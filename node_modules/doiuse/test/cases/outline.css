@@ -1,0 +1,12 @@
+/*
+expect:
+outline: 2
+*/
+
+button {
+  outline: none;
+}
+
+a {
+  outline-color: #000;
+}

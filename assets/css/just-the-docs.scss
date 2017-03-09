@@ -1,0 +1,38 @@
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+//
+// Import dependancies
+//
+
+@import "./normalize.scss/normalize.scss";
+
+//
+// Import Just the docs scss
+//
+
+// Support
+@import "./support/support";
+
+// Utilities
+@import "./utilities/utilities";
+
+// Base
+@import "./base";
+
+// Layout
+@import "./layout";
+
+// Navigation
+@import "./navigation";
+
+// Typography
+@import "./typography";
+
+// Tables
+@import "./tables";
+
+// Code blocks and inline code
+@import "./code";

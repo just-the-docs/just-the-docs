@@ -1,0 +1,6 @@
+/*
+expect:
+rem: 1
+*/
+
+p { font-size: 1rem; }

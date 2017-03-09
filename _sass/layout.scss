@@ -1,0 +1,115 @@
+.page-wrap {
+  @include mq(md) {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+
+.side-bar {
+
+  padding-top: $gutter-spacing;
+  padding-bottom: $gutter-spacing;
+  background-color: $grey-lt-000;
+  z-index: 100;
+
+  @include mq(md) {
+    padding-top: $gutter-spacing * 2;
+    border-right: $border $border-color;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-end;
+    width: $nav-width + 16px;
+    height: 100%;
+  }
+
+  @include mq(lg) {
+    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    min-width: $nav-width;
+  }
+}
+
+.main-content-wrap {
+  @include mq(md) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+.main-content {
+  padding-top: $gutter-spacing;
+  padding-right: $gutter-spacing;
+  padding-left: $gutter-spacing;
+  @include mq(md) {
+    position: relative;
+    margin-left: $nav-width;
+    max-width: $content-width;
+    padding-right: $gutter-spacing;
+    padding-left: $gutter-spacing * 1.5;
+    padding-bottom: $gutter-spacing;
+  }
+
+  @include mq(lg) {
+    margin-left: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    padding-left: $gutter-spacing;
+  }
+}
+
+.site-title {
+  display: block;
+
+  @include mq(md) {
+    position: absolute;
+    top: $gutter-spacing;
+    right: 0;
+    width: $nav-width;
+    z-index: 101;
+  }
+}
+
+.navigation,
+.site-title,
+.site-footer {
+  padding-left: $gutter-spacing;
+  padding-right: $gutter-spacing;
+  width: 100%;
+
+  @include mq(lg) {
+    width: $nav-width + 32px;
+  }
+}
+
+.navigation {
+  @include mq(md) {
+    position: absolute;
+    top: $sp-8;
+    right: 0;
+  }
+}
+
+.site-footer {
+  @include mq(md) {
+    position: absolute;
+    bottom: $sp-8;
+    right: 0;
+    z-index: 100;
+  }
+}
+
+.img-logo {
+  width: 150px;
+  height: auto;
+}

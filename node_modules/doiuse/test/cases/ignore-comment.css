@@ -1,0 +1,25 @@
+/* doiuse-disable */
+disable-all {
+  display: flex;
+}
+
+/* doiuse-enable flexbox */
+enable-specific {
+  display: flex;
+}
+
+/* doiuse-disable flexbox, css-filters */
+disable-specific {
+  display: flex;
+  filter: brightness(50%);
+}
+
+/* doiuse-enable */
+enable-all {
+  display: flex;
+}
+
+/* doiuse-disable */
+/* applies to included files */
+@import "./ignore-include.css";
+/* but not to other file */

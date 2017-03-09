@@ -1,0 +1,103 @@
+# dollar-variable-colon-space-after
+
+Require a single space or disallow whitespace after the colon in `$`-variable declarations.
+
+```scss
+$variable: 10px;
+/**      ↑
+ * The space after this colon */
+```
+
+## Options
+
+`string`: `"always"|"never"|"always-single-line"`
+
+### `"always"`
+
+There *must always* be a single space after the colon.
+
+The following patterns are considered warnings:
+
+```scss
+a { $var :10px }
+```
+
+```scss
+$var:10px;
+```
+
+```scss
+$var:
+  10px;
+// a newline is not a space
+```
+
+The following patterns are *not* considered warnings:
+
+```scss
+a { $var : 10px }
+```
+
+```scss
+$var: 10px;
+```
+
+### `"never"`
+
+There *must never* be whitespace after the colon.
+
+The following patterns are considered warnings:
+
+```scss
+$var: 10px;
+```
+
+```scss
+$var:
+10px;
+```
+
+```scss
+a { $var :10px }
+```
+
+The following patterns are *not* considered warnings:
+
+```scss
+$var :10px;
+```
+
+```scss
+a { $var:10px }
+```
+
+### `"always-single-line"`
+
+There *must always* be a single space after the colon *if the variable value is single-line*.
+
+The following patterns are considered warnings:
+
+```scss
+$box-shadow:0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8);
+```
+
+The following patterns are *not* considered warnings:
+
+```scss
+a {
+  $box-shadow: 0 0 0 1px #5b9dd9, 0 0 2px 1px rgba(30, 140, 190, 0.8);
+}
+```
+
+```scss
+$box-shadow:
+  0 0 0 1px #5b9dd9,
+  0 0 2px 1px rgba(30, 140, 190, 0.8);
+```
+
+```scss
+a {
+  $box-shadow:0 0 0 1px #5b9dd9,
+    0 0 2px 1px rgba(30, 140, 190, 0.8);
+}
+```

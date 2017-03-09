@@ -1,0 +1,19 @@
+; EditorConfig is awesome: http://EditorConfig.org
+
+; top-most EditorConfig file
+root = true
+
+[*]
+charset = utf-8
+
+trim_trailing_whitespace = true
+
+; Unix style line endings
+end_of_line = lf
+
+; Always end file on newline
+insert_final_newline = true
+
+; Indentation
+indent_style = space
+indent_size = 4

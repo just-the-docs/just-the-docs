@@ -1,0 +1,20 @@
+module.exports = require('./lib/color')
+    .use(require('./lib/XYZ'))
+    .use(require('./lib/LAB'))
+    .use(require('./lib/HSV'))
+    .use(require('./lib/HSL'))
+    .use(require('./lib/CMYK'))
+
+    // Convenience functions
+    .use(require('./lib/plugins/namedColors'))
+    .use(require('./lib/plugins/clearer.js'))
+    .use(require('./lib/plugins/darken.js'))
+    .use(require('./lib/plugins/desaturate.js'))
+    .use(require('./lib/plugins/grayscale.js'))
+    .use(require('./lib/plugins/lighten.js'))
+    .use(require('./lib/plugins/mix.js'))
+    .use(require('./lib/plugins/negate.js'))
+    .use(require('./lib/plugins/opaquer.js'))
+    .use(require('./lib/plugins/rotate.js'))
+    .use(require('./lib/plugins/saturate.js'))
+    .use(require('./lib/plugins/toAlpha.js'));

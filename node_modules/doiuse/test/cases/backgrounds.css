@@ -1,0 +1,25 @@
+/*
+expect:
+background-img-opts: 3
+multibackgrounds: 3
+css-canvas: 1
+*/
+
+a {
+    background-size: cover;
+    background-origin: padding-box;
+    background-clip: padding-box;
+}
+
+div {
+  background: url(a.gif), url(b.gif);
+  background-image: url(c.gif), url(d.gif);
+}
+
+.another {
+  background-repeat: no-repeat, no-repeat;
+}
+
+.wc {
+  background: -webkit-canvas(squares);
+}

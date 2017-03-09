@@ -1,0 +1,18 @@
+/*
+expect:
+css-mediaqueries: 2
+css-featurequeries: 1
+css-media-resolution: 1
+*/
+
+@media only screen {
+  .ui { display: block; }
+}
+
+@supports (transform-origin: 5% 5%) {
+  .ui { transform-origin: 5% 5%; }
+}
+
+@media (min-resolution: 192dpi) {
+  .ui { width: 50%; }
+}

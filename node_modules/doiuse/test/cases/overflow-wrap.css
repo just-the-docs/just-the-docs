@@ -1,0 +1,8 @@
+/*
+expect:
+wordwrap: 1
+*/
+
+p {
+  overflow-wrap: break-word;
+}
