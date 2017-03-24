@@ -4,12 +4,21 @@ title: Home
 nav_order: 1
 ---
 
-![Just the Docs](/assets/images/just-the-docs.png){:.img-logo}
 
-# A Jekyll theme for documentation
+# Focus on writing documentation, not building a website for it.
+{: .mt-4 .mt-md-0 :}
 
-Focus on writing good docs, not building a site for it. Just the docs allows you to create your documentation site with a Jekyll theme that is easily hosted on GitHub pages.
-{: .fs-6 .fw-300 }
+<div class="d-sm-flex my-sm-7">
+  <div class="px-8 pl-sm-0 pr-sm-6 mb-5 mb-sm-0">
+    <img src="/assets/images/just-the-docs.png" alt="" class="mt-sm-2">
+  </div>
+  <div markdown="1">
+  Just the Docs gives your documentation a home with a responsive Jekyll theme that is easily customizable and hosted on GitHub pages.
+  {: .fs-6 .fw-300 }
+
+  [Get Started](#getting-started){: .btn .btn-purple .mr-2 } [View GitHub](https://github.com/pmarsceill/just-the-docs){: .btn }
+  </div>
+</div>
 
 ---
 
@@ -32,6 +41,10 @@ theme: "just-the-docs"
 ```
 3. Run you local Jekyll server
 ```bash
+$ jekyll serve
+```
+```bash
+# .. or if you're using a Gemfile (bundler)
 $ bundle exec jekyll serve
 ```
 4. Point your web browser to [http://localhost:4000](http://localhost:4000)
@@ -40,7 +53,7 @@ $ bundle exec jekyll serve
 
 ## About the project
 
-Just the Docs is &copy; 2016 by [Patrick Marsceill](http://patrickmarsceill.com).
+Just the Docs is &copy; 2017 by [Patrick Marsceill](http://patrickmarsceill.com).
 
 ### License
 

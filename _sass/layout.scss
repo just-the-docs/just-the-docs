@@ -1,3 +1,7 @@
+//
+// The basic two column layout
+//
+
 .page-wrap {
   @include mq(md) {
     display: flex;
@@ -12,9 +16,8 @@
 }
 
 .side-bar {
-
-  padding-top: $gutter-spacing;
-  padding-bottom: $gutter-spacing;
+  padding-top: $gutter-spacing-sm;
+  padding-bottom: $gutter-spacing-sm;
   background-color: $grey-lt-000;
   z-index: 100;
 
@@ -28,6 +31,7 @@
     align-items: flex-end;
     width: $nav-width + 16px;
     height: 100%;
+    min-height: 400px;
   }
 
   @include mq(lg) {
@@ -41,6 +45,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    min-height: 600px;
     top: 0;
     left: 0;
     -webkit-overflow-scrolling: touch;
@@ -50,14 +55,14 @@
 }
 
 .main-content {
-  padding-top: $gutter-spacing;
-  padding-right: $gutter-spacing;
-  padding-left: $gutter-spacing;
+  padding-top: $gutter-spacing-sm;
+  @include container;
+
   @include mq(md) {
     position: relative;
     margin-left: $nav-width;
     max-width: $content-width;
-    padding-right: $gutter-spacing;
+    padding-top: $gutter-spacing;
     padding-left: $gutter-spacing * 1.5;
     padding-bottom: $gutter-spacing;
   }
@@ -68,23 +73,11 @@
   }
 }
 
-.site-title {
-  display: block;
-
-  @include mq(md) {
-    position: absolute;
-    top: $gutter-spacing;
-    right: 0;
-    width: $nav-width;
-    z-index: 101;
-  }
-}
-
 .navigation,
-.site-title,
-.site-footer {
-  padding-left: $gutter-spacing;
-  padding-right: $gutter-spacing;
+.site-title {
+
+  @include container;
+
   width: 100%;
 
   @include mq(lg) {
@@ -95,21 +88,22 @@
 .navigation {
   @include mq(md) {
     position: absolute;
-    top: $sp-8;
+    padding-top: $sp-8;
+    top: 0;
     right: 0;
+    height: 100%;
   }
 }
 
 .site-footer {
-  @include mq(md) {
-    position: absolute;
-    bottom: $sp-8;
-    right: 0;
-    z-index: 100;
-  }
-}
 
-.img-logo {
-  width: 150px;
-  height: auto;
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: $sp-8;
+    z-index: 100;
+
+    @include container;
+  }
 }

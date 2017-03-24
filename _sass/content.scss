@@ -1,0 +1,48 @@
+//
+// Styles for rendered markdown in the .main-content container
+//
+
+// stylelint-disable selector-no-type
+
+.page-content {
+  ul,
+  ol,
+  dl {
+    padding-left: 1.5em;
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: step-counter;
+
+    li {
+      position: relative;
+
+      &::before {
+        counter-increment: step-counter;
+        content: counter(step-counter);
+        left: -1.5em;
+        top: 0.11em;
+        position: absolute;
+        color: $grey-dk-000;
+        @include fs-3;
+      }
+
+      ol {
+        counter-reset: sub-counter;
+
+        li {
+          &::before {
+            counter-increment: sub-counter;
+            content: counter(sub-counter, lower-alpha);
+          }
+        }
+      }
+    }
+  }
+
+  hr + *,
+  h1:first-of-type {
+    margin-top: 0;
+  }
+}

@@ -23,4 +23,5 @@ sass:
   load_paths:
     - node_modules/
 
+permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "Gemfile", "Gemfile.lock", "package.json", "LICENSE.txt"]

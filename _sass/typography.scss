@@ -1,3 +1,7 @@
+//
+// Typography
+//
+
 h1,
 .text-alpha {
   @include fs-8;
@@ -29,7 +33,7 @@ h5,
 }
 
 h6,
-.text-epsilon {
+.text-zeta {
   @include fs-2;
   color: $grey-dk-200;
 }
@@ -40,14 +44,10 @@ li {
   }
 }
 
-hr {
-  height: 1px;
-  padding: 0;
-  margin: $sp-6 0;
-  background-color: $grey-lt-100;
-  border: 0;
-}
-
 .text-small {
   @include fs-2;
+}
+
+.text-mono {
+  font-family: $mono-font-family;
 }

@@ -9,4 +9,5 @@ permalink: /ui-components
 
 # UI Components
 
-Just the Docs includes styles for displaying clear and readable typography, nicely formatted code, and easily identifiable buttons. The goal of this theme is to make it as easy as possible to write code documentation in markdown and have the Just the Docs take care of the rest, so very few CSS classes are required to render commonly used UI elements.
+Just the Docs includes all the CSS you need to create structured documentation for your next project. To make it as easy as possible to write documentation in plain Markdown, most styles will require no additional CSS classes.
+{: .fs-6 .fw-300 }

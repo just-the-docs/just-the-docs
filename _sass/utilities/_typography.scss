@@ -1,3 +1,9 @@
+//
+// Utility classes for typography
+//
+
+// stylelint-disable primer/selector-no-utility
+
 .fs-1 {
   @include fs-1;
 }
@@ -53,3 +59,33 @@
 .fw-700 {
   font-weight: 700 !important;
 }
+
+.lh-0 {
+  line-height: 0 !important;
+}
+
+.lh-default {
+  line-height: $body-line-height;
+}
+
+.lh-tight {
+  line-height: $body-heading-line-height;
+}
+
+.ls-5 {
+  letter-spacing: 0.05em !important;
+}
+
+.ls-10 {
+  letter-spacing: 0.1em !important;
+}
+
+.ls-0 {
+  letter-spacing: 0 !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+// stylelint-enable primer/selector-no-utility

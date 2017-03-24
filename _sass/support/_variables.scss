@@ -1,31 +1,47 @@
 //
+// Typography
+//
+
+$body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif !default;
+$mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace !default;
+$root-font-size: 16px !default;         // Base font-size for rems
+$body-line-height: 1.4;
+$body-heading-line-height: 1.15;
+
+//
 // Colors
 //
 
-$grey-dk-000: #959396;
-$grey-dk-100: #5c5962;
-$grey-dk-200: #44434d;
-$grey-dk-300: #27262b;
+$white: #fff !default;
 
-$grey-lt-000: #f5f6fa;
-$grey-lt-100: #efebf0;
-$grey-lt-200: #ecebed;
-$grey-lt-300: #e6e1e8;
+$grey-dk-000: #959396 !default;
+$grey-dk-100: #5c5962 !default;
+$grey-dk-200: #44434d !default;
+$grey-dk-300: #27262b !default;
 
-$purple-000: #7253ed;
-$purple-100: #5e41d0;
-$purple-200: #4e26af;
-$purple-300: #381885;
+$grey-lt-000: #f5f6fa !default;
+$grey-lt-100: #eeebee !default;
+$grey-lt-200: #ecebed !default;
+$grey-lt-300: #e6e1e8 !default;
 
-$green-000: #41d66f;
-$green-100: #2bb45a;
-$green-200: #299950;
-$green-300: #156f49;
+$purple-000: #7253ed !default;
+$purple-100: #5e41d0 !default;
+$purple-200: #4e26af !default;
+$purple-300: #381885 !default;
 
-$body-text-color: $grey-dk-100;
-$body-heading-color: $grey-dk-300;
-$root-font-size: 16px;         // Base font-size for rems
-$link-color: $purple-000;
+$blue-000: #2c84fa !default;
+$blue-100: #2869e6 !default;
+$blue-200: #264caf !default;
+$blue-300: #183385 !default;
+
+$green-000: #41d693 !default;
+$green-100: #11b584 !default;
+$green-200: #009c7b !default;
+$green-300: #026e57 !default;
+
+$body-text-color: $grey-dk-100 !default;
+$body-heading-color: $grey-dk-300 !default;
+$link-color: $purple-000 !default;
 
 //
 // Media queries in pixels
@@ -36,7 +52,7 @@ $media-queries: (
   sm: 500px,
   md: 740px,
   lg: 1120px,
-  xl: 1200px
+  xl: 1400px
 ) !default;
 
 //
@@ -55,7 +71,7 @@ $spacers: (
   sp-6: $spacing-unit * 2,
   sp-7: $spacing-unit * 2.5,
   sp-8: $spacing-unit * 3
-);
+) !default;
 
 $sp-1: map-get($spacers, sp-1); // 0.25 rem == 4px
 $sp-2: map-get($spacers, sp-2); // 0.5  rem == 8px
@@ -70,17 +86,18 @@ $sp-8: map-get($spacers, sp-8); // 3    rem == 48px
 // Borders
 //
 
-$border: 1px solid;
-$border-radius: 4px;
-$border-color: $grey-lt-100;
+$border: 1px solid !default;
+$border-radius: 4px !default;
+$border-color: $grey-lt-100 !default;
 
 //
 // Grid system
 //
 
-$gutter-spacing: $sp-6;
-$nav-width: 232px;
-$content-width: 800px;
+$gutter-spacing: $sp-6 !default;
+$gutter-spacing-sm: $sp-4 !default;
+$nav-width: 232px !default;
+$content-width: 800px !default;
 
 $media-queries: (
   xs: 320px,
@@ -89,11 +106,3 @@ $media-queries: (
   lg: 800px,
   xl: 1316px
 ) !default;
-
-//
-// Typography
-//
-
-$body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
-
-$mono-font-family: Menlo, Consolas, Monospace;

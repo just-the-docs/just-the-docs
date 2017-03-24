@@ -15,24 +15,13 @@
 
 // Support
 @import "./support/support";
-
-// Utilities
-@import "./utilities/utilities";
-
-// Base
 @import "./base";
-
-// Layout
 @import "./layout";
-
-// Navigation
+@import "./content";
 @import "./navigation";
-
-// Typography
 @import "./typography";
-
-// Tables
+@import "./buttons";
+@import "./search";
 @import "./tables";
-
-// Code blocks and inline code
 @import "./code";
+@import "./utilities/utilities";

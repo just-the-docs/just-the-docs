@@ -6,18 +6,20 @@
 <div class="page-wrap">
   <div class="side-bar">
     <a href="{{ site.url }}" class="site-title fs-6 fw-300 text-grey-dk-300">Just the <span class="fw-700">/docs</span></a>
-    <div class="navigation">
+    <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
+    <div class="navigation main-nav js-main-nav">
       {% include nav.html %}
+      <footer role="contentinfo" class="site-footer">
+        <p class="text-small text-grey-dk-000">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
+      </footer>
     </div>
-    <footer role="contentinfo" class="site-footer">
-      <p class="text-small text-grey-dk-000">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
-    </footer>
-
   </div>
   <div class="main-content-wrap">
     <div class="main-content">
+      <input type="text" class="js-search-input" />
+      <div class="js-search-results search-results-wrap"></div>
       {% unless page.url == "/" %}
-      <nav>
+      <nav class="breadcrumb-nav">
         <ol class="breadcrumb-nav-list">
           <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}">Home</a></li>
           {% if page.parent != nil and page.parent != page.title %}
@@ -27,22 +29,24 @@
         </ol>
       </nav>
       {% endunless %}
-      {{ content }}
+      <div class="page-content">
+        {{ content }}
 
-      {% if page.has_children == true %}
-      <hr>
-      <h2 class="text-delta">Table of contents</h2>
-      {% assign children_list = site.pages | sort:"nav_order" %}
-      <ol>
-        {% for child in children_list %}
-          {% if child.parent == page.title and child.title != page.title %}
-          <li>
-            <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
-          </li>
-          {% endif %}
-        {% endfor %}
-      </ol>
-      {% endif %}
+        {% if page.has_children == true %}
+        <hr>
+        <h2 class="text-delta">Table of contents</h2>
+        {% assign children_list = site.pages | sort:"nav_order" %}
+        <ol>
+          {% for child in children_list %}
+            {% if child.parent == page.title and child.title != page.title %}
+            <li>
+              <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+        </ol>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>

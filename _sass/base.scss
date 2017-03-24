@@ -1,3 +1,7 @@
+//
+// Base element style overrides
+//
+
 // stylelint-disable selector-no-type
 
 * {
@@ -5,34 +9,14 @@
 }
 
 html {
-  font-size: $root-font-size;
+  @include fs-4;
 }
 
 body {
   font-family: $body-font-family;
   font-size: inherit;
-  line-height: 1.4;
+  line-height: $body-line-height;
   color: $body-text-color;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 500;
-  color: $body-heading-color;
-  line-height: 1.1;
-  margin-bottom: .8em;
-
-  &:not(:first-child) {
-    margin-top: 1.2  em;
-  }
-}
-
-p {
-  margin-bottom: 1em;
 }
 
 p,
@@ -57,16 +41,52 @@ table {
   margin-top: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  color: $body-heading-color;
+  line-height: $body-heading-line-height;
+  margin-bottom: .8em;
+  margin-top: 1.2em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+
 a {
   color: $link-color;
   text-decoration: none;
 }
 
+a:not([class]) {
+  text-decoration: none;
+  background-image: linear-gradient($grey-lt-100 0%, $grey-lt-100 100%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 1px 1px;
+
+  &:hover {
+    background-image: linear-gradient(rgba($link-color, 0.45) 0%, rgba($link-color, 0.45) 100%);
+    background-size: 1px 1px;
+
+  }
+}
+
 pre,
 code {
   font-size: 90%;
-  line-height: 1.3;
+  line-height: $body-line-height;
   font-family: $mono-font-family;
+}
+
+figure {
+  margin: 0;
 }
 
 li {
@@ -76,4 +96,12 @@ li {
 img {
   max-width: 100%;
   height: auto;
+}
+
+hr {
+  height: 1px;
+  padding: 0;
+  margin: $sp-6 0;
+  background-color: $grey-lt-100;
+  border: 0;
 }

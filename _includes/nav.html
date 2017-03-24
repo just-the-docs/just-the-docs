@@ -10,7 +10,7 @@
             <ul class="navigation-list-child-list">
               {% for child in children_list %}
                 {% if child.parent == node.parent and child.title != node.title %}
-                <li class="navigation-list-item">
+                <li class="navigation-list-item {% if page.url == child.url %} active{% endif %}">
                   <a href="{{ child.url | absolute_url }}" class="navigation-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
                 </li>
                 {% endif %}

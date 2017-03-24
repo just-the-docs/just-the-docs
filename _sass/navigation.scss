@@ -1,3 +1,21 @@
+//
+// Main nav, breadcrumb, etc...
+//
+
+.site-title {
+  display: block;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+
+  @include mq(md) {
+    position: absolute;
+    top: $gutter-spacing;
+    right: 0;
+    z-index: 101;
+  }
+}
+
 .navigation-list {
   list-style: none;
   padding: 0;
@@ -11,6 +29,8 @@
 .navigation-list-child-list {
   list-style: none;
   padding-left: $sp-3;
+  margin-top: $sp-2;
+  margin-bottom: $sp-2;
 
   .navigation-list-link {
     color: $grey-dk-100;
@@ -22,6 +42,12 @@
       content: "- ";
       margin-left: -0.8em;
       color: $grey-dk-000;
+    }
+
+    &.active {
+      &::before {
+        color: $grey-dk-100;
+      }
     }
   }
 }
@@ -40,6 +66,39 @@
   }
 }
 
+// Small screen nav
+
+.main-nav {
+  display: none;
+
+  &.nav-open {
+    display: block;
+  }
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.side-bar {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.navigation-list-toggle {
+  position: absolute;
+  right: $sp-4;
+
+  @include mq(md) {
+    display: none !important;
+  }
+}
+
+// Breadcrumb nav
+
 .breadcrumb-nav-list {
   list-style: none;
   padding-left: 0;
@@ -50,6 +109,10 @@
 .breadcrumb-nav-list-item {
   display: table-cell;
   @include fs-2;
+
+  &::before {
+    display: none;
+  }
 
   &::after {
     display: inline-block;
@@ -62,6 +125,28 @@
   &:last-child {
     &::after {
       content: "";
+    }
+  }
+}
+
+ // Table of contents
+
+#markdown-toc {
+  counter-reset: toc-counter;
+  li {
+    &::before {
+      counter-increment: toc-counter;
+      content: counter(toc-counter, upper-roman);
+    }
+    ol {
+      counter-reset: toc-sub-counter;
+    }
+
+    li {
+      &::before {
+        counter-increment: toc-sub-counter;
+        content: counter(toc-sub-counter, lower-roman);
+      }
     }
   }
 }

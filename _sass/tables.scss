@@ -1,8 +1,19 @@
+//
+// Tables
+//
+
 table {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
   margin-bottom: $sp-5;
   border-collapse: separate;
-  box-shadow: 0 3px 12px 0 transparentize($grey-dk-300, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 4px 14px rgba(0, 0, 0, 0.05);
+
+  @include mq(sm) {
+    display: table;
+  }
 }
 
 th,
@@ -14,6 +25,7 @@ td {
   padding-right: $sp-3;
   border-bottom: $border $grey-lt-000;
   border-left: $border $border-color;
+  min-width: 120px;
 
   &:first-of-type {
     border-left: 0;
@@ -54,11 +66,8 @@ tbody {
   }
 }
 
-
-
-
-
 thead {
   th {
+    border-bottom: 1px solid $border-color;
   }
 }

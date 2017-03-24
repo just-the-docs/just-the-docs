@@ -1,18 +1,30 @@
+//
+// Code and syntax highlighting
+//
+
 code {
   background-color: $grey-lt-000;
   padding: 0.2em 0.15em;
   border: $border $border-color;
   border-radius: $border-radius;
+  font-weight: 400;
 }
 
 .highlight {
   background-color: $grey-lt-000;
   padding: $sp-3;
+  margin-bottom: 0;
 
   code {
     border: 0;
     padding: 0;
   }
+}
+
+.highlighter-rouge {
+  margin-bottom: $sp-3;
+  border-radius: $border-radius;
+  overflow: hidden;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
@@ -83,3 +95,27 @@ code {
 .highlight .vg { color: #268BD2 } /* Name.Variable.Global */
 .highlight .vi { color: #268BD2 } /* Name.Variable.Instance */
 .highlight .il { color: #2AA198 } /* Literal.Number.Integer.Long */
+
+//
+// Code examples (rendered)
+//
+
+.code-example {
+  border: 1px solid $border-color;
+  padding: $sp-3;
+  border-radius: $border-radius;
+  margin-bottom: $sp-3;
+  overflow: scroll;
+
+  + .highlighter-rouge,
+  + figure.highlight {
+    position: relative;
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: -$sp-4;
+  }
+
+}
