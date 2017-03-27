@@ -13,7 +13,6 @@ function toggleNav(){
   const nav = document.querySelector('.js-main-nav');
   const navTrigger = document.querySelector('.js-main-nav-trigger');
 
-
   addEvent(navTrigger, 'click', function(){
     var text = navTrigger.innerText;
     var textToggle = navTrigger.getAttribute('data-text-toggle');
@@ -74,35 +73,54 @@ function initSearch() {
     var searchResults = document.querySelector('.js-search-results');
     var store = dataStore;
 
-    addEvent(searchInput, 'keyup', function(){
-        var query = this.value;
+    function hideResults() {
+      searchResults.innerHTML = '';
+      searchResults.classList.remove('active');
+    }
 
-        searchResults.innerHTML = '';
+    addEvent(searchInput, 'keyup', function(e){
+      var query = this.value;
 
-        if (query === '') {
-          searchResults.innerHTML = '';
-        } else {
-          var results = index.search(query);
+      searchResults.innerHTML = '';
+      searchResults.classList.remove('active');
+
+      if (query === '') {
+        hideResults();
+      } else {
+        var results = index.search(query);
+
+        if (results.length > 1) {
+          searchResults.classList.add('active');
+          var resultsList = document.createElement('ul');
+          searchResults.appendChild(resultsList);
+
           for (var i in results) {
-            var resultsList = document.createElement("ul");
-            var resultsListItem = document.createElement("li");
-            var resultsLink = document.createElement("a");
+            var resultsListItem = document.createElement('li');
+            var resultsLink = document.createElement('a');
             var resultsUrl = store[results[i].ref].url;
             var resultsTitle = store[results[i].ref].title;
 
-            resultsLink.setAttribute("href", store[results[i].ref].url);
+            resultsLink.setAttribute('href', store[results[i].ref].url);
             resultsLink.innerText = resultsTitle;
 
-            resultsList.classList.add("search-results-list");
-            searchResults.appendChild(resultsList);
+            resultsList.classList.add('search-results-list');
+            resultsListItem.classList.add('search-results-list-item');
+            resultsLink.classList.add('search-results-link');
             resultsList.appendChild(resultsListItem);
-            resultsListItem.appendChild(resultsLink)
+            resultsListItem.appendChild(resultsLink);
           }
         }
+
+        // When esc key is pressed, hide the results and clear the field
+        if (e.keyCode == 27) {
+          hideResults();
+          searchInput.value = '';
+        }
+      }
     });
 
     addEvent(searchInput, 'blur', function(){
-      setTimeout(function(){searchResults.innerHTML = '';}, 300);
+      setTimeout(function(){hideResults()}, 300);
     });
   }
 }

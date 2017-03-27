@@ -1,13 +1,14 @@
 //
 // Tables
 //
+// stylelint-disable max-nesting-depth, selector-no-type
 
 table {
   display: block;
   width: 100%;
   max-width: 100%;
-  overflow-x: auto;
   margin-bottom: $sp-5;
+  overflow-x: auto;
   border-collapse: separate;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 4px 14px rgba(0, 0, 0, 0.05);
 
@@ -19,20 +20,21 @@ table {
 th,
 td {
   @include fs-3;
+  min-width: 120px;
   padding-top: $sp-2;
-  padding-left: $sp-3;
-  padding-bottom: $sp-2;
   padding-right: $sp-3;
+  padding-bottom: $sp-2;
+  padding-left: $sp-3;
   border-bottom: $border $grey-lt-000;
   border-left: $border $border-color;
-  min-width: 120px;
 
   &:first-of-type {
     border-left: 0;
   }
 }
 
-thead, tbody:first-child {
+thead,
+tbody:first-child {
   tr {
     &:first-of-type {
       th,
@@ -40,6 +42,7 @@ thead, tbody:first-child {
         &:first-of-type {
           border-top-left-radius: $border-radius;
         }
+
         &:last-of-type {
           border-top-right-radius: $border-radius;
         }
@@ -58,6 +61,7 @@ tbody {
         &:first-of-type {
           border-bottom-left-radius: $border-radius;
         }
+
         &:last-of-type {
           border-bottom-right-radius: $border-radius;
         }

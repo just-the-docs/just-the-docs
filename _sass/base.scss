@@ -1,7 +1,6 @@
 //
 // Base element style overrides
 //
-
 // stylelint-disable selector-no-type
 
 * {
@@ -47,17 +46,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 500;
-  color: $body-heading-color;
-  line-height: $body-heading-line-height;
-  margin-bottom: .8em;
   margin-top: 1.2em;
+  margin-bottom: 0.8em;
+  font-weight: 500;
+  line-height: $body-heading-line-height;
+  color: $body-heading-color;
 }
 
 p {
   margin-bottom: 1em;
 }
-
 
 a {
   color: $link-color;
@@ -78,11 +76,10 @@ a:not([class]) {
   }
 }
 
-pre,
 code {
-  font-size: 90%;
-  line-height: $body-line-height;
   font-family: $mono-font-family;
+  font-size: 12px;
+  line-height: $body-line-height;
 }
 
 figure {

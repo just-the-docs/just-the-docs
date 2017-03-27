@@ -1,6 +1,9 @@
+// stylelint-disable primer/selector-no-utility
 //
-// Utility classes for layout and spacing
+// Utility classes for layout
 //
+
+// Display
 
 .d-block { display: block !important; }
 .d-flex { display: flex !important; }
@@ -24,3 +27,12 @@
     }
   }
 }
+
+// Vertical alignment
+
+.v-align-baseline { vertical-align: baseline !important; }
+.v-align-bottom { vertical-align: bottom !important; }
+.v-align-middle { vertical-align: middle !important; }
+.v-align-text-bottom { vertical-align: text-bottom !important; }
+.v-align-text-top { vertical-align: text-top !important; }
+.v-align-top { vertical-align: top !important; }

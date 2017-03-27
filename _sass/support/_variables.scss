@@ -5,8 +5,8 @@
 $body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif !default;
 $mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace !default;
 $root-font-size: 16px !default;         // Base font-size for rems
-$body-line-height: 1.4;
-$body-heading-line-height: 1.15;
+$body-line-height: 1.4 !default;
+$body-heading-line-height: 1.15 !default !default;
 
 //
 // Colors
@@ -39,6 +39,16 @@ $green-100: #11b584 !default;
 $green-200: #009c7b !default;
 $green-300: #026e57 !default;
 
+$yellow-000: #ffeb82 !default;
+$yellow-100: #fadf50 !default;
+$yellow-200: #f7d12e !default;
+$yellow-300: #e7af06 !default;
+
+$red-000: #f77e7e !default;
+$red-100: #f96e65 !default;
+$red-200: #e94c4c !default;
+$red-300: #dd2e2e !default;
+
 $body-text-color: $grey-dk-100 !default;
 $body-heading-color: $grey-dk-300 !default;
 $link-color: $purple-000 !default;
@@ -70,17 +80,21 @@ $spacers: (
   sp-5: $spacing-unit * 1.5,
   sp-6: $spacing-unit * 2,
   sp-7: $spacing-unit * 2.5,
-  sp-8: $spacing-unit * 3
+  sp-8: $spacing-unit * 3,
+  sp-9: $spacing-unit * 3.5,
+  sp-10: $spacing-unit * 4
 ) !default;
 
-$sp-1: map-get($spacers, sp-1); // 0.25 rem == 4px
-$sp-2: map-get($spacers, sp-2); // 0.5  rem == 8px
-$sp-3: map-get($spacers, sp-3); // 0.75 rem == 12px
-$sp-4: map-get($spacers, sp-4); // 1    rem == 16px
-$sp-5: map-get($spacers, sp-5); // 1.5  rem == 24px
-$sp-6: map-get($spacers, sp-6); // 2    rem == 32px
-$sp-7: map-get($spacers, sp-7); // 2.5  rem == 40px
-$sp-8: map-get($spacers, sp-8); // 3    rem == 48px
+$sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
+$sp-2: map-get($spacers, sp-2) !default; // 0.5  rem == 8px
+$sp-3: map-get($spacers, sp-3) !default; // 0.75 rem == 12px
+$sp-4: map-get($spacers, sp-4) !default; // 1    rem == 16px
+$sp-5: map-get($spacers, sp-5) !default; // 1.5  rem == 24px
+$sp-6: map-get($spacers, sp-6) !default; // 2    rem == 32px
+$sp-7: map-get($spacers, sp-7) !default; // 2.5  rem == 40px
+$sp-8: map-get($spacers, sp-8) !default; // 3    rem == 48px
+$sp-9: map-get($spacers, sp-9) !default; // 4    rem == 48px
+$sp-10: map-get($spacers, sp-10) !default; // 4.5  rem == 48px
 
 //
 // Borders

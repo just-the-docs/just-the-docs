@@ -1,15 +1,13 @@
 ---
 ---
 {
-  {% for page in site.pages %}
-    {% unless page.url contains "css" %}
-    "{{ forloop.index - 1 }}": {
-      "id": "{{ forloop.index - 1 }}",
+  {% for page in site.html_pages %}
+    "{{ forloop.index0 }}": {
+      "id": "{{ forloop.index0 }}",
       "title": "{{ page.title | xml_escape }}",
       "content": "{{ page.content | strip_html | strip_newlines | escape | remove: "\"}}",
       "url": " {{ page.url | xml_escape }}"
     }
     {% unless forloop.last %},{% endunless %}
-    {% endunless %}
   {% endfor %}
 }

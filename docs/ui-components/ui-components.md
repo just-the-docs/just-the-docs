@@ -9,5 +9,5 @@ permalink: /ui-components
 
 # UI Components
 
-Just the Docs includes all the CSS you need to create structured documentation for your next project. To make it as easy as possible to write documentation in plain Markdown, most styles will require no additional CSS classes.
+To make it as easy as possible to write documentation in plain Markdown, most UI components are styled using default Markdown elements with few additional CSS classes needed.
 {: .fs-6 .fw-300 }

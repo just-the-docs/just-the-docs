@@ -3,52 +3,56 @@
 <html lang="en-us">
 {% include head.html %}
 
-<div class="page-wrap">
-  <div class="side-bar">
-    <a href="{{ site.url }}" class="site-title fs-6 fw-300 text-grey-dk-300">Just the <span class="fw-700">/docs</span></a>
-    <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
-    <div class="navigation main-nav js-main-nav">
-      {% include nav.html %}
-      <footer role="contentinfo" class="site-footer">
-        <p class="text-small text-grey-dk-000">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
-      </footer>
+  <div class="page-wrap">
+    <div class="side-bar">
+      <a href="{{ site.url }}" class="site-title fs-6 fw-300 text-grey-dk-300">Just the <span class="fw-700">/docs</span></a>
+      <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
+      <div class="navigation main-nav js-main-nav">
+        {% include nav.html %}
+        <footer role="contentinfo" class="site-footer">
+          <p class="text-small text-grey-dk-000">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
+        </footer>
+      </div>
     </div>
-  </div>
-  <div class="main-content-wrap">
-    <div class="main-content">
-      <input type="text" class="js-search-input" />
-      <div class="js-search-results search-results-wrap"></div>
-      {% unless page.url == "/" %}
-      <nav class="breadcrumb-nav">
-        <ol class="breadcrumb-nav-list">
-          <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}">Home</a></li>
-          {% if page.parent != nil and page.parent != page.title %}
-          <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}/{{ page.parent | slugify }}">{{ page.parent }}</a></li>
-          {% endif %}
-          <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
-        </ol>
-      </nav>
-      {% endunless %}
-      <div class="page-content">
-        {{ content }}
-
-        {% if page.has_children == true %}
-        <hr>
-        <h2 class="text-delta">Table of contents</h2>
-        {% assign children_list = site.pages | sort:"nav_order" %}
-        <ol>
-          {% for child in children_list %}
-            {% if child.parent == page.title and child.title != page.title %}
-            <li>
-              <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
-            </li>
+    <div class="main-content-wrap">
+      <div class="search">
+        <div class="search-input-wrap">
+          <input type="text" class="js-search-input search-input fs-2" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}"/>
+          <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+        </div>
+        <div class="js-search-results search-results-wrap"></div>
+      </div>
+      <div class="main-content {% if page.url == '/' %}mt-2 mt-md-10{% endif %}">
+        {% unless page.url == "/" %}
+        <nav class="breadcrumb-nav">
+          <ol class="breadcrumb-nav-list">
+            <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}">Home</a></li>
+            {% if page.parent != nil and page.parent != page.title %}
+            <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}/{{ page.parent | slugify }}">{{ page.parent }}</a></li>
             {% endif %}
-          {% endfor %}
-        </ol>
-        {% endif %}
+            <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
+          </ol>
+        </nav>
+        {% endunless %}
+        <div class="page-content">
+          {{ content }}
+
+          {% if page.has_children == true %}
+          <hr>
+          <h2 class="text-delta">Table of contents</h2>
+          {% assign children_list = site.pages | sort:"nav_order" %}
+          <ol>
+            {% for child in children_list %}
+              {% if child.parent == page.title and child.title != page.title %}
+              <li>
+                <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
+              </li>
+              {% endif %}
+            {% endfor %}
+          </ol>
+          {% endif %}
+        </div>
       </div>
     </div>
   </div>
-</div>
-
 </html>

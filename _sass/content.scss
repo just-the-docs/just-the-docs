@@ -1,8 +1,7 @@
 //
 // Styles for rendered markdown in the .main-content container
 //
-
-// stylelint-disable selector-no-type
+// stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors
 
 .page-content {
   ul,
@@ -19,13 +18,17 @@
       position: relative;
 
       &::before {
-        counter-increment: step-counter;
-        content: counter(step-counter);
-        left: -1.5em;
-        top: 0.11em;
         position: absolute;
+        top: 0.2em;
+        left: -1.5em;
         color: $grey-dk-000;
+        content: counter(step-counter);
+        counter-increment: step-counter;
         @include fs-3;
+
+        @include mq(sm) {
+          top: 0.11em;
+        }
       }
 
       ol {
@@ -33,8 +36,8 @@
 
         li {
           &::before {
-            counter-increment: sub-counter;
             content: counter(sub-counter, lower-alpha);
+            counter-increment: sub-counter;
           }
         }
       }

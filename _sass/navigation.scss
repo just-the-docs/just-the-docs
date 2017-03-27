@@ -7,6 +7,7 @@
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: auto;
+  background-color: $grey-lt-000;
 
   @include mq(md) {
     position: absolute;
@@ -17,9 +18,9 @@
 }
 
 .navigation-list {
-  list-style: none;
   padding: 0;
   margin-top: $sp-4;
+  list-style: none;
 
   @include mq(md) {
     margin-top: $sp-8;
@@ -27,10 +28,8 @@
 }
 
 .navigation-list-child-list {
-  list-style: none;
   padding-left: $sp-3;
-  margin-top: $sp-2;
-  margin-bottom: $sp-2;
+  list-style: none;
 
   .navigation-list-link {
     color: $grey-dk-100;
@@ -39,9 +38,10 @@
   .navigation-list-item {
     &::before {
       position: absolute;
-      content: "- ";
+      margin-top: 0.3em;
       margin-left: -0.8em;
       color: $grey-dk-000;
+      content: "- ";
     }
 
     &.active {
@@ -54,15 +54,18 @@
 
 .navigation-list-item {
   @include fs-3;
+  margin: 0;
 }
 
 .navigation-list-link {
   display: block;
+  padding-top: $sp-1;
+  padding-bottom: $sp-1;
 
   &.active {
+    font-weight: 600;
     color: $grey-dk-200;
     text-decoration: none;
-    font-weight: 600;
   }
 }
 
@@ -85,6 +88,7 @@
 
   @include mq(md) {
     display: block;
+    overflow-y: auto;
   }
 }
 
@@ -100,10 +104,14 @@
 // Breadcrumb nav
 
 .breadcrumb-nav-list {
-  list-style: none;
   padding-left: 0;
   margin-top: $sp-3;
-  margin-bottom: $sp-5;
+  margin-bottom: $sp-3;
+  list-style: none;
+
+  @include mq(md) {
+    margin-bottom: $sp-5;
+  }
 }
 
 .breadcrumb-nav-list-item {
@@ -116,37 +124,15 @@
 
   &::after {
     display: inline-block;
-    margin-left: $sp-2;
     margin-right: $sp-2;
-    content: "/";
+    margin-left: $sp-2;
     color: $grey-dk-000;
+    content: "/";
   }
 
   &:last-child {
     &::after {
       content: "";
-    }
-  }
-}
-
- // Table of contents
-
-#markdown-toc {
-  counter-reset: toc-counter;
-  li {
-    &::before {
-      counter-increment: toc-counter;
-      content: counter(toc-counter, upper-roman);
-    }
-    ol {
-      counter-reset: toc-sub-counter;
-    }
-
-    li {
-      &::before {
-        counter-increment: toc-sub-counter;
-        content: counter(toc-sub-counter, lower-roman);
-      }
     }
   }
 }

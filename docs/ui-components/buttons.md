@@ -62,7 +62,7 @@ GitHub flavored markdown does not support the `button` element, so you'll have t
 
 ### Button size
 
-Wrap the button in container that uses the [font-size utility classes]({{ site.baseurl }}{% link docs/utilities.md %}#typography) to scale buttons:
+Wrap the button in container that uses the [font-size utility classes]({{ site.baseurl }}{% link docs/utilities/utilities.md %}#typography) to scale buttons:
 
 <div class="code-example" markdown="1">
 
@@ -87,7 +87,7 @@ Wrap the button in container that uses the [font-size utility classes]({{ site.b
 
 ### Spacing between buttons
 
-Use the [margin utility classes]({{ site.baseurl }}{% link docs/utilities.md %}#spacing) to add spacing between two buttons in the same block.
+Use the [margin utility classes]({{ site.baseurl }}{% link docs/utilities/utilities.md %}#spacing) to add spacing between two buttons in the same block.
 
 <div class="code-example" markdown="1">
 

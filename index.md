@@ -5,15 +5,15 @@ nav_order: 1
 ---
 
 
-# Focus on writing documentation, not building a website for it.
-{: .mt-4 .mt-md-0 :}
+# Focus on writing your docs, instead of building a website for them.
+{: .fs-9 .mb-md-8 :}
 
 <div class="d-sm-flex my-sm-7">
-  <div class="px-8 pl-sm-0 pr-sm-6 mb-5 mb-sm-0">
+  <div class="px-10 pl-sm-0 pr-sm-7 mb-5 mb-sm-0">
     <img src="/assets/images/just-the-docs.png" alt="" class="mt-sm-2">
   </div>
   <div markdown="1">
-  Just the Docs gives your documentation a home with a responsive Jekyll theme that is easily customizable and hosted on GitHub pages.
+  Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub pages.
   {: .fs-6 .fw-300 }
 
   [Get Started](#getting-started){: .btn .btn-purple .mr-2 } [View GitHub](https://github.com/pmarsceill/just-the-docs){: .btn }
