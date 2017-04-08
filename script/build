@@ -1,6 +1,4 @@
 #!/bin/sh
-echo "Running tests... \n"
-./script/test
 
 echo "Moving SCSS dependancies into ./assets/css... \n"
 cp -rf ./node_modules/primer-support/ ./_sass/primer-support/
