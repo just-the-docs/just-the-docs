@@ -1,6 +1,6 @@
 <nav>
   <ul class="navigation-list">
-  {% assign pages_list = site.html_pages | sort:"nav_order"%}
+  {% assign pages_list = site.html_pages | sort:"nav_order" %}
   {% for node in pages_list %}
       <li class="navigation-list-item{% if page.url == node.url %} active{% endif %} js-side-nav-item">
         {% if node.parent == nil or node.has_children == true %}

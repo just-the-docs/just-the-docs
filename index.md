@@ -16,7 +16,7 @@ nav_order: 1
   Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub pages.
   {: .fs-6 .fw-300 }
 
-  [Get Started](#getting-started){: .btn .btn-purple .mr-2 } [View GitHub](https://github.com/pmarsceill/just-the-docs){: .btn }
+  [Get started now](#getting-started){: .btn .btn-purple .mr-2 } [View it on GitHub](https://github.com/pmarsceill/just-the-docs){: .btn }
   </div>
 </div>
 

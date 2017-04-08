@@ -44,6 +44,19 @@
     }
   }
 
+  ul {
+    list-style: none;
+
+    li {
+      &::before {
+        position: absolute;
+        margin-left: -1.5em;
+        color: $grey-dk-000;
+        content: "•";
+      }
+    }
+  }
+
   hr + *,
   h1:first-of-type {
     margin-top: 0;

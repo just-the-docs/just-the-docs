@@ -30,8 +30,8 @@ function toggleNav(){
 function initSearch() {
   var index = lunr(function () {
     this.ref('id');
-    this.field('title');
-    this.field('content', { boost: 10 });
+    this.field('title', { boost: 20 });
+    this.field('content');
     this.field('url');
   });
 
@@ -97,17 +97,22 @@ function initSearch() {
           for (var i in results) {
             var resultsListItem = document.createElement('li');
             var resultsLink = document.createElement('a');
+            var resultsUrlDesc = document.createElement('span');
             var resultsUrl = store[results[i].ref].url;
             var resultsTitle = store[results[i].ref].title;
 
             resultsLink.setAttribute('href', store[results[i].ref].url);
             resultsLink.innerText = resultsTitle;
+            resultsUrlDesc.innerText = resultsUrl;
 
             resultsList.classList.add('search-results-list');
             resultsListItem.classList.add('search-results-list-item');
             resultsLink.classList.add('search-results-link');
+            resultsUrlDesc.classList.add('fs-2','text-grey-dk-000','d-block');
+
             resultsList.appendChild(resultsListItem);
             resultsListItem.appendChild(resultsLink);
+            resultsLink.appendChild(resultsUrlDesc);
           }
         }
 
@@ -120,7 +125,7 @@ function initSearch() {
     });
 
     addEvent(searchInput, 'blur', function(){
-      setTimeout(function(){hideResults()}, 300);
+      setTimeout(function(){ hideResults() }, 300);
     });
   }
 }

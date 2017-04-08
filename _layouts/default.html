@@ -5,7 +5,7 @@
 
   <div class="page-wrap">
     <div class="side-bar">
-      <a href="{{ site.url }}" class="site-title fs-6 fw-300 text-grey-dk-300">Just the <span class="fw-700">/docs</span></a>
+      <a href="{{ site.url }}" class="site-title fs-6 text-grey-dk-300">{{ site.title }}</a>
       <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
       <div class="navigation main-nav js-main-nav">
         {% include nav.html %}
@@ -17,7 +17,7 @@
     <div class="main-content-wrap">
       <div class="search">
         <div class="search-input-wrap">
-          <input type="text" class="js-search-input search-input fs-2" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}"/>
+          <input type="text" class="js-search-input search-input fs-2" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
           <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
         </div>
         <div class="js-search-results search-results-wrap"></div>
@@ -41,7 +41,7 @@
           <hr>
           <h2 class="text-delta">Table of contents</h2>
           {% assign children_list = site.pages | sort:"nav_order" %}
-          <ol>
+          <ul>
             {% for child in children_list %}
               {% if child.parent == page.title and child.title != page.title %}
               <li>
@@ -49,7 +49,7 @@
               </li>
               {% endif %}
             {% endfor %}
-          </ol>
+          </ul>
           {% endif %}
         </div>
       </div>
