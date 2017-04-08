@@ -1,0 +1,27 @@
+#!/bin/sh
+echo "Running tests... \n"
+./script/test
+
+echo "Moving SCSS dependancies into ./assets/css... \n"
+cp -rf ./node_modules/primer-support/ ./_sass/primer-support/
+cp -rf ./node_modules/primer-base/ ./_sass/primer-base/
+cp -rf ./node_modules/primer-layout/ ./_sass/primer-layout/
+cp -rf ./node_modules/primer-utilities/ ./_sass/primer-utilities/
+cp -rf ./node_modules/primer-alerts/ ./_sass/primer-alerts/
+
+git add ./_sass/
+git commit -m 'Just the Docs build packaging'
+
+echo "Packaging gem... \n"
+gem build just-the-docs.gemspec
+
+echo "Cleaning up... \n"
+rm -rf ./_sass/primer-support/
+rm -rf ./_sass/primer-base/
+rm -rf ./_sass/primer-layout/
+rm -rf ./_sass/primer-utilities/
+rm -rf ./_sass/primer-alerts/
+git add ./_sass/
+git commit -m 'Just the Docs build packaging cleanup'
+git add *.gem
+git commit -m 'Bump just-the-docs gem package'
