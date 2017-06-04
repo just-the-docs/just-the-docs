@@ -8,10 +8,9 @@
   @include mq(md) {
     position: relative;
     z-index: 99;
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 0;
-    padding-bottom: 0;
+    display: block;
+    padding-top: $sp-1;
+    padding-bottom: $gutter-spacing / 2;
   }
 }
 
@@ -20,22 +19,17 @@
 
   &.active {
     position: absolute;
-    top: $sp-10;
-    right: $gutter-spacing;
+    top: $sp-1;
     z-index: 100;
     display: block;
     width: 300px;
-    margin-top: $sp-2;
+    margin-top: $gutter-spacing;
     background: $white;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 4px 14px rgba(0, 0, 0, 0.05);
   }
 }
 
 .search-input-wrap {
-  position: absolute;
-  top: $sp-7;
-  right: $gutter-spacing;
-  z-index: 99;
   display: flex;
   background-color: $white;
 }
@@ -46,14 +40,13 @@
   padding-bottom: $sp-1;
   border-top: 0;
   border-right: 0;
-  border-bottom: $border $border-color;
+  border-bottom: 0;
   border-left: 0;
   order: 2;
 
   &:focus {
-    border-bottom: $border $grey-lt-300;
     outline: 0;
-    box-shadow: 0;
+    box-shadow: none;
 
     + .search-icon {
       fill: $purple-000;
@@ -70,6 +63,7 @@
 
 .search-results-list {
   padding-left: 0;
+  margin-top: $sp-1;
   margin-bottom: $sp-1;
   list-style: none;
   @include fs-3;

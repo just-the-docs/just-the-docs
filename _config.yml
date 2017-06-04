@@ -25,3 +25,11 @@ sass:
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "Gemfile", "Gemfile.lock", "package.json", "LICENSE.txt"]
+
+aux_links:
+  GitHub:
+    - "//github.com/pmarsceill/just-the-docs"
+  "Support link":
+    - "//google.com/turds"
+  "Another link":
+    - "//yahoo.com"

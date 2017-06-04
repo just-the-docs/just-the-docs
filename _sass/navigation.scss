@@ -105,13 +105,8 @@
 
 .breadcrumb-nav-list {
   padding-left: 0;
-  margin-top: $sp-3;
   margin-bottom: $sp-3;
   list-style: none;
-
-  @include mq(md) {
-    margin-bottom: $sp-5;
-  }
 }
 
 .breadcrumb-nav-list-item {

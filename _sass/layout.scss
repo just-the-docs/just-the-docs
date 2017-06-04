@@ -53,8 +53,7 @@
   }
 }
 
-.main-content,
-.search {
+.main-content {
   padding-top: $gutter-spacing-sm;
   @include container;
 
@@ -70,6 +69,17 @@
   @include mq(lg) {
     padding-left: $gutter-spacing;
     margin-left: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+  }
+}
+
+.page-header {
+  border-bottom: $border $border-color;
+
+  @include mq(md) {
+    .main-content {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 

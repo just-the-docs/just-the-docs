@@ -30,7 +30,7 @@ function toggleNav(){
 function initSearch() {
   var index = lunr(function () {
     this.ref('id');
-    this.field('title', { boost: 20 });
+    this.field('title');
     this.field('content');
     this.field('url');
   });

@@ -62,7 +62,8 @@ GitHub flavored markdown does not support the `button` element, so you'll have t
 
 ### Button size
 
-Wrap the button in container that uses the [font-size utility classes]({{ site.baseurl }}{% link docs/utilities/utilities.md %}#typography) to scale buttons:
+Wrap the button in container that uses the [font-size utility classes]({{
+site.baseurl }}{% link docs/utilities/typography.md %}) to scale buttons:
 
 <div class="code-example" markdown="1">
 

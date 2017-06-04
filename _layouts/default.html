@@ -15,24 +15,34 @@
       </div>
     </div>
     <div class="main-content-wrap">
-      <div class="search">
-        <div class="search-input-wrap">
-          <input type="text" class="js-search-input search-input fs-2" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
-          <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+      <div class="page-header">
+        <div class="main-content pb-0">
+          <div class="search">
+            <div class="search-input-wrap">
+              <input type="text" class="js-search-input search-input fs-2" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
+              <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+            </div>
+            <div class="js-search-results search-results-wrap"></div>
+          </div>
+          {% if site.aux_links != nil %}
+            <ul class="list-style-none text-small">
+              {% for link in site.aux_links %}
+                <li class="d-inline-block{% unless forloop.last %} mr-2{% endunless %}"><a href="{{ link.last }}">{{ link.first }}</a></li>
+              {% endfor %}
+            </ul>
+          {% endif %}
         </div>
-        <div class="js-search-results search-results-wrap"></div>
       </div>
-      <div class="main-content {% if page.url == '/' %}mt-2 mt-md-10{% endif %}">
+      <div class="main-content">
         {% unless page.url == "/" %}
-        <nav class="breadcrumb-nav">
-          <ol class="breadcrumb-nav-list">
-            <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}">Home</a></li>
-            {% if page.parent != nil and page.parent != page.title %}
-            <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}/{{ page.parent | slugify }}">{{ page.parent }}</a></li>
-            {% endif %}
-            <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
-          </ol>
-        </nav>
+          {% if page.parent != nil and page.parent != page.title %}
+            <nav class="breadcrumb-nav">
+              <ol class="breadcrumb-nav-list">
+                <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}/{{ page.parent | slugify }}">{{ page.parent }}</a></li>
+                <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
+              </ol>
+            </nav>
+          {% endif %}
         {% endunless %}
         <div class="page-content">
           {{ content }}
