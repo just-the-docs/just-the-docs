@@ -1,4 +1,4 @@
-,nit do
+task :init do
   touch search-data.json
 
   File.open('search-data.json', 'w') do |f|
@@ -13,9 +13,6 @@
     "url": "{{ page.url | xml_escape }}"
   }{% if forloop.last %}{% else %},
   {% endif %}{% endfor %}
-}
-
+}'
   end
-end'
-
-  end
+end
