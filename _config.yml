@@ -24,7 +24,7 @@ sass:
     - node_modules/
 
 permalink: pretty
-exclude: ["node_modules/", "*.gemspec", "Gemfile", "Gemfile.lock", "package.json", "LICENSE.txt"]
+exclude: ["node_modules/", "*.gemspec", "Gemfile", "Gemfile.lock", "package.json", "LICENSE.txt", "lib/"]
 
 aux_links:
   GitHub:
