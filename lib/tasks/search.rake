@@ -2,7 +2,7 @@ namespace :search do
   desc 'Generate the files needed for search functionality'
   task :init do
     puts 'Creating search data json file...'
-    touch search-data.json
+    touch 'search-data.json'
 
     File.open('search-data.json', 'w') do |f|
       f.puts '
