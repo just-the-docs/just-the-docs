@@ -12,7 +12,7 @@ namespace :search do
   {% for page in site.html_pages %}"{{ forloop.index0 }}": {
     "id": "{{ forloop.index0 }}",
     "title": "{{ page.title | xml_escape }}",
-    "content": 'content',
+    "content": '+content+',
     "url": "{{ page.url | xml_escape }}"
   }{% if forloop.last %}{% else %},
   {% endif %}{% endfor %}
