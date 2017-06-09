@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|bin|lib|_layouts|_includes|_sass|LICENSE|README)}i) }
-  spec.executibles   << 'just-the-docs'
+  spec.executables   << 'just-the-docs'
 
   spec.add_runtime_dependency "jekyll", "~> 3.3"
 
