@@ -3,7 +3,7 @@ namespace :search do
   task :init do
     puts 'Creating search data json file...'
     touch 'search-data.json'
-    content = %Q[{{ page.content | markdownify | strip_html | xml_escape | remove: 'Table of contents' | remove: page.title | strip_newlines | replace: '#{\}', ' ' }}]
+    content = %Q[{{ page.content | markdownify | strip_html | xml_escape | remove: 'Table of contents' | remove: page.title | strip_newlines | replace: '\', ' ' }}]
 
     File.open('search-data.json', 'w') do |f|
       f.puts '---
