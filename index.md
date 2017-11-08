@@ -6,7 +6,7 @@ nav_order: 1
 
 
 # Focus on writing good documentation
-{: .fs-9 .mb-md-8 :}
+{: .fs-9 }
 
 Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub pages.
 {: .fs-6 .fw-300 }
@@ -31,6 +31,10 @@ gem "just-the-docs"
 2. Add Just the Docs to your Jekyll site’s `config.yml`
 ```yaml
 theme: "just-the-docs"
+```
+3. _Optional:_ Initialize search data (creates `search-data.json`)
+```bash
+$ bundle exec just-the-docs rake search:init
 ```
 3. Run you local Jekyll server
 ```bash

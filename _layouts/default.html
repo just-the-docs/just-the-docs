@@ -25,9 +25,9 @@
             <div class="js-search-results search-results-wrap"></div>
           </div>
           {% if site.aux_links != nil %}
-            <ul class="list-style-none text-small">
+            <ul class="list-style-none text-small mt-2 js-aux-nav aux-nav">
               {% for link in site.aux_links %}
-                <li class="d-inline-block{% unless forloop.last %} mr-2{% endunless %}"><a href="{{ link.last }}">{{ link.first }}</a></li>
+                <li class="d-inline-block my-0{% unless forloop.last %} mr-2{% endunless %}"><a href="{{ link.last }}">{{ link.first }}</a></li>
               {% endfor %}
             </ul>
           {% endif %}

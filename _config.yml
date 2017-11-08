@@ -26,10 +26,7 @@ sass:
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "Gemfile", "Gemfile.lock", "package.json", "script/", "LICENSE.txt", "lib/", "bin/"]
 
+# Aux links for the upper right navigation
 aux_links:
-  GitHub:
+  "View it on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
-  "Support link":
-    - "//google.com/turds"
-  "Another link":
-    - "//yahoo.com"

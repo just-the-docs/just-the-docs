@@ -12,4 +12,31 @@ Just the docs uses [lunr.js](http://lunrjs.com) to add a client-side search inte
 - Page content
 - Page URL
 
+## Setup search
+
+Before you can use search, you must initialize the feature by running this
+rake command that comes with the `just-the-docs`
+
+```bash
+$ bundle exec just-the-docs rake search:init
+```
+
+This command creates the `search-data.json` file that Jekyll uses to create
+your search index. Alternatively, you can create the file manually in the
+root of your Jekyll site with this content:
+
+```{% raw %}
+---
+---
+{
+  {% for page in site.html_pages %}"{{ forloop.index0 }}": {
+    "id": "{{ forloop.index0 }}",
+    "title": "{{ page.title | xml_escape }}",
+    "content": "{{ page.content | markdownify | strip_html | xml_escape | remove: 'Table of contents' | remove: page.title | strip_newlines | replace: '\', ' '}}",
+    "url": "{{ page.url | xml_escape }}"
+  }{% if forloop.last %}{% else %},
+  {% endif %}{% endfor %}
+}{% endraw %}
+```
+
 You can modify this by modifying the forloop in `search-data.json` and the javascript in `just-the-docs.js` on line 30.

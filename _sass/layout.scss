@@ -73,12 +73,21 @@
 }
 
 .page-header {
-  border-bottom: $border $border-color;
+  background-color: $grey-lt-000;
 
   @include mq(md) {
-    .main-content {
+    background-color: $white;
+    border-bottom: $border $border-color;
+
+  }
+
+  .main-content {
+    padding-top: 0;
+
+    @include mq(md) {
       display: flex;
       justify-content: space-between;
+      padding-top: $sp-4;
     }
   }
 }

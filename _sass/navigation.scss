@@ -23,7 +23,7 @@
   list-style: none;
 
   @include mq(md) {
-    margin-top: $sp-8;
+    margin-top: $sp-10;
   }
 }
 
@@ -71,7 +71,8 @@
 
 // Small screen nav
 
-.main-nav {
+.main-nav,
+.aux-nav {
   display: none;
 
   &.nav-open {

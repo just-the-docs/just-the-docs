@@ -11,6 +11,7 @@ function removeEvent(el, type, handler) {
 
 function toggleNav(){
   const nav = document.querySelector('.js-main-nav');
+  const auxNav = document.querySelector('.js-aux-nav');
   const navTrigger = document.querySelector('.js-main-nav-trigger');
 
   addEvent(navTrigger, 'click', function(){
@@ -18,6 +19,7 @@ function toggleNav(){
     var textToggle = navTrigger.getAttribute('data-text-toggle');
 
     nav.classList.toggle('nav-open');
+    auxNav.classList.toggle('nav-open');
     navTrigger.classList.toggle('nav-open');
     navTrigger.innerText = textToggle;
     navTrigger.setAttribute('data-text-toggle', text);
@@ -30,7 +32,7 @@ function toggleNav(){
 function initSearch() {
   var index = lunr(function () {
     this.ref('id');
-    this.field('title');
+    this.field('title', { boost: 20 });
     this.field('content');
     this.field('url');
   });

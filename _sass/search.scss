@@ -9,6 +9,7 @@
     position: relative;
     z-index: 99;
     display: block;
+    flex-grow: 1;
     padding-top: $sp-1;
     padding-bottom: $gutter-spacing / 2;
   }
@@ -35,7 +36,7 @@
 }
 
 .search-input {
-  width: 200px;
+  width: 100%;
   padding-top: $sp-1;
   padding-bottom: $sp-1;
   border-top: 0;
