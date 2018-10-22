@@ -47,8 +47,9 @@ When the theme is released, only the files in `_layouts`, `_includes`, and `_sas
 
 - Open a [Pull Request](https://github.com/pmarsceill/just-the-docs/pulls)
 - Await code review
+- Bump the version number in `just-the-docs.gemspec`
 - Run `script/build` to package the gem
-- Run `script/publish` to publish the gem to Rubygems.org
+- Run `gem push just-the-docs-<version>.gem` to publish the gem to Rubygems.org
 
 ## License
 
