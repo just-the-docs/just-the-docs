@@ -10,7 +10,7 @@
       <div class="navigation main-nav js-main-nav">
         {% include nav.html %}
         <footer role="contentinfo" class="site-footer">
-          <p class="text-small text-grey-dk-000">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
+          <p class="text-small text-grey-dk-000 mb-0">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
         </footer>
       </div>
     </div>
@@ -25,7 +25,7 @@
             <div class="js-search-results search-results-wrap"></div>
           </div>
           {% if site.aux_links != nil %}
-            <ul class="list-style-none text-small mt-2 js-aux-nav aux-nav">
+            <ul class="list-style-none text-small mt-md-2 pb-4 pb-md-0 js-aux-nav aux-nav">
               {% for link in site.aux_links %}
                 <li class="d-inline-block my-0{% unless forloop.last %} mr-2{% endunless %}"><a href="{{ link.last }}">{{ link.first }}</a></li>
               {% endfor %}
