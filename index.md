@@ -17,7 +17,7 @@ Just the Docs gives your documentation a jumpstart with a responsive Jekyll them
 
 ## Getting started
 ### Dependancies
-Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/quickstart/) for more information. Just the Docs requires no special Jekyll plugins and can run on GitHub pages  Jekyll compiler.
+Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/quickstart/) for more information. Just the Docs requires no special Jekyll plugins and can run on GitHub Pages standard Jekyll compiler.
 
 ### Installation
 1. Install the Ruby Gem
