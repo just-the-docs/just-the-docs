@@ -28,7 +28,7 @@ Or install it yourself as:
 
 ## Usage
 
-View the documentation for more information.
+[View the documentation](https://pmarsceill.github.io/just-the-docs/) for usage information.
 
 ## Contributing
 
