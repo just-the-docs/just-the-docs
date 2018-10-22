@@ -1,8 +1,8 @@
-# just-the-docs
+# Just the Docs
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes` and your sass in `_sass`. To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+A nice looking, high customizable, responsive Jekyll theme for documention with built-in search. Easily hosted on GitHub pages.
 
-TODO: Delete this and the text above, and describe your gem
+![screenshot 2018-10-22 11 36 56](https://user-images.githubusercontent.com/896475/47302203-e4a8ca80-d5ee-11e8-916a-9bd30e95a40d.png)
 
 ## Installation
 
@@ -28,11 +28,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, and/or sass.
+View the documentation for more information.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/pmarsceill/just-the-docs. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
