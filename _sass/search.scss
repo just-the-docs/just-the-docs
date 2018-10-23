@@ -3,15 +3,27 @@
 //
 
 .search {
+  position: relative;
+  z-index: 99;
   display: none;
+  flex-grow: 1;
+  padding-bottom: $gutter-spacing / 2;
+  background-color: $white;
+  padding: $sp-2;
+  margin-bottom: $sp-3;
 
   @include mq(md) {
-    position: relative;
-    z-index: 99;
     display: block;
-    flex-grow: 1;
     padding-top: $sp-1;
-    padding-bottom: $gutter-spacing / 2;
+    padding-right: 0;
+    padding-bottom: $sp-4;
+    padding-left: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+  }
+
+  &.nav-open {
+    display: block;
   }
 }
 

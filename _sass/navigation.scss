@@ -20,6 +20,7 @@
 .navigation-list {
   padding: 0;
   margin-top: $sp-4;
+  margin-bottom: 0;
   list-style: none;
 
   @include mq(md) {
@@ -53,8 +54,12 @@
 }
 
 .navigation-list-item {
-  @include fs-3;
+  @include fs-4;
   margin: 0;
+
+  @include mq(md) {
+    @include fs-3;
+  }
 }
 
 .navigation-list-link {

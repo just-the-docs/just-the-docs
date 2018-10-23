@@ -93,7 +93,8 @@
 }
 
 .navigation,
-.site-title {
+.site-title,
+.site-footer {
 
   @include container;
 
@@ -114,8 +115,21 @@
   }
 }
 
-.site-footer {
+body {
+  position: relative;
+  padding-bottom: $sp-10;
+
   @include mq(md) {
-    margin-top: $sp-10;
+    position: static;
+    padding-bottom: 0;
+  }
+}
+
+.site-footer {
+  position: absolute;
+  bottom: $sp-3;
+
+  @include mq(md) {
+    right: 0;
   }
 }
