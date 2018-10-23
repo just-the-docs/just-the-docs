@@ -5,7 +5,7 @@
 
   <div class="page-wrap">
     <div class="side-bar">
-      <a href="{{ site.baseurl }}/" class="site-title fs-6 text-grey-dk-300 lh-tight">{{ site.title }}</a>
+      <a href="{{ site.baseurl }}" class="site-title fs-6 text-grey-dk-300 lh-tight">{{ site.title }}</a>
       <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
       <div class="navigation main-nav js-main-nav">
         {% include nav.html %}
@@ -38,7 +38,7 @@
           {% if page.parent != nil and page.parent != page.title %}
             <nav class="breadcrumb-nav">
               <ol class="breadcrumb-nav-list">
-                <li class="breadcrumb-nav-list-item"><a href="{{ site.url | absolute_url }}/{{ page.parent | slugify }}">{{ page.parent }}</a></li>
+                <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}{{ site.baseurl }}{{ page.parent | slugify }}">{{ page.parent }}</a></li>
                 <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
               </ol>
             </nav>
