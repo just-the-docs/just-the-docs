@@ -38,7 +38,7 @@
           {% if page.parent != nil and page.parent != page.title %}
             <nav class="breadcrumb-nav">
               <ol class="breadcrumb-nav-list">
-                <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}{{ site.baseurl }}{{ page.parent | slugify }}">{{ page.parent }}</a></li>
+                <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}{{ site.baseurl }}/{{ page.parent | slugify }}">{{ page.parent }}</a></li>
                 <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
               </ol>
             </nav>
