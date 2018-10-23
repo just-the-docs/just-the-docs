@@ -9,7 +9,7 @@
   &:hover,
   &.zeroclipboard-is-hover {
     color: $fg;
-     background-color: darken($bg, 4%);
+    background-color: darken($bg, 4%);
     background-image: linear-gradient((lighten($bg, 2%), darken($bg, 4%)));
   }
 
