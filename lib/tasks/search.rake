@@ -2,10 +2,12 @@ namespace :search do
   desc 'Generate the files needed for search functionality'
   task :init do
     puts 'Creating search data json file...'
-    touch 'search-data.json'
+    touch 'assets/js/search-data.json'
     content = %Q[{{ page.content | markdownify | strip_html | xml_escape | remove: 'Table of contents' | strip_newlines | replace: '\\', ' ' }}]
+    puts 'Done.'
+    puts 'Generating content...'
 
-    File.open('search-data.json', 'w') do |f|
+    File.open('assets/js/search-data.json', 'w') do |f|
       f.puts '---
 ---
 {
@@ -18,5 +20,6 @@ namespace :search do
   {% endif %}{% endfor %}
 }'
     end
+    puts 'Done.'
   end
 end
