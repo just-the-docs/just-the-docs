@@ -11,10 +11,11 @@
 
   @include mq(md) {
     position: absolute;
-    top: $sp-4;
+    top: 0;
     right: 0;
+    height: 60px;
+    padding-top: $sp-4;
     z-index: 101;
-    padding-bottom: $sp-4;
     box-shadow: inset 0 -1px 0 $border-color;
   }
 }
