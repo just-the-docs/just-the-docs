@@ -2,7 +2,8 @@
 
 A nice looking, high customizable, responsive Jekyll theme for documention with built-in search. Easily hosted on GitHub pages.
 
-![screenshot 2018-10-22 11 36 56](https://user-images.githubusercontent.com/896475/47302203-e4a8ca80-d5ee-11e8-916a-9bd30e95a40d.png)
+![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
+
 
 ## Installation
 
