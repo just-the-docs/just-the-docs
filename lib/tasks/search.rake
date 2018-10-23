@@ -4,7 +4,7 @@ namespace :search do
     puts 'Creating search data json file...'
     touch 'assets/js/search-data.json'
     content = %Q[{{ page.content | markdownify | strip_html | xml_escape | remove: 'Table of contents' | strip_newlines | replace: '\\', ' ' }}]
-
+    puts 'Done.'
     puts 'Generating content...'
 
     File.open('assets/js/search-data.json', 'w') do |f|
