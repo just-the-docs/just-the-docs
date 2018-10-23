@@ -28,5 +28,5 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 
 # Aux links for the upper right navigation
 aux_links:
-  "View it on GitHub":
+  "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
