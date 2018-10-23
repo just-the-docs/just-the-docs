@@ -35,14 +35,29 @@ function initSearch() {
   var index = lunr(function () {
     this.ref('id');
     this.field('title', { boost: 20 });
-    this.field('content');
+    this.field('content', { boost: 10 });
     this.field('url');
   });
 
   // Get the generated search_data.json file so lunr.js can search it locally.
 
+  sc = document.getElementsByTagName("script");
+  source = '';
+
+  for(idx = 0; idx < sc.length; idx++)
+  {
+    s = sc.item(idx);
+
+    if(s.src && s.src.match(/just-the-docs\.js$/))
+    { source = s.src; }
+  }
+
+  jsPath = source.replace('just-the-docs.js', '');
+
+  jsonPath = jsPath + '/search-data.json';
+
   var request = new XMLHttpRequest();
-  request.open('GET', '/search-data.json', true);
+  request.open('GET', jsonPath, true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
@@ -103,11 +118,12 @@ function initSearch() {
             var resultsLink = document.createElement('a');
             var resultsUrlDesc = document.createElement('span');
             var resultsUrl = store[results[i].ref].url;
+            var resultsRelUrl = store[results[i].ref].relUrl;
             var resultsTitle = store[results[i].ref].title;
 
-            resultsLink.setAttribute('href', store[results[i].ref].url);
+            resultsLink.setAttribute('href', resultsUrl);
             resultsLink.innerText = resultsTitle;
-            resultsUrlDesc.innerText = resultsUrl;
+            resultsUrlDesc.innerText = resultsRelUrl;
 
             resultsList.classList.add('search-results-list');
             resultsListItem.classList.add('search-results-list-item');
