@@ -4,9 +4,7 @@
 
 .site-title {
   display: block;
-  flex-grow: 1;
-  flex-shrink: 1;
-  flex-basis: auto;
+  flex: 1 1 auto;
   background-color: $grey-lt-000;
 
   @include mq(md) {
@@ -27,7 +25,7 @@
   list-style: none;
 
   @include mq(md) {
-    margin-top: $sp-10;
+    margin-top: 0;
   }
 }
 
@@ -91,15 +89,6 @@
   }
 }
 
-.side-bar {
-  display: flex;
-  flex-wrap: wrap;
-
-  @include mq(md) {
-    display: block;
-    overflow-y: auto;
-  }
-}
 
 .navigation-list-toggle {
   position: absolute;
