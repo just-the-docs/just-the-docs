@@ -23,7 +23,7 @@ $ bundle exec just-the-docs rake search:init
 
 This command creates the `search-data.json` file that Jekyll uses to create
 your search index. Alternatively, you can create the file manually in the
-root of your Jekyll site with this content:
+`assets/js/` of your Jekyll site with this content:
 
 ```{% raw %}
 ---
@@ -39,4 +39,4 @@ root of your Jekyll site with this content:
 }{% endraw %}
 ```
 
-You can modify this by modifying the forloop in `search-data.json` and the javascript in `just-the-docs.js` on line 30.
+_Note: If you don't run this rake command or create this file manually, search will not work (or it will use the search index data from this docs site, not your site's content)._
