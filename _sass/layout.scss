@@ -17,13 +17,15 @@
 
 .side-bar {
   z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
   background-color: $grey-lt-000;
 
   @include mq(md) {
+    flex-wrap: nowrap;
     position: absolute;
-    display: flex;
     width: $nav-width + 16px;
     height: 100%;
     padding-top: $gutter-spacing * 2;
@@ -107,11 +109,9 @@
 
 .navigation {
   @include mq(md) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
     padding-top: $sp-8;
+    overflow-y: auto;
+    flex: 1 1 auto;
   }
 }
 
@@ -127,9 +127,14 @@ body {
 
 .site-footer {
   position: absolute;
-  bottom: $sp-3;
+  bottom: 0;
+  padding-top: $sp-4;
+  padding-bottom: $sp-4;
 
   @include mq(md) {
-    right: 0;
+    position: static;
+    align-self: flex-end;
+    justify-self: end;
+    background-color: $grey-lt-000;
   }
 }
