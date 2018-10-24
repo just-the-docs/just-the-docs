@@ -5,8 +5,7 @@
 
 .page-content {
   ul,
-  ol,
-  dl {
+  ol {
     padding-left: 1.5em;
   }
 
@@ -63,5 +62,28 @@
 
   h1:first-of-type {
     margin-top: 0.5em;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+  }
+
+  dt,
+  dd {
+    margin: 0.25em 0;
+  }
+
+  dt {
+    text-align: right;
+
+    &::after {
+      content: ":";
+    }
+  }
+
+  dd {
+    margin-left: 1em;
+    font-weight: 500;
   }
 }
