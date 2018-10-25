@@ -10,5 +10,8 @@
     "stylelint": "^7.9.0",
     "stylelint-config-primer": "^1.4.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "test": "stylelint '**/*.scss'"
+  }
 }
