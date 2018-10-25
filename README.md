@@ -1,6 +1,6 @@
 # Just the Docs
 
-A nice looking, high customizable, responsive Jekyll theme for documention with built-in search. Easily hosted on GitHub pages.
+A nice looking, high customizable, responsive Jekyll theme for documentation with built-in search. Easily hosted on GitHub pages.
 
 ![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
 
