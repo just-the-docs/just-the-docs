@@ -3,6 +3,7 @@ rvm:
   - 2.3.0
 
 install:
+  - npm install
   - bundle install
 
 script:
