@@ -6,4 +6,5 @@ install:
   - bundle install
 
 script:
+  - npm run test
   - bundle exec jekyll build
