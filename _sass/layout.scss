@@ -115,6 +115,7 @@
   }
 }
 
+// stylelint-disable selector-no-type
 body {
   position: relative;
   padding-bottom: $sp-10;
@@ -124,6 +125,7 @@ body {
     padding-bottom: 0;
   }
 }
+// stylelint-enable selector-no-type
 
 .site-footer {
   position: absolute;

@@ -12,9 +12,9 @@
   margin-right: $sp-1;
   margin-left: $sp-1;
   color: $white;
+  text-transform: uppercase;
   vertical-align: middle;
   background-color: $blue-100;
-  text-transform: uppercase;
   @include fs-2;
 }
 
