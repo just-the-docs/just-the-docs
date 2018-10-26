@@ -1,4 +1,4 @@
-# Just the Docs [![Gem Version](https://badge.fury.io/rb/just-the-docs.svg)](https://badge.fury.io/rb/just-the-docs)
+# Just the Docs [![Gem Version](https://badge.fury.io/rb/just-the-docs.svg)](https://badge.fury.io/rb/just-the-docs) [![Build Status](https://travis-ci.com/pmarsceill/just-the-docs.svg?branch=master)](https://travis-ci.com/pmarsceill/just-the-docs)
 
 A nice looking, high customizable, responsive Jekyll theme for documentation with built-in search. Easily hosted on GitHub pages.
 
