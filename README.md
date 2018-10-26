@@ -1,9 +1,15 @@
-# Just the Docs [![Gem Version](https://badge.fury.io/rb/just-the-docs.svg)](https://badge.fury.io/rb/just-the-docs) [![Build Status](https://travis-ci.com/pmarsceill/just-the-docs.svg?branch=master)](https://travis-ci.com/pmarsceill/just-the-docs)
+<p align="right">
+    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://travis-ci.com/pmarsceill/just-the-docs"><img src="https://travis-ci.com/pmarsceill/just-the-docs.svg?branch=master" alt="Build status"></a>
+</p>
+<br><br>
+<p align="center">
+    <h1 align="center">Just the Docs</h1>
+    <p align="center">A modern, high customizable, responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub pages with few dependencies.</p>
+    <br><br><br>
+</p>
 
-A nice looking, high customizable, responsive Jekyll theme for documentation with built-in search. Easily hosted on GitHub pages.
 
 ![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
-
 
 ## Installation
 
@@ -41,6 +47,13 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/pmarsc
 - Ensure all CI tests pass
 - Await code review
 - Bump the version number in `just-the-docs.gemspec` and `package.json` according to [semantic versioning](https://semver.org/).
+
+### Design and development principles of this theme:
+
+1. As few dependencies as possible
+2. No build script needed
+3. First class mobile experience
+4. Make the content shine
 
 ## Development
 
