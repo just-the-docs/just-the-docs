@@ -1,8 +1,0 @@
-/*
-expect:
-object-fit: 1
-*/
-
-div {
-  object-fit: contain;
-}

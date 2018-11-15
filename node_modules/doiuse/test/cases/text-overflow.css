@@ -1,7 +1,0 @@
-/*
-expect:
-text-overflow: 1
-*/
-h1 {
-  text-overflow: ellipsis;
-}
