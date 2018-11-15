@@ -1,7 +1,7 @@
 {
   "ignoreFiles" : [
     "assets/css/just-the-docs.scss",
-    "_sass/normalize.scss/normalize.scss"
+    "_sass/normalize.scss/*"
   ],
   "extends": [
     "stylelint-config-primer"
