@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "just-the-docs"
-  spec.version       = "0.1.5"
+  spec.version       = "1.0.0"
   spec.authors       = ["Patrick Marsceill"]
   spec.email         = ["patrick.marsceill@gmail.com"]
 
@@ -13,8 +13,8 @@ Gem::Specification.new do |spec|
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r{^(assets|bin|_layouts|_includes|lib|Rakefile|_sass|LICENSE|README)}i) }
   spec.executables   << 'just-the-docs'
 
-  spec.add_runtime_dependency "jekyll", "~> 3.3"
-  spec.add_runtime_dependency "rake", "~> 10.0"
+  spec.add_runtime_dependency "jekyll", "~> 3.8.5"
+  spec.add_runtime_dependency "rake", "~> 12.3.1"
 
-  spec.add_development_dependency "bundler", "~> 1.12"
+  spec.add_development_dependency "bundler", "~> 1.17.1"
 end
