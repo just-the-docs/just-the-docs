@@ -30,3 +30,5 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 aux_links:
   "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
+
+color_scheme: "dark"

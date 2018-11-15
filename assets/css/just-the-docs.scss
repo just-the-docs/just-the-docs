@@ -4,7 +4,7 @@
 ---
 
 //
-// Import dependancies
+// Import external dependencies
 //
 
 @import "./normalize.scss/normalize.scss";
@@ -16,8 +16,13 @@
 // Support
 @import "./support/support";
 
-// Custom overrides
-@import "./custom/custom";
+//
+// Import custom color scheme scss
+//
+
+{% if site.color_scheme == "dark" %}
+@import "./color_schemes/dark.scss";
+{% endif %}
 
 // Modules
 @import "./base";
@@ -31,3 +36,8 @@
 @import "./tables";
 @import "./code";
 @import "./utilities/utilities";
+
+//
+// Import custom overrides
+//
+@import "./custom/custom";

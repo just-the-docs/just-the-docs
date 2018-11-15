@@ -75,7 +75,7 @@
 }
 
 .btn-outline {
-  color: $blue-100;
+  color: $link-color;
   background: transparent;
   box-shadow: inset 0 0 0 2px $grey-lt-300;
 
@@ -99,6 +99,10 @@
   &.selected:focus {
     box-shadow: inset 0 0 0 2px $grey-dk-100;
   }
+}
+
+.btn-primary {
+  @include btn-color($white, $btn-primary-color);
 }
 
 .btn-purple {
