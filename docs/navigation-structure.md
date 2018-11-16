@@ -35,6 +35,18 @@ nav_order: 4
 ---
 ```
 
+### Excluding pages
+
+For specific pages that you do not wish to include in the main navigation, e.g. a 404 page. Use the `nav_exclude: true` parameter in the YAML front matter for that page.
+
+```yaml
+---
+layout: default
+title: 404
+nav_exclude: true
+---
+```
+
 ### Pages with children
 
 Sometimes you will want to create a page with many children (a section). To accomplish this you need to a few things. First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives is an organization like:
