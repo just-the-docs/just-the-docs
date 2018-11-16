@@ -1,6 +1,0 @@
-/*
-expect:
-pointer-events: 1
-*/
-
-div .label { pointer-events: none; }

@@ -18,11 +18,6 @@ description: A Jekyll theme for documentation
 baseurl: "/just-the-docs/" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-sass:
-  # Load dependancies
-  load_paths:
-    - node_modules/
-
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
 

@@ -1,6 +1,0 @@
-/*
-expect:
-word-break: 1
-*/
-
-p { word-break: break-all; }
