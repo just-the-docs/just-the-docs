@@ -12,7 +12,9 @@ Just the docs uses [lunr.js](http://lunrjs.com) to add a client-side search inte
 - Page content
 - Page URL
 
-## Setup search
+## Set up search
+
+### 1. Generate search index
 
 Before you can use search, you must initialize the feature by running this
 rake command that comes with the `just-the-docs`
@@ -41,3 +43,12 @@ your search index. Alternatively, you can create the file manually in the
 ```
 
 _Note: If you don't run this rake command or create this file manually, search will not work (or it will use the search index data from this docs site, not your site's content)._
+
+### 2. Enable search in configuration
+
+In your site's `_config.yml` enable search:
+
+```yml
+# Enable or disable the site search
+search_enabled: true
+```
