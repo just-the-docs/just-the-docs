@@ -79,8 +79,6 @@
 
   @include mq(md) {
     background-color: $white;
-    border-bottom: $border $border-color;
-
   }
 
   .main-content {
@@ -88,8 +86,11 @@
 
     @include mq(md) {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
+      height: 60px;
       padding-top: $sp-4;
+      padding-bottom: $sp-4;
+      border-bottom: $border $border-color;
     }
   }
 }

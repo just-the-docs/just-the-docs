@@ -155,7 +155,9 @@ function initSearch() {
 
 function ready(){
   toggleNav();
-  initSearch();
+  if (typeof lunr !== 'undefined') {
+    initSearch();
+  }
 }
 
 // in case the document is already rendered

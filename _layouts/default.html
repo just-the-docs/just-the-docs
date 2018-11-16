@@ -16,7 +16,8 @@
     </div>
     <div class="main-content-wrap">
       <div class="page-header">
-        <div class="main-content pb-0">
+        <div class="main-content">
+          {% if site.search_enabled != nil %}
           <div class="search js-search">
             <div class="search-input-wrap">
               <input type="text" class="js-search-input search-input" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
@@ -24,8 +25,9 @@
             </div>
             <div class="js-search-results search-results-wrap"></div>
           </div>
+          {% endif %}
           {% if site.aux_links != nil %}
-            <ul class="list-style-none text-small mt-md-2 pb-4 pb-md-0 js-aux-nav aux-nav">
+            <ul class="list-style-none text-small mt-md-1 mb-md-1 pb-4 pb-md-0 js-aux-nav aux-nav">
               {% for link in site.aux_links %}
                 <li class="d-inline-block my-0{% unless forloop.last %} mr-2{% endunless %}"><a href="{{ link.last }}">{{ link.first }}</a></li>
               {% endfor %}

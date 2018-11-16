@@ -94,6 +94,12 @@ end
   - level 2 item
 - level 1 item
 
+### And a task list
+
+- [ ] Hello, this is a TODO item
+- [ ] Hello, this is another TODO item
+- [x] Goodbye, this item is done
+
 ### Small image
 
 ![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)

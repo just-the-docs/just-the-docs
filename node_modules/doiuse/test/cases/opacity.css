@@ -1,8 +1,0 @@
-/*
-expect:
-css-opacity: 1
-*/
-
-.panel {
-  opacity: .5;
-}
