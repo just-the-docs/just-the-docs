@@ -15,7 +15,7 @@
     z-index: 101;
     height: 60px;
     padding-top: $sp-4;
-    box-shadow: inset 0 -1px 0 $border-color;
+    border-bottom: $border $border-color;
   }
 }
 

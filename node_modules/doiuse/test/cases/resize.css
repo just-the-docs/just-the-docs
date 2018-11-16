@@ -1,8 +1,0 @@
-/*
-expect:
-css-resize: 1
-*/
-
-textarea {
-  resize: both;
-}

@@ -1,17 +1,8 @@
 #!/bin/sh
 
-echo "Moving SCSS dependancies into ./assets/css... \n"
-cp -rf ./node_modules/normalize.scss/ ./_sass/normalize.scss/
-
-git add ./_sass/
-git commit -m 'Just the Docs build packaging'
-
 echo "Packaging gem... \n"
 gem build just-the-docs.gemspec
 
 echo "Cleaning up... \n"
-rm -rf ./_sass/normalize.scss/
-git add ./_sass/
-git commit -m 'Just the Docs build packaging cleanup'
 git add *.gem
 git commit -m 'Bump just-the-docs gem package'
