@@ -20,7 +20,14 @@ Just the Docs gives your documentation a jumpstart with a responsive Jekyll them
 ### Dependencies
 Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/quickstart/) for more information. Just the Docs requires no special Jekyll plugins and can run on GitHub Pages standard Jekyll compiler.
 
-### Installation
+### Quick start: Use as a GitHub Pages remote theme
+1. Add Just the Docs to your Jekyll site's `_config.yml` as a remote theme
+```yaml
+remote_theme: pmarsceill/just-the-docs
+```
+<small>You must have GitHub pages enabled on your repo, one or more markdown files, and a `_config.yml` file. [See an example repository](https://github.com/pmarsceill/jtd-remote)</small>
+
+### Local installation: Use the gem-based theme
 1. Install the Ruby Gem
 ```bash
 $ gem install just-the-docs
@@ -29,7 +36,7 @@ $ gem install just-the-docs
 # .. or add it to your your Jekyll site’s Gemfile
 gem "just-the-docs"
 ```
-2. Add Just the Docs to your Jekyll site’s `config.yml`
+2. Add Just the Docs to your Jekyll site’s `_config.yml`
 ```yaml
 theme: "just-the-docs"
 ```
@@ -46,6 +53,10 @@ $ jekyll serve
 $ bundle exec jekyll serve
 ```
 4. Point your web browser to [http://localhost:4000](http://localhost:4000)
+
+### Configure Just the Docs
+- [See configuration options]({{ site.baseurl }}{% link docs/configuration.md %})
+
 
 ---
 
