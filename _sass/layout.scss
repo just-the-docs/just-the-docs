@@ -79,7 +79,6 @@
 
   @include mq(md) {
     background-color: $body-background-color;
-    border-bottom: $border $border-color;
   }
 
   .main-content {
