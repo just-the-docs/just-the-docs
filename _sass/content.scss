@@ -56,6 +56,22 @@
     }
   }
 
+  .task-list {
+    padding-left: 0;
+  }
+
+  .task-list-item {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+    }
+  }
+
+  .task-list-item-checkbox {
+    margin-right: 0.6em;
+  }
+
   hr + * {
     margin-top: 0;
   }
