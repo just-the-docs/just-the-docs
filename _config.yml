@@ -21,6 +21,9 @@ baseurl: "/just-the-docs/" # the subpath of your site, e.g. /blog
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
 
+# Enable or disable the site search
+search_enabled: true
+
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":
