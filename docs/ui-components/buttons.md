@@ -21,7 +21,6 @@ nav_order: 2
 ### Links that look like buttons
 
 <div class="code-example" markdown="1">
-
 [Link button](http://example.com/){: .btn }
 
 [Link button](http://example.com/){: .btn .btn-purple }
@@ -32,7 +31,6 @@ nav_order: 2
 
 </div>
 ```markdown
-
 [Link button](http://example.com/){: .btn }
 
 [Link button](http://example.com/){: .btn .btn-purple }
