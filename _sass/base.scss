@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: $white;
+  background: $link-color;
+}
+
 html {
   @include fs-4;
 }

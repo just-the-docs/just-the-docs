@@ -39,7 +39,7 @@
     display: block;
     width: 300px;
     margin-top: $gutter-spacing;
-    background: $white;
+    background: lighten($body-background-color, 1%);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 4px 14px rgba(0, 0, 0, 0.05);
   }
 }
@@ -65,7 +65,7 @@
     box-shadow: none;
 
     + .search-icon {
-      fill: $purple-000;
+      fill: $link-color;
     }
   }
 
@@ -108,6 +108,7 @@
   padding-left: $sp-3;
 
   &:hover {
-    background-color: $grey-lt-000;
+    color: $body-heading-color;
+    background-color: darken($body-background-color, 2%);
   }
 }
