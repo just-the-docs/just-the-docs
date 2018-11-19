@@ -6,6 +6,7 @@ env:
 
 install:
   - npm install
+  - gem install bundler --version '>=1.17.1'
   - bundle install
 
 script:
