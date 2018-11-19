@@ -17,13 +17,13 @@ nav_order: 5
 
 ## Main navigation
 
-The main navigation for your Just the Docs site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (parent pages with children).
+The main navigation for your Just the Docs site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
 
-### Top level pages
+By default, all pages will appear as top level pages in the main nav unless a parent page is defined (see [Pages with Children](#pages-with-children)).
 
-By default, all pages will appear as top level pages in the main nav.
+---
 
-### Ordering pages
+## Ordering pages
 
 To specify a page order, use the `nav_order` variable in your pages' YAML front matter.
 
@@ -37,9 +37,11 @@ nav_order: 4
 ---
 ```
 
-### Excluding pages
+---
 
-For specific pages that you do not wish to include in the main navigation, e.g. a 404 page. Use the `nav_exclude: true` parameter in the YAML front matter for that page.
+## Excluding pages
+
+For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page. Use the `nav_exclude: true` parameter in the YAML front matter for that page.
 
 #### Example
 {: .no_toc }
@@ -51,9 +53,11 @@ nav_exclude: true
 ---
 ```
 
-### Pages with children
+---
 
-Sometimes you will want to create a page with many children (a section). To accomplish this you need to define a few things. First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives is an organization like:
+## Pages with children
+
+Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives is an organization like:
 
 ```
 +-- ..
@@ -69,7 +73,7 @@ Sometimes you will want to create a page with many children (a section). To acco
 |   |   +-- typography.md
 |   |
 |   |-- utilities
-|   |   |-- utilities.md (parent page)
+|   |   |-- utilities.md      (parent page)
 |   |   |-- color.md
 |   |   |-- layout.md
 |   |   |-- responsive-modifiers.md
@@ -84,7 +88,7 @@ Sometimes you will want to create a page with many children (a section). To acco
 
 On the parent pages, add 2 YAML front matter variables:
 -  `has_children: true` (tells us that this a parent page)
--  `permalink:` set this to the directories that the contains the pages
+-  `permalink:` set this to the site directories that the contains the pages
 
 #### Example
 {: .no_toc }
@@ -99,9 +103,10 @@ permalink: /docs/ui-components
 ---
 ```
 
-Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, has children and is ordered second in the main nav.
+Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, it has children and is ordered second in the main nav.
 
 ### Child pages
+{: .text-gamma }
 
 On child pages, simply set the `parent:` YAML front matter to whatever the parent's page title is and set a nav order (this number is now scoped within the section).
 
@@ -119,6 +124,7 @@ nav_order: 2
 The Buttons page appears a child of UI Components and appears second in the UI Components section.
 
 ### Children with children
+{: .text-gamma }
 
 Child pages can also have children (grand children). This is achieved by using a similar pattern on the child and grand child pages.
 
@@ -166,9 +172,19 @@ Would create the following navigation structure:
 
 ---
 
-## Breadcrumbs
+## Auxiliary Navigation
 
-Breadcrumbs are auto generated based on the parent/child structure and the directory structure for the site. In order for breadcrumbs to work correctly for pages children, the URL structure must be the slugified version of the parent page's title. For example, the page UI Components, must use the `/ui-components` directory to house its descendant pages.
+To add a auxiliary navigation item to your site (in the upper right on all pages), add it to the `aux_nav` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-nav) in your site's `_config.yml` file.
+
+#### Example
+{: .no_toc }
+
+```yml
+# Aux links for the upper right navigation
+aux_links:
+"Just the Docs on GitHub":
+    - "//github.com/pmarsceill/just-the-docs"
+```
 
 ---
 
