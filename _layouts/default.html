@@ -5,7 +5,7 @@
 
   <div class="page-wrap">
     <div class="side-bar">
-      <a href="{{ site.url }}{{ site.baseurl }}" class="site-title fs-6 text-grey-dk-300 lh-tight">{{ site.title }}</a>
+      <a href="{{ site.url }}{{ site.baseurl }}" class="site-title fs-6 lh-tight">{{ site.title }}</a>
       <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
       <div class="navigation main-nav js-main-nav">
         {% include nav.html %}
@@ -37,10 +37,15 @@
       </div>
       <div class="main-content">
         {% unless page.url == "/" %}
-          {% if page.parent != nil and page.parent != page.title %}
+          {% if page.parent %}
             <nav class="breadcrumb-nav">
               <ol class="breadcrumb-nav-list">
-                <li class="breadcrumb-nav-list-item"><a href="{{ site.url }}{{ site.baseurl }}/{{ page.parent | slugify }}">{{ page.parent }}</a></li>
+                {% if page.grand_parent %}
+                  <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
+                  <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
+                {% else %}
+                  <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
+                {% endif %}
                 <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
               </ol>
             </nav>

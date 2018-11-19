@@ -21,7 +21,7 @@
   flex-wrap: wrap;
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
-  background-color: $grey-lt-000;
+  background-color: $sidebar-color;
 
   @include mq(md) {
     flex-wrap: nowrap;
@@ -75,10 +75,10 @@
 }
 
 .page-header {
-  background-color: $grey-lt-000;
+  background-color: $sidebar-color;
 
   @include mq(md) {
-    background-color: $white;
+    background-color: $body-background-color;
   }
 
   .main-content {
@@ -138,6 +138,6 @@ body {
     position: static;
     align-self: flex-end;
     justify-self: end;
-    background-color: $grey-lt-000;
+    background-color: $sidebar-color;
   }
 }

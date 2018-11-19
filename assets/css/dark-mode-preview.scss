@@ -20,9 +20,7 @@
 // Import custom color scheme scss
 //
 
-{% if site.color_scheme == "dark" %}
 @import "./color_schemes/dark.scss";
-{% endif %}
 
 // Modules
 @import "./base";

@@ -25,7 +25,8 @@ td {
   padding-right: $sp-3;
   padding-bottom: $sp-2;
   padding-left: $sp-3;
-  border-bottom: $border $grey-lt-000;
+  background-color: lighten($body-background-color, 2%);
+  border-bottom: $border rgba($border-color, 0.5);
   border-left: $border $border-color;
 
   &:first-of-type {

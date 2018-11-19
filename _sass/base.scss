@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  color: $white;
+  background: $link-color;
+}
+
 html {
   @include fs-4;
 }
@@ -16,6 +21,7 @@ body {
   font-size: inherit;
   line-height: $body-line-height;
   color: $body-text-color;
+  background-color: $body-background-color;
 }
 
 p,
@@ -64,7 +70,7 @@ a {
 
 a:not([class]) {
   text-decoration: none;
-  background-image: linear-gradient($grey-lt-100 0%, $grey-lt-100 100%);
+  background-image: linear-gradient($border-color 0%, $border-color 100%);
   background-repeat: repeat-x;
   background-position: 0 100%;
   background-size: 1px 1px;
@@ -99,6 +105,6 @@ hr {
   height: 1px;
   padding: 0;
   margin: $sp-6 0;
-  background-color: $grey-lt-100;
+  background-color: $border-color;
   border: 0;
 }
