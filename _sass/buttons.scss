@@ -15,11 +15,11 @@
   font-size: inherit;
   font-weight: 500;
   line-height: 1.5;
-  color: $purple-200;
+  color: $link-color;
   text-decoration: none;
   vertical-align: baseline;
   cursor: pointer;
-  background-color: #f7f7f7;
+  background-color: $base-button-color;
   border-width: 0;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -38,7 +38,7 @@
 
   &:hover,
   &.zeroclipboard-is-hover {
-    color: $purple-300;
+    color: darken($link-color, 2%);
   }
 
   &:hover,
@@ -46,13 +46,13 @@
   &.zeroclipboard-is-hover,
   &.zeroclipboard-is-active {
     text-decoration: none;
-    background-color: #f4f4f4;
+    background-color: darken($base-button-color, 1%);
   }
 
   &:active,
   &.selected,
   &.zeroclipboard-is-active {
-    background-color: #ededed;
+    background-color: darken($base-button-color, 3%);
     background-image: none;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
   }
@@ -75,7 +75,7 @@
 }
 
 .btn-outline {
-  color: $blue-100;
+  color: $link-color;
   background: transparent;
   box-shadow: inset 0 0 0 2px $grey-lt-300;
 
@@ -83,7 +83,7 @@
   &:active,
   &.zeroclipboard-is-hover,
   &.zeroclipboard-is-active {
-    color: $grey-dk-100;
+    color: darken($link-color, 4%);
     text-decoration: none;
     background-color: transparent;
     box-shadow: inset 0 0 0 3px $grey-lt-300;
@@ -99,6 +99,10 @@
   &.selected:focus {
     box-shadow: inset 0 0 0 2px $grey-dk-100;
   }
+}
+
+.btn-primary {
+  @include btn-color($white, $btn-primary-color);
 }
 
 .btn-purple {

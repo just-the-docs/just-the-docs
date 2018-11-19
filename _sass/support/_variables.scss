@@ -17,6 +17,7 @@ $white: #fff !default;
 $grey-dk-000: #959396 !default;
 $grey-dk-100: #5c5962 !default;
 $grey-dk-200: #44434d !default;
+$grey-dk-250: #302d36 !default;
 $grey-dk-300: #27262b !default;
 
 $grey-lt-000: #f5f6fa !default;
@@ -49,9 +50,16 @@ $red-100: #f96e65 !default;
 $red-200: #e94c4c !default;
 $red-300: #dd2e2e !default;
 
+$body-background-color: $white !default;
+$sidebar-color: $grey-lt-000 !default;
+$code-background-color: $grey-lt-000 !default;
+
 $body-text-color: $grey-dk-100 !default;
 $body-heading-color: $grey-dk-300 !default;
+$nav-child-link-color: $grey-dk-100 !default;
 $link-color: $purple-000 !default;
+$btn-primary-color: $purple-100 !default;
+$base-button-color: #f7f7f7 !default;
 
 //
 // Media queries in pixels
