@@ -3,6 +3,7 @@ layout: default
 title: Layout
 nav_order: 2
 parent: Utilities
+has_children: true
 ---
 
 # Layout Utilities
