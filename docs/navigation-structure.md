@@ -53,7 +53,7 @@ nav_exclude: true
 
 ### Pages with children
 
-Sometimes you will want to create a page with many children (a section). To accomplish this you need to a few things. First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives is an organization like:
+Sometimes you will want to create a page with many children (a section). To accomplish this you need to define a few things. First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives is an organization like:
 
 ```
 +-- ..
@@ -82,10 +82,9 @@ Sometimes you will want to create a page with many children (a section). To acco
 +-- ..
 ```
 
-On the parent pages, add 3 YAML front matter variables:
+On the parent pages, add 2 YAML front matter variables:
 -  `has_children: true` (tells us that this a parent page)
--  `parent: ` set this to the title of the parent page (in this case, it's this page's title)
--  `permalink: ` set this to the directory that the contains the pages
+-  `permalink:` set this to the directories that the contains the pages
 
 #### Example
 {: .no_toc }
@@ -96,12 +95,11 @@ layout: default
 title: UI Components
 nav_order: 2
 has_children: true
-parent: UI Components
-permalink: /ui-components
+permalink: /docs/ui-components
 ---
 ```
 
-Here we're setting up the UI Components landing page that is available at `/ui-components`, has children and is ordered second in the main nav.
+Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, has children and is ordered second in the main nav.
 
 ### Child pages
 
@@ -119,6 +117,52 @@ nav_order: 2
 ```
 
 The Buttons page appears a child of UI Components and appears second in the UI Components section.
+
+### Children with children
+
+Child pages can also have children (grand children). This is achieved by using a similar pattern on the child and grand child pages.
+
+1. Add the `has_children` attribute to the child
+1. Add the `parent` and `grand_parent` attribute to the grandchild
+
+#### Example
+{: .no_toc }
+
+```yaml
+---
+layout: default
+title: Buttons
+parent: UI Components
+nav_order: 2
+has_children: true
+---
+```
+
+```yaml
+---
+layout: default
+title: Buttons Child Page
+parent: Buttons
+grand_parent: UI Components
+nav_order: 1
+---
+```
+
+Would create the following navigation structure:
+
+```
++-- ..
+|
+|-- UI Components
+|   |-- ..
+|   |
+|   |-- Buttons
+|   |   |-- Button Child Page
+|   |
+|   |-- ..
+|
++-- ..
+```
 
 ---
 
