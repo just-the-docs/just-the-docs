@@ -45,7 +45,7 @@ var fun = function lang(l) {
 ```
 </div>
 
-```markdown
+{% highlight markdown %}
 ```js
 // Javascript code with syntax highlighting.
 var fun = function lang(l) {
@@ -53,7 +53,7 @@ var fun = function lang(l) {
   return true;
 }
 ```
-```
+{% endhighlight %}
 
 ---
 
@@ -73,6 +73,7 @@ To demonstrate front end code, sometimes it useful to show a rendered example of
 ```
 
 </div>
+
 {% highlight markdown %}
 <div class="code-example" markdown="1">
 
