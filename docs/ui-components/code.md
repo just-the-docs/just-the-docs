@@ -45,6 +45,7 @@ var fun = function lang(l) {
 ```
 </div>
 
+<div>
 {% highlight markdown %}
 ```js
 // Javascript code with syntax highlighting.
@@ -54,6 +55,7 @@ var fun = function lang(l) {
 }
 ```
 {% endhighlight %}
+</div>
 
 ---
 
