@@ -20,7 +20,7 @@ search_enabled: true
 ```yml
 # Aux links for the upper right navigation
 aux_links:
-"Just the Docs on GitHub":
+    "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
 ```
 
