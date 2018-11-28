@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Navigation Structure
+title: Corporate Design
 nav_order: 5
 ---
 
