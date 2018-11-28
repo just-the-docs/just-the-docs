@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Customization
+title: Channels
 nav_order: 6
 ---
 
-# Customization
+# Channels
 {:.no_toc}
 
 ## Table of contents
