@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "_sass/vendor/normalize.scss/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
