@@ -24,10 +24,6 @@
 @import "./color_schemes/dark.scss";
 {% endif %}
 
-{% if site.color_scheme == "orange" %}
-@import "./color_schemes/orange.scss";
-{% endif %}
-
 // Modules
 @import "./base";
 @import "./layout";
