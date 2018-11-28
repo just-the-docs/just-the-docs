@@ -1,4 +1,4 @@
-title: smile.direct Brand Guidelines
+title: smile.direct
 description: New brand guidelines for smile.direct
 baseurl: "/" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -15,4 +15,4 @@ aux_links:
     - "//www.smile-direct.ch"
 
 # Color scheme currently only supports "dark" or nil (default)
-color_scheme: nil
+color_scheme: orange
