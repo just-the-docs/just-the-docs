@@ -14,6 +14,8 @@
 
 ## Installation
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pmarsceill/just-the-docs.svg)](https://greenkeeper.io/)
+
 Add this line to your Jekyll site's Gemfile:
 
 ```ruby
