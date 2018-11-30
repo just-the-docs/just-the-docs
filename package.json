@@ -7,7 +7,7 @@
   "bugs": "https://github.com/pmarsceill/just-the-docs/issues",
   "devDependencies": {
     "stylelint": "^9.9.0",
-    "stylelint-config-primer": "^3.0.0"
+    "stylelint-config-primer": "^3.0.1"
   },
   "dependencies": {},
   "scripts": {
