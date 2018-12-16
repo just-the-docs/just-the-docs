@@ -122,7 +122,7 @@ nav_order: 2
 
 ### Auto-generating Table of Contents
 
-By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set it to false on the parent page's YAML front matter.
+By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set `has_toc: false` on the parent page's YAML front matter.
 
 #### Example
 {: .no_toc }
