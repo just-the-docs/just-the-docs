@@ -54,7 +54,7 @@
         <div class="page-content">
           {{ content }}
 
-          {% if page.has_children == true %}
+          {% if page.has_children == true and page.has_toc != false %}
           <hr>
           <h2 class="text-delta">Table of contents</h2>
           {% assign children_list = site.pages | sort:"nav_order" %}

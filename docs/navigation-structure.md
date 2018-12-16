@@ -92,7 +92,6 @@ On the parent pages, add 2 YAML front matter variables:
 
 #### Example
 {: .no_toc }
-
 ```yaml
 ---
 layout: default
@@ -118,6 +117,23 @@ layout: default
 title: Buttons
 parent: UI Components
 nav_order: 2
+---
+```
+
+### Auto-generating Table of Contents
+
+By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set it to false on the parent page's YAML front matter.
+
+#### Example
+{: .no_toc }
+```yaml
+---
+layout: default
+title: UI Components
+nav_order: 2
+has_children: true
+has_toc: false
+permalink: /docs/ui-components
 ---
 ```
 
