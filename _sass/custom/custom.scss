@@ -2,54 +2,112 @@
 // // Typography
 // //
 //
-// $body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
-// $mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace;
-// $root-font-size: 16px;         // Base font-size for rems
-// $body-line-height: 1.4;
-// $body-heading-line-height: 1.15;
+$body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+$mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace;
+$root-font-size: 16px;         // Base font-size for rems
+$body-line-height: 1.3;
+$body-heading-line-height: 1.15;
 //
 // //
 // // Colors
 // //
 //
-// $white: #fff;
+$white: #fff;
 //
-// $grey-dk-000: #959396;
-// $grey-dk-100: #5c5962;
-// $grey-dk-200: #44434d;
-// $grey-dk-250: #302d36 !default;
-// $grey-dk-300: #27262b;
+$grey-dk-000: #959396;
+$grey-dk-100: #5c5962;
+$grey-dk-200: #44434d;
+$grey-dk-250: #302d36 !default;
+$grey-dk-300: #27262b;
 //
-// $grey-lt-000: #f5f6fa;
-// $grey-lt-100: #eeebee;
-// $grey-lt-200: #ecebed;
-// $grey-lt-300: #e6e1e8;
+$grey-lt-000: #f5f6fa;
+$grey-lt-100: #eeebee;
+$grey-lt-200: #ecebed;
+$grey-lt-300: #e6e1e8;
 //
-// $purple-000: #7253ed;
-// $purple-100: #5e41d0;
-// $purple-200: #4e26af;
-// $purple-300: #381885;
+$purple-000: #7253ed;
+$purple-100: #5e41d0;
+$purple-200: #4e26af;
+$purple-300: #381885;
 //
-// $blue-000: #2c84fa;
-// $blue-100: #2869e6;
-// $blue-200: #264caf;
-// $blue-300: #183385;
+$blue-000: #2c84fa;
+$blue-100: #2869e6;
+$blue-200: #264caf;
+$blue-300: #183385;
 //
-// $green-000: #41d693;
-// $green-100: #11b584;
-// $green-200: #009c7b;
-// $green-300: #026e57;
+$green-000: #41d693;
+$green-100: #11b584;
+$green-200: #009c7b;
+$green-300: #026e57;
 //
-// $body-background-color: $white !default;
-$sidebar-color: #32b45d !default;
-// $code-background-color: $grey-lt-000 !default;
 
-// $body-text-color: $grey-dk-100 !default;
-// $body-heading-color: $grey-dk-300 !default;
-$nav-child-link-color: #FFFFFF !default;
+//TP Custom Colours
+$tpOrange-000: #ff7f15;
+$tpOrange-100: #cc6510;
+$tpOrange-200: #b2580e;
+
+$tpGreen-000: #32b45d;
+$tpGreen-100: #28904a;
+$tpGreen-200: #1e6c37;
+
+//
+
+$body-background-color: $white !default;
+$sidebar-color: $tpGreen-000 !default;
+$code-background-color: $grey-lt-000 !default;
+
+$body-text-color: $grey-dk-100 !default;
+$body-heading-color: $grey-dk-300 !default;
+
+$nav-child-link-color:$white !default;
 $link-color: $purple-000 !default;
-$btn-primary-color: #ff7f15 !default;
-$base-button-color: #FFFFFF !default;
+$btn-primary-color: $tpOrange-000 !default;
+$base-button-color: $white !default;
+
+
+a {
+    color: $tpGreen-100;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $tpGreen-200;
+    text-decoration: none;
+}
+
+.btn{
+    color: $tpGreen-000;
+    background-color: #f7f7f7;;
+}
+
+.btn:hover{
+    color: $white;
+    background-color: $tpGreen-100;
+    background-image: #f7f7f7;
+}
+
+.btn-primary{
+    
+    color: $white;
+    background-color: $tpGreen-000;
+    background-image: linear-gradient($tpGreen-000, $tpGreen-100);
+}
+
+.btn-primary:hover{
+    background-color: $tpGreen-000;
+    background-image: linear-gradient($tpGreen-100, $tpGreen-200);
+}
+
+
+//Code Highlight box shaddow
+.highlight{
+    padding: 10px;
+    -webkit-box-shadow: 2px 3px 3px 0px $tpGreen-000;
+    -moz-box-shadow: 2px 3px 3px 0px $tpGreen-000;
+    box-shadow: 2px 3px 3px 0px $tpGreen-000;
+}
+
+  
 //
 // //
 // // Media queries in pixels
