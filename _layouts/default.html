@@ -36,7 +36,7 @@
           {% endif %}
         </div>
       </div>
-      <div class="main-content js-main-content" tabindex="1">
+      <div class="main-content js-main-content" tabindex="0">
         {% unless page.url == "/" %}
           {% if page.parent %}
             <nav class="breadcrumb-nav">
@@ -52,7 +52,7 @@
             </nav>
           {% endif %}
         {% endunless %}
-        <div class="page-content">
+        <div id="main-content" class="page-content" role="main">
           {{ content }}
 
           {% if page.has_children == true and page.has_toc != false %}
