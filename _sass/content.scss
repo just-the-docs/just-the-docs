@@ -17,13 +17,16 @@
     padding-left: 1.5em;
   }
 
-  ol {
-    list-style-type: none;
+  ol, ul {
     counter-reset: step-counter;
-
+    list-style-type: none;
     li {
       position: relative;
+    }
+  }
 
+  ol {
+    li {
       &::before {
         position: absolute;
         top: 0.2em;
@@ -37,29 +40,37 @@
           top: 0.11em;
         }
       }
-
-      ol {
-        counter-reset: sub-counter;
-
-        li {
-          &::before {
-            content: counter(sub-counter, lower-alpha);
-            counter-increment: sub-counter;
-          }
-        }
-      }
     }
   }
-
   ul {
-    list-style: none;
-
     li {
       &::before {
         position: absolute;
         margin-left: -1.5em;
         color: $grey-dk-000;
         content: "•";
+      }
+    }
+  }
+  li {
+    ol {
+      counter-reset: sub-counter;
+      li {
+        &::before {
+          content: counter(sub-counter, lower-alpha);
+          counter-increment: sub-counter;
+          margin-left: 0;
+        }
+      }
+    }
+    ul {
+      counter-reset: sub-counter;
+      li {
+        &::before {
+          // Keeps ordered lists with nested unordered lists from getting misnumbered.
+          counter-increment: sub-counter;
+          margin-left: 0;
+        }
       }
     }
   }
