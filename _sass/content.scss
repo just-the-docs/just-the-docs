@@ -15,9 +15,6 @@
   ul,
   ol {
     padding-left: 1.5em;
-  }
-
-  ol, ul {
     counter-reset: step-counter;
     list-style-type: none;
     li {
