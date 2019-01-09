@@ -55,6 +55,22 @@ nav_exclude: true
 
 ---
 
+## External Links
+
+To render an external link in the TOC, add an `external_url` directive in the frontmatter header.
+
+#### Example
+{: .no_toc }
+```yaml
+---
+layout: default
+title: Google Search
+external_url: https://www.google.com 
+---
+```
+
+---
+
 ## Pages with children
 
 Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives is an organization like:
