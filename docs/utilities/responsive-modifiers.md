@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Responsive Modifiers
-nav_order: 1
 parent: Utilities
+nav_order: 1
 ---
 
 # Responsive modifiers

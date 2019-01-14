@@ -16,17 +16,17 @@ nav_order: 6
 ---
 
 ## Color schemes
-{: .d-inline-block :}
+{: .d-inline-block }
 
 New
-{: .label .label-green :}
+{: .label .label-green }
 
 Just the Docs supports two color schemes: light (default), and dark.
 
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
 
 #### Example
-{: no_toc }
+{: .no_toc }
 
 ```yml
 # Color scheme currently only supports "dark" or nil (default)
@@ -56,7 +56,7 @@ To customize your site’s aesthetic, open `_sass/custom/custom.scss` in your ed
 For example, to change the link color from the purple default to blue, open `_sass/custom/custom.css` and find the `$link-color` variable on line `50`. Uncomment it, and change its value to our `$blue-000` variable, or another shade of your choosing.
 
 #### Example
-{: no_toc }
+{: .no_toc }
 
 ```scss
 // ...

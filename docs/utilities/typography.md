@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Typography
-nav_order: 3
 parent: Utilities
+nav_order: 4
 ---
 
 # Typography Utilities
