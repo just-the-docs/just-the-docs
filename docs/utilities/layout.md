@@ -7,7 +7,7 @@ has_children: true
 ---
 
 # Layout Utilities
-{:.no_toc}
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -65,7 +65,6 @@ This paragraph will have a margin bottom of 1rem/16px at large screens.
 
 This paragraph will have 2rem/32px of padding on the right and left at all screen sizes.
 {: .px-6 }
-
 ```
 
 ## Vertical Alignment
@@ -111,5 +110,4 @@ These headings will be `inline-block`:
 
 ### heading 3
 { .d-inline-block }
-
 ```

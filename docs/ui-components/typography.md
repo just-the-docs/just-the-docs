@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 # Typography
-{:.no_toc}
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -24,7 +24,7 @@ By default, Just the Docs uses a native system font stack for sans-serif fonts:
 -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif
 ```
 
-ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
 abcdefghijklmnopqrstuvwxyz
 {: .fs-5 .ls-10 .code-example }
 
@@ -34,7 +34,7 @@ For monospace type, like code snippets or the pre `<pre>` element, Just the Docs
 "SFMono-Regular", Menlo, Consolas, Monospace
 ```
 
-ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
 abcdefghijklmnopqrstuvwxyz
 {: .fs-5 .ls-10 .text-mono .code-example }
 
@@ -51,7 +51,7 @@ Just the docs uses a responsive type scale that shifts depending on the viewport
 | `h3`, `.text-gamma`   | 16px                             | 18px                          |
 | `h4`, `.text-delta`   | 14px                             | 16px                          |
 | `h5`, `.text-epsilon` | 16px                             | 18px                          |
-| `h6`, `.text-zeta  `   | 18px                             | 24px                          |
+| `h6`, `.text-zeta`    | 18px                             | 24px                          |
 | `body`                | 14px                             | 16px                          |
 
 ---

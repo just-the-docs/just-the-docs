@@ -5,7 +5,7 @@ nav_order: 7
 ---
 
 # Search
-{:.no_toc}
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -25,16 +25,13 @@ Just the docs uses [lunr.js](http://lunrjs.com) to add a client-side search inte
 
 ### Generate search index
 
-Before you can use search, you must initialize the feature by running this
-rake command that comes with the `just-the-docs`
+Before you can use search, you must initialize the feature by running this `rake` command that comes with `just-the-docs`:
 
 ```bash
 $ bundle exec just-the-docs rake search:init
 ```
 
-This command creates the `search-data.json` file that Jekyll uses to create
-your search index. Alternatively, you can create the file manually in the
-`assets/js/` of your Jekyll site with this content:
+This command creates the `search-data.json` file that Jekyll uses to create your search index. Alternatively, you can create the file manually in the `assets/js/` directory of your Jekyll site with this content:
 
 ```{% raw %}
 ---
@@ -68,6 +65,7 @@ Sometimes you might have a page that you don't want indexed in the search and yo
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default

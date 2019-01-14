@@ -29,6 +29,7 @@ To specify a page order, use the `nav_order` variable in your pages' YAML front 
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default
@@ -45,6 +46,7 @@ For specific pages that you do not wish to include in the main navigation, e.g. 
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default
@@ -92,6 +94,7 @@ On the parent pages, add 2 YAML front matter variables:
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default
@@ -111,6 +114,7 @@ On child pages, simply set the `parent:` YAML front matter to whatever the paren
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default
@@ -126,6 +130,7 @@ By default, all pages with children will automatically append a Table of Content
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default
@@ -142,7 +147,7 @@ The Buttons page appears a child of UI Components and appears second in the UI C
 ### Children with children
 {: .text-gamma }
 
-Child pages can also have children (grand children). This is achieved by using a similar pattern on the child and grand child pages.
+Child pages can also have children (grandchildren). This is achieved by using a similar pattern on the child and grandchild pages.
 
 1. Add the `has_children` attribute to the child
 1. Add the `parent` and `grand_parent` attribute to the grandchild
@@ -198,7 +203,7 @@ To add a auxiliary navigation item to your site (in the upper right on all pages
 ```yml
 # Aux links for the upper right navigation
 aux_links:
-"Just the Docs on GitHub":
+  "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
 ```
 

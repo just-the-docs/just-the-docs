@@ -5,7 +5,7 @@ nav_order: 6
 ---
 
 # Customization
-{:.no_toc}
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -49,7 +49,6 @@ addEvent(toggleDarkMode, 'click', function(){
 })
 </script>
 
-
 ## Specific visual customization
 
 To customize your site’s aesthetic, open `_sass/custom/custom.scss` in your editor to see if there is a variable that you can override. Most styles like fonts, colors, spacing, etc.. are derived from these variables. To override a specific variable, uncomment out it’s line and change it’s value.
@@ -72,4 +71,3 @@ $link-color: $blue-000;
 _Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependancies to fail.
 
 ---
-

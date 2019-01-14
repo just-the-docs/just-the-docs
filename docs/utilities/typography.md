@@ -6,7 +6,7 @@ parent: Utilities
 ---
 
 # Typography Utilities
-{:.no_toc}
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -117,33 +117,31 @@ Use the `lh-` classes to explicitly apply line height to text.
 | `.lh-tight`   | 1.1                  | Default for headings          |
 | `.lh-default` | 1.4                  | Default for body (paragraphs) |
 
-
-
 <div class="code-example" markdown="1">
-No Line height  
+No Line height
 No Line height
 {: .lh-0 }
 
-Tight line height  
+Tight line height
 Tight line height
 {: .lh-tight }
 
-Default line height  
+Default line height
 Default line height
 {: .fh-default }
 </div>
 ```markdown
 In Markdown, use the `{: }` wrapper to apply custom classes:
 
-No Line height  
+No Line height
 No Line height
 {: .lh-0 }
 
-Tight line height  
+Tight line height
 Tight line height
 {: .lh-tight }
 
-Default line height  
+Default line height
 Default line height
 {: .fh-default }
 ```

@@ -39,12 +39,12 @@ const originalCssRef = cssFile.getAttribute('href')
 const darkModeCssRef = originalCssRef.replace('just-the-docs.css', 'dark-mode-preview.css')
 
 addEvent(toggleDarkMode, 'click', function(){
-if (cssFile.getAttribute('href') === originalCssRef) {
-cssFile.setAttribute('href', darkModeCssRef)
-} else {
-cssFile.setAttribute('href', originalCssRef)
-}
+  if (cssFile.getAttribute('href') === originalCssRef) {
+    cssFile.setAttribute('href', darkModeCssRef)
+  } else {
+    cssFile.setAttribute('href', originalCssRef)
+  }
 })
 </script>
 
-See [Customization]({{site.baseurl }}{% link docs/customization.md %}) for more information.
+See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.

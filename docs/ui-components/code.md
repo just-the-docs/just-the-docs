@@ -6,7 +6,7 @@ nav_order: 6
 ---
 
 # Code
-{:.no_toc}
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -21,9 +21,7 @@ nav_order: 6
 Code can be rendered inline using single ticks by wrapping your code in single back ticks.
 
 <div class="code-example" markdown="1">
-
 Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
 </div>
 ```markdown
 Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
