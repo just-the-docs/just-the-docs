@@ -16,7 +16,7 @@ nav_order: 5
 
 ---
 
-Most lists can be rendered with pure markdown...
+Most lists can be rendered with pure Markdown.
 
 ## Unordered list
 
@@ -71,7 +71,7 @@ _or_
 
 ## Definition list
 
-Definition lists require HTML syntax and aren't supported with the GitHub flavored markdown compiler.
+Definition lists require HTML syntax and aren't supported with the GitHub Flavored Markdown compiler.
 
 <div class="code-example" markdown="1">
 <dl>

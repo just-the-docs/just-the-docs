@@ -28,7 +28,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 abcdefghijklmnopqrstuvwxyz
 {: .fs-5 .ls-10 .code-example }
 
-For monospace type, like code snippets or the pre `<pre>` element, Just the Docs uses a native system font stack for monospace fonts:
+For monospace type, like code snippets or the `<pre>` element, Just the Docs uses a native system font stack for monospace fonts:
 
 ```scss
 "SFMono-Regular", Menlo, Consolas, Monospace
@@ -42,7 +42,7 @@ abcdefghijklmnopqrstuvwxyz
 
 ## Responsive type scale
 
-Just the docs uses a responsive type scale that shifts depending on the viewport size. Common elements text elements rendered from markdown use a
+Just the Docs uses a responsive type scale that shifts depending on the viewport size.
 
 | Selector              | Small screen size `font-size`    | Large screen size `font-size` |
 |:----------------------|:---------------------------------|:------------------------------|
@@ -109,6 +109,6 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 ## Typographic Utilities
 
-There are a number of specific typographic CSS classes that allow you to do override default styling for font size, font-weight, line height, and capitalization.
+There are a number of specific typographic CSS classes that allow you to override default styling for font size, font weight, line height, and capitalization.
 
 [View typography utilities]({{ site.baseurl }}{% link docs/utilities/utilities.md %}#typography){: .btn .btn-outline }

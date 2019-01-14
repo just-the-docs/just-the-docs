@@ -51,9 +51,9 @@ addEvent(toggleDarkMode, 'click', function(){
 
 ## Specific visual customization
 
-To customize your site’s aesthetic, open `_sass/custom/custom.scss` in your editor to see if there is a variable that you can override. Most styles like fonts, colors, spacing, etc.. are derived from these variables. To override a specific variable, uncomment out it’s line and change it’s value.
+To customize your site’s aesthetic, open `_sass/custom/custom.scss` in your editor to see if there is a variable that you can override. Most styles like fonts, colors, spacing, etc. are derived from these variables. To override a specific variable, uncomment its line and change its value.
 
-For example, to change the link color from the purple default to blue, open `_sass/custom/custom.css` and find the `$link-color` variable on line `50`. Uncomment it out, and change it's value to our `$blue-000` variable, or another shade of your choosing.
+For example, to change the link color from the purple default to blue, open `_sass/custom/custom.css` and find the `$link-color` variable on line `50`. Uncomment it, and change its value to our `$blue-000` variable, or another shade of your choosing.
 
 #### Example
 {: no_toc }

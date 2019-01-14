@@ -57,9 +57,9 @@ Spacing values are based on a `1rem = 16px` spacing scale, broken down into thes
 #### Examples
 {: .no_toc }
 
-```markdown
 In Markdown, use the `{: }` wrapper to apply custom classes:
 
+```markdown
 This paragraph will have a margin bottom of 1rem/16px at large screens.
 {: .mb-lg-4 }
 
@@ -95,9 +95,9 @@ Use these classes in conjunction with the responsive modifiers.
 #### Examples
 {: .no_toc }
 
-```markdown
 In Markdown, use the `{: }` wrapper to apply custom classes:
 
+```markdown
 This button will be hidden until medium screen sizes:
 
 [ A button ](#url)

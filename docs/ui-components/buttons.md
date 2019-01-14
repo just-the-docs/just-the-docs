@@ -41,7 +41,7 @@ nav_order: 2
 
 ### Button element
 
-GitHub flavored markdown does not support the `button` element, so you'll have to use inline HTML for this:
+GitHub Flavored Markdown does not support the `button` element, so you'll have to use inline HTML for this:
 
 <div class="code-example">
 <button type="button" name="button" class="btn">Button element</button>

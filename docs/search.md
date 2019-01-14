@@ -15,7 +15,7 @@ nav_order: 7
 
 ---
 
-Just the docs uses [lunr.js](http://lunrjs.com) to add a client-side search interface powered by a JSON index that Jekyll generates. All search results are shown in an auto-complete style interface (there is no search results page). By default, all generated html pages are indexed  using the following data points:
+Just the Docs uses [lunr.js](http://lunrjs.com) to add a client-side search interface powered by a JSON index that Jekyll generates. All search results are shown in an auto-complete style interface (there is no search results page). By default, all generated HTML pages are indexed using the following data points:
 
 - Page title
 - Page content
@@ -52,7 +52,7 @@ _Note: If you don't run this rake command or create this file manually, search w
 
 ### Enable search in configuration
 
-In your site's `_config.yml` enable search:
+In your site's `_config.yml`, enable search:
 
 ```yml
 # Enable or disable the site search
@@ -61,7 +61,7 @@ search_enabled: true
 
 ## Hiding pages from search
 
-Sometimes you might have a page that you don't want indexed in the search and you don't want it to show up in search results, e.g, a 404 page. To exclude a page from search, add the `search_exclude: true` parameter to the page's YAML front matter:
+Sometimes you might have a page that you don't want to be indexed for the search nor to show up in search results, e.g, a 404 page. To exclude a page from search, add the `search_exclude: true` parameter to the page's YAML front matter:
 
 #### Example
 {: .no_toc }
