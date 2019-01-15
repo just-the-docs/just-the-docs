@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 gem_dir = File.expand_path("..",File.dirname(__FILE__))
-$LOAD_PATH.unshift gem_dir# Look in gem directory for resources first.
+$LOAD_PATH.unshift gem_dir # Look in gem directory for resources first.
 exec_type = ARGV[0]
 
 if exec_type == 'rake' then

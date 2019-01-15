@@ -25,10 +25,11 @@ By default, all pages will appear as top level pages in the main nav unless a pa
 
 ## Ordering pages
 
-To specify a page order, use the `nav_order` variable in your pages' YAML front matter.
+To specify a page order, use the `nav_order` parameter in your pages' YAML front matter.
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default
@@ -41,10 +42,11 @@ nav_order: 4
 
 ## Excluding pages
 
-For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page. Use the `nav_exclude: true` parameter in the YAML front matter for that page.
+For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default
@@ -57,7 +59,7 @@ nav_exclude: true
 
 ## Pages with children
 
-Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives is an organization like:
+Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like:
 
 ```
 +-- ..
@@ -86,12 +88,13 @@ Sometimes you will want to create a page with many children (a section). First, 
 +-- ..
 ```
 
-On the parent pages, add 2 YAML front matter variables:
--  `has_children: true` (tells us that this a parent page)
--  `permalink:` set this to the site directories that the contains the pages
+On the parent pages, add 2 YAML front matter parameters:
+-  `has_children: true` (tells us that this is a parent page)
+-  `permalink:` set this to the site directory that contains the child pages
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default
@@ -102,7 +105,7 @@ permalink: /docs/ui-components
 ---
 ```
 
-Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, it has children and is ordered second in the main nav.
+Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, which has children and is ordered second in the main nav.
 
 ### Child pages
 {: .text-gamma }
@@ -111,6 +114,7 @@ On child pages, simply set the `parent:` YAML front matter to whatever the paren
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default
@@ -120,12 +124,15 @@ nav_order: 2
 ---
 ```
 
+The Buttons page appears as a child of UI Components and appears second in the UI Components section.
+
 ### Auto-generating Table of Contents
 
-By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set `has_toc: false` on the parent page's YAML front matter.
+By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set `has_toc: false` in the parent page's YAML front matter.
 
 #### Example
 {: .no_toc }
+
 ```yaml
 ---
 layout: default
@@ -137,12 +144,10 @@ permalink: /docs/ui-components
 ---
 ```
 
-The Buttons page appears a child of UI Components and appears second in the UI Components section.
-
 ### Children with children
 {: .text-gamma }
 
-Child pages can also have children (grand children). This is achieved by using a similar pattern on the child and grand child pages.
+Child pages can also have children (grandchildren). This is achieved by using a similar pattern on the child and grandchild pages.
 
 1. Add the `has_children` attribute to the child
 1. Add the `parent` and `grand_parent` attribute to the grandchild
@@ -170,7 +175,7 @@ nav_order: 1
 ---
 ```
 
-Would create the following navigation structure:
+This would create the following navigation structure:
 
 ```
 +-- ..
@@ -198,7 +203,7 @@ To add a auxiliary navigation item to your site (in the upper right on all pages
 ```yml
 # Aux links for the upper right navigation
 aux_links:
-"Just the Docs on GitHub":
+  "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
 ```
 
@@ -206,7 +211,7 @@ aux_links:
 
 ## In-page navigation with Table of Contents
 
-To generate a Table of Contents on your docs pages, you can use the `{:toc}` method from Kramdown, immediately after an `<ol>` in markdown. This will automatically generate an ordered list of anchor links to various sections of page based on headings and heading levels. There may be occasions where you're using a heading and you don't want it to show up in the TOC, to skip a particular heading use the `{: .no_toc }` CSS class.
+To generate a Table of Contents on your docs pages, you can use the `{:toc}` method from Kramdown, immediately after an `<ol>` in Markdown. This will automatically generate an ordered list of anchor links to various sections of the page based on headings and heading levels. There may be occasions where you're using a heading and you don't want it to show up in the TOC, so to skip a particular heading use the `{: .no_toc }` CSS class.
 
 #### Example
 {: .no_toc }

@@ -1,13 +1,12 @@
 ---
 layout: default
 title: Layout
-nav_order: 2
 parent: Utilities
-has_children: true
+nav_order: 2
 ---
 
 # Layout Utilities
-{:.no_toc}
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -57,15 +56,14 @@ Spacing values are based on a `1rem = 16px` spacing scale, broken down into thes
 #### Examples
 {: .no_toc }
 
-```markdown
 In Markdown, use the `{: }` wrapper to apply custom classes:
 
+```markdown
 This paragraph will have a margin bottom of 1rem/16px at large screens.
 {: .mb-lg-4 }
 
 This paragraph will have 2rem/32px of padding on the right and left at all screen sizes.
 {: .px-6 }
-
 ```
 
 ## Vertical Alignment
@@ -96,9 +94,9 @@ Use these classes in conjunction with the responsive modifiers.
 #### Examples
 {: .no_toc }
 
-```markdown
 In Markdown, use the `{: }` wrapper to apply custom classes:
 
+```markdown
 This button will be hidden until medium screen sizes:
 
 [ A button ](#url)
@@ -111,5 +109,4 @@ These headings will be `inline-block`:
 
 ### heading 3
 { .d-inline-block }
-
 ```

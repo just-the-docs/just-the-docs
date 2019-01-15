@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 # Typography
-{:.no_toc}
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -24,17 +24,17 @@ By default, Just the Docs uses a native system font stack for sans-serif fonts:
 -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif
 ```
 
-ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
 abcdefghijklmnopqrstuvwxyz
 {: .fs-5 .ls-10 .code-example }
 
-For monospace type, like code snippets or the pre `<pre>` element, Just the Docs uses a native system font stack for monospace fonts:
+For monospace type, like code snippets or the `<pre>` element, Just the Docs uses a native system font stack for monospace fonts:
 
 ```scss
 "SFMono-Regular", Menlo, Consolas, Monospace
 ```
 
-ABCDEFGHIJKLMNOPQRSTUVWXYZ  
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
 abcdefghijklmnopqrstuvwxyz
 {: .fs-5 .ls-10 .text-mono .code-example }
 
@@ -42,7 +42,7 @@ abcdefghijklmnopqrstuvwxyz
 
 ## Responsive type scale
 
-Just the docs uses a responsive type scale that shifts depending on the viewport size. Common elements text elements rendered from markdown use a
+Just the Docs uses a responsive type scale that shifts depending on the viewport size.
 
 | Selector              | Small screen size `font-size`    | Large screen size `font-size` |
 |:----------------------|:---------------------------------|:------------------------------|
@@ -51,7 +51,7 @@ Just the docs uses a responsive type scale that shifts depending on the viewport
 | `h3`, `.text-gamma`   | 16px                             | 18px                          |
 | `h4`, `.text-delta`   | 14px                             | 16px                          |
 | `h5`, `.text-epsilon` | 16px                             | 18px                          |
-| `h6`, `.text-zeta  `   | 18px                             | 24px                          |
+| `h6`, `.text-zeta`    | 18px                             | 24px                          |
 | `body`                | 14px                             | 16px                          |
 
 ---
@@ -109,6 +109,6 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 ## Typographic Utilities
 
-There are a number of specific typographic CSS classes that allow you to do override default styling for font size, font-weight, line height, and capitalization.
+There are a number of specific typographic CSS classes that allow you to override default styling for font size, font weight, line height, and capitalization.
 
 [View typography utilities]({{ site.baseurl }}{% link docs/utilities/utilities.md %}#typography){: .btn .btn-outline }
