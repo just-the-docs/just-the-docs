@@ -7,6 +7,6 @@
     "content": "{{ page.content | newline_to_br | replace: '<br />', ' ' | replace: '</h1>', ' ' | strip_newlines | markdownify | strip_html | remove: 'Table of contents' | xml_excape | escape | replace: '\', ' ' | replace: '```', '' | replace: '   ', ' ' | replace: '    ', ' ' | remove: '---' | remove: '#####' | remove: '####' | remove: '###' | remove: '##' | strip_newlines }}",
     "url": "{{ page.url | absolute_url | xml_escape }}",
     "relUrl": "{{ page.url | xml_escape }}"
-  }{% if forloop.last %}{% else %},{% endif %}
+  }{% unless forloop.last %},{% endunless %}
   {% endif %}{% endfor %}
 }
