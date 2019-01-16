@@ -33,8 +33,8 @@ $ bundle exec just-the-docs rake search:init
 
 This command creates the `search-data.json` file that Jekyll uses to create your search index. Alternatively, you can create the file manually in the `assets/js/` directory of your Jekyll site with this content:
 
-```{% raw %}
----
+```liquid
+{% raw %}---
 ---
 {
   {% for page in site.html_pages %}"{{ forloop.index0 }}": {
@@ -54,7 +54,7 @@ _Note: If you don't run this rake command or create this file manually, search w
 
 In your site's `_config.yml`, enable search:
 
-```yml
+```yaml
 # Enable or disable the site search
 search_enabled: true
 ```

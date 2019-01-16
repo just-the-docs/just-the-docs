@@ -28,7 +28,7 @@ To enable a color scheme, set the `color_scheme` parameter in your site's `_conf
 #### Example
 {: .no_toc }
 
-```yml
+```yaml
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: "dark"
 ```
@@ -68,6 +68,6 @@ $link-color: $blue-000;
 // ...
 ```
 
-_Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependancies to fail.
+_Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
 
 ---
