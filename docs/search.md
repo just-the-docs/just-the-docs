@@ -39,10 +39,10 @@ This command creates the `search-data.json` file that Jekyll uses to create your
 {
   {% for page in site.html_pages %}{% if page.search_exclude != true %}"{{ forloop.index0 }}": {
     "id": "{{ forloop.index0 }}",
-    "title": "{{ page.title | xml_escape }}",
+    "title": "{{ page.title | replace: '&amp;', '&' }}",
     "content": "{{ page.content | markdownify | strip_html | escape_once | remove: 'Table of contents' | remove: '```'  | remove: '---' | replace: '\', ' ' | normalize_whitespace }}",
-    "url": "{{ page.url | absolute_url | xml_escape }}",
-    "relUrl": "{{ page.url | xml_escape }}"
+    "url": "{{ page.url | absolute_url }}",
+    "relUrl": "{{ page.url }}"
   }{% unless forloop.last %},{% endunless %}
   {% endif %}{% endfor %}
 }{% endraw %}
