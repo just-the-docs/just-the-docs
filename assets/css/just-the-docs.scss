@@ -3,6 +3,53 @@
 # only Main files contain this front matter, not partials.
 ---
 
+$body-font-family: 'Roboto', 'Open Sans', -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+$mono-font-family: "Roboto Mono", "SFMono-Regular", Menlo, Consolas, Monospace;
+
+// //
+// // Colors
+// //
+//
+// $white: #fff;
+//
+// $grey-dk-000: #959396;
+// $grey-dk-100: #5c5962;
+// $grey-dk-200: #44434d;
+// $grey-dk-250: #302d36 !default;
+// $grey-dk-300: #27262b;
+//
+$grey-lt-000: #eeeeee;
+// $grey-lt-100: #eeebee;
+// $grey-lt-200: #ecebed;
+// $grey-lt-300: #e6e1e8;
+//
+// $purple-000: #7253ed;
+// $purple-100: #5e41d0;
+// $purple-200: #4e26af;
+// $purple-300: #381885;
+//
+// $blue-000: #2c84fa;
+// $blue-100: #2869e6;
+// $blue-200: #264caf;
+// $blue-300: #183385;
+//
+// $green-000: #41d693;
+// $green-100: #11b584;
+// $green-200: #009c7b;
+// $green-300: #026e57;
+//
+// $body-background-color: $white !default;
+// $sidebar-color: $grey-lt-000 !default;
+// $code-background-color: $grey-lt-000 !default;
+
+// $body-text-color: $grey-dk-100 !default;
+// $body-heading-color: $grey-dk-300 !default;
+// $nav-child-link-color: $grey-dk-100 !default;
+$link-color: #0696D7 !default;
+// $btn-primary-color: $purple-100 !default;
+$base-button-color: #0696D7 !default;
+
+
 //
 // Import external dependencies
 //

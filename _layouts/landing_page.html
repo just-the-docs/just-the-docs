@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+
+    <img style="max-height: 200px;" src="{{ site.data.landing_page.image }}"/>
+
+    <div class="fs-3" style="width: 75%; margin: 10px;">
+    {{ site.data.landing_page.content }}
+    </div>
+
+    <input type="text" placeholder="Search {{ site.title }}" autocomplete="off" class="fs-5" style="width: 75%; height: 40px;">
+    <div class="js-search-results search-results-wrap"></div>
+
+    <div style="display: flex; flex-wrap: wrap; margin-top: 40px; align-items: center; justify-content: center" >
+    {% for tile in site.data.landing_page.tiles%}
+
+        <div style="width: 180px; margin: 10px; padding: 10px; height: 180px; border: 1px solid #0696D7; background-color: #EEEEEE; border-radius: 4px; text-align: center;">
+            <img style="width: 80px; height: 80px" src="{{ tile.image }}"/>
+            <a href="{{ tile.target }}" style="white-space: inherit;">
+                <div class="fs-2">{{ tile.description }}</div>
+            </a>
+        </div>
+
+    {% endfor %}
+    </div>
+
+
+</div>
