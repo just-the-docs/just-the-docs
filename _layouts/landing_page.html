@@ -10,8 +10,10 @@ layout: default
     {{ site.data.landing_page.content }}
     </div>
 
-    <input type="text" placeholder="Search {{ site.title }}" autocomplete="off" class="fs-5" style="width: 75%; height: 40px;">
-    <div class="js-search-results search-results-wrap"></div>
+    {% if site.data.landing_page.enable_search != nil %}
+        <input type="text" placeholder="Search {{ site.title }}" autocomplete="off" class="fs-5" style="width: 75%; height: 40px;">
+        <div class="js-search-results search-results-wrap"></div>
+    {% endif %}
 
     <div style="display: flex; flex-wrap: wrap; margin-top: 40px; align-items: center; justify-content: center" >
     {% for tile in site.data.landing_page.tiles%}
