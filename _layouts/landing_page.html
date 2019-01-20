@@ -10,7 +10,7 @@ layout: default
     {{ site.data.landing_page.content }}
     </div>
 
-    {% if site.data.landing_page.enable_search != nil %}
+    {% if site.data.landing_page.enable_search %}
         <input type="text" placeholder="Search {{ site.title }}" autocomplete="off" class="fs-5" style="width: 75%; height: 40px;">
         <div class="js-search-results search-results-wrap"></div>
     {% endif %}
