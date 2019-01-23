@@ -150,11 +150,18 @@ function initSearch() {
   }
 }
 
+function pageFocus() {
+  var mainContent = document.querySelector('.js-main-content');
+  mainContent.focus();
+  console.log(mainContent)
+}
+
 
 // Document ready
 
 function ready(){
   toggleNav();
+  pageFocus();
   if (typeof lunr !== 'undefined') {
     initSearch();
   }

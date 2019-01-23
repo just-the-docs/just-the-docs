@@ -74,6 +74,10 @@
   }
 }
 
+.js-main-content:focus {
+  outline: none;
+}
+
 .page-header {
   background-color: $sidebar-color;
 

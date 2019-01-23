@@ -6,18 +6,18 @@ nav_order: 2
 
 # Configuration
 
-Just the Docs has some specific configuration parameters that can be definied in your Jekyll site's `_config.yml` file.
+Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's `_config.yml` file.
 
 ## Search enabled
 
-```yml
+```yaml
 # Enable or disable the site search
 search_enabled: true
 ```
 
 ## Aux links
 
-```yml
+```yaml
 # Aux links for the upper right navigation
 aux_links:
     "Just the Docs on GitHub":
@@ -26,7 +26,7 @@ aux_links:
 
 ## Color scheme
 
-```yml
+```yaml
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: "dark"
 ```
@@ -39,12 +39,12 @@ const originalCssRef = cssFile.getAttribute('href')
 const darkModeCssRef = originalCssRef.replace('just-the-docs.css', 'dark-mode-preview.css')
 
 addEvent(toggleDarkMode, 'click', function(){
-if (cssFile.getAttribute('href') === originalCssRef) {
-cssFile.setAttribute('href', darkModeCssRef)
-} else {
-cssFile.setAttribute('href', originalCssRef)
-}
+  if (cssFile.getAttribute('href') === originalCssRef) {
+    cssFile.setAttribute('href', darkModeCssRef)
+  } else {
+    cssFile.setAttribute('href', originalCssRef)
+  }
 })
 </script>
 
-See [Customization]({{site.baseurl }}{% link docs/customization.md %}) for more information.
+See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.

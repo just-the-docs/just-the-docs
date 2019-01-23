@@ -14,6 +14,7 @@ code {
 pre.highlight {
   padding: $sp-3;
   margin-bottom: 0;
+  -webkit-overflow-scrolling: touch;
   background-color: $code-background-color;
 
   code {
@@ -104,7 +105,7 @@ pre.highlight {
 .code-example {
   padding: $sp-3;
   margin-bottom: $sp-3;
-  overflow: scroll;
+  overflow: auto;
   border: 1px solid $border-color;
   border-radius: $border-radius;
 

@@ -5,7 +5,7 @@ nav_order: 6
 ---
 
 # Customization
-{:.no_toc}
+{: .no_toc }
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -16,19 +16,19 @@ nav_order: 6
 ---
 
 ## Color schemes
-{: .d-inline-block :}
+{: .d-inline-block }
 
 New
-{: .label .label-green :}
+{: .label .label-green }
 
 Just the Docs supports two color schemes: light (default), and dark.
 
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
 
 #### Example
-{: no_toc }
+{: .no_toc }
 
-```yml
+```yaml
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: "dark"
 ```
@@ -49,15 +49,14 @@ addEvent(toggleDarkMode, 'click', function(){
 })
 </script>
 
-
 ## Specific visual customization
 
-To customize your site’s aesthetic, open `_sass/custom/custom.scss` in your editor to see if there is a variable that you can override. Most styles like fonts, colors, spacing, etc.. are derived from these variables. To override a specific variable, uncomment out it’s line and change it’s value.
+To customize your site’s aesthetic, open `_sass/custom/custom.scss` in your editor to see if there is a variable that you can override. Most styles like fonts, colors, spacing, etc. are derived from these variables. To override a specific variable, uncomment its line and change its value.
 
-For example, to change the link color from the purple default to blue, open `_sass/custom/custom.css` and find the `$link-color` variable on line `50`. Uncomment it out, and change it's value to our `$blue-000` variable, or another shade of your choosing.
+For example, to change the link color from the purple default to blue, open `_sass/custom/custom.css` and find the `$link-color` variable on line `50`. Uncomment it, and change its value to our `$blue-000` variable, or another shade of your choosing.
 
 #### Example
-{: no_toc }
+{: .no_toc }
 
 ```scss
 // ...
@@ -69,7 +68,6 @@ $link-color: $blue-000;
 // ...
 ```
 
-_Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependancies to fail.
+_Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
 
 ---
-
