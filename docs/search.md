@@ -33,17 +33,17 @@ $ bundle exec just-the-docs rake search:init
 
 This command creates the `search-data.json` file that Jekyll uses to create your search index. Alternatively, you can create the file manually in the `assets/js/` directory of your Jekyll site with this content:
 
-```{% raw %}
----
+```liquid
+{% raw %}---
 ---
 {
-  {% for page in site.html_pages %}"{{ forloop.index0 }}": {
+  {% for page in site.html_pages %}{% if page.search_exclude != true %}"{{ forloop.index0 }}": {
     "id": "{{ forloop.index0 }}",
-    "title": "{{ page.title | xml_escape }}",
-    "content": "{{ page.content | markdownify | strip_html | xml_escape | remove: 'Table of contents' | remove: page.title | strip_newlines | replace: '\', ' '}}",
-    "url": "{{ page.url | absolute_url | xml_escape }}",
-    "relUrl": "{{ page.url | xml_escape }}"
-  }{% if forloop.last %}{% else %},
+    "title": "{{ page.title | replace: '&amp;', '&' }}",
+    "content": "{{ page.content | markdownify | strip_html | escape_once | remove: 'Table of contents' | remove: '```'  | remove: '---' | replace: '\', ' ' | normalize_whitespace }}",
+    "url": "{{ page.url | absolute_url }}",
+    "relUrl": "{{ page.url }}"
+  }{% unless forloop.last %},{% endunless %}
   {% endif %}{% endfor %}
 }{% endraw %}
 ```
@@ -54,7 +54,7 @@ _Note: If you don't run this rake command or create this file manually, search w
 
 In your site's `_config.yml`, enable search:
 
-```yml
+```yaml
 # Enable or disable the site search
 search_enabled: true
 ```

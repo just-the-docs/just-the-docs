@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Patrick Marsceill"]
   spec.email         = ["patrick.marsceill@gmail.com"]
 
-  spec.summary       = %q{A nice looking, high customizable, responsive Jekyll theme for documention with built-in search.}
+  spec.summary       = %q{A nice looking, highly customizable, responsive Jekyll theme for documentation with built-in search.}
   spec.homepage      = "https://github.com/pmarsceill/just-the-docs"
   spec.license       = "MIT"
 

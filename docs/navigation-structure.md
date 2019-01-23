@@ -200,7 +200,7 @@ To add a auxiliary navigation item to your site (in the upper right on all pages
 #### Example
 {: .no_toc }
 
-```yml
+```yaml
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":
