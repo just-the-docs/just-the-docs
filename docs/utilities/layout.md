@@ -105,8 +105,8 @@ This button will be hidden until medium screen sizes:
 These headings will be `inline-block`:
 
 ### heading 3
-{ .d-inline-block }
+{: .d-inline-block }
 
 ### heading 3
-{ .d-inline-block }
+{: .d-inline-block }
 ```
