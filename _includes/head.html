@@ -9,15 +9,12 @@
   <link rel="stylesheet" href="{{ "/assets/css/just-the-docs.css" | absolute_url }}">
 
   {% if site.ga_tracking != nil %}
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2709176-10"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', '{{ site.ga_tracking }}');
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', '{{ site.ga_tracking }}', '{{ site.url }}');
+      ga('send', 'pageview');
     </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
   {% endif %}
 
   {% if site.search_enabled != nil %}
