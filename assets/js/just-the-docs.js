@@ -54,7 +54,7 @@ function initSearch() {
 
   jsPath = source.replace('just-the-docs.js', '');
 
-  jsonPath = jsPath + '/search-data.json';
+  jsonPath = jsPath + 'search-data.json';
 
   var request = new XMLHttpRequest();
   request.open('GET', jsonPath, true);
