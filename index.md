@@ -66,7 +66,7 @@ $ bundle exec jekyll serve
 
 ## About the project
 
-Just the Docs is &copy; 2017 by [Patrick Marsceill](http://patrickmarsceill.com).
+Just the Docs is &copy; 2017-2019 by [Patrick Marsceill](http://patrickmarsceill.com).
 
 ### License
 
