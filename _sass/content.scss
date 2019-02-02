@@ -21,7 +21,7 @@
     list-style-type: none;
     counter-reset: step-counter;
 
-    >li {
+    > li {
       position: relative;
 
       &::before {
@@ -54,7 +54,7 @@
   ul {
     list-style: none;
 
-    >li {
+    > li {
       &::before {
         position: absolute;
         margin-left: -1.4em;
