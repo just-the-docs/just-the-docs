@@ -13,11 +13,14 @@ layout: default
     <div style="display: flex; flex-wrap: wrap; margin-top: 40px; align-items: center; justify-content: center" >
     {% for tile in site.data.landing_page.tiles%}
 
-        <div style="width: 180px; margin: 10px; padding: 10px; height: 180px; border: 1px solid #0696D7; background-color: #EEEEEE; border-radius: 4px; text-align: center;">
+        <div
+            style="cursor: pointer; width: 200px; margin: 5px; padding: 10px; height: 200px; border: 1px solid #0696D7; border-radius: 4px; text-align: center;"
+            onmouseover="this.style.background='#eeeeee';"
+            onmouseout="this.style.background='white';"
+            onclick="location.href='{{ tile.target }}';"
+        >
             <img style="width: 80px; height: 80px" src="{{ tile.image }}"/>
-            <a href="{{ tile.target }}" style="white-space: inherit;">
-                <div class="fs-2">{{ site.data.landing_page_text[tile.name] }}</div>
-            </a>
+            <div class="fs-2">{{ site.data.landing_page_text[tile.name] }}</div>
         </div>
 
     {% endfor %}
