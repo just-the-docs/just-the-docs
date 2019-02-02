@@ -21,13 +21,13 @@
     list-style-type: none;
     counter-reset: step-counter;
 
-    li {
+    > li {
       position: relative;
 
       &::before {
         position: absolute;
         top: 0.2em;
-        left: -1.5em;
+        left: -1.6em;
         color: $grey-dk-000;
         content: counter(step-counter);
         counter-increment: step-counter;
@@ -54,10 +54,10 @@
   ul {
     list-style: none;
 
-    li {
+    > li {
       &::before {
         position: absolute;
-        margin-left: -1.5em;
+        margin-left: -1.4em;
         color: $grey-dk-000;
         content: "•";
       }

@@ -54,7 +54,7 @@ function initSearch() {
 
   jsPath = source.replace('just-the-docs.js', '');
 
-  jsonPath = jsPath + '/search-data.json';
+  jsonPath = jsPath + 'search-data.json';
 
   var request = new XMLHttpRequest();
   request.open('GET', jsonPath, true);
@@ -108,7 +108,7 @@ function initSearch() {
       } else {
         var results = index.search(query);
 
-        if (results.length > 1) {
+        if (results.length > 0) {
           searchResults.classList.add('active');
           var resultsList = document.createElement('ul');
           searchResults.appendChild(resultsList);

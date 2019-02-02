@@ -15,7 +15,7 @@
         <p class="text-small text-grey-dk-000 mb-0">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
       </footer>
     </div>
-    <div class="main-content-wrap">
+    <div class="main-content-wrap js-main-content" tabindex="0">
       <div class="page-header">
         <div class="main-content">
           {% if site.search_enabled != nil %}
@@ -36,7 +36,7 @@
           {% endif %}
         </div>
       </div>
-      <div class="main-content js-main-content" tabindex="0">
+      <div class="main-content">
         {% unless page.url == "/" %}
           {% if page.parent %}
             <nav class="breadcrumb-nav">
