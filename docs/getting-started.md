@@ -4,7 +4,7 @@ title: Getting Started
 # parent: UI Components
 nav_order: 1
 ---
-
+<!-- 
 # Getting Started
 
   Delta is an exchange for trading of cryptocurrency derivatives. We currently offer Futures contracts on bitcoin (BTC) and ether (ETH). The following features stand us apart from other cryptocurrency exchanges:
@@ -35,4 +35,4 @@ Decide on the order type (e.g. limit or market) and place it
 
  Trading derivatives is more involved and quite different from spot buying and selling of cryptocurrencies. The mechanics of margining, calculation of PnL, details of contract settlement may not be always obvious and we’d encourage you to browse through the Tutorials section as well as the rest of the documentation.
 
-  We hope you have a happy and profitable trading experience on Delta!
+  We hope you have a happy and profitable trading experience on Delta! -->
