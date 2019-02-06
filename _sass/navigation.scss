@@ -58,6 +58,7 @@
 }
 
 .navigation-list-item {
+  color: #fff !important;  
   @include fs-4;
   margin: 0;
 
@@ -70,6 +71,7 @@
   }
 
   &.active {
+    color: #00B5EB !important;
     .navigation-list-child-list {
       display: block;
     }
