@@ -149,7 +149,7 @@
 
 .nav-top-level {
   @include fs-2;
-  color: $link-color;
+  color: #32bfff; // blue with a slightly better contrast ratio (4.5+)
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -194,8 +194,9 @@
 
 .nav-entry-selected {
   @extend .nav-entry;
-  color: $link-color;
-  background-color: $white;
+  color: $sidebar-color;
+  background-color: $grey-lt-300;
+  font-weight: 500;
   border-radius: 4px;
 }
 
@@ -213,4 +214,10 @@
 .in-page-nav-entry {
   @include fs-2;
   color: $link-color;
+}
+
+.external-link-decoration:after {
+  font-family: "FontAwesome";
+  content: "\f14c";
+  margin-left: 3px;
 }

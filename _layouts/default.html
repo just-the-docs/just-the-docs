@@ -95,7 +95,19 @@
     /**
      * AnchorJS v3.2.0 options and selector
      */
-      anchors.add();
+    anchors.add();
+
+    // decorate all external links with a style and open in new tab
+    (function() {
+      var links = document.links;
+      for (var i = 0, linksLength = links.length; i < linksLength; i++) {
+        if (links[i].hostname != window.location.hostname) {
+          links[i].target = '_blank';
+          links[i].className += ' external-link-decoration';
+        }
+      }
+    })();
+
   </script>
 
 </body>
