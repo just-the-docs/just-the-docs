@@ -5,7 +5,8 @@
 .site-title {
   display: block;
   flex: 1 1 auto;
-  color: $body-heading-color;
+  color: $white;
+  font-weight: 100;
   background-color: $sidebar-color;
 
   @include mq(md) {
@@ -15,7 +16,6 @@
     z-index: 101;
     height: 60px;
     padding-top: $sp-4;
-    border-bottom: $border $border-color;
   }
 }
 
@@ -114,7 +114,7 @@
 // Breadcrumb nav
 .breadcrumb-nav {
   @include mq(md) {
-    margin-top: -$sp-4;
+    margin-top: $sp-4;
   }
 }
 
@@ -145,4 +145,72 @@
       content: "";
     }
   }
+}
+
+.nav-top-level {
+  @include fs-2;
+  color: $link-color;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.nav-entry {
+  @include fs-2;
+  color: $grey-lt-300;
+  display:block;
+  font-weight: 300;
+  padding: 3px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.nav-entry:hover {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.nav-entry-expanded {
+  @extend .nav-entry;
+}
+
+.nav-entry-expanded:after {
+    font-family: "FontAwesome";
+    content: "\f078";
+    text-align: right;
+    float: right;
+}
+
+.nav-entry-non-expanded {
+  @extend .nav-entry;
+}
+
+.nav-entry-non-expanded:after {
+  font-family: "FontAwesome";
+  content: "\f054";
+  text-align: right;
+  float: right;
+}
+
+.nav-entry-selected {
+  @extend .nav-entry;
+  color: $link-color;
+  background-color: $white;
+  border-radius: 4px;
+}
+
+.nav-entry-selected-expanded:after {
+  font-family: "FontAwesome";
+  content: "\f078";
+  text-align: right;
+  float: right;
+}
+
+.nav-entry-selected-expanded {
+  @extend .nav-entry-selected;
+}
+
+.in-page-nav-entry {
+  @include fs-2;
+  color: $link-color;
 }

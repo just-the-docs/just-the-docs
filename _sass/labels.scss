@@ -34,3 +34,19 @@
   color: $grey-dk-200;
   background-color: $yellow-200;
 }
+
+.warning-popup {
+  background-color: #ffe6c4;
+  border-left: 4px solid #ff9f19;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.info-popup {
+  background-color: #d6e5ff;
+  border-left: 4px solid $blue-100;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

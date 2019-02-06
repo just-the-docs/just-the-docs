@@ -1,77 +1,60 @@
 <nav>
-  <ul class="navigation-list">
-    {% assign pages_list = site.html_pages | sort:"nav_order" %}
-    {% for node in pages_list %}
-      {% unless node.nav_exclude %}
-        {% if node.parent == nil %}
-          <li class="navigation-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
-            {% if page.parent == node.title or page.grand_parent == node.title %}
-              {% assign first_level_url = node.external_url | node.url | absolute_url %}
-            {% endif %}
-            <a {% if node.external_url %} href="{{ node.external_url }}" target="_blank" {% else %} href="{{ node.url | absolute_url }}" {% endif %}
-               class="navigation-list-link{% if page.url == node.url %} active{% endif %}"
-            >
-              {{ node.title }}
-              {% if node.external_url %}
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" version="1.1" width="14px" height="14px">
-                  <g id="surface1">
-                  <path style=" " d="M 9 2 L 9 3 L 12.292969 3 L 6.023438 9.273438 L 6.726563 9.976563 L 13 3.707031 L 13 7 L 14 7 L 14 2 Z M 4 4 C 2.894531 4 2 4.894531 2 6 L 2 12 C 2 13.105469 2.894531 14 4 14 L 10 14 C 11.105469 14 12 13.105469 12 12 L 12 7 L 11 8 L 11 12 C 11 12.550781 10.550781 13 10 13 L 4 13 C 3.449219 13 3 12.550781 3 12 L 3 6 C 3 5.449219 3.449219 5 4 5 L 8 5 L 9 4 Z "/>
-                  </g>
-                  </svg>
-              {% endif %}
-            </a>
-            {% if node.has_children %}
-              {% assign children_list = site.html_pages | sort:"nav_order" %}
-              <ul class="navigation-list-child-list ">
-                {% for child in children_list %}
-                  {% if child.parent == node.title %}
-                    <li class="navigation-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
-                      {% if page.url == child.url or page.parent == child.title %}
-                        {% assign second_level_url = child.external_url | child.url | absolute_url %}
-                      {% endif %}
-                      <a {% if child.external_url %} href="{{ child.external_url }}" target="_blank" {% else %} href="{{ child.url | absolute_url }}" {% endif %}
-                         class="navigation-list-link{% if page.url == child.url %} active{% endif %}"
-                      >
-                        {{ child.title }}
-                        {% if child.external_url %}
-                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" version="1.1" width="14px" height="14px">
-                          <g id="surface1">
-                          <path style=" " d="M 9 2 L 9 3 L 12.292969 3 L 6.023438 9.273438 L 6.726563 9.976563 L 13 3.707031 L 13 7 L 14 7 L 14 2 Z M 4 4 C 2.894531 4 2 4.894531 2 6 L 2 12 C 2 13.105469 2.894531 14 4 14 L 10 14 C 11.105469 14 12 13.105469 12 12 L 12 7 L 11 8 L 11 12 C 11 12.550781 10.550781 13 10 13 L 4 13 C 3.449219 13 3 12.550781 3 12 L 3 6 C 3 5.449219 3.449219 5 4 5 L 8 5 L 9 4 Z "/>
-                          </g>
-                          </svg>
-                        {% endif %}
-                      </a>
-                      {% if child.has_children %}
-                        {% assign grand_children_list = site.html_pages | sort:"nav_order" %}
-                        <ul class="navigation-list-child-list">
-                          {% for grand_child in grand_children_list %}
-                            {% if grand_child.parent == child.title %}
-                              <li class="navigation-list-item {% if page.url == grand_child.url %} active{% endif %}">
-                                <a {% if grand_child.external_url %} href="{{ grand_child.external_url }}" target="_blank" {% else %} href="{{ grand_child.url | absolute_url }}" {% endif %}
-                                   class="navigation-list-link{% if page.url == grand_child.url %} active{% endif %}"
-                                >
-                                  {{ grand_child.title }}
-                                  {% if grand_child.external_url %}
-                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" version="1.1" width="14px" height="14px">
-                                    <g id="surface1">
-                                    <path style=" " d="M 9 2 L 9 3 L 12.292969 3 L 6.023438 9.273438 L 6.726563 9.976563 L 13 3.707031 L 13 7 L 14 7 L 14 2 Z M 4 4 C 2.894531 4 2 4.894531 2 6 L 2 12 C 2 13.105469 2.894531 14 4 14 L 10 14 C 11.105469 14 12 13.105469 12 12 L 12 7 L 11 8 L 11 12 C 11 12.550781 10.550781 13 10 13 L 4 13 C 3.449219 13 3 12.550781 3 12 L 3 6 C 3 5.449219 3.449219 5 4 5 L 8 5 L 9 4 Z "/>
-                                    </g>
-                                    </svg>
-                                  {% endif %}
-                                </a>
-                              </li>
-                            {% endif %}
-                          {% endfor %}
-                        </ul>
-                      {% endif %}
-                    </li>
-                  {% endif %}
+
+    {% for toc_level_1 in site.data.toc %}
+
+        <div class="nav-top-level" style="margin-top:15px; margin-bottom:5px">
+            {{ site.data.toc_text[toc_level_1.caption] }}
+        </div>
+
+        {% for toc_level_2 in toc_level_1.children %}
+
+
+            {% comment %}
+                ------------------------------------------------
+                Figure out if a level2 or level3 item in the TOC
+                is selected. In that case, make sure all the children
+                are expanded in the TOC.
+                ------------------------------------------------
+            {% endcomment %}
+
+            {% assign this_node_or_children_selected = false %}
+            {% assign has_children = false %}
+
+            {% for page_iter in site.pages %}
+                {% if page_iter.permalink == toc_level_2.page and page_iter.permalink == page.permalink %}
+                    {% assign this_node_or_children_selected = true %}
+                {% endif %}
+            {% endfor %}
+
+            {% assign page.g_child_pages = toc_level_2.children %}
+            {% for toc_level_3 in toc_level_2.children %}
+                {% assign has_children = true %}
+                {% for page_iter in site.pages %}
+                    {% if page_iter.permalink == toc_level_3.page and page_iter.permalink == page.permalink%}
+                        {% assign this_node_or_children_selected = true %}
+                    {% endif %}
                 {% endfor %}
-              </ul>
+            {% endfor %}
+
+
+            {% if has_children %}
+                {% include nav_entry.html entry=toc_level_2 has_children=true expanded=this_node_or_children_selected %}
+                {% if this_node_or_children_selected %}
+                    {% for toc_level_3 in toc_level_2.children %}
+                        {% include nav_entry.html indent="<span style='margin-left:20px'/>" entry=toc_level_3 %}
+                    {% endfor %}
+                {% endif %}
+            {% else %}
+                {% include nav_entry.html entry=toc_level_2 %}
             {% endif %}
-          </li>
-        {% endif %}
-      {% endunless %}
+
+            {% comment %}
+                ------------------------------------------------
+            {% endcomment %}
+
+        {% endfor %}
+
     {% endfor %}
-  </ul>
+
+
 </nav>

@@ -40,6 +40,7 @@ h6,
 }
 
 li {
+  font-size: 14px;
   .highlight {
     margin-top: $sp-2;
   }
@@ -47,6 +48,11 @@ li {
 
 .text-small {
   @include fs-2;
+}
+
+p {
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .text-mono {

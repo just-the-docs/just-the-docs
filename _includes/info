@@ -1,0 +1,6 @@
+<div class="info-popup">
+    <p>
+        <i class="fa fa-info-circle"></i>
+        <b>{{include.title}}:</b> {{include.content}}
+    </p>
+</div>

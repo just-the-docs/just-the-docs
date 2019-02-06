@@ -1,0 +1,25 @@
+
+{% if include.entry.page %}
+
+    {% for page_iter in site.pages %}
+        {% if page_iter.permalink == include.entry.page %}
+            <div>
+                <a class="in-page-nav-entry" href="{{ page_iter.url | absolute_url }}">
+                    {{ page_iter.title }}
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+
+{% endif %}
+
+
+{% if include.entry.url %}
+    <div>
+        <a href="{{ include.entry.url }}" class="in-page-nav-entry" target="_blank">
+            {{ site.data.toc_text[include.entry.text] }}&nbsp;&nbsp;<i class="fa fa-external-link-square"></i>
+        </a>
+    </div>
+{% endif %}
+
+

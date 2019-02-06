@@ -1,0 +1,45 @@
+
+{% if include.entry.page %}
+
+    {% for page_iter in site.pages %}
+        {% if page_iter.permalink == include.entry.page %}
+
+            <div>
+
+            <a
+                {% if page.permalink == page_iter.permalink and include.has_children %}
+                    class="nav-entry-selected-expanded"
+                {% elsif page.permalink == page_iter.permalink %}
+                    class="nav-entry-selected"
+                {% elsif include.has_children and include.expanded %}
+                    class="nav-entry-expanded"
+                {% elsif include.has_children %}
+                    class="nav-entry-non-expanded"
+                {% else %}
+                    class="nav-entry"
+                {% endif %}
+
+                href="{{ page_iter.url | absolute_url }}"
+            >
+                {{include.indent}}{{ page_iter.title }}
+            </a>
+            </div>
+
+        {% endif %}
+    {% endfor %}
+
+{% endif %}
+
+
+{% if include.entry.url %}
+
+    <div>
+
+        <a class="nav-entry" href="{{ include.entry.url }}" target="_blank">
+            {{include.indent}}{{ site.data.toc_text[include.entry.text] }}&nbsp;&nbsp;<i class="fa fa-external-link-square"></i>
+        </a>
+    </div>
+
+{% endif %}
+
+

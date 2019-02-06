@@ -51,7 +51,7 @@ $red-200: #e94c4c !default;
 $red-300: #dd2e2e !default;
 
 $body-background-color: $white !default;
-$sidebar-color: $grey-lt-000 !default;
+$sidebar-color: #444444 !default;
 $code-background-color: $grey-lt-000 !default;
 
 $body-text-color: $grey-dk-100 !default;
@@ -118,8 +118,8 @@ $border-color: $grey-lt-100 !default;
 
 $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
-$nav-width: 232px !default;
-$content-width: 800px !default;
+$nav-width: 200px !default;
+$content-width: 675px !default;
 
 $media-queries: (
   xs: 320px,

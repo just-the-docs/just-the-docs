@@ -37,7 +37,7 @@
 
   @include mq(lg) {
     width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
-    min-width: $nav-width;
+    min-width: $nav-width - 50;
   }
 }
 
@@ -62,9 +62,9 @@
   @include mq(md) {
     position: relative;
     max-width: $content-width;
-    padding-top: $gutter-spacing;
+    padding-top: 0;
     padding-bottom: $gutter-spacing;
-    padding-left: $gutter-spacing * 1.5;
+    padding-left: $gutter-spacing;
     margin-left: $nav-width;
   }
 
@@ -110,7 +110,7 @@
 
 .navigation {
   @include mq(md) {
-    padding-top: $sp-8;
+    //padding-top: $sp-8;
     overflow-y: auto;
     flex: 1 1 auto;
   }
