@@ -15,7 +15,7 @@
     z-index: 101;
     height: 60px;
     padding-top: $sp-4;
-    border-bottom: $border $border-color;
+    // border-bottom: $border $border-color;
   }
 }
 
@@ -35,7 +35,7 @@
   list-style: none;
 
   .navigation-list-link {
-    color: #ffffff;
+    color: $nav-child-link-color;
   }
 
   .navigation-list-item {
@@ -51,14 +51,13 @@
 
     &.active {
       &::before {
-        color: #18202B;
+        color: $body-text-color;
       }
     }
   }
 }
 
 .navigation-list-item {
-  color: #fff !important;  
   @include fs-4;
   margin: 0;
 
@@ -71,7 +70,6 @@
   }
 
   &.active {
-    color: #00B5EB !important;
     .navigation-list-child-list {
       display: block;
     }
