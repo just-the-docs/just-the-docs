@@ -35,7 +35,7 @@
   list-style: none;
 
   .navigation-list-link {
-    color: $nav-child-link-color;
+    color: #ffffff;
   }
 
   .navigation-list-item {
@@ -51,7 +51,7 @@
 
     &.active {
       &::before {
-        color: $body-text-color;
+        color: #18202B;
       }
     }
   }
