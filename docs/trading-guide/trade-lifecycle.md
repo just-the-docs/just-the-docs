@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Trading Guide
+title: Trade Lifecycle
 # parent: UI Components
 parent: Trading Guide
 nav_order: 1
