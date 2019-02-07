@@ -26,8 +26,8 @@ search_enabled: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Back To Site":
-    - "//delta.exchange"
+  "Back To Trading":
+    - "//delta.exchange/app"
 
 # Color scheme currently only supports "dark" or nil (default)
 # color_scheme: "dark"

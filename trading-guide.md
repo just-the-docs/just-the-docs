@@ -51,7 +51,7 @@ Trading can be halted for scheduled maintenance and in case of unanticipated eve
 
   
 
-## <a id="fpm"></a>Fair Price Marking
+## Fair Price Marking
 
 Leverage is inherent in derivative contracts, combined with high volatility of crypto-currencies can lead to unwarranted liquidations. Lack of liquidity could further exacerbate this situation as price swings in a derivatives contract relative to the underlying index could widen even further.
 
