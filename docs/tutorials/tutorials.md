@@ -7,6 +7,9 @@ nav_order: 2
 
 # Tutorials
 
+1. Table of Contents
+{:toc}
+
 ## Futures
 
 A derivative is a financial security which derives its value from an underlying asset or group of assets. The derivative itself is a contract between two parties and its price is driven by fluctuations in the underlying asset.
