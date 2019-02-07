@@ -9,6 +9,9 @@ permalink: /
 
 # Getting Started
 
+1. Table of Contents
+{:toc}
+
   Delta is an exchange for trading of cryptocurrency derivatives. We currently offer Futures contracts on bitcoin (BTC) and ether (ETH). The following features stand us apart from other cryptocurrency exchanges:
 
 -   **Leverage:** All derivative contracts traded on Delta have built in leverage of up to $100$x. This means that with say $100 worth of BTC, you can take a position of size $10000.
