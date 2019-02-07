@@ -2,7 +2,9 @@
 layout: default
 title: Trading Guide
 # parent: UI Components
+has_childred: true
 nav_order: 3
+permalink: /docs/trading-guide
 ---
 
 # Trading Guide
