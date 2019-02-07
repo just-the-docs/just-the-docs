@@ -3,7 +3,7 @@ layout: default
 title: Trading Guide
 # parent: UI Components
 parent: Trading Guide
-nav_order: 3
+nav_order: 1
 ---
 
 # Trading Guide
