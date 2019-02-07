@@ -9,6 +9,9 @@ permalink: /docs/trading-guide
 
 # Trading Guide
 
+1. TOC
+{:toc}
+
 ## Trade lifecycle
 
 ### Funding exchange wallet
