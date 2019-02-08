@@ -149,3 +149,10 @@ p, ul, ol {
 .site-title {
   border-bottom: 1px solid rgba(255,255,255,0.2);
 }
+
+.site-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
