@@ -127,6 +127,9 @@
 
 .navigation-list-item > a {
   color: white !important;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 10px 25px;
 }
 
 h1,h2,h3,h4,h5,h6,p,ol,ul {
@@ -136,4 +139,8 @@ h1,h2,h3,h4,h5,h6,p,ol,ul {
 p {
   font-size: 18px;
   line-height: 28px;
+}
+
+.navigation-list-item {
+  border-bottom: 1px solid white;
 }
