@@ -1,14 +1,15 @@
-<p align="right">
-    <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://travis-ci.com/pmarsceill/just-the-docs"><img src="https://travis-ci.com/pmarsceill/just-the-docs.svg?branch=master" alt="Build status"></a>
-</p>
-<br><br>
-<p align="center">
-    <h1 align="center">Just the Docs</h1>
-    <p align="center">A modern, high customizable, responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub pages with few dependencies.</p>
-    <p align="center"><strong><a href="https://pmarsceill.github.io/just-the-docs">See it in action!</a></strong></p>
-    <br><br><br>
-</p>
+# Shotgun Developer Documentation Theme
 
+This is a clone of [just-the-docs](https://pmarsceill.github.io/just-the-docs) extended and tailored to
+serve the documentation needs of the Shotgun Ecosystem. For more information, see [tk-doc-generator](https://github.com/shotgunsoftware/tk-doc-generator).
+
+----
+
+# Just The Docs
+
+A modern, high customizable, responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub pages with few dependencies.
+
+[See it in action](https://pmarsceill.github.io/just-the-docs)
 
 ![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
 
