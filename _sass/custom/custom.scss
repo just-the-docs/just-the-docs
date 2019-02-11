@@ -160,7 +160,7 @@ p, ul, ol {
     img {
       width: 32px;
       height: 32px;
-      color: white !important;
+      filter: brightness(0) invert(1);
     }
   }
 }
