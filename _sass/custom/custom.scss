@@ -157,9 +157,11 @@ p, ul, ol {
   align-items: stretch;
   a {
     flex: 0 1 auto;
-    width: 32px;
-    height: 32px;
-    color: white !important;
+    img {
+      width: 32px;
+      height: 32px;
+      color: white !important;
+    }
   }
 }
 
