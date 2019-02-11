@@ -157,9 +157,10 @@ p, ul, ol {
   align-items: stretch;
   a {
     flex: 0 1 auto;
+    background-image: none !important;
     img {
-      width: 32px;
-      height: 32px;
+      width: 16px;
+      height: 16px;
       filter: brightness(0) invert(1);
     }
   }
