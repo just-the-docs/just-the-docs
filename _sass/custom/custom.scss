@@ -154,5 +154,12 @@ p, ul, ol {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
+  a {
+    flex: 0 1 auto;
+    width: 32px;
+    height: 32px;
+    color: white !important;
+  }
 }
+
