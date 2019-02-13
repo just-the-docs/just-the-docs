@@ -1,17 +1,7 @@
 // //
-// // Typography
-// //
-//
-// $body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
-// $mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace;
-// $root-font-size: 16px;         // Base font-size for rems
-// $body-line-height: 1.4;
-// $body-heading-line-height: 1.15;
-//
-// //
-// // Colors
-// //
-//
+// // TP Theme
+// // 
+
 
 $white: #fff;
 $grey-dk-000: $white;
@@ -20,10 +10,8 @@ $tp_orange: #ff7f15;
 $tp_green: rgba(50,180,93,1);
 
 $link-color: $tp_orange;
-
 $nav-link-color: $white;
 $nav-child-link-color: $white;
-
 $btn-primary-color: $tp_orange;
 $base-button-color: $white !default;
 
@@ -36,6 +24,9 @@ $base-button-color: $white !default;
 .side-bar, .site-title, .site-footer {
     background-color: $tp_green;
 }
+.navigation{
+    min-width: 300px;
+}
 
 .navigation-list-child-list .navigation-list-link
 .navigation-list-link a,
@@ -44,4 +35,13 @@ $base-button-color: $white !default;
 .site-title a,
 .site-footer{
     color: $white;
+}
+
+//Re-Enable List-syles
+.page-content ul{
+    list-style: disc; 
+}
+
+.page-content ol{
+    list-style-type: decimal; 
 }
