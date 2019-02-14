@@ -12,11 +12,11 @@ layout: default
     {{ site.data.landing_page_text.title }}
     </div>
 
-    <div style="display: flex; flex-wrap: wrap; margin-top: 10px; align-items: center; justify-content: center" >
+    <div style="display: flex; flex-wrap: wrap; margin-top: 10px; justify-content: center;" >
     {% for tile in site.data.landing_page.tiles%}
 
         <div
-            style="cursor: pointer; width: 190px; margin: 5px; padding: 5px; padding-top: 10px; padding-bottom: 10px; height: 190px; border: 1px solid #0696D7; border-radius: 4px; text-align: center;"
+            style="cursor: pointer; width: 190px; margin: 5px; padding: 5px; padding-top: 10px; padding-bottom: 10px; border: 1px solid #0696D7; border-radius: 4px; text-align: center;"
             onmouseover="this.style.background='#eeeeee';"
             onmouseout="this.style.background='white';"
             onclick="location.href='{{ tile.target }}';"
