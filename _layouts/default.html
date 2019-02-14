@@ -101,7 +101,8 @@
     (function() {
       var links = document.links;
       for (var i = 0, linksLength = links.length; i < linksLength; i++) {
-        if (links[i].hostname != window.location.hostname) {
+        // temp fix: make sure sphinx repos on developer site appear as external links from dev site.
+        if (links[i].hostname != window.location.hostname || links[i].pathname.startsWith('tk-') || links[i].pathname.startsWith('python-api') || links[i].pathname.startsWith('rest-api') ) {
           links[i].target = '_blank';
           links[i].className += ' external-link-decoration';
         }

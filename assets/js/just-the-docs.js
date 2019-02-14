@@ -108,7 +108,7 @@ function initSearch() {
       } else {
         var results = index.search(query);
 
-        if (results.length > 1) {
+        if (results.length > 0) {
           searchResults.classList.add('active');
           var resultsList = document.createElement('ul');
           searchResults.appendChild(resultsList);
