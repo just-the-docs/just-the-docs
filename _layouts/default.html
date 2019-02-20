@@ -102,7 +102,7 @@
       var links = document.links;
       for (var i = 0, linksLength = links.length; i < linksLength; i++) {
         // temp fix: make sure sphinx repos on developer site appear as external links from dev site.
-        if (links[i].pathname.startsWith('/tk-doc-generator') {
+        if (links[i].pathname.startsWith('/tk-doc-generator')) {
             // no external links for the doc generator - but for all other developer site /tk-links
             continue;
         }
