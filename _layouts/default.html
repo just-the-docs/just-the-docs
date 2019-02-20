@@ -22,7 +22,7 @@
                 <select onChange="window.location.href = this.value">
 
                     {% for tongue in site.languages %}
-                        <option {% if tongue == site.active_lang %} selected {% endif %} value="{% if tongue == site.default_lang %}{{site.baseurl}}{{page.url}}{% else %}{{site.baseurl}}/{{ tongue }}{{page.url}}{% endif %}">{{ site.lang_vars[forloop.index0] }}</option>
+                        <option {% if tongue == site.active_lang %} selected {% endif %} value="{% if tongue == site.default_lang %}{{site.url}}{{site.baseurl}}{{page.url}}{% else %}{{site.url}}{{site.baseurl}}/{{ tongue }}{{page.url}}{% endif %}">{{ site.lang_vars[forloop.index0] }}</option>
                     {% endfor %}
                 </select>
 
