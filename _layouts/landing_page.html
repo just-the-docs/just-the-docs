@@ -6,7 +6,7 @@ layout: default
 
 <div style="margin-top: 50px; display: flex; align-items: center; flex-direction: column; justify-content: center;">
 
-    <img style="max-height: 200px;" src="{{ site.data.landing_page.image }}"/>
+    <img style="max-height: 200px; box-shadow: none;" src="{{ site.data.landing_page.image }}"/>
 
     <div class="fs-3" style="width: 90%; margin: 20px;">
     {{ site.data.landing_page_text.title }}
@@ -21,7 +21,7 @@ layout: default
             onmouseout="this.style.background='white';"
             onclick="location.href='{{ tile.target }}';"
         >
-            <img style="width: 80px; height: 80px" src="{{ tile.image }}"/>
+            <img style="width: 80px; height: 80px; box-shadow: none;" src="{{ tile.image }}"/>
             <div class="fs-2">{{ site.data.landing_page_text[tile.name] }}</div>
         </div>
 
