@@ -1,0 +1,16 @@
+{% comment %} build the value for style by looking for include variables {% endcomment %}
+{% assign style = style | default: "" %}
+{% if include.width %}
+    {% assign style = style | append: "width: " | append: include.width | append: ";" %}
+{% endif %}
+{% if height %}
+    {% assign style = style | append: "height: " | append: include.height | append: ";" %}
+{% endif %}
+{% if include.dropshadow == false %}
+	{% comment %} if dropshadow is false, remove the box-shadow inherited by <img> {% endcomment %}
+    {% assign style = style | append: "box-shadow: none;" %}
+{% endif %}
+<figure>
+  <img src="{{include.src}}" style="{{style}}">
+  {% if include.caption %}<figcaption>{{include.caption}}</figcaption>{% endif %}
+</figure>
