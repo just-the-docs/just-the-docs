@@ -1,5 +1,5 @@
 {% comment %} build the value for style by looking for include variables {% endcomment %}
-{% assign style = style | default: "" %}
+{% assign style = include.style | default: "" %}
 {% if include.width %}
     {% assign style = style | append: "width: " | append: include.width | append: ";" %}
 {% endif %}
