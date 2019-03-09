@@ -62,9 +62,15 @@
           <ul>
             {% for child in children_list %}
               {% if child.parent == page.title and child.title != page.title %}
-              <li>
-                <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
-              </li>
+                {% if child.summary %}
+                  <li>
+                    <a href="{{ child.url | absolute_url }}">{{ child.title }} - {{ child.summary }}</a>
+                  </li>
+                {% else %}
+                  <li>
+                    <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
+                  </li>
+                {% endif %}
               {% endif %}
             {% endfor %}
           </ul>
