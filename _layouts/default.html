@@ -64,7 +64,7 @@
               {% if child.parent == page.title and child.title != page.title %}
                 {% if child.summary %}
                   <li>
-                    <a href="{{ child.url | absolute_url }}">{{ child.title }} - {{ child.summary }}</a>
+                    <a href="{{ child.url | absolute_url }}">{{ child.title }}</a> - {{ child.summary }}
                   </li>
                 {% else %}
                   <li>
