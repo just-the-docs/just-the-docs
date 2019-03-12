@@ -10,13 +10,14 @@
 	{% comment %} if dropshadow is false, remove the box-shadow inherited by <img> {% endcomment %}
     {% assign style = style | append: "box-shadow: none;" %}
 {% endif %}
-{% comment %} In order to properly render markdown in variables, we need to capture{% endcomment %}
-{% comment %}the whole include's output and markdownify it.{% endcomment %}
-{% comment %}This is because markdownifying variables alone will wrap thine in <p> elements.{% endcomment %}
-{% capture includeresult %}
+{% comment %}
+We want to markdownify the caption, however the markdownify filter does not offer an "inline" mode
+(see https://github.com/jekyll/jekyll/issues/3571).  To get around this, we'll remove <p> </p>.
+{% endcomment %}
+{% if include.caption %}
+	{% assign include.caption = include.caption | markdownify | remove: "<p>" | remove: "</p>" %}
+{% endif %}
 <figure>
   <img src="{{include.src}}" style="{{style}}">
-  {% if include.caption %}<figcaption>{{include.caption}}</figcaption>{% endif %}
+  {% if include.caption %}<figcaption>{{include.caption | markdownify | strip | }}</figcaption>{% endif %}
 </figure>
-{% endcapture %}
-{{ includeresult | markdownify }}

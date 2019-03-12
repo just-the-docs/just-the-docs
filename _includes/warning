@@ -1,12 +1,12 @@
-{% comment %} In order to properly render markdown in variables, we need to capture{% endcomment %}
-{% comment %}the whole include's output and markdownify it.{% endcomment %}
-{% comment %}This is because markdownifying variables alone will wrap thine in <p> elements.{% endcomment %}
-{% capture includeresult %}
+{% comment %}
+We want to markdownify the title/content, however the markdownify filter does not offer an "inline" mode
+(see https://github.com/jekyll/jekyll/issues/3571).  To get around this, we'll remove <p> </p>.
+{% endcomment %}
+{% assign include.title = include.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign include.content = include.content | markdownify | remove: "<p>" | remove: "</p>" %}
 <div class="warning-popup">
     <p>
         <i class="fa fa-exclamation-circle"></i>
         <b>{{include.title}}:</b> {{include.content}}
     </p>
 </div>
-{% endcapture %}
-{{ includeresult | markdownify }}
