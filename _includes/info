@@ -1,6 +1,6 @@
 <div class="info-popup">
     <p>
         <i class="fa fa-info-circle"></i>
-        <b>{{include.title | markdownify}}:</b> {{include.content | markdownify}}
+        <b>{{include.title | markdownify | strip}}:</b> {{include.content | markdownify | strip}}
     </p>
 </div>
