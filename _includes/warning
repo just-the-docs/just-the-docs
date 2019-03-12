@@ -2,11 +2,9 @@
 We want to markdownify the title/content, however the markdownify filter does not offer an "inline" mode
 (see https://github.com/jekyll/jekyll/issues/3571).  To get around this, we'll remove <p> </p>.
 {% endcomment %}
-{% assign include.title = include.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% assign include.content = include.content | markdownify | remove: "<p>" | remove: "</p>" %}
 <div class="warning-popup">
     <p>
         <i class="fa fa-exclamation-circle"></i>
-        <b>{{include.title}}:</b> {{include.content}}
+        <b>{{include.title | markdownify | remove: "<p>" | remove: "</p>"}}:</b> {{include.content | markdownify | remove: "<p>" | remove: "</p>"}}
     </p>
 </div>

@@ -14,10 +14,7 @@
 We want to markdownify the caption, however the markdownify filter does not offer an "inline" mode
 (see https://github.com/jekyll/jekyll/issues/3571).  To get around this, we'll remove <p> </p>.
 {% endcomment %}
-{% if include.caption %}
-	{% assign include.caption = include.caption | markdownify | remove: "<p>" | remove: "</p>" %}
-{% endif %}
 <figure>
   <img src="{{include.src}}" style="{{style}}">
-  {% if include.caption %}<figcaption>{{include.caption | markdownify | strip | }}</figcaption>{% endif %}
+  {% if include.caption %}<figcaption>{{include.caption | markdownify | remove: "<p>" | remove: "</p>"}}</figcaption>{% endif %}
 </figure>
