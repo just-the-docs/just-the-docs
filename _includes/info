@@ -1,6 +1,12 @@
+{% comment %} In order to properly render markdown in variables, we need to capture{% endcomment %}
+{% comment %}the whole include's output and markdownify it.{% endcomment %}
+{% comment %}This is because markdownifying variables alone will wrap thine in <p> elements.{% endcomment %}
+{% capture includeresult %}
 <div class="info-popup">
     <p>
         <i class="fa fa-info-circle"></i>
-        <b>{{include.title | markdownify | strip}}:</b> {{include.content | markdownify | strip}}
+        <b>{{include.title}}:</b> {{include.content}}
     </p>
 </div>
+{% endcapture %}
+{{ includeresult | markdownify }}
