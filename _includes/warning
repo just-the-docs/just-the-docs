@@ -1,6 +1,6 @@
 <div class="warning-popup">
     <p>
         <i class="fa fa-exclamation-circle"></i>
-        <b>{{include.title}}:</b> {{include.content}}
+        <b>{{include.title | markdownify}}:</b> {{include.content | markdownify}}
     </p>
 </div>
