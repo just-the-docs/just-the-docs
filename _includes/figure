@@ -12,5 +12,5 @@
 {% endif %}
 <figure>
   <img src="{{include.src}}" style="{{style}}">
-  {% if include.caption %}<figcaption>{{include.caption}}</figcaption>{% endif %}
+  {% if include.caption %}<figcaption>{{include.caption | markdownify}}</figcaption>{% endif %}
 </figure>
