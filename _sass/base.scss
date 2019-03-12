@@ -92,6 +92,10 @@ figure {
   margin: 0;
 }
 
+figure > img {
+  margin-bottom 1em;
+}
+
 figcaption {
   text-align: center;
   margin-top: 0.5em;
