@@ -10,7 +10,11 @@
 	{% comment %} if dropshadow is false, remove the box-shadow inherited by <img> {% endcomment %}
     {% assign style = style | append: "box-shadow: none;" %}
 {% endif %}
+{% comment %}
+We want to markdownify the caption, however the markdownify filter does not offer an "inline" mode
+(see https://github.com/jekyll/jekyll/issues/3571).  To get around this, we'll remove <p> </p>.
+{% endcomment %}
 <figure>
   <img src="{{include.src}}" style="{{style}}">
-  {% if include.caption %}<figcaption>{{include.caption}}</figcaption>{% endif %}
+  {% if include.caption %}<figcaption>{{include.caption | markdownify | remove: "<p>" | remove: "</p>"}}</figcaption>{% endif %}
 </figure>
