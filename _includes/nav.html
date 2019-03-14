@@ -18,8 +18,7 @@
 
             {% assign expand_level_2 = false %}
             {% assign expand_level_3 = false %}
-            {% assign has_children_level_2 = false %}
-            {% assign has_children_level_3 = false %}
+            {% assign has_children = "" %}
 
             {% for page_iter in site.pages %}
                 {% if page_iter.permalink == toc_level_2.page and page_iter.permalink == page.permalink %}
@@ -35,19 +34,19 @@
                 ------------------------------------------------
             {% endcomment %}
             {% for toc_level_3 in toc_level_2.children %}
-                {% assign has_children_level_2 = true %}
+                {% assign has_children = has_children | append: "," | append: toc_level_2.page %}
                 {% for page_iter in site.pages %}
                     {% if page_iter.permalink == toc_level_3.page and page_iter.permalink == page.permalink %}
                         {% assign expand_level_2 = true %}
-                        {% assign expand_level_3 = true %}
+                        {% assign expand_level_3 = toc_level_3.page %}
                     {% endif %}
                 {% endfor %}
                 {% for toc_level_4 in toc_level_3.children %}
-                    {% assign has_children_level_3 = true %}
+                    {% assign has_children = has_children | append: "," | append: toc_level_3.page %}
                     {% for page_iter in site.pages %}
                         {% if page_iter.permalink == toc_level_4.page and page_iter.permalink == page.permalink %}
                             {% assign expand_level_2 = true %}
-                            {% assign expand_level_3 = true %}
+                            {% assign expand_level_3 = toc_level_3.page %}
                         {% endif %}
                     {% endfor %}
                 {% endfor %}
@@ -60,15 +59,22 @@
                 expand all the parents to the level of the selected item.
                 ------------------------------------------------
             {% endcomment %}
-            {% if has_children_level_2 %}
+            {% assign has_children = has_children | split: "," %}
+
+            {% if has_children contains toc_level_2.page %}
                 {% include nav_entry.html entry=toc_level_2 has_children=true expanded=expand_level_2 %}
                 {% if expand_level_2 %}
                     {% for toc_level_3 in toc_level_2.children %}
-                        {% include nav_entry.html indent="<span style='margin-left:20px'/>" entry=toc_level_3 has_children=has_children_level_3 expanded=expand_level_3 %}
-                        {% if expand_level_3 %}
-                            {% for toc_level_4 in toc_level_3.children %}
-                                {% include nav_entry.html indent="<span style='margin-left:40px'/>" entry=toc_level_4 %}
-                            {% endfor %}
+                        {% if has_children contains toc_level_3.page %}
+                            {% assign expand_this = expand_level_3 == toc_level_3.page %}
+                            {% include nav_entry.html indent="<span style='margin-left:20px'/>" entry=toc_level_3 has_children=true expanded=expand_this %}
+                            {% if expand_this %}
+                                {% for toc_level_4 in toc_level_3.children %}
+                                    {% include nav_entry.html indent="<span style='margin-left:40px'/>" entry=toc_level_4 %}
+                                {% endfor %}
+                            {% endif %}
+                        {% else %}
+                            {% include nav_entry.html indent="<span style='margin-left:20px'/>" entry=toc_level_3 has_children=false %}
                         {% endif %}
                     {% endfor %}
                 {% endif %}
