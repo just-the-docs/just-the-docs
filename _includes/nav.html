@@ -8,53 +8,76 @@
 
         {% for toc_level_2 in toc_level_1.children %}
 
-
             {% comment %}
                 ------------------------------------------------
-                Figure out if a level2 or level3 item in the TOC
-                is selected. In that case, make sure all the children
-                are expanded in the TOC.
+                Figure out if a level2, level3 or level4 item in the TOC
+                is selected. In that case, make sure all the parents
+                are expanded in the TOC to reveal the selected item.
                 ------------------------------------------------
             {% endcomment %}
 
-            {% assign this_node_or_children_selected = false %}
-            {% assign has_children = false %}
+            {% assign expand_level_2 = false %}
+            {% assign expand_level_3 = false %}
+            {% assign has_children_level_2 = false %}
+            {% assign has_children_level_3 = false %}
 
             {% for page_iter in site.pages %}
                 {% if page_iter.permalink == toc_level_2.page and page_iter.permalink == page.permalink %}
-                    {% assign this_node_or_children_selected = true %}
+                    {% assign expand_level_2 = true %}
                 {% endif %}
             {% endfor %}
 
-            {% assign page.g_child_pages = toc_level_2.children %}
+            {% comment %}
+                ------------------------------------------------
+                Iterate over the children of each level2 item to find level3
+                items, then over the children of each level3 item to find
+                level4 items.
+                ------------------------------------------------
+            {% endcomment %}
             {% for toc_level_3 in toc_level_2.children %}
-                {% assign has_children = true %}
+                {% assign has_children_level_2 = true %}
                 {% for page_iter in site.pages %}
-                    {% if page_iter.permalink == toc_level_3.page and page_iter.permalink == page.permalink%}
-                        {% assign this_node_or_children_selected = true %}
+                    {% if page_iter.permalink == toc_level_3.page and page_iter.permalink == page.permalink %}
+                        {% assign expand_level_2 = true %}
+                        {% assign expand_level_3 = true %}
                     {% endif %}
+                {% endfor %}
+                {% for toc_level_4 in toc_level_3.children %}
+                    {% assign has_children_level_3 = true %}
+                    {% for page_iter in site.pages %}
+                        {% if page_iter.permalink == toc_level_4.page and page_iter.permalink == page.permalink %}
+                            {% assign expand_level_2 = true %}
+                            {% assign expand_level_3 = true %}
+                        {% endif %}
+                    {% endfor %}
                 {% endfor %}
             {% endfor %}
 
-
-            {% if has_children %}
-                {% include nav_entry.html entry=toc_level_2 has_children=true expanded=this_node_or_children_selected %}
-                {% if this_node_or_children_selected %}
+            {% comment %}
+                ------------------------------------------------
+                Draw all the nav entries.
+                If there are any children, and any of those children is selected
+                expand all the parents to the level of the selected item.
+                ------------------------------------------------
+            {% endcomment %}
+            {% if has_children_level_2 %}
+                {% include nav_entry.html entry=toc_level_2 has_children=true expanded=expand_level_2 %}
+                {% if expand_level_2 %}
                     {% for toc_level_3 in toc_level_2.children %}
-                        {% include nav_entry.html indent="<span style='margin-left:20px'/>" entry=toc_level_3 %}
+                        {% include nav_entry.html indent="<span style='margin-left:20px'/>" entry=toc_level_3 has_children=has_children_level_3 expanded=expand_level_3 %}
+                        {% if expand_level_3 %}
+                            {% for toc_level_4 in toc_level_3.children %}
+                                {% include nav_entry.html indent="<span style='margin-left:40px'/>" entry=toc_level_4 %}
+                            {% endfor %}
+                        {% endif %}
                     {% endfor %}
                 {% endif %}
             {% else %}
                 {% include nav_entry.html entry=toc_level_2 %}
             {% endif %}
-
             {% comment %}
                 ------------------------------------------------
             {% endcomment %}
-
         {% endfor %}
-
     {% endfor %}
-
-
 </nav>
