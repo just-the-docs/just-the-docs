@@ -66,7 +66,11 @@
                 {% if expand_level_2 %}
                     {% for toc_level_3 in toc_level_2.children %}
                         {% if has_children contains toc_level_3.page %}
-                            {% assign expand_this = expand_level_3 == toc_level_3.page %}
+                            {% if expand_level_3 == toc_level_3.page %}
+                                {% assign expand_this = true %}
+                            {% else %}
+                                {% assign expand_this = false %}
+                            {% endif %}
                             {% include nav_entry.html indent="<span style='margin-left:20px'/>" entry=toc_level_3 has_children=true expanded=expand_this %}
                             {% if expand_this %}
                                 {% for toc_level_4 in toc_level_3.children %}
