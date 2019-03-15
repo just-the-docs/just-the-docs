@@ -64,6 +64,12 @@
                 {% for toc_level_2 in toc_level_1.children %}
                     {% if toc_level_2.page == page.permalink %}
                         {% assign children = toc_level_2.children %}
+                    {% else %}
+                        {% for toc_level_3 in toc_level_2.children %}
+                          {% if toc_level_3.page == page.permalink %}
+                              {% assign children = toc_level_3.children %}
+                          {% endif %}
+                        {% endfor %}
                     {% endif %}
                 {% endfor %}
             {% endfor %}
