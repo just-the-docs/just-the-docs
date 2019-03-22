@@ -39,4 +39,4 @@ color_scheme: nil
 
 kramdown:
   hard_wrap:      false
-  toc_levels:     2..2
+  toc_levels:     2..4
