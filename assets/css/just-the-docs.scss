@@ -17,6 +17,11 @@
 @import "./support/support";
 
 //
+// Import custom overrides
+//
+@import "./custom/custom.scss";
+
+//
 // Import custom color scheme scss
 //
 
@@ -37,7 +42,3 @@
 @import "./code";
 @import "./utilities/utilities";
 
-//
-// Import custom overrides
-//
-@import "./custom/custom";

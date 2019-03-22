@@ -1,0 +1,134 @@
+
+# Categories
+#   - viewer
+#   - generator
+#   - parser
+#   - validator
+#   - storage
+#   - applications
+
+- name: Elyx 3D Viewer (1Spatial)
+  webpage: https://1spatial.com/products/elyx/elyx-gis-platform/elyx-3d/
+  description: CityGML viewer (Windows-only)
+  category: viewer
+  foss: false
+
+- name: RhinoCity
+  webpage: http://www.rhinoterrain.com/en/rhinocity-3.html
+  description: "Plugin for Rhinoceros to easily create 3D textured models from data such as roof vectors, aerial imagery, point clouds or cadastral files."
+  foss: false
+  category: generator
+
+- name: schemaCityGML
+  webpage: http://geovalidation.bk.tudelft.nl/schemacitygml/
+  description: Web-application to validate your CityGML file against the XSD schemas
+  foss: true
+  category: validator
+
+- name: CityDoctor
+  webpage: http://www.citydoctor.eu
+  description: Implements methods and metrics for analysis, testing and correction of syntax, geometry and semantics
+  foss: false
+  category: validator
+
+- name: 3D City Database
+  webpage: http://www.3dcitydb.org
+  description: Free geo database to store, represent, and manage virtual 3D city models on top of a standard spatial relational database (PostGIS and Oracle)
+  foss: true
+  category: storage
+
+- name: GeoRocket
+  webpage: https://georocket.io
+  description: High-performance data store for geospatial files (ready for the cloud). Supports CityGML, GML, GeoJSON, and more.
+  foss: true
+  category: storage
+
+- name: 3dfier
+  webpage: https://github.com/tudelft3d/3dfier
+  description: Takes 2D GIS datasets and "3dfies" them by lifting each polygon to its height (obtained with LiDAR). Outputs CityGML
+  foss: true
+  category: generator
+
+- name: azul
+  webpage: https://itunes.apple.com/nl/app/azul/id1173239678?mt=12
+  description: A native and fast CityGML viewer for macOS
+  category: viewer
+  foss: true
+
+- name: CityEditor (SketchUp extension)
+  webpage: https://extensions.sketchup.com/en/content/cityeditor-2
+  description: CityEditor by 3DIS GmbH allows import, editing and export of CityGML models using SketchUp
+  category: generator
+  foss: false
+
+- name: citygml4j
+  webpage: https://github.com/citygml4j
+  description: Open source Java class library and API 
+  category: parser
+  foss: true
+  
+- name: libcitygml
+  webpage: https://github.com/jklimke/libcitygml
+  description: Open source C++ class library for reading CityGML. Supports most CityGML elements; also provides a plugin for the OpenSceneGraph library for CityGML visualization
+  category: parser
+  foss: true
+
+- name: CodeSynthesis XSD
+  webpage: http://www.codesynthesis.com/products/xsd/
+  description: "XML Schema to C++ data binding compiler, see [the CityGML specificities](http://wiki.codesynthesis.com/Schemas/CityGML)"
+  foss: true
+  category: parser
+
+- name: FME
+  webpage: http://www.safe.com
+  description: Can be used to read, write, process and visualise CityGML; Windows, macOS, Linux
+  foss: false
+  category: viewer;parser
+
+- name: FZKViewer
+  webpage: https://www.iai.kit.edu/1302.php
+  description: Visualises the semantic data models IFC, CityGML and gbXML; Windows-only
+  foss: true
+  category: viewer
+
+- name: HUMBOLDT Alignment Editor (HALE)
+  webpage: http://www.dhpanel.eu/humboldt-framework/hale.html
+  description: Can read, write, process CityGML and other GML application schemas (incl. INSPIRE)
+  foss: true
+  category: parser
+
+- name: ogc-schemas
+  webpage: https://github.com/highsource/ogc-schemas
+  description: Provides JAXB (Java) and Jsonix (JSON) bindings for XML Schemas defined by OGC incl; CityGML v1.0 and v2.0
+  foss: true
+  category: parser
+
+- name: OGR
+  webpage: http://www.gdal.org/ogr/
+  description: Could help in reading 'vanilla' GML, not support for CityGML objects though
+  foss: true
+  category: parser
+
+- name: osm2citygml
+  webpage: https://github.com/stirringhalo/osm2citygml
+  description: This tool will take XMLs of buildings from OSM using Overpass and convert it to CityGML format with OSM2World and FME for eventual use with 3DCityDB
+  foss: true
+  category: generator
+
+- name: Random3Dcity
+  webpage: https://github.com/tudelft3d/Random3Dcity
+  description: A basic procedural modelling engine for generating random (synthetic) buildings and other features in CityGML in multiple levels of detail (LOD)
+  foss: true
+  category: generator
+
+- name: val3dity
+  webpage: http://geovalidation.bk.tudelft.nl/val3dity/
+  description: Validation of 3D GML primitives according to the international standard ISO19107
+  foss: true
+  category: validator
+
+- name: virtualcitySYSTEMS--BuildingReconstruction
+  webpage: http://www.virtualcitysystems.de/en/products/buildingreconstruction
+  description: The extensive 3D city models can be derived automatically from digital elevation data in CityGML and ESRI-Shape formats.
+  category: generator
+  foss: false
