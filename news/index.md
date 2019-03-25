@@ -6,11 +6,11 @@ description: "CityJSON news"
 permalink: /news/
 ---
 
-<h1>News</h1> 
+<a href="{{ site.baseurl }}/feed.xml"><i class="fa fa-rss"></i> subscribe to the news</a>
+{: .no_toc .text-delta }
+
 
 {% for post in site.posts %}
-  <h3><small><span class="post-date">{{ post.date | date_to_string }}</span></small><br><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+  <h3><span class="text-delta">{{ post.date | date_to_string }}</span><br><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
 {% endfor %}
 
-<br>
-<span class="grey"><a href="{{ site.baseurl }}/feed.xml"><i class="fa fa-rss"></i> RSS</a></span>
