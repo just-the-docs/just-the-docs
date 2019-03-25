@@ -110,3 +110,13 @@ The structure of a CityJSON file is a fairly simple to understand and can be eas
 ## Which features of CityGML are supported?
 
 Almost all of them, see the [CityGML compatibility page]({{ site.baseurl }}/citygml-compatibility/). 
+
+
+## A JSON encoding of GML, huh?!?
+
+While its name otherwise implies, CityGML is not only a GML encoding, but is actually an open standardised data model and it currently has 2 implementations:
+
+  1. the GML encoding is the only official one, and is defined in the `official documentation <https://portal.opengeospatial.org/files/?artifact_id=47842>`_
+  2. a database schema called `3DCityDB <http://www.3dcitydb.org>`_, which can be implemented both for `PostgreSQL <https://www.postgresql.org>`_ and `Oracle Spatial <https://www.oracle.com/database/spatial/index.html>`_. This is *not* an official standard.
+
+CityJSON can be considered as the third implementation of the CityGML data model.
