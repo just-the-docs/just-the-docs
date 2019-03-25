@@ -7,7 +7,7 @@ permalink: /software/
 ---
 
 We offer here a list of sofware that we believe are useful to practioners and researchers dealing with CityJSON.
-Free and open-source software are marked by <img height="15" src="/assets/images/foss.svg">
+Free and open-source software are marked by <img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}">
 <!-- Most of the software are recent and well-maintained; if you believe your software should be there please [let us know](/contribute/). -->
 
 ---
@@ -27,7 +27,7 @@ Free and open-source software are marked by <img height="15" src="/assets/images
 {% for i in software %}
 {% for cat in i.category %}
 {% if cat contains 'viewer' %}
-<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="/assets/images/foss.svg"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
+<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -38,7 +38,7 @@ Free and open-source software are marked by <img height="15" src="/assets/images
 {% for i in software %}
 {% for cat in i.category %}
 {% if cat contains 'generator' %}
-<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="/assets/images/foss.svg"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
+<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -49,7 +49,7 @@ Free and open-source software are marked by <img height="15" src="/assets/images
 {% for i in software %}
 {% for cat in i.category %}
 {% if cat contains 'manipulator' %}
-<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="/assets/images/foss.svg"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
+<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -60,7 +60,7 @@ Free and open-source software are marked by <img height="15" src="/assets/images
 {% for i in software %}
 {% for cat in i.category %}
 {% if cat contains 'parser' %}
-<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="/assets/images/foss.svg"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
+<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -75,7 +75,7 @@ Free and open-source software are marked by <img height="15" src="/assets/images
 {% for i in software %}
 {% for cat in i.category %}
 {% if cat contains 'validator' %}
-<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="/assets/images/foss.svg"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
+<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -86,7 +86,7 @@ Free and open-source software are marked by <img height="15" src="/assets/images
 {% for i in software %}
 {% for cat in i.category %}
 {% if cat contains 'applications' %}
-<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="/assets/images/foss.svg"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
+<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
 {% endif %}
 {% endfor %}
 {% endfor %}
