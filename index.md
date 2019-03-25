@@ -23,12 +23,12 @@ It was designed with programmers in mind, so that tools and APIs supporting it c
 
 We believe you should use CityJSON because: 
 
-  1. its simplicity means that [several software]({{ "/software" | prepend: site.baseurl }}) already support CityJSON
-  2. you can automatically convert CityGML files to CityJSON, and vice versa, with the open-source [citygml-tools](https://github.com/citygml4j/citygml-tools)
+  1. its simplicity means that [several software]({{ "/software/" | prepend: site.baseurl }}) already support CityJSON
+  2. you can automatically convert CityGML files to CityJSON, and vice versa, with the open-source [citygml-tools](https://github.com/citygml4j/citygml-tools), we even have a [tutorial]({{ "/tutorials/citygml-tools/" | prepend: site.baseurl }})
   3. files are about [7X compacter than their CityGML equivalent](https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets), and that without loss of information
   4. there is a [web-viewer](https://tudelft3d.github.io/CityJSON-viewer) where you can drag'n'drop a file
   5. you can easily manipulate and edit files with [cjio](https://github.com/tudelft3d/cjio) to merge files, remove/filter objects, etc.
-  6. you can *easily* define [Extensions]({{ "/extensions" | prepend: site.baseurl }}) to the core model (ADEs) 
+  6. you can *easily* define [Extensions]({{ "/extensions/" | prepend: site.baseurl }}) to the core model (ADEs) 
   7. everyone can contribute to its development, which is [open on its GitHub repository](https://github.com/tudelft3d/cityjson)
 
 
