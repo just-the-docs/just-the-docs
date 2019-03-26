@@ -44,7 +44,7 @@ permalink: /datasets/
 </table>
 
 
-## Generating automatically own area in automatically
+## Generating automatically your own area
 
 It is possible to generate automatically a 3D city model in CityJSON with [3dfier](https://github.com/tudelft3d/3dfier), just follow that simple [tutorial](https://github.com/tudelft3d/3dfier/wiki/General-3dfier-tutorial-to-generate-LOD1-models)
 

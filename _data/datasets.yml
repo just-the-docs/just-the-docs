@@ -25,7 +25,7 @@
   json: DA13_3D_Buildings_Merged.json
   json-size: 105
   gml:  DA13_3D_Buildings_Merged.gml
-  gml-size: 590,0
+  gml-size: 590.0
   # textures: none
   details: tile 'DA13'. Buildings in LoD2
 
