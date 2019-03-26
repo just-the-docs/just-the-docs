@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CityJSON specifications
+title: Specifications
 nav_order: 4
 permalink: /specs/
 ---
