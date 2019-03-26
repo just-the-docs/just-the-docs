@@ -5,7 +5,7 @@
   json: DenHaag_01.json
   json-size: 2.9
   gml:  DenHaag_01.xml
-  gml-size: 23.0
+  gml-size: 23
   # textures: none
   details: "'Tile 01', Buildings (in LoD2) and Terrain are merged"
 
@@ -15,7 +15,7 @@
   json: VM05_2009.json
   json-size: 5.4
   gml:  VM05_2009.gml
-  gml-size: 56.0
+  gml-size: 56
   # textures: none
   details: tile 'VM05'. Buildings in LoD2
 
@@ -25,7 +25,7 @@
   json: DA13_3D_Buildings_Merged.json
   json-size: 105
   gml:  DA13_3D_Buildings_Merged.gml
-  gml-size: 590.0
+  gml-size: 590
   # textures: none
   details: tile 'DA13'. Buildings in LoD2
 
@@ -43,9 +43,9 @@
   url:  https://www.data.gv.at/katalog/dataset/86d88cae-ad97-4476-bae5-73488a12776d
   image: dataset_vienna.png
   json: Vienna_102081.json 
-  json-size: 55.3
+  json-size: 5.3
   gml:  Vienna_102081.gml
-  gml-size: 37.0
+  gml-size: 37
   # textures: none
   details: Buildings in LoD2
 
@@ -55,6 +55,6 @@
   json: LoD3_Railway.json
   json-size: 4.3
   gml:  LoD3_Railway.gml
-  gml-size: 45.0
+  gml-size: 45
   textures: LoD3_Railway.zip
   details: CityGML demo. Buildings, Railway, Terrain, Vegetation (with Implicit Geometries), Water, Tunnels

@@ -18,7 +18,7 @@ A compact and developer-friendly JSON-based encoding of the OGC CityGML data mod
 
 ---
 
-CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [CityGML](https://www.citygml.org>) data model (version 2.0.0), which is an open standardised data model and exchange format to store digital 3D models of cities and landscapes. 
+CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [OGC CityGML](http://www.opengeospatial.org/standards/citygml) data model (version 2.0.0), which is an open standardised data model and exchange format to store digital 3D models of cities and landscapes. 
 
 The aim of CityJSON is to offer an alternative to the GML encoding of CityGML, which can be verbose and complex (and thus rather frustrating to work with). 
 CityJSON aims at being easy-to-use, both for reading datasets, and for creating them.
@@ -32,7 +32,7 @@ We believe you should use CityJSON because:
   4. there is a [web-viewer](https://tudelft3d.github.io/CityJSON-viewer) where you can drag'n'drop a file!
   5. you can easily manipulate and edit files with [cjio](https://github.com/tudelft3d/cjio) to merge files, remove/filter objects, etc.
   6. you can *easily* define [Extensions]({{ "/extensions/" | prepend: site.baseurl }}) to the core model (akin to ADEs) 
-  7. its development is [open on GitHub](https://github.com/tudelft3d/cityjson) and everyone is welcome to contribute
+  7. its development is [open on GitHub](https://github.com/tudelft3d/cityjson/issues/) and everyone is welcome to contribute
 
 
 ---
