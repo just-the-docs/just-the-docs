@@ -20,18 +20,20 @@ permalink: /datasets/
 {% assign ds = site.data.datasets | better_sort: 'name' %}
 <table >
   <tr>
-    <td><b>CityGML file</b></td>
-    <td><b>files</b></td>
+    <td><b>dataset</b></td>
+    <td><b>CityGML file (size)</b></td>
+    <td><b>CityJSON file (size)</b></td>
     <td><b>textures</b></td>
     <td><b>details</b></td>
   </tr>
   {% for i in ds %}
     <tr>
       <td><a href="{{ i.url }}">{{ i.name }}</a></td>
-      <td><a href="{{ i.json }}">[JSON]</a> <a href="{{ i.gml }}">[GML]</a></td>
+      <td><a href="https://3d.bk.tudelft.nl/opendata/cityjson/citygml/{{ i.gml }}">[GML]</a> ({{ i.gml-size }}MB)</td>
+      <td><a href="https://3d.bk.tudelft.nl/opendata/cityjson/v09/{{ i.json }}">[JSON]</a> ({{ i.json-size }}MB)</td>
       <td>
         {% if i.textures %}
-          <a href="{{ i.textures }}">[ZIP]</a>
+          <a href="https://3d.bk.tudelft.nl/opendata/cityjson/citygml/{{ i.textures }}">[ZIP]</a>
         {% else %}
           none
         {% endif %}

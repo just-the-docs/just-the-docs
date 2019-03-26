@@ -2,55 +2,59 @@
 - name: "Den Haag"
   url:  https://data.overheid.nl/data/dataset/ngr-3d-model-den-haag
   image: dataset_denhaag.png
-  json: https://3d.bk.tudelft.nl/opendata/cityjson/v09/DenHaag_01.json
-  gml:  https://3d.bk.tudelft.nl/opendata/cityjson/citygml/DenHaag_01.xml
+  json: DenHaag_01.json
+  json-size: 2.9
+  gml:  DenHaag_01.xml
+  gml-size: 23.0
   # textures: none
   details: "'Tile 01', Buildings (in LoD2) and Terrain are merged"
 
 - name: Montréal 
   url:  http://donnees.ville.montreal.qc.ca/dataset/maquette-numerique-batiments-citygml-lod2-avec-textures/resource/36047113-aa19-4462-854a-cdcd6281a5af
   image: dataset_montreal.png
-  json: https://3d.bk.tudelft.nl/opendata/cityjson/v09/VM05_2009.json
-  gml:  https://3d.bk.tudelft.nl/opendata/cityjson/citygml/VM05_2009.gml
+  json: VM05_2009.json
+  json-size: 5.4
+  gml:  VM05_2009.gml
+  gml-size: 56.0
   # textures: none
   details: tile 'VM05'. Buildings in LoD2
 
 - name: New York 
   url:  https://www1.nyc.gov/site/doitt/initiatives/3d-building.page
   image: dataset_newyork.png
-  json: https://3d.bk.tudelft.nl/opendata/cityjson/v09/DA13_3D_Buildings_Merged.json
-  gml:  https://3d.bk.tudelft.nl/opendata/citygml/DA13_3D_Buildings_Merged.gml
+  json: DA13_3D_Buildings_Merged.json
+  json-size: 105
+  gml:  DA13_3D_Buildings_Merged.gml
+  gml-size: 590,0
   # textures: none
   details: tile 'DA13'. Buildings in LoD2
 
 - name: Rotterdam 
   url:  http://rotterdamopendata.nl/dataset/rotterdam-3d-bestanden/resource/edacea54-76ce-41c7-a0cc-2ebe5750ac18
   image: dataset_rotterdam.png
-  json: https://3d.bk.tudelft.nl/opendata/cityjson/v09/3-20-DELFSHAVEN.json
-  gml:  https://3d.bk.tudelft.nl/opendata/citygml/3-20-DELFSHAVEN.xml>`_
-  textures: https://3d.bk.tudelft.nl/opendata/citygml/3-20-DELFSHAVEN.zip
+  json: 3-20-DELFSHAVEN.json
+  json-size: 2.6
+  gml:  3-20-DELFSHAVEN.xml
+  gml-size: 16.0
+  textures: 3-20-DELFSHAVEN.zip
   details: neighbourhood 'Delfshaven'. Buildings in LoD2
 
 - name: Vienna 
   url:  https://www.data.gv.at/katalog/dataset/86d88cae-ad97-4476-bae5-73488a12776d
   image: dataset_vienna.png
-  json: https://3d.bk.tudelft.nl/opendata/cityjson/v09/Vienna_102081.json 
-  gml:  https://3d.bk.tudelft.nl/opendata/citygml/Vienna_102081.gml
+  json: Vienna_102081.json 
+  json-size: 55.3
+  gml:  Vienna_102081.gml
+  gml-size: 37.0
   # textures: none
   details: Buildings in LoD2
 
-- name: "GeoRes" 
-  url:  https://www.citygml.org/samplefiles/
-  image: dataset_geores.jpg
-  json: https://3d.bk.tudelft.nl/opendata/cityjson/v09/geoRES_testdata_v1.0.0.json
-  gml:  https://3d.bk.tudelft.nl/opendata/citygml/geoRES_testdata_v1.0.0.xml>`_     
-  textures: https://3d.bk.tudelft.nl/opendata/citygml/geoRES_testdata_v1.0.0.zip
-  details:  CityGML demo. Buildings, Terrain, Vegetation, Water, LandUse. 
-
 - name: "Railway" 
-  url:  https://www.citygml.org/samplefiles/
+  url:  https://www.citygml.org
   image: dataset_railway.jpg
-  json: https://3d.bk.tudelft.nl/opendata/cityjson/v09/LoD3_Railway.json
-  gml:  https://3d.bk.tudelft.nl/opendata/citygml/LoD3_Railway.gml
-  textures: https://3d.bk.tudelft.nl/opendata/citygml/LoD3_Railway.zip
+  json: LoD3_Railway.json
+  json-size: 4.3
+  gml:  LoD3_Railway.gml
+  gml-size: 45.0
+  textures: LoD3_Railway.zip
   details: CityGML demo. Buildings, Railway, Terrain, Vegetation (with Implicit Geometries), Water, Tunnels
