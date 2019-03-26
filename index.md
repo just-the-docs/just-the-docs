@@ -11,7 +11,10 @@ permalink: /
 A compact and developer-friendly JSON-based encoding of the OGC CityGML data model
 {: .fs-6 .fw-300 }
 
-[Specifications (v1.0)]({{ '/specs/1.0/' | prepend: site.baseurl}}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [Getting started]({{ '/tutorials/getting-started/' | prepend: site.baseurl}}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Specifications (v1.0)]({{ '/specs/1.0/' | prepend: site.baseurl}}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
+[Getting started]({{ '/tutorials/getting-started/' | prepend: site.baseurl}}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[<i class="fab fa-github"></i> GitHub repository](https://github.com/tudelft3d/cityjson/){: .btn .fs-5 .mb-4 .mb-md-0 }
+
 
 ---
 
@@ -23,9 +26,9 @@ It was designed with programmers in mind, so that tools and APIs supporting it c
 
 We believe you should use CityJSON because: 
 
-  1. its simplicity means that [several software]({{ "/software/" | prepend: site.baseurl }}) already started supporting CityJSON
+  1. its simplicity means that CityJSON is already supported by [several software]({{ "/software/" | prepend: site.baseurl }}) 
   2. you can automatically convert CityGML files to CityJSON files, and vice versa, with the open-source tool [citygml-tools](https://github.com/citygml4j/citygml-tools); we even have a [tutorial]({{ "/tutorials/citygml-tools/" | prepend: site.baseurl }})
-  3. files are on average [7X compacter](https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets) than their CityGML equivalent, and that without loss of information
+  3. files are on average [7X compacter](https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets) than their CityGML equivalent
   4. there is a [web-viewer](https://tudelft3d.github.io/CityJSON-viewer) where you can drag'n'drop a file!
   5. you can easily manipulate and edit files with [cjio](https://github.com/tudelft3d/cjio) to merge files, remove/filter objects, etc.
   6. you can *easily* define [Extensions]({{ "/extensions/" | prepend: site.baseurl }}) to the core model (akin to ADEs) 
@@ -49,7 +52,7 @@ We invite anyone to contribute to the development and improvement of CityJSON, a
 
 ## If you use CityJSON in an academic context, please cite this preprint
 
-Ledoux H, Arroyo Ohori K, Kumar K, Dukai B, Labetski A, Vitalis A (2019). CityJSON: A compact and easy-to-useencoding of the CityGML data model. **arXiv 1902.09155** [<i class="fas fa-file-pdf"></i>](https://arxiv.org/pdf/1902.09155.pdf)
+Ledoux H, Arroyo Ohori K, Kumar K, Dukai B, Labetski A, Vitalis A (2019). CityJSON: A compact and easy-to-use encoding of the CityGML data model. **arXiv 1902.09155** [<i class="fas fa-file-pdf"></i>](https://arxiv.org/pdf/1902.09155.pdf)
 
 
 
