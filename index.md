@@ -6,7 +6,8 @@ description: "CityJSON homepage"
 permalink: /
 ---
 
-<img src="{{ '/assets/images/cityjson_logo.svg' | prepend: site.baseurl }}" width="200">
+<!-- <img src="{{ '/assets/images/cityjson_logo.svg' | prepend: site.baseurl }}" width="200"> -->
+<img src="{{ '/assets/images/cj2.svg' | prepend: site.baseurl }}" width="200">
 
 A compact and developer-friendly JSON-based encoding of the OGC CityGML data model
 {: .fs-6 .fw-300 }
