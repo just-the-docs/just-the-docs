@@ -14,7 +14,7 @@ permalink: /about/
 {:toc}
 
 
-![](Den-Haag-3D.png){: width="800px"}
+![](Den-Haag-3D.jpg){: width="800px"}
 <br>*Excerpt of the 3D city model (LOD2) of The Hague, Netherlands (open dataset).*<br/><br/>
 
 
