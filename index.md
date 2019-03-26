@@ -37,14 +37,6 @@ We believe you should use CityJSON because:
 
 ---
 
-## Is CityJSON an official OGC standard?
-
-No, and there are no concrete plans for CityJSON to become one.
-
-CityJSON was started, and is maintained, by the [3D geoinformation group at TU Delft](https://3d.bk.tudelft.nl).
-Others have since joined the development.
-
-
 ## Contributing to the project 
 
 We invite anyone to contribute to the development and improvement of CityJSON, all discussions, issues, and developments are open to everyone on the [GitHub repository of CityJSON](https://github.com/tudelft3d/cityjson).
