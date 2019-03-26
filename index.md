@@ -23,13 +23,13 @@ It was designed with programmers in mind, so that tools and APIs supporting it c
 
 We believe you should use CityJSON because: 
 
-  1. its simplicity means that [several software]({{ "/software/" | prepend: site.baseurl }}) already support CityJSON
-  2. you can automatically convert CityGML files to CityJSON, and vice versa, with the open-source tool [citygml-tools](https://github.com/citygml4j/citygml-tools); we even have a [tutorial]({{ "/tutorials/citygml-tools/" | prepend: site.baseurl }})
-  3. files are about [7X compacter than their CityGML equivalent](https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets), and that without loss of information
+  1. its simplicity means that [several software]({{ "/software/" | prepend: site.baseurl }}) already started supporting CityJSON
+  2. you can automatically convert CityGML files to CityJSON files, and vice versa, with the open-source tool [citygml-tools](https://github.com/citygml4j/citygml-tools); we even have a [tutorial]({{ "/tutorials/citygml-tools/" | prepend: site.baseurl }})
+  3. files are on average [7X compacter] (https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets) than their CityGML equivalent, and that without loss of information
   4. there is a [web-viewer](https://tudelft3d.github.io/CityJSON-viewer) where you can drag'n'drop a file!
   5. you can easily manipulate and edit files with [cjio](https://github.com/tudelft3d/cjio) to merge files, remove/filter objects, etc.
-  6. you can *easily* define [Extensions]({{ "/extensions/" | prepend: site.baseurl }}) to the core model (ADEs) 
-  7. everyone can contribute to its development, which is [open on its GitHub repository](https://github.com/tudelft3d/cityjson)
+  6. you can *easily* define [Extensions]({{ "/extensions/" | prepend: site.baseurl }}) to the core model (akin to ADEs) 
+  7. its development is [open on GitHub](https://github.com/tudelft3d/cityjson) and everyone is welcome to contribute
 
 
 ---
@@ -39,12 +39,12 @@ We believe you should use CityJSON because:
 No, and there are no concrete plans for CityJSON to become one.
 
 CityJSON was started, and is maintained, by the [3D geoinformation group at TU Delft](https://3d.bk.tudelft.nl).
-
+Others have since joined the development.
 
 
 ## Contributing to the project 
 
-We invite anyone to contribute to the development and improvement of CityJSON, all [discussions, issues, and developments](https://github.com/tudelft3d/cityjson/issues) are open to everyone on the [GitHub repository of CityJSON](https://github.com/tudelft3d/cityjson).
+We invite anyone to contribute to the development and improvement of CityJSON, all discussions, issues, and developments are open to everyone on the [GitHub repository of CityJSON](https://github.com/tudelft3d/cityjson).
 
 
 ## If you use CityJSON in an academic context, please cite this preprint
