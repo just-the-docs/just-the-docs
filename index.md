@@ -28,7 +28,7 @@ It was designed with programmers in mind, so that tools and APIs supporting it c
 
 We believe you should use CityJSON because: 
 
-  1. its simplicity means that CityJSON is already supported by [several software]({{ "/software/" | prepend: site.baseurl }}) 
+  1. its simplicity means that it is already supported by [several software]({{ "/software/" | prepend: site.baseurl }}) 
   2. you can automatically convert CityGML files to CityJSON files, and vice versa, with the open-source tool [citygml-tools](https://github.com/citygml4j/citygml-tools); we even have a [tutorial]({{ "/tutorials/citygml-tools/" | prepend: site.baseurl }})
   3. files are on average [7X compacter](https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets) than their CityGML equivalent
   4. there is a [web-viewer](https://tudelft3d.github.io/CityJSON-viewer) where you can drag'n'drop a file!
