@@ -1,0 +1,123 @@
+{
+  "type": "CityJSON",
+  "version": "0.9",
+  "extensions": {
+    "Noise": "https://someurl.org/noise.json"
+  },
+  "CityObjects": {
+    "1234": {
+      "type": "Building",
+      "geometry": [
+        {
+          "type": "Solid",
+          "lod": 2,
+          "boundaries": [
+            [ [[0, 3, 2, 1]], [[4, 5, 6, 7]], [[0, 1, 5, 4]], [[1, 2, 6, 5]], [[2, 3, 7, 6]], [[3, 0, 4, 7]] ] 
+          ]
+        }
+      ],
+      "attributes": {
+        "roofType": "pointy",
+        "class": "22",
+          "+noise-buildingReflectionCorrection": {
+            "value": 4.123,
+            "uom": "dB"
+          },
+          "+noise-buildingLNightMax": {
+            "value": 43.123,
+            "uom": "dB"
+          }
+      }
+    },
+    "thesegment_1": {
+      "type": "+NoiseCityFurnitureSegment",
+      "toplevel": false,
+      "geometry": [
+        {
+          "type": "MultiLineString",
+          "lod": 0,
+          "boundaries": [
+            [2, 3, 5], [7, 5, 12]
+          ]
+        }      
+      ],
+      "attributes": {
+        "reflectionCorrection": {
+          "value": 4.123,
+          "uom": "dB"
+        }
+      },
+      "parents": ["a_noisy_bench"]
+    },    
+    "thesegment_2": {
+      "type": "+NoiseCityFurnitureSegment",
+      "toplevel": false,
+      "geometry": [
+        {
+          "type": "MultiLineString",
+          "lod": 0,
+          "boundaries": [ 
+            [2, 3, 5], [7, 2, 12]
+          ]
+        }      
+      ],
+      "attributes": {
+        "reflectionCorrection": {
+          "value": 2.666,
+          "uom": "dB"
+        }
+      },
+      "parents": ["a_noisy_bench"]
+    },    
+    "a_noisy_bench": {
+      "type": "CityFurniture",
+      "geometry": [
+        {
+          "type": "Solid",
+          "lod": 2,
+          "boundaries": [
+            [ [[0, 3, 2, 1]], [[4, 5, 6, 7]], [[0, 1, 5, 4]], [[1, 2, 6, 5]], [[2, 3, 7, 6]], [[3, 0, 4, 7]] ] 
+          ]
+        }
+      ],
+      "children": ["thesegment_1", "thesegment_2"]
+    },
+  	"onebuilding": {
+      "type": "Building", 
+      "geometry": [
+      {
+        "type": "Solid",
+        "lod": 1,
+        "boundaries": [
+          [ [[0, 3, 2, 1]], [[4, 5, 6, 7]], [[0, 1, 5, 4]], [[1, 2, 6, 5]], [[2, 3, 7, 6]], [[3, 0, 4, 7]] ] 
+        ]
+      },
+      {
+        "type": "Solid",
+        "lod": 2,
+        "boundaries": [
+          [ [[8, 11, 10, 9]], [[12, 13, 14, 15]], [[8, 9, 13, 12]], [[9, 10, 14, 13]], [[10, 11, 15, 14]], [[11, 8, 12, 15]] ] 
+        ]
+      }      
+      ]        
+    }  
+  },
+  "vertices": [
+    [0.0, 0.0, 0.0],
+    [1.0, 0.0, 0.0],
+    [1.0, 1.0, 0.0],
+    [0.0, 1.0, 0.0],
+    [0.0, 0.0, 1.0],
+    [1.0, 0.0, 1.0],
+    [1.0, 1.0, 1.0],
+    [0.0, 1.0, 1.0],
+    [1.0, 0.0, 0.0],
+    [2.0, 0.0, 0.0],
+    [2.0, 1.0, 0.0],
+    [1.0, 1.0, 0.0],
+    [1.0, 0.0, 1.0],
+    [2.0, 0.0, 1.0],
+    [2.0, 1.0, 1.0],
+    [1.0, 1.0, 1.0]
+  ]
+}
