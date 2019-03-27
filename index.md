@@ -12,8 +12,9 @@ permalink: /
 A compact and developer-friendly JSON-based encoding of the CityGML data model
 {: .fs-6 .fw-300 }
 
-[Specifications (v1.0)]({{ '/specs/1.0/' | prepend: site.baseurl}}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
+[Specifications (v1.0)]({{ '/specs/1.0.0/' | prepend: site.baseurl }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
 [Getting started]({{ '/tutorials/getting-started/' | prepend: site.baseurl}}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Web-viewer](https://tudelft3d.github.io/CityJSON-viewer/){: .btn .fs-5 .mb-4 .mb-md-0 }
 [<i class="fab fa-github"></i> GitHub repository](https://github.com/tudelft3d/cityjson/){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 
