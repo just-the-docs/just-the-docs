@@ -16,7 +16,7 @@
 title: CityJSON
 description: CityGML without the GML
 url: "https://hugoledoux.github.io"
-baseurl: "/cityjson-website/"
+baseurl: "/cityjson-website"
 
 # baseurl: "/just-the-docs/" # the subpath of your site, e.g. /blog
 # url: "https://www.cityjson.org" # the base hostname & protocol for your site, e.g. http://example.com
