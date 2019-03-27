@@ -12,15 +12,15 @@ permalink: /
 A compact and developer-friendly JSON-based encoding of the CityGML data model
 {: .fs-6 .fw-300 }
 
-[Specifications (v1.0)]({{ '/specs/1.0.0/' | prepend: site.baseurl }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
-[Getting started]({{ '/tutorials/getting-started/' | prepend: site.baseurl}}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Specifications (v{{ site.lastversion }})]({{ '/specs/' | append: site.lastversion | prepend: site.baseurl }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
+[Getting started]({{ '/tutorials/getting-started/' | prepend: site.baseurl }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 [Web-viewer](https://tudelft3d.github.io/CityJSON-viewer/){: .btn .fs-5 .mb-4 .mb-md-0 }
 [<i class="fab fa-github"></i> GitHub repository](https://github.com/tudelft3d/cityjson/){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 
 ---
 
-CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [OGC CityGML](http://www.opengeospatial.org/standards/citygml) data model (version 2.0.0), which is an open standardised data model and exchange format to store digital 3D models of cities and landscapes. 
+CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [OGC CityGML](http://www.opengeospatial.org/standards/citygml) data model (version 2.0.0), which is an open standardised data model and exchange format (in [GML](http://www.opengeospatial.org/standards/gml)) to store digital 3D models of cities and landscapes. 
 
 The aim of CityJSON is to offer an alternative to the GML encoding of CityGML, which can be verbose and complex (and thus rather frustrating to work with). 
 CityJSON aims at being easy-to-use, both for reading datasets, and for creating them.

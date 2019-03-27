@@ -16,7 +16,7 @@
 title: CityJSON
 description: CityGML without the GML
 url: "https://hugoledoux.github.io"
-baseurl: "/cityjson-website"
+baseurl: "/cityjson-website/"
 
 # baseurl: "/just-the-docs/" # the subpath of your site, e.g. /blog
 # url: "https://www.cityjson.org" # the base hostname & protocol for your site, e.g. http://example.com
@@ -39,11 +39,9 @@ search_enabled: true
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nil
 
-# Google Analytics Tracking (optional)
-# e.g, UA-1234567-89
-# ga_tracking: UA-2709176-10
-
 
 kramdown:
   hard_wrap:      false
   toc_levels:     2..4
+
+lastversion: "1.0.0"
