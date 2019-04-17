@@ -2,16 +2,38 @@
 layout: default
 title: Extensions
 nav_order: 7
-has_children: true
 permalink: /extensions/
 ---
 
 # Extensions
 {: .no_toc }
 
+CityJSON uses [JSON Schemas](http://json-schema.org/) to document and validate the data model, schemas should be seen as basically validating the syntax of a JSON document.
 
-The CityGML data model allows us to represent the most common city features, but sometimes practitioners may want to model additional features and/or add certain attributes to the data model. 
-For this, CityGML has the concept of [ADEs (Application Domain Extensions)](https://doi.org/10.1186/s40965-018-0055-6). 
-An ADE is defined in an extra [XML Schema](https://en.wikipedia.org/wiki/XML_schema/) (XSD file) with its own namespace, and often inheritance is used to refine the classes of the CityGML data model, to define entirely new classes, and to modify any class by adding for instance new geometries and complex attribute anywhere in a City Model. 
-The ADE allows us to document in a structured way, and also to validate, an instance of a CityGML document that would contain both classes from the core model and from the ADEs.
+A CityJSON *Extension* is a JSON file that allows us to document how the core data model of CityJSON may be extended, and to validate CityJSON files containing new objects and/or attributes.
+This is conceptually akin to the *Application Domain Extensions* (ADEs) in CityGML; see Section 10.13 of the [official CityGML documentation](https://portal.opengeospatial.org/files/?artifact_id=47842).
 
+See the [Extensions specifications for v{{site.lastversion}}]({{ site.url }}{{ site.baseurl }}specs/{{ site.lastversion }}/#extensions)
+
+
+## Registy of current Extensions
+
+{% assign extensions = site.data.extensions | better_sort: 'name' %}
+
+{% for i in extensions %}
+<p>
+  <b>{{ i.name }}</b>
+  <br/>
+  {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} 
+  <br/>
+  <a href="{{ i.url }}">download schema</a>
+  {% if i.status %}
+  <br/>
+  status: {{ i.status }}
+  {% endif %}
+  {% if i.organisation %}
+  <br/>
+  developers: {{ i.organisation | markdownify | remove: '<p>' | remove: '</p>' }} 
+  {% endif %}
+</p>
+{% endfor %}

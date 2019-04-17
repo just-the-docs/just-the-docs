@@ -1,0 +1,10 @@
+
+- name: Noise
+  url:  https://github.com/tudelft3d/cityjson/blob/master/schema/v09/extensions/noise.json
+  description: "Conversion of the CityGML Noise ADE"
+  status: v1.0
+  organisation: "[3D geoinformation TU Delft](https://3d.bk.tudelft.nl)"
+
+- name: Energy
+  url:  https://github.com/tudelft3d/cityjson/blob/master/schema/v09/extensions/noise.json
+  description: "Conversion of the [CityGML Energy ADE](https://github.com/cstb/citygml-energy)"
