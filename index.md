@@ -30,6 +30,8 @@ remote_theme: pmarsceill/just-the-docs
 ```
 <small>You must have GitHub Pages enabled on your repo, one or more Markdown files, and a `_config.yml` file. [See an example repository](https://github.com/pmarsceill/jtd-remote)</small>
 
+[Set up GitHub Pages locally](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll) so that you can also use this theme locally.
+
 ### Local installation: Use the gem-based theme
 
 1. Install the Ruby Gem
