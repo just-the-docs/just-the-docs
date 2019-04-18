@@ -1218,7 +1218,7 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 8ac92da89bb2253e0da87e20a9b9caa745f5f5b6" name="generator">
+  <meta content="Bikeshed version 4d208866a95a1121fceca549a36bfb09c5bf1705" name="generator">
   <link href="https://cityjson.org/specs/latest/" rel="canonical">
 <style>/* style-md-lists */
 
@@ -1429,7 +1429,7 @@ pre .property::before, pre .property::after {
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">CityJSON Specifications 1.0.0</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard, <time class="dt-updated" datetime="2019-03-27">27 March 2019</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="subtitle"><span class="content">Living Standard, <time class="dt-updated" datetime="2019-04-18">18 April 2019</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -1445,7 +1445,7 @@ pre .property::before, pre .property::after {
    <div data-fill-with="warning"></div>
    <p class="copyright" data-fill-with="copyright"><a href="http://creativecommons.org/publicdomain/zero/1.0/" rel="license"><img alt="CC0" src="https://licensebuttons.net/p/zero/1.0/80x15.png"></a> To the extent possible under law, the editors have waived all copyright
 and related or neighboring rights to this work.
-In addition, as of 27 March 2019,
+In addition, as of 18 April 2019,
 the editors have made this specification available under the <a href="http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0" rel="license">Open Web Foundation Agreement Version 1.0</a>,
 which is available at http://www.openwebfoundation.org/legal/the-owf-1-0-agreements/owfa-1-0.
 Parts of this work may be from another specification document.  If so, those parts are instead covered by the license of that specification document. </p>
@@ -1453,7 +1453,7 @@ Parts of this work may be from another specification document.  If so, those par
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>CityJSON is a JSON-based encoding for a subset of the OGC CityGML data model (version 2.0.0). It defines how to store digital 3D models of cities and landscapes. The aim of CityJSON is to offer an alternative to the GML encoding of CityGML, which can be verbose and complex (and thus rather frustrating to work with). CityJSON aims at being easy-to-use, both for reading datasets, and for creating them. It was designed with programmers in mind, so that tools and APIs supporting it can be quickly built.</p>
+   <p>CityJSON is a <a href="https://json.org/">JSON</a>-based encoding for a subset of the <a href="http://www.opengeospatial.org/standards/citygml">OGC CityGML data model</a> (version 2.0.0). It defines how to store digital 3D models of cities and landscapes. The aim of CityJSON is to offer an alternative to the GML encoding of CityGML, which can be verbose and complex (and thus rather frustrating to work with). CityJSON aims at being easy-to-use, both for reading datasets, and for creating them. It was designed with programmers in mind, so that tools and APIs supporting it can be quickly built.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
@@ -1507,11 +1507,12 @@ Parts of this work may be from another specification document.  If so, those par
     <li>
      <a href="#extensions"><span class="secno">8</span> <span class="content">Extensions</span></a>
      <ol class="toc">
-      <li><a href="#the-extension-file"><span class="secno">8.1</span> <span class="content">The Extension file</span></a>
-      <li><a href="#case-1-adding-new-complex-attributes-to-existing-city-objects"><span class="secno">8.2</span> <span class="content">Case 1: Adding new complex attributes to existing City Objects</span></a>
-      <li><a href="#case-2-adding-new-properties-at-the-root-of-a-document"><span class="secno">8.3</span> <span class="content">Case 2: Adding new properties at the root of a document</span></a>
-      <li><a href="#case-3-creating-extending-new-city-objects"><span class="secno">8.4</span> <span class="content">Case 3: Creating/extending new City Objects</span></a>
-      <li><a href="#rules-to-follow-to-define-new-city-objects"><span class="secno">8.5</span> <span class="content">Rules to follow to define new City Objects</span></a>
+      <li><a href="#using-an-extension-in-a-cityjson-file"><span class="secno">8.1</span> <span class="content">Using an Extension in a CityJSON file</span></a>
+      <li><a href="#the-extension-file"><span class="secno">8.2</span> <span class="content">The Extension file</span></a>
+      <li><a href="#case-1-adding-new-complex-attributes-to-existing-city-objects"><span class="secno">8.3</span> <span class="content">Case 1: Adding new complex attributes to existing City Objects</span></a>
+      <li><a href="#case-2-adding-new-properties-at-the-root-of-a-document"><span class="secno">8.4</span> <span class="content">Case 2: Adding new properties at the root of a document</span></a>
+      <li><a href="#case-3-creating-extending-new-city-objects"><span class="secno">8.5</span> <span class="content">Case 3: Creating/extending new City Objects</span></a>
+      <li><a href="#rules-to-follow-to-define-new-city-objects"><span class="secno">8.6</span> <span class="content">Rules to follow to define new City Objects</span></a>
      </ol>
     <li><a href="#conformance"><span class="secno"></span> <span class="content"> Conformance</span></a>
     <li>
@@ -1533,7 +1534,7 @@ Parts of this work may be from another specification document.  If so, those par
       <li data-md>
        <p>one member with the name <code>"type"</code>, whose value must be <code>"CityJSON"</code>;</p>
       <li data-md>
-       <p>one member with the name <code>"version"</code>, whose value must be a string with the version (X.Y) of CityJSON used;</p>
+       <p>one member with the name <code>"version"</code>, whose value must be a string with the version (X.Y) of CityJSON used. Observe that while shemas can have a version with patch version (X.Y.Z), a CityJSON object points only to the minor version (X.Y), and in theory the latest schema of that version is used.</p>
       <li data-md>
        <p>one member with the name <code>"CityObjects"</code>. The value of this member is a collection of key-value pairs, where the key is the ID of the object, and the value is one City Object. The ID of a City Object should be unique (within one dataset/file).</p>
       <li data-md>
@@ -2518,7 +2519,7 @@ v[2] = (vi[2] * ["transform"]["scale"][2]) + ["transform"]["translate"][2]
 </pre>
    <h2 class="heading settled" data-level="8" id="extensions"><span class="secno">8. </span><span class="content">Extensions</span><a class="self-link" href="#extensions"></a></h2>
    <p>CityJSON uses <a href="http://json-schema.org/">JSON Schemas</a> to document and validate the data model, schemas should be seen as basically validating the syntax of a JSON document.</p>
-   <p>A CityJSON <em>Extension</em> is a JSON file that allows to document how the core data model of CityJSON may be extended, and to validate CityJSON files.
+   <p>A CityJSON <em>Extension</em> is a JSON file that allows us to document how the core data model of CityJSON may be extended, and to validate CityJSON files.
 This is conceptually akin to the <em>Application Domain Extensions</em> (ADEs) in CityGML; see Section 10.13 of the <a href="https://portal.opengeospatial.org/files/?artifact_id=47842">official CityGML documentation</a>.</p>
    <p>The following 3 cases for extension are possible:</p>
    <ol>
@@ -2536,7 +2537,29 @@ This is conceptually akin to the <em>Application Domain Extensions</em> (ADEs) i
   This is achieved by enforcing a set of simple rules---as defined below---when adding new City Objects. 
   If these are followed, then a CityJSON file containing Extensions will be seen as a 'standard' CityJSON file.</p>
    </div>
-   <h3 class="heading settled" data-level="8.1" id="the-extension-file"><span class="secno">8.1. </span><span class="content">The Extension file</span><a class="self-link" href="#the-extension-file"></a></h3>
+   <h3 class="heading settled" data-level="8.1" id="using-an-extension-in-a-cityjson-file"><span class="secno">8.1. </span><span class="content">Using an Extension in a CityJSON file</span><a class="self-link" href="#using-an-extension-in-a-cityjson-file"></a></h3>
+   <p>An Extension should be given a name (eg "Noise") and the URL of the Extension file should be given, along with the version that is used for this file.
+It is expected that the Extension is publicly available at the URL, and can be downloaded.</p>
+   <p>Several Extensions can be used in a single file, each one is indexed by its name in the <code>"extensions"</code> JSON object.
+In the example below we have 2 Extensions: one named "Noise" and one named "Solar_Potential".</p>
+<pre class="language-javascript highlight"><c- p>{</c->
+  <c- u>"type"</c-><c- o>:</c-> <c- u>"CityJSON"</c-><c- p>,</c->
+  <c- u>"version"</c-><c- o>:</c-> <c- u>"1.0"</c-><c- p>,</c->
+  <c- u>"extensions"</c-><c- o>:</c-> <c- p>{</c->
+    <c- u>"Noise"</c-><c- o>:</c-> <c- p>{</c->
+      <c- u>"url"</c-> <c- o>:</c-> <c- u>"https://someurl.org/noise.json"</c-><c- p>,</c->
+      <c- u>"version"</c-><c- o>:</c-> <c- u>"1.0"</c->
+    <c- p>},</c->
+    <c- u>"Solar_Potential"</c-><c- o>:</c-> <c- p>{</c->
+      <c- u>"url"</c-> <c- o>:</c-> <c- u>"https://someurl.org/solar.json"</c-><c- p>,</c->
+      <c- u>"version"</c-><c- o>:</c-> <c- u>"0.8"</c->
+    <c- p>}</c->
+  <c- p>},</c->
+  <c- u>"CityObjects"</c-><c- o>:</c-> <c- p>{},</c->
+  <c- u>"vertices"</c-><c- o>:</c-> <c- p>[]</c->
+<c- p>}</c->
+</pre>
+   <h3 class="heading settled" data-level="8.2" id="the-extension-file"><span class="secno">8.2. </span><span class="content">The Extension file</span><a class="self-link" href="#the-extension-file"></a></h3>
    <p>A CityJSON Extension is a JSON object, and it must have the following 7 members:</p>
    <ol>
     <li data-md>
@@ -2584,7 +2607,7 @@ An example would be to reuse the Solid type would be:</p>
   <c- p>]</c->
 <c- p>}</c->
 </pre>
-   <h3 class="heading settled" data-level="8.2" id="case-1-adding-new-complex-attributes-to-existing-city-objects"><span class="secno">8.2. </span><span class="content">Case 1: Adding new complex attributes to existing City Objects</span><a class="self-link" href="#case-1-adding-new-complex-attributes-to-existing-city-objects"></a></h3>
+   <h3 class="heading settled" data-level="8.3" id="case-1-adding-new-complex-attributes-to-existing-city-objects"><span class="secno">8.3. </span><span class="content">Case 1: Adding new complex attributes to existing City Objects</span><a class="self-link" href="#case-1-adding-new-complex-attributes-to-existing-city-objects"></a></h3>
    <p>One of the philosophy of JSON is "schema-less", which means that one is allowed to define new properties for the JSON objects without documenting them in a JSON schema (watch out: this does <em>not</em> mean that JSON cannot have schemas!).
 While this is in contrast to CityGML (and GML as a whole) where the schemas are central, the schemas of CityJSON (schema) are partly following that philosophy. 
 That is, for a given City Object, the "allowed" properties/attributes are listed in the schema, but it is not an error to add new ones. 
@@ -2655,7 +2678,7 @@ Notice that <code>"extraAttributes"</code> may have several properties (the type
   <c- p>}</c-> 
 <c- p>}</c->
 </pre>
-   <h3 class="heading settled" data-level="8.3" id="case-2-adding-new-properties-at-the-root-of-a-document"><span class="secno">8.3. </span><span class="content">Case 2: Adding new properties at the root of a document</span><a class="self-link" href="#case-2-adding-new-properties-at-the-root-of-a-document"></a></h3>
+   <h3 class="heading settled" data-level="8.4" id="case-2-adding-new-properties-at-the-root-of-a-document"><span class="secno">8.4. </span><span class="content">Case 2: Adding new properties at the root of a document</span><a class="self-link" href="#case-2-adding-new-properties-at-the-root-of-a-document"></a></h3>
    <p>It is allowed to add a new property at the root of a CityJSON file, but if one wants to document it in a schema, then this property must start with a <code>+</code>.
 Imagine we wanted to store some census data for a given neighbourhood for which we have a CityJSON file, then we could define the extra root property <code>"+census"</code> as follows:</p>
 <pre class="language-javascript highlight"><c- u>"extraRootProperties"</c-><c- o>:</c-> <c- p>{</c->
@@ -2688,7 +2711,7 @@ Imagine we wanted to store some census data for a given neighbourhood for which 
   <c- p>}</c->
 <c- p>}</c->
 </pre>
-   <h3 class="heading settled" data-level="8.4" id="case-3-creating-extending-new-city-objects"><span class="secno">8.4. </span><span class="content">Case 3: Creating/extending new City Objects</span><a class="self-link" href="#case-3-creating-extending-new-city-objects"></a></h3>
+   <h3 class="heading settled" data-level="8.5" id="case-3-creating-extending-new-city-objects"><span class="secno">8.5. </span><span class="content">Case 3: Creating/extending new City Objects</span><a class="self-link" href="#case-3-creating-extending-new-city-objects"></a></h3>
    <p>The creation of a new City Object is done by defining it in the CityJSON Extension object in the <code>"extraCityObjects"</code> property:</p>
 <pre class="language-javascript highlight"><c- u>"extraCityObjects"</c-><c- o>:</c-> <c- p>{</c->
   <c- u>"+NoiseBuilding"</c-><c- o>:</c-> <c- p>{</c->
@@ -2710,12 +2733,12 @@ Imagine we wanted to store some census data for a given neighbourhood for which 
   <c- p>}</c->
 <c- p>}</c->
 </pre>
-   <p>Since all City Objects are documented in the schemas of CityJSON (in <a href="https://github.com/tudelft3d/cityjson/tree/master/schema">cityobjects.json</a>), it is basically a matter of copying the parts needed in a new file and modifying its content.</p>
+   <p>Since all City Objects are documented in the schemas of CityJSON (in <a href="https://github.com/tudelft3d/cityjson/tree/master/schemas">cityobjects.json</a>), it is basically a matter of copying the parts needed in a new file and modifying its content.</p>
    <p>A new name for the City Object must be given and it must begin with <code>+</code>.</p>
    <p>Because City Objects can be of different levels (1st-level ones can exist by themselves; 2nd-level ones need to have a parent), we need to explicitly state this by using the property <code>"toplevel"</code>, which is a Boolean value.</p>
    <p>It should be observed that since JSON schemas do not allow inheritance, the only way to extend a City Object is to define an entirely new one (with a new name, eg <code>"+NoiseBuilding"</code>).
 This is done by copying the schema of the parent City Object and extending it.</p>
-   <h3 class="heading settled" data-level="8.5" id="rules-to-follow-to-define-new-city-objects"><span class="secno">8.5. </span><span class="content">Rules to follow to define new City Objects</span><a class="self-link" href="#rules-to-follow-to-define-new-city-objects"></a></h3>
+   <h3 class="heading settled" data-level="8.6" id="rules-to-follow-to-define-new-city-objects"><span class="secno">8.6. </span><span class="content">Rules to follow to define new City Objects</span><a class="self-link" href="#rules-to-follow-to-define-new-city-objects"></a></h3>
    <p>The challenge when creating Extensions to the core model is that we do not want to break the software packages (viewers, spatial analysis, etc) that already read and process CityJSON files.
 While one could define a new City Object and document it, if this new object does not follow the rules below then it will mean that new specific software needs to be built for it---this would go against the fundamental ideas behind CityJSON.</p>
    <ol>
