@@ -6,4 +6,14 @@ nav_order: 9
 permalink: /tutorials/getting-started/
 ---
 
-Bacon ipsum dolour sit amet porchetta beef turkey, bacon turducken boudin hamburger venison ball tip. Brisket pork loin bresaola short loin ground round leberkas pastrami tongue jerky cow turducken beef ribs. Pork ribeye landjaeger prosciutto pig venison tenderloin. Swine beef ribs kielbasa, porchetta tenderloin salami venison pork belly tail.
+The first thing is to install the software [cjio](https://github.com/tudelft3d/cjio), which is used to manipulate, edit, and validate CityJSON files:
+
+You must have Python (version >3.5) installed, and [pip](https://pypi.org/project/pip/).
+To install the latest release:
+```
+pip install cjio
+```
+
+Download the demo file, you can open and browse that file in any text editor
+
+## make simple file wiht 2 buildings
