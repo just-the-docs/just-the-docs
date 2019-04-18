@@ -7,7 +7,7 @@ permalink: /
 ---
 
 <!-- <img src="{{ '/assets/images/cityjson_logo.svg' | prepend: site.baseurl }}" width="200"> -->
-<img src="{{ '/assets/images/cj2.svg' | prepend: site.baseurl }}" width="200">
+<img src="{{ '/assets/images/cityjson_logo.svg' | prepend: site.baseurl }}" width="600">
 
 A compact and developer-friendly JSON-based encoding of the CityGML data model
 {: .fs-6 .fw-300 }
