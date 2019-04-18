@@ -81,7 +81,7 @@ The structure of a CityJSON file is a fairly simple to understand and can be eas
 {
   "type": "CityJSON",
   "version": "1.0",
-  "extensions": { "Noise": "https://someurl.org/noise.json" },
+  "extensions": {...},
   "metadata": { "referenceSystem": "urn:ogc:def:crs:EPSG::7415" },
   "CityObjects": {
     "id-1": {
