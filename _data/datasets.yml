@@ -1,6 +1,6 @@
 
 - name: "Den Haag"
-  url:  https://data.overheid.nl/data/dataset/ngr-3d-model-den-haag
+  url:  https://data.overheid.nl/dataset/48265-3d-lod2-stadsmodel-2010-den-haag-citygml
   image: dataset_denhaag.png
   json: DenHaag_01.json
   json-size: 2.9
