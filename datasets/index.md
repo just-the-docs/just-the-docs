@@ -30,7 +30,7 @@ permalink: /datasets/
     <tr>
       <td><a href="{{ i.url }}">{{ i.name }}</a></td>
       <td><a href="https://3d.bk.tudelft.nl/opendata/cityjson/citygml/{{ i.gml }}">[GML]</a> ({{ i.gml-size }}MB)</td>
-      <td><a href="https://3d.bk.tudelft.nl/opendata/cityjson/v09/{{ i.json }}">[JSON]</a> ({{ i.json-size }}MB)</td>
+      <td><a href="https://3d.bk.tudelft.nl/opendata/cityjson/1.0/{{ i.json }}">[JSON]</a> ({{ i.json-size }}MB)</td>
       <td>
         {% if i.textures %}
           <a href="https://3d.bk.tudelft.nl/opendata/cityjson/citygml/{{ i.textures }}">[ZIP]</a>
