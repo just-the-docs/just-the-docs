@@ -21,18 +21,18 @@ permalink: /about/
 
 ## Overview
 
-CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [CityGML](https://www.citygml.org>) data model (version 2.0.0), which is an open standardised data model and exchange format to store digital 3D models of cities and landscapes.
-CityGML is an official standart of the [Open Geospatial Consortium](http://www.opengeospatial.org).
+CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [CityGML](https://www.citygml.org) data model (version 2.0.0), which is an open standardised data model and exchange format to store digital 3D models of cities and landscapes.
+CityGML is an official standard of the [Open Geospatial Consortium](http://www.opengeospatial.org).
 
 CityJSON defines ways to describe most of the common 3D features and objects found in cities (such as buildings, roads, rivers, bridges, vegetation and city furniture) and the relationships between them.
-It also defines different standard levels of detail (LoDs) for the 3D objects, which allows us to represent objects for different applications and purposes.
+It also defines different standard levels of detail (LoDs) for the 3D objects, which allows us to represent different resolutions of objects for different applications and purposes.
 
-A CityJSON file represents both the geometry and the semantics of the city features of a given area, eg buildings, roads, rivers, the vegetation, and the city furniture.
+A CityJSON file describes both the geometry and the semantics of the city features of a given area, eg buildings, roads, rivers, the vegetation, and the city furniture.
 
 The aim of CityJSON is to offer an alternative to the GML encoding of CityGML, which can be verbose and complex (and thus rather frustrating to work with). 
 CityJSON aims at being easy-to-use, both for reading datasets, and for creating them.
 It was designed with programmers in mind, so that tools and APIs supporting it can be quickly built.
-It was also designed to be compact (it typically [compresses 7X the CityGML files publicly available](https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets)), and to be friendly for web and mobile development.
+It was also designed to be compact (it typically [compresses publicly available CityGML files by 7x](https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets)), and to be friendly for web and mobile development.
 
 A CityJSON object, representing a city, is as 'flat' as possible, ie the hierarchy of CityGML has been flattened out and only the city objects which are 'leaves' of this hierarchy are implemented.
 This considerably simplifies the storage of a city model, and furthermore does not mean that information is lost.
@@ -47,7 +47,7 @@ There is now a growing number [software tools]({{ site.baseurl }}/software/) tha
 
 CityJSON mainly describes the geometry, attributes, and semantics of different kinds of 3D city objects. 
 These can be supplemented with textures and/or colours in order to give a better impression of their appearance. 
-Specific relationships between different objects can also be stored using CityGML, e.g. that a building is decomposed into three parts, or that a building has a both a carport and a balcony.
+Specific relationships between different objects can also be stored using CityGML, eg that a building is decomposed into three parts, or that a building has a both a carport and a balcony.
 
 The types of objects stored in CityJSON/CityGML are grouped into different modules. 
 These are:
@@ -72,8 +72,8 @@ There are already a few Extensions defined, and those can be reused.
 
 ## How are objects stored in CityJSON?
 
-CityJSON datasets consist of a set of plain text files (JSON files) and possibly some accompanying image files that are used as textures. 
-Each text file can represent a part of the dataset, such as a specific region, a specific type of object (such as a set of roads), or a predefined LOD.
+CityJSON datasets consist of a set of plain text files (JSON files) and optionally accompanying image files that are used as textures. 
+Each text file can represent a part of the dataset, such as a specific region, a specific type of object (such as a set of roads), or a predefined LoD.
 
 The structure of a CityJSON file is a fairly simple to understand and can be easily read by humans, a simple example would look like this:
 

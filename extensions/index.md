@@ -16,7 +16,7 @@ This is conceptually akin to the *Application Domain Extensions* (ADEs) in CityG
 See the [Extensions specifications for v{{site.lastversion}}]({{ site.url }}{{ site.baseurl }}specs/{{ site.lastversion }}/#extensions)
 
 
-## Registy of current Extensions
+## Registry of current Extensions
 
 {% assign extensions = site.data.extensions | better_sort: 'name' %}
 
