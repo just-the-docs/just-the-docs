@@ -56,7 +56,7 @@
     - viewer
 
 - name: Web-viewer
-  webpage: https://viewer.tudelft.xyz
+  webpage: https://view.cityjson.org
   description: A simple web-viewer for CityJSON files
   foss: true
   category: 
