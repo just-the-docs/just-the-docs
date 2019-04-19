@@ -12,6 +12,7 @@ permalink: /tutorials/getting-started/
 1. TOC
 {:toc}
 
+---
 
 ## Download a simple file with 2 buildings
 
