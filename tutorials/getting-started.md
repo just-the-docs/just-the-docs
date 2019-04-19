@@ -23,7 +23,8 @@ Go to the [CityJSON official online viewer](https://view.cityjson.org) and drop 
 ![](../files/gs-viewer.png)
 
 
-You can also use (more powerful) viewers (where the semantics of the buildings is shown for instance, and attributes), one of them is [azul](https://itunes.apple.com/nl/app/azul/id1173239678?mt=12), a macOS-only viewer:
+You can also use (more powerful) viewers (where the semantics of the buildings is shown for instance, and attributes), we offer a [list of viewers]({{ 'software/#viewers' | prepend: site.baseurl }}) (and other software).
+One of them is [azul](https://itunes.apple.com/nl/app/azul/id1173239678?mt=12), a macOS-only viewer:
 
 ![](../files/gs-azul.png)
 
