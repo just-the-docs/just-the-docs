@@ -17,7 +17,7 @@
 
 - name: 3dfier
   webpage: https://github.com/tudelft3d/3dfier
-  description: Takes 2D GIS datasets and "3dfies" them by lifting each polygon to its height (obtained with LiDAR). Outputs CityGML
+  description: Takes 2D GIS datasets and "3dfies" them by lifting each polygon to its height (obtained with LiDAR). Outputs CityJSON, CityGML, and OBJ
   foss: true
   category: 
     - generator
@@ -40,7 +40,7 @@
     - manipulator
     - converter
 
-- name: QGIS plugin
+- name: CityJSON QGIS plugin
   webpage: https://github.com/tudelft3d/cityjson-qgis-plugin
   description: A plugin that supports the loading of CityJSON datasets in QGIS3; these can be queried like any other layers in QGIS.
   foss: true
