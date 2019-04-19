@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Mapping of the Noise ADE to a CityJSON Extension
+title: Mapping the CityGML Noise ADE to a CityJSON Extension
 parent: Tutorials
-nav_order: 9
+nav_order: 3
 permalink: /tutorials/extension/
 ---
 

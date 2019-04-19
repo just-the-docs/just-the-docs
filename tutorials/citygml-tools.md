@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Converting CityGML files
+title: Converting to/from CityGML files
 parent: Tutorials
-nav_order: 9
+nav_order: 2
 permalink: /tutorials/citygml-tools/
 ---
 

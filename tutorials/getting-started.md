@@ -2,7 +2,7 @@
 layout: page
 title: Getting started with CityJSON
 parent: Tutorials
-nav_order: 9
+nav_order: 1
 permalink: /tutorials/getting-started/
 ---
 
