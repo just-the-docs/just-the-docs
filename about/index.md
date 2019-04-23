@@ -21,7 +21,7 @@ permalink: /about/
 
 ## Overview
 
-CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [CityGML](https://www.citygml.org) data model (version 2.0.0), which is an open standardised data model and exchange format to store digital 3D models of cities and landscapes.
+CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [CityGML](https://www.opengeospatial.org/standards/citygml) data model (version 2.0.0), which is an open standardised data model and exchange format to store digital 3D models of cities and landscapes.
 CityGML is an official standard of the [Open Geospatial Consortium](http://www.opengeospatial.org).
 
 CityJSON defines ways to describe most of the common 3D features and objects found in cities (such as buildings, roads, rivers, bridges, vegetation and city furniture) and the relationships between them.
