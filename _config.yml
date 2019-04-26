@@ -15,11 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 title: CityJSON
 description: CityGML without the GML
-url: "https://tudelft3d.github.io"
-baseurl: "/cityjson-website"
+# url: "https://tudelft3d.github.io"
+# baseurl: "/cityjson-website"
 
-# baseurl: "/just-the-docs/" # the subpath of your site, e.g. /blog
-# url: "https://www.cityjson.org" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.cityjson.org" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
