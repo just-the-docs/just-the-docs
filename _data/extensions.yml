@@ -1,6 +1,6 @@
 
 - name: Noise
-  url:  https://github.com/tudelft3d/cityjson/blob/master/schema/v09/extensions/noise.json
+  url:  https://3d.bk.tudelft.nl/schemas/cityjson/1.0.0/extensions/noise.json
   description: "Conversion of the CityGML Noise ADE"
   # status: v1.0
   organisation: "[3D geoinformation TU Delft](https://3d.bk.tudelft.nl)"

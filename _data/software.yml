@@ -56,7 +56,7 @@
     - viewer
 
 - name: Web-viewer
-  webpage: https://view.cityjson.org
+  webpage: https://viewer.cityjson.org
   description: A simple web-viewer for CityJSON files
   foss: true
   category: 
