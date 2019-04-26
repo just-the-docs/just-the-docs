@@ -13,7 +13,7 @@ CityJSON uses [JSON Schemas](http://json-schema.org/) to document and validate t
 A CityJSON *Extension* is a JSON file that allows us to document how the core data model of CityJSON may be extended, and to validate CityJSON files containing new objects and/or attributes.
 This is conceptually akin to the *Application Domain Extensions* (ADEs) in CityGML; see Section 10.13 of the [official CityGML documentation](https://portal.opengeospatial.org/files/?artifact_id=47842).
 
-See the [Extensions specifications for v{{site.lastversion}}]({{ site.url }}{{ site.baseurl }}specs/{{ site.lastversion }}/#extensions)
+See the [Extensions specifications for v{{site.lastversion}}]({{ site.url }}{{ site.baseurl }}/specs/{{ site.lastversion }}/#extensions)
 
 
 ## Registry of current Extensions
