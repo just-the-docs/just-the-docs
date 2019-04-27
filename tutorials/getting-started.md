@@ -25,7 +25,7 @@ You can open that file in any text editor to see its structure, and notice that 
 
 ## Visualise the file
 
-Go to the [CityJSON official online viewer](https://view.cityjson.org) and drop the file on the logo, and voilà:
+Go to the [CityJSON official online viewer](https://viewer.cityjson.org) and drop the file on the logo, and voilà:
 
 ![](../files/gs-viewer.png)
 
@@ -100,7 +100,7 @@ $ cjio myfile.json merge '/home/elvis/temp/*.json' save all_merged.json
 
 ## What else?
 
-One important point is ensuring that the files you produce and manipulate are valid, see our [validation tutorial][{{ '/tutorials/validation/' | prepend: site.baseurl }}].
+One important point is ensuring that the files you produce and manipulate are valid, see our [validation tutorial]({{ '/tutorials/validation/' | prepend: site.baseurl }}).
 
 Several datasets can be downloaded from the [datasets page]({{ '/datasets/' | prepend: site.baseurl }}), but more importantly, it is possible to convert any CityGML file, see [our tutorial]({{ '/tutorials/conversion/' | prepend: site.baseurl }}).
 
