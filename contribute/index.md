@@ -7,20 +7,20 @@ permalink: /contribute/
 
 While this website is made and maintained by the [3D Geoinformation group at the TU Delft](https://3d.bk.tudelft.nl), everyone is welcome to contribute by submitting new content and/or fixing errors.
 
-If you want to inform us of an error or propose an improvement to the specifications or the schemas, use [this GitHub repository](https://github.com/tudelft3d/cityjson).
+## Errors or improvements in the specifications or schemas?
 
-If you want to fix errors in this website, its [source is publicly available](https://github.com/tudelft3d/cityjson-website).
+Use [https://github.com/tudelft3d/cityjson](https://github.com/tudelft3d/cityjson)
 
-For both, you can either:
+
+## Errors in this website?
+
+Its source code is open: [https://github.com/tudelft3d/cityjson-website](https://github.com/tudelft3d/cityjson-website)
+
+
+## How to contribute?
+
+You can either:
 
   - add an issue
   - fix the error yourself and open a [pull request](https://help.github.com/articles/about-pull-requests/).
-
-
-
-
-
-
-
-
 
