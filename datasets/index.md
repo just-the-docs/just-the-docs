@@ -43,11 +43,15 @@ permalink: /datasets/
   {% endfor %}
 </table>
 
-<i class="fas fa-exclamation-circle"></i> It should be observed that on average CityJSON compresses 6X a CityGML, and that without any loss of information ([see details](https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets)).
+<i class="fas fa-exclamation-circle"></i> It should be observed that on average CityJSON compresses ~6X a CityGML, and that without any loss of information ([see details](https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets)).
 
 ## Generating automatically your own area
 
-It is possible to generate automatically a 3D city model in CityJSON with [3dfier](https://github.com/tudelft3d/3dfier), just follow that simple [tutorial](https://github.com/tudelft3d/3dfier/wiki/General-3dfier-tutorial-to-generate-LOD1-models)
+It is possible to generate automatically a 3D city model in CityJSON with [3dfier](https://github.com/tudelft3d/3dfier), just follow that simple [tutorial](https://github.com/tudelft3d/3dfier/wiki/General-3dfier-tutorial-to-generate-LOD1-models).
 
 
+## All USA buildings
 
+The project [Open City Model](https://github.com/opencitymodel/opencitymodel) has converted all buildings in the USA to LoD1 buildings and offers them in CityJSON.
+
+<i class="fas fa-exclamation-circle"></i> Watch out: the coordinates are in (lat, long, meters), which means that there's a mix of units (degrees and meters) and several viewers and processing software do not like this very much...
