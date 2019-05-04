@@ -1,5 +1,5 @@
 ---
-layout: anchor_headings
+layout: table_wrappers
 ---
 
 <!DOCTYPE html>
@@ -57,7 +57,8 @@ layout: anchor_headings
           {% endif %}
         {% endunless %}
         <div id="main-content" class="page-content" role="main">
-          {{ content }}
+
+          {% include vendor/anchor_headings.html html=content anchorBody="#" anchorClass="anchor_heading" %}
 
           {% if page.has_children == true and page.has_toc != false %}
           <hr>
