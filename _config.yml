@@ -38,3 +38,11 @@ ga_tracking: UA-2709176-10
 
 plugins:
   - jekyll-seo-tag
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blank_lines: false
+  profile: false
