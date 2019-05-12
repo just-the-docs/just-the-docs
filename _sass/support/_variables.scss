@@ -62,18 +62,6 @@ $btn-primary-color: $purple-100 !default;
 $base-button-color: #f7f7f7 !default;
 
 //
-// Media queries in pixels
-//
-
-$media-queries: (
-  xs: 320px,
-  sm: 500px,
-  md: 740px,
-  lg: 1120px,
-  xl: 1400px
-) !default;
-
-//
 // Spacing
 //
 
@@ -119,5 +107,18 @@ $border-color: $grey-lt-100 !default;
 $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
 $nav-width: 264px !default;
+$nav-width-md: 248px !default;
 $content-width: 800px !default;
 $header-height: 60px !default;
+
+//
+// Media queries in pixels
+//
+
+$media-queries: (
+  xs: 320px,
+  sm: 500px,
+  md: $content-width,
+  lg: $content-width + $nav-width,
+  xl: 1400px
+) !default;

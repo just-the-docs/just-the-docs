@@ -24,7 +24,7 @@
   @include mq(md) {
     flex-wrap: nowrap;
     position: absolute;
-    width: $nav-width;
+    width: $nav-width-md;
     height: 100%;
     flex-direction: column;
     border-right: $border $border-color;
@@ -54,7 +54,7 @@
   @include mq(md) {
     position: relative;
     max-width: $content-width;
-    margin-left: $nav-width;
+    margin-left: $nav-width-md;
   }
 
   @include mq(lg) {

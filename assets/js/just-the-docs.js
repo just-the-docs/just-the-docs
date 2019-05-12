@@ -14,7 +14,8 @@ function toggleNav(){
   const pageHeader = document.querySelector('.js-page-header');
   const navTrigger = document.querySelector('.js-main-nav-trigger');
 
-  addEvent(navTrigger, 'click', function(){
+  addEvent(navTrigger, 'click', function(e){
+    e.preventDefault();
     var text = navTrigger.innerText;
     var textToggle = navTrigger.getAttribute('data-text-toggle');
 
