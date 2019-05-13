@@ -8,7 +8,7 @@ workflow "Publish to RubyGems" {
 
 action "Build from Gemspec" {
   uses = "scarhand/actions-ruby@master"
-  runs = "gem build *.gemspec"
+  runs = "gem build just-the-docs.gemspec"
 }
 
 action "Publish to Ruby Gems" {
