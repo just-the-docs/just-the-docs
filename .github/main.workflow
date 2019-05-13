@@ -1,16 +1,26 @@
 workflow "Publish to RubyGems" {
   on = "release"
-  resolves = ["scarhand/actions-ruby@master"]
+  resolves = [
+    "Publish to GPR",
+    "Publish to Ruby Gems",
+  ]
 }
 
 action "Build from Gemspec" {
   uses = "scarhand/actions-ruby@master"
-  runs = "build *.gemspec"
+  runs = "gem build *.gemspec"
 }
 
-action "scarhand/actions-ruby@master" {
+action "Publish to Ruby Gems" {
   uses = "scarhand/actions-ruby@master"
   needs = ["Build from Gemspec"]
-  runs = "push *.gem"
+  runs = "gem push *.gem"
   secrets = ["RUBYGEMS_AUTH_TOKEN"]
+}
+
+action "Publish to GPR" {
+  uses = "scarhand/actions-ruby@master"
+  needs = ["Build from Gemspec"]
+  secrets = ["GPR_AUTH_TOKEN"]
+  runs = " gem push --key github --host https://rubygems.pkg.github.com/pmarsceill *.gem"
 }
