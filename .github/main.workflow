@@ -22,5 +22,5 @@ action "Publish to GPR" {
   uses = "scarhand/actions-ruby@master"
   needs = ["Build from Gemspec"]
   secrets = ["GPR_AUTH_TOKEN"]
-  runs = " gem push --key github --host https://rubygems.pkg.github.com/pmarsceill *.gem"
+  runs = " gem push --key [\"GPR_AUTH_TOKEN\"] --host https://rubygems.pkg.github.com/pmarsceill *.gem"
 }
