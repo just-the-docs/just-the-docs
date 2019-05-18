@@ -1,3 +1,6 @@
+---
+---
+
 // Event handling
 
 function addEvent(el, type, handler) {
@@ -31,25 +34,8 @@ function toggleNav(){
 // Site search
 
 function initSearch() {
-  // Get the generated search_data.json file so lunr.js can search it locally.
-
-  sc = document.getElementsByTagName("script");
-  source = '';
-
-  for(idx = 0; idx < sc.length; idx++)
-  {
-    s = sc.item(idx);
-
-    if(s.src && s.src.match(/just-the-docs\.js$/))
-    { source = s.src; }
-  }
-
-  jsPath = source.replace('just-the-docs.js', '');
-
-  jsonPath = jsPath + 'search-data.json';
-
   var request = new XMLHttpRequest();
-  request.open('GET', jsonPath, true);
+  request.open('GET', '{{ "assets/js/search-data.json" | absolute_url }}', true);
 
   request.onload = function() {
     if (request.status >= 200 && request.status < 400) {
@@ -101,24 +87,39 @@ function initSearch() {
     addEvent(searchInput, 'keydown', function(e){
       switch (e.keyCode) {
         case 38: // arrow up
+          e.preventDefault();
           var active = document.querySelector('.search-result.active');
-          if (active.parentElement.previousSibling) {
-            var previous = active.parentElement.previousSibling.querySelector('.search-result');
+          if (active) {
             active.classList.remove('active');
-            previous.classList.add('active');
+            if (active.parentElement.previousSibling) {
+              var previous = active.parentElement.previousSibling.querySelector('.search-result');
+              previous.classList.add('active');
+            }
           }
           return;
         case 40: // arrow down
+          e.preventDefault();
           var active = document.querySelector('.search-result.active');
-          if (active.parentElement.nextSibling) {
-            var next = active.parentElement.nextSibling.querySelector('.search-result');
-            active.classList.remove('active');
+          if (active) {
+            if (active.parentElement.nextSibling) {
+              var next = active.parentElement.nextSibling.querySelector('.search-result');
+              active.classList.remove('active');
+              next.classList.add('active');
+            }
+          } else {
+            var next = document.querySelector('.search-result');
             next.classList.add('active');
           }
           return;
         case 13: // enter
+          e.preventDefault();
           var active = document.querySelector('.search-result.active');
-          active.click();
+          if (active) {
+            active.click();
+          } else {
+            var first = document.querySelector('.search-result');
+            first.click();
+          }
           return;
       }
     });
@@ -132,6 +133,7 @@ function initSearch() {
         case 38: // arrow up
         case 40: // arrow down
         case 13: // enter
+          e.preventDefault();
           return;
       }
 
@@ -168,9 +170,6 @@ function initSearch() {
 
           var resultLink = document.createElement('a');
           resultLink.classList.add('search-result');
-          if (i == 0) {
-            resultLink.classList.add('active');
-          }
           resultLink.setAttribute('href', doc.url);
           resultsListItem.appendChild(resultLink);
 

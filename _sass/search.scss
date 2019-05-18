@@ -109,17 +109,13 @@
   padding-left: $sp-3;
   padding-right: $sp-3;
 
-  &:hover {
+  &:hover, &.active {
     background-color: darken($body-background-color, 5%);
   }
 
   @include mq(md) {
     padding-left: $sp-4;
     padding-right: $sp-4;
-
-    &.active {
-      background-color: darken($body-background-color, 5%);
-    }
   }
 
   .search-result-title {
