@@ -129,6 +129,7 @@
       display: inline-block;
       width: 40%;
       vertical-align: top;
+      word-wrap: break-word;
     }
   }
 
@@ -145,6 +146,7 @@
     @include mq(sm) {
       display: inline-block;
       width: 60%;
+      vertical-align: top;
     }
   }
 

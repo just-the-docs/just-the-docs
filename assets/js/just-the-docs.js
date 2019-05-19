@@ -42,6 +42,7 @@ function initSearch() {
       // Success!
       var data = JSON.parse(request.responseText);
 
+      lunr.tokenizer.separator = /[\s\-/]+/
       var index = lunr(function () {
         this.ref('id');
         this.field('title', { boost: 200 });
@@ -220,7 +221,7 @@ function initSearch() {
                 var nextSpace = doc.content.indexOf(' ', previewEnd + 1);
                 var nextDot = doc.content.indexOf('.', previewEnd + 1);
                 if ((nextDot > 0) && (nextDot < nextSpace)) {
-                  previewEnd = nextDot + 1;
+                  previewEnd = nextDot;
                   ellipsesAfter = false;
                   break;
                 }
@@ -238,7 +239,7 @@ function initSearch() {
               preview += '<span class="search-result-highlight">' + doc.content.substring(start, end) + '</span>';
               preview += doc.content.substring(end, previewEnd);
               if (ellipsesAfter) {
-                preview += '...';
+                preview += ' ...';
               }
 
               var resultPreview = document.createElement('div');
