@@ -1,23 +1,34 @@
 ---
 ---
+(function (jtd, undefined) {
 
 // Event handling
 
-function addEvent(el, type, handler) {
-    if (el.attachEvent) el.attachEvent('on'+type, handler); else el.addEventListener(type, handler);
+jtd.addEvent = function(el, type, handler) {
+  if (el.attachEvent) el.attachEvent('on'+type, handler); else el.addEventListener(type, handler);
 }
-function removeEvent(el, type, handler) {
-    if (el.detachEvent) el.detachEvent('on'+type, handler); else el.removeEventListener(type, handler);
+jtd.removeEvent = function(el, type, handler) {
+  if (el.detachEvent) el.detachEvent('on'+type, handler); else el.removeEventListener(type, handler);
+}
+jtd.onReady = function(ready) {
+  // in case the document is already rendered
+  if (document.readyState!='loading') ready();
+  // modern browsers
+  else if (document.addEventListener) document.addEventListener('DOMContentLoaded', ready);
+  // IE <= 8
+  else document.attachEvent('onreadystatechange', function(){
+      if (document.readyState=='complete') ready();
+  });
 }
 
 // Show/hide mobile menu
 
-function toggleNav(){
+function initNav() {
   const mainNav = document.querySelector('.js-main-nav');
   const pageHeader = document.querySelector('.js-page-header');
   const navTrigger = document.querySelector('.js-main-nav-trigger');
 
-  addEvent(navTrigger, 'click', function(e){
+  jtd.addEvent(navTrigger, 'click', function(e){
     e.preventDefault();
     var text = navTrigger.innerText;
     var textToggle = navTrigger.getAttribute('data-text-toggle');
@@ -37,7 +48,7 @@ function initSearch() {
   var request = new XMLHttpRequest();
   request.open('GET', '{{ "assets/js/search-data.json" | absolute_url }}', true);
 
-  request.onload = function() {
+  request.onload = function(){
     if (request.status >= 200 && request.status < 400) {
       // Success!
       var data = JSON.parse(request.responseText);
@@ -67,7 +78,7 @@ function initSearch() {
     }
   };
 
-  request.onerror = function() {
+  request.onerror = function(){
     // There was a connection error of some sort
     console.log('There was a connection error');
   };
@@ -85,7 +96,7 @@ function initSearch() {
       searchResults.classList.remove('active');
     }
 
-    addEvent(searchInput, 'keydown', function(e){
+    jtd.addEvent(searchInput, 'keydown', function(e){
       switch (e.keyCode) {
         case 38: // arrow up
           e.preventDefault();
@@ -129,7 +140,7 @@ function initSearch() {
       }
     });
 
-    addEvent(searchInput, 'keyup', function(e){
+    jtd.addEvent(searchInput, 'keyup', function(e){
       switch (e.keyCode) {
         case 27: // When esc key is pressed, hide the results and clear the field
           hideResults();
@@ -252,7 +263,7 @@ function initSearch() {
       }
     });
 
-    addEvent(searchInput, 'blur', function(){
+    jtd.addEvent(searchInput, 'blur', function(){
       setTimeout(function(){ hideResults() }, 300);
     });
   }
@@ -263,22 +274,16 @@ function pageFocus() {
   mainContent.focus();
 }
 
-
 // Document ready
 
-function ready(){
-  toggleNav();
+jtd.onReady(function(){
+  initNav();
   pageFocus();
   if (typeof lunr !== 'undefined') {
     initSearch();
   }
-}
-
-// in case the document is already rendered
-if (document.readyState!='loading') ready();
-// modern browsers
-else if (document.addEventListener) document.addEventListener('DOMContentLoaded', ready);
-// IE <= 8
-else document.attachEvent('onreadystatechange', function(){
-    if (document.readyState=='complete') ready();
 });
+
+})(window.jtd = window.jtd || {});
+
+{% include_relative _custom.js %}
