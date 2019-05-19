@@ -17,7 +17,7 @@
 .search-input-wrap {
   display: flex;
   height: 100%;
-  background-color: $body-background-color;
+  background-color: $search-background-color;
   padding: $sp-2;
   border-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -28,6 +28,7 @@
     padding-bottom: 0;
     padding-left: 0;
     border-radius: 0;
+    background-color: $body-background-color;
     box-shadow: none;
   }
 }
@@ -37,12 +38,13 @@
   width: 100%;
   padding-top: $sp-1;
   padding-bottom: $sp-1;
-  background-color: $body-background-color;
+  background-color: $search-background-color;
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
   border-left: 0;
   order: 2;
+  @include fs-4;
 
   &:focus {
     outline: 0;
@@ -53,9 +55,8 @@
     }
   }
 
-  @include fs-4;
-
   @include mq(md) {
+    background-color: $body-background-color;
     @include fs-3;
   }
 }
@@ -73,7 +74,7 @@
   z-index: 100;
   width: 100%;
   border-radius: $border-radius;
-  background: lighten($body-background-color, 1%);
+  background: $search-background-color;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 
   &.active {
@@ -110,7 +111,7 @@
   padding-right: $sp-3;
 
   &:hover, &.active {
-    background-color: darken($body-background-color, 5%);
+    background-color: darken($search-background-color, 5%);
   }
 
   @include mq(md) {
