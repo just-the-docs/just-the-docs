@@ -52,7 +52,7 @@ function initSearch() {
 
         for (var i in data) {
           this.add({
-            id: data[i].id,
+            id: i,
             title: data[i].title,
             content: data[i].content,
             url: data[i].url
