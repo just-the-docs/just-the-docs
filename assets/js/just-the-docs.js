@@ -108,7 +108,9 @@ function initSearch() {
             }
           } else {
             var next = document.querySelector('.search-result');
-            next.classList.add('active');
+            if (next) {
+              next.classList.add('active');
+            }
           }
           return;
         case 13: // enter
@@ -118,7 +120,9 @@ function initSearch() {
             active.click();
           } else {
             var first = document.querySelector('.search-result');
-            first.click();
+            if (first) {
+              first.click();
+            }
           }
           return;
       }
@@ -247,7 +251,9 @@ function initSearch() {
       }
     });
 
-    addEvent(searchInput, 'blur', hideResults);
+    addEvent(searchInput, 'blur', function(){
+      setTimeout(function(){ hideResults() }, 300);
+    });
   }
 }
 
