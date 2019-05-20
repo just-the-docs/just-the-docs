@@ -12,9 +12,10 @@
 
   <link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}" type="image/x-icon">
 
-  {% assign color_scheme = site.color_scheme %}
-  {% if color_theme == nil %}
+  {% if site.color_scheme == nil or site.color_scheme == "nil" %}
     {% assign color_scheme = 'light' %}
+  {% else %}
+    {% assign color_scheme = site.color_scheme %}
   {% endif %}
   <link rel="stylesheet" href="{{ color_scheme | prepend: '/assets/css/just-the-docs-' | append: '.css' | absolute_url }}">
 
