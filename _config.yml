@@ -29,7 +29,7 @@ aux_links:
   "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
 
-# Color scheme currently only supports "dark" or nil (default)
+# Color scheme currently only supports "dark" or "light"/nil (default)
 color_scheme: nil
 
 # Google Analytics Tracking (optional)

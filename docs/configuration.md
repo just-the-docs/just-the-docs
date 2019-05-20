@@ -48,17 +48,14 @@ color_scheme: "dark"
 
 <script>
 const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-const cssFile = document.querySelector('[rel="stylesheet"]');
-const originalCssRef = cssFile.getAttribute('href');
-const darkModeCssRef = originalCssRef.replace('just-the-docs.css', 'dark-mode-preview.css');
 
-addEvent(toggleDarkMode, 'click', function(){
-  if (cssFile.getAttribute('href') === originalCssRef) {
-    cssFile.setAttribute('href', darkModeCssRef);
+jtd.addEvent(toggleDarkMode, 'click', function(){
+  if (jtd.getTheme() === 'dark') {
+    jtd.setTheme('light');
   } else {
-    cssFile.setAttribute('href', originalCssRef);
+    jtd.setTheme('dark');
   }
-})
+});
 </script>
 
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
