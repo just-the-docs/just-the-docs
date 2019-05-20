@@ -86,9 +86,9 @@
 
   @include mq(md) {
     display: flex;
+    height: $header-height;
     background-color: $body-background-color;
     justify-content: flex-end;
-    height: $header-height;
     border-bottom: $border $border-color;
   }
 
