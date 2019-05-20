@@ -85,8 +85,8 @@
   background-color: $sidebar-color;
 
   @include mq(md) {
-    background-color: $body-background-color;
     display: flex;
+    background-color: $body-background-color;
     justify-content: flex-end;
     height: $header-height;
     border-bottom: $border $border-color;
@@ -128,10 +128,10 @@
   align-items: center;
 
   @include mq(md) {
+    z-index: 101;
     height: $header-height;
     min-height: $header-height;
     max-height: $header-height;
-    z-index: 101;
     border-bottom: $border $border-color;
   }
 }
@@ -149,9 +149,9 @@
 }
 
 .site-button {
+  display: flex;
   height: 100%;
   padding: $gutter-spacing-sm;
-  display: flex;
   align-items: center;
 
   @include mq(md) {

@@ -17,8 +17,8 @@
 .search-input-wrap {
   display: flex;
   height: 100%;
-  background-color: $search-background-color;
   padding: $sp-2;
+  background-color: $search-background-color;
   border-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 
@@ -27,8 +27,8 @@
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-    border-radius: 0;
     background-color: $body-background-color;
+    border-radius: 0;
     box-shadow: none;
   }
 }
@@ -70,11 +70,11 @@
 
 .search-results-wrap {
   position: absolute;
-  display: none;
   z-index: 100;
+  display: none;
   width: 100%;
-  border-radius: $border-radius;
   background: $search-background-color;
+  border-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 
   &.active {
@@ -106,30 +106,31 @@
 .search-result {
   display: block;
   padding-top: $sp-1;
+  padding-right: $sp-3;
   padding-bottom: $sp-1;
   padding-left: $sp-3;
-  padding-right: $sp-3;
 
-  &:hover, &.active {
+  &:hover,
+  &.active {
     background-color: darken($search-background-color, 5%);
   }
 
   @include mq(md) {
-    padding-left: $sp-4;
     padding-right: $sp-4;
+    padding-left: $sp-4;
   }
 
   .search-result-title {
     display: block;
     padding-top: $sp-2;
-    padding-bottom: $sp-2;
     padding-right: $sp-4;
+    padding-bottom: $sp-2;
 
     @include mq(sm) {
       display: inline-block;
       width: 40%;
-      vertical-align: top;
       word-wrap: break-word;
+      vertical-align: top;
     }
   }
 
@@ -138,8 +139,7 @@
     padding-top: $sp-2;
     padding-bottom: $sp-2;
     padding-left: $sp-4;
-    border-left: $border;
-    border-left-color: $border-color;
+    border-left: $border $border-color;
     color: $search-result-preview-color;
     @include fs-2;
 
@@ -151,7 +151,7 @@
   }
 
   .search-result-highlight {
-    color: $link-color;
     font-weight: bold;
+    color: $link-color;
   }
 }
