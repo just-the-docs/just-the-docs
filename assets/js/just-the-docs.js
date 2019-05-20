@@ -291,4 +291,4 @@ jtd.onReady(function(){
 
 })(window.jtd = window.jtd || {});
 
-{% include_relative _custom.js %}
+{% include_relative custom.js %}
