@@ -2,7 +2,7 @@
 {% if include.entry.page %}
 
     {% for page_iter in site.pages %}
-        {% if page_iter.permalink == include.entry.page %}
+        {% if page_iter.pagename == include.entry.page %}
 
             <div>
 
@@ -19,7 +19,7 @@
                     class="nav-entry"
                 {% endif %}
 
-                href="{{ page_iter.url | absolute_url }}"
+                href="{{ page_iter.url | absolute_url }}?title={{ page_iter.title | url_encode }}"
             >
                 {{include.indent}}{{ page_iter.title }}
             </a>

@@ -21,7 +21,7 @@
             {% assign has_children = "" %}
 
             {% for page_iter in site.pages %}
-                {% if page_iter.permalink == toc_level_2.page and page_iter.permalink == page.permalink %}
+                {% if page_iter.pagename == toc_level_2.page and page_iter.permalink == page.permalink %}
                     {% assign expand_level_2 = true %}
                 {% endif %}
             {% endfor %}
@@ -36,7 +36,7 @@
             {% for toc_level_3 in toc_level_2.children %}
                 {% assign has_children = has_children | append: "," | append: toc_level_2.page %}
                 {% for page_iter in site.pages %}
-                    {% if page_iter.permalink == toc_level_3.page and page_iter.permalink == page.permalink %}
+                    {% if page_iter.pagename == toc_level_3.page and page_iter.permalink == page.permalink %}
                         {% assign expand_level_2 = true %}
                         {% assign expand_level_3 = toc_level_3.page %}
                     {% endif %}
@@ -44,7 +44,7 @@
                 {% for toc_level_4 in toc_level_3.children %}
                     {% assign has_children = has_children | append: "," | append: toc_level_3.page %}
                     {% for page_iter in site.pages %}
-                        {% if page_iter.permalink == toc_level_4.page and page_iter.permalink == page.permalink %}
+                        {% if page_iter.pagename == toc_level_4.page and page_iter.permalink == page.permalink %}
                             {% assign expand_level_2 = true %}
                             {% assign expand_level_3 = toc_level_3.page %}
                         {% endif %}
