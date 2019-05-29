@@ -2,7 +2,7 @@
 layout: page
 title: Modelling guide for CityJSON
 parent: Tutorials
-nav_order: 1
+nav_order: 5
 permalink: /tutorials/modelling-guide/
 ---
 
