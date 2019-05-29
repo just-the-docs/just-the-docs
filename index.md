@@ -46,7 +46,7 @@ We invite anyone to contribute to the development and improvement of CityJSON, a
 
 ## If you use CityJSON in an academic context, please cite this preprint
 
-Ledoux H, Arroyo Ohori K, Kumar K, Dukai B, Labetski A, Vitalis A (2019). CityJSON: A compact and easy-to-use encoding of the CityGML data model. **arXiv:1902.09155** [<i class="fas fa-file-pdf"></i>](https://arxiv.org/pdf/1902.09155.pdf)
+Ledoux H, Arroyo Ohori K, Kumar K, Dukai B, Labetski A, Vitalis A (2019). CityJSON: A compact and easy-to-use encoding of the CityGML data model. **arXiv:1902.09155** [<i class="fas fa-file-pdf"></i>](https://arxiv.org/abs/1902.09155)
 
 
 
