@@ -1,0 +1,11 @@
+<nav>
+  {% for link in site.data.navigation %}
+    {% assign class = "" %}
+
+    {% if link.link == page.url %}
+      {% assign class = class | append: " active" %}
+    {% endif %}
+
+    <a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+  {% endfor %}
+</nav>

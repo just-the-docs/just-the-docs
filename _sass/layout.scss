@@ -5,7 +5,7 @@
 .page-wrap {
   @include mq(md) {
     position: absolute;
-    top: 0;
+    //top: 0px;
     left: 0;
     display: flex;
     width: 100%;
@@ -147,3 +147,34 @@ body {
     background-color: $sidebar-color;
   }
 }
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: $body-background-color;
+  overflow: hidden;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+  border: $border $border-color;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: $link-color;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: $sidebar-color;
+}
+
+/* Add a color to the active/current link */
+/*.topnav a.active {
+  background-color: $sidebar-color;
+}*/
