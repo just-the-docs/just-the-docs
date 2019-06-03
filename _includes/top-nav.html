@@ -1,11 +1,32 @@
-<nav>
-  {% for link in site.data.navigation %}
-    {% assign class = "" %}
-
-    {% if link.link == page.url %}
-      {% assign class = class | append: " active" %}
-    {% endif %}
-
-    <a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
-  {% endfor %}
-</nav>
+<div class="topnav">
+  <div class="topnav-container">
+    <div class="topnav-logo">
+      <a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
+    </div>
+    <div class="hamburger-container" onclick="hamburger_click(this)">
+      <div class="hamburger-bar1"></div>
+      <div class="hamburger-bar2"></div>
+      <div class="hamburger-bar3"></div>
+    </div>
+    <script>
+      function hamburger_click(x) {
+        x.classList.toggle("hamburger-change");
+        document.querySelector('.topnav-items').classList.toggle("nav-open");
+        document.querySelector('.topnav-container').classList.toggle("nav-open");
+      }
+    </script>
+    <div class="topnav-items">
+      <nav>
+        {% for link in site.data.navigation %}
+          {% assign class = "" %}
+      
+          {% if link.link == page.url %}
+            {% assign class = class | append: " active" %}
+          {% endif %}
+      
+          <a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+</div>
