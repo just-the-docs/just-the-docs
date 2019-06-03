@@ -1,7 +1,7 @@
 <div class="topnav">
   <div class="topnav-container">
     <div class="topnav-logo">
-      <a href="{{ site.url }}{{ site.baseurl }}">{{ site.title }}</a>
+      <a href="{{ site.url }}{{ site.baseurl }}" class="">{{ site.title }}</a>
     </div>
     <div class="hamburger-container" onclick="hamburger_click(this)">
       <div class="hamburger-bar1"></div>
@@ -19,11 +19,6 @@
       <nav>
         {% for link in site.data.navigation %}
           {% assign class = "" %}
-      
-          {% if link.link == page.url %}
-            {% assign class = class | append: " active" %}
-          {% endif %}
-      
           <a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a>
         {% endfor %}
       </nav>

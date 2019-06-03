@@ -37,31 +37,39 @@
   
     @include mq(md) {
       display: block;
-      width: 75%;
+      width: 80%;
     }
   }
   
   .topnav-logo {
     width: 50%;
     float: left;
-    padding: 14px 0;
+    padding: 9px 0;
+
+    a {
+      font-size: 22px;
+      color: $link-color;
+      font-weight: bold;
+      text-shadow: 1px 1px 1px;
+    }
+    
   
     @include mq(md) {
-      width: 25%;
+      width: 20%;
     }
-  }  
+  }
   
   .topnav-items a {
     float: left;
     color: $link-color;
     text-align: center;
     padding: 14px 16px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
   }
   
   .topnav-items a:hover {
-    background-color: $sidebar-color;
+    opacity: 0.3;
   }
   
   .hamburger-container {
