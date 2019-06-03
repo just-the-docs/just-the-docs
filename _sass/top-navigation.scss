@@ -2,12 +2,12 @@
 
 .topnav {
     border: $border $border-color;
+    height: 57px;
   }
   
   .topnav-container {
     background-color: $body-background-color;
     box-sizing: border-box;
-    min-height: 55px;
     max-width: 1140px;
     margin: 0 auto;
     padding-left: 10px;
