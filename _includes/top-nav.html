@@ -1,7 +1,13 @@
 <div class="topnav">
   <div class="topnav-container">
     <div class="topnav-logo">
-      <a href="{{ site.url }}{{ site.baseurl }}" class="">{{ site.title }}</a>
+      <a href="{{ site.url }}{{ site.baseurl }}" class="">
+      {% if site.logo-source != nil and site.logo-width != nil %}
+        <img src="{{ site.url }}{{ site.logo-source }}" width="{{ site.logo-width }}" height="57">
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+      </a>
     </div>
     <div class="hamburger-container" onclick="hamburger_click(this)">
       <div class="hamburger-bar1"></div>
