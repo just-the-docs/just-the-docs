@@ -1,8 +1,10 @@
 // Top navigation
 
+$topnav-height: 57px;
+
 .topnav {
     border: $border $border-color;
-    height: 57px;
+    height: $topnav-height;
   }
   
   .topnav-container {
@@ -12,10 +14,6 @@
     margin: 0 auto;
     padding-left: 10px;
     padding-right: 10px;
-  
-    &.nav-open {
-      display: inline-block;
-    }
   }
   
   .topnav-items {
@@ -27,6 +25,11 @@
       display: block;
       float: left;
       width: 100%;
+      position: absolute;
+      top: $topnav-height;
+      background-color: $body-background-color;
+      z-index: 999;
+      transition: 2s;
   
       a {
         display: block;

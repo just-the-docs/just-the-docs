@@ -10,6 +10,8 @@
     <div class="side-bar">
       {% if site.navigation_enabled == nil %}
       <a href="{{ site.url }}{{ site.baseurl }}" class="site-title fs-6 lh-tight">{{ site.title }}</a>
+      {% else %}
+      <span class="site-title fs-6 lh-tight"></span>
       {% endif %}
       <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
       <div class="navigation main-nav js-main-nav">
