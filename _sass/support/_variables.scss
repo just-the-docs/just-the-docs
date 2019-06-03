@@ -128,3 +128,11 @@ $media-queries: (
   lg: 800px,
   xl: 1316px
 ) !default;
+
+//
+// Top navigation
+//
+
+$topnav-background-color: $body-background-color !default;
+$topnav-items-color: $link-color !default;
+$topnav-logo-color: $link-color !default;

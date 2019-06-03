@@ -8,7 +8,7 @@ $topnav-height: 57px;
   }
   
   .topnav-container {
-    background-color: $body-background-color;
+    background-color: $topnav-background-color;
     box-sizing: border-box;
     max-width: 1140px;
     margin: 0 auto;
@@ -27,7 +27,7 @@ $topnav-height: 57px;
       width: 100%;
       position: absolute;
       top: $topnav-height;
-      background-color: $body-background-color;
+      background-color: $topnav-background-color;
       z-index: 999;
       transition: 2s;
   
@@ -51,7 +51,7 @@ $topnav-height: 57px;
 
     a {
       font-size: 22px;
-      color: $link-color;
+      color: $topnav-logo-color;
       font-weight: bold;
       text-shadow: 1px 1px 1px;
     }
@@ -64,7 +64,7 @@ $topnav-height: 57px;
   
   .topnav-items a {
     float: left;
-    color: $link-color;
+    color: $topnav-items-color;
     text-align: center;
     padding: 14px 16px;
     font-size: 16px;
@@ -88,7 +88,7 @@ $topnav-height: 57px;
   .hamburger-bar1, .hamburger-bar2, .hamburger-bar3 {
     width: 25px;
     height: 3px;
-    background-color: $link-color;
+    background-color: $topnav-items-color;
     margin: 4px 0;
     transition: 0.4s;
   }
