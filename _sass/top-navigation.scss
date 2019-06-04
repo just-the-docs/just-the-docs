@@ -5,10 +5,10 @@ $topnav-height: 57px;
 .topnav {
     border: $border $border-color;
     height: $topnav-height;
+    background-color: $topnav-background-color;
   }
   
   .topnav-container {
-    background-color: $topnav-background-color;
     box-sizing: border-box;
     max-width: 1140px;
     margin: 0 auto;
