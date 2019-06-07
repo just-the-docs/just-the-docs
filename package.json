@@ -6,7 +6,7 @@
   "license": "MIT",
   "bugs": "https://github.com/pmarsceill/just-the-docs/issues",
   "devDependencies": {
-    "stylelint": "^10.0.1",
+    "stylelint": "^10.1.0",
     "stylelint-config-primer": "^7.0.0",
     "stylelint-selector-no-utility": "^4.0.0"
   },
