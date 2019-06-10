@@ -24,6 +24,15 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 # Enable or disable the site search
 search_enabled: true
 
+# Enable or disable top navigation panel
+# top_navigation_enabled: true
+
+# Project logo - relevant only if top_navigation_enabled is true
+# logo-source: /resources/logo.png
+
+# Project logo width - relevant only if top_navigation_enabled is true
+# logo-width: 180
+
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":

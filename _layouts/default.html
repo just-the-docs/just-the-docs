@@ -3,12 +3,12 @@
 <html lang="{{ site.lang | default: "en-US" }}">
 {% include head.html %}
 <body>
-  {% if site.navigation_enabled != nil %}
+  {% if site.top_navigation_enabled != nil %}
     {% include top-nav.html %}
   {% endif %}
   <div class="page-wrap">
     <div class="side-bar">
-      {% if site.navigation_enabled == nil %}
+      {% if site.top_navigation_enabled == nil %}
       <a href="{{ site.url }}{{ site.baseurl }}" class="site-title fs-6 lh-tight">{{ site.title }}</a>
       {% else %}
       <span class="site-title fs-6 lh-tight"></span>
