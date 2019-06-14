@@ -1,14 +1,13 @@
 
 
-- name: "Vienna"
-  url:  https://www.data.gv.at/katalog/dataset/86d88cae-ad97-4476-bae5-73488a12776d
-  json: Vienna_Building_LoD2_V10.json
+- name: "Zürich"
+  url:  https://data.stadt-zuerich.ch/dataset?q=&tags=3d-stadtmodell
+  json: Zurich_Building_LoD2_V10.json
   json-size: 292.9
-  gml: Vienna_Building_LoD2_V10.gml
+  gml: Zurich_Building_LoD2_V10.gml
   gml-size: 3030
   # textures: none
-  details: "Buildins in LoD2"
-
+  details: "Buildinds in LoD2"
 
 - name: "Den Haag"
   url:  https://data.overheid.nl/dataset/48265-3d-lod2-stadsmodel-2010-den-haag-citygml
@@ -59,3 +58,13 @@
   gml-size: 45
   textures: LoD3_Railway.zip
   details: CityGML demo. Buildings, Railway, Terrain, Vegetation (with Implicit Geometries), Water, Tunnels
+
+- name: Vienna 
+  url:  https://www.data.gv.at/katalog/dataset/86d88cae-ad97-4476-bae5-73488a12776d
+  image: dataset_vienna.png
+  json: Vienna_102081.json 
+  json-size: 5.3
+  gml:  Vienna_102081.gml
+  gml-size: 37
+  # textures: none
+  details: Buildings in LoD2  
