@@ -17,7 +17,8 @@ permalink: /datasets/
 ## Datasets converted from CityGML
 
 
-{% assign ds = site.data.datasets | better_sort: 'name' %}
+{% assign ds = site.data.datasets | sort: 'name' %}
+
 <table >
   <tr>
     <td><b>dataset</b></td>
