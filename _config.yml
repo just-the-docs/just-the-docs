@@ -16,7 +16,8 @@
 title: Just the Docs
 description: A Jekyll theme for documentation
 baseurl: "/just-the-docs/" # the subpath of your site, e.g. /blog
-url: "https://pmarsceill.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url : "https://pfd.github.io/just-the-docs/" # the base hostname & protocol for your site, e.g. http://example.com
+
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
@@ -34,7 +35,10 @@ color_scheme: nil
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
-ga_tracking: UA-2709176-10
+ga_tracking: UA-142138857-1
+
 
 plugins:
   - jekyll-seo-tag
+
+remote_theme: pmarsceill/just-the-docs
