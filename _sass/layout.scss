@@ -120,7 +120,8 @@
   }
 }
 
-// stylelint-disable selector-no-type
+// stylelint-disable selector-max-type
+
 body {
   position: relative;
   padding-bottom: $sp-10;
@@ -130,7 +131,8 @@ body {
     padding-bottom: 0;
   }
 }
-// stylelint-enable selector-no-type
+
+// stylelint-enable selector-max-type
 
 .site-footer {
   position: absolute;
