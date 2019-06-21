@@ -5,7 +5,6 @@
 .search {
   position: relative;
   z-index: 99;
-  display: none;
   flex-grow: 1;
   padding: $sp-2;
   margin-bottom: $sp-3;
@@ -53,7 +52,6 @@
   width: 100%;
   padding-top: $sp-1;
   padding-bottom: $sp-1;
-  background-color: $body-background-color;
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
@@ -69,7 +67,7 @@
     }
   }
 
-  @include fs-5;
+  @include fs-2;
 
   @include mq(sm) {
     @include fs-3;
