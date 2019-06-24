@@ -7,7 +7,7 @@
   gml: Zurich_Building_LoD2_V10.gml
   gml-size: 3030
   # textures: none
-  details: "Buildinds in LoD2"
+  details: "Buildings in LoD2"
 
 - name: "Den Haag"
   url:  https://data.overheid.nl/dataset/48265-3d-lod2-stadsmodel-2010-den-haag-citygml
@@ -27,7 +27,7 @@
   gml:  VM05_2009.gml
   gml-size: 56
   # textures: none
-  details: tile 'VM05'. Buildings in LoD2
+  details: Tile 'VM05'. Buildings in LoD2
 
 - name: New York 
   url:  https://www1.nyc.gov/site/doitt/initiatives/3d-building.page
@@ -37,7 +37,7 @@
   gml:  DA13_3D_Buildings_Merged.gml
   gml-size: 590
   # textures: none
-  details: tile 'DA13'. Buildings in LoD2
+  details: Tile 'DA13'. Buildings in LoD2
 
 - name: Rotterdam 
   url:  http://rotterdamopendata.nl/dataset/rotterdam-3d-bestanden/resource/edacea54-76ce-41c7-a0cc-2ebe5750ac18
@@ -47,7 +47,7 @@
   gml:  3-20-DELFSHAVEN.xml
   gml-size: 16.0
   textures: 3-20-DELFSHAVEN.zip
-  details: neighbourhood 'Delfshaven'. Buildings in LoD2
+  details: Neighbourhood 'Delfshaven'. Buildings in LoD2
 
 - name: "Railway" 
   url:  https://www.citygml.org
