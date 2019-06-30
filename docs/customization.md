@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Customization
-nav_order: 6
+nav_order: 7
 ---
 
 # Customization
@@ -70,4 +70,18 @@ $link-color: $blue-000;
 
 _Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
 
+## Create pages with a different structure
+
+Just the Docs is all about creating documentation pages. However to create a complete website you usually need pages that have a different structure like a landing page, an about page, etc. For that purpose Just the Docs provides a "clean" page layout where you can create your own structure. This layout is called `generic-page`. To create page with this layout simply set the `layout` attribute in the YAML front matter to `generic-page`:
+
+```yaml
 ---
+title: My Beautiful Landing Page
+layout: generic-page
+nav_exclude: true
+---
+```
+
+If you want this page to be excluded from the documentation pages set `nav_exclude` to `true`.
+
+You can use this feature in conjunction with [top navigation menu]({{ site.baseurl }}{% link docs/top-navigation.md %}) to add links to these pages from the top navigation menu.
