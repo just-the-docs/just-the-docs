@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 
 <html lang="{{ site.lang | default: "en-US" }}">
-{% include head.html %}
+{% capture page_title %}
+{{ page.title }} - {{ site.title }}
+{% endcapture %}
+{% include head.html title=page_title %}
 <body>
   {% if site.top_navigation_enabled != nil %}
     {% include top-nav.html %}
