@@ -34,11 +34,11 @@
     </script>
     <div class="topnav-items">
       <nav>
-        {% for link in site.data.navigation %}
+        {% for link in site.data.top_navigation %}
           {% assign class = "" %}
-          <a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>
+          <a href="{% include relative-src.html src=link.link %}" class="{{ class }}" {% if link.external_link %}target="_blank"{% endif %}>
             {{ link.name }}
-            {% if link.new_window %}
+            {% if link.external_link %}
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="16px" height="16px">
               <g id="Outlined">
                 <path style="fill:none;stroke:currentColor;stroke-width:2;stroke-miterlimit:10;" d="M20,12v7c0,0.552-0.448,1-1,1H5   c-0.552,0-1-0.448-1-1V5c0-0.552,0.448-1,1-1h7"/>
