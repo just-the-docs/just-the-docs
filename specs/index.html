@@ -1,0 +1,25 @@
+---
+layout: page
+title: Specifications
+permalink: /specs/
+redirect_from: /specs/latest/
+---
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <script type="text/javascript">
+      var url = window.location.href;
+      if (url.includes('/#') == true) {
+        url = url.replace(new RegExp("/#"), "/{{ site.lastversion }}/#");
+        console.log(url);
+        window.location.href = url;
+      }
+      else {
+        window.location.href = url + '{{ site.lastversion }}';
+      }
+    </script>
+  </head>
+</body>
+</html>
