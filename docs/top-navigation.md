@@ -38,14 +38,14 @@ For example:
   external_link: true
 ```
 
-In addition you can add your project's logo to the top navigation menu by setting `logo-source` and `logo-width` parameters:
+In addition you can add your project's logo to the top navigation menu by setting `logo_source` and `logo_width` parameters:
 
 ```yaml
 # Project logo - relevant only if top_navigation_enabled is true
-logo-source: /resources/logo.png
+logo_source: /resources/logo.png
 
 # Project logo width - relevant only if top_navigation_enabled is true
-logo-width: 180
+logo_width: 180
 ```
 
-`logo-source` is the path to the logo image and `logo-width` sets the logo width in the navigation menu. If one of them is missing the logo won't be shown and the project's name will appear instead.
+`logo_source` is the path to the logo image and `logo_width` sets the logo width in the navigation menu. If one of them is missing the logo won't be shown and the project's name will appear instead.

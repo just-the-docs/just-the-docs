@@ -28,10 +28,10 @@ search_enabled: true
 # top_navigation_enabled: true
 
 # Project logo - relevant only if top_navigation_enabled is true
-# logo-source: /resources/logo.png
+# logo_source: /resources/logo.png
 
 # Project logo width - relevant only if top_navigation_enabled is true
-# logo-width: 180
+# logo_width: 180
 
 # Aux links for the upper right navigation
 aux_links:
