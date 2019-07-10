@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Getting started with CityJSON
-parent: Tutorials
+parent: Help for users
+grand_parent: Help
 nav_order: 1
-permalink: /tutorials/getting-started/
+permalink: /help/users/getting-started/
 ---
 
 ## Table of contents

@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Help to calculate coordinates
-parent: Developers
+parent: Help for developers
+grand_parent: Help
 nav_order: 2
-permalink: /developers/realcoords/
+permalink: /help/dev/realcoords/
 ---
 
 

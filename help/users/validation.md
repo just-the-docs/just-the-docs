@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Validation of a CityJSON file
-parent: Tutorials
+parent: Help for users
+grand_parent: Help
 nav_order: 3
-permalink: /tutorials/validation/
+permalink: /help/users/validation/
 ---
 
 ## Table of contents

@@ -1,9 +1,10 @@
 ---
 layout: page
 title: Modelling guide for CityJSON
-parent: Tutorials
-nav_order: 5
-permalink: /tutorials/modelling-guide/
+parent: Help for developers
+grand_parent: Help
+nav_order: 1
+permalink: /help/dev/modelling-guide/
 ---
 
 ## Table of contents
