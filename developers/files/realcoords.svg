@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="-104 -354 770.5 833" width="770.5" height="833">
+  <defs>
+    <font-face font-family="Input Mono" font-size="12" panose-1="2 0 5 9 2 0 0 9 0 4" units-per-em="1000" underline-position="0" underline-thickness="78.71717" slope="0" x-height="545.45455" cap-height="727.2727" ascent="927.2766" descent="-272.72034" font-weight="400">
+      <font-face-src>
+        <font-face-name name="InputMono-Regular"/>
+      </font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -3 7 6" markerWidth="7" markerHeight="6" color="#674ed3">
+      <g>
+        <path d="M 4.8 0 L 0 -1.8 L 0 1.8 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+    <marker orient="auto" overflow="visible" markerUnits="strokeWidth" id="FilledArrow_Marker_2" stroke-linejoin="miter" stroke-miterlimit="10" viewBox="-1 -3 7 6" markerWidth="7" markerHeight="6" color="#674ed3">
+      <g>
+        <path d="M 4.8 0 L 0 -1.8 L 0 1.8 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.10.2 
+    <dc:date>2019-07-10 08:12:54 +0000</dc:date>
+  </metadata>
+  <g id="Canvas_1" fill-opacity="1" fill="none" stroke-dasharray="none" stroke-opacity="1" stroke="none">
+    <title>Lienzo 2</title>
+    <g id="Canvas_1: Capa 1">
+      <title>Capa 1</title>
+      <g id="Graphic_2">
+        <path d="M -90 100 L 127.5 100 C 133.02285 100 137.5 104.47715 137.5 110 L 137.5 152.5 C 137.5 158.02285 133.02285 162.5 127.5 162.5 L -90 162.5 C -95.52285 162.5 -100 158.02285 -100 152.5 L -100 110 C -100 104.47715 -95.52285 100 -90 100 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(-95 114.25)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="10.659091" y="14">Obtain its coordinates from</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="71.75" y="31">vertices[v]</tspan>
+        </text>
+      </g>
+      <g id="Graphic_5">
+        <path d="M 435 100 L 652.5 100 C 658.02285 100 662.5 104.47715 662.5 110 L 662.5 152.5 C 662.5 158.02285 658.02285 162.5 652.5 162.5 L 435 162.5 C 429.47715 162.5 425 158.02285 425 152.5 L 425 110 C 425 104.47715 429.47715 100 435 100 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(430 105.75)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="10.659091" y="14">Obtain its coordinates from </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="25.931818" y="31">geometry-templates[ti].</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="33.56818" y="48">vertices-templates[v]</tspan>
+        </text>
+      </g>
+      <g id="Graphic_6">
+        <path d="M -90 187.5 L 127.5 187.5 C 133.02285 187.5 137.5 191.97715 137.5 197.5 L 137.5 252.5 C 137.5 258.02285 133.02285 262.5 127.5 262.5 L -90 262.5 C -95.52285 262.5 -100 258.02285 -100 252.5 L -100 197.5 C -100 191.97715 -95.52285 187.5 -90 187.5 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(-95 216.5)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="10.659091" y="14">Multiply by transform.scale</tspan>
+        </text>
+      </g>
+      <g id="Graphic_7">
+        <path d="M -90 287.5 L 127.5 287.5 C 133.02285 287.5 137.5 291.97715 137.5 297.5 L 137.5 340 C 137.5 345.52285 133.02285 350 127.5 350 L -90 350 C -95.52285 350 -100 345.52285 -100 340 L -100 297.5 C -100 291.97715 -95.52285 287.5 -90 287.5 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(-95 310.25)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="25.931818" y="14">Add transform.translate</tspan>
+        </text>
+      </g>
+      <g id="Graphic_8">
+        <path d="M 435 187.5 L 652.5 187.5 C 658.02285 187.5 662.5 191.97715 662.5 197.5 L 662.5 252.5 C 662.5 258.02285 658.02285 262.5 652.5 262.5 L 435 262.5 C 429.47715 262.5 425 258.02285 425 252.5 L 425 197.5 C 425 191.97715 429.47715 187.5 435 187.5 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(430 191)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="3.0227273" y="14">Multiply by CityObjects[&quot;i&quot;].</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="3.0227273" y="31">geometry.transformationMatrix </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="25.931818" y="48">to obtain template with </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="18.295455" y="65">correct orientation/scale</tspan>
+        </text>
+      </g>
+      <g id="Graphic_10">
+        <path d="M -90 -250 L 127.5 -250 C 133.02285 -250 137.5 -245.52285 137.5 -240 L 137.5 -110 C 137.5 -104.47715 133.02285 -100 127.5 -100 L -90 -100 C -95.52285 -100 -100 -104.47715 -100 -110 L -100 -240 C -100 -245.52285 -95.52285 -250 -90 -250 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(-95 -243)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="71.75" y="14">If type is:</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="64.11364" y="31">&quot;MultiPoint&quot;,</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="45.022727" y="48">&quot;MultiLineString&quot;,</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="56.47727" y="65">&quot;MultiSurface&quot;,</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="41.204545" y="82">&quot;CompositeSurface&quot;,</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="83.20455" y="99">&quot;Solid&quot;,</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="52.65909" y="116">&quot;MultiSolid&quot;, or</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="52.65909" y="133">&quot;CompositeSolid&quot;</tspan>
+        </text>
+      </g>
+      <g id="Graphic_11">
+        <path d="M -90 -300 L 652.5 -300 C 658.02285 -300 662.5 -295.52285 662.5 -290 L 662.5 -285 C 662.5 -279.47715 658.02285 -275 652.5 -275 L -90 -275 C -95.52285 -275 -100 -279.47715 -100 -285 L -100 -290 C -100 -295.52285 -95.52285 -300 -90 -300 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(-95 -296)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="147.15909" y="14">Obtain the geometry type from CityObjects[&quot;i&quot;].geometry.type</tspan>
+        </text>
+      </g>
+      <g id="Graphic_12">
+        <path d="M 172.5 -250 L 652.5 -250 C 658.02285 -250 662.5 -245.52285 662.5 -240 L 662.5 -110 C 662.5 -104.47715 658.02285 -100 652.5 -100 L 172.5 -100 C 166.97715 -100 162.5 -104.47715 162.5 -110 L 162.5 -240 C 162.5 -245.52285 166.97715 -250 172.5 -250 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(167.5 -183.5)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="130.45455" y="14">If type is: &quot;GeometryInstance&quot;</tspan>
+        </text>
+      </g>
+      <g id="Graphic_13">
+        <path d="M -90 12.5 L 127.5 12.5 C 133.02285 12.5 137.5 16.977153 137.5 22.5 L 137.5 65 C 137.5 70.52285 133.02285 75 127.5 75 L -90 75 C -95.52285 75 -100 70.52285 -100 65 L -100 22.5 C -100 16.977153 -95.52285 12.5 -90 12.5 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(-95 18.25)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="29.75" y="14">For every vertex v in:</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="45.022727" y="31">CityObjects[&quot;id&quot;].</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="41.204545" y="48">geometry.boundaries</tspan>
+        </text>
+      </g>
+      <g id="Graphic_14">
+        <path d="M 435 -75 L 652.5 -75 C 658.02285 -75 662.5 -70.52285 662.5 -65 L 662.5 -22.5 C 662.5 -16.977153 658.02285 -12.5 652.5 -12.5 L 435 -12.5 C 429.47715 -12.5 425 -16.977153 425 -22.5 L 425 -65 C 425 -70.52285 429.47715 -75 435 -75 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(430 -69.25)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="6.840909" y="14">Obtain the template index ti </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="29.75" y="31">from CityObjects[&quot;i&quot;].</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="48.84091" y="48">geometry.template</tspan>
+        </text>
+      </g>
+      <g id="Graphic_15">
+        <path d="M -90 -350 L 652.5 -350 C 658.02285 -350 662.5 -345.52285 662.5 -340 L 662.5 -335 C 662.5 -329.47715 658.02285 -325 652.5 -325 L -90 -325 C -95.52285 -325 -100 -329.47715 -100 -335 L -100 -340 C -100 -345.52285 -95.52285 -350 -90 -350 Z" fill="#674ed3"/>
+        <path d="M -90 -350 L 652.5 -350 C 658.02285 -350 662.5 -345.52285 662.5 -340 L 662.5 -335 C 662.5 -329.47715 658.02285 -325 652.5 -325 L -90 -325 C -95.52285 -325 -100 -329.47715 -100 -335 L -100 -340 C -100 -345.52285 -95.52285 -350 -90 -350 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(-95 -346)" fill="white">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="white" x="269.3409" y="14">For a CityObject with id=&quot;i&quot;</tspan>
+        </text>
+      </g>
+      <g id="Graphic_17">
+        <path d="M 435 12.5 L 652.5 12.5 C 658.02285 12.5 662.5 16.977153 662.5 22.5 L 662.5 65 C 662.5 70.52285 658.02285 75 652.5 75 L 435 75 C 429.47715 75 425 70.52285 425 65 L 425 22.5 C 425 16.977153 429.47715 12.5 435 12.5 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(430 18.25)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="29.75" y="14">For every vertex v in:</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="41.204545" y="31">geometry-templates.</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="22.113636" y="48">templates[ti].boundaries</tspan>
+        </text>
+      </g>
+      <g id="Graphic_18">
+        <path d="M 172.5 -75 L 390 -75 C 395.52285 -75 400 -70.52285 400 -65 L 400 -22.5 C 400 -16.977153 395.52285 -12.5 390 -12.5 L 172.5 -12.5 C 166.97715 -12.5 162.5 -16.977153 162.5 -22.5 L 162.5 -65 C 162.5 -70.52285 166.97715 -75 172.5 -75 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(167.5 -69.25)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="6.840909" y="14">Obtain anchor vertex av from </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="48.84091" y="31">CityObjects[&quot;i&quot;].</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="41.204545" y="48">geometry.boundaries</tspan>
+        </text>
+      </g>
+      <g id="Graphic_19">
+        <path d="M 172.5 100 L 390 100 C 395.52285 100 400 104.47715 400 110 L 400 152.5 C 400 158.02285 395.52285 162.5 390 162.5 L 172.5 162.5 C 166.97715 162.5 162.5 158.02285 162.5 152.5 L 162.5 110 C 162.5 104.47715 166.97715 100 172.5 100 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(167.5 114.25)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="10.659091" y="14">Obtain its coordinates from  </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="67.93182" y="31">vertices[av]</tspan>
+        </text>
+      </g>
+      <g id="Graphic_20">
+        <path d="M 172.5 187.5 L 390 187.5 C 395.52285 187.5 400 191.97715 400 197.5 L 400 252.5 C 400 258.02285 395.52285 262.5 390 262.5 L 172.5 262.5 C 166.97715 262.5 162.5 258.02285 162.5 252.5 L 162.5 197.5 C 162.5 191.97715 166.97715 187.5 172.5 187.5 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(167.5 216.5)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="10.659091" y="14">Multiply by transform.scale</tspan>
+        </text>
+      </g>
+      <g id="Graphic_21">
+        <path d="M 172.5 375 L 652.5 375 C 658.02285 375 662.5 379.47715 662.5 385 L 662.5 415 C 662.5 420.52285 658.02285 425 652.5 425 L 172.5 425 C 166.97715 425 162.5 420.52285 162.5 415 L 162.5 385 C 162.5 379.47715 166.97715 375 172.5 375 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(167.5 383)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="92.27273" y="14">Add anchor vertex in real coordinates to</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="119" y="31">oriented/scaled template vertices</tspan>
+        </text>
+      </g>
+      <g id="Graphic_24">
+        <path d="M 172.5 287.5 L 390 287.5 C 395.52285 287.5 400 291.97715 400 297.5 L 400 340 C 400 345.52285 395.52285 350 390 350 L 172.5 350 C 166.97715 350 162.5 345.52285 162.5 340 L 162.5 297.5 C 162.5 291.97715 166.97715 287.5 172.5 287.5 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(167.5 293.25)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="14.477273" y="14">Add transform.translate to </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="6.840909" y="31">obtain anchor vertex in real </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="71.75" y="48">coordinates</tspan>
+        </text>
+      </g>
+      <g id="Graphic_25">
+        <path d="M 172.5 12.5 L 390 12.5 C 395.52285 12.5 400 16.977153 400 22.5 L 400 65 C 400 70.52285 395.52285 75 390 75 L 172.5 75 C 166.97715 75 162.5 70.52285 162.5 65 L 162.5 22.5 C 162.5 16.977153 166.97715 12.5 172.5 12.5 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(167.5 35.25)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="6.840909" y="14">For the (only) vertex in av:</tspan>
+        </text>
+      </g>
+      <g id="Line_29">
+        <line x1="281.25" y1="-325" x2="281.25" y2="-312.9" marker-end="url(#FilledArrow_Marker)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_30">
+        <line x1="18.75" y1="-275" x2="18.75" y2="-262.9" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_31">
+        <line x1="412.5" y1="-275" x2="412.5" y2="-262.9" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_32">
+        <line x1="18.75" y1="-100" x2="18.75" y2="-.4" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_33">
+        <line x1="18.75" y1="75" x2="18.75" y2="87.1" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_34">
+        <line x1="18.75" y1="162.5" x2="18.75" y2="174.6" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_35">
+        <line x1="18.75" y1="262.5" x2="18.75" y2="274.6" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_37">
+        <line x1="280.75" y1="-100" x2="280.75" y2="-87.9" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_38">
+        <line x1="280.75" y1="-12.5" x2="280.75" y2="-.4" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_39">
+        <line x1="280.75" y1="75" x2="280.75" y2="87.1" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_40">
+        <line x1="280.75" y1="162.5" x2="280.75" y2="174.6" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_42">
+        <line x1="543.25" y1="-100" x2="543.25" y2="-87.9" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_43">
+        <line x1="543.25" y1="-12.5" x2="543.25" y2="-.4" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_44">
+        <line x1="543.25" y1="75" x2="543.25" y2="87.1" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_45">
+        <line x1="543.25" y1="162.5" x2="543.25" y2="174.6" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_46">
+        <line x1="543.25" y1="262.5" x2="543.25" y2="362.1" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Graphic_48">
+        <path d="M -90 450 L 652.5 450 C 658.02285 450 662.5 454.47715 662.5 460 L 662.5 465 C 662.5 470.52285 658.02285 475 652.5 475 L -90 475 C -95.52285 475 -100 470.52285 -100 465 L -100 460 C -100 454.47715 -95.52285 450 -90 450 Z" fill="#674ed3"/>
+        <path d="M -90 450 L 652.5 450 C 658.02285 450 662.5 454.47715 662.5 460 L 662.5 465 C 662.5 470.52285 658.02285 475 652.5 475 L -90 475 C -95.52285 475 -100 470.52285 -100 465 L -100 460 C -100 454.47715 -95.52285 450 -90 450 Z" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(-95 454)" fill="white">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="white" x="204.43182" y="14">Real coordinates for a CityObject with id=&quot;i&quot;</tspan>
+        </text>
+      </g>
+      <g id="Line_49">
+        <line x1="18.75" y1="350" x2="18.75" y2="437.1" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_50">
+        <line x1="280.75" y1="262.5" x2="280.75" y2="274.6" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_51">
+        <line x1="280.75" y1="350" x2="280.75" y2="362.1" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_52">
+        <line x1="412.5" y1="425" x2="412.5" y2="437.1" marker-end="url(#FilledArrow_Marker_2)" stroke="#674ed3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>
