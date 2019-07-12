@@ -44,4 +44,4 @@ kramdown:
   hard_wrap:      false
   toc_levels:     2..4
 
-lastversion: "1.0.0"
+lastversion: "1.0.1"

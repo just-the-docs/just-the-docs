@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" viewBox="96 -3 483 319.5" width="483" height="319.5">
+  <defs>
+    <font-face font-family="Input Mono" font-size="12" panose-1="2 0 5 9 2 0 0 9 0 4" units-per-em="1000" underline-position="0" underline-thickness="78.71717" slope="0" x-height="545.45455" cap-height="727.2727" ascent="927.2766" descent="-272.72034" font-weight="400">
+      <font-face-src>
+        <font-face-name name="InputMono-Regular"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+  <metadata> Produced by OmniGraffle 7.10.2 
+    <dc:date>2019-07-10 13:12:10 +0000</dc:date>
+  </metadata>
+  <g id="Canvas_1" stroke-opacity="1" fill-opacity="1" stroke="none" stroke-dasharray="none" fill="none">
+    <title>Canvas 1</title>
+    <g id="Canvas_1: Layer 1">
+      <title>Layer 1</title>
+      <g id="Graphic_5">
+        <path d="M 109 62.5 L 316 62.5 C 320.97056 62.5 325 66.52944 325 71.5 L 325 303.5 C 325 308.47056 320.97056 312.5 316 312.5 L 109 312.5 C 104.02944 312.5 100 308.47056 100 303.5 L 100 71.5 C 100 66.52944 104.02944 62.5 109 62.5 Z" stroke="#0165a6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(115 68.5)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="133.90909" y="14">Building            </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="149.18182" y="31">Bridge                 </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="80.45455" y="48">CityObjectGroup</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="95.72727" y="65">CityFurniture</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="65.18182" y="82">GenericCityObject</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="141.54545" y="99">LandUse</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="118.63636" y="116">PlantCover</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="141.54545" y="133">Railway</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="164.45455" y="150">Road</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="11.727273" y="167">SolitaryVegetationObject</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="126.27273" y="184">TINRelief</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="80.45455" y="201">TransportSquare</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="149.18182" y="218">Tunnel</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="126.27273" y="235">WaterBody</tspan>
+        </text>
+      </g>
+      <g id="Graphic_7">
+        <path d="M 359 62.5 L 566 62.5 C 570.97056 62.5 575 66.52944 575 71.5 L 575 103.5 C 575 108.47056 570.97056 112.5 566 112.5 L 359 112.5 C 354.02944 112.5 350 108.47056 350 103.5 L 350 71.5 C 350 66.52944 354.02944 62.5 359 62.5 Z" stroke="#0165a6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(360 70.5)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="0" y="14">BuildingPart </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="0" y="31">BuildingInstallation</tspan>
+        </text>
+      </g>
+      <g id="Graphic_10">
+        <path d="M 359 137.5 L 566 137.5 C 570.97056 137.5 575 141.52944 575 146.5 L 575 203.5 C 575 208.47056 570.97056 212.5 566 212.5 L 359 212.5 C 354.02944 212.5 350 208.47056 350 203.5 L 350 146.5 C 350 141.52944 354.02944 137.5 359 137.5 Z" stroke="#0165a6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(360 149.5)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="0" y="14">BridgePart</tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="0" y="31">BridgeInstallation </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="0" y="48">BridgeConstructionElement</tspan>
+        </text>
+      </g>
+      <g id="Graphic_11">
+        <path d="M 359 262.5 L 566 262.5 C 570.97056 262.5 575 266.52944 575 271.5 L 575 303.5 C 575 308.47056 570.97056 312.5 566 312.5 L 359 312.5 C 354.02944 312.5 350 308.47056 350 303.5 L 350 271.5 C 350 266.52944 354.02944 262.5 359 262.5 Z" stroke="#0165a6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <text transform="translate(360 270.5)" fill="black">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="0" y="14">TunnelPart </tspan>
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="black" x="0" y="31">TunnelInstallation</tspan>
+        </text>
+      </g>
+      <g id="Graphic_21">
+        <path d="M 109 0 L 316 0 C 320.97056 3043592e-22 325 4.0294373 325 9 L 325 28.5 C 325 33.470563 320.97056 37.5 316 37.5 L 109 37.5 C 104.02944 37.5 100 33.470563 100 28.5 L 100 9 C 100 4.0294373 104.02944 -3043592e-22 109 0 Z" fill="#0165a6"/>
+        <text transform="translate(115 10.25)" fill="white">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="white" x="27" y="14">1st-level city objects</tspan>
+        </text>
+      </g>
+      <g id="Graphic_22">
+        <path d="M 359 0 L 566 0 C 570.97056 3043592e-22 575 4.0294373 575 9 L 575 28.5 C 575 33.470563 570.97056 37.5 566 37.5 L 359 37.5 C 354.02944 37.5 350 33.470563 350 28.5 L 350 9 C 350 4.0294373 354.02944 -3043592e-22 359 0 Z" fill="#0165a6"/>
+        <text transform="translate(365 10.25)" fill="white">
+          <tspan font-family="Input Mono" font-size="12" font-weight="400" fill="white" x="0" y="14">2nd-level city objects</tspan>
+        </text>
+      </g>
+      <g id="Line_24">
+        <line x1="312.5" y1="79.31287" x2="349" y2="81.30507" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_25">
+        <line x1="312.5" y1="95.90643" x2="389.4852" y2="136.5" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="Line_26">
+        <line x1="312.5" y1="282.23684" x2="349" y2="283.51754" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>
