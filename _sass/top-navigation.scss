@@ -119,3 +119,22 @@ $topnav-height: 57px;
       border: 0;
     }
   }
+
+  .topnav-right-items {
+    float: left !important;
+    width: 50px !important;
+
+    @include mq(md) {
+      float: right !important;     
+    }
+    padding: 16px 10px !important;
+
+  }
+
+  .topnav-right-items img {
+    width: 28px;
+  }
+
+  .topnav-right-items:hover {
+    opacity: 0.3;
+  }
