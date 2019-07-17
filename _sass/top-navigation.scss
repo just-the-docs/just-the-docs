@@ -48,7 +48,7 @@ $topnav-height: 57px;
     padding: 10px 10px;
 
     a {
-      font-size: 22px;
+      font-size: 26px;
       color: $topnav-logo-color;
       font-weight: bold;
       text-shadow: 1px 1px 1px;
@@ -92,15 +92,15 @@ $topnav-height: 57px;
   }
   
   .hamburger-change .hamburger-bar1 {
-    -webkit-transform: rotate(-45deg) translate(0px, 9px);
-    transform: rotate(-45deg) translate(0px, 9px);
+    -webkit-transform: rotate(-45deg) translate(0px, 10px);
+    transform: rotate(-45deg) translate(0px, 10px);
   }
   
   .hamburger-change .hamburger-bar2 {opacity: 0;}
   
   .hamburger-change .hamburger-bar3 {
-    -webkit-transform: rotate(45deg) translate(0px, -9px);
-    transform: rotate(45deg) translate(0px, -9px);
+    -webkit-transform: rotate(45deg) translate(0px, -10px);
+    transform: rotate(45deg) translate(0px, -10px);
   }
   
   .top-nav-toggle {
