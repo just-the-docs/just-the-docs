@@ -2,6 +2,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
+  {% if site.ga_tracking != nil %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ site.ga_tracking }}');
+    </script>
+  {% endif %}
+
   {% if site.plugins.jekyll-seo == nil %}
     <title>{{ include.title }}</title>
 
@@ -13,15 +24,6 @@
   <link rel="shortcut icon" href="{{ "favicon.ico" | absolute_url }}" type="image/x-icon">
 
   <link rel="stylesheet" href="{{ "/assets/css/just-the-docs.css" | absolute_url }}">
-
-  {% if site.ga_tracking != nil %}
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', '{{ site.ga_tracking }}', '{{ site.url }}');
-      ga('send', 'pageview');
-    </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
-  {% endif %}
 
   {% if site.search_enabled != nil %}
     <script type="text/javascript" src="{{ "/assets/js/vendor/lunr.min.js" | absolute_url }}"></script>
