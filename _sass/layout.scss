@@ -21,9 +21,9 @@
   flex-wrap: wrap;
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
-  background-color: $sidebar-color;
-  min-height: 60px;
   width: 100%;
+  min-height: 60px;
+  background-color: $sidebar-color;
 
   @include mq(md) {
     flex-wrap: nowrap;
