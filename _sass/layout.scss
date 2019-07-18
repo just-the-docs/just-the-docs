@@ -20,9 +20,9 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  min-height: 60px;
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
-  min-height: 60px;
   background-color: $sidebar-color;
 
   @include mq(md) {

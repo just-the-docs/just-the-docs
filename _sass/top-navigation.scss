@@ -20,12 +20,12 @@ $topnav-height: 57px;
   width: 50%;
 
   &.nav-open {
-    display: block;
     position: absolute;
-    float: left;
+    display: block;
     top: $topnav-height;
-    width: 100%;
+    float: left;
     z-index: 999;
+    width: 100%;
     background-color: $topnav-background-color;
     transition: 2s;
 
@@ -59,17 +59,21 @@ $topnav-height: 57px;
   }
 }
 
-.topnav-items a {
-  float: left;
-  padding: 20px 16px;
-  color: $topnav-items-color;
-  font-size: 16px;
-  font-weight: bold;
-  text-align: center;
+.topnav-items {
+  a {
+    float: left;
+    padding: 20px 16px;
+    font-size: 16px;
+    color: $topnav-items-color;
+    font-weight: bold;
+    text-align: center;
+  }
 }
 
-.topnav-items a:hover {
-  opacity: 0.3;
+.topnav-items {
+  a:hover {
+    opacity: 0.3;
+  }
 }
 
 .hamburger-container {
@@ -109,8 +113,8 @@ $topnav-height: 57px;
 .top-nav-toggle {
   position: absolute;
   top: -22px;
-  display: inline;
   right: 10px;
+  display: inline;
   font-size: 1.9em;
   border: 0;
 
