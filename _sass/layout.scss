@@ -19,9 +19,9 @@
   z-index: 100;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
-  width: 100%;
   min-height: 60px;
   background-color: $sidebar-color;
 

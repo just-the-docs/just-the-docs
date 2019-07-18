@@ -6,14 +6,14 @@ $topnav-height: 57px;
   height: $topnav-height;
   background-color: $topnav-background-color;
 }
-  
+
 .topnav-container {
   max-width: 1140px;
   box-sizing: border-box;
   padding-right: 10px;
   margin: 0 auto;
 }
-  
+
 .topnav-items {
   display: none;
   float: right;
@@ -21,10 +21,10 @@ $topnav-height: 57px;
 
   &.nav-open {
     display: block;
-    float: left;
     position: absolute;
-    width: 100%;
+    float: left;
     top: $topnav-height;
+    width: 100%;
     z-index: 999;
     background-color: $topnav-background-color;
     transition: 2s;
@@ -41,7 +41,7 @@ $topnav-height: 57px;
     width: 70%;
   }
 }
-  
+
 .topnav-logo {
   float: left;
   width: 80%;
@@ -53,7 +53,6 @@ $topnav-height: 57px;
     color: $topnav-logo-color;
     text-shadow: 1px 1px 1px;
   }
-  
 
   @include mq(md) {
     width: 30%;
@@ -62,11 +61,11 @@ $topnav-height: 57px;
 
 .topnav-items a {
   float: left;
-  color: $topnav-items-color;
   padding: 20px 16px;
-  text-align: center;
+  color: $topnav-items-color;
   font-size: 16px;
   font-weight: bold;
+  text-align: center;
 }
 
 .topnav-items a:hover {
@@ -75,16 +74,16 @@ $topnav-height: 57px;
 
 .hamburger-container {
   float: right;
-  cursor: pointer;
   padding: 14px 10px;
+  cursor: pointer;
 
   @include mq(md) {
     display: none;
   }
 }
 
-.hamburger-bar1, 
-.hamburger-bar2, 
+.hamburger-bar1,
+.hamburger-bar2,
 .hamburger-bar3 {
   width: 25px;
   height: 3px;
@@ -94,8 +93,8 @@ $topnav-height: 57px;
 }
 
 .hamburger-change .hamburger-bar1 {
-  -webkit-transform: rotate(-45deg) translate(0px, 10px);
-  transform: rotate(-45deg) translate(0px, 10px);
+  -webkit-transform: rotate(-45deg) translate(0, 10px);
+  transform: rotate(-45deg) translate(0, 10px);
 }
 
 .hamburger-change .hamburger-bar2 {
@@ -103,14 +102,14 @@ $topnav-height: 57px;
 }
 
 .hamburger-change .hamburger-bar3 {
-  -webkit-transform: rotate(45deg) translate(0px, -10px);
-  transform: rotate(45deg) translate(0px, -10px);
+  -webkit-transform: rotate(45deg) translate(0, -10px);
+  transform: rotate(45deg) translate(0, -10px);
 }
 
 .top-nav-toggle {
   position: absolute;
-  display: inline;
   top: -22px;
+  display: inline;
   right: 10px;
   font-size: 1.9em;
   border: 0;
@@ -129,11 +128,10 @@ $topnav-height: 57px;
   width: 50px !important;
 
   @include mq(md) {
-    float: right !important;     
+    float: right !important;
   }
 
   padding: 16px 10px !important;
-
 }
 
 .topnav-right-items img {
