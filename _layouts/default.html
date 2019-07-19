@@ -57,8 +57,12 @@
       <div class="main-content">
 
         <div class="page-content">
+
+            {{ site.custom_pre_content }}  
+
             {{ content }}
 
+            {{ site.custom_post_content }}  
 
             {% for toc_level_1 in site.data.toc %}
                 {% for toc_level_2 in toc_level_1.children %}
