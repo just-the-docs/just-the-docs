@@ -300,4 +300,4 @@ jtd.onReady(function(){
 
 })(window.jtd = window.jtd || {});
 
-{% include_relative custom.js %}
+{% include js/custom.js %}
