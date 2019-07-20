@@ -1,6 +1,3 @@
 ---
 ---
-@import "./support/support";
-@import "./color_schemes/light";
-@import "./modules";
-@import "./custom/custom";
+{% include css/just-the-docs.scss color_scheme="light" %}
