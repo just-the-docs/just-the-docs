@@ -125,12 +125,12 @@
 
 .site-header {
   display: flex;
+  min-height: $header-height;
   align-items: center;
 
   @include mq(md) {
     z-index: 101;
     height: $header-height;
-    min-height: $header-height;
     max-height: $header-height;
     border-bottom: $border $border-color;
   }
@@ -142,8 +142,8 @@
   display: flex;
   height: 100%;
   align-items: center;
-  padding-top: $gutter-spacing-sm;
-  padding-bottom: $gutter-spacing-sm;
+  padding-top: $sp-2;
+  padding-bottom: $sp-2;
   color: $body-heading-color;
   @include fs-6;
 }
