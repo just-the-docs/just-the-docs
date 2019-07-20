@@ -146,6 +146,11 @@
   padding-bottom: $sp-2;
   color: $body-heading-color;
   @include fs-6;
+
+  @include mq(md) {
+    padding-top: $sp-3;
+    padding-bottom: $sp-3;
+  }
 }
 
 .site-button {
