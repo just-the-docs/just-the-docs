@@ -158,7 +158,6 @@
   height: 100%;
   padding: $gutter-spacing-sm;
   align-items: center;
-  @include fs-3;
 
   @include mq(md) {
     display: none;
@@ -192,4 +191,10 @@ body {
     position: static;
     justify-self: end;
   }
+}
+
+.icon {
+  width: $sp-5;
+  height: $sp-5;
+  fill: $link-color;
 }
