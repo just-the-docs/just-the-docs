@@ -12,25 +12,25 @@ layout: table_wrappers
     <div class="side-bar">
       <div class="site-header">
         <a href="{{ site.url }}{{ site.baseurl }}" class="site-title">{% include site_title.html %}</a>
-        <a href="#" class="site-button fs-3 js-main-nav-trigger" data-text-toggle="Hide">Menu</a>
+        <a href="#" id="site-nav-trigger" class="site-button fs-3" data-text-toggle="Hide">Menu</a>
       </div>
-      <nav role="navigation" aria-label="Main navigation" class="navigation main-nav js-main-nav">
+      <nav role="navigation" aria-label="Main navigation" id="site-nav" class="site-nav">
         {% include nav.html %}
       </nav>
       <footer role="contentinfo" class="site-footer">
         <p class="text-small text-grey-dk-000 mb-0">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
       </footer>
     </div>
-    <div class="main-content-wrap js-main-content" tabindex="0">
-      <div class="main-content">
-        <div class="page-header js-page-header">
+    <div id="main-wrap" class="main-wrap" tabindex="0">
+      <div class="main">
+        <div id="main-header" class="main-header">
           {% if site.search_enabled != nil %}
           <div class="search">
             <div class="search-input-wrap">
-              <input type="text" class="js-search-input search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
+              <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
               <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
             </div>
-            <div class="js-search-results search-results-wrap"></div>
+            <div id="search-results" class="search-results"></div>
           </div>
           {% endif %}
           {% if site.aux_links != nil %}
@@ -41,7 +41,7 @@ layout: table_wrappers
             </ul>
           {% endif %}
         </div>
-        <div class="page">
+        <div class="main-content-wrap">
           {% unless page.url == "/" %}
             {% if page.parent %}
               <nav class="breadcrumb-nav">
@@ -57,7 +57,7 @@ layout: table_wrappers
               </nav>
             {% endif %}
           {% endunless %}
-          <div id="main-content" class="page-content" role="main">
+          <div id="main-content" class="main-content" role="main">
 
             {% include vendor/anchor_headings.html html=content anchorBody="#" anchorClass="anchor_heading" %}
 

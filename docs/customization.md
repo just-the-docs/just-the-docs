@@ -32,10 +32,10 @@ To enable a color scheme, set the `color_scheme` parameter in your site's `_conf
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: "dark"
 ```
-<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
+<button id="toggle-dark-mode" class="btn">Preview dark color scheme</button>
 
 <script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+const toggleDarkMode = document.getElementById('toggle-dark-mode');
 
 jtd.addEvent(toggleDarkMode, 'click', function(){
   if (jtd.getTheme() === 'dark') {
