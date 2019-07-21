@@ -24,17 +24,17 @@ jtd.onReady = function(ready) {
 // Show/hide mobile menu
 
 function initNav() {
-  const mainNav = document.querySelector('.js-main-nav');
-  const pageHeader = document.querySelector('.js-page-header');
-  const navTrigger = document.querySelector('.js-main-nav-trigger');
+  const siteNav = document.getElementById('site-nav');
+  const mainHeader = document.getElementById('main-header');
+  const navTrigger = document.getElementById('site-nav-trigger');
 
   jtd.addEvent(navTrigger, 'click', function(e){
     e.preventDefault();
     var text = navTrigger.innerText;
     var textToggle = navTrigger.getAttribute('data-text-toggle');
 
-    mainNav.classList.toggle('nav-open');
-    pageHeader.classList.toggle('nav-open');
+    siteNav.classList.toggle('nav-open');
+    mainHeader.classList.toggle('nav-open');
     navTrigger.classList.toggle('nav-open');
     navTrigger.innerText = textToggle;
     navTrigger.setAttribute('data-text-toggle', text);
@@ -88,8 +88,8 @@ function initSearch() {
   function searchResults(index, data) {
     var index = index;
     var docs = data;
-    var searchInput = document.querySelector('.js-search-input');
-    var searchResults = document.querySelector('.js-search-results');
+    var searchInput = document.getElementById('search-input');
+    var searchResults = document.getElementById('search-results');
 
     function hideResults() {
       searchResults.innerHTML = '';
@@ -275,8 +275,8 @@ function initSearch() {
 }
 
 function pageFocus() {
-  var mainContent = document.querySelector('.js-main-content');
-  mainContent.focus();
+  var mainWrap = document.getElementById('main-wrap');
+  mainWrap.focus();
 }
 
 // Document ready
