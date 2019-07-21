@@ -12,13 +12,13 @@ layout: table_wrappers
     <div class="side-bar">
       <div class="site-header">
         <a href="{{ site.url }}{{ site.baseurl }}" class="site-title">{% include site_title.html %}</a>
-        <a href="#" id="site-nav-trigger" class="site-button fs-3" data-text-toggle="Hide">Menu</a>
+        <a href="#" id="site-nav-trigger" class="site-button" data-text-toggle="Hide">Menu</a>
       </div>
-      <nav role="navigation" aria-label="Main navigation" id="site-nav" class="site-nav">
+      <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
         {% include nav.html %}
       </nav>
       <footer role="contentinfo" class="site-footer">
-        <p class="text-small text-grey-dk-000 mb-0">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
+        This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
       </footer>
     </div>
     <div id="main-wrap" class="main-wrap" tabindex="0">
@@ -34,17 +34,19 @@ layout: table_wrappers
           </div>
           {% endif %}
           {% if site.aux_links != nil %}
-            <ul class="list-style-none text-small aux-nav">
+          <nav aria-label="Auxiliary" class="aux-nav">
+            <ul class="aux-nav-list">
               {% for link in site.aux_links %}
-                <li class="d-inline-block my-0{% unless forloop.last %} mr-2{% endunless %}"><a href="{{ link.last }}">{{ link.first }}</a></li>
+                <li class="aux-nav-list-item"><a href="{{ link.last }}">{{ link.first }}</a></li>
               {% endfor %}
             </ul>
+          </nav>
           {% endif %}
         </div>
         <div class="main-content-wrap">
           {% unless page.url == "/" %}
             {% if page.parent %}
-              <nav class="breadcrumb-nav">
+              <nav aria-label="Breadcrumb" class="breadcrumb-nav">
                 <ol class="breadcrumb-nav-list">
                   {% if page.grand_parent %}
                     <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>

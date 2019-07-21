@@ -158,6 +158,7 @@
   height: 100%;
   padding: $gutter-spacing-sm;
   align-items: center;
+  @include fs-3;
 
   @include mq(md) {
     display: none;
@@ -184,6 +185,8 @@ body {
   bottom: 0;
   padding-top: $sp-4;
   padding-bottom: $sp-4;
+  color: $grey-dk-000;
+  @include fs-2;
 
   @include mq(md) {
     position: static;
