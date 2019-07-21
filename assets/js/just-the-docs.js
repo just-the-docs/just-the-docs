@@ -37,24 +37,36 @@ function initNav() {
 
   const siteNav = document.getElementById('site-nav');
   const mainHeader = document.getElementById('main-header');
-  const navTrigger = document.getElementById('site-nav-trigger');
+  const menuButton = document.getElementById('menu-button');
 
-  jtd.addEvent(navTrigger, 'click', function(e){
+  jtd.addEvent(menuButton, 'click', function(e){
     e.preventDefault();
-    var text = navTrigger.innerText;
-    var textToggle = navTrigger.getAttribute('data-text-toggle');
 
-    siteNav.classList.toggle('nav-open');
-    mainHeader.classList.toggle('nav-open');
-    navTrigger.classList.toggle('nav-open');
-    navTrigger.innerText = textToggle;
-    navTrigger.setAttribute('data-text-toggle', text);
-    textToggle = text;
-  })
+    if (menuButton.classList.toggle('nav-open')) {
+      siteNav.classList.add('nav-open');
+      mainHeader.classList.add('nav-open');
+    } else {
+      siteNav.classList.remove('nav-open');
+      mainHeader.classList.remove('nav-open');
+    }
+  });
+
+  {% if site.search_enabled != false -%}
+  const searchInput = document.getElementById('search-input');
+  const searchButton = document.getElementById('search-button');
+
+  jtd.addEvent(searchButton, 'click', function(e){
+    e.preventDefault();
+
+    mainHeader.classList.add('nav-open');
+    searchInput.focus();
+  });
+  {%- endif %}
 }
 
 // Site search
 
+{% if site.search_enabled != false -%}
 function initSearch() {
   var request = new XMLHttpRequest();
   request.open('GET', '{{ "assets/js/search-data.json" | absolute_url }}', true);
@@ -284,6 +296,7 @@ function initSearch() {
     });
   }
 }
+{%- endif %}
 
 function pageFocus() {
   var mainWrap = document.getElementById('main-wrap');
@@ -295,9 +308,9 @@ function pageFocus() {
 jtd.onReady(function(){
   initNav();
   pageFocus();
-  if (typeof lunr !== 'undefined') {
-    initSearch();
-  }
+  {% if site.search_enabled != false -%}
+  initSearch();
+  {%- endif %}
 });
 
 })(window.jtd = window.jtd || {});
