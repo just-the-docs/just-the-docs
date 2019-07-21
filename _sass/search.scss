@@ -171,10 +171,10 @@
 .search-button {
   position: fixed;
   display: flex;
+  right: $sp-4;
+  bottom: $sp-4;
   width: $sp-9;
   height: $sp-9;
-  bottom: $sp-4;
-  right: $sp-4;
   background-color: $search-background-color;
   border-radius: #{$sp-9 / 2};
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
