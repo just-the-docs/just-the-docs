@@ -4,7 +4,7 @@ layout: table_wrappers
 
 <!DOCTYPE html>
 
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
 <body>
 
@@ -14,9 +14,9 @@ layout: table_wrappers
         <a href="{{ site.url }}{{ site.baseurl }}" class="site-title">{% include title.html %}</a>
         <a href="#" class="site-button fs-3 js-main-nav-trigger" data-text-toggle="Hide">Menu</a>
       </div>
-      <div class="navigation main-nav js-main-nav">
+      <nav role="navigation" aria-label="Main navigation" class="navigation main-nav js-main-nav">
         {% include nav.html %}
-      </div>
+      </nav>
       <footer role="contentinfo" class="site-footer">
         <p class="text-small text-grey-dk-000 mb-0">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
       </footer>
