@@ -102,10 +102,12 @@ function initSearch() {
     var docs = data;
     var searchInput = document.getElementById('search-input');
     var searchResults = document.getElementById('search-results');
+    var mainContentWrap = document.getElementById('main-content-wrap');
 
     function hideResults() {
       searchResults.innerHTML = '';
       searchResults.classList.remove('active');
+      mainContentWrap.classList.remove('blur');
     }
 
     jtd.addEvent(searchInput, 'keydown', function(e){
@@ -184,6 +186,7 @@ function initSearch() {
 
       if (results.length > 0) {
         searchResults.classList.add('active');
+        mainContentWrap.classList.add('blur');
         var resultsList = document.createElement('ul');
         resultsList.classList.add('search-results-list');
         searchResults.appendChild(resultsList);
