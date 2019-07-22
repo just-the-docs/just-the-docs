@@ -2,22 +2,22 @@
 // Main nav, breadcrumb, etc...
 //
 
-.navigation-list {
+.nav-list {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
   list-style: none;
 }
 
-.navigation-list-child-list {
+.nav-list-child-list {
   padding-left: $sp-3;
   list-style: none;
 
-  .navigation-list-link {
+  .nav-list-link {
     color: $nav-child-link-color;
   }
 
-  .navigation-list-item {
+  .nav-list-item {
     position: relative;
 
     &::before {
@@ -36,7 +36,7 @@
   }
 }
 
-.navigation-list-item {
+.nav-list-item {
   @include fs-4;
   margin: 0;
 
@@ -44,18 +44,18 @@
     @include fs-3;
   }
 
-  .navigation-list-child-list {
+  .nav-list-child-list {
     display: none;
   }
 
   &.active {
-    .navigation-list-child-list {
+    .nav-list-child-list {
       display: block;
     }
   }
 }
 
-.navigation-list-link {
+.nav-list-link {
   display: block;
   padding-top: $sp-1;
   padding-bottom: $sp-1;
