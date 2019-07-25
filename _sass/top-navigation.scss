@@ -21,10 +21,10 @@ $topnav-height: 57px;
 
   &.nav-open {
     position: absolute;
-    display: block;
     top: $topnav-height;
-    float: left;
     z-index: 999;
+    display: block;
+    float: left;
     width: 100%;
     background-color: $topnav-background-color;
     transition: 2s;
@@ -64,8 +64,8 @@ $topnav-height: 57px;
     float: left;
     padding: 20px 16px;
     font-size: 16px;
-    color: $topnav-items-color;
     font-weight: bold;
+    color: $topnav-items-color;
     text-align: center;
   }
 }
@@ -97,7 +97,6 @@ $topnav-height: 57px;
 }
 
 .hamburger-change .hamburger-bar1 {
-  -webkit-transform: rotate(-45deg) translate(0, 10px);
   transform: rotate(-45deg) translate(0, 10px);
 }
 
@@ -106,7 +105,6 @@ $topnav-height: 57px;
 }
 
 .hamburger-change .hamburger-bar3 {
-  -webkit-transform: rotate(45deg) translate(0, -10px);
   transform: rotate(45deg) translate(0, -10px);
 }
 

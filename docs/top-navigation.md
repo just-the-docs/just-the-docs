@@ -16,7 +16,7 @@ This feature is not enabled by default. To enable it set the `top_navigation_ena
 top_navigation_enabled: true
 ```
 
-This will add an empty menu that will only include the project title. To add menu items create a `top_navigation.yml` file under `/data/top_navigation.yml` with the following structure:
+This will add an empty menu that will only include the project title. To add menu items create a `top_navigation.yml` file under `/_data/top_navigation.yml` with the following structure:
 
 ```yaml
 left_items:
