@@ -1,7 +1,7 @@
 <div class="topnav">
   <div class="topnav-container">
     <div class="topnav-logo">
-      <a href="{{ site.url }}{{ site.baseurl }}" class="">
+      <a class="topnav-logo-name" href="{{ site.url }}{{ site.baseurl }}" class="">
       {% if site.logo_source != nil and site.logo_width != nil %}
         <img src="{{ site.url }}{{ site.logo_source }}" width="{{ site.logo_width }}" height="57">
       {% else %}
@@ -19,6 +19,10 @@
         x.classList.toggle("hamburger-change");
         document.querySelector('.topnav-items').classList.toggle("nav-open");
         document.querySelector('.topnav-container').classList.toggle("nav-open");
+        var items = document.querySelectorAll('.topnav-item');
+        for (i = 0; i < items.length; ++i) {
+          items[i].classList.toggle("nav-open");
+        }
       }
       function fix_heights() {
         document.querySelector('.page-wrap').style.height = "calc(100% - 57px)";
@@ -36,7 +40,7 @@
       <nav>
         {% for item in site.data.top_navigation.left_items %}
           {% assign class = "" %}
-          <a href="{% include relative-src.html src=item.link %}" class="{{ class }}" {% if item.external_link %}target="_blank"{% endif %}>
+          <a class="topnav-item" href="{% include relative-src.html src=item.link %}" class="{{ class }}" {% if item.external_link %}target="_blank"{% endif %}>
             {{ item.name }}
             {% if item.external_link %}
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve" width="16px" height="16px">
@@ -52,7 +56,7 @@
 
         {% for item in site.data.top_navigation.right_items %}
           <a href="{{ item.link }}" class="topnav-right-items" target="_blank">
-            <img src="{% include relative-src.html src=item.image %}" title="{{ item.tooltip }}" alt="{{ item.name }}"/>
+            <img class="topnav-right-items-img" src="{% include relative-src.html src=item.image %}" title="{{ item.tooltip }}" alt="{{ item.name }}"/>
           </a>
         {% endfor %}
       </nav>
