@@ -26,14 +26,18 @@ See the [Extensions specifications for v{{site.lastversion}}]({{ site.url }}{{ s
   <br/>
   {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} 
   <br/>
-  <a href="{{ i.url }}">download schema</a>
+  <a href="{{ i.url }}">schema</a>
   {% if i.status %}
-  <br/>
-  status: {{ i.status }}
+  | 
+  version {{ i.status }}
+  {% endif %}
+  {% if i.paper %}
+  | 
+  <a href="{{ i.paper }}">scientific article</a>
   {% endif %}
   {% if i.organisation %}
-  <br/>
-  developers: {{ i.organisation | markdownify | remove: '<p>' | remove: '</p>' }} 
+  | 
+  {{ i.organisation | markdownify | remove: '<p>' | remove: '</p>' }} 
   {% endif %}
 </p>
 {% endfor %}
