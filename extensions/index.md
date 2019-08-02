@@ -26,11 +26,10 @@ See the [Extensions specifications for v{{site.lastversion}}]({{ site.url }}{{ s
   <br/>
   {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} 
   <br/>
-  <a href="{{ i.url }}">schema</a>
   {% if i.status %}
-  | 
-  version {{ i.status }}
+  v{{ i.status }} |
   {% endif %}
+  <a href="{{ i.url }}">schema</a>
   {% if i.paper %}
   | 
   <a href="{{ i.paper }}">scientific article</a>
