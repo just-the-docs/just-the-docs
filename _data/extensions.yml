@@ -2,14 +2,15 @@
 - name: Noise
   url:  https://3d.bk.tudelft.nl/schemas/cityjson/1.0.0/extensions/noise.json
   description: "Conversion of the CityGML Noise ADE"
-  # status: v1.0
+  status: 1.0
   organisation: "[3D geoinformation TU Delft](https://3d.bk.tudelft.nl)"
 
 - name: Linear Cell Complex
   url: https://github.com/tudelft3d/cityjson-lcc-extension/blob/master/linearcellcomplex.json
   description: "An extension that allows topological information of a city model to be stored as a Combinatorial Map based Linear Cell Complex"
-  status: v0.2
+  status: 0.2
   organisation: "[3D geoinformation TU Delft](https://3d.bk.tudelft.nl)"
+  paper: https://doi.org/10.3390/ijgi8080347
   
 # - name: Energy
 #   url:  https://github.com/tudelft3d/cityjson/blob/master/schema/v09/extensions/noise.json
