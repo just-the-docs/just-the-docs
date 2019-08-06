@@ -8,12 +8,14 @@
     <div class="side-bar">
       <a href="{{ site.url }}{{ site.baseurl }}" class="site-title fs-6 lh-tight">{{ site.title }}</a>
       <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
-      <div class="navigation main-nav js-main-nav">
-        {% include nav.html %}
-      </div>
-      <footer role="contentinfo" class="site-footer">
-        <p class="text-small text-grey-dk-000 mb-0">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
-      </footer>
+      <nav role="navigation" aria-label="Main navigation" class="navigation-wrapper">
+        <div class="navigation main-nav js-main-nav">
+          {% include nav.html %}
+        </div>
+        <footer class="site-footer">
+          <p class="text-small text-grey-dk-000 mb-4">This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</p>
+        </footer>
+       </nav>
     </div>
     <div class="main-content-wrap js-main-content" tabindex="0">
       <div class="page-header">
@@ -68,6 +70,13 @@
               {% endif %}
             {% endfor %}
           </ul>
+          {% endif %}
+
+          {% if site.footer_content != nil %}
+          <hr>
+          <footer role="contentinfo">
+            <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
+          </footer>
           {% endif %}
         </div>
       </div>
