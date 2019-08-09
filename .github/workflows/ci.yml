@@ -13,14 +13,9 @@ jobs:
 
     - name: Build the site in the jekyll/builder container
       run: |
-        sudo mkdir -p /srv/jekyll
-        sudo touch /srv/jekyll/Gemfile.lock
-        sudo chmod 777 /srv/jekyll/Gemfile.lock
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
-        jekyll/builder:3.8.5 \
-        
-        jekyll build
+        jekyll/builder:3.8.5 /bin/bash -c "chmod 777 /srv/jekyll && jekyll build"
         
   css:
     name: Stylelint
