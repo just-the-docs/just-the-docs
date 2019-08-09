@@ -14,8 +14,8 @@ jobs:
     - name: Build the site in the jekyll/builder container
       run: |
         sudo mkdir -p /srv/jekyll
-        touch /srv/jekyll/Gemfile.lock
-        chmod a+w /srv/jekyll/Gemfile.lock
+        sudo touch /srv/jekyll/Gemfile.lock
+        sudo chmod a+w /srv/jekyll/Gemfile.lock
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
         jekyll/builder:3.8.5 \
