@@ -15,10 +15,11 @@ jobs:
       run: |
         sudo mkdir -p /srv/jekyll
         sudo touch /srv/jekyll/Gemfile.lock
-        sudo chmod a+w /srv/jekyll/Gemfile.lock
+        sudo chmod 777 /srv/jekyll/Gemfile.lock
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
         jekyll/builder:3.8.5 \
+        
         jekyll build
         
   css:
