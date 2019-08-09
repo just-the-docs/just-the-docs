@@ -16,7 +16,7 @@ jobs:
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
         jekyll/builder:3.8.5 \
-        sudo jekyll build
+        jekyll build
         
   css:
     name: Stylelint
