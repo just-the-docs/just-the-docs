@@ -13,7 +13,7 @@ jobs:
 
     - name: Build the site in the jekyll/builder container
       run: |
-        mkdir -p /srv/jekyll
+        sudo mkdir -p /srv/jekyll
         touch /srv/jekyll/Gemfile.lock
         chmod a+w /srv/jekyll/Gemfile.lock
         docker run --rm \
