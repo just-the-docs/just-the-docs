@@ -13,6 +13,7 @@ jobs:
 
     - name: Build the site in the jekyll/builder container
       run: |
+        ls -a
         sudo chmod 777 /srv
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
