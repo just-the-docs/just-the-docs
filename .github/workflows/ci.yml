@@ -15,7 +15,7 @@ jobs:
       run: |      
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
-        -it jekyll/jekyll:3.8.5 \
+        jekyll/jekyll:3.8.5 \
         jekyll build
         
   css:
