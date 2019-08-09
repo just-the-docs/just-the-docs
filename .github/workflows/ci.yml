@@ -12,7 +12,8 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Build the site in the jekyll/builder container
-      run: |      
+      run: |
+        sudo chmod 777 -R ${{ github.workspace }}:/srv
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
         jekyll/jekyll:3.8.5 \
