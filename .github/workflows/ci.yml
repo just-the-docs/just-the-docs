@@ -13,10 +13,9 @@ jobs:
 
     - name: Build the site in the jekyll/builder container
       run: |      
-        export JEKYLL_VERSION=3.8
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
-        -it jekyll/jekyll:$JEKYLL_VERSION \
+        -it jekyll/jekyll:3.8.5 \
         jekyll build
         
   css:
