@@ -6,13 +6,15 @@ jobs:
 
   jekyll:
     name: Build Jekyll site
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     steps:
 
     - uses: actions/checkout@master
 
     - name: Build the site in the jekyll/builder container
       run: |
+        touch /srv/jekyll/Gemfile.lock
+        chmod a+w /srv/jekyll/Gemfile.lock
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
         jekyll/builder:3.8.5 \
