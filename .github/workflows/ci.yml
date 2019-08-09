@@ -1,8 +1,9 @@
-name: CI
-
 on: [push]
 
+name: CI
+
 jobs:
+
   jekyll:
     name: Build Jekyll site
     runs-on: ubuntu-latest
@@ -16,19 +17,20 @@ jobs:
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest \
         jekyll build --future
- 
-   css:
+        
+  css:
     name: Stylelint
     runs-on: ubuntu-latest
-
     steps:
+    
     - uses: actions/checkout@master
+
     - name: Use Node.js 10.x
       uses: actions/setup-node@v1
       with:
         version: 10.x
+
     - name: npm install, build, and test
       run: |
         npm install
-        npm run build --if-present
         npm test
