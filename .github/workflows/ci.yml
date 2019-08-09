@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 jobs:
- jekyll:
+  jekyll:
     name: Build Jekyll site
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +17,7 @@ jobs:
         jekyll/builder:latest \
         jekyll build --future
  
-  css:
+   css:
     name: Stylelint
     runs-on: ubuntu-latest
 
