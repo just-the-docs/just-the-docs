@@ -13,11 +13,9 @@ jobs:
 
     - name: Build the site in the jekyll/builder container
       run: |
-        ls -a
-        sudo chmod 777 /srv
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
-        jekyll/jekyll:3.8.5 \
+        jekyll/builder:3.8.4 \
         jekyll build
         
   css:
