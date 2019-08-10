@@ -6,7 +6,7 @@
 // stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type
 
 .page-content {
-  line-height: 1.6;
+  line-height: $content-line-height;
 
   a {
     overflow: hidden;

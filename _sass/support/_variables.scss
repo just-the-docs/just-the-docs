@@ -6,6 +6,7 @@ $body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetic
 $mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace !default;
 $root-font-size: 16px !default;         // Base font-size for rems
 $body-line-height: 1.4 !default;
+$content-line-height: 1.5 !default;
 $body-heading-line-height: 1.15 !default !default;
 
 //
@@ -58,7 +59,7 @@ $code-background-color: $grey-lt-000 !default;
 
 $body-text-color: $grey-dk-100 !default;
 $body-heading-color: $grey-dk-300 !default;
-$search-result-preview-color: $grey-dk-100 !default;
+$search-result-preview-color: $grey-dk-000 !default;
 $nav-child-link-color: $grey-dk-100 !default;
 $link-color: $purple-000 !default;
 $btn-primary-color: $purple-100 !default;
@@ -113,7 +114,7 @@ $nav-width: 264px !default;
 $nav-width-md: 248px !default;
 $content-width: 800px !default;
 $header-height: 60px !default;
-$search-results-width: 488px !default;
+$search-results-width: 500px !default;
 
 //
 // Media queries in pixels
