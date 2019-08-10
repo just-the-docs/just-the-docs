@@ -25,10 +25,13 @@ jtd.onReady = function(ready) {
 
 function initNav() {
   jtd.addEvent(document, 'click', function(e){
-    var expander = e.path.find(function(x){ return x.classList && x.classList.contains('nav-list-expander') });
-    if (expander) {
+    var target = e.target;
+    while (target && target.classList && !target.classList.contains('nav-list-expander')) {
+      target = target.parentElement;
+    }
+    if (target) {
       e.preventDefault();
-      expander.parentElement.classList.toggle('active');
+      target.parentElement.classList.toggle('active');
     }
   });
 
