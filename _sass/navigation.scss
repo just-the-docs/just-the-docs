@@ -18,7 +18,7 @@
 
     .nav-list-link {
       display: block;
-      height: $nav-list-item-height;
+      min-height: $nav-list-item-height;
       line-height: #{$nav-list-item-height - 2 * $sp-1};
       padding-top: $sp-1;
       padding-right: $gutter-spacing-sm;
