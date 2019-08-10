@@ -24,6 +24,13 @@ jtd.onReady = function(ready) {
 // Show/hide mobile menu
 
 function initNav() {
+  jtd.addEvent(document, 'click', function(e){
+    var expander = e.path.find(function(x){ return x.classList && x.classList.contains('nav-list-expander') });
+    if (expander) {
+      expander.parentElement.classList.toggle('active');
+    }
+  });
+
   const siteNav = document.getElementById('site-nav');
   const mainHeader = document.getElementById('main-header');
   const menuButton = document.getElementById('menu-button');
