@@ -113,8 +113,6 @@
 }
 
 .site-nav {
-  @include container;
-
   @include mq(md) {
     padding-top: $sp-8;
     padding-bottom: $gutter-spacing-sm;
@@ -163,6 +161,11 @@
   @include mq(md) {
     display: none;
   }
+}
+
+.site-title:hover,
+.site-button:hover {
+  background-color: darken($sidebar-color, 3%);
 }
 
 // stylelint-disable selector-max-type
