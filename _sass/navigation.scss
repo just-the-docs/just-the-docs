@@ -10,6 +10,7 @@
 
   .nav-list-item {
     @include fs-4;
+    position: relative;
     margin: 0;
 
     @include mq(md) {
@@ -18,12 +19,18 @@
 
     .nav-list-link {
       display: block;
-      min-height: $nav-list-item-height;
-      line-height: #{$nav-list-item-height - 2 * $sp-1};
+      min-height: $nav-list-item-height-sm;
+      line-height: #{$nav-list-item-height-sm - 2 * $sp-1};
       padding-top: $sp-1;
       padding-right: $gutter-spacing-sm;
       padding-bottom: $sp-1;
-      padding-left: $nav-list-item-height;
+      padding-left: $nav-list-item-height-sm;
+
+      @include mq(md) {
+        min-height: $nav-list-item-height;
+        line-height: #{$nav-list-item-height - 2 * $sp-1};
+        padding-left: $nav-list-item-height;
+      }
 
       &.active {
         font-weight: 600;
@@ -38,13 +45,22 @@
 
     .nav-list-expander {
       position: absolute;
-      width: $nav-list-item-height;
-      height: $nav-list-item-height;
-      padding-top: #{$nav-list-item-height / 4};
-      padding-right: #{$nav-list-item-height / 4};
-      padding-bottom: #{$nav-list-item-height / 4};
-      padding-left: #{$nav-list-item-height / 4};
+      width: $nav-list-item-height-sm;
+      height: $nav-list-item-height-sm;
+      padding-top: #{$nav-list-item-height-sm / 4};
+      padding-right: #{$nav-list-item-height-sm / 4};
+      padding-bottom: #{$nav-list-item-height-sm / 4};
+      padding-left: #{$nav-list-item-height-sm / 4};
       fill: $link-color;
+
+      @include mq(md) {
+        width: $nav-list-item-height;
+        height: $nav-list-item-height;
+        padding-top: #{$nav-list-item-height / 4};
+        padding-right: #{$nav-list-item-height / 4};
+        padding-bottom: #{$nav-list-item-height / 4};
+        padding-left: #{$nav-list-item-height / 4};
+      }
 
       &:hover {
         background-color: $feedback-color;
