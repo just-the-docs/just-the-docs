@@ -27,6 +27,7 @@ function initNav() {
   jtd.addEvent(document, 'click', function(e){
     var expander = e.path.find(function(x){ return x.classList && x.classList.contains('nav-list-expander') });
     if (expander) {
+      e.preventDefault();
       expander.parentElement.classList.toggle('active');
     }
   });

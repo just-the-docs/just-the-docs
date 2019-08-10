@@ -32,7 +32,7 @@
 
       &:hover,
       &.active {
-        background-color: darken($sidebar-color, 3%);
+        background-color: $feedback-color;
       }
     }
 
@@ -47,7 +47,7 @@
       fill: $link-color;
 
       &:hover {
-        background-color: darken($sidebar-color, 3%);
+        background-color: $feedback-color;
       }
     }
 

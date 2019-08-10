@@ -112,7 +112,7 @@
 
   &:hover,
   &.active {
-    background-color: $sidebar-color;
+    background-color: $feedback-color;
   }
 
   @include mq(md) {
