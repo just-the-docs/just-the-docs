@@ -27,11 +27,11 @@ function initNav() {
   jtd.addEvent(document, 'click', function(e){
     var target = e.target;
     while (target && !(target.classList && target.classList.contains('nav-list-expander'))) {
-      target = target.parentElement;
+      target = target.parentNode;
     }
     if (target) {
       e.preventDefault();
-      target.parentElement.classList.toggle('active');
+      target.parentNode.classList.toggle('active');
     }
   });
 
