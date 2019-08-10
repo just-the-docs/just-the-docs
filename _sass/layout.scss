@@ -164,7 +164,7 @@
 
 .site-title:hover,
 .site-button:hover {
-  background-color: darken($sidebar-color, 3%);
+  background-color: $feedback-color;
 }
 
 // stylelint-disable selector-max-type

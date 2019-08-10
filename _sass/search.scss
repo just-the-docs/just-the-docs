@@ -114,7 +114,7 @@
 
   &:hover,
   &.active {
-    background-color: darken($search-background-color, 5%);
+    background-color: $feedback-color;
   }
 
   @include mq(md) {
