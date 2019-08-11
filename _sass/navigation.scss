@@ -22,14 +22,25 @@
       min-height: $nav-list-item-height-sm;
       line-height: #{$nav-list-item-height-sm - 2 * $sp-1};
       padding-top: $sp-1;
-      padding-right: $gutter-spacing-sm;
       padding-bottom: $sp-1;
-      padding-left: $nav-list-item-height-sm;
+      @if $nav-list-expander-right {
+        padding-right: $nav-list-item-height-sm;
+        padding-left: $gutter-spacing-sm;
+      } @else {
+        padding-right: $gutter-spacing-sm;
+        padding-left: $nav-list-item-height-sm;
+      }
 
       @include mq(md) {
         min-height: $nav-list-item-height;
         line-height: #{$nav-list-item-height - 2 * $sp-1};
-        padding-left: $nav-list-item-height;
+        @if $nav-list-expander-right {
+          padding-right: $nav-list-item-height;
+          padding-left: $gutter-spacing;
+        } @else {
+          padding-right: $gutter-spacing;
+          padding-left: $nav-list-item-height;
+        }
       }
 
       &.active {
@@ -45,6 +56,9 @@
 
     .nav-list-expander {
       position: absolute;
+      @if $nav-list-expander-right {
+        right: 0;
+      }
       width: $nav-list-item-height-sm;
       height: $nav-list-item-height-sm;
       padding-top: #{$nav-list-item-height-sm / 4};
@@ -65,6 +79,12 @@
       &:hover {
         background-color: $feedback-color;
       }
+
+      @if $nav-list-expander-right {
+        svg {
+          transform: rotate(90deg);
+        }
+      }
     }
 
     > .nav-list {
@@ -78,12 +98,20 @@
         .nav-list-link {
           color: $nav-child-link-color;
         }
+
+        .nav-list-expander {
+          fill: $nav-child-link-color;
+        }
       }
     }
 
     &.active {
       > .nav-list-expander svg {
-        transform: rotate(90deg);
+        @if $nav-list-expander-right {
+          transform: rotate(-90deg);
+        } @else {
+          transform: rotate(90deg);
+        }
       }
 
       > .nav-list {
