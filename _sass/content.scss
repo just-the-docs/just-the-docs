@@ -111,4 +111,34 @@
     margin-left: 1em;
     font-weight: 500;
   }
+
+  .anchor-heading {
+    fill: $link-color;
+    visibility: hidden;
+
+    @include mq(md) {
+      position: absolute;
+      left: -$sp-5;
+      width: $sp-5;
+      height: 100%;
+    }
+  }
+
+  h1:hover > .anchor-heading,
+  h2:hover > .anchor-heading,
+  h3:hover > .anchor-heading,
+  h4:hover > .anchor-heading,
+  h5:hover > .anchor-heading,
+  h6:hover > .anchor-heading {
+    visibility: visible;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
+  }
 }
