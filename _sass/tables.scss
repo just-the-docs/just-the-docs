@@ -43,6 +43,10 @@ tbody {
       td {
         border-bottom: 0;
       }
+
+      td {
+        padding-bottom: $sp-3;
+      }
     }
   }
 }
