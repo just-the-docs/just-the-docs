@@ -85,10 +85,10 @@
   background-color: $sidebar-color;
 
   @include mq(md) {
-    background-color: $body-background-color;
     display: flex;
     justify-content: flex-end;
     height: $header-height;
+    background-color: $body-background-color;
     border-bottom: $border $border-color;
   }
 
@@ -128,10 +128,10 @@
   align-items: center;
 
   @include mq(md) {
+    z-index: 101;
     height: $header-height;
     min-height: $header-height;
     max-height: $header-height;
-    z-index: 101;
     border-bottom: $border $border-color;
   }
 }
@@ -148,11 +148,16 @@
   @include fs-6;
 }
 
-.site-button {
+.menu-button {
+  appearance: none;
+  display: flex;
   height: 100%;
   padding: $gutter-spacing-sm;
-  display: flex;
   align-items: center;
+  color: $link-color;
+  text-transform: uppercase;
+  background: transparent;
+  border: 0;
 
   @include mq(md) {
     display: none;

@@ -113,14 +113,16 @@
   }
 
   .anchor-heading {
+    position: absolute;
+    right: -$sp-3;
+    width: $sp-5;
+    height: 100%;
     fill: $link-color;
     visibility: hidden;
 
     @include mq(md) {
-      position: absolute;
+      right: auto;
       left: -$sp-5;
-      width: $sp-5;
-      height: 100%;
     }
   }
 
