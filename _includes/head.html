@@ -15,13 +15,13 @@
   <link rel="stylesheet" href="{{ "/assets/css/just-the-docs.css" | absolute_url }}">
 
   {% if site.ga_tracking != nil %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{site.ga_tracking}}"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', "{{site.ga_tracking}}");
+      gtag('config', "{{ site.ga_tracking }}");
     </script>
 
   {% endif %}
@@ -33,5 +33,5 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% seo %}
+  {% seo %}
 </head>
