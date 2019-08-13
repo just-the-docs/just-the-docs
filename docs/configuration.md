@@ -38,6 +38,16 @@ aux_links:
       - "//github.com/pmarsceill/just-the-docs"
 ```
 
+## Heading anchors
+```yaml
+# Heading anchors appear on hover over h1-h6 tags
+# allowing users to deep link to a particular heading
+# on a page.
+#
+# Supprts true (default) or false/nil
+heading_anchors: true
+```
+
 ## Color scheme
 
 ```yaml

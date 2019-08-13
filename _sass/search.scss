@@ -17,8 +17,8 @@
 .search-input-wrap {
   display: flex;
   height: 100%;
-  background-color: $search-background-color;
   padding: $sp-2;
+  background-color: $search-background-color;
   border-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 
@@ -27,8 +27,8 @@
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
-    border-radius: 0;
     background-color: $body-background-color;
+    border-radius: 0;
     box-shadow: none;
   }
 }
@@ -70,11 +70,11 @@
 
 .search-results-wrap {
   position: absolute;
-  display: none;
   z-index: 100;
+  display: none;
   width: 100%;
-  border-radius: $border-radius;
   background: $search-background-color;
+  border-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 
   &.active {
