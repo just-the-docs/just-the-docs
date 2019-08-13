@@ -194,6 +194,11 @@ function initSearch() {
           resultTitle.innerText = doc.title;
           resultLink.appendChild(resultTitle);
 
+          var resultRelUrl = document.createElement('span');
+          resultRelUrl.classList.add('search-result-rel-url');
+          resultRelUrl.innerText = doc.relUrl;
+          resultTitle.appendChild(resultRelUrl);
+
           var metadata = result.matchData.metadata;
           var contentFound = false;
           for (var j in metadata) {
