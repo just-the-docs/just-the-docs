@@ -206,7 +206,7 @@ function initSearch() {
               var position = metadata[j].title.position[0];
               var start = position[0];
               var end = position[0] + position[1];
-              resultTitle.innerHTML = doc.title.substring(0, start) + '<span class="search-result-highlight">' + doc.title.substring(start, end) + '</span>' + doc.title.substring(end, doc.title.length);
+              resultTitle.innerHTML = doc.title.substring(0, start) + '<span class="search-result-highlight">' + doc.title.substring(start, end) + '</span>' + doc.title.substring(end, doc.title.length)+'<span class="search-result-rel-url">'+doc.relUrl+'</span>';
 
             } else if (metadata[j].content && !contentFound) {
               contentFound = true;
