@@ -24,6 +24,9 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 # Enable or disable the site search
 search_enabled: true
 
+# Enable or disable heading anchors
+heading_anchors: true
+
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":
@@ -41,3 +44,11 @@ ga_tracking: UA-2709176-10
 
 plugins:
   - jekyll-seo-tag
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blank_lines: false
+  profile: false
