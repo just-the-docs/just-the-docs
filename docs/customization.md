@@ -69,5 +69,3 @@ $link-color: $blue-000;
 ```
 
 _Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
-
----

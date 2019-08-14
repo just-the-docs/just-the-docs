@@ -19,6 +19,12 @@
   }
 }
 
+.navigation-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
 .navigation-list {
   padding: 0;
   margin-top: $sp-4;
