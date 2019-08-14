@@ -35,16 +35,16 @@ color_scheme: "dark"
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode')
-const cssFile = document.querySelector('[rel="stylesheet"]')
-const originalCssRef = cssFile.getAttribute('href')
-const darkModeCssRef = originalCssRef.replace('just-the-docs.css', 'dark-mode-preview.css')
+const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+const cssFile = document.querySelector('[rel="stylesheet"]');
+const originalCssRef = cssFile.getAttribute('href');
+const darkModeCssRef = originalCssRef.replace('just-the-docs.css', 'dark-mode-preview.css');
 
-addEvent(toggleDarkMode, 'click', function(){
+jtd.addEvent(toggleDarkMode, 'click', function(){
   if (cssFile.getAttribute('href') === originalCssRef) {
-    cssFile.setAttribute('href', darkModeCssRef)
+    cssFile.setAttribute('href', darkModeCssRef);
   } else {
-    cssFile.setAttribute('href', originalCssRef)
+    cssFile.setAttribute('href', originalCssRef);
   }
 })
 </script>
@@ -69,5 +69,3 @@ $link-color: $blue-000;
 ```
 
 _Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
-
----
