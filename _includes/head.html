@@ -26,7 +26,7 @@
 
   {% endif %}
 
-  {% if site.search_enabled != nil %}
+  {% if site.search_enabled != false %}
     <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | absolute_url }}"></script>
   {% endif %}
   <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
