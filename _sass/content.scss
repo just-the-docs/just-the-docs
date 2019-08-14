@@ -6,6 +6,8 @@
 // stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type
 
 .page-content {
+  line-height: 1.6;
+
   a {
     overflow: hidden;
     text-overflow: ellipsis;
