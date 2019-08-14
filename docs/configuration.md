@@ -26,6 +26,7 @@ View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/
 
 ```yaml
 # Enable or disable the site search
+# Support true (default) or false
 search_enabled: true
 ```
 
@@ -38,11 +39,11 @@ aux_links:
       - "//github.com/pmarsceill/just-the-docs"
 ```
 
-## Heading anchors
+## Heading anchor links
 ```yaml
-# Heading anchors appear on hover over h1-h6 tags
-# allowing users to deep link to a particular heading
-# on a page.
+# Heading anchor links appear on hover over h1-h6 tags
+# in page content allowing users to deep link to a particular
+# heading on a page.
 #
 # Supprts true (default) or false/nil
 heading_anchors: true
