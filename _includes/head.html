@@ -15,12 +15,15 @@
   <link rel="stylesheet" href="{{ "/assets/css/just-the-docs.css" | absolute_url }}">
 
   {% if site.ga_tracking != nil %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
     <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', '{{ site.ga_tracking }}', '{{ site.url }}');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', "{{ site.ga_tracking }}");
     </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
+
   {% endif %}
 
   {% if site.search_enabled != nil %}
@@ -30,5 +33,5 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% seo %}
+  {% seo %}
 </head>
