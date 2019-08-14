@@ -40,7 +40,7 @@ const cssFile = document.querySelector('[rel="stylesheet"]');
 const originalCssRef = cssFile.getAttribute('href');
 const darkModeCssRef = originalCssRef.replace('just-the-docs.css', 'dark-mode-preview.css');
 
-addEvent(toggleDarkMode, 'click', function(){
+jtd.addEvent(toggleDarkMode, 'click', function(){
   if (cssFile.getAttribute('href') === originalCssRef) {
     cssFile.setAttribute('href', darkModeCssRef);
   } else {
