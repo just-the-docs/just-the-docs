@@ -116,26 +116,37 @@
 
   .anchor-heading {
     position: absolute;
-    right: -$sp-3;
+    right: -$sp-4;
     width: $sp-5;
     height: 100%;
+    padding-right: $sp-1;
+    padding-left: $sp-1;
     overflow: visible;
-    fill: $link-color;
-    visibility: hidden;
 
     @include mq(md) {
       right: auto;
       left: -$sp-5;
     }
+
+    svg {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      fill: $link-color;
+      visibility: hidden;
+    }
   }
 
+  .anchor-heading:hover,
   h1:hover > .anchor-heading,
   h2:hover > .anchor-heading,
   h3:hover > .anchor-heading,
   h4:hover > .anchor-heading,
   h5:hover > .anchor-heading,
   h6:hover > .anchor-heading {
-    visibility: visible;
+    svg {
+      visibility: visible;
+    }
   }
 
   h1,
