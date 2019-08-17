@@ -17,7 +17,7 @@ nav_order: 5
 
 ## Main navigation
 
-The main navigation for your Just the Docs site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
+The main navigation for your Just the Docs site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children).
 
 By default, all pages will appear as top level pages in the main nav unless a parent page is defined (see [Pages with Children](#pages-with-children)).
 
@@ -89,7 +89,6 @@ Sometimes you will want to create a page with many children (a section). First, 
 ```
 
 On the parent pages, add 2 YAML front matter parameters:
--  `has_children: true` (tells us that this is a parent page)
 -  `permalink:` set this to the site directory that contains the child pages
 
 #### Example
@@ -100,7 +99,6 @@ On the parent pages, add 2 YAML front matter parameters:
 layout: default
 title: UI Components
 nav_order: 2
-has_children: true
 permalink: /docs/ui-components
 ---
 ```
@@ -138,7 +136,6 @@ By default, all pages with children will automatically append a Table of Content
 layout: default
 title: UI Components
 nav_order: 2
-has_children: true
 has_toc: false
 permalink: /docs/ui-components
 ---
@@ -147,10 +144,7 @@ permalink: /docs/ui-components
 ### Children with children
 {: .text-gamma }
 
-Child pages can also have children (grandchildren). This is achieved by using a similar pattern on the child and grandchild pages.
-
-1. Add the `has_children` attribute to the child
-1. Add the `parent` and `grand_parent` attribute to the grandchild
+Child pages can also have children.
 
 #### Example
 {: .no_toc }
@@ -161,7 +155,6 @@ layout: default
 title: Buttons
 parent: UI Components
 nav_order: 2
-has_children: true
 ---
 ```
 
@@ -170,7 +163,6 @@ has_children: true
 layout: default
 title: Buttons Child Page
 parent: Buttons
-grand_parent: UI Components
 nav_order: 1
 ---
 ```
@@ -189,6 +181,52 @@ This would create the following navigation structure:
 |   |-- ..
 |
 +-- ..
+```
+
+### Categories
+
+Items in the main menu can be grouped into categories, with a `category:` YAML
+front matter option.
+
+A category is not a page/link itself, it simply renders an `h4` tag above a
+group of links, and is entirely optional.
+
+#### Example
+{: .no_toc }
+
+```yaml
+---
+layout: default
+category: Category 1
+title: Page 1
+---
+```
+
+```yaml
+---
+layout: default
+category: Category 2
+title: Page 2
+---
+```
+
+```yaml
+---
+layout: default
+category: Category 1
+title: Page 3
+---
+```
+
+This will result in the following menu structure:
+
+```
+CATEGORY 1
+Page 1
+Page 3
+
+CATEGORY 2
+Page 2
 ```
 
 ---

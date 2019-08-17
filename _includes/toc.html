@@ -1,0 +1,13 @@
+{%- assign tocNodes = site.html_pages | where_exp:"item", "item.nav_exclude !=
+true" | where_exp:"item", "item.parent == page.title" | sort:"title" | sort:"nav_order" -%}
+{%- if tocNodes.size > 0 -%}
+  <hr>
+  <h2 class="text-delta">Table of contents</h2>
+  <ul>
+    {% for tocNode in tocNodes %}
+      <li>
+        <a href="{{ tocNode.url | absolute_url }}">{{ tocNode.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{%- endif -%}

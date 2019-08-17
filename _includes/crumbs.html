@@ -1,0 +1,16 @@
+{%- assign crumbsNodes = site.html_pages | where_exp:"item", "item.nav_exclude !=
+true" | where_exp:"item", "item.parent == include.owner" -%}
+{%- for crumbsNode in crumbsNodes -%}
+  {%- include active.html node=crumbsNode -%}
+  {%- if active -%}
+    <li class="breadcrumb-nav-list-item">
+      {%- if crumbsNode.title == page.title -%}
+        {{ crumbsNode.title }}
+      {%- else -%}
+        <a href="{{ crumbsNode.url | absolute_url }}">{{ crumbsNode.title }}</a>
+      {%- endif -%}
+    </li>
+  {%- endif -%}
+  {%- assign active = false -%}
+  {%- include crumbs.html owner=crumbsNode.title -%}
+{%- endfor -%}
