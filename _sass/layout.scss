@@ -153,6 +153,17 @@
   }
 }
 
+@if variable-exists(logo) {
+  .site-logo {
+    width: 100%;
+    height: 100%;
+    background-image: url($logo);
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
 .menu-button {
   appearance: none;
   display: flex;
