@@ -4,10 +4,10 @@ true" | where_exp:"item", "item.parent == page.title" | sort:"title" | sort:"nav
   <hr>
   <h2 class="text-delta">Table of contents</h2>
   <ul>
-    {% for tocNode in tocNodes %}
+    {%- for tocNode in tocNodes -%}
       <li>
         <a href="{{ tocNode.url | absolute_url }}">{{ tocNode.title }}</a>
       </li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
 {%- endif -%}
