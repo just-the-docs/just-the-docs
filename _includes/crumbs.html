@@ -1,5 +1,4 @@
-{%- assign crumbsNodes = site.html_pages | where_exp:"item", "item.nav_exclude !=
-true" | where_exp:"item", "item.parent == include.owner" -%}
+{%- assign crumbsNodes = site.html_pages | where_exp:"item", "item.parent == include.owner" -%}
 {%- for crumbsNode in crumbsNodes -%}
   {%- include active.html node=crumbsNode -%}
   {%- if active -%}

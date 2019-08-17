@@ -1,5 +1,4 @@
-{%- assign tocNodes = site.html_pages | where_exp:"item", "item.nav_exclude !=
-true" | where_exp:"item", "item.parent == page.title" | sort:"title" | sort:"nav_order" -%}
+{%- assign tocNodes = site.html_pages | where_exp:"item", "item.parent == page.title" | sort:"title" | sort:"nav_order" -%}
 {%- if tocNodes.size > 0 -%}
   <hr>
   <h2 class="text-delta">Table of contents</h2>
