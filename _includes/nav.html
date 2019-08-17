@@ -11,8 +11,10 @@ true" | where_exp:"item", "item.parent == include.owner" | sort:"title" | sort:"
         {%- include active.html node=node -%}
         <li class="navigation-list-item{% if active %} active{% endif %}">
           <a href="{{ node.url | absolute_url }}" class="navigation-list-link{% if active %} active{% endif %}">{{ node.title }}</a>
-          {%- assign active = false -%}
-          {%- include nav.html class="-child-list" owner=node.title -%}
+          {%- if active -%}
+            {%- assign active = false -%}
+            {%- include nav.html class="-child-list" owner=node.title -%}
+          {%- endif -%}
         </li>
       {%- endfor -%}
     {%- endfor -%}
