@@ -2,6 +2,7 @@
 {%- for crumbsNode in crumbsNodes -%}
   {%- include active.html node=crumbsNode -%}
   {%- if active -%}
+    {%- assign active = false -%}
     <li class="breadcrumb-nav-list-item">
       {%- if crumbsNode.title == page.title -%}
         {{ crumbsNode.title }}
@@ -10,6 +11,5 @@
       {%- endif -%}
     </li>
   {%- endif -%}
-  {%- assign active = false -%}
   {%- include crumbs.html owner=crumbsNode.title -%}
 {%- endfor -%}
