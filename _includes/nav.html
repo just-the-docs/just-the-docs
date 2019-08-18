@@ -1,6 +1,4 @@
-{%- assign groups = site.html_pages | where_exp:"item", "item.nav_exclude !=
-true" | where_exp:"item", "item.parent == include.owner" | sort:"title" | sort:"nav_order"
-| group_by:"category" | sort:"name" -%}
+{%- assign groups = site.html_pages | where_exp:"item", "item.nav_exclude != true" | where_exp:"item", "item.parent == include.owner" | sort:"title" | sort:"nav_order" | group_by:"category" | sort:"name" -%}
 {%- if groups.size > 0 -%}
   <ul class="navigation-list{{ include.class }}">
     {%- for group in groups -%}
