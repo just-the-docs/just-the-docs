@@ -27,9 +27,6 @@ search_enabled: true
 # Enable or disable heading anchors
 heading_anchors: true
 
-# Restrict display of grandchildren to selected parent when true:
-grandchildren_branch: false
-
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":

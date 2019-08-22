@@ -191,20 +191,6 @@ This would create the following navigation structure:
 +-- ..
 ```
 
-The current default is that when a grandparent is selected, the links to its
-children *and all its grandchildren* are displayed in the navigation menu.
-So in the above example, selecting `UI Components` displays the link to
-`Button Child Page` as well as the link to `Buttons`.
-
-Setting the following global option in `_config.yml` delays the display of links
-to grandchildren until their parent is selected. So selecting `UI Components`
-displays only the link to `Buttons`, and the link to `Button Child Page` is
-displayed when `Buttons` is selected.
-
-```
-grandchildren_branch: true
-```
-
 ---
 
 ## Auxiliary Navigation
