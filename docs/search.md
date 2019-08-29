@@ -59,6 +59,15 @@ In your site's `_config.yml`, enable search:
 search_enabled: true
 ```
 
+The default is for hyphens to separate tokens in search terms:
+`gem-based` is equivalent to `gem based`, matching either word.
+To allow search for hyphenated words:
+
+```yaml
+# Set the search token separator
+search_tokenizer_separator: /[\s/]+/
+```
+
 ## Hiding pages from search
 
 Sometimes you might have a page that you don't want to be indexed for the search nor to show up in search results, e.g, a 404 page. To exclude a page from search, add the `search_exclude: true` parameter to the page's YAML front matter:
