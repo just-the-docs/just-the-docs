@@ -24,11 +24,6 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 # Enable or disable the site search
 search_enabled: true
 
-# Set the search token separator
-search_tokenizer_separator: /[\s\-/]+/
-# For hyphenated-word search:
-# search_tokenizer_separator: /[\s/]+/
-
 # Enable or disable heading anchors
 heading_anchors: true
 
