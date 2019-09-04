@@ -69,3 +69,20 @@ $link-color: $blue-000;
 ```
 
 _Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
+
+## Override styles
+
+To add your own CSS at the end of the cascade, edit `_sass/overrides.scss` to add in your own custom CSS. This will allow for all overrides to be kept in a single file, and allow for any upstream changes to still be allowed.
+
+For example, if you'd like to add your own styles for printing a page, you could add the following styles.
+
+#### Example
+{: .no_toc }
+
+```scss
+// Print-only styles.
+@media print {
+  .side-bar, .page-header { display: none; }
+  .main-content { max-width: auto; margin: 1em;}
+}
+```
