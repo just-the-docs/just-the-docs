@@ -59,12 +59,12 @@ In your site's `_config.yml`, enable search:
 search_enabled: true
 ```
 
-The default is for hyphens to separate tokens in search terms:	
-`gem-based` is equivalent to `gem based`, matching either word.	
-To allow search for hyphenated words:	
+The default is for hyphens to separate tokens in search terms:
+`gem-based` is equivalent to `gem based`, matching either word.
+To allow search for hyphenated words:
 
-```yaml	
-# Set the search token separator	
+```yaml
+# Set the search token separator
 search_tokenizer_separator: /[\s/]+/
 ```
 
