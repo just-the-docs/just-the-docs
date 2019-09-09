@@ -3,6 +3,10 @@
 # only Main files contain this front matter, not partials.
 ---
 
+{% if site.logo %}
+$logo: "{{ site.logo | absolute_url }}";
+{% endif %}
+
 //
 // Import external dependencies
 //

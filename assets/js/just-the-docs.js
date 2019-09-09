@@ -52,8 +52,13 @@ function initSearch() {
     if (request.status >= 200 && request.status < 400) {
       // Success!
       var data = JSON.parse(request.responseText);
-
+      
+      {% if site.search_tokenizer_separator != nil %}
+      lunr.tokenizer.separator = {{ site.search_tokenizer_separator }}
+      {% else %}
       lunr.tokenizer.separator = /[\s\-/]+/
+      {% endif %}
+      
       var index = lunr(function () {
         this.ref('id');
         this.field('title', { boost: 200 });
