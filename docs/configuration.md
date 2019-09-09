@@ -89,13 +89,3 @@ See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more
 # e.g, UA-1234567-89
 ga_tracking: UA-5555555-55
 ```
-
-## Mathjax
-
-```yaml
-compress_html:
-  blanklines: true # required for Mathjax
-mathjax:
-  source: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML
-  config: 'MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } })'
-```

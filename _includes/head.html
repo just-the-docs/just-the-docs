@@ -29,17 +29,7 @@
   {% if site.search_enabled != false %}
     <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | absolute_url }}"></script>
   {% endif %}
-  
-    <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
-  
-  {% if page.mathjax %}
-    <script type="text/x-mathjax-config">
-      {{ site.mathjax.config }};
-    </script>
-    <script type="text/javascript" async 
-      src="{{ site.mathjax.source }}">
-    </script>
-  {% endif %}
+  <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 

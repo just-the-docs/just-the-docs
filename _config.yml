@@ -50,10 +50,5 @@ compress_html:
   comments: all
   endings: all
   startings: []
-  blanklines: true # required for Mathjax
+  blank_lines: false
   profile: false
-
-# For the Mathjax script loaded in the head of all pages with page.mathjax
-mathjax:
-  source: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_CHTML
-  config: 'MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "AMS" } } })'
