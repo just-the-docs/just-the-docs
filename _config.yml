@@ -50,5 +50,5 @@ compress_html:
   comments: all
   endings: all
   startings: []
-  blank_lines: false
+  blanklines: false
   profile: false
