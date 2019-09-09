@@ -57,7 +57,7 @@ function initSearch() {
       lunr.tokenizer.separator = {{ site.search_tokenizer_separator }}
       {% else %}
       lunr.tokenizer.separator = /[\s\-/]+/
-      {% end %}
+      {% endif %}
       
       var index = lunr(function () {
         this.ref('id');
