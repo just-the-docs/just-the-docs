@@ -6,29 +6,35 @@
     <title>{{ page.title }} - {{ site.title }}</title>
 
     {% if page.description %}
-    <meta name="Description" content="{{ page.description }}">
+      <meta name="Description" content="{{ page.description }}">
     {% endif %}
   {% endif %}
 
-  <link rel="shortcut icon" href="{{ "favicon.ico" | absolute_url }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}" type="image/x-icon">
 
-  <link rel="stylesheet" href="{{ "/assets/css/just-the-docs.css" | absolute_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs.css' | absolute_url }}">
 
   {% if site.ga_tracking != nil %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
     <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', '{{ site.ga_tracking }}', '{{ site.url }}');
-      ga('send', 'pageview');
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', "{{ site.ga_tracking }}");
     </script>
-    <script async src="https://www.google-analytics.com/analytics.js"></script>
+
   {% endif %}
 
-  {% if site.search_enabled != nil %}
-    <script type="text/javascript" src="{{ "/assets/js/vendor/lunr.min.js" | absolute_url }}"></script>
+  {% if site.search_enabled != false %}
+    <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | absolute_url }}"></script>
   {% endif %}
-  <script type="text/javascript" src="{{ "/assets/js/just-the-docs.js" | absolute_url }}"></script>
+  <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% seo %}
+  {% seo %}
+
+  {% include head_custom.html %}
+
 </head>

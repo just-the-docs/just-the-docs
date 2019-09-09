@@ -6,6 +6,8 @@
 // stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type
 
 .page-content {
+  line-height: $content-line-height;
+
   a {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -110,5 +112,49 @@
   dd {
     margin-left: 1em;
     font-weight: 500;
+  }
+
+  .anchor-heading {
+    position: absolute;
+    right: -$sp-4;
+    width: $sp-5;
+    height: 100%;
+    padding-right: $sp-1;
+    padding-left: $sp-1;
+    overflow: visible;
+
+    @include mq(md) {
+      right: auto;
+      left: -$sp-5;
+    }
+
+    svg {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      fill: $link-color;
+      visibility: hidden;
+    }
+  }
+
+  .anchor-heading:hover,
+  h1:hover > .anchor-heading,
+  h2:hover > .anchor-heading,
+  h3:hover > .anchor-heading,
+  h4:hover > .anchor-heading,
+  h5:hover > .anchor-heading,
+  h6:hover > .anchor-heading {
+    svg {
+      visibility: visible;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    position: relative;
   }
 }
