@@ -22,11 +22,23 @@ Just the Docs has some specific configuration parameters that can be defined in 
 
 View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file as an example.
 
-## Search enabled
+## Site logo
+
+```yaml
+# Set a path/url to a logo that will be displayed instead of the title
+logo: "/assets/images/just-the-docs.png"
+```
+
+## Search
 
 ```yaml
 # Enable or disable the site search
+# Supports true (default) or false
 search_enabled: true
+
+# Enable support for hyphenated search words:
+search_tokenizer_separator: /[\s/]+/
+
 ```
 
 ## Aux links
@@ -34,8 +46,25 @@ search_enabled: true
 ```yaml
 # Aux links for the upper right navigation
 aux_links:
-    "Just the Docs on GitHub":
-      - "//github.com/pmarsceill/just-the-docs"
+  "Just the Docs on GitHub":
+    - "//github.com/pmarsceill/just-the-docs"
+```
+
+## Heading anchor links
+
+```yaml
+# Heading anchor links appear on hover over h1-h6 tags in page content
+# allowing users to deep link to a particular heading on a page.
+#
+# Supports true (default) or false/nil
+heading_anchors: true
+```
+
+## Footer content
+
+```yaml
+# Footer content appears at the bottom of every page's main content
+footer_content: "Copyright &copy; 2017-2019 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 ```
 
 ## Color scheme

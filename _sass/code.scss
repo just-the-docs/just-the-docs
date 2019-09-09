@@ -11,7 +11,8 @@ code {
   border-radius: $border-radius;
 }
 
-pre.highlight {
+pre.highlight,
+figure.highlight {
   padding: $sp-3;
   margin-bottom: 0;
   -webkit-overflow-scrolling: touch;
@@ -61,7 +62,7 @@ pre.highlight {
 .highlight .ld { color: #93a1a1; } // literal.date //
 .highlight .m { color: #2aa198; } // literal.number //
 .highlight .s { color: #2aa198; } // literal.string //
-.highlight .na { color: #93a1a1; } // name.attribute //
+.highlight .na { color: #555; } // name.attribute //
 .highlight .nb { color: #b58900; } // name.builtin //
 .highlight .nc { color: #268bd2; } // name.class //
 .highlight .no { color: #cb4b16; } // name.constant //
@@ -69,7 +70,7 @@ pre.highlight {
 .highlight .ni { color: #cb4b16; } // name.entity //
 .highlight .ne { color: #cb4b16; } // name.exception //
 .highlight .nf { color: #268bd2; } // name.function //
-.highlight .nl { color: #93a1a1; } // name.label //
+.highlight .nl { color: #555; } // name.label //
 .highlight .nn { color: #93a1a1; } // name.namespace //
 .highlight .nx { color: #555; } // name.other //
 .highlight .py { color: #93a1a1; } // name.property //

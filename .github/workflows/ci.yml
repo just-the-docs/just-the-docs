@@ -1,0 +1,35 @@
+on: [push]
+
+name: CI
+
+jobs:
+
+  jekyll:
+    name: Build Jekyll site
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@master
+
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run --rm \
+        --volume="${{ github.workspace }}:/srv/jekyll" \
+        jekyll/builder:3.8.5 /bin/bash -c "chmod 777 /srv/jekyll && jekyll build"
+        
+  css:
+    name: Stylelint
+    runs-on: ubuntu-latest
+    steps:
+    
+    - uses: actions/checkout@master
+
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v1
+      with:
+        version: 10.x
+
+    - name: npm install, build, and test
+      run: |
+        npm install
+        npm test

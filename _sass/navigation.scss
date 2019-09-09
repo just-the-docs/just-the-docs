@@ -1,33 +1,11 @@
 //
 // Main nav, breadcrumb, etc...
 //
-
-.site-title {
-  display: block;
-  flex: 1 1 auto;
-  color: $body-heading-color;
-  background-color: $sidebar-color;
-
-  @include mq(md) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 101;
-    height: 60px;
-    padding-top: $sp-4;
-    border-bottom: $border $border-color;
-  }
-}
-
 .navigation-list {
   padding: 0;
-  margin-top: $sp-4;
+  margin-top: 0;
   margin-bottom: 0;
   list-style: none;
-
-  @include mq(md) {
-    margin-top: 0;
-  }
 }
 
 .navigation-list-child-list {
@@ -90,8 +68,7 @@
 
 // Small screen nav
 
-.main-nav,
-.aux-nav {
+.main-nav {
   display: none;
 
   &.nav-open {
@@ -102,13 +79,8 @@
   }
 }
 
-.navigation-list-toggle {
-  position: absolute;
-  right: $sp-4;
-
-  @include mq(md) {
-    display: none !important;
-  }
+.aux-nav {
+  align-self: center;
 }
 
 // Breadcrumb nav
