@@ -2,7 +2,6 @@
 {%- for crumbsNode in crumbsNodes -%}
   {%- assign active = crumbsNode | active -%}
   {%- if active -%}
-    {%- assign active = false -%}
     <li class="breadcrumb-nav-list-item">
       {%- if crumbsNode.title == page.title -%}
         {{ crumbsNode.title }}
