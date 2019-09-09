@@ -1,7 +1,8 @@
 {%- assign crumbsNodes = site.html_pages | where_exp:"item", "item.parent == include.owner" -%}
 {%- for crumbsNode in crumbsNodes -%}
-  {%- assign active = crumbsNode | active -%}
+  {%- include active.html node=crumbsNode -%}
   {%- if active -%}
+    {%- assign active = false -%}
     <li class="breadcrumb-nav-list-item">
       {%- if crumbsNode.title == page.title -%}
         {{ crumbsNode.title }}

@@ -1,0 +1,7 @@
+{%- if page.url == include.node.url -%}
+  {%- assign active = true -%}
+{%- endif -%}
+{%- assign activityNodes = site.html_pages | where_exp:"item", "item.parent == include.node.title" -%}
+{%- for activityNode in activityNodes -%}
+  {%- include active.html node=activityNode -%}
+{%- endfor -%}
