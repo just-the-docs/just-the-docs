@@ -6,11 +6,10 @@
         <h4>{{ group.name }}</h4>
       {%- endif -%}
       {%- for node in group.items -%}
-        {%- include active.html node=node -%}
+        {%- assign active = node | active -%}
         <li class="navigation-list-item{% if active %} active{% endif %}">
           <a href="{{ node.url | absolute_url }}" class="navigation-list-link{% if active %} active{% endif %}">{{ node.title }}</a>
           {%- if active -%}
-            {%- assign active = false -%}
             {%- include nav.html class="-child-list" owner=node.title -%}
           {%- endif -%}
         </li>
