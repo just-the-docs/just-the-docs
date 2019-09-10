@@ -67,7 +67,7 @@ Sometimes you will want to create a page with many children (a section). First, 
 |
 |-- docs
 |   |-- ui-components
-|   |   |-- ui-components.md  (parent page)
+|   |   |-- index.md  (parent page)
 |   |   |-- buttons.md
 |   |   |-- code.md
 |   |   |-- labels.md
@@ -75,7 +75,7 @@ Sometimes you will want to create a page with many children (a section). First, 
 |   |   +-- typography.md
 |   |
 |   |-- utilities
-|   |   |-- utilities.md      (parent page)
+|   |   |-- index.md      (parent page)
 |   |   |-- color.md
 |   |   |-- layout.md
 |   |   |-- responsive-modifiers.md
@@ -88,9 +88,8 @@ Sometimes you will want to create a page with many children (a section). First, 
 +-- ..
 ```
 
-On the parent pages, add 2 YAML front matter parameters:
+On the parent pages, add this YAML front matter parameter:
 -  `has_children: true` (tells us that this is a parent page)
--  `permalink:` set this to the site directory that contains the child pages
 
 #### Example
 {: .no_toc }
@@ -101,7 +100,6 @@ layout: default
 title: UI Components
 nav_order: 2
 has_children: true
-permalink: /docs/ui-components
 ---
 ```
 
@@ -140,7 +138,6 @@ title: UI Components
 nav_order: 2
 has_children: true
 has_toc: false
-permalink: /docs/ui-components
 ---
 ```
 
