@@ -11,7 +11,7 @@
     "stylelint-selector-no-utility": "^4.0.0"
   },
   "dependencies": {
-    "@primer/css": "^12.6.0"
+    "@primer/css": "^12.7.0"
   },
   "scripts": {
     "test": "stylelint '**/*.scss'"
