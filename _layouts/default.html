@@ -83,6 +83,9 @@ layout: table_wrappers
           {% if site.footer_content != nil %}
             <hr>
             <footer role="contentinfo">
+              {% if page.last_modified_date %}
+              <p class="text-small text-grey-dk-000 mb-0">Page last modified: {{ page.last_modified_date | date: "%Y-%m-%d %H:%M" }}</p>
+              {% endif %}
               <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
             </footer>
           {% endif %}
