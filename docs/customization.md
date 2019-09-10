@@ -59,7 +59,7 @@ _Note:_ Editing the variables directly in `_sass/support/variables.scss` is not 
 
 ## Override styles
 
-To add your own CSS at the end of the cascade, edit `_sass/overrides.scss` to add in your own custom CSS. This will allow for all overrides to be kept in a single file, and allow for any upstream changes to still be allowed.
+For styles that aren't defined as a variables, you may want to modify specific CSS classes. To add your own CSS overrides at the end of the cascade, edit `_sass/overrides.scss`. This will allow for all overrides to be kept in a single file, and for any upstream changes to still be applied.
 
 For example, if you'd like to add your own styles for printing a page, you could add the following styles.
 
