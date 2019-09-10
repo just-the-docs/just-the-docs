@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
       toggleDarkMode.textContent = buttonCopy[0]
   }
 
-  addEvent(toggleDarkMode, 'click', function(){
+  jtd.addEvent(toggleDarkMode, 'click', function(){
     if (cssFile.getAttribute('href') === originalCssRef) {
       cssFile.setAttribute('href', darkModeCssRef)
       updateButtonText(toggleDarkMode)
