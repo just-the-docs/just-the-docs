@@ -10,8 +10,13 @@
 
     <div class="side-bar">
       <a href="{% if site.baseurl == "" or site.baseurl == nil %}/{% else %}{{site.baseurl}}{% endif %}" class="site-title fs-6 lh-tight">{{ site.title }}</a>
-      <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>
+      <span class="fs-3"><button class="js-main-nav-trigger navigation-list-toggle btn btn-outline" type="button" data-text-toggle="Hide">Menu</button></span>    
       <div class="navigation main-nav js-main-nav">
+
+        {% if site.google_custom_search_id != nil %}
+          <div class="gcse-search"></div>
+        {% endif %}
+    
         {% include nav.html %}
       </div>
       <footer role="contentinfo" class="site-footer">
@@ -35,7 +40,7 @@
 
     <div class="main-content-wrap">
       <div class="page-header">
-        <div class="main-content">
+        <div class="main-content">        
           {% if site.search_enabled != nil %}
           <div class="search js-search">
             <div class="search-input-wrap">

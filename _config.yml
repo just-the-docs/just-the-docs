@@ -24,6 +24,11 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 # Enable or disable the site search
 search_enabled: true
 
+# add a google custom search box
+# (see https://developers.google.com/custom-search/docs/element)
+# enter a search engine id in order to enable this
+google_custom_search_id: null
+
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":

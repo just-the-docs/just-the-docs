@@ -112,3 +112,42 @@
     background-color: darken($body-background-color, 2%);
   }
 }
+
+// google search styling
+
+// style reset for all children
+.gsc-control-cse * {
+  border: unset;
+  padding: unset;
+  margin: unset;
+  min-width: unset;
+  box-shadow: unset;
+  background-color: unset;
+}
+
+// override some values from the built-in gcse style
+.gsc-control-cse {
+  padding: 0px !important;
+  border: 0px !important;
+}
+
+.gsc-input {
+  padding: 0px !important;
+}
+
+.gsc-input-box {
+  border-radius: 3px;
+  border: none !important;
+}
+
+form.gsc-search-box {
+  margin: 0px !important;
+}
+
+input.gsc-input {
+  font-size: 12px !important;
+}
+
+.gsc-search-button {
+  padding: 6px !important; 
+}

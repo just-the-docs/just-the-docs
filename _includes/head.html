@@ -18,7 +18,9 @@
   <script type="text/javascript" src="{{ "/assets/js/just-the-docs.js" | absolute_url }}"></script>
   <script type="text/javascript" src="{{ "/assets/js/vendor/anchor.min.js" | absolute_url }}"></script>
 
-
+  {% if site.google_custom_search_id != nil %}
+  <script async src="https://cse.google.com/cse.js?cx={{ site.google_custom_search_id }}"></script>
+  {% endif %}
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
