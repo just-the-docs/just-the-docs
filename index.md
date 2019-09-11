@@ -9,7 +9,7 @@ permalink: /
 <!-- <img src="{{ '/assets/images/cityjson_logo.svg' | prepend: site.baseurl }}" width="200"> -->
 <img src="{{ '/assets/images/cityjson_logo.svg' | prepend: site.baseurl }}" width="600">
 
-A JSON-based encoding for 3D maquettes
+A JSON-based encoding for 3D city models
 {: .fs-6 .fw-300 }
 
 [Getting started]({{ '/help/users/getting-started/' | prepend: site.baseurl }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
@@ -20,7 +20,7 @@ A JSON-based encoding for 3D maquettes
 
 ---
 
-CityJSON is a [JSON-based](http://json.org) encoding for storing 3D maquettes, also called 3D city models or digital twins.
+CityJSON is a [JSON-based](http://json.org) encoding for storing 3D city models, also called digital maquettes or digital twins.
 
 The aim of CityJSON is to offer a compact and developer-friendly format, so that files can be easily visualised, manipulated, and edited.
 It was designed with programmers in mind, so that tools and APIs supporting it can be quickly built, and [several]({{ "/software/" | prepend: site.baseurl }}) have been created already.
