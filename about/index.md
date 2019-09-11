@@ -122,10 +122,3 @@ While its name otherwise implies, CityGML is not only a GML encoding, but is act
 
 CityJSON can be considered as the third implementation of the CityGML data model.
 
-
-## Is CityJSON an official OGC standard?
-
-No, and there are no concrete plans for CityJSON to become one.
-
-CityJSON was started, and is maintained, by the [3D geoinformation group at TU Delft](https://3d.bk.tudelft.nl).
-Others have since joined the development.

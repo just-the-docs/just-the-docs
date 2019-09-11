@@ -9,7 +9,7 @@ permalink: /
 <!-- <img src="{{ '/assets/images/cityjson_logo.svg' | prepend: site.baseurl }}" width="200"> -->
 <img src="{{ '/assets/images/cityjson_logo.svg' | prepend: site.baseurl }}" width="600">
 
-A compact and developer-friendly JSON-based encoding of the CityGML data model
+A JSON-based encoding for 3D maquettes
 {: .fs-6 .fw-300 }
 
 [Getting started]({{ '/help/users/getting-started/' | prepend: site.baseurl }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
@@ -20,10 +20,9 @@ A compact and developer-friendly JSON-based encoding of the CityGML data model
 
 ---
 
-CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [OGC CityGML](http://www.opengeospatial.org/standards/citygml) data model (version 2.0.0), which is an open standardised data model and exchange format (in [GML](http://www.opengeospatial.org/standards/gml)) to store digital 3D models of cities and landscapes. 
+CityJSON is a [JSON-based](http://json.org) encoding for storing 3D maquettes, also called 3D city models or digital twins.
 
-The aim of CityJSON is to offer an alternative to the GML encoding of CityGML, which can be verbose and complex (and thus rather frustrating to work with). 
-CityJSON aims at being easy-to-use, both for reading datasets, and for creating them.
+The aim of CityJSON is to offer a compact and developer-friendly format, so that files can be easily visualised, manipulated, and edited.
 It was designed with programmers in mind, so that tools and APIs supporting it can be quickly built, and [several]({{ "/software/" | prepend: site.baseurl }}) have been created already.
 
 We believe that you should use CityJSON because: 
@@ -33,16 +32,26 @@ We believe that you should use CityJSON because:
   3. files are on average [6X more compact](https://github.com/tudelft3d/cityjson/wiki/Compression-factor-for-a-few-open-CityGML-datasets) than their CityGML equivalent
   4. there is a [web-viewer](https://viewer.cityjson.org) where you can drag-and-drop a file
   5. you can easily manipulate files with [cjio](https://github.com/tudelft3d/cjio), you can for instance merge files, remove/filter objects, change the CRS, manage the textures, etc.
-  6. you can *easily* define [Extensions]({{ "/extensions/" | prepend: site.baseurl }}) to the core model (akin to ADEs) 
+  6. you can *easily* define [Extensions]({{ "/extensions/" | prepend: site.baseurl }}) to the core model 
   7. its development is [open on GitHub](https://github.com/tudelft3d/cityjson/issues/), it is supported by a vibrant community, and everyone is welcome to contribute
 
-
 ---
+
+## Is it an international standard?
+
+While CityJSON itself is not officially standardised, it is an encoding for a subset of the [OGC CityGML](http://www.opengeospatial.org/standards/citygml) data model (version 2.0.0), which is an open standardised data model and exchange format (in [GML](http://www.opengeospatial.org/standards/gml)) to store digital 3D models of cities and landscapes. 
+The few features that are not currently supported are either because they are seldom used, or because they would overcomplicate the JSON encoding; see the [CityGML compatibility page]({{ site.baseurl }}/citygml-compatibility/).
+
+And because we offer [bidirectional conversion between CityJSON and CityGML]({{ "/help/users/conversion/" | prepend: site.baseurl }}), using CityJSON means that you are using the CityGML data model.
+
+CityJSON was started, and is maintained, by the [3D geoinformation group at TU Delft](https://3d.bk.tudelft.nl).
+Others have since joined its development.
 
 ## Contributing to the project 
 
 We invite anyone to contribute to the development and improvement of CityJSON, all discussions, issues, and developments are open to everyone on the [GitHub repository of CityJSON](https://github.com/tudelft3d/cityjson).
 
+---
 
 ## If you use CityJSON in an academic context, please cite this article
 
