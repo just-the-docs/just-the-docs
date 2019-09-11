@@ -34,20 +34,7 @@ color_scheme: "dark"
 ```
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
-<script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-const cssFile = document.querySelector('[rel="stylesheet"]');
-const originalCssRef = cssFile.getAttribute('href');
-const darkModeCssRef = originalCssRef.replace('just-the-docs.css', 'dark-mode-preview.css');
-
-jtd.addEvent(toggleDarkMode, 'click', function(){
-  if (cssFile.getAttribute('href') === originalCssRef) {
-    cssFile.setAttribute('href', darkModeCssRef);
-  } else {
-    cssFile.setAttribute('href', originalCssRef);
-  }
-})
-</script>
+<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
 ## Specific visual customization
 
@@ -69,3 +56,20 @@ $link-color: $blue-000;
 ```
 
 _Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
+
+## Override styles
+
+For styles that aren't defined as a variables, you may want to modify specific CSS classes. To add your own CSS overrides at the end of the cascade, edit `_sass/overrides.scss`. This will allow for all overrides to be kept in a single file, and for any upstream changes to still be applied.
+
+For example, if you'd like to add your own styles for printing a page, you could add the following styles.
+
+#### Example
+{: .no_toc }
+
+```scss
+// Print-only styles.
+@media print {
+  .side-bar, .page-header { display: none; }
+  .main-content { max-width: auto; margin: 1em;}
+}
+```
