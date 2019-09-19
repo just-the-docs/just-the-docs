@@ -5,7 +5,7 @@ categories: news
 date: 2019-09-19 07:37
 ---
 
-<img src="{{ site.baseurl }}/img/2019/example_Delft.png"/>
+<img src="{{ site.baseurl }}/img/2019/example_delft.png"/>
 
 The "offical" web-viewer ([viewer.cityjson.org](https://viewer.cityjson.org/)) has been greatly improved by [Felix Dahle](https://github.com/fdahle) for the course [Research Assignment](https://3d.bk.tudelft.nl/courses/geo5010/) in the [Msc Geomatics at Delft University of Technology](https://geomatics.tudelft.nl).
 
@@ -18,4 +18,4 @@ The improvements:
   - shadow support for presentation
   - smoother controls
 
-  
+
