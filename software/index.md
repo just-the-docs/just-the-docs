@@ -56,6 +56,17 @@ Free and open-source software are marked by <img height="15" src="{{ '/assets/im
 
 - - -
 
+## DBMS storage
+{% for i in software %}
+{% for cat in i.category %}
+{% if cat contains 'storage' %}
+<p><a href="{{ i.webpage }}"><b>{{ i.name }}</b></a> {% if i.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}<br/> {{ i.description | markdownify | remove: '<p>' | remove: '</p>' }} </p>
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+- - -
+
 ## Parsers and API for programmers
 {% for i in software %}
 {% for cat in i.category %}

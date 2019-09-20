@@ -9,11 +9,12 @@
 #   - applications
 
 
-# - name: 3D City Database
-#   webpage: http://www.3dcitydb.org
-#   description: Free geo database to store, represent, and manage virtual 3D city models on top of a standard spatial relational database (PostGIS and Oracle)
-#   foss: true
-#   category: storage
+- name: 3D City Database
+  webpage: http://www.3dcitydb.org
+  description: Free geo-database to store, represent, and manage virtual 3D city models on top of a standard spatial relational database (PostGIS and Oracle)
+  foss: true
+  category: 
+    - storage
 
 - name: 3dfier
   webpage: https://github.com/tudelft3d/3dfier
