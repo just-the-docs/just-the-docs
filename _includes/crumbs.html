@@ -1,5 +1,4 @@
-{%- assign crumbsNodes = site.html_pages | where_exp:"item", "item.parent == include.owner" -%}
-{%- for crumbsNode in crumbsNodes -%}
+{%- for crumbsNode in include.nodes -%}
   {%- include active.html node=crumbsNode -%}
   {%- if active -%}
     {%- assign active = false -%}
@@ -10,6 +9,7 @@
         <a href="{{ crumbsNode.url | absolute_url }}">{{ crumbsNode.title }}</a>
       {%- endif -%}
     </li>
+    {%- assign crumbsChildren = hierarchy | where_exp:"item", "item.name == crumbsNode.title" | map: "items" | first -%}
+    {%- include crumbs.html nodes=crumbsChildren -%}
   {%- endif -%}
-  {%- include crumbs.html owner=crumbsNode.title -%}
 {%- endfor -%}

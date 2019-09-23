@@ -1,4 +1,4 @@
-{%- assign groups = site.html_pages | where_exp:"item", "item.nav_exclude != true" | where_exp:"item", "item.parent == include.owner" | sort:"title" | sort:"nav_order" | group_by:"category" | sort:"name" -%}
+{%- assign groups = include.nodes | group_by:"category" | sort:"name" -%}
 {%- if groups.size > 0 -%}
   <ul class="navigation-list{{ include.class }}">
     {%- for group in groups -%}
@@ -11,7 +11,8 @@
           <a href="{{ node.url | absolute_url }}" class="navigation-list-link{% if active %} active{% endif %}">{{ node.title }}</a>
           {%- if active -%}
             {%- assign active = false -%}
-            {%- include nav.html class="-child-list" owner=node.title -%}
+            {%- assign children = hierarchy | where_exp:"item", "item.name == node.title" | map: "items" | first | default: site.emptyArray -%}
+            {%- include nav.html class="-child-list" nodes=children -%}
           {%- endif -%}
         </li>
       {%- endfor -%}

@@ -52,3 +52,6 @@ compress_html:
   startings: []
   blank_lines: false
   profile: false
+
+# to be used in templates
+emptyArray: []

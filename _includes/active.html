@@ -1,7 +1,8 @@
 {%- if page.url == include.node.url -%}
   {%- assign active = true -%}
+{%- else -%}
+  {%- assign activityChildren = hierarchy | where_exp:"item", "item.name == include.node.title" | map: "items" | first -%}
+  {%- for activityNode in activityChildren -%}
+    {%- include active.html node=activityNode -%}
+  {%- endfor -%}
 {%- endif -%}
-{%- assign activityNodes = site.html_pages | where_exp:"item", "item.parent == include.node.title" -%}
-{%- for activityNode in activityNodes -%}
-  {%- include active.html node=activityNode -%}
-{%- endfor -%}

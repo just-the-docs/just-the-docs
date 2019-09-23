@@ -2,6 +2,11 @@
 layout: table_wrappers
 ---
 
+{%- assign sorted_nodes = site.html_pages | sort:"title" | sort:"nav_order" -%}
+{%- assign hierarchy = sorted_nodes | group_by:"parent" -%}
+{%- assign top_nodes = hierarchy | where_exp:"item", "item.name == ''" | map: "items" | first -%}
+{%- assign nav_nodes = top_nodes | where_exp:"item", "item.nav_exclude != true" -%}
+
 <!DOCTYPE html>
 
 <html lang="{{ site.lang | default: "en-US" }}">
@@ -17,7 +22,7 @@ layout: table_wrappers
 
       <div class="navigation main-nav js-main-nav">
         <nav aria-label="Main navigation" role="navigation">
-          {%- include nav.html -%}
+          {%- include nav.html nodes=nav_nodes -%}
         </nav>
       </div>
       <footer class="site-footer">
@@ -49,7 +54,7 @@ layout: table_wrappers
             {% if page.parent %}
               <nav class="breadcrumb-nav">
                 <ol class="breadcrumb-nav-list">
-                  {%- include crumbs.html -%}
+                  {%- include crumbs.html nodes=top_nodes -%}
                 </ol>
               </nav>
             {% endif %}
