@@ -2,10 +2,9 @@
 layout: table_wrappers
 ---
 
-{%- assign sorted_nodes = site.html_pages | sort:"title" | sort:"nav_order" -%}
-{%- assign hierarchy = sorted_nodes | group_by:"parent" -%}
+{%- assign hierarchy = site.html_pages | where_exp:"item", "item.nav_exclude != true" | sort:"title" | sort:"nav_order" | group_by:"parent" -%}
 {%- assign top_nodes = hierarchy | where_exp:"item", "item.name == ''" | map: "items" | first -%}
-{%- assign nav_nodes = top_nodes | where_exp:"item", "item.nav_exclude != true" -%}
+{%- assign empty_array = "" | split: "," -%}
 
 <!DOCTYPE html>
 
@@ -22,7 +21,7 @@ layout: table_wrappers
 
       <div class="navigation main-nav js-main-nav">
         <nav aria-label="Main navigation" role="navigation">
-          {%- include nav.html nodes=nav_nodes -%}
+          {%- include nav.html nodes=top_nodes -%}
         </nav>
       </div>
       <footer class="site-footer">
