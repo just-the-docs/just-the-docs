@@ -4,7 +4,6 @@ layout: table_wrappers
 
 {%- assign hierarchy = site.html_pages | where_exp:"item", "item.nav_exclude != true" | sort:"title" | sort:"nav_order" | group_by:"parent" -%}
 {%- assign top_nodes = hierarchy | where_exp:"item", "item.name == ''" | map: "items" | first -%}
-{%- assign empty_array = "" | split: "," -%}
 
 <!DOCTYPE html>
 

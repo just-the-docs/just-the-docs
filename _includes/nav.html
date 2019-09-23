@@ -11,8 +11,10 @@
           <a href="{{ node.url | absolute_url }}" class="navigation-list-link{% if active %} active{% endif %}">{{ node.title }}</a>
           {%- if active -%}
             {%- assign active = false -%}
-            {%- assign children = hierarchy | where_exp:"item", "item.name == node.title" | map: "items" | first | default: empty_array -%}
-            {%- include nav.html class="-child-list" nodes=children -%}
+            {%- assign children = hierarchy | where_exp:"item", "item.name == node.title" | map: "items" | first -%}
+            {%- if children -%}
+              {%- include nav.html class="-child-list" nodes=children -%}
+            {%- endif -%}
           {%- endif -%}
         </li>
       {%- endfor -%}
