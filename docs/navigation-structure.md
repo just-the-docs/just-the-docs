@@ -88,7 +88,7 @@ Sometimes you will want to create a page with many children (a section). First, 
 +-- ..
 ```
 
-On the parent pages, add 2 YAML front matter parameters:
+On the parent pages, add a YAML front matter parameter:
 -  `permalink:` set this to the site directory that contains the child pages
 
 #### Example
