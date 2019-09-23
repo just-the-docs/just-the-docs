@@ -5,15 +5,13 @@ nav_order: 5
 ---
 
 # Navigation Structure
-
 {: .no_toc }
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
 1. TOC
-   {:toc}
+{:toc}
 
 ---
 
@@ -30,7 +28,6 @@ By default, all pages will appear as top level pages in the main nav unless a pa
 To specify a page order, use the `nav_order` parameter in your pages' YAML front matter.
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -39,7 +36,6 @@ layout: default
 title: Customization
 nav_order: 4
 ---
-
 ```
 
 ---
@@ -49,7 +45,6 @@ nav_order: 4
 For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -58,7 +53,6 @@ layout: default
 title: 404
 nav_exclude: true
 ---
-
 ```
 
 ---
@@ -95,7 +89,6 @@ Sometimes you will want to create a page with many children (a section). First, 
 ```
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -104,19 +97,16 @@ layout: default
 title: UI Components
 nav_order: 2
 ---
-
 ```
 
 Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, which has children and is ordered second in the main nav.
 
 ### Child pages
-
 {: .text-gamma }
 
 On child pages, simply set the `parent:` YAML front matter to whatever the parent's page title is and set a nav order (this number is now scoped within the section).
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -126,7 +116,6 @@ title: Buttons
 parent: UI Components
 nav_order: 2
 ---
-
 ```
 
 The Buttons page appears as a child of UI Components and appears second in the UI Components section.
@@ -136,7 +125,6 @@ The Buttons page appears as a child of UI Components and appears second in the U
 By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set `has_toc: false` in the parent page's YAML front matter.
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -146,17 +134,14 @@ title: UI Components
 nav_order: 2
 has_toc: false
 ---
-
 ```
 
 ### Children with children
-
 {: .text-gamma }
 
 Child pages can also have children.
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -166,7 +151,6 @@ title: Buttons
 parent: UI Components
 nav_order: 2
 ---
-
 ```
 
 ```yaml
@@ -176,7 +160,6 @@ title: Buttons Child Page
 parent: Buttons
 nav_order: 1
 ---
-
 ```
 
 This would create the following navigation structure:
@@ -204,7 +187,6 @@ A category is not a page/link itself, it simply renders an `h4` tag above a
 group of links, and is entirely optional.
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -213,7 +195,6 @@ layout: default
 category: Category 1
 title: Page 1
 ---
-
 ```
 
 ```yaml
@@ -222,7 +203,6 @@ layout: default
 category: Category 2
 title: Page 2
 ---
-
 ```
 
 ```yaml
@@ -231,7 +211,6 @@ layout: default
 category: Category 1
 title: Page 3
 ---
-
 ```
 
 This will result in the following menu structure:
@@ -252,7 +231,6 @@ Page 2
 To add a auxiliary navigation item to your site (in the upper right on all pages), add it to the `aux_nav` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-nav) in your site's `_config.yml` file.
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -269,20 +247,17 @@ aux_links:
 To generate a Table of Contents on your docs pages, you can use the `{:toc}` method from Kramdown, immediately after an `<ol>` in Markdown. This will automatically generate an ordered list of anchor links to various sections of the page based on headings and heading levels. There may be occasions where you're using a heading and you don't want it to show up in the TOC, so to skip a particular heading use the `{: .no_toc }` CSS class.
 
 #### Example
-
 {: .no_toc }
 
 ```markdown
 # Navigation Structure
-
 {: .no_toc }
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
 1. TOC
-   {:toc}
+{:toc}
 ```
 
 This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself.
