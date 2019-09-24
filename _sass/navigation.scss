@@ -42,16 +42,6 @@
   @include mq(md) {
     @include fs-3;
   }
-
-  .navigation-list-child-list {
-    display: none;
-  }
-
-  &.active {
-    .navigation-list-child-list {
-      display: block;
-    }
-  }
 }
 
 .navigation-list-link {
