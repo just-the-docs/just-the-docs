@@ -27,6 +27,11 @@ function initNav() {
   const mainNav = document.querySelector('.js-main-nav');
   const pageHeader = document.querySelector('.js-page-header');
   const navTrigger = document.querySelector('.js-main-nav-trigger');
+  const activeItem = mainNav.querySelector('.active');
+
+  if (activeItem) {
+    activeItem.scrollIntoView();
+  }
 
   jtd.addEvent(navTrigger, 'click', function(e){
     e.preventDefault();
