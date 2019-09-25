@@ -81,7 +81,7 @@ Free and open-source software are marked by <img height="15" src="{{ '/assets/im
 
 ## Validators of different aspects of CityGML
 
-(look at the [tutorial on validation]({{ "/tutorials/validation/" | prepend: site.baseurl }}) where more details are available)
+(look at the [tutorial on validation]({{ "/help/users/validation/" | prepend: site.baseurl }}) where more details are available)
 
 {% for i in software %}
 {% for cat in i.category %}
