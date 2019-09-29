@@ -14,7 +14,7 @@ permalink: /citygml-compatibility/
 {:toc}
 
 
-## CityGML modules and characteristics supported
+## CityGML features supported
 
 CityJSON implements most of the data model, and *all* the CityGML modules have been mapped to CityJSON objects. 
 However, for the sake of simplicity and efficiency, some modules and features have been omitted and/or simplified. 
@@ -43,7 +43,7 @@ The CityGML class `TexCoordGen` is not supported, ie one must specify the UV coo
 ADEs (Application Domain Extensions) are also supported, see the [Extensions page]({{ site.baseurl }}/extensions/) .
 
 
-## Other CityGML modules and characteristics not supported
+## CityGML features not supported
 
 1.  in CityGML most objects can have an ID (usually `gml:id`), that is one Building can have an ID, but also each 3D primitive forming its geometry can have an ID. In CityJSON, only specs\_cityobjects can have IDs, and each specs\_semantics.
 2.  no support for arbitrary coordinate reference systems (CRSs). Only an [EPSG code](https://epsg.io) can be used. Furthermore, all geometries in a given CityJSON must be using the same CRS.
@@ -51,6 +51,6 @@ ADEs (Application Domain Extensions) are also supported, see the [Extensions pag
 4.  no *ClosureSurface*
 
 
-## Modules and features not supported in CityGML
+## New features (not in CityGML)
 
 CityJSON has built-in support for the metadata of a dataset (and is ISO 19115-compliant), while, surprisingly, CityGML does not offer that possibility.

@@ -42,7 +42,7 @@ We believe that you should use CityJSON because:
 While CityJSON itself is not officially standardised, it is an encoding for a subset of the [OGC CityGML](http://www.opengeospatial.org/standards/citygml) data model (version 2.0.0), which is an open standardised data model and exchange format (in [GML](http://www.opengeospatial.org/standards/gml)) to store digital 3D models of cities and landscapes. 
 The few features that are not currently supported are either because they are seldom used, or because they would overcomplicate the JSON encoding; see the [CityGML compatibility page]({{ site.baseurl }}/citygml-compatibility/).
 
-And because we offer [bidirectional conversion between CityJSON and CityGML]({{ "/help/users/conversion/" | prepend: site.baseurl }}), using CityJSON means that you are using the CityGML data model.
+And because we offer [bidirectional conversion]({{ "/help/users/conversion/" | prepend: site.baseurl }}) between CityJSON and CityGML, using CityJSON means that you are using the CityGML data model.
 
 CityJSON was started, and is maintained, by the [3D geoinformation group at TU Delft](https://3d.bk.tudelft.nl).
 Others have since joined its development.
