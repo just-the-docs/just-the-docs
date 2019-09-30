@@ -48,7 +48,6 @@ ADEs (Application Domain Extensions) are also supported, see the [Extensions pag
 1.  in CityGML most objects can have an ID (usually `gml:id`), that is one Building can have an ID, but also each 3D primitive forming its geometry can have an ID. In CityJSON, only specs\_cityobjects can have IDs, and each specs\_semantics.
 2.  no support for arbitrary coordinate reference systems (CRSs). Only an [EPSG code](https://epsg.io) can be used. Furthermore, all geometries in a given CityJSON must be using the same CRS.
 3.  no support for the topological relationships that can be defined, eg *relativeToTerrain* and *relativeToWater*
-4.  no *ClosureSurface*
 
 
 ## New features (not in CityGML)
