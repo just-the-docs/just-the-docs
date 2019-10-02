@@ -43,7 +43,15 @@ layout: table_wrappers
           {% if site.aux_links != nil %}
             <ul class="list-style-none text-small aux-nav">
               {% for link in site.aux_links %}
-                <li class="d-inline-block my-0{% unless forloop.last %} mr-2{% endunless %}"><a href="{{ link.last }}">{{ link.first }}</a></li>
+                <li class="d-inline-block my-0{% unless forloop.last %} mr-2{% endunless %}">
+                  {% if site.aux_links_new_tab %}
+                  <a href="{{ link.last }}" target="_blank" rel="noopener noreferrer">
+                  {% else %}
+                  <a href="{{ link.last }}">
+                  {% endif %}
+                    {{ link.first }}
+                  </a>
+                </li>
               {% endfor %}
             </ul>
           {% endif %}
