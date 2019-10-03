@@ -39,7 +39,7 @@ We first need to define the new attributes and specify that they can be used for
       "uom": { "type": "string" }
     },
     "required": [ "value", "uom" ],
-    "additionalProperties": "false"
+    "additionalProperties": false
   }
 },
 "extraAttributes": {

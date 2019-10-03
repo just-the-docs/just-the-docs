@@ -2,8 +2,8 @@
   "type": "CityJSON_Extension",
   "name": "Noise",
   "uri": "http://someurl.org/noise.json",
-  "version": "1.0",
-  "description": "Extension for Noise Immission Simulation",
+  "version": "1.0.0",
+  "description": "Extension for Noise Emmission Simulation",
   
   "definitions": {
     "measure": {
@@ -13,7 +13,7 @@
         "uom": { "type": "string" }
       },
       "required": [ "value", "uom" ],
-      "additionalProperties": "false"
+      "additionalProperties": false
     },
     
     "train": {
@@ -32,7 +32,7 @@
         "speedNight": { "$ref": "#/definitions/measure" },
         "additionalCorrectionTrain": { "$ref": "#/definitions/measure" }
       },
-      "additionalProperties": "false"
+      "additionalProperties": false
     }
   },
   
