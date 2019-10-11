@@ -38,6 +38,10 @@ nav_order: 4
 ---
 ```
 
+The specified `nav_order` parameters on a site should be all integers or all strings.
+Pages without a `nav_order` parameter are ordered alphabetically by their `title`,
+and appear after the explicitly-ordered pages at each level.
+
 ---
 
 ## Excluding pages
