@@ -225,3 +225,16 @@ To generate a Table of Contents on your docs pages, you can use the `{:toc}` met
 ```
 
 This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself.
+
+## External Navigation
+
+To add external links to the navbar, add it to the `external_navigation` configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#external_navigation) in your site's `_config.yml` file. All external links will appear other items in the nav bar.
+
+### Example
+
+```yaml
+# External Links
+external_navigation:
+  - url: https://github.com/pmarsceill/just-the-docs
+    title: "Just the Docs on GitHub"
+```

@@ -50,6 +50,15 @@ aux_links:
     - "//github.com/pmarsceill/just-the-docs"
 ```
 
+## External navigation
+
+```yaml
+# External Links
+external_navigation:
+  - url: https://github.com/pmarsceill/just-the-docs
+    title: "Just the Docs on GitHub"
+```
+
 ## Heading anchor links
 
 ```yaml

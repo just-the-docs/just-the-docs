@@ -36,5 +36,11 @@
         {%- endif -%}
       {%- endunless -%}
     {%- endfor -%}
+    {%- assign external_navigation = site.external_navigation -%}
+    {%- for link in external_navigation -%}
+      <li class="navigation-list-item">
+        <a href="{{ link.url | absolute_url }}" class="navigation-list-link">{{ link.title }}</a>
+      </li>
+    {%- endfor -%}
   </ul>
 </nav>
