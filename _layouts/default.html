@@ -77,7 +77,7 @@ layout: table_wrappers
             {% assign children_list = site.pages | sort:"nav_order" %}
             <ul>
               {% for child in children_list %}
-                {% if child.parent == page.title and child.title != page.title %}
+                {% if child.parent == page.title and child.title != page.title and child.grand_parent == page.parent %}
                 <li>
                   <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
                 </li>
