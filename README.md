@@ -63,6 +63,14 @@ Your theme is set up just like a normal Jekyll site! To test your theme, run `bu
 
 When the theme is released, only the files in `_layouts`, `_includes`, and `_sass` tracked with Git will be released.
 
+## Upgrade your links (Jekyll 4+)
+
+Since Jekyll 4+ the tags `link` and `post_url` include the relative_url. You should no longer prepend `{{ site.baseurl }}` to them.
+
+For further details: 
+- https://github.com/jekyll/jekyll/pull/6727
+- https://github.com/jekyll/jekyll/pull/7589
+
 ## License
 
 The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
