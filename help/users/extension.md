@@ -176,7 +176,7 @@ The steps to follow are thus:
 
 ## Validation of the CityJSON_Extension file
 
-We offer a small [validation script](https://github.com/tudelft3d/cityjson-software/tree/master/validate-extension) for the CityJSON_Extension.
+We offer a small [validation script](https://github.com/cityjson/cityjson-example-code/tree/master/validate-extension) for the CityJSON_Extension.
 
 For it to function properly, you need to add the CityJSON_Extension file (`noise.json` in our case) in the folder `/extensions` of the [CityJSON schemas]({{ '/schemas/' | prepend: site.baseurl }}); you need to download them locally. 
 The files will therefore be structured as follows:
@@ -209,7 +209,7 @@ The validation of a CityJSON file containing extensions needs to be performed as
   2.  Each City Object defined in the Extensions is (individually) validated against its schema defined in the new schema file.
 
 While this could be done with any JSON schema validator, resolving all the JSON references could be slightly tricky. 
-Thus, [cjio](https://github.com/tudelft3d/cjio) (with the option `--validate`) has automated this process. 
+Thus, [cjio](https://github.com/cityjson/cjio) (with the option `--validate`) has automated this process. 
 
 You just need to add the CityJSON_Extension files in the folder `/extensions`, as explained above.
 Then specify the folder where the schemas are with the option `--folder_schemas`.

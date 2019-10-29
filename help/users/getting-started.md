@@ -38,7 +38,7 @@ One of them is [azul](https://itunes.apple.com/nl/app/azul/id1173239678?mt=12), 
 
 ## Manipulate and edit it with cjio
 
-Manually editing a file is error-prone, so instead you can use [cjio](https://github.com/tudelft3d/cjio).
+Manually editing a file is error-prone, so instead you can use [cjio](https://github.com/cityjson/cjio).
 It can be used to manipulate, edit, and validate CityJSON files.
 
 You must have Python (version >3.5) installed, and [pip](https://pypi.org/project/pip/).

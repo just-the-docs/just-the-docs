@@ -26,7 +26,7 @@ These are based on the [JSON Schema project](https://json-schema.org/).
 To validate a given file you can use any software listed [here](https://json-schema.org/implementations.html#validators).
 However, it is rather tricky to stitch all the schemas together, and the handling of [Extensions]({{ '/extensions/' | prepend: site.baseurl }}) will not work.
 
-The "official validator" for CityJSON is [cjio](https://github.com/tudelft3d/cjio) with the operator `validate`.
+The "official validator" for CityJSON is [cjio](https://github.com/cityjson/cjio) with the operator `validate`.
 If you installed cjio, then the schemas are built-in and can be used readily.
 
 To validate the file [twobuilding.json](../files/twobuildings.json), simply `cjio twobuildings.json validate`

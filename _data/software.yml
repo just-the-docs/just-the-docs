@@ -24,7 +24,7 @@
     - generator
 
 - name: cjio
-  webpage: https://github.com/tudelft3d/cjio
+  webpage: https://github.com/cityjson/cjio
   description: Python CLI to process and manipulate CityJSON files. Used as the 'official' validator for CityJSON files.
   foss: true
   category: 
