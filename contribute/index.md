@@ -9,12 +9,12 @@ While this website is made and maintained by the [3D Geoinformation group at the
 
 ## Errors or improvements in the specifications or schemas?
 
-Use [https://github.com/cityjson/specs](https://github.com/cityjson/specs)
+[<i class="fas fa-external-link-alt"></i> https://github.com/cityjson/specs](https://github.com/cityjson/specs)
 
 
 ## Errors in this website?
 
-Its source code is open: [https://github.com/tudelft3d/cityjson-website](https://github.com/cityjson/website)
+[<i class="fas fa-external-link-alt"></i> https://github.com/cityjson/website](https://github.com/cityjson/website)
 
 
 ## How to contribute?
