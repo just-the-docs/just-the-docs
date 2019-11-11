@@ -67,6 +67,17 @@ heading_anchors: true
 footer_content: "Copyright &copy; 2017-2019 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 ```
 
+## Footer links
+
+```yaml
+# Footer links appears at the bottom of every page's main content (overrides "footer_content" if defined)
+footer_links:
+  "Just the Docs on GitHub":
+    - "//github.com/pmarsceill/just-the-docs"
+  "Just the Docs on GitHub":
+    - "//github.com/pmarsceill/just-the-docs"
+```
+
 ## Color scheme
 
 ```yaml
