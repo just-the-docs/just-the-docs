@@ -97,6 +97,11 @@ layout: table_wrappers
                 {% endfor %}
               </ul>
             </footer>
+          {% elsif site.footer_content != nil %}
+            <hr>
+            <footer role="contentinfo">
+              <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
+            </footer>
           {% endif %}
         </div>
       </div>
