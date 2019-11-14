@@ -96,7 +96,7 @@ layout: table_wrappers
               {% endif %}
               {% if site.show_gh_edit_link and site.edit_link_text %}
               <p class="text-small text-grey-dk-000 mb-0">
-                <a href="{{ site.gh_edit_repository }}/tree/master/{{ page.path }}">Edit this page on GitHub.</a>
+                <a href="{{ site.gh_edit_repository }}/tree/master/{{ page.path }}">{{ site.edit_link_text }}</a>
               </p>
               {% endif %}
               {% if site.footer_content != nil %}

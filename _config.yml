@@ -45,7 +45,7 @@ show_last_edit_time: true
 last_edit_time_format: "%b %e %Y at %I:%M %p"
 show_gh_edit_link: true
 gh_edit_repository: "https://github.com/pmarsceill/just-the-docs"
-edit_link_text: "Edit this page on GitHub"
+edit_link_text: "Edit this page on GitHub."
 
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nil
