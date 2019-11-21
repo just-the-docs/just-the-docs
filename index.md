@@ -51,7 +51,7 @@ Others have since joined its development.
 
 ## Contributing to the project 
 
-We invite anyone to contribute to the development and improvement of CityJSON, all discussions, issues, and developments are open to everyone on the [GitHub repository of CityJSON](https://github.com/cityjson/specsove).
+We invite anyone to contribute to the development and improvement of CityJSON, all discussions, issues, and developments are open to everyone on the [GitHub repository of CityJSON](https://github.com/cityjson/specs).
 
 ---
 
