@@ -9,6 +9,15 @@
 #   - applications
 
 
+- name: Blender plugin
+  webpage: https://github.com/cityjson/Blender-CityJSON-Plugin
+  description: Plugin to open/import directly CityJSON models in Blender, attributes and semantics are kept.
+  foss: true
+  category: 
+    - viewer
+    - manipulator
+    - applications
+
 - name: 3D City Database
   webpage: http://www.3dcitydb.org
   description: Free geo-database to store, represent, and manage virtual 3D city models on top of a standard spatial relational database (PostGIS and Oracle)
