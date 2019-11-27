@@ -20,9 +20,9 @@
     .nav-list-link {
       display: block;
       min-height: $nav-list-item-height-sm;
-      line-height: #{$nav-list-item-height-sm - 2 * $sp-1};
       padding-top: $sp-1;
       padding-bottom: $sp-1;
+      line-height: #{$nav-list-item-height-sm - 2 * $sp-1};
       @if $nav-list-expander-right {
         padding-right: $nav-list-item-height-sm;
         padding-left: $gutter-spacing-sm;
@@ -50,7 +50,7 @@
 
       &:hover,
       &.active {
-        background-color: $feedback-color;
+        background-image: linear-gradient(-90deg, rgba($feedback-color, 1) 0%, rgba($feedback-color, 0.8) 80%, rgba($feedback-color, 0) 100%);
       }
     }
 
@@ -77,7 +77,7 @@
       }
 
       &:hover {
-        background-color: $feedback-color;
+        background-image: linear-gradient(-90deg, rgba($feedback-color, 1) 0%, rgba($feedback-color, 0.8) 100%);
       }
 
       @if $nav-list-expander-right {
