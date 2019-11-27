@@ -37,24 +37,36 @@ function initNav() {
 
   const siteNav = document.getElementById('site-nav');
   const mainHeader = document.getElementById('main-header');
-  const navTrigger = document.getElementById('site-nav-trigger');
+  const menuButton = document.getElementById('menu-button');
 
-  jtd.addEvent(navTrigger, 'click', function(e){
+  jtd.addEvent(menuButton, 'click', function(e){
     e.preventDefault();
-    var text = navTrigger.innerText;
-    var textToggle = navTrigger.getAttribute('data-text-toggle');
 
-    siteNav.classList.toggle('nav-open');
-    mainHeader.classList.toggle('nav-open');
-    navTrigger.classList.toggle('nav-open');
-    navTrigger.innerText = textToggle;
-    navTrigger.setAttribute('data-text-toggle', text);
-    textToggle = text;
-  })
+    if (menuButton.classList.toggle('nav-open')) {
+      siteNav.classList.add('nav-open');
+      mainHeader.classList.add('nav-open');
+    } else {
+      siteNav.classList.remove('nav-open');
+      mainHeader.classList.remove('nav-open');
+    }
+  });
+
+  {% if site.search_enabled != false -%}
+  const searchInput = document.getElementById('search-input');
+  const searchButton = document.getElementById('search-button');
+
+  jtd.addEvent(searchButton, 'click', function(e){
+    e.preventDefault();
+
+    mainHeader.classList.add('nav-open');
+    searchInput.focus();
+  });
+  {%- endif %}
 }
 
 // Site search
 
+{% if site.search_enabled != false -%}
 function initSearch() {
   var request = new XMLHttpRequest();
   request.open('GET', '{{ "assets/js/search-data.json" | absolute_url }}', true);
@@ -106,10 +118,12 @@ function initSearch() {
     var docs = data;
     var searchInput = document.getElementById('search-input');
     var searchResults = document.getElementById('search-results');
+    var mainContentWrap = document.getElementById('main-content-wrap');
 
     function hideResults() {
       searchResults.innerHTML = '';
       searchResults.classList.remove('active');
+      mainContentWrap.classList.remove('blur');
     }
 
     jtd.addEvent(searchInput, 'keydown', function(e){
@@ -188,6 +202,7 @@ function initSearch() {
 
       if (results.length > 0) {
         searchResults.classList.add('active');
+        mainContentWrap.classList.add('blur');
         var resultsList = document.createElement('ul');
         resultsList.classList.add('search-results-list');
         searchResults.appendChild(resultsList);
@@ -289,6 +304,7 @@ function initSearch() {
     });
   }
 }
+{%- endif %}
 
 // Focus
 
@@ -314,9 +330,9 @@ jtd.setTheme = function(theme) {
 jtd.onReady(function(){
   initNav();
   pageFocus();
-  if (typeof lunr !== 'undefined') {
-    initSearch();
-  }
+  {% if site.search_enabled != false -%}
+  initSearch();
+  {%- endif %}
 });
 
 })(window.jtd = window.jtd || {});
