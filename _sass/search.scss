@@ -68,7 +68,7 @@
   order: 1;
 }
 
-.search-results-wrap {
+.search-results {
   position: absolute;
   z-index: 100;
   display: none;
@@ -112,7 +112,7 @@
 
   &:hover,
   &.active {
-    background-color: $sidebar-color;
+    background-color: $feedback-color;
   }
 
   @include mq(md) {
