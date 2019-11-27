@@ -38,7 +38,6 @@ search_enabled: true
 
 # Enable support for hyphenated search words:
 search_tokenizer_separator: /[\s/]+/
-
 ```
 
 ## Aux links
@@ -56,7 +55,7 @@ aux_links:
 # Heading anchor links appear on hover over h1-h6 tags in page content
 # allowing users to deep link to a particular heading on a page.
 #
-# Supports true (default) or false/nil
+# Supports true (default) or false
 heading_anchors: true
 ```
 
@@ -70,8 +69,8 @@ footer_content: "Copyright &copy; 2017-2019 Patrick Marsceill. Distributed by an
 ## Color scheme
 
 ```yaml
-# Color scheme currently only supports "dark" or nil (default)
-color_scheme: "dark"
+# Color scheme supports "light" (default) and "dark"
+color_scheme: dark
 ```
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
@@ -81,8 +80,10 @@ const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
 jtd.addEvent(toggleDarkMode, 'click', function(){
   if (jtd.getTheme() === 'dark') {
     jtd.setTheme('light');
+    toggleDarkMode.textContent = 'Preview dark color scheme';
   } else {
     jtd.setTheme('dark');
+    toggleDarkMode.textContent = 'Return to the light side';
   }
 });
 </script>
