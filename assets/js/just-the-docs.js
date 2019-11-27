@@ -306,16 +306,10 @@ function initSearch() {
 }
 {%- endif %}
 
-function pageFocus() {
-  var mainWrap = document.getElementById('main-wrap');
-  mainWrap.focus();
-}
-
 // Document ready
 
 jtd.onReady(function(){
   initNav();
-  pageFocus();
   {% if site.search_enabled != false -%}
   initSearch();
   {%- endif %}
