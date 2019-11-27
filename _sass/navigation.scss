@@ -1,6 +1,7 @@
 //
 // Main nav, breadcrumb, etc...
 //
+// stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type, selector-max-specificity
 
 .nav-list {
   padding: 0;
@@ -20,13 +21,14 @@
     .nav-list-link {
       display: block;
       min-height: $nav-list-item-height-sm;
-      line-height: #{$nav-list-item-height-sm - 2 * $sp-1};
       padding-top: $sp-1;
       padding-bottom: $sp-1;
+      line-height: #{$nav-list-item-height-sm - 2 * $sp-1};
       @if $nav-list-expander-right {
         padding-right: $nav-list-item-height-sm;
         padding-left: $gutter-spacing-sm;
-      } @else {
+      }
+      @else {
         padding-right: $gutter-spacing-sm;
         padding-left: $nav-list-item-height-sm;
       }
@@ -37,7 +39,8 @@
         @if $nav-list-expander-right {
           padding-right: $nav-list-item-height;
           padding-left: $gutter-spacing;
-        } @else {
+        }
+        @else {
           padding-right: $gutter-spacing;
           padding-left: $nav-list-item-height;
         }
@@ -50,7 +53,7 @@
 
       &:hover,
       &.active {
-        background-color: $feedback-color;
+        background-image: linear-gradient(-90deg, rgba($feedback-color, 1) 0%, rgba($feedback-color, 0.8) 80%, rgba($feedback-color, 0) 100%);
       }
     }
 
@@ -77,7 +80,7 @@
       }
 
       &:hover {
-        background-color: $feedback-color;
+        background-image: linear-gradient(-90deg, rgba($feedback-color, 1) 0%, rgba($feedback-color, 0.8) 100%);
       }
 
       @if $nav-list-expander-right {
@@ -109,7 +112,8 @@
       > .nav-list-expander svg {
         @if $nav-list-expander-right {
           transform: rotate(-90deg);
-        } @else {
+        }
+        @else {
           transform: rotate(90deg);
         }
       }
