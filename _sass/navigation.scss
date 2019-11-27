@@ -1,6 +1,7 @@
 //
 // Main nav, breadcrumb, etc...
 //
+// stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type, selector-max-specificity
 
 .nav-list {
   padding: 0;
@@ -26,7 +27,8 @@
       @if $nav-list-expander-right {
         padding-right: $nav-list-item-height-sm;
         padding-left: $gutter-spacing-sm;
-      } @else {
+      }
+      @else {
         padding-right: $gutter-spacing-sm;
         padding-left: $nav-list-item-height-sm;
       }
@@ -37,7 +39,8 @@
         @if $nav-list-expander-right {
           padding-right: $nav-list-item-height;
           padding-left: $gutter-spacing;
-        } @else {
+        }
+        @else {
           padding-right: $gutter-spacing;
           padding-left: $nav-list-item-height;
         }
@@ -109,7 +112,8 @@
       > .nav-list-expander svg {
         @if $nav-list-expander-right {
           transform: rotate(-90deg);
-        } @else {
+        }
+        @else {
           transform: rotate(90deg);
         }
       }
