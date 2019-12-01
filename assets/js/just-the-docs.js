@@ -73,49 +73,42 @@ function initSearch() {
 
   request.onload = function(){
     if (request.status >= 200 && request.status < 400) {
-      // Success!
-      var data = JSON.parse(request.responseText);
+      var docs = JSON.parse(request.responseText);
       
-      {% if site.search_tokenizer_separator != nil %}
-      lunr.tokenizer.separator = {{ site.search_tokenizer_separator }}
-      {% else %}
-      lunr.tokenizer.separator = /[\s\-/]+/
-      {% endif %}
-      
-      var index = lunr(function () {
+      lunr.tokenizer.separator = {{ site.search_tokenizer_separator | default: "/[\s\-/]+/" }}
+
+      var index = lunr(function(){
         this.ref('id');
         this.field('title', { boost: 200 });
         this.field('content', { boost: 2 });
         this.field('url');
         this.metadataWhitelist = ['position']
 
-        for (var i in data) {
+        for (var i in docs) {
           this.add({
             id: i,
-            title: data[i].title,
-            content: data[i].content,
-            url: data[i].url
+            title: docs[i].title,
+            content: docs[i].content,
+            url: docs[i].url
           });
         }
       });
 
-      searchResults(index, data);
+      searchLoaded(index, docs);
     } else {
-      // We reached our target server, but it returned an error
       console.log('Error loading ajax request. Request status:' + request.status);
     }
   };
 
   request.onerror = function(){
-    // There was a connection error of some sort
     console.log('There was a connection error');
   };
 
   request.send();
 
-  function searchResults(index, data) {
+  function searchLoaded(index, docs) {
     var index = index;
-    var docs = data;
+    var docs = docs;
     var searchInput = document.getElementById('search-input');
     var searchResults = document.getElementById('search-results');
     var mainContentWrap = document.getElementById('main-content-wrap');
@@ -126,66 +119,10 @@ function initSearch() {
       mainContentWrap.classList.remove('blur');
     }
 
-    jtd.addEvent(searchInput, 'keydown', function(e){
-      switch (e.keyCode) {
-        case 38: // arrow up
-          e.preventDefault();
-          var active = document.querySelector('.search-result.active');
-          if (active) {
-            active.classList.remove('active');
-            if (active.parentElement.previousSibling) {
-              var previous = active.parentElement.previousSibling.querySelector('.search-result');
-              previous.classList.add('active');
-            }
-          }
-          return;
-        case 40: // arrow down
-          e.preventDefault();
-          var active = document.querySelector('.search-result.active');
-          if (active) {
-            if (active.parentElement.nextSibling) {
-              var next = active.parentElement.nextSibling.querySelector('.search-result');
-              active.classList.remove('active');
-              next.classList.add('active');
-            }
-          } else {
-            var next = document.querySelector('.search-result');
-            if (next) {
-              next.classList.add('active');
-            }
-          }
-          return;
-        case 13: // enter
-          e.preventDefault();
-          var active = document.querySelector('.search-result.active');
-          if (active) {
-            active.click();
-          } else {
-            var first = document.querySelector('.search-result');
-            if (first) {
-              first.click();
-            }
-          }
-          return;
-      }
-    });
-
-    jtd.addEvent(searchInput, 'keyup', function(e){
-      switch (e.keyCode) {
-        case 27: // When esc key is pressed, hide the results and clear the field
-          hideResults();
-          searchInput.value = '';
-          return;
-        case 38: // arrow up
-        case 40: // arrow down
-        case 13: // enter
-          e.preventDefault();
-          return;
-      }
-
+    function update() {
       hideResults();
 
-      var input = this.value;
+      var input = searchInput.value;
       if (input === '') {
         return;
       }
@@ -297,10 +234,75 @@ function initSearch() {
           }
         }
       }
+    }
+
+    jtd.addEvent(searchInput, 'focus', function(){
+      setTimeout(update, 0);
     });
 
-    jtd.addEvent(searchInput, 'blur', function(){
-      setTimeout(function(){ hideResults() }, 300);
+    jtd.addEvent(searchInput, 'keyup', function(e){
+      switch (e.keyCode) {
+        case 27: // When esc key is pressed, hide the results and clear the field
+          hideResults();
+          searchInput.value = '';
+          return;
+        case 38: // arrow up
+        case 40: // arrow down
+        case 13: // enter
+          e.preventDefault();
+          return;
+      }
+      update();
+    });
+
+    jtd.addEvent(searchInput, 'keydown', function(e){
+      switch (e.keyCode) {
+        case 38: // arrow up
+          e.preventDefault();
+          var active = document.querySelector('.search-result.active');
+          if (active) {
+            active.classList.remove('active');
+            if (active.parentElement.previousSibling) {
+              var previous = active.parentElement.previousSibling.querySelector('.search-result');
+              previous.classList.add('active');
+            }
+          }
+          return;
+        case 40: // arrow down
+          e.preventDefault();
+          var active = document.querySelector('.search-result.active');
+          if (active) {
+            if (active.parentElement.nextSibling) {
+              var next = active.parentElement.nextSibling.querySelector('.search-result');
+              active.classList.remove('active');
+              next.classList.add('active');
+            }
+          } else {
+            var next = document.querySelector('.search-result');
+            if (next) {
+              next.classList.add('active');
+            }
+          }
+          return;
+        case 13: // enter
+          e.preventDefault();
+          var active = document.querySelector('.search-result.active');
+          if (active) {
+            active.click();
+          } else {
+            var first = document.querySelector('.search-result');
+            if (first) {
+              first.click();
+            }
+          }
+          return;
+      }
+    });
+
+    jtd.addEvent(document, 'click', function(e){
+      if (e.target != searchInput) {
+        hideResults();
+      }
     });
   }
 }
