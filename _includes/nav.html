@@ -8,7 +8,7 @@
             {%- assign first_level_url = node.url | absolute_url -%}
           {%- endif -%}
           {%- if node.has_children -%}
-            <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#arrow-right"></use></svg></a>
+            <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
           {%- endif -%}
           <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
           {%- if node.has_children -%}
@@ -20,7 +20,7 @@
                   {%- assign second_level_url = child.url | absolute_url -%}
                 {%- endif -%}
                 {%- if child.has_children -%}
-                  <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#arrow-right"></use></svg></a>
+                  <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
                 {%- endif -%}
                 <a href="{{ child.url | absolute_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
                 {%- if child.has_children -%}
