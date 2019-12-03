@@ -204,9 +204,9 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 0;
   height: 0;
-  z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity ease 200ms;
