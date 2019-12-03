@@ -11,8 +11,8 @@
   padding-bottom: $sp-2;
 
   @include mq(md) {
-    height: 100%;
     max-width: $search-results-width;
+    height: 100%;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -93,8 +93,8 @@
   max-height: calc(100vh - 100%);
   overflow-y: auto;
   background: $search-background-color;
-  border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 
   @include mq(md) {
@@ -202,11 +202,11 @@
 
 .search-overlay {
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   width: 0;
   height: 0;
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 0;
   transition: opacity ease 200ms;
