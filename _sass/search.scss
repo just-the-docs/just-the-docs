@@ -209,7 +209,7 @@
   height: 0;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 0;
-  transition: opacity ease 200ms, width 0s 200ms, height 0s 200ms
+  transition: opacity ease 200ms, width 0s 200ms, height 0s 200ms;
 }
 
 .search-active {
