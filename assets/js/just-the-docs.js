@@ -111,12 +111,10 @@ function initSearch() {
     var docs = docs;
     var searchInput = document.getElementById('search-input');
     var searchResults = document.getElementById('search-results');
-    var mainContentWrap = document.getElementById('main-content-wrap');
 
     function hideResults() {
       searchResults.innerHTML = '';
-      searchResults.classList.remove('active');
-      mainContentWrap.classList.remove('blur');
+      document.body.classList.remove('search-active');
     }
 
     function update() {
@@ -138,8 +136,9 @@ function initSearch() {
       });
 
       if (results.length > 0) {
-        searchResults.classList.add('active');
-        mainContentWrap.classList.add('blur');
+        window.scroll(0, window.scrollY + searchInput.getBoundingClientRect().top);
+        document.body.classList.add('search-active');
+
         var resultsList = document.createElement('ul');
         resultsList.classList.add('search-results-list');
         searchResults.appendChild(resultsList);

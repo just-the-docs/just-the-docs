@@ -125,37 +125,30 @@
   }
 }
 
-// Small screen nav
-
-.site-nav {
-  display: none;
-
-  &.nav-open {
-    display: block;
-  }
-  @include mq(md) {
-    display: block;
-  }
-}
+// Aux nav
 
 .aux-nav {
-  align-self: center;
+  height: 100%;
+  overflow-x: auto;
+  @include fs-2;
 
   .aux-nav-list {
+    display: flex;
+    height: 100%;
     padding: 0;
     margin: 0;
     list-style: none;
-    @include fs-2;
   }
 
   .aux-nav-list-item {
     display: inline-block;
-    margin-right: $sp-2;
-    @include fs-2;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
 
-    &:last-child {
-      margin-right: 0;
-    }
+  @include mq(md) {
+    padding-right: $gutter-spacing-sm;
   }
 }
 

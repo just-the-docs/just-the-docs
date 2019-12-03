@@ -94,8 +94,8 @@ $sp-5: map-get($spacers, sp-5) !default; // 1.5  rem == 24px
 $sp-6: map-get($spacers, sp-6) !default; // 2    rem == 32px
 $sp-7: map-get($spacers, sp-7) !default; // 2.5  rem == 40px
 $sp-8: map-get($spacers, sp-8) !default; // 3    rem == 48px
-$sp-9: map-get($spacers, sp-9) !default; // 4    rem == 48px
-$sp-10: map-get($spacers, sp-10) !default; // 4.5  rem == 48px
+$sp-9: map-get($spacers, sp-9) !default; // 3.5  rem == 56px
+$sp-10: map-get($spacers, sp-10) !default; // 4  rem == 64px
 
 //
 // Borders
@@ -118,7 +118,7 @@ $nav-list-item-height-sm: $sp-8 !default;
 $nav-list-expander-right: true;
 $content-width: 800px !default;
 $header-height: 60px !default;
-$search-results-width: 500px !default;
+$search-results-width: $content-width - $nav-width !default;
 
 //
 // Media queries in pixels

@@ -15,6 +15,7 @@ pre.highlight,
 figure.highlight {
   padding: $sp-3;
   margin-bottom: 0;
+  border-radius: $border-radius;
   -webkit-overflow-scrolling: touch;
   background-color: $code-background-color;
 
@@ -26,7 +27,6 @@ figure.highlight {
 
 .highlighter-rouge {
   margin-bottom: $sp-3;
-  border-radius: $border-radius;
 }
 
 .highlight .c { color: #586e75; } // comment //

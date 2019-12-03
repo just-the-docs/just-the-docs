@@ -46,7 +46,7 @@ layout: table_wrappers
         <div class="search">
           <div class="search-input-wrap">
             <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
-            <svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg>
+            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
           </div>
           <div id="search-results" class="search-results"></div>
         </div>
@@ -55,7 +55,7 @@ layout: table_wrappers
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
             {% for link in site.aux_links %}
-              <li class="aux-nav-list-item"><a href="{{ link.last }}">{{ link.first }}</a></li>
+              <li class="aux-nav-list-item"><a href="{{ link.last }}" class="site-button">{{ link.first }}</a></li>
             {% endfor %}
           </ul>
         </nav>
@@ -114,6 +114,8 @@ layout: table_wrappers
     <a href="#" id="search-button" class="search-button">
       <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-search"></use></svg>
     </a>
+
+    <div class="search-overlay"></div>
   {% endif %}
 
 </body>
