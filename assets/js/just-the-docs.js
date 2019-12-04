@@ -112,13 +112,17 @@ function initSearch() {
     var searchInput = document.getElementById('search-input');
     var searchResults = document.getElementById('search-results');
 
-    function hideResults() {
+    function clearResults() {
       searchResults.innerHTML = '';
-      document.body.classList.remove('search-active');
+      hideResults();
+    }
+
+    function hideResults() {
+      document.documentElement.classList.remove('search-active');
     }
 
     function update() {
-      hideResults();
+      clearResults();
 
       var input = searchInput.value;
       if (input === '') {
@@ -136,8 +140,7 @@ function initSearch() {
       });
 
       if (results.length > 0) {
-        window.scroll(0, window.scrollY + searchInput.getBoundingClientRect().top);
-        document.body.classList.add('search-active');
+        document.documentElement.classList.add('search-active');
 
         var resultsList = document.createElement('ul');
         resultsList.classList.add('search-results-list');
@@ -242,7 +245,7 @@ function initSearch() {
     jtd.addEvent(searchInput, 'keyup', function(e){
       switch (e.keyCode) {
         case 27: // When esc key is pressed, hide the results and clear the field
-          hideResults();
+          clearResults();
           searchInput.value = '';
           return;
         case 38: // arrow up

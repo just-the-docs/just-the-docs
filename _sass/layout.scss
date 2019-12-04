@@ -162,6 +162,7 @@
 body {
   position: relative;
   padding-bottom: $sp-10;
+  overflow-y: scroll;
 
   @include mq(md) {
     position: static;
