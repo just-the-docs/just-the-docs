@@ -248,6 +248,14 @@
     transition: opacity ease 200ms, width 0s, height 0s;
   }
 
+  body {
+    overflow-y: hidden;
+
+    @include mq(md) {
+      overflow-y: scroll;
+    }
+  }
+
   @include mq(md) {
     .main {
       position: absolute;

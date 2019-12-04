@@ -111,6 +111,7 @@ function initSearch() {
     var docs = docs;
     var searchInput = document.getElementById('search-input');
     var searchResults = document.getElementById('search-results');
+    var mainHeader = document.getElementById('main-header');
 
     function clearResults() {
       searchResults.innerHTML = '';
@@ -140,6 +141,7 @@ function initSearch() {
       });
 
       if (results.length > 0) {
+        window.scroll(0, window.scrollY + mainHeader.getBoundingClientRect().top);
         document.documentElement.classList.add('search-active');
 
         var resultsList = document.createElement('ul');
