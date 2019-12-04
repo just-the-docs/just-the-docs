@@ -248,6 +248,8 @@
     transition: opacity ease 200ms, width 0s, height 0s;
   }
 
+  // stylelint-disable selector-max-type
+
   body {
     overflow-y: hidden;
 
