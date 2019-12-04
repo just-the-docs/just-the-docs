@@ -50,8 +50,8 @@
   @include mq(md) {
     max-width: $search-results-width;
     padding-top: $gutter-spacing-sm;
-    padding-left: #{$gutter-spacing + $sp-5};
     padding-bottom: $gutter-spacing-sm;
+    padding-left: #{$gutter-spacing + $sp-5};
     background-color: $body-background-color;
     border-radius: 0;
     box-shadow: none;
@@ -251,8 +251,8 @@
   @include mq(md) {
     .main {
       position: absolute;
-      height: 100vh;
       width: 100vw;
+      height: 100vh;
       overflow: hidden;
     }
   }
