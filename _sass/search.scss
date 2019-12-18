@@ -8,7 +8,7 @@
   flex-grow: 1;
   height: $sp-10;
   padding: $sp-2;
-  transition: padding linear 100ms;
+  transition: padding linear #{$transition-duration / 2};
 
   @include mq(md) {
     position: relative !important;
@@ -22,7 +22,7 @@
 .search-input-wrap {
   position: relative;
   height: $sp-8;
-  transition: height linear 100ms;
+  transition: height linear #{$transition-duration / 2};
 
   @include mq(md) {
     height: 100% !important;
@@ -55,7 +55,7 @@
     background-color: $body-background-color;
     border-radius: 0;
     box-shadow: none;
-    transition: width ease 200ms;
+    transition: width ease $transition-duration;
     @include fs-3;
   }
 
@@ -207,7 +207,7 @@
   height: 0;
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 0;
-  transition: opacity ease 200ms, width 0s 200ms, height 0s 200ms;
+  transition: opacity ease $transition-duration, width 0s $transition-duration, height 0s $transition-duration;
 }
 
 .search-active {
@@ -242,7 +242,7 @@
     width: 100%;
     height: 100%;
     opacity: 1;
-    transition: opacity ease 200ms, width 0s, height 0s;
+    transition: opacity ease $transition-duration, width 0s, height 0s;
   }
 
   // stylelint-disable selector-max-type
