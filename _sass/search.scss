@@ -257,10 +257,8 @@
 
   @include mq(md) {
     .main {
-      position: absolute;
-      width: 100vw;
       height: 100vh;
-      overflow: visible;
+      overflow-y: hidden;
     }
   }
 }
