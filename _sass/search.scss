@@ -93,7 +93,7 @@
   width: 100%;
   max-height: calc(100% - #{$sp-10});
   overflow-y: auto;
-  background: $search-background-color;
+  background-color: $search-background-color;
   border-bottom-right-radius: $border-radius;
   border-bottom-left-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
@@ -191,15 +191,11 @@
   width: $sp-9;
   height: $sp-9;
   background-color: $search-background-color;
+  border: 1px solid rgba($link-color, 0.3);
   border-radius: #{$sp-9 / 2};
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   align-items: center;
   justify-content: center;
-}
-
-.search-results,
-.search-button {
-  border: 1px solid rgba($link-color, 0.3);
 }
 
 .search-overlay {
@@ -229,6 +225,7 @@
   }
 
   .search-input {
+    background-color: $search-background-color;
     border-radius: 0;
     box-shadow: none;
 
@@ -263,7 +260,7 @@
       position: absolute;
       width: 100vw;
       height: 100vh;
-      overflow: hidden;
+      overflow: visible;
     }
   }
 }
