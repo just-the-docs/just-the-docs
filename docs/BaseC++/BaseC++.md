@@ -1,9 +1,9 @@
 ---
 layout: default
-title: UI Components
+title: BaseC++
 nav_order: 3
 has_children: true
-permalink: /docs/ui-components
+permalink: /docs/BaseC++
 ---
 
 # UI Components
