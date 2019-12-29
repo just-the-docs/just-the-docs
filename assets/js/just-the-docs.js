@@ -51,7 +51,7 @@ function initNav() {
     }
   });
 
-  {% if site.search_enabled != false -%}
+  {% if site.search_enabled != false and site.search.button -%}
   const searchInput = document.getElementById('search-input');
   const searchButton = document.getElementById('search-button');
 
