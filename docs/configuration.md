@@ -36,9 +36,12 @@ logo: "/assets/images/just-the-docs.png"
 # Supports true (default) or false
 search_enabled: true
 
-# Enable support for hyphenated search words:
-search_tokenizer_separator: /[\s/]+/
-
+search:
+  heading_level: 2              # Split documents into sections that can be individually searched
+  preview_words_before: 5       # Maximum amount of words to display before a matched word in the preview
+  preview_words_after: 10       # Maximum amount of words to display after a matched word in the preview
+  rel_url: false                # Include the relative url in the search: true (default) or false
+  tokenizer_separator: /[\s/]+/ # Enable support for hyphenated search words
 ```
 
 ## Aux links
