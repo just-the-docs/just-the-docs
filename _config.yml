@@ -31,9 +31,7 @@ search:
   preview_words_before: 5
   preview_words_after: 10
   rel_url: false
-
-# Set the search token separator for hyphenated-word search:
-search_tokenizer_separator: /[\s/]+/
+  tokenizer_separator: /[\s/]+/ # Set the search token separator for hyphenated-word search
 
 # Enable or disable heading anchors
 heading_anchors: true
