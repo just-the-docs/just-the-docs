@@ -81,7 +81,9 @@ function initSearch() {
         this.ref('id');
         this.field('title', { boost: 200 });
         this.field('content', { boost: 2 });
-        this.field('url');
+        {% if site.search.rel_url != false -%}
+        this.field('relUrl');
+        {%- endif %}
         this.metadataWhitelist = ['position']
 
         for (var i in docs) {
@@ -89,7 +91,9 @@ function initSearch() {
             id: i,
             title: docs[i].title,
             content: docs[i].content,
-            url: docs[i].url
+            {% if site.search.rel_url != false -%}
+            relUrl: docs[i].relUrl
+            {%- endif %}
           });
         }
       });
@@ -112,20 +116,29 @@ function initSearch() {
     var searchInput = document.getElementById('search-input');
     var searchResults = document.getElementById('search-results');
     var mainHeader = document.getElementById('main-header');
+    var currentInput;
 
-    function clearResults() {
-      searchResults.innerHTML = '';
-      hideResults();
+    function showSearch() {
+      document.documentElement.classList.add('search-active');
     }
 
-    function hideResults() {
+    function hideSearch() {
       document.documentElement.classList.remove('search-active');
     }
 
     function update() {
-      clearResults();
-
       var input = searchInput.value;
+      if (input === '') {
+        hideSearch();
+      } else {
+        showSearch();
+        window.scroll(0, window.scrollY + mainHeader.getBoundingClientRect().top);
+      }
+      if (input === currentInput) {
+        return;
+      }
+      currentInput = input;
+      searchResults.innerHTML = '';
       if (input === '') {
         return;
       }
@@ -140,10 +153,13 @@ function initSearch() {
         });
       });
 
-      if (results.length > 0) {
-        window.scroll(0, window.scrollY + mainHeader.getBoundingClientRect().top);
-        document.documentElement.classList.add('search-active');
+      if (results.length == 0) {
+        var noResultsDiv = document.createElement('div');
+        noResultsDiv.classList.add('search-no-result');
+        noResultsDiv.innerText = 'No results found';
+        searchResults.appendChild(noResultsDiv);
 
+      } else {
         var resultsList = document.createElement('ul');
         resultsList.classList.add('search-results-list');
         searchResults.appendChild(resultsList);
@@ -163,13 +179,26 @@ function initSearch() {
 
           var resultTitle = document.createElement('div');
           resultTitle.classList.add('search-result-title');
-          resultTitle.innerText = doc.title;
           resultLink.appendChild(resultTitle);
 
-          var resultRelUrl = document.createElement('span');
-          resultRelUrl.classList.add('search-result-rel-url');
-          resultRelUrl.innerText = doc.relUrl;
-          resultTitle.appendChild(resultRelUrl);
+          var resultDoc = document.createElement('div');
+          resultDoc.classList.add('search-result-doc');
+          resultDoc.innerHTML = '<svg viewBox="0 0 24 24" class="search-result-icon"><use xlink:href="#svg-doc"></use></svg>';
+          resultTitle.appendChild(resultDoc);
+
+          var resultDocSpan = document.createElement('span');
+          resultDocSpan.innerText = doc.doc;
+          resultDoc.appendChild(resultDocSpan);
+          var resultDocOrSection = resultDocSpan;
+
+          if (doc.doc != doc.title) {
+            resultDoc.classList.add('search-result-doc-parent');
+            var resultSection = document.createElement('div');
+            resultSection.classList.add('search-result-section');
+            resultSection.innerText = doc.title;
+            resultTitle.appendChild(resultSection);
+            resultDocOrSection = resultSection;
+          }
 
           var metadata = result.matchData.metadata;
           var contentFound = false;
@@ -178,9 +207,9 @@ function initSearch() {
               var position = metadata[j].title.position[0];
               var start = position[0];
               var end = position[0] + position[1];
-              resultTitle.innerHTML = doc.title.substring(0, start) + '<span class="search-result-highlight">' + doc.title.substring(start, end) + '</span>' + doc.title.substring(end, doc.title.length)+'<span class="search-result-rel-url">'+doc.relUrl+'</span>';
-
-            } else if (metadata[j].content && !contentFound) {
+              resultDocOrSection.innerHTML = doc.title.substring(0, start) + '<span class="search-result-highlight">' + doc.title.substring(start, end) + '</span>' + doc.title.substring(end, doc.title.length);
+            }
+            if (metadata[j].content && !contentFound) {
               contentFound = true;
 
               var position = metadata[j].content.position[0];
@@ -190,10 +219,10 @@ function initSearch() {
               var previewEnd = end;
               var ellipsesBefore = true;
               var ellipsesAfter = true;
-              for (var k = 0; k < 3; k++) {
+              for (var k = 0; k < {{ site.search.preview_words_before | default: 5 }}; k++) {
                 var nextSpace = doc.content.lastIndexOf(' ', previewStart - 2);
-                var nextDot = doc.content.lastIndexOf('.', previewStart - 2);
-                if ((nextDot > 0) && (nextDot > nextSpace)) {
+                var nextDot = doc.content.lastIndexOf('. ', previewStart - 2);
+                if ((nextDot >= 0) && (nextDot > nextSpace)) {
                   previewStart = nextDot + 1;
                   ellipsesBefore = false;
                   break;
@@ -205,10 +234,10 @@ function initSearch() {
                 }
                 previewStart = nextSpace + 1;
               }
-              for (var k = 0; k < 10; k++) {
+              for (var k = 0; k < {{ site.search.preview_words_after | default: 10 }}; k++) {
                 var nextSpace = doc.content.indexOf(' ', previewEnd + 1);
-                var nextDot = doc.content.indexOf('.', previewEnd + 1);
-                if ((nextDot > 0) && (nextDot < nextSpace)) {
+                var nextDot = doc.content.indexOf('. ', previewEnd + 1);
+                if ((nextDot >= 0) && (nextDot < nextSpace)) {
                   previewEnd = nextDot;
                   ellipsesAfter = false;
                   break;
@@ -236,6 +265,13 @@ function initSearch() {
               resultLink.appendChild(resultPreview);
             }
           }
+
+          {% if site.search.rel_url != false -%}
+          var resultRelUrl = document.createElement('span');
+          resultRelUrl.classList.add('search-result-rel-url');
+          resultRelUrl.innerText = doc.relUrl;
+          resultTitle.appendChild(resultRelUrl);
+          {%- endif %}
         }
       }
     }
@@ -247,9 +283,8 @@ function initSearch() {
     jtd.addEvent(searchInput, 'keyup', function(e){
       switch (e.keyCode) {
         case 27: // When esc key is pressed, hide the results and clear the field
-          clearResults();
           searchInput.value = '';
-          return;
+          break;
         case 38: // arrow up
         case 40: // arrow down
         case 13: // enter
@@ -305,7 +340,7 @@ function initSearch() {
 
     jtd.addEvent(document, 'click', function(e){
       if (e.target != searchInput) {
-        hideResults();
+        hideSearch();
       }
     });
   }
