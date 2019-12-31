@@ -51,7 +51,7 @@ function initNav() {
     }
   });
 
-  {% if site.search_enabled != false and site.search.button -%}
+  {%- if site.search_enabled != false and site.search.button %}
   const searchInput = document.getElementById('search-input');
   const searchButton = document.getElementById('search-button');
 
@@ -64,9 +64,9 @@ function initNav() {
   {%- endif %}
 }
 
+{%- if site.search_enabled != false %}
 // Site search
 
-{% if site.search_enabled != false -%}
 function initSearch() {
   var request = new XMLHttpRequest();
   request.open('GET', '{{ "assets/js/search-data.json" | absolute_url }}', true);
@@ -81,7 +81,7 @@ function initSearch() {
         this.ref('id');
         this.field('title', { boost: 200 });
         this.field('content', { boost: 2 });
-        {% if site.search.rel_url != false -%}
+        {%- if site.search.rel_url != false %}
         this.field('relUrl');
         {%- endif %}
         this.metadataWhitelist = ['position']
@@ -91,7 +91,7 @@ function initSearch() {
             id: i,
             title: docs[i].title,
             content: docs[i].content,
-            {% if site.search.rel_url != false -%}
+            {%- if site.search.rel_url != false %}
             relUrl: docs[i].relUrl
             {%- endif %}
           });
@@ -266,7 +266,7 @@ function initSearch() {
             }
           }
 
-          {% if site.search.rel_url != false -%}
+          {%- if site.search.rel_url != false %}
           var resultRelUrl = document.createElement('span');
           resultRelUrl.classList.add('search-result-rel-url');
           resultRelUrl.innerText = doc.relUrl;
@@ -351,7 +351,7 @@ function initSearch() {
 
 jtd.onReady(function(){
   initNav();
-  {% if site.search_enabled != false -%}
+  {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
 });

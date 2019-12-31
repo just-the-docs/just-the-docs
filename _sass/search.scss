@@ -37,7 +37,7 @@
   padding-top: $sp-2;
   padding-right: $gutter-spacing-sm;
   padding-bottom: $sp-2;
-  padding-left: #{$gutter-spacing-sm + $sp-4 * 1.2 + $sp-2};
+  padding-left: #{$gutter-spacing-sm + $sp-5};
   background-color: $search-background-color;
   border-top: 0;
   border-right: 0;
@@ -55,7 +55,7 @@
     background-color: $body-background-color;
     border-radius: 0;
     box-shadow: none;
-    transition: width ease $transition-duration;
+    transition: padding-left linear #{$transition-duration / 2}, width ease $transition-duration;
     @include fs-3;
   }
 
@@ -76,6 +76,7 @@
 
   @include mq(md) {
     padding-left: $gutter-spacing;
+    transition: padding-left linear #{$transition-duration / 2};
   }
 
   .search-icon {
@@ -261,7 +262,14 @@
     box-shadow: none;
 
     @include mq(md) {
+      padding-left: #{$sp-4 * 1.25 + $sp-5};
       width: $search-results-width;
+    }
+  }
+
+  .search-label {
+    @include mq(md) {
+      padding-left: #{$sp-4 * 1.25};
     }
   }
 
