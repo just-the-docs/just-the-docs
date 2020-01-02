@@ -266,8 +266,8 @@
     box-shadow: none;
 
     @include mq(md) {
-      padding-left: #{$sp-4 * 1.25 + $sp-5};
       width: $search-results-width;
+      padding-left: #{$sp-4 * 1.25 + $sp-5};
     }
   }
 
