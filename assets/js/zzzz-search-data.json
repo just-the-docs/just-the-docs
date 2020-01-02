@@ -34,9 +34,9 @@ permalink: /assets/js/search-data.json
         {%- endif -%}
   {%- unless i == 0 -%},{%- endunless -%}
   "{{ i }}": {
-    "doc": "{{ page.title | escape_once }}",
-    "title": "{{ title | escape_once }}",
-    "content": "{{ content | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | escape_once | remove: 'Table of contents' | replace: '\', '&bsol;' | replace: ' .  .  . ', ' . ' | replace: ' .  . ', ' . ' | normalize_whitespace | replace: '| |', '|' }}",
+    "doc": {{ page.title | jsonify }},
+    "title": {{ title | jsonify }},
+    "content": {{ content | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
     "url": "{{ url | absolute_url }}",
     "relUrl": "{{ url }}"
   }
@@ -45,9 +45,9 @@ permalink: /assets/js/search-data.json
       {%- unless title_found -%}
   {%- unless i == 0 -%},{%- endunless -%}
   "{{ i }}": {
-    "doc": "{{ page.title | escape_once }}",
-    "title": "{{ page.title | escape_once }}",
-    "content": "{{ parts[0] | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | escape_once | remove: 'Table of contents' | replace: '\', '&bsol;' | replace: ' .  .  . ', ' . ' | replace: ' .  . ', ' . ' | normalize_whitespace | replace: '| |', '|' }}",
+    "doc": {{ page.title | jsonify }},
+    "title": {{ page.title | jsonify }},
+    "content": {{ parts[0] | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
     "url": "{{ page.url | absolute_url }}",
     "relUrl": "{{ page.url }}"
   }

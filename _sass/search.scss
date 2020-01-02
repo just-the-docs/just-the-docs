@@ -183,7 +183,7 @@
   @include fs-1;
 }
 
-.search-result-preview {
+.search-result-previews {
   display: block;
   padding-top: $sp-2;
   padding-bottom: $sp-2;
@@ -201,6 +201,10 @@
     margin-left: 0;
     vertical-align: top;
   }
+}
+
+.search-result-preview + .search-result-preview {
+  margin-top: $sp-1;
 }
 
 .search-result-highlight {

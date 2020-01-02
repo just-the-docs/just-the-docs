@@ -40,6 +40,9 @@ search:
   # Split documents into sections that can be individually searched
   # Supports 1 - 6, default: 2
   heading_level: 2
+  # Maximum amount of previews to display
+  # Default: 3
+  previews: 3
   # Maximum amount of words to display before a matched word in the preview
   # Default: 5
   preview_words_before: 5

@@ -188,7 +188,7 @@ function searchLoaded(index, docs) {
         resultTitle.appendChild(resultDoc);
 
         var resultDocSpan = document.createElement('span');
-        resultDocSpan.innerText = doc.doc;
+        resultDocSpan.innerHTML = doc.doc;
         resultDoc.appendChild(resultDocSpan);
         var resultDocOrSection = resultDocSpan;
 
@@ -196,74 +196,119 @@ function searchLoaded(index, docs) {
           resultDoc.classList.add('search-result-doc-parent');
           var resultSection = document.createElement('div');
           resultSection.classList.add('search-result-section');
-          resultSection.innerText = doc.title;
+          resultSection.innerHTML = doc.title;
           resultTitle.appendChild(resultSection);
           resultDocOrSection = resultSection;
         }
 
         var metadata = result.matchData.metadata;
-        var contentFound = false;
+        var titlePositions = [];
+        var contentPositions = [];
         for (var j in metadata) {
-          if (metadata[j].title) {
-            var position = metadata[j].title.position[0];
-            var start = position[0];
-            var end = position[0] + position[1];
-            resultDocOrSection.innerHTML = doc.title.substring(0, start) + '<span class="search-result-highlight">' + doc.title.substring(start, end) + '</span>' + doc.title.substring(end, doc.title.length);
+          var meta = metadata[j];
+          if (meta.title) {
+            var positions = meta.title.position;
+            for (var k in positions) {
+              titlePositions.push(positions[k]);
+            }
           }
-          if (metadata[j].content && !contentFound) {
-            contentFound = true;
+          if (meta.content) {
+            var positions = meta.content.position;
+            for (var k in positions) {
+              var position = positions[k];
+              var previewStart = position[0];
+              var previewEnd = position[0] + position[1];
+              var ellipsesBefore = true;
+              var ellipsesAfter = true;
+              for (var k = 0; k < {{ site.search.preview_words_before | default: 5 }}; k++) {
+                var nextSpace = doc.content.lastIndexOf(' ', previewStart - 2);
+                var nextDot = doc.content.lastIndexOf('. ', previewStart - 2);
+                if ((nextDot >= 0) && (nextDot > nextSpace)) {
+                  previewStart = nextDot + 1;
+                  ellipsesBefore = false;
+                  break;
+                }
+                if (nextSpace < 0) {
+                  previewStart = 0;
+                  ellipsesBefore = false;
+                  break;
+                }
+                previewStart = nextSpace + 1;
+              }
+              for (var k = 0; k < {{ site.search.preview_words_after | default: 10 }}; k++) {
+                var nextSpace = doc.content.indexOf(' ', previewEnd + 1);
+                var nextDot = doc.content.indexOf('. ', previewEnd + 1);
+                if ((nextDot >= 0) && (nextDot < nextSpace)) {
+                  previewEnd = nextDot;
+                  ellipsesAfter = false;
+                  break;
+                }
+                if (nextSpace < 0) {
+                  previewEnd = doc.content.length;
+                  ellipsesAfter = false;
+                  break;
+                }
+                previewEnd = nextSpace;
+              }
+              contentPositions.push({
+                highlight: position,
+                previewStart: previewStart, previewEnd: previewEnd,
+                ellipsesBefore: ellipsesBefore, ellipsesAfter: ellipsesAfter
+              });
+            }
+          }
+        }
 
-            var position = metadata[j].content.position[0];
-            var start = position[0];
-            var end = position[0] + position[1];
-            var previewStart = start;
-            var previewEnd = end;
-            var ellipsesBefore = true;
-            var ellipsesAfter = true;
-            for (var k = 0; k < {{ site.search.preview_words_before | default: 5 }}; k++) {
-              var nextSpace = doc.content.lastIndexOf(' ', previewStart - 2);
-              var nextDot = doc.content.lastIndexOf('. ', previewStart - 2);
-              if ((nextDot >= 0) && (nextDot > nextSpace)) {
-                previewStart = nextDot + 1;
-                ellipsesBefore = false;
-                break;
+        if (titlePositions.length > 0) {
+          titlePositions.sort(function(p1, p2){ return p1[0] - p2[0] });
+          resultDocOrSection.innerHTML = '';
+          addHighlightedText(resultDocOrSection, doc.title, 0, doc.title.length, titlePositions);
+        }
+
+        if (contentPositions.length > 0) {
+          contentPositions.sort(function(p1, p2){ return p1.highlight[0] - p2.highlight[0] });
+          var contentPosition = contentPositions[0];
+          var previewPosition = {
+            highlight: [contentPosition.highlight],
+            previewStart: contentPosition.previewStart, previewEnd: contentPosition.previewEnd,
+            ellipsesBefore: contentPosition.ellipsesBefore, ellipsesAfter: contentPosition.ellipsesAfter
+          };
+          var previewPositions = [previewPosition];
+          for (var j = 1; j < contentPositions.length; j++) {
+            contentPosition = contentPositions[j];
+            if (previewPosition.previewEnd < contentPosition.previewStart) {
+              previewPosition = {
+                highlight: [contentPosition.highlight],
+                previewStart: contentPosition.previewStart, previewEnd: contentPosition.previewEnd,
+                ellipsesBefore: contentPosition.ellipsesBefore, ellipsesAfter: contentPosition.ellipsesAfter
               }
-              if (nextSpace < 0) {
-                previewStart = 0;
-                ellipsesBefore = false;
-                break;
-              }
-              previewStart = nextSpace + 1;
+              previewPositions.push(previewPosition);
+            } else {
+              previewPosition.highlight.push(contentPosition.highlight);
+              previewPosition.previewEnd = contentPosition.previewEnd;
+              previewPosition.ellipsesAfter = contentPosition.ellipsesAfter;
             }
-            for (var k = 0; k < {{ site.search.preview_words_after | default: 10 }}; k++) {
-              var nextSpace = doc.content.indexOf(' ', previewEnd + 1);
-              var nextDot = doc.content.indexOf('. ', previewEnd + 1);
-              if ((nextDot >= 0) && (nextDot < nextSpace)) {
-                previewEnd = nextDot;
-                ellipsesAfter = false;
-                break;
-              }
-              if (nextSpace < 0) {
-                previewEnd = doc.content.length;
-                ellipsesAfter = false;
-                break;
-              }
-              previewEnd = nextSpace;
-            }
-            var preview = doc.content.substring(previewStart, start);
-            if (ellipsesBefore) {
-              preview = '... ' + preview;
-            }
-            preview += '<span class="search-result-highlight">' + doc.content.substring(start, end) + '</span>';
-            preview += doc.content.substring(end, previewEnd);
-            if (ellipsesAfter) {
-              preview += ' ...';
-            }
+          }
+
+          var resultPreviews = document.createElement('div');
+          resultPreviews.classList.add('search-result-previews');
+          resultLink.appendChild(resultPreviews);
+
+          var content = doc.content;
+          for (var j = 0; j < Math.min(previewPositions.length, {{ site.search.previews | default: 3 }}); j++) {
+            var position = previewPositions[j];
 
             var resultPreview = document.createElement('div');
             resultPreview.classList.add('search-result-preview');
-            resultPreview.innerHTML = preview;
-            resultLink.appendChild(resultPreview);
+            resultPreviews.appendChild(resultPreview);
+
+            if (position.ellipsesBefore) {
+              resultPreview.appendChild(document.createTextNode('... '));
+            }
+            addHighlightedText(resultPreview, content, position.previewStart, position.previewEnd, position.highlight);
+            if (position.ellipsesAfter) {
+              resultPreview.appendChild(document.createTextNode(' ...'));
+            }
           }
         }
 
@@ -274,6 +319,24 @@ function searchLoaded(index, docs) {
         resultTitle.appendChild(resultRelUrl);
         {%- endif %}
       }
+    }
+
+    function addHighlightedText(parent, text, start, end, positions) {
+      var index = start;
+      for (var i in positions) {
+        var position = positions[i];
+        var span = document.createElement('span');
+        span.innerHTML = text.substring(index, position[0]);
+        parent.appendChild(span);
+        index = position[0] + position[1];
+        var highlight = document.createElement('span');
+        highlight.classList.add('search-result-highlight');
+        highlight.innerHTML = text.substring(position[0], index);
+        parent.appendChild(highlight);
+      }
+      var span = document.createElement('span');
+      span.innerHTML = text.substring(index, end);
+      parent.appendChild(span);
     }
   }
 
