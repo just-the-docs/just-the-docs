@@ -166,6 +166,11 @@
     height: $sp-4;
     margin-right: $sp-2;
     fill: $link-color;
+    flex-shrink: 0;
+  }
+
+  .search-result-doc-title {
+    overflow: auto;
   }
 }
 

@@ -187,16 +187,17 @@ function searchLoaded(index, docs) {
         resultDoc.innerHTML = '<svg viewBox="0 0 24 24" class="search-result-icon"><use xlink:href="#svg-doc"></use></svg>';
         resultTitle.appendChild(resultDoc);
 
-        var resultDocSpan = document.createElement('span');
-        resultDocSpan.innerHTML = doc.doc;
-        resultDoc.appendChild(resultDocSpan);
-        var resultDocOrSection = resultDocSpan;
+        var resultDocTitle = document.createElement('div');
+        resultDocTitle.classList.add('search-result-doc-title');
+        resultDocTitle.innerText = doc.doc;
+        resultDoc.appendChild(resultDocTitle);
+        var resultDocOrSection = resultDocTitle;
 
         if (doc.doc != doc.title) {
           resultDoc.classList.add('search-result-doc-parent');
           var resultSection = document.createElement('div');
           resultSection.classList.add('search-result-section');
-          resultSection.innerHTML = doc.title;
+          resultSection.innerText = doc.title;
           resultTitle.appendChild(resultSection);
           resultDocOrSection = resultSection;
         }
@@ -325,18 +326,14 @@ function searchLoaded(index, docs) {
       var index = start;
       for (var i in positions) {
         var position = positions[i];
-        var span = document.createElement('span');
-        span.innerHTML = text.substring(index, position[0]);
-        parent.appendChild(span);
+        parent.appendChild(document.createTextNode(text.substring(index, position[0])));
         index = position[0] + position[1];
         var highlight = document.createElement('span');
         highlight.classList.add('search-result-highlight');
-        highlight.innerHTML = text.substring(position[0], index);
+        highlight.innerText = text.substring(position[0], index);
         parent.appendChild(highlight);
       }
-      var span = document.createElement('span');
-      span.innerHTML = text.substring(index, end);
-      parent.appendChild(span);
+      parent.appendChild(document.createTextNode(text.substring(index, end)));
     }
   }
 
