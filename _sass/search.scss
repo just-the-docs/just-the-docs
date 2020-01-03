@@ -198,6 +198,7 @@
   color: $search-result-preview-color;
   border-left: $border;
   border-left-color: $border-color;
+  word-wrap: break-word;
   @include fs-2;
 
   @include mq(sm) {
