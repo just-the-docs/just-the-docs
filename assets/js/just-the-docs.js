@@ -154,6 +154,15 @@ function searchLoaded(index, docs) {
       });
     });
 
+    if ((results.length == 0) && (input.length > 2)) {
+      results = index.query(function (query) {
+        var tokens = lunr.tokenizer(input)
+        query.term(tokens, {
+          editDistance: Math.round(Math.sqrt(input.length / 2 - 1))
+        });
+      });
+    }
+
     if (results.length == 0) {
       var noResultsDiv = document.createElement('div');
       noResultsDiv.classList.add('search-no-result');
