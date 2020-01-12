@@ -67,15 +67,19 @@ heading_anchors: true
 footer_content: "Copyright &copy; 2017-2019 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 # Footer metadata
 show_last_edit_time: true
-last_edit_time_format: "%b %e %Y at %I:%M %p"
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format
 show_gh_edit_link: true
-gh_edit_repository: "https://github.com/pmarsceill/just-the-docs"
-edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
+gh_edit_branch: "master" # switch to the branch that your docs is served from
+gh_edit_view_mode: "tree" # switch to "edit" if you want the user to jump into the editor immediately
+edit_link_text: "Edit this page on GitHub."
 ```
 
 * the "page last modified" data will only display if a page has a key called `last_modified_date`, formatted in some readable date format
 * `last_edit_time_format` uses Ruby's DateTime formatter; see examples and more information [at this link.](https://apidock.com/ruby/DateTime/strftime)
-* `gh_edit_repository` should be changed to the project's GitHub repository
+* `gh_edit_repository` is the URL of the project's GitHub repository
+* `gh_edit_branch` is the branch that the docs site is served from; defaults to `master`
+* `gh_edit_view_mode` is `"tree"` by default, which brings the user to the github page; switch to `"edit"` to bring the user directly into editing mode
 
 ## Color scheme
 
