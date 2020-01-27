@@ -9,6 +9,16 @@
 #   - applications
 
 
+- name: FME reader/writer
+  webpage: https://github.com/safesoftware/fme-CityJSON
+  description: A (beta) reader/writer for [FME](https://www.safe.com/fme/). For the latest version, download and compile the open-source code from GitHub. The latest [FME beta](https://www.safe.com/support/downloads/#beta) has the latest code too.
+  foss: false
+  category: 
+    - viewer
+    - generator
+    - converter
+
+
 - name: Blender plugin
   webpage: https://github.com/cityjson/Blender-CityJSON-Plugin
   description: Plugin to open/import directly CityJSON models in Blender, attributes and semantics are kept.
