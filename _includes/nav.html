@@ -2,7 +2,7 @@
   {%- assign pages_list = site.html_pages | sort: "nav_order" -%}
   {%- for node in pages_list -%}
     {%- unless node.nav_exclude -%}
-      {%- if node.parent == nil -%}
+      {%- if node.parent == nil and node.title -%}
         <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
           {%- if page.parent == node.title or page.grand_parent == node.title -%}
             {%- assign first_level_url = node.url | absolute_url -%}
