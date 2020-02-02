@@ -12,7 +12,7 @@
     {%- assign pages_list = sorted_ordered_pages_list | concat: sorted_unordered_pages_list -%}
     {%- for node in pages_list -%}
       {%- unless node.nav_exclude -%}
-        {%- if node.parent == nil -%}
+        {%- if node.parent == nil and node.title -%}
           <li class="navigation-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
             {%- if page.parent == node.title or page.grand_parent == node.title -%}
               {%- assign first_level_url = node.url | absolute_url -%}
