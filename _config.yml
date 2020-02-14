@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Just the Docs
-description: A Jekyll theme for documentation
-baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
-url: "https://pmarsceill.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+title: Twitter API Docs
+description: Documentation for using Twitter API 
+baseurl: "/twitter-api-docs" # the subpath of your site, e.g. /blog
+url: "https://github.com/parsasi" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
