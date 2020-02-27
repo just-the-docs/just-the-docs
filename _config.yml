@@ -16,7 +16,7 @@
 title: Twitter API Docs
 description: Documentation for using Twitter API 
 baseurl: "/twitter-api-docs" # the subpath of your site, e.g. /blog
-url: "https://github.com/parsasi" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://parsasi.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
