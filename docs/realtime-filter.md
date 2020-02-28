@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Markdown kitchen sink
+title: Realtime Filtering
 nav_order: 99
 ---
 
