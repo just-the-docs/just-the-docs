@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Navigation Structure
+title: Timelines
 nav_order: 5
 ---
 
