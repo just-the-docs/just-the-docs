@@ -1,9 +1,8 @@
 ---
 layout: default
 title: POST statuses/update
-nav_order: 2
-has_children: false
-permalink: /docs/
+parent: Post, retrieve, and engage with tweets
+nav_order: 1
 ---
 
 # POST statuses/update
@@ -22,6 +21,7 @@ https://api.twitter.com/1.1/statuses/update.json
 ```
 
 ## Resource Information
+
 | | |
 |:----------------|:----|
 |Response formats | JSON|
