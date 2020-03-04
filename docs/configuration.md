@@ -1,88 +1,39 @@
 ---
 layout: default
-title: Configuration
+title: POST statuses/update
 nav_order: 2
+has_children: false
+permalink: /docs/
 ---
 
-# Configuration
-{: .no_toc }
+# POST statuses/update
 
 
-Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's _config.yml file.
-{: .fs-6 .fw-300 }
 
-## Table of contents
-{: .no_toc .text-delta }
+Updates the authenticating user's current status, also known as Tweeting.
 
-1. TOC
-{:toc}
-
----
+For each update attempt, the update text is compared with the authenticating user's recent Tweets. Any attempt that would result in duplication will be blocked, resulting 403 error. A user cannot submit the same status twice in a row
 
 
-View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file as an example.
-
-## Site logo
-
-```yaml
-# Set a path/url to a logo that will be displayed instead of the title
-logo: "/assets/images/just-the-docs.png"
-```
-
-## Search
-
-```yaml
-# Enable or disable the site search
-# Supports true (default) or false
-search_enabled: true
-
-# Enable support for hyphenated search words:
-search_tokenizer_separator: /[\s/]+/
+## Resource URL
 
 ```
-
-## Aux links
-
-```yaml
-# Aux links for the upper right navigation
-aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+https://api.twitter.com/1.1/statuses/update.json
 ```
 
-## Heading anchor links
+## Resource Information
+| | |
+|:----------------|:----|
+|Response formats | JSON|
+|Requires authentication?|Yes(user context only)|
+|Rate limited?|Yes|
+|Requests/3-hour window| 300 per user; 300 per app|
 
-```yaml
-# Heading anchor links appear on hover over h1-h6 tags in page content
-# allowing users to deep link to a particular heading on a page.
-#
-# Supports true (default) or false/nil
-heading_anchors: true
-```
+## Parameters
 
-## Footer content
-
-```yaml
-# Footer content appears at the bottom of every page's main content
-footer_content: "Copyright &copy; 2017-2019 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
-```
-
-## Color scheme
-
-```yaml
-# Color scheme currently only supports "dark" or nil (default)
-color_scheme: "dark"
-```
-<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
-
-<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
-
-See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
-
-## Google Analytics
-
-```yaml
-# Google Analytics Tracking (optional)
-# e.g, UA-1234567-89
-ga_tracking: UA-5555555-55
-```
+|Name|Required|Description|Default Value|Example|
+|:---|:-------|:----------|:------------|:------|
+|status|required| The text of the status update.| | |
+|in_reply_to_status_id|optional|The ID od an existing status that the update is in reply to.|||
+|attachment_url|optional|In order for a URl to not be counted in the status body of an extended tweet, provide a URL as a Tweet attachment.|| `https://twitter.com/andypiper/status/903615884664725505`|
+|media_ids|optional|A comma delimited of media_ids to associate with the tweet ||`	471592 142565 957632`|
