@@ -18,3 +18,16 @@ In order to apply for a developer account, go to [Apply for a developer account]
 We will choose a student account for the purposes of this tutorial. 
 
 ![Twitter API Docs](/assets/images/config1.png"ChooseAccountType")
+
+Once you click on next, you will have to choose your country of residance and a name, by which you will be called. Click next.
+![Choose country and name](/assets/images/config3.png"Name")
+
+Next, you will be required to write about the app you will connect to the api. Based on the features you will use, you are required to write different paragraphs, mostly describing how you will use the feature.
+![Describe what you will do with the API](/assets/images/config4.png"Description")
+
+You will be asked to confirm your information. Makes sure they're correct and click on the "Looks Good" button.
+
+![Data Confirmation](/assets/images/config5.png"Confirm")
+
+Lastly, you will be requiried to accept to their Terms of use.
+> note that you will be have to have confirmed your email address before you can compelete this step.
