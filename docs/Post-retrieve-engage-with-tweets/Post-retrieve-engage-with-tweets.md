@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Post, retrieve, and engage with tweets
-nav_order: 1
+nav_order: 2
 has_children: true
-permalink: /docs/Post_retrieve_engage_with_tweets
+permalink: /docs/Post-retrieve-engage-with-tweets
 ---
 
 # Post, retrieve and engage with tweets
