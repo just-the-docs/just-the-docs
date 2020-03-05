@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Configuration
-nav_order: 1
+nav_order: 3
 has_children: true
-permalink: /docs/Configuration/Configuration.md
+# permalink: /docs/Configuration/Configuration.md
 ---
 # configuration
 Twitter Standard API requires the developers to create a developer account and set up an Oauth 1.0 on your app before you can access the users' data. 
