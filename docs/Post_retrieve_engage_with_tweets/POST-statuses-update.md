@@ -22,12 +22,12 @@ https://api.twitter.com/1.1/statuses/update.json
 
 ## Resource Information
 
-| | |
+| Response | Information |
 |:----------------|:----|
 |Response formats | JSON|
 |Requires authentication?|Yes(user context only)|
 |Rate limited?|Yes|
-|Requests/3-hour window| 300 per user; 300 per app|
+|Requests/3-hour window| 300 per user/300 per app|
 
 ## Parameters
 
