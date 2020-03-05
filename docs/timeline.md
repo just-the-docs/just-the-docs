@@ -2,6 +2,7 @@
 layout: default
 title: Timelines
 nav_order: 5
+permalink: docs/timeline
 ---
 
 # Navigation Structure

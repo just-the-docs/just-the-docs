@@ -2,6 +2,7 @@
 layout: default
 title: Tweet Engamenet
 nav_order: 6
+permalink: docs/tweet-engagement
 ---
 
 # Customization

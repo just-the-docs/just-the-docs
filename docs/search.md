@@ -2,6 +2,7 @@
 layout: default
 title: Search
 nav_order: 3
+permalink: docs/search
 ---
 
 # Search

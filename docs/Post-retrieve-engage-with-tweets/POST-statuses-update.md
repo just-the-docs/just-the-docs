@@ -4,6 +4,8 @@ title: POST statuses/update
 parent: Post, retrieve, and engage with tweets
 nav_order: 1
 ---
+1.TOC
+{:toc}
 
 # POST statuses/update
 
@@ -22,7 +24,7 @@ https://api.twitter.com/1.1/statuses/update.json
 
 ## Resource Information
 
-| Response | Information |
+| Resource | Information |
 |:----------------|:----|
 |Response formats | JSON|
 |Requires authentication?|Yes(user context only)|

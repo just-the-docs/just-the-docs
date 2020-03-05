@@ -1,8 +1,8 @@
 ---
 layout: default
-
 title: realtime-filter
 nav_order: 6
+permalink: docs/realtime-filter
 ---
 
 # Customization
