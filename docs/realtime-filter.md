@@ -1,7 +1,7 @@
 ---
 layout: default
 title: realtime-filter
-nav_order: 6
+nav_order: 4å
 permalink: docs/realtime-filter
 ---
 
@@ -73,14 +73,6 @@ For example, if you'd like to add your own styles for printing a page, you could
   .side-bar, .page-header { display: none; }
   .main-content { max-width: auto; margin: 1em;}
 }
-=======
-<<<<<<< HEAD:docs/tweet-engagement .md
-title: tweet-engagement
-nav_order: 4
-=======
-title: Realtime Filtering
-nav_order: 99
->>>>>>> 274e80697560f492bc96a2eec8bd752bfc877a67:docs/realtime-filter.md
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
