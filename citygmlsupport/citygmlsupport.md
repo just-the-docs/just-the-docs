@@ -37,19 +37,24 @@ The types of objects stored in CityGML are grouped into different modules, and C
 12. **Generics**: everything is supported
 13. **Groups**: everything is supported, except that groups can only be for grouping City Objects (and not surfaces or parts of City Objects as it can be in CityGML)
 
-Furthermore, for the **Appearance** module: the CityGML class `GeoreferencedTexture` is not supported. 
-The CityGML class `TexCoordGen` is not supported, ie one must specify the UV coordinates in the texture files. 
-
-ADEs (Application Domain Extensions) are also supported, see the [Extensions page]({{ site.baseurl }}/extensions/) .
-
-
-## CityGML features not supported
-
-1.  in CityGML most objects can have an ID (usually `gml:id`), that is one Building can have an ID, but also each 3D primitive forming its geometry can have an ID. In CityJSON, only specs\_cityobjects can have IDs, and each specs\_semantics.
-2.  no support for arbitrary coordinate reference systems (CRSs). Only an [EPSG code](https://epsg.io) can be used. Furthermore, all geometries in a given CityJSON must be using the same CRS.
-3.  no support for the topological relationships that can be defined, eg *relativeToTerrain* and *relativeToWater*
+__Extensions__ to the core data model are also supported (called ADEs in CityGML -- Application Domain Extensions).
+CityJSON Extensions are however different from CityGML ADEs, they do not follow the same rules and thus cannot be considered as a direct JSON translation.
+However, they have the same function as ADEs, see the [Extensions page]({{ site.baseurl }}/extensions/) for details.
 
 
-## New features (not in CityGML)
 
-CityJSON has built-in support for the metadata of a dataset (and is ISO 19115-compliant), while, surprisingly, CityGML does not offer that possibility.
+## CityGML features __not__ supported
+
+  1. __LoD4 of CityGML__, which was mostly designed to represent the interior of buildings (including details and furniture). The main reason is that currently there are virtually no datasets having LoD4 buildings. If there is a need in the future, the concepts and the implementation would follow the same rules described above.
+  1. __Several CRSs in the same datasets.__ In CityJSON, all geometries in a given CityJSON object must use the same CRS. In CityGML, 3 adjacent buildings can all have different CRSs, and some of the geometries to represent the walls can be in yet another CRS (although admittedly it is seldom used!).
+  1. __Arbitrary coordinate reference systems (CRSs).__ Only an [EPSG code](https://epsg.io) can be used. 
+  1. __Identifiers for low-level geometries.__ In CityGML most objects can have an ID (usually a `gml:id). That is, not only can one building have an ID, but also each of the 3D primitives forming its geometry can have an ID. In CityJSON, only city objects and semantic surfaces can have IDs.
+  1. __Raster files for the relief.__ Only TINs are supported.
+  1. __CityGML class `GeoreferencedTexture`__. In the **Appearance** module, the CityGML class `TexCoordGen` is not supported, ie one must specify the UV coordinates in the texture files. 
+  1. __topological relationships__, eg *relativeToTerrain* and *relativeToWater*, which qualify relationships, are not supported.
+
+
+
+## Extra feature (not in CityGML)
+
+  1. CityJSON has built-in support for the metadata of a dataset (and is ISO 19115-compliant), while, surprisingly, CityGML does not offer that possibility.
