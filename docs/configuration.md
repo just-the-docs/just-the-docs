@@ -24,6 +24,8 @@ View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/
 
 ## Site logo
 
+Dave
+
 ```yaml
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/just-the-docs.png"
