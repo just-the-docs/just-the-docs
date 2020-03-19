@@ -8,59 +8,25 @@ permalink: /docs/Configuration/ExpressSetup.md
 1.TOC
 {:toc}
 
-# Setting up our NodeJs and Express
-We will create a simple, boiler plate Node Js server, using ExpressJs. We will be required to provide the URL of the app in the developer dashboard.
+# Deploying our app to Heorku
+To deploy our app, we will use [Heroku Cloud Application Platform](https://www.heroku.com/). [Heroku](https://www.heroku.com/) will allow us to deploy our NodeJs app quickly and without having to pay.
+![Heroku Cloud Application Platform](/assets/images/config13.png)
+Create an account with [Heroku](https://www.heroku.com/), if you havn't already.
+Once logged in, Heroku will take you to your apps page, where you can find the apps that are currently running on Heroku.
+## Installing Heroku CLI
+Heroku CLI will allow us to deploy our app, from our termianl. Using the CLI is a quick and effective way to continuously deploy your web apps.
+> Make sure you have Git installed, before you install Heroku CLI.
+Download and install Heorku CLI:
+- [MacOs:](https://cli-assets.heroku.com/heroku.pkg "Heorku CLI Donwload for MacOS")
+- [Windows:](https://cli-assets.heroku.com/heroku-x64.exe "Heorku CLI Donwload for Windows")
+- Ubuntu: Run `sudo snap install --classic heroku`
 
-## Boilerplate Express
-Let's start with making a directory for our project and adding a server.js file.
-
-
-```
-mkdir TwitterAPI
-cd TwitterAPI
-ls
-touch server.js
-npm init -y
-```
-![Creating the boiler plate app](/assets/images/config9.png"Create app")
-
-Then, let's install Express from npm
-```
-npm i express
-```
-Once Express is installed, we can go to our server.js file and create our server.
-
-In our server.js file, we'll add our "/" endpoint.
-```
-const express = require('express')
-const app = express()
- 
-app.get('/', (req, res) => {
-  res.send('Twitter API')
-})
- 
-app.listen(3000 , () => console.log("The server is listening on port 3000"))
-
-```
-Now if we run the server.js file we will see the message printed in the terminal; and, the word will be shown, if we go to our browser and go to "localhost:3000".
-![Server is running in terminal](/assets/images/config10.png"Terminal")
-![App is shown in the browser](/assets/images/config11.png"Browser shows the app")
-
-## Adding a callback endpoint
-The user will be sent to Twitter, to login to their account. After being authentication, the user will be sent back to our callback, by Twitter. We will be expecting them  in our callback page. For now, though, we will just show them a message.
-Let's add the endpoint to our server.js
-
-```
-
-app.get('/returned' , (req,res) => {
-    res.send('Welcome back')
-})
-
-```
-
-![Returned endpoint is shown in the browser](/assets/images/config12.png"Returned endpoint is shown in the browser")
-
-We will revisit and mofidy our app, later on; But, now let's deploy our app to heroku.
+After installing the CLI, open terminal in your project directory.
+run `rm -rf node_modules; npm install --production`
+This will ensure that you only have the packages you need for production on you project, before you deploy your app.
+![npm init](/assets/images/config15.png"Running npm init")
+This will generate a package.json file in our project.
+`rm -rf node_modules; npm install --production`
 
 ### Setting up an app
 Twitter will email you a link, to confirm your email, for the developer account. After following the link email to you, you will be taken to your developer dashboard, where you can set up new apps, get API keys and set up your end points.
