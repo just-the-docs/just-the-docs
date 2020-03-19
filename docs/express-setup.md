@@ -2,7 +2,7 @@
 layout: default
 title: Creating our Express app
 nav_order: 100
-permalink: /docs/ExpressSetup
+permalink: /docs/express-setup
 ---
 1.TOC
 {:toc}

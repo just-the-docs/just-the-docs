@@ -1,7 +1,7 @@
 ---
 layout: default
 title: realtime-filter
-nav_order: 4å
+nav_order: 4
 permalink: docs/realtime-filter
 ---
 

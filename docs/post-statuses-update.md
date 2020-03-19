@@ -2,7 +2,7 @@
 layout: default
 title: POST statuses/update
 nav_order: 102
-permalink: /docs/POST-status-update
+permalink: /docs/post-status-update
 ---
 1.TOC
 {:toc}
