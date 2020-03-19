@@ -16,7 +16,7 @@ Sign in with your Twitter account. If you don't have one, go to [Sign up for Twi
 In order to apply for a developer account, go to [Apply for a developer account](https://developer.twitter.com/en/apply).
 We will choose a student account for the purposes of this tutorial. 
 
-![Twitter API Docs](/assets/images/config1.png"ChooseAccountType")
+![Twitter API Docs](../assets/images/config1.png"ChooseAccountType")
 
 Once you click on next, you will have to choose your country of residance and a name, by which you will be called. Click next.
 ![Choose country and name](/assets/images/config3.png"Name")
