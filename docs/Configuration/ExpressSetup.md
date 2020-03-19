@@ -3,7 +3,6 @@ layout: default
 title: Creating our Express app
 parent: Configuration
 nav_order: 1
-permalink: /docs/Configuration/ExpressSetup.md
 ---
 1.TOC
 {:toc}
