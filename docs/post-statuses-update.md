@@ -1,7 +1,7 @@
 ---
 layout: default
 title: POST statuses/update
-nav_order: 102
+nav_order: 5
 permalink: /docs/post-status-update
 ---
 1.TOC
