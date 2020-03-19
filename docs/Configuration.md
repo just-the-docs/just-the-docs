@@ -2,7 +2,6 @@
 layout: default
 title: Configuration
 nav_order: 99
-has_children: true
 permalink: /docs/Configuration
 ---
 # configuration

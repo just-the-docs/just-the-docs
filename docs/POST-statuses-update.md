@@ -1,8 +1,8 @@
 ---
 layout: default
 title: POST statuses/update
-parent: Post, retrieve, and engage with tweets
-nav_order: 1
+nav_order: 102
+permalink: /docs/POST-status-update
 ---
 1.TOC
 {:toc}
