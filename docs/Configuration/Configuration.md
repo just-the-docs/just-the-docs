@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Configuration
-nav_order: 1
+nav_order: 99
 has_children: true
-permalink: /docs/Configuration/Configuration.md
+permalink: /docs/Configuration
 ---
 # configuration
 Twitter Standard API requires the developers to create a developer account and set up an Oauth 1.0 on your app before you can access the users' data. 
@@ -91,3 +91,4 @@ app.get('/returned' , (req,res) => {
 ![Returned endpoint is shown in the browser](/assets/images/config12.png"Returned endpoint is shown in the browser")
 
 We will revisit and mofidy our app, later on; But, now let's deploy our app to heroku.
+
