@@ -4,7 +4,7 @@ title: Configuration
 nav_order: 99
 permalink: /docs/configuration
 ---
-# configuration
+# Account Configuration
 Twitter Standard API requires the developers to create a developer account and set up an Oauth 1.0 on your app before you can access the users' data. 
 In the following steps, we walk through how we can set up our account and integrate our app with Twitter Standard API, using Oauth 1.0.
 ## Developer Portal
