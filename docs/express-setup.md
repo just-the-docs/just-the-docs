@@ -54,9 +54,9 @@ This will help Heroku, recognize the version of the Node you are using.
 
 ### Setting your npm start command
 Inside your package.json, add this code to your scripts section:
-`
+~~~
     "start": "node server.js"
-`
+~~~
 
 At the end, my package.json file is going to look like this:
 ~~~
@@ -85,9 +85,9 @@ Now, you will push your app to your Heroku repository.
 Run `npm install` to install and update all of your dependencies.
 
 Start your app locally using the command below:
-`
+~~~
 heroku local web
-`
+~~~
 This command is installed as a part of Heroku CLI.
 
 ### Loging into Heroku in CLI
@@ -95,12 +95,12 @@ After installing the CLI, run `heroku login`. This will open a browser windows, 
 
 ### Deploying
 Add, commit and push your code to Heroku:
-`
+~~~
 git add .
 git commit -m "Initial Commit"
 heroku create
 git push heroku master
-`
+~~~
 If everything works out, your can open your deployed app using `heroku open`.
 
 
