@@ -74,6 +74,9 @@ At the end, my package.json file is going to look like this:
   "dependencies": {
     "express": "^4.17.1"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "devDependencies": {},
   "description": ""
 }
