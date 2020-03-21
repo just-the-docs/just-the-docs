@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sending our first request
-nav_order: 101
+nav_order: 4
 permalink: /docs/sending-a-request
 ---
 # Setting our endpoints in developer dashboard
