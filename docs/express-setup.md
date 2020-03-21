@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Creating our Express app
-nav_order: 100
+nav_order: 3
 permalink: /docs/express-setup
 ---
 

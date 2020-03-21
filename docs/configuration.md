@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Configuration
-nav_order: 99
+nav_order: 2
 permalink: /docs/configuration
 ---
 # Account Configuration
