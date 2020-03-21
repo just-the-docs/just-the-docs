@@ -74,6 +74,9 @@ At the end, my package.json file is going to look like this:
   "dependencies": {
     "express": "^4.17.1"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "devDependencies": {},
   "description": ""
 }
@@ -89,35 +92,28 @@ Start your app locally using the command below:
 heroku local web
 ~~~
 This command is installed as a part of Heroku CLI.
+![Running locally](../assets/images/config16.png)
+Press `Ctrl+C` to exit
 
 ### Loging into Heroku in CLI
 After installing the CLI, run `heroku login`. This will open a browser windows, where you can login to your Heorku account. With logging in, you will be able to deploy your app from your command line.
 
 ### Deploying
-Add, commit and push your code to Heroku:
+Add, commit your code to Heroku:
 ~~~
 git add .
 git commit -m "Initial Commit"
+~~~
+Then, run the command below, to create a remote for your Heroku:
+~~~
 heroku create
+~~~
+This will create a remote for your Heroku repository.
+Once created, you can push your code into your Heroku repository:
+~~~
 git push heroku master
 ~~~
-If everything works out, your can open your deployed app using `heroku open`.
+You can visit the app by running `heroku open`.
+![Deployed](../assets/images/config17.png)
 
-
-### Setting up an app
-Twitter will email you a link, to confirm your email, for the developer account. After following the link email to you, you will be taken to your developer dashboard, where you can set up new apps, get API keys and set up your end points.
-
-In the dashboard, click on Create an app
-
-![Create an app](../assets/images/config7.png)
-
-Click on the button to create an app, on the top corner of your page.
-
-![Create an app link](../assets/images/config8.png)
-
-### Preparing your URL endpoints
-
-Twitter will require a set of URL's from you. Those URL's will tell Twitter where to expect the requests to come from, and where to send them back. If requests are sent from any other URL, twitter will not authorize your program, even if the currect API key and token are used.
->Twitter will not accept local URL's(i.e. localhost/ ) as the URL for app.
-
-We will need to set up and deploy our app, in order to have the URL's that twitter is expecting from us. We will make a simple Express app and we will deploy it to Heorku, to provide Twitter with the ened points it needs.
+Congrats! You have deployed your NodeJs application to Heorku.
