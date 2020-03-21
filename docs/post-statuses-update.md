@@ -1,7 +1,7 @@
 ---
 layout: default
 title: POST statuses/update
-nav_order: 102
+nav_order: 5
 permalink: /docs/post-status-update
 ---
 1.TOC
@@ -39,7 +39,6 @@ https://api.twitter.com/1.1/statuses/update.json
 |in_reply_to_status_id|optional|The ID od an existing status that the update is in reply to.|||
 |attachment_url|optional|In order for a URl to not be counted in the status body of an extended tweet, provide a URL as a Tweet attachment.|| `https://twitter.com/andypiper/status/903615884664725505`|
 |media_ids|optional|A comma delimited of media_ids to associate with the tweet ||`	471592 142565 957632`|
-
 ## Example Request
 
 You can use any REST tool such Postman and Insomnia for request to api. Sample Request look like this:
