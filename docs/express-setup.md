@@ -4,8 +4,6 @@ title: Creating our Express app
 nav_order: 3
 permalink: /docs/express-setup
 ---
-1.TOC
-{:toc}
 
 # Deploying our app to Heorku
 To deploy our app, we will use [Heroku Cloud Application Platform](https://www.heroku.com/). [Heroku](https://www.heroku.com/) will allow us to deploy our NodeJs app quickly and without having to pay.
@@ -14,13 +12,13 @@ To deploy our app, we will use [Heroku Cloud Application Platform](https://www.h
 
 Create an account with [Heroku](https://www.heroku.com/), if you havn't already.
 Once logged in, Heroku will take you to your apps page, where you can find the apps that are currently running on Heroku.
+***
 ## Setting up Heroku CLI
-
-### Downloading the CLI
 Heroku CLI will allow us to deploy our app, from our termianl. Using the CLI is a quick and effective way to continuously deploy your web apps.
 >Make sure you have Git installed, before you install Heroku CLI.
+***
+### Downloading the CLI
 Download and install Heorku CLI:
-
 - [MacOs](https://cli-assets.heroku.com/heroku.pkg "Heorku CLI Donwload for MacOS")
 - [Windows](https://cli-assets.heroku.com/heroku-x64.exe "Heorku CLI Donwload for Windows")
 - Ubuntu: Run `sudo snap install --classic heroku`
@@ -39,7 +37,7 @@ Then, we will install Heorku's npm package globally
 To verify the installation you can run this command:
 `heroku --version`
 You should see heroku/ in the output.
-
+***
 ## Configuring Heroku settings
 Heroku will require us to change a few settings in your package.json file. First, let's specify our engin.
 
@@ -81,6 +79,7 @@ At the end, my package.json file is going to look like this:
   "description": ""
 }
 ~~~
+***
 ## Pushing your app
 Now, you will push your app to your Heroku repository.
 ### Preparing for deployment
