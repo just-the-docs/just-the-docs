@@ -13,7 +13,7 @@ permalink: /docs/post-status-update
 
 Updates the authenticating user's current status, also known as Tweeting.
 
-For each update attempt, the update text is compared with the authenticating user's recent Tweets. Any attempt that would result in duplication will be blocked, resulting 403 error. A user cannot submit the same status twice in a row
+We can use `oauth_token` obtained in Authentication to update the status on the user's behalf.
 
 
 ## Resource URL
@@ -22,6 +22,40 @@ For each update attempt, the update text is compared with the authenticating use
 https://api.twitter.com/1.1/statuses/update.json
 ```
 
+## End point for status update 
+
+In this end point, we are going to use `axios` library to send the request to twitter api and `express.json()` middleware to parse the json data in the request.
+
+```
+const axios = require('axios')
+const express = require('express')
+
+const app = express()
+
+app.use(express.json())
+
+app.post('./statusUpdate',(req,res) => {
+  const status = req.body.status
+  const data = {
+    'status': 'Hello'
+  }
+  const url = 'https://api.twitter.com/1.1/statuses/update.json'
+  axios.post(url, {
+      headers: {
+          'Authorization': 'oauth',
+          'oauth_consumer_key':'cChZNFj6T5R0TigYB9yd1w',
+          'oauth_token':'7588892-kagSNqWge8gB1WwE3plnFsJHAZVfxWD7Vb57p0b4',
+      },
+      data
+  }) 
+  .then((response) => {
+    console.log(response)
+  })
+  .catch((error) => {
+      console.log(error)
+  })
+})
+```
 ## Resource Information
 
 | Resource | Information |
