@@ -37,10 +37,10 @@ logo: "/assets/images/just-the-docs.png"
 search_enabled: true
 
 search:
-  # Split documents into sections that can be individually searched
+  # Split pages into sections that can be searched individually
   # Supports 1 - 6, default: 2
   heading_level: 2
-  # Maximum amount of previews to display
+  # Maximum amount of previews per search result
   # Default: 3
   previews: 3
   # Maximum amount of words to display before a matched word in the preview
@@ -49,12 +49,13 @@ search:
   # Maximum amount of words to display after a matched word in the preview
   # Default: 10
   preview_words_after: 10
-  # Include the relative url in the search
+  # Set the search token separator
+  # Default: /[\s\-/]+/
+  # Example: enable support for hyphenated search words
+  tokenizer_separator: /[\s/]+/
+  # Display the relative url in search results
   # Supports true (default) or false
   rel_url: false
-  # Enable support for hyphenated search words
-  # Default: /[\s\-/]+/
-  tokenizer_separator: /[\s/]+/
   # Enable or disable the search button
   # Supports true or false (default)
   button: true
