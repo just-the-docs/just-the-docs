@@ -55,6 +55,16 @@ However, they have the same function as ADEs, see the [Extensions page]({{ site.
 
 
 
-## Extra feature (not in CityGML)
+## Extra feature(s) (not in CityGML)
 
   1. CityJSON has built-in support for the metadata of a dataset (and is ISO 19115-compliant), while, surprisingly, CityGML does not offer that possibility.
+
+
+## Conversion CityJSON files <-> XML-encoded CityGML files
+
+The open-source software [citygml-tools](https://github.com/citygml4j/citygml-tools), which is based on [citygml4j](https://github.com/citygml4j/citygml4j) allows us to convert a CityJSON file to an XML-encoded CityGML file, and vice-versa.
+
+  - if the CityGML file contains features not supported (see above) then a warning is raise.
+  - identifiers for edges and points are simply discarded.
+  - if a CityJSON file has metadata, then they are ignored in the output CityGML file. Since CityGML has no structure way to store metadata, if there are in a XML-encoded file then they are ignored in the conversion.
+  - all the elements in the CityGML need to be in the same CRS for the conversion to be successful.
