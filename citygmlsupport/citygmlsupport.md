@@ -56,7 +56,6 @@ However, they have the same purpose as ADEs, see the [Extensions page]({{ site.b
   1. __CityGML class `GeoreferencedTexture`.__ In the **Appearance** module, the CityGML class `TexCoordGen` is not supported, ie one must specify the UV coordinates in the texture files. 
   1. __topological relationships,__ eg *relativeToTerrain* and *relativeToWater*, which qualify relationships, are not supported. XLinks to identify that some surfaces are shared between 2 objects is also not supported, however the fact that more topology is explicitly stored compensates somehow.
   1. __Terrain Intersection Curve (TIC).__ This feature of CityGML is seldom used in practice it seems, and can always be simply computed on-the-fly: intersection between the solid of the buildings (or other objects) and the terain. Furthermore, it is dependent on the LoD of the object (different LoDs can have different footprints)
-  1.  
 
 
 ## Extra feature(s) (not in CityGML)
