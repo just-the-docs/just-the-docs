@@ -71,14 +71,14 @@
                             {% else %}
                                 {% assign expand_this = false %}
                             {% endif %}
-                            {% include nav_entry.html indent="<span style='margin-left:20px'/>" entry=toc_level_3 has_children=true expanded=expand_this %}
+                            {% include nav_entry.html indent="style='margin-left:20px'" entry=toc_level_3 has_children=true expanded=expand_this %}
                             {% if expand_this %}
                                 {% for toc_level_4 in toc_level_3.children %}
-                                    {% include nav_entry.html indent="<span style='margin-left:40px'/>" entry=toc_level_4 %}
+                                    {% include nav_entry.html indent="style='margin-left:40px'" entry=toc_level_4 %}
                                 {% endfor %}
                             {% endif %}
                         {% else %}
-                            {% include nav_entry.html indent="<span style='margin-left:20px'/>" entry=toc_level_3 has_children=false %}
+                            {% include nav_entry.html indent="style='margin-left:20px'" entry=toc_level_3 has_children=false %}
                         {% endif %}
                     {% endfor %}
                 {% endif %}

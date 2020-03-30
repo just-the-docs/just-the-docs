@@ -18,10 +18,10 @@
                 {% else %}
                     class="nav-entry"
                 {% endif %}
-
+                {{include.indent}}
                 href="{{ page_iter.url | absolute_url }}?title={{ page_iter.title | url_encode }}"
             >
-                {{include.indent}}{{ page_iter.title }}
+                {{page_iter.title }}
             </a>
             </div>
 
@@ -35,11 +35,10 @@
 
     <div>
 
-        <a class="nav-entry" href="{{ include.entry.url }}">
-            {{include.indent}}{{ site.data.toc_text[include.entry.text] }}
+        <a class="nav-entry" href="{{ include.entry.url }}" {{include.indent}}>
+            {{ site.data.toc_text[include.entry.text] }}
         </a>
     </div>
 
 {% endif %}
-
 
