@@ -216,8 +216,8 @@
   color: $link-color;
 }
 
-.external-link-decoration:after {
+.external-link-decoration:before {
   font-family: "FontAwesome";
   content: "\f14c";
-  margin-left: 3px;
+  margin-right: 3px;
 }
