@@ -56,11 +56,13 @@ However, they have the same purpose as ADEs, see the [Extensions page]({{ site.b
   1. __CityGML class `GeoreferencedTexture`.__ In the **Appearance** module, the CityGML class `TexCoordGen` is not supported, ie one must specify the UV coordinates in the texture files. 
   1. __topological relationships,__ eg *relativeToTerrain* and *relativeToWater*, which qualify relationships, are not supported. XLinks to identify that some surfaces are shared between 2 objects is also not supported, however the fact that more topology is explicitly stored compensates somehow.
   1. __Terrain Intersection Curve (TIC).__ This feature of CityGML is seldom used in practice it seems, and can always be simply computed on-the-fly: intersection between the solid of the buildings (or other objects) and the terain. Furthermore, it is dependent on the LoD of the object (different LoDs can have different footprints)
+  1. __Complex attributes have been simplified__. For instance, several attributes in CityGML are derived from `gml:Measure` (like `bldg:measuredHeight`), and thus you cannot just store a value but also the unit of measurement. This is not represented in CityJSON directly, an Extension must be used. Also, generic attributes in CityGML cannot be mapped simply because in CityJSON you can add any attributes you like (inline with the JSON philosophy). 
 
 
-## Extra feature(s) (not in CityGML)
+## Extra features (not in CityGML)
 
   1. CityJSON has built-in support for the metadata of a dataset (and is ISO 19115-compliant), while, surprisingly, CityGML does not offer that possibility.
+  2. CityJSON supports the so-called ["TU Delft LoDs"](https://3d.bk.tudelft.nl/lod), which refine and improve the 5 LoDs in CityGML (only for buildings).
 
 
 ## Conversion CityJSON files <-> XML-encoded CityGML files
