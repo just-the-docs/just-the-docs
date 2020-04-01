@@ -15,8 +15,8 @@
 # in the templates via {{ site.myvariable }}.
 title: Discord for Dummies
 description: an instruction guide of Discord for beginners
-baseurl: "/discord-for-dummies" # the subpath of your site, e.g. /blog
-url: "https://bobsmithliu.github.io/COMMdoc/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/discordfordummies" # the subpath of your site, e.g. /blog
+url: "https://github.com/bobsmithliu/discordfordummies" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
