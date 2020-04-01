@@ -15,7 +15,6 @@ This document is to help you to use Discord, a software that provides Voice over
 
 Discord is also a great option and popular among LAN game matches, e-sport tournaments, and other game streamers.
 
-[View it on GitHub](https://github.com/bobsmithliu/COMMdoc){: .btn .fs-5 .mb-4 .mb-md-0 }
 ---
 
 ### Table of contents
