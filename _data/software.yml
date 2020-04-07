@@ -8,6 +8,13 @@
 #   - converter
 #   - applications
 
+- name: ninja
+  webpage: https://ninja.cityjson.org/
+  description: A viewer with support for holes and the ability to edit, all within the ease of your browser. The [repository](https://github.com/cityjson/ninja) has the latest code too.
+  foss: true
+  category: 
+    - viewer
+    - manipulator
 
 - name: FME reader/writer
   webpage: https://github.com/safesoftware/fme-CityJSON
