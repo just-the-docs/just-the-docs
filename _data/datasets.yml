@@ -10,7 +10,7 @@
   details: "Buildings in LoD2"
 
 - name: "Den Haag"
-  url:  https://data.overheid.nl/dataset/48265-3d-lod2-stadsmodel-2010-den-haag-citygml
+  url:  https://denhaag.dataplatform.nl/#/data/756d6fe7-f334-4ced-af13-61d612d92b1a
   image: dataset_denhaag.png
   json: DenHaag_01.json
   json-size: 2.9
