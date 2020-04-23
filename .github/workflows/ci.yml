@@ -28,7 +28,7 @@ jobs:
       run: |
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
-        jekyll/builder:3.8.5 /bin/bash -c "gem install bundler && chmod 777 /srv/jekyll && jekyll build && chmod 777 && assets/js/ && bundle exec just-the-docs rake search:init"
+        jekyll/builder:3.8.5 /bin/bash -c "gem install bundler && chmod 777 /srv/jekyll && jekyll build && chmod 777 assets/js/ && bundle exec just-the-docs rake search:init"
 
   css:
     name: Stylelint
