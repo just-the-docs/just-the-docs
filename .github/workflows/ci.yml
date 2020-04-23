@@ -4,8 +4,8 @@ name: CI
 
 jobs:
 
-  jekyll:
-    name: Build Jekyll site
+  jekyll-latest:
+    name: Build Jekyll site (latest)
     runs-on: ubuntu-latest
     steps:
 
@@ -15,8 +15,21 @@ jobs:
       run: |
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
-        jekyll/builder:3.8.5 /bin/bash -c "chmod 777 /srv/jekyll && jekyll build"
-        
+        jekyll/builder:latest /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && jekyll build && bundle exec just-the-docs rake search:init"
+
+  jekyll-3-8-5:
+    name: Build Jekyll site (v3.8.5)
+    runs-on: ubuntu-latest
+    steps:
+
+    - uses: actions/checkout@master
+
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run --rm \
+        --volume="${{ github.workspace }}:/srv/jekyll" \
+        jekyll/builder:3.8.5 /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && jekyll build && bundle exec just-the-docs rake search:init"
+
   css:
     name: Stylelint
     runs-on: ubuntu-latest
