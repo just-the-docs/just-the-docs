@@ -1,3 +1,74 @@
+// hide footer
+//.site-footer {display: none;}
+
+$sidebar-color: $white;
+//.side-bar a {color: #000000;}
+$nav-child-link-color: #27262b;
+//$link-color: #000000;
+//.page {text-align: center;}
+
+//// navigation links ////
+
+.navigation-list-link {
+color: #27262b;
+padding-left: 20px;
+}
+
+.navigation-list-link:hover {
+color: #27262b;
+border-radius: 25px;
+background: #CDCDCD;
+padding-left: 20px;
+width: 100%;
+height: 100%;
+}
+
+.navigation-list-link.active {
+color: white !important;
+border-radius: 25px;
+background: #7253ed;
+padding-left: 20px;
+width: 100%;
+height: 100%;
+}
+
+// hide small line before child links
+.navigation-list-item::before {
+display: none;
+}
+
+// allow line breaks for links
+.page a {
+white-space: normal !important;
+}
+
+//// Dark mode ////
+
+html[data-theme="dark"] {
+$sidebar-color: black;
+.page {background-color: black;}
+.side-bar {background-color: black;}
+.main-content-wrap {background-color: black;}
+.page-header {background-color: black;}
+.side-bar a {color: #E4E6EB;}
+.page {color: #E4E6EB;}
+h1, h2, h3, h4, h5, h6 {color: #E4E6EB !important;}
+.navigation-list-link {color: #E4E6EB;}
+.navigation-list-link:hover {background: #3A3B3C;}
+.navigation-list-link.active {background: #7253ed !important;}
+body {background-color: black;}
+.search-input-wrap {background-color: black;}
+.search-input {background-color: black;}
+.highlight {background-color: #18191A;}
+code {background-color: #18191A;}
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+      content: "dark";
+    }
+}
+
 ////
 //// Typography
 ////
