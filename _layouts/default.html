@@ -86,10 +86,29 @@ layout: table_wrappers
             </ul>
           {% endif %}
 
-          {% if site.footer_content != nil %}
+          {% if site.footer_content != nil or site.show_last_edit_time or site.show_gh_edit_link %}
             <hr>
             <footer role="contentinfo">
+              {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
+              <p class="text-small text-grey-dk-000 mb-0">
+                Page last modified: {{ page.last_modified_date | date: site.last_edit_time_format }}.
+              </p>
+              {% endif %}
+              {% 
+                if 
+                  site.gh_edit_link and 
+                  site.gh_edit_link_text and 
+                  site.gh_edit_repository and 
+                  site.gh_edit_view_mode and 
+                  site.gh_edit_branch
+              %}
+              <p class="text-small text-grey-dk-000 mb-0">
+                <a href="{{ site.gh_edit_repository }}/{{site.gh_edit_view_mode}}/{{site.gh_edit_branch}}/{{ page.path }}">{{ site.edit_link_text }}</a>
+              </p>
+              {% endif %}
+              {% if site.footer_content != nil %}
               <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
+              {% endif %}
             </footer>
           {% endif %}
 
