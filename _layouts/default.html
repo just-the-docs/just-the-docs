@@ -89,7 +89,7 @@ layout: table_wrappers
           {% if site.footer_content != nil or site.show_last_edit_time or site.show_gh_edit_link %}
             <hr>
             <footer role="contentinfo">
-              {% if site.show_last_edit_time and site.last_edit_time_format and page.last_modified_date %}
+              {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
               <p class="text-small text-grey-dk-000 mb-0">
                 Page last modified: {{ page.last_modified_date | date: site.last_edit_time_format }}.
               </p>
