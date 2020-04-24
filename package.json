@@ -17,5 +17,6 @@
   "scripts": {
     "test": "stylelint '**/*.scss'",
     "format": "prettier --write '**/*.{scss,js,json}'"
-  }
+  },
+  "dependencies": {}
 }
