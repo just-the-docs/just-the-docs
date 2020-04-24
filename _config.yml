@@ -38,16 +38,20 @@ aux_links:
   "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
 
-# Footer content appears at the bottom of every page's main content
+# Footer content 
+# appears at the bottom of every page's main content
 footer_content: "Copyright &copy; 2017-2019 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
-# Footer metadata
+
+# Footer last edited timestamp
 show_last_edit_time: true # show (default) or hide edit time
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
-show_gh_edit_link: true # show (default) or hide edit this page link
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
-edit_link_text: "Edit this page on GitHub."
 
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nil
