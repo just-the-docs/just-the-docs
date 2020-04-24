@@ -48,7 +48,6 @@ jobs:
       run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
       id: extract_branch
 
-    - name: npm install, build, and test
     - run: npm install
     - run: npm test
     - run: npm run format
