@@ -85,5 +85,5 @@ See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
 ga_tracking: UA-5555555-55
-ga_tracking_anonymize_ip: true
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
 ```
