@@ -6,14 +6,15 @@
   "license": "MIT",
   "bugs": "https://github.com/pmarsceill/just-the-docs/issues",
   "devDependencies": {
+    "@primer/css": "^14.3.0",
+    "prettier": "^2.0.5",
     "stylelint": "^10.0.1",
     "stylelint-config-primer": "^9.0.0",
+    "stylelint-prettier": "^1.1.2",
     "stylelint-selector-no-utility": "^4.0.0"
-  },
-  "dependencies": {
-    "@primer/css": "^14.3.0"
   },
   "scripts": {
     "test": "stylelint '**/*.scss'"
+    "format": "pretter --write '**/*.{scss,js,json}'"
   }
 }
