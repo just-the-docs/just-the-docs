@@ -43,6 +43,24 @@ jobs:
         node-version: 10.x
 
     - name: npm install, build, and test
+    - run: npm install
+    - run: npm test
+    - run: npm run format
+    - name: Add changed files
       run: |
-        npm install
-        npm test
+        echo "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+        git config --global user.email $GITHUB_ACTOR@users.noreply.github.com
+        git config --global user.name $GITHUB_ACTOR
+        echo "branch is ${{ steps.extract_branch.outputs.branch }}"
+        git checkout ${{ steps.extract_branch.outputs.branch }}
+        git add .
+    - name: Are there any updates?
+      shell: bash
+      run: echo "##[set-output name=status]$(git status -s)"
+      id: is_dirty
+    - name: Commit files
+      if: steps.is_dirty.outputs.status
+      run: |
+        echo ${{ steps.is_dirty.outputs.status }}
+        git commit -m "🎨 Prettier"
+        git push --force --set-upstream "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ${{ steps.extract_branch.outputs.branch }}
