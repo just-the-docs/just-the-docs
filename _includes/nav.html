@@ -13,22 +13,26 @@
               {%- assign children_list = site.html_pages | where: "parent", node.title | sort:"nav_order" -%}
               <ul class="navigation-list-child-list ">
                 {%- for child in children_list -%}
-                  <li class="navigation-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
-                    {%- if page.url == child.url or page.parent == child.title -%}
-                      {%- assign second_level_url = child.url | absolute_url -%}
-                    {%- endif -%}
-                    <a href="{{ child.url | absolute_url }}" class="navigation-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
-                    {%- if child.has_children -%}
-                        {%- assign grand_children_list = site.html_pages | where: "parent", child.title | sort:"nav_order" -%}
-                        <ul class="navigation-list-child-list">
-                        {%- for grand_child in grand_children_list -%}
-                          <li class="navigation-list-item {% if page.url == grand_child.url %} active{% endif %}">
-                            <a href="{{ grand_child.url | absolute_url }}" class="navigation-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
-                          </li>
-                        {%- endfor -%}
-                      </ul>
-                    {%- endif -%}
-                  </li>
+                  {%- unless child.nav_exclude -%}
+                    <li class="navigation-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
+                      {%- if page.url == child.url or page.parent == child.title -%}
+                        {%- assign second_level_url = child.url | absolute_url -%}
+                      {%- endif -%}
+                      <a href="{{ child.url | absolute_url }}" class="navigation-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
+                      {%- if child.has_children -%}
+                          {%- assign grand_children_list = site.html_pages | where: "parent", child.title | sort:"nav_order" -%}
+                          <ul class="navigation-list-child-list">
+                          {%- for grand_child in grand_children_list -%}
+                            {%- unless grand_child.nav_exclude -%}
+                              <li class="navigation-list-item {% if page.url == grand_child.url %} active{% endif %}">
+                                <a href="{{ grand_child.url | absolute_url }}" class="navigation-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
+                              </li>
+                            {%- endunless -%}
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </li>
+                  {%- endunless -%}
                 {%- endfor -%}
               </ul>
             {%- endif -%}
