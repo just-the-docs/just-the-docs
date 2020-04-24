@@ -5,6 +5,11 @@
     "_sass/vendor/**/*.scss"
   ],
   "extends": [
+    "stylelint-prettier/recommended",
     "stylelint-config-primer"
-  ]
+  ],
+  "plugins": ["stylelint-prettier"],
+  "rules": {
+    "prettier/prettier": true
+  }
 }
