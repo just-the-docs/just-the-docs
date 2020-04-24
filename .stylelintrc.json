@@ -1,5 +1,5 @@
 {
-  "ignoreFiles" : [
+  "ignoreFiles": [
     "assets/css/just-the-docs-default.scss",
     "assets/css/just-the-docs-light.scss",
     "assets/css/just-the-docs-dark.scss",
