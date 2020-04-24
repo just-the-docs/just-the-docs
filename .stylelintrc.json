@@ -4,14 +4,10 @@
     "assets/css/dark-mode-preview.scss",
     "_sass/vendor/**/*.scss"
   ],
-<<<<<<< HEAD
   "extends": [
     "stylelint-config-primer",
     "stylelint-config-prettier"
   ],
-=======
-  "extends": ["stylelint-prettier/recommended", "stylelint-config-primer"],
->>>>>>> c81862436316d38aea535163427d17f84e29343a
   "plugins": ["stylelint-prettier"],
   "rules": {
     "prettier/prettier": true
