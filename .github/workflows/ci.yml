@@ -55,8 +55,8 @@ jobs:
         echo "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
         git config --global user.email $GITHUB_ACTOR@users.noreply.github.com
         git config --global user.name $GITHUB_ACTOR
-        # echo "branch is ${{ steps.extract_branch.outputs.branch }}"
-        # git checkout ${{ steps.extract_branch.outputs.branch }}
+        echo "extracted branch is ${{ steps.extract_branch.outputs.branch }}"
+        git checkout -b ${{ steps.extract_branch.outputs.branch }}
         git status
         git add .
     - name: Are there any updates?
@@ -68,6 +68,5 @@ jobs:
       run: |
         echo ${{ steps.is_dirty.outputs.status }}
         git commit -m "🎨 Prettier"
-        git push --force -U origin HEAD
-        # git push --force --set-upstream "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ${{ steps.extract_branch.outputs.branch }}
+        git push --force --set-upstream "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ${{ steps.extract_branch.outputs.branch }}
     - run: npm test
