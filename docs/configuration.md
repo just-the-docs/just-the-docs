@@ -38,7 +38,6 @@ search_enabled: true
 
 # Enable support for hyphenated search words:
 search_tokenizer_separator: /[\s/]+/
-
 ```
 
 ## Aux links
@@ -56,7 +55,7 @@ aux_links:
 # Heading anchor links appear on hover over h1-h6 tags in page content
 # allowing users to deep link to a particular heading on a page.
 #
-# Supports true (default) or false/nil
+# Supports true (default) or false
 heading_anchors: true
 ```
 
@@ -88,12 +87,24 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 ## Color scheme
 
 ```yaml
-# Color scheme currently only supports "dark" or nil (default)
-color_scheme: "dark"
+# Color scheme supports "light" (default) and "dark"
+color_scheme: dark
 ```
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
-<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
+<script>
+const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+
+jtd.addEvent(toggleDarkMode, 'click', function(){
+  if (jtd.getTheme() === 'dark') {
+    jtd.setTheme('light');
+    toggleDarkMode.textContent = 'Preview dark color scheme';
+  } else {
+    jtd.setTheme('dark');
+    toggleDarkMode.textContent = 'Return to the light side';
+  }
+});
+</script>
 
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
 
