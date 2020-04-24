@@ -31,16 +31,22 @@ jobs:
         jekyll/builder:3.8.5 /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && jekyll build && bundle exec just-the-docs rake search:init"
 
   css:
-    name: Stylelint
+    name: Build, Test, and Format
     runs-on: ubuntu-latest
-    steps:
-    
-    - uses: actions/checkout@master
 
-    - name: Use Node.js 10.x
+    steps:
+    - uses: actions/checkout@v2
+      # Using this so the this instead of GITHUB_TOKEN so that this workflow can trigger another
+      with:
+        token: ${{ secrets.PAT }} 
+    - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
-        node-version: 10.x
+        node-version: '12.x'
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
 
     - name: npm install, build, and test
     - run: npm install
