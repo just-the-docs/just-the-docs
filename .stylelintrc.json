@@ -6,7 +6,6 @@
   ],
   "extends": [
     "stylelint-config-primer",
-    "stylelint-prettier/recommended",
     "stylelint-config-prettier"
   ],
   "plugins": ["stylelint-prettier"],
