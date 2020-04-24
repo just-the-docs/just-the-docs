@@ -30,8 +30,8 @@ jobs:
         --volume="${{ github.workspace }}:/srv/jekyll" \
         jekyll/builder:3.8.5 /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && jekyll build && bundle exec just-the-docs rake search:init"
 
-  css:
-    name: Build, Test, and Format
+  assets:
+    name: Format and test CSS and JS
     runs-on: ubuntu-latest
 
     steps:
@@ -49,7 +49,6 @@ jobs:
       id: extract_branch
 
     - run: npm install
-    - run: npm test
     - run: npm run format
     - name: Add changed files
       run: |
@@ -69,3 +68,4 @@ jobs:
         echo ${{ steps.is_dirty.outputs.status }}
         git commit -m "🎨 Prettier"
         git push --force --set-upstream "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ${{ steps.extract_branch.outputs.branch }}
+    - run: npm test
