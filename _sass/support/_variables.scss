@@ -2,9 +2,10 @@
 // Typography
 //
 
-$body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif !default;
+$body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue",
+  helvetica, roboto, noto, "segoe ui", arial, sans-serif !default;
 $mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace !default;
-$root-font-size: 16px !default;         // Base font-size for rems
+$root-font-size: 16px !default; // Base font-size for rems
 $body-line-height: 1.4 !default;
 $content-line-height: 1.5 !default;
 $body-heading-line-height: 1.15 !default !default;
@@ -82,7 +83,7 @@ $spacers: (
   sp-7: $spacing-unit * 2.5,
   sp-8: $spacing-unit * 3,
   sp-9: $spacing-unit * 3.5,
-  sp-10: $spacing-unit * 4
+  sp-10: $spacing-unit * 4,
 ) !default;
 
 $sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
@@ -125,5 +126,5 @@ $media-queries: (
   sm: 500px,
   md: $content-width,
   lg: $content-width + $nav-width,
-  xl: 1400px
+  xl: 1400px,
 ) !default;
