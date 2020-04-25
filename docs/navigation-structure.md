@@ -19,7 +19,11 @@ nav_order: 5
 
 The main navigation for your Just the Docs site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
 
-By default, all pages will appear as top level pages in the main nav unless a parent page is defined (see [Pages with Children](#pages-with-children)).
+By default, all pages will appear as top level pages in the main navigation unless a parent page is defined (see [Pages with Children](#pages-with-children)). 
+Selecting a top level page reveals links to all its children and grandchildren.
+Configuration options allow hiding links to grandchildren until their parent is selected,
+and revealing all links to children of top level pages (see [Navigation Display Levels](#navigation-display-levels)).
+
 
 ---
 
@@ -187,6 +191,19 @@ This would create the following navigation structure:
 |
 +-- ..
 ```
+
+### Navigation Display Levels
+
+The number of levels displayed in the navigation menu can be configured as follows:
+
+- `nav_top_show: 1` reveals links to top level pages (the default).\\
+  `nav_top_show: 2` reveals also links to children of top level pages.\\
+  `nav_top_show: 3` reveals also links to grandchildren of top level pages.
+
+- `nav_active_show: 1` reveals links to children of the selected page.\\
+  `nav_active_show: 2` reveals also links to grandchildren of the selected page (the default).
+  
+(With `nav_top_show: 3`, the setting of `nav_active_show` is ignored.)
 
 ---
 

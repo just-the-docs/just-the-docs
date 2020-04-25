@@ -33,6 +33,10 @@ search_tokenizer_separator: /[\s/]+/
 # Enable or disable heading anchors
 heading_anchors: true
 
+# Set the depth of displayed navigation links
+nav_top_show: 1    # levels always displayed
+nav_active_show: 2 # sub-levels displayed when selected
+
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":
