@@ -5,9 +5,6 @@
       {%- unless node.nav_exclude -%}
         {%- if node.parent == nil -%}
           <li class="navigation-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
-            {%- if page.parent == node.title or page.grand_parent == node.title -%}
-              {%- assign first_level_url = node.url | absolute_url -%}
-            {%- endif -%}
             <a href="{{ node.url | absolute_url }}" class="navigation-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
             {%- if node.has_children -%}
             {%- if page.url == node.url or page.parent == node.title or page.grand_parent == node.title -%}
@@ -15,9 +12,6 @@
               <ul class="navigation-list-child-list ">
                 {%- for child in children_list -%}
                   <li class="navigation-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
-                    {%- if page.url == child.url or page.parent == child.title -%}
-                      {%- assign second_level_url = child.url | absolute_url -%}
-                    {%- endif -%}
                     <a href="{{ child.url | absolute_url }}" class="navigation-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
                     {%- if child.has_children -%}
                       {%- if page.url == child.url or page.parent == child.title -%}
