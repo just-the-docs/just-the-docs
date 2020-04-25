@@ -38,6 +38,10 @@ aux_links:
   "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
 
+# Sort order for navigation links
+nav_sort: case_insensitive # default, equivalent to nil
+# nav_sort: case_sensitive # Capital letters sorted before lowercase
+
 # Footer content appears at the bottom of every page's main content
 footer_content: "Copyright &copy; 2017-2019 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 
