@@ -14,8 +14,8 @@ namespace :search do
 {
   {% assign comma = false %}
   {% for page in site.html_pages %}{% if page.search_exclude != true %}{% if comma == true%},{% endif %}"{{ forloop.index0 }}": {
-    "title": "{{ page.title | replace: '&amp;', '&' }}",
-    "content": "'+content+'",
+    "title": "{{ page.title | replace: \'&amp;\', \'&\' }}",
+    "content": "\'+content+\'",
     "url": "{{ page.url | absolute_url }}",
     "relUrl": "{{ page.url }}"
   }{% assign comma = true %}
