@@ -47,6 +47,9 @@ search_tokenizer_separator: /[\s/]+/
 aux_links:
   "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: false
 ```
 
 ## Heading anchor links
