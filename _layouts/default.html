@@ -95,14 +95,15 @@ layout: table_wrappers
               {% endif %}
               {% 
                 if 
-                  site.gh_edit_link and 
-                  site.gh_edit_link_text and 
-                  site.gh_edit_repository and 
-                  site.gh_edit_view_mode and 
-                  site.gh_edit_branch
+                  site.gh_edit_link and
+                  site.gh_edit_link_text and
+                  site.gh_edit_repository and
+                  site.gh_edit_branch and
+                  site.gh_edit_view_mode
+
               %}
               <p class="text-small text-grey-dk-000 mb-0">
-                <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}">{{ site.edit_link_text }}</a>
+                <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}">{{ site.gh_edit_link_text }}</a>
               </p>
               {% endif %}
               {% if site.footer_content != nil %}
