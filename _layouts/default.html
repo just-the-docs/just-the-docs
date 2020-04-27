@@ -74,7 +74,6 @@ layout: table_wrappers
           {% if page.has_children == true and page.has_toc != false %}
             <hr>
             <h2 class="text-delta">Table of contents</h2>
-            {% assign children_list = site.pages | sort:"nav_order" %}
             <ul>
               {% for child in children_list %}
                 {% if child.parent == page.title and child.title != page.title and child.grand_parent == page.parent %}
@@ -86,10 +85,29 @@ layout: table_wrappers
             </ul>
           {% endif %}
 
-          {% if site.footer_content != nil %}
+          {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
             <hr>
             <footer role="contentinfo">
+              {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
+              <p class="text-small text-grey-dk-000 mb-0">
+                Page last modified: {{ page.last_modified_date | date: site.last_edit_time_format }}.
+              </p>
+              {% endif %}
+              {% 
+                if 
+                  site.gh_edit_link and 
+                  site.gh_edit_link_text and 
+                  site.gh_edit_repository and 
+                  site.gh_edit_view_mode and 
+                  site.gh_edit_branch
+              %}
+              <p class="text-small text-grey-dk-000 mb-0">
+                <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}">{{ site.edit_link_text }}</a>
+              </p>
+              {% endif %}
+              {% if site.footer_content != nil %}
               <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
+              {% endif %}
             </footer>
           {% endif %}
 
