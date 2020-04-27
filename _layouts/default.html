@@ -85,7 +85,7 @@ layout: table_wrappers
             </ul>
           {% endif %}
 
-          {% if site.footer_content != nil or site.show_last_edit_time or site.show_gh_edit_link %}
+          {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
             <hr>
             <footer role="contentinfo">
               {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
