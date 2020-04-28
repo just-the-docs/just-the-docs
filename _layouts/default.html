@@ -75,6 +75,7 @@ layout: table_wrappers
             <hr>
             <h2 class="text-delta">Table of contents</h2>
             <ul>
+              {%- assign children_list = pages_list | where: "parent", node.title -%}
               {% for child in children_list %}
                 {% if child.parent == page.title and child.title != page.title and child.grand_parent == page.parent %}
                 <li>
