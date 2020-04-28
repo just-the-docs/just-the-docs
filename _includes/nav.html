@@ -2,12 +2,12 @@
   <ul class="navigation-list">
     {%- assign ordered_pages_list = site.html_pages | where_exp:"item", "item.nav_order != nil" -%}
     {%- assign unordered_pages_list = site.html_pages | where_exp:"item", "item.nav_order == nil" -%}
-    {%- if site.nav_sort == 'case_sensitive' -%}
-      {%- assign sorted_ordered_pages_list = ordered_pages_list | sort:"nav_order" -%}
-      {%- assign sorted_unordered_pages_list = unordered_pages_list | sort:"title" -%}
-    {%- else -%}
+    {%- if site.nav_sort == 'case_insensitive' -%}
       {%- assign sorted_ordered_pages_list = ordered_pages_list | sort_natural:"nav_order" -%}
       {%- assign sorted_unordered_pages_list = unordered_pages_list | sort_natural:"title" -%}
+    {%- else -%}
+      {%- assign sorted_ordered_pages_list = ordered_pages_list | sort:"nav_order" -%}
+      {%- assign sorted_unordered_pages_list = unordered_pages_list | sort:"title" -%}
     {%- endif -%}
     {%- assign pages_list = sorted_ordered_pages_list | concat: sorted_unordered_pages_list -%}
     {%- for node in pages_list -%}
