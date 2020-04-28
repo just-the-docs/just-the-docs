@@ -44,7 +44,6 @@ and appear after the explicitly-ordered pages at each level.
 By default, all Capital letters are sorted before all lowercase letters;
 adding `nav_sort: case_insensitive` in the configuration file ignores case
 when sorting strings (but also sorts numbers lexicographically: `10` comes before `1`).
-add `nav_sort: case_sensitive` in the configuration file.
 
 ---
 
