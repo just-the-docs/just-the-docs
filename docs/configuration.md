@@ -75,7 +75,7 @@ color_scheme: "dark"
 ```
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
-<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
+<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | relative_url }}"></script>
 
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
 

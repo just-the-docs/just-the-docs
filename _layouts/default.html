@@ -79,7 +79,7 @@ layout: table_wrappers
               {% for child in children_list %}
                 {% if child.parent == page.title and child.title != page.title %}
                 <li>
-                  <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+                  <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
                 </li>
                 {% endif %}
               {% endfor %}
