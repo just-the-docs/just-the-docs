@@ -144,3 +144,13 @@ Default line height
 Default line height
 {: .fh-default }
 ```
+
+## Text justification
+
+By default text is justified left. Use these `text-` classes to override settings:
+
+| Class          | What it does         |
+|:---------------|:---------------------|
+| `.text-left`   | `text-align: left`   |
+| `.text-right`  | `text-align: right`  |
+| `.text-center` | `text-align: center` |
