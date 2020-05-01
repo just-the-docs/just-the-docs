@@ -197,9 +197,9 @@ This would create the following navigation structure:
 
 ---
 
-## Auxiliary Navigation
+## Auxiliary Links
 
-To add a auxiliary navigation item to your site (in the upper right on all pages), add it to the `aux_nav` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-nav) in your site's `_config.yml` file.
+To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
 
 #### Example
 {: .no_toc }
