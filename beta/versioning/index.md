@@ -107,7 +107,9 @@ Traversing the versions through their parents builds the city model's history, a
 
 ## Sample Data
 
-*I think it would be nice to have a link here to sample data? What do you think?*
+<p><a href="https://github.com/tudelft3d/cityjson-versioning-prototype/blob/develop/Examples/dummy/buildingBeforeAndAfter.json"><b>J.R.R. Tolkien's dataset</b></a><br/>
+Simple example with dummy data (no geometries) to describe a scenario with versions and branches. Inspired by interesting literature...
+</p>
 
 ## Read More
 
