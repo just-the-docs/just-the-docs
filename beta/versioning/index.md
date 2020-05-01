@@ -9,13 +9,13 @@ permalink: /beta/versioning/
 
 Versioning is our approach to solving the problem of storing different iterations or variations of a city model in a structured and meaningful way. Our proposed solution describes how this can be possible through the CityJSON encoding.
 
-We are actively working to perfecting the data structure and developing tools to work with it.
+We are actively working on perfecting the data structure and developing tools to work with it.
 
 ## Motivation
 
-When a 3D city model is created, it represents its real-world counterpart at a snapshot in time. However, as time passes, the model needs to be updated and to evolve, much like its real-world counterpart. 
+When a 3D city model is created, it represents its real-world counterpart at a snapshot in time. However, as time passes, the model needs to updated and evolve, much like its real-world counterpart. 
 
-In order to keep a 3D city model up to date, new versions of it should be regularly created due to three main causes:
+In order to keep a 3D city model up to date, new versions should regularly be created, due to three main reasons:
  1. Cities are constantly changing (e.g. a new building is built, a road is closed, etc.). 
  2. The modelling aspect of a project may change, such as when new information becomes available for existing city objects through the acquisition of a new dataset or the output of a new simulation. 
  3. Certain maintenance processes may cause changes to a dataset (e.g. geometric errors are fixed, or the classification used in an attribute is changed).
@@ -28,7 +28,7 @@ Users can interact with a vCityJSON in two ways:
  1. By directly adding new city object versions manually (e.g. by duplicating an existing city object, renaming it and making the necessary changes). In this approach, they would need to add a new version and define it accordingly.
  2. It is possible to develop a tool that extracts a “simple” city model based on the description of one version in a vCityJSON file. Then, changes can be made to this file, after which the tool can incorporate the changes in the versioned CityJSON by adding all of the necessary new objects.
 
-The structure vCityJSON is similar to a regular CityJSON, with the addition of a `versioning` property at the root of the CityJSON object:
+The structure of a vCityJSON is similar to a regular CityJSON, with the addition of a `versioning` property at the root of the CityJSON object:
 ```js
 {
   "type": "CityJSON",
@@ -89,7 +89,7 @@ Then the versions and their corresponding city objects are defined in the `versi
   ... // Rest of CityJSON
 }
 ```
-Every `version` contains the `author`, `date` and `message`. It, also, contains the list of objects that exist in this version through the `objects` property; this is a dictionary which maps the original city object's id with the versioned city object's id. For instance, in the example above the same building (which originally had the id `building1`) is represented in two different states, which are described by the `building-original` and `building1-renovated` city objects in the versioned file. Finally, every version has the list of `parents`, which is the name of the version that it derived from. For instance, `v2` came after `v1`, therefore `v1` is its parent. 
+Every `version` contains the `author`, `date`, and `message`. It also contains the list of objects that exist in this version through the `objects` property; this is a dictionary which maps the original city object's id with the versioned city object's id. For instance, in the example above the same building (which originally had the id `building1`) is represented in two different states, which are described by the `building-original` and `building1-renovated` city objects in the versioned file. Finally, every version has a list of `parents`, which is the name of the version that it derived from. For instance, `v2` came after `v1`, therefore `v1` is its parent. 
 
 Traversing the versions through their parents builds the city model's history, as a graph. In this graph, `branches` can be denoted through the respective dictionary which maps a branch's name to a specific version. In a similar fashion, `tags` can be defined in the model to denote certain milestones.
 
