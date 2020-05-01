@@ -3,10 +3,21 @@
 #   - viewer
 #   - generator
 #   - parser
-#   - manipulator
+#   - editor
+#   - transformer
 #   - validator
 #   - converter
 #   - applications
+
+# Interfaces
+#   - cli
+#   - gui
+#   - both
+
+# Types
+#   - app
+#   - lib
+#   - both
 
 - name: ninja
   webpage: https://ninja.cityjson.org/
@@ -14,7 +25,9 @@
   foss: true
   category: 
     - viewer
-    - manipulator
+    - editor
+  interface: gui
+  type: app
 
 - name: FME reader/writer
   webpage: https://github.com/safesoftware/fme-CityJSON
@@ -24,7 +37,8 @@
     - viewer
     - generator
     - converter
-
+  interface: gui
+  type: app
 
 - name: Blender plugin
   webpage: https://github.com/cityjson/Blender-CityJSON-Plugin
@@ -32,8 +46,10 @@
   foss: true
   category: 
     - viewer
-    - manipulator
+    - transformer
     - applications
+  interface: gui
+  type: app
 
 - name: 3D City Database
   webpage: http://www.3dcitydb.org
@@ -48,6 +64,8 @@
   foss: true
   category: 
     - generator
+  interface: cli
+  type: lib
 
 - name: cjio
   webpage: https://github.com/cityjson/cjio
@@ -56,16 +74,20 @@
   category: 
     - validator
     - converter
-    - manipulator
+    - transformer
     - parser
+  interface: cli
+  type: both
 
 - name: citygml-tools
   webpage: https://github.com/citygml4j/citygml-tools
   description: CLI created with citygml4j, it allows us to convert CityJSON <-> CityGML in one-click. 
   foss: true
   category: 
-    - manipulator
+    - transformer
     - converter
+  interface: cli
+  type: both
 
 - name: CityJSON QGIS plugin
   webpage: https://github.com/tudelft3d/cityjson-qgis-plugin
@@ -73,7 +95,8 @@
   foss: true
   category: 
     - viewer
-    - manipulator
+  interface: gui
+  type: app
 
 - name: azul
   webpage: https://itunes.apple.com/nl/app/azul/id1173239678?mt=12
@@ -81,6 +104,8 @@
   foss: true
   category: 
     - viewer
+  interface: gui
+  type: app
 
 - name: Web-viewer
   webpage: https://viewer.cityjson.org
@@ -88,6 +113,8 @@
   foss: true
   category: 
     - viewer
+  interface: gui
+  type: app
 
 - name: citygml4j
   webpage: https://github.com/citygml4j
@@ -95,6 +122,8 @@
   foss: true
   category: 
     - parser
+  interface: cli
+  type: lib
   
 - name: val3dity
   webpage: http://github.com/tudelft3d/val3dity/
@@ -102,6 +131,8 @@
   foss: true
   category: 
     - validator
+  interface: both
+  type: both
 
 # - name: FME
 #   webpage: http://www.safe.com
