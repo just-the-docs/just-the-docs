@@ -28,7 +28,7 @@ Users can interact with a vCityJSON in two ways:
  1. By directly adding new city object versions manually (e.g. by duplicating an existing city object, renaming it and making the necessary changes). In this approach, they would need to add a new version and define it accordingly.
  2. It is possible to develop a tool that extracts a “simple” city model based on the description of one version in a vCityJSON file. Then, changes can be made to this file, after which the tool can incorporate the changes in the versioned CityJSON by adding all of the necessary new objects.
 
-The structure vCityJSON is similar to a regular CityJSON, with the addition of a "versioning" property at the root of the CityJSON object:
+The structure vCityJSON is similar to a regular CityJSON, with the addition of a `versioning` property at the root of the CityJSON object:
 ```js
 {
   "type": "CityJSON",
@@ -38,7 +38,7 @@ The structure vCityJSON is similar to a regular CityJSON, with the addition of a
   "vertices": []
 }
 ``` 
-All versions of city objects are listed under the "CityObjects" property, as is the case in a regular CityJSON file. For example, if one vCityJSON file contains two versions of a building, then two city objects will be in the file as follows:
+All versions of city objects are listed under the `CityObjects` property, as is the case in a regular CityJSON file. For example, if one vCityJSON file contains two versions of a building, then two city objects will be in the file as follows:
 ```js
 {
   ... // Start of CityJSON
@@ -108,7 +108,7 @@ Traversing the versions through their parents builds the city model's history, a
 ## Sample Data
 
 <p><a href="https://github.com/tudelft3d/cityjson-versioning-prototype/blob/develop/Examples/dummy/buildingBeforeAndAfter.json"><b>J.R.R. Tolkien's dataset</b></a><br/>
-Simple example with dummy data (no geometries) to describe a scenario with versions and branches. Inspired by interesting literature...
+Simple example with dummy data (no geometries) to describe a scenario with versions and branches. Created by J.R.R. Tolkien himself...
 </p>
 
 ## Read More
