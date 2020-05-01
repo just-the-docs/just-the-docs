@@ -6,16 +6,17 @@
 .label-blue {
   display: inline-block;
   padding-top: 0.16em;
-  padding-right: 0.42em;
+  padding-right: 0.56em;
   padding-bottom: 0.16em;
-  padding-left: 0.42em;
-  margin-right: $sp-1;
-  margin-left: $sp-1;
+  padding-left: 0.56em;
+  margin-right: $sp-2;
+  margin-left: $sp-2;
   color: $white;
   text-transform: uppercase;
   vertical-align: middle;
   background-color: $blue-100;
   @include fs-2;
+  border-radius: 12px;
 }
 
 .label-green {
