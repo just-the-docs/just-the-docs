@@ -29,7 +29,7 @@ layout: table_wrappers
       </footer>
     </div>
     <div class="main-content-wrap js-main-content" tabindex="0">
-      <div class="main-content">
+      <div class="main-content" id="top">
         <div class="page-header js-page-header">
           {% if site.search_enabled != false %}
           <div class="search">
@@ -96,28 +96,37 @@ layout: table_wrappers
 
           {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
             <hr>
-            <footer role="contentinfo">
-              {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
-              <p class="text-small text-grey-dk-000 mb-0">
-                Page last modified: {{ page.last_modified_date | date: site.last_edit_time_format }}.
-              </p>
+            <footer>
+              {% if site.back_to_top %}
+              <p><a href="#top">{{ site.back_to_top_text }}</a></p>
               {% endif %}
-              {% 
-                if 
+              {% if site.footer_content != nil %}
+              <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
+              {% endif %}
+
+              {% if site.last_edit_timestamp or site.gh_edit_link %}
+                <div class="d-flex mt-2">
+                  {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
+                  <p class="text-small text-grey-dk-000 mb-0 mr-2">
+                  Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
+                  </p>
+                  {% endif %}
+                  {%
+                  if
                   site.gh_edit_link and
                   site.gh_edit_link_text and
                   site.gh_edit_repository and
                   site.gh_edit_branch and
                   site.gh_edit_view_mode
 
-              %}
-              <p class="text-small text-grey-dk-000 mb-0">
-                <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}">{{ site.gh_edit_link_text }}</a>
-              </p>
+                  %}
+                  <p class="text-small text-grey-dk-000 mb-0">
+                  <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}">{{ site.gh_edit_link_text }}</a>
+                  </p>
+                  {% endif %}
+                </div>
               {% endif %}
-              {% if site.footer_content != nil %}
-              <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
-              {% endif %}
+
             </footer>
           {% endif %}
 
