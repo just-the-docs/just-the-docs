@@ -156,5 +156,15 @@
   h5,
   h6 {
     position: relative;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  + table,
+  .table-wrapper,
+  .code-example,
+  .highlighter-rouge {
+    margin-top: 1em;
   }
 }

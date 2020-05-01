@@ -45,7 +45,7 @@ layout: table_wrappers
               {% for link in site.aux_links %}
                 <li class="d-inline-block my-0{% unless forloop.last %} mr-2{% endunless %}">
                   <a href="{{ link.last }}"
-                    {% if site.aux_links_new_tab %} 
+                    {% if site.aux_links_new_tab %}
                     target="_blank" rel="noopener noreferrer"
                     {% endif %}
                   >

@@ -25,25 +25,23 @@ body {
   background-color: $body-background-color;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 ol,
 ul,
+dl,
 pre,
 address,
 blockquote,
-dl,
+.table-wrapper {
+  margin-top: 0.5em;
+}
+
+table,
+p,
 div,
-fieldset,
-form,
 hr,
-noscript,
-table {
+form,
+fieldset,
+noscript {
   margin-top: 0;
 }
 
@@ -53,8 +51,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1.2em;
-  margin-bottom: 0.8em;
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
   font-weight: 500;
   line-height: $body-heading-line-height;
   color: $body-heading-color;
