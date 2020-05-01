@@ -7,6 +7,12 @@ has_children: false
 permalink: /beta/versioning/
 ---
 
+Versioning is our approach to solving the problem of storing different iterations or variations of a city model in a structured and meaningful way. Our proposed solution describes how this can be possible through the CityJSON encoding.
+
+We are actively working to perfecting the data structure and developing tools to work with it.
+
+## Motivation
+
 When a 3D city model is created, it represents its real-world counterpart at a snapshot in time. However, as time passes, the model needs to be updated and to evolve, much like its real-world counterpart. 
 
 In order to keep a 3D city model up to date, new versions of it should be regularly created due to three main causes:
@@ -37,7 +43,7 @@ All versions of city objects are listed under the "CityObjects" property, as is 
 {
   ... // Start of CityJSON
   "CityObjects": {
-    "building1": {
+    "building1-original": {
       "type": "building",
       "geometry": [ ... ]
     },
@@ -49,6 +55,44 @@ All versions of city objects are listed under the "CityObjects" property, as is 
   ... // Rest of CityJSON
 }
 ``` 
+Then the versions and their corresponding city objects are defined in the `versioning` property:
+```js
+{
+  ... // Start of CityJSON
+  "versioning": {
+    "versions": {
+      "v2": {
+        "author": "John Doe",
+        "message": "Change building1 according to renovation",
+        "date": "20200501T13:46:45.511Z",
+        "parents": ["v1"],
+        "objects": {
+          "building1": "building1-renovated"
+        }
+      },
+      "v1": {
+        "author": "John Doe",
+        "message": "Add building1",
+        "date": "20200221T13:46:45.511Z",
+        "objects": {
+          "building1": "building1-original"
+        }
+      }
+    },
+    "branches": {
+      "master": "v2"
+    },
+    "tags": {
+      "first-version": "v1"
+    }
+  }
+  ... // Rest of CityJSON
+}
+```
+Every `version` contains the `author`, `date` and `message`. It, also, contains the list of objects that exist in this version through the `objects` property; this is a dictionary which maps the original city object's id with the versioned city object's id. For instance, in the example above the same building (which originally had the id `building1`) is represented in two different states, which are described by the `building-original` and `building1-renovated` city objects in the versioned file. Finally, every version has the list of `parents`, which is the name of the version that it derived from. For instance, `v2` came after `v1`, therefore `v1` is its parent. 
+
+Traversing the versions through their parents builds the city model's history, as a graph. In this graph, `branches` can be denoted through the respective dictionary which maps a branch's name to a specific version. In a similar fashion, `tags` can be defined in the model to denote certain milestones.
+
 ## Software
 
 {% assign software = site.data.beta.beta_software | better_sort: 'name' %}
