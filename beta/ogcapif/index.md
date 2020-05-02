@@ -1,10 +1,10 @@
 ---
 layout: default
 title: OGC API&mdash;Features
-parent: Beta
+parent: Experimental
 nav_order: 1
 has_children: false
-permalink: /beta/ogcapif/
+permalink: /experimental/ogcapif/
 ---
 
 <h1>{{ page.title }} <span class="label label-purple">best practice doc</span></h1>

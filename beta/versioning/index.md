@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Versioning
-parent: Beta
+parent: Experimental
 nav_order: 2
 has_children: false
-permalink: /beta/versioning/
+permalink: /experimental/versioning/
 ---
 
 <h1>{{ page.title }} <span class="label label-purple">work-in-progress</span></h1>

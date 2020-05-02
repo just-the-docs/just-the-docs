@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Beta
+title: Experimental
 nav_order: 9
 has_children: true
-permalink: /beta/
+permalink: /experimental/
 ---
 
-# Beta, work-in-progress, playground, etc.
+# Experimental features, work-in-progress, playground, etc.
 {: .no_toc }
