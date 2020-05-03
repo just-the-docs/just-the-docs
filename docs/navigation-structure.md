@@ -212,6 +212,14 @@ The number of levels displayed in the navigation menu can be configured as follo
   
 (With `nav_top_show: 3`, the setting of `nav_active_show` is ignored.)
 
+Titles and navigation attributes need to be coherent:
+
+- sibling pages have distinct `title` attributes;
+- parent pages have the attribute `has_children: true`;
+- `parent` and `grandparent` attributes are titles of pages at the right level;
+- the `grandparent` attribute of a grandchild page is the same as the `parent` attribute 
+  of its parent page.
+
 ---
 
 ## Auxiliary Navigation
