@@ -19,37 +19,7 @@
 #   - lib
 #   - both
 
-- name: ninja
-  webpage: https://ninja.cityjson.org/
-  description: A viewer with support for holes and the ability to edit, all within the ease of your browser. The [repository](https://github.com/cityjson/ninja) has the latest code too.
-  foss: true
-  category: 
-    - viewer
-    - editor
-  interface: gui
-  type: app
-
-- name: FME
-  webpage: https://github.com/safesoftware/fme-CityJSON
-  description: A (beta) reader/writer for [FME](https://www.safe.com/fme/). For the latest version, download and compile the open-source code from GitHub. The latest [FME beta](https://www.safe.com/support/downloads/#beta) has the latest code too.
-  foss: false
-  category: 
-    - viewer
-    - generator
-    - converter
-  interface: gui
-  type: app
-
-- name: Blender plugin
-  webpage: https://github.com/cityjson/Blender-CityJSON-Plugin
-  description: Plugin to open/import directly CityJSON models in Blender, attributes and semantics are kept.
-  foss: true
-  category: 
-    - viewer
-    - transformer
-    - applications
-  interface: gui
-  type: app
+# Don't forget to add software alphabetically!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 - name: 3D City DB
   webpage: http://www.3dcitydb.org
@@ -70,6 +40,45 @@
   interface: cli
   type: lib
 
+- name: azul
+  webpage: https://itunes.apple.com/nl/app/azul/id1173239678?mt=12
+  description: A native and fast CityJSON viewer for macOS
+  foss: true
+  category: 
+    - viewer
+  interface: gui
+  type: app
+
+- name: Blender plugin
+  webpage: https://github.com/cityjson/Blender-CityJSON-Plugin
+  description: Plugin to open/import directly CityJSON models in Blender, attributes and semantics are kept.
+  foss: true
+  category: 
+    - viewer
+    - transformer
+    - applications
+  interface: gui
+  type: app
+
+- name: citygml4j
+  webpage: https://github.com/citygml4j
+  description: Open source Java class library and API 
+  foss: true
+  category: 
+    - parser
+  interface: cli
+  type: lib
+
+- name: citygml-tools
+  webpage: https://github.com/citygml4j/citygml-tools
+  description: CLI created with citygml4j, it allows us to convert CityJSON <-> CityGML in one-click. 
+  foss: true
+  category: 
+    - transformer
+    - converter
+  interface: cli
+  type: both
+
 - name: cjio
   webpage: https://github.com/cityjson/cjio
   description: Python CLI to process and manipulate CityJSON files. Used as the 'official' validator for CityJSON files.
@@ -82,15 +91,26 @@
   interface: cli
   type: both
 
-- name: citygml-tools
-  webpage: https://github.com/citygml4j/citygml-tools
-  description: CLI created with citygml4j, it allows us to convert CityJSON <-> CityGML in one-click. 
+- name: FME
+  webpage: https://github.com/safesoftware/fme-CityJSON
+  description: A (beta) reader/writer for [FME](https://www.safe.com/fme/). For the latest version, download and compile the open-source code from GitHub. The latest [FME beta](https://www.safe.com/support/downloads/#beta) has the latest code too.
+  foss: false
+  category: 
+    - viewer
+    - generator
+    - converter
+  interface: gui
+  type: app
+
+- name: ninja
+  webpage: https://ninja.cityjson.org/
+  description: A viewer with support for holes and the ability to edit, all within the ease of your browser. The [repository](https://github.com/cityjson/ninja) has the latest code too.
   foss: true
   category: 
-    - transformer
-    - converter
-  interface: cli
-  type: both
+    - viewer
+    - editor
+  interface: gui
+  type: app
 
 - name: QGIS plugin
   webpage: https://github.com/tudelft3d/cityjson-qgis-plugin
@@ -100,24 +120,6 @@
     - viewer
   interface: gui
   type: app
-
-- name: azul
-  webpage: https://itunes.apple.com/nl/app/azul/id1173239678?mt=12
-  description: A native and fast CityJSON viewer for macOS
-  foss: true
-  category: 
-    - viewer
-  interface: gui
-  type: app
-
-- name: citygml4j
-  webpage: https://github.com/citygml4j
-  description: Open source Java class library and API 
-  foss: true
-  category: 
-    - parser
-  interface: cli
-  type: lib
   
 - name: val3dity
   webpage: http://github.com/tudelft3d/val3dity/
@@ -127,12 +129,6 @@
     - validator
   interface: both
   type: both
-
-# - name: FME
-#   webpage: http://www.safe.com
-#   description: Can be used to read, write, process and visualise CityGML; Windows, macOS, Linux
-#   foss: false
-#   category: viewer;parser
 
 
 

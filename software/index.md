@@ -32,7 +32,7 @@ Software for experimental features can be found in the beta section of the websi
     </tr>
   </thead>
   <tbody>
-    {% assign software = site.data.software | better_sort: 'name' %}
+    {% assign software = site.data.software %}
     {% for sf in software %}
       <tr>
         <th scope="row" style="text-align:left"><a href="{{ sf.webpage }}"><b>{{ sf.name }}</b></a> {% if sf.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}</th>
@@ -128,7 +128,7 @@ Software for experimental features can be found in the beta section of the websi
 
 ---
 
-{% assign software = site.data.software | better_sort: 'name' %}
+{% assign software = site.data.software %}
 
 ## Viewers
 {% for i in software %}
