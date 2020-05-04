@@ -3,14 +3,14 @@
 #   - versioning
 #   - ogcapif
 
-- name: ninja
-  webpage: https://ninja.cityjson.org/
-  description: A viewer with support for holes and the ability to edit, all within the ease of your browser. The [repository](https://github.com/cityjson/ninja) has the latest code too.
-  foss: true
-  category: versioning
-
 - name: CityJSON versioning prototype
   webpage: https://github.com/tudelft3d/cityjson-versioning-prototype
   description: A prototype implementation of interaction with versioned CityJSON files. It supports common versioning commands such as log, diff, checkout, commit, branch, merge, and rehash.
+  foss: true
+  category: versioning
+
+- name: ninja
+  webpage: https://ninja.cityjson.org/
+  description: A viewer with support for holes and the ability to edit, all within the ease of your browser. The [repository](https://github.com/cityjson/ninja) has the latest code too.
   foss: true
   category: versioning

@@ -97,7 +97,7 @@ Traversing the versions through their parents builds the city model's history, a
 
 ## Software
 
-{% assign software = site.data.beta.beta_software | better_sort: 'name' %}
+{% assign software = site.data.experimental.experimental_software %}
 
 {% for i in software %}
 {% for cat in i.category %}
