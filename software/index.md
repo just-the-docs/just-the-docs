@@ -12,9 +12,12 @@ Software for experimental features can be found in the beta section of the websi
 <!-- Most of the software are recent and well-maintained; if you believe your software should be there please [let us know](/contribute/). -->
 
 ---
-## Summary table
 
-<table class="table table-hover">
+<div class="d-xs-none d-md-block">
+
+<h2 id="summary-table">Summary table</h2>
+
+<table class="table table-hover d-block" id="software-table">
   <thead class="thead-light">
     <tr>
       <th scope="col"></th>
@@ -112,7 +115,9 @@ Software for experimental features can be found in the beta section of the websi
     </tfoot>
 </table>
 
----
+<hr>
+
+</div>
 
 ## Table of contents
 {: .no_toc .text-delta }
