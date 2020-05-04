@@ -20,9 +20,9 @@ Software for experimental features can be found in the beta section of the websi
 <table class="table table-hover d-block" id="software-table">
   <thead class="thead-light">
     <tr>
-      <th scope="col"></th>
-      <th scope="col"></th>
       <th scope="col">Software</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
       <th scope="col">Viewer</th>
       <th scope="col">Generator</th>
       <th scope="col">Editor</th>
@@ -35,6 +35,7 @@ Software for experimental features can be found in the beta section of the websi
     {% assign software = site.data.software | better_sort: 'name' %}
     {% for sf in software %}
       <tr>
+        <th scope="row" style="text-align:left"><a href="{{ sf.webpage }}"><b>{{ sf.name }}</b></a> {% if sf.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}</th>
         <th scope="row">
         {% assign interface = sf.interface %}
         {% case interface %}
@@ -59,7 +60,6 @@ Software for experimental features can be found in the beta section of the websi
             {% else %}
         {% endcase %}
         </th>
-        <th scope="row"><a href="{{ sf.webpage }}"><b>{{ sf.name }}</b></a> {% if sf.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}</th>
         <th scope="row">
         {% for cat in sf.category %}
             {% if cat contains 'viewer' %}

@@ -29,7 +29,7 @@
   interface: gui
   type: app
 
-- name: FME reader/writer
+- name: FME
   webpage: https://github.com/safesoftware/fme-CityJSON
   description: A (beta) reader/writer for [FME](https://www.safe.com/fme/). For the latest version, download and compile the open-source code from GitHub. The latest [FME beta](https://www.safe.com/support/downloads/#beta) has the latest code too.
   foss: false
@@ -104,15 +104,6 @@
 - name: azul
   webpage: https://itunes.apple.com/nl/app/azul/id1173239678?mt=12
   description: A native and fast CityJSON viewer for macOS
-  foss: true
-  category: 
-    - viewer
-  interface: gui
-  type: app
-
-- name: Web-viewer
-  webpage: https://viewer.cityjson.org
-  description: A simple web-viewer for CityJSON files
   foss: true
   category: 
     - viewer
