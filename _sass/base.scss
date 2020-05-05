@@ -36,8 +36,7 @@ div,
 hr,
 form,
 fieldset,
-noscript
-.table-wrapper {
+noscript .table-wrapper {
   margin-top: 0;
 }
 
@@ -52,7 +51,6 @@ h6 {
   font-weight: 500;
   line-height: $body-heading-line-height;
   color: $body-heading-color;
-
 }
 
 p {
