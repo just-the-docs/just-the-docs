@@ -26,7 +26,7 @@ You can open that file in any text editor to see its structure, and notice that 
 
 ## Visualise it
 
-Go to the [CityJSON official online viewer](https://viewer.cityjson.org) and drop the file on the logo, and voilà:
+Go to the [CityJSON official online viewer](https://viewer.cityjson.org) (called 'ninja') and drop the file, and voilà:
 
 ![](../files/gs-viewer.png)
 
