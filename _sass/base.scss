@@ -31,17 +31,13 @@ dl,
 pre,
 address,
 blockquote,
-.table-wrapper {
-  margin-top: 0.5em;
-}
-
 table,
-p,
 div,
 hr,
 form,
 fieldset,
-noscript {
+noscript
+.table-wrapper {
   margin-top: 0;
 }
 
@@ -51,14 +47,16 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1.5em;
-  margin-bottom: 0.25em;
+  margin-top: 0;
+  margin-bottom: 1em;
   font-weight: 500;
   line-height: $body-heading-line-height;
   color: $body-heading-color;
+
 }
 
 p {
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 

@@ -39,12 +39,6 @@ h6,
   color: $grey-dk-200;
 }
 
-li {
-  .highlight {
-    margin-top: $sp-2;
-  }
-}
-
 .text-small {
   @include fs-2;
 }

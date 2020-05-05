@@ -79,7 +79,7 @@ This paragraph will have 2rem/32px of padding on the right and left at all scree
 | `.flex-justify-between` | `justify-content: space-between` |
 | `.flex-justify-around`  | `justify-content: space-around`  |
 
-Note any of the `flex-` classes must be used on a parent element that has `d-flex` applied to it.
+_Note: any of the `flex-` classes must be used on a parent element that has `d-flex` applied to it._
 
 ## Vertical Alignment
 
