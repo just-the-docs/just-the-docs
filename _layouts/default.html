@@ -29,7 +29,7 @@ layout: table_wrappers
       </footer>
     </div>
     <div class="main-content-wrap js-main-content" tabindex="0">
-      <div class="main-content">
+      <div class="main-content" id="top">
         <div class="page-header js-page-header">
           {% if site.search_enabled != false %}
           <div class="search">
@@ -43,7 +43,15 @@ layout: table_wrappers
           {% if site.aux_links != nil %}
             <ul class="list-style-none text-small aux-nav">
               {% for link in site.aux_links %}
-                <li class="d-inline-block my-0{% unless forloop.last %} mr-2{% endunless %}"><a href="{{ link.last }}">{{ link.first }}</a></li>
+                <li class="d-inline-block my-0{% unless forloop.last %} mr-2{% endunless %}">
+                  <a href="{{ link.last }}"
+                    {% if site.aux_links_new_tab %}
+                    target="_blank" rel="noopener noreferrer"
+                    {% endif %}
+                  >
+                    {{ link.first }}
+                  </a>
+                </li>
               {% endfor %}
             </ul>
           {% endif %}
@@ -74,10 +82,10 @@ layout: table_wrappers
           {% if page.has_children == true and page.has_toc != false %}
             <hr>
             <h2 class="text-delta">Table of contents</h2>
-            {% assign children_list = site.pages | sort:"nav_order" %}
             <ul>
+              {%- assign children_list = pages_list | where: "parent", node.title -%}
               {% for child in children_list %}
-                {% if child.parent == page.title and child.title != page.title %}
+                {% if child.parent == page.title and child.title != page.title and child.grand_parent == page.parent %}
                 <li>
                   <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
                 </li>
@@ -86,10 +94,39 @@ layout: table_wrappers
             </ul>
           {% endif %}
 
-          {% if site.footer_content != nil %}
+          {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
             <hr>
-            <footer role="contentinfo">
+            <footer>
+              {% if site.back_to_top %}
+              <p><a href="#top">{{ site.back_to_top_text }}</a></p>
+              {% endif %}
+              {% if site.footer_content != nil %}
               <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
+              {% endif %}
+
+              {% if site.last_edit_timestamp or site.gh_edit_link %}
+                <div class="d-flex mt-2">
+                  {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
+                  <p class="text-small text-grey-dk-000 mb-0 mr-2">
+                  Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
+                  </p>
+                  {% endif %}
+                  {%
+                  if
+                  site.gh_edit_link and
+                  site.gh_edit_link_text and
+                  site.gh_edit_repository and
+                  site.gh_edit_branch and
+                  site.gh_edit_view_mode
+
+                  %}
+                  <p class="text-small text-grey-dk-000 mb-0">
+                  <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}">{{ site.gh_edit_link_text }}</a>
+                  </p>
+                  {% endif %}
+                </div>
+              {% endif %}
+
             </footer>
           {% endif %}
 

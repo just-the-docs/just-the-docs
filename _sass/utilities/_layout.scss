@@ -47,6 +47,32 @@
   }
 }
 
+// Horizontal alignment
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.flex-justify-start {
+  justify-content: flex-start !important;
+}
+
+.flex-justify-end {
+  justify-content: flex-end !important;
+}
+
+.flex-justify-between {
+  justify-content: space-between !important;
+}
+
+.flex-justify-around {
+  justify-content: space-around !important;
+}
+
 // Vertical alignment
 
 .v-align-baseline {
