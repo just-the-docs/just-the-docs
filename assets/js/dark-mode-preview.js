@@ -6,11 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     "just-the-docs.css",
     "dark-mode-preview.css"
   )
-  const buttonCopy = ["Return to the light side", "Preview dark color scheme"]
+  const buttonText = {
+    dark: "Preview dark color scheme",
+    light: "Return to the light side",
+  }
   const updateButtonText = function (toggleDarkMode) {
-    toggleDarkMode.textContent === buttonCopy[0]
-      ? (toggleDarkMode.textContent = buttonCopy[1])
-      : (toggleDarkMode.textContent = buttonCopy[0])
+    toggleDarkMode.textContent === buttonText.light
+      ? (toggleDarkMode.textContent = buttonText.dark)
+      : (toggleDarkMode.textContent = buttonText.light)
   }
 
   jtd.addEvent(toggleDarkMode, "click", function () {
