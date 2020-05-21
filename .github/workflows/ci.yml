@@ -28,7 +28,7 @@ jobs:
       run: |
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
-        jekyll/builder:3.8.5 /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && bundle install  && jekyll build && bundle exec just-the-docs rake search:init"
+        jekyll/builder:3.8.5 /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && bundle install && jekyll build && bundle exec just-the-docs rake search:init"
 
   assets:
     name: Format and test CSS and JS
