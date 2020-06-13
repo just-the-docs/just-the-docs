@@ -157,12 +157,16 @@ function searchLoaded(index, docs) {
     });
 
     if ((results.length == 0) && (input.length > 2)) {
-      results = index.query(function (query) {
-        var tokens = lunr.tokenizer(input)
-        query.term(tokens, {
-          editDistance: Math.round(Math.sqrt(input.length / 2 - 1))
+      var tokens = lunr.tokenizer(input).filter(function(token, i) {
+        return token.str.length < 20;
+      })
+      if (tokens.length > 0) {
+        results = index.query(function (query) {
+          query.term(tokens, {
+            editDistance: Math.round(Math.sqrt(input.length / 2 - 1))
+          });
         });
-      });
+      }
     }
 
     if (results.length == 0) {
