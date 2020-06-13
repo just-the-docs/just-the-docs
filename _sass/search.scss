@@ -23,9 +23,9 @@
   position: relative;
   z-index: 1;
   height: $sp-8;
+  overflow: hidden;
   border-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
   transition: height linear #{$transition-duration / 2};
 
   @include mq(md) {
@@ -47,21 +47,21 @@
   padding-right: $gutter-spacing-sm;
   padding-bottom: $sp-2;
   padding-left: #{$gutter-spacing-sm + $sp-5};
+  font-size: 16px;
   background-color: $search-background-color;
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
   border-left: 0;
   border-radius: 0;
-  font-size: 16px;
 
   @include mq(md) {
     padding-top: $gutter-spacing-sm;
     padding-bottom: $gutter-spacing-sm;
     padding-left: #{$gutter-spacing + $sp-5};
+    font-size: 14px;
     background-color: $body-background-color;
     transition: padding-left linear #{$transition-duration / 2};
-    font-size: 14px;
   }
 
   &:focus {
