@@ -21,12 +21,21 @@
 
 .search-input-wrap {
   position: relative;
+  z-index: 1;
   height: $sp-8;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
   transition: height linear #{$transition-duration / 2};
 
   @include mq(md) {
+    position: absolute;
+    width: 100%;
+    max-width: $search-results-width;
     height: 100% !important;
-    transition: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: width ease $transition-duration;
   }
 }
 
@@ -43,20 +52,16 @@
   border-right: 0;
   border-bottom: 0;
   border-left: 0;
-  border-radius: $border-radius;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
-  @include fs-4;
+  border-radius: 0;
+  font-size: 16px;
 
   @include mq(md) {
-    max-width: $search-results-width;
     padding-top: $gutter-spacing-sm;
     padding-bottom: $gutter-spacing-sm;
     padding-left: #{$gutter-spacing + $sp-5};
     background-color: $body-background-color;
-    border-radius: 0;
-    box-shadow: none;
-    transition: padding-left linear #{$transition-duration / 2}, width ease $transition-duration;
-    @include fs-3;
+    transition: padding-left linear #{$transition-duration / 2};
+    font-size: 14px;
   }
 
   &:focus {
@@ -100,6 +105,7 @@
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 
   @include mq(md) {
+    top: 100%;
     width: $search-results-width;
     max-height: calc(100vh - 200%) !important;
   }
@@ -265,15 +271,18 @@
 
   .search-input-wrap {
     height: $sp-10;
+    border-radius: 0;
+
+    @include mq(md) {
+      width: $search-results-width;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
   }
 
   .search-input {
     background-color: $search-background-color;
-    border-radius: 0;
-    box-shadow: none;
 
     @include mq(md) {
-      width: $search-results-width;
       padding-left: #{$sp-4 * 1.25 + $sp-5};
     }
   }
@@ -295,20 +304,17 @@
     transition: opacity ease $transition-duration, width 0s, height 0s;
   }
 
-  // stylelint-disable selector-max-type
-
-  body {
-    overflow-y: hidden;
-
-    @include mq(md) {
-      overflow-y: scroll;
+  @include mq(md) {
+    .main {
+      position: fixed;
     }
   }
 
-  @include mq(md) {
-    .main {
-      height: 100vh;
-      overflow-y: hidden;
+  .main-header {
+    padding-top: $sp-10;
+
+    @include mq(md) {
+      padding-top: 0;
     }
   }
 }
