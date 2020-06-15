@@ -57,6 +57,7 @@ $sidebar-color: $grey-lt-000 !default;
 $search-background-color: $white !default;
 $table-background-color: $white !default;
 $code-background-color: $grey-lt-000 !default;
+$feedback-color: darken($sidebar-color, 3%) !default;
 
 $body-text-color: $grey-dk-100 !default;
 $body-heading-color: $grey-dk-300 !default;
@@ -113,6 +114,9 @@ $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
 $nav-width: 264px !default;
 $nav-width-md: 248px !default;
+$nav-list-item-height: $sp-6 !default;
+$nav-list-item-height-sm: $sp-8 !default;
+$nav-list-expander-right: true;
 $content-width: 800px !default;
 $header-height: 60px !default;
 $search-results-width: 500px !default;
