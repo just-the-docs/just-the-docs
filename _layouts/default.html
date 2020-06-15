@@ -26,133 +26,129 @@ layout: table_wrappers
     </symbol>
   </svg>
 
-  <div class="page-wrap">
-    <div class="side-bar">
-      <div class="site-header">
-        <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
-        <a href="#" id="menu-button" class="site-button">
-          <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#menu"></use></svg>
-        </a>
-      </div>
-      <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
-        {% include nav.html %}
-      </nav>
-      <footer class="site-footer">
-        This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-      </footer>
-    </div>
-    <div id="main-wrap" class="main-wrap" tabindex="0">
-      <div class="main" id="top">
-        <div id="main-header" class="main-header">
-          {% if site.search_enabled != false %}
-            <div class="search">
-              <div class="search-input-wrap">
-                <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
-                <svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#search"></use></svg>
-              </div>
-              <div id="search-results" class="search-results"></div>
-            </div>
-          {% endif %}
-          {% if site.aux_links %}
-            <nav aria-label="Auxiliary" class="aux-nav">
-              <ul class="aux-nav-list">
-                {% for link in site.aux_links %}
-                  <li class="aux-nav-list-item">
-                    <a href="{{ link.last }}"
-                      {% if site.aux_links_new_tab %}
-                      target="_blank" rel="noopener noreferrer"
-                      {% endif %}
-                    >
-                    {{ link.first }}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </nav>
-          {% endif %}
-        </div>
-        <div id="main-content-wrap" class="main-content-wrap">
-          {% unless page.url == "/" %}
-            {% if page.parent %}
-              <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-                <ol class="breadcrumb-nav-list">
-                  {% if page.grand_parent %}
-                    <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
-                    <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
-                  {% else %}
-                    <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
-                  {% endif %}
-                  <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
-                </ol>
-              </nav>
-            {% endif %}
-          {% endunless %}
-          <div id="main-content" class="main-content" role="main">
-            {% if site.heading_anchors != false %}
-              {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#link\"></use></svg>" anchorClass="anchor-heading" %}
-            {% else %}
-              {{ content }}
-            {% endif %}
-
-            {% if page.has_children == true and page.has_toc != false %}
-              <hr>
-              <h2 class="text-delta">Table of contents</h2>
-              <ul>
-                {%- assign children_list = pages_list | where: "parent", node.title -%}
-                {% for child in children_list %}
-                  {% if child.parent == page.title and child.title != page.title and child.grand_parent == page.parent %}
-                    <li>
-                      <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            {% endif %}
-
-            {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
-              <hr>
-              <footer>
-                {% if site.back_to_top %}
-                  <p><a href="#top">{{ site.back_to_top_text }}</a></p>
-                  {% endif %}
-                {% if site.footer_content != nil %}
-                  <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
-                {% endif %}
-
-                {% if site.last_edit_timestamp or site.gh_edit_link %}
-                  <div class="d-flex mt-2">
-                    {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
-                      <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                        Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
-                      </p>
-                    {% endif %}
-                    {% if
-                      site.gh_edit_link and
-                      site.gh_edit_link_text and
-                      site.gh_edit_repository and
-                      site.gh_edit_branch and
-                      site.gh_edit_view_mode
-                    %}
-                      <p class="text-small text-grey-dk-000 mb-0">
-                        <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}">{{ site.gh_edit_link_text }}</a>
-                      </p>
-                    {% endif %}
-                  </div>
-                {% endif %}
-              </footer>
-            {% endif %}
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {% if site.search_enabled != false %}
-      <a href="#" id="search-button" class="search-button">
-        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#search"></use></svg>
+  <div class="side-bar">
+    <div class="site-header">
+      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
+      <a href="#" id="menu-button" class="site-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#menu"></use></svg>
       </a>
-    {% endif %}
+    </div>
+    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      {% include nav.html %}
+    </nav>
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
   </div>
+  <div class="main" id="top">
+    <div id="main-header" class="main-header">
+      {% if site.search_enabled != false %}
+        <div class="search">
+          <div class="search-input-wrap">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
+            <svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#search"></use></svg>
+          </div>
+          <div id="search-results" class="search-results"></div>
+        </div>
+      {% endif %}
+      {% if site.aux_links %}
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <ul class="aux-nav-list">
+            {% for link in site.aux_links %}
+              <li class="aux-nav-list-item">
+                <a href="{{ link.last }}"
+                  {% if site.aux_links_new_tab %}
+                  target="_blank" rel="noopener noreferrer"
+                  {% endif %}
+                >
+                  {{ link.first }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      {% endif %}
+    </div>
+    <div id="main-content-wrap" class="main-content-wrap">
+      {% unless page.url == "/" %}
+        {% if page.parent %}
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list">
+              {% if page.grand_parent %}
+                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
+                <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
+              {% else %}
+                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
+              {% endif %}
+              <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
+            </ol>
+          </nav>
+        {% endif %}
+      {% endunless %}
+      <div id="main-content" class="main-content" role="main">
+        {% if site.heading_anchors != false %}
+          {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#link\"></use></svg>" anchorClass="anchor-heading" %}
+        {% else %}
+          {{ content }}
+        {% endif %}
+
+        {% if page.has_children == true and page.has_toc != false %}
+          <hr>
+          <h2 class="text-delta">Table of contents</h2>
+          <ul>
+            {%- assign children_list = pages_list | where: "parent", node.title -%}
+            {% for child in children_list %}
+              {% if child.parent == page.title and child.title != page.title and child.grand_parent == page.parent %}
+                <li>
+                  <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
+          <hr>
+          <footer>
+            {% if site.back_to_top %}
+              <p><a href="#top">{{ site.back_to_top_text }}</a></p>
+            {% endif %}
+            {% if site.footer_content != nil %}
+              <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
+            {% endif %}
+
+            {% if site.last_edit_timestamp or site.gh_edit_link %}
+              <div class="d-flex mt-2">
+                {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
+                  <p class="text-small text-grey-dk-000 mb-0 mr-2">
+                    Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
+                  </p>
+                {% endif %}
+                {% if
+                  site.gh_edit_link and
+                  site.gh_edit_link_text and
+                  site.gh_edit_repository and
+                  site.gh_edit_branch and
+                  site.gh_edit_view_mode
+                %}
+                  <p class="text-small text-grey-dk-000 mb-0">
+                    <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}">{{ site.gh_edit_link_text }}</a>
+                  </p>
+                {% endif %}
+              </div>
+            {% endif %}
+          </footer>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+
+  {% if site.search_enabled != false %}
+    <a href="#" id="search-button" class="search-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#search"></use></svg>
+    </a>
+  {% endif %}
 
 </body>
 </html>

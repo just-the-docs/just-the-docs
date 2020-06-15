@@ -306,13 +306,6 @@ function initSearch() {
 }
 {%- endif %}
 
-// Focus
-
-function pageFocus() {
-  var mainWrap = document.getElementById('main-wrap');
-  mainWrap.focus();
-}
-
 // Switch theme
 
 jtd.getTheme = function() {
@@ -329,7 +322,6 @@ jtd.setTheme = function(theme) {
 
 jtd.onReady(function(){
   initNav();
-  pageFocus();
   {% if site.search_enabled != false -%}
   initSearch();
   {%- endif %}
