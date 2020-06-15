@@ -12,6 +12,14 @@ layout: table_wrappers
       <title>Link</title>
       <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
     </symbol>
+    <symbol id="search" viewBox="0 0 24 24">
+      <title>Menu</title>
+      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/>
+    </symbol>
+    <symbol id="menu" viewBox="0 0 24 24">
+      <title>Search</title>
+      <path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+    </symbol>
     <symbol id="arrow-right" viewBox="0 0 24 24">
       <title>Expand</title>
       <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/><path d="M0 0h24v24H0z" fill="none"/>
@@ -21,8 +29,10 @@ layout: table_wrappers
   <div class="page-wrap">
     <div class="side-bar">
       <div class="site-header">
-        <a href="{{ site.url }}{{ site.baseurl }}" class="site-title lh-tight">{% include title.html %}</a>
-        <button id="site-nav-trigger" class="site-button" data-text-toggle="Hide" type="button">Menu</button>
+        <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
+        <a href="#" id="menu-button" class="site-button">
+          <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#menu"></use></svg>
+        </a>
       </div>
       <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
         {% include nav.html %}
@@ -38,12 +48,12 @@ layout: table_wrappers
             <div class="search">
               <div class="search-input-wrap">
                 <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
-                <svg width="14" height="14" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" class="search-icon"><title>Search</title><g fill-rule="nonzero"><path d="M17.332 20.735c-5.537 0-10-4.6-10-10.247 0-5.646 4.463-10.247 10-10.247 5.536 0 10 4.601 10 10.247s-4.464 10.247-10 10.247zm0-4c3.3 0 6-2.783 6-6.247 0-3.463-2.7-6.247-6-6.247s-6 2.784-6 6.247c0 3.464 2.7 6.247 6 6.247z"/><path d="M11.672 13.791L.192 25.271 3.02 28.1 14.5 16.62z"/></g></svg>
+                <svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#search"></use></svg>
               </div>
               <div id="search-results" class="search-results"></div>
             </div>
           {% endif %}
-          {% if site.aux_links != nil %}
+          {% if site.aux_links %}
             <nav aria-label="Auxiliary" class="aux-nav">
               <ul class="aux-nav-list">
                 {% for link in site.aux_links %}
@@ -61,7 +71,7 @@ layout: table_wrappers
             </nav>
           {% endif %}
         </div>
-        <div class="main-content-wrap">
+        <div id="main-content-wrap" class="main-content-wrap">
           {% unless page.url == "/" %}
             {% if page.parent %}
               <nav aria-label="Breadcrumb" class="breadcrumb-nav">
@@ -136,6 +146,12 @@ layout: table_wrappers
         </div>
       </div>
     </div>
+
+    {% if site.search_enabled != false %}
+      <a href="#" id="search-button" class="search-button">
+        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#search"></use></svg>
+      </a>
+    {% endif %}
   </div>
 
 </body>
