@@ -3,7 +3,7 @@
 //
 
 .side-bar {
-  z-index: 100;
+  z-index: 0;
   display: flex;
   flex-wrap: wrap;
   background-color: $sidebar-color;
@@ -50,15 +50,13 @@
 }
 
 .main-header {
-  @include container;
+  z-index: 0;
   display: none;
-  padding-top: $gutter-spacing-sm;
-  padding-bottom: $gutter-spacing-sm;
   background-color: $sidebar-color;
 
   @include mq(md) {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     height: $header-height;
     background-color: $body-background-color;
     border-bottom: $border $border-color;
@@ -84,7 +82,14 @@
 }
 
 .site-nav {
+  display: none;
+
+  &.nav-open {
+    display: block;
+  }
+
   @include mq(md) {
+    display: block;
     padding-top: $sp-8;
     padding-bottom: $gutter-spacing-sm;
     overflow-y: auto;
@@ -98,7 +103,6 @@
   align-items: center;
 
   @include mq(md) {
-    z-index: 101;
     height: $header-height;
     max-height: $header-height;
     border-bottom: $border $border-color;
@@ -138,15 +142,20 @@
   height: 100%;
   padding: $gutter-spacing-sm;
   align-items: center;
+}
 
-  @include mq(md) {
+@include mq(md) {
+  .site-header .site-button {
     display: none;
   }
 }
 
-.site-title:hover,
-.site-button:hover {
+.site-title:hover {
   background-image: linear-gradient(-90deg, rgba($feedback-color, 1) 0%, rgba($feedback-color, 0.8) 80%, rgba($feedback-color, 0) 100%);
+}
+
+.site-button:hover {
+  background-image: linear-gradient(-90deg, rgba($feedback-color, 1) 0%, rgba($feedback-color, 0.8) 100%);
 }
 
 // stylelint-disable selector-max-type
@@ -154,6 +163,7 @@
 body {
   position: relative;
   padding-bottom: $sp-10;
+  overflow-y: scroll;
 
   @include mq(md) {
     position: static;
