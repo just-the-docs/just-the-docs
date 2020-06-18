@@ -9,11 +9,9 @@ nav_order: 5
 # Navigation Structure
 {: .no_toc }
 
-## Table of contents
-{: .no_toc .text-delta }
 
-1. TOC
-{:toc}
+
+
 
 ---
 
@@ -233,11 +231,9 @@ To generate a Table of Contents on your docs pages, you can use the `{:toc}` met
 # Navigation Structure
 {: .no_toc }
 
-## Table of contents
-{: .no_toc .text-delta }
 
-1. TOC
-{:toc}
+
+
 ```
 
 This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself.
