@@ -109,3 +109,17 @@ nav_exclude: true
 search_exclude: true
 ---
 ```
+
+
+## Generate search index when used as a gem
+
+If you use Just the Docs as a remote theme, you do not need the following steps.
+
+If you use the theme as a gem, you must initialize the search by running this `rake` command that comes with `just-the-docs`:
+
+```bash
+$ bundle exec just-the-docs rake search:init
+```
+
+This command creates the `assets/js/zzzz-search-data.json` file that Jekyll uses to create your search index.
+Alternatively, you can create the file manually with [this content]({{ site.github.repository_url }}/blob/master/assets/js/zzzz-search-data.json).

@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+gem_dir = File.expand_path("..",File.dirname(__FILE__))
+$LOAD_PATH.unshift gem_dir # Look in gem directory for resources first.
+exec_type = ARGV[0]
+
+if exec_type == 'rake' then
+    require 'rake'
+    require 'pp'
+    pwd=Dir.pwd
+    Dir.chdir(gem_dir) # We'll load rakefile from the gem's dir.
+    Rake.application.init
+    Rake.application.load_rakefile
+    Dir.chdir(pwd) # Revert to original pwd for any path args passed to task.
+    Rake.application.invoke_task(ARGV[1])
+end
