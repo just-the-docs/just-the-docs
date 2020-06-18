@@ -1,0 +1,214 @@
+I"�-<h1 class="no_toc" id="navigation-structure">Navigation Structure</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#main-navigation" id="markdown-toc-main-navigation">Main navigation</a></li>
+  <li><a href="#ordering-pages" id="markdown-toc-ordering-pages">Ordering pages</a></li>
+  <li><a href="#excluding-pages" id="markdown-toc-excluding-pages">Excluding pages</a></li>
+  <li><a href="#pages-with-children" id="markdown-toc-pages-with-children">Pages with children</a>    <ol>
+      <li><a href="#child-pages" id="markdown-toc-child-pages">Child pages</a></li>
+      <li><a href="#auto-generating-table-of-contents" id="markdown-toc-auto-generating-table-of-contents">Auto-generating Table of Contents</a></li>
+      <li><a href="#children-with-children" id="markdown-toc-children-with-children">Children with children</a></li>
+    </ol>
+  </li>
+  <li><a href="#auxiliary-navigation" id="markdown-toc-auxiliary-navigation">Auxiliary Navigation</a></li>
+  <li><a href="#in-page-navigation-with-table-of-contents" id="markdown-toc-in-page-navigation-with-table-of-contents">In-page navigation with Table of Contents</a></li>
+</ol>
+
+<hr />
+
+<h2 id="main-navigation">Main navigation</h2>
+
+<p>The main navigation for your Just the Docs site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).</p>
+
+<p>By default, all pages will appear as top level pages in the main nav unless a parent page is defined (see <a href="#pages-with-children">Pages with Children</a>).</p>
+
+<hr />
+
+<h2 id="ordering-pages">Ordering pages</h2>
+
+<p>To specify a page order, use the <code class="highlighter-rouge">nav_order</code> parameter in your pages’ YAML front matter.</p>
+
+<h4 class="no_toc" id="example">Example</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Customization</span>
+<span class="na">nav_order</span><span class="pi">:</span> <span class="m">4</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="excluding-pages">Excluding pages</h2>
+
+<p>For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the <code class="highlighter-rouge">nav_exclude: true</code> parameter in the YAML front matter for that page.</p>
+
+<h4 class="no_toc" id="example-1">Example</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">title</span><span class="pi">:</span> <span class="m">404</span>
+<span class="na">nav_exclude</span><span class="pi">:</span> <span class="no">true</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="pages-with-children">Pages with children</h2>
+
+<p>Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together… For example, in these docs, we keep all of the written documentation in the <code class="highlighter-rouge">./docs</code> directory and each of the sections in subdirectories like <code class="highlighter-rouge">./docs/ui-components</code> and <code class="highlighter-rouge">./docs/utilities</code>. This gives us an organization like:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-- ..
+|-- (Jekyll files)
+|
+|-- docs
+|   |-- ui-components
+|   |   |-- index.md  (parent page)
+|   |   |-- buttons.md
+|   |   |-- code.md
+|   |   |-- labels.md
+|   |   |-- tables.md
+|   |   +-- typography.md
+|   |
+|   |-- utilities
+|   |   |-- index.md      (parent page)
+|   |   |-- color.md
+|   |   |-- layout.md
+|   |   |-- responsive-modifiers.md
+|   |   +-- typography.md
+|   |
+|   |-- (other md files, pages with no children)
+|   +-- ..
+|
+|-- (Jekyll files)
++-- ..
+</code></pre></div></div>
+
+<p>On the parent pages, add this YAML front matter parameter:</p>
+<ul>
+  <li><code class="highlighter-rouge">has_children: true</code> (tells us that this is a parent page)</li>
+</ul>
+
+<h4 class="no_toc" id="example-2">Example</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">UI Components</span>
+<span class="na">nav_order</span><span class="pi">:</span> <span class="m">2</span>
+<span class="na">has_children</span><span class="pi">:</span> <span class="no">true</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>Here we’re setting up the UI Components landing page that is available at <code class="highlighter-rouge">/docs/ui-components</code>, which has children and is ordered second in the main nav.</p>
+
+<h3 class="text-gamma" id="child-pages">Child pages</h3>
+
+<p>On child pages, simply set the <code class="highlighter-rouge">parent:</code> YAML front matter to whatever the parent’s page title is and set a nav order (this number is now scoped within the section).</p>
+
+<h4 class="no_toc" id="example-3">Example</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Buttons</span>
+<span class="na">parent</span><span class="pi">:</span> <span class="s">UI Components</span>
+<span class="na">nav_order</span><span class="pi">:</span> <span class="m">2</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>The Buttons page appears as a child of UI Components and appears second in the UI Components section.</p>
+
+<h3 id="auto-generating-table-of-contents">Auto-generating Table of Contents</h3>
+
+<p>By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page’s content. To disable this auto Table of Contents, set <code class="highlighter-rouge">has_toc: false</code> in the parent page’s YAML front matter.</p>
+
+<h4 class="no_toc" id="example-4">Example</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">UI Components</span>
+<span class="na">nav_order</span><span class="pi">:</span> <span class="m">2</span>
+<span class="na">has_children</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">has_toc</span><span class="pi">:</span> <span class="no">false</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h3 class="text-gamma" id="children-with-children">Children with children</h3>
+
+<p>Child pages can also have children (grandchildren). This is achieved by using a similar pattern on the child and grandchild pages.</p>
+
+<ol>
+  <li>Add the <code class="highlighter-rouge">has_children</code> attribute to the child</li>
+  <li>Add the <code class="highlighter-rouge">parent</code> and <code class="highlighter-rouge">grand_parent</code> attribute to the grandchild</li>
+</ol>
+
+<h4 class="no_toc" id="example-5">Example</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Buttons</span>
+<span class="na">parent</span><span class="pi">:</span> <span class="s">UI Components</span>
+<span class="na">nav_order</span><span class="pi">:</span> <span class="m">2</span>
+<span class="na">has_children</span><span class="pi">:</span> <span class="no">true</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Buttons Child Page</span>
+<span class="na">parent</span><span class="pi">:</span> <span class="s">Buttons</span>
+<span class="na">grand_parent</span><span class="pi">:</span> <span class="s">UI Components</span>
+<span class="na">nav_order</span><span class="pi">:</span> <span class="m">1</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p>This would create the following navigation structure:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>+-- ..
+|
+|-- UI Components
+|   |-- ..
+|   |
+|   |-- Buttons
+|   |   |-- Button Child Page
+|   |
+|   |-- ..
+|
++-- ..
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="auxiliary-navigation">Auxiliary Navigation</h2>
+
+<p>To add a auxiliary navigation item to your site (in the upper right on all pages), add it to the <code class="highlighter-rouge">aux_nav</code> <a href="/just-the-docs/just-the-docs/docs/configuration/#aux-nav">configuration option</a> in your site’s <code class="highlighter-rouge">_config.yml</code> file.</p>
+
+<h4 class="no_toc" id="example-6">Example</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Aux links for the upper right navigation</span>
+<span class="na">aux_links</span><span class="pi">:</span>
+  <span class="s2">"</span><span class="s">Just</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Docs</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">GitHub"</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s2">"</span><span class="s">//github.com/pmarsceill/just-the-docs"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="in-page-navigation-with-table-of-contents">In-page navigation with Table of Contents</h2>
+
+<p>To generate a Table of Contents on your docs pages, you can use the <code class="highlighter-rouge">{:toc}</code> method from Kramdown, immediately after an <code class="highlighter-rouge">&lt;ol&gt;</code> in Markdown. This will automatically generate an ordered list of anchor links to various sections of the page based on headings and heading levels. There may be occasions where you’re using a heading and you don’t want it to show up in the TOC, so to skip a particular heading use the <code class="highlighter-rouge">{: .no_toc }</code> CSS class.</p>
+
+<h4 class="no_toc" id="example-7">Example</h4>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Navigation Structure</span>
+{: .no_toc }
+
+<span class="gu">## Table of contents</span>
+{: .no_toc .text-delta }
+<span class="p">
+1.</span> TOC
+{:toc}
+</code></pre></div></div>
+
+<p>This example skips the page name heading (<code class="highlighter-rouge">#</code>) from the TOC, as well as the heading for the Table of Contents itself (<code class="highlighter-rouge">##</code>) because it is redundant, followed by the table of contents itself.</p>
+:ET

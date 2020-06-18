@@ -1,0 +1,78 @@
+I"<h1 class="no_toc" id="configuration">Configuration</h1>
+
+<p class="fs-6 fw-300">Just the Docs has some specific configuration parameters that can be defined in your Jekyll site’s _config.yml file.</p>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#site-logo" id="markdown-toc-site-logo">Site logo</a></li>
+  <li><a href="#search" id="markdown-toc-search">Search</a></li>
+  <li><a href="#aux-links" id="markdown-toc-aux-links">Aux links</a></li>
+  <li><a href="#heading-anchor-links" id="markdown-toc-heading-anchor-links">Heading anchor links</a></li>
+  <li><a href="#footer-content" id="markdown-toc-footer-content">Footer content</a></li>
+  <li><a href="#color-scheme" id="markdown-toc-color-scheme">Color scheme</a></li>
+  <li><a href="#google-analytics" id="markdown-toc-google-analytics">Google Analytics</a></li>
+</ol>
+
+<hr />
+
+<p>View this site’s <a href="https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml">_config.yml</a> file as an example.</p>
+
+<h2 id="site-logo">Site logo</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Set a path/url to a logo that will be displayed instead of the title</span>
+<span class="na">logo</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/assets/images/just-the-docs.png"</span>
+</code></pre></div></div>
+
+<h2 id="search">Search</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Enable or disable the site search</span>
+<span class="c1"># Supports true (default) or false</span>
+<span class="na">search_enabled</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="c1"># Enable support for hyphenated search words:</span>
+<span class="na">search_tokenizer_separator</span><span class="pi">:</span> <span class="s">/[\s/]+/</span>
+
+</code></pre></div></div>
+
+<h2 id="aux-links">Aux links</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Aux links for the upper right navigation</span>
+<span class="na">aux_links</span><span class="pi">:</span>
+  <span class="s2">"</span><span class="s">Just</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">Docs</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">GitHub"</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s2">"</span><span class="s">//github.com/pmarsceill/just-the-docs"</span>
+</code></pre></div></div>
+
+<h2 id="heading-anchor-links">Heading anchor links</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Heading anchor links appear on hover over h1-h6 tags in page content</span>
+<span class="c1"># allowing users to deep link to a particular heading on a page.</span>
+<span class="c1">#</span>
+<span class="c1"># Supports true (default) or false/nil</span>
+<span class="na">heading_anchors</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<h2 id="footer-content">Footer content</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Footer content appears at the bottom of every page's main content</span>
+<span class="na">footer_content</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Copyright</span><span class="nv"> </span><span class="s">&amp;copy;</span><span class="nv"> </span><span class="s">2017-2019</span><span class="nv"> </span><span class="s">Patrick</span><span class="nv"> </span><span class="s">Marsceill.</span><span class="nv"> </span><span class="s">Distributed</span><span class="nv"> </span><span class="s">by</span><span class="nv"> </span><span class="s">an</span><span class="nv"> </span><span class="s">&lt;a</span><span class="nv"> </span><span class="s">href=</span><span class="se">\"</span><span class="s">https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt</span><span class="se">\"</span><span class="s">&gt;MIT</span><span class="nv"> </span><span class="s">license.&lt;/a&gt;"</span>
+</code></pre></div></div>
+
+<h2 id="color-scheme">Color scheme</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Color scheme currently only supports "dark" or nil (default)</span>
+<span class="na">color_scheme</span><span class="pi">:</span> <span class="s2">"</span><span class="s">dark"</span>
+</code></pre></div></div>
+<p><button class="btn js-toggle-dark-mode">Preview dark color scheme</button></p>
+
+<script type="text/javascript" src="https://wbsmolen.github.io/just-the-docs/assets/js/dark-mode-preview.js"></script>
+
+<p>See <a href="/just-the-docs/just-the-docs/docs/customization/">Customization</a> for more information.</p>
+
+<h2 id="google-analytics">Google Analytics</h2>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Google Analytics Tracking (optional)</span>
+<span class="c1"># e.g, UA-1234567-89</span>
+<span class="na">ga_tracking</span><span class="pi">:</span> <span class="s">UA-5555555-55</span>
+</code></pre></div></div>
+:ET

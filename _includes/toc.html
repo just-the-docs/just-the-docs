@@ -1,0 +1,17 @@
+  
+{%- assign tocNodes = hierarchy | where_exp:"item", "item.name == page.title" | map: "items" | first -%}
+{%- if tocNodes.size > 0 -%}
+  <hr>
+  <h2 class="text-delta">Table of contents</h2>
+  <ul>
+    {%- for tocNode in tocNodes -%}
+      <li>
+        <a href="{{ tocNode.url | absolute_url }}">{{ tocNode.title }}</a>
+        {%- if tocNode.summary -%}
+          -
+          {{ tocNode.summary }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

@@ -1,0 +1,261 @@
+I"55<h1 class="no_toc" id="color-utilities">Color Utilities</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#light-greys" id="markdown-toc-light-greys">Light Greys</a></li>
+  <li><a href="#dark-greys" id="markdown-toc-dark-greys">Dark Greys</a></li>
+  <li><a href="#purples" id="markdown-toc-purples">Purples</a></li>
+  <li><a href="#blues" id="markdown-toc-blues">Blues</a></li>
+  <li><a href="#greens" id="markdown-toc-greens">Greens</a></li>
+  <li><a href="#yellows" id="markdown-toc-yellows">Yellows</a></li>
+  <li><a href="#reds" id="markdown-toc-reds">Reds</a></li>
+</ol>
+
+<hr />
+
+<p>All the colors used in Just the Docs have been systematized into a series of variables that have been extended to both font color and background color utility classes.</p>
+
+<h2 id="light-greys">Light Greys</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color value</th>
+      <th style="text-align: left">Font color utility</th>
+      <th style="text-align: left">Background color utility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-lt-000"></span> <code class="highlighter-rouge">grey-lt-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-grey-lt-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-grey-lt-000</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-lt-100"></span> <code class="highlighter-rouge">grey-lt-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-grey-lt-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-grey-lt-100</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-lt-200"></span> <code class="highlighter-rouge">grey-lt-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-grey-lt-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-grey-lt-200</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-lt-300"></span> <code class="highlighter-rouge">grey-lt-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-grey-lt-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-grey-lt-300</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="dark-greys">Dark Greys</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color value</th>
+      <th style="text-align: left">Font color utility</th>
+      <th style="text-align: left">Background color utility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-dk-000"></span> <code class="highlighter-rouge">grey-dk-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-grey-dk-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-grey-dk-000</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-dk-100"></span> <code class="highlighter-rouge">grey-dk-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-grey-dk-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-grey-dk-100</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-dk-200"></span> <code class="highlighter-rouge">grey-dk-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-grey-dk-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-grey-dk-200</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-dk-250"></span> <code class="highlighter-rouge">grey-dk-250</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-grey-dk-250</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-grey-dk-250</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-dk-300"></span> <code class="highlighter-rouge">grey-dk-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-grey-dk-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-grey-dk-300</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="purples">Purples</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color value</th>
+      <th style="text-align: left">Font color utility</th>
+      <th style="text-align: left">Background color utility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-purple-000"></span> <code class="highlighter-rouge">purple-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-purple-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-purple-000</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-purple-100"></span> <code class="highlighter-rouge">purple-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-purple-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-purple-100</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-purple-200"></span> <code class="highlighter-rouge">purple-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-purple-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-purple-200</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-purple-300"></span> <code class="highlighter-rouge">purple-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-purple-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-purple-300</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="blues">Blues</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color value</th>
+      <th style="text-align: left">Font color utility</th>
+      <th style="text-align: left">Background color utility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-blue-000"></span> <code class="highlighter-rouge">blue-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-blue-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-blue-000</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-blue-100"></span> <code class="highlighter-rouge">blue-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-blue-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-blue-100</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-blue-200"></span> <code class="highlighter-rouge">blue-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-blue-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-blue-200</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-blue-300"></span> <code class="highlighter-rouge">blue-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-blue-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-blue-300</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="greens">Greens</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color value</th>
+      <th style="text-align: left">Font color utility</th>
+      <th style="text-align: left">Background color utility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-green-000"></span> <code class="highlighter-rouge">green-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-green-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-green-000</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-green-100"></span> <code class="highlighter-rouge">green-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-green-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-green-100</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-green-200"></span> <code class="highlighter-rouge">green-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-green-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-green-200</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-green-300"></span> <code class="highlighter-rouge">green-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-green-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-green-300</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="yellows">Yellows</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color value</th>
+      <th style="text-align: left">Font color utility</th>
+      <th style="text-align: left">Background color utility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-yellow-000"></span> <code class="highlighter-rouge">yellow-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-yellow-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-yellow-000</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-yellow-100"></span> <code class="highlighter-rouge">yellow-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-yellow-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-yellow-100</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-yellow-200"></span> <code class="highlighter-rouge">yellow-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-yellow-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-yellow-200</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-yellow-300"></span> <code class="highlighter-rouge">yellow-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-yellow-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-yellow-300</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="reds">Reds</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color value</th>
+      <th style="text-align: left">Font color utility</th>
+      <th style="text-align: left">Background color utility</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-red-000"></span> <code class="highlighter-rouge">red-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-red-000</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-red-000</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-red-100"></span> <code class="highlighter-rouge">red-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-red-100</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-red-100</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-red-200"></span> <code class="highlighter-rouge">red-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-red-200</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-red-200</code></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><span class="d-inline-block p-2 mr-1 v-align-middle bg-red-300"></span> <code class="highlighter-rouge">red-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.text-red-300</code></td>
+      <td style="text-align: left"><code class="highlighter-rouge">.bg-red-300</code></td>
+    </tr>
+  </tbody>
+</table>
+:ET

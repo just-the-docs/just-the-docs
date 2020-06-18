@@ -1,0 +1,80 @@
+I"N*<h1 class="no_toc" id="search">Search</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#set-up-search" id="markdown-toc-set-up-search">Set up search</a>    <ol>
+      <li><a href="#generate-search-index" id="markdown-toc-generate-search-index">Generate search index</a></li>
+      <li><a href="#enable-search-in-configuration" id="markdown-toc-enable-search-in-configuration">Enable search in configuration</a></li>
+    </ol>
+  </li>
+  <li><a href="#hiding-pages-from-search" id="markdown-toc-hiding-pages-from-search">Hiding pages from search</a></li>
+</ol>
+
+<hr />
+
+<p>Just the Docs uses <a href="http://lunrjs.com">lunr.js</a> to add a client-side search interface powered by a JSON index that Jekyll generates. All search results are shown in an auto-complete style interface (there is no search results page). By default, all generated HTML pages are indexed using the following data points:</p>
+
+<ul>
+  <li>Page title</li>
+  <li>Page content</li>
+  <li>Page URL</li>
+</ul>
+
+<h2 id="set-up-search">Set up search</h2>
+
+<h3 id="generate-search-index">Generate search index</h3>
+
+<p>Before you can use search, you must initialize the feature by running this <code class="highlighter-rouge">rake</code> command that comes with <code class="highlighter-rouge">just-the-docs</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>bundle <span class="nb">exec </span>just-the-docs rake search:init
+</code></pre></div></div>
+
+<p>This command creates the <code class="highlighter-rouge">search-data.json</code> file that Jekyll uses to create your search index. Alternatively, you can create the file manually in the <code class="highlighter-rouge">assets/js/</code> directory of your Jekyll site with this content:</p>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+---
+{
+  <span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">comma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span><span class="nv">page</span><span class="w"> </span><span class="nt">in</span><span class="w"> </span><span class="nv">site.html_pages</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">search_exclude</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">comma</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">true</span><span class="p">%}</span>,<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>"<span class="p">{{</span><span class="w"> </span><span class="nb">forloop.index0</span><span class="w"> </span><span class="p">}}</span>": {
+    "title": "<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'&amp;amp;'</span><span class="p">,</span><span class="w"> </span><span class="s1">'&amp;'</span><span class="w"> </span><span class="p">}}</span>",
+    "content": "<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">content</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">markdownify</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'&lt;/h'</span><span class="p">,</span><span class="w"> </span><span class="s1">' . &lt;/h'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'&lt;hr'</span><span class="p">,</span><span class="w"> </span><span class="s1">' . &lt;hr'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'&lt;/p'</span><span class="p">,</span><span class="w"> </span><span class="s1">' . &lt;/p'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'&lt;/ul'</span><span class="p">,</span><span class="w"> </span><span class="s1">' . &lt;/ul'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'&lt;/tr'</span><span class="p">,</span><span class="w"> </span><span class="s1">' . &lt;/tr'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'&lt;/li'</span><span class="p">,</span><span class="w"> </span><span class="s1">' | &lt;/li'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'&lt;/td'</span><span class="p">,</span><span class="w"> </span><span class="s1">' | &lt;/td'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">strip_html</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">escape_once</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove</span><span class="p">:</span><span class="w"> </span><span class="s1">'Table of contents'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">remove</span><span class="p">:</span><span class="w"> </span><span class="s1">'```'</span><span class="w">  </span><span class="p">|</span><span class="w"> </span><span class="nf">remove</span><span class="p">:</span><span class="w"> </span><span class="s1">'---'</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">'\'</span><span class="p">,</span><span class="w"> </span><span class="s1">' '</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">' .  .  . '</span><span class="p">,</span><span class="w"> </span><span class="s1">' . '</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">replace</span><span class="p">:</span><span class="w"> </span><span class="s1">' .  . '</span><span class="p">,</span><span class="w"> </span><span class="s1">' . '</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">normalize_whitespace</span><span class="w"> </span><span class="p">}}</span>",
+    "url": "<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">absolute_url</span><span class="w"> </span><span class="p">}}</span>",
+    "relUrl": "<span class="p">{{</span><span class="w"> </span><span class="nv">page</span><span class="p">.</span><span class="nv">url</span><span class="w"> </span><span class="p">}}</span>"
+  }<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="nv">comma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+}
+</code></pre></div></div>
+
+<p><em>Note: If you don’t run this rake command or create this file manually, search will not work (or it will use the search index data from this docs site, not your site’s content).</em></p>
+
+<h3 id="enable-search-in-configuration">Enable search in configuration</h3>
+
+<p>In your site’s <code class="highlighter-rouge">_config.yml</code>, enable search:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Enable or disable the site search</span>
+<span class="na">search_enabled</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<p>The default is for hyphens to separate tokens in search terms:
+<code class="highlighter-rouge">gem-based</code> is equivalent to <code class="highlighter-rouge">gem based</code>, matching either word.
+To allow search for hyphenated words:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Set the search token separator</span>
+<span class="na">search_tokenizer_separator</span><span class="pi">:</span> <span class="s">/[\s/]+/</span>
+</code></pre></div></div>
+
+<h2 id="hiding-pages-from-search">Hiding pages from search</h2>
+
+<p>Sometimes you might have a page that you don’t want to be indexed for the search nor to show up in search results, e.g, a 404 page. To exclude a page from search, add the <code class="highlighter-rouge">search_exclude: true</code> parameter to the page’s YAML front matter:</p>
+
+<h4 class="no_toc" id="example">Example</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">default</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Page not found</span>
+<span class="na">nav_exclude</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">search_exclude</span><span class="pi">:</span> <span class="no">true</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+:ET

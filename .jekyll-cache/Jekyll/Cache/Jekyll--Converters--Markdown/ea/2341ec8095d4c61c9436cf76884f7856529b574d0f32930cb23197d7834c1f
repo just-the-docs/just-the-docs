@@ -1,0 +1,39 @@
+I"‡<h1 id="responsive-modifiers">Responsive modifiers</h1>
+
+<p>Just the Docs spacing works in conjunction with a variety of modifiers that allow you to target specific screen sizes responsively. Use these in conjunction with spacing and display prefix and suffix classes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Modifier</th>
+      <th style="text-align: left">Screen size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">(none)</td>
+      <td style="text-align: left">All screens until the next modifier</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">xs</code></td>
+      <td style="text-align: left">320px (20rem) and up</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">sm</code></td>
+      <td style="text-align: left">500px (31.25rem) and up</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">md</code></td>
+      <td style="text-align: left">740px (46.25rem) and up</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">lg</code></td>
+      <td style="text-align: left">1120px (70rem) and up</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">xl</code></td>
+      <td style="text-align: left">1400px (87.5rem) and up</td>
+    </tr>
+  </tbody>
+</table>
+:ET

@@ -11,7 +11,7 @@
   {% endif %}
 
   <link rel="shortcut icon" href="{{ 'favicon.ico' | absolute_url }}" type="image/x-icon">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/just-the-docs.css' | absolute_url }}">
 
   {% if site.ga_tracking != nil %}
@@ -30,11 +30,16 @@
     <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | absolute_url }}"></script>
   {% endif %}
   <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
+  <script type="text/javascript" src="{{ '/assets/js/toc.js' | absolute_url }}"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% seo %}
 
   {% include head_custom.html %}
-
+  <script type="text/javascript">
+    $(document).ready(function() {
+        $('#toc').toc();
+    });
+  </script>
 </head>

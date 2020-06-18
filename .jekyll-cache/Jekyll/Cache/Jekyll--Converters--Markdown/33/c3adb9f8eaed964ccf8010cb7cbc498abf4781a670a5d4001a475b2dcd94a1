@@ -1,0 +1,36 @@
+I"*<h1 id="labels">Labels</h1>
+
+<p>Use labels as a way to add an additional mark to a section of your docs. Labels come in a few colors. By default, labels will be blue.</p>
+
+<div class="code-example">
+  <p class="label">Default label</p>
+
+  <p class="label label-blue">Blue label</p>
+
+  <p class="label label-green">Stable</p>
+
+  <p class="label label-purple">New release</p>
+
+  <p class="label label-yellow">Coming soon</p>
+
+  <p class="label label-red">Deprecated</p>
+</div>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Default label
+{: .label }
+
+Blue label
+{: .label .label-blue }
+
+Stable
+{: .label .label-green }
+
+New release
+{: .label .label-purple }
+
+Coming soon
+{: .label .label-yellow }
+
+Deprecated
+{: .label .label-red }
+</code></pre></div></div>
+:ET

@@ -5,12 +5,26 @@
 
 .table-wrapper {
   display: block;
-  width: 100%;
   max-width: 100%;
   margin-bottom: $sp-5;
   overflow-x: auto;
   border-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+ }
+
+.tbtoc {
+  float: right !important;
+  display: block;
+  max-width: 100%;
+  margin-bottom: $sp-5;
+  overflow-x: auto;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding-left: 20px;
+  margin-left: 30px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 table {

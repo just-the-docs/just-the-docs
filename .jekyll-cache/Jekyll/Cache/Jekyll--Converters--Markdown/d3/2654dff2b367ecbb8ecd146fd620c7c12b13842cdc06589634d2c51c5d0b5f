@@ -1,0 +1,73 @@
+I"�<h1 class="no_toc" id="code">Code</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#inline-code" id="markdown-toc-inline-code">Inline code</a></li>
+  <li><a href="#syntax-highlighted-code-blocks" id="markdown-toc-syntax-highlighted-code-blocks">Syntax highlighted code blocks</a></li>
+  <li><a href="#code-blocks-with-rendered-examples" id="markdown-toc-code-blocks-with-rendered-examples">Code blocks with rendered examples</a></li>
+</ol>
+
+<hr />
+
+<h2 id="inline-code">Inline code</h2>
+
+<p>Code can be rendered inline by wrapping it in single back ticks.</p>
+
+<div class="code-example">
+  <p>Lorem ipsum dolor sit amet, <code class="highlighter-rouge">&lt;inline code snippet&gt;</code> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Lorem ipsum dolor sit amet, <span class="sb">`&lt;inline code snippet&gt;`</span> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="syntax-highlighted-code-blocks">Syntax highlighted code blocks</h2>
+
+<p>Use Jekyll’s built-in syntax highlighting with Rouge for code blocks by using three backticks, followed by the language name:</p>
+
+<div class="code-example">
+  <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
+<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>  </div>
+</div>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="p">```</span><span class="nl">js
+</span><span class="c1">// Javascript code with syntax highlighting.</span>
+<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nx">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">```</span></code></pre></figure>
+
+<hr />
+
+<h2 id="code-blocks-with-rendered-examples">Code blocks with rendered examples</h2>
+
+<p>To demonstrate front end code, sometimes it’s useful to show a rendered example of that code. After including the styles from your project that you’ll need to show the rendering, you can use a <code class="highlighter-rouge">&lt;div&gt;</code> with the <code class="highlighter-rouge">code-example</code> class, followed by the code block syntax. If you want to render your output with Markdown instead of HTML, use the <code class="highlighter-rouge">markdown="1"</code> attribute to tell Jekyll that the code you are rendering will be in Markdown format… This is about to get meta…</p>
+
+<div class="code-example">
+
+  <div class="code-example">
+
+    <p><a href="http://example.com/" class="btn">Link button</a></p>
+
+  </div>
+  <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nv">Link button</span><span class="p">](</span><span class="sx">http://example.com/</span><span class="p">)</span>{: .btn }
+</code></pre></div>  </div>
+
+</div>
+
+<figure class="highlight"><pre><code class="language-markdown" data-lang="markdown"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"code-example"</span> <span class="na">markdown=</span><span class="s">"1"</span><span class="nt">&gt;</span>
+
+<span class="p">[</span><span class="nv">Link button</span><span class="p">](</span><span class="sx">http://example.com/</span><span class="p">)</span>{: .btn }
+
+<span class="nt">&lt;/div&gt;</span>
+<span class="p">```</span><span class="nl">markdown
+</span><span class="p">[</span><span class="nv">Link button</span><span class="p">](</span><span class="sx">http://example.com/</span><span class="p">)</span>{: .btn }
+<span class="p">```</span></code></pre></figure>
+
+:ET

@@ -1,0 +1,142 @@
+I"…<h1 class="no_toc" id="typography">Typography</h1>
+
+<h2 class="no_toc text-delta" id="table-of-contents">Table of contents</h2>
+
+<ol id="markdown-toc">
+  <li><a href="#font-stack" id="markdown-toc-font-stack">Font stack</a></li>
+  <li><a href="#responsive-type-scale" id="markdown-toc-responsive-type-scale">Responsive type scale</a></li>
+  <li><a href="#headings" id="markdown-toc-headings">Headings</a></li>
+  <li><a href="#body-text" id="markdown-toc-body-text">Body text</a></li>
+  <li><a href="#inline-elements" id="markdown-toc-inline-elements">Inline elements</a></li>
+  <li><a href="#typographic-utilities" id="markdown-toc-typographic-utilities">Typographic Utilities</a></li>
+</ol>
+
+<hr />
+
+<h2 id="font-stack">Font stack</h2>
+
+<p>By default, Just the Docs uses a native system font stack for sans-serif fonts:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">-apple-system</span><span class="o">,</span> <span class="nt">BlinkMacSystemFont</span><span class="o">,</span> <span class="s2">"helvetica neue"</span><span class="o">,</span> <span class="nt">helvetica</span><span class="o">,</span> <span class="nt">roboto</span><span class="o">,</span> <span class="nt">noto</span><span class="o">,</span> <span class="s2">"segoe ui"</span><span class="o">,</span> <span class="nt">arial</span><span class="o">,</span> <span class="nt">sans-serif</span>
+</code></pre></div></div>
+
+<p class="fs-5 ls-10 code-example">ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz</p>
+
+<p>For monospace type, like code snippets or the <code class="highlighter-rouge">&lt;pre&gt;</code> element, Just the Docs uses a native system font stack for monospace fonts:</p>
+
+<div class="language-scss highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"SFMono-Regular"</span><span class="o">,</span> <span class="nt">Menlo</span><span class="o">,</span> <span class="nt">Consolas</span><span class="o">,</span> <span class="nt">Monospace</span>
+</code></pre></div></div>
+
+<p class="fs-5 ls-10 text-mono code-example">ABCDEFGHIJKLMNOPQRSTUVWXYZ
+abcdefghijklmnopqrstuvwxyz</p>
+
+<hr />
+
+<h2 id="responsive-type-scale">Responsive type scale</h2>
+
+<p>Just the Docs uses a responsive type scale that shifts depending on the viewport size.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Selector</th>
+      <th style="text-align: left">Small screen size <code class="highlighter-rouge">font-size</code></th>
+      <th style="text-align: left">Large screen size <code class="highlighter-rouge">font-size</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">h1</code>, <code class="highlighter-rouge">.text-alpha</code></td>
+      <td style="text-align: left">32px</td>
+      <td style="text-align: left">36px</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">h2</code>, <code class="highlighter-rouge">.text-beta</code></td>
+      <td style="text-align: left">18px</td>
+      <td style="text-align: left">24px</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">h3</code>, <code class="highlighter-rouge">.text-gamma</code></td>
+      <td style="text-align: left">16px</td>
+      <td style="text-align: left">18px</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">h4</code>, <code class="highlighter-rouge">.text-delta</code></td>
+      <td style="text-align: left">14px</td>
+      <td style="text-align: left">16px</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">h5</code>, <code class="highlighter-rouge">.text-epsilon</code></td>
+      <td style="text-align: left">16px</td>
+      <td style="text-align: left">18px</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">h6</code>, <code class="highlighter-rouge">.text-zeta</code></td>
+      <td style="text-align: left">18px</td>
+      <td style="text-align: left">24px</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">body</code></td>
+      <td style="text-align: left">14px</td>
+      <td style="text-align: left">16px</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="headings">Headings</h2>
+
+<p>Headings are rendered like this:</p>
+
+<div class="code-example">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+</div>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Heading 1</span>
+<span class="gu">## Heading 2</span>
+<span class="gu">### Heading 3</span>
+<span class="gu">#### Heading 4</span>
+<span class="gu">##### Heading 5</span>
+<span class="gu">###### Heading 6</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="body-text">Body text</h2>
+
+<p>Default body text is rendered like this:</p>
+
+<div class="code-example">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="inline-elements">Inline elements</h2>
+
+<div class="code-example">
+  <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
+
+  <p><a href="another-page">Link to another page</a>.</p>
+</div>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Text can be <span class="gs">**bold**</span>, _italic_, or ~~strikethrough~~.
+
+<span class="p">[</span><span class="nv">Link to another page</span><span class="p">](</span><span class="sx">another-page</span><span class="p">)</span>.
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="typographic-utilities">Typographic Utilities</h2>
+
+<p>There are a number of specific typographic CSS classes that allow you to override default styling for font size, font weight, line height, and capitalization.</p>
+
+<p><a href="{{ site.baseurl }}{% link docs/utilities/utilities.md %}#typography" class="btn btn-outline">View typography utilities</a></p>
+:ET

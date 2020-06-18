@@ -65,6 +65,21 @@ layout: table_wrappers
             {% endif %}
           {% endunless %}
           <div id="main-content" class="page-content" role="main">
+            <div class="tbtoc">
+              <p>
+              <p class="label label-blue"><strong>Page Owner:</strong> {{ page.owner }}</p><br/><p class="label label-green"><strong>Last Updated:</strong> {{ page.last_update }}</p>
+              <br/><a href="{{ site.repo }}/edit/stable/{{ page.path }}" class="btn btn-purple"><i class="fa fa-github" aria-hidden="true"></i> See this page on GitHub</a>
+              <br/><a href="{{ site.repo }}/issues/new?labels={% if page.editable %}{{ page.editable }}{% else %}question{% endif %}&title=Question:&body=I have a question regarding: {{ site.repo }}/tree/stable/{{ page.path }}" class="btn btn-purple"><i class="fa fa-question" aria-hidden="true"></i> Ask a question about this page</a>
+              <br/><a href="{{ site.repo }}/issues/new" class="btn btn-purple"><i class="fa fa-comments" aria-hidden="true"></i> Open a GitHub issue</a>
+              {% if page.has_children != true %}
+              <h2 class="text-delta">Table of contents</h2>
+              <div id="toc"></div>
+              {% endif %}
+              {% if page.feedback == true %}
+              {% include feedback.html %}
+              {% endif %}
+              </p>
+            </table>
             {% if site.heading_anchors != false %}
               {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#link\"></use></svg>" anchorClass="anchor-heading" %}
             {% else %}

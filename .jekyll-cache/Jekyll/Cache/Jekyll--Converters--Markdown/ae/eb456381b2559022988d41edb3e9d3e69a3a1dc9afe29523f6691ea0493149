@@ -1,0 +1,47 @@
+I"„<h1 id="tables">Tables</h1>
+
+<p>Tables are responsive by default, allowing wide tables to have a horizontal scroll to access columns outside of the normal viewport.</p>
+
+<div class="code-example">
+
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: left">head1</th>
+        <th style="text-align: left">head two</th>
+        <th style="text-align: left">three</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align: left">ok</td>
+        <td style="text-align: left">good swedish fish</td>
+        <td style="text-align: left">nice</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">out of stock</td>
+        <td style="text-align: left">good and plenty</td>
+        <td style="text-align: left">nice</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">ok</td>
+        <td style="text-align: left">good <code class="highlighter-rouge">oreos</code></td>
+        <td style="text-align: left">hmm</td>
+      </tr>
+      <tr>
+        <td style="text-align: left">ok</td>
+        <td style="text-align: left">good <code class="highlighter-rouge">zoute</code> drop</td>
+        <td style="text-align: left">yumm</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good <span class="sb">`oreos`</span>      | hmm   |
+| ok           | good <span class="sb">`zoute`</span> drop | yumm  |
+</code></pre></div></div>
+:ET
