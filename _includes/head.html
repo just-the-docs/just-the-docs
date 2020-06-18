@@ -37,15 +37,14 @@
   {% endif %}
   <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | absolute_url }}"></script>
   <script type="text/javascript" src="{{ '/assets/js/toc.js' | absolute_url }}"></script>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  {% seo %}
-
-  {% include head_custom.html %}
   <script type="text/javascript">
     $(document).ready(function() {
         $('#toc').toc();
     });
   </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  {% include head_custom.html %}
 </head>

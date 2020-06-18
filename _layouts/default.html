@@ -71,11 +71,9 @@ layout: table_wrappers
               <br/><a href="{{ site.repo }}/edit/stable/{{ page.path }}" class="btn btn-purple"><i class="fa fa-github" aria-hidden="true"></i> See this page on GitHub</a>
               <br/><a href="{{ site.repo }}/issues/new?labels={% if page.editable %}{{ page.editable }}{% else %}question{% endif %}&title=Question:&body=I have a question regarding: {{ site.repo }}/tree/stable/{{ page.path }}" class="btn btn-purple"><i class="fa fa-question" aria-hidden="true"></i> Ask a question about this page</a>
               <br/><a href="{{ site.repo }}/issues/new" class="btn btn-purple"><i class="fa fa-comments" aria-hidden="true"></i> Open a GitHub issue</a>
-              {% if page.has_children != true %}
               <h2 class="text-delta">Table of contents</h2>
               <div id="toc"></div>
-              {% endif %}
-              {% if page.feedback == true %}
+              {% if site.ga_tracking != nil %}
               {% include feedback.html %}
               {% endif %}
               </p>
