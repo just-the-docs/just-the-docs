@@ -1,4 +1,6 @@
 ---
+last_update: June 18 2020
+owner: Patrick Marsceill
 layout: default
 title: Configuration
 nav_order: 2
@@ -39,6 +41,13 @@ search_enabled: true
 # Enable support for hyphenated search words:
 search_tokenizer_separator: /[\s/]+/
 
+```
+
+## Site Repo
+
+```yml
+# Set a repo path for the on-page deep-links to GitHub
+repo: "https://github.com/pmarsceill/just-the-docs"
 ```
 
 ## Aux links

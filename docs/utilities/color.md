@@ -1,4 +1,6 @@
 ---
+last_update: June 18 2020
+owner: Patrick Marsceill
 layout: default
 title: Color
 parent: Utilities

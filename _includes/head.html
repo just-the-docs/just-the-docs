@@ -17,11 +17,17 @@
   {% if site.ga_tracking != nil %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', "{{ site.ga_tracking }}");
+        gtag('config', '{{ site.ga_tracking }}');
+        var doNotTrack = false;
+          if (!doNotTrack) {
+              window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+              ga('create', '{{ site.ga_tracking }}', 'auto');
+              ga('send', 'pageview');
+          }
     </script>
 
   {% endif %}

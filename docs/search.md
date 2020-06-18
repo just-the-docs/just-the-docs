@@ -1,4 +1,6 @@
 ---
+last_update: June 18 2020
+owner: Patrick Marsceill
 layout: default
 title: Search
 nav_order: 7
@@ -77,6 +79,8 @@ Sometimes you might have a page that you don't want to be indexed for the search
 
 ```yaml
 ---
+last_update: June 18 2020
+owner: Patrick Marsceill
 layout: default
 title: Page not found
 nav_exclude: true
