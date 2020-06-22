@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.executables   << 'just-the-docs'
   
   spec.add_runtime_dependency "bundler", "~> 2.1.4"
-  spec.add_runtime_dependency "jekyll", ">= 3.8.5", "< 4.1.0"
+  spec.add_runtime_dependency "jekyll", ">= 3.8.5"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.0"
   spec.add_runtime_dependency "rake", ">= 12.3.1", "< 13.1.0"
 
