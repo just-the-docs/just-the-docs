@@ -38,6 +38,13 @@ nav_order: 4
 ---
 ```
 
+The specified `nav_order` parameters on a site should be all integers or all strings.
+Pages without a `nav_order` parameter are ordered alphabetically by their `title`,
+and appear after the explicitly-ordered pages at each level.
+By default, all Capital letters are sorted before all lowercase letters;
+adding `nav_sort: case_insensitive` in the configuration file ignores case
+when sorting strings (but also sorts numbers lexicographically: `10` comes before `1`).
+
 ---
 
 ## Excluding pages
@@ -190,9 +197,9 @@ This would create the following navigation structure:
 
 ---
 
-## Auxiliary Navigation
+## Auxiliary Links
 
-To add a auxiliary navigation item to your site (in the upper right on all pages), add it to the `aux_nav` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-nav) in your site's `_config.yml` file.
+To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
 
 #### Example
 {: .no_toc }
