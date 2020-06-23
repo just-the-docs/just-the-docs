@@ -14,8 +14,16 @@ permalink: /datasets/
 
 ---
 
-## Datasets converted from CityGML
+## Simple geometries
 
+  - [https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/tetra.json](tetra.json)
+  - [https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/cube.json](cube.json)
+  - [https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/torus.json](torus.json)
+  - [https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/twocube.json](twocube.json)
+
+For different City Objects (buildings, trees, roads, etc.) and different geometries, see the latest [CityJSON specifications](https://www.cityjson.org/specs/).
+
+## Datasets converted from CityGML
 
 {% assign ds = site.data.datasets | sort: 'name' %}
 
