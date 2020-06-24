@@ -82,7 +82,7 @@ Then the versions and their corresponding city objects are defined in the `versi
       }
     },
     "branches": {
-      "master": "v2"
+      "main": "v2"
     },
     "tags": {
       "first-version": "v1"
