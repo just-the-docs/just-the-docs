@@ -256,7 +256,8 @@
   height: 0;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
-  transition: opacity ease $transition-duration, width 0s $transition-duration, height 0s $transition-duration;
+  transition: opacity ease $transition-duration, width 0s $transition-duration,
+    height 0s $transition-duration;
 }
 
 .search-active {
