@@ -55,7 +55,7 @@ search:
   tokenizer_separator: /[\s/]+/
   # Display the relative url in search results
   # Supports true (default) or false
-  rel_url: false
+  rel_url: true
   # Enable or disable the search button that appears in the bottom right corner of every page
   # Supports true or false (default)
   button: false
