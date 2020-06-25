@@ -68,7 +68,7 @@
     outline: 0;
 
     + .search-label .search-icon {
-      fill: $link-color;
+      color: $link-color;
     }
   }
 }
@@ -88,7 +88,7 @@
     width: #{$sp-4 * 1.2};
     height: #{$sp-4 * 1.2};
     align-self: center;
-    fill: $grey-dk-000;
+    color: $grey-dk-000;
   }
 }
 
@@ -171,7 +171,7 @@
     width: $sp-4;
     height: $sp-4;
     margin-right: $sp-2;
-    fill: $link-color;
+    color: $link-color;
     flex-shrink: 0;
   }
 

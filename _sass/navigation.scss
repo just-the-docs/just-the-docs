@@ -71,7 +71,7 @@
       padding-right: #{$nav-list-item-height-sm / 4};
       padding-bottom: #{$nav-list-item-height-sm / 4};
       padding-left: #{$nav-list-item-height-sm / 4};
-      fill: $link-color;
+      color: $link-color;
 
       @include mq(md) {
         width: $nav-list-item-height;
@@ -110,7 +110,7 @@
         }
 
         .nav-list-expander {
-          fill: $nav-child-link-color;
+          color: $nav-child-link-color;
         }
       }
     }
