@@ -56,9 +56,9 @@ search:
   # Display the relative url in search results
   # Supports true (default) or false
   rel_url: false
-  # Enable or disable the search button
+  # Enable or disable the search button that appears in the bottom right corner of every page
   # Supports true or false (default)
-  button: true
+  button: false
 ```
 
 ## Aux links

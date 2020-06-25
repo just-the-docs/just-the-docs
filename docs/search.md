@@ -86,8 +86,10 @@ search.rel_url: false
 
 ### Display search button
 
+The search button displays in the bottom right corner of the screen and triggers the search input when clicked.
+
 ```yaml
-# Enable or disable the search button
+# Enable or disable the search button that appears in the bottom right corner of every page
 # Supports true or false (default)
 search.button: true
 ```
