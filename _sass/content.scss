@@ -8,6 +8,16 @@
 .page-content {
   line-height: $content-line-height;
 
+  ol,
+  ul,
+  dl,
+  pre,
+  address,
+  blockquote,
+  .table-wrapper {
+    margin-top: 0.5em;
+  }
+
   a {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -17,6 +27,12 @@
   ul,
   ol {
     padding-left: 1.5em;
+  }
+
+  li {
+    .highlight {
+      margin-top: $sp-1;
+    }
   }
 
   ol {
@@ -156,5 +172,22 @@
   h5,
   h6 {
     position: relative;
+    margin-top: 1.5em;
+    margin-bottom: 0.25em;
+
+    &:first-child {
+      margin-top: $sp-2;
+    }
+
+    + table,
+    + .table-wrapper,
+    + .code-example,
+    + .highlighter-rouge {
+      margin-top: 1em;
+    }
+
+    + p {
+      margin-top: 0;
+    }
   }
 }
