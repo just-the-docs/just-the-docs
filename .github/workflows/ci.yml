@@ -15,7 +15,7 @@ jobs:
       run: |
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
-        jekyll/builder:latest /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && bundle install && jekyll build && bundle exec rake search:init"
+        jekyll/builder:latest /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && bundle install && bundle exec jekyll build && bundle exec rake search:init"
 
   jekyll-3-8-5:
     name: Build Jekyll site (v3.8.5)
@@ -28,45 +28,17 @@ jobs:
       run: |
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
-        jekyll/builder:3.8.5 /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && bundle install && jekyll build && bundle exec rake search:init"
+        jekyll/builder:3.8.5 /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && bundle install && bundle exec jekyll build && bundle exec rake search:init"
 
   assets:
-    name: Format and test CSS and JS
+    name: Test CSS and JS
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
-      # Using this so the this instead of GITHUB_TOKEN so that this workflow can trigger another
-      with:
-        token: ${{ secrets.PAT }} 
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - name: Extract branch name
-      shell: bash
-      run: echo "##[set-output name=branch;]$(echo ${GITHUB_HEAD_REF#refs/heads/})"
-      id: extract_branch
-
     - run: npm install
-    - run: npm run format
-    - name: Add changed files
-      run: |
-        echo "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
-        git config --global user.email $GITHUB_ACTOR@users.noreply.github.com
-        git config --global user.name $GITHUB_ACTOR
-        echo "extracted branch is ${{ steps.extract_branch.outputs.branch }}"
-        git checkout -b ${{ steps.extract_branch.outputs.branch }}
-        git status
-        git add .
-    - name: Are there any updates?
-      shell: bash
-      run: echo "##[set-output name=status]$(git status -s)"
-      id: is_dirty
-    - name: Commit files
-      if: steps.is_dirty.outputs.status
-      run: |
-        echo ${{ steps.is_dirty.outputs.status }}
-        git commit -m "🎨 Prettier"
-        git push --force --set-upstream "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" ${{ steps.extract_branch.outputs.branch }}
     - run: npm test
