@@ -16,14 +16,14 @@ change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
 version-resolver:
   major:
     labels:
-      - 'major'
+      - 'next-major-release'
   minor:
     labels:
-      - 'minor'
+      - 'next-minor-release'
   patch:
     labels:
       - 'patch'
-  default: patch
+  default: minor
 template: |
   ## Changes
 
