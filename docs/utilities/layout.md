@@ -2,7 +2,6 @@
 layout: default
 title: Layout
 parent: Utilities
-nav_order: 2
 ---
 
 # Layout Utilities
@@ -52,6 +51,9 @@ Spacing values are based on a `1rem = 16px` spacing scale, broken down into thes
 | `6`            | 2rem          | 32px                |
 | `7`            | 2.5rem        | 40px                |
 | `8`            | 3rem          | 48px                |
+| `auto`         | auto          | auto                |
+
+Use `mx-auto` to horizontally center elements.
 
 #### Examples
 {: .no_toc }
@@ -65,6 +67,19 @@ This paragraph will have a margin bottom of 1rem/16px at large screens.
 This paragraph will have 2rem/32px of padding on the right and left at all screen sizes.
 {: .px-6 }
 ```
+
+## Horizontal Alignment
+
+| Classname               | What it does                     |
+|:------------------------|:---------------------------------|
+| `.float-left`           | `float: left`                    |
+| `.float-right`          | `float: right`                   |
+| `.flex-justify-start`   | `justify-content: flex-start`    |
+| `.flex-justify-end`     | `justify-content: flex-end`      |
+| `.flex-justify-between` | `justify-content: space-between` |
+| `.flex-justify-around`  | `justify-content: space-around`  |
+
+_Note: any of the `flex-` classes must be used on a parent element that has `d-flex` applied to it._
 
 ## Vertical Alignment
 
