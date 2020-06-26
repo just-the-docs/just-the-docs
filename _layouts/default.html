@@ -123,7 +123,7 @@ layout: table_wrappers
           <hr>
           <footer>
             {% if site.back_to_top %}
-              <p><a href="#top">{{ site.back_to_top_text }}</a></p>
+              <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
             {% endif %}
             {% if site.footer_content != nil %}
               <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
@@ -144,7 +144,7 @@ layout: table_wrappers
                   site.gh_edit_view_mode
                 %}
                   <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}">{{ site.gh_edit_link_text }}</a>
+                    <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
                   </p>
                 {% endif %}
               </div>
