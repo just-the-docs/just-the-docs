@@ -22,7 +22,7 @@ h3,
 h4,
 .text-delta {
   @include fs-2;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
@@ -39,12 +39,6 @@ h6,
   color: $grey-dk-200;
 }
 
-li {
-  .highlight {
-    margin-top: $sp-2;
-  }
-}
-
 .text-small {
   @include fs-2;
 }
@@ -53,6 +47,14 @@ li {
   font-family: $mono-font-family !important;
 }
 
+.text-left {
+  text-align: left !important;
+}
+
 .text-center {
   text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
 }

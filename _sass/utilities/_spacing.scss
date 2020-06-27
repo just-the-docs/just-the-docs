@@ -7,6 +7,11 @@
 
 // Margin spacer utilities
 
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
 @for $i from 1 through length($spacers) {
   $size: #{map-get($spacers, sp-#{$i - 1})};
   $scale: #{$i - 1};
@@ -42,11 +47,10 @@
     margin-right: -#{$size} !important;
     margin-left: -#{$size} !important;
   }
-}
-
-.mx-auto {
-  margin-right: auto !important;
-  margin-left: auto !important;
+  .mx-#{$scale}-auto {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
 }
 
 @each $media-query in map-keys($media-queries) {
