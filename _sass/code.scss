@@ -16,8 +16,9 @@ figure.highlight {
   padding: $sp-3;
   margin-top: 0;
   margin-bottom: 0;
-  -webkit-overflow-scrolling: touch;
   background-color: $code-background-color;
+  border-radius: $border-radius;
+  -webkit-overflow-scrolling: touch;
 
   code {
     padding: 0;
@@ -27,8 +28,6 @@ figure.highlight {
 
 .highlighter-rouge {
   margin-bottom: $sp-3;
-  overflow: hidden;
-  border-radius: $border-radius;
 }
 
 .highlight .c {
