@@ -1,22 +1,8 @@
-// Font size
-$font-size-1: 9px;
-$font-size-1-mq: 10px;
-$font-size-2: 11px; //h4 - uppercased!, h6 not uppercased, text-small
-$font-size-3: 12px; //h5
-$font-size-4: 15px;
-$font-size-5: 16px; //h3
-$font-size-6: 18px; //h2
-$font-size-7: 24px; 
-$font-size-8: 32px;//h1
-$font-size-9: 36px;
-$font-size-10: 42px;
-$font-size-10-mq: 48px;
-
 @mixin fs-1 {
   font-size: $font-size-1 !important;
 
   @include mq(sm) {
-    font-size: $font-size-1-mq !important;
+    font-size: $font-size-1-sm !important;
   }
 }
 
@@ -93,6 +79,6 @@ $font-size-10-mq: 48px;
   line-height: $body-heading-line-height;
 
   @include mq(sm) {
-    font-size: $font-size-10-mq !important;
+    font-size: $font-size-10-sm !important;
   }
 }
