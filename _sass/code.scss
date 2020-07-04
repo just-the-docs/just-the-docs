@@ -43,37 +43,37 @@ figure.highlight {
   pre {
     padding: $sp-3;
     margin-top: 0;
-    margin-bottom: 0;  
+    margin-bottom: 0;
   }
 }
 
-// With linenos: 
+// With linenos:
 
-figure.highlight > pre > code, figure.highlight > code 
-{
+figure.highlight > pre > code, figure.highlight > code {
 
-td, td > pre {
-  @include fs-2;
-  min-width: 0;
-  padding: 0;
-  background-color: $code-background-color;
-  border-bottom: none;
-  border-left: none;
-}
+  td,
+  td > pre {
+    @include fs-2;
+    min-width: 0;
+    padding: 0;
+    background-color: $code-background-color;
+    border-bottom: 0;
+    border-left: 0;
+  }
 
-td.gutter {
-  padding-right: 1rem;
-}
-  
-pre {
-  line-height: 2;
-  margin-top: 0;
-}
+  td.gutter {
+    padding-right: 1rem;
+  }
+    
+  pre {
+    margin-top: 0;
+    line-height: 2;
+  }
 
-tbody > tr > td {
-  border-bottom: none;
-  padding-bottom: 0;
-}
+  tbody > tr > td {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
 
 }
 
@@ -82,8 +82,8 @@ tbody > tr > td {
 figure.highlight > pre > code .table-wrapper {
   padding: 0;
   margin-bottom: 0;
+  border: 0;
   box-shadow: none;
-  border: none;
 }
 
 // Using fix_linenos: figure.highlight > code > div > table > ...
