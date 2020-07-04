@@ -26,6 +26,73 @@ figure.highlight {
   }
 }
 
+// Using Liquid tags for highlighting, optionally with linenos
+//
+// See docs/index-test.md for tests
+
+// Without linenos: figure.highlight > pre > code > div > span*
+
+figure.highlight {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: $sp-3;
+  background-color: $code-background-color;
+  border-radius: $border-radius;
+  -webkit-overflow-scrolling: touch;
+
+  pre {
+    padding: $sp-3;
+    margin-top: 0;
+    margin-bottom: 0;  
+  }
+}
+
+// With linenos: 
+
+figure.highlight > pre > code, figure.highlight > code 
+{
+
+td, td > pre {
+  @include fs-2;
+  min-width: 0;
+  padding: 0;
+  background-color: $code-background-color;
+  border-bottom: none;
+  border-left: none;
+}
+
+td.gutter {
+  padding-right: 1rem;
+}
+  
+pre {
+  line-height: 2;
+  margin-top: 0;
+}
+
+tbody > tr > td {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+}
+
+// Jekyll 4.1.1: figure.highlight > pre > code > div > table > ...
+
+figure.highlight > pre > code .table-wrapper {
+  padding: 0;
+  margin-bottom: 0;
+  box-shadow: none;
+  border: none;
+}
+
+// Using fix_linenos: figure.highlight > code > div > table > ...
+
+figure.highlight > code .table-wrapper {
+  padding: $sp-3;
+}
+
+
 .highlighter-rouge {
   margin-bottom: $sp-3;
 }
