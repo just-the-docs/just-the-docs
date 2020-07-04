@@ -49,7 +49,8 @@ figure.highlight {
 
 // With linenos:
 
-figure.highlight > pre > code, figure.highlight > code {
+figure.highlight > pre > code,
+figure.highlight > code {
 
   td,
   td > pre {
@@ -64,7 +65,7 @@ figure.highlight > pre > code, figure.highlight > code {
   td.gutter {
     padding-right: 1rem;
   }
-    
+
   pre {
     margin-top: 0;
     line-height: 2;
@@ -74,7 +75,6 @@ figure.highlight > pre > code, figure.highlight > code {
     padding-bottom: 0;
     border-bottom: 0;
   }
-
 }
 
 // Jekyll 4.1.1: figure.highlight > pre > code > div > table > ...
@@ -91,7 +91,6 @@ figure.highlight > pre > code .table-wrapper {
 figure.highlight > code .table-wrapper {
   padding: $sp-3;
 }
-
 
 .highlighter-rouge {
   margin-bottom: $sp-3;
