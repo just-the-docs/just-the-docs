@@ -231,4 +231,21 @@ To generate a Table of Contents on your docs pages, you can use the `{:toc}` met
 {:toc}
 ```
 
-This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself.
+This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself. To get an unordered list, replace  `1. TOC` above by `- TOC`.
+
+### Collapsible Table of Contents
+
+The Table of Contents can be made collapsible using the `<details>` and `<summary>` elements , as in the following example. The attribute `open` (expands the Table of Contents by default) and the styling with `{: .text-delta }` are optional.
+
+```markdown
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+```
+
+The result is shown at [the top of this page](#navigation-structure) (`{:toc}` can be used only once on each page).
