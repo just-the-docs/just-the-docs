@@ -11,6 +11,34 @@ code {
   border-radius: $border-radius;
 }
 
+// Content structure for highlighted code blocks using fences or Liquid
+//
+// ```[LANG]...```, no kramdown line_numbers:
+//   div.[language-LANG.]highlighter-rouge > div.highlight > pre.highlight > code
+//
+// ```[LANG]...```, kramdown line_numbers = true:
+//   div.[language-LANG.]highlighter-rouge > div.highlight > pre.highlight > code
+//   > div.table-wrapper > table.rouge-table > tbody > tr 
+//   > td.rouge-gutter.gl > pre.lineno
+//   | td.rouge-code > pre
+//
+// {% highlight LANG %}...{% endhighlight %}:
+//   figure.highlight > pre > code.language-LANG
+//
+// {% highlight LANG linenos %}...{% endhighlight %}:
+//   figure.highlight > pre > code.language-LANG
+//   > div.table-wrapper > table.rouge-table > tbody > tr
+//   > td.gutter.gl > pre.lineno
+//   | td.code > pre
+//
+// fix_linenos removes the outermost pre when it encloses table.rouge-table
+//
+// See docs/index-test.md for some tests.
+// 
+// No kramdown line_numbers: fences and Liquid highlighting look the same.
+// Kramdown line_numbers = true: fences have a wider gutter than with Liquid?
+
+
 pre.highlight,
 figure.highlight {
   padding: $sp-3;
@@ -27,12 +55,11 @@ figure.highlight {
 }
 
 // Using Liquid tags for highlighting, optionally with linenos
-//
-// See docs/index-test.md for tests
 
 // Without linenos: figure.highlight > pre > code > div > span*
 
-figure.highlight {
+figure.highlight,
+div.highlight {
   padding: 0;
   margin-top: 0;
   margin-bottom: $sp-3;
@@ -47,11 +74,12 @@ figure.highlight {
   }
 }
 
-// With linenos:
+// With linenos or kramdown line_numbers option:
 
-figure.highlight > pre > code,
-figure.highlight > code {
-
+figure.highlight > pre > code, // {% highlight linenos %}
+figure.highlight > code,       // with fix_linenos
+div.highlight > pre > code,    // ```...```
+div.highlight > code {         // with fix_linenos
   td,
   td > pre {
     @include fs-2;
@@ -62,8 +90,8 @@ figure.highlight > code {
     border-left: 0;
   }
 
-  td.gutter {
-    padding-right: 1rem;
+  td.gl {
+    padding-right: $sp-3;
   }
 
   pre {
@@ -79,7 +107,9 @@ figure.highlight > code {
 
 // Jekyll 4.1.1: figure.highlight > pre > code > div > table > ...
 
-figure.highlight > pre > code .table-wrapper {
+figure.highlight > pre > code .table-wrapper,
+div.highlight > pre > code .table-wrapper,
+ {
   padding: 0;
   margin-bottom: 0;
   border: 0;
@@ -88,8 +118,12 @@ figure.highlight > pre > code .table-wrapper {
 
 // Using fix_linenos: figure.highlight > code > div > table > ...
 
-figure.highlight > code .table-wrapper {
+figure.highlight > code .table-wrapper,
+div.highlight > code .table-wrapper {
   padding: $sp-3;
+  margin-bottom: 0;
+  border: 0;
+  box-shadow: none;
 }
 
 .highlighter-rouge {
