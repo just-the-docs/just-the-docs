@@ -18,7 +18,7 @@ code {
 //
 // ```[LANG]...```, kramdown line_numbers = true:
 //   div.[language-LANG.]highlighter-rouge > div.highlight > pre.highlight > code
-//   > div.table-wrapper > table.rouge-table > tbody > tr 
+//   > div.table-wrapper > table.rouge-table > tbody > tr
 //   > td.rouge-gutter.gl > pre.lineno
 //   | td.rouge-code > pre
 //
@@ -34,10 +34,9 @@ code {
 // fix_linenos removes the outermost pre when it encloses table.rouge-table
 //
 // See docs/index-test.md for some tests.
-// 
+//
 // No kramdown line_numbers: fences and Liquid highlighting look the same.
 // Kramdown line_numbers = true: fences have a wider gutter than with Liquid?
-
 
 pre.highlight,
 figure.highlight {
@@ -76,10 +75,10 @@ div.highlight {
 
 // With linenos or kramdown line_numbers option:
 
-figure.highlight > pre > code, // {% highlight linenos %}
-figure.highlight > code,       // with fix_linenos
-div.highlight > pre > code,    // ```...```
-div.highlight > code {         // with fix_linenos
+figure.highlight > pre > code,
+figure.highlight > code,
+div.highlight > pre > code,
+div.highlight > code {
   td,
   td > pre {
     @include fs-2;
@@ -108,8 +107,7 @@ div.highlight > code {         // with fix_linenos
 // Jekyll 4.1.1: figure.highlight > pre > code > div > table > ...
 
 figure.highlight > pre > code .table-wrapper,
-div.highlight > pre > code .table-wrapper,
- {
+div.highlight > pre > code .table-wrapper {
   padding: 0;
   margin-bottom: 0;
   border: 0;
