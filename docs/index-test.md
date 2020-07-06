@@ -33,43 +33,11 @@ var fun = function lang(l) {
 ```
 
 ```ruby
-# Ruby code with syntax highlighting in fences
+# Ruby code with syntax highlighting
 GitHubPages::Dependencies.gems.each do |gem, version|
   s.add_dependency(gem, "= #{version}")
 end
 ```
-
-{% highlight ruby %}
-# Ruby code with syntax highlighting using Liquid
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-{% endhighlight %}
-
-{% capture fix_linenos_code %}{% highlight ruby linenos %}
-# Ruby code with syntax highlighting and fixed line numbers using Liquid
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-{% endhighlight %}{% endcapture %}{% include fix_linenos.html %}{{ fix_linenos_code }}
-
-{% comment %}
-
-The code example below requires the following setting in `_config.yml`:
-```yaml
-compress_html:
-  ignore:
-    envs: all
-```
-
-{% highlight ruby linenos %}
-# Ruby code with syntax highlighting and unfixed line numbers using Liquid
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-{% endhighlight %}
-
-{% endcomment %}
 
 #### [](#header-4)Header 4
 
