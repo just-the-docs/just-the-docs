@@ -88,8 +88,8 @@ figure.highlight {
     @include fs-2;
     min-width: 0;
     padding: 0;
-    border: 0;
     background-color: $code-background-color;
+    border: 0;
   }
 
   td.gl {
