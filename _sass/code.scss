@@ -57,7 +57,8 @@ div.highlighter-rouge {
   }
 }
 
-// {% highlight LANG [linenos] %}...{% endhighlight %}:
+// {% highlight LANG %}...{% endhighlight %},
+// {% highlight LANG linenos %}...{% endhighlight %}:
 figure.highlight {
   padding: $sp-3;
   margin-top: 0;
