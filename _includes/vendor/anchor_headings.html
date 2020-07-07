@@ -64,7 +64,7 @@
     {% capture anchor %}{% endcapture %}
 
     {% if html_id and headerLevel >= minHeader and headerLevel <= maxHeader %}
-      {% capture anchor %}href="#{{ html_id}}"{% endcapture %}
+      {% capture anchor %}href="#{{ html_id}}" aria-labelledby="{{ html_id}}"{% endcapture %}
 
       {% if include.anchorClass %}
         {% capture anchor %}{{ anchor }} class="{{ include.anchorClass }}"{% endcapture %}

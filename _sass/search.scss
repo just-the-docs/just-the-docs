@@ -308,6 +308,8 @@
   @include mq(md) {
     .main {
       position: fixed;
+      right: 0;
+      left: 0;
     }
   }
 
