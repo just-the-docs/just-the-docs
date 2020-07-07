@@ -38,55 +38,58 @@ code {
 // No kramdown line_numbers: fences and Liquid highlighting look the same.
 // Kramdown line_numbers = true: fences have a wider gutter than with Liquid?
 
-pre.highlight,
-figure.highlight {
+// ```[LANG]...```
+div.highlighter-rouge {
   padding: $sp-3;
-  margin-top: 0;
-  margin-bottom: 0;
-  background-color: $code-background-color;
-  border-radius: $border-radius;
-  -webkit-overflow-scrolling: touch;
-
-  code {
-    padding: 0;
-    border: 0;
-  }
-}
-
-// Using Liquid tags for highlighting, optionally with linenos
-
-// Without linenos: figure.highlight > pre > code > div > span*
-
-figure.highlight,
-div.highlight {
-  padding: 0;
   margin-top: 0;
   margin-bottom: $sp-3;
   background-color: $code-background-color;
   border-radius: $border-radius;
+  box-shadow: none;
   -webkit-overflow-scrolling: touch;
 
-  pre {
-    padding: $sp-3;
-    margin-top: 0;
-    margin-bottom: 0;
+  div.highlight,
+  pre.highlight,
+  code {
+    padding: 0;
+    margin: 0;
+    border: 0;
   }
 }
 
-// With linenos or kramdown line_numbers option:
+// {% highlight LANG [linenos] %}...{% endhighlight %}:
+figure.highlight {
+  padding: $sp-3;
+  margin-top: 0;
+  margin-bottom: $sp-3;
+  background-color: $code-background-color;
+  border-radius: $border-radius;
+  box-shadow: none;
+  -webkit-overflow-scrolling: touch;
 
-figure.highlight > pre > code,
-figure.highlight > code,
-div.highlight > pre > code,
-div.highlight > code {
-  td,
+  pre,
+  code {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+}
+
+// ```[LANG]...```, kramdown line_numbers = true,
+// {% highlight LANG linenos %}...{% endhighlight %}:
+.highlight .table-wrapper {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+
+  tr > td,
   td > pre {
     @include fs-2;
     min-width: 0;
     padding: 0;
+    border: 0;
     background-color: $code-background-color;
-    border-bottom: 0;
-    border-left: 0;
   }
 
   td.gl {
@@ -94,38 +97,9 @@ div.highlight > code {
   }
 
   pre {
-    margin-top: 0;
+    margin: 0;
     line-height: 2;
   }
-
-  tbody > tr > td {
-    padding-bottom: 0;
-    border-bottom: 0;
-  }
-}
-
-// Jekyll 4.1.1: figure.highlight > pre > code > div > table > ...
-
-figure.highlight > pre > code .table-wrapper,
-div.highlight > pre > code .table-wrapper {
-  padding: 0;
-  margin-bottom: 0;
-  border: 0;
-  box-shadow: none;
-}
-
-// Using fix_linenos: figure.highlight > code > div > table > ...
-
-figure.highlight > code .table-wrapper,
-div.highlight > code .table-wrapper {
-  padding: $sp-3;
-  margin-bottom: 0;
-  border: 0;
-  box-shadow: none;
-}
-
-.highlighter-rouge {
-  margin-bottom: $sp-3;
 }
 
 .highlight .c {
