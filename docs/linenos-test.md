@@ -13,30 +13,30 @@ produced by Jekyll (4.1.1 or earlier) for line numbers from highlighted code
 To avoid non-conforming HTML and unsatisfactory layout, HTML compression
 can be turned off by using the following configuration option:
 
-```yaml
+{% highlight yaml %}
 compress_html:
   ignore:
     envs: all
-```
+{% endhighlight %}
 
 When using Kramdown code fences, line numbers are turned on globally by the
 following configuration option:
 
-```yaml
+{% highlight yaml %}
 kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: false
-```
+{% endhighlight %}
 
 Line numbers can then be suppressed locally using Liquid tags (_without_ the
 `linenos` option) instead of fences:
 
-```
+{% highlight yaml %}
 {% raw %}{% highlight some_language %}
 Some code
 {% endhighlight %}{% endraw %}
-```
+{% endhighlight %}
 
 # Workarounds
 
@@ -47,7 +47,7 @@ be replaced by `code` -- but note that `code=code` cannot be removed).
 
 ## Code fences
 
-````
+{% highlight default %}
 {% raw %}{% capture some_var %}
 ```some_language
 Some code
@@ -55,18 +55,18 @@ Some code
 {% endcapture %}
 {% assign some_var = some_var | markdownify %}
 {% include fix_linenos.html code=some_var %}{% endraw %}
-````
+{% endhighlight %}
 
 ## Liquid highlighting
 
-```
+{% highlight default %}
 {% raw %}{% capture some_var %}
 {% highlight some_language linenos %}
 Some code
 {% endhighlight %}
 {% endcapture %}
 {% include fix_linenos.html code=some_var %}{% endraw %}
-```
+{% endhighlight %}
 
 _Credit:_ The original version of the above workaround was suggested by
 Dmitry Hrabrov at
