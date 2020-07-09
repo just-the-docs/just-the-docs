@@ -30,7 +30,7 @@ Go to the [CityJSON official online viewer](https://viewer.cityjson.org) (called
 
 ![](../files/gs-viewer.png)
 
-You can also use more powerful viewers (where the semantics and attributes of the buildings are shown for instance), we offer a [list of viewers]({{ 'software/#viewers' | prepend: site.baseurl }}) and of other software.
+You can also use more powerful viewers (where the semantics and attributes of the buildings are shown for instance), we offer a [list of viewers]({{ '/software/#viewers' | prepend: site.baseurl }}) and of other software.
 One of them is [azul](https://itunes.apple.com/nl/app/azul/id1173239678?mt=12), a macOS-only viewer:
 
 ![](../files/gs-azul.png)
