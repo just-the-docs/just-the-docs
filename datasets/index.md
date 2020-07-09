@@ -14,8 +14,18 @@ permalink: /datasets/
 
 ---
 
-## Datasets converted from CityGML
+## Simple geometries
 
+  - [tetra.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/tetra.json) -- a unit cube
+  - [cube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/cube.json) --  a simple tetrahedron
+  - [torus.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/torus.json) -- a unit cube with a genus of one
+  - [msol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/msol.json) -- one MultiSolid: 2 unit cubes that are not adjacent
+  - [csol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/csol.json) -- one CompositeSolid: 2 adjacent unit cubes
+  - [twocube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/twocube.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
+
+For different City Objects (buildings, trees, roads, etc.) and different geometries, see the latest [CityJSON specifications](https://www.cityjson.org/specs/), and to understand how the hierarchical brackets work, see [this guide](https://www.cityjson.org/help/dev/geom-arrays/).
+
+## Datasets converted from CityGML
 
 {% assign ds = site.data.datasets | sort: 'name' %}
 
