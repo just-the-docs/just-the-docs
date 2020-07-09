@@ -7,7 +7,8 @@ permalink: /assets/js/search-data.json
 {%- assign pages_array = pages_array | push: site.html_pages -%}
 {%- if site.doc_collections -%}
   {%- for doc_collection in site.doc_collections -%}
-    {%- assign collection = site[doc_collection.collection] -%}
+    {% assign collection_name = doc_collection[0] %}
+    {% assign collection = site[collection_name] %}
     {%- assign pages_array = pages_array | push: collection -%}
   {%- endfor -%}
 {%- endif -%}

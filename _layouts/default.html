@@ -51,8 +51,9 @@ layout: table_wrappers
       {% if site.doc_collections %}
         {% assign doc_collections_size = site.doc_collections | size %}
         {% for doc_collection in site.doc_collections %}
-          {% assign name = doc_collection.name %}
-          {% assign collection = site[doc_collection.collection] %}
+          {% assign collection_name = doc_collection[0] %}
+          {% assign collection = site[collection_name] %}
+          {% assign name = doc_collection[1].name %}
           {% if doc_collections_size > 1 %}
             <div class="nav-category">{{ name }}</div>
           {% endif %}
@@ -155,6 +156,9 @@ layout: table_wrappers
                   site.gh_edit_branch and
                   site.gh_edit_view_mode
                 %}
+                {{ site.github.repository_url }}
+                {{ site.github.source.branch }}
+                {{ site.github.source.path }}
                   <p class="text-small text-grey-dk-000 mb-0">
                     <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
                   </p>
