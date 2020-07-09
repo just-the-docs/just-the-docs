@@ -22,6 +22,47 @@ Just the Docs has some specific configuration parameters that can be defined in 
 
 View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file as an example.
 
+## Document collections
+
+By default, the navigation display normal [pages](https://jekyllrb.com/docs/pages/).
+Instead, you can also use [Jekyll collections](https://jekyllrb.com/docs/collections/).
+Collections group documents that semantically belong together.
+
+For example, to group all documentation, put all your files in the `_docs` folder and create the `docs` collection:
+```yaml
+# Define Jekyll collections
+collections:
+  # Define a collection named "docs", its documents reside in the "_docs" directory
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+
+# Define which collections are used in just-the-docs
+doc_collections:
+  # Reference the "docs" collection
+  docs:
+    # Give the collection a name
+    name: Documentation
+```
+
+You can reference multiple collections.
+This creates categories in the navigation with the configured names.
+```yaml
+collections:
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+  tutorials:
+    permalink: "/:collection/:path/"
+    output: true
+
+doc_collections:
+  docs:
+    name: Documentation
+  tutorials:
+    name: Tutorials
+```
+
 ## Site logo
 
 ```yaml
