@@ -24,11 +24,11 @@ View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/
 
 ## Document collections
 
-By default, the navigation display normal [pages](https://jekyllrb.com/docs/pages/).
+By default, the navigation and search include normal [pages](https://jekyllrb.com/docs/pages/).
 Instead, you can also use [Jekyll collections](https://jekyllrb.com/docs/collections/).
 Collections group documents that semantically belong together.
 
-For example, to group all documentation, put all your files in the `_docs` folder and create the `docs` collection:
+For example, to group all documentation put all your files in the `_docs` folder and create the `docs` collection:
 ```yaml
 # Define Jekyll collections
 collections:
