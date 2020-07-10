@@ -48,16 +48,18 @@ layout: table_wrappers
       </a>
     </div>
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
-      {% if site.doc_collections %}
-        {% assign doc_collections_size = site.doc_collections | size %}
-        {% for doc_collection in site.doc_collections %}
-          {% assign collection_name = doc_collection[0] %}
-          {% assign collection = site[collection_name] %}
-          {% assign name = doc_collection[1].name %}
-          {% if doc_collections_size > 1 %}
-            <div class="nav-category">{{ name }}</div>
+      {% if site.just_the_docs.collections %}
+        {% assign collections_size = site.just_the_docs.collections | size %}
+        {% for collection_entry in site.just_the_docs.collections %}
+          {% assign collection_key = collection_entry[0] %}
+          {% assign collection_value = collection_entry[1] %}
+          {% assign collection = site[collection_key] %}
+          {% if collection_value.nav_exclude != true %}
+            {% if doc_collections_size > 1 %}
+              <div class="nav-category">{{ collection_value.name }}</div>
+            {% endif %}
+            {% include nav.html pages=collection %}
           {% endif %}
-          {% include nav.html pages=collection %}
         {% endfor %}
       {% else %}
         {% include nav.html pages=site.html_pages %}

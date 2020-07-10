@@ -2,14 +2,17 @@
 permalink: /assets/js/search-data.json
 ---
 {
-{% assign i = 0 -%}
+{%- assign i = 0 -%}
 {%- assign pages_array = '' | split: '' -%}
 {%- assign pages_array = pages_array | push: site.html_pages -%}
-{%- if site.doc_collections -%}
-  {%- for doc_collection in site.doc_collections -%}
-    {% assign collection_name = doc_collection[0] %}
-    {% assign collection = site[collection_name] %}
-    {%- assign pages_array = pages_array | push: collection -%}
+{%- if site.just_the_docs.collections -%}
+  {%- for collection_entry in site.just_the_docs.collections -%}
+    {%- assign collection_key = collection_entry[0] -%}
+    {%- assign collection_value = collection_entry[1] -%}
+    {%- assign collection = site[collection_key] -%}
+    {%- if collection_value.search_exclude != true -%}
+      {%- assign pages_array = pages_array | push: collection -%}
+    {%- endif -%}
   {%- endfor -%}
 {%- endif -%}
 {%- for pages in pages_array -%}
