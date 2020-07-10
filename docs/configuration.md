@@ -45,10 +45,10 @@ just_the_docs:
       name: Documentation
       # Exclude the collection from the navigation
       # Supports true or false (default)
-      nav_exclude: false;
+      nav_exclude: false
       # Exclude the collection from the search
       # Supports true or false (default)
-      search_exclude: false;
+      search_exclude: false
 ```
 
 You can reference multiple collections.
