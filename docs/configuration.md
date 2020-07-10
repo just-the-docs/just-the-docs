@@ -25,10 +25,9 @@ View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/
 ## Document collections
 
 By default, the navigation and search include normal [pages](https://jekyllrb.com/docs/pages/).
-Instead, you can also use [Jekyll collections](https://jekyllrb.com/docs/collections/).
-Collections group documents that semantically belong together.
+Instead, you can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
 
-For example, to group all documentation put all your files in the `_docs` folder and create the `docs` collection:
+For example, put all your documentation files in the `_docs` folder and create the `docs` collection:
 ```yaml
 # Define Jekyll collections
 collections:
@@ -37,12 +36,19 @@ collections:
     permalink: "/:collection/:path/"
     output: true
 
-# Define which collections are used in just-the-docs
-doc_collections:
-  # Reference the "docs" collection
-  docs:
-    # Give the collection a name
-    name: Documentation
+just_the_docs:
+  # Define which collections are used in just-the-docs
+  collections:
+    # Reference the "docs" collection
+    docs:
+      # Give the collection a name
+      name: Documentation
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false;
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false;
 ```
 
 You can reference multiple collections.
@@ -56,11 +62,12 @@ collections:
     permalink: "/:collection/:path/"
     output: true
 
-doc_collections:
-  docs:
-    name: Documentation
-  tutorials:
-    name: Tutorials
+just_the_docs:
+  collections:
+    docs:
+      name: Documentation
+    tutorials:
+      name: Tutorials
 ```
 
 ## Site logo
