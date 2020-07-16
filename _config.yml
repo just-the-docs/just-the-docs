@@ -13,16 +13,16 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Just the Docs
-description: A Jekyll theme for documentation
-baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
+title: BLOCKER
+description: An infrastructure description and provisioning language.
+baseurl: "/specification" # the subpath of your site, e.g. /blog
 url: "https://pmarsceill.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
 
 # Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/images/just-the-docs.png"
+logo: "/assets/images/blockerLogo.jpeg"
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -89,7 +89,7 @@ gh_edit_branch: "master" # the branch that your docs is served from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
-color_scheme: nil
+color_scheme: dark
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
