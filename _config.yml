@@ -107,4 +107,5 @@ compress_html:
   blanklines: false
   profile: false
 
-theme: just-the-docs
+#theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs # XXX Our Jekyll theme - See https://pmarsceill.github.io/just-the-docs/
