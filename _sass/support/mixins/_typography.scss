@@ -42,7 +42,7 @@
   font-size: $font-size-6 !important;
 
   @include mq(sm) {
-    font-size: $font-size-7  !important;
+    font-size: $font-size-7 !important;
     line-height: $body-heading-line-height;
   }
 }
@@ -52,7 +52,7 @@
   line-height: $body-heading-line-height;
 
   @include mq(sm) {
-    font-size: $font-size-8  !important;
+    font-size: $font-size-8 !important;
   }
 }
 
@@ -61,7 +61,7 @@
   line-height: $body-heading-line-height;
 
   @include mq(sm) {
-    font-size: $font-size-9!important;
+    font-size: $font-size-9 !important;
   }
 }
 
