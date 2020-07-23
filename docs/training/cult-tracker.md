@@ -3,7 +3,7 @@ layout: default
 title: Cult Tracker
 parent: Cult
 grand_parent: Training
-nav_order: 2
+nav_order: 3
 ---
 
 
