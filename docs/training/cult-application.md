@@ -84,7 +84,7 @@ Please list previous militaries you have served in within SL. If you haven't bee
 
 ## FURRY QUESTIONNAIRE
 
-As of October 16th, 2019, we have changed our policy on accepting EX-FURRIES (not those who are STILL furries) into our group. Please answer the questions below honestly and be as detailed as possible. You will go through a rigorous background check, will have an interview with myself, or another member of command/Enforcer staff, and you MAY have to go through a trial period in our Militia group anywhere between 30-90 days BEFORE your application is accepted and you're allowed to begin your cult training.
+As of October 16th, 2019, we have changed our policy on accepting EX-FURRIES (not those who are STILL furries) into our group. Please answer the questions below honestly and be as detailed as possible. You will go through a rigorous background check, will have an interview with Zalera, or another member of command/Enforcer staff, and you MAY have to go through a trial period in our Militia group anywhere between 30-90 days BEFORE your application is accepted and you're allowed to begin your cult training.
 
 If you are approved, and at any later time additional-past or new furry-involvement proof is discovered, you MAY still be ejected or have your application denied depending on the severity of the new information so it is VERY important to be honest and not leave anything out here.
 
@@ -244,8 +244,8 @@ Please make sure you have saved, and renamed your application then...
 
 DELIVER APPLICATION TO):
 
-        >>Zalera Atheria
-                    Head Corruptor/Head of Recruiting and Training
++ Zalera Atheria
+- Head Corruptor/Head of Recruiting and Training
 
 PLEASE give me AT LEAST 24 hours to respond to you! I have
 a life and am not online 24/7 but i WILL respond to you within the day.
