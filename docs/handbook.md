@@ -19,7 +19,7 @@ Handbook Issue 5.7,3
 
 The Handbook will always be available here:
 
-https://chaos-indivisvm.github.io/handbook
+https://chaos-indivisvm.github.io/chaos-docs/docs/handbook/
 
 This is a Guide for Contributing to the Handbook:
 
