@@ -2,9 +2,10 @@
 layout: default
 title: Cult Tracker
 parent: Cult
-grandparent: Training
+grand_parent: Training
 nav_order: 2
 ---
+
 
 ## Table of contents
 {: .no_toc .text-delta }
