@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Handbook
-nav_order: 1
+nav_order: 2
 ---
 
 # ❋ Chaos Indivisvm ❋
