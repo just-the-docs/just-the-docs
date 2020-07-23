@@ -8,12 +8,12 @@ nav_order: 2
 {: .no_toc }
 Handbook Issue 5.7,3
 
-## ❋Table of Contents❋
+## Table of contents
 {: .no_toc .text-delta }
 
 1. TOC
-
 {:toc}
+
 
 ## Handbook Information
 
