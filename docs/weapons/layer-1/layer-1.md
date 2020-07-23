@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Layer 1
+parent: Weapons
 nav_order: 1
 has_children: true
 ---
