@@ -7,13 +7,17 @@ nav_order: 1
 ---
 
 # ❋ Chaos Indivisvm Application v9.15❋
-
+{: .no_toc }
 
 Please read the ENTIRE application. There are important requirements and expectations to read. Also there are questions placed throughout, not just in certain sections. So make sure you read EVERYTHING.
 
-# Chaos Indivism is located at Milopolis
+Chaos Indivism is located at **Milopolis**
 
+## Table of contents
+{: .no_toc .text-delta }
 
+1. TOC
+{:toc}
 
 # Requirements
 
