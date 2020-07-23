@@ -6,7 +6,7 @@ grand_parent: Training
 nav_order: 1
 ---
 
-# ❋ Chaos Indivisvm Application v9.15❋
+                   ❋ Chaos Indivisvm Application v9.15❋
 
 
 Please read the ENTIRE application. There are important requirements and expectations to read. Also there are questions placed throughout, not just in certain sections. So make sure you read EVERYTHING.
@@ -250,10 +250,10 @@ a life and am not online 24/7 but i WILL respond to you within the day.
 please IM me for an update, THEN feel free to send your app to
 ONE of the follwing
 
-        >>Hadet Sonnenkern
-                "Technically still head enforcer"
-        >>Sam Huntsman
-                Lord. & the bitch who helps me with apps when my computer dies
+Hadet Sonnenkern
++ "Technically still head enforcer"
+Sam Huntsman
++ Lord. & the bitch who helps me with apps when my computer dies
 
 OK YOU'RE DONE!
 
