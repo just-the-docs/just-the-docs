@@ -6,9 +6,8 @@ grand_parent: Training
 nav_order: 1
 ---
 
-                   ❋ Chaos Indivisvm Application v9.15❋
+# ❋ Chaos Indivisvm Application v9.15❋
 
-                                    ♦♦♦♦♦
 
 Please read the ENTIRE application. There are important requirements and expectations to read. Also there are questions placed throughout, not just in certain sections. So make sure you read EVERYTHING.
 
