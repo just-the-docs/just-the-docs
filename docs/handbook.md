@@ -15,7 +15,7 @@ Handbook Issue 5.7,3
 {:toc}
 
 
-## Handbook Information
+### Handbook Information
 
 The Handbook will always be available here:
 
