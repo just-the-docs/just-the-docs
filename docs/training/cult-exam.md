@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Cult Tracker
+title: Cult Exam
 parent: Cult
 grand_parent: Training
 nav_order: 3
