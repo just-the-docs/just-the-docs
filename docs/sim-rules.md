@@ -5,8 +5,10 @@ nav_order: 7
 ---
 # CHAOS INDIVISVM 
 {: .no_toc }
-    - Sim Rules
+- Sim Rules
+
 Updated: 07/24/2020 - July 24th, 2020
+
 Authors: Dread Hudson, Hadet Sonnenkern, & Sam Huntsman
 
 
