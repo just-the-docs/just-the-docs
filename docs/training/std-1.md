@@ -41,11 +41,11 @@ In order to be promoted to Marauder the trainee must have:
 + Be active in the group for at least 90 days after attaining the rank of Veteran
 + Be recommended by AT LEAST 2 active members of Chosen rank or higher
 + At least two of the following must be true:
-        * Completed, shadowed, or otherwise supervised/vouched for cultist training where the Veteran primarily lead the training
-        * Completed, shadowed, or otherwise supervised/vouched for STD where the veteran primarily led the training
-        * Led at least two major(6+ enemies) raids or defenses. Chosen+ must vouch for it
-        * Contribution to Mechanicus Projects- either participation in items currently in testing, in the armory, or a substantial part of the current sim build. OVERLORD APPROVAL REQUIRED!
-        * The group is to have a need for one- for instance, we must have 2-3 active Renegades/Veterans to justify a Marauder promotion. The group grows bottom-up.
+        + Completed, shadowed, or otherwise supervised/vouched for cultist training where the Veteran primarily lead the training
+        + Completed, shadowed, or otherwise supervised/vouched for STD where the veteran primarily led the training
+        + Led at least two major(6+ enemies) raids or defenses. Chosen+ must vouch for it
+        + Contribution to Mechanicus Projects- either participation in items currently in testing, in the armory, or a substantial part of the current sim build. OVERLORD APPROVAL REQUIRED!
+        + The group is to have a need for one- for instance, we must have 2-3 active Renegades/Veterans to justify a Marauder promotion. The group grows bottom-up.
 
 ---
 # Section 1: Introduction
