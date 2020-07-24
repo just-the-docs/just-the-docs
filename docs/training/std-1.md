@@ -371,65 +371,65 @@ VIII. Grav Chute Training Assessment
         * Good medium range anti-armor.
 
     * Melta Bomb
-....Will stick to objects you throw it at, or just land on the ground.
-.....After a few seconds, it detonates with 50 AT with a HUGE explosion (back off)
-.....The area it detonated in will be engulfed in pinkish fire that also does approximately 100 AT. It hurts a lot.
-....You cannot throw it very far, it's very "heavy".
+        * Will stick to objects you throw it at, or just land on the ground.
+        * After a few seconds, it detonates with 50 AT with a HUGE explosion (back off)
+        * The area it detonated in will be engulfed in pinkish fire that also does approximately 100 AT. It hurts a lot.
+        * You cannot throw it very far, it's very "heavy".
 
 + Secondary Grenades
-...(Bottom row of grenades, double click OR shift+R to activate.)
+    * (Bottom row of grenades, double click OR shift+R to activate.)
 
     * Fuel Cluster
-....Spews green puke (fuel) on the ground.
-....If ignited by almost any kind of fire (even from an assault pack taking off or plasma weapon), will act like inferno, AT and all.
-....Please don't spam, the sim will lag. If thrown into a fire, will also ignite.
+        * Spews green puke (fuel) on the ground.
+        * If ignited by almost any kind of fire (even from an assault pack taking off or plasma weapon), will act like inferno, AT and all.
+        * Please don't spam, the sim will lag. If thrown into a fire, will also ignite.
 
     * Smoke
-....It's smoke
-....Useful to cover an advance or to blind a firing position.
-....Does no damage.
+        * It's smoke
+        * Useful to cover an advance or to blind a firing position.
+        * Does no damage.
 
     * Chaff
-....Throw this at a DADs or other grenade interceptor
-.....It will overwhelm them and allow you to actually shell a position whilst it is recharging.
-.....If it intercepts it through a wall, it will destroy it because we don't like cheats.
-....Chaff will also DISABLE mines temporarily while it is active, making minefields safer to cross.
+        * Throw this at a DADs or other grenade interceptor
+        * It will overwhelm them and allow you to actually shell a position whilst it is recharging.
+        * If it intercepts it through a wall, it will destroy it because we don't like cheats.
+        *Chaff will also DISABLE mines temporarily while it is active, making minefields safer to cross.
 
     * Melta Bomb Triggered
-....Same as melta bomb, except it detonates when you look towards it and hit 'Z'.
-.....Or look away and hit 'Shift+Z'.
-....Deceptively useful to destroy something that is being actively repaired
-.....OR if your goal is to deal a lot of damage at once by stacking bombs.
+        * Same as melta bomb, except it detonates when you look towards it and hit 'Z'.
+        * Or look away and hit 'Shift+Z'.
+        * Deceptively useful to destroy something that is being actively repaired
+            * OR if your goal is to deal a lot of damage at once by stacking bombs.
 
 + God Favor Grenades (OPTIONAL)
-...(Top row of grenades, double click OR shift+R to activate.)
+    * (Top row of grenades, double click OR shift+R to activate.)
 
     * Khorne Scatter
-....Splits into multiple grenades.
-....Pattern is very random, most effective air detonated.
+        * Splits into multiple grenades.
+        * Pattern is very random, most effective air detonated.
 
     * Tzeentch Gravity
-....Pulls avatars and slow projectiles.
-....Works on sims without push AND the effects are raycasted
-.....meaning they do not pull you throw walls.
-....Can be shot to end its effect early.
+        * Pulls avatars and slow projectiles.
+        * Works on sims without push AND the effects are raycasted
+            * meaning they do not pull you throw walls.
+        * Can be shot to end its effect early.
 
     * Slaanesh Torment
-....Flashbangs (with SCREAMING!) and traps avatars with daemonic chains.
-....Works on friendlies, but won't trap you.
-....Good for securing melee kills or stopping an advance.
-....Deals 10 avi damage if they move around while trapped.
-.....Note that people walking into the radius while it is active will also be trapped.
-....Can be shot to end its effect early.
+        * Flashbangs (with SCREAMING!) and traps avatars with daemonic chains.
+        * Works on friendlies, but won't trap you.
+        * Good for securing melee kills or stopping an advance.
+        * Deals 10 avi damage if they move around while trapped.
+        * Note that people walking into the radius while it is active will also be trapped.
+        * Can be shot to end its effect early.
 
     * Nurgle Infection
-....Infects avatars and spreads upon contact with other avatars. Upon spreading to another avatar, the stage or "gen" advances by 1. (Gens 1- 4)
-....The higher the Gen, the quicker it kills them.
-.....Gen 3 turns them into a resurrectable zombie corpse
-.....Gen 4 turns them into a zombie on death.
-....If infected by your own infection, it will not kill you, but will do 3 damage per tick, meaning you won't heal over time
-....Will kill friendlies.
-....Zombies are hostile to everyone who is not Nurgle Favor 6 or higher (favor explained later in Section 2, V.)
+        * Infects avatars and spreads upon contact with other avatars. Upon spreading to another avatar, the stage or "gen" advances by 1. (Gens 1- 4)
+        * The higher the Gen, the quicker it kills them.
+        * Gen 3 turns them into a resurrectable zombie corpse
+        * Gen 4 turns them into a zombie on death.
+        * If infected by your own infection, it will not kill you, but will do 3 damage per tick, meaning you won't heal over time
+        * Will kill friendlies.
+        * Zombies are hostile to everyone who is not Nurgle Favor 6 or higher (favor explained later in Section 2, V.)
 
 ### S2, III. P3. Deployables
 
