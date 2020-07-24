@@ -51,11 +51,13 @@ In order to be promoted to Marauder the trainee must have:
 # Section 1: Introduction
 ---
 
-##Table of Contents:
+## Table of Contents:
 {: .no_toc .text-delta }  
 
 I. Pre-Training
+
 II. Orientation
+
 III. Basic Conduct as Renegade
 
 ## S1, I. Pre-Training
@@ -87,11 +89,13 @@ III. Basic Conduct as Renegade
     * ALL Renegade general pool weapons and equipment (Marked by R or E-1)
     * you MAY want to wait until section 2 for this part as the weapons are explained in the order that they appear on the wall but it’s up to you.
 
+
 + To avoid getting black-screened, have them use [this preferences setup](http://i.imgur.com/Ui1l4uK.png)
 
 + As for preventing Teleport failed Alert spam (and viewer lockup) : The XML file is also available in the teamspeak file browser in the main channel, or you can find it here.
     * notifications.xml can be found in the firestorm directory under skins > default > xui > en
     * Make sure they back it up first!!!
+
 
 + Should a Renegade acquire a Corruption unlock for a weapon and seeks to learn to better use the weapon, or you recognize a lack of proficiency, proceed with optional Corruption training in Section 8.
 
@@ -108,6 +112,7 @@ III. Basic Conduct as Renegade
     * Be active as a Renegade for at least 14 days.
     * Be recommended for promotion by at least two Marauders or higher.
 
+
 + That said, being a Renegade, the lowest actual rank, in our group is pretty great, but we want you to earn that Veteran rank. Renegades begin with a broad selection of gear. These pieces of gear are generally sorted into three schools of thought: generic, heavy support, and fast attack. For the first part of your training we will be focusing on the more generic tools you have access to, ones with straightforward applications you may find yourself using in every fight.
 
 ## S1, III. Basic Conduct as Renegade
@@ -118,6 +123,7 @@ III. Basic Conduct as Renegade
 + DO NOT use unauthorized weaponry during combat.
     * Use the most up-to-date version of a vehicle or piece of equipment unless instructed otherwise by a Lord/Overlord or we'll sack you.
     * If you are confused about the terminology: If it isn't in the armory, given to you by Dread, or a Lord/Overlord hasn't approved of its use: IT ISN'T AUTHORIZED!
+
 
 + CALL OUT when you are using more advanced/specific weaponry (snipers, mortars, vehicles, etc) so the officer-in-charge (OIC, whoever is the highest rank at the time leading, or assigned autonomously) knows how to conduct against the opposing forces- he needs to know what tools he has at his disposal and make adjustments as necessary.
 
@@ -131,7 +137,9 @@ III. Basic Conduct as Renegade
 {: .no_toc .text-delta }
 
 I. The Basics
+
 II. Renegade Weapon/Equipment Types
+
 III. Basic HUD Training
 + Part 1: The Basics
 + Part 2: Grenades
@@ -140,10 +148,15 @@ III. Basic HUD Training
 + Part 5: Warp Gates
 + Part 6: Extra Features
 + Part 7: Knowledge Checkpoint
+
 IV. Command HUD Training
+
 V. Corruption
+
 VI. Skirmish/Combat Efficiency
+
 VII. Infantry Mortar
+
 VIII. Grav Chute Training Assessment
 
 ### READ THIS SECTION TO YOURSELF
@@ -158,6 +171,7 @@ VIII. Grav Chute Training Assessment
     * Right click to zoom, control with mouse wheel
     * Minimap to identify approximate avatar positions, arrow up - above relative to you, arrow down - below relative to you
 
+
 + Mention basic gestures and commands used:
     * R: Reload
     * 1: Toggle between modes if gun has any
@@ -165,9 +179,10 @@ VIII. Grav Chute Training Assessment
     * F: Changes some firing modes OR deploys certain vehicular / deployable weapons.
     * /1 helpL1, /1 helpL2, /1 helpL3: shows gun instructions in chat for layers 1, 2, and 3 respectively.
 
+
 + Tell them about the gun sets and gestures (Shift + 1/2/3/4)
-    * Set 1: 2-handed weapons (Lasgun, autogun, etc.)
-    * Set 2: 1-handed weapons (autopistols, laspistols, Chainsword, etc.)
+    * Set 1: two-handed weapons (Lasgun, autogun, etc.)
+    * Set 2: one-handed weapons (autopistols, laspistols, Chainsword, etc.)
     * Set 3: Auxiliary weapons (Rocket Launcher, grenade launcher, infantry mortar etc.)
     * Set 4: Slings all weapons
 + Let them know that it is good form to wear all layers at once.]
@@ -179,9 +194,11 @@ VIII. Grav Chute Training Assessment
     * Inform trainees that a weapon being reloaded will CANCEL its reload when you swap to another layer.
     * Inform trainees that upon death, all weapons equipped are automatically reloaded with no additional input required.
 
+
 + Target Leading
     * Show trainees how to lead targets (the crosshair is no longer effective for doing this). Remember that you do not shoot at where a target is, but instead where they are going to be.
     * Note: Each gun varies in spread and ammo count
+
 
 + Raycast:
     * RAYCAST IS CHEAT.
@@ -201,6 +218,7 @@ VIII. Grav Chute Training Assessment
     * Shotgun - Fires a burst of buckshot. Buckshot does partial damage.
     * Bayonet (/1 bayo) - 5m melee with 'C'. Smaller arc than swords. Collects skulls. Skulls can be turned in for corruption (explained in Section 2, V.)
 
+
 + Shotgun
     * Additional fire mode unlocked once a division is chosen
     * A decent close-mid range weapon. Fires raycasted sensor cones of buckshot, reloads each shot individually
@@ -209,12 +227,14 @@ VIII. Grav Chute Training Assessment
     * Semi-auto/pump action(kinda)
     * Take note of how the shotgun can be fired in the middle of a reload, because the shells are reloaded individually.
 
+
 + Lasgun
     * Modes: Full, semi and auto.
     * Raycast (/1 rc) and Non-raycast (/1 solid)
     * Damage Falls off at Range. Does less damage the further away the person is.
-    * Bayonet (/1 bayo) -5m melee with 'C'. Smaller arc than swords, same as autogun. Collects Sculls
+    * Bayonet (/1 bayo) -5m melee with 'C'. Smaller arc than swords, same as autogun. Collects Skulls
     * Has heat haze like the longlas
+
 
 + Longlas
     * Projects 5 raycast beams in a cross, more margin of error for aiming than the lasgun
@@ -223,32 +243,37 @@ VIII. Grav Chute Training Assessment
 
 ### S2, II. P2. Layer 2 Weapons
 
-+ 1-handed guns
-    * Paired with 1-handed melee on Layer 2
++ One-handed guns
+    * Paired with one-handed melee on Layer 2
+
 
 + Autopistol
-    * Higher spread, higher fire rate, smaller ammo count. Like the autogun, no additional features.
-    * 1-handed
+    * High spread, high fire rate, small magazine. Like the autogun, no additional features.
+    * One-handed
+
 
 + Laspistol
     * Toggle Physical and Raycast (/1 fm)
-    * 1-handed
+    * One-handed
     * Damage Falls off at Range. Does less damage the further away the person is.
     * Has heat haze like the longlas
 
+
 + Repair Tool
-    * Paired with 1-handed gun.
+    * Paired with one-handed gun.
     * Hold 'C' to trigger repair on sit bases/deployables while next to it. (5 HP per second)
     * Eyes collected have most value. 40 damage per tick over time.
 
 
 + Melee
-    * Paired with 1-handed guns on Layer 2
+    * Paired with one-handed guns on Layer 2
     * Trigger with 'C'
+
 
 + Catachan Knife
     * 2m range
     * Guts collected have more value.
+
 
 + Heretic's Cleaver & Axe
     * Basic bitch 5m melee.
@@ -257,6 +282,7 @@ VIII. Grav Chute Training Assessment
 
 + Rocket launcher
     * Modes:
+
         * Frag
             * Normal explosion, infantry, no drop off
             * Kills within 7.5m, partial damage out to 14m
@@ -284,9 +310,11 @@ VIII. Grav Chute Training Assessment
     * Toggle activation with space bar
     * or use E to stop slow-fall, will resume when key is released.
 
+
 + Cult Bomb
     * Explain that renegades SHOULD retain their cult bomb. Detonate it and laugh at them. Tell them they can use their own detonation hotkey (explained in HUD) to detonate anyone at a lower rank than them that they are looking at.
     * Decent AT (30), very large explosion.
+
 
 + Assault Pack
     * ASSAULT PACK IS BEST THE END
@@ -325,12 +353,14 @@ VIII. Grav Chute Training Assessment
     * ] [rotate deployable clockwise]
     * Ctrl+Space [switch between roll and sprint]
 
+
 + Explain that all selection of items in the HUD can be done via clicking on the HUD buttons.
 
 ### S2, III. P2. Grenades
 
 + Options to change grenade velocity (Left number) and time of detonation from THROW, NOT from impact (Right number).
     * You can control the detonation time delay with the NUMPAD + and - keys!
+
 
 + Primary Grenades
 
@@ -367,7 +397,7 @@ VIII. Grav Chute Training Assessment
         * 6m detection for scripted objects
         * Mine-clearing and 15 AT delivery
         * 3m detection for avatars
-        * Can throw further than most other grenades 
+        * Can throw further than most other grenades
         * Good medium range anti-armor.
 
     * Melta Bomb
@@ -375,6 +405,7 @@ VIII. Grav Chute Training Assessment
         * After a few seconds, it detonates with 50 AT with a HUGE explosion (back off)
         * The area it detonated in will be engulfed in pinkish fire that also does approximately 100 AT. It hurts a lot.
         * You cannot throw it very far, it's very "heavy".
+
 
 + Secondary Grenades
     * (Bottom row of grenades, double click OR shift+R to activate.)
@@ -393,13 +424,14 @@ VIII. Grav Chute Training Assessment
         * Throw this at a DADs or other grenade interceptor
         * It will overwhelm them and allow you to actually shell a position whilst it is recharging.
         * If it intercepts it through a wall, it will destroy it because we don't like cheats.
-        *Chaff will also DISABLE mines temporarily while it is active, making minefields safer to cross.
+        * Chaff will also DISABLE mines temporarily while it is active, making minefields safer to cross.
 
     * Melta Bomb Triggered
         * Same as melta bomb, except it detonates when you look towards it and hit 'Z'.
         * Or look away and hit 'Shift+Z'.
         * Deceptively useful to destroy something that is being actively repaired
             * OR if your goal is to deal a lot of damage at once by stacking bombs.
+
 
 + God Favor Grenades (OPTIONAL)
     * (Top row of grenades, double click OR shift+R to activate.)
@@ -442,25 +474,29 @@ VIII. Grav Chute Training Assessment
     * You have unlimited deployables and a short cooldown.
     * Classic Deployment may be selected in the HUD if preferred. The HUD remembers which deployment mode you selected last. This persists across separate logins.
 
+
 + Barricade
     * blocks things, also good to prim jump over obstacles.
     * You can sit on it and it acts as a "sandbag"
-....meaning you die when its HP hits 0.
+    * Meaning you die when its HP hits 0.
     * It is good form to die on your deployable when under fire- but if you survive a firefight, you may stand up and make a new barricade or repair your existing one.
-....You MUST stand up to repair your barricade.
+    * You MUST stand up to repair your barricade.
+
 
 + Barbwire
     * Slows down avatars and hurts them when they run at it
     * Doesn't hurt you if you walk.
     * Somewhat effective on top of teleporters and putting it behind obstacles just out of sight.
 
+
 + DADS (Dominus Area Denial System or Dominus Assisted Defense System)
     * Catches and detonates enemy grenades/rockets within radius.
     * Goes dim when the interception field is on cooldown.
-....most groups will use high volumes of scatter grenades or shrapnel to shut it down.
+    * Most groups will use high volumes of scatter grenades or shrapnel to shut it down.
     * SPACE THEM OUT!
-....15-20M between them, put them at high and low elevations relative to you.
+    * Ensure 15-20M between them, put them at high and low elevations relative to you.
     * RAYCASTED - They do NOT work behind walls.
+
 
 + Tank trap
     * Blocks things like the barricade.
@@ -471,18 +507,21 @@ VIII. Grav Chute Training Assessment
 
 + Strategy
     * Teach them how and where to strategically place mines
-....ie. around corners, stairways, doorways, objectives.
+        * ie. around corners, stairways, doorways, objectives.
+
     * Teach them how to place them on surfaces by looking at them and being close, or looking up with your camera to throw them.
     * Also, yes, this means you can jump towards a ceiling and throw mines onto ceilings.
-....Especially important for razor wire and breaching charges.
-    *Explain that most non-triggered deployables will detonate if you walk right on top of them.
-....Or don't.
+        * Especially important for razor wire and breaching charges.
+
+    * Explain that most non-triggered deployables will detonate if you walk right on top of them.
+        * Or don't.
 
 
 + AP Mine
     * Anti-Infantry
     * 5m detection and explosion on enemies
     * Deals 5 AT
+
 
 + AT Mine
     * Double click AP mine
@@ -491,16 +530,19 @@ VIII. Grav Chute Training Assessment
     * Deals 30 AT
     * THEY RAYCAST UP TO DETECT VEHICLES ABOVE THEM!!!!
 
+
 + Motion Claymore Mine
     * Has more range than an AP mine, but this is in a single direction.
     * Use this when you know what direction someone will come from or around corners.
     * Be wary that it is likely to also detonate other claymores if they are clustered.
     * Deals 5 AT
 
+
 + Triggered Claymore Mine
     * Double click Motion Claymore Mine
     * same as Motion Claymore, except it is triggered with Z (by looking at it) or Shift+Z.
     * Deals 5 AT
+
 
 + Demolition Charge
     * A powerful, triggered explosive.
@@ -509,22 +551,25 @@ VIII. Grav Chute Training Assessment
     * Good for situations the triggered melta bomb is good for, but less AT and no AO fire
     * 25 AT splash, 50 AT to whatever it’s stuck to. Mutually-exclusive (will not do splash to stuck objects)
 
+
 + Breaching Charge
     * The breaching charge is like a demolition charge, except it deploys a permanent breach through a wall, ceiling, or floor.
     * Start by placing the charge and waiting for the chat message or audio cue that the charge is ready.
-....Press Z or Shift+Z and wait for the charge to spark.
-....If it is NOT disrupted (by shooting at it or w/e) it should detonate and have a HOLE!
-....This hole can be used by ANYONE, including enemies, permanently, until it is repaired.
-    * Only your repair, the tech-axe, clean up buttons, and enemy negative-LBA damage / repair systems can remove it.
-....Be careful- crafty enemies will overwhelm your position and exploit these holes.
+        * Press Z or Shift+Z and wait for the charge to spark.
+        * If it is NOT disrupted (by shooting at it or w/e) it should detonate and have a HOLE!
+        * This hole can be used by ANYONE, including enemies, permanently, until it is repaired.
+        * Only your repair, the tech-axe, clean up buttons, and enemy negative-LBA damage / repair systems can remove it.
+        * Be careful- crafty enemies will overwhelm your position and exploit these holes.
     * They can make us incredibly speedy when defending a position, but they can easily be our undoing.
     * If the charge detonates suddenly without a windup, then the wall is too thick to breach: use another section of wall that is thinner!
     * Beware the detonation, it will kill you if you are too close when the wall blows. It also kills people on the other side.
     * Deals 50 damage on splash, 50 damage to whatever it’s stuck to. Not mutually-exclusive.
 
+
 + Razorwire Charge
     * Like the grenade, It can only be triggered with Z or Shift+Z, or by shooting it.
     * Not a mine.
+
 
 + AA Mine
     * Double click razor wire charge.
@@ -542,13 +587,16 @@ VIII. Grav Chute Training Assessment
     * There is no downside to having a gate out. Just pay attention to your HUD indicator
     * If there is no blue mark, it means your gate died.
 
+
 + ALWAYS CALL OUT YOUR GATES
     * Tell us where they are, and where they lead (Map direction, specific buildings, etc.)
+
 
 + Left (Orange) - Entry.
     * Place with 'Shift+V'.
     * To enter, click on the red part of it.
     * If it doesn't work, turn on transparencies and look for the sphere.
+
 
 + Right (Blue) - Exit
     * Place with ‘V’
@@ -562,10 +610,12 @@ VIII. Grav Chute Training Assessment
     * /1 c:[message] for everyone within the sim with the HUD to read
     * DO NOT clutter comms, only use for relevant information during combat
 
+
 + Cleanup
     * /1 cleanup OR Chaos star button on top left of HUD.
     * Use it after every raid/defense. Even if no one tells you to.
     * Use it if you accidentally gas/infect our spawn.
+
 
 + Ammo Counter
     * Displays available ammo for attached weapons
@@ -573,10 +623,12 @@ VIII. Grav Chute Training Assessment
         * Most useful with heat-based weapons.
     * When the sim is not laggy, use this to determine when it is "safe" to switch weapons
 
+
 + Maneuver HUD
     * 10m Dodge Roll and 3 second sprint
     * Bar converts to indicate vehicle hp and pack fuel (grav chute, assault pack) when gear/vehicle is attached/rezzed.
     * You should always have the maneuver HUD on!!!
+
 
 + Grapple Hook
     * Combination of the maneuver HUD and the grenade.
@@ -596,8 +648,9 @@ VIII. Grav Chute Training Assessment
         * This movement maintains your momentum and can increase it.
         * Holding it and turning around an object with accelerate you rapidly.
         * Swinging back and forth and shifting camera position gets larger swings.
-    *'S' allows you to "bounce" off of a surface
+    * 'S' allows you to "bounce" off of a surface
         * It's a little faster than manually swinging with 'W' and looks somewhat more realistic.
+
 
 + Advanced HUD Menu
     * Accessed by hold-clicking the chaos star in the top left. From here, you can access:
@@ -634,6 +687,7 @@ VIII. Grav Chute Training Assessment
     * Optionally, get them a battle buddy to give them a backup gate
         * Mave them make the calls to tell their buddy to deploy their backup and keep advancing.
 
+
 + If making your own challenges, (( RECOMMENDED!!! )) tailor them to what you've noticed the Renegade struggling with, with things they seemed to dismiss, newer features for returning members, things you've struggled with in the past, or things with our normal loadout that are "need to know" that you know other groups don't have.]
 
 + DO NOT continue to Phase IV until you are sure they fully understand how to use all of the Phase 1-3 weapons/equipment AND can accurately demonstrate how to use the ENTIRE HUD
@@ -648,6 +702,7 @@ VIII. Grav Chute Training Assessment
     * Switch it OFF by clicking anywhere on the HUD that doesn't have a button.
         * Keep it off if it's a laggy fight.
 
+
 + Commands
     * /1 OIC - If there is no current OIC, or you are a higher rank than said OIC, this assigns you as OIC.
     * /1 ping - Pings a coordinate (Yellow Box), Using a raycast to a location (Gesture 'Y')
@@ -658,12 +713,15 @@ VIII. Grav Chute Training Assessment
     * /1 oickey:<key> - Lord+ Only command - Assigns OIC to this key
     * /1 clear - Lord+ Only command - Clears the OIC
 
+
 + Buttons
     * 1 - 2 - 3 - 4
     * Sets waypoint location, for points A, B, C and D (OIC ONLY)
 
+
 + Half star buttons UNDERNEATH 1 - 2 - 3 - 4
     * Opens a textbox for inputting coordinates (OIC ONLY)
+
 
 + Upper Right star button
     * If you are the OIC, Clears all set waypoints.
@@ -681,12 +739,14 @@ VIII. Grav Chute Training Assessment
         * Some that are more difficult to utilize grant even MORE corruption per kill!
         * /1skulls command with most melee weapons will display who you have killed and how many times.
 
+
 + Corruption Altar
     * How to Deposit Skull
     * How to pledge in dark pact for God Favor
     * How to transfer corruption (see if they're dumb enough to give you their corruption)
     * Show them some of the more "strange" weapons that can take skulls
         * autogun bayonet, repair tool, etc.
+
 
 + God Favor
     * Explain to them how God Favor works, and explain that they can spend corruption to buy god favor points.
@@ -695,6 +755,7 @@ VIII. Grav Chute Training Assessment
     * EXAMPLE: If you currently have two points of favor for each god but then buy a point of devotion toward Nurgle: Your new total will be 3 points to Nurgle, 2 points stay the same for Khorne and Slanesh, but you lose a point from Tzeentch as Nurgle and Tzeentch are rivals.
     * Once you hit your 4th point you are considered devoted to that god. Each time you buy favor to your devoted god after the 4th point, you will lose one point towards ALL the other gods. (when you buy the 4th point, all other points spent for your other gods go down by one, and this will continue for every point you buy for your devoted god going forward)
     * The altar will always alert you if the purchase you're about to make will result in lost points from another god so don't worry about going TOO in depth with this.
+
 
 + OPTIONAL
     * Show them current deity-specific weapons (if you have access) available for them to decide later.
@@ -706,12 +767,14 @@ VIII. Grav Chute Training Assessment
 + HIGHLIGHT THE USE OF MINIMAPS to determine enemy positions.
     * Teach them about marking targets and using contact sets (if using Firestorm)
 
+
 + Grenades Only Duel
     * All grenades are allowed for this.
     * Go to about 10-20 kills in close quarters.
     * Assess their performance.
     * OPTIONAL:
         * Ask them to switch to a specific grenade mid-match or have multiple skirmishes using specific grenades.
+
 
 + Observed Duel
     * They may use any weapons you have gone over so far.
@@ -728,11 +791,12 @@ VIII. Grav Chute Training Assessment
 
 ## S2, VII. Grav Chute Training
 
-+Reminders
++ Reminders
     * This is a parachute, not a jetpack.
     * It will only slow your fall, not help you hover mid-air.
     * With limited fuel and falling from extreme heights, conservation of grav chute fuel is necessary to prevent hard-falling (and thus your death from opportunistic shots while animation-locked), or simply to avoid fire while free-falling.
     * If you are not using a backpack slot for something else, you should have this on.
+
 
 + Grav Chute Course
     * Located above VR.
@@ -762,12 +826,13 @@ VIII. Grav Chute Training Assessment
         * You have eyes everywhere, but seeing the whole battle at once doesn't make you omnipresent.
     * Alternatively, if someone is nice enough to give you a specific coordinate position and asks for you to fire there, do so.
 
+
 + Basic Commands
     * Press ‘C’ to deploy.
         * While deployed, you will not be able to move.
         * Note that there is a cooldown before you can get back up, so plan ahead.
     * Use by alt-camming around the sim; in order to watch enemies and acquire targets.
-        *Don’t get tunnel vision, there is no reason to sit there and watch what you are shelling
+        * Don’t get tunnel vision, there is no reason to sit there and watch what you are shelling
         * Pay attention to where your shots land and where they could be more useful
         * You can also fire while deployed and in mouselook.
         * This will use the low trajectory by default
@@ -781,7 +846,7 @@ VIII. Grav Chute Training Assessment
         * Note that you can copy/paste pings directly from local and it will work.
         * You can also click a ping link in local and the mortar will auto-target those coordinates.
 
-+Rounds & Firing Modes
++ Rounds & Firing Modes
     * Mortar has two firing modes.
         * /1high - rain from the sky.
         * /1low - If you are at an elevated position, such as a tower.
@@ -789,6 +854,7 @@ VIII. Grav Chute Training Assessment
             * Be wary of enemy cover. Again, this is the default mode for mouselook.
     * Each round is almost exactly like a type of grenade, but more powerful in most cases.
         * Hit '2' to change rounds.
+
 
 + Available default rounds are:
     * Frag
@@ -805,6 +871,7 @@ VIII. Grav Chute Training Assessment
     * Flash
         * Same as the flash grenade.
 
+
 + COOL TRICKS
     * Like Inferno grenades, inferno or razorwire rounds from a mortar ruin the fun of teleporters. Plant one of these rounds where the roaches are coming from and watch a forward advance stop in its tracks. When no one is around to replace the TP pad, feel free to krak shell it to oblivion.
     * Radical artillery men quickly alt cam between two teleport points and shell both of them as quickly as possible.
@@ -812,7 +879,7 @@ VIII. Grav Chute Training Assessment
 
 
 ---
-### CHECKPOINT +++
+### CHECKPOINT
 
 + This completes the first two sections of Renegade training.
 
@@ -824,6 +891,7 @@ VIII. Grav Chute Training Assessment
     * 14 days participation
     * recommendation of 2 members at rank Marauder or above.
 
-+After promotion to Veteran, they must complete advanced Veteran training FIRST (Sections 6 and 7 found here), as well as the remaining role-specific in order to be considered for Marauder. This INCLUDES going back to EITHER Section 4 or 5 depending on their prior selection (ie, if you went Heavy Support, you must get the Fast Attack training before moving on to the Veteran Fast Attack training.)
+
++ After promotion to Veteran, they must complete advanced Veteran training FIRST (Sections 6 and 7 found here), as well as the remaining role-specific in order to be considered for Marauder. This INCLUDES going back to EITHER Section 4 or 5 depending on their prior selection (ie, if you went Heavy Support, you must get the Fast Attack training before moving on to the Veteran Fast Attack training.)
 
 ---
