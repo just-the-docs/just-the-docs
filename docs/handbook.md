@@ -6,7 +6,7 @@ nav_order: 2
 
 # ❋ Chaos Indivisvm ❋
 {: .no_toc }
-Handbook Issue 5.7,3
+Handbook Issue 5.7,4
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -398,12 +398,10 @@ XI. Community Links
 We don't just do things in secondlife, we also play other games together and have a forum for documentation and discussion.
 
 + The Forums
-http://forums.hadettheundying.com/
+http://forum.chaos.church/
 
 Please be active on the forums. If you have not registered, please click the box in our spawn hub or armory and register.
 Forums are there for extended documentation and offline communication, and are possibly the best way for us to keep track of enlisted progress, punishments taken against other parties, bug reports, and progress reports.
-
-YOU ARE NOT TO EVER MENTION sim donations OR armory unlocks in the forums, EVER. Period.
 
 Please do not hide yourself on the forums, it shows activity when we have people on.
 
