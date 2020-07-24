@@ -258,10 +258,10 @@ VIII. Grav Chute Training Assessment
 + Rocket launcher
     * Modes:
         * Frag
-.....Normal explosion, infantry, no drop off
-.....Kills within 7.5m, partial damage out to 14m
-.....Deals 10 AT on direct hit, 7 on splash
-.....A direct hit is not meant to deal splash damage, but sometimes occurs.
+            * Normal explosion, infantry, no drop off
+            * Kills within 7.5m, partial damage out to 14m
+            * Deals 10 AT on direct hit, 7 on splash
+            * A direct hit is not meant to deal splash damage, but sometimes occurs.
 
 ....Krak
 .....Krak explosion, mine, deployable, and vehicle killing rocket, very slight drop off
