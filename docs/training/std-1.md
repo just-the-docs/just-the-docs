@@ -263,16 +263,16 @@ VIII. Grav Chute Training Assessment
             * Deals 10 AT on direct hit, 7 on splash
             * A direct hit is not meant to deal splash damage, but sometimes occurs.
 
-....Krak
-.....Krak explosion, mine, deployable, and vehicle killing rocket, very slight drop off
-.....Deals 35 AT on direct hit, 10 on splash
-.....A direct hit is not meant to deal splash damage, but sometimes occurs.
-.....AT radius is approximately 7m. Avi damage radius begins falling off at 4m and falls to 0 damage at 6m.
+        * Krak
+            * Krak explosion, mine, deployable, and vehicle killing rocket, very slight drop off
+            * Deals 35 AT on direct hit, 10 on splash
+            * A direct hit is not meant to deal splash damage, but sometimes occurs.
+            * AT radius is approximately 7m. Avi damage radius begins falling off at 4m and falls to 0 damage at 6m.
 
-....Flakk
-.....Seeker rocket, mouse click for lock on beep, mouse over target (avatar) for lock on steady beep.
-.....Pay attention to name of target listed in local chat. Reload (R) to clear lock on (Watch who you target!)
-.....AT Damage is 25
+        * Flakk
+            * Seeker rocket, mouse click for lock on beep, mouse over target (avatar) for lock on steady beep.
+            * Pay attention to name of target listed in local chat. Reload (R) to clear lock on (Watch who you target!)
+            * AT Damage is 25
 
 + Infantry Mortar
     * SEE S2, VIII. FOR IN-DEPTH TRAINING. DO NOT LET THEM USE UNTIL YOU HAVE COVERED THAT SECTION.
