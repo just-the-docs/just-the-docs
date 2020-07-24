@@ -16,7 +16,7 @@
 title: Chaos Docs 
 description: Documentation on Group and Equipment Operation
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://chaos-indivisvm.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://docs.chaos.church" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
