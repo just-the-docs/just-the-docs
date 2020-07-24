@@ -550,10 +550,10 @@ VIII. Grav Chute Training Assessment
     * To enter, click on the red part of it.
     * If it doesn't work, turn on transparencies and look for the sphere.
 
-+Right (Blue) - Exit
++ Right (Blue) - Exit
     * Place with ‘V’
     * Must be oriented correctly upon placement
-....(DO NOT face a wall when rezzing it.)
+        * DO NOT face a wall when rezzing it.
     * You cannot go back through an exit.
 
 ### S2, III. P6. Extra HUD Features
@@ -569,8 +569,8 @@ VIII. Grav Chute Training Assessment
 
 + Ammo Counter
     * Displays available ammo for attached weapons
-....(Plasma/melta weapons - displays heat percentage before overheat 100%).
-....Most useful with heat-based weapons (as mentioned before)
+        * (Plasma/melta weapons - displays heat percentage before overheat 100%.
+        * Most useful with heat-based weapons.
     * When the sim is not laggy, use this to determine when it is "safe" to switch weapons
 
 + Maneuver HUD
@@ -581,34 +581,34 @@ VIII. Grav Chute Training Assessment
 + Grapple Hook
     * Combination of the maneuver HUD and the grenade.
     * Toggle by tapping '4'.
-....Until you tap '4' again, you cannot use grenades. Instead, whenever you use your grenade hotkey, you will throw the grapple.
+        * Until you tap '4' again, you cannot use grenades. Instead, whenever you use your grenade hotkey, you will throw the grapple.
     * The grapple 'latches' onto whatever it impacts and is within line of sight
-....meaning you can throw it over walls to scale walls.
+        * Meaning you can throw it over walls to scale walls.
     * You can throw the grapple hook AGAIN while grappling by using the grenade hotkey
-....but you will fall until it grapples again.
+        * You will fall until it grapples again.
     * Ascend by holding 'E'. Descend by holding 'C'.
-....If you descend too rapidly, the grapple will be cut and you will fall.
-....When you ascend to the grapple, you will go 'up and over' a little bit of where the grapple is.
-....Usually this results on you going up a ledge, meaning hitting a ledge EXACTLY is not required.
-    *You can cut the line by pressing E and C at the same time, or simply press 4 to stow it entirely.
+        * If you descend too rapidly, the grapple will be cut and you will fall.
+        * When you ascend to the grapple, you will go 'up and over' a little bit of where the grapple is.
+        * Usually this results on you going up a ledge, meaning hitting a ledge EXACTLY is not required.
+    * You can cut the line by pressing E and C at the same time, or simply press 4 to stow it entirely.
     * You cannot strafe with 'A' and 'D'.
-....You can however move in any direction you turn your camera tapping 'W'.
-.....This movement maintains your momentum and can increase it.
-.....Holding it and turning around an object with accelerate you rapidly.
-.....Swinging back and forth and shifting camera position gets larger swings.
+        * You can however move in any direction you turn your camera tapping 'W'.
+        * This movement maintains your momentum and can increase it.
+        * Holding it and turning around an object with accelerate you rapidly.
+        * Swinging back and forth and shifting camera position gets larger swings.
     *'S' allows you to "bounce" off of a surface
-....It's a little faster than manually swinging with 'W' and looks somewhat more realistic.
+        * It's a little faster than manually swinging with 'W' and looks somewhat more realistic.
 
 + Advanced HUD Menu
     * Accessed by hold-clicking the chaos star in the top left. From here, you can access:
-....Manual Stats command
-....Manual HUD reset command
-....Manual Cleanup command
-....Manual Tech Deployable Cleanup command
-....Manual Lookup command (use UUIDs to see your friend's stats!)
-....Manual Corruption Transfer command
-....Toggle between new/classic deployment system.
-.....Let them know to use classic deployment for high-lag situations.
+    * Manual Stats command
+    * Manual HUD reset command
+    * Manual Cleanup command
+    * Manual Tech Deployable Cleanup command
+    * Manual Lookup command (use UUIDs to see your friend's stats!)
+    * Manual Corruption Transfer command
+    * Toggle between new/classic deployment system.
+    * Let them know to use classic deployment for high-lag situations.
 
 
 ### S2, III. P7. Knowledge Checkpoint
@@ -621,18 +621,18 @@ VIII. Grav Chute Training Assessment
 
 + Deploy a barricade.
     * Ask the renegade to kill it as quickly as possible using what you have given them so far.
-....any method is correct but make sure they they know how to:
-.....Kill it by shooting it (with anything that’ll work)
-.....Kill it by using the appropriate grenades
-.....Switch weapons to continue doing damage
+    * Any method is correct but make sure they they know how to:
+        * Kill it by shooting it (with anything that’ll work)
+        * Kill it by using the appropriate grenades
+        * Switch weapons to continue doing damage
 
 
 + Ask them to advance across the sim and deploy their warp gate in locations that provide cover for the exit.
     * Time it. Shoot at them to mess with their progress and destroy their gate
-....ONLY if the location is a shitty one.
+        * ONLY if the location is a shitty one.
 
     * Optionally, get them a battle buddy to give them a backup gate
-....have them make the calls to tell their buddy to deploy their backup and keep advancing.
+        * Mave them make the calls to tell their buddy to deploy their backup and keep advancing.
 
 + If making your own challenges, (( RECOMMENDED!!! )) tailor them to what you've noticed the Renegade struggling with, with things they seemed to dismiss, newer features for returning members, things you've struggled with in the past, or things with our normal loadout that are "need to know" that you know other groups don't have.]
 
@@ -646,7 +646,7 @@ VIII. Grav Chute Training Assessment
     * DO NOT spam ping
     * Pay attention to relevant objectives and pings.
     * Switch it OFF by clicking anywhere on the HUD that doesn't have a button.
-....Keep it off if it's a laggy fight.
+        * Keep it off if it's a laggy fight.
 
 + Commands
     * /1 OIC - If there is no current OIC, or you are a higher rank than said OIC, this assigns you as OIC.
@@ -677,16 +677,16 @@ VIII. Grav Chute Training Assessment
     * Participation in raids/defenses (with an OIC,)
     * Tasks given by Command Staff
     * MELEE KILLS (Skull collection system).
-....All melee weapons have the ability to collect skulls to be converted to corruption.
-....Some that are more difficult to utilize grant even MORE corruption per kill!
-..../1skulls command with most melee weapons will display who you have killed and how many times.
+        * All melee weapons have the ability to collect skulls to be converted to corruption.
+        * Some that are more difficult to utilize grant even MORE corruption per kill!
+        * /1skulls command with most melee weapons will display who you have killed and how many times.
 
 + Corruption Altar
     * How to Deposit Skull
     * How to pledge in dark pact for God Favor
     * How to transfer corruption (see if they're dumb enough to give you their corruption)
     * Show them some of the more "strange" weapons that can take skulls
-....(autogun bayonet, repair tool, etc.)
+        * autogun bayonet, repair tool, etc.
 
 + God Favor
     * Explain to them how God Favor works, and explain that they can spend corruption to buy god favor points.
@@ -711,18 +711,18 @@ VIII. Grav Chute Training Assessment
     * Go to about 10-20 kills in close quarters.
     * Assess their performance.
     * OPTIONAL:
-....Ask them to switch to a specific grenade mid-match or have multiple skirmishes using specific grenades.
+        * Ask them to switch to a specific grenade mid-match or have multiple skirmishes using specific grenades.
 
 + Observed Duel
     * They may use any weapons you have gone over so far.
     * Make sure both use different group tags
-....(for skull collection. This is allowed if two people are actively fighting.)
+        * for skull collection. This is allowed if two people are actively fighting.
     * Correct their flaws the best you can and give them tips on the areas they fail hard in.
     * Emphasize the importance of deployables before, during, and after the fight, warp gates and DADS in particular.
     * BE CREATIVE.
-....You may set up specific objectives for them to accomplish
-....(capture points, warp gates, etc.)
-....Failing that, first to 10 kills.
+        * You may set up specific objectives for them to accomplish
+        * capture points, warp gates, etc.
+        * Failing that, first to 10 kills.
     * Tell them to HIT THEIR CLEAN UP BUTTON when done fighting.
     * Have them use the Corruption Altar to deposit any skulls when they’re done.
 
@@ -744,66 +744,66 @@ VIII. Grav Chute Training Assessment
 
 + Strategy/Etiquette
     * Always ask to be on a mortar.
-....It is not a force multiplier in every situation.
-....One person on a mortar means one less person is taking objectives or fighting
+        * It is not a force multiplier in every situation.
+        * One person on a mortar means one less person is taking objectives or fighting
     * Never fire and forget.
-....Confirm your kills and call into comms when its something important like a teleporter
+        * Confirm your kills and call into comms when its something important like a teleporter
     * ALWAYS pay attention to comm callouts for specific objectives to be taken down by mortar
-....Teleporters, deployables, etc.
-....Do not tunnel-vision to a single target.
-....When in doubt, switch to HE and shell away from friendlies
+        * Teleporters, deployables, etc.
+        * Do not tunnel-vision to a single target.
+        * When in doubt, switch to HE and shell away from friendlies
     * Alt cam around the map and be sure to report enemy movement
     * KEEP AN EAR OUT FOR TELEPORTERS, TANKS, POSITIONS, ETC
     * Mortar munition moves by trajectory
-....Check for various obstacles between your position and target.
-....Find reasonable cover when deploying.
+        * Check for various obstacles between your position and target.
+        * Find reasonable cover when deploying.
     * Remember that when you're on a mortar, you're everyone's bitch.
-....Fire exactly where you're told to fire, even if some asshole is asking for it unless they're contradicted by a higher ranking asshole.
-....You have eyes everywhere, but seeing the whole battle at once doesn't make you omnipresent.
+        * Fire exactly where you're told to fire, even if some asshole is asking for it unless they're contradicted by a higher ranking asshole.
+        * You have eyes everywhere, but seeing the whole battle at once doesn't make you omnipresent.
     * Alternatively, if someone is nice enough to give you a specific coordinate position and asks for you to fire there, do so.
 
 + Basic Commands
     * Press ‘C’ to deploy.
-....While deployed, you will not be able to move.
-....Note that there is a cooldown before you can get back up, so plan ahead.
+        * While deployed, you will not be able to move.
+        * Note that there is a cooldown before you can get back up, so plan ahead.
     * Use by alt-camming around the sim; in order to watch enemies and acquire targets.
-....Don’t get tunnel vision, there is no reason to sit there and watch what you are shelling
-....Pay attention to where your shots land and where they could be more useful
-....You can also fire while deployed and in mouselook.
-.....This will use the low trajectory by default
-.....Useful as an alternative to the rocket launcher.
+        *Don’t get tunnel vision, there is no reason to sit there and watch what you are shelling
+        * Pay attention to where your shots land and where they could be more useful
+        * You can also fire while deployed and in mouselook.
+        * This will use the low trajectory by default
+        * Useful as an alternative to the rocket launcher.
     * When there is something to shoot, tap '1' to lock onto a coordinate that you are alt cammed on.
     * Tap 'F' or 'E' to fire (E is more responsive) to fire.
-....Remember your shell takes time to get to its location and can be intercepted.
-....Keep an eye on the location.
-....Shelling extremely mobile targets is a waste of time unless you're laying down razorwire or fire at a chokepoint.
+        * Remember your shell takes time to get to its location and can be intercepted.
+        * Keep an eye on the location.
+        * Shelling extremely mobile targets is a waste of time unless you're laying down razorwire or fire at a chokepoint.
     * Type in ‘/1target’ and input specific coordinates (<XXX,YYY,ZZZ>)
-....Note that you can copy/paste pings directly from local and it will work.
-....You can also click a ping link in local and the mortar will auto-target those coordinates.
+        * Note that you can copy/paste pings directly from local and it will work.
+        * You can also click a ping link in local and the mortar will auto-target those coordinates.
 
 +Rounds & Firing Modes
     * Mortar has two firing modes.
-..../1high - rain from the sky.
-..../1low - If you are at an elevated position, such as a tower.
-.....Faster and more direct firing
-.....Be wary of enemy cover. Again, this is the default mode for mouselook.
+        * /1high - rain from the sky.
+        * /1low - If you are at an elevated position, such as a tower.
+            * Faster and more direct firing
+            * Be wary of enemy cover. Again, this is the default mode for mouselook.
     * Each round is almost exactly like a type of grenade, but more powerful in most cases.
-....Hit '2' to change rounds.
+        * Hit '2' to change rounds.
 
 + Available default rounds are:
     * Frag
-....Blast radius similar to a frag rocket rather than a frag grenade.
-....Delivers 25 AT on a direct hit
+        * Blast radius similar to a frag rocket rather than a frag grenade.
+        * Delivers 25 AT on a direct hit
 
     * Krak
-....Delivers 25 AT on direct hit
-....plus 20 AT to every scripted object within the blast radius
+        * Delivers 25 AT on direct hit
+        * plus 20 AT to every scripted object within the blast radius
 
     * Chaff
-....Same as the chaff grenade.
+        * Same as the chaff grenade.
 
     * Flash
-....Same as the flash grenade.
+        * Same as the flash grenade.
 
 + COOL TRICKS
     * Like Inferno grenades, inferno or razorwire rounds from a mortar ruin the fun of teleporters. Plant one of these rounds where the roaches are coming from and watch a forward advance stop in its tracks. When no one is around to replace the TP pad, feel free to krak shell it to oblivion.
