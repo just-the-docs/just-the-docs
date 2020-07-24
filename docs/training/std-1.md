@@ -257,8 +257,7 @@ VIII. Grav Chute Training Assessment
 
 + Rocket launcher
     * Modes:
-
-.... Frag
+        * Frag
 .....Normal explosion, infantry, no drop off
 .....Kills within 7.5m, partial damage out to 14m
 .....Deals 10 AT on direct hit, 7 on splash
