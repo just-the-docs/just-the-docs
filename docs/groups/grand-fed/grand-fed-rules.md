@@ -9,13 +9,13 @@ nav_order: 2
 # Grand Federation Combat Regulations (04/25/20)
 {: .no_toc .text-delta }
 
-## Table of contents
+# Table of contents
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
-#FORWARD
+# FORWARD
 {: .no_toc .text-delta }
 
 + Please use common sense, just because something isn't mentioned in the rules does not mean it is OK. If something is not explicitly banned but is clearly being used in an attempt to circumvent the rules, it is not allowed. If something is not covered here but deemed to be disallowed by the defending officer, stop doing it for the time being until it is reviewed by Grand Federation leadership to determine if it should or shouldn't be allowed and we will follow up with you when such decision is made.
