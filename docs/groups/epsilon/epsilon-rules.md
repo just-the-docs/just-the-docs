@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Epsilon Rules
-parent: Eosilon
+parent: Epsilon
 grand_parent: Groups
 nav_order: 1
 ---
