@@ -4,7 +4,6 @@ title: Standard Training Document I: Renegades
 parent: Imperfectus
 grand_parent: Training
 nav_order: 1
-has_children: false
 ---
 
 
