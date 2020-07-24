@@ -335,40 +335,40 @@ VIII. Grav Chute Training Assessment
 + Primary Grenades
 
     * Frag
-....Standard medium-long range explosive.
-....Deals 5 AT
+        * Standard medium-long range explosive.
+        * Deals 5 AT
 
     * Warp Frag
-....Larger explosion, damage falloff with distance, 10 AT, throws half the distance of frag.
-....Plasma cloud left behind burns people for partial damage for a very short time.
+        * Larger explosion, damage falloff with distance, 10 AT, throws half the distance of frag.
+        * Plasma cloud left behind burns people for partial damage for a very short time.
 
     * Flash
-....Blinds and loud, only affects you in mouselook.
+        * Blinds and loud, only affects you in mouselook.
 
     * Toxin
-....Area of denial, partial-damage to avatars only.
-....If detonated in the air it falls downwards. (if it hits the top of a wall, for example, the gas will fall straight down to the ground)
-....When hit by fire or fire, gas ignites and detonates.
+        * Area of denial, partial-damage to avatars only.
+        * If detonated in the air it falls downwards. (if it hits the top of a wall, for example, the gas will fall straight down to the ground)
+        * When hit by fire or fire, gas ignites and detonates.
 
     * Inferno
-....Area of denial
-....partial-damage to avatars and seated armored targets such as sandbags, tanks, manned turrets, and sit barricades.
-....Also falls down if detonated in midair.
-....If it detonates against a wall or in the air, it makes MORE fire for airbursting "fun!"
-....For non-seated armor, only the initial fire in the center will do AT- there are BETTER options for teleporters.
+        * Area of denial
+        * Partial Damage to avatars and seated armored targets such as sandbags, tanks, manned turrets, and sit barricades.
+        * Also falls down if detonated in midair.
+        * If it detonates against a wall or in the air, it makes MORE fire for airbursting "fun!"
+        * For non-seated armor, only the initial fire in the center will do AT- there are BETTER options for teleporters.
 
     * Razorwire
-....Spits wooden stakes everywhere and then connects them to the point of detonation with razor wire.
-....If collided into, it does partial damage.
-....Use it to lock down areas, or throw it in the air and detonate it to see the chains disrupt jumping enemies.
-....Shoot chains or stakes to remove.
+        * Spits wooden stakes everywhere and then connects them to the point of detonation with razor wire.
+        * If collided into, it does partial damage.
+        * Use it to lock down areas, or throw it in the air and detonate it to see the chains disrupt jumping enemies.
+        * Shoot chains or stakes to remove.
 
     * Krak
-....6m detection for scripted objects
-....Mine-clearing and 15 AT delivery
-....3m detection for avatars
-....Can throw further than most other grenades
-....Good medium range anti-armor.
+        * 6m detection for scripted objects
+        * Mine-clearing and 15 AT delivery
+        * 3m detection for avatars
+        * Can throw further than most other grenades 
+        * Good medium range anti-armor.
 
     * Melta Bomb
 ....Will stick to objects you throw it at, or just land on the ground.
