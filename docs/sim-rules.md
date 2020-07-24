@@ -23,7 +23,7 @@ If your group declares its intentions to be obnoxious little assholes don't expe
 
 # General Rules - TL;DR VERSION
 
-## I. Don't be an Asshole -
+## I. Don't be an Asshole:
 Examples of this include:
 1. Intentional Primshooting
 2. Using any form of Clientside Assistance. Wireframe, ARC, Collision Skeletons, Hitboxes, etc. If you are discovered to be doing this you're gonna get griefed for pretty much forever.
@@ -33,7 +33,7 @@ Examples of this include:
 6. Renaming equipment to get around the banned equipment enforcer. If it's on that, it's on it for a good reason, and trying to evade it may get your entire raid party griefed.
 7. Engaging people in non combat areas. The VR room is off limits for combat, as is the armoury and AFK room. If people are in these areas, they are busy doing other shit. If you kill people in these areas, you will be removed for a week minimum.
 
-# II. Equipment - 
+# II. Equipment:
 
 (Any device deployed on the field of battle)
     
@@ -139,7 +139,7 @@ A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
     * Flak Munitions may do a maximum of 5 AT to a detected entity. Please scale according to the firing platform, At full auto, 5 AT is plenty for a vehicle, but unreasonable for infantry.
     * Flak Munitions may not distinguish between friend or foe.
                     
-### Radial Munitions - 
+### Radial Munitions:  
 * (Explosions, Gas, Smoke, Etc. Anything that isn't a bullet)
 
 1. All munitions, excluding the single instance (sec. 2) described below, must utilize raycast checks to avoid killing avatars through obstructions.
@@ -190,7 +190,7 @@ Because people are getting fucking retarded about it, Here's a refresher course 
             
 # Notes
 
-## Rule Violations & Bans -
+## Rule Violations & Bans: 
 1. There is now a three strike policy in place regarding violating the rules.
     * On your first offense, you will get a warning, then you will get locked in placed and/or glassed to make you pay attention, and then administrative action will be taken.
     * Afterwards, No warning will be given. 
@@ -212,7 +212,7 @@ Because people are getting fucking retarded about it, Here's a refresher course 
 
 * While we may not ban you if you're doing something exceptionally stupid we may remove your ability to rez objects for some time and/or lock you in place until you have cooled down.
 
-## HOW TO RAYCAST -
+## HOW TO RAYCAST: 
 
 THIS IS A BASIC EXPLOSIVE
 ```
