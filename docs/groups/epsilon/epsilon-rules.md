@@ -27,7 +27,7 @@ We're all about having fun here, so we keep the rules pretty limited. Don't make
 
 + Movement Enhancers // Butt packs that allow horizontal or vertical movement are permitted on a case by case basis. At a future date we will provide one in the spawn for anyone without. Air strafes are stupid, don't use those. Dodge rolls and slides must have a reasonable cool down between uses. [ Reasonable is up to defending OIC. ]
 
-Always Allowed Enhancers
+        Always Allowed Enhancers
             - Chaos Assault Pack
             - Chaos Grav-Chute
             - ESC Butt Pack
