@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Standard Training Document I: Renegades
+title: Standard Training Document I Renegades
 parent: Imperfectus
 grand_parent: Training
 nav_order: 1
