@@ -32,4 +32,11 @@ The Autogun is our everyman rifle. It can do a little bit of everything and is t
 * The Autogun is our most effective weapon when things get laggy
 * It shoots french fries.
 
+# Test Table
 
+| head1        | head two          | three |
+|:-------------|:------------------|:------|
+| ok           | good swedish fish | nice  |
+| out of stock | good and plenty   | nice  |
+| ok           | good `oreos`      | hmm   |
+| ok           | good `zoute` drop | yumm  |
