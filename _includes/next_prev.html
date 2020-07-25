@@ -1,0 +1,18 @@
+<div style="display: flex; justify-content: space-between;">
+{%- assign ordered_pages_list = site.html_pages | where_exp:"item", "item.nav_order != nil" -%}
+{%- assign sorted_ordered_pages_list = ordered_pages_list | sort:"nav_order" -%}
+
+
+{%- for node in sorted_ordered_pages_list -%}
+  {%- assign next_page = page.nav_order | plus: 1 -%}
+  {%- assign previous_page = page.nav_order | minus: 1 -%}
+  {%- if previous_page == node.nav_order -%}
+    <a href="{{ node.url | absolute_url }}">previous</a>
+  {%- endif -%}
+  {%- if next_page == node.nav_order -%}
+    <a href="{{ node.url | absolute_url }}">next</a> 
+  {%- endif -%}
+  
+{%- endfor -%}
+
+</div>
