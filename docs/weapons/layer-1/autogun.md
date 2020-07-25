@@ -22,6 +22,7 @@ The Autogun is our everyman rifle. It can do a little bit of everything and is t
     - Hitting the **C** Key on your keyboard or **PGDN** if you're a southpaw.
 
 # Weapon Stats
+
 | ROF        | Mag          | RLD |
 |:-----------|:-------------|:----|
 | 540-780    | 30 Rounds    | 3/s |
