@@ -804,7 +804,6 @@ VIII. Grav Chute Training Assessment
     * If the course is unavailable, fly up very high in the valkyrie and do not stop practicing with the grav-chute until the Renegade can stop hard falling
 
 ## S2, VIII. Infantry Mortar - All eyes on the Ground
-{: .no_toc .text-delta }
 
 + Strategy/Etiquette
     * Always ask to be on a mortar.
