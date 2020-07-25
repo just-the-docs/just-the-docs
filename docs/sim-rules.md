@@ -258,6 +258,7 @@ Base distance of 10 Meters. 6 Meters or less is 100 damage, over is falloff to 0
 ## HOW TO LBA
         
 * THE CURRENT VERSION! IS 2.22!!!!
+
 [GitHub]:(https://github.com/Krutchen/SLMCLBA){: .btn .btn-purple }
     
         
