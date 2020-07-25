@@ -22,9 +22,9 @@ The Autogun is our everyman rifle. It can do a little bit of everything and is t
     - Hitting the **C** Key on your keyboard or **PGDN** if you're a southpaw.
 
 # Weapon Stats
-| Rate of Fire | Reload Time | Magazine Size | Anti-Armor | Radius |
-|:-------------|:------------|:--------------|:-----------|:-------|
-| 540 RPM     | 3 Seconds  | 30 Rounds    | 0         | 0     |
+| Rate of Fire | Reload Time | Magazine Size | Anti-Armor | Radius|
+|:-------------|:------------|:--------------|:-----------|:------|
+| 540 RPM      | 3 Seconds   | 30 Rounds     | 0          | 0     |
 
 
 # Notes
