@@ -1,6 +1,9 @@
-on: [pull_request]
+on: 
+  push:
+    branches:
+    - master
 
-name: CI
+name: Master branch CI
 
 jobs:
 
@@ -9,29 +12,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
 
     - name: Build the site in the jekyll/builder container
       run: |
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
         jekyll/builder:latest /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && bundle install && bundle exec jekyll build && bundle exec rake search:init"
-
   jekyll-3-8-5:
     name: Build Jekyll site (v3.8.5)
     runs-on: ubuntu-latest
     steps:
 
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
 
     - name: Build the site in the jekyll/builder container
       run: |
         docker run --rm \
         --volume="${{ github.workspace }}:/srv/jekyll" \
         jekyll/builder:3.8.5 /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && bundle install && bundle exec jekyll build && bundle exec rake search:init"
-
   assets:
-    name: Test CSS and JS
+    name: Format and test CSS and JS
     runs-on: ubuntu-latest
 
     steps:
