@@ -397,7 +397,7 @@ II. Ferrum Infantry Equipment and Tactics
  + Higher ammo capacity, lower accuracy, longer reload time.
  + Moving while firing decreases accuracy.
  + Entrenchment mode
-   + Sit on sandbags or activate with 'C' on cover you can see over
+   + Sit on barricade or activate with 'C' on cover you can see over
    + Higher accuracy.
    + Deactivates when unsat, moving, or looking up or down too far.
 

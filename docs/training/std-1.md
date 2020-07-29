@@ -382,7 +382,7 @@ VIII. Grav Chute Training Assessment
 
     * Inferno
         * Area of denial
-        * Partial Damage to avatars and seated armored targets such as sandbags, tanks, manned turrets, and sit barricades.
+        * Partial Damage to avatars and seated armored targets such as barricades/sandbags, tanks, manned turrets, and sit barricades.
         * Also falls down if detonated in midair.
         * If it detonates against a wall or in the air, it makes MORE fire for airbursting "fun!"
         * For non-seated armor, only the initial fire in the center will do AT- there are BETTER options for teleporters.
@@ -874,7 +874,7 @@ VIII. Grav Chute Training Assessment
 + COOL TRICKS
     * Like Inferno grenades, inferno or razorwire rounds from a mortar ruin the fun of teleporters. Plant one of these rounds where the roaches are coming from and watch a forward advance stop in its tracks. When no one is around to replace the TP pad, feel free to krak shell it to oblivion.
     * Radical artillery men quickly alt cam between two teleport points and shell both of them as quickly as possible.
-    * Dropping infernos from the sky on sandbags is hilarious.
+    * Dropping infernos from the sky on barricades/sandbags is hilarious.
 
 
 ---
