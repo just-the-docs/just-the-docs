@@ -109,7 +109,7 @@
 
   dl {
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template: auto / 10em 1fr;
   }
 
   dt,
@@ -118,16 +118,18 @@
   }
 
   dt {
+    grid-column: 1;
     text-align: right;
-
+    font-weight: 500;
     &::after {
       content: ":";
     }
   }
 
   dd {
+    grid-column: 2;
     margin-left: 1em;
-    font-weight: 500;
+    margin-bottom: 0;
   }
 
   .anchor-heading {
