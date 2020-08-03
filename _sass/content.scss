@@ -119,8 +119,8 @@
 
   dt {
     grid-column: 1;
-    text-align: right;
     font-weight: 500;
+    text-align: right;
     &::after {
       content: ":";
     }
@@ -128,8 +128,8 @@
 
   dd {
     grid-column: 2;
-    margin-left: 1em;
     margin-bottom: 0;
+    margin-left: 1em;
   }
 
   .anchor-heading {
