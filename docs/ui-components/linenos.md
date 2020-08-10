@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Markdown line number test
-nav_order: 999
+title: Code with line numbers
+parent: Code
+grand_parent: UI Components
 ---
 
 # Configuration options
