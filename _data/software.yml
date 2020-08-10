@@ -120,6 +120,15 @@
     - viewer
   interface: gui
   type: app
+
+- name: Schema Store
+  webpage: https://www.schemastore.org/json/
+  description: The JSON API contains a list of JSON Schema files for known JSON file formats. Each schema file can be used in tooling such as command line validators, editor auto-completion etc.
+  foss: true
+  category: 
+    - parser
+  interface: cli
+  type: lib
   
 - name: val3dity
   webpage: http://github.com/tudelft3d/val3dity/

@@ -23,12 +23,12 @@ Software for experimental features can be found in the respective pages of the [
       <th scope="col">Software</th>
       <th scope="col"></th>
       <th scope="col"></th>
-      <th scope="col">Viewer</th>
-      <th scope="col">Generator</th>
-      <th scope="col">Editor</th>
-      <th scope="col">Transformer</th>
-      <th scope="col">Parser</th>
-      <th scope="col">Validator</th>
+      <th scope="col">View</th>
+      <th scope="col">Generate</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Transform</th>
+      <th scope="col">Parse/API</th>
+      <th scope="col">Validate</th>
     </tr>
   </thead>
   <tbody>
