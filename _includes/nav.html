@@ -1,6 +1,7 @@
 <ul class="nav-list">
-  {%- assign ordered_pages_list = site.html_pages | where_exp:"item", "item.nav_order != nil" -%}
-  {%- assign unordered_pages_list = site.html_pages | where_exp:"item", "item.nav_order == nil" -%}
+  {%- assign included_pages_list = site.html_pages | where_exp:"item", "item.nav_exclude != true" | where_exp:"item", "item.title != nil" -%}
+  {%- assign ordered_pages_list = included_pages_list | where_exp:"item", "item.nav_order != nil"  -%}
+  {%- assign unordered_pages_list = included_pages_list | where_exp:"item", "item.nav_order == nil" -%}
   {%- if site.nav_sort == 'case_insensitive' -%}
     {%- assign sorted_ordered_pages_list = ordered_pages_list | sort_natural:"nav_order" -%}
     {%- assign sorted_unordered_pages_list = unordered_pages_list | sort_natural:"title" -%}
@@ -10,8 +11,7 @@
   {%- endif -%}
   {%- assign pages_list = sorted_ordered_pages_list | concat: sorted_unordered_pages_list -%}
   {%- for node in pages_list -%}
-    {%- unless node.nav_exclude -%}
-      {%- if node.parent == nil and node.title -%}
+      {%- if node.parent == nil -%}
         <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
           {%- if page.parent == node.title or page.grand_parent == node.title -%}
             {%- assign first_level_url = node.url | absolute_url -%}
@@ -24,7 +24,6 @@
             {%- assign children_list = pages_list | where: "parent", node.title -%}
             <ul class="nav-list ">
             {%- for child in children_list -%}
-              {%- unless child.nav_exclude -%}
                 <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
                   {%- if page.url == child.url or page.parent == child.title -%}
                     {%- assign second_level_url = child.url | absolute_url -%}
@@ -44,12 +43,10 @@
                     </ul>
                   {%- endif -%}
                 </li>
-              {%- endunless -%}
             {%- endfor -%}
             </ul>
           {%- endif -%}
         </li>
       {%- endif -%}
-    {%- endunless -%}
   {%- endfor -%}
 </ul>
