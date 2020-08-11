@@ -1,15 +1,58 @@
 <ul class="nav-list">
-  {%- assign included_pages_list = site.html_pages | where_exp:"item", "item.nav_exclude != true" | where_exp:"item", "item.title != nil" -%}
-  {%- assign ordered_pages_list = included_pages_list | where_exp:"item", "item.nav_order != nil"  -%}
-  {%- assign unordered_pages_list = included_pages_list | where_exp:"item", "item.nav_order == nil" -%}
+  {%- assign included_pages = site.html_pages
+        | where_exp:"item", "item.nav_exclude != true"
+        | where_exp:"item", "item.title != nil" -%}
+
+  {%- comment -%}
+    A nav_order value can be a number or a string.
+    Numbers are sorted by their values, before strings.
+    An omitted nav_order value is equivalent to the title value,
+    except that a numerical title value is treated as a string.
+    The case-sensitivity of string sorting is determined by site.nav_sort.
+  {%- endcomment -%}
+  
+  {%- assign string_ordered_pages = included_pages
+        | where_exp:"item", "item.nav_order == nil" -%}
+  {%- assign nav_ordered_pages = included_pages
+        | where_exp:"item", "item.nav_order != nil"  -%}
+
+  {%- comment -%}
+    The nav_ordered_pages have to be added to number_ordered_pages and
+    string_ordered_pages, depending on the nav_order value.
+    The first character of jsonify is `"` only for strings.
+  {%- endcomment -%}
+  {%- assign nav_ordered_groups = nav_ordered_pages
+        | group_by_exp:"item", "item.nav_order | jsonify | slice: 0" -%}
+  {%- assign number_ordered_pages = "" | split:"X" -%}
+  {%- for group in nav_ordered_groups -%}
+    {%- if group.name == '"' -%}
+      {%- assign string_ordered_pages = string_ordered_pages | concat: group.items -%}
+    {%- else -%}
+      {%- assign number_ordered_pages = number_ordered_pages | concat: group.items -%}
+    {%- endif -%}
+  {%- endfor -%}
+  
+  {%- assign sorted_number_ordered_pages = number_ordered_pages | sort:"nav_order" -%}
+  
+  {%- comment -%}
+    The string_ordered_pages have to be sorted by nav_order, and otherwise title.
+    After grouping them by those values, the groups are sorted, then the items
+    of each group are concatenated.
+  {%- endcomment -%}
+  {%- assign string_ordered_groups = string_ordered_pages
+        | group_by_exp:"item", "item.nav_order | default: item.title | string" -%}
   {%- if site.nav_sort == 'case_insensitive' -%}
-    {%- assign sorted_ordered_pages_list = ordered_pages_list | sort_natural:"nav_order" -%}
-    {%- assign sorted_unordered_pages_list = unordered_pages_list | sort_natural:"title" -%}
+    {%- assign sorted_string_ordered_groups = string_ordered_groups | sort_natural:"name" -%}
   {%- else -%}
-    {%- assign sorted_ordered_pages_list = ordered_pages_list | sort:"nav_order" -%}
-    {%- assign sorted_unordered_pages_list = unordered_pages_list | sort:"title" -%}
+    {%- assign sorted_string_ordered_groups = string_ordered_groups | sort:"name" -%}
   {%- endif -%}
-  {%- assign pages_list = sorted_ordered_pages_list | concat: sorted_unordered_pages_list -%}
+  {%- assign sorted_string_ordered_pages = "" | split:"X" -%}
+  {%- for group in sorted_string_ordered_groups -%}
+    {%- assign sorted_string_ordered_pages = sorted_string_ordered_pages | concat: group.items -%}
+  {%- endfor -%}
+
+  {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
+  
   {%- for node in pages_list -%}
       {%- if node.parent == nil -%}
         <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
