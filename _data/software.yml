@@ -57,6 +57,7 @@
     - viewer
     - transformer
     - applications
+    - editor
   interface: gui
   type: app
 
