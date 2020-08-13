@@ -23,7 +23,7 @@
   {%- comment -%}
     The nav_ordered_pages have to be added to number_ordered_pages and
     string_ordered_pages, depending on the nav_order value.
-    The first character of jsonify is `"` only for strings.
+    The first character of the jsonify result is `"` only for strings.
   {%- endcomment -%}
   {%- assign nav_ordered_groups = nav_ordered_pages
         | group_by_exp:"item", "item.nav_order | jsonify | slice: 0" -%}
@@ -39,12 +39,13 @@
   {%- assign sorted_number_ordered_pages = number_ordered_pages | sort:"nav_order" -%}
   
   {%- comment -%}
-    The string_ordered_pages have to be sorted by nav_order, and otherwise title.
+    The string_ordered_pages have to be sorted by nav_order, and otherwise title
+    (where appending the empty string to a numeric title converts it to a string).
     After grouping them by those values, the groups are sorted, then the items
     of each group are concatenated.
   {%- endcomment -%}
   {%- assign string_ordered_groups = string_ordered_pages
-        | group_by_exp:"item", "item.nav_order | default: item.title | string" -%}
+        | group_by_exp:"item", "item.nav_order | default: item.title | append:''" -%}
   {%- if site.nav_sort == 'case_insensitive' -%}
     {%- assign sorted_string_ordered_groups = string_ordered_groups | sort_natural:"name" -%}
   {%- else -%}
