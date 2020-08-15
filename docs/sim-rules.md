@@ -115,7 +115,7 @@ A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
 1. Standard damage enabled projectiles (Bullets) must die on collision with solid surfaces.
 2. Projectile Rotations should be locked through `llSetStatus(STATUS_ROTATE_X|STATUS_ROTATE_Y|STATUS_ROTATE_Z,0);` on any non arcing munition, excluding seekers. 
     * Munitions that arc through the air, ie grenades, mortars, etc, should have X and Z locked regardless. This is to prevent projectiles from wildly ricocheting.
-3. **Explosive munitions should be no smaller than 0.06 meters, height and widthwise, non-phantom, and should be able to be countered by all interception systems. Low yield explosive bullets are the only exception, see #6 of this section.**
+3. **Explosive projectiles should be no smaller than 0.06 meters, height and widthwise, non-phantom, and should be able to be countered by all interception systems. Low yield explosive bullets are the only exception, see #6 of this section.**
 4. Projectile Density should be set to 1000 or lower, to prevent bullets from bouncing physical vehicles.
 5. Munitions must be fired along a interceptable trajectory. Under no circumstances can something warp from position A to position B with something between it.
 6. Fully automatic explosive bullets and Fully automatic AT bullets must be fired from an appropriate platform, and scaled to the nature of that platform. These are the rules for the PROJECTILES.
