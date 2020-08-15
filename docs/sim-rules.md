@@ -11,6 +11,8 @@ Updated: 08/13/2020 - August 13th, 2020
 
 Authors: Dread Hudson, Hadet Sonnenkern, & Sam Huntsman
 
+The most up to date ruleset will always be available at : 
+https://docs.chaos.church/docs/sim-rules/
 
 Don't be stupid, Don't try abusing loopholes. If you're acting like a little kid, You will be treated like a little kid.
 If your group declares its intentions to be obnoxious little assholes don't expect any quarter to be given, You are responsible for who you associate with.
@@ -79,21 +81,22 @@ Examples of this include:
         - HOWEVER, if none of them have Assault Packs on, tough shit, you will get ONE pack per 5 defenders.
 
 # Deployables:
-1. Interceptors:
-    * If you are using an grenade interceptor that is intercepting munitions through objects we will grief it and you. 
-    * You must also utilize checks to ensure your interceptor does not intercept vehicles, such as planes. Ask, and you shall receive the code snippet.
-    *  We prefer if Interceptors are Sensor based as opposed to using VolumeDetect., the reason being to cut down on Collision Events. 
+
+## Interceptors:
+1. If you are using an grenade interceptor that is intercepting munitions through objects we will grief it and you. 
+2. You must also utilize checks to ensure your interceptor does not intercept vehicles, such as planes. Ask, and you shall receive the code snippet.
+3.  We prefer if Interceptors are Sensor based as opposed to using VolumeDetect., the reason being to cut down on Collision Events. 
             
-# Artillery:  
+## Artillery:  
 1. Artillery may not auto-target avatars or objects.
 2. Artillery may not utilize seeking munitions.
 3. Artillery must have an operator within 10 meters, or a visible and built upon upgrade that allows it to fire and reload automatically. 
             
-# Teleporters:
+## Teleporters:
 1. All Teleporters must have a SOLID hitbox of AT LEAST 1m x 1m x 1m
 2. Drop Pods are also considered teleporters, and must have a end beacon that adheres to the same size requirement as teleporters.
             
-# Auto Turrets:
+## Auto Turrets:
 1. During Capture-the-Flag : Turrets are limited to 3 per side
 2. Turrets must have a lockon time of GREATER THAN 1 second, PREFERABLY adjusted to be longer the farther away a target is.
 3. Turrets must not actively target through objects.
@@ -101,7 +104,7 @@ Examples of this include:
 5. We REQUIRE you to have specialized turrets for specialized things (if you use them at all), instead of using 'jack of all trades' style turrets.
     * i.e. Anti-Air Turrets should not attack ground targets.
             
-# Repair capable Deployables
+## Repair capable Deployables
 Are not allowed at this time. 
 
 This includes drones and deployable repair auras, basically any deployable that repairs anything else, regardless if it's armor, other deployables, or anything else you can think of. The only thing doing repairs should be a dedicated repair tool.
@@ -157,7 +160,7 @@ A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
     * Currently, only dedicated infantry carried repair tools may repair.
 6. If your group cannot meet these standards, you will be restricted to using the free Combat HUD provided in the attacker spawn.
 
-# Armour
+# III. Armour
  (Anything that tracks HP)
 1. Due to inconsistent scripting, people still having their armour and movement functions in the same script, and the fact that it is now a COMMUNITY STANDARD with nearly
     * every ACTIVE group having adopted it, LBA, LBA Light, and LBA Slim are the ONLY acceptable forms of Armour in this sim.
@@ -179,7 +182,7 @@ A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
 * If your Armour scripts consistently fail to responsively & accurately take damage, you will be provided with one of our design.
 * If your Sitbase scripts consistently fail to responsively & accurately track and move with your hitbox, you will be provided with one of our design.
         
-# Vehicle Balance: 
+## Vehicle Balance: 
 Because people are getting fucking retarded about it, Here's a refresher course in "why is my gunship being thrown off sim?" or "why are all of my prims being returned?".
 
 1. Armour Values should reflect the size, speed, and firepower of the vehicle being used. If your tank has an excess of 500 HP and several powerful weapon systems, It should naturally be moving at a snails pace.
@@ -192,7 +195,7 @@ Because people are getting fucking retarded about it, Here's a refresher course 
 5. Automatic interception systems on vehicles are ONLY allowed for fleetships. This is due to fleetships presenting an extremely large, obvious target, that utilize little to no cover, with limited mobility. They are naval vessels, not agile jet fighters.            
     * Automated interception systems on fleetships must be reasonable. We will determine what is reasonable.
             
-# Notes
+# IV. Notes
 
 ## Rule Violations & Bans: 
 1. There is now a three strike policy in place regarding violating the rules.
