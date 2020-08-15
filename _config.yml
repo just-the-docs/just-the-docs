@@ -66,6 +66,9 @@ aux_links_new_tab: false
 nav_sort: case_insensitive # default, equivalent to nil
 # nav_sort: case_sensitive # Capital letters sorted before lowercase
 
+# Display next and previous links
+nav_next_prev: true
+
 # Footer content
 # appears at the bottom of every page's main content
 

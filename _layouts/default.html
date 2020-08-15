@@ -105,7 +105,9 @@ layout: table_wrappers
           </nav>
         {% endif %}
       {% endunless %}
-      {% include next_prev.html %}
+      {% if site.nav_next_prev == true %}
+        {% include next_prev.html %}
+      {% endif %}
         </div>
       
       
