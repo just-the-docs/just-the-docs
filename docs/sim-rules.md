@@ -112,6 +112,7 @@ A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
 
 ### Direct Munitions:
 * (Bullets, Rockets, etc, what makes contact and/or deploys radial munitions)
+
 1. Standard damage enabled projectiles (Bullets) must die on collision with solid surfaces.
 2. Projectile Rotations should be locked through `llSetStatus(STATUS_ROTATE_X|STATUS_ROTATE_Y|STATUS_ROTATE_Z,0);` on any non arcing munition, excluding seekers. 
     Munitions that arc through the air, ie grenades, mortars, etc, should have X and Z locked regardless. This is to prevent projectiles from wildly ricocheting.
@@ -119,11 +120,11 @@ A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
 4. Projectile Density should be set to 1000 or lower, to prevent bullets from bouncing physical vehicles.
 5. Munitions must be fired along a interceptable trajectory. Under no circumstances can something warp from position A to position B with something between it.
 6. Fully automatic explosive bullets and Fully automatic AT bullets must be fired from an appropriate platform, and scaled to the nature of that platform. These are the rules for the PROJECTILES.
-    * Man Portable weapons capable of firing Explosive bullets should fire at a relatively low rate of fire, Less than 400 RPM for 'Rifles' and 700 for 'LMG's. Anything exceeding 200 RPM may not be capable of AT.
-    * Man Portable weapons capable of firing AT bullets should fire an even lower rate of fire than Explosive platforms - Don't melt tanks with rifles, that shit is legit gay. AT output should scale based on your RPM as well. Ie. 5 AT Should require 60 RPM, scale from there.
-    * Man Portable AT bullets MAY NOT also have an explosion.
-    * Vehicle mounted weapons may have a higher rate of fire, according to the mounted weapon. AT output should scale based on your RPM, with handicaps such as being fixed allowing for higher AT or RPM.
-    * Specialization is key to balancing full auto explosive & AT weaponry. If it's good at one thing it should be shit at the other. If it does both AT and Explodes, it better be a slow as shit firing autocannon, a GAU-8 on a close air support plane, or from a fleetship.
+        * Man Portable weapons capable of firing Explosive bullets should fire at a relatively low rate of fire, Less than 400 RPM for 'Rifles' and 700 for 'LMG's. Anything exceeding 200 RPM may not be capable of AT.
+        * Man Portable weapons capable of firing AT bullets should fire an even lower rate of fire than Explosive platforms - Don't melt tanks with rifles, that shit is legit gay. AT output should scale based on your RPM as well. Ie. 5 AT Should require 60 RPM, scale from there.
+        * Man Portable AT bullets MAY NOT also have an explosion.
+        * Vehicle mounted weapons may have a higher rate of fire, according to the mounted weapon. AT output should scale based on your RPM, with handicaps such as being fixed allowing for higher AT or RPM.
+        * Specialization is key to balancing full auto explosive & AT weaponry. If it's good at one thing it should be shit at the other. If it does both AT and Explodes, it better be a slow as shit firing autocannon, a GAU-8 on a close air support plane, or from a fleetship.
             
 8. Seeking Munitions must adhere to the following:
     * Seeking Munitions must utilize physical movement, and must comply with the explosive munition hitbox regulation.
