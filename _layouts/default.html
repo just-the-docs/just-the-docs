@@ -84,6 +84,12 @@ layout: table_wrappers
       {% endif %}
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
+      {% if page.parent %} 
+        {% assign flexposition = "space-between" %}
+      {% else %}
+        {% assign flexposition = "flex-end" %}
+      {% endif %}
+    <div style="display: flex; justify-content: {{ flexposition }}">
       {% unless page.url == "/" %}
         {% if page.parent %}
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
@@ -99,6 +105,11 @@ layout: table_wrappers
           </nav>
         {% endif %}
       {% endunless %}
+      {% include next_prev.html %}
+        </div>
+      
+      
+      
       <div id="main-content" class="main-content" role="main">
         {% if site.heading_anchors != false %}
           {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" %}

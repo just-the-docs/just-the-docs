@@ -194,3 +194,41 @@
     }
   }
 }
+
+// Next-Prev nav
+
+.next-prev-nav {
+  @include mq(md) {
+    margin-top: -$sp-4;
+    //float: right;
+  }
+}
+
+.next-prev-nav-list {
+  padding-left: 0;
+  margin-bottom: $sp-3;
+  list-style: none;
+}
+
+.next-prev-nav-list-item {
+  display: table-cell;
+  @include fs-2;
+
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    display: inline-block;
+    margin-right: $sp-2;
+    margin-left: $sp-2;
+    color: $grey-dk-000;
+    content: "/";
+  }
+
+  &:last-child {
+    &::after {
+      content: "";
+    }
+  }
+}
