@@ -67,7 +67,7 @@ Examples of this include:
 2. Repair tools must replace either a main-hand or offhand weapon.
 3. Repairs given may not exceed 12 hp/sec under any circumstances.
 
-### Movement Enhancers : 
+## Movement Enhancers : 
 
 * No one should be Avatar Flying around the sim, and your avatar shouldn't be able to jump and fly from one end of the sim to the other, that's not the kind of combat this sim was designed for. 
 * If you want your Jump Pack approved contact Hadet Sonnenkern or Dread Hudson, The final decision is up to them.
@@ -80,23 +80,23 @@ Examples of this include:
         - WHAT THIS MEANS is that if we have 3 defending, but all of them have Assault Packs on, you also get 3 Stormboy packs.
         - HOWEVER, if none of them have Assault Packs on, tough shit, you will get ONE pack per 5 defenders.
 
-# Deployables:
+## Deployables:
 
-## Interceptors:
+### Interceptors:
 1. If you are using an grenade interceptor that is intercepting munitions through objects we will grief it and you. 
 2. You must also utilize checks to ensure your interceptor does not intercept vehicles, such as planes. Ask, and you shall receive the code snippet.
 3.  We prefer if Interceptors are Sensor based as opposed to using VolumeDetect., the reason being to cut down on Collision Events. 
             
-## Artillery:  
+### Artillery:  
 1. Artillery may not auto-target avatars or objects.
 2. Artillery may not utilize seeking munitions.
 3. Artillery must have an operator within 10 meters, or a visible and built upon upgrade that allows it to fire and reload automatically. 
             
-## Teleporters:
+### Teleporters:
 1. All Teleporters must have a SOLID hitbox of AT LEAST 1m x 1m x 1m
 2. Drop Pods are also considered teleporters, and must have a end beacon that adheres to the same size requirement as teleporters.
             
-## Auto Turrets:
+### Auto Turrets:
 1. During Capture-the-Flag : Turrets are limited to 3 per side
 2. Turrets must have a lockon time of GREATER THAN 1 second, PREFERABLY adjusted to be longer the farther away a target is.
 3. Turrets must not actively target through objects.
@@ -111,7 +111,7 @@ This includes drones and deployable repair auras, basically any deployable that 
 
 A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
 
-# Munitions:
+## Munitions:
 
 ### Direct Munitions:
 * (Bullets, Rockets, etc, what makes contact and/or deploys radial munitions)
