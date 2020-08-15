@@ -7,7 +7,7 @@ nav_order: 7
 {: .no_toc }
 - Sim Rules
 
-Updated: 07/24/2020 - July 24th, 2020
+Updated: 08/13/2020 - August 13th, 2020
 
 Authors: Dread Hudson, Hadet Sonnenkern, & Sam Huntsman
 
@@ -32,6 +32,7 @@ Examples of this include:
 5. Not listening to what the OIC says; If you're being told not to do something then don't do it.
 6. Renaming equipment to get around the banned equipment enforcer. If it's on that, it's on it for a good reason, and trying to evade it may get your entire raid party griefed.
 7. Engaging people in non combat areas. The VR room is off limits for combat, as is the armoury and AFK room. If people are in these areas, they are busy doing other shit. If you kill people in these areas, you will be removed for a week minimum.
+8. No AOs that are not included in your gun, and absolutely no flippy ninja jump animations. This is SL military army mans, not Magical girl naruto RP.
 
 # II. Equipment:
 
@@ -56,6 +57,8 @@ Examples of this include:
 ### MELEES:
 1. All melee weapons must utilize raycast checks to avoid killing avatars through obstructions.
 2. Melee weapons should not have a kill range that exceeds 6 Meters from the attacking avatar
+3. Melee weapons should have a cooldown between swings. Unless it's a chainsaw that does partial damage, you shouldn't be swinging as fast as you can mash the button. Automatic firerate for melee is gay.
+4. No auto triggering melees. Triggering melee requires user input. Do note, however, that a big robot physically stepping on someone is a roadkill and not a melee.
                 
 ### REPAIR TOOLS:
 1. Repairs may only be used at a distance of 5m or less from the object being repaired.
@@ -112,16 +115,15 @@ A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
 1. Standard damage enabled projectiles (Bullets) must die on collision with solid surfaces.
 2. Projectile Rotations should be locked through `llSetStatus(STATUS_ROTATE_X|STATUS_ROTATE_Y|STATUS_ROTATE_Z,0);` on any non arcing munition, excluding seekers. 
     * Munitions that arc through the air, ie grenades, mortars, etc, should have X and Z locked regardless. This is to prevent projectiles from wildly ricocheting.
-3. Projectile Density should be set to 1000 or lower, to prevent bullets from bouncing physical vehicles.
-4. Munitions must be fired along a interceptable trajectory. Under no circumstances can something warp from position A to position B with something between it.
-5. Explosive munition hitboxes should be no smaller than 0.15 meters, height and widthwise, non-phantom, and should be able to be countered by all interception systems. Don't try being a sneaky little faggot.
-6. Fully automatic explosive bullets (FAEB) must be fired from an appropriate platform. These are the rules for the PROJECTILES.
-    * Man portable FAEB weapons should fire at a relatively low rate of fire (Less than 400 RPM for 'Rifles', Less than 700 for 'LMG's), and may not be capable of AT.
-    * Vehicle mounted weapons have a higher rate of fire, according to the mounted weapon. Only FIXED, AIMED BY TURNING THE ENTIRE VEHICLE, or FLEETSHIP mounted FAEBs may do DIRECT HIT AT at a MAXIMUM of 5 AT. AT should scale with RPM, naturally.
-7. Fully automatic AT bullets (FAAB) must be fired from an appropriate platform.
-    * Man portable FAAB weapons should fire at an EXTREMELY low rate of fire (Less than 300 RPM, a sacrifice is expected for AT output at automatic rates) and may do DIRECT HIT AT at a **MAXIMUM** of 5 AT. In that regard, 5 AT Should cap at 60 RPM, scale from there.
-    * Man portable FAAB weapons MAY NOT also have an explosion.
-    * Vehicle mounted FAAB munitions may do DIRECT HIT AT at a MAXIMUM of 5 AT. Only FIXED, AIMED BY TURNING THE ENTIRE VEHICLE, or FLEETSHIP mounted FAABs may explode.
+3. **Explosive projectiles should be no smaller than 0.06 meters, height and widthwise, non-phantom, and should be able to be countered by all interception systems. The counter to interception systems is Chaff, not making your explosive projectiles the same size as regular bullets. Low yield explosive bullets are the only exception to this rule, see #6 of this section.**
+4. Projectile Density should be set to 1000 or lower, to prevent bullets from bouncing physical vehicles.
+5. Munitions must be fired along a interceptable trajectory. Under no circumstances can something warp from position A to position B with something between it.
+6. Fully automatic explosive bullets and Fully automatic AT bullets must be fired from an appropriate platform, and scaled to the nature of that platform. These are the rules for the PROJECTILES.
+    * Man Portable weapons capable of firing Explosive bullets should fire at a relatively low rate of fire, Less than 400 RPM for 'Rifles' and 700 for 'LMG's. Anything exceeding 200 RPM may not be capable of AT.
+    * Man Portable weapons capable of firing AT bullets should fire an even lower rate of fire than Explosive platforms - Don't melt tanks with rifles, that shit is legit gay. AT output should scale based on your RPM as well. Ie. 5 AT Should require 60 RPM, scale from there.
+    * Man Portable AT bullets MAY NOT also have an explosion.
+    * Vehicle mounted weapons may have a higher rate of fire, according to the mounted weapon. AT output should scale based on your RPM, with handicaps such as being fixed allowing for higher AT or RPM.
+    * Specialization is key to balancing full auto explosive & AT weaponry. If it's good at one thing it should be shit at the other. If it does both AT and Explodes, it better be a slow as shit firing autocannon, a GAU-8 on a close air support plane, or from a fleetship.
             
 8. Seeking Munitions must adhere to the following:
     * Seeking Munitions must utilize physical movement, and must comply with the explosive munition hitbox regulation.
@@ -136,7 +138,7 @@ A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
     * Flak Munitions must utilize a raycast line-of-sight check for detected avatars, and must not detonate on if said raycast is obstructed.
     * Flak Munitions must utilize a raycast height check, and must not detonate if the target is under 15 meters from a surface
     * Flak Munitions may only proximity detonate within 10 meters of a detected entity.
-    * Flak Munitions may do a maximum of 5 AT to a detected entity. Please scale according to the firing platform, At full auto, 5 AT is plenty for a vehicle, but unreasonable for infantry.
+    * Flak Munitions may do a maximum of 5 AT to a detected entity. Please scale according to the firing platform, At full auto, 5 AT is plenty for a vehicle, but unreasonable for infantry. You do not want to have a Hydra with 10 AT flak rounds swatting all your aircraft out of the sky.
     * Flak Munitions may not distinguish between friend or foe.
                     
 ### Radial Munitions:  
@@ -145,10 +147,11 @@ A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
 1. All munitions, excluding the single instance (sec. 2) described below, must utilize raycast checks to avoid killing avatars through obstructions.
 2. High yield explosives, such as those fired from an appropriate artillery platform, at a velocity of under 50 meters a second, and that are fully effected by gravity, may do partial damage (based on distance), through obstructions.
 3. Under no circumstance may a munition be Group Safe. Scripted objects intended to render someone immune from a particular form of munition (such as gasmasks) count as that munition being group-safe (we cannot control nor trust you on its responsible use).
-4. Fully automatic explosive bullets (FAEB) must be fired from an appropriate platform. These are the rules for the EXPLOSIONS.
-    * Man portable FAEB explosions should be limited to a range of 3m or less, 100 Damage @ 1m, falloff to 0 by 3m
-    * Vehicle mounted FAEB explosions have a larger radius, according to the mounted weapon. 
+4. Fully automatic explosive bullets and fully automatic AT bullets must be fired from an appropriate platform. These are the rules for the EXPLOSIONS.
+    * Man portable full auto explosions should be limited to a range of 3m or less, 100 Damage @ 1m, falloff to 0 by 3m
+    * Vehicle mounted full auto explosions may have a larger radius, according to the mounted weapon. Error on the side of caution, nobody wants to deal with 5m kill explosions being machinegunned at them.
     * Fully automatic explosive bullets may not have splash AT.
+    * Man portable full auto AT bullets may not have any splash damage.
 5. Repair munitions are not allowed.
     * Currently, only dedicated infantry carried repair tools may repair.
 6. If your group cannot meet these standards, you will be restricted to using the free Combat HUD provided in the attacker spawn.
@@ -185,7 +188,7 @@ Because people are getting fucking retarded about it, Here's a refresher course 
     * What is a Gunship? An armoured flying vehicle with the main function of engaging ground targets. These are generally operated by one or two people.
     * Dropships may have up to 250 HP. 
     * What is a Dropship you may ask? A flying vehicle with the main function of transporting combatants to an area. They are generally lightly armed, or have crewed weapons, rather than being a one man killing machine.
-5. Automatic interception systems on vehicles are ONLY allowed for fleetships. This is due to fleetships presenting an extremely large, obvious target, that utilize little to no cover.            
+5. Automatic interception systems on vehicles are ONLY allowed for fleetships. This is due to fleetships presenting an extremely large, obvious target, that utilize little to no cover, with limited mobility. They are naval vessels, not agile jet fighters.            
     * Automated interception systems on fleetships must be reasonable. We will determine what is reasonable.
             
 # Notes
@@ -226,9 +229,9 @@ if(llList2Integer(rc,-1)<1)
     
 ## HOW TO PARTIAL DAMAGE EXPLOSIVES
 
-Base distance of 10 Meters. 6 Meters or less is 100 damage, over is falloff to 0.
+Base distance of 10 Meters. 5 Meters or less is 100 damage, over is falloff to 0.
 ```   
-   if(llDetectedType(i)&0x1)
+    if(llDetectedType(i)&0x1)
     {
         integer bit=llGetAgentInfo(tar);//Are they sitting? @ line 32
         vector pos=llDetectedPos(i);
@@ -237,8 +240,8 @@ Base distance of 10 Meters. 6 Meters or less is 100 damage, over is falloff to 0
         float dist=llVecDist(llGetPos(),pos);
         if(llList2Integer(rc,-1)<1)
         {
-            if(dist<=6)dmg=100;
-            else dmg=90-llRound(((dist-6)*22.5));
+            if(dist<=5)dmg=100;
+            else dmg=100-llRound(((dist-5)*20));
         }
         else dmg=0;
         if(dmg>0)
@@ -249,7 +252,7 @@ Base distance of 10 Meters. 6 Meters or less is 100 damage, over is falloff to 0
             if(dmg>0&&vd==0)
             {
                 integer pass=((integer)("0x" + llGetSubString(tar, 0, 3)) << 16) | dmg;
-                llRezObject("Damage Scaling Killprim",llGetPos(),ZERO_VECTOR,ZERO_ROTATION,pass);
+                llRezObject("[Chaos] Seeking/Scaling Kill Prim",llGetPos(),ZERO_VECTOR,ZERO_ROTATION,pass);
             }
         }
     }
