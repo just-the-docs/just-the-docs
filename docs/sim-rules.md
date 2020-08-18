@@ -163,9 +163,10 @@ A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
 # III. Armour
  (Anything that tracks HP)
 1. Due to inconsistent scripting, people still having their armour and movement functions in the same script, and the fact that it is now a COMMUNITY STANDARD with nearly
-    * every ACTIVE group having adopted it, LBA, LBA Light, and LBA Slim are the ONLY acceptable forms of Armour in this sim.
-    * Future forks of the LBA project are either still in development or not open-sourced well enough and are not allowed at this time.
-    *  LBA Systems must not reduce any damage put into it, except for when the anti-grief system, USING STOCK VALUES, is triggered.
+    * every ACTIVE group having adopted it, LBA Systems Sourced from the **MASTER** branch on the official LBA GitHub Repository are the only accepted armor systems in this Sim. If you are testing an update to one of these systems, please notify the OIC ahead of time. 
+    * Future forks of the LBA project are either still in development or not open-sourced well enough and are not allowed at this time. Unmerged Pull Requests are not officially supported.
+    *  Non-Directional LBA Systems must not reduce any damage put into it, except for when the anti-grief system, USING STOCK VALUES, is triggered.
+    * Directional LBA Modifier number must not Exceed a total of 6.0 when their Modifiers are added up(Example Being that each side of a stock LBA Object has a Base of 1, which adds up to 6. This does not mean you can do something totally stupid and if we see something stupid it will be handled on a case-by-case basis.
 1.LBA Light Systems must accept all collisions over 10 meters a second.
 2. Pure LBA should be reserved for: 
     * TANKS, FLEETSHIPS, AND HEAVY DEPLOYABLE COVER (Bunkers and Walls)
