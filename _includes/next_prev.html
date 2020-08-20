@@ -1,23 +1,14 @@
-{%- assign ordered_pages_list = site.html_pages | where_exp:"item", "item.nav_order != nil" -%}
-{%- assign sorted_ordered_pages_list = ordered_pages_list | sort:"nav_order" -%}
-
 <nav aria-label="Breadcrumb" class="next-prev-nav">
   <ol class="next-prev-nav-list">
-    {%- for node in sorted_ordered_pages_list -%}
-      {%- if node.parent == page.parent} %}
-        {%- assign next_page = page.nav_order | plus: 1 -%}
-        {%- assign previous_page = page.nav_order | minus: 1 -%}
-        {%- if previous_page == node.nav_order -%}
-        <li class="next-prev-nav-list-item">
-          <a href="{{ node.url | absolute_url }}">Previous</a>
-        </li>
-        {%- endif -%}
-        {%- if next_page == node.nav_order -%}
-        <li class="next-prev-nav-list-item">
-          <a href="{{ node.url | absolute_url }}">Next</a> 
-        </li>
-        {%- endif -%}
-      {%- endif -%}
-    {%- endfor -%}
+  {%- if previous_page -%}
+    <li class="next-prev-nav-list-item">
+      <a href="{{ previous_page.url | absolute_url }}">Previous</a>
+    </li>
+  {%- endif -%}
+  {%- if next_page -%}
+    <li class="next-prev-nav-list-item">
+      <a href="{{ next_page.url | absolute_url }}">Next</a> 
+    </li>
+  {%- endif -%}
   </ol>
 </nav>

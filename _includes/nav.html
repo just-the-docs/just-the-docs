@@ -9,9 +9,21 @@
     {%- assign sorted_unordered_pages_list = unordered_pages_list | sort:"title" -%}
   {%- endif -%}
   {%- assign pages_list = sorted_ordered_pages_list | concat: sorted_unordered_pages_list -%}
+  {%- assign previous_page = nil -%}
+  {%- assign next_page = nil -%}
+  {%- assign top_level_prev = nil -%}
+  {%- assign top_level_page = nil -%}
   {%- for node in pages_list -%}
     {%- unless node.nav_exclude -%}
       {%- if node.parent == nil and node.title -%}
+        {%- if page.url == node.url -%}
+          {%- assign previous_page = top_level_prev -%}
+          {%- assign top_level_page = page -%}
+        {%- elsif top_level_page != nil and next_page == nil -%}
+          {%- assign next_page = node -%}
+        {%- else -%}
+          {%- assign top_level_prev = node -%}
+        {%- endif -%}
         <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
           {%- if page.parent == node.title or page.grand_parent == node.title -%}
             {%- assign first_level_url = node.url | absolute_url -%}
@@ -23,8 +35,18 @@
           {%- if node.has_children -%}
             {%- assign children_list = pages_list | where: "parent", node.title -%}
             <ul class="nav-list ">
+            {%- assign child_level_prev = nil -%}
+            {%- assign child_level_page = nil -%}
             {%- for child in children_list -%}
               {%- unless child.nav_exclude -%}
+                {%- if page.url == child.url -%}
+                  {%- assign previous_page = child_level_prev -%}
+                  {%- assign child_level_page = page -%}
+                {%- elsif child_level_page != nil and next_page == nil -%}
+                    {%- assign next_page = child -%}
+                {%- else -%}
+                  {%- assign child_level_prev = child -%}
+                {%- endif -%}
                 <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
                   {%- if page.url == child.url or page.parent == child.title -%}
                     {%- assign second_level_url = child.url | absolute_url -%}
@@ -36,7 +58,17 @@
                   {%- if child.has_children -%}
                     {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title -%}
                     <ul class="nav-list">
+                    {%- assign grand_child_level_prev = nil -%}
+                    {%- assign grand_child_level_page = nil -%}
                     {%- for grand_child in grand_children_list -%}
+                      {%- if page.url == grand_child.url -%}
+                        {%- assign previous_page = grand_child_level_prev -%}
+                        {%- assign grand_child_level_page = page -%}
+                      {%- elsif grand_child_level_page != nil and next_page == nil -%}
+                        {%- assign next_page = grand_child -%}
+                      {%- else -%}
+                        {%- assign grand_child_level_prev = grand_child -%}
+                      {%- endif -%}
                       <li class="nav-list-item {% if page.url == grand_child.url %} active{% endif %}">
                         <a href="{{ grand_child.url | absolute_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
                       </li>
