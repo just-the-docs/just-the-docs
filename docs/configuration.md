@@ -147,6 +147,7 @@ gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
+# gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 ```
 
@@ -154,6 +155,7 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 - `last_edit_time_format` uses Ruby's DateTime formatter; see examples and more information [at this link.](https://apidock.com/ruby/DateTime/strftime)
 - `gh_edit_repository` is the URL of the project's GitHub repository
 - `gh_edit_branch` is the branch that the docs site is served from; defaults to `master`
+- `gh_edit_source` is the source directory that your project files are stored in (should be the same as [site.source](https://jekyllrb.com/docs/configuration/options/))
 - `gh_edit_view_mode` is `"tree"` by default, which brings the user to the github page; switch to `"edit"` to bring the user directly into editing mode
 
 ## Color scheme
