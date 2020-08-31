@@ -35,7 +35,7 @@ Examples of this include:
 6. Renaming equipment to get around the banned equipment enforcer. If it's on that, it's on it for a good reason, and trying to evade it may get your entire raid party griefed.
 7. Engaging people in non combat areas. The VR room is off limits for combat, as is the armoury and AFK room. If people are in these areas, they are busy doing other shit. If you kill people in these areas, you will be removed for a week minimum.
 8. No AOs that are not included in your gun, and absolutely no flippy ninja jump animations. This is SL military army mans, not Magical girl naruto RP.
-
+9. Under no circumstances should you have a video of you punching your own feces.
 # II. Equipment:
 
 (Any device deployed on the field of battle)
