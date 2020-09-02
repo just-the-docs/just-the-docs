@@ -8,6 +8,7 @@
 #   - validator
 #   - converter
 #   - applications
+#   - storage
 
 # Interfaces
 #   - cli
@@ -100,6 +101,16 @@
     - viewer
     - generator
     - converter
+  interface: gui
+  type: app
+
+- name: Measur3D
+  webpage: https://ganys.github.io/Measur3D/
+  description: A light and compact CityJSON management tool. This tool is built as a high-level MERN application. It therefore allows developing with a single language in both server and client side.
+  foss: true
+  category: 
+    - storage
+    - viewer
   interface: gui
   type: app
 

@@ -29,22 +29,23 @@ Software for experimental features can be found in the respective pages of the [
       <th scope="col">Transform</th>
       <th scope="col">Parse/API</th>
       <th scope="col">Validate</th>
+      <th scope="col">Store</th>
     </tr>
   </thead>
   <tbody>
     {% assign software = site.data.software %}
     {% for sf in software %}
       <tr>
-        <th scope="row" style="text-align:left"><a href="{{ sf.webpage }}"><b>{{ sf.name }}</b></a> {% if sf.foss == true %}<img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}</th>
+        <th scope="row" style="text-align:left"><a style="font-size: 13px" href="{{ sf.webpage }}"><b>{{ sf.name }}</b> {% if sf.foss == true %}<img style="height: 13px" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}</a></th>
         <th scope="row">
         {% assign interface = sf.interface %}
         {% case interface %}
             {% when "gui" %}
-                <i class="fas fa-mouse-pointer"></i>
+                <i style="font-size: 11px" class="fas fa-mouse-pointer"></i>
             {% when "cli" %}
-                <i class="fas fa-terminal"></i>
+                <i style="font-size: 11px" class="fas fa-terminal"></i>
             {% when "both" %}
-                <i class="fas fa-laptop-code"></i>
+                <i style="font-size: 11px" class="fas fa-laptop-code"></i>
             {% else %}
         {% endcase %}
         </th>
@@ -52,11 +53,11 @@ Software for experimental features can be found in the respective pages of the [
         {% assign type = sf.type %}
         {% case type %}
             {% when "app" %}
-                <i class="fas fa-desktop"></i>
+                <i style="font-size: 11px" class="fas fa-desktop"></i>
             {% when "lib" %}
-                <i class="fas fa-code"></i>
+                <i style="font-size: 11px" class="fas fa-code"></i>
             {% when "both" %}
-                <i class="fas fa-folder-plus"></i>
+                <i style="font-size: 11px" class="fas fa-folder-plus"></i>
             {% else %}
         {% endcase %}
         </th>
@@ -98,6 +99,13 @@ Software for experimental features can be found in the respective pages of the [
         <th scope="row">
         {% for cat in sf.category %}
             {% if cat contains 'validator' %}
+                <i class="fas fa-certificate"></i>
+            {% endif %}
+        {% endfor %}
+        </th>
+        <th scope="row">
+        {% for cat in sf.category %}
+            {% if cat contains 'storage' %}
                 <i class="fas fa-certificate"></i>
             {% endif %}
         {% endfor %}
@@ -173,7 +181,7 @@ Software for experimental features can be found in the respective pages of the [
 {% endfor %}
 
 - - -
-## DBMS storage
+## Storage
 {% for i in software %}
 {% for cat in i.category %}
 {% if cat contains 'storage' %}
