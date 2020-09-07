@@ -14,18 +14,8 @@ permalink: /datasets/
 
 ---
 
-## Simple geometries
 
-  - [tetra.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/tetra.json) -- a unit cube
-  - [cube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/cube.json) --  a simple tetrahedron
-  - [torus.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/torus.json) -- a unit cube with a genus of one
-  - [msol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/msol.json) -- one MultiSolid: 2 unit cubes that are not adjacent
-  - [csol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/csol.json) -- one CompositeSolid: 2 adjacent unit cubes
-  - [twocube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/twocube.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
-
-For different City Objects (buildings, trees, roads, etc.) and different geometries, see the latest [CityJSON specifications](https://www.cityjson.org/specs/), and to understand how the hierarchical brackets work, see [this guide](https://www.cityjson.org/help/dev/geom-arrays/).
-
-## Datasets converted from CityGML
+## Cities converted from CityGML
 
 {% assign ds = site.data.datasets | sort: 'name' %}
 
@@ -58,7 +48,20 @@ For different City Objects (buildings, trees, roads, etc.) and different geometr
 
 <i class="fas fa-exclamation-circle"></i> Please be aware that we simply converted the datasets as they are (with [citygml-tools](https://github.com/citygml4j/citygml-tools)). Datasets may have errors (most contain geometric errors), we suggest validating the files ([how to do this]({{ '/help/users/validation/' | relative_url }})) before using them.
 
-## Generating automatically your own area
+
+## Simple geometries
+
+  - [tetra.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/tetra.json) -- a unit cube
+  - [cube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/cube.json) --  a simple tetrahedron
+  - [torus.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/torus.json) -- a unit cube with a genus of one
+  - [msol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/msol.json) -- one MultiSolid: 2 unit cubes that are not adjacent
+  - [csol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/csol.json) -- one CompositeSolid: 2 adjacent unit cubes
+  - [twocube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/twocube.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
+
+For different City Objects (buildings, trees, roads, etc.) and different geometries, see the latest [CityJSON specifications](https://www.cityjson.org/specs/), and to understand how the hierarchical brackets work, see [this guide](https://www.cityjson.org/help/dev/geom-arrays/).
+
+
+## Generating automatically your own CityJSON dataset
 
 It is possible to generate automatically a 3D city model in CityJSON with [3dfier](https://github.com/tudelft3d/3dfier), just follow that simple [tutorial](https://tudelft3d.github.io/3dfier/generate_lod1.html).
 
@@ -70,6 +73,8 @@ Every building, every canals, every road, every bridge, in 3D. In CityJSON.
 <a href="https://brt.kadaster.nl/basisvoorziening-3d/"><i class="fas fa-external-link-alt"></i> PDOK 3D Topografie</a>
 
 <i class="fas fa-exclamation-circle"></i> Please be aware that the tiles are very big, and they will most likely bring [ninja](https://ninja.cityjson.org) or QGIS to their knees... The solution for the time being is to use a computer with 16GB+ of RAM, and use [cjio]({{ '/help/users/getting-started/#manipulate-and-edit-it-with-cjio' | relative_url }}) to extract only the buildings for instance. 
+
+
 ## All USA buildings
 
 The project [Open City Model](https://github.com/opencitymodel/opencitymodel) has converted all buildings in the USA to LoD1 buildings and offers them in CityJSON.
@@ -80,4 +85,5 @@ The project [Open City Model](https://github.com/opencitymodel/opencitymodel) ha
 ## Paid datasets <span class="label label-purple">$$$</span>
 
   - [3dcityloader.com](https://3dcityloader.com/) offers an online service where you can download custom areas for a few cities. Areas up to 0.3km² are free of charge.
+
 
