@@ -7,6 +7,7 @@
   gml: Zurich_Building_LoD2_V10.gml
   gml-size: 3030
   # textures: none
+  validity: 76% buildings valid
   details: "Buildings in LoD2"
 
 - name: "Den Haag"
@@ -17,6 +18,7 @@
   gml:  DenHaag_01.xml
   gml-size: 23
   # textures: none
+  validity: 62% features valid
   details: "'Tile 01', Buildings (in LoD2) and Terrain are merged"
 
 - name: Montréal 
@@ -27,6 +29,7 @@
   gml:  VM05_2009.gml
   gml-size: 56
   # textures: none
+  validity: 86% buildings valid
   details: Tile 'VM05'. Buildings in LoD2
 
 - name: New York 
@@ -37,6 +40,7 @@
   gml:  DA13_3D_Buildings_Merged.gml
   gml-size: 590
   # textures: none
+  validity: 99.9% buildings are valid (only 21 are invalid)
   details: Tile 'DA13'. Buildings in LoD2
 
 - name: Rotterdam 
@@ -47,6 +51,7 @@
   gml:  3-20-DELFSHAVEN.xml
   gml-size: 16.0
   textures: 3-20-DELFSHAVEN.zip
+  validity: 76% buildings valid
   details: Neighbourhood 'Delfshaven'. Buildings in LoD2
 
 - name: "Railway" 
@@ -57,6 +62,7 @@
   gml:  LoD3_Railway.gml
   gml-size: 45
   textures: LoD3_Railway.zip
+  validity: 74% features valid
   details: CityGML demo. Buildings, Railway, Terrain, Vegetation (with Implicit Geometries), Water, Tunnels
 
 - name: Vienna 
@@ -67,4 +73,5 @@
   gml:  Vienna_102081.gml
   gml-size: 37
   # textures: none
+  validity: 98.5% buildings valid
   details: Buildings in LoD2  

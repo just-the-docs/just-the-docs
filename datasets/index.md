@@ -25,6 +25,7 @@ permalink: /datasets/
     <td><b>CityGML file (size)</b></td>
     <td><b>CityJSON file (size)</b></td>
     <td><b>textures</b></td>
+    <td><b>validity</b></td>
     <td><b>details</b></td>
   </tr>
   {% for i in ds %}
@@ -39,6 +40,7 @@ permalink: /datasets/
           none
         {% endif %}
       </td>
+      <td>{{ i.validity }}</td>
       <td>{{ i.details }}</td>
     </tr>
   {% endfor %}
@@ -46,7 +48,9 @@ permalink: /datasets/
 
 <i class="fas fa-exclamation-circle"></i> It should be observed that on average CityJSON compresses ~6X a CityGML, and that without any loss of information ([see details](https://github.com/cityjson/specs/wiki/Compression-factor-for-a-few-open-CityGML-datasets)).
 
-<i class="fas fa-exclamation-circle"></i> Please be aware that we simply converted the datasets as they are (with [citygml-tools](https://github.com/citygml4j/citygml-tools)). Datasets may have errors (most contain geometric errors), we suggest validating the files ([how to do this]({{ '/help/users/validation/' | relative_url }})) before using them.
+<i class="fas fa-exclamation-circle"></i> We performed the geometric validation with [val3dity](https://github.com/tudelft3d/val3dity) and report the overall result in the column 'validity'. To understand the errors, we suggest validating the files ([how to do this]({{ '/help/users/validation/' | relative_url }})) yourself.
+
+<i class="fas fa-exclamation-circle"></i> Please be aware that we simply converted the datasets as they are (with [citygml-tools](https://github.com/citygml4j/citygml-tools)). Datasets contain errors.
 
 
 ## Simple geometries
