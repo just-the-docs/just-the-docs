@@ -56,7 +56,7 @@ For different City Objects (buildings, trees, roads, etc.) and different geometr
 
 <i class="fas fa-exclamation-circle"></i> It should be observed that on average CityJSON compresses ~6X a CityGML, and that without any loss of information ([see details](https://github.com/cityjson/specs/wiki/Compression-factor-for-a-few-open-CityGML-datasets)).
 
-<i class="fas fa-exclamation-circle"></i> Please be aware that we simply convert the datasets as they are. Datasets may have errors, we suggest using a [validator](https://www.cityjson.org/software/#validators) to check for issues before using.
+<i class="fas fa-exclamation-circle"></i> Please be aware that we simply converted the datasets as they are (with [citygml-tools](https://github.com/citygml4j/citygml-tools)). Datasets may have errors (most contain geometric errors), we suggest validating the files ([how to do this]({{ '/help/users/validation/' | relative_url }})) before using them.
 
 ## Generating automatically your own area
 
