@@ -75,3 +75,9 @@ Every building, every canals, every road, every bridge, in 3D. In CityJSON.
 The project [Open City Model](https://github.com/opencitymodel/opencitymodel) has converted all buildings in the USA to LoD1 buildings and offers them in CityJSON.
 
 <i class="fas fa-exclamation-circle"></i> Watch out: the coordinates are in (lat, long, meters), which means that there's a mix of units (degrees and meters) and several viewers and processing software do not like this very much...
+
+
+## Paid datasets <span class="label label-purple">$$$</span>
+
+  - [3dcityloader.com](https://3dcityloader.com/) offers an online service where you can download custom areas for a few cities. Areas up to 0.3km² are free of charge.
+
