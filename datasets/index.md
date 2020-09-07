@@ -56,6 +56,8 @@ For different City Objects (buildings, trees, roads, etc.) and different geometr
 
 <i class="fas fa-exclamation-circle"></i> It should be observed that on average CityJSON compresses ~6X a CityGML, and that without any loss of information ([see details](https://github.com/cityjson/specs/wiki/Compression-factor-for-a-few-open-CityGML-datasets)).
 
+<i class="fas fa-exclamation-circle"></i> Please be aware that we simply converted the datasets as they are (with [citygml-tools](https://github.com/citygml4j/citygml-tools)). Datasets may have errors (most contain geometric errors), we suggest validating the files ([how to do this]({{ '/help/users/validation/' | relative_url }})) before using them.
+
 ## Generating automatically your own area
 
 It is possible to generate automatically a 3D city model in CityJSON with [3dfier](https://github.com/tudelft3d/3dfier), just follow that simple [tutorial](https://tudelft3d.github.io/3dfier/generate_lod1.html).
