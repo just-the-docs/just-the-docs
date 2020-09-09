@@ -116,3 +116,5 @@ Simple example with dummy data (no geometries) to describe a scenario with versi
 ## Read More
 
 **A Data Structure to Incorporate Versioning in 3D City Models.** Stelios Vitalis, Anna Labetski, Ken Arroyo Ohori, Hugo Ledoux and Jantien Stoter. 14th 3D GeoInfo Conference 2019, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences IV-4(W8), ISPRS, 2019 [<i class="fas fa-bookmark"></i>](https://doi.org/10.5194/isprs-annals-IV-4-W8-123-2019) [<i class="fas fa-file-pdf"></i>](https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/IV-4-W8/123/2019/)
+
+**CityJSON + web = ninja.** Stelios Vitalis, Anna Labetski, Freek Boersma, Felix Dahle, Xiaoai Li, Ken Arroyo Ohori, Hugo Ledoux and Jantien Stoter. 15th 3D GeoInfo Conference 2020, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences VI-4(W1), ISPRS, 2020 [<i class="fas fa-bookmark"></i>](https://doi.org/10.5194/isprs-annals-VI-4-W1-2020-167-2020) [<i class="fas fa-file-pdf"></i>](https://www.isprs-ann-photogramm-remote-sens-spatial-inf-sci.net/VI-4-W1-2020/167/2020/)
