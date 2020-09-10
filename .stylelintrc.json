@@ -1,10 +1,13 @@
 {
-  "ignoreFiles" : [
-    "assets/css/just-the-docs.scss",
-    "assets/css/dark-mode-preview.scss",
+  "ignoreFiles": [
+    "assets/css/just-the-docs-default.scss",
+    "assets/css/just-the-docs-light.scss",
+    "assets/css/just-the-docs-dark.scss",
     "_sass/vendor/**/*.scss"
   ],
-  "extends": [
-    "stylelint-config-primer"
-  ]
+  "extends": ["stylelint-config-primer", "stylelint-config-prettier"],
+  "plugins": ["stylelint-prettier"],
+  "rules": {
+    "prettier/prettier": true
+  }
 }

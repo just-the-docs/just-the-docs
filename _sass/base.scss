@@ -14,6 +14,7 @@
 
 html {
   @include fs-4;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,25 +25,18 @@ body {
   background-color: $body-background-color;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 ol,
 ul,
+dl,
 pre,
 address,
 blockquote,
-dl,
+table,
 div,
-fieldset,
-form,
 hr,
-noscript,
-table {
+form,
+fieldset,
+noscript .table-wrapper {
   margin-top: 0;
 }
 
@@ -52,14 +46,15 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 1.2em;
-  margin-bottom: 0.8em;
+  margin-top: 0;
+  margin-bottom: 1em;
   font-weight: 500;
   line-height: $body-heading-line-height;
   color: $body-heading-color;
 }
 
 p {
+  margin-top: 1em;
   margin-bottom: 1em;
 }
 
@@ -76,15 +71,17 @@ a:not([class]) {
   background-size: 1px 1px;
 
   &:hover {
-    background-image: linear-gradient(rgba($link-color, 0.45) 0%, rgba($link-color, 0.45) 100%);
+    background-image: linear-gradient(
+      rgba($link-color, 0.45) 0%,
+      rgba($link-color, 0.45) 100%
+    );
     background-size: 1px 1px;
-
   }
 }
 
 code {
   font-family: $mono-font-family;
-  font-size: 12px;
+  font-size: 0.75em;
   line-height: $body-line-height;
 }
 

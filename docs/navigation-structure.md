@@ -38,6 +38,13 @@ nav_order: 4
 ---
 ```
 
+The specified `nav_order` parameters on a site should be all integers or all strings.
+Pages without a `nav_order` parameter are ordered alphabetically by their `title`,
+and appear after the explicitly-ordered pages at each level.
+By default, all Capital letters are sorted before all lowercase letters;
+adding `nav_sort: case_insensitive` in the configuration file ignores case
+when sorting strings (but also sorts numbers lexicographically: `10` comes before `1`).
+
 ---
 
 ## Excluding pages
@@ -190,9 +197,9 @@ This would create the following navigation structure:
 
 ---
 
-## Auxiliary Navigation
+## Auxiliary Links
 
-To add a auxiliary navigation item to your site (in the upper right on all pages), add it to the `aux_nav` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-nav) in your site's `_config.yml` file.
+To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
 
 #### Example
 {: .no_toc }
@@ -224,4 +231,21 @@ To generate a Table of Contents on your docs pages, you can use the `{:toc}` met
 {:toc}
 ```
 
-This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself.
+This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself. To get an unordered list, replace  `1. TOC` above by `- TOC`.
+
+### Collapsible Table of Contents
+
+The Table of Contents can be made collapsible using the `<details>` and `<summary>` elements , as in the following example. The attribute `open` (expands the Table of Contents by default) and the styling with `{: .text-delta }` are optional.
+
+```markdown
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+```
+
+The result is shown at [the top of this page](#navigation-structure) (`{:toc}` can be used only once on each page).

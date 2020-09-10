@@ -1,0 +1,9 @@
+package.json
+package-lock.json
+_site
+assets/css/just-the-docs-default.scss
+assets/css/just-the-docs-light.scss
+assets/css/just-the-docs-dark.scss
+assets/js/vendor/lunr.min.js
+assets/js/search-data.json
+assets/js/just-the-docs.js
