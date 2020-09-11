@@ -27,7 +27,7 @@ following configuration option:
 kramdown:
   syntax_highlighter_opts:
     block:
-      line_numbers: false
+      line_numbers: true
 {% endhighlight %}
 
 Line numbers can then be suppressed locally using Liquid tags (_without_ the
