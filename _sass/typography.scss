@@ -27,6 +27,10 @@ h4,
   letter-spacing: 0.1em;
 }
 
+h4 code {
+  text-transform: none;
+}
+
 h5,
 .text-epsilon {
   @include fs-3;
