@@ -1,86 +1,84 @@
-// Font size
-
 @mixin fs-1 {
-  font-size: 9px !important;
+  font-size: $font-size-1 !important;
 
   @include mq(sm) {
-    font-size: 10px !important;
+    font-size: $font-size-1-sm !important;
   }
 }
 
 @mixin fs-2 {
-  font-size: 11px !important;
+  font-size: $font-size-2 !important;
 
   @include mq(sm) {
-    font-size: 12px !important;
+    font-size: $font-size-3 !important;
   }
 }
 
 @mixin fs-3 {
-  font-size: 12px !important;
+  font-size: $font-size-3 !important;
 
   @include mq(sm) {
-    font-size: 14px !important;
+    font-size: $font-size-4 !important;
   }
 }
 
 @mixin fs-4 {
-  font-size: 15px !important;
+  font-size: $font-size-4 !important;
 
   @include mq(sm) {
-    font-size: 16px !important;
+    font-size: $font-size-5 !important;
   }
 }
 
 @mixin fs-5 {
-  font-size: 16px !important;
+  font-size: $font-size-5 !important;
 
   @include mq(sm) {
-    font-size: 18px !important;
+    font-size: $font-size-6 !important;
   }
 }
 
 @mixin fs-6 {
-  font-size: 18px !important;
+  font-size: $font-size-6 !important;
 
   @include mq(sm) {
-    font-size: 24px !important;
+    font-size: $font-size-7 !important;
     line-height: $body-heading-line-height;
   }
 }
 
 @mixin fs-7 {
-  font-size: 24px !important;
+  font-size: $font-size-7 !important;
   line-height: $body-heading-line-height;
 
   @include mq(sm) {
-    font-size: 32px !important;
+    font-size: $font-size-8 !important;
   }
 }
 
 @mixin fs-8 {
-  font-size: 32px !important;
+  font-size: $font-size-8 !important;
   line-height: $body-heading-line-height;
 
   @include mq(sm) {
-    font-size: 36px !important;
+    font-size: $font-size-9 !important;
   }
 }
 
 @mixin fs-9 {
-  font-size: 36px !important;
+  font-size: $font-size-9 !important;
   line-height: $body-heading-line-height;
 
   @include mq(sm) {
-    font-size: 42px !important;
+    font-size: $font-size-10 !important;
   }
 }
 
 @mixin fs-10 {
-  font-size: 42px !important;
+  font-size: $font-size-10 !important;
   line-height: $body-heading-line-height;
 
   @include mq(sm) {
-    font-size: 48px !important;
+    font-size: $font-size-10-sm !important;
   }
 }
