@@ -1,5 +1,5 @@
 <ul class="nav-list">
-  {%- assign included_pages = site.html_pages
+  {%- assign included_pages = include.pages
         | where_exp:"item", "item.nav_exclude != true"
         | where_exp:"item", "item.title != nil" -%}
 
