@@ -6,7 +6,7 @@ grand_parent: UI Components
 permalink: /docs/ui-components/code/line-numbers/
 ---
 
-# Configuration options
+# Code snippets with line numbers
 
 The default settings for HTML compression are incompatible with the HTML
 produced by Jekyll (4.1.1 or earlier) for line numbers from highlighted code
@@ -40,14 +40,14 @@ Some code
 {% endhighlight %}{% endraw %}
 {% endhighlight %}
 
-# Workarounds
+## Workarounds
 
 To use HTML compression together with line numbers, all highlighted code
 needs to be wrapped using one of the following workarounds.
 (The variable name `some_var` can be changed to avoid clashes; it can also
 be replaced by `code` -- but note that `code=code` cannot be removed).
 
-## Code fences
+### Code fences
 
 {% highlight default %}
 {% raw %}{% capture some_var %}
@@ -59,7 +59,7 @@ Some code
 {% include fix_linenos.html code=some_var %}{% endraw %}
 {% endhighlight %}
 
-## Liquid highlighting
+### Liquid highlighting
 
 {% highlight default %}
 {% raw %}{% capture some_var %}
@@ -74,7 +74,7 @@ _Credit:_ The original version of the above workaround was suggested by
 Dmitry Hrabrov at
 <https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901>.
 
-# Examples
+## Examples
 
 ```
 Some unknown code in fences
