@@ -47,7 +47,7 @@ needs to be wrapped using one of the following workarounds.
 (The variable name `some_var` can be changed to avoid clashes; it can also
 be replaced by `code` -- but note that `code=code` cannot be removed).
 
-### Code fences
+### Code fences (three backticks)
 
 {% highlight default %}
 {% raw %}{% capture some_var %}
@@ -76,7 +76,7 @@ Dmitry Hrabrov at
 
 ## Examples
 
-✅ Using code fences + workaround:
+✅ Using code fences + workaround (will only show line numbers if enabled globally in `_config.yml`):
 
 {% capture code_fence %}
 ```js
