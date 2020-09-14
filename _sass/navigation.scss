@@ -131,6 +131,29 @@
   }
 }
 
+.nav-category {
+  padding-top: $sp-2;
+  padding-right: $gutter-spacing-sm;
+  padding-bottom: $sp-2;
+  padding-left: $gutter-spacing-sm;
+  font-weight: 600;
+  text-align: end;
+  text-transform: uppercase;
+  border-bottom: $border $border-color;
+  @include fs-2;
+
+  @include mq(md) {
+    padding-right: $gutter-spacing;
+    padding-left: $gutter-spacing;
+    margin-top: $gutter-spacing-sm;
+    text-align: start;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
 // Aux nav
 
 .aux-nav {
