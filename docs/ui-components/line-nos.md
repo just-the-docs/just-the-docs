@@ -76,10 +76,10 @@ Dmitry Hrabrov at
 
 ## Examples
 
-```
-Some unknown code in fences
-```
+✅ Using code fences + workaround:
 
+{% highlight default %}
+{% raw %}{% capture code_fence %}
 ```js
 // Javascript code with syntax highlighting in fences
 var fun = function lang(l) {
@@ -87,20 +87,12 @@ var fun = function lang(l) {
   return true;
 }
 ```
-
-```ruby
-# Ruby code with syntax highlighting in fences
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-{% highlight ruby %}
-# Ruby code with syntax highlighting using Liquid
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
+{% endcapture %}
+{% assign code_fence = code_fence | markdownify %}
+{% include fix_linenos.html code=code_fence %}{% endraw %}
 {% endhighlight %}
+
+✅ Using liquid highlighting + workaround:
 
 {% capture code %}
 {% highlight ruby linenos %}
@@ -113,8 +105,8 @@ end
 {% include fix_linenos.html code=code %}
 {% assign code = nil %}
 
-With the default configuration options, the following example illustrates
-the incorrect formatting arising from the incompatibility of HTML compression
+❌ With the default configuration options, the following example illustrates
+the **incorrect** formatting arising from the incompatibility of HTML compression
 and the non-conforming HTML produced by Jekyll for line numbers:
 
 {% highlight ruby linenos %}
