@@ -78,7 +78,7 @@ Dmitry Hrabrov at
 
 ✅ Using code fences + workaround:
 
-{% raw %}{% capture code_fence %}
+{% capture code_fence %}
 ```js
 // Javascript code with syntax highlighting in fences
 var fun = function lang(l) {
@@ -88,7 +88,7 @@ var fun = function lang(l) {
 ```
 {% endcapture %}
 {% assign code_fence = code_fence | markdownify %}
-{% include fix_linenos.html code=code_fence %}{% endraw %}
+{% include fix_linenos.html code=code_fence %}
 
 ✅ Using liquid highlighting + workaround:
 
