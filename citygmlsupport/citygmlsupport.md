@@ -50,7 +50,7 @@ However, they have the same purpose as ADEs, see the [Extensions page]({{ site.b
 
   1. __LoD4 of CityGML,__ which was mostly designed to represent the interior of buildings (including details and furniture). The main reason is that currently there are virtually no datasets having LoD4 buildings. If there is a need in the future, the concepts and the implementation would follow the same rules described above.
   1. __Several CRSs in the same datasets.__ In CityJSON, all geometries in a given CityJSON object must use the same CRS. In CityGML, 3 adjacent buildings can all have different CRSs, and some of the geometries to represent the walls can be in yet another CRS (although admittedly it is seldom used!).
-  1. __Arbitrary coordinate reference systems (CRSs).__ Only an [EPSG code](https://epsg.io) can be used. 
+  1. __Arbitrary coordinate reference systems (CRSs).__ Only an [EPSG code](https://epsg.io) can be used. (For the future, we plan to allow other authorities than only EPSG.)
   1. __Identifiers for low-level geometries.__ In CityGML most objects can have an ID (usually a `gml:id). That is, not only can one building have an ID, but also each of the 3D primitives forming its geometry can have an ID. In CityJSON, only city objects and semantic surfaces can have IDs.
   1. __Raster files for the relief.__ Only TINs are supported.
   1. __CityGML class `GeoreferencedTexture`.__ In the **Appearance** module, the CityGML class `TexCoordGen` is not supported, ie one must specify the UV coordinates in the texture files. 
