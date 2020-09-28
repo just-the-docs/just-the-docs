@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Strings
-parent: Order
+parent: Tests for navigation order
 nav_order: 2
 has_children: true
 ---

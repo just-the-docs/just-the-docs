@@ -1,8 +1,14 @@
 ---
 layout: default
 title: Order
-has_children: true
-nav_order: 110
+parent: Navigation
+grand_parent: Tests
 ---
 
 # Order
+
+- [Default](default/), using `title` instead of `nav_order` fields.
+- [Strings](strings/), lexicographically ordered, possibly case-insensitively.
+- [Integers](integers/), numerically ordered.
+- [Floats](floats/), numerically ordered.
+- [Mixture](mixture/), with numbers before strings.

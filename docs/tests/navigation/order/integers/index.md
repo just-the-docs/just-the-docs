@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Integers
-parent: Order
+parent: Tests for navigation order
 nav_order: 3
 has_children: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Floats
-parent: Order
+parent: Tests for navigation order
 nav_order: 4
 has_children: true
 ---
