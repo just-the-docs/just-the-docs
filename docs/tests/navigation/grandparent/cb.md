@@ -1,7 +1,7 @@
 ---
 layout: default
-title: C
-parent: B
+title: Tests for disambiguation C
+parent: Tests for disambiguation B
 has_children: true
 ---
 
@@ -10,7 +10,7 @@ has_children: true
 A child of page B, and parent of page D
 
 ```yaml
-title: C
-parent: B
+title: Tests for disambiguation C
+parent: Tests for disambiguation B
 has_children: true
 ```

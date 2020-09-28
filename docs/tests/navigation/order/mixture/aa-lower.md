@@ -3,7 +3,7 @@ layout: default
 title: aa
 nav_order: "aa"
 parent: Mixture
-grand_parent: Order
+grand_parent: Tests for order
 ---
 
 # aa
@@ -12,5 +12,5 @@ grand_parent: Order
 title: aa
 nav_order: "aa"
 parent: Mixture
-grand_parent: Order
+grand_parent: Tests for order
 ```

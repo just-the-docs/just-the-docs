@@ -1,8 +1,8 @@
 ---
 layout: default
-title: D
-parent: C
-grand_parent: B
+title: Tests for disambiguation D
+parent: Tests for disambiguation C
+grand_parent: Tests for disambiguation B
 ---
 
 # D
@@ -10,7 +10,7 @@ grand_parent: B
 A grandchild of page B
 
 ```yaml
-title: D
-parent: C
-grand_parent: B
+title: Tests for disambiguation D
+parent: Tests for disambiguation C
+grand_parent: Tests for disambiguation B
 ```

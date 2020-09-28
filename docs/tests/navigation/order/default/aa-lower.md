@@ -2,7 +2,7 @@
 layout: default
 title: aa
 parent: Default
-grand_parent: Order
+grand_parent: Tests for order
 ---
 
 # aa
@@ -10,5 +10,5 @@ grand_parent: Order
 ```yaml
 title: aa
 parent: Default
-grand_parent: Order
+grand_parent: Tests for order
 ```

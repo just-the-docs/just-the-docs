@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Default
-parent: Tests for navigation order
+parent: Tests for order
 nav_order: 1
 has_children: true
 ---

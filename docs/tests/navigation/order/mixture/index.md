@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mixture
-parent: Tests for navigation order
+parent: Tests for order
 nav_order: 5
 has_children: true
 ---

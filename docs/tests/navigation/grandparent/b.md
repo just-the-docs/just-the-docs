@@ -1,6 +1,6 @@
 ---
 layout: default
-title: B
+title: Tests for disambiguation B
 has_children: true
 ---
 
@@ -9,6 +9,6 @@ has_children: true
 A top-level page
 
 ```yaml
-title: B
+title: Tests for disambiguation B
 has_children: true
 ```

@@ -7,26 +7,30 @@ grand_parent: Tests
 
 # Tests for exclusion Exclusion
 
+Pages excluded from the main navigation can have parents and children. Navigation to and between excluded pages can be supported by the auto-generating list of child pages inserted at the bottom of each page, and by links to parents in the breadcrumbs at the top of each page.
+
+The following tests cover all combinations of excluded and included pages for the top level, child pages, and grandchild pages. The last binary digit in a page title indicates whether the page is included (1) or excluded (0); preceding digits refer to its parent and grandparent.
+
 ## Tests for exclusion Included in main navigation
 
-- ["1"](1/)
-- ["11"](11/)
-- ["111"](111/)
+- [Tests for exclusion 1](1/)
+- [Tests for exclusion 11](11/)
+- [Tests for exclusion 111](111/)
 
 ## Tests for exclusion Included only in child navigation
 
-- ["110"](110/)
-- ["10"](10/)
-- ["101"](101/)
-- ["100"](100/)
+- [Tests for exclusion 110](110/)
+- [Tests for exclusion 10](10/)
+- [Tests for exclusion 101](101/)
+- [Tests for exclusion 100](100/)
 
 ## Tests for exclusion Not included in navigation
 
-- ["0"](0/)
-- ["01"](01/)
-- ["011"](011/)
-- ["010"](010/)
-- ["00"](00/)
-- ["001"](001/)
-- ["000"](000/)
+- [Tests for exclusion 0](0/)
+- [Tests for exclusion 01](01/)
+- [Tests for exclusion 011](011/)
+- [Tests for exclusion 010](010/)
+- [Tests for exclusion 00](00/)
+- [Tests for exclusion 001](001/)
+- [Tests for exclusion 000](000/)
 - ["Untitled"](untitled/)
