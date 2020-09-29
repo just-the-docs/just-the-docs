@@ -154,6 +154,41 @@
       visibility: hidden;
     }
   }
+  
+  dd {
+    blockquote,
+    div,
+    dl,
+    dt,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    ol,
+    p,
+    pre,
+    table,
+    ul,
+    .table-wrapper {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  dd, 
+  ol, 
+  ul {
+    dl:first-child {
+      dt:first-child,
+      dd:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+  }
 
   .anchor-heading:hover,
   h1:hover > .anchor-heading,
