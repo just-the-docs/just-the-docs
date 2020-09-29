@@ -24,6 +24,19 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 # Regression tests
 # To include the pages in /_tests, run jekyll with the option `--config _tests_config.yml`
 
+# Define Jekyll collections
+collections:
+  tests:
+    permalink: "/:collection/:path:output_ext"
+    output: true
+
+just_the_docs:
+  collections:
+    tests:
+      name: Tests
+      nav_exclude: false
+      search_exclude: true
+
 # Set a path/url to a logo that will be displayed instead of the title
 #logo: "/assets/images/just-the-docs.png"
 

@@ -48,6 +48,10 @@ layout: table_wrappers
       </a>
     </div>
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      {% assign uncollected = site.html_pages %}
+      {% if uncollected.size > 0 %}
+        {% include nav.html pages=uncollected %}
+      {% endif %}
       {% if site.just_the_docs.collections %}
         {% assign collections_size = site.just_the_docs.collections | size %}
         {% for collection_entry in site.just_the_docs.collections %}
@@ -55,14 +59,12 @@ layout: table_wrappers
           {% assign collection_value = collection_entry[1] %}
           {% assign collection = site[collection_key] %}
           {% if collection_value.nav_exclude != true %}
-            {% if collections_size > 1 %}
+            {% if collections_size > 1 or uncollected.size > 0 %}
               <div class="nav-category">{{ collection_value.name }}</div>
             {% endif %}
             {% include nav.html pages=collection %}
           {% endif %}
         {% endfor %}
-      {% else %}
-        {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
     <footer class="site-footer">
