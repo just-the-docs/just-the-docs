@@ -130,32 +130,6 @@
     grid-column: 2;
     margin-bottom: 0;
     margin-left: 1em;
-  }
-
-  .anchor-heading {
-    position: absolute;
-    right: -$sp-4;
-    width: $sp-5;
-    height: 100%;
-    padding-right: $sp-1;
-    padding-left: $sp-1;
-    overflow: visible;
-
-    @include mq(md) {
-      right: auto;
-      left: -$sp-5;
-    }
-
-    svg {
-      display: inline-block;
-      width: 100%;
-      height: 100%;
-      color: $link-color;
-      visibility: hidden;
-    }
-  }
-  
-  dd {
     blockquote,
     div,
     dl,
@@ -178,15 +152,38 @@
       }
     }
   }
-
-  dd, 
-  ol, 
+  
+  dd,
+  ol,
   ul {
     dl:first-child {
       dt:first-child,
       dd:nth-child(2) {
         margin-top: 0;
       }
+    }
+  }
+
+  .anchor-heading {
+    position: absolute;
+    right: -$sp-4;
+    width: $sp-5;
+    height: 100%;
+    padding-right: $sp-1;
+    padding-left: $sp-1;
+    overflow: visible;
+
+    @include mq(md) {
+      right: auto;
+      left: -$sp-5;
+    }
+
+    svg {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      color: $link-color;
+      visibility: hidden;
     }
   }
 
