@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Navigation
-parent: Tests
+parent: Tests Home
 ---
 
 # Navigation
