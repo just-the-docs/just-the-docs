@@ -147,37 +147,38 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 ## Document collections
 
 By default, the navigation and search include normal [pages](https://jekyllrb.com/docs/pages/).
-Instead, you can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
+You can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
 
-For example, put all your documentation files in the `_docs` folder and create the `docs` collection:
+For example, put all your test files in the `_tests` folder and create the `tests` collection:
 ```yaml
 # Define Jekyll collections
 collections:
-  # Define a collection named "docs", its documents reside in the "_docs" directory
-  docs:
+  # Define a collection named "tests", its documents reside in the "_tests" directory
+  tests:
     permalink: "/:collection/:path/"
     output: true
 
 just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
-    # Reference the "docs" collection
-    docs:
+    # Reference the "tests" collection
+    tests:
       # Give the collection a name
-      name: Documentation
+      name: Tests
       # Exclude the collection from the navigation
       # Supports true or false (default)
-      nav_exclude: false
+      # nav_exclude: true
       # Exclude the collection from the search
       # Supports true or false (default)
-      search_exclude: false
+      # search_exclude: true
 ```
+The navigation for all your normal pages (if any) is displayed before those in collections.
 
 You can reference multiple collections.
 This creates categories in the navigation with the configured names.
 ```yaml
 collections:
-  docs:
+  tests:
     permalink: "/:collection/:path/"
     output: true
   tutorials:
@@ -186,9 +187,11 @@ collections:
 
 just_the_docs:
   collections:
-    docs:
-      name: Documentation
+    tests:
+      name: Tests
     tutorials:
       name: Tutorials
 ```
+When *all* your pages are in a single collection, its name is not displayed.
 
+The navigation for each collection is a separate name space for page titles: a page in one collection cannot be a child of a page in a different collection, or of a normal page.
