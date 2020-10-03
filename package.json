@@ -10,7 +10,7 @@
     "prettier": "^2.1.1",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-primer": "^9.0.0",
+    "stylelint-config-primer": "^9.2.1",
     "stylelint-prettier": "^1.1.2",
     "stylelint-selector-no-utility": "^4.0.0"
   },
