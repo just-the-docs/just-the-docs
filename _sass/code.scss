@@ -52,6 +52,7 @@ div.highlighter-rouge {
   border-radius: $border-radius;
   box-shadow: none;
   -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 
   div.highlight,
   pre.highlight,
