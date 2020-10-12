@@ -11,6 +11,11 @@ code {
   border-radius: $border-radius;
 }
 
+// Avoid appearance of dark border around visited code links in Safari
+a:visited code {
+  border-color: $border-color;
+}
+
 // Content structure for highlighted code blocks using fences or Liquid
 //
 // ```[LANG]...```, no kramdown line_numbers:
