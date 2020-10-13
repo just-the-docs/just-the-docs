@@ -2,7 +2,7 @@
 layout: default
 title: A
 parent: Mixture
-grand_parent: Order
+grand_parent: Tests for order
 ---
 
 # A
@@ -10,5 +10,5 @@ grand_parent: Order
 ```yaml
 title: A
 parent: Mixture
-grand_parent: Order
+grand_parent: Tests for order
 ```

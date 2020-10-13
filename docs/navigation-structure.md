@@ -66,7 +66,9 @@ nav_exclude: true
 ---
 ```
 
-Pages with no `title` are automatically excluded from the navigation.
+The `nav_exclude` parameter does not affect the [auto-generating list of child pages](#auto-generating-table-of-contents), which you can use to access pages excluded from the main navigation.
+
+Pages with no `title` are automatically excluded from the navigation. 
 
 ---
 

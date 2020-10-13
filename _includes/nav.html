@@ -1,6 +1,5 @@
 <ul class="nav-list">
-  {%- assign included_pages = include.pages
-        | where_exp:"item", "item.nav_exclude != true"
+  {%- assign titled_pages = include.pages
         | where_exp:"item", "item.title != nil" -%}
 
   {%- comment -%}
@@ -15,9 +14,9 @@
     The case-sensitivity of string sorting is determined by `site.nav_sort`.
   {%- endcomment -%}
   
-  {%- assign string_ordered_pages = included_pages
+  {%- assign string_ordered_pages = titled_pages
         | where_exp:"item", "item.nav_order == nil" -%}
-  {%- assign nav_ordered_pages = included_pages
+  {%- assign nav_ordered_pages = titled_pages
         | where_exp:"item", "item.nav_order != nil"  -%}
 
   {%- comment -%}
@@ -60,10 +59,8 @@
   
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
+      {%- unless node.nav_exclude -%}
       <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
-        {%- if page.parent == node.title or page.grand_parent == node.title -%}
-          {%- assign first_level_url = node.url | absolute_url -%}
-        {%- endif -%}
         {%- if node.has_children -%}
           <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
         {%- endif -%}
@@ -72,10 +69,8 @@
           {%- assign children_list = pages_list | where: "parent", node.title -%}
           <ul class="nav-list ">
           {%- for child in children_list -%}
+            {%- unless child.nav_exclude -%}
             <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
-              {%- if page.url == child.url or page.parent == child.title -%}
-                {%- assign second_level_url = child.url | absolute_url -%}
-              {%- endif -%}
               {%- if child.has_children -%}
                 <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
               {%- endif -%}
@@ -84,17 +79,21 @@
                 {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title -%}
                 <ul class="nav-list">
                 {%- for grand_child in grand_children_list -%}
+                  {%- unless grand_child.nav_exclude -%}
                   <li class="nav-list-item {% if page.url == grand_child.url %} active{% endif %}">
                     <a href="{{ grand_child.url | absolute_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
                   </li>
+                  {%- endunless -%}
                 {%- endfor -%}
                 </ul>
               {%- endif -%}
             </li>
+            {%- endunless -%}
           {%- endfor -%}
           </ul>
         {%- endif -%}
       </li>
+      {%- endunless -%}
     {%- endif -%}
   {%- endfor -%}
 </ul>
