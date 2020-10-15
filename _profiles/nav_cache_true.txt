@@ -7,66 +7,66 @@ Configuration file: /Users/pdm/Projects/GitHub/just-the-docs/_include_tests.yml
 
 Build Process Summary: 
 
-| PHASE      |   TIME |
-+------------+--------+
-| RESET      | 0.0004 |
-| READ       | 0.4096 |
-| GENERATE   | 0.0000 |
-| RENDER     | 8.5469 |
-| CLEANUP    | 0.0063 |
-| WRITE      | 0.0629 |
-+------------+--------+
-| TOTAL TIME | 9.0261 |
+| PHASE      |    TIME |
++------------+---------+
+| RESET      |  0.0004 |
+| READ       |  0.3525 |
+| GENERATE   |  0.0000 |
+| RENDER     | 13.4824 |
+| CLEANUP    |  0.0059 |
+| WRITE      |  0.0552 |
++------------+---------+
+| TOTAL TIME | 13.8964 |
  
 
 Site Render Stats: 
 
 | Filename                                 | Count |     Bytes |   Time |
 +------------------------------------------+-------+-----------+--------+
-| _includes/nav/links.html                 |   506 |  1664.86K |  6.471 |
-| _layouts/default.html                    |    86 |  1978.16K |  5.757 |
-| _includes/nav/main.html                  |    86 |  1147.02K |  5.312 |
-| _includes/nav/collection.html            |    86 |  1147.02K |  4.760 |
-| _includes/nav/node.html                  |  1837 |   859.29K |  4.513 |
-| _includes/nav/page.html                  |   409 |     0.00K |  1.816 |
-| _includes/nav/children.html              |  3374 |     0.00K |  1.334 |
-| _includes/nav/sorted.html                |   654 |     0.00K |  0.998 |
-| _layouts/vendor/compress.html            |    86 |  1811.34K |  0.807 |
-| _includes/nav/node_inactive.html         |   237 |    80.15K |  0.652 |
-| _includes/nav/links_inactive.html        |    64 |    56.14K |  0.433 |
-| _includes/head.html                      |    86 |   151.87K |  0.207 |
-| assets/js/zzzz-search-data.json          |     1 |    89.33K |  0.162 |
-| _includes/vendor/anchor_headings.html    |    86 |   216.09K |  0.102 |
-| _includes/nav/toc.html                   |    86 |     9.52K |  0.016 |
-| _layouts/table_wrappers.html             |    86 |  1979.22K |  0.013 |
-| docs/ui-components/line-nos.md           |     1 |     6.00K |  0.008 |
-| assets/css/just-the-docs-default.css.map |     1 |   192.82K |  0.007 |
-| docs/ui-components/buttons.md            |     1 |     2.31K |  0.006 |
-| _includes/nav/crumbs.html                |    69 |    29.63K |  0.006 |
-| _includes/title.html                     |    86 |     1.51K |  0.004 |
-| _includes/footer_custom.html             |    86 |    17.30K |  0.004 |
-| assets/css/just-the-docs-dark.scss       |     1 |     0.11K |  0.004 |
+| _includes/nav/links.html                 |  3407 |  6301.36K | 29.174 |
+| _includes/nav/node.html                  |  6478 |  5543.64K | 24.998 |
+| _layouts/default.html                    |   106 |  3177.73K | 10.594 |
+| _includes/nav/main.html                  |   106 |  2138.46K |  9.998 |
+| _includes/nav/collection.html            |   212 |  2134.63K |  9.829 |
+| _includes/nav/page.html                  |   947 |     0.00K |  3.187 |
+| _includes/nav/children.html              | 10102 |     0.00K |  2.616 |
+| _includes/nav/sorted.html                |  3698 |     0.00K |  2.332 |
+| _layouts/vendor/compress.html            |   106 |  2957.33K |  1.103 |
+| _includes/nav/node_inactive.html         |   358 |   181.72K |  1.078 |
+| _includes/nav/links_inactive.html        |   185 |   164.31K |  1.039 |
+| _includes/head.html                      |   106 |   206.79K |  0.340 |
+| assets/js/zzzz-search-data.json          |     1 |    63.20K |  0.117 |
+| _includes/vendor/anchor_headings.html    |   106 |   241.39K |  0.116 |
+| _layouts/table_wrappers.html             |   106 |  3178.75K |  0.017 |
+| _includes/nav/toc.html                   |   106 |    13.63K |  0.016 |
+| docs/ui-components/line-nos.md           |     1 |     6.00K |  0.015 |
+| _includes/nav/crumbs.html                |    94 |    54.96K |  0.014 |
+| docs/ui-components/code.md               |     1 |     3.29K |  0.010 |
+| _includes/title.html                     |   106 |     1.86K |  0.005 |
+| _includes/footer_custom.html             |   106 |    21.32K |  0.005 |
 | assets/js/just-the-docs.js               |     1 |    14.44K |  0.004 |
-| _includes/css/just-the-docs.scss.liquid  |     3 |     0.33K |  0.002 |
-| docs/ui-components/code.md               |     1 |     3.29K |  0.002 |
-| assets/css/just-the-docs-light.css.map   |     1 |   192.82K |  0.002 |
+| assets/css/just-the-docs-dark.scss       |     1 |     0.11K |  0.004 |
 | assets/css/just-the-docs-dark.css.map    |     1 |   193.32K |  0.002 |
-| _includes/head_custom.html               |    86 |     0.00K |  0.001 |
-| _includes/header_custom.html             |    86 |     0.00K |  0.001 |
+| assets/css/just-the-docs-default.css.map |     1 |   192.82K |  0.002 |
+| assets/css/just-the-docs-light.css.map   |     1 |   192.82K |  0.002 |
+| _includes/css/just-the-docs.scss.liquid  |     3 |     0.33K |  0.002 |
+| _includes/head_custom.html               |   106 |     0.00K |  0.001 |
 | index.md                                 |     1 |     3.26K |  0.001 |
+| _includes/header_custom.html             |   106 |     0.00K |  0.001 |
+| docs/ui-components/buttons.md            |     1 |     2.31K |  0.001 |
 | _includes/fix_linenos.html               |     2 |     1.89K |  0.001 |
+| docs/navigation-structure.md             |     1 |     9.80K |  0.001 |
 | docs/ui-components/typography.md         |     1 |     3.45K |  0.001 |
 | docs/configuration.md                    |     1 |     6.19K |  0.000 |
 | assets/css/just-the-docs-default.scss    |     1 |     0.11K |  0.000 |
-| docs/navigation-structure.md             |     1 |     7.11K |  0.000 |
-| assets/css/just-the-docs-light.scss      |     1 |     0.11K |  0.000 |
 | 404.html                                 |     1 |     0.23K |  0.000 |
+| assets/css/just-the-docs-light.scss      |     1 |     0.11K |  0.000 |
 | docs/search.md                           |     1 |     3.07K |  0.000 |
-| _includes/css/custom.scss.liquid         |     3 |     0.08K |  0.000 |
 | docs/customization.md                    |     1 |     2.86K |  0.000 |
+| _includes/css/custom.scss.liquid         |     3 |     0.08K |  0.000 |
 | _includes/js/custom.js                   |     1 |     0.00K |  0.000 |
 +------------------------------------------+-------+-----------+--------+
-| TOTAL (for 42 files)                     |  8209 | 11872.27K | 33.407 |
+| TOTAL (for 42 files)                     | 26674 | 27017.59K | 96.622 |
  
-                    done in 9.091 seconds.
+                    done in 14.023 seconds.
  Auto-regeneration: disabled. Use --watch to enable.
