@@ -1,0 +1,73 @@
+Configuration file: /Users/pdm/Projects/GitHub/just-the-docs/_config.yml
+Configuration file: /Users/pdm/Projects/GitHub/just-the-docs/_include_tests.yml
+Configuration file: /Users/pdm/Projects/GitHub/just-the-docs/_nav_cache_false.yml
+            Source: /Users/pdm/Projects/GitHub/just-the-docs
+       Destination: /Users/pdm/Projects/GitHub/just-the-docs/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+
+Build Process Summary: 
+
+| PHASE      |    TIME |
++------------+---------+
+| RESET      |  0.0003 |
+| READ       |  0.3415 |
+| GENERATE   |  0.0000 |
+| RENDER     | 10.6115 |
+| CLEANUP    |  0.0056 |
+| WRITE      |  0.0510 |
++------------+---------+
+| TOTAL TIME | 11.0099 |
+ 
+
+Site Render Stats: 
+
+| Filename                                 | Count |     Bytes |   Time |
++------------------------------------------+-------+-----------+--------+
+| _includes/nav/links.html                 |  1605 |  2574.18K | 13.060 |
+| _includes/nav/node.html                  |  6094 |  2531.86K | 10.263 |
+| _layouts/default.html                    |    86 |  1978.16K |  8.238 |
+| _includes/nav/main.html                  |    86 |  1147.02K |  7.835 |
+| _includes/nav/collection.html            |    86 |  1147.02K |  7.329 |
+| _includes/nav/children.html              |  7492 |     0.00K |  2.412 |
+| _includes/nav/page.html                  |   409 |     0.00K |  1.663 |
+| _includes/nav/sorted.html                |  1718 |     0.00K |  1.641 |
+| _layouts/vendor/compress.html            |    86 |  1811.34K |  0.728 |
+| _includes/head.html                      |    86 |   151.87K |  0.193 |
+| assets/js/zzzz-search-data.json          |     1 |    89.33K |  0.140 |
+| _includes/nav/links_inactive.html        |    29 |    23.07K |  0.129 |
+| _includes/vendor/anchor_headings.html    |    86 |   216.09K |  0.093 |
+| _includes/nav/node_inactive.html         |    98 |    22.30K |  0.091 |
+| _includes/nav/toc.html                   |    86 |     9.52K |  0.012 |
+| _layouts/table_wrappers.html             |    86 |  1979.22K |  0.011 |
+| docs/ui-components/line-nos.md           |     1 |     6.00K |  0.009 |
+| _includes/nav/crumbs.html                |    69 |    29.63K |  0.005 |
+| _includes/title.html                     |    86 |     1.51K |  0.004 |
+| _includes/footer_custom.html             |    86 |    17.30K |  0.004 |
+| assets/js/just-the-docs.js               |     1 |    14.44K |  0.004 |
+| assets/css/just-the-docs-dark.scss       |     1 |     0.11K |  0.003 |
+| docs/ui-components/code.md               |     1 |     3.29K |  0.002 |
+| assets/css/just-the-docs-light.css.map   |     1 |   192.82K |  0.002 |
+| assets/css/just-the-docs-dark.css.map    |     1 |   193.32K |  0.002 |
+| assets/css/just-the-docs-default.css.map |     1 |   192.82K |  0.002 |
+| _includes/css/just-the-docs.scss.liquid  |     3 |     0.33K |  0.002 |
+| _includes/head_custom.html               |    86 |     0.00K |  0.001 |
+| docs/ui-components/buttons.md            |     1 |     2.31K |  0.001 |
+| _includes/fix_linenos.html               |     2 |     1.89K |  0.001 |
+| index.md                                 |     1 |     3.26K |  0.001 |
+| _includes/header_custom.html             |    86 |     0.00K |  0.001 |
+| docs/navigation-structure.md             |     1 |     7.11K |  0.001 |
+| docs/configuration.md                    |     1 |     6.19K |  0.001 |
+| docs/ui-components/typography.md         |     1 |     3.45K |  0.000 |
+| assets/css/just-the-docs-default.scss    |     1 |     0.11K |  0.000 |
+| assets/css/just-the-docs-light.scss      |     1 |     0.11K |  0.000 |
+| 404.html                                 |     1 |     0.23K |  0.000 |
+| docs/search.md                           |     1 |     3.07K |  0.000 |
+| docs/customization.md                    |     1 |     2.86K |  0.000 |
+| _includes/css/custom.scss.liquid         |     3 |     0.08K |  0.000 |
+| _includes/js/custom.js                   |     1 |     0.00K |  0.000 |
++------------------------------------------+-------+-----------+--------+
+| TOTAL (for 42 files)                     | 18573 | 14363.24K | 53.883 |
+ 
+                    done in 11.116 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
