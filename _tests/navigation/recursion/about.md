@@ -46,7 +46,7 @@ It implements the following features:
 
 * If you want the navigation structure in different parts of your website to look the same, you can add the title of the top page of each part as the `ancestor` of all its sub-pages. 
 
-* Instead of using `ancestor`, you can set an arbitrary number or string as the `section_id` for each part, and add it as the `section` field on all the descendant pages of that part.
+* Instead of using `ancestor`, you can set an arbitrary number or string as the `section_id` for each part, and add it as the `in_section` field on all the descendant pages of that part.
 
 ## Implementation overview
 
