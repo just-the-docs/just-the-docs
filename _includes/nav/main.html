@@ -1,0 +1,40 @@
+{%- comment -%}
+  {%- include nav/main.html -%}
+  outputs links for the main navigation. It also locates the current page in the
+  navigation hierarchy, and assigns to the variables `nav_page_ancestors`,
+  `nav_page_path`, and `nav_page_children`.
+  
+  `nav/main` first outputs the main navigation for pages not in any collection.
+  It then outputs the main navigation for the pages in each collection (preceded
+  by the name of the collection, unless all pages are in a single collection.)
+{%- endcomment -%}
+
+{%- assign pages_top_size = site.html_pages
+    | where_exp:"item", "item.title != nil"
+    | where_exp:"item", "item.parent != nil"
+    | where_exp:"item", "item.nav_exclude != true"
+    | size -%}
+{%- if pages_top_size > 0 -%}
+  {%- include nav/collection.html
+        pages = site.html_pages
+        key = nil -%}
+{%- endif -%}
+
+{%- if site.just_the_docs.collections -%}
+  {%- assign collections_size = site.just_the_docs.collections | size -%}
+  {%- for collection_entry in site.just_the_docs.collections -%}
+
+    {%- assign collection_key = collection_entry[0] -%}
+    {%- assign collection_value = collection_entry[1] -%}
+    {%- assign collection = site[collection_key] -%}
+    {%- if collection_value.nav_exclude != true -%}
+      {%- if collections_size > 1 or pages_top_size > 0 -%}
+        <div class="nav-category">{{ collection_value.name }}</div>
+      {%- endif -%}
+      {%- include nav/collection.html
+            pages = collection
+            key = collection_key -%}
+    {%- endif -%}
+
+  {%- endfor -%}
+{%- endif -%}

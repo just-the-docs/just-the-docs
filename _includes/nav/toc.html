@@ -1,0 +1,21 @@
+{%- comment -%}
+  {%- include nav/toc.html
+        nodes = array -%}
+  outputs a table of contents with navigation links to the nodes, unless empty.
+  The heading for the table can be configured by setting `site.toc_heading`.
+{%- endcomment -%}
+
+{%- if include.nodes.size >= 1 -%}
+  <hr>
+  <h2 class="text-delta">{{ site.toc_heading | default: "Table of contents" }}</h2>
+  <ul>
+    {%- for node in include.nodes -%}
+      <li>
+        <a href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+        {%- if node.summary -%}
+          - {{ node.summary }}
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

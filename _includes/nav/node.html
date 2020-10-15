@@ -1,0 +1,45 @@
+{%- comment -%}
+  {%- include nav/node.html 
+        node = node
+        path = string 
+        in_section = value_or_nil
+        pages = array
+        active = bool -%}
+  outputs links for the node and its children.
+{%- endcomment -%}
+
+{%- if node.section_id -%}
+  {%- assign nav_section = node.section_id -%}
+{%- else -%}
+  {%- assign nav_section = include.in_section -%}
+{%- endif -%}
+
+{%- include nav/children.html 
+      node = include.node
+      path = include.path
+      in_section = nav_section -%}
+
+<li class="nav-list-item{% if include.active %} active{% endif %}">
+
+  {%- if nav_children.size >= 1 -%}
+    <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+  {%- endif -%}
+
+  <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if include.active %} active{% endif %}">{{ node.title }}</a>
+
+  {%- if nav_children.size >= 1 -%}
+    {%- if nav_page_path == include.path -%}
+      {%- include nav/links_inactive.html
+            nodes = nav_children
+            path = include.path
+            in_section = nav_section
+            pages = include.pages -%}
+    {%- else -%}
+      {%- include nav/links.html
+            nodes = nav_children
+            path = include.path
+            in_section = nav_section
+            pages = include.pages -%}
+    {%- endif -%}
+  {%- endif -%}
+</li>

@@ -1,0 +1,66 @@
+{%- comment -%}
+  {%- include nav/page.html 
+        direct = bool
+        nodes = array 
+        ancestors = array
+        path = string 
+        in_section = value_or_nil -%}
+  searches for the location of the current page in the part of the navigation
+  for the `nodes` parameter, using `nav_parenthood` for finding child pages.
+  When the current page is located, `nav/page` assigns values to
+  `nav_page_ancestors`, `nav_page_path`, and `nav_page_children`.
+  
+  When `direct` is false, the search is exhaustive; otherwise it is directed by
+  the directory hierarchy. (An outer `docs` directory is ignored, which supports
+  sites where documentation pages are kept separately from source code pages.)
+{%- endcomment -%}
+
+{%- unless nav_page_path -%}
+  {%- for node in include.nodes -%}
+
+    {%- assign node_dir_list = node.path | split: "/" -%}
+    {%- if node_dir_list.first == "docs" -%}
+      {%- assign node_dir = node_dir_list | shift | pop | join: "/" -%}
+    {%- else -%}
+      {%- assign node_dir = node_dir_list | pop | join: "/" -%}
+    {%- endif -%}
+
+    {%- if nav_page_dir contains node_dir or include.direct == false -%}
+      
+      {%- if node.section_id -%}
+        {%- assign nav_section = node.section_id -%}
+      {%- else -%}
+        {%- assign nav_section = include.in_section -%}
+      {%- endif -%}
+      
+      {%- include nav/children.html 
+            node = node
+            path = include.path
+            in_section = nav_section
+            parenthood = nav_parenthood -%}
+      
+      {%- assign nav_path =  include.path | append: "^" | append: node.title -%}
+      
+      {%- if node.url == page.url -%}
+        {%- assign nav_page_ancestors = include.ancestors -%}
+        {%- assign nav_page_path = nav_path -%}
+        {%- assign nav_direct = true -%}
+        {%- include nav/sorted.html
+              nodes = nav_children -%}
+        {%- assign nav_page_children = nav_sorted -%}
+        {%- break -%}
+      {%- endif -%}
+      
+      {%- if nav_children.size >= 1 -%}
+        {%- assign nav_children_ancestors = include.ancestors | push: node -%}
+        {%- include nav/page.html
+              direct = include.direct
+              nodes = nav_children
+              ancestors = nav_children_ancestors
+              path = nav_path
+              in_section = nav_section -%}
+      {%- endif -%}
+    
+    {%- endif -%}
+  {%- endfor -%}
+{%- endunless -%}

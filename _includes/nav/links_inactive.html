@@ -1,0 +1,26 @@
+{%- comment -%}
+  {%- include nav/links_inactive.html 
+        nodes = array 
+        path = string 
+        in_section = value_or_nil
+        pages = array -%}
+  outputs links for inactive nodes and their children.
+{%- endcomment -%}
+
+{%- include nav/sorted.html
+      nodes = include.nodes -%}
+  
+<ul class="nav-list">
+{%- for node in nav_sorted -%}
+  {%- unless node.nav_exclude == true -%}
+    
+    {%- include nav/node_inactive.html
+          node = node
+          path = include.path
+          in_section = include.in_section
+          pages = include.pages
+          cached = false -%}
+    
+  {%- endunless -%}
+{%- endfor -%}
+</ul>

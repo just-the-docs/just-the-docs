@@ -1,0 +1,44 @@
+{%- comment -%}
+  {%- include nav/links.html 
+        nodes = array 
+        path = string 
+        in_section = value_or_nil
+        pages = array -%}
+  outputs links for non-excluded nodes and their children. The links for an
+  inactive node are independent of the path to the current page, but only those
+  for top-level nodes are cached.
+{%- endcomment -%}
+
+{%- include nav/sorted.html
+      nodes = include.nodes -%}
+  
+<ul class="nav-list">
+{%- for node in nav_sorted -%}
+  {%- unless node.nav_exclude == true -%}
+
+    {%- assign nav_path =  include.path | append: "^" | append: node.title -%}
+    {%- if nav_page_path contains nav_path -%}
+      {%- assign nav_active = true -%}
+    {%- else -%}
+      {%- assign nav_active = false -%}
+    {%- endif -%}
+
+    {%- if nav_active or site.nav_cache == false or node.parent -%}
+      {%- include nav/node.html
+            node = node
+            path = nav_path
+            in_section = include.in_section
+            pages = include.pages
+            active = nav_active -%}
+    {%- else -%}
+      {%- include_cached nav/node_inactive.html
+            node = node
+            path = nav_path
+            in_section = include.in_section
+            pages = include.pages
+            cached = true -%}
+    {%- endif -%}
+
+  {%- endunless -%}
+{%- endfor -%}
+</ul>

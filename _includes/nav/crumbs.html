@@ -1,0 +1,19 @@
+{%- comment -%}
+  {%- include nav/crumbs.html
+        nodes = array -%}
+  outputs breadcrumb navigation links for the nodes, and the title of the
+  current page.
+{%- endcomment -%}
+
+<nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+    {%- for node in include.nodes -%}
+    <li class="breadcrumb-nav-list-item">
+      <a href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+    </li>
+    {%- endfor -%}
+    <li class="breadcrumb-nav-list-item">
+      <span>{{ page.title }}</span>
+    </li>
+  </ol>
+</nav>

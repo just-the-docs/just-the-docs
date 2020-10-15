@@ -1,0 +1,4 @@
+# Configuration addition to disable caching of navigation links
+# Use jekyll option --config _config.yml,_nav_cache_false.yml
+
+nav_cache: false

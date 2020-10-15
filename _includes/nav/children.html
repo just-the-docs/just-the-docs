@@ -1,0 +1,38 @@
+{%- comment -%}
+  {%- include nav/children.html
+      node = node
+      path = string
+      in_section = value_or_nil -%}
+  assigns to `nav_children` an unsorted array containing children of `node`,
+  including `child` when all its specified disambiguation fields match:
+  - `child.grand_parent == node.parent`,
+  - `child.in_section == in_section`, and
+  - `path contains child.ancestor`.
+{%- endcomment -%}
+
+{%- assign nav_candidates = nav_parenthood
+      | where: "name", include.node.title | map: "items" | first -%}
+{%- assign nav_children = "" | split: "X" -%}
+
+{%- for child in nav_candidates -%}
+  {%- assign nav_child_ok = true -%}
+
+  {%- if child.grand_parent and child.grand_parent != include.node.parent -%}
+    {%- assign nav_child_ok = false -%}
+  {%- endif -%}
+
+  {%- if child.in_section and child.in_section != include.in_section -%}
+    {%- assign nav_child_ok = false -%}
+  {%- endif -%}
+
+  {%- if child.ancestor -%}
+    {%- assign nav_child_ancestor_title = "^" | append: child.ancestor -%}
+    {%- unless include.path contains nav_child_ancestor_title -%}
+      {%- assign nav_child_ok = false -%}
+    {%- endunless -%}
+  {%- endif -%}
+
+  {%- if nav_child_ok -%}
+    {%- assign nav_children = nav_children | push: child -%}
+  {%- endif -%}
+{%- endfor -%}

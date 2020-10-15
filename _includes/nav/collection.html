@@ -1,0 +1,74 @@
+{%- comment -%}
+  {%- include nav/collection.html 
+        pages = array
+        key = name_or_nil -%}
+  outputs the main navigation links for `pages`. It also assigns arrays of pages
+  to variables inspected by `nav/crumbs` and `nav/toc`.
+  
+  When `key` is `nil`, `pages` is `site.html_pages`; otherwise `key` is the name
+  of a collection, and `pages` are the pages of that collection. (Pages without
+  a `title` are automatically excluded in the former case, but Jekyll provides
+  default titles for pages in collections, so their untitled pages are not
+  automatically excluded.)
+  
+  `collection` first groups `pages` by their `parent` fields, creating an
+  unsorted array of hashes, assigned to `nav_parenthood`.
+  
+  When `pages` contains the current `page`, `collection` calls `nav/page` to 
+  search for the navigation path to `page`, then:
+  - assigns to `nav_page_path` the string of page titles leading to `page`,
+  - assigns to `nav_page_ancestors` the array of ancestors of `page`, and
+  - assigns  to `nav_page_children` the array of children of `page`.
+
+  When pages are stored in folders whose nesting corresponds to the parent
+  relation, only nodes whose folder path is a prefix of `page.path` need to be
+  searched. For larger sites, using folder paths to direct searching for `page`
+  can exponentially reduce the build time. To avoid dependence on assumptions
+  about the folders used to store pages, however, exhaustive search is needed
+  as a fall-back when directed search fails.
+  
+  Finally, `collection` outputs the main navigation links for `pages`. 
+  
+  The presence of navigation expanders requires the navigation links for the
+  entire site to be output on every page. To reduce build time, the navigation
+  links for inactive top-level nodes are cached. (It would be possible to cache
+  also the navigation links for inactive lower-level nodes, but that does not
+  reduce the build time signficantly.)
+{%- endcomment -%}
+
+{%- assign nav_parenthood = include.pages
+      | where_exp: "item", "item.title != nil" | group_by: "parent" -%}
+
+{%- assign nav_top_nodes = nav_parenthood
+      | where_exp: "item", "item.name == ''" | map: "items" | first -%}
+
+{%- assign nav_page_path = nil -%}
+
+{%- if include.key == nil or include.key == page.collection -%}
+
+  {%- assign nav_page_dir = page.path | split: "/" | pop | join: "/" -%}
+  {%- assign nav_ancestors = "" | split: "X" -%}
+
+  {%- include nav/page.html
+        direct = true
+        nodes = nav_top_nodes
+        ancestors = nav_ancestors
+        path = "^"
+        in_section = nil -%}
+
+  {%- unless nav_page_path -%}
+    {%- include nav/page.html
+          direct = false
+          nodes = nav_top_nodes
+          ancestors = nav_ancestors
+          path = "^"
+          in_section = nil -%}
+  {%- endunless -%}
+  
+{%- endif -%}
+
+{%- include nav/links.html
+      nodes = nav_top_nodes
+      path = "^" 
+      in_section = nil
+      pages = include.pages -%}
