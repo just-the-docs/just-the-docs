@@ -16,6 +16,9 @@ nav_order: 1
 ## Contents
 {: .no_toc .text-delta }
 
+1. TOC
+{:toc}
+
 ## The Big 4
 
   We as Epsilon firmly believe in giving people chances at proper conduct and behavior, and strive to provide people second chances even based on past actions in the SLMC. Sometimes the extent of those actions extend beyond even our ability to brush it aside. The following are cases that will result in a permanent ban from Araxia and all Epsilon associated regions.
