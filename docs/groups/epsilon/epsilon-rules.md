@@ -9,17 +9,17 @@ nav_order: 1
 # Epsilon Security Consulting Rules of Engagement [27SEP2020]
 {: .no_toc }
 
-## Common Sense Statute
+# Common Sense Statute
 
   We're all about having fun here, so we keep the rules pretty limited, don't make us change that. Attempts to circumvent the rules through loopholes or through attempts at rule lawyering will result in finding yourself returned to a safehub. Please don't be a pain in the ass.
 
-## Contents
+# Contents
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
-## The Big 4
+# The Big 4
 
   We as Epsilon firmly believe in giving people chances at proper conduct and behavior, and strive to provide people second chances even based on past actions in the SLMC. Sometimes the extent of those actions extend beyond even our ability to brush it aside. The following are cases that will result in a permanent ban from Araxia and all Epsilon associated regions.
   
@@ -28,7 +28,7 @@ nav_order: 1
     • Content Theft via abuse of permissions failures or copybotting and/or distribution of ill gotten content
     • Mass abuse reporting
   
-## General Conduct
+# General Conduct
 
 1. Client Side Assists - Usage of Wireframe, Hitboxes or disabling of prejump are forbidden. If the question is risen that these are in use, they will be requested to be disabled or the offending user will be placed upon an auto returner or autokiller until compliance is met. Further refusal will result in a temporary timeout. 
 
@@ -102,7 +102,7 @@ nav_order: 1
 6. NPCs - NPCs are permitted on a case by case basis. HP is limited to 25 LBA-L. Ask the defending OIC for approval. 
 
 
-## Banned Equipment
+# Banned Equipment
 
   If an item is on this list it is likely considered to be super fucking lame or just generally pointless to be used in the current day and age. There are some cases of simply untrustworthy creators that may also be added to this list or removed as trustworthiness is established.
   
