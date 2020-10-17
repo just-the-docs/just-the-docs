@@ -1,5 +1,5 @@
 # Configuration addition to include regression tests
-# Use jekyll option --config _config.yml,_include_tests.yml
+# Use jekyll option --config _config.yml,_tests.yml
 
 collections:
   tests:
