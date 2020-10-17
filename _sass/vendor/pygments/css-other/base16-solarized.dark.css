@@ -1,0 +1,74 @@
+/*
+
+    Name:       Base16 Solarized Dark
+    Author:     Ethan Schoonover (http://ethanschoonover.com/solarized)
+
+    Pygments template by Jan T. Sott (https://github.com/idleberg)
+    Created with Base16 Builder by Chris Kempson (https://github.com/chriskempson/base16-builder)
+
+*/
+.syntax .hll { background-color: #586e75 }
+.syntax  { background: #002b36; color: #fdf6e3 }
+.syntax .c { color: #657b83 } /* Comment */
+.syntax .err { color: #dc322f } /* Error */
+.syntax .k { color: #6c71c4 } /* Keyword */
+.syntax .l { color: #cb4b16 } /* Literal */
+.syntax .n { color: #fdf6e3 } /* Name */
+.syntax .o { color: #2aa198 } /* Operator */
+.syntax .p { color: #fdf6e3 } /* Punctuation */
+.syntax .cm { color: #657b83 } /* Comment.Multiline */
+.syntax .cp { color: #657b83 } /* Comment.Preproc */
+.syntax .c1 { color: #657b83 } /* Comment.Single */
+.syntax .cs { color: #657b83 } /* Comment.Special */
+.syntax .gd { color: #dc322f } /* Generic.Deleted */
+.syntax .ge { font-style: italic } /* Generic.Emph */
+.syntax .gh { color: #fdf6e3; font-weight: bold } /* Generic.Heading */
+.syntax .gi { color: #859900 } /* Generic.Inserted */
+.syntax .gp { color: #657b83; font-weight: bold } /* Generic.Prompt */
+.syntax .gs { font-weight: bold } /* Generic.Strong */
+.syntax .gu { color: #2aa198; font-weight: bold } /* Generic.Subheading */
+.syntax .kc { color: #6c71c4 } /* Keyword.Constant */
+.syntax .kd { color: #6c71c4 } /* Keyword.Declaration */
+.syntax .kn { color: #2aa198 } /* Keyword.Namespace */
+.syntax .kp { color: #6c71c4 } /* Keyword.Pseudo */
+.syntax .kr { color: #6c71c4 } /* Keyword.Reserved */
+.syntax .kt { color: #b58900 } /* Keyword.Type */
+.syntax .ld { color: #859900 } /* Literal.Date */
+.syntax .m { color: #cb4b16 } /* Literal.Number */
+.syntax .s { color: #859900 } /* Literal.String */
+.syntax .na { color: #268bd2 } /* Name.Attribute */
+.syntax .nb { color: #fdf6e3 } /* Name.Builtin */
+.syntax .nc { color: #b58900 } /* Name.Class */
+.syntax .no { color: #dc322f } /* Name.Constant */
+.syntax .nd { color: #2aa198 } /* Name.Decorator */
+.syntax .ni { color: #fdf6e3 } /* Name.Entity */
+.syntax .ne { color: #dc322f } /* Name.Exception */
+.syntax .nf { color: #268bd2 } /* Name.Function */
+.syntax .nl { color: #fdf6e3 } /* Name.Label */
+.syntax .nn { color: #b58900 } /* Name.Namespace */
+.syntax .nx { color: #268bd2 } /* Name.Other */
+.syntax .py { color: #fdf6e3 } /* Name.Property */
+.syntax .nt { color: #2aa198 } /* Name.Tag */
+.syntax .nv { color: #dc322f } /* Name.Variable */
+.syntax .ow { color: #2aa198 } /* Operator.Word */
+.syntax .w { color: #fdf6e3 } /* Text.Whitespace */
+.syntax .mf { color: #cb4b16 } /* Literal.Number.Float */
+.syntax .mh { color: #cb4b16 } /* Literal.Number.Hex */
+.syntax .mi { color: #cb4b16 } /* Literal.Number.Integer */
+.syntax .mo { color: #cb4b16 } /* Literal.Number.Oct */
+.syntax .sb { color: #859900 } /* Literal.String.Backtick */
+.syntax .sc { color: #fdf6e3 } /* Literal.String.Char */
+.syntax .sd { color: #657b83 } /* Literal.String.Doc */
+.syntax .s2 { color: #859900 } /* Literal.String.Double */
+.syntax .se { color: #cb4b16 } /* Literal.String.Escape */
+.syntax .sh { color: #859900 } /* Literal.String.Heredoc */
+.syntax .si { color: #cb4b16 } /* Literal.String.Interpol */
+.syntax .sx { color: #859900 } /* Literal.String.Other */
+.syntax .sr { color: #859900 } /* Literal.String.Regex */
+.syntax .s1 { color: #859900 } /* Literal.String.Single */
+.syntax .ss { color: #859900 } /* Literal.String.Symbol */
+.syntax .bp { color: #fdf6e3 } /* Name.Builtin.Pseudo */
+.syntax .vc { color: #dc322f } /* Name.Variable.Class */
+.syntax .vg { color: #dc322f } /* Name.Variable.Global */
+.syntax .vi { color: #dc322f } /* Name.Variable.Instance */
+.syntax .il { color: #cb4b16 } /* Literal.Number.Integer.Long */

@@ -1,0 +1,14 @@
+.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #ffffff; }
+.highlight .c { color: #a9a9a9 } /* Comment */
+.highlight .cm { color: #a9a9a9 } /* Comment.Multiline */
+.highlight .cp { color: #a9a9a9 } /* Comment.Preproc */
+.highlight .c1 { color: #a9a9a9 } /* Comment.Single */
+.highlight .cs { color: #a9a9a9 } /* Comment.Special */
+.highlight .gd { font-weight: bold } /* Generic.Deleted */
+.highlight .gr { background-color: #ff0000 } /* Generic.Error */
+.highlight .gi { font-weight: bold; background-color: #90ee90 } /* Generic.Inserted */
+.highlight .gt { color: #ffffff; font-weight: bold; background-color: #FF6C60 } /* Generic.Traceback */
+.highlight .na { color: #FFD2A7 } /* Name.Attribute */
+.highlight .nf { color: #FFD2A7 } /* Name.Function */
+.highlight .ow { color: #6699CC } /* Operator.Word */

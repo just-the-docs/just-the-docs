@@ -1,0 +1,74 @@
+/*
+
+    Name:       Base16 London Tube Light
+    Author:     Jan T. Sott
+
+    Pygments template by Jan T. Sott (https://github.com/idleberg)
+    Created with Base16 Builder by Chris Kempson (https://github.com/chriskempson/base16-builder)
+
+*/
+.syntax .hll { background-color: #e7e7e8 }
+.syntax  { background: #ffffff; color: #231f20 }
+.syntax .c { color: #959ca1 } /* Comment */
+.syntax .err { color: #ee2e24 } /* Error */
+.syntax .k { color: #98005d } /* Keyword */
+.syntax .l { color: #f386a1 } /* Literal */
+.syntax .n { color: #231f20 } /* Name */
+.syntax .o { color: #85cebc } /* Operator */
+.syntax .p { color: #231f20 } /* Punctuation */
+.syntax .cm { color: #959ca1 } /* Comment.Multiline */
+.syntax .cp { color: #959ca1 } /* Comment.Preproc */
+.syntax .c1 { color: #959ca1 } /* Comment.Single */
+.syntax .cs { color: #959ca1 } /* Comment.Special */
+.syntax .gd { color: #ee2e24 } /* Generic.Deleted */
+.syntax .ge { font-style: italic } /* Generic.Emph */
+.syntax .gh { color: #231f20; font-weight: bold } /* Generic.Heading */
+.syntax .gi { color: #00853e } /* Generic.Inserted */
+.syntax .gp { color: #959ca1; font-weight: bold } /* Generic.Prompt */
+.syntax .gs { font-weight: bold } /* Generic.Strong */
+.syntax .gu { color: #85cebc; font-weight: bold } /* Generic.Subheading */
+.syntax .kc { color: #98005d } /* Keyword.Constant */
+.syntax .kd { color: #98005d } /* Keyword.Declaration */
+.syntax .kn { color: #85cebc } /* Keyword.Namespace */
+.syntax .kp { color: #98005d } /* Keyword.Pseudo */
+.syntax .kr { color: #98005d } /* Keyword.Reserved */
+.syntax .kt { color: #ffd204 } /* Keyword.Type */
+.syntax .ld { color: #00853e } /* Literal.Date */
+.syntax .m { color: #f386a1 } /* Literal.Number */
+.syntax .s { color: #00853e } /* Literal.String */
+.syntax .na { color: #009ddc } /* Name.Attribute */
+.syntax .nb { color: #231f20 } /* Name.Builtin */
+.syntax .nc { color: #ffd204 } /* Name.Class */
+.syntax .no { color: #ee2e24 } /* Name.Constant */
+.syntax .nd { color: #85cebc } /* Name.Decorator */
+.syntax .ni { color: #231f20 } /* Name.Entity */
+.syntax .ne { color: #ee2e24 } /* Name.Exception */
+.syntax .nf { color: #009ddc } /* Name.Function */
+.syntax .nl { color: #231f20 } /* Name.Label */
+.syntax .nn { color: #ffd204 } /* Name.Namespace */
+.syntax .nx { color: #009ddc } /* Name.Other */
+.syntax .py { color: #231f20 } /* Name.Property */
+.syntax .nt { color: #85cebc } /* Name.Tag */
+.syntax .nv { color: #ee2e24 } /* Name.Variable */
+.syntax .ow { color: #85cebc } /* Operator.Word */
+.syntax .w { color: #231f20 } /* Text.Whitespace */
+.syntax .mf { color: #f386a1 } /* Literal.Number.Float */
+.syntax .mh { color: #f386a1 } /* Literal.Number.Hex */
+.syntax .mi { color: #f386a1 } /* Literal.Number.Integer */
+.syntax .mo { color: #f386a1 } /* Literal.Number.Oct */
+.syntax .sb { color: #00853e } /* Literal.String.Backtick */
+.syntax .sc { color: #231f20 } /* Literal.String.Char */
+.syntax .sd { color: #959ca1 } /* Literal.String.Doc */
+.syntax .s2 { color: #00853e } /* Literal.String.Double */
+.syntax .se { color: #f386a1 } /* Literal.String.Escape */
+.syntax .sh { color: #00853e } /* Literal.String.Heredoc */
+.syntax .si { color: #f386a1 } /* Literal.String.Interpol */
+.syntax .sx { color: #00853e } /* Literal.String.Other */
+.syntax .sr { color: #00853e } /* Literal.String.Regex */
+.syntax .s1 { color: #00853e } /* Literal.String.Single */
+.syntax .ss { color: #00853e } /* Literal.String.Symbol */
+.syntax .bp { color: #231f20 } /* Name.Builtin.Pseudo */
+.syntax .vc { color: #ee2e24 } /* Name.Variable.Class */
+.syntax .vg { color: #ee2e24 } /* Name.Variable.Global */
+.syntax .vi { color: #ee2e24 } /* Name.Variable.Instance */
+.syntax .il { color: #f386a1 } /* Literal.Number.Integer.Long */
