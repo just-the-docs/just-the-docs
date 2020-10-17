@@ -109,7 +109,7 @@
 
   dl {
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template: auto / 10em 1fr;
   }
 
   dt,
@@ -118,16 +118,50 @@
   }
 
   dt {
+    grid-column: 1;
+    font-weight: 500;
     text-align: right;
-
     &::after {
       content: ":";
     }
   }
 
   dd {
+    grid-column: 2;
+    margin-bottom: 0;
     margin-left: 1em;
-    font-weight: 500;
+    blockquote,
+    div,
+    dl,
+    dt,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    ol,
+    p,
+    pre,
+    table,
+    ul,
+    .table-wrapper {
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  dd,
+  ol,
+  ul {
+    dl:first-child {
+      dt:first-child,
+      dd:nth-child(2) {
+        margin-top: 0;
+      }
+    }
   }
 
   .anchor-heading {

@@ -12,8 +12,21 @@ namespace :search do
 permalink: /assets/js/search-data.json
 ---
 {
-  {%- assign i = 0 -%}
-  {% for page in site.html_pages %}
+{%- assign i = 0 -%}
+{%- assign pages_array = '' | split: '' -%}
+{%- assign pages_array = pages_array | push: site.html_pages -%}
+{%- if site.just_the_docs.collections -%}
+  {%- for collection_entry in site.just_the_docs.collections -%}
+    {%- assign collection_key = collection_entry[0] -%}
+    {%- assign collection_value = collection_entry[1] -%}
+    {%- assign collection = site[collection_key] -%}
+    {%- if collection_value.search_exclude != true -%}
+      {%- assign pages_array = pages_array | push: collection -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+{%- for pages in pages_array -%}
+  {%- for page in pages -%}
     {%- if page.title and page.search_exclude != true -%}
       {%- assign page_content = page.content -%}
       {%- assign heading_level = site.search.heading_level | default: 2 -%}
@@ -24,7 +37,7 @@ permalink: /assets/js/search-data.json
       {%- endfor -%}
       {%- assign parts = page_content | split: \'<h1\' -%}
       {%- assign title_found = false -%}
-      {% for part in parts offset: 1 %}
+      {%- for part in parts offset: 1 -%}
         {%- assign titleAndContent = part | split: \'</h1>\' -%}
         {%- assign title = titleAndContent[0] | replace_first: \'>\', \'<h1>\' | split: \'<h1>\' -%}
         {%- assign title = title[1] | strip_html -%}
@@ -47,7 +60,7 @@ permalink: /assets/js/search-data.json
     "doc": {{ page.title | jsonify }},
     "title": {{ title | jsonify }},
     "content": {{ content | replace: \'</h\', \' . </h\' | replace: \'<hr\', \' . <hr\' | replace: \'</p\', \' . </p\' | replace: \'<ul\', \' . <ul\' | replace: \'</ul\', \' . </ul\' | replace: \'<ol\', \' . <ol\' | replace: \'</ol\', \' . </ol\' | replace: \'</tr\', \' . </tr\' | replace: \'<li\', \' | <li\' | replace: \'</li\', \' | </li\' | replace: \'</td\', \' | </td\' | replace: \'<td\', \' | <td\' | replace: \'</th\', \' | </th\' | replace: \'<th\', \' | <th\' | strip_html | remove: \'Table of contents\' | normalize_whitespace | replace: \'. . .\', \'.\' | replace: \'. .\', \'.\' | replace: \'| |\', \'|\' | append: \' \' | jsonify }},
-    "url": "{{ url | absolute_url }}",
+    "url": "{{ url | relative_url }}",
     "relUrl": "{{ url }}"
   }
         {%- assign i = i | plus: 1 -%}
@@ -58,13 +71,14 @@ permalink: /assets/js/search-data.json
     "doc": {{ page.title | jsonify }},
     "title": {{ page.title | jsonify }},
     "content": {{ parts[0] | replace: \'</h\', \' . </h\' | replace: \'<hr\', \' . <hr\' | replace: \'</p\', \' . </p\' | replace: \'<ul\', \' . <ul\' | replace: \'</ul\', \' . </ul\' | replace: \'<ol\', \' . <ol\' | replace: \'</ol\', \' . </ol\' | replace: \'</tr\', \' . </tr\' | replace: \'<li\', \' | <li\' | replace: \'</li\', \' | </li\' | replace: \'</td\', \' | </td\' | replace: \'<td\', \' | <td\' | replace: \'</th\', \' | </th\' | replace: \'<th\', \' | <th\' | strip_html | remove: \'Table of contents\' | normalize_whitespace | replace: \'. . .\', \'.\' | replace: \'. .\', \'.\' | replace: \'| |\', \'|\' | append: \' \' | jsonify }},
-    "url": "{{ page.url | absolute_url }}",
+    "url": "{{ page.url | relative_url }}",
     "relUrl": "{{ page.url }}"
   }
         {%- assign i = i | plus: 1 -%}
       {%- endunless -%}
     {%- endif -%}
-  {% endfor %}
+  {%- endfor -%}
+{%- endfor %}
 }'
     end
     puts 'Done.'

@@ -284,13 +284,13 @@
     background-color: $search-background-color;
 
     @include mq(md) {
-      padding-left: #{$sp-4 * 1.25 + $sp-5};
+      padding-left: 2.3rem;
     }
   }
 
   .search-label {
     @include mq(md) {
-      padding-left: #{$sp-4 * 1.25};
+      padding-left: 0.6rem;
     }
   }
 
