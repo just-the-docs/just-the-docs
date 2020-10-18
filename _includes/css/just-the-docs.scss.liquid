@@ -2,6 +2,15 @@
 $logo: "{{ site.logo | absolute_url }}";
 {% endif %}
 @import "./support/support";
+{% if include.color_scheme == "light-or-dark" %}
+@import "./color_schemes/light";
+@import "./modules";
+@media (prefers-color-scheme: dark) {
+  @import "./color_schemes/dark";
+  @import "./modules";
+}
+{% else %}
 @import "./color_schemes/{{ include.color_scheme }}";
 @import "./modules";
+{% endif %}
 {% include css/custom.scss.liquid %}

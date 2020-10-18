@@ -118,8 +118,9 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 ## Color scheme
 
 ```yaml
-# Color scheme supports "light" (default) and "dark"
-color_scheme: dark
+# Color scheme supports "dark", "light"/nil (default), or a custom scheme that you define
+# The scheme "light-or-dark" switches between "light" and "dark" with the system setting
+color_scheme: light-or-dark
 ```
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
@@ -195,4 +196,3 @@ just_the_docs:
     tutorials:
       name: Tutorials
 ```
-

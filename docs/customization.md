@@ -21,7 +21,7 @@ nav_order: 6
 New
 {: .label .label-green }
 
-Just the Docs supports two color schemes: light (default), and dark.
+Just the Docs supports two color schemes: `light` (default), and `dark`. The scheme `light-or-dark` uses the `light` or `dark` scheme according to the system setting.
 
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
 
@@ -29,8 +29,7 @@ To enable a color scheme, set the `color_scheme` parameter in your site's `_conf
 {: .no_toc }
 
 ```yaml
-# Color scheme supports "light" (default) and "dark"
-color_scheme: dark
+color_scheme: light-or-dark
 ```
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
