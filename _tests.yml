@@ -1,0 +1,16 @@
+# Regression tests
+# To include the pages in /_tests in the build, run jekyll with the option
+# --config _config.yml,_tests.yml
+
+# Define Jekyll collections
+collections:
+  tests:
+    permalink: "/:collection/:path:output_ext"
+    output: true
+
+just_the_docs:
+  collections:
+    tests:
+      name: Tests
+      nav_exclude: false
+      search_exclude: true
