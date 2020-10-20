@@ -32,9 +32,12 @@
   {%- endif -%}
   
   <a href="{{ node.url | absolute_url }}" class="nav-list-link">{{ node.title }}</a>
-  
+
+{%- capture nav_newline %}
+{% endcapture -%}
+
   {%- if nav_children.size >= 1 -%}
-    {%- assign nav_path =  include.path | append: "^" | append: node.title -%}
+    {%- assign nav_path =  include.path | append: node.title | append: nav_newline -%}
     {%- include nav/links_inactive.html
           nodes = nav_children
           path = nav_path

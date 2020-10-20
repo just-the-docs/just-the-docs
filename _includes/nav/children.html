@@ -25,8 +25,11 @@
     {%- assign nav_child_ok = false -%}
   {%- endif -%}
 
+{%- capture nav_newline %}
+{% endcapture -%}
+
   {%- if child.ancestor -%}
-    {%- assign nav_child_ancestor_title = "^" | append: child.ancestor | append: "^" -%}
+    {%- assign nav_child_ancestor_title = nav_newline | append: child.ancestor | append: nav_newline -%}
     {%- unless include.path contains nav_child_ancestor_title -%}
       {%- assign nav_child_ok = false -%}
     {%- endunless -%}

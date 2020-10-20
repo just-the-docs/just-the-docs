@@ -38,8 +38,11 @@
             path = include.path
             in_section = nav_section
             parenthood = nav_parenthood -%}
-      
-      {%- assign nav_path =  include.path | append: node.title | append: "^" -%}
+
+{%- capture nav_newline %}
+{% endcapture -%}
+    
+      {%- assign nav_path =  include.path | append: node.title | append: nav_newline -%}
       
       {%- if node.url == page.url -%}
         {%- assign nav_page_ancestors = include.ancestors -%}

@@ -49,11 +49,14 @@
   {%- assign nav_page_dir = page.path | split: "/" | pop | join: "/" -%}
   {%- assign nav_ancestors = "" | split: "X" -%}
 
+{%- capture nav_newline %}
+{% endcapture -%}
+
   {%- include nav/page.html
         direct = true
         nodes = nav_top_nodes
         ancestors = nav_ancestors
-        path = "^"
+        path = nav_newline
         in_section = nil -%}
 
   {%- unless nav_page_path -%}
@@ -61,7 +64,7 @@
           direct = false
           nodes = nav_top_nodes
           ancestors = nav_ancestors
-          path = "^"
+          path = nav_newline
           in_section = nil -%}
   {%- endunless -%}
   
@@ -69,6 +72,6 @@
 
 {%- include nav/links.html
       nodes = nav_top_nodes
-      path = "^" 
+      path = nav_newline 
       in_section = nil
       pages = include.pages -%}

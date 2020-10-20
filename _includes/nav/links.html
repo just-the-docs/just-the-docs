@@ -16,7 +16,10 @@
 {%- for node in nav_sorted -%}
   {%- unless node.nav_exclude == true -%}
 
-    {%- assign nav_path =  include.path | append: node.title | append: "^" -%}
+{%- capture nav_newline %}
+{% endcapture -%}
+
+    {%- assign nav_path =  include.path | append: node.title | append: nav_newline -%}
     {%- if nav_page_path contains nav_path -%}
       {%- assign nav_active = true -%}
     {%- else -%}
