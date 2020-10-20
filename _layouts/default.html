@@ -48,7 +48,22 @@ layout: table_wrappers
       </a>
     </div>
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
-      {% include nav.html %}
+      {% if site.just_the_docs.collections %}
+        {% assign collections_size = site.just_the_docs.collections | size %}
+        {% for collection_entry in site.just_the_docs.collections %}
+          {% assign collection_key = collection_entry[0] %}
+          {% assign collection_value = collection_entry[1] %}
+          {% assign collection = site[collection_key] %}
+          {% if collection_value.nav_exclude != true %}
+            {% if collections_size > 1 %}
+              <div class="nav-category">{{ collection_value.name }}</div>
+            {% endif %}
+            {% include nav.html pages=collection %}
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {% include nav.html pages=site.html_pages %}
+      {% endif %}
     </nav>
     <footer class="site-footer">
       This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
@@ -65,6 +80,7 @@ layout: table_wrappers
           <div id="search-results" class="search-results"></div>
         </div>
       {% endif %}
+      {% include header_custom.html %}
       {% if site.aux_links %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
@@ -86,6 +102,21 @@ layout: table_wrappers
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
         {% if page.parent %}
+          {%- for node in pages_list -%}
+            {%- if node.parent == nil -%}
+              {%- if page.parent == node.title or page.grand_parent == node.title -%}
+                {%- assign first_level_url = node.url | absolute_url -%}
+              {%- endif -%}
+              {%- if node.has_children -%}
+                {%- assign children_list = pages_list | where: "parent", node.title -%}
+                {%- for child in children_list -%}
+                  {%- if page.url == child.url or page.parent == child.title -%}
+                    {%- assign second_level_url = child.url | absolute_url -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
             <ol class="breadcrumb-nav-list">
               {% if page.grand_parent %}
@@ -101,7 +132,7 @@ layout: table_wrappers
       {% endunless %}
       <div id="main-content" class="main-content" role="main">
         {% if site.heading_anchors != false %}
-          {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" %}
+          {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
         {% else %}
           {{ content }}
         {% endif %}
@@ -119,15 +150,17 @@ layout: table_wrappers
           </ul>
         {% endif %}
 
-        {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
+        {% capture footer_custom %}
+          {%- include footer_custom.html -%}
+        {% endcapture %}
+        {% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link %}
           <hr>
           <footer>
             {% if site.back_to_top %}
               <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
             {% endif %}
-            {% if site.footer_content != nil %}
-              <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
-            {% endif %}
+
+            {{ footer_custom }}
 
             {% if site.last_edit_timestamp or site.gh_edit_link %}
               <div class="d-flex mt-2">
@@ -144,7 +177,7 @@ layout: table_wrappers
                   site.gh_edit_view_mode
                 %}
                   <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
+                    <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
                   </p>
                 {% endif %}
               </div>

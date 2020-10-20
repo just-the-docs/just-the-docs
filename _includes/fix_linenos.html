@@ -1,0 +1,65 @@
+{%- comment -%}
+This file can be used to fix the HTML produced by Jekyll for highlighted
+code with line numbers.
+
+It works with `{% highlight some_language linenos %}...{% endhighlight %}`
+and with the Kramdown option to add line numbers to fenced code.
+
+The implementation was derived from the workaround provided by 
+Dmitry Hrabrov (DeXP) at
+https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+
+EXPLANATION
+
+The HTML produced by Rouge highlighting with lie numbers is of the form
+`code table`. Jekyll (<= 4.1.1) always wraps the highlighted HTML
+with `pre`. This wrapping is not only unnecessary, but also transforms
+the conforming HTML produced by Rouge to non-conforming HTML, which
+results in HTML validation error reports. 
+
+The fix removes the outer `pre` tags whenever they contain the pattern
+`<table class="rouge-table">`.
+  
+Apart from avoiding HTML validation errors, the fix allows the use of
+the [Jekyll layout for compressing HTML](http://jch.penibelst.de),
+which relies on `pre` tags not being nested, according to
+https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-172069842 
+
+USAGE
+
+(Any names can be used for `some_var` and `some_language`.)
+
+{% capture some_var %}
+{% highlight some_language linenos %}
+Some code
+{% endhighlight %}
+{% endcapture %}
+{% include fix_linenos.html code=some_var %}
+
+For code fences:
+
+{% capture some_var %}
+```some_language
+Some code
+```
+{% endcapture %}
+{% assign some_var = some_var | markdownify %}
+{% include fix_linenos.html code=some_var %}
+
+CAVEATS
+
+The above does not work when `Some code` happens to contain the matched string 
+`<table class="rouge-table">`.
+
+The use of this file overwrites the variable `fix_linenos_code` with `nil`.
+
+{%- endcomment -%}
+
+{% assign fix_linenos_code = include.code %}
+{% if fix_linenos_code contains '<table class="rouge-table">' %}
+  {% assign fix_linenos_code = fix_linenos_code | replace: '<pre class="highlight">', '<pre>' %}
+  {% assign fix_linenos_code = fix_linenos_code | replace: "<pre><code", "<code" %}
+  {% assign fix_linenos_code = fix_linenos_code | replace: "</code></pre>", "</code>" %}
+{% endif %}
+{{ fix_linenos_code }}
+{% assign fix_linenos_code = nil %}

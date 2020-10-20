@@ -2,13 +2,31 @@
 // Typography
 //
 
-$body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue",
-  helvetica, roboto, noto, "segoe ui", arial, sans-serif !default;
+$body-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace !default;
 $root-font-size: 16px !default; // Base font-size for rems
 $body-line-height: 1.4 !default;
 $content-line-height: 1.6 !default;
 $body-heading-line-height: 1.25 !default;
+
+//
+// Font size
+// `-sm` suffix is the size at the small (and above) media query
+//
+
+$font-size-1: 9px !default;
+$font-size-1-sm: 10px !default;
+$font-size-2: 11px !default; //h4 - uppercased!, h6 not uppercased, text-small
+$font-size-3: 12px !default; //h5
+$font-size-4: 14px !default;
+$font-size-5: 16px !default; //h3
+$font-size-6: 18px !default; //h2
+$font-size-7: 24px !default;
+$font-size-8: 32px !default; //h1
+$font-size-9: 36px !default;
+$font-size-10: 42px !default;
+$font-size-10-sm: 48px !default;
 
 //
 // Colors

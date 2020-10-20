@@ -33,6 +33,10 @@ Or install it yourself as:
 
     $ gem install just-the-docs
 
+Alternatively, you can run it inside Docker while developing your site
+
+    $ docker-compose up
+
 ## Usage
 
 [View the documentation](https://pmarsceill.github.io/just-the-docs/) for usage information.
