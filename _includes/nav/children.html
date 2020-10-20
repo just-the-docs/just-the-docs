@@ -26,7 +26,7 @@
   {%- endif -%}
 
   {%- if child.ancestor -%}
-    {%- assign nav_child_ancestor_title = "^" | append: child.ancestor -%}
+    {%- assign nav_child_ancestor_title = "^" | append: child.ancestor | append: "^" -%}
     {%- unless include.path contains nav_child_ancestor_title -%}
       {%- assign nav_child_ok = false -%}
     {%- endunless -%}
