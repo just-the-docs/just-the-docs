@@ -1,6 +1,6 @@
 ---
 title: First
-parent: First Last
+parent: First^Last
 ---
 
 # First
