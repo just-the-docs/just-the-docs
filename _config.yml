@@ -20,7 +20,7 @@ url: "https://pmarsceill.github.io" # the base hostname & protocol for your site
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
-, "docs/tests/"
+# , "docs/tests/"
 ]
 
 # Regression tests
@@ -99,6 +99,47 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
 color_scheme: nil
+
+# Callouts
+# The title of a callout is optional, and rendered in uppercase.
+# The variables $color-000, $color-100, $color-200, $color-300 are required.
+# Predefined colors: grey-lt, grey-dk, purple, blue, green, yellow, red.
+# The names of callouts need to avoid the class names used in the theme CSS!
+# - avoid btn, highlight, icon, label, main, search, and hyphenated words.
+# Common names for callouts:
+# admonition, attention, caution, danger, error, hint, important, note, tip, warning.
+callouts:
+  admonition:
+    # title:
+    color: grey-lt
+  attention:
+    title: Attention
+    color: purple
+    opacity: 0.3
+  caution:
+    title: Caution
+    color: yellow
+  danger:
+    title: Danger
+    color: red
+  error:
+    title: Error
+    color: red
+  hint:
+    title: Hint
+    color: grey-dk
+  important:
+    title: Important
+    color: green
+  note:
+    title: Note
+    color: blue
+  tip:
+    title: Tip
+    color: grey-dk
+  warning:
+    title: Warning
+    color: red
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
