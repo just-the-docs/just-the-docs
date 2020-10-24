@@ -102,10 +102,8 @@ color_scheme: nil
 
 # Callouts
 # The title of a callout is optional, and rendered in uppercase.
-# The variables $color-000, $color-100, $color-200, $color-300 are required.
+# The variables $color-000 and $color-300 are required for each color.
 # Predefined colors: grey-lt, grey-dk, purple, blue, green, yellow, red.
-# The names of callouts need to avoid the class names used in the theme CSS!
-# - avoid btn, highlight, icon, label, main, search, and hyphenated words.
 # Common names for callouts:
 # admonition, attention, caution, danger, error, hint, important, note, tip, warning.
 callouts:
