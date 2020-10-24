@@ -11,11 +11,15 @@
   {%- assign callout_color_hue = "000" -%}
 {%- endif -%}
 
+div.opaque {
+  background-color: $body-background-color;
+}
+
 {%- for callout in site.callouts %}
 
-{%- assign callout_opacity = callout[1].opacity | default: 0.4 -%}
+{%- assign callout_opacity = callout[1].opacity | default: 0.2 -%}
 
-.{{ callout[0] }} {
+p.{{ callout[0] }}, blockquote.{{ callout[0] }} {
     background: rgba(${{ callout[1].color }}-{{ callout_background_hue }}, {{ callout_opacity }});
     border-left: $border-radius solid ${{ callout[1].color }}-{{ callout_color_hue }};
     border-radius: $border-radius;

@@ -113,3 +113,113 @@ For example, if you'd like to add your own styles for printing a page, you could
   .main-content { max-width: auto; margin: 1em;}
 }
 ```
+
+## Callouts
+
+When you have [configured]({{ site.baseurl }}{% link docs/configuration.md %}) the optional `title` and `color` (with optional `opacity`) for a callout, you can apply it to a paragraph or a block quote, as illustrated below.[^postfix]
+
+[^postfix]:
+    You can put the callout markup either before or after its content.
+
+#### An untitled callout
+{: .no_toc }
+
+```markdown
+{: .highlight }
+A paragraph
+```
+
+{: .highlight }
+A paragraph
+
+#### A single paragraph callout
+{: .no_toc }
+
+```markdown
+{: .note }
+A paragraph
+```
+
+{: .note }
+A paragraph
+
+#### A multi-paragraph callout
+{: .no_toc }
+
+```markdown
+{: .important }
+> A paragraph
+>
+> Another paragraph
+>
+> The last paragraph
+```
+
+{: .important }
+> A paragraph
+>
+> Another paragraph
+>
+> The last paragraph
+
+#### An indented callout
+{: .no_toc }
+
+```markdown
+> {: .hint }
+  A paragraph
+```
+
+> {: .hint }
+  A paragraph
+
+#### Indented multi-paragraph callouts
+{: .no_toc }
+
+```markdown
+> {: .attention }
+> > A paragraph
+> >
+> > Another paragraph
+> >
+> > The last paragraph
+```
+
+> {: .attention }
+> > A paragraph
+> >
+> > Another paragraph
+> >
+> > The last paragraph
+
+#### Nested callouts
+{: .no_toc }
+
+```markdown
+{: .important }
+> {: .warning }
+> A paragraph
+```
+
+{: .important }
+> {: .warning }
+> A paragraph
+
+#### Opaque background
+{: .no_toc }
+
+```markdown
+{: .important }
+> {: .opaque }
+> <div markdown="block">
+> {: .warning }
+> A paragraph
+> </div>
+```
+
+{: .important }
+> {: .opaque }
+> <div markdown="block">
+> {: .warning }
+> A paragraph
+> </div>

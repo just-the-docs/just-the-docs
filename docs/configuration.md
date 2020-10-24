@@ -139,6 +139,33 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
 
+## Callouts
+
+Markdown does not include support for callouts. However, you can style text as a callout using a Markdown extension provided by kramdown. 
+
+To use this feature, you need to configure the name, title, and color for each kind of callout you want to use, e.g.:
+
+```yaml
+callouts:
+  warning:
+    title: Warning
+    color: red
+```
+
+You can then style a paragraph as a warning like this:
+
+```markdown
+{: .warning }
+A paragraph...
+```
+to produce:
+
+{: .warning }
+A paragraph...
+
+You can find suggestions for various kinds of callout in this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file. (They are not provided automatically when you use Just the Docs as the theme for your own site, to avoid potential clashes with custom CSS.)
+See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
+
 ## Google Analytics
 
 ```yaml
@@ -195,4 +222,3 @@ just_the_docs:
     tutorials:
       name: Tutorials
 ```
-

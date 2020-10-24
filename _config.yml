@@ -115,7 +115,6 @@ callouts:
   attention:
     title: Attention
     color: purple
-    opacity: 0.3
   caution:
     title: Caution
     color: yellow
@@ -125,6 +124,9 @@ callouts:
   error:
     title: Error
     color: red
+  highlight:
+    color: yellow
+    opacity: 0.5
   hint:
     title: Hint
     color: grey-dk

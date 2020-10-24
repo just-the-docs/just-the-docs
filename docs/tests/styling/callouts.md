@@ -48,6 +48,11 @@ A paragraph
 {: .error }
 A paragraph
 
+## Highlight
+
+{: .highlight }
+A paragraph
+
 ## Hint
 
 {: .hint }
@@ -101,4 +106,13 @@ A paragraph
 
 {: .important }
 > {: .warning }
-  A paragraph
+> A paragraph
+
+With opaque background (using HTML):
+
+{: .important }
+> {: .opaque }
+> <div markdown="block">
+> {: .warning }
+> A paragraph
+> </div>
