@@ -165,10 +165,10 @@ A paragraph...
 The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a different color, you need to define its `000` and `300` shades in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
 
 ```scss
-$pink-000:  #ff99cc; // 80%
-$pink-100:  #ff66b3; // 70%
-$pink-200:  #ff3399; // 60%
-$pink-300:  #ff0080; // 50%
+$pink-000: #ff99cc; // 80%
+$pink-100: #ff66b3; // 70%
+$pink-200: #ff3399; // 60%
+$pink-300: #ff0080; // 50%
 ```
 
 You can override the default `opacity` (0.2) of the callout background, e.g.:
