@@ -141,9 +141,9 @@ See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more
 
 ## Callouts
 
-Markdown does not include support for callouts. However, you can style text as a callout using a Markdown extension provided by kramdown. 
+Markdown does not include support for callouts. However, you can style text as a callout using a Markdown extension supported by kramdown: [*block IALs*](https://kramdown.gettalong.org/quickref.html#block-attributes). 
 
-To use this feature, you need to configure the name, title, and color for each kind of callout you want to use, e.g.:
+To use this feature, you need to configure the (optional) `title` and the `color` for each kind of callout you want to use, e.g.:
 
 ```yaml
 callouts:
@@ -152,19 +152,37 @@ callouts:
     color: red
 ```
 
-You can then style a paragraph as a warning like this:
+This uses the color `$red-000` for the background of the callout, and `$red-300` for the title and box decoration.[^dark] You can then style a paragraph as a `warning` callout like this:
 
 ```markdown
 {: .warning }
 A paragraph...
 ```
-to produce:
 
-{: .warning }
-A paragraph...
+[^dark]:
+    If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title. 
 
-You can find suggestions for various kinds of callout in this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file. (They are not provided automatically when you use Just the Docs as the theme for your own site, to avoid potential clashes with custom CSS.)
-See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
+The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a different color, you need to define its `000` and `300` shades in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
+
+```scss
+$pink-000:  #ff99cc; // 80%
+$pink-100:  #ff66b3; // 70%
+$pink-200:  #ff3399; // 60%
+$pink-300:  #ff0080; // 50%
+```
+
+You can override the default `opacity` (0.2) of the callout background, e.g.:
+
+```yaml
+callouts:
+  custom:
+    color: pink
+    opacity: 0.3
+```
+
+This site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file includes configuration for various kinds of callout. (These callouts are *not* provided as defaults when you use Just the Docs as the theme for your own site, to avoid potential clashes with custom CSS.)
+
+See [Customization]({{ site.baseurl }}{% link docs/customization.md %}#callouts) for more information.
 
 ## Google Analytics
 

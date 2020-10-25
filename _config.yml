@@ -116,6 +116,10 @@ callouts:
   caution:
     title: Caution
     color: yellow
+  custom:
+    title: Custom
+    color: pink
+    opacity: 0.3
   danger:
     title: Danger
     color: red

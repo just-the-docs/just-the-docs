@@ -38,6 +38,11 @@ A paragraph
 {: .caution }
 A paragraph
 
+## Custom
+
+{: .custom }
+A paragraph
+
 ## Danger
 
 {: .danger }
