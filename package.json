@@ -10,7 +10,7 @@
     "@primer/css": "^15.2.0",
     "prettier": "^2.1.2",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-primer": "^9.2.1",
+    "stylelint-config-primer": "^9.2.4",
     "stylelint-prettier": "^1.1.2",
     "stylelint-selector-no-utility": "^4.0.0"
   },
