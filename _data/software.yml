@@ -50,18 +50,6 @@
   interface: gui
   type: app
 
-- name: Blender plugin
-  webpage: https://github.com/cityjson/Blender-CityJSON-Plugin
-  description: Plugin to open/import directly CityJSON models in Blender, attributes and semantics are kept.
-  foss: true
-  category: 
-    - viewer
-    - transformer
-    - applications
-    - editor
-  interface: gui
-  type: app
-
 - name: citygml4j
   webpage: https://github.com/citygml4j
   description: Open source Java class library and API 
@@ -141,7 +129,19 @@
     - parser
   interface: cli
   type: lib
-  
+
+- name: Up3date
+  webpage: https://github.com/cityjson/Blender-CityJSON-Plugin
+  description: Plugin to open/import directly CityJSON models in Blender, attributes and semantics are kept.
+  foss: true
+  category: 
+    - viewer
+    - transformer
+    - applications
+    - editor
+  interface: gui
+  type: app
+
 - name: val3dity
   webpage: http://github.com/tudelft3d/val3dity/
   description: Validation of 3D GML primitives according to the international standard ISO19107
