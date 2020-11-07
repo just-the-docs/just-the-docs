@@ -48,7 +48,7 @@ theme: "just-the-docs"
 ```bash
 $ bundle exec just-the-docs rake search:init
 ```
-3. Run you local Jekyll server
+3. Run your local Jekyll server
 ```bash
 $ jekyll serve
 ```
