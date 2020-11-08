@@ -55,7 +55,7 @@ layout: table_wrappers
           {% assign collection_value = collection_entry[1] %}
           {% assign collection = site[collection_key] %}
           {% if collection_value.nav_exclude != true %}
-            {% if collections_size > 1 %}
+            {% if collections_size > 1 and collection_value.name != null %}
               <div class="nav-category">{{ collection_value.name }}</div>
             {% endif %}
             {% include nav.html pages=collection %}

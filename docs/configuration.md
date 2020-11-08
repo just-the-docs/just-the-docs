@@ -196,3 +196,16 @@ just_the_docs:
       name: Tutorials
 ```
 
+You can choose to remove a collection name.
+This creates a category in the navigation with no heading. This is useful if you'd like to add a link at the top of the sidebar above other collections.
+```yaml
+collections:
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  collections:
+    docs:
+      name: null
+```
