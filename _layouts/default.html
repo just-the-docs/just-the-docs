@@ -110,7 +110,7 @@ layout: table_wrappers
               {%- if node.has_children -%}
                 {%- assign children_list = pages_list | where: "parent", node.title -%}
                 {%- for child in children_list -%}
-                  {%- if page.url == child.url or page.parent == child.title -%}
+                  {%- if page.url == child.url or page.parent == child.title and page.grand_parent == child.parent-%}
                     {%- assign second_level_url = child.url | absolute_url -%}
                   {%- endif -%}
                 {%- endfor -%}
