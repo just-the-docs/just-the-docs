@@ -28,6 +28,23 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 # To include them, comment-out the relevant line above.
 # Uncommenting the following line doesn't work - see https://github.com/jekyll/jekyll/issues/4791
 # include: ["docs/tests/"]
+# Uncommenting the following collections configuration produces further tests
+# (it also suppresses all the other pages - see https://github.com/pmarsceill/just-the-docs/issues/447)
+#
+# collections:
+#   test_collection_1:
+#     permalink: "/:collection/:path/"
+#     output: true
+#   test_collection_2:
+#     permalink: "/:collection/:path/"
+#     output: true
+# 
+# just_the_docs:
+#   collections:
+#     test_collection_1:
+#       name: Test Collection 1
+#     test_collection_2:
+#       name: Test Collection 2
 
 # Set a path/url to a logo that will be displayed instead of the title
 #logo: "/assets/images/just-the-docs.png"
