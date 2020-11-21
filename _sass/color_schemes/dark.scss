@@ -19,7 +19,7 @@ $feedback-color: darken($sidebar-color, 3%);
 // Both the following highlight themes are more legible than those used forthe light theme
 //
 
-@import "./vendor/pygments/css-github/pygments-tomorrow-night";
+@import "./vendor/pygments/css-github/pygments-tomorrow-night.css";
 $code-background-color: #1d1f21;
 
 // @import "./vendor/pygments/css-github/pygments-base16-tomorrow-dark";
