@@ -74,6 +74,16 @@ aux_links:
 aux_links_new_tab: false
 ```
 
+## Dropdown
+
+```yaml
+drop_title: "Dropdown"
+
+drop_links:
+  "Link":
+    - "//github.com/pmarsceill/just-the-docs"
+```
+
 ## Heading anchor links
 
 ```yaml
