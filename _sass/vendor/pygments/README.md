@@ -1,6 +1,8 @@
 # Pygments
 
 > The accompanying files were copied from https://github.com/StylishThemes/Syntax-Themes/tree/master/pygments
+> 
+> The filename extension has been changed from `css` to `scss`, for importing in Sass.
 
 [Pygments](http://pygments.org/) is a Python syntax highlighter that was previously used everywhere on GitHub. It is still used for GitHub Jupyter Notebook pages and the API pages.
 
@@ -8,9 +10,9 @@ A [demo](https://stylishthemes.github.io/Syntax-Themes/pygments/) of the origina
 
 ## Folders
 
-* [`css-github`](css-github/) - CSS pygments themes, dark only, that were optimized to be used on GitHub.
-* [`css-other`](css-other/) - CSS pygments themes in their original form from whatever source that provided them.
-* [`py`](py/) - Python scripts used to generate a specific pygments theme.
+* [X] [`css-github`](css-github/) - CSS pygments themes, dark only, that were optimized to be used on GitHub.
+* [ ] [`css-other`](css-other/) - CSS pygments themes in their original form from whatever source that provided them.
+* [ ] [`py`](py/) - Python scripts used to generate a specific pygments theme.
 
 ## Useful links
 
