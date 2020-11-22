@@ -59,7 +59,7 @@
       ol {
         counter-reset: sub-counter;
 
-        li {
+        > li {
           &::before {
             content: counter(sub-counter, lower-alpha);
             counter-increment: sub-counter;
