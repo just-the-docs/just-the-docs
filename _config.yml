@@ -70,6 +70,13 @@ aux_links:
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
 
+# Dropdown settings
+drop_title: "Dropdown"
+
+drop_links:
+  "Link":
+    - "//github.com/pmarsceill/just-the-docs"
+
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: case_sensitive # Capital letters sorted before lowercase
