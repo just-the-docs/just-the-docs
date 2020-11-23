@@ -10,13 +10,14 @@
   text-align: center;
   padding: 0 30%;
 
-  h1{
-    font-size: 70px;
-    line-height: 0.5em;
+  h1 {
+    @include fs-10;
+    line-height: 1em;
+    margin-bottom: 2%;
   }
 
-  p{
-    font-size: 20px;
+  p {
+    @include fs-5;
     line-height: 1.5em;
   }
 }
