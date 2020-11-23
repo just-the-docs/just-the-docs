@@ -19,7 +19,7 @@
   }
 
   @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    width: calc((100% - #{$nav-width + $content-width}) / 2 + (#{$nav-width} - 50px));
     min-width: $nav-width;
   }
 }
@@ -27,7 +27,7 @@
 .main {
   @include mq(md) {
     position: relative;
-    max-width: $content-width;
+    max-width: $content-width + 50px;
     margin-left: $nav-width-md;
   }
 

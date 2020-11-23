@@ -1,0 +1,56 @@
+.home-header {
+  width: 100%;
+  height: calc(100vh - #{$header-height});
+  background: $header-image;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 30%;
+
+  h1{
+    font-size: 70px;
+    line-height: 0.5em;
+  }
+
+  p{
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+}
+
+.left {
+  text-align: left;
+
+  img {
+    margin-left: 10%;
+  }
+}
+
+.right {
+  text-align: right;
+
+  img {
+    margin-right: 10%;
+  }
+}
+
+.image-txt-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 7% 14%;
+}
+
+.divider {
+  margin: 0 20%;
+  color: $sidebar-color;
+  border: 1px solid rgba($sidebar-color, 0.98);
+}
+
+.buttons {
+  text-align: center;
+  padding: 7% 14%;
+}

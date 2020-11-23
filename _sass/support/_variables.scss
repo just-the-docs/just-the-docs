@@ -151,3 +151,5 @@ $media-queries: (
   lg: $content-width + $nav-width,
   xl: 1400px,
 ) !default;
+
+$header-image: url("../../assets/images/header.png") no-repeat 50% 50%;
