@@ -1,7 +1,7 @@
 .home-header {
   width: 100%;
   height: calc(100vh - #{$header-height});
-  background: $header;
+  background: url($header);
   background-size: cover;
   display: flex;
   flex-direction: column;
