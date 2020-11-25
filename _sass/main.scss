@@ -1,7 +1,7 @@
 .home-header {
   width: 100%;
   height: calc(100vh - #{$header-height});
-  background: $header-image;
+  background: $header;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -58,6 +58,7 @@
 
 .footer-main {
   background-color: $sidebar-color;
+  width: inherit;
 }
 
 .footer-content {

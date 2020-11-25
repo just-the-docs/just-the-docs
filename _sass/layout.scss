@@ -19,7 +19,7 @@
   }
 
   @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + (#{$nav-width} - 50px));
+    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
     min-width: $nav-width;
   }
 }
@@ -27,7 +27,6 @@
 .main {
   @include mq(md) {
     position: relative;
-    max-width: $content-width + 50px;
     margin-left: $nav-width-md;
   }
 
@@ -39,6 +38,10 @@
 }
 
 .main-content-wrap {
+  padding-right: calc(
+          (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
+  ) !important;
+
   @include container;
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
