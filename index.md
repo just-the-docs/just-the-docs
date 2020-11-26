@@ -37,7 +37,7 @@ remote_theme: pmarsceill/just-the-docs
 $ gem install just-the-docs
 ```
 ```yaml
-# .. or add it to your your Jekyll site’s Gemfile
+# .. or add it to your Jekyll site’s Gemfile
 gem "just-the-docs"
 ```
 2. Add Just the Docs to your Jekyll site’s `_config.yml`
