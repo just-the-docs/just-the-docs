@@ -1,6 +1,9 @@
 {% if site.logo %}
 $logo: "{{ site.logo | absolute_url }}";
 {% endif %}
+{% if site.header %}
+$header: "{{ site.header | absolute_url }}";
+{% endif %}
 @import "./support/support";
 @import "./color_schemes/{{ include.color_scheme }}";
 @import "./modules";

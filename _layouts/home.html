@@ -45,20 +45,6 @@ layout: table_wrappers
     {% else %}
     {{ content }}
     {% endif %}
-    <footer class="main-footer">
-        {% if site.footer_content != nil %}
-        <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
-        {% endif %}
-
-        {% if site.last_edit_timestamp or site.gh_edit_link %}
-        <div class="d-flex mt-2">
-            {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
-            <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
-            </p>
-            {% endif %}
-        </div>
-        {% endif %}
-    </footer>
+    {% include footer.html %}
 </body>
 </html>
