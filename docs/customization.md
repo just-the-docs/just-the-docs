@@ -143,6 +143,18 @@ A paragraph
 {: .note }
 A paragraph
 
+```markdown
+{: .note-title }
+> My note title
+>
+> A paragraph with a custom title callout
+```
+
+{: .note-title }
+> My note title
+>
+> A paragraph with a custom title callout
+
 #### A multi-paragraph callout
 {: .no_toc }
 
@@ -156,6 +168,26 @@ A paragraph
 ```
 
 {: .important }
+> A paragraph
+>
+> Another paragraph
+>
+> The last paragraph
+
+```markdown
+{: .important-title }
+> My important title
+>
+> A paragraph
+>
+> Another paragraph
+>
+> The last paragraph
+```
+
+{: .important-title }
+> My important title
+>
 > A paragraph
 >
 > Another paragraph
