@@ -27,7 +27,6 @@
 .main {
   @include mq(md) {
     position: relative;
-    max-width: $content-width;
     margin-left: $nav-width-md;
   }
 
@@ -39,6 +38,10 @@
 }
 
 .main-content-wrap {
+  padding-right: calc(
+          (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
+  ) !important;
+
   @include container;
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
@@ -248,4 +251,5 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  background-color: $sidebar-color;
 }

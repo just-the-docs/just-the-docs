@@ -1,0 +1,40 @@
+<div class="footer-main">
+    <div class="footer-content">
+        <img src="{{ site.logo }}">
+        <div class="column left">
+            {% if site.drop_title %}
+            <p><b>{{ site.drop_title }}</b></p>
+            {% for link in site.drop_links %}
+            <a href="{{ link.last }}"
+               {% if site.aux_links_new_tab %}
+               target="_blank"
+               {% endif %}
+            >
+                {{ link.first }}
+            </a>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <div class="column" style="align-self: flex-end;">
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact</a>
+            <a href="#">Sponsors</a>
+            <a href="#">About</a>
+        </div>
+    </div>
+    <footer class="main-footer">
+        {% if site.footer_content != nil %}
+        <p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
+        {% endif %}
+
+        {% if site.last_edit_timestamp or site.gh_edit_link %}
+        <div class="d-flex mt-2">
+            {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
+            <p class="text-small text-grey-dk-000 mb-0 mr-2">
+                Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
+            </p>
+            {% endif %}
+        </div>
+        {% endif %}
+    </footer>
+</div>
