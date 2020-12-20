@@ -360,9 +360,10 @@ VIII. Grav Chute Training Assessment
 
 + Options to change grenade velocity (Left number) and time of detonation from THROW, NOT from impact (Right number).
     * You can control the detonation time delay with the NUMPAD + and - keys!
+    * You can go into negative integers (the numbers turn red) with the timer to set the fuse delay to that number of seconds AFTER the first bounce.
 
 
-+ Primary Grenades
++ Default Primary Grenades
 
     * Frag
         * Standard medium-long range explosive.
@@ -372,13 +373,17 @@ VIII. Grav Chute Training Assessment
         * Larger explosion, damage falloff with distance, 10 AT, throws half the distance of frag.
         * Plasma cloud left behind burns people for partial damage for a very short time.
 
-    * Flash
-        * Blinds and loud, only affects you in mouselook.
+    * Blind
+        * Blinds and deafens the target if they are caught in the area of effect and attempt to enter mouselook.
+        * Intense slowdown/stun effect.
+        * Both effects are concurrent and last 10 seconds.
 
     * Toxin
-        * Area of denial, partial-damage to avatars only.
+        * Produces a GREEN, slightly translucent gas cloud.
+        * Area of denial, 25% partial damage every 2 seconds to avatars only.
         * If detonated in the air it falls downwards. (if it hits the top of a wall, for example, the gas will fall straight down to the ground)
-        * When hit by fire or fire, gas ignites and detonates.
+        * Lasts for one minute.
+        * With this, and other gas grenades, use in moderation unless told otherwise by the OIC. The Area of effect is quite large and lasts a while. A good rule of thumb for moderation is: If you see ANY ongoing gas effect, you may throw one more. If you see two, do not throw another until AT LEAST one expires.
 
     * Inferno
         * Area of denial
@@ -407,8 +412,34 @@ VIII. Grav Chute Training Assessment
         * You cannot throw it very far, it's very "heavy".
 
 
-+ Secondary Grenades
-    * (Bottom row of grenades, double click OR shift+R to activate.)
++ Default Secondary Grenades
+    * (Double click a grenade button OR shift+R to activate. Ordered here from left to right, top to bottom.)
+
+    * Plasma Grenade
+        * Has the same weight of a regular frag
+        * Charges over time. At minimum charge, the effect is less than a regular frag. At max charge, the effect is similar to a warp frag.
+        * Takes approximately 4 seconds to reach maximum potential.
+        * Deals between 1 and 12 AT, depending on charge level.
+
+    * Shrapnel Grenade
+        * Fires deadly raycasted shrapnel in a spherical pattern from the center of the blast.
+        * Shrapnel that collides with a wall can ricochet to hit targets that may otherwise be out-of-sight.
+        * Excellent for scoring kills around corners, even untimed.
+
+    * Illumination Flare
+        * Blinds people that look directly at the flare.
+        * Deals 20% damage on direct contact with the flare.
+        * Marks both avatars and scripted objects with a bounding box that can be seen through walls.
+        * Lasts for 20 seconds.
+        * Use in conjunction with a suppression weapon or supporting squad is highly recommended.
+        * In the absence of logistics, INTEL wins battles! Use these to SUPPLEMENT, but not replace good callouts.
+
+    * Riot Gas Grenade
+        * Produces a LIGHT BLUE, translucent gas cloud.
+        * Anyone moving through the cloud will suffer a slowdown and blinding effect that gradually becomes worse.
+        * After approximately 30 seconds of exposure, those exposed will start to choke, suffering 8% damage every 3 seconds.
+        * After leaving the cloud, any currently suffered effects will linger for approximately 4 seconds.
+        * Smoke clouds last for approximately one minute.
 
     * Fuel Cluster
         * Spews green puke (fuel) on the ground.
@@ -432,9 +463,33 @@ VIII. Grav Chute Training Assessment
         * Deceptively useful to destroy something that is being actively repaired
             * OR if your goal is to deal a lot of damage at once by stacking bombs.
 
++ Unlisted Grenades
+    * Use the SWAP GRENADE advanced menu button of the HUD to switch to these. Feature explained below.
+
+    * Acid Grenade
+        * Spews 4 puddles of bio-mutagenic acid on the ground.
+        * ACID is distinguishable from FUEL by being BRIGHTER GREEN in colour, as well as emitting PARTICLES.
+        * Acid deals 12% damage every half second to anyone walking over it.
+        * Acid also deals 5 AT per half-second to scripted objects with the NPC flag.
+        * Acid may be DESTROYED by ANY AMOUNT of AT, but not ignited.
+
+    * Beach Ball
+        * Throws a temporary bouncy beach ball.
+        * Purely for fun.
+
+    * Rock
+        * Throws a rock.
+        * Rock kills on contact until it bounces once.
+        * Mainly for bragging rights.
+
+    * Stimm Gas Grenade
+        * Produces a DARK PINK cloud of stimulant gas.
+        * Allies within the gas benefit from an shorter dodge cooldown.
+        * After 2 seconds of exposure, anyone within the cloud will take 8% damage every 3 seconds due to blood toxicity.
+        * There is a random chance that anyone affected by the stimulant will go BERSERK.
+        * Berserk status causes the afflicted to lose control over their movement entirely, but gain a 60% damage automelee. Status ends on death.
 
 + God Favor Grenades (OPTIONAL)
-    * (Top row of grenades, double click OR shift+R to activate.)
 
     * Khorne Scatter
         * Splits into multiple grenades.
@@ -481,12 +536,23 @@ VIII. Grav Chute Training Assessment
     * Meaning you die when its HP hits 0.
     * It is good form to die on your deployable when under fire- but if you survive a firefight, you may stand up and make a new barricade or repair your existing one.
     * You MUST stand up to repair your barricade.
+    * Barricade may be repaired beyond 50 HP, up to 150 HP, which increases the seating capacity to 3 people.
 
 
 + Barbwire
     * Slows down avatars and hurts them when they run at it
     * Doesn't hurt you if you walk.
     * Somewhat effective on top of teleporters and putting it behind obstacles just out of sight.
+
+
++ Wall
+    * Provides quick access to taller cover than the barricade.
+    * May be repaired beyond 100 HP, up to 200 HP.
+
+
++ Tank trap
+    * Blocks things like the barricade.
+    * When a tank(or other armored vehicle) hits the spike on the front at speed, it will deal AT damage in proportion to how fast it was impacted.
 
 
 + DADS (Dominus Area Denial System or Dominus Assisted Defense System)
@@ -498,9 +564,14 @@ VIII. Grav Chute Training Assessment
     * RAYCASTED - They do NOT work behind walls.
 
 
-+ Tank trap
-    * Blocks things like the barricade.
-    * When a tank(or other armored vehicle) hits the spike on the front at speed, it will deal AT damage in proportion to how fast it was impacted.
++ Harpoon Ladder
+    * Deploys a ladder that anchors itself to an object up to 50m from the turret.
+    * To use, press T to rez the turret ghost, then press B to finalize deployment while looking at the desired ladder destination.
+    * In classic deployment mode, you will have to press B to adjust the turret after deployment, then B again while looking at the desired turret destination.
+    * To fire the turret, either click on it whilst within 2 metres, or look at it and press Z.
+    * Anyone caught in the path of a deploying ladder will be killed.
+    * The HP of the ladder scales according to how long it is. Longer = lower HP.
+    * A ladder that has been destroyed can be quickly redeployed by simply firing the turret again, assuming said turret is intact.
 
 
 ### S2, III. P4. Mines/Deployable Munitions
@@ -662,6 +733,7 @@ VIII. Grav Chute Training Assessment
     * Manual Corruption Transfer command
     * Toggle between new/classic deployment system.
     * Let them know to use classic deployment for high-lag situations.
+    * Swap Grenades: To use, press the button, choose whether you want to swap a main or alternate grenade, then press the number associated with the grenade button you wish to swap. 1-4 for the top row, 5-8 for the bottom row. The HUD will then list every grenade along with an associated number, and present a dialog box. Enter the desired grenade's number into the dialog box and press 'submit'. Grenade swaps persist across logins, so feel free to have your favorite grenades more conveniently accessible!
 
 
 ### S2, III. P7. Knowledge Checkpoint
