@@ -50,7 +50,7 @@ layout: table_wrappers
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
       {% assign pages_top_size = site.html_pages
           | where_exp:"item", "item.title != nil"
-          | where_exp:"item", "item.parent != nil"
+          | where_exp:"item", "item.parent == nil"
           | where_exp:"item", "item.nav_exclude != true"
           | size %}
       {% if pages_top_size > 0 %}
