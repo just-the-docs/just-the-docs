@@ -1,6 +1,6 @@
 # Regression tests
-# To include the pages in /_tests in the build, run jekyll with the option
-# --config _config.yml,_tests.yml
+# To include the pages in /_tests in the local build, run jekyll with the option
+# --config _config.yml,_config_dev.yml,_tests.yml
 
 # Define Jekyll collections
 collections:
