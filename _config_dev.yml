@@ -1,0 +1,5 @@
+# For local development and testing, use the option
+# --config _config.yml,_config_dev.yml
+# See https://stackoverflow.com/a/27400343
+
+url: http://localhost:4000/
