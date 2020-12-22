@@ -13,6 +13,9 @@ collections:
   test_collection_2:
     permalink: "/:collection/:path:output_ext"
     output: true
+  test_collection_3:
+    permalink: "/:collection/:path:output_ext"
+    output: true
 
 just_the_docs:
   collections:
@@ -26,5 +29,9 @@ just_the_docs:
       search_exclude: true
     test_collection_2:
       name: Test Collection 2
+      nav_exclude: false
+      search_exclude: true
+    test_collection_3:
+      name: Test Collection 3
       nav_exclude: false
       search_exclude: true
