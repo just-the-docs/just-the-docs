@@ -16,9 +16,11 @@
 title: Just the Docs
 description: A Jekyll theme for documentation
 baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
-url: "https://pmarsceill.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://github.com/Mi-Lan" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
+remote_theme: pmarsceill/just-the-docs
+theme: "just-the-docs"
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
 , "docs/tests/"
 ]
@@ -30,7 +32,7 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 # include: ["docs/tests/"]
 
 # Set a path/url to a logo that will be displayed instead of the title
-#logo: "/assets/images/just-the-docs.png"
+logo: "/assets/images/dxdao-blue.png"
 
 # Enable or disable the site search
 # Supports true (default) or false
@@ -92,7 +94,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
+gh_edit_repository: "https://github.com/Mi-Lan/just-the-docs" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
