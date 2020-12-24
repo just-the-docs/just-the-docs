@@ -1,7 +1,26 @@
 <ul class="nav-list">
-  {%- assign included_pages = include.pages
+  {%- assign page_category = page.path | split: "/" %}
+
+  {% assign included_pages = "" | split: "" %}
+
+  {% for item in include.pages %}
+    {% assign item_category = item.path | split: "/" %}
+    {% if item.nav_exclude != true and item.title != nil %}
+      {% comment %}
+      Categories are defined by a specific level of each page's path in the site.
+      For instance, when the level is 1, categries are defined as /*/<category>/*.
+      The navbar will show all only the documents within the same category if a category_path_level is set in the site config.
+      {% endcomment %}
+      {% if site.category_path_level == nil or item_category[site.category_path_level] == page_category[site.category_path_level] %}
+        {% assign included_pages = included_pages | push: item %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% comment %}{%- assign included_pages =
+        | where_exp:"item", "item.path | first == docs"
         | where_exp:"item", "item.nav_exclude != true"
-        | where_exp:"item", "item.title != nil" -%}
+        | where_exp:"item", "" -%}{% endcomment %}
 
   {%- comment -%}
     The values of `title` and `nav_order` can be numbers or strings.
@@ -14,11 +33,11 @@
 
     The case-sensitivity of string sorting is determined by `site.nav_sort`.
   {%- endcomment -%}
-  
+
   {%- assign string_ordered_pages = included_pages
-        | where_exp:"item", "item.nav_order == nil" -%}
+        | where_exp: "item", "item.nav_order == nil" -%}
   {%- assign nav_ordered_pages = included_pages
-        | where_exp:"item", "item.nav_order != nil"  -%}
+        | where_exp: "item", "item.nav_order != nil" -%}
 
   {%- comment -%}
     The nav_ordered_pages have to be added to number_ordered_pages and
@@ -26,8 +45,8 @@
     The first character of the jsonify result is `"` only for strings.
   {%- endcomment -%}
   {%- assign nav_ordered_groups = nav_ordered_pages
-        | group_by_exp:"item", "item.nav_order | jsonify | slice: 0" -%}
-  {%- assign number_ordered_pages = "" | split:"X" -%}
+        | group_by_exp: "item", "item.nav_order | jsonify | slice: 0" -%}
+  {%- assign number_ordered_pages = "" | split: "X" -%}
   {%- for group in nav_ordered_groups -%}
     {%- if group.name == '"' -%}
       {%- assign string_ordered_pages = string_ordered_pages | concat: group.items -%}
@@ -35,9 +54,9 @@
       {%- assign number_ordered_pages = number_ordered_pages | concat: group.items -%}
     {%- endif -%}
   {%- endfor -%}
-  
-  {%- assign sorted_number_ordered_pages = number_ordered_pages | sort:"nav_order" -%}
-  
+
+  {%- assign sorted_number_ordered_pages = number_ordered_pages | sort: "nav_order" -%}
+
   {%- comment -%}
     The string_ordered_pages have to be sorted by nav_order, and otherwise title
     (where appending the empty string to a numeric title converts it to a string).
@@ -45,19 +64,19 @@
     of each group are concatenated.
   {%- endcomment -%}
   {%- assign string_ordered_groups = string_ordered_pages
-        | group_by_exp:"item", "item.nav_order | default: item.title | append:''" -%}
+        | group_by_exp: "item", "item.nav_order | default: item.title | append:''" -%}
   {%- if site.nav_sort == 'case_insensitive' -%}
-    {%- assign sorted_string_ordered_groups = string_ordered_groups | sort_natural:"name" -%}
+    {%- assign sorted_string_ordered_groups = string_ordered_groups | sort_natural: "name" -%}
   {%- else -%}
-    {%- assign sorted_string_ordered_groups = string_ordered_groups | sort:"name" -%}
+    {%- assign sorted_string_ordered_groups = string_ordered_groups | sort: "name" -%}
   {%- endif -%}
-  {%- assign sorted_string_ordered_pages = "" | split:"X" -%}
+  {%- assign sorted_string_ordered_pages = "" | split: "X" -%}
   {%- for group in sorted_string_ordered_groups -%}
     {%- assign sorted_string_ordered_pages = sorted_string_ordered_pages | concat: group.items -%}
   {%- endfor -%}
 
   {%- assign pages_list = sorted_number_ordered_pages | concat: sorted_string_ordered_pages -%}
-  
+
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
       <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
@@ -65,33 +84,41 @@
           {%- assign first_level_url = node.url | absolute_url -%}
         {%- endif -%}
         {%- if node.has_children -%}
-          <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+          <a href="#" class="nav-list-expander">
+            <svg viewBox="0 0 24 24">
+              <use xlink:href="#svg-arrow-right"></use>
+            </svg>
+          </a>
         {%- endif -%}
         <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
         {%- if node.has_children -%}
           {%- assign children_list = pages_list | where: "parent", node.title -%}
           <ul class="nav-list ">
-          {%- for child in children_list -%}
-            <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
-              {%- if page.url == child.url or page.parent == child.title -%}
-                {%- assign second_level_url = child.url | absolute_url -%}
-              {%- endif -%}
-              {%- if child.has_children -%}
-                <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
-              {%- endif -%}
-              <a href="{{ child.url | absolute_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
-              {%- if child.has_children -%}
-                {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title -%}
-                <ul class="nav-list">
-                {%- for grand_child in grand_children_list -%}
-                  <li class="nav-list-item {% if page.url == grand_child.url %} active{% endif %}">
-                    <a href="{{ grand_child.url | absolute_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
-                  </li>
-                {%- endfor -%}
-                </ul>
-              {%- endif -%}
-            </li>
-          {%- endfor -%}
+            {%- for child in children_list -%}
+              <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
+                {%- if page.url == child.url or page.parent == child.title -%}
+                  {%- assign second_level_url = child.url | absolute_url -%}
+                {%- endif -%}
+                {%- if child.has_children -%}
+                  <a href="#" class="nav-list-expander">
+                    <svg viewBox="0 0 24 24">
+                      <use xlink:href="#svg-arrow-right"></use>
+                    </svg>
+                  </a>
+                {%- endif -%}
+                <a href="{{ child.url | absolute_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
+                {%- if child.has_children -%}
+                  {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title -%}
+                  <ul class="nav-list">
+                    {%- for grand_child in grand_children_list -%}
+                      <li class="nav-list-item {% if page.url == grand_child.url %} active{% endif %}">
+                        <a href="{{ grand_child.url | absolute_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
           </ul>
         {%- endif -%}
       </li>
