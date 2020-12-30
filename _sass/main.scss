@@ -59,6 +59,10 @@
 .footer-main {
   background-color: $sidebar-color;
   width: inherit;
+
+  @include mq(md) {
+    margin-left: $nav-width-md;
+  }
 }
 
 .footer-content {

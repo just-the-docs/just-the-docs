@@ -19,7 +19,8 @@
   }
 
   @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    // Keep a consistent size to left navbar instead of scaling.
+    //width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
     min-width: $nav-width;
   }
 }
@@ -130,7 +131,7 @@
 
   @include mq(md) {
     display: block;
-    padding-top: $sp-8;
+    padding-top: $sp-8 * 2;
     padding-bottom: $gutter-spacing-sm;
     overflow-y: auto;
     flex: 1 1 auto;
