@@ -104,8 +104,10 @@ layout: table_wrappers
       </div>
     </div>
   </div>
-  {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
-    {% include footer.html %}
-  {% endif %}
+  <div class="right-of-navbar">
+    {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
+      {% include footer.html %}
+    {% endif %}
+  </div>
 </body>
 </html>

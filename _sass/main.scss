@@ -56,13 +56,16 @@
   padding: 7% 14%;
 }
 
+.right-of-navbar {
+  @include mq(md) {
+    margin-left: $nav-width-md;
+  }
+}
+
 .footer-main {
   background-color: $sidebar-color;
   width: inherit;
 
-  @include mq(md) {
-    margin-left: $nav-width-md;
-  }
 }
 
 .footer-content {
