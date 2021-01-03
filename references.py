@@ -22,9 +22,9 @@ def slugify(s):
 
 # maps page-slug to referrer list.
 # {'operations': [{'index'}], ... }
-refs = {}
-
-links = {}
+refs = {} # external links by page
+paths = {} # mapping of page names to url
+links = {} # outbound links by page
 
 class HighlightRenderer(mistune.Renderer):
 
@@ -85,6 +85,7 @@ files = ['index.md', 'operations/OPERATIONS.md']
 
 for f in list(Path(".").rglob("*.[mM][dD]")):
     md = open(f).read()
+    paths[f.name] = str(f)[:-3]
     markdown.renderer.set_file_slug(f.name)
     markdown(md)
 
@@ -101,6 +102,11 @@ for k in list(refs.keys()):
         del refs[k]
 
 print("INBOUND LINKS:")
-refs = {k:list(v.keys()) for k,v in refs.items()})
-pp.pprint(refs)
-open('references.json','w').write(json.dumps(refss)
+refs = {k:list(v.keys()) for k,v in refs.items()}
+
+output = {
+    'refs': refs,
+    'paths': paths
+}
+pp.pprint(output)
+open('references.json','w').write(json.dumps(output))
