@@ -1,3 +1,9 @@
+---
+layout: default
+title: Training
+parent: Programming
+---
+
 # Training
 
 **Purpose**

@@ -1,3 +1,9 @@
+---
+layout: default
+title: GIT
+parent: Programming
+---
+
 # How Countable Uses GIT
 
 **Purpose**

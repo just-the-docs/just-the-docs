@@ -1,3 +1,9 @@
+---
+layout: default
+title: Information Security
+parent: Programming
+---
+
 # Information Security
 
 **Purpose**

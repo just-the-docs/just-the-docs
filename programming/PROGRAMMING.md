@@ -1,3 +1,9 @@
+---
+layout: default
+title: Programming
+has_children: true
+---
+
 # Developers Reference
 
 <div class="toctree" data-maxdepth="2">

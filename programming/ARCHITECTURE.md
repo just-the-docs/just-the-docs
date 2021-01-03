@@ -1,3 +1,8 @@
+---
+layout: default
+title: Architecture
+parent: Programming
+---
 # Architecture
 
 **Purpose**

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Prototyping
+parent: Programming
+---
+
 # Prototyping
 
 **Purpose**

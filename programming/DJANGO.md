@@ -1,4 +1,8 @@
-# Django Standards
+---
+layout: default
+title: Django
+parent: Programming
+---
 
 **Purpose**
 

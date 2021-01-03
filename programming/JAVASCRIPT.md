@@ -1,3 +1,9 @@
+---
+layout: default
+title: Javascript
+parent: Programming
+---
+
 # Javascript Best Practices
 
 **Purpose**

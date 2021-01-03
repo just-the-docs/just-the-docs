@@ -1,3 +1,9 @@
+---
+layout: default
+title: Python
+parent: Programming
+---
+
 # Python
 
 **Purpose**

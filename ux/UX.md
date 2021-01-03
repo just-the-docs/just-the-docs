@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Configuration
+title: UX
 nav_order: 2
+has_children: true
 ---
 
 # UX

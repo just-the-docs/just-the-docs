@@ -1,4 +1,8 @@
-# Project Structure and Ops
+---
+layout: default
+title: Code Project Structure
+parent: Programming
+---
 
 **Purpose**
 

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Coding Standards
+parent: Programming
+---
+
 # Coding Standards and Style
 
 **Purpose**

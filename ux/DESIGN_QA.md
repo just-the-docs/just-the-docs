@@ -1,3 +1,8 @@
+---
+layout: default
+title: Design QA
+parent: UX
+---
 # Design QA
 
 **Purpose**

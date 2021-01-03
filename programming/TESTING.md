@@ -1,3 +1,9 @@
+---
+layout: default
+title: Testing
+parent: Programming
+---
+
 # Testing and Bug Reporting
 
 **Purpose**

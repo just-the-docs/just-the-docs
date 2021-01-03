@@ -1,4 +1,8 @@
-# Dependency Strategy
+---
+layout: default
+title: Dependencies
+parent: Programming
+---
 
 <div class="toctree" data-maxdepth="2" data-caption="Contents:">
 
