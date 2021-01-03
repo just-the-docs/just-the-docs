@@ -10,7 +10,8 @@ fetch('/ops/references.json')
      const toks = (window.location + '').split("/")
      const my_slug = toks[toks.length-2].toLowerCase()
      if (my_slug === 'ops') my_slug = 'index'
-     const links_html = data.refs.map( ref => {
+     const my_refs = data.refs[my_slug] || []
+     const links_html = my_refs.map( ref => {
        return `<a href="{window.location.host + data.paths[ref]}">${ref}</a>`
      }).join("")
      const footer = document.querySelector('footer.page-footer')
