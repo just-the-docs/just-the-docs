@@ -1,0 +1,13 @@
+# On Creating a Predictiable System
+
+Last year Countable grew from 2 fulltime and 1 part time person to 4 fulltime and 3 part time people. In the past, the company has really been a solo consulting practice with some assistants helping me keep up with work. This isn't scalable anymore and will change in 2018, so I'd like to make it clear where I'm driving the bus, and want your input as much as possible.
+
+In 2018, there's one top level objective for our company, to create a predictable, consistent, transparent and automated (where possible) system for delivering work to clients.
+  * Predictable and consistent means as little variation between different projects as possible. Everything should become "just another one of those", and eliminate any unusual differences and exceptions. This lets us work across several projects easier, and re-use highly optimized practices and code across projects. Our process should be like clockwork and most steps should be standardized, automatic or automated, and require no thought or effort so we can focus on the important stuff. The important stuff is understanding the work deeply, learning technical skills, and implementing our projects in a strategic way to minimize technical debt and maximize captured opportunities for the client.
+  * Transparent means it should be perfectly clear to both us and our clients what work items we have queued up, what's being worked on, and when it's expected to be testable (at least in a staging environment, but anywhere). Kevin's rightly pointed out that it's useful to have deadlines and it's doubly nice for clients. This must happen automatically so we don't need to consider it for each small task. Even more than us, it's very valuable to our clients to have a clear indication of when work is to be delivered.
+
+Some specific action items to help with the above.
+  * We will have team meetings , weekly at first, and at least monthly. They will be Scrum meetings with our shared project of building the above system. 
+  * I should not be a bottleneck for any work with a client, and should really only be involved for project planning, architecture, and escalation (when you're unsure or see a non-technical problem). I should not have to see every piece of work that goes to a client, or approve a release. Everyone on the team must produce good enough work for the client to see directly. That doesn't mean you can't ask for an opinion from another team member or me of course. It's just that it's not required every time.
+
+These won't happen overnight but I think that if we make good progress on these continuously, our jobs become easier and more enjoyable and it frees up time for the more interesting work.
