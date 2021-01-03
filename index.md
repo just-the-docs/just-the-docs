@@ -42,7 +42,7 @@ A nice plain-language quote:
 \-- "The Great CEO Within", By Matt Mochary
 
 *Second, why is it open source?* To promote
-[transparency](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY.html#transparency-policy).
+[transparency](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY/#transparency-policy).
 
 ## Scope
 
@@ -51,7 +51,7 @@ This repo will contain:
   - Business processes and knowledge base.
   - The Articles of Incorporation and other general corporate documents.
     Countable is a
-    [CCPC](http://www.cra-arc.gc.ca/E/pub/tp/it458r2/it458r2-e.html),
+    [CCPC](http://www.cra-arc.gc.ca/E/pub/tp/it458r2/it458r2-e/),
     but it's possible some of these documents may be useful for other
     organization structures.
   - Document templates used by the company for accounting and legal.
@@ -80,12 +80,12 @@ that do this. What makes us different?
   - We work hard to be transparent, interactive, and have fun.
 
 [Read about the purpose of
-Countable](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY.html#basics-of-our-purpose-at-countable).
+Countable](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY/#basics-of-our-purpose-at-countable).
 
 ## Who is Countable?
 
 We are selective in order to embody our
-[values](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY.html#values).
+[values](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY/#values).
 This starts with hiring, all the way to the kinds of partners we seek
 out. In the end, we want to bring together people to have a big impact
 by improving all the industries we engage with, through better
@@ -98,46 +98,46 @@ the technology they depend on. Now that's a feedback loop\!
 Finding the right people is one of our biggest challenges, so we need
 every advantage we can find in this way.
 
-  - [General Posting](../peopleops/recruiting/JOB_POSTINGS.html)
+  - [General Posting](peopleops/recruiting/JOB_POSTINGS/)
   - [Are You A Good Fit For
-    Countable](../peopleops/recruiting/HIRING_FIT.html)?
+    Countable](peopleops/recruiting/HIRING_FIT/)?
 
 ### Marketing
 
 Helps us find the best partners and team members who share our passion.
 
   - [Value
-    Proposition](https://countable-ops-manual.readthedocs.io/sales/SALES.html#value-prop)
-  - [Creative Brief](../ux/UX.html)
-  - [Design Asset Storage](../operations/FILE_STORAGE.html)
-  - [Social Media Posting Policy](../ux/UX_GUIDELINES.html)
-  - [SEO](../ux/UX_GUIDELINES.html)
-  - [Usability](../ux/USABILITY_TESTING.html)
+    Proposition](https://countable-ops-manual.readthedocs.io/sales/SALES/#value-prop)
+  - [Creative Brief](ux/UX/)
+  - [Design Asset Storage](operations/FILE_STORAGE/)
+  - [Social Media Posting Policy](ux/UX_GUIDELINES/)
+  - [SEO](ux/UX_GUIDELINES/)
+  - [Usability](ux/USABILITY_TESTING/)
 
 ### Getting Started
 
 If you're a new Countable team member, start here\!
 
-  - [Onboarding](../peopleops/ONBOARDING_GUIDE.html)
-  - [Your Contract](../peopleops/SUBCONTRACTOR_AGREEMENT.html)
+  - [Onboarding](peopleops/ONBOARDING_GUIDE/)
+  - [Your Contract](peopleops/SUBCONTRACTOR_AGREEMENT/)
   - [Diversity and
-    Inclusion](https://countable-ops-manual.readthedocs.io/peopleops/TEAM_NORMS.html#diversity-and-inclusion-principles)
+    Inclusion](https://countable-ops-manual.readthedocs.io/peopleops/TEAM_NORMS/#diversity-and-inclusion-principles)
   - [Physical
-    Setup](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB.html#setting-up-your-desk)
-  - [Project Management](../operations/PROJECT_MANAGEMENT.html)
-  - [Evaluation](../peopleops/EVALUATION.html)
-  - [Compensation](https://countable-ops-manual.readthedocs.io/peopleops/TEAM_NORMS.html#compensation-strategy-principles)
-  - [Scrum](../operations/SCRUM.html)
-  - [Trello](../operations/TRELLO.html)
+    Setup](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB/#setting-up-your-desk)
+  - [Project Management](operations/PROJECT_MANAGEMENT/)
+  - [Evaluation](peopleops/EVALUATION/)
+  - [Compensation](https://countable-ops-manual.readthedocs.io/peopleops/TEAM_NORMS/#compensation-strategy-principles)
+  - [Scrum](operations/SCRUM/)
+  - [Trello](operations/TRELLO/)
   - [Client Data
-    Protection](https://countable-ops-manual.readthedocs.io/operations/CLIENTS.html#client-data-protection)
+    Protection](https://countable-ops-manual.readthedocs.io/operations/CLIENTS/#client-data-protection)
 
 If you're a new client, start here\!
 
-  - [Scrum](../operations/SCRUM.html)
-  - [Trello](../operations/TRELLO.html)
+  - [Scrum](operations/SCRUM/)
+  - [Trello](operations/TRELLO/)
   - [Requesting Work from
-    Countable](../operations/CLIENT_WORK_REQUEST_INSTRUCTIONS.html)
+    Countable](operations/CLIENT_WORK_REQUEST_INSTRUCTIONS/)
 
 ### Engineering
 
@@ -146,35 +146,35 @@ product/engineering processes in order to improve the team's
 performance, and take advantage of an experience curve by eliminating
 arbitrary process differences.
 
-  - [Code Project Standards](../developers/PROJECT_STANDARDS.html)
-  - [Coding Standards](../developers/CODING_STANDARDS.html)
-  - [Operations](../devops/DEVOPS.html)
-  - [Prototyping](../developers/PROTOTYPING.html)
-  - [Testing](../developers/TESTING.html)
-  - [Training](../developers/TRAINING.html)
-  - [Architecture](../developers/ARCHITECTURE.html)
-  - [Dependencies](../developers/DEPENDENCIES.html)
-  - [Django](../developers/DJANGO.html)
-  - [Docker](../devops/DOCKER.html)
-  - [Git](../developers/GIT.html)
-  - [Jenkins](https://countable-ops-manual.readthedocs.io/devops/DEVOPS.html#id3)
+  - [Code Project Standards](developers/PROJECT_STANDARDS/)
+  - [Coding Standards](developers/CODING_STANDARDS/)
+  - [Operations](devops/DEVOPS/)
+  - [Prototyping](developers/PROTOTYPING/)
+  - [Testing](developers/TESTING/)
+  - [Training](developers/TRAINING/)
+  - [Architecture](developers/ARCHITECTURE/)
+  - [Dependencies](developers/DEPENDENCIES/)
+  - [Django](developers/DJANGO/)
+  - [Docker](devops/DOCKER/)
+  - [Git](developers/GIT/)
+  - [Jenkins](https://countable-ops-manual.readthedocs.io/devops/DEVOPS/#id3)
   - [Stack
-    Choices](https://countable-ops-manual.readthedocs.io/devops/DEVOPS.html#stack-choices)
+    Choices](https://countable-ops-manual.readthedocs.io/devops/DEVOPS/#stack-choices)
 
 ### Consulting
 
 How to provide the best results for clients.
 
-  - [Methodology](../operations/OPERATIONS.html)
-  - [Communicating with Clients](../operations/CLIENTS.html)
+  - [Methodology](operations/OPERATIONS/)
+  - [Communicating with Clients](operations/CLIENTS/)
 
 ## Operations
 
-  - [Meetings](../peopleops/MEETINGS.html)
-  - [Processes](../operations/OPERATIONS.html)
-  - [Storage](../operations/FILE_STORAGE.html)
+  - [Meetings](peopleops/MEETINGS/)
+  - [Processes](operations/OPERATIONS/)
+  - [Storage](operations/FILE_STORAGE/)
   - [Gathering Team
-    Feedback](https://countable-ops-manual.readthedocs.io/peopleops/COMMUNICATIONS_CHARTER.html#giving-feedback-to-teammates)
+    Feedback](https://countable-ops-manual.readthedocs.io/peopleops/COMMUNICATIONS_CHARTER/#giving-feedback-to-teammates)
 
 ## Contributing
 
@@ -199,7 +199,7 @@ pull request. The rules:
   - Keep it concise, to-the-point, actionable. If you do use an
     abstraction, provide a corresponding example.
   - Each page should state it's purpose for existing, as related to the
-    company's [mission](../philosophy/PHILOSOPHY.html). Clarity and
+    company's [mission](philosophy/PHILOSOPHY/). Clarity and
     utility over completeness. Try to maximize "usefulness density", or
     the total benefit (ie, in saved time, dollars) of the content
     divided by its length (in characters).
