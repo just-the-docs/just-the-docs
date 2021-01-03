@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Peopleops
+title: People Ops
 has_children: true
 ---
 
@@ -8,5 +8,5 @@ has_children: true
 
 See sidebar for content.
 
-Peopleops is the art and science of getting humans to interact in a way that produces the best results for us, our clients and the greater world.
+People Ops is the art and science of getting humans to interact in a way that produces the best results for us, our clients and the greater world.
 This includes the condition of the company outside of any given project.

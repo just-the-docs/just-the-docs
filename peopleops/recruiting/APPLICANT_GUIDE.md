@@ -1,4 +1,8 @@
-# APPLICANT GUIDE
+---
+layout: default
+parent: People Ops
+title: Applicant Guide
+---
 
 (draft)
 

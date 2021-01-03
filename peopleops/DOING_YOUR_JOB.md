@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Peopleops
+parent: People Ops
 title: Doing Your Job
 ---
 

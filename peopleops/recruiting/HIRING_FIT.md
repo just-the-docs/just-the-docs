@@ -1,3 +1,9 @@
+---
+layout: default
+title: Hiring Fit
+parent: People Ops
+---
+
 # Is Countable A Good Fit For You?
 
 <div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">

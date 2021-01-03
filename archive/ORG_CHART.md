@@ -1,5 +1,10 @@
+---
+layout: default
+parent: Operations
+title: Org Chart
+---
 
-# Org Chart
+(deprecated)
 
 ## Law Firm Model
 There already exists a consulting-based type of business where expertise is parcelled out to clients - the Law Firm. We will model after this structure. The company is organized into Senior Partners, Junior Partners and Associates. Another element we steal from Law practice is that billing is time-unit based by default.
