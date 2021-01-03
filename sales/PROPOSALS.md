@@ -1,3 +1,9 @@
+---
+layout: default
+title: Proposals
+parent: Sales
+---
+
 # Proposals
 
 **Purpose**

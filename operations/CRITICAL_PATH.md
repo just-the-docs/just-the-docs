@@ -1,3 +1,8 @@
+---
+layout: default
+parent: Operations
+---
+
 # Critical Path
 
 <div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">

@@ -1,3 +1,9 @@
+---
+layout: default
+parent: Peopleops
+title: Feedback Loops
+---
+
 # Feedback Loops on Your Work
 
 One of our core principles at Countable is to shorten feedback loops.

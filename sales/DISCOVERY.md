@@ -1,3 +1,9 @@
+---
+layout: default
+title: Discovery
+parent: Sales
+---
+
 # Project Discovery
 
 **Purpose**

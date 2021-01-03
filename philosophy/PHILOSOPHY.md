@@ -1,3 +1,8 @@
+---
+layout: default
+title: Philosophy
+has_children: true
+---
 # Our Philosophy
 
 **Purpose**

@@ -1,3 +1,9 @@
+---
+layout: default
+title: Philosophical References
+parent: Philosophy
+---
+
 # Concepts We Incorporate
 
 **Purpose**

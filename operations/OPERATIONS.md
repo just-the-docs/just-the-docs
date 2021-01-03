@@ -1,8 +1,8 @@
-# Business Operations
-
-<div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
-
-</div>
+---
+layout: default
+title: Operations
+has_children: true
+---
 
 **Purpose**
 

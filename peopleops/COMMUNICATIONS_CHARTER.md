@@ -1,3 +1,9 @@
+---
+layout: default
+parent: Peopleops
+title: Communications Charter
+---
+
 # Communications Charter
 
 <div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">

@@ -1,8 +1,10 @@
-# Areas of Responsibility
+---
+layout: default
+parent: Operations
+title: Areas of Responsibility
+---
 
-<div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
-
-</div>
+(deprecated)
 
 **Purpose**
 

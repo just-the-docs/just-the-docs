@@ -1,8 +1,8 @@
 # Why Docker?
-
-<div class="toctree" data-maxdepth="2" data-caption="Contents:">
-
-</div>
+---
+layout: default
+parent: DevOps
+---
 
 **Purpose**
 

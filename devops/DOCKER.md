@@ -1,4 +1,7 @@
-# Docker
+---
+layout: default
+parent: DevOps
+---
 
 ## Docker Patterns
 

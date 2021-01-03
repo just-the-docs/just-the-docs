@@ -1,8 +1,8 @@
-# Onboarding
-
-<div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
-
-</div>
+---
+layout: default
+parent: Peopleops
+title: Onboarding
+---
 
 **Purpose**
 

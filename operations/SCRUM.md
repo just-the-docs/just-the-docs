@@ -1,4 +1,7 @@
-# SCRUM
+---
+layout: default
+parent: Operations
+---
 
 **Purpose**
 

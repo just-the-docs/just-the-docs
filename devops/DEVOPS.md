@@ -1,8 +1,9 @@
+---
+layout: default
+title: DevOps
+has_children: true
+---
 # DevOps
-
-<div class="toctree" data-maxdepth="2" data-caption="Contents:">
-
-</div>
 
 **Purpose**
 

@@ -1,6 +1,11 @@
+---
+layout: default
+title: Proposal Structure
+parent: Sales
+---
+
 # Project Structure
 
-(draft)
 
 **Purpose**
 

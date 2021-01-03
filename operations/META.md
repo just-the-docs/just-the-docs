@@ -1,4 +1,7 @@
-# META
+---
+layout: default
+parent: Operations
+---
 
 Read the [RST
 Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)

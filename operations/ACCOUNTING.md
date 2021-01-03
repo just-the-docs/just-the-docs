@@ -1,8 +1,8 @@
-# Accounting at Countable
-
-<div class="toctree" data-maxdepth="2" hidden="">
-
-</div>
+---
+layout: default
+parent: Operations
+title: Accounting
+---
 
 **Purpose**
 

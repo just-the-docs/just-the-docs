@@ -1,4 +1,8 @@
-# Delivery Workflow Documentation (for Clients)
+---
+layout: default
+parent: Operations
+title: Client Work Request Instructions
+---
 
 <div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
 

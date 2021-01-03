@@ -1,3 +1,8 @@
+---
+layout: default
+title: Sales
+has_children: true
+---
 # Sales
 
 <div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
