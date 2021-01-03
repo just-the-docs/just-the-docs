@@ -100,7 +100,7 @@ $spacers: (
   sp-5: $spacing-unit * 1.5,
   sp-6: $spacing-unit * 2,
   sp-7: $spacing-unit * 2.5,
-  sp-8: $spacing-unit * 6,
+  sp-8: $spacing-unit * 3,
   sp-9: $spacing-unit * 3.5,
   sp-10: $spacing-unit * 4,
 ) !default;
@@ -135,9 +135,9 @@ $nav-width-md: 248px !default;
 $nav-list-item-height: $sp-6 !default;
 $nav-list-item-height-sm: $sp-8 !default;
 $nav-list-expander-right: true;
-$content-width: 800px !default;
+$content-width: 900px !default;
 $header-height: 60px !default;
-$search-results-width: $content-width - $nav-width !default;
+$search-results-width: 100% !default;
 $transition-duration: 400ms;
 
 //

@@ -83,6 +83,7 @@ drop_links:
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: case_sensitive # Capital letters sorted before lowercase
+#category_path_level: 1
 
 # Footer content
 # appears at the bottom of every page's main content

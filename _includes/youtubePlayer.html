@@ -1,0 +1,11 @@
+<!-- Feel free to change the width and height to your desired video size. -->
+
+<div class="embed-container">
+    <iframe
+            src="https://www.youtube.com/embed/{{ include.id }}"
+            width="{{ include.width | default: "100%" }}"
+            height="{{ include.height | default: "350px" }}"
+            frameborder="0"
+            allowfullscreen="">
+    </iframe>
+</div>

@@ -103,8 +103,10 @@ layout: table_wrappers
         {% endif %}
       </div>
     </div>
+  </div>
+  <div class="right-of-navbar">
     {% if site.footer_content != nil or site.last_edit_timestamp or site.gh_edit_link %}
-    {% include footer.html %}
+      {% include footer.html %}
     {% endif %}
   </div>
 
