@@ -5,6 +5,7 @@ The intent here is to:
 2. Save the graph of references in a JSON file.
 3. Use javascript (?) to append external references on pages from the JSON.
 """
+import json
 import pprint
 pp = pprint.PrettyPrinter(width=41, compact=True)
 
@@ -100,4 +101,6 @@ for k in list(refs.keys()):
         del refs[k]
 
 print("INBOUND LINKS:")
-pp.pprint({k:list(v.keys()) for k,v in refs.items()})
+refs = {k:list(v.keys()) for k,v in refs.items()})
+pp.pprint(refs)
+open('references.json','w').write(json.dumps(refss)
