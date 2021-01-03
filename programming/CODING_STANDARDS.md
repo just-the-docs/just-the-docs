@@ -141,7 +141,7 @@ use a different number of spaces. **We never use the tab character.**
 
 ### Docker
 
-Use [Docker](../devops/DOCKER.html) for any web application project (and
+Use [Docker](../devops/DOCKER) for any web application project (and
 other projects where applicable). It should be possible to bring up a
 new environment by only the following for any of our projects.
 
@@ -194,7 +194,7 @@ Tested tricks for having good code you like to work on in the long term.
 >     *declarative style* to the extent possible (as opposed to
 >     imperative style), meaning define what you want and not the order
 >     it is created.
->   - Do not leave old files with filenames like "base\_old.html" in the
+>   - Do not leave old files with filenames like "base\_old" in the
 >     tree. Just delete the old one, commit to refactor, and communiate
 >     the change to your team.
 
@@ -207,6 +207,6 @@ code.
 
 ## Coding Standards for Specific Languages
 
-Check out the individual pages for [HTML/CSS](HTML_CSS.html),
-[Javascript](JAVASCRIPT.html), and [Python](PYTHON.html) for more
+Check out the individual pages for [HTML/CSS](HTML_CSS),
+[Javascript](JAVASCRIPT), and [Python](PYTHON) for more
 specific coding standards.

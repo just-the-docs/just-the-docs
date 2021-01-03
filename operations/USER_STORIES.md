@@ -15,7 +15,7 @@ Use the following process as a template for user stories documentation.
 ## User Stories Process
 
 The User Stories document should be created after the process of
-[Project Discovery](../sales/DISCOVERY.html) has progressed to the stage
+[Project Discovery](../sales/DISCOVERY) has progressed to the stage
 that we are discussing real, tangible possibilities for a project to
 deliver.
 

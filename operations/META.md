@@ -4,7 +4,7 @@ parent: Operations
 ---
 
 Read the [RST
-Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)
+Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics)
 
 ## Tips and Tricks for Formatting
 
@@ -86,8 +86,8 @@ documentation approaches in general:
   - [Write the Docs Beginners
     Guide](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
   - [Readme Driven
-    Development](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
+    Development](https://tom.preston-werner.com/2010/08/23/readme-driven-development)
   - [Getting Started with
-    Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
+    Sphinx](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx)
   - [Sphinx
-    Extensibility](https://www.sphinx-doc.org/en/master/usage/extensions/index.html)
+    Extensibility](https://www.sphinx-doc.org/en/master/usage/extensions/index)

@@ -55,7 +55,7 @@ If it's something we're still working towards, it's in *italics*.
   - Share something with the team every day. The simplest way to do this
     is to report what you did on Slack in your team's channel, and
     anything you're stuck on. Shooting a quick [screen cap
-    video](https://countable-ops-manual.readthedocs.io/operations/PROJECT_MANAGEMENT.html#tools-screencastify)
+    video](https://countable-ops-manual.readthedocs.io/operations/PROJECT_MANAGEMENT#tools-screencastify)
     to share is a great idea to try out.
   - Check slack twice a day at least, and react/respond to some other
     team members' posts.
@@ -69,14 +69,14 @@ If it's something we're still working towards, it's in *italics*.
     update on what's done and what's pending out of their current
     expectations. Include a link to staged work, and a screenshot or
     video. It's best to do this Friday or Monday.
-    [Transparency](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY.html#transparency-policy)
+    [Transparency](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY#transparency-policy)
 
 ### Do Not
 
   - Use private messages for things that don't need to be private. Share
     your experiences on your projects in your client channel, and if
     it's more widely applicable, (\#client-) in \#general.
-    [Transparency](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY.html#transparency-policy)
+    [Transparency](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY#transparency-policy)
 
 ## Time Off
 
@@ -267,7 +267,7 @@ using [SimpleTax](https://simpletax.ca/)
     percentage of time working there.
 6.  Deduct travel costs when working.
 7.  Full list -[CRA Business
-    Expenses](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/sole-proprietorships-partnerships/business-expenses.html)
+    Expenses](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/sole-proprietorships-partnerships/business-expenses)
 
 ### Categorization as a Subcontractor
 

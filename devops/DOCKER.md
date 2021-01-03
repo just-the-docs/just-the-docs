@@ -37,12 +37,12 @@ parent: DevOps
 
 This explains the basics of using Docker, specifically written for
 Countable devs. If you want to know WHY we use docker, see [Docker
-Basics](https://countable-ops-manual.readthedocs.io/devops/DEVOPS.html#docker-basics)
+Basics](https://countable-ops-manual.readthedocs.io/devops/DEVOPS#docker-basics)
 and [Why
-Docker?](https://countable-ops-manual.readthedocs.io/devops/WHY_DOCKER.html)
+Docker?](https://countable-ops-manual.readthedocs.io/devops/WHY_DOCKER)
 
 Basic docker for new devs. It assumes you did [these exercises on
-Linux](https://countable-ops-manual.readthedocs.io/developers/TRAINING.html#linux).
+Linux](https://countable-ops-manual.readthedocs.io/developers/TRAINING#linux).
 
 ## Docker 101
 

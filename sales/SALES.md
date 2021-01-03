@@ -64,7 +64,7 @@ could win 1 deal a month, which is more sustainable than one every \~3
 months as we do now.
 
 See also
-[Discovery](https://countable-ops-manual.readthedocs.io/sales/DISCOVERY.html)
+[Discovery](https://countable-ops-manual.readthedocs.io/sales/DISCOVERY)
 
 ### Day to Day Practices
 

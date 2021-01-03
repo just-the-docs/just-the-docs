@@ -40,7 +40,7 @@ on. At this point, find a good tutorial on the next material you want to
 study.
 
 For this training, be sure to follow the practices
-[here](../developers/DEVELOPERS.html).
+[here](../developers/DEVELOPERS).
 
 All training materials here are pre-approved to do on company time.
 
@@ -77,7 +77,7 @@ video](https://hackr.io/tutorial/learn-docker-in-12-minutes).
 
 To set up a new Django environment in Docker.
 
-[More on Docker](../devops/DOCKER.html)
+[More on Docker](../devops/DOCKER)
 
 ### Django Training
 

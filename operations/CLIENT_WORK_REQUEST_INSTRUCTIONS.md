@@ -44,7 +44,7 @@ We use Trello to communicate work items with our clients.
     under the card or add them as a "member". Otherwise, it may be some
     time before someone sees your card.
 
-For more information on how we use Trello, see [here](../TRELLO.html).
+For more information on how we use Trello, see [here](../TRELLO).
 
 ## How We Process Your Work Request
 

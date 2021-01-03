@@ -54,7 +54,7 @@ effort, just time to leave open)
 
 1.  CAPTURE - find RFPs you can win (This should be happening all the
     time as described in
-    [Sales](https://countable-ops-manual.readthedocs.io/sales/SALES.html))
+    [Sales](https://countable-ops-manual.readthedocs.io/sales/SALES))
 2.  PRE-QUALIFY - look a bit deeper (Score in our OPPORTUNITIES sheet)
 3.  QUALIFY - (5 days) (ask questions as soon as possible after deciding
     to write, wait for responses)

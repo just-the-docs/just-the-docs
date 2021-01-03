@@ -174,7 +174,7 @@ What do we really want as a team?
 ## Principles
 
 The purpose of this page is to address a specific issue with our
-[OKR](https://countable-ops-manual.readthedocs.io/operations/OKRS.html)
+[OKR](https://countable-ops-manual.readthedocs.io/operations/OKRS)
 process, wherein by focusing exclusively on some OKR we neglect some
 important assumption we should have had all along. ie, by releasing fast
 we neglect privacy.

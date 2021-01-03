@@ -73,7 +73,7 @@ we need every advantage we can find in this way. Our strategy:
     probably want to hire that person, and they'll be more likely to
     want to work here too. For this, we have to communicate our mission,
     vision and values within our [philosophy
-    documentation](../philosophy/PHILOSOPHY.html).
+    documentation](../philosophy/PHILOSOPHY).
 
 Another goal is to always try to screen people earlier. The first stages
 of the screening process are cheaper, so we want to avoid letting anyone

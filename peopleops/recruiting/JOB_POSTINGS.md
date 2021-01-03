@@ -66,7 +66,7 @@ Your application must include a resume, and a cover letter. To avoid
 automated submissions, and to see if you pay attention to detail and
 follow instructions, your email must be exactly 100 words. Further
 instructions can be found at:
-<https://countable-ops-manual.readthedocs.io/peopleops/recruiting/APPLICANT_GUIDE.html>
+<https://countable-ops-manual.readthedocs.io/peopleops/recruiting/APPLICANT_GUIDE>
 .
 
 I look forward to hearing from you\!

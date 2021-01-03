@@ -43,7 +43,7 @@ Covers all the onboarding steps for a new Countable Team Member.
 ### Set up Eightmeters
 
 [See
-here](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB.html#using-eightmeters)
+here](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#using-eightmeters)
 
 ### Team Calendar
 
@@ -61,7 +61,7 @@ here](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB.html#
 ### Environment
 
   - Set up a [physical space and
-    equipment](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB.html#setting-up-your-desk)
+    equipment](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#setting-up-your-desk)
     to work.
   - devs only - Read about our `/devops/DEVOPS` and
     `/developers/CODING_STANDARDS`

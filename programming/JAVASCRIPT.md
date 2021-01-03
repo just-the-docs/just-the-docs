@@ -56,13 +56,13 @@ pre-defined content instead of creating it on the fly. eg:
     $(".some-selector").append("<a id='abc_error_message' class='error hidden'>error message here</a>")
     
     // better
-    // <a id='abc_error_message' class='error hidden'>error message here</a> <!--already in index.html-->
+    // <a id='abc_error_message' class='error hidden'>error message here</a> <!--already in index-->
     $("#abc_error_message").show()
 
-If you must dynamically generate HTML, `.html` and `.text` for setting a
+If you must dynamically generate HTML, `` and `.text` for setting a
 large block of generated information, with ES6 strings.
 
-    $("#parent_id").html(`<b> here is a dynamic fragment. ${variable} ${variable}</b>`)
+    $("#parent_id")(`<b> here is a dynamic fragment. ${variable} ${variable}</b>`)
 
 To make small changes to how something looks, animate it, open/close,
 etc. use `addClass` and `removeClass`.
@@ -94,7 +94,7 @@ When manipulating the DOM, as in
 
 if needed, use:
 
-  - `.text()`, `.html()`
+  - `.text()`, `()`
 
 avoid:
 

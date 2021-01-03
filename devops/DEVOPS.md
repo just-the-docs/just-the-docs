@@ -135,8 +135,8 @@ in-depth learning.
 
 ### Docker Basics
 
-We have some training materials on Docker [here](DOCKER.html) and we
-explain why we like to use it [here](WHY_DOCKER.html).
+We have some training materials on Docker [here](DOCKER) and we
+explain why we like to use it [here](WHY_DOCKER).
 
 We use Docker to manage dev, test, stage and prod environments. Specific
 conventions we follow:
@@ -234,7 +234,7 @@ When starting with Docker there are a few common issues:
 ### Setting up a Jenkins node & project
 
 Create a [new
-server](https://countable-ops-manual.readthedocs.io/devops/DEVOPS.html#id6)
+server](https://countable-ops-manual.readthedocs.io/devops/DEVOPS#id6)
 first.
 
 1.  Bootstrap the slave [using
@@ -298,7 +298,7 @@ backup:
     [here](https://console.aws.amazon.com/iam/home). Go to your username
     -\> Security credentials -\> Create access key .
 3.  To download a backup, you have to install [aws
-    cli](https://docs.aws.amazon.com/cli/latest/userguide/installing.html).
+    cli](https://docs.aws.amazon.com/cli/latest/userguide/installing).
     You'll be prompted for some information:
 4.  Enter your creds you generated in \#2 above. The region is
     us-east-1.
@@ -445,13 +445,13 @@ process should aspire to these goals:
 ### Specific processes that help with the above:
 
   - Developers work on `feature-branch` named branches (see
-    [GIT](https://countable-ops-manual.readthedocs.io/developers/GIT.html))
+    [GIT](https://countable-ops-manual.readthedocs.io/developers/GIT))
     and commit and push often. Atomic commits increase developer
     happiness by 10% according to the 2017 StackOverflow survey.
   - Developers take responsibility for cleaning up their code, testing,
     and then making a Pull Reqeust.
   - The pull request should be reviewed by a peer to adhere to our [code
-    standards](../developers/CODING_STANDARDS.html), ensure the code is
+    standards](../developers/CODING_STANDARDS), ensure the code is
     readable and self-documenting, and to help us learn from each other.
   - When approved, anyone may merge the Pull Request into `develop`
     (never `master` directly)
@@ -460,7 +460,7 @@ process should aspire to these goals:
   - Ideally once per week, `develop` is auto-merged into `master` which
     triggers a release.
   - Critical bugfixes may bypass the above process by pushing
-    [hotfixes](https://countable-ops-manual.readthedocs.io/developers/GIT.html)
+    [hotfixes](https://countable-ops-manual.readthedocs.io/developers/GIT)
     to `master`. Do this sparingly.
 
 ### Servers
@@ -536,7 +536,7 @@ To choose a hosting provider.
     user you just created (create the file if it doesn't exist)
   - Install [dotfiles](https://github.com/countable-web/dotfiles)
   - Set up
-    [Jenkins](https://countable-ops-manual.readthedocs.io/devops/DEVOPS.html#id3)
+    [Jenkins](https://countable-ops-manual.readthedocs.io/devops/DEVOPS#id3)
     if needed.
   - Create an account for any team member who needs access, and add them
     to the `dev` `sudo` and `docker` groups.

@@ -28,7 +28,7 @@ architecture.
 
 This is how we build things.
 
-  - [Build a prototype first](../PROTOTYPING.html) to validate
+  - [Build a prototype first](../PROTOTYPING) to validate
     everything (market, feasibility, usefulness). It's encouraged to
     take shortcuts as long as your project is just a prototype and not
     used in production.
@@ -48,13 +48,13 @@ This is how we build things.
     possible (return 500 HTTP code). For validation problems (user
     error), return a 400 http code and refuse the operation. We don't
     generally need to tell the team when this happens.
-  - We have [Coding Standards](../CODING_STANDARDS.html) based on
+  - We have [Coding Standards](../CODING_STANDARDS) based on
     auto-formatters where possible, which include standards for
     structuring projects which are based upon what we've learned.
   - We operate based on principles in 12factor.net, see [implementation
-    here](../devops/DEVOPS.html)
+    here](../devops/DEVOPS)
   - We are intentional about what dependencies we include in [our
-    stack](https://countable-ops-manual.readthedocs.io/devops/DEVOPS.html#stack-choices)
+    stack](https://countable-ops-manual.readthedocs.io/devops/DEVOPS#stack-choices)
 
 ## Developer's Guild Meetings
 
