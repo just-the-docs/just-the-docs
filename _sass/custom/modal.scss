@@ -1,0 +1,118 @@
+/* Modal Styles */
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  text-align: center;
+  background-color: $table-background-color;
+  position: relative;
+  border-radius: $border-radius;
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: stretch;
+
+  .close {
+    color: $body-text-color;
+    position: absolute;
+    top: $sp-4;
+    right: $sp-4;
+    font-size: $font-size-8;
+    line-height: 1rem;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .errormsg {
+    color: red;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 200px;
+  }
+
+  .left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  .right {
+    padding: $sp-4;
+  }
+
+  .input-group {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    margin-top: $sp-3;
+    max-width: 100%;
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      background-color: $grey-lt-300;
+      border: none;
+      border-radius: 4px;
+      font-size: $font-size-5;
+      padding: $sp-1 $sp-2;
+    }
+  }
+
+  button {
+    padding: $sp-1 $sp-2;
+    border-radius: $border-radius;
+    font-size: $font-size-5;
+    border: none;
+    outline: none;
+    background-color: $grey-dk-200;
+    width: 100%;
+    margin-top: $sp-4;
+  }
+
+  button:hover {
+    background-color: $grey-dk-250;
+  }
+
+  .separator {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    margin: $sp-3 0;
+
+    hr {
+      margin: 0 $sp-2;
+      width: 100%;
+    }
+  }
+
+  .social-logins button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid black;
+    margin-top: $sp-6;
+    cursor: pointer;
+
+    .logo {
+      width: 24px;
+      height: 24px;
+      margin-right: $sp-3;
+    }
+  }
+}

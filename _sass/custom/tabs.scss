@@ -1,0 +1,26 @@
+/* Tab Styles */
+
+.tabs {
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: $border-radius;
+  display: flex;
+  flex-flow: row;
+}
+.tabs .tab-link {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  padding: $sp-2;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.tabs .tab-link.active {
+  background-color: $grey-lt-200;
+}
+.tab-content > div {
+  display: none;
+}
