@@ -108,7 +108,7 @@ Follow and document these steps:
     to mark it.
   - Assign the bug to someone who can either fix or triage it.
   - (Refer to [Bug Reporting in our Developers
-    page](https://countable-ops-manual.readthedocs.io/developers/TESTING#bug-reporting-checklist))
+    page](https://countable-ops-manual.readthedocs.io/programming/TESTING#bug-reporting-checklist))
 
 <!-- end list -->
 

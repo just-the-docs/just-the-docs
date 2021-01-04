@@ -146,17 +146,17 @@ product/engineering processes in order to improve the team's
 performance, and take advantage of an experience curve by eliminating
 arbitrary process differences.
 
-  - [Code Project Standards](developers/PROJECT_STANDARDS/)
-  - [Coding Standards](developers/CODING_STANDARDS/)
+  - [Code Project Standards](programming/PROJECT_STANDARDS/)
+  - [Coding Standards](programming/CODING_STANDARDS/)
   - [Operations](devops/DEVOPS/)
-  - [Prototyping](developers/PROTOTYPING/)
-  - [Testing](developers/TESTING/)
-  - [Training](developers/TRAINING/)
-  - [Architecture](developers/ARCHITECTURE/)
-  - [Dependencies](developers/DEPENDENCIES/)
-  - [Django](developers/DJANGO/)
+  - [Prototyping](programming/PROTOTYPING/)
+  - [Testing](programming/TESTING/)
+  - [Training](programming/TRAINING/)
+  - [Architecture](programming/ARCHITECTURE/)
+  - [Dependencies](programming/DEPENDENCIES/)
+  - [Django](programming/DJANGO/)
   - [Docker](devops/DOCKER/)
-  - [Git](developers/GIT/)
+  - [Git](programming/GIT/)
   - [Jenkins](https://countable-ops-manual.readthedocs.io/devops/DEVOPS/#id3)
   - [Stack
     Choices](https://countable-ops-manual.readthedocs.io/devops/DEVOPS/#stack-choices)

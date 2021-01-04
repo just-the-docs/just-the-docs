@@ -64,8 +64,8 @@ here](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#using
     equipment](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#setting-up-your-desk)
     to work.
   - devs only - Read about our `/devops/DEVOPS` and
-    `/developers/CODING_STANDARDS`
-  - devs only - Complete the `/developers/TRAINING` following these
+    `/programming/CODING_STANDARDS`
+  - devs only - Complete the `/programming/TRAINING` following these
     practices and get a team member to code review it using a feature
     branch and pull request.
   - Order a book that will help you learn your job, and bill the company
@@ -120,7 +120,7 @@ complete tasks every day when you work. But, you are expected to:
   - Try your best to complete a tiny task, rather than partially
     finishing a big task.
   - Expectations that are required to be part of Countable (level 1) and
-    for promotion are documented here: `/developers/EVALUATION`.
+    for promotion are documented here: `/programming/EVALUATION`.
 
 ### How To Ask For Help
 

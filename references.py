@@ -20,6 +20,9 @@ from pygments.formatters import html
 def slugify(s):
     return s.lower().replace(" ", "-").replace("_","-")
 
+def fname_to_slug(s):
+    return slugify(s[:-3])
+
 # maps page-slug to referrer list.
 # {'operations': [{'index'}], ... }
 refs = {} # external links by page
@@ -28,17 +31,18 @@ links = {} # outbound links by page
 
 class HighlightRenderer(mistune.Renderer):
 
-    def set_file_slug(self, fpath):
-        self.fpath = fpath
-        self.file_slug = slugify(fpath[:-3])
+    def set_file_slug(self, fname):
+        self.file_slug = fname_to_slug(fname)
         links[self.file_slug] = {
-           'full_link': self.fpath,
            'outbound': []
         }
         
     def link(self, link, title, content):
         if hasattr(self, 'file_slug'):
-            if not link.startswith('http://') and not link.startswith('https://'):
+            if not link.startswith('http://') and \
+                not link.startswith('https://') and \
+                not link.startswith ("#") and \
+                not link.startswith('mailto:'):
                 links[self.file_slug]['outbound'].append(link)
         return super().link(link, title, content)
 
@@ -85,7 +89,20 @@ files = ['index.md', 'operations/OPERATIONS.md']
 
 for f in list(Path(".").rglob("*.[mM][dD]")):
     md = open(f).read()
-    paths[f.name] = str(f)[:-3]
+    web_path = str(f)[:-3]
+    node = fname_to_slug(f.name)
+
+    # Do not include README files in this generator.
+    if node == 'readme':
+        continue
+    else:
+        print("NODE:", node)
+
+    if node in paths:
+        raise Exception("Duplicate node detected {} != {}. Please never have 2 markdown files with the same name, as filenames are used as node IDs for bidirectional links.".format(
+        web_path, paths[node]
+    ))
+    paths[node] = web_path
     markdown.renderer.set_file_slug(f.name)
     markdown(md)
 
@@ -94,12 +111,16 @@ for k, v in links.items():
         target_slug = slugify(target.strip("/").split("/")[-1])
         if target_slug not in refs:
             refs[target_slug] = {}
-        refs[target_slug][k] = True
+        if target_slug not in links.keys():
+            print('no source file found, for slug: {}, referred by {}'.format(target_slug, k))
+        else:
+            refs[target_slug][k] = True
 
-for k in list(refs.keys()):
-    if k not in links.keys():
-        print('no source file found, for slug: {}'.format(k))
-        del refs[k]
+# Should be handled above already, TODO: remove this.
+# for k in list(refs.keys()):
+#     if k not in links.keys():
+#         # exclude refs that do not resolve.
+#         del refs[k]
 
 print("INBOUND LINKS:")
 refs = {k:list(v.keys()) for k,v in refs.items()}

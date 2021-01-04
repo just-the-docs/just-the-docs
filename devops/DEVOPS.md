@@ -445,13 +445,13 @@ process should aspire to these goals:
 ### Specific processes that help with the above:
 
   - Developers work on `feature-branch` named branches (see
-    [GIT](https://countable-ops-manual.readthedocs.io/developers/GIT))
+    [GIT](https://countable-ops-manual.readthedocs.io/programming/GIT))
     and commit and push often. Atomic commits increase developer
     happiness by 10% according to the 2017 StackOverflow survey.
   - Developers take responsibility for cleaning up their code, testing,
     and then making a Pull Reqeust.
   - The pull request should be reviewed by a peer to adhere to our [code
-    standards](../developers/CODING_STANDARDS), ensure the code is
+    standards](../programming/CODING_STANDARDS), ensure the code is
     readable and self-documenting, and to help us learn from each other.
   - When approved, anyone may merge the Pull Request into `develop`
     (never `master` directly)
@@ -460,7 +460,7 @@ process should aspire to these goals:
   - Ideally once per week, `develop` is auto-merged into `master` which
     triggers a release.
   - Critical bugfixes may bypass the above process by pushing
-    [hotfixes](https://countable-ops-manual.readthedocs.io/developers/GIT)
+    [hotfixes](https://countable-ops-manual.readthedocs.io/programming/GIT)
     to `master`. Do this sparingly.
 
 ### Servers

@@ -40,7 +40,7 @@ on. At this point, find a good tutorial on the next material you want to
 study.
 
 For this training, be sure to follow the practices
-[here](../developers/DEVELOPERS).
+[here](../programming/PROGRAMMING).
 
 All training materials here are pre-approved to do on company time.
 

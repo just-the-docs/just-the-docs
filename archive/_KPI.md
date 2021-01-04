@@ -28,7 +28,7 @@ Our KPI report should be generated at the end of each month, by **one team membe
     - Can be maintained by:
         - Assuring that our **Quality and Customer's satisfaction** metrics are high
     - Can be increased by:
-        * Setting proposals on platforms such as [bcdevexchange.org](bcdevexchange.org)
+        * Setting proposals on platforms such as [bcdevexchange.org](https://bcdevexchange.org)
         * Hiring an external sales team
             - % commission per closed deal
         * Recurrent sales training

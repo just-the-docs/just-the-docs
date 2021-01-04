@@ -42,7 +42,7 @@ and [Why
 Docker?](https://countable-ops-manual.readthedocs.io/devops/WHY_DOCKER)
 
 Basic docker for new devs. It assumes you did [these exercises on
-Linux](https://countable-ops-manual.readthedocs.io/developers/TRAINING#linux).
+Linux](https://countable-ops-manual.readthedocs.io/programming/TRAINING#linux).
 
 ## Docker 101
 
