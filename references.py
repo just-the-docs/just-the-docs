@@ -102,6 +102,10 @@ for f in list(Path(".").rglob("*.[mM][dD]")):
         raise Exception("Duplicate node detected {} != {}. Please never have 2 markdown files with the same name, as filenames are used as node IDs for bidirectional links.".format(
         web_path, paths[node]
     ))
+
+    # If the path ends with 'index', that means we can remove the last token since this is the default, root file.
+    if web_path.endswith('index'):
+        web_path = web_path[:-5]
     paths[node] = web_path
     markdown.renderer.set_file_slug(f.name)
     markdown(md)
