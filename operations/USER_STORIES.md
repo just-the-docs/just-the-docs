@@ -1,6 +1,7 @@
 ---
 layout: default
 parent: Operations
+title: User Stories
 ---
 
 **Purpose**
