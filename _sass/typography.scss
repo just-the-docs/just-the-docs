@@ -34,13 +34,11 @@ h4 code {
 h5,
 .text-epsilon {
   @include fs-3;
-  color: $grey-dk-200;
 }
 
 h6,
 .text-zeta {
   @include fs-2;
-  color: $grey-dk-200;
 }
 
 .text-small {
