@@ -88,7 +88,8 @@ layout: table_wrappers
         {% else %}
           {{ content }}
         {% endif %}
-
+        <h1>{{ page.title }}</h1>
+        <h6>{{ page.author }}</h6>
         {% if page.has_children == true and page.has_toc != false %}
           <hr>
           <h2 class="text-delta">Table of contents</h2>
