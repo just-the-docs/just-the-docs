@@ -31,8 +31,7 @@ branch naming.
     urgent problems in production.
 
 Our feature branches are owned by a single person and very
-short-lived,see [trunk based
-development](https://paulhammant.com/2013/04/05/what-is-trunk-based-development/).
+short-lived,see [trunk based development](https://paulhammant.com/2013/04/05/what-is-trunk-based-development/).
 From the latter:
 
 > You should do Trunk-Based Development instead of GitFlow and other
@@ -110,8 +109,7 @@ develop in this case.
     components.
   - Be careful when merging in the upstream (develop) branch that you
     don't overwrite anyone else's changes with yours. It pays to look
-    closely at each merge marker. Use a [3way merge
-    tool](https://www.youtube.com/watch?v=GiXGYQ9Ah0U) `git mergetool`
+    closely at each merge marker. Use a [3way merge tool](https://www.youtube.com/watch?v=GiXGYQ9Ah0U) `git mergetool`
     if the merge is nontrivial.
 
 ## Tips for Creating A Pull Request
@@ -150,7 +148,6 @@ review.
     conventions. Are we doing something a new way, when a perfectly good
     way existed before?
   - Try to find and remove any duplicate code (DRY) or dead code.
-  - Review these [Code Review
-    Guidelines](https://phauer.com/2018/code-review-guidelines/)
+  - Review these [Code Review Guidelines](https://phauer.com/2018/code-review-guidelines/)
   - If you review code, always indicate you did so. Either click
     "approve", or leave a comment.

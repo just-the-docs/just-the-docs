@@ -23,7 +23,7 @@ after submitting a work request.
 This process is designed to help us do great work for you, as
 transparently as possible. If at any point you sense something's not
 working or not right for you, don't hesitate to [tell
-us](mailto:everyone@countable.ca) and we'll improve it\!
+us](mailto:everyone@countable.ca) and we'll improve it!
 
 If you're a visual person, check out the process diagram
 [here](https://docs.google.com/drawings/d/1UkPeGGzKYWkCsZpkwWB_UJ3JjWJcoT4t8qSU8A0tsy4/edit?usp=sharing).

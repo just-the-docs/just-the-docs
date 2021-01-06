@@ -99,15 +99,13 @@ Finding the right people is one of our biggest challenges, so we need
 every advantage we can find in this way.
 
   - [General Posting](peopleops/recruiting/JOB_POSTINGS/)
-  - [Are You A Good Fit For
-    Countable](peopleops/recruiting/HIRING_FIT/)?
+  - [Are You A Good Fit For Countable](peopleops/recruiting/HIRING_FIT/)?
 
 ### Marketing
 
 Helps us find the best partners and team members who share our passion.
 
-  - [Value
-    Proposition](https://countable-ops-manual.readthedocs.io/sales/SALES/#value-prop)
+  - [Value Proposition](https://countable-ops-manual.readthedocs.io/sales/SALES/#value-prop)
   - [Creative Brief](ux/UX/)
   - [Design Asset Storage](operations/FILE_STORAGE/)
   - [Social Media Posting Policy](ux/UX_GUIDELINES/)
@@ -120,24 +118,20 @@ If you're a new Countable team member, start here\!
 
   - [Onboarding](peopleops/ONBOARDING_GUIDE/)
   - [Your Contract](peopleops/SUBCONTRACTOR_AGREEMENT/)
-  - [Diversity and
-    Inclusion](https://countable-ops-manual.readthedocs.io/peopleops/TEAM_NORMS/#diversity-and-inclusion-principles)
-  - [Physical
-    Setup](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB/#setting-up-your-desk)
+  - [Diversity and Inclusion](https://countable-ops-manual.readthedocs.io/peopleops/TEAM_NORMS/#diversity-and-inclusion-principles)
+  - [Physical Setup](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB/#setting-up-your-desk)
   - [Project Management](operations/PROJECT_MANAGEMENT/)
   - [Evaluation](peopleops/EVALUATION/)
   - [Compensation](https://countable-ops-manual.readthedocs.io/peopleops/TEAM_NORMS/#compensation-strategy-principles)
   - [Scrum](operations/SCRUM/)
   - [Trello](operations/TRELLO/)
-  - [Client Data
-    Protection](https://countable-ops-manual.readthedocs.io/operations/CLIENTS/#client-data-protection)
+  - [Client Data Protection](https://countable-ops-manual.readthedocs.io/operations/CLIENTS/#client-data-protection)
 
 If you're a new client, start here\!
 
   - [Scrum](operations/SCRUM/)
   - [Trello](operations/TRELLO/)
-  - [Requesting Work from
-    Countable](operations/CLIENT_WORK_REQUEST_INSTRUCTIONS/)
+  - [Requesting Work from Countable](operations/CLIENT_WORK_REQUEST_INSTRUCTIONS/)
 
 ### Engineering
 
@@ -158,8 +152,7 @@ arbitrary process differences.
   - [Docker](devops/DOCKER/)
   - [Git](programming/GIT/)
   - [Jenkins](https://countable-ops-manual.readthedocs.io/devops/DEVOPS/#id3)
-  - [Stack
-    Choices](https://countable-ops-manual.readthedocs.io/devops/DEVOPS/#stack-choices)
+  - [Stack Choices](https://countable-ops-manual.readthedocs.io/devops/DEVOPS/#stack-choices)
 
 ### Consulting
 
@@ -173,8 +166,7 @@ How to provide the best results for clients.
   - [Meetings](peopleops/MEETINGS/)
   - [Processes](operations/OPERATIONS/)
   - [Storage](operations/FILE_STORAGE/)
-  - [Gathering Team
-    Feedback](https://countable-ops-manual.readthedocs.io/peopleops/COMMUNICATIONS_CHARTER/#giving-feedback-to-teammates)
+  - [Gathering Team Feedback](https://countable-ops-manual.readthedocs.io/peopleops/COMMUNICATIONS_CHARTER/#giving-feedback-to-teammates)
 
 ## Contributing
 
@@ -213,13 +205,11 @@ pull request. The rules:
     [Caktus](https://github.com/caktus/developer-documentation)
   - [GitLab handbook](https://about.gitlab.com/handbook/)
   - [Remote Only Manifesto](https://www.remoteonly.org/)
-  - [The Great CEO
-    Within](https://docs.google.com/document/d/1ZJZbv4J6FZ8Dnb0JuMhJxTnwl-dwqx5xl0s65DE3wO8/preview#)
+  - [The Great CEO Within](https://docs.google.com/document/d/1ZJZbv4J6FZ8Dnb0JuMhJxTnwl-dwqx5xl0s65DE3wO8/preview#)
   - [Buffer](https://open.buffer.com/) Is a radically transparent
     company that publishes internals too\! We love and admire them for
     it :)
   - [X team](https://x-team.com/remote-team-guide/) has been proactive
     in publishing their processes online in some detail on their
     website.
-  - [netlify culture
-    handbook](https://github.com/netlify/culture-handbook/blob/master/values)
+  - [netlify culture handbook](https://github.com/netlify/culture-handbook/blob/master/values)

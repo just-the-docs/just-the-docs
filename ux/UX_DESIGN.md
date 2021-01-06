@@ -1,3 +1,9 @@
+---
+layout: default
+title: UX Design Process
+parent: UX
+---
+
 # UX Design Process
 
 **Purpose**
@@ -86,7 +92,7 @@ Depending on the project, you may also want to develop:
     product owner and users, adjust, and repeat until everyone on your
     team has a clear shared vision.
   - You're now ready to hand off the wireframes to technical team
-    members to build a functional prototype (`/programming/PROTOTYPING`).
+    members to build a functional [prototype](../programming/PROTOTYPING).
 
 ## Feedback
 
@@ -94,7 +100,7 @@ While user experience design can be front-loaded in a project somewhat,
 it's critical to continue throughout the project to ensure incremental
 improvements are made and a great end result is achieved.
 
-  - Conduct usability tests (`USABILITY_TESTING`) of the functional
+  - Conduct [usability tests](USABILITY_TESTING) of the functional
     prototype as you iterate on it, each sprint.
   - Perform follow-up interviews on users after they've tried the
     product.

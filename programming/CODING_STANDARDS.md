@@ -38,13 +38,11 @@ language pages.
 
 We are influenced by the following writing.
 
-  - [Domain Driven
-    Design](https://en.wikipedia.org/wiki/Domain-driven_design)
+  - [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)
   - [12 factor App Methodology](https://12factor.net/)
   - [Trunk based development](https://trunkbaseddevelopment.com/)
   - [Agile Manifesto](https://agilemanifesto.org/)
-  - [Clean
-    Code](https://www.oreilly.com/library/view/clean-code/9780136083238/)
+  - [Clean Code](https://www.oreilly.com/library/view/clean-code/9780136083238/)
 
 ## Names
 
@@ -54,8 +52,7 @@ classes, and any other case where a name is chosen in code.
 Variables should hint what their data types are: in one glimpse I should
 be able to tell if a variable is e.g. a Boolean, string, etc.
 
-Consider the book [Clean
-Code](https://www.oreilly.com/library/view/clean-code/9780136083238/) on
+Consider the book [Clean Code](https://www.oreilly.com/library/view/clean-code/9780136083238/) on
 this topic and on writing short functions.
 
   - Names should indicate *what* a function does in *business domain

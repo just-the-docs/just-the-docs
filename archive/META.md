@@ -4,8 +4,7 @@ parent: Operations
 title: Meta
 ---
 
-Read the [RST
-Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics)
+Read the [RST Primer](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics)
 
 ## Tips and Tricks for Formatting
 

@@ -42,7 +42,7 @@ typically hired based on a quote for a specific deliverable.
 Everything that follows is for Staff Contractors, not outside
 consultants.
 
-Use these `JOB_POSTINGS`.
+Use these [Job Postings](JOB_POSTINGS).
 
 ## Recruiting Process
 
@@ -72,8 +72,7 @@ we need every advantage we can find in this way. Our strategy:
     Ideally we want virtuous cycle where if we have a culture fit, we
     probably want to hire that person, and they'll be more likely to
     want to work here too. For this, we have to communicate our mission,
-    vision and values within our [philosophy
-    documentation](../philosophy/PHILOSOPHY).
+    vision and values within our [philosophy documentation](../philosophy/PHILOSOPHY).
 
 Another goal is to always try to screen people earlier. The first stages
 of the screening process are cheaper, so we want to avoid letting anyone
@@ -103,8 +102,7 @@ Otherwise, when you receive an application:
 
 Due to the volume of resumes in initial screenings, we need a quick,
 quanitiative way to screen them. This is far from perfect, but early
-screening is optimized to [avoid "type 2 errors" not "type 1
-errors"](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors).
+screening is optimized to [avoid "type 2 errors" not "type 1 errors"](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors).
 Awarding half points is fine. Use your best judgement.
 
   - 1 point for communication. No point awarded if candidates who miss
@@ -182,8 +180,7 @@ are specfic to each team. The guideline for advancement:
   - Interview questions are not open-sourced here, because it was give
     too much advantage to the people who happen to see this page.
   - If in doubt, reject the candidate. Hiring the wrong person results
-    in a [type 2
-    error](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors).
+    in a [type 2 error](https://en.wikipedia.org/wiki/Type_I_and_type_II_errors).
   - Consider that "before you make an offer to someone, think about
     whether you’d like to have 10 times as many people like them in your
     company."
@@ -306,16 +303,14 @@ according to your needs.
 ## Interviewing
 
   - Prepare yourself for the interview. Take a look at our standard
-    [interview
-    questions](https://docs.google.com/document/d/130KCrw5WGYTGgJYKBVec3iEXxKkNoEkm1urHzEWznMo/edit#heading=h.7h8atrac1axk)
+    [interview questions](https://docs.google.com/document/d/130KCrw5WGYTGgJYKBVec3iEXxKkNoEkm1urHzEWznMo/edit#heading=h.7h8atrac1axk)
     and pick the ones that you find relevant for the situation
   - Communicate with your supervisor about the scheduled meetings, since
     they should participate as well.
   - On this step you and your selected candidate should join a
     video-chat meeting room, so you can have a quick conversation and
     get non-verbal cues about the lead personality traits, values, etc.
-  - [Here is a link to the Countable video chat
-    room](http://countable.whereby.com/lobby)
+  - [Here is a link to the Countable video chat room](http://countable.whereby.com/lobby)
 
 ## Tests
 
@@ -347,8 +342,7 @@ according to your needs.
 ### Onboarding
 
   - After you've successfully completed the previous step and collected
-    the candidate documents (save it at our [peopleops
-    folder](https://drive.google.com/drive/folders/1HY7LPI_h5F5WxaTW5v-1_DMUXcJIjjh1)
+    the candidate documents (save it at our [peopleops folder](https://drive.google.com/drive/folders/1HY7LPI_h5F5WxaTW5v-1_DMUXcJIjjh1)
     or send it to your supervisor)
   - You should add the candidate to the following services:
       - Project's Trello board
@@ -366,5 +360,4 @@ fit for both sides.
 
 ## References
 
-\[1\] [Harvard business review on how to
-hire](https://hbr.org/2018/01/how-to-hire)
+\[1\] [Harvard business review on how to hire](https://hbr.org/2018/01/how-to-hire)

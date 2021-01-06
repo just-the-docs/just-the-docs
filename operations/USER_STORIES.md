@@ -24,8 +24,7 @@ deliver.
 skill set, and they should be regularly updated accordingly when client
 feedback or user testing leads to potential changes.
 
-If you are new to this concept overall, the [User story
-Wikipedia](https://en.wikipedia.org/wiki/User_story) provides some great
+If you are new to this concept overall, the [User story Wikipedia](https://en.wikipedia.org/wiki/User_story) provides some great
 beginning resources.
 
 ## Personas
@@ -53,5 +52,4 @@ leads.
 within the team and actively prevent the customer requirements to emerge
 during the development."
 
-\--[Agile for Growth
-Blog](http://agileforgrowth.com/blog/how-to-write-good-user-stories/)
+\--[Agile for Growth Blog](http://agileforgrowth.com/blog/how-to-write-good-user-stories/)

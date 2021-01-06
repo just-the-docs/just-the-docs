@@ -24,7 +24,7 @@ options.
   - Countable does not take into account race and gender in hiring
     decisions or salary offers. Hiring should be done as if these
     attributes are not known at the time of offer.
-  - We use this `JOB_POSTINGS`.
+  - We use this [Job Postings](JOB_POSTINGS).
   - We try to be always hiring, in order to snap up the right person if
     they come along at any time.
 

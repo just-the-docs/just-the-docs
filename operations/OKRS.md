@@ -8,7 +8,7 @@ title: OKRs
 
 Teams who write down individual goals and regularly report progress to
 team members are 43% more likely to complete them. OKRs are a structured
-form of Goal-setting.
+form of goal-setting.
 
 **Scope**
 
@@ -103,8 +103,7 @@ They should:
 
 ### Our OKR Spreadsheet
 
-Each month's OKRs are captured
-[here](https://docs.google.com/spreadsheets/d/1H-5MpvHeZSyrmJzDexRLfqE2OfdwYhfwRq1J-zUUrlM/edit?usp=sharing)
+Each month's OKRs are captured in Eightmeters.
 
 ### Committed OKRs
 

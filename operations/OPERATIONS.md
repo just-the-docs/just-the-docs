@@ -123,7 +123,7 @@ Countable is an agency that uses consulting as a source of information
 to build start-ups.
 
 Countable has projects, and some of those projects can turn into new
-businesses (KMC\_shfits turned into Cortico in this case). Those
+businesses (KMC\_shifts turned into Cortico in this case). Those
 businesses stay in the team as a project for all intends and purposes at
 first, but over time they may become more independent. This depends on
 when they need space to focus on different problems than Countable. This
@@ -143,5 +143,4 @@ For all staff and subcontractors:
     within 6 feet of a colleague, and wash your hands regularly.
   - If you suspect you may be infected, refer to the Cortico COVID-19
     screening form for a list of symptoms and book an appointment if you
-    have concerns at
-    <https://kmc.cortico.ca/book/first-available-walk-in/>
+    have concerns at [KMC's walk-in](https://kmc.cortico.ca/book/first-available-walk-in/)

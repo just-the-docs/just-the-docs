@@ -61,8 +61,7 @@ Good:
 
 ## CSS Coding Standards
 
-Use the [Prettier autoformatter and
-standard](https://github.com/prettier/prettier).
+Use the [Prettier autoformatter and standard](https://github.com/prettier/prettier).
 
   - Don't use \!important
   - Use `.class` not `#id` for styling, because it is more reusable.
@@ -94,8 +93,7 @@ standard](https://github.com/prettier/prettier).
         color: #0000FF;
     }
 
-If you want to dive deeper, see [CSS
-Guidelines](https://cssguidelin.es/)
+If you want to dive deeper, see [CSS Guidelines](https://cssguidelin.es/)
 
 ## SCSS
 
@@ -108,8 +106,7 @@ We prefer to use SCSS over bare CSS. This enabled the following:
 
 ## Javascript, HTML and CSS Formatting
 
-Use the [Prettier autoformatter and
-standard](https://github.com/prettier/prettier).
+Use the [Prettier autoformatter and standard](https://github.com/prettier/prettier).
 
 For projects using node, and supported editors (like VS Code) you can
 have a `.prettierrc.js` in your project root, like this.

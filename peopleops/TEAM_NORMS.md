@@ -106,15 +106,15 @@ for customers. This document lists our existing Guilds and Teams.
 
 **List of Guilds**
 
-  - `/devops/DEVOPS` - Their goal is to ensure our software is delivered
+  - [DevOps](./devops/DEVOPS) - Their goal is to ensure our software is delivered
     to customers as quickly, reliably and automatically as possible.
-  - `/programming/DEVELOPERS` - Their goal is to improve our code, solve
+  - [Developers](/programming/DEVELOPERS) - Their goal is to improve our code, solve
     problems for users, and demonstrate working software to our team
     every day.
-  - `/ux/UX` - Their goal is to help everyone, from users to product
+  - [UX](./ux/UX) - Their goal is to help everyone, from users to product
     owners and developers, enjoy and benefit from interacting with our
     software.
-  - `/operations/OPERATIONS` - Their goal is maintaining clear and open
+  - [Operations](./operations/OPERATIONS) - Their goal is maintaining clear and open
     communication with our clients, and maintaining the roadmap to
     sustainable growth for our firm.
 
@@ -135,8 +135,7 @@ or other purposes. These are not `teams` in our company's terminology.
 
 ## Training at Countable
 
-We have official training materials here: `/programming/TRAINING`. Bill
-for your time doing any of these.
+We have official training materials here: [Training](./programming/TRAINING). Bill for your time doing any of these.
 
 **Books**
 
@@ -153,7 +152,7 @@ an operations meet, and a design/ux guild meet.
 
 ## Performance Evaluation Policy
 
-See our dedicated `/programming/EVALUATION`
+See our dedicated [Evaluation](./programming/EVALUATION) processes.
 
 ## Team Event Basics
 

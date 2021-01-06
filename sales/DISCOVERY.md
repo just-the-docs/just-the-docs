@@ -19,7 +19,7 @@ The agenda of for a kick-off meeting, and next steps.
 
 ## Kick-off Meeting
 
-Before starting the project, ensure the `PROJECT_STRUCTURE` is set up.
+Before starting the project, ensure the [Project Structure](PROJECT_STRUCTURE) is set up.
 
 For the Kick-off Meeting, meet the product owner (client) in person or
 over video chat. Text based interaction isn't good enough for these

@@ -32,20 +32,15 @@ For more, check out the guide book from the inventor of Scrum
 User Stories serve as the central planning document for any given
 project. The purpose of User Stories is to ensure all stakeholders can
 understand what we're trying to accomplish, no matter their level of
-technical expertise. Check out the [User
-Stories](../operations/USER_STORIES) page for more detail and how
+technical expertise. Check out the [User Stories](../operations/USER_STORIES) page for more detail and how
 to compose User Stories.
 
 ## SCRUM Process
 
 ### Project Objective and Key Results
 
-Every team should have one or more
-[Objectives](../operations/OKRS). This is a written goal discussed
-with the team to ensure clarity, and is used by the **Product Owner** to
-order the **Backlog**. An objective may be to meet a particular [User
-Story](../operations/USER_STORIES).
-
+Every team should have one or more [Objectives](../operations/OKRS). This is a written goal discussed with the team to ensure clarity, and is used by the **Product Owner** toorder the **Backlog**. An objective may be to meet a  particular [UserStory](../operations/USER_STORIES).
+ 
 ### Sprint
 
 A sprint is a period (1 week to 1 month) punctuated by a Sprint meeting.
@@ -125,9 +120,7 @@ communicate about what they're working on, coordinate code reviews, and
 figure out logistics to ship their work every week, and generate ideas
 for the sprint plan meeting.
 
-For a visual aid of how our work is processed, see this [Business
-Process
-Diagram](https://drive.google.com/open?id=1VrniT1lRqVu9sJr0ZMK1aQLnFwEuFIQD).
+For a visual aid of how our work is processed, see this [Business Process Diagram](https://drive.google.com/open?id=1VrniT1lRqVu9sJr0ZMK1aQLnFwEuFIQD).
 
 Note: Instead of just talking about what did you do this week, try to
 use a screen share feature to walk along all of your "done" trello

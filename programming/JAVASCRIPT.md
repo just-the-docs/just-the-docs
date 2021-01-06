@@ -20,8 +20,7 @@ Covers the specifics of multiple tools and frameworks.
   - Prefer ES6 template strings to other methods of string
     concatenation.
 
-Use the [Prettier autoformatter and
-standard](https://github.com/prettier/prettier).
+Use the [Prettier autoformatter and standard](https://github.com/prettier/prettier).
 
 For projects using node, and supported editors (like VS Code) you can
 have a `.prettierrc.js` in your project root, like this.
@@ -44,8 +43,7 @@ software projects due to maintainability issues, and thsoe concerns are
 founded. However, taking some care in how you use the library helps keep
 jQuery projects maintainable.
 
-Most of the problems maintaining jQuery apps come from [DOM
-Manipulation](https://api.jquery.com/category/manipulation/) which leads
+Most of the problems maintaining jQuery apps come from [DOM Manipulation](https://api.jquery.com/category/manipulation/) which leads
 to needlessly complex state. To minimize this, here are some guidelines
 to use where possible.
 
@@ -113,8 +111,7 @@ avoid:
     <div>
 
 It is better to query the DOM once, cache it then use the `find` method
-to grab elements. See cache.find [performance test
-here](https://jsperf.com/selector-vs-find-again/11)
+to grab elements. See cache.find [performance test here](https://jsperf.com/selector-vs-find-again/11)
 
     // BAD
     const one = $("#one");
@@ -173,5 +170,4 @@ created too late or being lost due to dom updates.
 
 ## References
 
-\[1\] [Declarative vs Imperative
-Programming](https://codeburst.io/declarative-vs-imperative-programming-a8a7c93d9ad2)
+\[1\] [Declarative vs Imperative Programming](https://codeburst.io/declarative-vs-imperative-programming-a8a7c93d9ad2)

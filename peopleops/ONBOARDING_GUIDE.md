@@ -9,8 +9,7 @@ title: Onboarding
 The goal of this guide is to help new members of Countable get connected
 with the team, efficiently set up accounts, and learn key things to help
 you get started contributing\! If you find a way to improve this
-document, send a [Pull
-Request](https://github.com/countable-web/ops-manual/pull/new/master)\!
+document, send a [Pull Request](https://github.com/countable-web/ops-manual/pull/new/master)\!
 If anything is unclear, let's fix it so it's clear for the next person.
 
 **Scope**
@@ -21,8 +20,7 @@ Covers all the onboarding steps for a new Countable Team Member.
 
   - Get a countable.ca email address (ask your manager to create it),
     and [set up your signature](https://youtu.be/hA5cRIDg0Ko)
-  - Use your email address to [sign up on our
-    slack](https://join.slack.com/t/countable-web/signup).
+  - Use your email address to [sign up on our slack](https://join.slack.com/t/countable-web/signup).
   - Use our slack to say hi to the team. Share your:
       - New Title
       - Last Company
@@ -31,8 +29,7 @@ Covers all the onboarding steps for a new Countable Team Member.
       - Hobbies
       - Two True things about you, and a Lie (let the team guess which).
   - Use the team to answer your other questions.
-  - Add your work availability
-    [here](https://docs.google.com/spreadsheets/d/1zh6GYex7UtoZGyChRGNy8378brtxvfrOdtedf6z5c5M/edit#gid=0)
+  - Add your work availability to your calendar [using Google's Work Hours](https://support.google.com/calendar/answer/7638168?hl=en). These should account for at least half of your planned working time, but don't have to be 40+ hours- leave yourself some time for deep and uninterrupted work!
 
 ### Set your profile photo
 
@@ -42,8 +39,7 @@ Covers all the onboarding steps for a new Countable Team Member.
 
 ### Set up Eightmeters
 
-[See
-here](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#using-eightmeters)
+[See here](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#using-eightmeters)
 
 ### Team Calendar
 
@@ -60,19 +56,16 @@ here](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#using
 
 ### Environment
 
-  - Set up a [physical space and
-    equipment](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#setting-up-your-desk)
+  - Set up a [physical space and equipment](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#setting-up-your-desk)
     to work.
-  - devs only - Read about our `/devops/DEVOPS` and
-    `/programming/CODING_STANDARDS`
-  - devs only - Complete the `/programming/TRAINING` following these
-    practices and get a team member to code review it using a feature
+  - devs only - Read about our [DevOps](./devops/DEVOPS) and
+    [Coding Standards](./programming/CODING_STANDARDS)
+  - devs only - Complete the [Training](./programming/TRAINING) following these practices and get a team member to code review it using a feature
     branch and pull request.
   - Order a book that will help you learn your job, and bill the company
     for it.
 
-Fill [this onboarding
-form](https://docs.google.com/forms/d/e/1FAIpQLScYLUdoD5z1OhMNbhXC4G3GDLVbumoPH9X-mnNPDRaR2YQiwA/viewform?usp=sf_link).
+Fill [this onboarding form](https://docs.google.com/forms/d/e/1FAIpQLScYLUdoD5z1OhMNbhXC4G3GDLVbumoPH9X-mnNPDRaR2YQiwA/viewform?usp=sf_link).
 It contains information we need for you to start work at Countable.
 
 Join these using your Google account:
@@ -84,8 +77,7 @@ Join these using your Google account:
 
 ### How to Do Work
 
-Skim this so you know the language and how we work
-`/operations/PROJECT_MANAGEMENT`.
+Skim this so you know the language and how we work: [Project Management](./operations/PROJECT_MANAGEMENT).
 
 ### Confirm
 
@@ -98,12 +90,10 @@ you've completed onboarding, or we'll assume you haven't and complain.
   - If something *specific to our company* isn't in here, ask team mates
     for help liberally and ensure it gets documented concisely in the
     right place.
-  - Review the [staff
-    homepage](https://sites.google.com/countable.ca/countable-staff/home),
+  - Review the [staff homepage](https://sites.google.com/countable.ca/countable-staff/home),
     for commonly used resources including the Google Drive stuff you can
     access. Sign in as countable email to view this page.
-  - It's a great idea to bookmark [the eightmeters
-    URL](https://eightmeters.countable.ca) and OKRs URL (Google Sheet)
+  - It's a great idea to bookmark [the eightmeters URL](https://eightmeters.countable.ca) and OKRs URL (Google Sheet)
     in your bookmarks bar. Because you should access both of these
     things frequently.
 
@@ -120,7 +110,7 @@ complete tasks every day when you work. But, you are expected to:
   - Try your best to complete a tiny task, rather than partially
     finishing a big task.
   - Expectations that are required to be part of Countable (level 1) and
-    for promotion are documented here: `/programming/EVALUATION`.
+    for promotion are documented here: [Evaluation](./programming/EVALUATION).
 
 ### How To Ask For Help
 
@@ -141,8 +131,4 @@ See [this video](https://www.youtube.com/watch?v=hY14Er6JX2s), skip to
 ### What's Next?
 
 The team should spend lots of time with new staff, and over-communicate.
-Until we provide more guidlines here's a link
-
-[to some questions managers should review with new employees after the
-first
-month](https://www.gqrgm.com/questions-ask-new-employees-first-month/),
+Until we provide more guidelines here's a link [to some questions managers should review with new employees after the first month](https://www.gqrgm.com/questions-ask-new-employees-first-month/)

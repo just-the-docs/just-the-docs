@@ -17,8 +17,7 @@ Countable to assist with onboarding.
 ## Project Management Process
 
   - Every project has a "Purpose" which must be documented and visible.
-  - Every project has at least one [Objective and Key
-    Result](../operations/OKRS) every month.
+  - Every project has at least one [Objective and Key Result](../operations/OKRS) every month.
   - We use Scrum like [this](../operations/SCRUM).
   - Every day, try to get some
     [feedback](../peopleops/FEEDBACK_LOOPS) on your work.
@@ -26,7 +25,7 @@ Countable to assist with onboarding.
   - Work together to minimize the amount of time anyone is blocked or
     waiting for someone's output as their input. The list of items in
     which people depend on each other's work is called the
-    `CRITICAL_PATH`
+    [Critical Path](CRITICAL_PATH)
 
 ## Project Management Objectives
 
@@ -46,8 +45,7 @@ Countable to assist with onboarding.
 
 ## Tools - GIT
 
-For developers - We follow the [git
-flow](https://datasift.github.io/gitflow/IntroducingGitFlow)
+For developers - We follow the [git flow](https://datasift.github.io/gitflow/IntroducingGitFlow)
 branching conventions loosely. All projects should have a master
 (production) branch which releases are made from, and a develop (stable)
 branch for developers as a foundation to build features on. Feature

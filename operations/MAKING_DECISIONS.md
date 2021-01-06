@@ -6,7 +6,7 @@ title: Makeing Decisions
 
 **Purpose**
 
-It can be confusing how decisions are made so let's shed light on it.
+It can be confusing how decisions are made, so let's shed light on it.
 
 **Scope**
 
@@ -46,8 +46,7 @@ decisions. Type 1 and type 2. You should research, and get help with
 Type 1 decisions, and make Type 2 decisions quickly on your own
 (provided it's within your AOR).
 
-[More on this
-distinction](https://www.businessinsider.com/jeff-bezos-on-type-1-and-type-2-decisions-2016-4)
+[More on this distinction](https://www.businessinsider.com/jeff-bezos-on-type-1-and-type-2-decisions-2016-4)
 
   - irreversible (also called Type 1 by Jeff Bezos) or difficult to
     reverse decisions. Requires committing an investment. These are more

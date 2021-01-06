@@ -32,8 +32,7 @@ get better at our work, and communicate with teammates.
     don't pull someone in who was planning the day off.
   - While there are occasional emergencies that may require it, we try
     to minimize the pressure on people to work beyond 8 hours a day.
-  - Indicate what hours you will work in the [staff
-    schedule](https://docs.google.com/spreadsheets/d/1zh6GYex7UtoZGyChRGNy8378brtxvfrOdtedf6z5c5M/edit#gid=0).
+  - Indicate what hours you will work in the [staff schedule](https://docs.google.com/spreadsheets/d/1zh6GYex7UtoZGyChRGNy8378brtxvfrOdtedf6z5c5M/edit#gid=0).
     This isn't written in stone but allows your team members to plan
     when to work with you. If you change it one day, just let your team
     know in advance.
@@ -140,7 +139,7 @@ external project stakeholders).
 ### Trello
 
 \- Trello is for tracking what we need to get done (actionable tasks and
-reminders). We use variants of Scrum, details here: `/operations/TRELLO`
+reminders). We use variants of Scrum, details [here](/operations/TRELLO).
 
 ### Office Hours and Presence
 
@@ -153,7 +152,7 @@ reminders). We use variants of Scrum, details here: `/operations/TRELLO`
 
 ## Meetings
 
-See `/peopleops/MEETINGS`
+See [Meetings](/peopleops/MEETINGS)
 
 ## Slack Hygiene
 
@@ -216,12 +215,11 @@ improve. Some references on why this is:
     professionally. (Originals)
   - Honest feedback prevents the perils of "group think" that damages
     teams as they grow. (Culture code)
-  - [Gratitude makes you
-    happier](https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier)
+  - [Gratitude makes you happier](https://www.health.harvard.edu/healthbeat/giving-thanks-can-make-you-happier)
 
 ### When To Give Feedback
 
-  - Code reviews (following norms here: `/programming/GIT`) The benefits
+  - Code reviews (following norms [here](/programming/GIT) The benefits
     of Senior developers reviewing Junior developers' code is obvious I
     hope, but it's just as critical to provide feedback as a Jr
     dev because:
@@ -313,7 +311,5 @@ about it."
 
 #### Resources
 
->   - [Video on
->     presenting](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/how-to-speak/index.htm)
->   - [Quiz with targetted advice on general communication
->     skills](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/how-to-speak/index.htm)
+>   - [Video on presenting](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/how-to-speak/index.htm)
+>   - [Quiz with targetted advice on general communication skills](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/how-to-speak/index.htm)

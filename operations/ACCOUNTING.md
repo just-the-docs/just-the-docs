@@ -21,8 +21,7 @@ to, and how we do so.
 
 ### List of Tax Deductible Items
 
-Anything purchased by Countable from [this list of eligible
-items](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/sole-proprietorships-partnerships/business-expenses)
+Anything purchased by Countable from [this list of eligible items](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/sole-proprietorships-partnerships/business-expenses)
 should be included in our tax deduction each year.
 
 ### Tax Categories

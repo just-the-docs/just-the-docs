@@ -16,7 +16,7 @@ and nodejs posts.
 
 ## Base Job Posting
 
-Hi\!
+Hi!
 
 `cta (call to action) here "let's chat"`
 
@@ -36,8 +36,7 @@ transparent from the ground up: we've open-sourced our company's
 operations manual here if you want to learn more about our current
 thinking.
 
-[Our Open Source Ops
-Manual](https://countable-ops-manual.readthedocs.io/)
+[Our Open Source Ops Manual](https://countable-ops-manual.readthedocs.io/)
 
 `responsibilities and skills`
 

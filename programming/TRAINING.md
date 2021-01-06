@@ -70,8 +70,7 @@ If you're new to Docker, do this. We use Docker for everything so you
 should get familiar with the basic concepts of running containers from
 images, and docker-compose which runs multiple containers at once.
 
-[Watch this 12 minute
-video](https://hackr.io/tutorial/learn-docker-in-12-minutes).
+[Watch this 12 minute video](https://hackr.io/tutorial/learn-docker-in-12-minutes).
 
 [Do this tutorial](https://docs.docker.com/compose/django/).
 
@@ -96,17 +95,14 @@ These are optional based on what specific gaps you need to fill.
 I'm starting with a list of resources I've found helpful myself, or have
 found and can imagine being helpful for our work.
 
-To provide a feedback loop on training efficacy, copy [this Trello
-Ticket](https://trello.com/c/rUsXiFoO/3-training-session-tracker-replace-title)
+To provide a feedback loop on training efficacy, copy [this Trello Ticket](https://trello.com/c/rUsXiFoO/3-training-session-tracker-replace-title)
 for each section you begin below.
 
 ### Javascript Training
 
-  - *intermediate* [Functional programming
-    intro](http://reactivex.io/learnrx/)
+  - *intermediate* [Functional programming intro](http://reactivex.io/learnrx/)
   - *intermediate* Read "Javascript, The Good Parts"
-  - *advanced* [Watch Hey Underscore You're Doing it
-    Wrong](https://www.youtube.com/watch?v=m3svKOdZijA/)
+  - *advanced* [Watch Hey Underscore You're Doing it Wrong](https://www.youtube.com/watch?v=m3svKOdZijA/)
 
 ### Linux
 
@@ -154,8 +150,7 @@ beat compiling your own kernel and assembling your own userland.
 ### Startup School Videos
 
 These apply quite generally to the kind of product development we take
-on. [Latest Startup School
-Videos](https://www.startupschool.org/latest). You must take notes and
+on. [Latest Startup School Videos](https://www.startupschool.org/latest). You must take notes and
 share them with the team.
 
 ## References

@@ -30,6 +30,7 @@ should clarify our process.
 
 We should store things only in the places and ways described below.
 
+
 | System                                                                                                                                                                                                         | What Goes Here                                                                       | Who Has Access                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------- |
 | GitHub - this repo                                                                                                                                                                                             | Document how and why we do things                                                    | Everyone in the world                 |
@@ -86,11 +87,9 @@ Every client has a folder in our Company Google Drive named:
     linked
     [HERE](https://drive.google.com/drive/u/0/folders/19uOpYepddtD_fsheccNiAdTOPYYaAymg?ddrp=1)
 
-It is based on Felipe's folder design schema (attached) and [this
-article](https://pixeldreams.com/blog/best-practices-folder-structure/)
+It is based on Felipe's folder design schema (attached) and [this article](https://pixeldreams.com/blog/best-practices-folder-structure/)
 
-![Countable Web Production, File Organization
-Tree](https://github.com/fepirata/final-exam-special-topics/blob/master/public/cwp_file_organization_tree_v01.jpg?raw=true)
+![Countable Web Production, File Organization Tree](https://github.com/fepirata/final-exam-special-topics/blob/master/public/cwp_file_organization_tree_v01.jpg?raw=true)
 
 | Folder                                                                         | What Goes Here                                           | Description                                                                                                                                                               |
 | ------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -108,16 +107,14 @@ Tree](https://github.com/fepirata/final-exam-special-topics/blob/master/public/c
 
 The naming convention for folder have the following structure:
 
-![Countable Web Production, Naming Structure guide for
-folders](https://github.com/fepirata/final-exam-special-topics/blob/master/public/cwp_naming_guide_folder_v03.jpg?raw=true)
+![Countable Web Production, Naming Structure guide for folders](https://github.com/fepirata/final-exam-special-topics/blob/master/public/cwp_naming_guide_folder_v03.jpg?raw=true)
 
 ### Files
 
 The files follow a similar structure, the main difference is that files
 have versioning section in the end of the name:
 
-![Countable Web Production, Naming Structure guide for
-files](https://github.com/fepirata/final-exam-special-topics/blob/master/public/cwp_naming_guide_file_v01.jpg?raw=true)
+![Countable Web Production, Naming Structure guide for files](https://github.com/fepirata/final-exam-special-topics/blob/master/public/cwp_naming_guide_file_v01.jpg?raw=true)
 
 ### Guidelines for naming structure
 
@@ -155,15 +152,13 @@ additional folder or not:
     the versioning section in the end.
   - The five main folders follow a color structure, which visually helps
     us to guide through the folders. It's good to keep the color pattern
-    whenever possible. ![Countable Web Production, folder color
-    example](https://github.com/fepirata/final-exam-special-topics/blob/master/public/cwp_file_structure_folder_color_example.png)
+    whenever possible. ![Countable Web Production, folder color example](https://github.com/fepirata/final-exam-special-topics/blob/master/public/cwp_file_structure_folder_color_example.png)
 
 ### Example: Countable Marketing Folder
 
 TODO: make this follow the convention fully.
 
-[Example
-folder](https://drive.google.com/drive/folders/1iPhpEg1RuEz_ki4yNgzSOg9Z257Mpa7x?usp=sharing)
+[Example folder](https://drive.google.com/drive/folders/1iPhpEg1RuEz_ki4yNgzSOg9Z257Mpa7x?usp=sharing)
 
 All the old files are in there, but they've been organized into the
 following categories:
@@ -224,20 +219,14 @@ following categories:
     including sliced images and the logo files specifically used for the
     website.
 
-It is based on Felipe's folder design schema (attached) and [this
-article](https://pixeldreams.com/blog/best-practices-folder-structure/)
+It is based on Felipe's folder design schema (attached) and [this article](https://pixeldreams.com/blog/best-practices-folder-structure/)
 
 ### Miro
 
 Miro is a great tool but the art boards can get messy quickly. General
-guidelines to keep us productive: - Store everything in project folders.
-Every client should have exactly one folder, and you should invite the
-relevant team members to that folder. Do NOT make different folders per
-project, or save things in the root folder, if you want to share them
-with the team. - Name your artboards clearly. You can put a lot in one
-art board, and that's often better than having many small art boards. As
-a rule fo thumb, create one art board per project epic (major activity
-the group works together on, such as a substantial user interface) - For
-mock-ups. Please put them in frames (such as the browser frame). Label
-each page clearly in the frame title (ie, in CRUD notation like "Widget
+guidelines to keep us productive: 
+- Store everything in project folders. Every client should have exactly one folder, and you should invite the relevant team members to that folder. Do NOT make different folders per project, or save things in the root folder, if you want to share them with the team. 
+- Name your artboards clearly. You can put a lot in one art board, and that's often better than having many small art boards. As a rule fo thumb, create one art board per project epic (major activity the group works together on, such as a substantial user interface) 
+- For mock-ups: Please put them in frames (such as the browser frame). Label
+each page clearly in the frame title (i.e., in CRUD notation like "Widget
 List"). Use arrows to indicate navigation between frames.

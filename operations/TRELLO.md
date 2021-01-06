@@ -54,8 +54,7 @@ of a set of **Cards** (tasks) arranged in **Columns**.
 ## Trello Cards
 
 A card should contain a clear description of work to be done by one
-person required to support a given User Story (See
-`/operations/USER_STORIES`). This may correspond to a single User
+person required to support a given [User Story](./operations/USER_STORIES). This may correspond to a single User
 Acceptance Test.
 
 During composition, the author of the Trello card should always assume
@@ -158,7 +157,7 @@ approval, code review, or automated test written.
 A diagram shows how cards can move from conception to completion
 [here](https://drive.google.com/open?id=1VrniT1lRqVu9sJr0ZMK1aQLnFwEuFIQD).
 As the diagram illustrates, each column corresponds to a specific within
-the adapted `/operations/SCRUM` framework.
+the adapted [SCRUM](SCRUM) framework.
 
 ## Progress Awareness
 

@@ -4,8 +4,7 @@ parent: Operations
 title: Clients
 ---
 
-Check out our [Delivery Workflow Documentation for
-clients](../CLIENT_WORK_REQUEST_INSTRUCTIONS)
+Check out our [Delivery Workflow Documentation for Clients](../CLIENT_WORK_REQUEST_INSTRUCTIONS)
 
 ## Communicating With Clients
 
@@ -16,8 +15,7 @@ clients](../CLIENT_WORK_REQUEST_INSTRUCTIONS)
   - Email may be appropriate as well for more substantial updates that
     deal with several Trello cards.
   - Show the clients you work for something at least once a week. You
-    can use **Screencastify chrome extension** for it ([More
-    details](../PROJECT_MANAGEMENT)).
+    can use **Screencastify chrome extension** for it ([More details](../PROJECT_MANAGEMENT)).
   - Keep it visual. Use screenshots, mockups, videos, and links to
     staged apps as the primary way to demonstrate work to clients.
   - Try to anticipate what problems they will have when using the app,

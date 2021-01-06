@@ -43,8 +43,7 @@ Commission is divided as follows.
 
 ## Cost Estimation
 
-Software project cost estimation is [notoriously
-difficult](https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model).
+Software project cost estimation is [notoriously difficult](https://erikbern.com/2019/04/15/why-software-projects-take-longer-than-you-think-a-statistical-model).
 A typical problem is the team appears to have 70% of the information
 when estimating a project, when they really have 30% because by
 definition, they can't see black swan conditions (unknown unknowns).
@@ -99,8 +98,7 @@ of work. Keep the following in mind:
 >   - The quote should provide a clear scope of functional
 >     specification, and list assumptions it is based on in order to
 >     simplify determining whether later changes are in scope or not.
->   - Use [this
->     template](https://docs.google.com/spreadsheets/d/1Gc_xjX-SnOvQ9QemLBrsYtPrBZISqT4H7qFw_Wkn3Co/edit#gid=0).
+>   - Use [this template](https://docs.google.com/spreadsheets/d/1Gc_xjX-SnOvQ9QemLBrsYtPrBZISqT4H7qFw_Wkn3Co/edit#gid=0).
 >   - The big caveat with providing a quote, is it affects the work
 >     outcome. It may help keep the team focused on what's promised in
 >     the quote, but also may prevent fixing problems we find along the
