@@ -1,3 +1,9 @@
+---
+layout: default
+title: Team Norms at Countable
+parent: People Ops
+---
+
 # Team Norms at Countable
 
 **Purpose**

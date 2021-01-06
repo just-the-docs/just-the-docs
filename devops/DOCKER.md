@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Docker
 parent: DevOps
 ---
 

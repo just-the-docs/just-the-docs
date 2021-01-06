@@ -1,3 +1,9 @@
+---
+layout: default
+title: Docker
+parent: Why Docker?
+---
+
 # Why Docker?
 ---
 layout: default

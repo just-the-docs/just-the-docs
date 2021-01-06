@@ -1,8 +1,10 @@
+---
+layout: default
+title: Subcontractor Work Agreement
+parent: People Ops
+---
+
 # Subcontractor Work Agreement
-
-<div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
-
-</div>
 
 **Purpose**
 
