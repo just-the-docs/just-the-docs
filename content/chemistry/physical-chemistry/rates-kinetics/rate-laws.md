@@ -2,7 +2,7 @@
 layout: lesson
 title: Rate Laws
 author: Andy Cai
-parent: Rate Kinetics
+parent: Rates and Kinetics
 grand_parent: Physical Chemistry
 ---
 
