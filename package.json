@@ -1,23 +1,36 @@
 {
-  "name": "just-the-docs",
-  "version": "0.3.2",
-  "description": "A modern Jekyll theme for documentation",
-  "repository": "pmarsceill/just-the-docs",
-  "license": "MIT",
-  "bugs": "https://github.com/pmarsceill/just-the-docs/issues",
-  "devDependencies": {
-    "@primer/css": "^15.1.0",
-    "prettier": "^2.1.1",
-    "stylelint": "^13.6.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-primer": "^9.0.0",
-    "stylelint-prettier": "^1.1.2",
-    "stylelint-selector-no-utility": "^4.0.0"
-  },
+  "name": "incendium-academy",
+  "version": "1.0.0",
+  "description": "",
   "scripts": {
-    "test": "stylelint '**/*.scss'",
-    "format": "prettier --write '**/*.{scss,js,json}'",
-    "stylelint-check": "stylelint-config-prettier-check"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:webpack": "webpack --mode=development --watch",
+    "start:jekyll": "bundle exec jekyll serve --livereload -o",
+    "start": "npm-run-all -p -r start:webpack start:jekyll",
+    "build:webpack": "webpack --mode=production",
+    "build:jekyll": "bundle exec jekyll build",
+    "build": "npm run build:webpack && npm run build:jekyll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IncendiumAcademy/IncendiumAcademy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IncendiumAcademy/IncendiumAcademy/issues"
+  },
+  "homepage": "https://github.com/IncendiumAcademy/IncendiumAcademy#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.8.1",
+    "firebase": "^8.2.1",
+    "npm-run-all": "^4.1.5",
+    "regenerator-runtime": "^0.13.7",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
   },
   "dependencies": {}
 }

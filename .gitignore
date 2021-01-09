@@ -2,8 +2,12 @@
 .bundle
 .ruby-version
 .jekyll-cache
+.jekyll-metadata
 .sass-cache
 _site
+.sass-cache
 Gemfile.lock
 node_modules
 .idea
+assets/js/main-bundle.js
+assets/js/main-bundle.js.LICENSE.txt
