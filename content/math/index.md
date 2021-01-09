@@ -1,9 +1,5 @@
 ---
 layout: default
-title: Math
+title: Home
 nav_order: 0
 ---
-
-# Math
-
-$$ \frac{1}{2} $$

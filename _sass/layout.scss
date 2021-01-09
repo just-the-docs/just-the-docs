@@ -254,3 +254,15 @@ body {
   margin-right: auto;
   background-color: $sidebar-color;
 }
+
+.centered { display: block; float: none; margin-right: auto; margin-left: auto; }
+
+.zoom-25 { zoom: 25%; }
+.zoom-50 { zoom: 50%; }
+.zoom-65 { zoom: 65%; }
+.zoom-75 { zoom: 75%; }
+.zoom-100 { zoom: 100%; }
+.zoom-125 { zoom: 125%; }
+.zoom-150 { zoom: 150%; }
+.zoom-175 { zoom: 175%; }
+.zoom-200 { zoom: 200%; }

@@ -1,9 +1,6 @@
 ---
 layout: lesson
-title: Chemistry
+title: Home
 nav_order: 0
 ---
 
-# Chemistry
-
-$$ \frac{1}{2} $$

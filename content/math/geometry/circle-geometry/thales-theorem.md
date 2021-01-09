@@ -2,6 +2,8 @@
 layout: lesson
 title: Thales Theorem
 author: Richard Hanxu
+parent: Circle Geometry
+grand_parent: Geometry  
 ---
 
 This is a brief extension of the Inscribed Angle theorem, which is useful in questions involving right triangles inscribed within a circle.

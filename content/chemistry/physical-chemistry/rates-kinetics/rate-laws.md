@@ -2,7 +2,12 @@
 layout: lesson
 title: Rate Laws
 author: Andy Cai
+parent: Rate Kinetics
+grand_parent: Physical Chemistry
 ---
+
+1. TOC
+{:toc}
 
 {% raw %}
 ## Introduction
@@ -284,13 +289,17 @@ We can think about this using an intuitive example.
 
 Imagine there are two tanks of water divided by a plate that has many holes:
 
-<img src="DIAGRAM1.png" alt="DIAGRAM1" style="zoom:50%;"/>
+{% endraw %}
+
+![](DIAGRAM1.png){: .centered }{: .zoom-65 }
 
 This simulates our fast equilibrium reaction. The water goes from the left side to the right side at a rate equal to the rate water goes from the right side to the left side, meaning it is at equilibrium. 
 
 Now let's poke a small hole in the right side. This will simulate the slow step following the reversible reaction.
 
-<img src="DIAGRAM2.png" alt="DIAGRAM2" style="zoom:50%;"/>
+![](DIAGRAM2.png){: .centered }{: .zoom-65 }
+
+{% raw %}
 
 We see that the water levels of the two sides remain equal, as the rate at which the water leaves the right side is slow enough that equilibrium can still roughly be reached. 
 

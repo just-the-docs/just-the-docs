@@ -2,6 +2,8 @@
 layout: lesson
 title: Inscribed and Central Angles
 author: Richard Hanxu
+parent: Circle Geometry
+grand_parent: Geometry
 ---
 
 A first look at competitive geometry, with an introduction to inscribed and central angles in a circle.

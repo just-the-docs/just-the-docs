@@ -2,6 +2,8 @@
 layout: lesson
 title: Geometric Sequences
 author: Jae Gwan Park
+parent: Sequences and Series
+grand_parent: Algebra
 ---
 
 

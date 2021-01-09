@@ -1,9 +1,5 @@
 ---
 layout: default
-title: Physics
+title: Home
 nav_order: 0
 ---
-
-# Physics
-
-$$ \frac{1}{2} $$
