@@ -354,8 +354,10 @@ $$
 Since the rate at which it is consumed should equal the rate at which it is produced, we get the following relation:
 
 $$
-Rate_{produced} = Rate_{consumed} \\
-k_2[\ce{A}][\ce{B2}] = k_3[\ce{AB2}][\ce{B2}][\ce{A}]
+\begin{align*}
+Rate_{produced} &= Rate_{consumed} \\
+k_2[\ce{A}][\ce{B2}] &= k_3[\ce{AB2}][\ce{B2}][\ce{A}]
+\end{align*}
 $$
 
 This relation can be simplified to get an expression for $$[\ce{AB2}]$$.
@@ -382,16 +384,27 @@ $$
 Once again, since the rate at which it is consumed should equal the rate at which it is produced, we get the following relation:
 
 $$
-Rate_{produced} = Rate_{consumed} \\ k_1[\ce{A2}] = k_{-1} [\ce{A}]^2 + k_2[\ce{A}][\ce{B2}] + k_3[\ce{AB2}][\ce{B2}][\ce{A}]
+\begin{align*}
+Rate_{produced} &= Rate_{consumed} \\ 
+k_1[\ce{A2}] &= k_{-1} [\ce{A}]^2 + k_2[\ce{A}][\ce{B2}] + k_3[\ce{AB2}][\ce{B2}][\ce{A}]
+\end{align*}
 $$
 
 Let's substitute our $$[\ce{AB2}]$$ term that we found earlier and simplify:
 
 $$
-k_1[\ce{A2}] = k_{-1} [\ce{A}]^2 + k_{ 2 }[\ce{A}][\ce{B2}] + k_3\frac{k_2}{k_3}[\ce{B2}][\ce{A}] \\ k_1[\ce{A2}] = k_{-1}[\ce{A}]^2 + 2k_{ 2 }[\ce{A}][\ce{B2}] \\ k_{-1}[\ce{A}]^2 + 2k_{ 2 }[\ce{A}][\ce{B2}] - k_1[\ce{A2}] = 0
+\begin{align*}
+k_1[\ce{A2}] &= k_{-1} [\ce{A}]^2 + k_{ 2 }[\ce{A}][\ce{B2}] + k_3\frac{k_2}{k_3}[\ce{B2}][\ce{A}] \\
+k_1[\ce{A2}] &= k_{-1}[\ce{A}]^2 + 2k_{ 2 }[\ce{A}][\ce{B2}] \\ 
+\end{align*}
 $$
 
-We can now solve for $$[\ce{A}]$$ using the quadratic formula. A lesson on how to solve quadratics is linked here: [Insert link to math lesson on quadratics here]
+$$
+\therefore k_{-1}[\ce{A}]^2 + 2k_{ 2 }[\ce{A}][\ce{B2}] - k_1[\ce{A2}] = 0
+$$
+
+
+We can now solve for $$[\ce{A}]$$ using the quadratic formula. A lesson on how to solve quadratics is linked here: [Insert link to math lesson on quadratics here] 
 
 $$
 [\ce{A}] = \frac{-2k_2 + \sqrt{(2k_2)^2 + 4k_{-1}k_1[\ce{A2}]}}{2k_{-1}} = \frac{-k_2 + \sqrt{{k_2}^2 + k_{-1}k_1[\ce{A2}]}}{k_{-1}}
@@ -400,9 +413,11 @@ $$
 We will now plug these terms into the rate law of the rate-determining third step:
 
 $$
-Rate = k_3[\ce{AB2}][\ce{B2}][\ce{A}] \\
-Rate = k_3\frac{k_2}{k_3}[\ce{B2}]\frac{-k_2 + \sqrt{{k_2}^2 + k_{-1}k_1[\ce{A2}]}}{k_{-1}} \\
-Rate = k_2[\ce{B2}]\frac{-k_2 + \sqrt{{k_2}^2 + k_{-1}k_1[\ce{A2}]}}{k_{-1}}
+\begin{align*}
+Rate &= k_3[\ce{AB2}][\ce{B2}][\ce{A}] \\
+Rate &= k_3\frac{k_2}{k_3}[\ce{B2}]\frac{-k_2 + \sqrt{{k_2}^2 + k_{-1}k_1[\ce{A2}]}}{k_{-1}} \\
+Rate &= k_2[\ce{B2}]\frac{-k_2 + \sqrt{{k_2}^2 + k_{-1}k_1[\ce{A2}]}}{k_{-1}}
+\end{align*}
 $$
 
 Now we have the rate law of our reaction!

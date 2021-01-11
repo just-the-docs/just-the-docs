@@ -6,8 +6,8 @@ parent: Circle Geometry
 grand_parent: Geometry
 ---
 
-A first look at competitive geometry, with an introduction to inscribed and central angles in a circle.
-Inscribed and Central Angle formulae are integral components to circle geometry problems. It's very likely that you'll encounter a problem that uses this concept. Know it well!
+Inscribed and Central Angle formulae are integral components to circle geometry problems. 
+This lesson goes over all the necessary theorems that will be required on math contests. 
 
 ---
 
