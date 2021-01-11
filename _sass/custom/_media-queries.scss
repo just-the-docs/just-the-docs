@@ -1,0 +1,19 @@
+/* Easy Media Queries */
+
+// Device Sizes
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+/** Use media queries like this:
+  * @include media-query($on-palm) {
+  *   .wrapper {
+  *     // Styles here
+  *   }
+  * }
+  */

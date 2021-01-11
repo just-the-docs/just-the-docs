@@ -41,8 +41,24 @@
 .image-txt-container {
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-flow: row;
   padding: 7% 14%;
+}
+
+@include media-query($on-palm) {
+  .left {
+    flex-flow: column;
+  }
+  .right {
+    flex-flow: column-reverse;
+  }
+  .left, .right {
+    text-align: center;
+
+    img {
+      margin: 0;
+    }
+  }
 }
 
 .divider {
@@ -65,7 +81,7 @@
 .footer-main {
   background-color: $sidebar-color;
   width: inherit;
-
+  padding: 2% 14%;
 }
 
 .footer-content {
@@ -73,7 +89,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  padding: 2% 14%;
 
   img {
     margin-right: 25%;
