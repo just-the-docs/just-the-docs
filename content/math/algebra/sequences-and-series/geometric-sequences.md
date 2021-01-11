@@ -6,6 +6,9 @@ parent: Sequences and Series
 grand_parent: Algebra
 ---
 
+1. TOC
+{:toc}
+
 **A geometric sequence is a sequence with a common ratio between consecutive terms.**
 
 In this lesson we explain three of the most important subtopics of geometric sequences.
