@@ -4,8 +4,6 @@ title: Discovery
 parent: Sales
 ---
 
-# Project Discovery
-
 **Purpose**
 
 Our first job on a project is get everyone involved aligned on the

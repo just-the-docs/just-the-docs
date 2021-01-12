@@ -4,6 +4,14 @@ title: Proposal Writing Process
 parent: Proposals
 ---
 
+**Purpose**
+
+To clearly outline the process of writing proposals.
+
+**Scope**
+
+Extensive process coverage with multiple sub-lists; might benefit from being further broken down and reorganized.
+
 ## Process
 
 In brackets, we indicate the approximate time to allocate (not actual

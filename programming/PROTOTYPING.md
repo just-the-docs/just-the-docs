@@ -4,8 +4,6 @@ title: Prototyping
 parent: Programming
 ---
 
-# Prototyping
-
 **Purpose**
 
 Explain prototyping as the anchor of our technical approach.

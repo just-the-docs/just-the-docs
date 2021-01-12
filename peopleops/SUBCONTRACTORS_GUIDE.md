@@ -4,12 +4,17 @@ parent: People Ops
 title: Subcontractor's Guide
 ---
 
+
+**Purpose**
+
+**Scope**
+
 ## Subcontractor's Guide
 
 Currently covers taxes, categorization as a subcontractor, and benefits
 of incorporating.
 
-Also check out our template `SUBCONTRACTOR_AGREEMENT`
+Also check out our template [Subcontractor Agreement](SUBCONTRACTOR_AGREEMENT.md)
 
 ### Taxes
 

@@ -4,14 +4,6 @@ title: Programming
 has_children: true
 ---
 
-# Developers Reference
-
-<div class="toctree" data-maxdepth="2">
-
-CODING\_STANDARDS PROJECT\_STANDARDS ARCHITECTURE DEPENDENCIES GIT
-PYTHON DJANGO HTML\_CSS JAVASCRIPT PROTOTYPING TESTING TRAINING
-
-</div>
 
 **Purpose**
 

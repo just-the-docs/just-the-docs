@@ -4,6 +4,14 @@ parent: Philosophy
 title: Vision
 ---
 
+**Purpose**
+
+Allows us to identify common threads, and meaningful changes, in Countable's vision over time.
+
+**Scope**
+
+Documents past and present vision statements for Countable.
+
 ## Vision Statement
 
 Do you have a problem that might be solvable using the internet?

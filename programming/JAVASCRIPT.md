@@ -4,8 +4,6 @@ title: Javascript
 parent: Programming
 ---
 
-# Javascript Best Practices
-
 **Purpose**
 
 Document our coding standards and best practices for the Javascript

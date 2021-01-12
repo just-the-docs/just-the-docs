@@ -18,8 +18,7 @@ smoother more adaptable approach to deploying our projects.
 
 **Scope**
 
-Currently combines two former internal articles, "The Allure of Docker"
-and "A Pure Docker Workflow for Django."
+Currently combines two former internal articles, "The Allure of Docker" and "A Pure Docker Workflow for Django."
 
 ## What Do We Mean By "Pure Docker"
 

@@ -4,8 +4,6 @@ title: UX Design Process
 parent: UX
 ---
 
-# UX Design Process
-
 **Purpose**
 
 To explain the Human Centered Design approach Countable takes to its

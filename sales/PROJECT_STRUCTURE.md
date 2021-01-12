@@ -4,9 +4,6 @@ title: Proposal Structure
 parent: Sales
 ---
 
-# Project Structure
-
-
 **Purpose**
 
 This contains internal project setup instructions. TODO: move this to the project management area of the manual.

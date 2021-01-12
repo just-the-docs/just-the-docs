@@ -6,8 +6,7 @@ parent: Programming
 
 **Purpose**
 
-To share things we've found to solve common issues with Django and save
-lots of time.
+To share things we've found to solve common issues with Django and save lots of time.
 
 **Scope**
 

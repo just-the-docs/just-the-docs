@@ -4,8 +4,6 @@ title: Training
 parent: Programming
 ---
 
-# Training
-
 **Purpose**
 
 Lay the groundwork for continuous learning at Countable, demonstrating

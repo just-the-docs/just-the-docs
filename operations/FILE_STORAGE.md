@@ -6,13 +6,11 @@ title: File Storage
 
 **Purpose**
 
-To enable anyone to find any file or asset, without having to ask the
-person who created it where it is.
+To enable anyone to find any file or asset, without having to ask the person who created it where it is.
 
 **Scope**
 
-This page makes it clear where all work is saved, and gives more
-granular instructions regarding Google Drive file organization.
+This page makes it clear where all work is saved, and gives more granular instructions regarding Google Drive file organization.
 
 ## Why We Need Organized Storage
 
@@ -30,19 +28,15 @@ should clarify our process.
 
 We should store things only in the places and ways described below.
 
-
-| System                                                                                                                                                                                                         | What Goes Here                                                                       | Who Has Access                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ------------------------------------- |
-| GitHub - this repo                                                                                                                                                                                             | Document how and why we do things                                                    | Everyone in the world                 |
-| Miro                                                                                                                                                                                                           | Mockups, visual content                                                              | The specific client and project staff |
-| GitHub                                                                                                                                                                                                         | Open source code                                                                     | Everyone in the world                 |
-| Trello                                                                                                                                                                                                         | Work requests, tasks. Never store work deliverables here, only links to Google Drive | The specific client and project staff |
-| Bitbucket                                                                                                                                                                                                      | Private source code                                                                  | The specific client and project staff |
-| Google Drive <span class="title-ref"> </span>/clients/\<client sl ug\>/\<project slug\>\`\` folder                                                                                                             | Private client files (such as artwork)                                               | The specific client and project staff |
-| <span class="title-ref">Google Drive </span><span class="title-ref">/team/</span><span class="title-ref"> fold er \<https://drive.go ogle.com/drive/folde rs/12iWzlcOP\_qdFlVcM \_U1yLVKB6IDq4Uvd\></span>\_\_ | Private company data (minimize this)                                                 | Our staff                             |
-| <span class="title-ref">Google Drive </span><span class="title-ref">/public/</span><span class="title-ref"> fold er \<https://drive.go ogle.com/drive/folde rs/1Do2l9oaPHlyJ-J6w -BoGAvUmJjK1mDk3\></span>\_\_ | Any public assets (maximize this)                                                    | Everyone in the world                 |
-| Google Drive (your own folders)                                                                                                                                                                                | Never store anything here                                                            | You                                   |
-| Your local computer                                                                                                                                                                                            | No more than one day's work                                                          | You                                   |
+| Folder  | What Goes Here | Description |
+| ------------- | ------------- | ------------- |
+| `/clients/<client slug>` | projects folders for this client. | [official client slug](https://docs.google.com/spreadsheets/d/11IvCJCtw0iD4vWEOY_tNMvpUnte2eb1Z3exMMtevIzk/edit#gid=279543225) |
+| `/clients/<client slug>/<project slug>` | projects folders for this client. | [official client slug](https://docs.google.com/spreadsheets/d/11IvCJCtw0iD4vWEOY_tNMvpUnte2eb1Z3exMMtevIzk/edit#gid=279543225) |
+| `/clients/<client slug>/<project slug>/01_preproduction` | these are inputs to the project that existed beforehand. |  |
+| `/clients/<client slug>/<project slug>/02_design` | raw project files designers work on. | |
+| `/clients/<client slug>/<project slug>/03_reviews` | exported work to show the client. | Recommended: Adobe XD links, saved in a Google Doc |
+| `/clients/<client slug>/<project slug>/04_assets` | Sliced outputs for developers to take. | PNG and SVG files, separated so they can be positioned dynamimcally |
+| `/clients/<client slug>/<project slug>/05_feedback` | New data and information gained as part of the project | Usability tests | 
 
 Never share work directly in Slack by uploading it. Only share links to
 things stored in the correct place in Google Drive.
@@ -90,16 +84,6 @@ Every client has a folder in our Company Google Drive named:
 It is based on Felipe's folder design schema (attached) and [this article](https://pixeldreams.com/blog/best-practices-folder-structure/)
 
 ![Countable Web Production, File Organization Tree](https://github.com/fepirata/final-exam-special-topics/blob/master/public/cwp_file_organization_tree_v01.jpg?raw=true)
-
-| Folder                                                                         | What Goes Here                                           | Description                                                                                                                                                               |
-| ------------------------------------------------------------------------------ | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/cli ents/<client slug>`                                                      | projects folders for this client.                        | <span class="title-ref">official client slug \<https: //docs.google.com/sp readsheets/d/11IvCJC tw0iD4vWEOY\_tNMvpUnt e2eb1Z3exMMtevIzk/ed it\#gid=279543225\></span>\_\_ |
-| <span class="title-ref"> </span>/clients/\<client sl ug\>/\<project slug\>\`\` | projects folders for this client.                        | <span class="title-ref">official client slug \<https: //docs.google.com/sp readsheets/d/11IvCJC tw0iD4vWEOY\_tNMvpUnt e2eb1Z3exMMtevIzk/ed it\#gid=279543225\></span>\_\_ |
-| `/clients/<client  slug>/<project slug >/01_preproduction`                     | these are inputs to the project that existed beforehand. |                                                                                                                                                                           |
-| `/clients/ <client slug>/<proje ct slug>/02_design`                            | raw project files designers work on.                     |                                                                                                                                                                           |
-| `/clients/< client slug>/<projec t slug>/03_reviews`                           | exported work to show the client.                        | Recommended: Adobe XD links, saved in a Google Doc                                                                                                                        |
-| `/clients/ <client slug>/<proje ct slug>/04_assets`                            | Sliced outputs for developers to take.                   | PNG and SVG files, separated so they can be positioned dynamimcally                                                                                                       |
-| `/clients/<c lient slug>/<project  slug>/05_feedback`                          | New data and information gained as part of the project   | Usability tests                                                                                                                                                           |
 
 ## Naming Convention
 

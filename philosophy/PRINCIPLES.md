@@ -4,6 +4,14 @@ parent: Philosophy
 title: Principles
 ---
 
+**Purpose**
+
+Outlines the principles that drive Countable.
+
+**Scope**
+
+Relates principles to our OKRs process, then lists some key principles.
+
 ## Principles
 
 The purpose of this page is to address a specific issue with our

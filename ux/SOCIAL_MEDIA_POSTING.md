@@ -4,10 +4,13 @@ title: Social Media Posting Policy
 parent: UX
 ---
 
-## Countable's Social Media Posting Policy
+**Purpose**
 
-The following covers what is and isn't okay to post, and who should be
-posting.
+Make clear what should and should not be posted to social media.
+
+**Scope**
+
+The following covers what is and isn't okay to post, and who should be posting.
 
 ### Purpose of Social Media Posting
 

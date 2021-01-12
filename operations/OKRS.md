@@ -7,8 +7,7 @@ title: OKRs
 **Purpose**
 
 Teams who write down individual goals and regularly report progress to
-team members are 43% more likely to complete them. OKRs are a structured
-form of goal-setting.
+team members are 43% more likely to complete them. OKRs are a structured form of goal-setting.
 
 **Scope**
 

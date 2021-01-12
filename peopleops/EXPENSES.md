@@ -4,6 +4,14 @@ parent: People Ops
 title: Expenses at Countable
 ---
 
+**Purpose**
+
+To clearly identify what is and is not covered as an expense at Countable, and how to properly request compensation for expenses.
+
+**Scope**
+
+Covers equipment expenses, what else the company will cover, and how to claim expenses.
+
 ### Equipment Expenses
 
   - Any expense over $100 must be approved in advance of the purchase in

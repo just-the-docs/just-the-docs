@@ -4,7 +4,13 @@ title: Branding Projects
 parent: UX
 ---
 
-## Branding Projects
+**Purpose**
+
+To help team members understand the project branding process at Countable.
+
+**Scope**
+
+Covers process and guidelines for branding projects.
 
 ### Branding Process
 

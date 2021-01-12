@@ -5,8 +5,6 @@ parent: Sales
 has_children: true
 ---
 
-# Proposals
-
 **Purpose**
 
 The following are actionable tactics to improve the ROI of time spent

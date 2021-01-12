@@ -1,13 +1,8 @@
 ---
 layout: default
+title: Critical Path
 parent: Operations
 ---
-
-# Critical Path
-
-<div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
-
-</div>
 
 **Purpose**
 
@@ -15,8 +10,7 @@ Release a prototype as quickly as possible.
 
 **Scope**
 
-Identify dependencies to complete a finished product, and make sure the
-"critical path" these items define is minimized.
+Identify dependencies to complete a finished product, and make sure the "critical path" these items define is minimized.
 
 ## Critical Path Process
 

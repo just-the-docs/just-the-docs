@@ -6,8 +6,7 @@ parent: Programming
 
 **Purpose**
 
-To describe the minimum requirements and expected structure of technical
-projects at Countable.
+To describe the minimum requirements and expected structure of technical projects at Countable.
 
 **Scope**
 

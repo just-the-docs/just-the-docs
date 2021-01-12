@@ -4,12 +4,6 @@ parent: People Ops
 title: Communications Charter
 ---
 
-# Communications Charter
-
-<div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
-
-</div>
-
 **Purpose**
 
 Help everyone at Countable understand how to indicate their

@@ -4,6 +4,14 @@ parent: Philosophy
 title: Transparency Policy
 ---
 
+**Purpose**
+
+Documents the reasons for Countable's dedication to transparency.
+
+**Scope**
+
+Covers the general transparency policy, its driving justification, and some caveats and examples.
+
 ## Transparency Policy
 
 There are data indicating transparency is important: "90% of job seekers

@@ -7,12 +7,15 @@ has_children: true
 
 **Purpose**
 
-The purpose of DevOps is to ensure that software is always deployed and
-tested reliably and automatically in a way that helps us and our
-customers.
+The purpose of DevOps is to ensure that software is always deployed and tested reliably and automatically in a way that helps us and our customers.
 
-DevOps is the practice of writing code and configurations to accomplish
-this.
+DevOps is the practice of writing code and configurations to accomplish this.
+
+**Scope**
+
+This root page introduces the areas we call DevOps at Countable, from
+standards and conventions, to specific tools, release management, and
+information security.
 
 ## Goals of DevOps
 
@@ -66,12 +69,6 @@ this.
     environment, and spam slack with any errors.
   - TODO: It should be fully automated to create a new jenkins slave
     server.
-
-**Scope**
-
-This page introduces the areas we call DevOps at Countable, from
-standards and conventions, to specific tools, release management, and
-information security.
 
 ## Standards and Conventions
 

@@ -4,6 +4,14 @@ title: Creative Brief
 parent: UX
 ---
 
+**Purpose**
+
+Show what inspires us.
+
+**Scope**
+
+Currently covers content from a previous creative brief workshopping session.
+
 ## Creative Brief
 
 Visual design is a communication tool for meeting the right kinds of

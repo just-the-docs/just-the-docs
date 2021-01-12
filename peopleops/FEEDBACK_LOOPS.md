@@ -4,6 +4,14 @@ parent: People Ops
 title: Feedback Loops
 ---
 
+**Purpose**
+
+To cover one of our core principles at Countable: to shorten feedback loops.
+
+**Scope**
+
+Identifies the importance of feedback loops at Countable, some of the primary sources of feedback, and how to regularly connect with others in pursuit of useful feedback.
+
 # Feedback Loops on Your Work
 
 One of our core principles at Countable is to shorten feedback loops.

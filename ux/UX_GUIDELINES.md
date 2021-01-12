@@ -4,8 +4,6 @@ title: Countable's General UX and Design Guidelines
 parent: UX
 ---
 
-# UX Guidelines
-
 **Purpose**
 
 Provides the Countable team with guidelines for when our work intersects

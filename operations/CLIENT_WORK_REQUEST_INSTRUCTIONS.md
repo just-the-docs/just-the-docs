@@ -4,19 +4,13 @@ parent: Operations
 title: Client Work Request Instructions
 ---
 
-<div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
-
-</div>
-
 **Purpose**
 
-This is a client-facing process intended to open useful channels of
-communication and collaboration.
+This is a client-facing process intended to open useful channels of communication and collaboration.
 
 **Scope**
 
-It covers the details of the linked process diagram, and what to expect
-after submitting a work request.
+It covers the details of the linked process diagram, and what to expect after submitting a work request.
 
 ## Content
 

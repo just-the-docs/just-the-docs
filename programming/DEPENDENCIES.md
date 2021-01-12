@@ -4,10 +4,6 @@ title: Dependencies
 parent: Programming
 ---
 
-<div class="toctree" data-maxdepth="2" data-caption="Contents:">
-
-</div>
-
 **Purpose**
 
 This page covers dependency and framework selection and management. See

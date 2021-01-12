@@ -4,6 +4,14 @@ title: Proposal Team Roles
 parent: Proposals
 ---
 
+**Purpose**
+
+To document the necessary team roles for writing a proposal.
+
+**Scope**
+
+Covers three primary roles.
+
 ## Proposal Writing Roles
 
 **Assign these roles to people at the top of the proposal draft:**

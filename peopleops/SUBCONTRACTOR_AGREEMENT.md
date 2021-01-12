@@ -4,8 +4,6 @@ title: Subcontractor Work Agreement
 parent: People Ops
 ---
 
-# Subcontractor Work Agreement
-
 **Purpose**
 
 Transparently share our work agreement.

@@ -6,18 +6,15 @@ title: Recruiting
 
 **Purpose**
 
-To transparently define a replicable recruiting process for the
-Countable team.
+To transparently define a replicable recruiting process for the Countable team.
 
 **Scope**
 
-Covers why we recruit the way we do, and the hiring process all the way
-up to onboarding.
+Covers why we recruit the way we do, and the hiring process all the way up to onboarding.
 
 ## Background
 
-A study of 200 Silicon Valley startups investigated the effect of 3
-hiring policies:
+A study of 200 Silicon Valley startups investigated the effect of 3 hiring policies:
 
 1.  The "star" blueprint which sought the best technical candidates;
 2.  The "commitment" blueprint which hired based on values;

@@ -8,13 +8,11 @@ parent: Sales
 
 **Purpose**
 
-A fundamental challenge in selling the value produced by a company is
-market segmentation.
+A fundamental challenge in selling the value produced by a company is market segmentation.
 
 **Scope**
 
-Here we define some systematic tests to confirm exactly who to optimize
-our products, services and market funnel for.
+Here we define some systematic tests to confirm exactly who to optimize our products, services and market funnel for.
 
 ## Criteria
 

@@ -3,12 +3,10 @@ layout: default
 title: HTML/CSS
 parent: Programming
 ---
-# HTML and CSS Standards at Countable
 
 **Purpose**
 
-Documenting Countable's coding standards specific to front-end languages
-and their formatting.
+Documenting Countable's coding standards specific to front-end languages and their formatting.
 
 **Scope**
 

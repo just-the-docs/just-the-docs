@@ -4,8 +4,6 @@ title: Testing
 parent: Programming
 ---
 
-# Testing and Bug Reporting
-
 **Purpose**
 
 To establish how and why we do testing at Countable.

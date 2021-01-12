@@ -10,8 +10,7 @@ To cover the major points of accounting practices at Countable.
 
 **Scope**
 
-Currently touches upon any unique categories we track or pay attention
-to, and how we do so.
+Currently touches upon any unique categories we track or pay attention to, and how we do so.
 
 ## Timesheets and Expenses
 

@@ -4,17 +4,13 @@ title: Philosophical References
 parent: Philosophy
 ---
 
-# Concepts We Incorporate
-
 **Purpose**
 
-To share the external ideas and resources which have helped shape our
-company's philosophy.
+To share the external ideas and resources which have helped shape our company's philosophy.
 
 **Scope**
 
-Currently consists primarily of resources on management styles and lists
-the books that most heavily influenced this ops manual.
+Currently consists primarily of resources on management styles and lists the books that most heavily influenced this ops manual.
 
 ## Management
 

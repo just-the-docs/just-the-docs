@@ -4,6 +4,14 @@ parent: People Ops
 title: Setting Up Your Desk
 ---
 
+**Purpose**
+
+Help new team members understand how to get started.
+
+**Scope**
+
+Currently just covers equipment requirements :/
+
 ## Setting Up Your Desk
 
 ### Equipment Requirements

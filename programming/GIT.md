@@ -4,8 +4,6 @@ title: GIT
 parent: Programming
 ---
 
-# How Countable Uses GIT
-
 **Purpose**
 
 Outlining the norms of git collaboration at Countable.

@@ -14,11 +14,7 @@ Currently holds content on linking best practices, a draft on Writing Ops Manual
 
 ## How to Add Links
 
-Clark input - what's better? 
-
-/devops/DEVOPs.md
-./devops/DEVOPS.md
-../devops/DEVOPS.md
+Best convention for linking to other files: ../devops/DEVOPS.md
 
 ## Writing Ops Manual Pages
 

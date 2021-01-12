@@ -1,21 +1,17 @@
 ---
 layout: default
-title: Coding Standards
+title: Coding Standards and Style
 parent: Programming
 ---
 
-# Coding Standards and Style
-
 **Purpose**
 
-Encourage consistent and effective coding practices in the team, arising
-out of specific cases where different conventions of developers caused
+Encourage consistent and effective coding practices in the team, arising out of specific cases where different conventions of developers caused
 us to waste time.
 
 **Scope**
 
-Covers principles of our coding standards, then branches out to specific
-language pages.
+Covers principles of our coding standards, then branches out to specific language pages.
 
 ## Principles
 

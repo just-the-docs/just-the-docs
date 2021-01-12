@@ -4,7 +4,13 @@ title: SEO Guidelines
 parent: UX
 ---
 
-## SEO Guidelines
+**Purpose**
+
+Identify our SEO practices.
+
+**Scope**
+
+Relatively outdated content.
 
 ### Page Titles
 

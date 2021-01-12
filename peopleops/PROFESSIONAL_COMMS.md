@@ -4,6 +4,15 @@ parent: People Ops
 title: Professional Conduct and Communication
 ---
 
+
+**Purpose**
+
+Establishes expectations around professional conduct and communication.
+
+**Scope**
+
+Gives both a brief high-level coverage of professionalism, and some specific examples. 
+
 ## Professional Conduct
 
 How to communicate with clients, and general practices. TLDR: Act

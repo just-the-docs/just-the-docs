@@ -4,8 +4,6 @@ title: Design QA
 parent: UX
 ---
 
-# Design QA
-
 **Purpose**
 
 To share the importance of Design QA in digital product design, and how

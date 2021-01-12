@@ -4,6 +4,14 @@ title: Content Writing Guidelines
 parent: UX
 ---
 
+**Purpose**
+
+Standardize the voice and presentation of Countable's content writing.
+
+**Scope**
+
+Provides general guidelines, formal standards, documentation on voice and specifics for blog writing.
+
 ## Content Writing
 
 This document standardizes the voice and presentation of Countable's

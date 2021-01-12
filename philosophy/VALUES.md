@@ -4,9 +4,17 @@ parent: Philosophy
 title: Values
 ---
 
+**Purpose**
+
+Identifies values at Countable.
+
+**Scope**
+
+Covers how we define values, some outcomes from internal team surveys, and question prompts for exploring values.
+
 ## Values
 
-alues are ideals that our team members share. This helps us improve
+Values are ideals that our team members share. This helps us improve
 communication among one team. Knowing these values are held, many things
 go without saying (and that's efficient). Values also help us find
 customers and new employees who will get along with us.

@@ -6,13 +6,11 @@ title: Meetings
 
 **Purpose**
 
-Help everyone at Countable understand the different types of meetings we
-hold, and how to get the most benefit out of the fewest meetings.
+Help everyone at Countable understand the different types of meetings we hold, and how to get the most benefit out of the fewest meetings.
 
 **Scope**
 
-Defines expectations for all meetings, then goes into details for
-specific types of meetings.
+Defines expectations for all meetings, then goes into details for specific types of meetings.
 
 ## All Meetings
 

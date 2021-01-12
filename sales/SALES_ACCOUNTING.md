@@ -3,7 +3,6 @@ layout: default
 title: Sales Accounting
 parent: Sales
 ---
-# Accounting For Sales
 
 **Purpose**
 

@@ -5,12 +5,6 @@ nav_order: 2
 has_children: true
 ---
 
-# UX
-
-<div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
-
-</div>
-
 **Purpose**
 
 To identify the norms and practices of our UX-driven process at

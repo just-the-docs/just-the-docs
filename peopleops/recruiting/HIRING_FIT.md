@@ -4,20 +4,13 @@ title: Hiring Fit
 parent: People Ops
 ---
 
-# Is Countable A Good Fit For You?
-
-<div class="toctree" data-maxdepth="2" data-caption="Contents:" hidden="">
-
-</div>
-
 **Purpose**
 
 This helps us screen for people who enjoy working this way.
 
 **Scope**
 
-Define what we'd like to offer our employees, compared with their other
-options.
+Define what we'd like to offer our employees, compared with their other options.
 
 ## Notes on Our Hiring
 

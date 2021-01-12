@@ -4,17 +4,13 @@ title: Team Norms at Countable
 parent: People Ops
 ---
 
-# Team Norms at Countable
-
 **Purpose**
 
-Establishes the norms and policies which guide our collaboration at
-Countable.
+Establishes the norms and policies which guide our collaboration at Countable.
 
 **Scope**
 
-Covers our principles of diversity and inclusion, training, performance
-evaluation, and team events.
+Covers our principles of diversity and inclusion, training, performance evaluation, and team events.
 
 ## Diversity and Inclusion Principles
 
