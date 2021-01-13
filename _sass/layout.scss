@@ -131,7 +131,7 @@
 
   @include mq(md) {
     display: block;
-    padding-top: $sp-8 * 2;
+    padding-top: $sp-2;
     padding-bottom: $gutter-spacing-sm;
     overflow-y: auto;
     flex: 1 1 auto;

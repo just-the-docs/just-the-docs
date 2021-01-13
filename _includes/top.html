@@ -6,23 +6,6 @@
         </a>
     </div>
 
-    {% if site.drop_title %}
-    <div class="dropdown">
-        <a class="site-button">{{ site.drop_title }}</a>
-        <div class="dropdown-content">
-            {% for link in site.drop_links %}
-            <a href="{{ link.last }}"
-               {% if site.aux_links_new_tab %}
-               target="_blank"
-               {% endif %}
-            >
-                {{ link.first }}
-            </a>
-            {% endfor %}
-        </div>
-    </div>
-    {% endif %}
-
     {% if site.search_enabled != false %}
     <div class="search">
         <div class="search-input-wrap">
