@@ -133,3 +133,9 @@ If the answer to all the above, we might do great work together. Let's
 prototype a relationship - we'll complete a 3 week project together with
 no commitments. After this, both parties can decide if we want to pursue
 further work.
+
+## Marketing
+
+Defines how we communicate with potential clients. It screens for
+clients with similar values, with whom we'd like to collaborate on
+exciting projects. To anchor this, revisit our [Value Prop for Clients](https://countable-ops-manual.readthedocs.io/sales/SALES#value-prop)

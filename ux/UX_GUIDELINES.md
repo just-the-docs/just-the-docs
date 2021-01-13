@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Countable's General UX and Design Guidelines
+title: UX & Design Guidelines
 parent: UX
 ---
 
