@@ -60,6 +60,10 @@
   @include mq(md) {
     margin-left: $nav-width-md;
   }
+
+  @include mq(lg) {
+    margin-left: $nav-width;
+  }
 }
 
 .footer-main {

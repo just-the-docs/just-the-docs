@@ -65,6 +65,20 @@ layout: table_wrappers
     {% include top.html %}
   </div>
 
+  {% if page.video_id %}
+    <div class="right-of-navbar video-bg">
+      <div class="video-container">
+        <iframe
+                src="https://www.youtube.com/embed/{{ page.video_id }}"
+                frameborder="0"
+                allowfullscreen
+                class="video"
+        >
+        </iframe>
+      </div>
+    </div>
+  {% endif %}
+
   <div class="main">
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
@@ -82,7 +96,9 @@ layout: table_wrappers
           </nav>
         {% endif %}
       {% endunless %}
+
       <div id="main-content" class="main-content" role="main">
+
         {% if page.title %}
           <h1 class="fs-9 fw-500">{{ page.title }}</h1>
         {% endif %}
