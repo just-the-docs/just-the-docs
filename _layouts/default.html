@@ -90,21 +90,20 @@ layout: table_wrappers
       {% endif %}
     </div>
 
-  {% if page.video_id %}
-    <div class="right-of-navbar video-bg">
-      <div class="video-container">
-        <iframe
-                src="https://www.youtube.com/embed/{{ page.video_id }}"
-                frameborder="0"
-                allowfullscreen
-                class="video"
-        >
-        </iframe>
+    {% if page.video_id %}
+      <div class="right-of-navbar video-bg">
+        <div class="video-container">
+          <iframe
+                  src="https://www.youtube.com/embed/{{ page.video_id }}"
+                  frameborder="0"
+                  allowfullscreen
+                  class="video"
+          >
+          </iframe>
+        </div>
       </div>
-    </div>
-  {% endif %}
+    {% endif %}
 
-  <div class="main">
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
         {% if page.parent %}
