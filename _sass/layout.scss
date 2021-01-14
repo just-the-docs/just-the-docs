@@ -73,42 +73,6 @@
       display: flex;
     }
   }
-
-  .dropdown {
-    background-color: white;
-    position: relative;
-    display: inline-block;
-    border-bottom: $border $border-color;
-    height: $header-height;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    @include fs-3;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    background-color: $sidebar-color;
-  }
-
-  .dropdown-content a:hover {
-    background-color: rgba($feedback-color, 1);
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  .dropdown:hover .site-button {
-    background-color: rgba($feedback-color, 1);
-  }
 }
 
 .site-nav,

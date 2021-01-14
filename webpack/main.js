@@ -1,3 +1,4 @@
+import "./event-handlers";
 import "./tabs";
 import Modal from "./modal";
 import { auth } from "./auth";

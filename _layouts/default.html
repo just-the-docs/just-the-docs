@@ -40,34 +40,27 @@ layout: table_wrappers
     </symbol>
   </svg>
 
-  <div class="side-bar">
-    <div class="site-header">
-      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
-      <a href="#" id="menu-button" class="site-button">
-        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
-      </a>
-    </div>
-    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
-      {% if site.just_the_docs.collections %}
-        {% assign collections_size = site.just_the_docs.collections | size %}
-        {% for collection_entry in site.just_the_docs.collections %}
-          {% assign collection_key = collection_entry[0] %}
-          {% assign collection_value = collection_entry[1] %}
-          {% assign collection = site[collection_key] %}
-          {% if collection_value.nav_exclude != true %}
-            {% if collections_size > 1 %}
-              <div class="nav-category">{{ collection_value.name }}</div>
-            {% endif %}
-            {% include nav.html pages=collection %}
-          {% endif %}
-        {% endfor %}
-      {% else %}
-        {% include nav.html pages=site.html_pages %}
-      {% endif %}
-    </nav>
-  </div>
+  {%- include sidebar.html -%}
+
   <div class="main" id="top">
     <div id="main-header" class="main-header">
+      {% if site.drop_title %}
+      <div id="dropdown" class="dropdown">
+        <a class="site-button">{{ site.drop_title }}</a>
+        <div class="dropdown-content">
+          {% for link in site.drop_links %}
+            <a href="{{ link.last }}"
+                    {% if site.aux_links_new_tab %}
+                      target="_blank"
+                    {% endif %}
+            >
+              {{ link.first }}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+
       {% if site.search_enabled != false %}
         <div class="search">
           <div class="search-input-wrap">
@@ -75,23 +68,6 @@ layout: table_wrappers
             <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
           </div>
           <div id="search-results" class="search-results"></div>
-        </div>
-      {% endif %}
-
-      {% if site.drop_title %}
-        <div class="dropdown">
-          <a class="site-button">{{ site.drop_title }}</a>
-          <div class="dropdown-content">
-            {% for link in site.drop_links %}
-              <a href="{{ link.last }}"
-                      {% if site.aux_links_new_tab %}
-                        target="_blank"
-                      {% endif %}
-              >
-                {{ link.first }}
-              </a>
-            {% endfor %}
-          </div>
         </div>
       {% endif %}
 
@@ -113,6 +89,7 @@ layout: table_wrappers
         </nav>
       {% endif %}
     </div>
+
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
         {% if page.parent %}
