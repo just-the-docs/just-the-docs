@@ -40,104 +40,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f16c9fcd-a63c-4bc2-bc3e-6081b374ec9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/Links.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/BrandingAssets.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/FAQ.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/Mesa.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/Omen.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/Rails.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/Swapr.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_sass/utilities/_spacing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/utilities/_spacing.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/configuration.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/customization.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index-test.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/navigation-structure.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DxDaoProducts.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/search.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/disambiguation/a.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/disambiguation/b.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/disambiguation/ca.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/disambiguation/cb.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/disambiguation/dca.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/disambiguation/dcb.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/disambiguation/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/0.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/00.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/000.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/001.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/01.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/010.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/011.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/10.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/100.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/101.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/11.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/110.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/111.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/excluded.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/exclusion/untitled.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/default/10.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/default/2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/default/a.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/default/aa-lower.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/default/aa.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/default/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/floats/-1.1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/floats/0.0.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/floats/10.0.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/floats/2.2222.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/floats/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/integers/-1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/integers/0.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/integers/10.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/integers/2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/integers/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/-1.1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/-1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/0.0.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/0.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/10.0.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/10.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/2.2222.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/a.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/aa-lower.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/aa.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/mixture/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/order.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/strings/10.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/strings/2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/strings/a.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/strings/aa-lower.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/strings/aa.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/navigation/order/strings/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/styling/dl.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/styling/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/styling/ol.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tests/styling/ul.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ui-components/buttons.md" beforeDir="false" afterPath="$PROJECT_DIR$/dx-dao/Governance.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ui-components/code.md" beforeDir="false" afterPath="$PROJECT_DIR$/dx-dao/Roadmap.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ui-components/labels.md" beforeDir="false" afterPath="$PROJECT_DIR$/dx-dao/FAQ.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ui-components/line-nos.md" beforeDir="false" afterPath="$PROJECT_DIR$/dx-dao/line-nos.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ui-components/lists.md" beforeDir="false" afterPath="$PROJECT_DIR$/dx-dao/Tokenomics.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ui-components/tables.md" beforeDir="false" afterPath="$PROJECT_DIR$/dx-dao/BrandingAssets.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ui-components/typography.md" beforeDir="false" afterPath="$PROJECT_DIR$/dx-dao/DxdaoMeetings.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ui-components/ui-components.md" beforeDir="false" afterPath="$PROJECT_DIR$/dx-dao/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/utilities/color.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/contributorHub/color.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/utilities/layout.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/contributorHub/layout.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/utilities/responsive-modifiers.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/contributorHub/responsive-modifiers.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/utilities/typography.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/contributorHub/typography.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/utilities/utilities.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/contributorHub/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DxDaoProducts.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Links.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DXD.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/contributorHub/color.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/contributorHub/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ContributorHub/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/contributorHub/layout.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/contributorHub/responsive-modifiers.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/contributorHub/typography.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dx-dao/BrandingAssets.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dx-dao/DxdaoMeetings.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dx-dao/FAQ.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dx-dao/Governance.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dx-dao/Roadmap.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dx-dao/Tokenomics.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dx-dao/index.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dx-dao/line-nos.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1m0tf3uwfqj8DtWRPnEQCErwjO0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -151,9 +100,14 @@
     <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/../docs" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$" />
@@ -189,9 +143,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-602" y="-954" width="586" height="490" key="find.popup" timestamp="1608644846203">
+    <state width="1268" height="409" key="GridCell.Tab.0.bottom" timestamp="1610651321681">
+      <screen x="-1169" y="-1417" width="3440" height="1417" />
+    </state>
+    <state width="1268" height="409" key="GridCell.Tab.0.bottom/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610651321681" />
+    <state width="1268" height="409" key="GridCell.Tab.0.center" timestamp="1610651321677">
+      <screen x="-1169" y="-1417" width="3440" height="1417" />
+    </state>
+    <state width="1268" height="409" key="GridCell.Tab.0.center/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610651321677" />
+    <state width="1268" height="409" key="GridCell.Tab.0.left" timestamp="1610651321676">
+      <screen x="-1169" y="-1417" width="3440" height="1417" />
+    </state>
+    <state width="1268" height="409" key="GridCell.Tab.0.left/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610651321676" />
+    <state width="1268" height="409" key="GridCell.Tab.0.right" timestamp="1610651321678">
+      <screen x="-1169" y="-1417" width="3440" height="1417" />
+    </state>
+    <state width="1268" height="409" key="GridCell.Tab.0.right/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610651321678" />
+    <state x="-602" y="-956" width="586" height="490" key="find.popup" timestamp="1610660638888">
       <screen x="-1169" y="-1417" width="3440" height="1417" />
     </state>
     <state x="-602" y="-954" width="586" height="490" key="find.popup/-1169.-1417.3440.1417/0.23.1440.805@-1169.-1417.3440.1417" timestamp="1608644846203" />
+    <state x="-602" y="-956" width="586" height="490" key="find.popup/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610660638888" />
   </component>
 </project>

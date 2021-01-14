@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Roadmap
-parent: DxDao
-nav_order: 2
+title: REP
+parent: Governance
+nav_order: 1
 ---
 
 # Code
