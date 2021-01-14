@@ -2,6 +2,7 @@
   "name": "incendium-academy",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:webpack": "webpack --mode=development --watch",
