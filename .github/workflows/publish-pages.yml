@@ -11,6 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.6' # Version range or exact version of a Ruby version to use, using semvers version range syntax.
+
+      - name: Install bundler
+        run: |
+          gem install bundler
+          bundle
+
       - name: Setup Node
         uses: actions/setup-node@v2.1.2
         with:
