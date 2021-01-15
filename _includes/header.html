@@ -45,12 +45,12 @@
         <ul class="aux-nav-list">
             {% for link in site.aux_links %}
             <li class="aux-nav-list-item">
-                <a href="{{ link.last }}" class="site-button"
+                <a href="{{- link.last -}}" class="site-button" data-tab="{{- link.first | downcase | replace: ' ', '' -}}"
                    {% if site.aux_links_new_tab %}
                    target="_blank" rel="noopener noreferrer"
                    {% endif %}
                 >
-                    {{ link.first }}
+                    {{- link.first -}}
                 </a>
             </li>
             {% endfor %}

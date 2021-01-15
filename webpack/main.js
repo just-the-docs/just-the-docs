@@ -8,7 +8,7 @@ window.addEventListener("load", () => {
   const authModal = new Modal("authModal");
 
   // Logout button
-  document.getElementById("logoutBtn").addEventListener("click", () => {
+  document.getElementById("logoutBtn")?.addEventListener("click", () => {
     auth.signOut();
   });
   // Submit login form
@@ -71,7 +71,7 @@ window.addEventListener("load", () => {
       }
     });
   // Sign in with Google
-  document.getElementById("googleLoginBtn").addEventListener("click", () => {
+  document.getElementById("googleLoginBtn")?.addEventListener("click", () => {
     auth.signInWithGoogle();
   });
 
@@ -80,13 +80,13 @@ window.addEventListener("load", () => {
     if (user) {
       // console.log("user");
       authModal.hide();
-      document.getElementById("status").innerHTML = `
-          ID: ${user.uid}<br>
-          Anonymous: ${user.isAnonymous}<br>
-          Name: ${user.displayName || user.providerData[0]?.displayName}<br>
-          Email: ${user.email}<br>
-          Email Verified: ${user.emailVerified}
-        `;
+      // document.getElementById("status").innerHTML = `
+      //     ID: ${user.uid}<br>
+      //     Anonymous: ${user.isAnonymous}<br>
+      //     Name: ${user.displayName || user.providerData[0]?.displayName}<br>
+      //     Email: ${user.email}<br>
+      //     Email Verified: ${user.emailVerified}
+      //   `;
       db.initialize(user.uid);
       db.updateDOM();
     } else {
@@ -98,7 +98,7 @@ window.addEventListener("load", () => {
     auth.getRedirectResult();
   });
 
-  document.getElementById("userData").addEventListener("change", (e) => {
+  document.getElementById("userData")?.addEventListener("change", (e) => {
     db.updateProgress({ [e.target.name]: e.target.checked });
   });
 });
