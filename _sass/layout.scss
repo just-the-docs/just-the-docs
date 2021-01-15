@@ -127,7 +127,8 @@
   @include fs-6;
 
   @include mq(md) {
-    padding: $sp-2 $sp-4;
+    padding-top: $sp-2;
+    padding-bottom: $sp-2;
   }
 }
 
