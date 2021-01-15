@@ -2,7 +2,7 @@
 
 .tabs {
   overflow: hidden;
-  border: 1px solid black;
+  border: 1px solid $grey-dk-200;
   border-radius: $border-radius;
   display: flex;
   flex-flow: row;
@@ -16,7 +16,7 @@
   outline: none;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: $body-text-color;
 }
 .tabs .tab-link.active {
   background-color: $grey-lt-200;

@@ -49,14 +49,18 @@
   }
 
   .close {
-    color: $body-text-color;
+    color: lighten($body-text-color, 30%);
     position: absolute;
-    top: $sp-4;
-    right: $sp-4;
+    top: $sp-3;
+    right: $sp-3;
     font-size: $font-size-8;
     line-height: 1rem;
     z-index: 2;
     cursor: pointer;
+
+    &:hover {
+      color: $body-text-color;
+    }
   }
 
   .errormsg {
@@ -64,6 +68,7 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     max-width: 200px;
+    margin-top: $sp-1;
   }
 
   .modal-left {
@@ -109,25 +114,9 @@
       background-color: $grey-lt-300;
       border: none;
       border-radius: 4px;
-      font-size: $font-size-5;
+      @include fs-5;
       padding: $sp-1 $sp-2;
     }
-  }
-
-  button {
-    padding: $sp-1 $sp-2;
-    border-radius: $border-radius;
-    font-size: $font-size-5;
-    border: none;
-    outline: none;
-    background-color: $grey-dk-000;
-    width: 100%;
-    margin-top: $sp-4;
-    color: black;
-  }
-
-  button:hover {
-    background-color: $grey-dk-250;
   }
 
   .separator {
@@ -138,23 +127,20 @@
     margin: $sp-3 0;
 
     hr {
+      height: 2px;
       margin: 0 $sp-2;
       width: 100%;
     }
   }
 
   .social-logins button {
-    width: 100%;
     display: flex;
     align-items: center;
-    background: white;
-    border: 1px solid black;
-    margin-top: $sp-6;
-    cursor: pointer;
+    font-family: "Roboto", sans-serif;
 
     .logo {
-      width: 24px;
-      height: 24px;
+      width: 1.5em;
+      height: 1.5em;
       margin-right: $sp-3;
     }
   }
