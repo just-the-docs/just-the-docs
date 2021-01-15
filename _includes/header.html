@@ -1,17 +1,21 @@
 <div id="main-header" class="main-header">
-    <div class="site-header">
-        <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
-        <a href="#" id="home-menu-button" class="site-button">
-            <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
-        </a>
-    </div>
+    {%- if include.home -%}
+        <div class="site-header">
+            <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
+            <a href="#" id="home-menu-button" class="site-button">
+                <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+            </a>
+        </div>
+    {%- endif -%}
 
     {% if site.drop_title %}
     <div id="dropdown" class="dropdown">
-    <a href="#" class="dropdown-expander">
-        <svg viewBox="0 0 24 24"> <use xlink:href="#svg-arrow-right"></use> </svg>
+    <a class="site-button">
+        {{ site.drop_title }}
+        <span class="dropdown-expander">
+            <svg viewBox="0 0 24 24"> <use xlink:href="#svg-arrow-right"></use> </svg>
+        </span>
     </a>
-    <a class="site-button">{{ site.drop_title }}</a>
     <div class="dropdown-content">
         {% for link in site.drop_links %}
         <a href="{{ link.last }}"
@@ -41,12 +45,12 @@
         <ul class="aux-nav-list">
             {% for link in site.aux_links %}
             <li class="aux-nav-list-item">
-                <a href="{{ link.last }}" class="site-button"
+                <a href="{{- link.last -}}" class="site-button" data-tab="{{- link.first | downcase | replace: ' ', '' -}}"
                    {% if site.aux_links_new_tab %}
                    target="_blank" rel="noopener noreferrer"
                    {% endif %}
                 >
-                    {{ link.first }}
+                    {{- link.first -}}
                 </a>
             </li>
             {% endfor %}
@@ -54,13 +58,15 @@
     </nav>
     {% endif %}
 
-    {% if site.search_enabled != false %} <!--TODO: figure out what this does-->
-    {% if site.search.button %}
-    <a href="#" id="search-button" class="search-button">
-        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-search"></use></svg>
-    </a>
-    {% endif %}
+    {%- if include.home -%}
+        {% if site.search_enabled != false %}
+        {% if site.search.button %}
+        <a href="#" id="search-button" class="search-button">
+            <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-search"></use></svg>
+        </a>
+        {% endif %}
 
-    <div class="search-overlay"></div>
-    {% endif %}
+        <div class="search-overlay"></div>
+        {% endif %}
+    {%- endif -%}
 </div>

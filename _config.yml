@@ -85,9 +85,9 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Login":
-    - "https://github.com/IncendiumAcademy/" # TODO: change link to login link
+    - "#authModal"
   "Sign Up":
-    - "https://github.com/IncendiumAcademy/" # TODO: change link to sign up link
+    - "#authModal"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false

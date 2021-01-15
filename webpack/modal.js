@@ -9,15 +9,16 @@ export default class Modal {
       if (e.target === this.modal) this.hide();
     });
 
-    document.querySelectorAll(`*[data-trigger='${id}']`).forEach((trigger) => {
+    document.querySelectorAll(`*[href='#${id}']`).forEach((trigger) => {
       trigger.addEventListener("click", (e) => {
+        e.preventDefault();
         this.show(e.target.dataset.tab);
       });
     });
   }
 
   show(tabID) {
-    this.modal.style.display = "flex";
+    this.modal.classList.add('visible');
     this.modal.querySelector(`.tab-content > #${tabID}`).style.display =
       "block";
     this.modal.querySelector(`.tab-content > :not(#${tabID})`).style.display =
@@ -31,7 +32,7 @@ export default class Modal {
   }
 
   hide() {
-    this.modal.style.display = "none";
+    this.modal.classList.remove('visible');
     this.modal.querySelectorAll("input").forEach((input) => (input.value = ""));
     this.modal.querySelectorAll(".errormsg").forEach((el) => el.remove());
   }

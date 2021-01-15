@@ -96,9 +96,15 @@
   flex-direction: row;
 
   img {
-    margin-right: 25%;
-    width: 15%;
-    height: 15%;
+    margin-right: 10%;
+    width: 30%;
+    height: 30%;
+
+    @include mq(md) {
+      margin-right: 25%;
+      width: 15%;
+      height: 15%;
+    }
   }
 }
 
@@ -135,6 +141,19 @@
 
 .site-header {
   height: $header-height;
+  width: 100%;
+
+  @include mq(md) {
+    width: $nav-width;
+  }
+}
+
+.site-logo {
+  background-position: left center;
+
+  // @include mq(md) {
+  //   background-position: right center;
+  // }
 }
 
 .dropdown {

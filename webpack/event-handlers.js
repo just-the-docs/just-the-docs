@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     dropdownEl.classList.toggle('active');
   });
   window.addEventListener('click', (e) => {
-    if(e.target.parentNode != dropdownEl) dropdownEl.classList.remove('active');
+    if(e.target.closest('#dropdown') == null) dropdownEl.classList.remove('active');
   });
 
   const menuBtn = document.getElementById('home-menu-button');
