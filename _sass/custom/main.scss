@@ -229,6 +229,64 @@
   }
 }
 
+.aux-nav .aux-nav-list {
+  justify-content: center;
+}
+
+.aux-nav-list-item .site-button {
+  border-width: 0;
+  border-radius: $border-radius;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  color: $white;
+  background-color: $btn-primary-color;
+  margin: 1rem;
+  padding: 0.3em 1rem;
+
+  &:hover,
+  &.zeroclipboard-is-hover {
+    color: $white;
+    background-color: darken($btn-primary-color, 4%);
+    background-image: linear-gradient((lighten($btn-primary-color, 2%), darken($btn-primary-color, 4%)));
+  }
+
+  &:active,
+  &.selected,
+  &.zeroclipboard-is-active {
+    background-color: darken($btn-primary-color, 5%);
+    background-image: none;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  @include mq(md) {
+    margin: 0;
+    padding: $gutter-spacing-sm;
+    border-width: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: $link-color;
+    background-color: initial;
+
+    &:hover,
+    &.zeroclipboard-is-hover {
+      color: $link-color;
+      background-color: initial;
+      background-image: linear-gradient(
+        -90deg,
+        rgba($feedback-color, 1) 0%,
+        rgba($feedback-color, 0.8) 100%
+      );
+    }
+
+    &:active,
+    &.selected,
+    &.zeroclipboard-is-active {
+      background-color: initial;
+      background-image: initial;
+      box-shadow: initial;
+    }
+  }
+}
+
 .main {
   @include mq(md) {
     position: relative;
