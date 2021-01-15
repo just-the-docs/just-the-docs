@@ -43,52 +43,8 @@ layout: table_wrappers
   {%- include sidebar.html -%}
 
   <div class="main" id="top">
-    <div id="main-header" class="main-header">
-      {% if site.drop_title %}
-      <div id="dropdown" class="dropdown">
-        <a class="site-button">{{ site.drop_title }}</a>
-        <div class="dropdown-content">
-          {% for link in site.drop_links %}
-            <a href="{{ link.last }}"
-                    {% if site.aux_links_new_tab %}
-                      target="_blank"
-                    {% endif %}
-            >
-              {{ link.first }}
-            </a>
-          {% endfor %}
-        </div>
-      </div>
-    {% endif %}
 
-      {% if site.search_enabled != false %}
-        <div class="search">
-          <div class="search-input-wrap">
-            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
-            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
-          </div>
-          <div id="search-results" class="search-results"></div>
-        </div>
-      {% endif %}
-
-      {% if site.aux_links %}
-        <nav aria-label="Auxiliary" class="aux-nav">
-          <ul class="aux-nav-list">
-            {% for link in site.aux_links %}
-              <li class="aux-nav-list-item">
-                <a href="{{ link.last }}" class="site-button"
-                  {% if site.aux_links_new_tab %}
-                  target="_blank" rel="noopener noreferrer"
-                  {% endif %}
-                >
-                  {{ link.first }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
-      {% endif %}
-    </div>
+    {%- include header.html -%}
 
     {% if page.video_id %}
       <div class="video-bg">
@@ -195,6 +151,7 @@ layout: table_wrappers
       <div class="search-overlay"></div>
     {% endif %}
   </div>
+
   {%- include auth_modal.html -%}
 </body>
 </html>

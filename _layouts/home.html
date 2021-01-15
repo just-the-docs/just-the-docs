@@ -7,7 +7,7 @@ layout: table_wrappers
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
 <body class="home">
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <!--TODO: figure out what this does-->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="svg-link" viewBox="0 0 24 24">
             <title>Link</title>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
@@ -40,7 +40,7 @@ layout: table_wrappers
         </symbol>
     </svg>
 
-    {% include home_header.html %}
+    {% include header.html home=true %}
 
     {% if site.heading_anchors != false %}
     {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
