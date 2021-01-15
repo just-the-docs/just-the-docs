@@ -39,15 +39,15 @@
 }
 
 .main-content-wrap {
-  padding-right: calc(
-          (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
-  ) !important;
-
   @include container;
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
 
   @include mq(md) {
+    padding-right: calc(
+            (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
+    ) !important;
+
     padding-top: $gutter-spacing;
     padding-bottom: $gutter-spacing;
   }
