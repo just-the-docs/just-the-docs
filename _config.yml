@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Incendium Academy
 description: Free Online STEM Contest Preparation For Everyone
-logo: "/assets/images/logo.png" # the subpath of your site, e.g. /blog
+logo: "/assets/images/logo.png"
 
 permalink: pretty
 
