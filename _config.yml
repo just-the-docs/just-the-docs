@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Incendium Academy
-description: Free Online STEM Contest Preparation
+description: Free Online STEM Contest Preparation For Everyone
 logo: "/assets/images/logo.png" # the subpath of your site, e.g. /blog
 
 permalink: pretty
