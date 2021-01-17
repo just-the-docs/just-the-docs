@@ -4,6 +4,8 @@ parent: Philosophy
 title: Values
 ---
 
+# Values
+
 **Purpose**
 
 Identifies values at Countable.

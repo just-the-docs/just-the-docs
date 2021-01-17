@@ -4,6 +4,8 @@ parent: Philosophy
 title: Transparency Policy
 ---
 
+# Transparency Policy
+
 **Purpose**
 
 Documents the reasons for Countable's dedication to transparency.

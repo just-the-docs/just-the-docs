@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Django
 parent: Programming
+title: Django
 ---
+
+# Django
 
 **Purpose**
 

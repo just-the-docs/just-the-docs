@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Content Writing Guidelines
 parent: UX
+title: Content Writing Guidelines
 ---
+
+# Content Writing Guidelines
 
 **Purpose**
 
@@ -65,8 +67,7 @@ please remember to:
     experience, etc. You can include your own voice as well as the
     overall tone of Countable (see above).
 
-[Resources for blog
-writing](https://www.youtube.com/watch?v=ygiAqYJq8No)
+[Resources for blog writing](https://www.youtube.com/watch?v=ygiAqYJq8No)
 
 **Finally**
 

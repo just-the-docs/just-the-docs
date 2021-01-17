@@ -4,6 +4,8 @@ parent: People Ops
 title: Meetings
 ---
 
+# Meetings
+
 **Purpose**
 
 Help everyone at Countable understand the different types of meetings we hold, and how to get the most benefit out of the fewest meetings.
@@ -104,7 +106,7 @@ All active projects should have a Sprint meeting every 1 to 4 weeks.
 
   - Discuss how the current sprint will accomplish our "OKR" for the
     project.
-  - See `/operations/SCRUM` for full instructions
+  - See (Scrum)[../operations/SCRUM/] for full instructions
 
 ## One-on-one Meetings
 

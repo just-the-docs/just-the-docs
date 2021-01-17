@@ -1,8 +1,10 @@
 ---
 layout: default
-title: UX & Design Guidelines
 parent: UX
+title: UX and Design Guidelines
 ---
+
+# UX and Design Guidelines
 
 **Purpose**
 

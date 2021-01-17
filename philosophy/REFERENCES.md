@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Philosophical References
 parent: Philosophy
+title: Philosophical References
 ---
+
+# References That Drive Our Philosophy
 
 **Purpose**
 
@@ -18,8 +20,7 @@ Some resources in line with our thinking on management styles.
 
 ### Just Shut Up
 
-  - [Data Driven Investor
-    post](https://medium.com/datadriveninvestor/are-you-a-manager-shut-up-494616dcea2f)
+  - [Data Driven Investor post](https://medium.com/datadriveninvestor/are-you-a-manager-shut-up-494616dcea2f)
 
 ### "The Culture Code"
 

@@ -1,8 +1,10 @@
 ---
 layout: default
-title: GIT
 parent: Programming
+title: GIT
 ---
+
+# Git
 
 **Purpose**
 

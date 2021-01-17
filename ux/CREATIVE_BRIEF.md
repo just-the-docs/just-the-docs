@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Creative Brief
 parent: UX
+title: Creative Brief
 ---
+
+# Creative Brief
 
 **Purpose**
 

@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Hiring Fit
 parent: People Ops
+title: Hiring Fit
 ---
+
+# Hiring Fit
 
 **Purpose**
 
@@ -17,7 +19,7 @@ Define what we'd like to offer our employees, compared with their other options.
   - Countable does not take into account race and gender in hiring
     decisions or salary offers. Hiring should be done as if these
     attributes are not known at the time of offer.
-  - We use this [Job Postings](JOB_POSTINGS).
+  - We use this [Job Postings](../peopleops/recruiting/JOB_POSTINGS).
   - We try to be always hiring, in order to snap up the right person if
     they come along at any time.
 

@@ -4,6 +4,8 @@ parent: Operations
 title: Trello
 ---
 
+# Trello
+
 **Purpose**
 
 We use Trello for project management, as it allows unlimited access to
@@ -81,8 +83,7 @@ Details should include important information depending on what kind
     provided to direct the members where the improvement or change is
     applied. For front-end related requests, include screenshots, URL of
     the page if possible, and XD & Google Drive links (if applicable).
-    Tutorial video for front-end cards:
-    <https://www.loom.com/share/3c91d0cf0348471abb3eed20fc63b4ab>
+    [Tutorial video for front-end cards](https://www.loom.com/share/3c91d0cf0348471abb3eed20fc63b4ab)
   - **Proposed Behavior** - Key points should be well-defined. For
     front-end related improvements or changes, if there are any
     references from other websites, include screenshots or links.

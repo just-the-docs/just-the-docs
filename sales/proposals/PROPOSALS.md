@@ -5,6 +5,8 @@ parent: Sales
 has_children: true
 ---
 
+# Proposals
+
 **Purpose**
 
 The following are actionable tactics to improve the ROI of time spent
@@ -45,7 +47,7 @@ public sector.
   - Keep the proposal as short as possible while addressing the criteria
     and building trust.
 
-    Continue to review the [Proposal Writing Process](PROPOSAL_PROCESS)
+    Continue to review the [Proposal Writing Process](PROPOSAL_PROCESS.md)
 
 ## Specific Proposal Types:
 

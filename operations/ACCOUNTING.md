@@ -4,6 +4,8 @@ parent: Operations
 title: Accounting
 ---
 
+# Accounting 
+
 **Purpose**
 
 To cover the major points of accounting practices at Countable.

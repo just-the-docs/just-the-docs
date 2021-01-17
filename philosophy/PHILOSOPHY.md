@@ -4,6 +4,8 @@ title: Philosophy
 has_children: true
 ---
 
+# Philosophy
+
 **Purpose**
 
 To provide a foundation for all we do at Countable (processes) rooted in why we do it (philosophy).

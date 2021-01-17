@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Niche Experiments
 parent: Sales
+title: Niche Experiments
 ---
+
+# Niche Experiments
 
 (draft)
 

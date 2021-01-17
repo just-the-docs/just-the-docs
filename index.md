@@ -105,10 +105,10 @@ every advantage we can find in this way.
 
 Helps us find the best partners and team members who share our passion.
 
-  - [Value Proposition](https://countable-ops-manual.readthedocs.io/sales/SALES/#value-prop)
+  - [Value Proposition](sales/VALUE_PROP)
   - [Creative Brief](ux/UX/)
   - [Design Asset Storage](operations/FILE_STORAGE/)
-  - [Social Media Posting Policy](ux/UX_GUIDELINES/)
+  - [Social Media Posting Policy](ux/CREATIVE_BRIEF/)
   - [SEO](ux/UX_GUIDELINES/)
   - [Usability](ux/USABILITY_TESTING/)
 
@@ -118,14 +118,14 @@ If you're a new Countable team member, start here\!
 
   - [Onboarding](peopleops/ONBOARDING_GUIDE/)
   - [Your Contract](peopleops/SUBCONTRACTOR_AGREEMENT/)
-  - [Diversity and Inclusion](https://countable-ops-manual.readthedocs.io/peopleops/TEAM_NORMS/#diversity-and-inclusion-principles)
-  - [Physical Setup](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB/#setting-up-your-desk)
+  - [Diversity and Inclusion](peopleops/DIVERSITY_INCLUSION/)
+  - [Physical Setup](peopleops/DOING_YOUR_JOB/)
   - [Project Management](operations/PROJECT_MANAGEMENT/)
   - [Evaluation](peopleops/EVALUATION/)
-  - [Compensation](https://countable-ops-manual.readthedocs.io/peopleops/TEAM_NORMS/#compensation-strategy-principles)
+  - [Compensation](peopleops/COMPENSATION_STRATEGY/)
   - [Scrum](operations/SCRUM/)
   - [Trello](operations/TRELLO/)
-  - [Client Data Protection](https://countable-ops-manual.readthedocs.io/operations/CLIENTS/#client-data-protection)
+  - [Client Data Protection](operations/CLIENT_DATA_PROTECTION/)
 
 If you're a new client, start here\!
 
@@ -135,10 +135,7 @@ If you're a new client, start here\!
 
 ### Engineering
 
-The purpose of this section is to standardize key (not all)
-product/engineering processes in order to improve the team's
-performance, and take advantage of an experience curve by eliminating
-arbitrary process differences.
+The purpose of this section is to standardize key (not all) product/engineering processes in order to improve the team's performance, and take advantage of an experience curve by eliminating arbitrary process differences.
 
   - [Code Project Standards](programming/PROJECT_STANDARDS/)
   - [Coding Standards](programming/CODING_STANDARDS/)
@@ -151,14 +148,14 @@ arbitrary process differences.
   - [Django](programming/DJANGO/)
   - [Docker](devops/DOCKER/)
   - [Git](programming/GIT/)
-  - [Jenkins](https://countable-ops-manual.readthedocs.io/devops/DEVOPS/#id3)
-  - [Stack Choices](https://countable-ops-manual.readthedocs.io/devops/DEVOPS/#stack-choices)
+  - [Jenkins](devops/JENKINS/)
+  - [Stack Choices](devops/STACK_CHOICES/)
 
 ### Consulting
 
 How to provide the best results for clients.
 
-  - [Methodology](operations/OPERATIONS/)
+  - [Methodology](operations/METHODOLOGY/)
   - [Communicating with Clients](operations/CLIENTS/)
 
 ## Operations
@@ -166,11 +163,11 @@ How to provide the best results for clients.
   - [Meetings](peopleops/MEETINGS/)
   - [Processes](operations/OPERATIONS/)
   - [Storage](operations/FILE_STORAGE/)
-  - [Gathering Team Feedback](https://countable-ops-manual.readthedocs.io/peopleops/COMMUNICATIONS_CHARTER/#giving-feedback-to-teammates)
+  - [Gathering Team Feedback](peopleops/COMMUNICATIONS_CHARTER/)
 
 ## Contributing
 
-Technical things to learn when working on this manual: `operations/META`
+Technical things to learn when working on this manual: [Contributing](operations/META/)
 
 If you want to suggest a change to Countable Web Productions, make a
 pull request. The rules:
@@ -178,9 +175,6 @@ pull request. The rules:
   - *Important*: Never commit private data or protected intellectual
     property. Nothing specific to our employees, clients, or finances
     should go in here.
-  - The easiest place to contribute an idea is by joining our company's
-    [board of advisors](https://www.reddit.com/r/countableweb) on
-    reddit.
   - Organize by "context". The documents in here are intended to be
     actionable. So, for any document, place it with a name and folder
     structure that matches what someone is *doing when they need this

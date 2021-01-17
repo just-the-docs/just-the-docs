@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Coding Standards and Style
 parent: Programming
+title: Coding Standards and Style
 ---
+
+# Coding Standards and Style
 
 **Purpose**
 
@@ -200,6 +202,6 @@ code.
 
 ## Coding Standards for Specific Languages
 
-Check out the individual pages for [HTML/CSS](HTML_CSS),
-[Javascript](JAVASCRIPT), and [Python](PYTHON) for more
+Check out the individual pages for [HTML/CSS](HTML_CSS.md),
+[Javascript](JAVASCRIPT.md), and [Python](PYTHON.md) for more
 specific coding standards.

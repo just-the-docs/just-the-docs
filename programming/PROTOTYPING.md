@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Prototyping
 parent: Programming
+title: Prototyping
 ---
+
+# Prototyping
 
 **Purpose**
 

@@ -4,6 +4,8 @@ parent: Operations
 title: Scrum
 ---
 
+# Scrum
+
 **Purpose**
 
 Countable uses

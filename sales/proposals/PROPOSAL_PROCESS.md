@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Proposal Writing Process
 parent: Proposals
+title: Proposal Writing Process
 ---
+
+# Proposal Writing Process
 
 **Purpose**
 
@@ -19,7 +21,7 @@ effort, just time to leave open)
 
 1.  CAPTURE - find RFPs you can win (This should be happening all the
     time as described in
-    [Sales](https://countable-ops-manual.readthedocs.io/sales/SALES))
+    [Sales](../sales/SALES))
 2.  PRE-QUALIFY - look a bit deeper (Score in our OPPORTUNITIES sheet)
 3.  QUALIFY - (5 days) (ask questions as soon as possible after deciding
     to write, wait for responses)
@@ -159,7 +161,7 @@ have a good chance of winning based on all the information so far.
 
 ## Proposal Writing Roles
 
-Assign the key [Proposal Writing Roles](PROPOSAL_ROLES) to people at the top of the proposal draft.
+Assign the key [Proposal Writing Roles](PROPOSAL_ROLES.md) to people at the top of the proposal draft.
 
 #### Getting Organized
 

@@ -4,6 +4,8 @@ parent: People Ops
 title: Communications Charter
 ---
 
+# Communications Charter 
+
 **Purpose**
 
 Help everyone at Countable understand how to indicate their
@@ -26,18 +28,15 @@ get better at our work, and communicate with teammates.
     don't pull someone in who was planning the day off.
   - While there are occasional emergencies that may require it, we try
     to minimize the pressure on people to work beyond 8 hours a day.
-  - Indicate what hours you will work in the [staff schedule](https://docs.google.com/spreadsheets/d/1zh6GYex7UtoZGyChRGNy8378brtxvfrOdtedf6z5c5M/edit#gid=0).
-    This isn't written in stone but allows your team members to plan
-    when to work with you. If you change it one day, just let your team
-    know in advance.
+  - Indicate what hours you will work using [Google's Work Hours](https://support.google.com/calendar/answer/7638168?hl=en) in your Countable Calendar. This isn't written in stone but allows your team members to plan when to work with you. If you change it one day, just let your team know in advance.
+  - If your time zone or responsibilities make it difficult to put the "complete picture" here, make sure there are at least two major slots of 4+ hours booked for Vancouver business hours (9-5, M-F Pacific time).
 
 ## Guidelines for All Communication
 
 We want to restrict types of communication by channel so people aren't
-stressed by having to listen on all channels at all times. For example,
-we expect people to check email just once or twice a day, and not on
-evenings or weekends, so don't feel guilty about not checking it on your
-time off.
+stressed by having to listen on all channels at all times. 
+
+For example, we expect people to check email just once or twice a day, and not on evenings or weekends, so don't feel guilty about not checking it on your time off.
 
   - Where possible, communication is `asynchronous` because we have
     different schedules and often timezones too. This means it will
@@ -133,7 +132,7 @@ external project stakeholders).
 ### Trello
 
 \- Trello is for tracking what we need to get done (actionable tasks and
-reminders). We use variants of Scrum, details [here](/operations/TRELLO).
+reminders). We use variants of Scrum, details [here](../operations/TRELLO).
 
 ### Office Hours and Presence
 
@@ -146,7 +145,7 @@ reminders). We use variants of Scrum, details [here](/operations/TRELLO).
 
 ## Meetings
 
-See [Meetings](/peopleops/MEETINGS)
+See [Meetings](../peopleops/MEETINGS)
 
 ## Slack Hygiene
 
@@ -213,7 +212,7 @@ improve. Some references on why this is:
 
 ### When To Give Feedback
 
-  - Code reviews (following norms [here](/programming/GIT) The benefits
+  - Code reviews (following norms [here](../programming/GIT) The benefits
     of Senior developers reviewing Junior developers' code is obvious I
     hope, but it's just as critical to provide feedback as a Jr
     dev because:

@@ -4,6 +4,8 @@ parent: Operations
 title: Recruiting
 ---
 
+# Recruiting
+
 **Purpose**
 
 To transparently define a replicable recruiting process for the Countable team.
@@ -24,7 +26,7 @@ The commitment blueprint was **starkly the best**, with zero failures in
 the 2000 market bubble and triple the chance of making an IPO the next
 best model.
 
-Two other models, the "autocratic" and "beaurocratic" performed even
+Two other models, the "autocratic" and "bureaucratic" performed even
 worse than the aforementioned three.
 
 ### Recruiting for Staff Contractors
@@ -39,7 +41,7 @@ typically hired based on a quote for a specific deliverable.
 Everything that follows is for Staff Contractors, not outside
 consultants.
 
-Use these [Job Postings](JOB_POSTINGS).
+Use these [Job Postings](../peopleops/recruiting/JOB_POSTINGS).
 
 ## Recruiting Process
 
@@ -245,14 +247,12 @@ according to your needs.
     leads when they answer to your offer. It's an important step because
     most freelancers are in different timezones, so you'll have a huge
     gap in communication if you don't respond to them right away.
-2)  Use a timezone conversion system like [Savvy
-    Time](https://savvytime.com/converter/pdt-to-ist), to schedule the
+2)  Use a timezone conversion system like [Savvy Time](https://savvytime.com/converter/pdt-to-ist), to schedule the
     meetings that should occur after the initial screening.
 3)  Use any video-chat service, like
     [Whereby](http://countable.whereby.com/lobby) to schedule an
     interview with your best candidates.
-4)  You can check for more tools at our [peopleops
-    folder](https://drive.google.com/drive/folders/1HY7LPI_h5F5WxaTW5v-1_DMUXcJIjjh1)
+4)  You can check for more tools at our [peopleops folder](https://drive.google.com/drive/folders/1HY7LPI_h5F5WxaTW5v-1_DMUXcJIjjh1)
 
 ## Initial Screening
 
@@ -283,8 +283,7 @@ according to your needs.
 <!-- end list -->
 
 5)  Now send a message to the selected ones, asking for a quick (15 min)
-    video chat interview. Check what timezone he's in, and use a [time
-    zone conversion tool](https://savvytime.com/converter/pdt-to-ist) to
+    video chat interview. Check what timezone he's in, and use a [time zone conversion tool](https://savvytime.com/converter/pdt-to-ist) to
     make sure it will match yours.
 6)  It's important to remember scheduling the interview time in an Alarm
     app (any app that remembers you about it) since once you get 2+
@@ -294,8 +293,7 @@ according to your needs.
 
 ## Scheduling
 
-  - Please use [Calendly](https://calendly.com/) to schedule your
-    meetings and avoid timezone issues.
+  - Please use [Calendly](https://calendly.com/) to schedule your meetings and avoid timezone issues.
 
 ## Interviewing
 
@@ -322,17 +320,15 @@ according to your needs.
 2)  For developers, one suggestion would be services like (we still
     exploring options):
     
-    2.1) [Hacker Rank](https://www.hackerrank.com)
+   2.1) [Hacker Rank](https://www.hackerrank.com)
 
 ## Contract signature
 
   - Once selected a candidate, your supervisor should proceed with the
     contract signature by using a [HelloSign](https://hellosign.com)
     template, that provides legally binding electronic signatures.
-  - Once everything is prepared at HelloSign, send the document to the
-    signature to your candidate's email.
-  - Once your contract is signed, ask your **candidate national ID
-    document**.
+  - Once everything is prepared at HelloSign, send the document to the signature to your candidate's email.
+  - Once your contract is signed, ask your **candidate national ID document**.
   - Confirm if the provided document name matches with what was inserted
     into the contract.
 

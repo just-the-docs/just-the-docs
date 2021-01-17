@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Social Media Posting Policy
 parent: UX
+title: Social Media Posting Policy
 ---
+
+# Social Media Posting Policy
 
 **Purpose**
 

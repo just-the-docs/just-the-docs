@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Javascript
 parent: Programming
+title: Javascript
 ---
+
+# Javascript
 
 **Purpose**
 

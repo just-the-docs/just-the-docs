@@ -4,6 +4,8 @@ parent: Philosophy
 title: Vision
 ---
 
+# Vision
+
 **Purpose**
 
 Allows us to identify common threads, and meaningful changes, in Countable's vision over time.

@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Code Project Structure
 parent: Programming
+title: Code Project Structure
 ---
+
+# Code Project Structure
 
 **Purpose**
 

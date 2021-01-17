@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Branding Projects
 parent: UX
+title: Branding Projects
 ---
+
+# Branding Projects
 
 **Purpose**
 

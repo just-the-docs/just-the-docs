@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Critical Path
 parent: Operations
+title: Critical Path
 ---
+
+# Critical Path
 
 **Purpose**
 

@@ -4,6 +4,8 @@ parent: UX
 title: Usability Testing
 ---
 
+# Usability Testing
+
 **Purpose**
 
 To ensure thorough and standardized usability tests can be followed by
@@ -107,8 +109,7 @@ Follow and document these steps:
   - Add to the appropriate Trello list/board and use a red "bug" label
     to mark it.
   - Assign the bug to someone who can either fix or triage it.
-  - (Refer to [Bug Reporting in our Developers
-    page](https://countable-ops-manual.readthedocs.io/programming/TESTING#bug-reporting-checklist))
+  - (Refer to [Bug Reporting in our Developers page](../programming/TESTING#bug-reporting-checklist))
 
 <!-- end list -->
 

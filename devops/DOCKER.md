@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Docker
 parent: DevOps
+title: Docker
 ---
 
 **Purpose**
@@ -44,13 +44,10 @@ Patterns of our use of Docker are at the start for easy reference, followed by f
 
 ## Docker Training
 
-This explains the basics of using Docker, specifically written for
-Countable devs. If you want to know WHY we use docker, see [Docker
-Basics](https://countable-ops-manual.readthedocs.io/devops/DEVOPS#docker-basics)
-and [Why
-Docker?](https://countable-ops-manual.readthedocs.io/devops/WHY_DOCKER)
+This explains the basics of using Docker, specifically written for Countable devs. 
 
-Basic docker for new devs. It assumes you did [these exercises on
-Linux](https://countable-ops-manual.readthedocs.io/programming/TRAINING#linux).
+If you want to know WHY we use Docker, see [Why Docker?](../devops/WHY_DOCKER)
 
-Check out [Docker 101](DOCKER_101.md) to learn more.
+Basic docker for new devs. It assumes you did [these exercises on Linux](../programming/TRAINING).
+
+Check out [Docker 101](../devops/DOCKER_101) to learn more.

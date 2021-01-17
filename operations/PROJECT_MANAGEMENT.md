@@ -4,6 +4,8 @@ parent: Operations
 title: Project Management
 ---
 
+# Project Management
+
 **Purpose**
 
 Set conventions for communication between project stakeholders to
@@ -25,7 +27,7 @@ Countable to assist with onboarding.
   - Work together to minimize the amount of time anyone is blocked or
     waiting for someone's output as their input. The list of items in
     which people depend on each other's work is called the
-    [Critical Path](CRITICAL_PATH)
+    [Critical Path](../operations/CRITICAL_PATH)
 
 ## Project Management Objectives
 
@@ -59,20 +61,4 @@ Check out our page on [how we use Trello](../operations/TRELLO).
 
 ## Tools - Screencastify
 
-Especially when dealing with a remote team, customers tend to be more
-anxious about project progress and features implementation. To overcome
-this situation and to keep our customers aware of our current
-development status we can use this chrome extension to **record short
-screencasts with a brief summary of the latest changes**. After this,
-generate a shareable link and send to them through e-mail, in a **weekly
-basis**.
-
-  - Don't spend more than 10 minutes to do it, since its just a short
-    and simple video.
-  - Be professional in your tone and language.
-  - This methodology is particularly useful for front-end changes, since
-    they're visible.
-  - In case you're dealing with back-end related work, you can still do
-    the screencast, but your approach should be different: You'll have
-    to explain and summarize what you're working on, and show some
-    important parts of the code that you developed.
+Check out our page on [recording short screencast videos](../operations/SCREENCASTIFY).

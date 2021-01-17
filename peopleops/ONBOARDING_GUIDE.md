@@ -4,6 +4,8 @@ parent: People Ops
 title: Onboarding
 ---
 
+# Onboarding Guide
+
 **Purpose**
 
 The goal of this guide is to help new members of Countable get connected
@@ -39,7 +41,7 @@ Covers all the onboarding steps for a new Countable Team Member.
 
 ### Set up Eightmeters
 
-[See here](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#using-eightmeters)
+[See here](../peopleops/EIGHTMETERS/)
 
 ### Team Calendar
 
@@ -56,11 +58,11 @@ Covers all the onboarding steps for a new Countable Team Member.
 
 ### Environment
 
-  - Set up a [physical space and equipment](https://countable-ops-manual.readthedocs.io/peopleops/DOING_YOUR_JOB#setting-up-your-desk)
-    to work.
-  - devs only - Read about our [DevOps](./devops/DEVOPS) and
-    [Coding Standards](./programming/CODING_STANDARDS)
-  - devs only - Complete the [Training](./programming/TRAINING) following these practices and get a team member to code review it using a feature
+  - Review our further documentation on [Doing Your Job](../peopleops/DOING_YOUR_JOB/)
+  - Set up a [physical space and equipment](../peopleops/SETTING_UP/) to work.
+  - devs only - Read about our [DevOps](../devops/DEVOPS) and
+    [Coding Standards](../programming/CODING_STANDARDS)
+  - devs only - Complete the [Training](../programming/TRAINING) following these practices and get a team member to code review it using a feature
     branch and pull request.
   - Order a book that will help you learn your job, and bill the company
     for it.
@@ -77,7 +79,7 @@ Join these using your Google account:
 
 ### How to Do Work
 
-Skim this so you know the language and how we work: [Project Management](./operations/PROJECT_MANAGEMENT).
+Skim this so you know the language and how we work: [Project Management](../operations/PROJECT_MANAGEMENT).
 
 ### Confirm
 
@@ -110,7 +112,7 @@ complete tasks every day when you work. But, you are expected to:
   - Try your best to complete a tiny task, rather than partially
     finishing a big task.
   - Expectations that are required to be part of Countable (level 1) and
-    for promotion are documented here: [Evaluation](./programming/EVALUATION).
+    for promotion are documented here: [Evaluation](../peopleops/evaluation/EVALUATION/).
 
 ### How To Ask For Help
 

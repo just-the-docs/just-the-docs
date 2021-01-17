@@ -4,8 +4,9 @@ title: People Ops
 has_children: true
 ---
 
-(draft)
+# People Ops
 
+(draft)
 
 **Purpose**
 

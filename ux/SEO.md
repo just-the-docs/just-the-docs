@@ -1,8 +1,10 @@
 ---
 layout: default
-title: SEO Guidelines
 parent: UX
+title: SEO Guidelines
 ---
+
+# SEO Guidelines
 
 **Purpose**
 

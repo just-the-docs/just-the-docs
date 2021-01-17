@@ -1,8 +1,10 @@
 ---
 layout: default
 parent: Operations
-title: Meta (Contributing to the Ops Manual)
+title: Contributing to the Ops Manual
 ---
+
+# Contributing to the Ops Manual
 
 **Purpose**
 
@@ -14,44 +16,58 @@ Currently holds content on linking best practices, a draft on Writing Ops Manual
 
 ## How to Add Links
 
-Best convention for linking to other files: ../devops/DEVOPS.md
+Best convention for linking to other files: `../devops/DEVOPS`
+
+You can link directly to a single file within the same folder by using `DEVOPS.md`. From preliminary testing, in this use the .md *is* needed.
+
+## Data Headers for New Pages
+
+When you create a new page in the ops manual, you will need to include a few lines of simple information at the very top of the page. (If there is a space or line before it, the header will not be parsed correctly.)
+
+There are two primary page scenarios for header templates:
+
+#### Headers for New Sub-Pages
+
+If you are creating a page within an existing folder (99% of the time), you will include the following header content: 
+
+` ---
+layout: default
+parent: Operations
+title: Contributing to the Ops Manual
+--- `
+
+#### Headers for New Collections
+
+If you are creating a new collection (*very* rare, please consult with ops guild before doing so), you will include the following header content: 
+
+` ---
+layout: default
+title: Operations
+has_children: true
+--- `
+
+Note that any child pages created "below" that collection page will have to reference its title in their own data headers, so please choose a succinct title for these.
 
 ## Writing Ops Manual Pages
 
-This is a *draft*. Please take these as a rough guide for now, and let
-me (cvo) know what works and what doesn't. You can add sections not
+This is a *draft*. Please take these as a rough guide for now, and let me (cvo) know what works and what doesn't. You can add sections not
 documented here.
 
   - An Ops Manual page **MUST**:
     
-      - be written to help employees achieve our mission and create
-        value for our customers.
-      - have a "Purpose" heading which concisely summarizes why the
-        document exists, because we want to ensure the area is important
-        to our mission. This SHOULD indicate how we can measure success.
+      - be written to help employees achieve our mission and create value for our customers.
+      - have a **Purpose** heading concisely summarizing why the document exists, because we want to ensure the area is important to our mission. This SHOULD indicate how we can measure success.
 
   - An Ops Manual page **SHOULD**:
     
-      - Have a "Scope" section that identifies what area of work is
-        being discussed, and any definitions to clarify what follows,
-        because we want each process document to be focused on a
-        specific area of work.
+      - Have a **Scope** section identifying what area of work is being discussed, and any definitions to clarify what follows, because we want each process document to be focused on a specific area of work.
       - Contain bulleted lists of process steps, rules and guidelines.
-      - Be concise, becasue it's easier for employees to understand.
-      - Clearly state the logical purpose, evidence or citation that
-        indicates how the rules help our mission because we want each
-        rule to justify its existence. Use the word 'because' (explain
-        why the step exists) as needed.
+      - Be concise, because it's easier for employees to understand.
+      - Clearly state the logical purpose, evidence or citation that indicates how the rules help our mission because we want each rule to justify its existence.
+      - Use the word 'because' (explain *why* the step exists) as needed.
 
 ## Processes
 
-  - Documenting processes allows your team to improve together at their
-    work. You can talk about how you do things, and how each person can
-    do it better. It also sets you up for automation.
-    
-      - Reach out to your team and make sure they know about, and buy
-        into, the process. The best way is to get their help developing
-        the process.
-      - Test the documented processes with other people. They should
-        tell you if it's clear, actionable and effective, and how to
-        improve it.
+  - Documenting processes allows your team to improve together at their work. You can talk about how you do things, and how each person can do it better. It also sets you up for automation.
+   - Reach out to your team and make sure they know about, and buy into, the process. The best way is to get their help developing the process.
+   - Test the documented processes with other people. They should tell you if it's clear, actionable and effective, and how to improve it.

@@ -4,6 +4,8 @@ parent: Operations
 title: File Storage
 ---
 
+# File Storage
+
 **Purpose**
 
 To enable anyone to find any file or asset, without having to ask the person who created it where it is.

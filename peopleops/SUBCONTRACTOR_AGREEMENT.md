@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Subcontractor Work Agreement
 parent: People Ops
+title: Subcontractor Work Agreement
 ---
+
+# Subcontractor Work Agreement
 
 **Purpose**
 
@@ -10,7 +12,7 @@ Transparently share our work agreement.
 
 **Scope**
 
-TODO: This document is out of date and the official one has not been
+#TODO: This document is out of date and the official one has not been
 converted to markdown and open-sourced.
 
 This is the agreement template we hold with everyone who works at the

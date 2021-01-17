@@ -1,19 +1,20 @@
 ---
 layout: default
-title: Proposal Structure
 parent: Sales
+title: Project Structure
 ---
+
+# Project Structure
 
 **Purpose**
 
-This contains internal project setup instructions. TODO: move this to the project management area of the manual.
+This contains internal project setup instructions.
 
 **Scope**
 
 Here we provide a checklist of key steps and expectations to set when starting a new project.
 
-Onboarding New Clients
-----------------------
+## Onboarding New Clients
 
 Steps for onboarding a client:
 
@@ -24,14 +25,12 @@ Steps for onboarding a client:
    repositories.
 
 
-Lead Time
-~~~~~~~~~
+### Lead Time
 
 -  The team's capacity must be checked, and then a start date and project
    delivery timeline can be determined.
 
-Minimum Billable Amount
-~~~~~~~~~~~~~~~~~~~~~~~
+### Minimum Billable Amount
 
 -  Any additional request (ie, via email) for technical work (anything
    not administrative, that requires opening adobe illustrator for
@@ -41,8 +40,7 @@ Minimum Billable Amount
    enough that both sides are incentivized to avoid a huge number of
    small requests since it's much less efficient that way.
 
-Budget Changes During the Project
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Budget Changes During the Project
 
 -  During the project, if we expect to exceed the budget, tell the
    client and your manager ASAP, and explain what happened.

@@ -4,6 +4,8 @@ parent: Philosophy
 title: Principles
 ---
 
+# Principles
+
 **Purpose**
 
 Outlines the principles that drive Countable.
@@ -15,7 +17,7 @@ Relates principles to our OKRs process, then lists some key principles.
 ## Principles
 
 The purpose of this page is to address a specific issue with our
-[OKR](https://countable-ops-manual.readthedocs.io/operations/OKRS)
+[OKR](../operations/OKRS)
 process, wherein by focusing exclusively on some OKR we neglect some
 important assumption we should have had all along. ie, by releasing fast
 we neglect privacy.

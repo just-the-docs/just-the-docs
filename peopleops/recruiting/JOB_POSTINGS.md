@@ -4,6 +4,8 @@ parent: People Ops
 title: Job Postings
 ---
 
+# Job Postings 
+
 **Purpose**
 
 This serves as a root page with all example job postings we commonly
@@ -36,7 +38,7 @@ transparent from the ground up: we've open-sourced our company's
 operations manual here if you want to learn more about our current
 thinking.
 
-[Our Open Source Ops Manual](https://countable-ops-manual.readthedocs.io/)
+[Our Open Source Ops Manual](https://countable-web.github.io/ops/)
 
 `responsibilities and skills`
 
@@ -64,9 +66,7 @@ us know what you prefer.
 Your application must include a resume, and a cover letter. To avoid
 automated submissions, and to see if you pay attention to detail and
 follow instructions, your email must be exactly 100 words. Further
-instructions can be found at:
-<https://countable-ops-manual.readthedocs.io/peopleops/recruiting/APPLICANT_GUIDE>
-.
+instructions [can be found here](https://countable-web.github.io/ops/peopleops/recruiting/APPLICANT_GUIDE).
 
 I look forward to hearing from you\!
 

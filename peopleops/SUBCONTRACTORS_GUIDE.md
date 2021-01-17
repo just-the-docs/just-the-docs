@@ -4,14 +4,15 @@ parent: People Ops
 title: Subcontractor's Guide
 ---
 
+# Subcontractor's Guide
 
 **Purpose**
 
+Make our labour practices transparent and provide support for team members who are new to subcontracting.
+
 **Scope**
 
-## Subcontractor's Guide
-
-Currently covers taxes, categorization as a subcontractor, and benefits
+Currently covers taxes, categorization as a subcontractor, and the benefits
 of incorporating.
 
 Also check out our template [Subcontractor Agreement](SUBCONTRACTOR_AGREEMENT.md)
@@ -29,8 +30,7 @@ using [SimpleTax](https://simpletax.ca/)
 5.  Rent, deduct the percentage of the room used for work, times
     percentage of time working there.
 6.  Deduct travel costs when working.
-7.  Full list -[CRA Business
-    Expenses](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/sole-proprietorships-partnerships/business-expenses)
+7.  Full list -[CRA Business Expenses](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/sole-proprietorships-partnerships/business-expenses)
 
 ### Categorization as a Subcontractor
 

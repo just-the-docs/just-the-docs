@@ -4,6 +4,8 @@ parent: Operations
 title: Client Work Request Instructions
 ---
 
+# Client Work Request Instructions
+
 **Purpose**
 
 This is a client-facing process intended to open useful channels of communication and collaboration.
@@ -16,8 +18,7 @@ It covers the details of the linked process diagram, and what to expect after su
 
 This process is designed to help us do great work for you, as
 transparently as possible. If at any point you sense something's not
-working or not right for you, don't hesitate to [tell
-us](mailto:everyone@countable.ca) and we'll improve it!
+working or not right for you, don't hesitate to [tell us](mailto:everyone@countable.ca) and we'll improve it!
 
 If you're a visual person, check out the process diagram
 [here](https://docs.google.com/drawings/d/1UkPeGGzKYWkCsZpkwWB_UJ3JjWJcoT4t8qSU8A0tsy4/edit?usp=sharing).
@@ -38,7 +39,7 @@ We use Trello to communicate work items with our clients.
     under the card or add them as a "member". Otherwise, it may be some
     time before someone sees your card.
 
-For more information on how we use Trello, see [here](../TRELLO).
+For more information on how we use Trello, see [here](../operations/TRELLO).
 
 ## How We Process Your Work Request
 

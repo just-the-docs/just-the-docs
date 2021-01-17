@@ -4,6 +4,8 @@ parent: People Ops
 title: Expenses at Countable
 ---
 
+# Expenses at Countable
+
 **Purpose**
 
 To clearly identify what is and is not covered as an expense at Countable, and how to properly request compensation for expenses.
@@ -14,8 +16,7 @@ Covers equipment expenses, what else the company will cover, and how to claim ex
 
 ### Equipment Expenses
 
-  - Any expense over $100 must be approved in advance of the purchase in
-    order to be reimbursed.
+  - Any expense over $100 must be approved in advance of the purchase in order to be reimbursed.
   - Countable will provide a (loaner) linux laptop if you use that as
     your primary work machine. We subsidize Linux because it helps the
     team learn about our servers, Docker and other critical components
@@ -40,8 +41,6 @@ Covers equipment expenses, what else the company will cover, and how to claim ex
     but if you can solve any real problem for $100 or less, ask for
     forgiveness rather than permission.) See the next section for
     guidelines.
-
-## Expenses
 
 ### Examples of Things The Company Will Pay For
 

@@ -4,9 +4,11 @@ parent: People Ops
 title: Feedback Loops
 ---
 
+# Feedback Loops
+
 **Purpose**
 
-To cover one of our core principles at Countable: to shorten feedback loops.
+To cover one of our core principles at Countable: shortening feedback loops.
 
 **Scope**
 

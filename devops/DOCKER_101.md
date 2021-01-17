@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Docker 101
 parent: DevOps
+title: Docker 101
 ---
+
+# Docker 101
 
 **Purpose**
 

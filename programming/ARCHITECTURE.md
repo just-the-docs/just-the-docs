@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Architecture
 parent: Programming
+title: Architecture
 ---
+
+# Architecture
 
 **Purpose**
 

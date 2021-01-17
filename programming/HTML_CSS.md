@@ -1,8 +1,10 @@
 ---
 layout: default
-title: HTML/CSS
 parent: Programming
+title: HTML/CSS
 ---
+
+# HTML/CSS
 
 **Purpose**
 

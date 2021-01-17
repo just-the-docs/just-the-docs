@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Python
 parent: Programming
+title: Python
 ---
 
 # Python
@@ -22,12 +22,9 @@ For Python code, please comply with PEP-8. Editor plugins can automate
 most of the rules for you. Common mistakes:
 
   - Use the `black` autoformatter.
-  - [Functions should be
-    snake\_case](https://www.python.org/dev/peps/pep-0008/#function-names)
-  - [Classes should be
-    UpperCamelCase](https://www.python.org/dev/peps/pep-0008/#class-names)
-  - [Constants should be
-    ALL\_CAPS](https://www.python.org/dev/peps/pep-0008/#id48)
+  - [Functions should be snake\_case](https://www.python.org/dev/peps/pep-0008/#function-names)
+  - [Classes should be UpperCamelCase](https://www.python.org/dev/peps/pep-0008/#class-names)
+  - [Constants should be ALL\_CAPS](https://www.python.org/dev/peps/pep-0008/#id48)
 
 ### Imports
 

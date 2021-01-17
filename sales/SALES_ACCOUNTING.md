@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Sales Accounting
 parent: Sales
+title: Sales Accounting
 ---
+
+# Sales Accounting
 
 **Purpose**
 

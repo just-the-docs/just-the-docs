@@ -4,6 +4,8 @@ parent: Operations
 title: Client Data Protection
 ---
 
+# Client Data Protection
+
 **Purpose**
 
 Commit our data protection principles and practices to paper. 

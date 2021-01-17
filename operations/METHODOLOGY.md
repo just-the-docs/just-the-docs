@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Methodology Toolbox
 parent: Operations
+title: Methodology Toolkit
 ---
+
+# Methodology Toolkit
 
 **Purpose**
 

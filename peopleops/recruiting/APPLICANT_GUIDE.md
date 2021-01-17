@@ -4,6 +4,8 @@ parent: People Ops
 title: Applicant Guide
 ---
 
+# Applicant Guide
+
 (draft)
 
 **Purpose**
@@ -20,7 +22,7 @@ about who we expect to be a good fit.
   - This is a guide for people applying to Countable. We'll expand it in
     the future (with your feedback I hope). For now, we suggest:
     
-      - Read about who we think is a good [Hiring Fit](HIRING_FIT)
+      - Read about who we think is a good [Hiring Fit](../peopleops/recruiting/HIRING_FIT)
       - Check out countable.ca (and cortico.ca) to see a bit about our
         work.
       - See [our team page](https://countable.ca/careers). 

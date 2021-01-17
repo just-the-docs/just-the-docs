@@ -4,10 +4,12 @@ parent: People Ops
 title: Doing Your Job
 ---
 
+# Doing Your Job
+
 **Purpose**
 
 Describing the processes and norms of getting our jobs done at
-Countable. Make sure to check out our [Onboarding Guide](/peopleops/ONBOARDING_GUIDE`) first!
+Countable. Make sure to check out our [Onboarding Guide](../peopleops/ONBOARDING_GUIDE/) first!
 
 **Scope**
 
@@ -32,12 +34,8 @@ If it's something we're still working towards, it's in *italics*.
   - Be on time, or notify as early as possible about absence or lateness
     and offer something instead (here's my summary so you can read it).
     See Commitments, below.
-  - *Everyone should share something. Prepare what you want to say (that
-    fits the meeting agenda), and even send it to team members before
-    the meeting.*
-  - If you have a proposal or idea, write it up in detail, and share it
-    ahead of time. Indicate how it impacts something we care about
-    (OKR).
+  - *Everyone should share something. Prepare what you want to say (that fits the meeting agenda), and even send it to team members before the meeting.*
+  - If you have a proposal or idea, write it up in detail, and share it ahead of time. Indicate how it impacts something we care about (OKR).
 
 ### Commitments
 
@@ -53,7 +51,7 @@ If it's something we're still working towards, it's in *italics*.
 
   - Share something with the team every day. The simplest way to do this
     is to report what you did on Slack in your team's channel, and
-    anything you're stuck on. Shooting a quick [screen cap video](https://countable-ops-manual.readthedocs.io/operations/PROJECT_MANAGEMENT#tools-screencastify)
+    anything you're stuck on. Shooting a quick [screen cap video](../operations/SCREENCASTIFY)
     to share is a great idea to try out.
   - Check slack twice a day at least, and react/respond to some other
     team members' posts.
@@ -63,18 +61,17 @@ If it's something we're still working towards, it's in *italics*.
 
 ### Every Week
 
-  - Communicate with each client you are working with. Send them an
+  - Communicate with each client you are working with: Send them an
     update on what's done and what's pending out of their current
     expectations. Include a link to staged work, and a screenshot or
     video. It's best to do this Friday or Monday.
-    [Transparency](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY#transparency-policy)
 
 ### Do Not
 
   - Use private messages for things that don't need to be private. Share
     your experiences on your projects in your client channel, and if
     it's more widely applicable, (\#client-) in \#general.
-    [Transparency](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY#transparency-policy)
+    [Transparency](../philosophy/TRANSPARENCY/)
 
 ## Time Off
 

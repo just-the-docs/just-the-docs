@@ -1,9 +1,11 @@
 ---
 layout: default
-title: UX
+title: UX and Design
 nav_order: 2
 has_children: true
 ---
+
+# UX and Design
 
 **Purpose**
 

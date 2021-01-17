@@ -1,8 +1,10 @@
 ---
 layout: default
-title: Training
 parent: Programming
+title: Training
 ---
+
+# Training
 
 **Purpose**
 
@@ -83,8 +85,7 @@ this](https://docs.djangoproject.com/en/1.11/intro/tutorial01/). Most of
 our back end projects are Django and it's good to know how to structure
 a back end MVC anyway for any project.
 
-> [Use this method of setting up
-> Django](https://docs.docker.com/compose/django/)
+> [Use this method of setting up Django](https://docs.docker.com/compose/django/)
 
 ## Further Training
 
@@ -115,8 +116,7 @@ retain very well. These exercise assume you're using `bash`, but some
 computers may use `zsh` by defualt. To remedy this, just open your shell
 and type `bash` to be sure the shell matches that in the exercises.
 
-  - <span class="title-ref">Command Line Interface
-    \<https://linuxjourney.com/lesson/the-shell\></span> (all)
+  - [Command Line Interface](https://linuxjourney.com/lesson/the-shell\)
   - [Permissions](https://linuxjourney.com/lesson/file-permissions)
     (1,2,3,4)
   - [Text](https://linuxjourney.com/lesson/stdout-standard-out-redirect#)
