@@ -15,7 +15,7 @@ Operations covers the intersection of business best practices and project manage
 This document will give an initial overview of what operations is presumed to cover in this case, plans for the operations guild at
 Countable, and link out to more useful reference docs on our processes.
 
-Check out our [Methodology Toolkit](../operations/METHODOLOGY) at Countable.
+Check out our [Methodology Toolkit](METHODOLOGY.md) at Countable.
 
 ## Processes at Countable
 
