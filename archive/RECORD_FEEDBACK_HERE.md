@@ -6,7 +6,7 @@ parent: People Ops
 
 # Staff Feedback
 
-If you're not sure where to add your thoughts, put them here. TODO: Move this stuff to reddit.com/countableweb
+If you're not sure where to add your thoughts, put them here.
 
 Captured feedback from employees on how we can improve. Discuss these in team meetings.
 

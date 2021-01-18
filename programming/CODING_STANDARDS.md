@@ -145,7 +145,10 @@ new environment by only the following for any of our projects.
     cp docker-compose.override.yml.dev.template docker-compose.override.yml
     docker-compose up
 
-TODO: Write a dotfiles script that does all the following with
+TODO
+{: .label .label-yellow }
+
+Write a dotfiles script that does all the following with
 `getproject <project slug>`.
 
 And browsing to [localhost](http://localhost)

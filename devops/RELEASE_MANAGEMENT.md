@@ -99,4 +99,7 @@ Note, command history is stored on servers, and is not private. It's useful to d
 
 #### Future Work
 
-  - #TODO Document IAS usage (Terraform + Ansible for example)
+TODO
+{: .label .label-yellow }
+
+  -  Document IAS usage (Terraform + Ansible for example)

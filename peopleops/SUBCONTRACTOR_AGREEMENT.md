@@ -12,7 +12,10 @@ Transparently share our work agreement.
 
 **Scope**
 
-#TODO: This document is out of date and the official one has not been
+TODO
+{: .label .label-yellow }
+
+This document is out of date and the official one has not been
 converted to markdown and open-sourced.
 
 This is the agreement template we hold with everyone who works at the

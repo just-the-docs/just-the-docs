@@ -12,7 +12,10 @@ Help new team members understand how to get started.
 
 **Scope**
 
-#TODO Currently just covers equipment requirements :/
+TODO 
+{: .label .label-yellow }
+
+Currently just covers equipment requirements :/
 
 ## Setting Up Your Desk
 

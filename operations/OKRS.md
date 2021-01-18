@@ -22,7 +22,10 @@ Each objective has a few *key results* which are measurable, sufficient conditio
 
 ## OKR Process
 
-#TODO update and link to eightmeters
+TODO
+{: .label .label-yellow }
+
+update and link to eightmeters
 
 At the beginning of each month, in project or team sprints or Slack:
 

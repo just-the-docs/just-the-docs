@@ -142,7 +142,10 @@ additional folder or not:
 
 ### Example: Countable Marketing Folder
 
-TODO: make this follow the convention fully.
+TODO
+{: .label .label-yellow }
+
+make this follow the convention fully.
 
 [Example folder](https://drive.google.com/drive/folders/1iPhpEg1RuEz_ki4yNgzSOg9Z257Mpa7x?usp=sharing)
 

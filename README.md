@@ -11,7 +11,12 @@ To generate references (bidirectional links):
 docker build . -f Dockerfile-python -t refs
 docker run -it -v $(pwd):/code/ refs python references.py
 ```
-Then, commit this file to GIT. TODO: figure out how the rake task does this seemingly automatically on GITHUB's side, for just-the-docs search implementation. Do the reference generation that way too ideally.
+Then, commit this file to GIT. 
+
+TODO
+{: .label .label-yellow }
+
+figure out how the rake task does this seemingly automatically on GITHUB's side, for just-the-docs search implementation. Do the reference generation that way too ideally.
 
 Below are instructions for using the documentation generator (Just The Docs):
 

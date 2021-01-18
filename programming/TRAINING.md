@@ -131,7 +131,10 @@ and type `bash` to be sure the shell matches that in the exercises.
   - [Domain Name System](https://linuxjourney.com/lesson/what-is-dns)
     (all) - not great, a bit wordy.
 
-TODO: If someone is feeling energetic, please create an interactive
+TODO
+{: .label .label-yellow }
+
+If someone is feeling energetic, please create an interactive
 tutorial bash script with key points from the above linuxjourney.com
 chapters.
 
