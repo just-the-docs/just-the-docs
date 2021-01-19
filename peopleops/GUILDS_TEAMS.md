@@ -29,7 +29,10 @@ With each of our clients, we form a team with some of our staff.
 
 Countable does not have functional team divisions by job role.
 
-#TODO Add a sub-section here defining Countable's formal and practical relationship to Cortico
+TODO
+{: .label .label-yellow }
+
+Add a sub-section here defining Countable's formal and practical relationship to Cortico
 
 **Other Informal Groups**
 

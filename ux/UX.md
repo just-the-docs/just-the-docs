@@ -1,6 +1,6 @@
 ---
 layout: default
-title: UX and Design
+title: UX
 nav_order: 2
 has_children: true
 ---
