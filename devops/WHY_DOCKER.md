@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: DevOps
-title: Docker
+title: Why Docker?
 ---
 
 # Why Docker?
