@@ -30,21 +30,29 @@ There are two primary page scenarios for header templates:
 
 If you are creating a page within an existing folder (99% of the time), you will include the following header content: 
 
-` ---
+<!--
+
+---
 layout: default
 parent: Operations
 title: Contributing to the Ops Manual
---- `
+---
+
+ -->
 
 #### Headers for New Collections
 
 If you are creating a new collection (*very* rare, please consult with ops guild before doing so), you will include the following header content: 
 
-` ---
+<!--
+
+---
 layout: default
 title: Operations
 has_children: true
---- `
+---
+
+ -->
 
 Note that any child pages created "below" that collection page will have to reference its title in their own data headers, so please choose a succinct title for these.
 
