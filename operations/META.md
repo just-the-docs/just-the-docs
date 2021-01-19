@@ -26,7 +26,7 @@ When you create a new page in the ops manual, you will need to include a few lin
 
 There are two primary page scenarios for header templates:
 
-#### Headers for New Sub-Pages
+##### Headers for New Sub-Pages
 
 If you are creating a page within an existing folder (99% of the time), you will include the following header content: 
 
@@ -38,7 +38,7 @@ title: Contributing to the Ops Manual
 ---
 ```
 
-#### Headers for New Collections
+##### Headers for New Collections
 
 If you are creating a new collection (*very* rare, please consult with ops guild before doing so), you will include the following header content: 
 
