@@ -6,7 +6,7 @@
   "license": "MIT",
   "bugs": "https://github.com/pmarsceill/just-the-docs/issues",
   "devDependencies": {
-    "stylelint": "^13.7.2",
+    "stylelint": "^13.9.0",
     "@primer/css": "^15.2.0",
     "prettier": "^2.1.2",
     "stylelint-config-prettier": "^8.0.2",
