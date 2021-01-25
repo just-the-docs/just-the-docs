@@ -163,3 +163,8 @@ Made with help from
 {: .mt-4 }
 - [Lawrence Systems](https://forums.lawrencesystems.com/t/getting-started-building-your-own-wireguard-vpn-server/7425)
 - [/u/PanzerschreckGER](https://www.reddit.com/r/pihole/comments/bl4ka8/guide_pihole_on_the_go_with_wireguard/)
+
+## WikiToDos:
+
+1. Explain config files more (DNS | Keep alive | etc)
+2. Fix Docker file/instructions
