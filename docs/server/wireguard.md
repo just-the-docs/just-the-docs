@@ -95,7 +95,7 @@ DNS = 10.0.0.1
 [Peer]
 PublicKey = <SERVERPUBLICKEY>
 AllowedIPs = 0.0.0.0/0, ::/0
-Endpoint = vpn.benflatau.com:51820
+Endpoint = <VPNURL_OR_IP>:51820
 PersistentKeepalive = 30
 
 ```
