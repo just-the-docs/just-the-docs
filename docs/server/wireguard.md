@@ -36,8 +36,12 @@ nav_order: 1
 ### Configuring Wireguard
 
 1. As `root`, create a file called `wg0.conf` in the `/etc/wireguard/` folder:
-2. Here's an example config:
-
+2. You can generate a config at [wireguardconfig.com](https://www.wireguardconfig.com/)
+3. Alternatively, you can do the following command to generate the public and private keys on your machine/server:
+```bash
+umask 077; wg genkey | tee privatekey | wg pubkey > publickey
+```
+4. Here's an example config:
 
 ```
 [Interface]
