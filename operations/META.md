@@ -20,6 +20,26 @@ Best convention for linking to other files: `../devops/DEVOPS`
 
 You can link directly to a single file within the same folder by using `DEVOPS.md`. From preliminary testing, in this use the .md *is* needed.
 
+## How to Add Colored Labels
+
+The jekyll template we use, [just-the-docs](https://pmarsceill.github.io/just-the-docs/), allows us to set some custom colored labels. Here are the tagging norms we've set:
+
+DRAFT
+{: .label .label-green }
+
+TODO
+{: .label .label-yellow }
+
+PROCESS CHECKLIST
+{: .label .label-purple }
+
+SUGGESTED BEST PRACTICES
+{: .label .label-blue }
+
+REQUIRED PRACTICES
+{: .label .label-red }
+
+
 ## Data Headers for New Pages
 
 When you create a new page in the ops manual, you will need to include a few lines of simple information at the very top of the page. (If there is a space or line before it, the header will not be parsed correctly.)
