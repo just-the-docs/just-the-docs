@@ -1,7 +1,7 @@
 ---
 layout: default
-title: FAQ
-parent: DxDao
+title: Snapshot
+parent: Governance
 nav_order: 3
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Tokenomics
-parent: DxDao
-nav_order: 5
+title: Alchemy
+parent: Governance
+nav_order: 4
 ---
 
 # Lists
