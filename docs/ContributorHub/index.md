@@ -2,6 +2,7 @@
 layout: default
 title: Contributor Hub
 nav_order: 5
+has_children: true
 ---
 
 HERE WILL GO ALL RELEVEVANT CATEGORIES 

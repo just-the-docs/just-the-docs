@@ -40,33 +40,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f16c9fcd-a63c-4bc2-bc3e-6081b374ec9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/BrandingAssets.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/FAQ.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/Mesa.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/Omen.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/Rails.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/Swapr.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/decentralized-communications-technologies.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/discrimination-and-harassment.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/employment.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/open-positions-and-bounties.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/our-philosophy.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/performance-and-career-development.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/standards-of-conduct.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/vacation-and-holidays.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/worker-compensation.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/worker-proposals.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/GetConnected/discord.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/GetConnected/etherscan.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/GetConnected/forum.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/GetConnected/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/GetConnected/medium.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/GetConnected/telegram.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/GetConnected/twitter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/GetConnected/website.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/mesa/faq.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/mesa/roadmap.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/mesa/twitter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/mesa/website.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/omen/faq.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/omen/market-resolution-rules.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/omen/roadmap.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/omen/twitter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/omen/website.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/rails/faq.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/rails/roadmap.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/rails/twitter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/rails/website.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/swapr/faq.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/swapr/roadmap.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/swapr/twitter.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Products/swapr/website.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/utilities/_spacing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/utilities/_spacing.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/DxDaoProducts.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Links.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DXD.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/contributorHub/color.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/contributorHub/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ContributorHub/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/contributorHub/layout.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/contributorHub/responsive-modifiers.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/contributorHub/typography.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dx-dao/BrandingAssets.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dx-dao/DxdaoMeetings.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dx-dao/FAQ.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dx-dao/Governance.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dx-dao/Roadmap.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dx-dao/Tokenomics.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dx-dao/index.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dx-dao/line-nos.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ContributorHub/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ContributorHub/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/Mesa.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/Mesa.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/Omen.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/Omen.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/Rails.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/Rails.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/Swapr.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/Swapr.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +110,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/GetConnected" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
@@ -104,14 +120,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs" />
-      <recent name="$PROJECT_DIR$/../docs" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/GetConnected" />
+      <recent name="$PROJECT_DIR$/docs/Products" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/GetConnected" />
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/../docs" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -143,6 +162,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="551" y="-1417" width="1720" height="1417" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611869095363">
+      <screen x="-1169" y="-1417" width="3440" height="1417" />
+    </state>
+    <state x="551" y="-1417" width="1720" height="1417" key="#com.intellij.fileTypes.FileTypeChooser/-1169.-1417.3440.1417/0.23.1440.803@-1169.-1417.3440.1417" timestamp="1611869095363" />
     <state width="1268" height="409" key="GridCell.Tab.0.bottom" timestamp="1610651321681">
       <screen x="-1169" y="-1417" width="3440" height="1417" />
     </state>
@@ -159,9 +182,10 @@
       <screen x="-1169" y="-1417" width="3440" height="1417" />
     </state>
     <state width="1268" height="409" key="GridCell.Tab.0.right/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610651321678" />
-    <state x="-602" y="-956" width="586" height="490" key="find.popup" timestamp="1610660638888">
+    <state x="-558" y="-887" width="586" height="548" key="find.popup" timestamp="1611867438824">
       <screen x="-1169" y="-1417" width="3440" height="1417" />
     </state>
+    <state x="-558" y="-887" width="586" height="548" key="find.popup/-1169.-1417.3440.1417/0.23.1440.803@-1169.-1417.3440.1417" timestamp="1611867438824" />
     <state x="-602" y="-954" width="586" height="490" key="find.popup/-1169.-1417.3440.1417/0.23.1440.805@-1169.-1417.3440.1417" timestamp="1608644846203" />
     <state x="-602" y="-956" width="586" height="490" key="find.popup/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610660638888" />
   </component>
