@@ -481,4 +481,27 @@ jtd.onReady(function(){
 
 })(window.jtd = window.jtd || {});
 
+{% if site.dark_color_scheme and site.dark_color_scheme != 'nil' -%}
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)')
+              .addEventListener('change', event => {
+          if (event.matches) {
+              jtd.setTheme('{{site.dark_color_scheme}}');
+          } else {
+              {% if site.color_scheme and site.color_scheme != 'nil' -%}
+                  jtd.setTheme('{{site.color_scheme}}');
+              {% else -%}
+                  jtd.setTheme('light');
+              {%- endif %}
+          }
+        });
+    
+        if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            jtd.setTheme('{{site.dark_color_scheme}}');
+        }
+    }
+{%- endif %}
+
 {% include js/custom.js %}
+
+

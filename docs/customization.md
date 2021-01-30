@@ -50,6 +50,19 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
+### Automatic color scheme
+
+If you want your site to react to the user's system light/dark selection, define the `dark_color_scheme` parameter. This will enable automatic switching between `color_scheme` for light mode and `dark_color_scheme` for dark mode.
+
+#### Example
+{: .no_toc}
+
+```yaml
+color_scheme: light
+# Automatically switch to this when a user has a system dark mode enabled
+dark_color_scheme: dark
+```
+
 ## Custom schemes
 
 ### Define a custom scheme
