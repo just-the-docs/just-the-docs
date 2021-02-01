@@ -118,6 +118,14 @@ Things to try.
     coding allowed too.
   - review: [Gitlab Remote work tips](https://about.gitlab.com/company/culture/all-remote/tips/)
 
+## Solving Problems
+
+We aim to onboard people we can trust to make good decisions to the team. 
+
+If you've been with us for 3 months or more, and you think you can solve
+a problem for our team for less than $100, feel free to do so and submit
+for compensation with context.
+
 ### References
 
 [Quu Blog](https://blog.quuu.co/lessons-worth-learning-from-remote-workers/)

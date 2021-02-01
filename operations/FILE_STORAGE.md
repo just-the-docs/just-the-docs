@@ -14,6 +14,9 @@ To enable anyone to find any file or asset, without having to ask the person who
 
 This page makes it clear where all work is saved, and gives more granular instructions regarding Google Drive file organization.
 
+TODO
+{: .label .label-yellow } Simplify this page to make it easier to parse.
+
 ## Why We Need Organized Storage
 
   - devs need to find sliced versions of assets.

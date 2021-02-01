@@ -37,3 +37,11 @@ You'll need:
   - A quiet, hopefully cool, room to work from with a stable internet
     connection. When you `ping 8.8.8.8` you should get no dropped
     packets or numbers over 100ms.
+
+
+### Chrome Extension Suggestions
+
+The following are extensions that our team has found useful to add to Chrome:
+
+TODO 
+{: .label .label-yellow } fill in

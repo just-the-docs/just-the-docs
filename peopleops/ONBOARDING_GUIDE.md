@@ -30,8 +30,14 @@ Covers all the onboarding steps for a new Countable Team Member.
       - School
       - Hobbies
       - Two True things about you, and a Lie (let the team guess which).
+      - In addition to the photo that Slack prompts you for, fill in the rest of your user   profile with relevant information.
   - Use the team to answer your other questions.
-  - Add your work availability to your calendar [using Google's Work Hours](https://support.google.com/calendar/answer/7638168?hl=en). These should account for at least half of your planned working time, but don't have to be 40+ hours- leave yourself some time for deep and uninterrupted work!
+
+### Set your work availability
+
+  - Add your work availability to your calendar [using Google's Work Hours](https://support.google.com/calendar/answer/7638168?hl=en). 
+      - These should account for at least half of your planned working time, but doesn't have to be 40+ hours- leave yourself some time for deep and uninterrupted work! 
+      - Think of your availability as when you are prepared to be booked into meetings with others and respond synchronously in Slack.
 
 ### Set your profile photo
 
@@ -54,7 +60,8 @@ Covers all the onboarding steps for a new Countable Team Member.
 
   - Provide a void cheque (in Canada this includes your bank account
     number, routing/transit number and institution number) to our
-    accounting staff.
+    accounting staff via [this email address](accounting@countable.ca) - 
+    you can also send any future inquiries about accounting matters there.
 
 ### Environment
 

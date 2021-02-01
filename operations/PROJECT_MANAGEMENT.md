@@ -27,7 +27,9 @@ Countable to assist with onboarding.
   - Work together to minimize the amount of time anyone is blocked or
     waiting for someone's output as their input. The list of items in
     which people depend on each other's work is called the
-    [Critical Path](../operations/CRITICAL_PATH)
+    [Critical Path](../operations/CRITICAL_PATH).
+  - Keep in mind that every project has slightly different needs, and thus will require 
+    different processes, based on the working preferences of our clients.
 
 ## Project Management Objectives
 

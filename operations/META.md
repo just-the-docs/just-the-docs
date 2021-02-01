@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Operations
-title: Contributing to the Ops Manual
+title: Meta
 ---
 
 # Contributing to the Ops Manual

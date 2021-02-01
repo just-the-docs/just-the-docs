@@ -43,12 +43,19 @@ USEFUL to our reader. This means we:
   - Use clear and direct language
   - Avoid use of industry jargon and acronyms; if they're used, provide
     definitions
+  - Avoid a "ranty" feel- always go for a positive approach
   - Fact check any assertions made, particuarly technical ones - it's
     important we maintain a reputation of being experts in our field
   - Avoid spammy messaging trying to coerce or trick our reader into
     buying one of our products - our products should speak for
     themselves
   - Where appropriate, we can mention our products and their usefulness
+
+In addition to these guidelines, we strive to present a perspective that is:
+
+  - evidence-based
+  - informational
+  - data-driven (if specifically *writing a tutorial* or *drawing on our expertise* it should be especially data-driven)
 
 ### Blog Writing
 

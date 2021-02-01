@@ -82,27 +82,27 @@ This section is used in the Process above for self-evaluation.
 An internship or Junior. Evaluation of fit to Countable's culture, work
 style and technical needs.
 
-See [Self Evaluation Questions here](../peopleops/evaluation/LEVEL_1_QUESTIONS/).
+See [Self Evaluation Questions here](LEVEL_1_QUESTIONS.md).
 
 ## Level 2
 
 Considered a permanent position. Works directly with clients and other
 stakeholders on delivering results, only escalating as needed.
 
-See [Self Evaluation Questions here](../peopleops/evaluation/LEVEL_2_QUESTIONS/).
+See [Self Evaluation Questions here](LEVEL_2_QUESTIONS.md).
 
 ## Level 3
 
 Owns a client relationship, leads in a technical area within a guild, or
 takes on another area of responsibility.
 
-See [Self Evaluation Questions here](../peopleops/evaluation/LEVEL_3_QUESTIONS/).
+See [Self Evaluation Questions here](LEVEL_3_QUESTIONS.md).
 
 ## Level 4
 
 Owns a guild, major client group or customer base (business line).
 
-See [Self Evaluation Questions here](../peopleops/evaluation/LEVEL_4_QUESTIONS/).
+See [Self Evaluation Questions here](LEVEL_4_QUESTIONS.md).
 
 \[1\] Jim Collins, "Good to Great".
 
