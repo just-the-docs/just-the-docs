@@ -1,3 +1,10 @@
+---
+layout: default
+parent: DevOps
+title: Docker Troubleshooting
+---
+
+
 # Docker Troubleshooting
 
 ## Purpose

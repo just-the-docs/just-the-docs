@@ -2,14 +2,15 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "Countable's Ops Manual"
 permalink: /
 ---
 
+# Countable Web's Open Source Ops Manual
 
 ## What Is This?
 
-This is the [Countable Web Productions Inc](http://countable.ca)
+This is the [Countable Web Productions Inc.](http://countable.ca)
 *operations manual*. It's a living record of how our company works, and
 is constantly evolving as we learn. Our whole team proposes amendments
 in order to constantly improve the material here.
@@ -41,8 +42,7 @@ A nice plain-language quote:
 
 \-- "The Great CEO Within", By Matt Mochary
 
-*Second, why is it open source?* To promote
-[transparency](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY/#transparency-policy).
+*Second, why is it open source?* To promote [transparency](philosophy/TRANSPARENCY/).
 
 ## Scope
 
@@ -51,7 +51,7 @@ This repo will contain:
   - Business processes and knowledge base.
   - The Articles of Incorporation and other general corporate documents.
     Countable is a
-    [CCPC](http://www.cra-arc.gc.ca/E/pub/tp/it458r2/it458r2-e/),
+    [CCPC](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/type-corporation.html#ccpc),
     but it's possible some of these documents may be useful for other
     organization structures.
   - Document templates used by the company for accounting and legal.
@@ -79,13 +79,11 @@ that do this. What makes us different?
     effort.
   - We work hard to be transparent, interactive, and have fun.
 
-[Read about the purpose of
-Countable](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY/#basics-of-our-purpose-at-countable).
+[Read about the purpose of Countable](philosophy/PHILOSOPHY/).
 
 ## Who is Countable?
 
-We are selective in order to embody our
-[values](https://countable-ops-manual.readthedocs.io/philosophy/PHILOSOPHY/#values).
+We are selective in order to embody our [values](philosophy/VALUES/).
 This starts with hiring, all the way to the kinds of partners we seek
 out. In the end, we want to bring together people to have a big impact
 by improving all the industries we engage with, through better
@@ -206,4 +204,4 @@ pull request. The rules:
   - [X team](https://x-team.com/remote-team-guide/) has been proactive
     in publishing their processes online in some detail on their
     website.
-  - [netlify culture handbook](https://github.com/netlify/culture-handbook/blob/master/values)
+  - [netlify culture handbook](https://github.com/netlify/culture-handbook)
