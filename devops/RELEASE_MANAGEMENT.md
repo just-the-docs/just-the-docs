@@ -24,13 +24,13 @@ Each project may have some differences by the ideal release management process s
 
 ### Specific processes that help with the above:
 
-  - Developers work on `feature-branch` named branches (see [GIT](../programming/GIT)) and commit and push often. Atomic commits increase developer happiness by 10% according to the 2017 StackOverflow survey.
+  - Developers work on `feature-branch` named branches (see [GIT](programming/GIT/)) and commit and push often. Atomic commits increase developer happiness by 10% according to the 2017 StackOverflow survey.
   - Developers take responsibility for cleaning up their code, testing, and then making a Pull Reqeust.
-  - The pull request should be reviewed by a peer to adhere to our [code standards](../programming/CODING_STANDARDS), ensure the code is readable and self-documenting, and to help us learn from each other.
+  - The pull request should be reviewed by a peer to adhere to our [code standards](programming/CODING_STANDARDS/), ensure the code is readable and self-documenting, and to help us learn from each other.
   - When approved, anyone may merge the Pull Request into `develop` (never `master` directly)
   - The `develop` branch is automatically staged so we can review the product together and report any bugs prior to it being released.
   - Ideally once per week, `develop` is auto-merged into `master` which triggers a release.
-  - Critical bugfixes may bypass the above process by pushing [hotfixes](../programming/GIT) to `master`. Do this sparingly.
+  - Critical bugfixes may bypass the above process by pushing [hotfixes](programming/GIT/) to `master`. Do this sparingly.
 
 ### Servers
 
@@ -90,7 +90,7 @@ To choose a hosting provider:
 
   - Add your SSH key to `/home/[myname]/.ssh/authorized_keys` of the user you just created (create the file if it doesn't exist)
   - Install [dotfiles](https://github.com/countable-web/dotfiles)
-  - Set up [Jenkins](../devops/JENKINS) if needed.
+  - Set up [Jenkins](devops/JENKINS/) if needed.
   - Create an account for any team member who needs access, and add them to the `dev` `sudo` and `docker` groups.
 
 Run your Jenkins job to test the software works.

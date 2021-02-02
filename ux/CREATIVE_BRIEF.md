@@ -14,6 +14,11 @@ Show what inspires us.
 
 Currently covers content from a previous creative brief workshopping session.
 
+
+TODO
+{: .label .label-yellow }
+Replace/remove the significant number of broken links in the doc below (deprecated agencies and sites)
+
 ## Creative Brief
 
 Visual design is a communication tool for meeting the right kinds of

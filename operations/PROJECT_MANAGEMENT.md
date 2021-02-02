@@ -19,15 +19,15 @@ Countable to assist with onboarding.
 ## Project Management Process
 
   - Every project has a "Purpose" which must be documented and visible.
-  - Every project has at least one [Objective and Key Result](../operations/OKRS) every month.
-  - We use Scrum like [this](../operations/SCRUM).
+  - Every project has at least one [Objective and Key Result](OKRS.md) every month.
+  - We use Scrum like [this](SCRUM.md).
   - Every day, try to get some
-    [feedback](../peopleops/FEEDBACK_LOOPS) on your work.
+    [feedback](peopleops/FEEDBACK_LOOPS/) on your work.
   - Every day, coordinate with team mates on slack and prioritize.
   - Work together to minimize the amount of time anyone is blocked or
     waiting for someone's output as their input. The list of items in
     which people depend on each other's work is called the
-    [Critical Path](../operations/CRITICAL_PATH).
+    [Critical Path](CRITICAL_PATH.md).
   - Keep in mind that every project has slightly different needs, and thus will require 
     different processes, based on the working preferences of our clients.
 
@@ -54,13 +54,13 @@ branching conventions loosely. All projects should have a master
 (production) branch which releases are made from, and a develop (stable)
 branch for developers as a foundation to build features on. Feature
 branches are created from develop and merged back in via pull request
-when ready. Here are some [examples](../programming/GIT) of how we'd
+when ready. Here are some [examples](programming/GIT/) of how we'd
 use GIT in different cases.
 
 ## Tools - Trello
 
-Check out our page on [how we use Trello](../operations/TRELLO).
+Check out our page on [how we use Trello](TRELLO.md).
 
 ## Tools - Screencastify
 
-Check out our page on [recording short screencast videos](../operations/SCREENCASTIFY).
+Check out our page on [recording short screencast videos](SCREENCASTIFY.md).

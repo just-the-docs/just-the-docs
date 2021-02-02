@@ -119,7 +119,7 @@ If you're a new Countable team member, start here\!
   - [Diversity and Inclusion](peopleops/DIVERSITY_INCLUSION/)
   - [Physical Setup](peopleops/DOING_YOUR_JOB/)
   - [Project Management](operations/PROJECT_MANAGEMENT/)
-  - [Evaluation](peopleops/EVALUATION/)
+  - [Evaluation](peopleops/evaluation/EVALUATION/)
   - [Compensation](peopleops/COMPENSATION_STRATEGY/)
   - [Scrum](operations/SCRUM/)
   - [Trello](operations/TRELLO/)

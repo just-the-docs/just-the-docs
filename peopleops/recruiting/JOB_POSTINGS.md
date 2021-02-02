@@ -66,7 +66,7 @@ us know what you prefer.
 Your application must include a resume, and a cover letter. To avoid
 automated submissions, and to see if you pay attention to detail and
 follow instructions, your email must be exactly 100 words. Further
-instructions [can be found here](https://countable-web.github.io/ops/peopleops/recruiting/APPLICANT_GUIDE).
+instructions can be found here: <https://countable-web.github.io/ops/peopleops/recruiting/APPLICANT_GUIDE/>.
 
 I look forward to hearing from you\!
 

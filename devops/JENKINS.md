@@ -36,7 +36,7 @@ Currently covers basics, setting up a new project and node, and troubleshooting.
 
 ### Setting up a Jenkins node & project
 
-Create a [new server](../devops/DEVOPS) first.
+Create a [new server](DEVOPS.md) first.
 
 1.  Bootstrap the slave [using dotfiles](https://github.com/countable-web/dotfiles/blob/master/README.md#set-up-a-jenkins-slave).
 2.  Create a Node In Jenkins, click [Build Executor Status](https://jenkins.countable.ca/computer/new) -\> New Node. Give this node a name and select Copy From Existing Node. Choose any existing one. Update the Node IP to your new physical node's public IP. This node is now what wil be used to deploy project of your choice.

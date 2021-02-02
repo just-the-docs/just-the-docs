@@ -47,8 +47,6 @@ With "software eating the world", Python's been the condiment of choice, and is 
 
 This lets us synergize with other projects of our clients', as well as staff and expertise within the same lingua franca.
 
-![python popularity](https://zgab33vy595fw5zq-zippykid.netdna-ssl.com/wp-content/uploads/2017/09/growth_major_languages-1-1024x878.png)
-
 Avoid language-specific environment dependencies that can be met by built in functions or by Docker. 
 
 i.e., you don't need virtualenv, pyenv, grunt, gulp.

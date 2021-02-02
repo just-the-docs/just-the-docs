@@ -37,7 +37,7 @@ In summary, we want to steer everything (salesbot included) to find **4 or 5 $30
 A dedicated staff member would be hired for the heavy-lifting, and we could win 1 deal a month, which is more sustainable than one every \~3 months as we do now.
 
 See also
-[Discovery](../sales/DISCOVERY)
+[Discovery](sales/DISCOVERY/)
 
 ### Day to Day Practices
 
@@ -96,4 +96,4 @@ further work.
 
 Defines how we communicate with potential clients. It screens for
 clients with similar values, with whom we'd like to collaborate on
-exciting projects. To anchor this, revisit our [Value Prop for Clients](../sales/VALUE_PROP)
+exciting projects. To anchor this, revisit our [Value Prop for Clients](sales/VALUE_PROP/)

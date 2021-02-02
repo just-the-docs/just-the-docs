@@ -53,11 +53,11 @@ Each client typically has a different server environment, and Docker mostly prev
 
 ### Jenkins
 
-See the [Jenkins section](../devops/JENKINS/) of this DevOps document for how we use Jenkins to automate many environment instances.
+See the [Jenkins section](JENKINS.md) of this DevOps document for how we use Jenkins to automate many environment instances.
 
 ### Docker
 
-See the [Docker section](../devops/DOCKER/) of this DevOps document for how we use Docker to manage project environments.
+See the [Docker section](DOCKER.md) of this DevOps document for how we use Docker to manage project environments.
 
 ## Cloudflare
 
@@ -95,7 +95,7 @@ in-depth learning.
 
 ### Docker Basics
 
-We have some training materials on Docker [here](../devops/DOCKER/) and we explain why we like to use it [here](../devops/WHY_DOCKER/).
+We have some training materials on Docker [here](DOCKER_101.md) and we explain why we like to use it [here](WHY_DOCKER.md).
 
 We use Docker to manage dev, test, stage and prod environments. Specific conventions we follow:
 

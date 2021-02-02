@@ -40,7 +40,7 @@ on. At this point, find a good tutorial on the next material you want to
 study.
 
 For this training, be sure to follow the practices
-[here](../programming/PROGRAMMING).
+[here](PROGRAMMING.md).
 
 All training materials here are pre-approved to do on company time.
 
@@ -76,13 +76,11 @@ images, and docker-compose which runs multiple containers at once.
 
 To set up a new Django environment in Docker.
 
-[More on Docker](../devops/DOCKER)
+[More on Docker](devops/DOCKER/)
 
 ### Django Training
 
-If you’re new to Django, [do
-this](https://docs.djangoproject.com/en/1.11/intro/tutorial01/). Most of
-our back end projects are Django and it's good to know how to structure
+If you’re new to Django, [do this](https://docs.djangoproject.com/en/1.11/intro/tutorial01/). Most of our back end projects are Django and it's good to know how to structure
 a back end MVC anyway for any project.
 
 > [Use this method of setting up Django](https://docs.docker.com/compose/django/)
@@ -116,7 +114,7 @@ retain very well. These exercise assume you're using `bash`, but some
 computers may use `zsh` by defualt. To remedy this, just open your shell
 and type `bash` to be sure the shell matches that in the exercises.
 
-  - [Command Line Interface](https://linuxjourney.com/lesson/the-shell\)
+  - [Command Line Interface](https://linuxjourney.com/lesson/the-shell)
   - [Permissions](https://linuxjourney.com/lesson/file-permissions)
     (1,2,3,4)
   - [Text](https://linuxjourney.com/lesson/stdout-standard-out-redirect#)
@@ -142,6 +140,10 @@ From learnshell.org - Good concept but a bit slow and poor choice of
 material mostly. This page is ok.
 
   - [Variables](https://www.learnshell.org/en/Variables)
+
+TODO
+{: .label .label-yellow }
+Fix/replace dead link above
 
 If you want to learn Linux deeply after doing the above, it's hard to
 beat compiling your own kernel and assembling your own userland.

@@ -16,10 +16,10 @@ This document lists our existing Guilds and Teams.
 
 ## List of Guilds
 
-  - [DevOps](../devops/DEVOPS) - Their goal is to ensure our software is delivered to customers as quickly, reliably and automatically as possible.
-  - [Developers](../programming/DEVELOPERS) - Their goal is to improve our code, solve problems for users, and demonstrate working software to our team every day.
-  - [UX](../ux/UX) - Their goal is to help everyone, from users to product owners and developers, enjoy and benefit from interacting with our software.
-  - [Operations](../operations/OPERATIONS) - Their goal is maintaining clear and open communication with our clients, and maintaining the roadmap to sustainable growth for our firm.
+  - [DevOps](devops/DEVOPS/) - Their goal is to ensure our software is delivered to customers as quickly, reliably and automatically as possible.
+  - [Developers](programming/DEVELOPERS/) - Their goal is to improve our code, solve problems for users, and demonstrate working software to our team every day.
+  - [UX](ux/UX/) - Their goal is to help everyone, from users to product owners and developers, enjoy and benefit from interacting with our software.
+  - [Operations](operations/OPERATIONS/) - Their goal is maintaining clear and open communication with our clients, and maintaining the roadmap to sustainable growth for our firm.
   
 #### Monthly Guild Meetings
 
@@ -46,17 +46,17 @@ or other purposes. These are not `teams` in our company's terminology.
 
 ## Training at Countable
 
-We have official training materials here: [Training](../programming/TRAINING). Bill for your time doing any of these.
+We have official training materials here: [Training](programming/TRAINING/). Bill for your time doing any of these.
 
 **Books**
 
 If you buy a book for work, the company will reimburse you.
 
-Suggested reading in [References](../philosophy/REFERENCES) that has influenced our culture and methods.
+Suggested reading in [References](philosophy/REFERENCES/) that has influenced our culture and methods.
 
 ## Performance Evaluation Policy
 
-See our dedicated [Evaluation](../programming/EVALUATION) processes.
+See our dedicated [Evaluation](programming/EVALUATION/) processes.
 
 ## Team Event Basics
 

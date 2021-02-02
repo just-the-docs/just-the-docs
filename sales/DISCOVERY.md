@@ -82,7 +82,7 @@ Project planning materials:
 ### User Experience Design (UX) Planning
 
 The next phase of the project after discovery is to use the above
-answers to develop a [user experience design](../ux/UX_DESIGN)
+answers to develop a [user experience design](ux/UX_DESIGN/)
 research plan.
 
 ### For Branding and Visual Design Projects

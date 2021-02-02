@@ -9,7 +9,7 @@ title: Doing Your Job
 **Purpose**
 
 Describing the processes and norms of getting our jobs done at
-Countable. Make sure to check out our [Onboarding Guide](../peopleops/ONBOARDING_GUIDE/) first!
+Countable. Make sure to check out our [Onboarding Guide](ONBOARDING_GUIDE.md) first!
 
 **Scope**
 
@@ -51,7 +51,7 @@ If it's something we're still working towards, it's in *italics*.
 
   - Share something with the team every day. The simplest way to do this
     is to report what you did on Slack in your team's channel, and
-    anything you're stuck on. Shooting a quick [screen cap video](../operations/SCREENCASTIFY)
+    anything you're stuck on. Shooting a quick [screen cap video](operations/SCREENCASTIFY.md)
     to share is a great idea to try out.
   - Check slack twice a day at least, and react/respond to some other
     team members' posts.
@@ -71,7 +71,7 @@ If it's something we're still working towards, it's in *italics*.
   - Use private messages for things that don't need to be private. Share
     your experiences on your projects in your client channel, and if
     it's more widely applicable, (\#client-) in \#general.
-    [Transparency](../philosophy/TRANSPARENCY/)
+    [Transparency](philosophy/TRANSPARENCY/)
 
 ## Time Off
 

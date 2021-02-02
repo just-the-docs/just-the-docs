@@ -113,6 +113,13 @@ avoid:
 It is better to query the DOM once, cache it then use the `find` method
 to grab elements. See cache.find [performance test here](https://jsperf.com/selector-vs-find-again/11)
 
+
+TODO
+{: .label .label-yellow }
+The above performance test link is broken, can't find a replacement via search.
+Need technical eyes to find & suggest a good replacement.
+
+
     // BAD
     const one = $("#one");
     const two = $("#two");

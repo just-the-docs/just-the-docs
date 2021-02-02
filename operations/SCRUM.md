@@ -18,7 +18,7 @@ This page briefly summarizes SCRUM principles, then focuses on how we
 actually put it into action at Countable.
 
 For more, check out the guide book from the inventor of Scrum
-[here](https://www.scrumguides.org/scrum-guide).
+[here](https://www.scrumguides.org/scrum-guide.html).
 
 ## Principles
 
@@ -34,14 +34,14 @@ For more, check out the guide book from the inventor of Scrum
 User Stories serve as the central planning document for any given
 project. The purpose of User Stories is to ensure all stakeholders can
 understand what we're trying to accomplish, no matter their level of
-technical expertise. Check out the [User Stories](../operations/USER_STORIES) page for more detail and how
+technical expertise. Check out the [User Stories](operations/USER_STORIES/) page for more detail and how
 to compose User Stories.
 
 ## SCRUM Process
 
 ### Project Objective and Key Results
 
-Every team should have one or more [Objectives](../operations/OKRS). This is a written goal discussed with the team to ensure clarity, and is used by the **Product Owner** toorder the **Backlog**. An objective may be to meet a  particular [UserStory](../operations/USER_STORIES).
+Every team should have one or more [Objectives](operations/OKRS/). This is a written goal discussed with the team to ensure clarity, and is used by the **Product Owner** toorder the **Backlog**. An objective may be to meet a  particular [UserStory](operations/USER_STORIES/).
  
 ### Sprint
 
@@ -86,7 +86,7 @@ These are the duties we must assigned when doing Scrum.
 
   - Develops User Stories by talking to real users and ensures those
     users' needs are being met by the team.
-  - Clarifies how to achieve our [Key Results](../operations/OKRS),
+  - Clarifies how to achieve our [Key Results](operations/OKRS/),
     while taking input from team.
   - Triage the Trello Requests column into an Ordered Backlog of work.
   - Makes sure items in the backlog are clear to developers. The product

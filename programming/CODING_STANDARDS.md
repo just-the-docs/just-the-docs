@@ -136,7 +136,7 @@ use a different number of spaces. **We never use the tab character.**
 
 ### Docker
 
-Use [Docker](../devops/DOCKER) for any web application project (and
+Use [Docker](devops/DOCKER/) for any web application project (and
 other projects where applicable). It should be possible to bring up a
 new environment by only the following for any of our projects.
 

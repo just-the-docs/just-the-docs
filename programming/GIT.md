@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Programming
-title: GIT
+title: Git
 ---
 
 # Git

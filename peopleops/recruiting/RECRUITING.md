@@ -41,7 +41,7 @@ typically hired based on a quote for a specific deliverable.
 Everything that follows is for Staff Contractors, not outside
 consultants.
 
-Use these [Job Postings](../peopleops/recruiting/JOB_POSTINGS).
+Use these [Job Postings](JOB_POSTINGS.md).
 
 ## Recruiting Process
 
@@ -71,7 +71,7 @@ we need every advantage we can find in this way. Our strategy:
     Ideally we want virtuous cycle where if we have a culture fit, we
     probably want to hire that person, and they'll be more likely to
     want to work here too. For this, we have to communicate our mission,
-    vision and values within our [philosophy documentation](../philosophy/PHILOSOPHY).
+    vision and values within our [philosophy documentation](philosophy/PHILOSOPHY/).
 
 Another goal is to always try to screen people earlier. The first stages
 of the screening process are cheaper, so we want to avoid letting anyone
