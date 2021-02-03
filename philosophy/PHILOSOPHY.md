@@ -16,7 +16,7 @@ Covers our company's purpose, vision, values, and principles, as well as
 covering our philosophies on transparency and management. We also
 provide references at the end that have influenced these philosophies.
 
-## Basics of Our Purpose at Countable
+## Our Purpose at Countable
 
 This is tough. In the way Google set out to organize the world's data, as opposed to just organizing the data, we want to solve the problem of information
 context. With more data available than ever, the problem becomes getting
