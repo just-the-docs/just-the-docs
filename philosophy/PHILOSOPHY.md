@@ -26,8 +26,7 @@ To be less abstract, this typically manifests as:
 
   - Fixing feedback loops. Giving all stakeholders the right information
     at the right time to optimize decision making.
-  - Put relevant data at users' fingertips to enable automation and
-    effective, efficient workflows.
+  - Involve customers and users in the system design process.
 
 Examples of how we embody this purpose:
 
