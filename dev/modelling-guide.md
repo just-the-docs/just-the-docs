@@ -2,9 +2,8 @@
 layout: page
 title: Modelling guide for CityJSON
 parent: Help for developers
-grand_parent: Help
 nav_order: 1
-permalink: /help/dev/modelling-guide/
+permalink: /dev/modelling-guide/
 ---
 
 ## Table of contents

@@ -1,10 +1,9 @@
 ---
 layout: page
 title: Getting started with CityJSON
-parent: Help for users
-grand_parent: Help
+parent: Tutorials
 nav_order: 1
-permalink: /help/users/getting-started/
+permalink: /tutorials/getting-started/
 ---
 
 ## Table of contents
@@ -104,7 +103,7 @@ $ cjio myfile.json merge '/home/elvis/temp/*.json' save all_merged.json
 
 ## What else?
 
-One important point is ensuring that the files you produce and manipulate are valid, see our [validation tutorial]({{ '/help/users/validation/' | prepend: site.baseurl }}) to learn how to do this (for the schema and the geometric primitives).
+One important point is ensuring that the files you produce and manipulate are valid, see our [validation tutorial]({{ '/tutorials/validation/' | prepend: site.baseurl }}) to learn how to do this (for the schema and the geometric primitives).
 
-Several datasets can be downloaded from the [datasets page]({{ '/datasets/' | prepend: site.baseurl }}), but more importantly, it is possible to convert any CityGML file, see [our tutorial]({{ '/help/users/conversion/' | prepend: site.baseurl }}).
+Several datasets can be downloaded from the [datasets page]({{ '/datasets/' | prepend: site.baseurl }}), but more importantly, it is possible to convert any CityGML file, see [our tutorial]({{ '/tutorials/conversion/' | prepend: site.baseurl }}).
 

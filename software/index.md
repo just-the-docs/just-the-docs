@@ -206,7 +206,7 @@ Software for experimental features can be found in the respective pages of the [
 
 ## Validators
 
-(look at the [tutorial on validation]({{ "/help/users/validation/" | prepend: site.baseurl }}) where more details are available)
+(look at the [tutorial on validation]({{ "/tutorials/validation/" | prepend: site.baseurl }}) where more details are available)
 
 {% for i in software %}
 {% for cat in i.category %}

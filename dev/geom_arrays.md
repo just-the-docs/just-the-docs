@@ -2,9 +2,8 @@
 layout: page
 title: Geometric primitives and depth of arrays
 parent: Help for developers
-grand_parent: Help
 nav_order: 3
-permalink: /help/dev/geom-arrays/
+permalink: /dev/geom-arrays/
 ---
 
 ## Table of contents

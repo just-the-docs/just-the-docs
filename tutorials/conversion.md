@@ -1,10 +1,9 @@
 ---
 layout: page
 title: Converting to/from CityGML files
-parent: Help for users
-grand_parent: Help
+parent: Tutorials
 nav_order: 2
-permalink: /help/users/conversion/
+permalink: /tutorials/conversion/
 ---
 
 The open-source software [citygml-tools](https://github.com/citygml4j/citygml-tools) allows us to automatically convert between CityGML and CityJSON, and vice-versa. 

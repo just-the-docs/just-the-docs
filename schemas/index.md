@@ -1,7 +1,8 @@
 ---
 layout: page
 title: "Schemas"
-nav_order: 5
+# nav_order: 5
+nav_exclude: true
 permalink: /schemas/
 ---
 

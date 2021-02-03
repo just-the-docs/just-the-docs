@@ -1,10 +1,9 @@
 ---
 layout: page
 title: Help for developers
-parent: Help
-nav_order: 2
+nav_order: 10
 has_children: true
-permalink: /help/dev/
+permalink: /dev/
 ---
 
 {: .no_toc }

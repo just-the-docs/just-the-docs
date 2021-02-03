@@ -48,7 +48,7 @@ permalink: /datasets/
 
 <i class="fas fa-exclamation-circle"></i> It should be observed that on average CityJSON compresses ~6X a CityGML, and that without any loss of information ([see details](https://github.com/cityjson/specs/wiki/Compression-factor-for-a-few-open-CityGML-datasets)).
 
-<i class="fas fa-exclamation-circle"></i> We performed the geometric validation with [val3dity](https://github.com/tudelft3d/val3dity) and report the overall result in the column 'validity'. To understand the errors, we suggest validating the files ([how to do this]({{ '/help/users/validation/' | relative_url }})) yourself.
+<i class="fas fa-exclamation-circle"></i> We performed the geometric validation with [val3dity](https://github.com/tudelft3d/val3dity) and report the overall result in the column 'validity'. To understand the errors, we suggest validating the files ([how to do this]({{ '/tutorials/validation/' | relative_url }})) yourself.
 
 <i class="fas fa-exclamation-circle"></i> Please be aware that we simply converted the datasets as they are (with [citygml-tools](https://github.com/citygml4j/citygml-tools)). Datasets contain errors.
 
@@ -62,7 +62,7 @@ permalink: /datasets/
   - [csol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/csol.json) -- one CompositeSolid: 2 adjacent unit cubes
   - [twocube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/twocube.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
 
-For different City Objects (buildings, trees, roads, etc.) and different geometries, see the latest [CityJSON specifications](https://www.cityjson.org/specs/), and to understand how the hierarchical brackets work, see [this guide](https://www.cityjson.org/help/dev/geom-arrays/).
+For different City Objects (buildings, trees, roads, etc.) and different geometries, see the latest [CityJSON specifications](https://www.cityjson.org/specs/), and to understand how the hierarchical brackets work, see [this guide](https://www.cityjson.org/dev/geom-arrays/).
 
 
 ## Generating automatically your own CityJSON dataset
@@ -76,7 +76,7 @@ Every building, every canals, every road, every bridge, in 3D. In CityJSON.
 
 <a href="https://brt.kadaster.nl/basisvoorziening-3d/"><i class="fas fa-external-link-alt"></i> PDOK 3D Topografie</a>
 
-<i class="fas fa-exclamation-circle"></i> Please be aware that the tiles are very big, and they will most likely bring [ninja](https://ninja.cityjson.org) or QGIS to their knees... The solution for the time being is to use a computer with 16GB+ of RAM, and use [cjio]({{ '/help/users/getting-started/#manipulate-and-edit-it-with-cjio' | relative_url }}) to extract only the buildings for instance. 
+<i class="fas fa-exclamation-circle"></i> Please be aware that the tiles are very big, and they will most likely bring [ninja](https://ninja.cityjson.org) or QGIS to their knees... The solution for the time being is to use a computer with 16GB+ of RAM, and use [cjio]({{ '/tutorials/getting-started/#manipulate-and-edit-it-with-cjio' | relative_url }}) to extract only the buildings for instance. 
 
 
 ## All USA buildings
