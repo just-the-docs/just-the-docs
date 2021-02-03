@@ -26,7 +26,7 @@ To be less abstract, this typically manifests as:
 
   - Fixing feedback loops. Giving all stakeholders the right information
     at the right time to optimize decision making.
-  - Involve customers and users in the system design process.
+  - Involve customers and users in the system design and testing process.
 
 Examples of how we embody this purpose:
 
