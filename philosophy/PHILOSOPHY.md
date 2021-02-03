@@ -47,6 +47,6 @@ Lesser purposes of the organization.
 
   - Provide an exciting, motivating place to work well, and on things we
     believe in.
-  - Provide an environment optimized for learning quickly.
+  - Provide an environment optimized for learning quickly, by creating a safe environment to experiment and fail.
   - Continuously improve in how we approach our work.
 
