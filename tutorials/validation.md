@@ -2,7 +2,7 @@
 layout: page
 title: Validation of a CityJSON file
 parent: Tutorials
-nav_order: 1
+nav_order: 2
 permalink: /tutorials/validation/
 ---
 
@@ -83,11 +83,11 @@ If the file [twobuilding.json](../files/twobuildings.json) is used, then the fol
 ![](../files/v-summary.png)
 
 It can be seen that one of the 2 buildings is not valid, because it has duplicate vertices.
-To know the details, you can produce a HTML report (at the path '/Users/elvis/temp/myreport/report.html'):
+To know the details, you can produce a report (called `myreport.json`):
 ```
-val3dity myfile.json --report /Users/elvis/temp/myreport
+val3dity myfile.json --report myreport.json
 ```
 
-And we obtain:
+Drag this file to the [online report browser](http://geovalidation.bk.tudelft.nl/val3dity/browser/), and we obtain:
 
 ![](../files/v-report.png)
