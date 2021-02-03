@@ -18,7 +18,7 @@ provide references at the end that have influenced these philosophies.
 
 ## Basics of Our Purpose at Countable
 
-At the most abstract level, we want to solve the problem of information
+This is tough. In the way Google set out to organize the world's data, as opposed to just organizing the data, we want to solve the problem of information
 context. With more data available than ever, the problem becomes getting
 the right data at the right time.
 
