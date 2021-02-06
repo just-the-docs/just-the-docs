@@ -10,7 +10,7 @@ title: Scrum
 
 Countable uses
 [Scrum](https://en.wikipedia.org/wiki/Scrum_\(software_development\)) to
-manage work delivery and collaboratively learn about problem domains.
+to collaborate with clients on work delivery and to optimize for learning.
 
 **Scope**
 
@@ -19,6 +19,8 @@ actually put it into action at Countable.
 
 For more, check out the guide book from the inventor of Scrum
 [here](https://www.scrumguides.org/scrum-guide.html).
+
+When does Countable use Scrum? Projects with at least 2 staff assigned, working at least half-time each, and longer than 1 month in length, and have external stakeholders (outside Countable), should use Scrum and have a Scrum master assigned. Other projects can still borrow from Scrum methodology (ie, meet weekly) but do not need a Scrum Master (or PM role of any kind) assignmed. On these, devs should be directly accountable to the client or product owner.
 
 ## Principles
 
