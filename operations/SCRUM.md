@@ -25,11 +25,10 @@ When does Countable use Scrum? Projects with at least 2 staff assigned, working 
 ## Principles
 
 1.  Ship work to real users and get feedback *every sprint*. Don't allow
-    "work in progress" to not be released. Instead, plan your work so it
-    can be released every 2 weeks or *ideally, every day*.
-2.  Make sure everyone's clear regarding their *Objectives* and team
-    members' Objectives and Key Results.
-3.  *Communicate* with your project team daily about meeting KRs.
+    "work in progress" to remain unreleased. Instead, plan your work so it
+    can be released every 2 weeks or *ideally, every day*. You can do this via feature flagging, having a stage site, or just planning work in small, releasable chunks.
+2.  Reflect weekly and share openly about how we can work better together.
+3.  See also https://agilemanifesto.org/
 
 ## User Stories
 
@@ -47,31 +46,27 @@ Every team should have one or more [Objectives](operations/OKRS/). This is a wri
  
 ### Sprint
 
-A sprint is a period (1 week to 1 month) punctuated by a Sprint meeting.
+A sprint is a period (1 week to 1 month) punctuated by a Sprint meeting with the following 3 sections.
 
-The **Scrum Master** must review tickets for clarity (triage them) from
-Requests to Backlog. The **Product Owner** must review tickets for
-priority (order the **Backlog**).
+#### Sprint Review
 
-#### Before Sprint Review meetings, team members should:
+Each team member explains (or ideally, shows), their work the past week to the Product Owner and team. The Scrum master reviews tickets in the "Done" columns, and asks each dev to share their associated work.
 
-1.  Measure what % done our Key Results are. Check any metrics necessary
-    so we don't bog down the meeting looking in mixpanel for example.
-2.  Pick cards for the next sprint that will most impact KRs.
+#### Sprint Plan
 
-#### During the sprint meeting
+The Scrum Master:
+1. goes through each item in Requests column
+1. asks who should be assigned
+1. asks that person if the card is clear
+1. moves the card to Backlog in priority order (based on Product Owner's input)
 
-Each team member updates the team on their
+The Product owner lists the top priority cards in Backlog, and developers determine to how much they can finish that week. Move those items from Backlog to Sprint.
 
-1.  Key Result scores
-2.  what they shipped to cause those changes
-3.  and how they will meet the Key Results by the deadline (usually end
-    of month)
+The above 2 steps can be done concurrnetly (move directly from Requests to Sprint) if all parties agree.
 
-#### Cards of Shame
+#### Sprint Retrospective
 
-1.  Review any cards left in the sprint column. Why are they there? How
-    can we avoid that?
+Each team member shares their ideas for what problems we have, and how we could improve. The team evaluates tha last sprint performance, and brainstorms ideas to try next sprint.
 
 #### Stand-up Meetings
 
@@ -88,11 +83,7 @@ These are the duties we must assigned when doing Scrum.
 
   - Develops User Stories by talking to real users and ensures those
     users' needs are being met by the team.
-  - Clarifies how to achieve our [Key Results](operations/OKRS/),
-    while taking input from team.
   - Triage the Trello Requests column into an Ordered Backlog of work.
-  - Makes sure items in the backlog are clear to developers. The product
-    owner is typically our client.
 
 #### Scrum Master
 
@@ -100,6 +91,8 @@ These are the duties we must assigned when doing Scrum.
   - Trains the team on Scrum and makes sure we're following the rules of
     scrum effectively (shipping each week, continuously learning, making
     tickets clear)
+  - Verifies work items in the backlog are clear to developers. The product
+    owner is typically our client.
   - Nudge team to identify problems in workflow and make them visible to
     work together.
 
