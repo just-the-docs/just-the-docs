@@ -337,11 +337,7 @@ according to your needs.
   - After you've successfully completed the previous step and collected
     the candidate documents (save it at our [peopleops folder](https://drive.google.com/drive/folders/1HY7LPI_h5F5WxaTW5v-1_DMUXcJIjjh1)
     or send it to your supervisor)
-  - You should add the candidate to the following services:
-      - Project's Trello board
-      - Slack (Ask your supervisor to add him, to avoid privacy issues)
-      - Bitbucket
-      - Google Drive folder
+  - Our Ops coordinator proceeds to [onboard](../ONBOARDING_GUIDE) the new person, with the help of their supervisor.
 
 ### Referrals
 
