@@ -1,3 +1,9 @@
+---
+layout: default
+parent: Operations
+title: Clients Onboarding
+---
+
 # Client Onboarding
 
 ## Purpose
