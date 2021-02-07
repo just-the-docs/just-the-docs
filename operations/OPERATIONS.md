@@ -19,7 +19,7 @@ Check out our [Methodology Toolkit](METHODOLOGY.md) at Countable.
 
 ## Guidelines at Countable
 
-This operatiosn manual is divided into different types of guidelines, depending on their "strictness".
+This operations manual is divided into different types of guidelines, depending on their "strictness".
 
 Unmarked text is simply informational. It's meant to help you and not to constraint your behaviour.
 

@@ -95,8 +95,9 @@ documented here.
       - Clearly state the logical purpose, evidence or citation that indicates how the rules help our mission because we want each rule to justify its existence.
       - Use the word 'because' (explain *why* the step exists) as needed.
 
-## Processes
+## Guidelines
 
-  - Documenting processes allows your team to improve together at their work. You can talk about how you do things, and how each person can do it better. It also sets you up for automation.
-   - Reach out to your team and make sure they know about, and buy into, the process. The best way is to get their help developing the process.
-   - Test the documented processes with other people. They should tell you if it's clear, actionable and effective, and how to improve it.
+  - Documenting guidelines allows your team to improve together at their work. You can talk about how you do things, and how each person can do it better. It also sets you up for automation.
+  - Reach out to your team and make sure they know about, and buy into, the guideline. The best way is to get their help developing the guideline.
+  - Test the documented guideline with other people. They should tell you if it's clear, actionable and effective, and how to improve it.
+  - [More details](./OPERATIONS)
