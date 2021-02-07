@@ -26,7 +26,7 @@ our clients' and employees' private data.
 *First, why does this repository exist?* The purpose of this repository
 is simply as a record of what worked well in the past and what to avoid. In some cases, we may reference outside resources but primarily this is a living record of what our company has learned.
 
-In some (rare) cases, we may document exact processes that must be followed but in general this manual is intended as a guide to help improve individual and team performance by sharing what works, and documenting conventions so we can coordinate better.
+In some (rare) cases, we may document exact processes{: .label .label-purple } that must be followed but in general this manual is intended as a guide to help improve individual and team performance by sharing what works, and documenting conventions so we can coordinate better.
 
 In the words of "The Great CEO Within", By Matt Mochary:
 
@@ -48,8 +48,8 @@ In the words of "The Great CEO Within", By Matt Mochary:
 This repo will contain:
 
   - Guidlines based on what worked well (or poorly) for us in the past.
-  - Conventions in order to help us communicate and collaborate efficiently.
-  - Business processes which should be carefully followed.
+  - Convention{: .label .label-green } in order to help us communicate and collaborate efficiently.
+  - Process{: .label .label-purple } which should be carefully followed, unless you have a good reason not to.
   - The Articles of Incorporation and other general corporate documents.
     Countable is a
     [CCPC](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/type-corporation.html#ccpc),
