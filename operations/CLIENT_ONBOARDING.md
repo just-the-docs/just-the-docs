@@ -14,7 +14,7 @@ Countable generally works with Fixed Price Agreements determined based on meetin
 
 ## Discovery
 
-Holding a kick-off meeting with a discovery process is one key a successful project outcome.
+Holding a kick-off meeting with a [discovery](../sales/DISCOVERY) process is one key a successful project outcome.
 
 ## Inception Project
 
