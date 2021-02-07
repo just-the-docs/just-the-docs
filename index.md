@@ -48,8 +48,8 @@ In the words of "The Great CEO Within", By Matt Mochary:
 This repo will contain:
 
   - Guidlines based on what worked well (or poorly) for us in the past.
-  - Convention{: .label .label-green } in order to help us communicate and collaborate efficiently.
-  - Process{: .label .label-purple } which should be carefully followed, unless you have a good reason not to.
+  - CONVENTIONS{: .label .label-blue } in order to help us communicate and collaborate efficiently.
+  - PROCESS{: .label .label-purple } which should be carefully followed, unless you have a good reason not to.
   - The Articles of Incorporation and other general corporate documents.
     Countable is a
     [CCPC](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/type-corporation.html#ccpc),
