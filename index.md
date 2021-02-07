@@ -107,7 +107,7 @@ Helps us find the best partners and team members who share our passion.
   - [Creative Brief](ux/UX/)
   - [Design Asset Storage](operations/FILE_STORAGE/)
   - [Social Media Posting Policy](ux/CREATIVE_BRIEF/)
-  - [SEO](ux/UX_GUIDELINES/)
+  - [SEO](ux/SEO/)
   - [Usability](ux/USABILITY_TESTING/)
 
 ### Getting Started
