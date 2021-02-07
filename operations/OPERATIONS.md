@@ -64,6 +64,8 @@ PROCESS
 
 so we can minimize those.
 
+See [here](./OPERATIONS) for more details on how to write ops manual pages.
+
 ### Company Structure / Governance
 
 Countable is an agency that uses consulting as a source of information to build start-ups.
