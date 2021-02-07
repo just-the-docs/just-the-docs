@@ -19,6 +19,8 @@ If anything is unclear, let's fix it so it's clear for the next person.
 Covers all the onboarding steps for a new Countable Team Member.
 
 ## First Steps
+PROCESS
+{: .label .label-purple }
 
   - Get a countable.ca email address (ask your manager to create it),
     and [set up your signature](https://youtu.be/hA5cRIDg0Ko)
@@ -34,22 +36,30 @@ Covers all the onboarding steps for a new Countable Team Member.
   - Use the team to answer your other questions.
 
 ### Set your work availability
+PROCESS
+{: .label .label-purple }
 
   - Add your work availability to your calendar [using Google's Work Hours](https://support.google.com/calendar/answer/7638168?hl=en). 
       - These should account for at least half of your planned working time, but doesn't have to be 40+ hours- leave yourself some time for deep and uninterrupted work! 
       - Think of your availability as when you are prepared to be booked into meetings with others and respond synchronously in Slack.
 
 ### Set your profile photo
+PROCESS
+{: .label .label-purple }
 
   - As a remote team, it makes it easier for our team and clients to
     track who everyone is if you upload a profile photo. Upload your
     photo to all accounts, especially Slack, Email, BitBucket, GitHub.
 
 ### Set up Eightmeters
+PROCESS
+{: .label .label-purple }
 
 [See here](EIGHTMETERS.md)
 
 ### Team Calendar
+PROCESS
+{: .label .label-purple }
 
   - Go to calendar.google.com from your Countable Google Apps account.
   - You should see our team calendar with meetings to attend.
@@ -57,6 +67,8 @@ Covers all the onboarding steps for a new Countable Team Member.
     and whether you're working 50% or 0%.
 
 ### Payment Info
+PROCESS
+{: .label .label-purple }
 
   - Provide a void cheque (in Canada this includes your bank account
     number, routing/transit number and institution number) to our

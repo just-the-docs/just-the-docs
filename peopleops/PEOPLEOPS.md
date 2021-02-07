@@ -6,7 +6,8 @@ has_children: true
 
 # People Ops
 
-(draft)
+DRAFT
+{: .label .label-green }
 
 **Purpose**
 

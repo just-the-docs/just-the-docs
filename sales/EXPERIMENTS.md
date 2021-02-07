@@ -6,7 +6,8 @@ title: Niche Experiments
 
 # Niche Experiments
 
-(draft)
+DRAFT
+{: .label .label-green }
 
 **Purpose**
 

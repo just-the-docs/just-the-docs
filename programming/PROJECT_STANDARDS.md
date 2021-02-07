@@ -87,7 +87,8 @@ is served by nginx.
 
 ## Front End Development
 
-(draft, rfc)
+DRAFT
+{: .label .label-green }
 
 Front-end development is exciting, but also a challenge. This is due to
 the fact that there are so many tools available for so many different

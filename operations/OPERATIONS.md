@@ -17,48 +17,52 @@ Countable, and link out to more useful reference docs on our processes.
 
 Check out our [Methodology Toolkit](METHODOLOGY.md) at Countable.
 
-## Processes at Countable
+## Guidelines at Countable
 
-Processes are the official rules defined in this manual which we all commit to work by.
+This operatiosn manual is divided into different types of guidelines, depending on their "strictness".
 
-We prefer to have a small set of official processes to produce better, more meaningful work faster, achieve our mission, and have more fun doing it. 
+Unmarked text is simply informational. It's meant to help you and not to constraint your behaviour.
 
-Processes have a cost, so we want the minimum set to accomplish this.
+CONVENTION
+{: .label .label-blue }
+Conventions are simply standard ways of doing things to help us collaborate and communicate efficiently. This could include "best practices".
 
-### Process Conventions
+PROCESS
+{: .label .label-purple }
+This refers to a process where there is a good reason to do it a specific way. Processes must be clear and actionable (like a checklist.) We will remind each other to follow these. Processes have a cost, so we want the minimum set necesssary. You should have a good reason if you do not follow a process, and if you disagree with it you should discuss having it changed with the team, not just ignore it.
+
+REQUIRED PRACTICES
+{: .label .label-red }
+We draw special attention to things with severe consequences with this label.
+
+### Developing new Guidelines
 
 Most processes will start out as conventions. 
 
-As you work, experiment and try things. 
+As you work, experiment and try things. When you can demonstrate something is working really well, discuss making it a convention with the team. Write it down concisely with rationale in the appropriate ops manual page with a
+DRAFT
+{: .label .label-green }
+tag.
 
-When you can demonstrate something is working really well, we should consider making it an official process.
+Don't rush a new guideline. Over time you can refine it out of draft status.
 
-### Process Drafts
+  - Be clear about when the guideline applies, what the roles are and why it's worth having in concise simple language.
+  - Explain the guidline to team members, and get feedback. Testing a guideline is a consultative decision.
+  - Our guidelines should be informed by our own experiences and evidence first, consultation with colleagues second, best practices third (processes well known and contained in multiple industry standards), and specific literature from a single author a distant fourth.
+  - Lead by example, and update your guideline as you learn.
+  - Get feedback from the team.
 
-The first step for an official process is to write it up in this manual as a draft. 
+After your team reviews the guidline it can be promoted to a
+CONVENTION
+{: .label .label-blue }
 
-The purpose of this is to make it clear and let teammates test whether it's useful.
+or just left as informational.
 
-The proposed process should:
+You should get officer (manager) approval before marking anything as
+PROCESS
+{: .label .label-purple }
 
-  - Have a clear benefit that outweighs its cost substantially. When in doubt, eliminate the process.
-  - Be as simple with the minimum number of steps necessary.
-  - Be informed by our own experiences and evidence first, consultation with colleagues second, best practices third (processes well known and contained in multiple industry standards), and specific literature from a single author a distant fourth.
-  - Be aligned with our mission.
-
-### Testing A New Process
-
-Don't rush a new process. Trial it first:
-
-  - Document the process in this operations manual as a *draft*. Be clear about when the process applies, what the roles are and why it's worth having in concise simple language.
-  - Explain the process to team members, and get feedback. Testing a process is a consultative decision.
-  - Lead by example, and update your process document as you learn.
-  - Review the process with the team and decide if you want to propose it company-wide.
-
-### Making Processes Official
-
-  - The process must be approved by the company's Director.
-  - Remove the *draft* status from the ops manual page. It's now official.
+so we can minimize those.
 
 ### Company Structure / Governance
 

@@ -6,7 +6,8 @@ title: Applicant Guide
 
 # Applicant Guide
 
-(draft)
+DRAFT
+{: .label .label-green }
 
 **Purpose**
 

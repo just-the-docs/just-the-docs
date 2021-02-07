@@ -1,6 +1,7 @@
 # KPI
 
-(draft)
+DRAFT
+{: .label .label-green }
 
 A KPI (Key Performance Indicator) is a measurement value about how effectively we're reaching our business goals. Here in Countable we compile all of the data gathered from many sources in a **monthly basis** and make it available through a KPI Dashboard sheet.
 

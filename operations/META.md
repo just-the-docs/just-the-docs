@@ -24,20 +24,25 @@ You can link directly to a single file within the same folder by using `DEVOPS.m
 
 The jekyll template we use, [just-the-docs](https://pmarsceill.github.io/just-the-docs/), allows us to set some custom colored labels. Here are the tagging norms we've set:
 
-DRAFT
-{: .label .label-green }
-
 TODO
 {: .label .label-yellow }
+Something you want to remember to write later.
 
-PROCESS CHECKLIST
-{: .label .label-purple }
+DRAFT
+{: .label .label-green }
+An idea you want to share with the team in this manual, but it needs more work.
 
 CONVENTION
 {: .label .label-blue }
+Something that the team normally does a certain way.
 
-REQUIRED PRACTICES
+PROCESS
+{: .label .label-purple }
+Something people should make an effort to follow.
+
+REQUIRED PRACTICE
 {: .label .label-red }
+Something that is critical and we want to draw special attention to it. (Safety, privacy, legal)
 
 
 ## Data Headers for New Pages

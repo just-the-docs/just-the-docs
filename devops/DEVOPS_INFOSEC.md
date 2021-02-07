@@ -6,6 +6,9 @@ title: DevOps Information Security
 
 # DevOps Information Security
 
+DRAFT
+{: .label .label-green }
+
 **Purpose**
 
 To explain the DevOps-specific Information Security practices at Countable.
