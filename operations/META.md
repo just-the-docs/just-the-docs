@@ -33,7 +33,7 @@ TODO
 PROCESS CHECKLIST
 {: .label .label-purple }
 
-SUGGESTED BEST PRACTICES
+CONVENTION
 {: .label .label-blue }
 
 REQUIRED PRACTICES
