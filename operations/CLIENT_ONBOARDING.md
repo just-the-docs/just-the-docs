@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Operations
-title: Clients Onboarding
+title: Client Onboarding
 ---
 
 # Client Onboarding
