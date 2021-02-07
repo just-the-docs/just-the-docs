@@ -24,7 +24,7 @@ This process has many benefits.
 
 ## Delivery
 
-Countable uses Scrum to deliver project work.
+Countable uses [Scrum](./SCRUM) to deliver project work.
   * Typically, the Product Owner role is held on the client's side.
   * This person will typically provide access to end-users and subject matter experts as well.
   * The product owner also oversees the Backlog, a list of requirements including mechanisms for change management.
