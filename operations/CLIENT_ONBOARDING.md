@@ -2,9 +2,11 @@
 
 ## Purpose
 
-This document outlines how to get started working with Countable at a high level.
+This document outlines how to get started working with Countable at a high level, in order to help new clients understand what to expect when working with Countable.
 
 ## Scope
+
+We summarize the high level steps involved in a project between Countable and our clients.
 
 ## Quoting Process
 
