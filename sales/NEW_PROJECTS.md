@@ -1,10 +1,10 @@
 ---
 layout: default
 parent: Sales
-title: Project Structure
+title: Setting Up A Project
 ---
 
-# Project Structure
+# Setting Up A Project
 
 **Purpose**
 
@@ -19,6 +19,7 @@ Here we provide a checklist of key steps and expectations to set when starting a
 Steps for onboarding a client:
 
 -  A contract must be signed with the client.
+-  Send them to our [Client Onboarding Guide](../operations/CLIENT_ONBOARDING).
 -  In the contract appendix A, our services should be summarized, along
    with any key opportunities or problems we can help with.
 -  Create a project in Trello, a Slack Channel, shared Google Drive folder, and any necessary code
