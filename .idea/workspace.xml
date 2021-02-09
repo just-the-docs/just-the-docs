@@ -40,49 +40,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f16c9fcd-a63c-4bc2-bc3e-6081b374ec9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/decentralized-communications-technologies.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/discrimination-and-harassment.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/employment.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/open-positions-and-bounties.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/our-philosophy.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/performance-and-career-development.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/standards-of-conduct.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/vacation-and-holidays.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/worker-compensation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/ContributorHub/worker-proposals.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/GetConnected/discord.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/GetConnected/etherscan.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/GetConnected/forum.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/GetConnected/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/GetConnected/medium.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/GetConnected/telegram.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/GetConnected/twitter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/GetConnected/website.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/mesa/faq.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/mesa/roadmap.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/mesa/twitter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/mesa/website.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/omen/faq.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/omen/market-resolution-rules.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/omen/roadmap.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/omen/twitter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/omen/website.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/rails/faq.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/rails/roadmap.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/rails/twitter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/rails/website.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/swapr/faq.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/swapr/roadmap.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/swapr/twitter.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Products/swapr/website.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ContributorHub/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ContributorHub/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Products/Mesa.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/Mesa.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Products/Omen.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/Omen.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Products/Rails.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/Rails.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Products/Swapr.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/Swapr.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GetConnected/telegram.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetConnected/telegram.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +69,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/GetConnected" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="$PROJECT_DIR$/node_modules/stylelint" />
@@ -143,6 +102,9 @@
       <updated>1608642435974</updated>
       <workItem from="1608642437233" duration="2470000" />
       <workItem from="1609930425556" duration="1522000" />
+      <workItem from="1612013414175" duration="50000" />
+      <workItem from="1612204980579" duration="1266000" />
+      <workItem from="1612557384856" duration="4360000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Website
-parent:Telegram
+title: Telegram
+parent: Get Connected
 
 
 ---
 
-website
+websitesdsdsdsd
