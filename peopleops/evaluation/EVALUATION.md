@@ -73,6 +73,8 @@ closely corresponding to your main job responsibilities. You are free to
 be a part of of other guilds, of course, but you will only be
 self-evaluating based on tasks from your main track.
 
+Please only fill the level you expect, and then if you pass (75%), do the level above. If you fail, the level below.
+
 ## Evaluation Questions by Job Level
 
 This section is used in the Process above for self-evaluation.
