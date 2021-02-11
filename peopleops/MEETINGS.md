@@ -18,7 +18,7 @@ Defines expectations for all meetings, then goes into details for specific types
 
 ### Date and Time of Meetings
 
-  - Meetings should, where possible, be booked during business hours,
+  - Meetings should, where possible, be booked during the business hours of the attendees,
     because we want to encourage work-life balance on the team (and any
     formal expectation to regularly meet outside business hours is
     damaging to that)
