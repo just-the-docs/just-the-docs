@@ -18,9 +18,8 @@ Covers self-evaluation questions for job level 4, for both general criteria and 
 
 **Professional Development**
 
-  - Sets standards for whole team in technical track OR responsible for
-    a business area (contributes to several winning proposals and
-    accounts)
+  - Manages or is responsible for $100k/yr in customer accounts, or made major contributions to winning proposals totaling this value, or developed/led a product that resulted in a $50k in revenue yearly.
+  - Mentors and coaches other senior team members to facilitate their professional development.
   - Evaluates technical work complexity for proposals/quotes and can
     delegate work appropriately.
   - Stays on top of industry trends in technical track. Can research,
@@ -35,6 +34,7 @@ Covers self-evaluation questions for job level 4, for both general criteria and 
 
   - Makes major Ops Manual contributions, involves the team in these to
     get everyone aligned on how to do our best work.
+  - Creates content for the company that results in high external engagement (5k views or more)
 
 **Project Management**
 
