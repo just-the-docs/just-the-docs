@@ -39,7 +39,7 @@ Defines expectations for all meetings, then goes into details for specific types
   - The purpose and agenda of the meeting must be clear and made
     available to the attendees (ie, listed in the meeting event details
     on the calendar) because that allows people who don't need to be
-    there, to skip.
+    there, to skip. It's the responsibility of all present to ask about this.
   - You should only attend a meeting if you have a contribution to make
     (based on reading the agenda). If you just need to get information
     from the minutes. *Ask the attendees for minutes* if you can't find
@@ -99,6 +99,10 @@ Defines expectations for all meetings, then goes into details for specific types
     people respond, so you can listen to your audience and steer your
     material to be more helpful. Meetings should be interactive, not
     monologues.
+  - For virtual meetings, please keep your camera on. This allows 
+  - Turn on your camera. Generally if you don't have your camera on, you shouldn't be at the meeting. Communication is 80% non verbal. If you have a good reason to keep your camera off, then please share that reason. Spend a little time ensuring you have good audio, lighting, and appropriate dress. Whoever is speaking needs to see your facial expression in order to assess comprehension or they have no idea if you're listening or understand or agree with what was said.
+  - Take notes! When you're at a meeting you should have a writing implement, Trello or some other mechanism.
+  - Ask questions and contribute actively. Everyone should speak at meetings.
 
 ## Scrum Meetings
 
