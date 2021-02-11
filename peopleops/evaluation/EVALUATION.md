@@ -106,6 +106,12 @@ Owns a guild, major client group or customer base (business line).
 
 See [Self Evaluation Questions here](LEVEL_4_QUESTIONS.md).
 
+## Level 5
+
+Leads the company's vision, mission, and high-level goals.
+
+See [Self Evaluation Questions here](LEVEL_5_QUESTIONS.md).
+
 \[1\] Jim Collins, "Good to Great".
 
 \[2\] [RoadmapSH](https://roadmap.sh/guides/levels-of-seniority) - this
