@@ -112,6 +112,9 @@ Leads the company's vision, mission, and high-level goals.
 
 See [Self Evaluation Questions here](LEVEL_5_QUESTIONS.md).
 
+-----
+References and further reading:
+
 \[1\] Jim Collins, "Good to Great".
 
 \[2\] [RoadmapSH](https://roadmap.sh/guides/levels-of-seniority) - this
