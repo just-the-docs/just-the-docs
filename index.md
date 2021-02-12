@@ -47,12 +47,14 @@ In the words of "The Great CEO Within", By Matt Mochary:
 
 This repo will contain:
 
-  - Guidelines based on what worked well (or poorly) for us in the past.
 CONVENTIONS
 {: .label .label-blue } 
-  - Conventions in order to help us communicate and collaborate efficiently.
+
 PROCESSES
 {: .label .label-purple } 
+
+  - Guidelines based on what worked well (or poorly) for us in the past.
+  - Conventions in order to help us communicate and collaborate efficiently.
   - Processes which should be carefully followed, unless you have a good reason not to.
   - The Articles of Incorporation and other general corporate documents.
     Countable is a
