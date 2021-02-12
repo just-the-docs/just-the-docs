@@ -306,3 +306,4 @@ about it."
 
 >   - [Video on presenting](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/how-to-speak/index.htm)
 >   - [Quiz with targetted advice on general communication skills](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/how-to-speak/index.htm)
+>   - [Stack Overflow Blog article on different communication styles](https://stackoverflow.blog/2021/02/11/why-are-video-calls-so-tiring-you-might-be-misreading-cultural-styles/)
