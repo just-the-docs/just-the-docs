@@ -5,11 +5,25 @@ collections:
   tests:
     permalink: "/:collection/:path:output_ext"
     output: true
+  test_collection_1:
+    permalink: "/:collection/:path/"
+    output: true
+  test_collection_2:
+    permalink: "/:collection/:path/"
+    output: true
 
 just_the_docs:
   collections:
     tests:
       name: Tests
+      nav_exclude: false
+      search_exclude: true
+    test_collection_1:
+      name: Test Collection 1
+      nav_exclude: false
+      search_exclude: true
+    test_collection_2:
+      name: Test Collection 2
       nav_exclude: false
       search_exclude: true
 
