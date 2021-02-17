@@ -41,7 +41,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f16c9fcd-a63c-4bc2-bc3e-6081b374ec9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/GetConnected/telegram.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetConnected/telegram.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Governance/Daotalk.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Governance/Daotalk.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Governance/Rep.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Governance/Rep.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +57,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="issues-20-and-onward" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1m0tf3uwfqj8DtWRPnEQCErwjO0" />
@@ -79,6 +85,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/Products/omen" />
+      <recent name="$PROJECT_DIR$/docs/GetConnected" />
+      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/../docs" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs/GetConnected" />
       <recent name="$PROJECT_DIR$/docs/Products" />
@@ -86,11 +98,26 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/images" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs/GetConnected" />
-      <recent name="$PROJECT_DIR$/docs" />
-      <recent name="$PROJECT_DIR$/../docs" />
-    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="docker-compose.yml.jekyll: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="jekyll" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.jekyll: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -104,7 +131,10 @@
       <workItem from="1609930425556" duration="1522000" />
       <workItem from="1612013414175" duration="50000" />
       <workItem from="1612204980579" duration="1266000" />
-      <workItem from="1612557384856" duration="4360000" />
+      <workItem from="1612557384856" duration="7522000" />
+      <workItem from="1612913296706" duration="5938000" />
+      <workItem from="1613144635708" duration="568000" />
+      <workItem from="1613169701154" duration="1031000" />
     </task>
     <servers />
   </component>
@@ -128,6 +158,10 @@
       <screen x="-1169" y="-1417" width="3440" height="1417" />
     </state>
     <state x="551" y="-1417" width="1720" height="1417" key="#com.intellij.fileTypes.FileTypeChooser/-1169.-1417.3440.1417/0.23.1440.803@-1169.-1417.3440.1417" timestamp="1611869095363" />
+    <state x="551" y="-1417" width="1720" height="981" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612907973510">
+      <screen x="-1169" y="-1417" width="3440" height="1417" />
+    </state>
+    <state x="551" y="-1417" width="1720" height="981" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1169.-1417.3440.1417/0.23.1440.797@-1169.-1417.3440.1417" timestamp="1612907973510" />
     <state width="1268" height="409" key="GridCell.Tab.0.bottom" timestamp="1610651321681">
       <screen x="-1169" y="-1417" width="3440" height="1417" />
     </state>
@@ -144,11 +178,20 @@
       <screen x="-1169" y="-1417" width="3440" height="1417" />
     </state>
     <state width="1268" height="409" key="GridCell.Tab.0.right/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610651321678" />
-    <state x="-558" y="-887" width="586" height="548" key="find.popup" timestamp="1611867438824">
+    <state x="-558" y="-887" width="586" height="548" key="find.popup" timestamp="1613049546429">
       <screen x="-1169" y="-1417" width="3440" height="1417" />
     </state>
-    <state x="-558" y="-887" width="586" height="548" key="find.popup/-1169.-1417.3440.1417/0.23.1440.803@-1169.-1417.3440.1417" timestamp="1611867438824" />
+    <state x="-558" y="-887" width="586" height="548" key="find.popup/-1169.-1417.3440.1417/0.23.1440.797@-1169.-1417.3440.1417" timestamp="1612907917725" />
+    <state x="-558" y="-887" width="586" height="548" key="find.popup/-1169.-1417.3440.1417/0.23.1440.803@-1169.-1417.3440.1417" timestamp="1613049546429" />
     <state x="-602" y="-954" width="586" height="490" key="find.popup/-1169.-1417.3440.1417/0.23.1440.805@-1169.-1417.3440.1417" timestamp="1608644846203" />
     <state x="-602" y="-956" width="586" height="490" key="find.popup/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610660638888" />
+    <state x="1076" y="-1201" width="670" height="676" key="search.everywhere.popup" timestamp="1612908891288">
+      <screen x="-1169" y="-1417" width="3440" height="1417" />
+    </state>
+    <state x="1076" y="-1201" width="670" height="676" key="search.everywhere.popup/-1169.-1417.3440.1417/0.23.1440.800@-1169.-1417.3440.1417" timestamp="1612908891288" />
+    <state x="551" y="-436" width="1720" height="435" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1612908095881">
+      <screen x="-1169" y="-1417" width="3440" height="1417" />
+    </state>
+    <state x="551" y="-436" width="1720" height="435" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/-1169.-1417.3440.1417/0.23.1440.797@-1169.-1417.3440.1417" timestamp="1612908095881" />
   </component>
 </project>

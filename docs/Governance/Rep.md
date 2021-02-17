@@ -5,83 +5,13 @@ parent: Governance
 nav_order: 1
 ---
 
-# Code
-{: .no_toc }
+## HOW TO GAIN REP
 
-## Table of contents
-{: .no_toc .text-delta }
+Any community member that contributes to DXdao, either by participating in community discussions, making posts on DAOtalk.org, or contributing in any meaningful way may also receive REP. DXdao currently operates a [REP Boost Program](https://daotalk.org/t/community-rep-boosts-jan-2021/2562) where community members that make a contribution to DXdao during a given month are nominated for a 0.1% REP boost.
 
-1. TOC
-{:toc}
+Community members that receive a REP boost need to submit a REP boost proposal on [Alchemy](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a). Here is a link for [How-to Submit a REP Boost Proposal on Alchemy.](https://docs.google.com/document/d/1jKD2IZV4ffnUx3csccaRpWEvPsOvcbmg8Ffd0l5HpEE/edit)
 
----
+If you believe that you should receive REP for a DXdao contribution, contact [Chris](https://daotalk.org/u/powers/summary) on DAOtalk.org to be nominated. DXdao welcomes nominating new community members for REP, and we are looking for new effective ways to allocate REP, while still honoring DXdao’s merit-based governance system. If you have a suggestion on how to allocate REP, please state it in the #governance channel on the [dx_dao](https://keybase.io/team/dx_dao) Keybase or [DAOtalk.org](https://daotalk.org/c/dx-dao/15).
 
-## Inline code
+Full-time workers may earn up to 4% REP for paid contributions to DXdao. A worker may request 0.1667% of REP for each month she has worked.
 
-Code can be rendered inline by wrapping it in single back ticks.
-
-<div class="code-example" markdown="1">
-Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-## Heading with `<inline code snippet>` in it.
-{: .no_toc }
-</div>
-```markdown
-Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-## Heading with `<inline code snippet>` in it.
-```
-
----
-
-## Syntax highlighted code blocks
-
-Use Jekyll's built-in syntax highlighting with Rouge for code blocks by using three backticks, followed by the language name:
-
-<div class="code-example" markdown="1">
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-</div>
-{% highlight markdown %}
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-{% endhighlight %}
-
----
-
-## Code blocks with rendered examples
-
-To demonstrate front end code, sometimes it's useful to show a rendered example of that code. After including the styles from your project that you'll need to show the rendering, you can use a `<div>` with the `code-example` class, followed by the code block syntax. If you want to render your output with Markdown instead of HTML, use the `markdown="1"` attribute to tell Jekyll that the code you are rendering will be in Markdown format... This is about to get meta...
-
-<div class="code-example" markdown="1">
-
-<div class="code-example" markdown="1">
-
-[Link button](http://example.com/){: .btn }
-
-</div>
-```markdown
-[Link button](http://example.com/){: .btn }
-```
-
-</div>
-{% highlight markdown %}
-<div class="code-example" markdown="1">
-
-[Link button](http://example.com/){: .btn }
-
-</div>
-```markdown
-[Link button](http://example.com/){: .btn }
-```
-{% endhighlight %}

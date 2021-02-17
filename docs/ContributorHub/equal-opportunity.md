@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Discrimination and Harassment
+title: Equal Opportunity
 parent: Contributor Hub
-
+nav_order: 8
 
 ---
 

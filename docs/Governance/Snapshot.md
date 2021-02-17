@@ -5,45 +5,8 @@ parent: Governance
 nav_order: 3
 ---
 
-# Labels
+## SNAPSHOT  
 
-Use labels as a way to add an additional mark to a section of your docs. Labels come in a few colors. By default, labels will be blue.
+DXD holders use Snapshot to create polls for a variety of governance-related topics of DXdao. If you are a DXD holder and would like to create a proposal regarding a particular topic for DXD holders to vote on, go to [https://snapshot.page/#/dxd.eth/](https://snapshot.page/#/dxd.eth/).
 
-<div class="code-example" markdown="1">
-Default label
-{: .label }
-
-Blue label
-{: .label .label-blue }
-
-Stable
-{: .label .label-green }
-
-New release
-{: .label .label-purple }
-
-Coming soon
-{: .label .label-yellow }
-
-Deprecated
-{: .label .label-red }
-</div>
-```markdown
-Default label
-{: .label }
-
-Blue label
-{: .label .label-blue }
-
-Stable
-{: .label .label-green }
-
-New release
-{: .label .label-purple }
-
-Coming soon
-{: .label .label-yellow }
-
-Deprecated
-{: .label .label-red }
-```
+REP holders are committed to respecting the majority wishes of DXD holders, and strongly take into consideration any signal given from a DXD holder Snapshot poll.

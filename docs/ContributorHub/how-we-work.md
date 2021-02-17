@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Vacation and Holidays
+title: How we Work
 parent: Contributor Hub
-
+nav_order: 7
 
 ---
 
