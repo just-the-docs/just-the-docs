@@ -198,7 +198,7 @@ process overall to ensure we're proactively evaluating.
   - After you've successfully completed the previous step and collected
     the candidate documents (save it at our [peopleops folder](https://drive.google.com/drive/folders/1HY7LPI_h5F5WxaTW5v-1_DMUXcJIjjh1)
     or send it to your supervisor)
-  - Our Ops coordinator proceeds to [onboard](../ONBOARDING_GUIDE) the new person, with the help of their supervisor.
+  - Our Ops coordinator proceeds to [onboard](../../ONBOARDING_GUIDE) the new person, with the help of their supervisor.
 
 ### Referrals
 
