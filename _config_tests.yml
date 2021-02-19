@@ -1,0 +1,9 @@
+# For local development _including_ the test pages, use the option
+# --config _config.yml,_config_dev.yml,_config_test.yml
+
+exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
+# , "docs/tests/"
+]
+
+# Uncommenting the following line doesn't work - see https://github.com/jekyll/jekyll/issues/4791
+# include: ["docs/tests/"]
