@@ -48,6 +48,16 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
+You can override the configuration setting in the front matter of individual pages:
+
+#### Example
+{: .no_toc }
+
+When the configuration has set `color_scheme: dark`, the following front matter changes it to `light` for that page:
+```yaml
+color_scheme: light
+```
+
 ## Custom schemes
 
 ### Define a custom scheme
@@ -72,14 +82,18 @@ Please use scheme files.
 
 ### Use a custom scheme
 
-To use the custom color scheme, only set the `color_scheme` parameter in your site's `_config.yml` file:
+To use the custom color scheme for all pages, just set the `color_scheme` parameter in your site's `_config.yml` file:
 ```yaml
 color_scheme: foo
 ```
 
+If you want to use a custom scheme in the front matter of individual pages, you need to make it switchable:
+
 ### Switchable custom scheme
 
-If you want to be able to change the scheme dynamically, for example via javascript, just add a file `assets/css/just-the-docs-foo.scss` (replace `foo` by your scheme name)
+If you want to be able to change the scheme dynamically, for example via javascript,
+or in the front matter of individual pages,
+just add a file `assets/css/just-the-docs-foo.scss` (replace `foo` by your scheme name)
 with the following content:`
 
 {% raw %}
@@ -92,6 +106,11 @@ This allows you to switch the scheme via the following javascript.
 
 ```js
 jtd.setTheme('foo');
+```
+
+It also allows you to use the custom scheme in the front matter of individual pages:
+```yaml
+color_scheme: foo
 ```
 
 ## Override and completely custom styles
