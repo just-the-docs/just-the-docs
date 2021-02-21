@@ -85,8 +85,6 @@ print(markdown('''
 '''))
 
 
-files = ['index.md', 'operations/OPERATIONS.md']
-
 for f in list(Path(".").rglob("*.[mM][dD]")):
     md = open(f).read()
     web_path = str(f)[:-3]
