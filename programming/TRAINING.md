@@ -76,7 +76,7 @@ images, and docker-compose which runs multiple containers at once.
 
 To set up a new Django environment in Docker.
 
-[More on Docker](devops/DOCKER/)
+[More on Docker](../../devops/DOCKER/)
 
 ### Django Training
 

@@ -46,17 +46,17 @@ or other purposes. These are not `teams` in our company's terminology.
 
 ## Training at Countable
 
-We have official training materials here: [Training](programming/TRAINING/). Bill for your time doing any of these.
+We have official training materials here: [Training](../../programming/TRAINING/). Bill for your time doing any of these.
 
 **Books**
 
 If you buy a book for work, the company will reimburse you.
 
-Suggested reading in [References](philosophy/REFERENCES/) that has influenced our culture and methods.
+Suggested reading in [References](../../philosophy/REFERENCES/) that has influenced our culture and methods.
 
 ## Performance Evaluation Policy
 
-See our dedicated [Evaluation](programming/EVALUATION/) processes.
+See our dedicated [Evaluation](../../programming/EVALUATION/) processes.
 
 ## Team Event Basics
 

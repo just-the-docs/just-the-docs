@@ -44,8 +44,8 @@ This is how we build things.
   - We have [Coding Standards](CODING_STANDARDS.md) based on
     auto-formatters where possible, which include standards for
     structuring projects which are based upon what we've learned.
-  - We operate based on principles in 12factor.net, see [implementation here](devops/DEVOPS/)
-  - We are intentional about what dependencies we include in [our stack](devops/STACK_CHOICES/)
+  - We operate based on principles in 12factor.net, see [implementation here](../../devops/DEVOPS/)
+  - We are intentional about what dependencies we include in [our stack](../../devops/STACK_CHOICES/)
 
 ## Developer's Guild Meetings
 

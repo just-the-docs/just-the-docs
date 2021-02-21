@@ -90,7 +90,7 @@ To choose a hosting provider:
 
   - Add your SSH key to `/home/[myname]/.ssh/authorized_keys` of the user you just created (create the file if it doesn't exist)
   - Install [dotfiles](https://github.com/countable-web/dotfiles)
-  - Set up [Jenkins](devops/JENKINS/) if needed.
+  - Set up [Jenkins](../JENKINS/) if needed.
   - Create an account for any team member who needs access, and add them to the `dev` `sudo` and `docker` groups.
 
 Run your Jenkins job to test the software works.
