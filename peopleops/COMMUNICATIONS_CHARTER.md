@@ -133,7 +133,7 @@ external project stakeholders).
 ### Trello
 
   - Trello is for tracking what we need to get done (actionable tasks and
-reminders). We use variants of Scrum, details [here](operations/TRELLO/).
+reminders). We use variants of Scrum, details [here](../TRELLO/).
 
 ### Office Hours and Presence
 
@@ -146,7 +146,7 @@ reminders). We use variants of Scrum, details [here](operations/TRELLO/).
 
 ## Meetings
 
-See [Meetings](peopleops/MEETINGS/)
+See [Meetings](../../peopleops/MEETINGS/)
 
 ## Slack Hygiene
 
@@ -213,7 +213,7 @@ improve. Some references on why this is:
 
 ### When To Give Feedback
 
-  - Code reviews (following norms [here](programming/GIT/) The benefits
+  - Code reviews (following norms [here](../../programming/GIT/) The benefits
     of Senior developers reviewing Junior developers' code is obvious I
     hope, but it's just as critical to provide feedback as a Jr
     dev because:

@@ -48,6 +48,6 @@ This explains the basics of using Docker, specifically written for Countable dev
 
 If you want to know WHY we use Docker, see [Why Docker?](WHY_DOCKER.md)
 
-Basic docker for new devs. It assumes you did [these exercises on Linux](programming/TRAINING/).
+Basic docker for new devs. It assumes you did [these exercises on Linux](../../programming/TRAINING/).
 
 Check out [Docker 101](DOCKER_101.md) to learn more.

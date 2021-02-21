@@ -98,7 +98,7 @@ Join these using your Google account:
 
 ### How to Do Work
 
-Skim this so you know the language and how we work: [Project Management](operations/PROJECT_MANAGEMENT/).
+Skim this so you know the language and how we work: [Project Management](../../operations/PROJECT_MANAGEMENT/).
 
 ### Confirm
 

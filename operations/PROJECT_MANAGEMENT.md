@@ -22,7 +22,7 @@ Countable to assist with onboarding.
   - Every project has at least one [Objective and Key Result](OKRS.md) every month.
   - We use Scrum like [this](SCRUM.md).
   - Every day, try to get some
-    [feedback](peopleops/FEEDBACK_LOOPS/) on your work.
+    [feedback](../../peopleops/FEEDBACK_LOOPS/) on your work.
   - Every day, coordinate with team mates on slack and prioritize.
   - Work together to minimize the amount of time anyone is blocked or
     waiting for someone's output as their input. The list of items in
@@ -54,7 +54,7 @@ branching conventions loosely. All projects should have a master
 (production) branch which releases are made from, and a develop (stable)
 branch for developers as a foundation to build features on. Feature
 branches are created from develop and merged back in via pull request
-when ready. Here are some [examples](programming/GIT/) of how we'd
+when ready. Here are some [examples](../../programming/GIT/) of how we'd
 use GIT in different cases.
 
 ## Tools - Trello
