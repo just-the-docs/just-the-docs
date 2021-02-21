@@ -111,7 +111,7 @@ external project stakeholders).
 
 ### Guidelines for Communicating Face-to-Face
 
-(On Whereby or other video chat, and in-person meetings)
+(In video and in-person meetings)
 
   - Make eye contact 50% of the time when speaking, and 100% of the time
     when listening.
@@ -122,6 +122,7 @@ external project stakeholders).
     thought.
   - Everyone in a group should speak some of the time, with
     contributions as equal as possible.
+  - It's helpful to be aware of different communication styles when interacting with others, especially in video meetings where there may be audio latency. This [Stack Overflow Blog article](https://stackoverflow.blog/2021/02/11/why-are-video-calls-so-tiring-you-might-be-misreading-cultural-styles/) is a useful read.
 
 ### Phone
 
@@ -131,7 +132,7 @@ external project stakeholders).
 
 ### Trello
 
-\- Trello is for tracking what we need to get done (actionable tasks and
+  - Trello is for tracking what we need to get done (actionable tasks and
 reminders). We use variants of Scrum, details [here](operations/TRELLO/).
 
 ### Office Hours and Presence
@@ -293,8 +294,7 @@ about it."
 
 ### Receiving Feedback
 
-  - It's hard for others to give you feedback, and it's precious. Don't
-    bite. You don't have to agree, you just have to listen.
+  - It's hard for others to give you feedback, and it's precious. You don't have to agree, you just have to listen.
   - Don't interrupt, dismiss, or show impatience or offence. Show
     appreciation for them putting themselves out there to help you
     improve.
@@ -306,3 +306,4 @@ about it."
 
 >   - [Video on presenting](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/how-to-speak/index.htm)
 >   - [Quiz with targetted advice on general communication skills](https://ocw.mit.edu/resources/res-tll-005-how-to-speak-january-iap-2018/how-to-speak/index.htm)
+>   - [Stack Overflow Blog article on different communication styles](https://stackoverflow.blog/2021/02/11/why-are-video-calls-so-tiring-you-might-be-misreading-cultural-styles/)

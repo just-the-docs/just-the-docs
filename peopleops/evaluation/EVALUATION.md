@@ -73,6 +73,8 @@ closely corresponding to your main job responsibilities. You are free to
 be a part of of other guilds, of course, but you will only be
 self-evaluating based on tasks from your main track.
 
+Please only fill the level you expect, and then if you pass (75%), do the level above. If you fail, the level below.
+
 ## Evaluation Questions by Job Level
 
 This section is used in the Process above for self-evaluation.
@@ -103,6 +105,15 @@ See [Self Evaluation Questions here](LEVEL_3_QUESTIONS.md).
 Owns a guild, major client group or customer base (business line).
 
 See [Self Evaluation Questions here](LEVEL_4_QUESTIONS.md).
+
+## Level 5
+
+Leads the company's vision, mission, and high-level goals.
+
+See [Self Evaluation Questions here](LEVEL_5_QUESTIONS.md).
+
+-----
+References and further reading:
 
 \[1\] Jim Collins, "Good to Great".
 

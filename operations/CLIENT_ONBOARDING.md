@@ -42,6 +42,6 @@ It is important to get all stakeholders aligned on release schedules and stick t
 ## Maintenance
 
 A web application operating in production should be monitored and maintained.
-
+  * While our team provides testing, it's the client's responsibility to identify any defects or bugs by the project's work deadline. We recommend continuing the projcet work (Sprints) into production for this reason, ideally for a month or more. When the project work finishes, there is a 2 week grace period for the client to review the deliverables and make a complete list of any defects or bugs the team may have missed. After this time, any new discovered change requests must be handled by your support contract.
   * If you prefer to use Countable for this, we can perform maintenance work at our standard rates. The amount of effort to keep a web application secure and up-to-date.
   * For support response time and service level assurance, please see our various on call support plans. [Latest plans here](https://docs.google.com/document/d/1_6hdlm3_NB19NR0ev6__aBxrzN8GxYiVoqy7Mb9Mnfs/edit?usp=sharing).

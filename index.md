@@ -47,15 +47,20 @@ In the words of "The Great CEO Within", By Matt Mochary:
 
 This repo will contain:
 
-  - Guidlines based on what worked well (or poorly) for us in the past.
-  - CONVENTIONS{: .label .label-blue } in order to help us communicate and collaborate efficiently.
-  - PROCESS{: .label .label-purple } which should be carefully followed, unless you have a good reason not to.
+CONVENTIONS
+{: .label .label-blue } 
+
+PROCESSES
+{: .label .label-purple } 
+
+  - Guidelines based on what worked well (or poorly) for us in the past.
+  - Conventions in order to help us communicate and collaborate efficiently.
+  - Processes which should be carefully followed, unless you have a good reason not to.
   - The Articles of Incorporation and other general corporate documents.
     Countable is a
     [CCPC](https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/corporations/type-corporation.html#ccpc),
     but it's possible some of these documents may be useful for other
     organization structures.
-  - Document templates used by the company for accounting and legal.
   - We will *not* publish information here that would compromise the
     privacy or property of our employees, clients or customers. For
     example, *filled* timesheets, invoices and other documents with
@@ -76,8 +81,8 @@ that do this. What makes us different?
     be as visible as possible.
   - We're built to address the 3 main failure modes of software projects
     (over budget, overdue, and incorrect requirements). We do this by
-    prototying, the art of simulating an experience with the minimum
-    effort.
+    prototyping (the art of simulating an experience with the minimum
+    effort).
   - We work hard to be transparent, interactive, and have fun.
 
 [Read about the purpose of Countable](philosophy/PHILOSOPHY/).
