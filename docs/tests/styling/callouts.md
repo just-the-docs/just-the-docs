@@ -7,6 +7,8 @@ grand_parent: Tests
 
 # Callouts
 
+The configuration of the callouts shown below is in [`_config_tests.yml`](https://github.com/pdmosses/just-the-docs/blob/callouts/_config_tests.yml).
+
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -110,8 +112,10 @@ A paragraph
 ## Nested callouts
 
 {: .important }
+> <div markdown="block">
 > {: .warning }
 > A paragraph
+> </div>
 
 With opaque background (using HTML):
 
