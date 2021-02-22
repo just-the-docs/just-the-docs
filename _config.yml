@@ -20,14 +20,8 @@ url: "https://pmarsceill.github.io" # the base hostname & protocol for your site
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
-# , "docs/tests/"
+, "docs/tests/"
 ]
-
-# Regression tests
-# By default, the pages in /docs/tests are excluded when the ste is built.
-# To include them, comment-out the relevant line above.
-# Uncommenting the following line doesn't work - see https://github.com/jekyll/jekyll/issues/4791
-# include: ["docs/tests/"]
 
 # Set a path/url to a logo that will be displayed instead of the title
 #logo: "/assets/images/just-the-docs.png"
@@ -101,49 +95,59 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 color_scheme: nil
 
 # Callouts
-# The title of a callout is optional, and rendered in uppercase.
-# The variables $color-000 and $color-300 are required for each color.
+# 
+# The title of a callout is optional. It is rendered in uppercase.
+# 
+# Each kind of callout has a color, used for the callout bar, the title, and the background.
 # Predefined colors: grey-lt, grey-dk, purple, blue, green, yellow, red.
-# Common names for callouts:
-# admonition, attention, caution, danger, error, hint, important, note, tip, warning.
-callouts:
-  admonition:
-    # title:
-    color: grey-lt
-  attention:
-    title: Attention
-    color: purple
-  caution:
-    title: Caution
-    color: yellow
-  custom:
-    title: Custom
-    color: pink
-    opacity: 0.3
-  danger:
-    title: Danger
-    color: red
-  error:
-    title: Error
-    color: red
-  highlight:
-    color: yellow
-    opacity: 0.5
-  hint:
-    title: Hint
-    color: grey-dk
-  important:
-    title: Important
-    color: green
-  note:
-    title: Note
-    color: blue
-  tip:
-    title: Tip
-    color: grey-dk
-  warning:
-    title: Warning
-    color: red
+# If you use another color, you should define its levels (000, 100, 200, 300) in _sass/custom/custom.scss.
+#
+# The default is for callout backgrounds to have a lower color level than the bars and titles.
+# The value of `callouts_level` is either `quiet` or `loud`:
+# `loud` increases the saturation and lightness of the backgrounds.
+# The default for `callouts_level` is `quiet` when using the `light` or custom color schemes,
+# and `loud` when using the `dark` color scheme.
+# 
+# Examples (not provided by default):
+# 
+# callouts:
+#   admonition:
+#     # title:
+#     color: grey-lt
+#   attention:
+#     title: Attention
+#     color: purple
+#   caution:
+#     title: Caution
+#     color: yellow
+#   custom:
+#     title: Custom
+#     color: pink
+#     opacity: 0.3
+#   danger:
+#     title: Danger
+#     color: red
+#   error:
+#     title: Error
+#     color: red
+#   highlight:
+#     color: yellow
+#     opacity: 0.5
+#   hint:
+#     title: Hint
+#     color: grey-dk
+#   important:
+#     title: Important
+#     color: green
+#   note:
+#     title: Note
+#     color: blue
+#   tip:
+#     title: Tip
+#     color: grey-dk
+#   warning:
+#     title: Warning
+#     color: red
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89

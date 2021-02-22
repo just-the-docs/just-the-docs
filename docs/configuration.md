@@ -141,9 +141,7 @@ See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more
 
 ## Callouts
 
-Markdown does not include support for callouts. However, you can style text as a callout using a Markdown extension supported by kramdown: [*block IALs*](https://kramdown.gettalong.org/quickref.html#block-attributes). 
-
-To use this feature, you need to configure the (optional) `title` and the `color` for each kind of callout you want to use, e.g.:
+To use this feature, you need to configure a `color` and (optionally) `title` for each kind of callout you want to use, e.g.:
 
 ```yaml
 callouts:
@@ -162,16 +160,16 @@ A paragraph...
 [^dark]:
     If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title. 
 
-The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a different color, you need to define its `000` and `300` shades in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
+The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
 
 ```scss
-$pink-000: #ff99cc; // 80%
-$pink-100: #ff66b3; // 70%
-$pink-200: #ff3399; // 60%
-$pink-300: #ff0080; // 50%
+$pink-000: #f77ef1;
+$pink-100: #f967f1;
+$pink-200: #e94ee1;
+$pink-300: #dd2cd4;
 ```
 
-You can override the default `opacity` (0.2) of the callout background, e.g.:
+You can override the default `opacity` of the background for a particular callout, e.g.:
 
 ```yaml
 callouts:
@@ -180,9 +178,19 @@ callouts:
     opacity: 0.3
 ```
 
-This site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file includes configuration for various kinds of callout. (These callouts are *not* provided as defaults when you use Just the Docs as the theme for your own site, to avoid potential clashes with custom CSS.)
+You can change the default opacity (0.2) for all callouts, e.g.:
 
-See [Customization]({{ site.baseurl }}{% link docs/customization.md %}#callouts) for more information.
+```yaml
+callouts_opacity: 0.3
+```
+
+You can also adjust the overall level of callouts.
+The value of `callouts_level` is either `quiet` or `loud`;
+`loud` increases the saturation and lightness of the backgrounds.
+The default level is `quiet` when using the `light` or custom color schemes,
+and `loud` when using the `dark color scheme.`
+
+See [Callouts]({{ site.baseurl }}{% link docs/ui-components/callouts.md %}) for more information.
 
 ## Google Analytics
 

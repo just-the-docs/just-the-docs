@@ -1,12 +1,12 @@
 {%- comment -%}
   {% include css/callouts.scss.liquid color_scheme = string %}
   produces SCSS for all the callouts in site.callouts. For the "dark"
-  color scheme, the hues of the text and background colors are reversed.
+  color scheme, the levels of the text and background colors are reversed.
 {%- endcomment -%}
 
 {%- assign callout_background_hue = "000" -%}
 {%- assign callout_color_hue = "300" -%}
-{%- if include.color_scheme == "dark" -%}
+{%- if site.callouts_level == "loud" or include.color_scheme == "dark" and site.callouts_level != "quiet" -%}
   {%- assign callout_background_hue = "300" -%}
   {%- assign callout_color_hue = "000" -%}
 {%- endif -%}
@@ -17,7 +17,7 @@ div.opaque {
 
 {%- for callout in site.callouts %}
 
-{%- assign callout_opacity = callout[1].opacity | default: 0.2 -%}
+{%- assign callout_opacity = callout[1].opacity | default: site.callouts_opacity | default: 0.2 -%}
 
 p.{{ callout[0] }}, blockquote.{{ callout[0] }} {
     background: rgba(${{ callout[1].color }}-{{ callout_background_hue }}, {{ callout_opacity }});
