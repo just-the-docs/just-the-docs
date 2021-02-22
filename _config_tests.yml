@@ -49,3 +49,45 @@ just_the_docs:
       name: Test Collection 5
       nav_exclude: true
       search_exclude: true
+
+# callouts_opacity: 0.15
+# callouts_level: loud
+
+callouts:
+  admonition:
+    # title:
+    color: grey-lt
+  attention:
+    title: Attention
+    color: purple
+  caution:
+    title: Caution
+    color: yellow
+  custom:
+    title: Custom
+    color: pink
+    opacity: 0.3
+  danger:
+    title: Danger
+    color: red
+  error:
+    title: Error
+    color: red
+  highlight:
+    color: yellow
+    opacity: 0.5
+  hint:
+    title: Hint
+    color: grey-dk
+  important:
+    title: Important
+    color: green
+  note:
+    title: Note
+    color: blue
+  tip:
+    title: Tip
+    color: grey-dk
+  warning:
+    title: Warning
+    color: red
