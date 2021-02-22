@@ -16,14 +16,8 @@ $table-background-color: $grey-dk-250;
 $feedback-color: darken($sidebar-color, 3%);
 
 //
-// Both the following highlight themes are more legible than those used forthe light theme
+// The following highlight theme is more legible than that used for the light color scheme
 //
 
 @import "./vendor/pygments/css-github/pygments-tomorrow-night";
 $code-background-color: #1d1f21;
-
-// @import "./vendor/pygments/css-github/pygments-base16-tomorrow-dark";
-// $code-background-color: #1d1f21;
-
-// See ./vendor/pygments/ for alternative highlighting themes.
-// When changing, $code-background-color may need adjusting.
