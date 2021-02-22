@@ -225,6 +225,9 @@ just_the_docs:
       # Exclude the collection from the navigation
       # Supports true or false (default)
       # nav_exclude: true
+      # Fold the collection in the navigation
+      # Supports true or false (default)
+      # nav_fold: true
       # Exclude the collection from the search
       # Supports true or false (default)
       # search_exclude: true

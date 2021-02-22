@@ -28,18 +28,22 @@ just_the_docs:
     tests:
       name: Tests
       nav_exclude: false
+      nav_fold: true
       search_exclude: true
     test_collection_1:
       name: Test Collection 1
       nav_exclude: false
+      nav_fold: true
       search_exclude: true
     test_collection_2:
       name: Test Collection 2
       nav_exclude: false
+      nav_fold: true
       search_exclude: false
     test_collection_3:
       name: Test Collection 3
       nav_exclude: false
+      nav_fold: false
       search_exclude: true
     test_collection_4:
       name: Test Collection 4
