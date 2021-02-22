@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Alchemy
-parent: Governance
-nav_order: 4
+title: BizDev
+parent: Meetings
+nav_order: 1
 ---
 
-# Alchemy
+# Lists
 {: .no_toc }
 
 ## Table of contents
