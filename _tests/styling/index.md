@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Color
+title: Styling
 parent: Tests Home
 has_children: true
 ---
 
-# Color
+# Styling

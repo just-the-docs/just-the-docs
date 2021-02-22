@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Callouts
-parent: Tests Home
+parent: Color
+grand_parent: Tests Home
 ---
 
 # Callouts
