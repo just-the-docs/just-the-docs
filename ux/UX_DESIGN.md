@@ -92,7 +92,7 @@ Depending on the project, you may also want to develop:
     product owner and users, adjust, and repeat until everyone on your
     team has a clear shared vision.
   - You're now ready to hand off the wireframes to technical team
-    members to build a functional [prototype](../../programming/PROTOTYPING/).
+    members to build a functional [prototype](../../developers/PROTOTYPING/).
 
 ## Feedback
 

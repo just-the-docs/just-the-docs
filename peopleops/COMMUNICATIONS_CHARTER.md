@@ -213,7 +213,7 @@ improve. Some references on why this is:
 
 ### When To Give Feedback
 
-  - Code reviews (following norms [here](../../programming/GIT/) The benefits
+  - Code reviews (following norms [here](../../developers/GIT/) The benefits
     of Senior developers reviewing Junior developers' code is obvious I
     hope, but it's just as critical to provide feedback as a Jr
     dev because:

@@ -109,7 +109,7 @@ Follow and document these steps:
   - Add to the appropriate Trello list/board and use a red "bug" label
     to mark it.
   - Assign the bug to someone who can either fix or triage it.
-  - (Refer to [Bug Reporting in our Developers page](../../programming/TESTING/)
+  - (Refer to [Bug Reporting in our Developers page](../../developers/TESTING/)
 
 <!-- end list -->
 

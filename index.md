@@ -141,17 +141,17 @@ If you're a new client, start here\!
 
 The purpose of this section is to standardize key (not all) product/engineering processes in order to improve the team's performance, and take advantage of an experience curve by eliminating arbitrary process differences.
 
-  - [Code Project Standards](programming/PROJECT_STANDARDS/)
-  - [Coding Standards](programming/CODING_STANDARDS/)
+  - [Code Project Standards](developers/PROJECT_STANDARDS/)
+  - [Coding Standards](developers/CODING_STANDARDS/)
   - [Operations](devops/DEVOPS/)
-  - [Prototyping](programming/PROTOTYPING/)
-  - [Testing](programming/TESTING/)
-  - [Training](programming/TRAINING/)
-  - [Architecture](programming/ARCHITECTURE/)
-  - [Dependencies](programming/DEPENDENCIES/)
-  - [Django](programming/DJANGO/)
+  - [Prototyping](developers/PROTOTYPING/)
+  - [Testing](developers/TESTING/)
+  - [Training](developers/TRAINING/)
+  - [Architecture](developers/ARCHITECTURE/)
+  - [Dependencies](developers/DEPENDENCIES/)
+  - [Django](developers/DJANGO/)
   - [Docker](devops/DOCKER/)
-  - [Git](programming/GIT/)
+  - [Git](developers/GIT/)
   - [Jenkins](devops/JENKINS/)
   - [Stack Choices](devops/STACK_CHOICES/)
 

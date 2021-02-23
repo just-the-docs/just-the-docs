@@ -54,7 +54,7 @@ branching conventions loosely. All projects should have a master
 (production) branch which releases are made from, and a develop (stable)
 branch for developers as a foundation to build features on. Feature
 branches are created from develop and merged back in via pull request
-when ready. Here are some [examples](../../programming/GIT/) of how we'd
+when ready. Here are some [examples](../../developers/GIT/) of how we'd
 use GIT in different cases.
 
 ## Tools - Trello

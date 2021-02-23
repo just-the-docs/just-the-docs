@@ -20,7 +20,7 @@ Currently covers web app host OS hardening, container security practices, and th
 
 ## Information Security
 
-This draft document focuses on design of actual systems, not processes for performing work [see Information Security](../../programming/INFOSEC/)
+This draft document focuses on design of actual systems, not processes for performing work [see Information Security](../../developers/INFOSEC/)
 
 ### Web Application Host OS Hardening
 

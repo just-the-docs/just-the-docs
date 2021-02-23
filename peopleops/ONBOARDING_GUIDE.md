@@ -80,8 +80,8 @@ PROCESS
   - Review our further documentation on [Doing Your Job](DOING_YOUR_JOB.md)
   - Set up a [physical space and equipment](SETTING_UP.md) to work.
   - devs only - Read about our [DevOps](../../devops/DEVOPS/) and
-    [Coding Standards](../../programming/CODING_STANDARDS/)
-  - devs only - Complete the [Training](../../programming/TRAINING/) following these practices and get a team member to code review it using a feature
+    [Coding Standards](../../developers/CODING_STANDARDS/)
+  - devs only - Complete the [Training](../../developers/TRAINING/) following these practices and get a team member to code review it using a feature
     branch and pull request.
   - Order a book that will help you learn your job, and bill the company
     for it.
