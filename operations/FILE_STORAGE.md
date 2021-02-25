@@ -61,9 +61,9 @@ there is ambiguity on where to save or retrieve a file.
     use more often should take fewer clicks.
   - Make sure your work is stored in a way that is convenient for those
     who will be using it.
-  - When a file is no longer needed, outdated, or otherwise more likely
+  - When a design file is no longer needed, outdated, or otherwise more likely
     to confuse than help, move it to a folder named \_archive in the
-    same directory.
+    same directory. Assets (exports) which are outdated should simply be deleted.
   - If an additional folder is needed, create the additional folder and
     name it according to the naming structure.
   - As a rule of thumb, when looking at a folder's contents it should be
