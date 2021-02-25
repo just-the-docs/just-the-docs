@@ -55,8 +55,8 @@ permalink: /datasets/
 
 ## Simple geometries
 
-  - [tetra.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/tetra.json) -- a unit cube
-  - [cube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/cube.json) --  a simple tetrahedron
+  - [cube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/cube.json) -- a unit cube
+  - [tetra.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/tetra.json) -- a simple tetrahedron
   - [torus.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/torus.json) -- a unit cube with a genus of one
   - [msol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/msol.json) -- one MultiSolid: 2 unit cubes that are not adjacent
   - [csol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/csol.json) -- one CompositeSolid: 2 adjacent unit cubes
