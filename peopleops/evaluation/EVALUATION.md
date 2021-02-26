@@ -37,8 +37,11 @@ months and try to answer as honestly as you can.
 
 Here are the components to be tracked:
 
-1.  **OKR score**: What is your average score the last 6 months?
-2.  What do you score in the **general criteria** for your level? You
+1.  **OKR score**: What is your average score the last 6 months? *Note:*
+    The expectation is that you're reflecting on your goal-setting process,
+    not that your score is high. OKRs are aspirational, and we're aiming
+    for about 70% overall- some months you might get a zero and that's ok.
+3.  What do you score in the **general criteria** for your level? You
     can assign yourself 0, 0.5, or 1. (In order to progress to the next
     level, you must achieve at least 75% on these)
 3.  What do you score in the **guild-specific criteria** for your level?
