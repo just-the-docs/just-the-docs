@@ -70,6 +70,19 @@ The `nav_exclude` parameter does not affect the [auto-generating list of child p
 
 Pages with no `title` are automatically excluded from the navigation. 
 
+## No parent page
+
+If you don't want a page for the parent (clicking the parent page title in the navigation page only shows the children instead of navigating to its own page), simply add `no_page: true` to the header of the parent or grand-parent page.
+
+```yaml
+---
+layout: default
+title: Parent Title
+has_children: true
+no_page: true
+---
+```
+
 ---
 
 ## Pages with children
