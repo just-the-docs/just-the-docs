@@ -16,6 +16,8 @@ Defines expectations for all meetings, then goes into details for specific types
 
 ## All Meetings
 
+All the expectations below are required for meetings with 5 or more people, or that include outside participants. For smaller groups within our own team who feel they have a clear goal, a more informal approach may be taken (the agenda and minutes are optional)
+
 ### Date and Time of Meetings
 
   - Meetings should, where possible, be booked during the business hours of the attendees,
