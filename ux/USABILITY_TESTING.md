@@ -30,7 +30,7 @@ shortcomings of the prototype that we need to know about.
 
 The following are questions to ask while Usability Testing:
 
-  - Is the product under evaluation efficient enough (Are the users able
+  - Is the product you're evaluating efficient enough (Are the users able
     to carry out their task while expending reasonable resources such as
     time, cognitive or physical demand)?
   - Is it effective enough (Can the user complete the tasks they are
@@ -46,39 +46,25 @@ Follow and document these steps:
 1.  Blink Test: Look at the site (home page, or whichever page you are
     evaluating) for five seconds, then look away.
 
-<!-- end list -->
-
   - What do you remember most about the site?
   - What stood out to you?
   - What do you think this site is for? If it's featuring a product,
     what does that product do?
 
-<!-- end list -->
-
 2.  Reflect:
-
-<!-- end list -->
 
   - What was your first impression of the site?
   - What do you like about how it looks?
   - Can you see any issues with the site/home page?
   - Can you see any other areas of improvement?
 
-<!-- end list -->
-
 3.  Expectancy:
-
-<!-- end list -->
 
   - What do you expect to be able to do on the site?
   - What parts do you expect to be able to click (ie: buttons, links)?
     Do they work?
 
-<!-- end list -->
-
 4.  Context and Tasks:
-
-<!-- end list -->
 
   - Who is the main user of this site? If you aren't sure, consult with
     us. We will let you know who you should "pretend" to be as you use
@@ -90,14 +76,12 @@ Follow and document these steps:
   - Are you able to complete them? Please document any issues you have
     completing these primary tasks.
 
-<!-- end list -->
-
 5.  Bugs: Your experience may be interrupted by something on the site
     being clearly broken of dysfunctional. These are bugs and are
-    priority fixes\! Please notify us right away if you run into these,
-    byt doing the following (if you've been granted access to Trello):
-
-<!-- end list -->
+    priority fixes! 
+    
+    Please notify us right away if you run into these, by doing the following 
+    (if you've been granted access to Trello):
 
   - Briefly describe the current behaviour and how it differs from the
     desired behaviour.
@@ -111,11 +95,8 @@ Follow and document these steps:
   - Assign the bug to someone who can either fix or triage it.
   - (Refer to [Bug Reporting in our Developers page](../../developers/TESTING/)
 
-<!-- end list -->
 
 6.  Finishing up and debrief:
-
-<!-- end list -->
 
   - Overall, how would you rate your experience using the product/site?
   - How do you feel now?
@@ -125,4 +106,4 @@ Follow and document these steps:
   - How was your experience usability testing for us? Please let us know
     if we can improve the testing process itself.
 
-Thank you\!
+Thank you!
