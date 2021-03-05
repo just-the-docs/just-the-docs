@@ -153,7 +153,7 @@ The Leman Russ is a bull compared to the Chimera. It is slimmer, taller, heavier
 
 Practice driving the Leman Russ around the sim. Explain that tanks are a fundamental part of heavy support. As a veteran, they are the first ones expected to respond to a call for a tank, and are usually expected to deploy the Leman Russ. Reiterate once again the importance of deploying with the correct HP type (LBA or LBA Lite) in the midst of combat.
 
-##### Controls:
+#### Controls:
 {: .no_toc .text-delta }
 
 + /1hp Sets how much health of what type you’ll deploy with
@@ -195,7 +195,7 @@ Encourage trainee to experiment with different weapons, loadouts, and styles of 
 + Great for area denial.
 + Can move while shelling a marked location.
 
-##### Controls:
+#### Controls:
 {: .no_toc .text-delta }
 
 + WASD to move
@@ -225,7 +225,7 @@ Aside from the HE shells, you have stormshards (airburst shotgun shells), airbur
 + Requires a gunner to use the nose weapon.
 + Can roadkill infantry.
 
-##### Controls:
+#### Controls:
 {: .no_toc .text-delta }
 
 + W to move forward
@@ -241,7 +241,7 @@ Aside from the HE shells, you have stormshards (airburst shotgun shells), airbur
 + AS GUNNER:
     + Mouse1 to fire nose weapon. Note that you have a limited turret traverse much like the hull mounted weapons on our armored ground vehicles.
 
-##### Current hardpoints:
+#### Current hardpoints:
 {: .no_toc .text-delta }
 
 + Rocket Pods:
@@ -252,7 +252,7 @@ Aside from the HE shells, you have stormshards (airburst shotgun shells), airbur
 + Hunter-Killer Missiles:
   + Ground vehicle-seeking rockets that deal 40 AT on direct hit to armor, 10 on a splash.
 
-##### Current nose weapons:
+#### Current nose weapons:
 {: .no_toc .text-delta }
 
 + Heavy bolter. Same as the one on the chimera, but with a different turret traverse limit.
@@ -288,7 +288,7 @@ Have them practice flying around the sim. Note that due to their fragility, it i
 + Multilas shreds pretty decently. Don’t rely on it in lag.
 + 32 mini frag rockets
 
-##### Controls:
+#### Controls:
 {: .no_toc .text-delta }
 
 + WASD for Forward, strafe left, reverse, strafe right
@@ -310,7 +310,7 @@ Note from Sam: That's **your** problem. The plane is amazing but needs to have t
 
 Note from Sam: This is **not** to be used in an anti tank capacity until its munitions have been updated. **Do not** use the cluster munitions **at all**.
 
-##### Controls
+#### Controls
 {: .no_toc .text-delta }
 + ~ Rezzes Vehicle Sitbase
 + /1 reset -Forces a script restart.
@@ -321,12 +321,12 @@ Note from Sam: This is **not** to be used in an anti tank capacity until its mun
 + Q Drops one of your 8 Bombs
 + Z Switches between your AUTOCANNON and your LASCANNONS (this command currently actually has no gesture. It is triggered on /1 ddet)
 
-##### Movement:
+#### Movement:
 {: .no_toc .text-delta }
 + Exactly the same as the Hellblade, just different weapons
 + If they need a refreshed feel free, see the Mortis section of this document
 
-##### Primary Munitions:
+#### Primary Munitions:
 {: .no_toc .text-delta }
 + Fire with left mouse
   + 15mm Autocannon
@@ -334,13 +334,13 @@ Note from Sam: This is **not** to be used in an anti tank capacity until its mun
   + Lascannon
     + 5 AT Lascannon shot, One shot every .5 seconds
 
-##### Rocket Munitions:
+#### Rocket Munitions:
 {: .no_toc .text-delta }
 + 8 frag rockets (10m, 25 AT)
 + Fire with F
 + 8s Reload between rockets
 
-##### Bomb Munitions:
+#### Bomb Munitions:
 {: .no_toc .text-delta }
 + 8 bombs per salvo
 + Fire with Q
@@ -371,11 +371,11 @@ Note from Sam: This is **not** to be used in an anti tank capacity until its mun
     + Incendiary bomb, Avatar damage & Seated avatar AT,
     + Same as the Inferno grenade.
 
-##### Combat Simulation
+#### Combat Simulation
 {: .no_toc .text-delta }
 + Kill a 400hp tanks 5 times
 
-###### Things to keep an eye on in the simulation
+#### Things to keep an eye on in the simulation
 {: .no_toc .text-delta }
 
 + Did the trainee maintain movement?
@@ -559,6 +559,7 @@ IV. God Favor Weapons/Gear
 + Can vent heat early by pressing R
 + Fires on mouse up instead of mouse down
   + Left click can be charged in order to deal more AT and have a wider AoE. Doing so generates more heat than normal.
+
 ---
 ## S8, II. Marauder and Up Vehicles
 ---
