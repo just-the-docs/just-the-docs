@@ -155,23 +155,23 @@
 }
 
 .nav-list.nav-category-list {
-	> .nav-list-item {
-		margin: 0;
+  > .nav-list-item {
+    margin: 0;
 
-		> .nav-list {
-			padding: 0;
-			
-			> .nav-list-item {
-				> .nav-list-link {
-					color: $link-color;
-				}
+    > .nav-list {
+      padding: 0;
+      
+      > .nav-list-item {
+        > .nav-list-link {
+          color: $link-color;
+        }
 
-				> .nav-list-expander {
-					color: $link-color;
-				}
-			}
-		}
-	}
+        > .nav-list-expander {
+          color: $link-color;
+        }
+      }
+    }
+  }
 }
 
 // Aux nav
