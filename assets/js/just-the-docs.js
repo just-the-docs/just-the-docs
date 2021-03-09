@@ -24,6 +24,27 @@ jtd.onReady = function(ready) {
 // Show/hide mobile menu
 
 function initNav() {
+  const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+  if(localStorage.getItem('Theme')){
+    if(localStorage.getItem('Theme')==='light'){
+      jtd.setTheme('light');
+      toggleDarkMode.textContent = 'Dark Theme';
+    }else{
+      jtd.setTheme('dark');
+      toggleDarkMode.textContent = 'Light Theme';
+    }
+  }
+  jtd.addEvent(toggleDarkMode, 'click', function(){
+    if (jtd.getTheme() === 'dark') {
+      localStorage.setItem('Theme','light')
+      jtd.setTheme('light');
+      toggleDarkMode.textContent = 'Dark Theme';
+    } else {
+      localStorage.setItem('Theme','dark')
+      jtd.setTheme('dark');
+      toggleDarkMode.textContent = 'Light Theme';
+    }
+  });
   jtd.addEvent(document, 'click', function(e){
     var target = e.target;
     while (target && !(target.classList && target.classList.contains('nav-list-expander'))) {
