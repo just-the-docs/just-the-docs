@@ -41,7 +41,28 @@
   <component name="ChangeListManager">
     <list default="true" id="f16c9fcd-a63c-4bc2-bc3e-6081b374ec9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/_includes/nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/nav.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GetConnected/discord.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetConnected/discord.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GetConnected/etherscan.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetConnected/etherscan.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GetConnected/forum.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetConnected/forum.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GetConnected/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetConnected/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GetConnected/medium.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetConnected/medium.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GetConnected/telegram.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetConnected/telegram.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GetConnected/twitter.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetConnected/twitter.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/GetConnected/website.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/GetConnected/website.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/mesa/twitter.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/mesa/twitter.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/mesa/website.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/mesa/website.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/omen/twitter.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/omen/twitter.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/omen/website.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/omen/website.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/rails/twitter.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/rails/twitter.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/rails/website.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/rails/website.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/swapr/twitter.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/swapr/twitter.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Products/swapr/website.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/swapr/website.md" afterDir="false" />
+=======
       <change beforePath="$PROJECT_DIR$/docs/FAQ.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FAQ.md" afterDir="false" />
+>>>>>>> ab858bd598659e58022750b28932d20ee3d775b7
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,13 +198,14 @@
       <screen x="-1169" y="-1417" width="3440" height="1417" />
     </state>
     <state width="1268" height="409" key="GridCell.Tab.0.right/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610651321678" />
-    <state x="-558" y="-887" width="586" height="548" key="find.popup" timestamp="1613049546429">
-      <screen x="-1169" y="-1417" width="3440" height="1417" />
+    <state x="-602" y="-966" width="586" height="490" key="find.popup" timestamp="1614866562429">
+      <screen x="-1169" y="-1417" width="3440" height="1337" />
     </state>
+    <state x="-602" y="-966" width="586" height="490" key="find.popup/-1169.-1417.3440.1337/0.23.1440.877@-1169.-1417.3440.1337" timestamp="1614866562429" />
     <state x="-558" y="-887" width="586" height="548" key="find.popup/-1169.-1417.3440.1417/0.23.1440.797@-1169.-1417.3440.1417" timestamp="1612907917725" />
     <state x="-558" y="-887" width="586" height="548" key="find.popup/-1169.-1417.3440.1417/0.23.1440.803@-1169.-1417.3440.1417" timestamp="1613049546429" />
     <state x="-602" y="-954" width="586" height="490" key="find.popup/-1169.-1417.3440.1417/0.23.1440.805@-1169.-1417.3440.1417" timestamp="1608644846203" />
-    <state x="-602" y="-956" width="586" height="490" key="find.popup/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1610660638888" />
+    <state x="-602" y="-956" width="586" height="490" key="find.popup/-1169.-1417.3440.1417/0.23.1440.807@-1169.-1417.3440.1417" timestamp="1614865730891" />
     <state x="1076" y="-1201" width="670" height="676" key="search.everywhere.popup" timestamp="1612908891288">
       <screen x="-1169" y="-1417" width="3440" height="1417" />
     </state>

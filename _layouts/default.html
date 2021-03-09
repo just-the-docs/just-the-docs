@@ -47,6 +47,7 @@ layout: table_wrappers
         <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
       </a>
     </div>
+
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
       {% if site.just_the_docs.collections %}
         {% assign collections_size = site.just_the_docs.collections | size %}
@@ -100,6 +101,7 @@ layout: table_wrappers
       {% endif %}
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
+
       {% unless page.url == "/" %}
         {% if page.parent %}
           {%- for node in pages_list -%}
