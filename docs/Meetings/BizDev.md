@@ -5,7 +5,7 @@ parent: Meetings
 nav_order: 1
 ---
 
-# Lists
+# BizDev
 {: .no_toc }
 
 ## Table of contents
@@ -41,3 +41,6 @@ Alchemy created the Genesis Protocol, which is an implementation of holographic 
 **Proposal Reputation Reward.** ETH addresses may claim REP for making proposals that pass.
 
 **Pre-Boosted Vote Period Limit.** DXdao currently has a pre-boosting period of one (1) day, which is the length of time that a proposal must maintain a confidence score (upstake divided by downstake) higher than the boosting threshold to become eligible for boosting.
+
+ <iframe class="airtable-embed" src="https://airtable.com/embed/shro5NCrbXEY0ggQf?backgroundColor=teal&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+       
