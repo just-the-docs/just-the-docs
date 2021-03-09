@@ -40,14 +40,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f16c9fcd-a63c-4bc2-bc3e-6081b374ec9e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ContributorHub/equal-opportunity.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ContributorHub/equal-opportunity.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ContributorHub/worker-compensation.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ContributorHub/worker-compensation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Governance/Alchemy.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Governance/Alchemy.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Governance/Daotalk.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Governance/Daotalk.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Governance/Rep.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Governance/Rep.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Products/omen/market-resolution-rules.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Products/omen/market-resolution-rules.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/FAQ.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/FAQ.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
