@@ -8,6 +8,31 @@ layout: table_wrappers
 {% include head.html %}
 
 <body>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    var d = document.querySelector('.js-toggle-dark-mode');
+
+    d.addEventListener("click", function () {
+
+
+      if (jtd.getTheme() === 'dark') {
+
+        d.textContent = 'Dark Theme';
+        jtd.setTheme('light');
+      }else{
+
+
+        d.textContent = 'Light Theme';
+        jtd.setTheme('dark');
+      }
+    });
+
+  });
+
+
+</script>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="svg-link" viewBox="0 0 24 24">
       <title>Link</title>
@@ -201,5 +226,7 @@ layout: table_wrappers
       <div class="search-overlay"></div>
     {% endif %}
   </div>
+
 </body>
+
 </html>
