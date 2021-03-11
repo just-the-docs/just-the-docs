@@ -80,7 +80,7 @@ VII. Advanced Movement Obstacle
   + 24 bolts/mag,
   + 40-round belt available as unlockable wargear.
     + Switch magazine types with /1 mag
-  + Belt lowers fire rate, accuracy, and has a chance to jam.
+  + Belt lowers fire rate and accuracy. This is true of any belt mag.
 
 The bolter is a potent suppression weapon that can also act as a force multiplier when we have the high ground. The bullets will detonate as small explosions, so if you haven't worked it out, shooting down at people allows you to levy the explosive ammunition to its full potential and aim at the ground of where someone is going to better secure a kill.
 
@@ -174,6 +174,22 @@ Practice driving the Leman Russ around the sim. Explain that tanks are a fundame
   + AP delivers 50 AT to whatever it strikes, and 10 AT on a splash.
 
 Have them get used to the controls and do a skirmish. Make sure they understand that they should prioritizing facing towards anything they want to kill so all three weapons are able to fire and that their only LBA munition is the main cannon and heavy flamer (if equipped).
+
+#### Alternative Turrets:
+{: .no_toc .text-delta }
+
++ Alternative turrets are purchased with corruption.
+
++ Vanquisher Turret:
+  + Primarily an anti-tank turret with high burst damage. Has no HE shells.
+  + Vanquisher shells deal 75 AT per shot on a direct hit, 15 on a splash.
+  + Beast hunter shells deal 35 AT on a direct hit and have no splash. Instead they deploy pools of bio-mutagenic acid (as the acid grenade). A shell that directly hits a scripted object with an NPC flag will instead deal 90 AT.
+
+
++ Annihilator Turret:
+    + Solely an anti-tank turret, as the only weaponry it has are twin-linked lascannons. Bring backup to deal with infantry or die a fool's death.
+    + Deals 25 AT per shot with the safety toggled on.
+    + Press 1 to turn the safety protocols off. With safety off, every shot will deal 35 damage and build 15 heat. At 70 heat, the tank will start dealing damage to itself. After 100 heat, each shot has a chance to shut the turret down until the excess heat dissipates.
 
 ---
 ## S6, III. Ferrum/Heavy Support Veteran Weapons
@@ -583,8 +599,9 @@ IV. God Favor Weapons/Gear
 
 + Corruption: 500
 + Renegade Rank Required
++ Simply a 5m melee, but looks better than the heretic blade.
 
-### Mk III Bolt Pistol
+### Mk III Bolt Pistol, Left-handed
 {: .no_toc .text-delta }
 
 + Corruption: 750
@@ -610,13 +627,22 @@ IV. God Favor Weapons/Gear
 
 + Corruption: 1000
 + Renegade Rank Required
-
++ Less range than the pump-action shotgun.
++ Press Q to change mags to a 20-round drum
++ Type /1 auto to change to full automatic fire.
++ Shell Types:
+  + Buckshot
+  + Bolt Slug
+  + Inferno Blast
 
 ### Riot Shield
 {: .no_toc .text-delta }
 
 + Corruption: 1000
 + Veteran Rank Required
++ Hold C to deploy shield.
++ Shield repairs itself when not in use.
++ Shield repairs faster when destroyed, but is not usable until it returns to full HP.
 
 ### Mortis Pattern Autopistol, Left-handed
 {: .no_toc .text-delta }
@@ -638,7 +664,7 @@ IV. God Favor Weapons/Gear
 
  Use it to burn out with indirect fire or defend a position by making paths to it unpassable. Let it charge to 100 ammo and burst fire and wave your cursor around whilst pointing in the air. Create impassable walls of fire. If the fighting is especially chaotic, go to full fuel pressure and do the same thing, except now even you don't know where the fire will go- it may even bounce back. Be responsible and don't spray fuel everywhere unless you intend to ignite it. Remember to also have a range option in case you're caught without fuel in the tank, because it can and will run out and you'll be sitting on your hands in a panic.
 
-### Voss Pattern Autopistol
+### Voss Pattern Autopistol, Left-handed
 {: .no_toc .text-delta }
 
 + Corruption: 1000
@@ -676,8 +702,8 @@ IV. God Favor Weapons/Gear
 + Renegade Rank Required
 + Collects Skulls
 + SMASH IT ON THE GROUND GO BOOM BOOM LIGHTNING PEW PEW
-+ Useable with the Assault pack for ground pound, turning the 2-second stun of the assault pack ground pound into a 90-degree arc of death.
-+ Delivers 25 AT per swing
++ Useable with the Assault pack for ground pound, turning the 2-second stun of the assault pack ground pound into a 90-degree arc of death. Ground pound deals 15 AT in an area all the way around the user.
++ Delivers 20 AT per swing
 
 ### Voss Pattern Lascannon
 {: .no_toc .text-delta }
@@ -690,14 +716,17 @@ IV. God Favor Weapons/Gear
 + 3 charges/mag
 + 4 second reload per charge expended
 + Has a 1 second charge time before firing, hold left mouse button to charge, release to cancel
-+ AT damage increases or decreases depending on range. Minimum is 15, maximum is 25.
-+ Like the stubber, it has an accuracy penalty if you move while firing.
++ Deals 25 AT.
++ Has an accuracy penalty if you move while firing.
 
 ### Power Axe
 {: .no_toc .text-delta }
 
 + Corruption: 2000
 + Renegade Rank Required
++ Layer 1
++ Deals 15 AT per swing
++ When used with an assault pack, the ground-pound maneuver will deal 20 AT and kill enemies in a lane in front of the user, similar to a claymore mine.
 
 ### Tech Pack
 {: .no_toc .text-delta }
@@ -712,6 +741,27 @@ IV. God Favor Weapons/Gear
 
 
 + All turrets have: 100 HP, raycasted detection arcs that cover 180 degrees to the front of the turret’s current facing, and a 2 second warning klaxon before they open fire.
+
+### Rigged Synaptic Disintegrator
+{: .no_toc .text-delta }
+
++ Corruption: 1000
++ Renegade Rank Required
++ Layer 1
++ A hybrid between the longlas and shotgun.
++ Within a short range, has a 50% damage max "flaying" effect on enemies in a cone around the main beam
++ 14 shots in the mag.
++ Recharges over time, but can also be manually reloaded.
++ Deals 5 AT per shot.
+
+### Arc Rifle
+{: .no_toc .text-delta }
+
++ Corruption: 1000
++ Layer 1
++ 16 rounds in the mag
++ Press 1 to switch between full and semi-auto
++ Has haze, but the haze wounds, blinds, and slows instead of killing outright.
 
 ---
 ## S8, IV. God Favor Equipment
@@ -777,23 +827,34 @@ IV. God Favor Weapons/Gear
 ### Tzeentch God Favor Equipment
 {: .no_toc .text-delta }
 
-- will update this shit later once i figure it out i forgot we had them lmao
-
 #### Blade of the Ahn-Nunurta
 {: .no_toc .text-delta }
 
 + Tzeentch Favor: 2
++ Layer 2
++ Collects skulls
++ 5m melee
++ Hold C to charge the blade. After 3 charge levels, release C to fire an energy wave that kills avis and detonates on contact with any surface
 
 #### Tzeentch Blasted Standard
 {: .no_toc .text-delta }
 
 + Tzeentch Favor: 4
++ Layer 2
++ Collects skulls
++ 5m melee
++ Hold C to hold the banner aloft. While held, **anyone** looking at the banner will take partial damage until they look away. Or until they stroke out and die.
++ Press Q to plant the banner. Planted banners act as both an interceptor and a turret that fires doombolts at enemies within 30m. Both the interceptor and turret functions draw from the same ammo pool, which recharges over time. Planted banners also act as a less-damaging version of a banner held aloft. Walk over the banner to retrieve it. Destroyed banners respawn in your hand after 45 seconds.
++ At Tzeentch favor 6, you become immune to the damage caused by looking at an aloft or planted banner.
 
 #### Disk of Tzeentch
 {: .no_toc .text-delta }
 
 + Tzeentch Favor: 6
-
++ Basically a hover disk, can be deployed by either clicking the icon below your enlisted HUD, or through the standard deployment method.
++ Low HP, use its speed to avoid incoming fire.
++ Unarmed, though riders may use **any** infantry weapon while on the disk. Flamers are both an effective and appropriate choice. Harvest the tears of Tzeentch's foes well, my child.
++ Hold W and S at the same time for a short burst of additional speed.
 
 ### Slanesh and Undivided
 {: .no_toc .text-delta }
@@ -804,6 +865,8 @@ IV. God Favor Weapons/Gear
 # End of Line
 ---
 
-Congrats, dickhead, you're done.
+Note from Sam:
 
-No, really. Get the fuck out of my office.
+Congrats, dickhead, you're done. Thanks for sitting through and listening or reading all of this.
+
+No, really. You've done all the training. Get the fuck out of my office.
