@@ -220,10 +220,24 @@ VIII. Grav Chute Training Assessment
 
 
 + Shotgun
-    * Additional fire mode unlocked once a division is chosen
     * A decent close-mid range weapon. Fires raycasted sensor cones of buckshot, reloads each shot individually
+    + Controls:
+      + 1 and 2 to cycle shell types.
+      + F to "breech load" a single shot of the selected shell type. This will be fired the next time you shoot.
+      + Q to enter "loadout mode." In loadout mode you can either press R to load a full magazine of the selected shell type, or F to load a single shell.
+      + If you load a single shell in loadout mode, you can select other shells and load them to make a custom magazine, OR you can press Q again to cancel loadout mode.
+      + /1 load will open a dialog menu, as well as print out a list of shell types in local chat. You can use this menu to more conveniently create a custom magazine by entering a numeric code into the text box, then clicking submit. For instance, submitting 13131313 will create a magazine consisting of alternating buckshot and inferno shells.
+      + /1 save1, /1 save2, and /1 save3 will save your current custom magazine to one of three save slots.
+      + /1 load1, /1 load2, and /1 load3 will load saved custom magazines.
+    + Shell Types:
+      + Buckshot: Standard fare damage-dealing shells. Kills out to 40m and wounds out to 65m. They deliver up to 8 AT to LBA light and up to 4 AT to full LBA.
+      + Heavy Bolt Slug: Your only long-range option. Fires a physical explosive slug that kills within a 3m radius, and wounds within a 6m radius of the explosion. Deals 6 AT regardless of type.
+      + Inferno Blast: A shorter-range option for both delivering AT and securing infantry kills. Fires pellets that ignite on contact with air. Kills within 30m and wounds within 50m. Shells also have a chance to ignite avatars, dealing damage over time based on the damage they initially took. Deals 12 AT to LBA light and 6 AT to full LBA.
+      + Flak: Fires four physical flak flechettes that detonate when within 5m of an airborne target. This has a height check of 20m above the nearest surface for unseated avis and 5m above the nearest surface for vehicles. The flechette **will not detonate** on a target below these heights. Delivers 1 AT.
+      + Acid: Fires four physical blobs of mutagenic acid that will bounce once before sticking and forming a pool. Acid deals 12% damage per half-second to avis, and 5 AT per half-second to scripted objects with an NPC flag. Any amount of AT from sources **other than shotgun shells** will clear a pool of acid. For the shotgun it takes at least 4 AT to a pool to clear it. This is so you don't accidentally clear your own pools as soon as you make them.
+      + Sunspot Flash: A shell primarily designed to hinder and disable, rather than kill. When fired, anyone within 30m and looking at the shooter will be blinded. This effect extends with lesser effect out to 65m. The shell kills within 28m, but only wounds out to 30m. It deals no AT.
     * Each shot does damage based on where the target is in relation to your crosshair. It does more damage the closer a target is both in range and towards the center of your crosshair.
-    * The damage falls off to 0 at 50m regardless of how well the shot is lined up.
+    * The damage falls off to 0 at 65m with regular buckshot regardless of how well the shot is lined up.
     * Semi-auto/pump action(kinda)
     * Take note of how the shotgun can be fired in the middle of a reload, because the shells are reloaded individually.
 
@@ -233,7 +247,8 @@ VIII. Grav Chute Training Assessment
     * Raycast (/1 rc) and Non-raycast (/1 solid)
     * Damage Falls off at Range. Does less damage the further away the person is.
     * Bayonet (/1 bayo) -5m melee with 'C'. Smaller arc than swords, same as autogun. Collects Skulls
-    * Has heat haze like the longlas
+    * Has heat haze like the longlas. The total "Kill footprint," or area that becomes dangerous when you fire, is a 0.25m thick plus-shaped beam, if anyone asks.
+      * After a certain distance the haze wounds for 70% instead of killing. This is true of all las weaponry **except for** the lascannon.
 
 
 + Longlas
@@ -498,7 +513,7 @@ VIII. Grav Chute Training Assessment
     * Tzeentch Gravity
         * Pulls avatars and slow projectiles.
         * Works on sims without push AND the effects are raycasted
-            * meaning they do not pull you throw walls.
+            * meaning they do not pull you through walls.
         * Can be shot to end its effect early.
 
     * Slaanesh Torment
@@ -767,17 +782,21 @@ VIII. Grav Chute Training Assessment
 ## S2, IV. Command HUD Training
 
 + Strategy & Basics
+    * **YOU MUST WEAR THIS DURING COMBAT AND CAN UTILIZE PINGS EVEN IF YOU ARE NOT AN OFFICER OR COMMAND STAFF**
     * Do NOT move the command HUD! Moving it will break it
     * When pinging, COMMUNICATE the reason for Pinging location, or state beforehand.
     * DO NOT spam ping
     * Pay attention to relevant objectives and pings.
     * Switch it OFF by clicking anywhere on the HUD that doesn't have a button.
-        * Keep it off if it's a laggy fight.
+        * **Only do this if ordered to by the OIC.** OICs will **only** issue such an order if the fight is extremely laggy.
 
 
 + Commands
     * /1 OIC - If there is no current OIC, or you are a higher rank than said OIC, this assigns you as OIC.
     * /1 ping - Pings a coordinate (Yellow Box), Using a raycast to a location (Gesture 'Y')
+      + Pings now show their coordinates in local chat as a link to anyone wearing a command HUD.
+      + Click the link or the ping box itself if you are using a mortar (either infantry or the Wyvern) to auto-target your mortar to those coordinates.
+      + Click the "eye" icon next to the coordinates while your camera is in its default position to zoom the camera to those coordinates.
     * /1 ping:<x,y,z> - Pings a coordinate, Using an input coordinate
     * /1 ba/bb/bc/bd - (OIC ONLY COMMAND) Sets a waypoint location, using a raycast to a location
     * /1 ba:<x,y,z>/ etc.. - Sets a waypoint location, using an input coordinate
