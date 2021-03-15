@@ -3,6 +3,7 @@ layout: default
 title: Alchemy
 parent: Governance
 nav_order: 4
+has_children: true
 ---
 
 # Alchemy
