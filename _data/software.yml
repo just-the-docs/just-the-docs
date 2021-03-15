@@ -112,6 +112,16 @@
   interface: gui
   type: app
 
+- name: ParaView reader
+  webpage: https://github.com/mdjong1/CityJSON-Reader-ParaView
+  description: A plugin that allows you to read CityJSON files directly into ParaView.
+  foss: true
+  category: 
+    - viewer
+    - applications
+  interface: gui
+  type: app  
+
 - name: QGIS plugin
   webpage: https://github.com/tudelft3d/cityjson-qgis-plugin
   description: A plugin that supports the loading of CityJSON datasets in QGIS3; these can be queried like any other layers in QGIS.
