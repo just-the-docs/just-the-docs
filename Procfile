@@ -1,1 +1,1 @@
-web: jekyll serve -P $PORT --no-watch --host http://frozen-dusk-29220.herokuapp.com/
+web: jekyll serve -P $PORT --no-watch --host 0.0.0.0
