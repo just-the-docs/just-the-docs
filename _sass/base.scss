@@ -6,23 +6,45 @@
 * {
   box-sizing: border-box;
 }
+html, html [data-theme="light"] {
 
-::selection {
-  color: $white;
-  background: $link-color;
+  --body-background-color: red;
 }
+
+html [data-theme="dark"] {
+  --body-background-color: blue;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  html, html [data-theme="dark"] {
+    --body-background-color: blue;
+  }
+
+
+  html [data-theme="light"] {
+    --body-background-color: red;
+  }
+}
+
 
 html {
   @include fs-4;
   scroll-behavior: smooth;
 }
 
+
 body {
   font-family: $body-font-family;
   font-size: inherit;
   line-height: $body-line-height;
   color: $body-text-color;
-  background-color: $body-background-color;
+  background-color: var(--body-background-color);
+}
+
+::selection {
+  color: $white;
+  background: $link-color;
 }
 
 ol,

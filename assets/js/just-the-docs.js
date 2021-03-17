@@ -460,25 +460,16 @@ function searchLoaded(index, docs) {
 
 // Switch theme
 
-jtd.getTheme = function() {
-  var cssFileHref = document.querySelector('[rel="stylesheet"]').getAttribute('href');
-  return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
-}
+// jtd.getTheme = function() {
+//   var cssFileHref = document.querySelector('[rel="stylesheet"]').getAttribute('href');
+//   return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
+// }
+//
+// jtd.setTheme = function(theme) {
+//   var cssFile = document.querySelector('[rel="stylesheet"]');
+//   cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | absolute_url }}' + theme + '.css');
+// }
 
-jtd.setTheme = function(theme) {
-  var cssFile = document.querySelector('[rel="stylesheet"]');
-  cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | absolute_url }}' + theme + '.css');
-}
-  if(localStorage.getItem('Theme')){
-    console.log('before readuy?')
-    if(localStorage.getItem('Theme')==='light'){
-      jtd.setTheme('light');
-
-    }else{
-      jtd.setTheme('dark');
-
-    }
-  }
 
 // Document ready
 
