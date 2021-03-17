@@ -72,7 +72,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  bundler (~> 2.1.4)
+  bundler (~> 2.2.11)
   just-the-docs!
   rake
 
@@ -80,4 +80,4 @@ RUBY VERSION
    ruby 2.7.2p137
 
 BUNDLED WITH
-   2.1.4
+   2.2.14
