@@ -30,8 +30,8 @@ here so we don't have someone with different expectations join the team.
 2.  Once an employee has completed some OKRs and demonstrated they can
     push the team towards our mission, they will get a substantial
     raise. At this point, we trust they've been vetted to be a cultural
-    fit. The raise will be weighted towards stock so that our greated
-    contributors are co-owners of Countable Web Productions Inc.
+    fit. The raise will be weighted towards stock so that those who
+    contribute are co-owners of Countable Web Productions Inc.
 3.  This will absolutely lead to unequal pay - if you're good you'll be
     paid a lot more than someone who's still learning to be productive.
     On the positive side, this allows us to afford to hire students who
