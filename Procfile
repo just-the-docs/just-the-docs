@@ -1,1 +1,1 @@
-web: jekyll-auth serve --port $PORT --no-watch --host 0.0.0.0 
+web: jekyll-auth serve --port $PORT --host 0.0.0.0 
