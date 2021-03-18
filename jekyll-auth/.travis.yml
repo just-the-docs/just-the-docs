@@ -1,0 +1,19 @@
+language: ruby
+rvm:
+  - 2.0
+  - 2.1
+  - 2.2
+script: "./script/cibuild"
+
+before_script:
+  - git config --global user.email "you@example.com"
+  - git config --global user.name "Your Name"
+
+sudo: false
+cache: bundler
+
+env:
+  global:
+    - GITHUB_CLIENT_ID=FOO
+    - GITHUB_CLIENT_SECRET=BAR
+    - GITHUB_ORG_NAME="balter-test-org"

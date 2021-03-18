@@ -1,0 +1,27 @@
+inherit_gem:
+  jekyll: .rubocop.yml
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Style/FileName:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - vendor/**/*
+
+Jekyll/NoPutsAllowed:
+  Enabled: false

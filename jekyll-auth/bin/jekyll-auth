@@ -1,0 +1,136 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# Command-line interface for jekyll-auth
+
+require "mercenary"
+require "jekyll-auth"
+require "open3"
+
+Mercenary.program("jekyll-auth") do |p|
+  p.version JekyllAuth::VERSION
+  p.description "A simple way to use Github OAuth to serve a protected jekyll site to your GitHub organization"
+  p.syntax "jekyll-auth <subcommand> options"
+
+  p.command(:new) do |c|
+    c.syntax "new"
+    c.description "Initialize an existing Jekyll site as a Jekyll Auth site"
+    c.action do |_args, _options|
+      JekyllAuth::Commands.copy_templates
+
+      if JekyllAuth::Commands.changed?
+        puts "Looks like we've made some changes, you may want to do a git commit and git push sometime soon".yellow
+      end
+
+      puts "Setup complete. Run `jekyll-auth` to view the authenticated site."
+    end
+  end
+
+  # Run the standard jekyll build command
+  # Called by Rake task, to allow the gem
+  # to add functionality here in the future
+  p.command(:build) do |c|
+    c.syntax "build"
+    c.description "Build the Jekyll site"
+    c.action do |_args, options|
+      require "jekyll"
+      Jekyll::Commands::Build.process(options)
+    end
+  end
+
+  p.command(:team_id) do |c|
+    c.syntax "team_id --org <ORG> --team <TEAM>"
+    c.description "Retrieve a team's ID"
+    c.option "org", "--org <ORG>", 'The GitHub Organization, e.g., "jekyll"'
+    c.option "team", "--team <TEAM>", 'The team name, e.g., "maintainers"'
+
+    c.action do |_args, options|
+      unless JekyllAuth::Commands.env_var_set? "GITHUB_TOKEN"
+        puts "You'll need to go to https://github.com/settings/tokens/new and create a personal access token".red
+        puts "Once you've got the token, prefix the jekyll-auth command with GITHUB_TOKEN=[YOUR TOKEN]".red
+        puts "You can also add it to a `.env` file in this directory".red
+        exit 1
+      end
+
+      org = options["org"] || ENV["GITHUB_ORG_NAME"]
+      team = options["team"]
+
+      if org.nil? || team.nil?
+        puts "An org name and team ID are required.".red
+        puts "Usage: jekyll-auth team_id --org <ORG> --team <TEAM>"
+        exit 1
+      end
+
+      team_id = JekyllAuth::Commands.team_id(org, team)
+
+      if team_id
+        puts "The team ID for `@#{org}/#{team}` is `#{team_id}`".green
+      else
+        puts "Couldn't find the `@#{org}/#{team}` team.".red
+      end
+    end
+  end
+
+  p.command(:serve) do |c|
+    c.syntax "serve"
+    c.description "Run Jekyll Auth site locally"
+    c.option "host", "--host <HOST>", "Listen at the given hostname, e.g., 127.0.0.1"
+    c.option "port", "--port <PORT>", "Listen on the given port, e.g., 4000"
+
+    c.action do |_args, options|
+      # Ensure environmental variables are set
+      unless %w(GITHUB_CLIENT_ID GITHUB_CLIENT_SECRET).all? { |v| JekyllAuth::Commands.env_var_set?(v) }
+        puts "Whoops. Looks like you forgot to tell Jekyll Auth about your app".red
+        puts "Be sure to run export GITHUB_CLIENT_ID=[client id], export GITHUB_CLIENT_SECRET=[client secret], and export GITHUB_ORG_NAME=[org name] (or GITHUB_TEAM_ID)".red
+        puts "See the readme for more information on where to find these".red
+        exit 1
+      end
+
+      # build site
+      p.go ["build"]
+
+      host = options["host"] || "0.0.0.0"
+      port = options["port"] || "4000"
+
+      puts "Spinning up the server with authentication. Use CTRL-C to stop."
+      puts "To preview the site without authentication, use the `jekyll serve` command"
+      JekyllAuth::Commands.execute_command "bundle", "exec", "rackup", "-o", host, "-p", port
+    end
+  end
+
+  p.command(:setup) do |c|
+    c.syntax "setup"
+    c.description "Configure Heroku for use with your Jekyll Auth site"
+    c.option "client_id", "--client_id <ID>", "Your oauth app client id"
+    c.option "client_secret", "--client_secret <SECRET>", "Your oauth app client secret"
+    c.option "team_id", "--team_id <ID>", "The team to authenticate against"
+    c.option "org_name", "--org_name <NAME>", "An organization to authenticate against"
+    c.action do |_args, options|
+      if find_executable("heroku").nil?
+        puts "Looks like we're missing the Heroku client. Let's see if we can't install it..."
+        JekyllAuth::Commands.execute_command "wget", "-qO-", "https://toolbelt.heroku.com/install.sh", "|", "sh"
+      end
+
+      JekyllAuth::Commands.init_repo
+      JekyllAuth::Commands.initial_commit if JekyllAuth::Commands.changed?
+
+      if JekyllAuth::Commands.heroku_remote_set?
+        puts "Looks like you've already got heroku set up... skipping.".green
+      else
+        puts "Creating a new Heroku app."
+        JekyllAuth::Commands.execute_command "heroku", "create"
+      end
+
+      puts "Configuring the Heroku app"
+      JekyllAuth::Commands.configure_heroku(options)
+
+      puts "Pushing to Heroku"
+      JekyllAuth::Commands.execute_command "git", "push", "heroku", "master", "--force"
+
+      puts "Lets check if it worked"
+      JekyllAuth::Commands.execute_command "heroku", "open"
+    end
+  end
+
+  p.default_command(:serve)
+end

@@ -1,0 +1,13 @@
+#!/bin/sh
+# Test that all dependencies resolve, and that the thing actually fires
+
+set -e
+
+export GITHUB_CLIENT_ID=FOO
+export GITHUB_CLIENT_SECRET=BAR
+export GITHUB_ORG_NAME="balter-test-org"
+
+bundle exec rake spec
+bundle exec rubocop
+bundle exec gem build jekyll-auth.gemspec
+bundle exec jekyll-auth --version
