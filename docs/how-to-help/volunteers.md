@@ -7,7 +7,7 @@ permalink: /volunteers/
 parent: How To Help
 ---
 
-|:---:|:---:|
+|---|---|
 | Sara Anzalone | Nathan Kline |
 | Cooper Ashley | Tim Kowis |
 | Donovan Brogan | Leon Kingsley |
