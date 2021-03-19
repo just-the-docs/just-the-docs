@@ -78,7 +78,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 # appears at the bottom of every page's main content
 
 # Back to top link
-back_to_top: true
+back_to_top: false
 back_to_top_text: "Back to top"
 
 footer_content: "Copyright &copy; 2019-2021 Coastal Forest Merlin Project"
@@ -98,7 +98,7 @@ gh_edit_branch: "master" # the branch that your docs is served from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 # Color scheme currently only supports "dark", "light"/nil (default), or a custom scheme that you define
-color_scheme: nil
+color_scheme: cfmp
 
 # Google Analytics Tracking (optional)
 #ga_tracking: UA-2709176-10
