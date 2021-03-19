@@ -5,6 +5,7 @@ nav_order: 3
 description: ""
 permalink: /research/
 has_children: true
+has_toc: false
 ---
 
 The Coastal Forest Merlin (Falco columbarius suckleyi) is a falcon evolved to living in the Temperate Rain Forest of our Northwest environment. Very little is known about its life history, survival requirements and population status. Here then, one sees an opportunity to contribute to the collective understanding of an uncommon forest raptor.

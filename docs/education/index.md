@@ -5,6 +5,7 @@ nav_order: 2
 description: ""
 permalink: /education/
 has_children: true
+has_toc: false
 ---
 
 The Coastal Forest Merlin (aka “Black Merlin”), is a hawk-like raptor living in the Northwest Rain Forest. Today, the majority of people are not aware of its presence on our shared landscape. To some, ka’la ki’do was a small hawk in the ancient forest of standing elders. Still others believe Merlin was a spiritual wizard icon of long ago. For thousands of years, Merlin falcons have lived right here where you and I do. As these are our neighbors, we should get to know them better while we can. They are dazzling fliers with an intriguing lifestyle that you will find a lot of fun to learn more about!
