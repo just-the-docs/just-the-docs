@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Volunteers
-nav_order: 1
+nav_order: 3
 description: ""
 permalink: /volunteers/
 parent: How To Help
