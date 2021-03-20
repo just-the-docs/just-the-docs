@@ -15,14 +15,14 @@
     margin: 0;
 
     @include mq(md) {
-      @include fs-3;
+      @include fs-5;
     }
 
     .nav-list-link {
       display: block;
       min-height: $nav-list-item-height-sm;
-      padding-top: $sp-1;
-      padding-bottom: $sp-1;
+      padding-top: $sp-2;
+      padding-bottom: $sp-2;
       line-height: #{$nav-list-item-height-sm - 2 * $sp-1};
       @if $nav-list-expander-right {
         padding-right: $nav-list-item-height-sm;
@@ -45,7 +45,7 @@
       }
 
       &.active {
-        font-weight: 600;
+        font-weight: 700;
         text-decoration: none;
       }
 

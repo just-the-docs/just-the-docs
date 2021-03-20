@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Coastal Forest Merlin Project
+title:
 description: Education and Research
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://127.0.0.1:4000" # the base hostname & protocol for your site, e.g. http://example.com

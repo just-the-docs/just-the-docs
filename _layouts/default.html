@@ -41,12 +41,14 @@ layout: table_wrappers
   </svg>
 
   <div class="side-bar">
+    {%- if page.has_header -%}
     <div class="site-header">
       <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
       <a href="#" id="menu-button" class="site-button">
         <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
       </a>
     </div>
+    {%- endif -%}
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
       {% if site.just_the_docs.collections %}
         {% assign collections_size = site.just_the_docs.collections | size %}
@@ -69,6 +71,7 @@ layout: table_wrappers
     </footer>
   </div>
   <div class="main" id="top">
+    {%- if page.has_header -%}
     <div id="main-header" class="main-header">
       {% if site.search_enabled != false %}
         <div class="search">
@@ -98,6 +101,7 @@ layout: table_wrappers
         </nav>
       {% endif %}
     </div>
+    {%- endif -%}
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
         {% if page.parent %}
