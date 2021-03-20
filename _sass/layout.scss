@@ -206,6 +206,11 @@ body {
 
 // cfmp
 
+iframe {
+  height: 1000px;
+  width: 100%;
+}
+
 figcaption {
   color: $grey-dk-200;
   @include fs-5;

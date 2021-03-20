@@ -24,6 +24,12 @@
     white-space: nowrap;
   }
 
+  // cfmp
+  a:link { color: #0000EE; }
+  a:link:active { color: #0000EE; text-decoration: underline; }
+  a:visited { color: #0000EE; }
+  a:visited:active { color: #0000EE; text-decoration: underline; }
+
   ul,
   ol {
     padding-left: 1.5em;
