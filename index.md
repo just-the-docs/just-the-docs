@@ -2,13 +2,13 @@
 layout: default
 title: Home
 nav_order: 1
-description: ""
+description: "The Coastal Forest Merlin Project investigates the life history and environment of the Coastal Forest Merlin and educates by involving people in conservation stewardship. Since 1983 the Coastal Forest Merlin Project has worked to combine its findings into several scientific papers and a national book."
 permalink: /
 ---
 
 # Merlin: A Fascinating Falcon!!
 
-### Have YOU heard of the Merlin Falcon?
+## Have YOU heard of the Merlin Falcon?
 
 Though the Merlin Falcon is native to western Washington, British Columbia, and southeast Alaskan rain-forests, scientists are still uncertain about the population size and location of these sleek and dashing raptors. The Coastal Forest Merlin Project investigates the life history and environment of the Coastal Forest Merlin and educates by involving people in conservation stewardship.
 
@@ -25,5 +25,5 @@ Humanity<br/>
 Or celebrate<br/>
 The joy of being<br/>
 In every moment<br/>
-Wild?<br/>
+Wild?
 </div>

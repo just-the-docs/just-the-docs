@@ -13,7 +13,7 @@
 }
 
 html {
-  @include fs-5;
+  @include fs-6;
   scroll-behavior: smooth;
 }
 
@@ -100,9 +100,9 @@ img {
 }
 
 hr {
+  background-color: $grey-dk-000;
+  border: 0;
   height: 1px;
   padding: 0;
-  margin: $sp-6 0;
-  background-color: $border-color;
-  border: 0;
+  margin: $sp-4 0;
 }
