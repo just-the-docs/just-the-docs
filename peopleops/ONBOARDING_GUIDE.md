@@ -35,13 +35,16 @@ PROCESS
       - In addition to the photo that Slack prompts you for, fill in the rest of your user   profile with relevant information.
   - Use the team to answer your other questions.
 
-### Set your work availability
+### Set your work availability and subscribe to group calendars
 PROCESS
 {: .label .label-purple }
 
   - Add your work availability to your calendar [using Google's Work Hours](https://support.google.com/calendar/answer/7638168?hl=en). 
       - These should account for at least half of your planned working time, but doesn't have to be 40+ hours- leave yourself some time for deep and uninterrupted work! 
       - Think of your availability as when you are prepared to be booked into meetings with others and respond synchronously in Slack.
+  -  Subscribe to our two main group calendars, by navigating to Calendar Settings, then selecting "Add Calendar" > "Subscribe to Calendar".
+      - For our Countable Meetings calendar, enter the following into the subscription open entry field: countable.ca_a4s4q08u5svcctd08vcmo65ri8@group.calendar.google.com
+      - For our Countable Holidays/absences calendar, enter the following into the subscription open entry field: countable.ca_viropu5cs7rjoo5l5520q5j564@group.calendar.google.com
 
 ### Set your profile photo
 PROCESS
@@ -72,7 +75,7 @@ PROCESS
 
   - Provide a void cheque (in Canada this includes your bank account
     number, routing/transit number and institution number) to our
-    accounting staff via [this email address](accounting@countable.ca) - 
+    accounting staff via [this email address](mailto:accounting@countable.ca) - 
     you can also send any future inquiries about accounting matters there.
 
 ### Environment
@@ -131,7 +134,7 @@ complete tasks every day when you work. But, you are expected to:
   - Try your best to complete a tiny task, rather than partially
     finishing a big task.
   - Expectations that are required to be part of Countable (level 1) and
-    for promotion are documented here: [Evaluation](/evaluation/EVALUATION/).
+    for promotion are documented here: [Evaluation](/peopleops/evaluation/EVALUATION/).
 
 ### How To Ask For Help
 
