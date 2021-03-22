@@ -55,6 +55,8 @@ share any adjustments and their perspective on your answers. Your
 manager should indicate their perspective on your biggest opportunity
 for improvement and strength as well.
 
+The evaluation document template can be found [here](https://docs.google.com/spreadsheets/d/1WZq39ujt32hhRJetP0syLyTML57cgmhMF3ijfzIb3gU/edit#gid=0).
+
 ### General Criteria
 
 For each job level, the general criteria are roughly grouped into three
