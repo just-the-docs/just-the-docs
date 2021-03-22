@@ -80,8 +80,8 @@ external project stakeholders).
 
   - We recommend you disable email notifications on your phone. It's a
     non-urgent channel and we don't want to be distracted by it.
-  - Email good for announcements, but should link to something in Trello
-    (if it requires followup), Google Docs (if it is a resource we may
+  - Email is good for announcements but should link to something in Trello
+    (if it requires a follow-up), Google Docs (if it is a resource we may
     need later), or Slack (if it's a discussion).
   - The email channel is not urgent: 24h response time is ok. We
     recommend checking email only twice daily, only on weekdays during
@@ -269,9 +269,9 @@ fireballs." with no explanation. Instead: "When you cast green fireballs
 I'm concerned that it makes too much smoke. I've seen this reddit post
 about it."
 
-  - Make it clear the goal is to improve the work, and you're giving
-    feedback because our team has high expectations, but you think the
-    other person can meet them.
+  - Make it clear. The goal is to improve the work, and you're giving
+    feedback because our team has high expectations, and you think that
+    the other person can meet them.
   - Be very respectful, constructive, helpful, humble and never mean or
     demeaning.
   - it's ok to be blunt. If you do have evidence of what the problem is,
