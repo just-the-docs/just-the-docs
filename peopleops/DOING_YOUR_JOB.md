@@ -51,7 +51,7 @@ If it's something we're still working towards, it's in *italics*.
 
   - Share something with the team every day. The simplest way to do this
     is to report what you did on Slack in your team's channel, and
-    anything you're stuck on. Shooting a quick [screen cap video](../SCREENCASTIFY.md)
+    anything you're stuck on. Shooting a quick [screen cap video](/peopleops/SCREENCASTIFY.md)
     to share is a great idea to try out.
   - Check slack twice a day at least, and react/respond to some other
     team members' posts.
