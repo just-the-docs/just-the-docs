@@ -20,7 +20,7 @@ actually put it into action at Countable.
 For more check out the
 [Scrum Guide](https://www.scrumguides.org/scrum-guide.html).
 
-When does Countable use Scrum? Projects with at least 2 staff assigned, working at least half-time each, and longer than 1 month in length, which has external stakeholders (outside Countable), should use Scrum and have a Scrum master assigned. Other projects can still borrow from Scrum methodology (ie, meet weekly) but do not need a Scrum Master (or PM role of any kind) assignmed. On these, devs should be directly accountable to the client or product owner.
+When does Countable use Scrum? Projects with at least 2 staff assigned, working at least half-time each, and longer than 1 month in length, which has external stakeholders (outside Countable), should use Scrum and have a Scrum master assigned. Other projects can still borrow from Scrum methodology (ie, meet weekly) but do not need a Scrum Master (or PM role of any kind) assigned. On these, devs should be directly accountable to the client or product owner.
 
 ## Principles
 
