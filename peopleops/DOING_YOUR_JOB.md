@@ -71,7 +71,7 @@ If it's something we're still working towards, it's in *italics*.
   - Use private messages for things that don't need to be private. Share
     your experiences on your projects in your client channel, and if
     it's more widely applicable, (\#client-) in \#general.
-    [Transparency](philosophy/TRANSPARENCY/)
+    [Transparency](/philosophy/TRANSPARENCY/)
 
 ## Time Off
 
