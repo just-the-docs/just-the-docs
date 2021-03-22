@@ -52,7 +52,7 @@ Please give feedback\! This document is a process proposal, which is a consultat
 ## Guidelines for making Good Decisions
 
   - What is the biggest opportunity, biggest risk, and expected outcome of each path?
-  - Consider whether you decision offers and incremental, geometric or exponential benefit.
+  - Consider whether your decision offers an incremental, geometric or exponential benefit.
 
 ## Rough Consensus
 
