@@ -7,7 +7,7 @@ has_children: false
 permalink: /experimental/restful/
 ---
 
-<h1>{{ page.title }} <span class="label label-purple">beta</span></h1>
+<h1>{{ page.title }} <span class="label label-yellow">beta</span></h1>
 
 We envision CityJSON being used, exchanged, manipulated, and viewed on the web.
 Therefore we would like to offer a [RESTful access](https://en.wikipedia.org/wiki/Representational_state_transfer) to CityJSON datasets and offer the possibilities for datasets to be "streamed".

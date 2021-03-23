@@ -21,12 +21,12 @@ permalink: /datasets/
 
 <table >
   <tr>
-    <td><b>dataset</b></td>
-    <td><b>CityGML file (size)</b></td>
-    <td><b>CityJSON file (size)</b></td>
-    <td><b>textures</b></td>
-    <td><b>validity</b></td>
-    <td><b>details</b></td>
+    <th>dataset</b></th>
+    <th>CityGML file (size)</b></th>
+    <th>CityJSON file (size)</b></th>
+    <th>textures</b></th>
+    <th>validity</b></th>
+    <th>details</b></th>
   </tr>
   {% for i in ds %}
     <tr>

@@ -7,7 +7,7 @@ has_children: false
 permalink: /experimental/versioning/
 ---
 
-<h1>{{ page.title }} <span class="label label-purple">beta</span></h1>
+<h1>{{ page.title }} <span class="label label-yellow">beta</span></h1>
 
 Versioning is our approach to solving the problem of storing different iterations or variations of a city model in a structured and meaningful way. Our proposed solution describes how this can be possible through the CityJSON encoding.
 

@@ -7,9 +7,12 @@ permalink: /software/
 ---
 
 Here is a list of sofware that we believe are useful to practioners and researchers dealing with CityJSON.
+
 Free and open-source software are marked by <img height="15" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}">.
+
 Software for experimental features can be found in the respective pages of the [Experimental](https://www.cityjson.org/experimental) section of the website.
-<!-- Most of the software are recent and well-maintained; if you believe your software should be there please [let us know](/contribute/). -->
+
+Most of the software are recent and well-maintained; if you believe your software should be there please [let us know](/contribute/).
 
 ---
 
