@@ -23,23 +23,23 @@ Most of the software are recent and well-maintained; if you believe your softwar
 <table class="table table-hover d-block" id="software-table">
   <thead class="thead-light">
     <tr>
-      <th scope="col">Software</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
-      <th scope="col">View</th>
-      <th scope="col">Generate</th>
-      <th scope="col">Edit</th>
-      <th scope="col">Transform</th>
-      <th scope="col">Parse/API</th>
-      <th scope="col">Validate</th>
-      <th scope="col">Store</th>
+      <th>Software</th>
+      <th></th>
+      <th></th>
+      <th>View</th>
+      <th>Generate</th>
+      <th>Edit</th>
+      <th>Transform</th>
+      <th>Parse/API</th>
+      <th>Validate</th>
+      <th>Store</th>
     </tr>
   </thead>
   <tbody>
     {% assign software = site.data.software %}
     {% for sf in software %}
       <tr>
-        <th scope="row" style="text-align:left"><a style="font-size: 13px" href="{{ sf.webpage }}"><b>{{ sf.name }}</b> {% if sf.foss == true %}<img style="height: 13px" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}</a></th>
+        <th scope="row" style="text-align:left"><a style="font-size: 13px" href="{{ sf.webpage }}">{{ sf.name }} {% if sf.foss == true %}<img style="height: 13px" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}</a></th>
         <th scope="row">
         {% assign interface = sf.interface %}
         {% case interface %}
