@@ -20,4 +20,4 @@ DXdao is currently in the process of allocating voting power to DXD holders thro
 
 ### On-Chain
 
-DXdao lives on the Ethereum blockchain. This includes its treasury, governance system, and products. All governance decisions are made on DXdao’s voting platform, [Alchemy](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a), which is an on-chain voting system hosted on the Ethereum Mainnet.
+DXdao lives on the Ethereum blockchain. This includes its treasury, governance system, and products. All governance decisions are made on DXdao’s voting platform, [Alchemy]({% link docs/Governance/Alchemy/index.md %}), which is an on-chain voting system hosted on the Ethereum Mainnet.

@@ -86,6 +86,7 @@ Once a worker proposal has been boosted, the proposal takes approximately 7 days
 
 -   Ongoing: [Caney Fork Worker Proposal 12/1-1-31](https://daotalk.org/t/caney-fork-worker-proposal-12-1-1-31/2491)
     
-### [How-to: Submit You Worker Proposal on Alchemy Guide](https://docs.google.com/document/d/1KnNhG5rOrydifFKQZ9CY7CXCGhN7onEP3UjuFWQb0D8/edit)
+### [How-to: Submit You Worker Proposal on Alchemy Guide]({% link docs/ContributorHub/worker-proposals/Mainnet-Worker-Proposal-Guide.md %})
 
-### [How-to: Alchemy DXD Vesting Proposal Guide](https://docs.google.com/document/d/1JSc0AG2Khy-rQhhRgmeeBnyFHEILPFInXOAYLuoJ0pM/edit#heading=h.9kunuyeuzjlv)
+### [How-to: Alchemy DXD Vesting Proposal Guide]({% link docs/ContributorHub/worker-proposals/DXD-Vesting-Guide.md %})
+
