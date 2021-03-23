@@ -141,10 +141,6 @@ material mostly. This page is ok.
 
   - [Variables](https://www.learnshell.org/en/Variables)
 
-TODO
-{: .label .label-yellow }
-Fix/replace dead link above
-
 If you want to learn Linux deeply after doing the above, it's hard to
 beat compiling your own kernel and assembling your own userland.
 
