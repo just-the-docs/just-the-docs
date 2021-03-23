@@ -18,15 +18,21 @@ description: CityGML without the GML
 # url: "https://tudelft3d.github.io"
 # baseurl: "/cityjson-website"
 
+lastversion: "1.0.1"
+
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.cityjson.org" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
 
+theme: "just-the-docs"
+
 
 plugins:
   - jekyll-redirect-from
+  - jekyll-seo-tag
   
 # Enable or disable the site search
 search_enabled: true
@@ -39,9 +45,15 @@ search_enabled: true
 # Color scheme currently only supports "dark" or nil (default)
 color_scheme: nil
 
+heading_anchors: true
+
 
 kramdown:
   hard_wrap:      false
   toc_levels:     2..4
 
-lastversion: "1.0.1"
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "(edit this page on GitHub)"
+gh_edit_repository: "https://github.com/cityjson/website" # the github URL for your repo
+gh_edit_branch: "master" # the branch that your docs is served from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately

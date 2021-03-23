@@ -2,11 +2,31 @@
 // Typography
 //
 
-$body-font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif !default;
+$body-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $mono-font-family: "SFMono-Regular", Menlo, Consolas, Monospace !default;
-$root-font-size: 16px !default;         // Base font-size for rems
+$root-font-size: 16px !default; // Base font-size for rems
 $body-line-height: 1.4 !default;
-$body-heading-line-height: 1.15 !default !default;
+$content-line-height: 1.6 !default;
+$body-heading-line-height: 1.25 !default;
+
+//
+// Font size
+// `-sm` suffix is the size at the small (and above) media query
+//
+
+$font-size-1: 9px !default;
+$font-size-1-sm: 10px !default;
+$font-size-2: 11px !default; //h4 - uppercased!, h6 not uppercased, text-small
+$font-size-3: 12px !default; //h5
+$font-size-4: 14px !default;
+$font-size-5: 16px !default; //h3
+$font-size-6: 18px !default; //h2
+$font-size-7: 24px !default;
+$font-size-8: 32px !default; //h1
+$font-size-9: 36px !default;
+$font-size-10: 42px !default;
+$font-size-10-sm: 48px !default;
 
 //
 // Colors
@@ -52,26 +72,18 @@ $red-300: #dd2e2e !default;
 
 $body-background-color: $white !default;
 $sidebar-color: $grey-lt-000 !default;
+$search-background-color: $white !default;
+$table-background-color: $white !default;
 $code-background-color: $grey-lt-000 !default;
+$feedback-color: darken($sidebar-color, 3%) !default;
 
 $body-text-color: $grey-dk-100 !default;
 $body-heading-color: $grey-dk-300 !default;
+$search-result-preview-color: $grey-dk-000 !default;
 $nav-child-link-color: $grey-dk-100 !default;
 $link-color: $purple-000 !default;
 $btn-primary-color: $purple-100 !default;
 $base-button-color: #f7f7f7 !default;
-
-//
-// Media queries in pixels
-//
-
-$media-queries: (
-  xs: 320px,
-  sm: 500px,
-  md: 740px,
-  lg: 1120px,
-  xl: 1400px
-) !default;
 
 //
 // Spacing
@@ -90,7 +102,7 @@ $spacers: (
   sp-7: $spacing-unit * 2.5,
   sp-8: $spacing-unit * 3,
   sp-9: $spacing-unit * 3.5,
-  sp-10: $spacing-unit * 4
+  sp-10: $spacing-unit * 4,
 ) !default;
 
 $sp-1: map-get($spacers, sp-1) !default; // 0.25 rem == 4px
@@ -101,8 +113,8 @@ $sp-5: map-get($spacers, sp-5) !default; // 1.5  rem == 24px
 $sp-6: map-get($spacers, sp-6) !default; // 2    rem == 32px
 $sp-7: map-get($spacers, sp-7) !default; // 2.5  rem == 40px
 $sp-8: map-get($spacers, sp-8) !default; // 3    rem == 48px
-$sp-9: map-get($spacers, sp-9) !default; // 4    rem == 48px
-$sp-10: map-get($spacers, sp-10) !default; // 4.5  rem == 48px
+$sp-9: map-get($spacers, sp-9) !default; // 3.5  rem == 56px
+$sp-10: map-get($spacers, sp-10) !default; // 4  rem == 64px
 
 //
 // Borders
@@ -118,13 +130,24 @@ $border-color: $grey-lt-100 !default;
 
 $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
-$nav-width: 232px !default;
+$nav-width: 264px !default;
+$nav-width-md: 248px !default;
+$nav-list-item-height: $sp-6 !default;
+$nav-list-item-height-sm: $sp-8 !default;
+$nav-list-expander-right: true;
 $content-width: 800px !default;
+$header-height: 60px !default;
+$search-results-width: $content-width - $nav-width !default;
+$transition-duration: 400ms;
+
+//
+// Media queries in pixels
+//
 
 $media-queries: (
   xs: 320px,
   sm: 500px,
-  md: 740px,
-  lg: 800px,
-  xl: 1316px
+  md: $content-width,
+  lg: $content-width + $nav-width,
+  xl: 1400px,
 ) !default;
