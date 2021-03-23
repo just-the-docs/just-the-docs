@@ -158,8 +158,8 @@
   foss: true
   category: 
     - validator
-  interface: both
-  type: both
+  interface: cli
+  type: app
 
 
 
