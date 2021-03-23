@@ -27,9 +27,6 @@ url: "https://www.cityjson.org" # the base hostname & protocol for your site, e.
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
 
-theme: "just-the-docs"
-
-
 plugins:
   - jekyll-redirect-from
   - jekyll-seo-tag
