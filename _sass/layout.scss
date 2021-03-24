@@ -70,7 +70,32 @@
     }
   }
 }
+.static-text {
+  padding-left:1rem ;
+  margin-bottom: 12px;
+  font-weight: 500;
 
+  @include mq(md) {
+    padding: 4px 32px;
+  }
+}
+.image-wrap {
+  display: flex;
+  margin-left: 2.5rem !important;
+  img {
+    height: 16px;
+    width: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  a {
+    padding-left: 1rem !important;
+  }
+  &:hover,
+  &.active {
+    background-color: $feedback-color;
+  }
+}
 .site-nav,
 .site-header,
 .site-footer {

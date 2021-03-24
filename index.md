@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DXdao
+title: Welcome
 nav_order: 0
 permalink: /
 ---

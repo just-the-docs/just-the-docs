@@ -60,22 +60,27 @@
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
       {%- unless node.nav_exclude -%}
-      <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
-        {%- if node.has_children -%}
+      <li class="nav-list-item{% if page.url == node.url or page.parent == node.title or page.grand_parent == node.title or node.active == true %} active{% endif %}">
+        {%- if node.has_children and node.active != true  -%}
           <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
         {%- endif -%}
-        <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
+        {%- if node.active -%}
+        <div class="static-text{% if page.url == node.url %} active{% endif %}">{{ node.title }}</div>
+        {%- else -%}
+        <a href="{{  node.url | absolute_url  }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
+        {%- endif -%}
+
         {%- if node.has_children -%}
           {%- assign children_list = pages_list | where: "parent", node.title -%}
           <ul class="nav-list ">
           {%- for child in children_list -%}
             {%- unless child.nav_exclude -%}
-            <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
+            <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}{% if child.external_link %}image-wrap{% endif %}">
               {%- if child.has_children -%}
                 <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
               {%- endif -%}
               {%- if child.external_link  -%}
-              <a href="{{child.external_link}}" target="_blank" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
+              <img src="/assets/images/connectedIcons/{{child.title}}.ico" alt=""><a href="{{child.external_link}}" target="_blank" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
               {%- else -%}
               <a href="{{ child.url | absolute_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
               {%- endif -%}
