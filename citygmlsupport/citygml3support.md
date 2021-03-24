@@ -98,12 +98,3 @@ Extensions allows us to: (1) add new complex attributes to existing City Objects
   1. CityJSON supports the so-called ["TU Delft LoDs"](https://3d.bk.tudelft.nl/lod), which refine and improve the 5 LoDs in CityGML (only for buildings).
   1. CityJSON addresses the issue of very large files, and how to stream them.
 
-
-## Conversion CityJSON files <-> XML-encoded CityGML files
-
-The open-source software [citygml-tools](https://github.com/citygml4j/citygml-tools), which is based on [citygml4j](https://github.com/citygml4j/citygml4j) allows us to convert a CityJSON file to an XML-encoded CityGML file, and vice-versa.
-
-  - if the CityGML file contains features not supported (see above) then a warning is raise.
-  - identifiers for edges and points are simply discarded.
-  - if a CityJSON file has metadata, then they are ignored in the output CityGML file. Since CityGML has no structure way to store metadata, if there are in a XML-encoded file then they are ignored in the conversion.
-  - all the elements in the CityGML need to be in the same CRS for the conversion to be successful.
