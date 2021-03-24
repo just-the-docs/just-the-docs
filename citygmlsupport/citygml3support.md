@@ -7,6 +7,14 @@ permalink: /citygml3-conformance/
 
 # Conformance of CityJSON v1.1 with CityGML 3.0
 
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+- - -
+
 CityJSON v1.1 is conformant with the CityGML v3.0 data model.
 
 
@@ -16,15 +24,14 @@ As the "modularisation" allows to select which modules are supported by an encod
 ![](../citygmlsupport/figs/citygml3modules.png)
 
 
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
 
 
 
 ## Modules
+
+    ✅ : 100% supported
+    ⚠️ : partially supported (often missing features are for the sake of an efficient implementation)
+    ❌ : module not supported at all
 
 
 | CityGML module   | compliant?  | extra info |
@@ -50,13 +57,19 @@ As the "modularisation" allows to select which modules are supported by an encod
 
 ## Generics module
 
-__Extensions__ to the core data model are also supported (called ADEs in CityGML -- Application Domain Extensions).
+Virtually all the generics module is implemented, but its implementation differs greatly.
+
+We kept the `GenericCityObject` that was defined in CityGML v2.0 to represent generic objects in a city that are not explicitly covered by the CityGML data model.
+
+The attributes are in CityJSON follow the JSON ideology that one can add any attribute she wants.
+
+__Extensions__ to the core data model are supported, but these are called "Extensions" (instead of ADEs in CityGML -- Application Domain Extensions).
 CityJSON Extensions are however different from CityGML ADEs, they do not follow the same rules and thus cannot be considered as a direct JSON translation.
 They are deliberately *simpler* than ADEs, with the aim of being easy to use in practice (ADEs are generally not very user-friendly).
 However, they have the same purpose as ADEs, see the [Extensions page]({{ site.baseurl }}/extensions/) for details.
 
 
-## CityGML v3.0 features __not__ supported
+## Other CityGML v3.0 features __not__ supported
 
 
   1. __Several CRSs in the same datasets.__ In CityJSON, all geometries in a given CityJSON object must use the same CRS. In CityGML, 3 adjacent buildings can all have different CRSs, and some of the geometries to represent the walls can be in yet another CRS (although admittedly it is seldom used!).
@@ -69,7 +82,8 @@ However, they have the same purpose as ADEs, see the [Extensions page]({{ site.b
 ## Extra features (not in CityGML)
 
   1. CityJSON has built-in support for the metadata of a dataset (and is ISO 19115-compliant), while, surprisingly, CityGML does not offer that possibility.
-  2. CityJSON supports the so-called ["TU Delft LoDs"](https://3d.bk.tudelft.nl/lod), which refine and improve the 5 LoDs in CityGML (only for buildings).
+  1. CityJSON supports the so-called ["TU Delft LoDs"](https://3d.bk.tudelft.nl/lod), which refine and improve the 5 LoDs in CityGML (only for buildings).
+  1. CityJSON addresses the issue of very large files, and how to stream them.
 
 
 ## Conversion CityJSON files <-> XML-encoded CityGML files
