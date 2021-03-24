@@ -43,10 +43,10 @@ As the "modularisation" allows to select which modules are supported by an encod
 | CityFurniture    | ✅          |   |      
 | CityObjectGroup  | ⚠️          | groups of City Objects are supported, but not groups of parts of objects (eg it is not possible to group some walls of a building together)  |       
 | Construction     | ✅          |   |     
-| Dynamizer        | ❌          | not supported  | 
-| Generics         | ⚠️          | [see details](./#generics-module)  | 
+| Dynamizer        | ❌          |   | 
+| Generics         | ✅          | everything supported, but implemention differs, [see details below](./#generics-module)  | 
 | LandUse          | ✅          |   |
-| PointCloud       | ❌          | not supported  | 
+| PointCloud       | ❌          |   | 
 | Relief           | ⚠️          | only the `TINRelief/TriangulatedSurface` is  supported. `Tin` (where only elevation points and break lines are stored) is not supported since it would require viewer/applications to have a *constrained Delaunay triangulator*, which is problematic (especially for web-based tools). Also, it is not possible to store areas over a terrain that would support different resolutions (as in Figure 25 of the [CityGML standard document](https://portal.opengeospatial.org/files/?artifact_id=47842)). `RasterRelief` is also not supported.  |
 | Transportation   | ✅          |   | 
 | Tunnel           | ✅          |   |
@@ -55,21 +55,34 @@ As the "modularisation" allows to select which modules are supported by an encod
 | WaterBody        | ✅          |  | 
 
 
+
 ## Generics module
 
-Virtually all the generics module is implemented, but its implementation differs greatly.
+The generics module is for:
 
-We kept the `GenericCityObject` that was defined in CityGML v2.0 to represent generic objects in a city that are not explicitly covered by the CityGML data model.
+  1. adding generic attributes that are not prescribed by the CityGML data model
+  1. representing city objects that are not described in the CityGML data model
 
-The attributes are in CityJSON follow the JSON ideology that one can add any attribute she wants.
+CityJSON implements these but the handling differs from CityGML slightly.
 
-__Extensions__ to the core data model are supported, but these are called "Extensions" (instead of ADEs in CityGML -- Application Domain Extensions).
-CityJSON Extensions are however different from CityGML ADEs, they do not follow the same rules and thus cannot be considered as a direct JSON translation.
+### Adding new attributes
+
+One of the philosophy of JSON is "schema-less", which means that one is allowed to define new properties for the JSON objects without documenting them in a JSON schema. 
+While this is in contrast to CityGML (and GML as a whole) where the schemas are central, the schemas of CityJSON are partly following that philosophy. 
+That is, for a given City Object, the "allowed" properties/attributes are listed in the schema, but it is not an error to add new ones. 
+The "official validator" of CityJSON (cjio with the option `--validate`) does more than simply validate a dataset against the schemas, and will return a warning if an attribute is not in the schema, but it is not considered as invalid in CityJSON.
+
+### Extensions to extend the data model
+
+To add new city objects, CityGML has the ADE mecanism (Application Domain Extensions).
+CityJSON has a similar concept, called [*Extensions*]({{ site.baseurl }}/extensions/).
+Extensions do not follow the same rules and thus cannot be considered as a direct JSON translation of ADEs.
 They are deliberately *simpler* than ADEs, with the aim of being easy to use in practice (ADEs are generally not very user-friendly).
-However, they have the same purpose as ADEs, see the [Extensions page]({{ site.baseurl }}/extensions/) for details.
+
+Extensions allows us to: (1) add new complex attributes to existing City Objects; (2) add new properties at the root of a document; (3) create a new City Object, or "extending" one, and defining complex geometries
 
 
-## Other CityGML v3.0 features __not__ supported
+## Specific CityGML v3.0 features __not__ supported
 
 
   1. __Several CRSs in the same datasets.__ In CityJSON, all geometries in a given CityJSON object must use the same CRS. In CityGML, 3 adjacent buildings can all have different CRSs, and some of the geometries to represent the walls can be in yet another CRS (although admittedly it is seldom used!).
