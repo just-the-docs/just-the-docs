@@ -27,8 +27,8 @@ support you along the way? If so, we may be the place for you.
 
 We are technology consultants and product creators who love to prototype
 and experiment on the web. Our roster of happy clients includes the
-Tesla of boats, a star-trak grade medical devices startup, global
-comicbook brand, Province Government, and a next generation of cellular
+Tesla of boats, a Star Trek grade medical devices startup, a global
+comic book brand, provincial governments, and a next generation cellular
 data provider. We help socially responsible, driven, and lucky companies
 across the globe leverage the internet by creating amazing things in an
 environment of your own design. On our team, every voice matters and we
