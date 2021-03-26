@@ -293,7 +293,7 @@ You will be responsible for:
 
 You should have a portfolio that demonstrates most if not all of:
 
-1.  Wiring in Miro, Figma, or equivalent.
+1.  Wireframing in Miro, Figma, or equivalent.
 2.  UI Design in XD, Illustrator, Photoshop, Sketch or equivalent.
 3.  Experience in brand development
 4.  Experience working on an Agile team alongside developers and UX researchers.
