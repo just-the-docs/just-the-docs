@@ -255,7 +255,7 @@ You must be:
 
 1.  A good writer (in English)
 2.  Good with Excel / Google Docs
-3.  Great at paying to detail while always trying to understand and work
+3.  Great at paying attention to detail while always trying to understand and work
     towards high level goals.
 4.  A self-starter who takes initiative to solve problems and chase
     opportunities for the company.
@@ -265,3 +265,48 @@ You must be:
 Complete some research on embeddable web based widgets and components.
 Install 5 on one page using squarespace. Fill a usability report and
 spreadsheet.
+
+## UI Designer Posting
+
+`title`
+
+User Interface Designer
+
+`cta`
+
+If you're passionate about designing on-brand interfaces which enable users to intuitively make their way through complex functionality, you could be a great fit for our technical team!
+
+`responsibilities and skills`
+
+Make all our user interfaces look good and easy to use
+
+You will be responsible for:
+
+1.  Wireframing UI's based on user research such as user stories, personas, and journey maps, as well as client business goals. Defining
+2.  Creating high-fidelity branded mockups. Brand may be created by you or extended from a client's existing brand.
+3.  Defining intuitive behaviours/states/patterns for all page elements, building towards consistent and easy-to-follow design systems.
+4.  Adhering to WCAG accessibility guidelines as necessary for each project.
+5.  Writing instructional copy/microcopy into interfaces 
+6.  Working closely with UX researchers to deeply understand user needs and goals, in order to implement them in the design; also, take part in user testing to understand where the UI needs to improve, and to define that for the front-end developers.
+7.  Working closely with back-end developers to understand the data being pulled into each UI, and figure out how to best present it (i.e. via interactive and filterable tables, charts, dropdowns, etc).
+8.  Working closely with front-end developers to understand how best to support their implementation of your designs. Work with them to define front-end frameworks/libraries, and understand the affordances and limitations of these. Conduct multiple cycles of design quality assurance on the front-end prototype to ensure it matches the mockups, and that behaviours/states/responsiveness act as intended.
+
+You should have a portfolio that demonstrates most if not all of:
+
+1.  Wiring in Miro, Figma, or equivalent.
+2.  UI Design in XD, Illustrator, Photoshop, Sketch or equivalent.
+3.  Experience in brand development
+4.  Experience working on an Agile team alongside developers and UX researchers.
+
+Bonus skills:
+- UX research and design
+- Front-end development
+
+
+There will be a technical test on the above skills, so it will save
+everyone time if you're honest about your abilities.
+
+`test`
+
+Design wireframes and a UI mockup for (something TBD), implementing and extending an existing brand, defining page navigation and page elemnt behaviours/states. Bonus: Suggest a CMS to use and describe how to onboard a site amdin during handoff of the project.
+
