@@ -140,7 +140,7 @@ the proposals fits.
 
 Also, create several touchpoints (LinkedIn, email, phone) to get to know
 them before you write. If there's a way to demonstrate your system
-woring, that is ideal.
+working, that is ideal.
 
 Attend any pre-proposal call, webinar or meeting in order to meet the
 evaluators.
@@ -209,7 +209,7 @@ the original RFP.
 >     building trust, remove it. Efficient communication that knows just
 >     what to leave out is a great demonstration of confidence and
 >     expertise.
->   - Include an visual or diagrams (about one every 2 pages)
+>   - Include a visual or diagrams (about one every 2 pages)
 >   - Use the active voice, with optimistic tone.
 >   - Mention the customer, more often than you mention your own
 >     company.
