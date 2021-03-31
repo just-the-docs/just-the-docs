@@ -82,8 +82,20 @@ $body-heading-color: $grey-dk-300 !default;
 $search-result-preview-color: $grey-dk-000 !default;
 $nav-child-link-color: $grey-dk-100 !default;
 $link-color: $purple-000 !default;
+$link-color-dk-2: darken($link-color, 2%) !default;
+$link-color-dk-4: darken($link-color, 4%) !default;
+
 $btn-primary-color: $purple-100 !default;
+$btn-primary-color-lg-5: lighten($btn-primary-color, 5) !default;
+$btn-primary-color-lg-2: lighten($btn-primary-color, 2) !default;
+$btn-primary-color-dk-2: darken($btn-primary-color, 2) !default;
+$btn-primary-color-dk-4: darken($btn-primary-color, 4) !default;
+$btn-primary-color-dk-5: darken($btn-primary-color, 5) !default;
+$btn-primary-color-dk-10: darken($btn-primary-color, 10) !default;
+
 $base-button-color: #f7f7f7 !default;
+$base-button-color-dk-1: darken($base-button-color, 1%);
+$base-button-color-dk-3: darken($base-button-color, 3%);
 
 //
 // Spacing

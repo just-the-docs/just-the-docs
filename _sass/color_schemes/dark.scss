@@ -8,8 +8,20 @@ $nav-child-link-color: $grey-dk-000;
 $search-result-preview-color: $grey-dk-000;
 
 $link-color: $blue-000;
+$link-color-dk-2: darken($link-color, 2%);
+$link-color-dk-4: darken($link-color, 4%);
+
 $btn-primary-color: $blue-200;
+$btn-primary-color-lg-5: lighten($btn-primary-color, 5);
+$btn-primary-color-lg-2: lighten($btn-primary-color, 2);
+$btn-primary-color-dk-2: darken($btn-primary-color, 2);
+$btn-primary-color-dk-4: darken($btn-primary-color, 4);
+$btn-primary-color-dk-5: darken($btn-primary-color, 5);
+$btn-primary-color-dk-10: darken($btn-primary-color, 10);
+
 $base-button-color: $grey-dk-250;
+$base-button-color-dk-1: darken($base-button-color, 1%);
+$base-button-color-dk-3: darken($base-button-color, 3%);
 
 $code-background-color: $grey-dk-250;
 $search-background-color: $grey-dk-250;
