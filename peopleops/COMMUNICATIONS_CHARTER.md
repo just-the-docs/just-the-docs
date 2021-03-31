@@ -181,7 +181,7 @@ people direct message or mention you, and only during your work hours.
     don't leave it open all day, you need some quiet time to focus on
     work. Catch up on your channels, skim and respond where needed.
 
-  - if you read something on a public slack channel, understand it, and
+  - If you read something on a public slack channel, understand it, and
     find it useful, please give a thumbs up or whatever emoticon. It
     helps the people who post in public channels the most to know who's
     read things and what to post.
@@ -223,10 +223,10 @@ improve. Some references on why this is:
     understandable.
     (3) it motivates Sr devs to have someone learning from them and
     seeing their work in general.
-    4)  you can help other Jr devs learn.
+    (4)  you can help other Jr devs learn.
     (5) It forces you to understand our standards and apply them better
     if you have to measure other people's work against them
-    6)  Sr devs still make of mistakes
+    (6)  Sr devs still make of mistakes
   - Peer reviews of UX and Art assets. Ask our team members to share XD
     links, screenshots your work on slack, and give them feedback in
     comments in XD, or right on Slack.
@@ -274,7 +274,7 @@ about it."
     the other person can meet them.
   - Be very respectful, constructive, helpful, humble and never mean or
     demeaning.
-  - it's ok to be blunt. If you do have evidence of what the problem is,
+  - It's ok to be blunt. If you do have evidence of what the problem is,
     be very specific. It's not about your opinion, it's about the facts,
     you're just pointing out evidence.
   - It's also ok to be subtle. Especially if you're not sure what the
