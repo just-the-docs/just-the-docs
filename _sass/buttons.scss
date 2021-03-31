@@ -102,11 +102,20 @@
 }
 
 .btn-primary {
-  @include btn-color($white,    $btn-primary-color-lg-5,    $btn-primary-color-lg-2,    $btn-primary-color-dk-2,    $btn-primary-color-dk-4,    $btn-primary-color-dk-5,    $btn-primary-color-dk-10  );
+  @include btn-color(
+    $white,
+    $btn-primary-color-lg-5,
+    $btn-primary-color-lg-2,
+    $btn-primary-color-dk-2,
+    $btn-primary-color-dk-4,
+    $btn-primary-color-dk-5,
+    $btn-primary-color-dk-10
+  );
 }
 
 .btn-purple {
-  @include btn-color($white,
+  @include btn-color(
+    $white,
     lighten($purple-100, 5%),
     lighten($purple-100, 2%),
     darken($purple-100, 2%),
@@ -117,7 +126,8 @@
 }
 
 .btn-blue {
-  @include btn-color($white,
+  @include btn-color(
+    $white,
     lighten($blue-000, 5%),
     lighten($blue-000, 2%),
     darken($blue-000, 2%),
@@ -128,7 +138,8 @@
 }
 
 .btn-green {
-    @include btn-color($white,
+  @include btn-color(
+    $white,
     lighten($green-100, 5%),
     lighten($green-100, 2%),
     darken($green-100, 2%),

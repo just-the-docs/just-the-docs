@@ -1,4 +1,4 @@
-:root{
+:root {
   --body-background-color: #{$white};
   --sidebar-color: #{$grey-lt-000};
   --search-background-color: #{$white};
@@ -31,7 +31,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root{
+  :root {
     --body-background-color: #{$grey-dk-300};
     --sidebar-color: #{$grey-dk-300};
     --search-background-color: #{$grey-dk-250};

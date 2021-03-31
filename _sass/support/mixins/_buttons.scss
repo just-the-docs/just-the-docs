@@ -1,6 +1,14 @@
 // Colored button
 
-@mixin btn-color($fg, $bg-lg-5, $bg-lg-2, $bg-dk-2, $bg-dk-4, $bg-dk-5, $bg-dk-10) {
+@mixin btn-color(
+  $fg,
+  $bg-lg-5,
+  $bg-lg-2,
+  $bg-dk-2,
+  $bg-dk-4,
+  $bg-dk-5,
+  $bg-dk-10
+) {
   color: $fg;
   background-color: $bg-dk-2;
   background-image: linear-gradient($bg-lg-5, $bg-dk-2);
