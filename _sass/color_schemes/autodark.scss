@@ -1,0 +1,95 @@
+:root {
+  --body-background-color: #{$white};
+  --sidebar-color: #{$grey-lt-000};
+  --search-background-color: #{$white};
+  --table-background-color: #{$white};
+  --code-background-color: #{$grey-lt-000};
+  --feedback-color: #{darken($sidebar-color, 3%)};
+
+  --body-text-color: #{$grey-dk-100};
+  --body-heading-color: #{$grey-dk-300};
+  --search-result-preview-color: #{$grey-dk-000};
+  --nav-child-link-color: #{$grey-dk-100};
+
+  --link-color: #{$purple-000};
+  --link-color-dk-2: #{darken($purple-000, 2%)};
+  --link-color-dk-4: #{darken($purple-000, 4%)};
+
+  --btn-primary-color: #{$purple-100};
+  --btn-primary-color-lg-5: #{lighten($purple-100, 5)};
+  --btn-primary-color-lg-2: #{lighten($purple-100, 2)};
+  --btn-primary-color-dk-2: #{darken($purple-100, 2)};
+  --btn-primary-color-dk-4: #{darken($purple-100, 4)};
+  --btn-primary-color-dk-5: #{darken($purple-100, 5)};
+  --btn-primary-color-dk-10: #{darken($purple-100, 10)};
+
+  --base-button-color: #f7f7f7;
+  --base-button-color-dk-1: darken(#f7f7f7, 1);
+  --base-button-color-dk-3: darken(#f7f7f7, 3);
+
+  --border-color: #{$grey-lt-100};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-background-color: #{$grey-dk-300};
+    --sidebar-color: #{$grey-dk-300};
+    --search-background-color: #{$grey-dk-250};
+    --table-background-color: #{$grey-dk-250};
+    --code-background-color: #{$grey-dk-250};
+    --feedback-color: #{darken($sidebar-color, 3%)};
+
+    --body-text-color: #{$grey-lt-300};
+    --body-heading-color: #{$grey-lt-000};
+    --nav-child-link-color: #{$grey-dk-000};
+    --search-result-preview-color: #{$grey-dk-000};
+
+    --link-color: #{$blue-000};
+    --link-color-dk-2: #{darken($blue-000, 2%)};
+    --link-color-dk-4: #{darken($blue-000, 4%)};
+
+    --btn-primary-color: #{$blue-200};
+    --btn-primary-color-lg-5: #{lighten($blue-200, 5)};
+    --btn-primary-color-lg-2: #{lighten($blue-200, 2)};
+    --btn-primary-color-dk-2: #{darken($blue-200, 2)};
+    --btn-primary-color-dk-4: #{darken($blue-200, 4)};
+    --btn-primary-color-dk-5: #{darken($blue-200, 5)};
+    --btn-primary-color-dk-10: #{darken($blue-200, 10)};
+
+    --base-button-color: #{$grey-dk-250};
+    --base-button-color-dk-1: #{darken($grey-dk-250, 1)};
+    --base-button-color-dk-3: #{darken($grey-dk-250, 3)};
+
+    --border-color: #{$grey-dk-200};
+  }
+}
+
+$body-background-color: var(--body-background-color);
+$sidebar-color: var(--sidebar-color);
+$search-background-color: var(--search-background-color);
+$table-background-color: var(--table-background-color);
+$code-background-color: var(--code-background-color);
+$feedback-color: var(--feedback-color);
+
+$body-text-color: var(--body-text-color);
+$body-heading-color: var(--body-heading-color);
+$nav-child-link-color: var(--nav-child-link-color);
+$search-result-preview-color: var(--search-result-preview-color);
+
+$link-color: var(--link-color);
+$link-color-dk-2: var(--link-color-dk-2);
+$link-color-dk-4: var(--link-color-dk-4);
+
+$btn-primary-color: var(--btn-primary-color);
+$btn-primary-color-lg-5: var(--btn-primary-color-lg-5);
+$btn-primary-color-lg-2: var(--btn-primary-color-lg-2);
+$btn-primary-color-dk-2: var(--btn-primary-color-dk-2);
+$btn-primary-color-dk-4: var(--btn-primary-color-dk-4);
+$btn-primary-color-dk-5: var(--btn-primary-color-dk-5);
+$btn-primary-color-dk-10: var(--btn-primary-color-dk-10);
+
+$base-button-color: var(--base-button-color);
+$base-button-color-dk-1: var(--base-button-color-dk-1);
+$base-button-color-dk-3: var(--base-button-color-dk-3);
+
+$border-color: var(--border-color);
