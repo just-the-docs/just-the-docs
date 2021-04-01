@@ -61,13 +61,22 @@ if you're not sure what some of the slugs you see are for.
 * Descriptions of expenses can be brief, but should be detailed enough that it is understandable to your manager and accounting. If expenses were not incurred in Canadian Dollars, please include the original currency amount in the description as well. 
 * Upload an image of the receipt using the "Choose Files" button before submitting
 
-## Figuring Out What To Bill
+## Describing Your Work In Eightmeters
 
-  * Describe the work in a few words that indicate specific outcomes you worked on for most of that day, in a language clients will understand. Between 3 and 20 words is the right level of detail.
+Include time spent on both admin and technical overhead (see the bottom of this section for definitions of these domains). Missing either of these two, or both, will lead to underbilling (which we do not promote). On paper, it may seem like underbilling is good because it saves the company money, but in the long-run, it creates frustration and can cost us valuable employees. However, while you should include the *time* from these, focus your work descriptions in eightmeters on the higher-level tasks and goals the overall work was in pursuit of:
+
+  * Describe the work in a few words that indicate specific outcomes you worked on for most of that day. Between 3 and 20 words is the right level of detail.
   * Do not enter the same description for multiple days. Indicate what was different about each day you worked. This is easy if you enter your time every day.
   * The `countable` > `training` project pays for your time training and learning things you need for your job (must be official training materials, or approved)
       * Training necessary for a specific project should be coded to that project.
   * Use the `countable` > `training` project for time discussing how Countable operates with team members.
+
+#TODO - break down main countable billing tags and explain what should go under each
+
+ *Admin overhead* is any non-technical work or research done in order to complete tasks (e.g. gathering relevant information through Slack or email, clarifying requirements, confirming if the bug is reproducible). *Technical overhead* is any technical work or research done which isn't directly a part of the work you are delivering but is necessary for its completion (e.g. local environment setup, reading code documentation, Googling code/tech issues).
+ 
+ #### Further Understanding What's Billable
+ 
   * If you're not sure what's billable, generally anything we ask you to do is billable, and anything we "invite" you to do is optional and not billable. 
       * Training is only billable if it's requested by the company that you complete specific materials, or you're learning something immediately required to solve a problem in your work. 
       * Attending events, conferences, etc, is not paid unless we require you to go for marketing or another purpose (but we'll often pay for your tickets in any case). 
