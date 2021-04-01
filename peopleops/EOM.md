@@ -21,7 +21,7 @@ Once you’ve finished onboarding, you are now familiar with how we use Trello a
 3. Change or specify necessary information such as month, assignee, and the list you should put the card under (*Sprint* List)
 4. We do self-evaluation and setting up learning goals quarterly, so take this section off of the list unless it's January or July.
 
-# Bookkeeping and Admin
+## Bookkeeping and Admin
 
 This section of the checklist covers timekeeping, updating your working hours when applicable, and a quick Trello audit.
 
@@ -29,7 +29,7 @@ This section of the checklist covers timekeeping, updating your working hours wh
 * Update your “Working Hours” in [Google Calendar](https://support.google.com/calendar/answer/7638168?hl=en) with your @countable.ca account, making sure this still reflects your current availability.
 * Trello Audit - update Trello cards assigned to you and move them under the appropriate list. If you are stuck, leave notes or comments for your teammates about your status and the area that you need support with.
 
-# PeopleOps and Company Vision
+## PeopleOps and Company Vision
 
 Under this checklist, we allot 1-on-1’s with your manager, rating of OKRs of the month, and start drafting for next month’s OKRs.
 
@@ -37,7 +37,7 @@ Under this checklist, we allot 1-on-1’s with your manager, rating of OKRs of t
 * Review and rate your OKRs from last month on Eightmeters
 * Think about, and draft, at least two OKRs on Eightmeters for the upcoming month
 
-# Twice Annually
+## Twice Annually
 
 Doing self-evaluation and setting up personal learning goals twice a year gives us insight into whether the team is rowing in the same direction to move the company forward.
 
