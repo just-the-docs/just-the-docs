@@ -87,6 +87,7 @@ Include time spent on both admin and technical overhead (see the bottom of this 
   * If a client urgently asks for help when you are not already working, record a minimum 30 minutes of work to compensate for the disruption of your time off.
   * Occasional breaks up to 15 minutes.
   * Professional development directly related to what you're working on, creating systems to improve our performance, documenting items in the Ops Manual.
+  * Professional development time, requested by the company.
  
  #### What Time is Not Billable
  
@@ -96,3 +97,4 @@ Include time spent on both admin and technical overhead (see the bottom of this 
   * Commuting is not paid unless it's to a client's office. If we go to a workspace with no clients, transit time is not billable. When visiting clients, travel time is billable.
   * Breaks from work over 15 minutes.
   * Checking your personal messaging channels such as your personal email.
+  * Formal professional development tuition or fees, requested by you, will (upon approval) be paid by the company, but not for your time.
