@@ -53,6 +53,7 @@ if you're not sure what some of the slugs you see are for.
         * *Good example:* Completed Trello Task "Title copied here". Changed deployment parameters so that we could meet our goal of reducing downtime during deploys. Prepared report on test coverage, based on request from client.
 *  **Trello or BitBucket ref:**
     * Also include at least one of: references to issues in Trello, Commit IDs. Link to trello cards can be found in "Share and more..." after opening a card.
+    * If you are working on a given client all day, or two clients, you can bill 5 to 15 minutes for time administering time entry or OKRs. Do not record that you are doing in this in the notes, or anything else that we know you're doing every day.
 
     
 ### How to Enter Your Expenses 
