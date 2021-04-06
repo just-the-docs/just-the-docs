@@ -60,6 +60,10 @@ search:
   # Enable or disable the search button that appears in the bottom right corner of every page
   # Supports true or false (default)
   button: false
+  # Set the search bar's placeholder text and aria-label
+  # Supports any string; by default, uses 'Search {{site.title}}';
+  # uncomment the line below to use a custom string
+  # placeholder_text: "What does 42 mean?"
 ```
 
 ## Aux links
@@ -195,4 +199,3 @@ just_the_docs:
     tutorials:
       name: Tutorials
 ```
-
