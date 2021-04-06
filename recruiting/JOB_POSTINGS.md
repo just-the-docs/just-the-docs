@@ -33,7 +33,7 @@ data provider. We help socially responsible, driven, and lucky companies
 across the globe leverage the internet by creating amazing things in an
 environment of your own design. On our team, every voice matters and we
 want to find ways to always improve, push each other to our potential to
-better serve the end-users of ours software. We're also ridiculously
+better serve the end-users of our software. We're also ridiculously
 transparent from the ground up: we've open-sourced our company's
 operations manual here if you want to learn more about our current
 thinking.
@@ -52,7 +52,7 @@ You should:
   - Experiment and investigate a problem deeper yourself, but know when
     to ask your team for help.
   - Voice disagreements rather than keeping them to yourself. We need
-    all opinions need to be on the table in order to make the best
+    all opinions to be on the table in order to make the best
     decision.
   - *Clouds and Dirt* - Consider both the big picture and minute
     details, from a client's overall business down to crossing T's and
@@ -146,7 +146,7 @@ Bonus skills:
   - Docker
   - Postgres (SQL)
   - Node.js (npm, mocha, Express)
-  - javacript
+  - javascript
 
 There will be a technical test on the above skills, so it will save
 everyone time if you're honest about your abilities.
@@ -230,7 +230,7 @@ campaign management and funnel optimization\!
 >   - Funnel optimization.
 >   - Other cross-functional work production development work. We're a
 >     small team so 50% of your work will likely be outside the core
->     marketing skillset\!
+>     marketing skill set\!
 
 ## Admin Posting
 
@@ -308,5 +308,5 @@ everyone time if you're honest about your abilities.
 
 `test`
 
-Design wireframes and a UI mockup for (something TBD), implementing and extending an existing brand, defining page navigation and page elemnt behaviours/states. Bonus: Suggest a CMS to use and describe how to onboard a site amdin during handoff of the project.
+Design wireframes and a UI mockup for (something TBD), implementing and extending an existing brand, defining page navigation and page element behaviours/states. Bonus: Suggest a CMS to use and describe how to onboard a site admin during handoff of the project.
 
