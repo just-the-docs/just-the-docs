@@ -40,9 +40,9 @@ if you're not sure what some of the slugs you see are for.
 #### Entry Fields for Recording Time
 
 *  **Date:**
-    * Select the appropriate date in the first field.
+    * Select the date on which the work took place.
 *  **Hours Worked:**
-    * Enter the time you spent on the project in this time period. Enter time in decimal format (1 hour and 30 mins should be entered as 1.5 hours). Unless you're reporting a specific, small deliverable, feel free to round to ~0.5 hour when estimating your time.
+    * Enter the time you spent on the project in this time period. Enter time in decimal format (1 hour and 30 mins should be entered as 1.5 hours). Please do your best to accurately record or estimate time worked. It need not be perfect, but if you are concerenced about being accurate, please use Toggl or another tool to assist you.
 *  **Work Description:**
     * Describe the work in a few words that indicate specific progress and outcomes you worked on for most of that day, in a language clients will understand. Between 3 and 20 words is the right level of detail. If you're entering the same phrase every day, you're not being specific enough.
     * Never combine line items between projects. If you worked on 2 different codes (project slugs) during the day, they must be separate line items.
@@ -75,11 +75,17 @@ Include time spent on both admin and technical overhead (see the bottom of this 
 
  *Admin overhead* is any non-technical work or research done in order to complete tasks (e.g. gathering relevant information through Slack or email, clarifying requirements, confirming if the bug is reproducible). *Technical overhead* is any technical work or research done which isn't directly a part of the work you are delivering but is necessary for its completion (e.g. local environment setup, reading code documentation, Googling code/tech issues).
  
- #### Further Understanding What's Billable
+ #### What Time is Billable
  
-  * If you're not sure what's billable, generally anything we ask you to do is billable, and anything we "invite" you to do is optional and not billable. 
-      * Training is only billable if it's requested by the company that you complete specific materials, or you're learning something immediately required to solve a problem in your work. 
-      * Attending events, conferences, etc, is not paid unless we require you to go for marketing or another purpose (but we'll often pay for your tickets in any case). 
-      * Commuting is not paid unless it's to a client's office. 
-      * Social events aren't paid.
-  * Billing for travel time: If we meet each other only, or go to a workspace with no clients, transit time is not billable. When visiting clients, it is billable.
+  * Generally, anything the company asks and expects you to do.
+  * Any time spent rendering services (offered by the company) to clients or customers.
+  * Any time administering your work, such as entering timesheets, doing OKRs, updating your work hours in your calendar, and time spent conversing with your team about work (ie, any time on Slack) is all billable.
+  * Training is only billable if it's requested by the company that you complete specific materials, or you're learning something immediately required to solve a problem in your work.
+  * Lunch break is billable up to half an hour, **if attended with a client or colleague**.
+ 
+ #### What Time is Not Billable
+ 
+  * Anything provide to attend at your option is not. ie) Social events, ,professional development options, team trips.
+  * Attending events, conferences, etc, is not paid unless we require you to go for marketing or another purpose (but we'll often pay for your tickets in any case).
+  * Meal breaks, if taken alone.
+  * Commuting is not paid unless it's to a client's office. If we go to a workspace with no clients, transit time is not billable. When visiting clients, travel time is billable.
