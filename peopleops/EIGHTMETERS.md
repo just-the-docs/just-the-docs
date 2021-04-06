@@ -85,6 +85,7 @@ Include time spent on both admin and technical overhead (see the bottom of this 
   * Lunch break is billable up to half an hour, **if attended with a client or colleague**.
   * You are expected to continuously develop your judgement to approach problem solving. Researching, testing, prototyping, discussing and any other activity you belivieve important for having great results in your work, are all billable activities. This includes failed attempts, because those result in necessary learning.
   * If a client urgently asks for help when you are not already working, record a minimum 30 minutes of work to compensate for the disruption of your time off.
+  * Occasional breaks up to 15 minutes.
  
  #### What Time is Not Billable
  
@@ -92,4 +93,5 @@ Include time spent on both admin and technical overhead (see the bottom of this 
   * Attending events, conferences, etc, is not paid unless we require you to go for marketing or another purpose (but we'll often pay for your tickets in any case).
   * Meal breaks, if taken alone.
   * Commuting is not paid unless it's to a client's office. If we go to a workspace with no clients, transit time is not billable. When visiting clients, travel time is billable.
+  * Breaks from work over 15 minutes.
   * Checking your personal messaging channels such as your personal email.
