@@ -82,6 +82,8 @@ Include time spent on both admin and technical overhead (see the bottom of this 
   * Any time administering your work, such as entering timesheets, doing OKRs, updating your work hours in your calendar, and time spent conversing with your team about work (ie, any time on Slack, your work email, Trello) is all billable.
   * Training is only billable if it's requested by the company that you complete specific materials, or you're learning something immediately required to solve a problem in your work.
   * Lunch break is billable up to half an hour, **if attended with a client or colleague**.
+  * You are expected to continuously develop your judgement to approach problem solving. Researching, testing, prototyping, discussing and any other activity you belivieve important for having great results in your work, are all billable activities. This includes failed attempts, because those result in necessary learning.
+  * If a client urgently asks for help when you are not already working, record a minimum 30 minutes of work to compensate for the disruption of your time off.
  
  #### What Time is Not Billable
  
