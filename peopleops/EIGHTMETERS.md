@@ -77,9 +77,9 @@ Include time spent on both admin and technical overhead (see the bottom of this 
  
  #### What Time is Billable
  
-  * Generally, anything the company asks and expects you to do.
+  * Generally, anything the company asks and/or expects you to do.
   * Any time spent rendering services (offered by the company) to clients or customers.
-  * Any time administering your work, such as entering timesheets, doing OKRs, updating your work hours in your calendar, and time spent conversing with your team about work (ie, any time on Slack) is all billable.
+  * Any time administering your work, such as entering timesheets, doing OKRs, updating your work hours in your calendar, and time spent conversing with your team about work (ie, any time on Slack, your work email, Trello) is all billable.
   * Training is only billable if it's requested by the company that you complete specific materials, or you're learning something immediately required to solve a problem in your work.
   * Lunch break is billable up to half an hour, **if attended with a client or colleague**.
  
@@ -89,3 +89,4 @@ Include time spent on both admin and technical overhead (see the bottom of this 
   * Attending events, conferences, etc, is not paid unless we require you to go for marketing or another purpose (but we'll often pay for your tickets in any case).
   * Meal breaks, if taken alone.
   * Commuting is not paid unless it's to a client's office. If we go to a workspace with no clients, transit time is not billable. When visiting clients, travel time is billable.
+  * Checking your personal messaging channels such as your personal email.
