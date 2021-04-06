@@ -8,7 +8,7 @@ title: Accounting
 
 **Purpose**
 
-To cover the major points of accounting practices at Countable.
+Keep accounting practices efficient, compliant with applicable regulation, and effective at providing the reporting to manage the business effectively.
 
 **Scope**
 
