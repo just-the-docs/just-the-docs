@@ -86,6 +86,7 @@ Include time spent on both admin and technical overhead (see the bottom of this 
   * You are expected to continuously develop your judgement to approach problem solving. Researching, testing, prototyping, discussing and any other activity you belivieve important for having great results in your work, are all billable activities. This includes failed attempts, because those result in necessary learning.
   * If a client urgently asks for help when you are not already working, record a minimum 30 minutes of work to compensate for the disruption of your time off.
   * Occasional breaks up to 15 minutes.
+  * Professional development directly related to what you're working on, creating systems to improve our performance, documenting items in the Ops Manual.
  
  #### What Time is Not Billable
  
