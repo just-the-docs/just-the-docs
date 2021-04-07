@@ -2,7 +2,7 @@
 layout: default
 title: Setting Up Google Form
 nav_order: 2
-has_children: false
+---
 
 
 ---
