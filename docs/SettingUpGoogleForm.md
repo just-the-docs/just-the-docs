@@ -20,7 +20,7 @@ Introduction of some sort.
 1.) Go to https://docs.google.com/forms/
    ![Google Login](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true)
 
-   ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="25%" width="25%" style="float: left" }
+   ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="25%" width="25%"}
    **Note:** You will see the page below **ONLY** if you are not already signed onto a google account. **SKIP** to Step 3 if you are already signed in
    <br />
    <br />
