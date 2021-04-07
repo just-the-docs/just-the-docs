@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Making and Using Sections
-nav_order: 3
+nav_order: 4
 ---
 
 
@@ -23,4 +23,4 @@ questions from your users using sections.
 1)  On the right hand side of the form, you will see a menu. Click on
 the bottom icon to add a section.
 <br></br>
-![Add Form Section](./images/formsSection/addSection.png)
+![Add Form Section](./images/formsSections/addSection.png)
