@@ -2,7 +2,7 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "Corticon empowers IT and business users to manage business rules outside the application—without coding.."
 permalink: /
 ---
 
@@ -12,8 +12,6 @@ permalink: /
 Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
 {: .fs-6 .fw-300 }
 
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
-
 ---
 # Corticon At a Glance
 
@@ -21,6 +19,10 @@ Corticon is a tool built for abstracting complex business logic from application
 
 1. Deployed as Decision Services onto Corticon Server
 2. Compiled into a JavaScript bundle, pre-configured for a variety of JavaScript platforms
+
+
+[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/notedhelms/Corticon-Enablement-Repository){: .btn .fs-5 .mb-4 .mb-md-0 }
+
 
 # Why Corticon?
 
