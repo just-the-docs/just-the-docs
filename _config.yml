@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Corticon Enablement Repository
-description: A Jekyll theme for documentation
+description: Everything you need to know to build Decision Services on any technology stack. 
 baseurl: "/Corticon-Enablement-Repository" # the subpath of your site, e.g. /blog
 url: "https://notedhelms.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
