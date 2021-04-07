@@ -54,7 +54,6 @@ We will be using the following mouse terms:
 **Note:** This icon provides additional information about the next step
 <br />
 <br />
----
 
 ### Code of Conduct
 
