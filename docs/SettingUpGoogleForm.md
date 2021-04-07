@@ -13,7 +13,7 @@ has_children: false
 
 ---
 
-Introduction of some sort.
+The first step is to set a Google Form up. To set a Google Form up follow these steps
 
 ---
 
