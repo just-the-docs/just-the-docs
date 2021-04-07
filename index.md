@@ -45,7 +45,7 @@ We will be using the following mouse terms:
 
 | Convention                           | Example        |
 | :----                                | :----          |
-| Emphasis                             | __only__,__skip__   |
+| Emphasis                             | _only_,_skip_   |
 | Referencing page                     | `Pages`, `Blank`, `form description` |
 
 ## Notes
