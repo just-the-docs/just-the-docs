@@ -9,8 +9,7 @@ permalink: /
 # Welcome to the Corticon Enablement Repository
 {: .fs-9 }
 
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
-{: .fs-6 .fw-300 }
+Corticon empowers IT and business users to manage business rules outside the application—without coding {: .fs-6 .fw-300 }
 
 ---
 # Corticon At a Glance
