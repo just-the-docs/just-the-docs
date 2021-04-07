@@ -7,9 +7,8 @@ permalink: /
 ---
 
 # Welcome to the Corticon Enablement Repository
-{: .fs-9 }
 
-Corticon empowers IT and business users to manage business rules outside the application—without coding {: .fs-6 .fw-300 }
+Corticon empowers IT and business users to manage business rules outside the application—without coding
 
 ---
 # Corticon At a Glance
