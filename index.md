@@ -19,8 +19,7 @@ Corticon is a tool built for abstracting complex business logic from application
 1. Deployed as Decision Services onto Corticon Server
 2. Compiled into a JavaScript bundle, pre-configured for a variety of JavaScript platforms
 
-
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/notedhelms/Corticon-Enablement-Repository){: .btn .fs-5 .mb-4 .mb-md-0 }
+[View it on GitHub](https://github.com/notedhelms/Corticon-Enablement-Repository){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 
 # Why Corticon?
