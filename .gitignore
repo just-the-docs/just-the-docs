@@ -3,6 +3,7 @@
 .ruby-version
 .jekyll-cache
 .sass-cache
+.DS_STORE
 _site
 Gemfile.lock
 node_modules
