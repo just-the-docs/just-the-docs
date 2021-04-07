@@ -55,3 +55,5 @@ From the menu, select where you want your section to lead to.
 **Note:** By default, the last section will automatically lead to the submit button. This ends the form for the user.
 
 ## Conclusion
+
+This guide has shown you how to make sections in Google Forms. Use them to better organise your questions, or create complex surveys with them! Overall, your form will be be presented much nicer with the usage of sections.
