@@ -18,9 +18,10 @@ Introduction of some sort.
 ---
 
 1.) Go to https://docs.google.com/forms/
-   ![Google Login](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true)
+   <br />
+   <br />
 
-   ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="15%" width="15%"}
+   ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="10%" width="10%"}
 
    **Note:** You will see the page below **ONLY** if you are not already signed onto a google account. **SKIP** to Step 3 if you are already signed in
    <br />
