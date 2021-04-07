@@ -9,7 +9,7 @@ nav_order: 3
 
 # Making and Using Section
 
-{: .no_toc
+{: .no_toc }
 
 ---
 
