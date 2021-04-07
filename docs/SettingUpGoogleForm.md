@@ -22,7 +22,7 @@ Introduction of some sort.
    <br />
 
    ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
-   **Note:** You will see the page below **ONLY** if you are not already signed onto a google account. **SKIP** to Step 3 if you are already signed in
+   **Note:** You will see the page below **only** if you are not already signed onto a google account. **skip** to Step 3 if you are already signed in
    <br />
    <br />
 2.) Log in using a google account.
