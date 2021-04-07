@@ -13,8 +13,8 @@ permalink: /
 A JSON-based encoding for 3D city models
 {: .fs-6 .fw-300 }
 
-[Getting started]({{ '/tutorials/getting-started/' | prepend: site.baseurl }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } 
-[Specifications (v{{ site.lastversion }})]({{ '/specs/' | append: site.lastversion | prepend: site.baseurl }}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Getting started]({{ '/tutorials/getting-started/' | prepend: site.baseurl }}){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2 } 
+[Specifications (v{{ site.lastversion }})]({{ '/specs/' | append: site.lastversion | prepend: site.baseurl }}){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 }
 <!-- [Web-viewer](https://tudelft3d.github.io/CityJSON-viewer/){: .btn .fs-5 .mb-4 .mb-md-0 } -->
 <!-- [<i class="fab fa-github"></i> GitHub repository](https://github.com/tudelft3d/cityjson/){: .btn .fs-5 .mb-4 .mb-md-0 } -->
 

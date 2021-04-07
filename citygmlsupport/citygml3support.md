@@ -24,10 +24,7 @@ As the "modularisation" allows to select which modules are supported by an encod
 ![](../citygmlsupport/figs/citygml3modules.png)
 
 
-
-
-
-## Modules
+## Overview CityGML modules
 
     ✅ : 100% supported
     ⚠️ : partially supported (often missing features are for the sake of an efficient implementation)
