@@ -51,13 +51,6 @@ We will be using the following mouse terms:
 ## Notes
 
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
-**Note:** This icon provides additional information about the next step
+Note: This icon provides additional information about the next step
 <br />
 <br />
-
-### Code of Conduct
-
-Just the Docs is committed to fostering a welcoming community.
-
-[View our Code of Conduct](https://github.com/pmarsceill/just-the-docs/tree/master/CODE_OF_CONDUCT.md) on our GitHub repository.
-
