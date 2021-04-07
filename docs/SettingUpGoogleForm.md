@@ -35,5 +35,5 @@ The first step is to set a Google Form up. To set a Google Form up follow these 
 4.) Go to the top left corner and click on Untitled Form to change form name.
    ![Google Form Page](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/3_Untitled_form1.png?raw=true)
 
-5. Next, click form description to add a description to the form. 
+5.) Next, click form description to add a description to the form. 
    ![Google Form](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/4_Untitled_form2.png?raw=true)
