@@ -1,22 +1,21 @@
 ---
 layout: default
-title: Home
+title: Introduction
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "This is a how to use Google Form Guide"
 permalink: /
 ---
 
-# Focus on writing good documentation
-{: .fs-9 }
-
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
-{: .fs-6 .fw-300 }
-
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
-
+# Introduction
 ---
+Google forms is a web application available in the Google Suite (G Suite) collection. It allows users to create surveys, quizzes, or anything else that needs a form-like structure. The purpose of this document is to help you create Google Forms easily. 
 
-## Getting started
+This guide was written using the April 2021 version of Google Chrome Web Browser on MacOS. If you are using a different web browser or operating system, it may look slightly different.
+
+
+## Is This Guide For You?
+This guide is intended for the beginning user to Google Forms using a desktop computer. You should be familiar with using a web browser and also have an existing Google account.
+
 
 ### Dependencies
 
