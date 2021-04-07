@@ -13,3 +13,5 @@ nav_order: 6
 Introduction of some sort.
 
 ---
+
+1.) Click on the color palette icon ![palette]()
