@@ -7,7 +7,7 @@ has_children: false
 
 ---
 
-# Task One: Setting Up Google Form
+# Setting Up Google Form
 
 {: .no_toc }
 
