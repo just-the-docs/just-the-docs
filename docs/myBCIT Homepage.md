@@ -28,7 +28,7 @@ The homepage is a collection of links to the various resources available to you 
 
 ## Online self service
 
-This is the paragraph thta will contain the information for the online self service section for the myBCIT homepage.
+This is the paragraph that will contain the information for the online self service section for the myBCIT homepage.
 
 ---
 
