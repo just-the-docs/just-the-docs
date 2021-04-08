@@ -2,7 +2,7 @@
 layout: default
 title: Equal Opportunity
 parent: Contributor Hub
-nav_order: 8
+nav_order: 7
 
 ---
 

@@ -5,94 +5,16 @@ parent: Meetings
 nav_order: 2
 ---
 
-# Buttons
+# Development
 {: .no_toc }
 
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
 ---
 
-## Basic button styles
+DXdao Development calls cover technical discussion, product development updates, and other associated topics. 
 
-### Links that look like buttons
+The below table includes upcoming and previous calls, meeting notes and recordings, and will be converted to your local time automatically.
 
-<div class="code-example" markdown="1">
-[Link button](http://example.com/){: .btn }
+___
 
-[Link button](http://example.com/){: .btn .btn-purple }
-[Link button](http://example.com/){: .btn .btn-blue }
-[Link button](http://example.com/){: .btn .btn-green }
-
-[Link button](http://example.com/){: .btn .btn-outline }
-</div>
-```markdown
-[Link button](http://example.com/){: .btn }
-
-[Link button](http://example.com/){: .btn .btn-purple }
-[Link button](http://example.com/){: .btn .btn-blue }
-[Link button](http://example.com/){: .btn .btn-green }
-
-[Link button](http://example.com/){: .btn .btn-outline }
-```
-
-### Button element
-
-GitHub Flavored Markdown does not support the `button` element, so you'll have to use inline HTML for this:
-
-<div class="code-example">
-<button type="button" name="button" class="btn">Button element</button>
-</div>
-```html
-<button type="button" name="button" class="btn">Button element</button>
-```
-
----
-
-## Using utilities with buttons
-
-### Button size
-
-
-<div class="code-example" markdown="1">
-<span class="fs-6">
-[Big ass button](http://example.com/){: .btn }
-</span>
-
-<span class="fs-3">
-[Tiny ass button](http://example.com/){: .btn }
-</span>
-</div>
-```markdown
-<span class="fs-8">
-[Link button](http://example.com/){: .btn }
-</span>
-
-<span class="fs-3">
-[Tiny ass button](http://example.com/){: .btn }
-</span>
-```
-
-### Spacing between buttons
-
-
-
-<div class="code-example" markdown="1">
-[Button with space](http://example.com/){: .btn .btn-purple .mr-2 }
-[Button ](http://example.com/){: .btn .btn-blue .mr-2 }
-
-[Button with more space](http://example.com/){: .btn .btn-green .mr-4 }
-[Button ](http://example.com/){: .btn .btn-blue }
-</div>
-```markdown
-[Button with space](http://example.com/){: .btn .btn-purple .mr-2 }
-[Button ](http://example.com/){: .btn .btn-blue }
-
-[Button with more space](http://example.com/){: .btn .btn-green .mr-4 }
-[Button ](http://example.com/){: .btn .btn-blue }
-```
  <iframe class="airtable-embed" src="https://airtable.com/embed/shrXbyfNKbwHWaCAt?backgroundColor=teal&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
        

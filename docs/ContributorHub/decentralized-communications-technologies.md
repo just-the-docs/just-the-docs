@@ -2,7 +2,7 @@
 layout: default
 title: Decentralized Communication Technologies
 parent: Contributor Hub
-nav_order: 9
+nav_order: 8
 
 ---
 

@@ -9,7 +9,7 @@ The best place to learn about DXdao is to check out the [DXdao Manifesto](https:
 
 ## What products does the DXdao currently own or operate?
 
-DXdao’s current suite of products include [Omen](https://omen.eth.link/), a prediction market; [Swapr](https://swapr.eth.link/), a governance-enabled AMM; [Mesa](https://mesa.eth.link/), a front-running resistant DEX; and [Rails](https://rails.eth.link/), a Layer 2 payment rails.
+DXdao’s current suite of products include [Omen](https://omen.eth.link/), a prediction market; [Swapr](https://swapr.eth.link/), a governance-enabled AMM; and [Mesa](https://mesa.eth.link/), a front-running resistant DEX.
 
 ## What revenues does the DXdao have?
 
