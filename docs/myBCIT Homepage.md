@@ -4,7 +4,7 @@ title: myBCIT Homepage
 nav_order: 12
 ---
 
-# myBCIT Homepage
+# Navigating your myBCIT Homepage
 {: .no_toc}
 
 <details open markdown="block">
