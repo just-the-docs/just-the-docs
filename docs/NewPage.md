@@ -21,3 +21,11 @@ nav_order: 12
 ## Online self service
 
 This is the paragraph thta will contain the information for the online self service section for the myBCIT homepage.
+
+## myCourses
+
+Test content for the mycourse section of this page.
+
+## Student Resources
+
+The student resources for the student resources part of this page.
