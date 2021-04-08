@@ -1,5 +1,5 @@
 ---
 layout: default
-title: Navigation Structure
-nav_order: 5
+title: New test page
+nav_order: 11
 ---
