@@ -20,7 +20,7 @@ nav_order: 12
 
 
 
-Test image of the myBCIT Homepage
+Test image of the myBCIT Homepage updated v2
 
 ![Screen shot of myBCIT Homepage](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/myBCIT_home_landing_page.png?raw=true "Image of the myBCIT Homepage")
 
