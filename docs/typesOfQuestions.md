@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Creating A Question
-nav_order: 3
+title: Types of Questions
+nav_order: 9
 parent: makingAQuestion
 
 ---
@@ -12,7 +12,7 @@ parent: makingAQuestion
   For information on how to select a question type, go to step 2 in the "Creating And Setting Up A Question".
 
 ## 1 - Short Answers and Paragraph
-  These question types allow people to write answers instead of choosing from pre-set options.
+  These question types allow people to input answers instead of choosing from pre-set options.
 
 #### Short Answers
   This option is suitable for written responses in a few words.
