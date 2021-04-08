@@ -31,13 +31,13 @@ To create and set up a question for your form, follow these steps. If you want t
 
   ![Question](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_Question.png?raw=true)
 
-  ### Selecting types of questions
+### Selecting types of questions
 
-  There are many different types of question that can be asked. The default type of question is set to multiple choice. To change the question type, click on "Multiple choice". A menu with question types will appear. Please refer to the "Type Of Questions" subsection for more details on the types of questions.
+  There are many different types of question that can be asked. The default type of question is set to multiple choice. To change the question type, click on "Multiple choice". A menu with question types will appear. Click on option you want. For more information on question types, go to the "Type Of Questions" subsection.
 
   ![Types of Questions](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_TypesOfQuestions.png?raw=true)
 
-  ### Mandatory questions
+### Mandatory questions
 
   Questions can either be optional, or required. By default, the questions are set to be optional. You can set a question to be required by clicking on the sliding toggle beside the "Required" on the bottom right of your question.
 
@@ -47,33 +47,31 @@ To create and set up a question for your form, follow these steps. If you want t
 
   ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
 
-  **Note:** This section will go over how to set up the options to a multiple choice question. For other question types, please refer to the "Type Of Questions" subsection.
+  **Note:** This section will go over how to set up the options to a multiple choice, checkbox, or dropdown question. For other question types, refer to the "Type Of Questions" subsection.
   <br/>
 
-  ### Adding an option
+### Adding an option
 
-  For a multiple choice question, people can choose between a set of options where they can only select one option.
+  It is required to have at least 1 option. To set an option, click on "Option 1". For example, "Vanilla" as a choice to the example question.
+
+  ![Option 1](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_firstOptions.png?raw=true)
+
+### Adding additional options
+
+  To add more options to the question, click on "Add option".
   
-  It is required to have at least 1 option. To set up an option, click on "Option 1". For example, "Vanilla" is a choice to the example question.
+  ![More options](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_moreOptions.png?raw=true)
 
-  ![Option 1 for MC](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_firstOptions.png?raw=true)
-
-  ### Adding additional options
-
-  To add more options to the question, click on "Add option". You can add up to 2,000 options.
-  
-  ![More options for MC](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_moreOptions.png?raw=true)
-
-  ### Removing an option
+### Removing an option
 
   To remove an option, click on the X symbol located to the right of the unwanted option.
-  ![Add "Other" for MC](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_removeOption.png?raw=true)
+  ![Add "Other"](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_removeOption.png?raw=true)
 
-  ### Allowing "others" as an option
+### Allowing "others" as an option
 
-  If you want people to be able to enter their own option, click on 'add "Other"'.
+  If you want people to be able to enter their own option, click on 'add "Other"'. This option is not availble for dropdown.
 
-  ![Add "Other" for MC](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_addOther.png?raw=true)
+  ![Add "Other"](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_addOther.png?raw=true)
 
 ## 4.) Previewing your questions
 
