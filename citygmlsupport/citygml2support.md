@@ -2,10 +2,10 @@
 layout: default
 title: CityGML compatibility
 nav_exclude: true
-permalink: /citygml-compatibility/
+permalink: /citygml2-conformance/
 ---
 
-# Compatibility with CityGML 2.0.0
+# Conformance of CityJSON v1.0 with CityGML 2.0
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -14,7 +14,7 @@ permalink: /citygml-compatibility/
 {:toc}
 
 
-CityJSON implements most of the data model, and *all* the CityGML modules have been mapped to CityJSON objects. 
+CityJSON v1.0 implements most of the CityGML v2.0 data model, and *all* the CityGML modules have been mapped to CityJSON objects. 
 However, for the sake of simplicity and efficiency, some modules and features have been omitted and/or simplified. 
 If a module is supported, it does not mean that there is a 1-to-1 mapping between the classes and features in CityGML and CityJSON, but rather that it is possible to represent the same information, but in a different manner. 
 The differences in the structure of the modules were made to improve the usability of CityJSON in practice (we identified where XML-encoded CityGML files were cumbersome to work with, and modified those), all decisions were made so that developers can easily manipulate files.

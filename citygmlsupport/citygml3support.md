@@ -2,7 +2,7 @@
 layout: default
 title: CityGML v3.0 conformance
 nav_exclude: true
-permalink: /citygml3-conformance/
+permalink: /citygml3conformance/
 ---
 
 # Conformance of CityJSON v1.1 with CityGML 3.0
@@ -19,7 +19,7 @@ CityJSON v1.1 is conformant with the CityGML v3.0 data model.
 
 
 The CityGML conceptual model is thematically decomposed into one Core module and 16 extension modules.
-As the "modularisation" allows to select which modules are supported by an encoding, below we list each of the modules and describe what is supported and where the so-called *null mapping* are applied.
+As the "modularisation" allows us to select which modules are supported by an encoding, below we list each of the modules and describe what is supported and where the so-called *null mapping* are applied.
 
 ![](../citygmlsupport/figs/citygml3modules.png)
 
