@@ -36,10 +36,10 @@ This is the paragraph thta will contain the information for the online self serv
 
 A brief overview of the myCourses page will go here.
 
---
+---
 
 ## Student Resources
 
 A summary of the student resources page will go here, and a subpage would be dedicated for more in-depth information.
 
---
+---
