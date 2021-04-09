@@ -4,7 +4,7 @@ title: Changing Google Form Color
 nav_order: 6
 ---
 
-# Task Five: Changing Google Form Header and Theme
+# Customizing Google Form
 
 {: .no_toc }
 
