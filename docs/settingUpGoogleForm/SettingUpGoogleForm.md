@@ -28,19 +28,27 @@ The first step is to set a Google Form up. To set a Google Form up follow these 
    <br />
 
 ## 2.) Log in using a google account.
+
    ![Google Form Homepage](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/1_Google_login.png?raw=true)
 
 ## 3.) Creating new Google Form
+
 Go to the left corner and click on `Blank`.
    ![Google Form page](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/2_Google_Form_Homepage.png?raw=true)
 
-## 4.) Naming Google Form 
+## 4.) Naming Google Form
+
    Go to the top left corner and click on `Untitled Form` to change form name.
    ![Google Form Page](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/3_Untitled_form1.png?raw=true)
 
-## 5.) Giving Google Form a description 
+## 5.) Giving Google Form a description
+
 Next, click on  `form description` to add a description to the form. 
    ![Google Form](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/4_Untitled_form2.png?raw=true)
 
 ---
 ## Conclusion
+
+You should now have your Google Form set up, Once you have completed all the steps!
+
+The next step is to start [creating and adding questions.](https://kevtrng.github.io/Google-Forms-Guide/docs/makingAQuestion/)
