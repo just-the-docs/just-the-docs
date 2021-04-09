@@ -49,6 +49,6 @@ Next, click on  `form description` to add a description to the form.
 ---
 ## Conclusion
 
-You should now have your Google Form set up, Once you have completed all the steps!
+Once you have followed and completed all the steps, you should now have your Google Form set up!
 
 The next step is to start [creating and adding questions.](https://kevtrng.github.io/Google-Forms-Guide/docs/makingAQuestion/)
