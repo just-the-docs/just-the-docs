@@ -1,4 +1,11 @@
 
+- name: pointcloud
+  url:  https://github.com/GANys/cityjson-pointcloud
+  description: "Support LAS 3D point clouds for CityObjects geometries"
+  status: 1.0
+  organisation: "[Gilles-Antoine Nys, Université Liège](https://github.com/GANys)"
+
+
 - name: Noise
   url:  https://3d.bk.tudelft.nl/schemas/cityjson/1.0.0/extensions/noise.json
   description: "Conversion of the CityGML Noise ADE"
