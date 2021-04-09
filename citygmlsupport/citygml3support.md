@@ -2,7 +2,7 @@
 layout: default
 title: CityGML v3.0 conformance
 nav_exclude: true
-permalink: /citygml3conformance/
+permalink: /citygml3-conformance/
 ---
 
 # Conformance of CityJSON v1.1 with CityGML 3.0
