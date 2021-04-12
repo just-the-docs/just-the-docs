@@ -70,14 +70,21 @@ For different City Objects (buildings, trees, roads, etc.) and different geometr
 It is possible to generate automatically a 3D city model in CityJSON with [3dfier](https://github.com/tudelft3d/3dfier), just follow that simple [tutorial](https://tudelft3d.github.io/3dfier/generate_lod1.html).
 
 
+## Every buildings (~10M) in the Netherlands
+
+Every building in the Netherlands, automatically reconstructed.
+Each building is available in 3 [levels-of-details](https://3d.bk.tudelft.nl/lod): LoD1.2, LoD1.3, and LoD2.2.
+
+[https://3dbag.nl](https://3dbag.nl)
+
+
 ## The Netherlands in 3D
 
-Every building, every canals, every road, every bridge, in 3D. In CityJSON.
+Every building (in LoD1.2), every canals, every road, every bridge, in 3D. In CityJSON.
 
 <a href="https://brt.kadaster.nl/basisvoorziening-3d/"><i class="fas fa-external-link-alt"></i> PDOK 3D Topografie</a>
 
 <i class="fas fa-exclamation-circle"></i> Please be aware that the tiles are very big, and they will most likely bring [ninja](https://ninja.cityjson.org) or QGIS to their knees... The solution for the time being is to use a computer with 16GB+ of RAM, and use [cjio]({{ '/tutorials/getting-started/#manipulate-and-edit-it-with-cjio' | relative_url }}) to extract only the buildings for instance. 
-
 
 ## All USA buildings
 
