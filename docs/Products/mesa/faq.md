@@ -6,6 +6,18 @@ grand_parent: Products
 
 ---
 
+# Mesa FAQ
+{: .no_toc }
+
+___
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
 ## What is Mesa?  
  
 Mesa is a decentralized application built on the Gnosis Protocol, a fully permissionless DEX that enables ring trades to maximize liquidity.  

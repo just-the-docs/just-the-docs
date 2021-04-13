@@ -6,6 +6,19 @@ grand_parent: Products
 
 ---
 
+# Omen Market Resolution Rules
+{: .no_toc }
+
+___
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 ## Invalid Markets 
 
 The outcome of the market **must be known** by its Resolution Date. If the outcome is not known by the resolution date, whether it is due to a wrong setting of the resolution date or an unexpected event delaying the knowledge of the result, the market will resolve as invalid. 
