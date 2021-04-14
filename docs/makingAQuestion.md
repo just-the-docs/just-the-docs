@@ -3,8 +3,6 @@ layout: default
 title: Creating A Question
 nav_order: 3
 has_children: true
-parent: addQuestion
-
 ---
 
 # Creating And Setting Up A Question
@@ -17,18 +15,18 @@ To create and set up a question for your form, follow these steps. If you want t
 ## 1. Adding a question to your form
   <br />
   <br />
-
-  If you have just followed the steps to set up your Google form, your screen should look like this. There should be a question already created.
+  
+  1a. If you have just followed the steps to set up your Google form, your screen should look like this. There should be a question already created.
 
   ![Default Form Look](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/1_defaultQuestion.png?raw=true)
 
-  If you do not see the question, or if you want to create more than one question, click on the plus button.
+  1b. If you do not see the question, or if you want to create more than one question, click on the plus button.
 
   ![Plus Button](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/1_addingAQuestion.png?raw=true)
 
 ## 2. Setting up your question
 
-  Click on "Untitled Question" to enter your question. For example, "What is your favourite ice-cream flavour?"
+  Click on "Untitled Question" to enter your question. If your question was created by following step 1b, you will see "question" instead of "untitled question". Here is an example question: "What is your favourite ice-cream flavour?"
 
   ![Question](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_Question.png?raw=true)
 
@@ -44,7 +42,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
   ![Types of Questions](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_requiredQuestion.png?raw=true)
 
-## 3. Setting up the choices to your question
+## 3. Setting up the choices to a question
 
   ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
 
@@ -60,7 +58,7 @@ To create and set up a question for your form, follow these steps. If you want t
 ### Adding additional options
 
   To add more options to the question, click on "Add option".
-
+  
   ![More options](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_moreOptions.png?raw=true)
 
 ### Removing an option
@@ -84,7 +82,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
   ![Eye Symbol For Preview](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/4_preview.png?raw=true)  
 
-  By previewing the questions, you will be able to see all your questions as if you were **ANOTHER PERSON??**
+  By previewing the questions, you will be able to see all your questions as a guest
 
 ## 5. Removing a question
 
@@ -92,7 +90,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
   ![Removing A Question](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/5_removingQuestion.png?raw=true)
 
-After following these instructions, you should be able to make questions for your form.
+After following these instructions, you should be able to make questions for your form. 
 
-ADDINT RED CICLES FOR JOJO:
+ADDINT RED CICLES FOR JOJO: 
 https://docs.google.com/presentation/d/17yguwzhHD-nF6y2vQUPfWnWDPJrwdPfdaRSz_Gqa4yI/edit#slide=id.p
