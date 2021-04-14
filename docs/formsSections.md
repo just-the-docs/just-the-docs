@@ -35,13 +35,15 @@ A new section should show up below. You may rename this by clicking on
 
 ![Rename](./images/formsSections/2_renameSection.gif)
 
-## 3. Rename the Section description
+## 3. Rename the Section Description
 
-To rename the section description, click over `Description (optional)`. Type in a description, if desired.
+Under the title is the description of the section. This can be used to give your users additional information. To rename the section description, click on `Description (optional)`, similar to the previous step. Type in a description, if desired.
 
 ## 4. Add Questions in Your Sections
 
 If you have already created a question and want to move it into your new section, click on the question's 6 dots and drag it under the section.
+
+![Add Questions](./images/formsSections/4_moveQuestion.gif)
 
 Otherwise, click on the section (or a question under the desired section), and add a question as you normally would.
 
@@ -49,7 +51,11 @@ Otherwise, click on the section (or a question under the desired section), and a
 
 Google Forms allows the user to be led to another section or to the submit button. To add this feature to your form, scroll down to the bottom of the section, and click on the dropdown menu.
 
+![Dropdown](./images/formsSections/5_continue.png)
+
 From the menu, select where you want your section to lead to.
+
+![menu](./images/formsSections/5_menu.png)
 
 ![Bell](./images/icons/bell.png){: height="8%" width="8%" style="float: left"}
 **Note:** By default, the last section will automatically lead to the submit button. This ends the form for the user.

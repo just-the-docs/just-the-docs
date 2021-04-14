@@ -3,7 +3,6 @@ layout: default
 title: Creating A Question
 nav_order: 3
 has_children: true
-parent: addQuestion
 
 ---
 
@@ -16,7 +15,6 @@ To create and set up a question for your form, follow these steps. If you want t
 
 ## 1. Adding a question to your form
 
-  <br />
   <br />
 
   If you have just followed the steps to set up your Google form, your screen should look like this. There should be a question already created.
