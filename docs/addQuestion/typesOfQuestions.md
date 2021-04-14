@@ -2,7 +2,7 @@
 layout: default
 title: Types of Questions
 nav_order: 9
-parent: makingAQuestion
+parent: Creating A Question
 
 ---
 
@@ -12,7 +12,7 @@ parent: makingAQuestion
 
   For information on how to select a question type, go to step 2 in the "Creating And Setting Up A Question".
 
-## A) Short Answers and Paragraph
+## A. Short Answers and Paragraph
 
   These question types allow people to input answers instead of choosing from pre-set options.
 
@@ -24,7 +24,7 @@ parent: makingAQuestion
 
   This option is suitable for long written responses over one or more paragraphs.
 
-## B) Multiple Choice, Checkboxes, and Dropdown
+## B. Multiple Choice, Checkboxes, and Dropdown
 
   These question types allow people to choose from a preset list of options that you make. For steps on how to add options for this type of question, go to step 3 from the "Creating And Setting Up A Question" page.
 
@@ -40,27 +40,27 @@ parent: makingAQuestion
 
   This option is suitable when _only one_ option should be chosen. Add "other" option cannot be added to dropdown.
 
-## C) Linear Scale, Multiple Choice Grid, Checkbox Grid
+## C. Linear Scale, Multiple Choice Grid, Checkbox Grid
 
   These questions types are more advanced.
 
-### 1.) Linear Scale
+### 1. Linear Scale
 
   This option is suitable when you want your question to be rated on a scale. Your scale can start at 0 or 1, and can end on a whole number from 2 to 10. You can optionally add a label to each end of the scale to clarify how respondents should answer the question based on their opinion.
 
-  1a) Enter your question. An example question: "How much do you like vanilla ice-cream?"
+  1a. Enter your question. An example question: "How much do you like vanilla ice-cream?"
 
-  1b) Define where your scale will start and end. Click on the little arrow on the right of the number that you want to change.
+  1b. Define where your scale will start and end. Click on the little arrow on the right of the number that you want to change.
 
   The number on the left corresponds to the start of the scale, and the number on the right corresponds to the end.
 
   ![Linear Scale Scale](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/questions/1_linearScale.png?raw=true)
 
-  1c) This step is optional. Click on "label" to add a label to your scale. It is recommended to add a label so people know what each end of the scale represents. For example, 1 is hate, and 5 is love. This is what the question should look like when we preview it.
+  1c. This step is optional. Click on "label" to add a label to your scale. It is recommended to add a label so people know what each end of the scale represents. For example, 1 is hate, and 5 is love. This is what the question should look like when we preview it.
 
   ![Linear Scale Results](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/questions/1_results.png?raw=true)
 
-### 2.) Multiple Choice Grid and Checkbox Grid
+### 2. Multiple Choice Grid and Checkbox Grid
 
   Grid questions are a quick way to help you ask the same question for series of different items.
 
@@ -74,11 +74,11 @@ parent: makingAQuestion
   
   ![Grid](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/questions/2_gridResults.png?raw=true)
 
-  2a) Enter your question. An example question: "How much do you like each of the following ice-cream flavours?"
+  2a. Enter your question. An example question: "How much do you like each of the following ice-cream flavours?"
 
-  2b) Click on "Row 1" to edit the first row. For additional rows, click on "Add row" to start typing. Each row represents a single item people are asked to answer for. An example of row entries following the sample question from step 2a would be "Vanilla" and "Chocolate".
+  2b. Click on "Row 1" to edit the first row. For additional rows, click on "Add row" to start typing. Each row represents a single item people are asked to answer for. An example of row entries following the sample question from step 2a would be "Vanilla" and "Chocolate".
 
-  2c) Click on "Column 1" to edit the first column. For additional columns, click on "Add column" to start typing. Columns are the choices people can select from. An example to the question on step 2a would be "Hate", or "Love"
+  2c. Click on "Column 1" to edit the first column. For additional columns, click on "Add column" to start typing. Columns are the choices people can select from. An example to the question on step 2a would be "Hate", or "Love"
   
   A completed multiple choice grid question would look like this:
   ![Grid Results](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/questions/2_gridResults.png?raw=true)
@@ -87,7 +87,7 @@ parent: makingAQuestion
 
   You can add additional options to refine your grid question
 
-  2d) Click on the three dots on the bottom right of the question for more options.
+  2d. Click on the three dots on the bottom right of the question for more options.
   You should see this:
   
   ![Grid Results](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/questions/2_advanced.png?raw=true)
