@@ -7,7 +7,7 @@ nav_order: 4
 
 ---
 
-# Making and Using Section
+# Making and Using Sections
 
 {: .no_toc }
 
@@ -25,7 +25,7 @@ On the right hand side of the form, you will see a menu. Click on
 the bottom icon to add a section.
 
 
-![Add Form Section](./images/formsSections/addSection.png)
+![Add Form Section](./images/formsSections/1_addSection.png)
 
 ## 2.	Rename your section
 
@@ -33,7 +33,7 @@ A new section should show up below. You may rename this by clicking on
 `Untitled Section` and typing in your desired title.
 
 
-![Rename](put in image/gif here)
+![Rename](./images/formsSections/2_renameSection.gif)
 
 ## 3. Rename the Section description
 
