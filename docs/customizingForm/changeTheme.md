@@ -1,20 +1,20 @@
 ---
 layout: default
-title: Customizing Google Form
-nav_order: 6
+title: Changing Theme
+parent: Customizing Google Form
+nav_order: 1
 ---
 
-# Customizing Google Form
-
-{: .no_toc }
-
 ---
-
-Introduction of some sort.
-
+layout: default
+title: Typography
+parent: UI Components
+nav_order: 1
 ---
 
 ## Changing Google Form Header
+---
+intro of some sort
 
 1.) To change the header, first click on ![palette](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/paint-palette.png?raw=true){: height="5%" width="5%"} icon.
 

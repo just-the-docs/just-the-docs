@@ -14,8 +14,8 @@ parent: addQuestion
 To create and set up a question for your form, follow these steps. If you want to have multiple questions in your form, repeat these steps.
 
 
-
 ## 1. Adding a question to your form
+
   <br />
   <br />
 
@@ -26,7 +26,6 @@ To create and set up a question for your form, follow these steps. If you want t
   If you do not see the question, or if you want to create more than one question, click on the plus button.
 
   ![Plus Button](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/1_addingAQuestion.png?raw=true)
-
 
 ## 2. Setting up your question
 
@@ -46,9 +45,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
   ![Types of Questions](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_requiredQuestion.png?raw=true)
 
-
 ## 3. Setting up the choices to your question
-
 
   ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
 
@@ -78,7 +75,6 @@ To create and set up a question for your form, follow these steps. If you want t
 
   ![Add "Other"](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_addOther.png?raw=true)
 
-
 ## 4. Previewing your questions
 
   After adding all desired options from step 3, you can preview the question, by clicking on the eye symbol located on the top right of the page.
@@ -91,9 +87,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
   By previewing the questions, you will be able to see all your questions as if you were **ANOTHER PERSON??**
 
-
 ## 5. Removing a question
-
 
   To remove a question, click on the trash can symbol on the bottom of the question that should be deleted.
 
