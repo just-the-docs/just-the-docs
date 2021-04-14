@@ -3,6 +3,7 @@ layout: default
 title: Creating A Question
 nav_order: 3
 has_children: true
+parent: addQuestion
 
 ---
 
@@ -16,7 +17,7 @@ To create and set up a question for your form, follow these steps. If you want t
 ## 1.) Adding a question to your form
   <br />
   <br />
-  
+
   If you have just followed the steps to set up your Google form, your screen should look like this. There should be a question already created.
 
   ![Default Form Look](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/1_defaultQuestion.png?raw=true)
@@ -59,7 +60,7 @@ To create and set up a question for your form, follow these steps. If you want t
 ### Adding additional options
 
   To add more options to the question, click on "Add option".
-  
+
   ![More options](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_moreOptions.png?raw=true)
 
 ### Removing an option
@@ -75,7 +76,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
 ## 4.) Previewing your questions
 
-  After adding all desired options from step 3, you can preview the question, by clicking on the eye symbol located on the top right of the page. 
+  After adding all desired options from step 3, you can preview the question, by clicking on the eye symbol located on the top right of the page.
 
   ![Eye Symbol For Preview](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/4_eyeSymbol.png?raw=true)  
 
@@ -91,7 +92,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
   ![Removing A Question](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/5_removingQuestion.png?raw=true)
 
-After following these instructions, you should be able to make questions for your form. 
+After following these instructions, you should be able to make questions for your form.
 
-ADDINT RED CICLES FOR JOJO: 
+ADDINT RED CICLES FOR JOJO:
 https://docs.google.com/presentation/d/17yguwzhHD-nF6y2vQUPfWnWDPJrwdPfdaRSz_Gqa4yI/edit#slide=id.p
