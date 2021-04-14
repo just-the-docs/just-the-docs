@@ -31,7 +31,7 @@ Introduction of some sort.
    <br />
    <br />
 
-      ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/3_changing_header.png?raw=true)
+   ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/3_changing_header.png?raw=true)
 
 4.) Click on a photo to select it.
 
@@ -40,7 +40,7 @@ Introduction of some sort.
    <br />
    <br />
 
-    ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/4_changing_header.png?raw=true)
+   ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/4_changing_header.png?raw=true)
 
 5.) Once it is selected, click on `insert`and you are done !
 
