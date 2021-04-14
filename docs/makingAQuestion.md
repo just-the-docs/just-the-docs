@@ -92,3 +92,6 @@ To create and set up a question for your form, follow these steps. If you want t
   ![Removing A Question](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/5_removingQuestion.png?raw=true)
 
 After following these instructions, you should be able to make questions for your form. 
+
+ADDINT RED CICLES FOR JOJO: 
+https://docs.google.com/presentation/d/17yguwzhHD-nF6y2vQUPfWnWDPJrwdPfdaRSz_Gqa4yI/edit#slide=id.p
