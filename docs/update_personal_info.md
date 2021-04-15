@@ -51,9 +51,15 @@ You may need to update your personal information if you’ve moved, or if there 
 <br>
 <br>
 
-**4.** Once you've logged in to the Online Student Self-Service page, click the "Student Self Service" to enter the student self service menu.
+**5.** Here you can select the action that you want to take
 
->![Screenshot 4 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/5_update_info.png?raw=true "The Student ")
+>![Screenshot 4 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/5_update_info.png?raw=true "The Student personal information sub-menu.")
 <br>
->The Online Student Self-Service homepage.
+>The Student personal information sub-menu.
+
+<br>
+<br>
+
+The "Update your personal information" will allow you to change information such as your address, name, or contact information. While the "Reset your password" and "Create or change your security question" will allow you to change your password and security question, respectively.
+
 
