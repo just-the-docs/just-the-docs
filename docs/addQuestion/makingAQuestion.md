@@ -21,12 +21,14 @@ To create and set up a question for your form, follow these steps. If you want t
 
   If you do not see the question, or if you want to create more than one question, click on the plus icon.
 
+
   ![Plus Button](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/1_addingAQuestion.png?raw=true)
+
 
 ## 2. Setting up your question
 
   Click on `Untitled Question` to enter your question. For example, "What is your favourite ice-cream flavour?"
-x 
+
   ![Question](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_Question.gif?raw=true)
 
 ### Selecting types of questions
@@ -54,9 +56,11 @@ x
 
   ![Option 1](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_firstOptions.png?raw=true)
 
+
 ### Adding additional options
 
   To add another option to the question, click on `Add option`. A new option will appear. Enter the option. Repeat until desired number of options are added.
+
 
   ![More options](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_additionalOptions.gif?raw=true)
 
@@ -65,6 +69,7 @@ x
   To remove an option, click on the X symbol located to the right of the unwanted option. The option will disappear after.
 
   ![Add "Other"](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_removeOption.gif?raw=true)
+
 
 ### Allowing user-set options
 
@@ -80,8 +85,7 @@ x
 
   This is what what you should see:
 
-  ![Eye Symbol For Preview](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/4_preview.png?raw=true)  
-
+  ![Eye Symbol For Preview](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/4_preview.png?raw=true)   
 
   By previewing the questions, you will be able to see all your questions as another user.
 
