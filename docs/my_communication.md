@@ -1,3 +1,4 @@
+---
 layout: default
 title: Notifications & Communications
 nav_order: 4
@@ -8,8 +9,8 @@ nav_order: 4
 
 Click my communication to view a timeline of current and past important events regarding specifically to your myBCIT account. You can view pending application statuses for programs and links to relevant information on upcoming course terms.
 
-
 ---
+
 
 **1.** The myCommunications option is found on the myBCIT homepage at the left and hand side of the page under the Online Self Service menu.
 

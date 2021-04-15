@@ -18,14 +18,12 @@ You may need to update your personal information if you’ve moved, or if there 
 
 >![Screenshot 1 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/1_update_info.png?raw=true "Update Personal Info on the myBCIT Homepage.")
 <br>
->*This is where the "Update Personal Information" menu is located.*
 
 <br>
 
 >Here's a close up of the menu option to click:
 >![Screenshot 2 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/2_update_info.png?raw=true "Close-up of the Online Self Service menu options.")
 <br>
->*A magnification of the previous image showing which menu option to select.*
 
 <br>
 
@@ -33,7 +31,6 @@ You may need to update your personal information if you’ve moved, or if there 
 
 >![Screenshot 3 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/3_update_info.png?raw=true "Online self service sign in.")
 <br>
->*Sign in page for your Online Student Self-Service Account.*
 
 <br>
 
@@ -41,7 +38,6 @@ You may need to update your personal information if you’ve moved, or if there 
 
 >![Screenshot 3 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/4_update_info.png?raw=true "The Online Student Self-Service homepage.")
 <br>
->*The Online Student Self-Service homepage.*
 
 <br>
 
@@ -49,6 +45,5 @@ You may need to update your personal information if you’ve moved, or if there 
 
 >![Screenshot 4 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/5_update_info.png?raw=true "The Student personal information sub-menu.")
 <br>
->*The Student personal information sub-menu.*
 
 The "Update your personal information" will allow you to change information such as your address, name, or contact information. While the "Reset your password" and "Create or change your security question" will allow you to change your password and security question, respectively.
