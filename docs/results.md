@@ -40,7 +40,7 @@ Select which question's results you want to view by clicking the left and right 
 
 To view a single user's response, click on the `Individual` tab. Under this tab, you will be able to see what a user answered for all the questions.
 
-![Tabs](./images/results/4_users.png)
+![Tabs](./images/results/4_tabs.png)
 
 Use the arrows to look through each response.
 
