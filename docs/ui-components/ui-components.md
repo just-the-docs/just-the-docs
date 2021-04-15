@@ -1,6 +1,8 @@
 ---
 layout: default
 title: ----------
+nav_exclude: true
+nonav: true
 nav_order: 96
 has_children: true
 permalink: /docs/ui-components
