@@ -27,7 +27,7 @@ You may need to update your personal information if you’ve moved, or if there 
 
 <br>
 
-**2.** You will be prompted to sign into your BCIT account to access the Online Student Self-Service Account
+**2.** Click "sign in" after you've entered your student number and password. Then you will be directed to the Online Self-Service homepage.
 
 >![Screenshot 3 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/3_update_info.png?raw=true "Online self service sign in.")
 <br>
@@ -41,9 +41,12 @@ You may need to update your personal information if you’ve moved, or if there 
 
 <br>
 
-**5.** Here you can select the action that you want to take
+**5.** Here you can click the action that you want to take, whether you wnat to update your personal information, update your password, or change your security question.
 
 >![Screenshot 4 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/5_update_info.png?raw=true "The Student personal information sub-menu.")
 <br>
+<br>
+<br>
+
 
 The "Update your personal information" will allow you to change information such as your address, name, or contact information. While the "Reset your password" and "Create or change your security question" will allow you to change your password and security question, respectively.
