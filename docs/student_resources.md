@@ -1,3 +1,4 @@
+---
 layout: default
 title: Student Resources 
 nav_order: 3
