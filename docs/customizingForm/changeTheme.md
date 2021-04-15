@@ -1,26 +1,17 @@
 ---
 layout: default
-title: Changing Google Form Header
+title: Changing Google Form Header using Default Photo
 parent: Customizing Google Form
 nav_order: 1
 ---
 
-# Changing Google Form Header
----
-
-Follow these steps if you would like to add a photo to the header of your form!
-You can either use a Google Form Default photo or upload your own photo to set as your Google Form header.
+# Changing Google Form Header using Default Photo
 
 ---
 
-## Table of contents
-{: .no_toc .text-delta }
+Follow these steps if you would like to use change your Google Form header using Google's default photos.
 
-1. TOC
-
-# Google Form Default Photo
-
-Follow steps 1-5 to set a Google Form default photo as the header of your form
+---
 
 ## 1. Open Theme options
 
@@ -62,45 +53,6 @@ Once it is selected, click on `insert`and you are done !
 
    ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/5_changing_header.png?raw=true)
 
----
+## Conclusion
 
-![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
-**Note:** Only do step 6 if you _do not_ want to use the Google Default photos and want to add your own photos
-<br>
-<br>
-
-# Uploading Photo
-
-Follow steps 6-11 to upload and set photo as the header of your form
-
-## 6. Upload your image
-
-To upload an image from your computer click `upload`
-
-   ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/6_changing_header.png?raw=true)
-
-## 7. Then click on `browse`
-
-   ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/7_changing_header.png?raw=true)
-
-## 8. Selecting image from computer
-
-Another window will open, find and double click on your photo so it uploads
-
-   ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/8_changing_header.png?raw=true)
-
-## 9. Adjusting header photo 
-
-Next adjust your header photo to your liking using the adjustable box.
-
-   ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/9_changing_header.png?raw=true)
-
-## 10. Adding Caption
-
-   ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/10_changing_header.png?raw=true)
-
-## 11. Set photo as header
-
-Click `DONE` to set your photo as a header on your Google Form 
-
-   ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/11_changing_header.png?raw=true)
+You have set a Header for your Google Form! You are all good to go with your Header!
