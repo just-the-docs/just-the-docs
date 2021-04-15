@@ -7,20 +7,53 @@ nav_order: 3
 # Updating Your Personal Information
 {: .no_toc }
 
-This guide will walk you through the steps necessary to navigate to the page to update your personal information, reset your password, or create/update your security questions.
+This guide will walk you through the steps necessary to navigate the [myBCIT Homepage](https://my.bcit.ca/) to update your personal information, reset your password, or create/update your security questions.
 
-You may need to aaronupdate your personal information if you’ve moved, or if there are any incorrect fields. Attributes such as your name, citizenship status, contact/emergency contact information, and your educational credentials can be accessed and updated. If you’ve forgotten your password/security question, or simply want to change them, this guide will show you how to.
+You may need to update your personal information if you’ve moved, or if there are any incorrect fields. Attributes such as your name, citizenship status, contact/emergency contact information, and your educational credentials can be accessed and updated. If you’ve forgotten your password/security question, or simply want to change them, this guide will show you how to.
 
 ---
+<br>
+<br>
+
 
 **1.** Click "Update Personal Information" located in the righthand side under the Online Self Service bar. 
 
->![Screenshot 1 of Update Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/1_update_info.png?raw=true "Update Personal Info on the myBCIT Homepage")
->CAPTION HERE IF NEEDED
+>![Screenshot 1 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/1_update_info.png?raw=true "Update Personal Info on the myBCIT Homepage.")
+<br>
+>This is where the "Update Personal Information" menu is located.
 
-**2.** You will be prompted to sign into your Online Self Service account. This requires your 'A0' student number and your password. 
+<br>
+<br>
 
->![Screenshot 2 of Update Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/2_update_info.png?raw=true "Online self service sign in")
->CAPTION HERE IF NEEDED
+>Here's a close up of the menu option to click:
+>![Screenshot 2 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/2_update_info.png?raw=true "Close-up of the Online Self Service menu options.")
+<br>
+>A magnification of the previous image showing which menu option to select.
 
-**3.** Etc...
+<br>
+<br>
+
+**2.** You will be prompted to sign into your BCIT account to access the Online Student Self-Service Account
+
+>![Screenshot 3 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/3_update_info.png?raw=true "Online self service sign in.")
+<br>
+>Sign in page for your Online Student Self-Service Account.
+
+<br>
+<br>
+
+**3.** Once you've logged in to the Online Student Self-Service page, click the "Student Self Service" to enter the student self service menu.
+
+>![Screenshot 3 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/4_update_info.png?raw=true "The Online Student Self-Service homepage.")
+<br>
+>The Online Student Self-Service homepage.
+
+<br>
+<br>
+
+**4.** Once you've logged in to the Online Student Self-Service page, click the "Student Self Service" to enter the student self service menu.
+
+>![Screenshot 4 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/5_update_info.png?raw=true "The Student ")
+<br>
+>The Online Student Self-Service homepage.
+
