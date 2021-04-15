@@ -1,7 +1,7 @@
 ---
 layout: default
 title: myBCIT Homepage
-nav_order: 12
+nav_order: 2
 ---
 
 # Navigating your myBCIT Homepage
@@ -29,20 +29,19 @@ The homepage is a collection of links to the various resources available to you 
 
 ---
 
-## Online self service
-
-This is the paragraph that will contain the information for the online self service section for the myBCIT homepage.
-
----
-
 ## myCourses
 
-A brief overview of the myCourses page will go here.
-
+Clicking on my courses is a quick way to view your enrolled courses along with the respective outlines for a specified term.
 ---
+
+## Campus Life
+
+Clicking on campus life will direct you to a page that holds some general information about the bcit campus locations and the international student center.
+
+--
 
 ## Student Resources
 
-A summary of the student resources page will go here, and a subpage would be dedicated for more in-depth information.
+The student resources page contains links to the bcit bookstore, IT center, Student association page and more information to help answer general questions a new student may have. 
 
 ---
