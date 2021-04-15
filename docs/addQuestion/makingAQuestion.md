@@ -21,7 +21,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
   ![Default Form Look](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/1_defaultQuestion.png?raw=true)
 
-  If you do not see the question, or if you want to create more than one question, click on the plus button.
+  If you do not see the question, or if you want to create more than one question, click on ![plus](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/plus2.png?raw=true){: height="5%" width="5%"} icon.
 
   ![Plus Button](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/1_addingAQuestion.png?raw=true)
 
@@ -52,13 +52,13 @@ To create and set up a question for your form, follow these steps. If you want t
 
 ### Adding an option
 
-  It is required to have at least 1 option. To set an option, click on "Option 1". For example, "Vanilla" as a choice to the example question.
+  It is required to have at least 1 option. To set an option, click on `Option 1`. For example, "Vanilla" as a choice to the example question.
 
   ![Option 1](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_firstOptions.png?raw=true)
 
 ### Adding additional options
 
-  To add more options to the question, click on "Add option".
+  To add more options to the question, click on `Add option`. 
 
   ![More options](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_moreOptions.png?raw=true)
 
@@ -69,13 +69,13 @@ To create and set up a question for your form, follow these steps. If you want t
 
 ### Allowing "others" as an option
 
-  If you want people to be able to enter their own option, click on 'add "Other"'. This option is not availble for dropdown.
+  If you want people to be able to enter their own option, click on `add "Other"`. This option is not available for dropdown.
 
   ![Add "Other"](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_addOther.png?raw=true)
 
 ## 4. Previewing your questions
 
-  After adding all desired options from step 3, you can preview the question, by clicking on the eye symbol located on the top right of the page.
+  After adding all desired options from step 3, you can preview the question, by clicking on ![eye](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/eye.png?raw=true){: height="4%" width="4%"} icon located on the top right of the page.
 
   ![Eye Symbol For Preview](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/4_eyeSymbol.png?raw=true)  
 
