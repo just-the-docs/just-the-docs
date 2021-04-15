@@ -1,18 +1,11 @@
 ---
 layout: default
-title: Changing Theme
+title: Changing Google Form Header
 parent: Customizing Google Form
 nav_order: 1
 ---
 
----
-layout: default
-title: Typography
-parent: UI Components
-nav_order: 1
----
-
-## Changing Google Form Header
+# Changing Google Form Header
 ---
 intro of some sort
 
