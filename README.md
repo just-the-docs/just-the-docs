@@ -1,9 +1,5 @@
 <h1 align="center">Google Forms Guide</h1>
 
-<p align="center>A basic walkthrough of how to create a form on Google Forms</p>
-
-<hr>
-
 ## Overview
 
 This Google Forms Guide is to help you get basic understanding of how to use Google Forms. 
