@@ -21,17 +21,18 @@ Before we begin, you will want to have a Google Form set up. To set up a Google 
 
 This link is where you will be able to start creating your Google Form.
 
-Link to Google Forms: https://docs.google.com/forms/
+Link to Google Forms: <https://docs.google.com/forms/>
 
 ## 2. Log In Using a Google Account.
 
 As Google Forms is part of the G Suite collection, you will need to have a Google Account to use it.
 
 ![Bell](../images/icons/bell.png){: height="8%" width="8%" style="float: left"}
-**Note:** If your email ends with _gmail.com_, you already have a Google account.
+**Note:** If your email ends with _@gmail.com_, you already have a Google account.
+
 
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
-**Note:** You will see the page below _only_ if you are not already signed onto a google account. _skip_ to [Step 3](#3-creating-new-google-form) if you are already signed in
+**Note:** You will see the page below _only_ if you are not already signed onto a google account. _Skip to [Step 3](#3-creating-new-google-form) if you are already signed in._
 
 ![Google Form Homepage](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/1_Google_login.png?raw=true)
 
