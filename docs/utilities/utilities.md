@@ -1,7 +1,8 @@
 ---
 layout: default
 title: ----------
-nave_exclude = true
+nav_exclude: true
+nonav: true
 nav_order: 95
 has_children: true
 permalink: docs/utilities
