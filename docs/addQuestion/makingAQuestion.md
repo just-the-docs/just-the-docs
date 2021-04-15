@@ -27,7 +27,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
   Click on `Untitled Question` to enter your question. For example, "What is your favourite ice-cream flavour?"
 x 
-  ![Question](../images/addingQuestions/2_question.gif)
+  ![Question](../images/addingQuestions/2_Question.gif)
 
 ### Selecting types of questions
 
@@ -76,11 +76,11 @@ x
 
   After adding all desired options from step 3, you can preview the question, by clicking on ![eye](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/eye.png?raw=true){: height="4%" width="4%"} icon located on the top right of the page.
 
-  ![Eye Symbol For Preview](4_eyeSymbol.png)  
+  ![Eye Symbol For Preview](../images/addingQuestions/4_eyeSymbol.png)  
 
   This is what what you should see:
 
-  ![Eye Symbol For Preview](addingQuestions/4_preview.png)  
+  ![Eye Symbol For Preview](../images/addingQuestions/4_preview.png)  
 
 
   By previewing the questions, you will be able to see all your questions as another user.
@@ -89,7 +89,7 @@ x
 
   To remove a question, click on the trash can symbol on the bottom of the question that should be deleted.
 
-  ![Removing A Question](5_removingQuestion.png)
+  ![Removing A Question](../images/addingQuestions/5_removingQuestion.png)
 
 ## Conclusion
 
