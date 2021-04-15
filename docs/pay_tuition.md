@@ -1,13 +1,13 @@
 ---
 layout: default
 title: Pay Tuition Fees
-nav_order: 4
+nav_order: 7
 ---
 
 # PayTuition
 {: .no_toc }
 
-To pay tuition for a course or program, from the myBCIT homepage, in the Online self service section. The myCommunications section will display all important updates relating to acceptance notifications.
+To pay tuition for a course or program, from the myBCIT Homepage, in the Online self service section. The myCommunications section will display all important updates relating to acceptance notifications.
 
 
 ---

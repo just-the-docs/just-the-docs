@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Viewing your Course Schedule
-nav_order: 6
+nav_order: 8
 ---
 
 # How to Find your Course Schedule

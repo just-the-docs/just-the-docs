@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Updating Your Personal Information
-nav_order: 3
+nav_order: 4
 ---
 
 # Updating Your Personal Information
