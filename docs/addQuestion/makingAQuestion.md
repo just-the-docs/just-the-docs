@@ -27,19 +27,19 @@ To create and set up a question for your form, follow these steps. If you want t
 
   Click on `Untitled Question` to enter your question. For example, "What is your favourite ice-cream flavour?"
 x 
-  ![Question](./images/addingQuestions/2_question.gif)
+  ![Question](../images/addingQuestions/2_question.gif)
 
 ### Selecting types of questions
 
   There are many different types of question that can be asked. The default type of question is set to multiple choice. To change the question type, click on `Multiple choice`. A menu with question types will appear. Click on option you want. For more information on question types, go to the `Type Of Questions` subsection.
 
- ![Question Types](./images/addingQuestions/2_typesOfQuestions.gif)
+ ![Question Types](../images/addingQuestions/2_typesOfQuestions.gif)
 
 ### Mandatory questions
 
   Questions can either be optional, or required. By default, the questions are set to be optional (the toggle is white). To set a question to required, click on the toggle beside the `Required` on the bottom right of the question. The colour of the toggle should change from white to another colour. To change a question to optional, click on the toggle again. The colour should change back to white.
 
-  ![Types of Questions](./images/addingQuestions/2_required.gif)
+  ![Types of Questions](../images/addingQuestions/2_required.gif)
 
 ## 3. Setting up the options to your question
 
@@ -52,19 +52,19 @@ x
 
   Click on `Option 1` to set the first option. It is required to have at least 1 option per question. Enter the option. For example, "Vanilla" or "Chocolate".
 
-  ![Option 1](./images/addingQuestions/3_firstOptions.png)
+  ![Option 1](../images/addingQuestions/3_firstOptions.png)
 
 ### Adding additional options
 
   To add another option to the question, click on `Add option`. A new option will appear. Enter the option. Repeat until desired number of options are added.
 
-  ![More options](./images/addingQuestions/3_additionalOptions.gif)
+  ![More options](../images/addingQuestions/3_additionalOptions.gif)
 
 ### Removing an option
 
   To remove an option, click on the X symbol located to the right of the unwanted option. The option will disappear after.
 
-  ![Add "Other"](./images/addingQuestions/3_removeOption.gif)
+  ![Add "Other"](../images/addingQuestions/3_removeOption.gif)
 
 ### Allowing user-set options
 
