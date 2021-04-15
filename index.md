@@ -6,23 +6,30 @@ description: "Just the Docs is a responsive Jekyll theme with built-in search th
 permalink: /
 ---
 
-# Introducton
+# Introduction
 {: .fs-9 }
 
-This guide is tailored to help new students familiarize themselves with the myBCIT website. The guide discusses all the essential features that are needed by new students. 
+This guide is designed to help prepare new students who are looking to attend BCIT an overview of the essential areas of the myBCIT homepage. Students will be guided through the BCIT homepage and will be provided on some of the need-to-know basics for new students such as updating personal information and overviews of the myCommunications page.Students will also be offered instruction to Apply for programs and courses, pay tuition, and view course schedules.
+
 {: .fs-6 .fw-300 }
 
 
 ---
 
 ## Pre-requisites
-You must already have your BCIT ‘A0#’ student number in order to get the most from this guide. Each of the links on the left section of the page provides a detailed step by step guidance to access information on the website.
+This guide is for new students to BCIT who are applying for a program or courses and will assume that students have signed up, been given an ‘A00’ student number with password and are able to successfully log into the myBCIT webpage.
 
 ---
 
-## Intended User
+## Intended Users
 
-The main goal of this guide is to help new students in accessing information on the website. Although ever step describes the process in detail, we still expect the user to have basic computer skills.
+This guide is provided for users with little to no experience in navigating the myBCIT homepage, and want to register for programs and courses at bcit. No prior knowledge with computers is necessary to follow this guide.
+
+---
+
+## Brief Overview:
+
+The table of contents lists the topics that students will find essential to explore the many resources provided on the myBCIT webpage.
 
 ---
 
@@ -31,3 +38,4 @@ The main goal of this guide is to help new students in accessing information on 
  ![caution](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/caution.png?raw=true)
  {: style="float: left" } 
  This caution symbol simply indicates where the user should pay extra attention to their actions.
+
