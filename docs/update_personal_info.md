@@ -15,12 +15,12 @@ You may need to aaronupdate your personal information if you’ve moved, or if t
 
 **1.** Click "Update Personal Information" located in the righthand side under the Online Self Service bar. 
 
->![Screenshot #1 of Update Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/#1_update_info.png?raw=true "Update Personal Info on the myBCIT Homepage")
+>![Screenshot 1 of Update Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/1_update_info.png?raw=true "Update Personal Info on the myBCIT Homepage")
 >CAPTION HERE IF NEEDED
 
 **2.** You will be prompted to sign into your Online Self Service account. This requires your 'A0' student number and your password. 
 
->![Screenshot #2 of Update Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/#2_update_info.png?raw=true "Online self service sign in")
+>![Screenshot 2 of Update Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/2_update_info.png?raw=true "Online self service sign in")
 >CAPTION HERE IF NEEDED
 
 **3.** Etc...
