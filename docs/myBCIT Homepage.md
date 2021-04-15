@@ -24,7 +24,7 @@ The homepage is a collection of links to the various resources available to you 
 
 
 
->![Screen shot of myBCIT Homepage](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/myBCIT_home_landing_page.png?raw=true "Image of the myBCIT Homepage")
+>![Screen shot of myBCIT Homepage](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/myBCITHomepage/myBCIT_home_landing_page.png?raw=true "Image of the myBCIT Homepage")
 >Test image of the myBCIT Homepage
 
 ---
@@ -39,7 +39,7 @@ Clicking on my courses is a quick way to view your enrolled courses along with t
 
 Clicking on campus life will direct you to a page that holds some general information about the bcit campus locations and the international student center.
 
---
+---
 
 ## Student Resources
 
