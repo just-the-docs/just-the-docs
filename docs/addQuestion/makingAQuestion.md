@@ -27,19 +27,19 @@ To create and set up a question for your form, follow these steps. If you want t
 
 ## 2. Setting up your question
 
-  Click on "Untitled Question" to enter your question. For example, "What is your favourite ice-cream flavour?"
+  Click on `Untitled Question` to enter your question. For example, "What is your favourite ice-cream flavour?"
 
   ![Question](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_Question.png?raw=true)
 
 ### Selecting types of questions
 
-  There are many different types of question that can be asked. The default type of question is set to multiple choice. To change the question type, click on "Multiple choice". A menu with question types will appear. Click on option you want. For more information on question types, go to the "Type Of Questions" subsection.
+  There are many different types of question that can be asked. The default type of question is set to multiple choice. To change the question type, click on `Multiple choice`. A menu with question types will appear. Click on option you want. For more information on question types, go to the "Type Of Questions" subsection.
 
   ![Types of Questions](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_TypesOfQuestions.png?raw=true)
 
 ### Mandatory questions
 
-  Questions can either be optional, or required. By default, the questions are set to be optional. You can set a question to be required by clicking on the sliding toggle beside the "Required" on the bottom right of your question.
+  Questions can either be optional, or required. By default, the questions are set to be optional. You can set a question to be required by clicking on the sliding toggle beside the `Required` on the bottom right of your question.
 
   ![Types of Questions](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_requiredQuestion.png?raw=true)
 
