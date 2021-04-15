@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Changing Google Form Header using Default Photo
+title: Changing Header Using Default Photo
 parent: Customizing Google Form
 nav_order: 1
 ---
@@ -28,11 +28,6 @@ Click on `Choose an image`
 ## 3. Choose Default Header
 
 Once you click on `Choose an image` a window will pop up and you can now choose a Google default header photo.
-
-   ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
-   **Note:** To upload your own photo, _skip_ to step 6 
-   <br />
-   <br />
 
    ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/3_changing_header.png?raw=true)
 
