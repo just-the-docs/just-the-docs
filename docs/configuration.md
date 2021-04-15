@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Configuration
+title: ----------
 nav_order: 97
 ---
 

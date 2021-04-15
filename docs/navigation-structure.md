@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Navigation Structure
+title: ----------
 nav_order: 94
 ---
 

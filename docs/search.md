@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Search
+title: ----------
 nav_order: 92
 ---
 

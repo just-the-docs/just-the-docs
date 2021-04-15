@@ -1,27 +1,55 @@
 ---
 layout: default
-title: Paying Tuition
+title: Pay Tuition Fees
 nav_order: 4
 ---
 
-# Paying Tuition
+# PayTuition
 {: .no_toc }
 
-BRIEF INTRO HERE
+To pay tuition for a course or program, from the myBCIT homepage, in the Online self service section. The myCommunications section will display all important updates relating to acceptance notifications.
+
 
 ---
 
-**1.** Once a student has received an admission offer and has previously paid the commitment fee to secure their spot in the course or program, they can then pay their tuition costs for the term.
+**1.** Click on the "Student Self Service" under the Online Self Service menu
 
-Homepage > Student Services > main menu> registration> Account balance and fee payments
+>![Screenshot 1 of Pay Tuition Fees](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/pay_tuition/2_pay_tuition.png?raw=true)
+<br>
 
-The account balance and fee’s page will display an overview of your personal bcit information with your current account balance displayed. This is the amount that can be paid either online, by cheque or by debit in person.
+<br>
 
->pay your tuition using one of bcits accepted payment options
-This page acts as a reference to the important information about online payment.
-IMPORTANT** When paying online students must declare the type of payment option as ‘BCIT-Tuition Payments’ as the PAYEE to pay for courses with your 9 digit personal bcit ID number as the account number.
+>![Screenshot 2 of Pay Tuition Fees](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/pay_tuition/3_pay_tuition.png?raw=true)
+<br>
+A notifying update will be displayed upon acceptance to the applied program.
+ and has previously paid the commitment fee to secure their spot in the course or program, they can then pay their tuition costs for the term.
 
-**For new students, tuition must be paid 60 days in advance to the respective programs start date. 
-**Students should account for a possible 48 hour payment processing time from the time a payment is made to not exceed the given payment deadline.
 
-Etc...
+**2.**Sign into your 
+
+>![Screenshot 3 of Pay Tuition Fees](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/pay_tuition/4_pay_tuition.png?raw=true)
+<br>
+Look for a message like this to confirm your registration status and that you may now pay the tuition balance.
+
+>![Screenshot 4 of Pay Tuition Fees](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/pay_tuition/5_pay_tuition.png?raw=true)
+<br>
+Once registration to the program is confirmed, click the admissions option at the top of the page.
+
+>![Screenshot 5 of Pay Tuition Fees](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/pay_tuition/6_pay_tuition.png?raw=true)
+<br>
+Click on the “View tuition” option to view all information about tuition costs.
+
+>![Screenshot 6 of Pay Tuition Fees](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/pay_tuition/7_pay_tuition.png?raw=true)
+<br>
+Current Balance at the bottom of the highlighted table will be how much is owed for the term, and is the cost amount that should be transferred if choosing the online payment method.
+
+>![Screenshot 7 of Pay Tuition Fees](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/pay_tuition/8_pay_tuition.png?raw=true)
+<br>
+Located on the current page, above the table there is an important link on transferring BCIT tuition fees labeled “Pay your tuition using one of BCIT’s accepted payment methods.
+
+>![Screenshot 8 of Pay Tuition Fees](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/pay_tuition/9_pay_tuition.png?raw=true)
+<br>
+This page holds the specific information for reference while using your online bank.
+***<add important /danger symbol> As the PAYEE to be receiving tuition costs, it is VERY important to state “BCIT- Tuition Payments” to pay for the course or program or the payment process may not go through.
+
+It is important to note that new students must have tuition paid 60 days prior to the start of the program. Note that it can take up to 48 hours to process payments for courses and programs, so please ensure tuition is paid before, or at 58 days prior to the start of the course or program.
