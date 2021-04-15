@@ -18,17 +18,3 @@ This guide is tailored to help new students familiarize themselves with the myBC
 ## Prerequesites
 
 You must already have your BCIT 'A0' student number in order to get the most from this guide.
-
-
-
----
-
-##3 About the project
-
-Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](http://patrickmarsceill.com).
-
-### License
-
-Just the Docs is distributed by an [MIT license](https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt).
-
-

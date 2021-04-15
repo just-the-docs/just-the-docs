@@ -23,13 +23,13 @@ The student resources page is a collection of student oriented features that are
 
 <br>
 
-**3.** 
+**3.** Each blue bullet point directs students to information on their respective topics. 
 >![Screenshot 3 of Student Resources](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/student_resources/3_student_resources.png?raw=true"Options in Online Self Service")
 <br>
 
 <br>
 
-**4.** Each blue bullet point directs students to information on their respective topics. 
+**4.** Next, click on the "BCIT Student Association" menu option.
 >![Screenshot 4 of Student Resources](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/student_resources/4_student_resources.png?raw=true"Dfferent options in Online Self Service")
 <br>
 

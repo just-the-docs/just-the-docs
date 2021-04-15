@@ -34,7 +34,7 @@ Applying for a program is the first step towards your journey of becoming a stud
 
 **4.** The application page displays the steps to be taken in order to officially apply to a program.
 Note that some programs have prerequisite requirements in order to apply in which official documentation in the form of transcripts are required to be considered. This page displays a link called “ submitting transcripts and supporting documents”  which contains information on the procedure to submitting documents for a given program application.
-This page contains important resources for preparing the documentation for submission to the admissions office and should be followed carefully for proper formatting. Please refer to https://www.bcit.ca/admission/how-to-apply/submitting-transcripts-supporting-documents/
+Important resources for preparing your documentation for submission to the admissions office and should be followed carefully for proper formatting. Please refer to this [page](https://www.bcit.ca/admission/how-to-apply/submitting-transcripts-supporting-documents/) for more information on how to format your documents.
 
 >![Screenshot 4 of How To Apply For a Program](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/applying_for_program/4_applying_for_program.png?raw=true"submitting documents and transcripts")
 <br>
