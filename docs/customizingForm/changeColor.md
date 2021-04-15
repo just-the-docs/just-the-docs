@@ -21,12 +21,12 @@ First click on ![palette](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-
 ## 2. Select Theme Color
 
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
-**Note:** Click the ![plus](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/plus.png) icon to _add_ custom color of your choice!
+**Note:** Click the ![plus](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/plus.png?raw=true) icon to _add_ custom color of your choice!
 <br>
 <br>
 
 Select your favourite color in the theme option window
-![Theme Option](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/1_Color.png)
+![Theme Option](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/1_Color.png?raw=true)
 
 ## 3. Select background color
 
