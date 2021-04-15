@@ -17,19 +17,18 @@ You can either use a Google Form Default photo or upload your own photo to set a
 {: .no_toc .text-delta }
 
 1. TOC
-{:toc}
 
 # Google Form Default Photo
 
 Follow steps 1-5 to set a Google Form default photo as the header of your form
 
-## 1.Open Theme options
+## 1. Open Theme options
 
 First click on ![palette](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/paint-palette.png?raw=true){: height="4%" width="4%"} icon.
 
    ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/1_changing_header.png?raw=true)
 
-## 2.Select Image
+## 2. Select Image
 
 Click on `Choose an image`
 
