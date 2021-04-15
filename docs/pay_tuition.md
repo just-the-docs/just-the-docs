@@ -67,7 +67,7 @@ To pay tuition for a course or program, from the myBCIT Homepage, in the Online 
  ![caution](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/caution.png?raw=true)
  {: style="float: left" } 
  <br> 
- **NOTE**: As the PAYEE to be receiving tuition costs, it is VERY important to state “BCIT- Tuition Payments” to pay for the course or program or the payment process may not go through.
+ **CAUTION**: As the PAYEE to be receiving tuition costs, it is VERY important to state “BCIT- Tuition Payments” to pay for the course or program or the payment process may not go through.
 
 <br>
 

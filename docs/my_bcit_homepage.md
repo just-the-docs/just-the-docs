@@ -48,7 +48,6 @@ The student resources page contains links to the bcit bookstore, IT center, Stud
 ---
 
 <br>
-<br>
 
 The myBCIT homepage acts as the main hub for accessing various features such as the Online Self-Service homepage, myCourses, and your BCIT email acccount as well.
 
