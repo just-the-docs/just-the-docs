@@ -11,3 +11,5 @@ While creating a form, it is not uncommon to run into some issues. This section 
 ## Unable to Exit Form Preview
 
 When previewing your form, the preview will open itself in a new tab. To exit out of the form preview, simply close the tab it is on by clicking on the `x` on the tab.
+
+![Exit Tab](./images/troubleshooting/closeTab.png)
