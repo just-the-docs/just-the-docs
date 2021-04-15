@@ -32,6 +32,7 @@ The homepage is a collection of links to the various resources available to you 
 ## myCourses
 
 Clicking on my courses is a quick way to view your enrolled courses along with the respective outlines for a specified term.
+
 ---
 
 ## Campus Life
