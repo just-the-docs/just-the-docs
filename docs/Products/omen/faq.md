@@ -6,6 +6,19 @@ grand_parent: Products
 
 ---
 
+# Omen FAQ
+{: .no_toc }
+
+___
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 ## What is Omen? 
  
 Omen is an information market platform. Users can create and/or participate in information markets on various topics (crypto, politics, sports, etc.) and risk their crypto on possible outcomes. The oracle provider then validates the outcome, and the users who hold shares of the correct outcome collect the crypto held as collateral. In the case of a dispute, an arbitrator can be called to make a judgment. 
@@ -90,15 +103,15 @@ Omen employs a type of AMM called the Fixed Product Market Maker (FPMM). The FPM
  
 4. Bob buys 2.5 Dai worth of Yes tokens from the market.
  
-		a. Bob sends 2.5DAI (plus a 2% fee of ~ 0.05DAI). 
+	*a*. Bob sends 2.5DAI (plus a 2% fee of ~ 0.05DAI). 
  
-		b. The market takes the 2.5 DAI and converts it to 2.5 Yes and 2.5 No outcome tokens. It also deposits the fee. 
+	*b*. The market takes the 2.5 DAI and converts it to 2.5 Yes and 2.5 No outcome tokens. It also deposits the fee. 
  
-		c. The market then converts the 2.5 No tokens to Yes tokens by trading with the existing liquidity. 
+	*c*. The market then converts the 2.5 No tokens to Yes tokens by trading with the existing liquidity. 
  
-		d. Preserving the product of its balances, the market returns 2 Yes tokens for the 2.5 No tokens deposited, leaving it with 8 Yes tokens and 12.5 No tokens (8*12.5 = 100 = 10*10). 
+	*d*. Preserving the product of its balances, the market returns 2 Yes tokens for the 2.5 No tokens deposited, leaving it with 8 Yes tokens and 12.5 No tokens (8*12.5 = 100 = 10*10). 
  
-		e. Bob gets back a total of 4.5 Yes tokens. 
+	*e*. Bob gets back a total of 4.5 Yes tokens. 
  
 5. Alice deposits her pool tokens and withdraws her liquidity, getting back 8 DAI and 4.5 No tokens, along with the 0.05 DAI she earned in fees. If the market resolves to Yes, Alice’s No tokens will be worth nothing and she will have experienced nearly a 20% loss. 
  
