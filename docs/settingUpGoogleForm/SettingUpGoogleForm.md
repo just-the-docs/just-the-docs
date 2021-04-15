@@ -17,11 +17,13 @@ Before we begin, you will want to have a Google Form set up. To set up a Google 
 
 ---
 
-## 1.) Go to <https://docs.google.com/forms/>
+## 1. Go to [Google Forms](https://docs.google.com/forms/)
 
 	This link is where you will be able to start creating your Google Form.
 
-## 2.) Log In Using a Google Account.
+	Link to Google Forms: https://docs.google.com/forms/
+
+## 2. Log In Using a Google Account.
 
 	As Google Forms is part of the G Suite collection, you will need to have a Google Account to use it.
 
@@ -33,19 +35,19 @@ Before we begin, you will want to have a Google Form set up. To set up a Google 
 
    ![Google Form Homepage](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/1_Google_login.png?raw=true)
 
-## 3.) Creating a New Google Form
+## 3. Creating a New Google Form
 
 Go to the left corner and click on `Blank`.
 
    ![Google Form page](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/2_Google_Form_Homepage.png?raw=true)
 
-## 4.) Naming Your Google Form
+## 4. Naming Your Google Form
 
    Go to the top left corner and click on `Untitled Form` to change form name.
 
    ![Google Form Page](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/3_Untitled_form1.png?raw=true)
 
-## 5.) Giving Your Google Form a Description
+## 5. Giving Your Google Form a Description
 
 	Next, click on `form description` to add a description to the form.
 
