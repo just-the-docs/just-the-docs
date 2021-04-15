@@ -24,7 +24,7 @@ The homepage is a collection of links to the various resources available to you 
 
 
 
->![Screen shot of myBCIT Homepage](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/myBCITHomepage/myBCIT_home_landing_page.png?raw=true "Image of the myBCIT Homepage")
+>![Screen shot of myBCIT Homepage](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/my_bcit_homepage/1_my_bcit_homepage.png?raw=true "Image of the myBCIT Homepage")
 >Test image of the myBCIT Homepage
 
 ---

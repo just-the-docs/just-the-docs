@@ -7,7 +7,7 @@ nav_order: 5
 # How to Find your Course Schedule
 {: .no_toc }
 
-<BRIEF INTRO HERE>
+BRIEF INTRO HERE
 
 ---
 

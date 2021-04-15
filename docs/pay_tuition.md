@@ -4,10 +4,10 @@ title: Paying Tuition
 nav_order: 4
 ---
 
-# myCommunication
+# Paying Tuition
 {: .no_toc }
 
-<BRIEF INTRO HERE>
+BRIEF INTRO HERE
 
 ---
 

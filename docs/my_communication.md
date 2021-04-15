@@ -1,13 +1,13 @@
 ---
 layout: default
-title: myCommunication Notifications & Events
+title: Notifications & Communications
 nav_order: 4
 ---
 
 # myCommunication
 {: .no_toc }
 
-<BRIEF INTRO HERE>
+BRIEF INTRO HERE
 
 ---
 
