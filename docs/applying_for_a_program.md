@@ -7,7 +7,7 @@ nav_order: 6
 # How To Apply For A Program
 {: .no_toc }
 
-
+Applying for a program is the first step towards your journey of becoming a student at BCIT. This guide will walk you through the steps on how to apply for a program.
 
 ---
 
