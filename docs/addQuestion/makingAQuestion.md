@@ -83,7 +83,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
   ![Eye Symbol For Preview](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/4_preview.png?raw=true)  
 
-  By previewing the questions, you will be able to see all your questions as if you were **ANOTHER PERSON??**
+  By previewing the questions, you will be able to see all your questions as if you were the user taking the form
 
 ## 5. Removing a question
 
