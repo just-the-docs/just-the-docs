@@ -76,3 +76,8 @@ To pay tuition for a course or program, from the myBCIT Homepage, in the Online 
 
 
 **It is important to note that new students must have tuition paid 60 days prior to the start of the program. Note that it can take up to 48 hours to process payments for courses and programs, so please ensure tuition is paid before, or at 58 days prior to the start of the course or program.**
+
+<br>
+<br>
+
+Please make sure to check [here](https://www.bcit.ca/academic-dates/) for tuition deadlines. Failure to pay your tuition on time may lead to the widthdrawal of you from your program!

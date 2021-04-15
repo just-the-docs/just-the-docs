@@ -30,6 +30,7 @@ Click my communication to view a timeline of current and past important events r
 
 >![Screenshot 3 of myCommunications](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/my_communication/3_my_communication.png?raw=true "The list of official email in the Student Letter Summary Section.")
 <br>
+
 <br>
 <br>
 

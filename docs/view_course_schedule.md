@@ -29,6 +29,9 @@ After being registered in a program, you will need to view your course schedule.
 **3.** This is your course schedule. From here you check your courses through weekly increments by clicking the "Previous Week" or "Next Week" links highlighted in the red boxes.
 
 >![Screenshot 3 of View Course Schedule](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/view_course_schedule/3_view_course_schedule.png?raw=true "The page containing information about your course schedule.")
+<br>
 
+<br>
+<br>
 
-
+Checking course schedule is essential for new students.  myBCIT makes it possible for students to check the  schedule before the classes begin. Therefore, these instructions are helpful for someone who is not familiar with the myBCIT website.

@@ -45,8 +45,8 @@ You may need to update your personal information if you’ve moved, or if there 
 
 >![Screenshot 4 of Updating your Info](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/update_personal_info/5_update_info.png?raw=true "The Student personal information sub-menu.")
 <br>
-<br>
-<br>
 
+<br>
+<br>
 
 The "Update your personal information" will allow you to change information such as your address, name, or contact information. While the "Reset your password" and "Create or change your security question" will allow you to change your password and security question, respectively.

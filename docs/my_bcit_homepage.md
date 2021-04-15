@@ -43,6 +43,8 @@ Clicking on campus life will direct you to a page that holds some general inform
 
 ## Student Resources
 
-The student resources page contains links to the bcit bookstore, IT center, Student association page and more information to help answer general questions a new student may have. 
+The student resources page contains links to the bcit bookstore, IT center, Student association page and more information to help answer general questions a new student may have. [Here]( ttps://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/student_resources.md) is how to navigate to the Student Resource page.
 
 ---
+
+

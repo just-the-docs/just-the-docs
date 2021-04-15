@@ -51,3 +51,8 @@ Important resources for preparing your documentation for submission to the admis
 **6.** Go through each specified step displayed on screen carefully to declare a program for application and click next
 >![Screenshot 6 of How To Apply For a Program](https://github.com/Kid-W/Will-Test-Docs/blob/gh-pages/docs/images/applying_for_program/6_applying_for_program.png?raw=true"fiiling out the three options")
 <br>
+
+<br>
+<br>
+
+As education being BCIT’s main function for students, providing correct and complete credentials during the application process is essential to keep each student's academic timeline on track.
