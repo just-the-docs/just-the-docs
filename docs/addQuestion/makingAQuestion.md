@@ -82,6 +82,7 @@ x
 
   ![Eye Symbol For Preview](addingQuestions/4_preview.png)  
 
+
   By previewing the questions, you will be able to see all your questions as another user.
 
 ## 5. Removing a question
