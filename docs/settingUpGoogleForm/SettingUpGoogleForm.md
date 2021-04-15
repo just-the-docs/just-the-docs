@@ -30,6 +30,7 @@ As Google Forms is part of the G Suite collection, you will need to have a Googl
 ![Bell](../images/icons/bell.png){: height="8%" width="8%" style="float: left"}
 **Note:** If your email ends with _@gmail.com_, you already have a Google account.
 
+<br />
 
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
 **Note:** You will see the page below _only_ if you are not already signed onto a google account. _Skip to [Step 3](#3-creating-new-google-form) if you are already signed in._
