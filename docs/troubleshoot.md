@@ -16,6 +16,6 @@ When previewing your form, the preview will open itself in a new tab. To exit ou
 
 ## Google Form Name Not Changing
 
-When you rename your Google Form, the title on the top left corner and the title in the middle of the page should automatically change to match each other. If they do not you must manually change the one that doesn't match to the title the you want it to be
+When you rename your Google Form, the title on the top left corner and the title in the middle of the page should automatically change to match each other. If they do not match you must manually change the one the title that did not update
 
-![Title]()
+![Title](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/troubleshooting/Title.png?raw=true)
