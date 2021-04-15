@@ -52,11 +52,11 @@ parent: Creating A Question
 
   1b. Click on the number that you want to change. The number on the left corresponds to the start of the scale, and the number on the right corresponds to the end of the scale.
 
-  ![Linear Scale Scale](./images/questions/1_linearScale.gif)
+  ![Linear Scale Scale](../images/questions/1_linearScale.gif)
 
   1c. This step is optional. Click on `Label` to add a label to your scale. It is recommended to add a label so users know what each end of the scale represents. For example, 0 is hate, and 10 is love. This is what the question should look like when we preview it.
 
-  ![Linear Scale Results](./images/questions/1_linearResults.png)
+  ![Linear Scale Results](../images/questions/1_linearResults.png)
 
 ### 2. Multiple Choice Grid and Checkbox Grid
 
@@ -75,7 +75,7 @@ parent: Creating A Question
   2c. Click on "Column 1" to edit the first column. For additional columns, click on "Add column" to start typing. An example to the question on step 2a would be "Hate" or "Love"
   
   A completed multiple choice grid question would look like this:
-  ![Grid Results](./images/questions/2_gridResults.png)
+  ![Grid Results](../images/questions/2_gridResults.png)
 
 ## D. Additional Options
 
@@ -84,7 +84,7 @@ parent: Creating A Question
   Click on the three dots on the bottom right of the question.
   A menu should appear:
   
-  ![Grid Results](./images/questions/2_advanced.png)
+  ![Grid Results](../images/questions/2_advanced.png)
   ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
   **Note** Additional options vary by question. This beginners guide will describe the options shown in the image above.
 
@@ -94,7 +94,7 @@ parent: Creating A Question
 
   1a. Click on `Description`. A new area to input the description will appear. Click on `Description` to add details to your question.
 
-  ![Description](./images/questions/2_description.gif)
+  ![Description](../images/questions/2_description.gif)
   
 
 ### 2. Shuffle Row Order
