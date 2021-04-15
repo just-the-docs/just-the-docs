@@ -21,7 +21,7 @@ To create and set up a question for your form, follow these steps. If you want t
 
   If you do not see the question, or if you want to create more than one question, click on the plus icon.
 
-  ![Plus Button](./images/addingQuestions/1_addingAQuestion.png)
+  ![Plus Button](../images/addingQuestions/1_addingAQuestion.png)
 
 ## 2. Setting up your question
 
