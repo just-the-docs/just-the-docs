@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Customization
-nav_order: 93
+nav_order: 66
 ---
 
 # Customization
