@@ -22,6 +22,8 @@ To change the header, first click on ![palette](https://github.com/kevtrng/Googl
 
 Click on `Basic` and a drop down will appear. Here you will select what font you can use
 
+   ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/2_Font.png?raw=true)
+
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
 **Note:** Google Form autosaves so you do not need worry about manually saving when you finish selecting your colors!
 <br>
