@@ -5,7 +5,7 @@ parent: Customizing Google Form
 nav_order: 1
 ---
 
-# Changing Google Form Header using Default Photo
+# Changing Form Header Using Default Photo
 
 ---
 

@@ -74,7 +74,7 @@ x
 
 ## 4. Previewing your questions
 
-  After adding all desired options from step 3, you can preview the question, by clicking on the eye symbol located on the top right of the page.
+  After adding all desired options from step 3, you can preview the question, by clicking on ![eye](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/eye.png?raw=true){: height="4%" width="4%"} icon located on the top right of the page.
 
   ![Eye Symbol For Preview](4_eyeSymbol.png)  
 
