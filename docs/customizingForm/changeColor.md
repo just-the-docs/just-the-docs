@@ -21,7 +21,7 @@ First click on ![palette](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-
 ## 2. Select Theme Color
 
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
-**Note:** Click the ![plus](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/plus.png?raw=true){: height="4%" width="4%"} icon to _add_ custom color of your choice!
+**Note:** Click the ![plus](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/plus.png?raw=true){: height="5%" width="5%"} icon to _add_ custom color of your choice!
 <br>
 <br>
 
