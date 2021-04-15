@@ -9,7 +9,7 @@ nav_order: 3
 
 This guide will walk you through the steps necessary to navigate to the page to update your personal information, reset your password, or create/update your security questions.
 
-You may need to update your personal information if you’ve moved, or if there are any incorrect fields. Attributes such as your name, citizenship status, contact/emergency contact information, and your educational credentials can be accessed and updated. If you’ve forgotten your password/security question, or simply want to change them, this guide will show you how to.
+You may need to aaronupdate your personal information if you’ve moved, or if there are any incorrect fields. Attributes such as your name, citizenship status, contact/emergency contact information, and your educational credentials can be accessed and updated. If you’ve forgotten your password/security question, or simply want to change them, this guide will show you how to.
 
 ---
 
