@@ -1,5 +1,5 @@
 ---
 layout: default
-title: Branding Assets
+title: Brand Assets
 nav_order: 9
 ---
