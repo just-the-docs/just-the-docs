@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Changing Header using Uploaded Photo
-parent: Customizing Google Form
+parent: Customizing Google Forms
 nav_order: 2
 ---
 
@@ -31,7 +31,7 @@ In this section, we will walk you through how to change your Google Form header 
 
 **5. Select an image from computer**
 <br>
-Another window will open, find and _double click_ on your photo so it uploads
+Another window will open, find and double click on your photo so it uploads
 
 ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/8_changing_header.png?raw=true)
 

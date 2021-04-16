@@ -6,8 +6,8 @@ nav_order: 9
 
 # Glossary
 ---
-__Autosave__: process when the software program automatically saves open file or file.
+__Autosave__: process when the software program automatically saves a file. You do not need to hit a "save" button with this feature.
 
-__Default__: A preselected option given by a program
+__Default__: a preselected option given by a program
 
-__Toggle__: a switch that switches a feature from on feature to another
+__Toggle__: a switch that enables a feature to be on or off

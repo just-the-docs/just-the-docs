@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Setting Up Google Form
+title: Setting Up Google Forms
 nav_order: 2
 ---
 
 
 ---
 
-# Setting Up a Google Form
+# Setting Up a Google Forms
 
 {: .no_toc }
 

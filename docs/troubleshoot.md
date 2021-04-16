@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Troubleshoot
+title: Troubleshooting
 nav_order: 10
 ---
 
@@ -22,7 +22,7 @@ When you rename your Google Form, the title on the top left corner and the title
 
 ## Cannot Edit Google Form
 
-Make sure you are logged into the same Gmail account that you have created your form with. 
+Make sure you are logged into the same Gmail account that you have created your form with.
 
 To log in, follow these steps:
 
