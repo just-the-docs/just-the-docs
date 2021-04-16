@@ -30,11 +30,12 @@ In this section, we will walk you through how to change your Google Form header 
 ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/7_changing_header.png?raw=true)
 
 **5. Select an image from computer**
-Another window will open, find and _double click_ on your photo so it uploads
+<br>
+Another window will open, find and double click on your photo so it uploads
 
 ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/8_changing_header.png?raw=true)
 
-**6. Adjusting header photo to your liking by using the square boxes on the corner**
+**6. Adjust your header photo to your liking by using the square boxes on the corner**
 
 ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/9_changing_header.png?raw=true)
 
