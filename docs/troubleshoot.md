@@ -35,3 +35,7 @@ To log in, follow these steps:
 ## Cannot Edit Google Form
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
 **Note** If you are already logged in but cannot edit a Google form that you were previously able to, you may not be the owner for the form. You will need to contact the owner of the Google form to request for permission to edit.
+
+## Accidental Deletion
+
+Sometimes you may have delete something by accident. If the is the case hold down `cmd` button while pressing the `z` button on your keyboard.
