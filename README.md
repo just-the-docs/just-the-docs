@@ -1,17 +1,29 @@
 <h1 align="center">Google Forms Guide</h1>
 
+<p align="center>A basic walkthrough of how to create a form on Google Forms</p>
+
+<hr>
+
+
 ## Overview
 
-This Google Forms Guide is to help you get basic understanding of how to use Google Forms. 
+  Hello. This Google Forms guide is intended to provide you with a general understanding of how to create and set a Google Form.
 
-In this guide, we will teach you: 
+  By the end of this guide, you should understand how to:
+    - create a google form,
+    - set up questions and answers,
+    - organize questions into sections,
+    - view results, and
+    - customize a google form.
 
-* How to set up your Google Forms
-* How to create questions
-* How to make and use sections
-* How to view your Google Forms results
-* How to customize your Google Forms
+## Collaborating Together
 
-## How we collaborated
+  Before writing this guide, we had team meetings on Discord and Zoom to brainstorm for a topic that would help the general public. After deciding on writing a beginners guide to Google Forms, we discussed and documented the necessary requirements to complete this guide.
+  
+  Due to the continued impact of COVID-19 on social restrictions, we have been accustomed to collaborating remotely. All progress and obstacles were communicated with each other via Discord.
+ 
+## Creating This Guide
 
-
+  To write this guide, we had to use existing skills as well as learn new skills.
+ 
+### Using Markdown
