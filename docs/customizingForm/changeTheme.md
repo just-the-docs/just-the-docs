@@ -28,13 +28,13 @@ In this section, we will walk you through how to change your Google Form header 
 **4. Click on a photo to select it.**
 
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
-**Note:** You should see a _blue outline_ around the photo you selected.
+**Note:** You should see a _blue_ outline around the photo you selected.
 <br />
 <br />
 
 ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/4_changing_header.png?raw=true)
 
-**5. click on `insert`and you are done !**
+**5. Click on `insert`and you are done !**
 
 ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/5_changing_header.png?raw=true)
 
