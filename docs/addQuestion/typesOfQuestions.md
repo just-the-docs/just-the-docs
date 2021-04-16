@@ -6,18 +6,20 @@ parent: Creating A Question
 
 ---
 
+# Other Question Types
+
+This section will include information for question types. Each question type is effective in collecting data in different ways. It is important to consider which type of question is most appropriate for the data you are trying to collect. Remember each question has different additional options to aid in your gathering of data.
+
+Select the preferred question type before continuing. Refer to step 3 in the Adding and Setting a Question section in the [Creating And Setting Up A Question](./makingAQuestion.md) page.
+
+---
+
 ## Table of Contents
 {: .no_toc .text-delta }
 * TOC
 {:toc}
 
 ---
-
-# Other Question Types
-
-This section will include information for question types. Each question type is effective in collecting data in different ways. It is important to consider which type of question is most appropriate for the data you are trying to collect. Remember each question has different additional options to aid in your gathering of data.
-
-Select the preferred question type before continuing. Refer to step 3 in the Adding and Setting a Question section in the [Creating And Setting Up A Question](./makingAQuestion.md) page.
 
 ## Linear Scale
 
