@@ -25,17 +25,29 @@ Select the preferred question type before continuing. Refer to step 3 in the Add
 
 This option is suitable when you want your question to be rated on a predefined scale. Your scale can start at 0 or 1, and can end on a number from 2 to 10. You can optionally add a label to each end of the scale to add clarity.
 
+<<<<<<< HEAD
+### 1. Enter your question.
+
+An example question: "How much do you like vanilla ice-cream?"
+
+### 2. Click on the number that you want to change.
+=======
 **1. Enter your question.**
 
 An example question: "How much do you like vanilla ice-cream?"
 
 **2. Click on the number that you want to change.**
+>>>>>>> e1871d8263fd5f278ac296cf6e2ab73d668b0c1c
 
 The number on the left corresponds to the start of the scale, and the number on the right corresponds to the end of the scale.
 
 ![Linear Scale Scale](../images/questions/1_linearScale.gif)
 
+<<<<<<< HEAD
+### 3. (Optional) Click on `Label` to add a label to your scale.
+=======
 **3. (Optional) Click on `Label` to add a label to your scale.**
+>>>>>>> e1871d8263fd5f278ac296cf6e2ab73d668b0c1c
 
 It is recommended to add a label so users know what each end of the scale represents. For example, 0 is hate, and 10 is love.
 
@@ -48,8 +60,13 @@ A completed question should look like this in preview.
 Grid questions are a quick way to help you ask the same question for series of different items. They are set up with rows and columns. Each row represents a single item users are asked to answer for. Columns are the choices people can select from.
 
 In a multiple choice grid, users can select only _one answer_ per row. Checkbox grid is similar to the multiple choice grid, except users can select _more than one answer_ per row.
+<<<<<<< HEAD
+
+### 1. Enter your question.
+=======
   
 **1. Enter your question.**
+>>>>>>> e1871d8263fd5f278ac296cf6e2ab73d668b0c1c
 
 An example question: "How much do you like each of the following ice-cream flavours?"
 
@@ -60,7 +77,7 @@ For additional rows, click on "Add row" to start typing. An example following th
 **3. Click on "Column 1" to edit the first column.**
 
 For additional columns, click on "Add column" to start typing. An example to the question on step 1 would be "Hate" or "Love".
-  
+
 A completed multiple choice grid question would look like this:
 ![Grid Results](../images/questions/2_gridResults.png)
 
@@ -83,8 +100,13 @@ The dropdown question type is suitable when _only one_ option should be chosen.
 ## Additional Options
 
 Additional options are available help refine questions.
+<<<<<<< HEAD
+
+### Click on the three dots on the bottom right of the question.
+=======
   
 **Click on the three dots on the bottom right of the question.**
+>>>>>>> e1871d8263fd5f278ac296cf6e2ab73d668b0c1c
 
 A menu will appear.
 
@@ -102,7 +124,7 @@ Adding a description will help clarify your question. This option is available o
 A new area to input the description will appear. Click on `Description` in the new area to add details to your question.
 
 ![Description](../images/questions/2_description.gif)
-  
+
 ### Shuffle Row Order
 
 This option will randomize the row sequence for every user.

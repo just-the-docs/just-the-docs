@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Troubleshoot
+title: Troubleshooting
 nav_order: 10
 
 ---

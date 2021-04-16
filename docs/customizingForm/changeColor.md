@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Changing Google Form Color
-parent: Customizing Google Form
+parent: Customizing Google Forms
 nav_order: 3
 ---
 
@@ -34,6 +34,5 @@ Before sending your Google Form, you would probably like to customize your Googl
 
 ## Conclusion
 
-Alright! Let's go! You did it!
+Alright, let's go! You did it!
 After completing all the steps above, you should now have a different color set for your Google Form!
-

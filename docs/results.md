@@ -28,7 +28,7 @@ If this is your first time selecting the `Responses` tab, you will be in the `Su
 
 ![Summary](./images/results/2_summary.png)
 
-Depending on what type of question you created, the data may present itself as a graph, chart, list, or some other format.
+Depending on what type of question you created, the data may present itself as a graph, chart, list, or another format.
 
 ### Viewing Responses by Question
 
