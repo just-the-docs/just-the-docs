@@ -2,7 +2,7 @@
 layout: default
 title: Other Questions Types
 nav_order: 9
-parent: Creating A Question
+parent: Creating A Question 
 
 ---
 
