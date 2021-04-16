@@ -20,21 +20,26 @@ If you have just followed the steps to set up your Google form, skip to step 2. 
 
 ### 1. Click on the plus icon.
 
-    ![Plus Button](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/1_addingAQuestion.png?raw=true)
+![Plus Button](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/1_addingAQuestion.png?raw=true)
 
-### 2. Click on `Untitled Question` to enter your question. For example, "What is your favourite ice-cream flavour?"
+### 2. Click on `Untitled Question` to enter your question. 
 
-    ![Question](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_Question.gif?raw=true)
+For example, "What is your favourite ice-cream flavour?"
 
-### 3. Click on `Multiple choice` to select a type of question. A menu with question types will appear.
+![Question](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_Question.gif?raw=true)
 
-    ![Question Types](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_typesOfQuestions.gif?raw=true)
+### 3. Click on `Multiple choice` to select a type of question. 
+
+A menu with question types will appear.
+
+![Question Types](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/2_typesOfQuestions.gif?raw=true)
 
 ### 4. Click on the preferred question type.
 
-    There are many different types of question that can be asked. For more information on question types, go to the [Type Of Questions](./typesOfQuestions.md) subsection.
+There are many different types of question that can be asked. For more information on question types, go to the [Type Of Questions](./typesOfQuestions.md) subsection.
 
-### 5. (Optional) Click on the toggle beside the `Required` on the bottom right of the question. The colour of the toggle should change from white to another colour. To change a question to optional, click on the toggle again. The colour should change back to white.
+### 5. (Optional) Click on the toggle beside the `Required` on the bottom right of the question. 
+The colour of the toggle should change from white to another colour. To change a question to optional, click on the toggle again. The colour should change back to white.
 
 Questions can either be optional, or required. By default, the questions are set to be optional (the toggle is white).
 
@@ -50,17 +55,20 @@ This section will go over how to add and remove an option to a multiple choice, 
 There must be at least one option set.
 
 #### 1. Click on `Option 1` to enter the first option.
-  ![Option 1](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_firstOptions.png?raw=true)
 
-    Enter the option. It is required to have at least 1 option per question. For example, "Vanilla" or "Chocolate".
+![Option 1](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_firstOptions.png?raw=true)
 
-#### 2. (Optional) Click on `Add option` to add another option to the question. A new option will appear. 
+Enter the option. It is required to have at least 1 option per question. For example, "Vanilla" or "Chocolate".
 
-    ![More options](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_additionalOptions.gif?raw=true)
+#### 2. (Optional) Click on `Add option` to add another option to the question. 
 
-    Enter the option. Repeat until desired number of options are added.
+A new option will appear. 
 
-#### 3. (Optional) Click on `add "Other"` to allow users to enter their own option. 
+![More options](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_additionalOptions.gif?raw=true)
+
+Enter the option. Repeat until desired number of options are added.
+
+#### 3. (Optional) Click on `add "Other"` to allow users to enter their own option.
 
 ![Add "Other"](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_addOther.png?raw=true)
 
@@ -70,7 +78,9 @@ This option is not available for dropdown.
 
 If you make a mistake, simply remove the option.
 
-#### 1. Click on the `x` symbol located to the right of the unwanted option. The option will disappear after.
+#### 1. Click on the `x` symbol located to the right of the unwanted option. 
+
+The option will disappear after.
 
 ![Add "Other"](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_removeOption.gif?raw=true)
 
@@ -84,7 +94,7 @@ Questions can be viewed as another user at any time.
 
 This is an example of preview.
 
-![Eye Symbol For Preview](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/4_preview.png?raw=true)   
+![Eye Symbol For Preview](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/4_preview.png?raw=true)
 
 ## Removing a Question
 
