@@ -12,11 +12,11 @@ Follow these quick instructions to change your Google Form font.
 
 ---
 
-*1. Click on ![palette](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/paint-palette.png?raw=true){: height="4%" width="4%"} icon.*
+**1. Click on ![palette](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/paint-palette.png?raw=true){: height="4%" width="4%"} icon.**
 
 ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/1_changing_header.png?raw=true)
 
-*2. Click on `Basic`*
+**2. Click on `Basic`**
 A drop down will appear. Here you will select what font you can use
 
 ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/2_Font.png?raw=true)
