@@ -10,7 +10,7 @@ parent: Creating A Question
 
 This section will include information for question types. Each question type is effective in collecting data in different ways. It is important to consider which type of question is most appropriate for the data you are trying to collect. Remember each question has different additional options to aid in your gathering of data.
 
-Select the preferred question type before continuing. Refer to step 3 in the Adding and Setting a Question section in the [Creating And Setting Up A Question](./makingAQuestions.md) page.
+Select the preferred question type before continuing. Refer to step 3 in the Adding and Setting a Question section in the [Creating And Setting Up A Question](/makingAQuestions.md) page.
 
 ## Linear Scale
 
@@ -65,7 +65,7 @@ The paragraph question type is suitable for long written responses over one or m
 
 ## Multiple Choice, Checkboxes, and Dropdown
 
-These question types allow users to choose from a preset list of options that you make. For steps on how to add options for this type of question, refer to step 3 in the Adding and Setting a Question section in the [Creating And Setting Up A Question](./makingAQuestions.md) page.
+These question types allow users to choose from a preset list of options that you make. For steps on how to add options for this type of question, refer to step 3 in the Adding and Setting a Question section in the [Creating And Setting Up A Question](/makingAQuestions.md) page.
 
 The multiple choice question type is suitable when _only one_ option should be chosen.
 The checkbox question type is suitable when _more than one_ option can be chosen.
