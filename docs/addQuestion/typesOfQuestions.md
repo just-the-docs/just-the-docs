@@ -20,7 +20,7 @@ This option is suitable when you want your question to be rated on a predefined 
 
 2. Click on the number that you want to change. The number on the left corresponds to the start of the scale, and the number on the right corresponds to the end of the scale.
 
-![Linear Scale Scale](../images/questions/1_linearScale.gif)
+    ![Linear Scale Scale](../images/questions/1_linearScale.gif)
 
 3. (Optional) Click on `Label` to add a label to your scale. It is recommended to add a label so users know what each end of the scale represents. For example, 0 is hate, and 10 is love.
 
