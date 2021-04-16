@@ -88,7 +88,7 @@ A menu will appear.
 
 Adding a description will help clarify your question. This option is available on most question types.
 
-#### Click on `Description`.
+**Click on `Description`.**
 
 A new area to input the description will appear. Click on `Description` in the new area to add details to your question.
 
@@ -98,7 +98,7 @@ A new area to input the description will appear. Click on `Description` in the n
 
 This option will randomize the row sequence for every user.
 
-#### Click `Shuffle row order`.
+**Click `Shuffle row order`.**
 
 ### Limit the response per column
 

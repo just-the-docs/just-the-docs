@@ -54,13 +54,13 @@ This section will go over how to add and remove an option to a multiple choice, 
 
 There must be at least one option set.
 
-#### 1. Click on `Option 1` to enter the first option.
+**1. Click on `Option 1` to enter the first option.**
 
 ![Option 1](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_firstOptions.png?raw=true)
 
 Enter the option. It is required to have at least 1 option per question. For example, "Vanilla" or "Chocolate".
 
-#### 2. (Optional) Click on `Add option` to add another option to the question. 
+**2. (Optional) Click on `Add option` to add another option to the question.**
 
 A new option will appear. 
 
@@ -68,7 +68,7 @@ A new option will appear.
 
 Enter the option. Repeat until desired number of options are added.
 
-#### 3. (Optional) Click on `add "Other"` to allow users to enter their own option.
+**3. (Optional) Click on `add "Other"` to allow users to enter their own option.**
 
 ![Add "Other"](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/addingQuestions/3_addOther.png?raw=true)
 
@@ -78,7 +78,7 @@ This option is not available for dropdown.
 
 If you make a mistake, simply remove the option.
 
-#### 1. Click on the `x` symbol located to the right of the unwanted option. 
+**1. Click on the `x` symbol located to the right of the unwanted option.**
 
 The option will disappear after.
 
