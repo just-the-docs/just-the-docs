@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Changing Google Form Color
-parent: Customizing Google Form
+parent: Customizing Google Forms
 nav_order: 3
 ---
 
@@ -19,7 +19,7 @@ Before sending your Google Form, you would probably like to customize your Googl
 **2. Select your favourite color in the theme option window.**
 
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
-**Note:** Click the ![plus](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/plus.png?raw=true){: height="5%" width="5%"} icon to _add_ custom color of your choice!
+**Note:** Click the ![plus](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/plus.png?raw=true){: height="5%" width="5%"} icon to _add_ a custom color of your choice!
 <br>
 <br>
 
@@ -34,6 +34,5 @@ Before sending your Google Form, you would probably like to customize your Googl
 
 ## Conclusion
 
-Alright! Let's go! You did it!
+Alright, let's go! You did it!
 After completing all the steps above, you should now have a different color set for your Google Form!
-

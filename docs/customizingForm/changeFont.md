@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Changing Google Form Font
-parent: Customizing Google Form
+parent: Customizing Google Forms
 nav_order: 4
 ---
 

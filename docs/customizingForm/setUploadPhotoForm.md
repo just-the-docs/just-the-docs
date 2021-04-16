@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Changing Header using Uploaded Photo
-parent: Customizing Google Form
+parent: Customizing Google Forms
 nav_order: 2
 ---
 
