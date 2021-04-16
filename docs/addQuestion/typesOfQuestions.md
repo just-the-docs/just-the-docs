@@ -79,6 +79,7 @@ Additional options are available help refine questions.
 
 A menu will appear.
 ![Additional Options](../images/questions/2_advanced.png)
+
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
 **Note** Additional options vary by question. This beginners guide will describe the options shown in the image above.
 
