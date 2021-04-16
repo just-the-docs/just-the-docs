@@ -28,6 +28,8 @@ Due to the continued impact of COVID-19 on social restrictions, we have been acc
 
 To write this guide, we were forced to learn new skills and use them with our existing abilities. None of us had previous experience writing documentation or content meant for web users. Learning how to use markdown and Github pages were also rather unfamiliar to us.
 
+For the styling and visuals, we used This documentation was built using Patrick Marsceill[Just the Docs](https://github.com/pmarsceill/just-the-docs) as a base, and configured it to our needs.
+
 ### Using Markdown
 
 Prior to writing this guide, each of us had minimal experience using markdown. We learnt how to format documents with the use of headings, lists, links, and more. Properly formatting a page proved to be useful as it gave our documentation a polished structure and would allow future users to read with ease.
@@ -47,3 +49,7 @@ Larger issues we ran into were related to formatting. Our icons would sometimes 
 A major issue that we faced was deciding on the best way to structure our writing. We had clashing views on what sections were big enough to have their own pages and such. These conflicts were resolved over a group meeting.
 
 ### Conclusion
+
+Overall, this project was an enjoyable and valuable experience. Even though using Google Forms for us is easy, we found it surprisingly difficult to write instructions in a manner that could be easily read by our intended audience.
+
+Working as a group provided different insights and gave us a wider range of options when making decisions. It also forced us to break up the workload evenly and further develop our leadership and teamwork skills.
