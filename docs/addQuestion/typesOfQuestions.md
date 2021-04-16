@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Types of Questions
+title: Other Questions Types
 nav_order: 9
 parent: Creating A Question
 
@@ -10,19 +10,19 @@ parent: Creating A Question
 
 This section will include information for other question types. Each question type is effective in collecting data in different ways. It is important to consider which type of question is most appropriate for the data you are trying to collect. Remember each question has different additional options to aid in your gathering of data.
 
-For steps to add a question or to select a question type, go to the [Creating And Setting Up A Question](./makingAQuestions.md#Setting-Up-the-Options-to-Your-Question) page.
+For steps to add a question or to select a question type, refer to step 3 in the Adding and Setting a Question section in the [Creating And Setting Up A Question](./makingAQuestions.md) page.
 
 ## Linear Scale
 
 This option is suitable when you want your question to be rated on a predefined scale. Your scale can start at 0 or 1, and can end on a number from 2 to 10. You can optionally add a label to each end of the scale to add clarity.
 
-1. Enter your question. An example question: "How much do you like vanilla ice-cream?"
+### 1. Enter your question. An example question: "How much do you like vanilla ice-cream?"
 
-2. Click on the number that you want to change. The number on the left corresponds to the start of the scale, and the number on the right corresponds to the end of the scale.
+### 2. Click on the number that you want to change. The number on the left corresponds to the start of the scale, and the number on the right corresponds to the end of the scale.
 
     ![Linear Scale Scale](../images/questions/1_linearScale.gif)
 
-3. (Optional) Click on `Label` to add a label to your scale. It is recommended to add a label so users know what each end of the scale represents. For example, 0 is hate, and 10 is love.
+### 3. (Optional) Click on `Label` to add a label to your scale. It is recommended to add a label so users know what each end of the scale represents. For example, 0 is hate, and 10 is love.
 
 A completed question should look like this in preview.
 
@@ -34,11 +34,11 @@ Grid questions are a quick way to help you ask the same question for series of d
 
 In a multiple choice grid, users can select only _one answer_ per row. Checkbox grid is similar to the multiple choice grid, except users can select _more than one answer_ per row.
   
-1. Enter your question. An example question: "How much do you like each of the following ice-cream flavours?"
+### 1. Enter your question. An example question: "How much do you like each of the following ice-cream flavours?"
 
-2. Click on "Row 1" to edit the first row. For additional rows, click on "Add row" to start typing. An example following the sample question from step 1 would be "Vanilla" and "Chocolate".
+### 2. Click on "Row 1" to edit the first row. For additional rows, click on "Add row" to start typing. An example following the sample question from step 1 would be "Vanilla" and "Chocolate".
 
-3. Click on "Column 1" to edit the first column. For additional columns, click on "Add column" to start typing. An example to the question on step 1 would be "Hate" or "Love".
+### 3. Click on "Column 1" to edit the first column. For additional columns, click on "Add column" to start typing. An example to the question on step 1 would be "Hate" or "Love".
   
 A completed multiple choice grid question would look like this:
 ![Grid Results](../images/questions/2_gridResults.png)
@@ -53,7 +53,7 @@ The paragraph question type is suitable for long written responses over one or m
 
 ## Multiple Choice, Checkboxes, and Dropdown
 
-These question types allow users to choose from a preset list of options that you make. For steps on how to add options for this type of question, refer to [Creating And Setting Up A Question](./makingAQuestions.md#Setting-Up-the-Options-to-Your-Question) page.
+These question types allow users to choose from a preset list of options that you make. For steps on how to add options for this type of question, refer to step 3 in the Adding and Setting a Question section in the [Creating And Setting Up A Question](./makingAQuestions.md) page.
 
 The multiple choice question type is suitable when _only one_ option should be chosen. The add "other" option which allow users to add their own answer is available to be added.
 
@@ -90,7 +90,7 @@ This option is only available for grid questions. Selecting this option will set
 
 Click on `Limit to one response per column`.
 
-A example of a completed multiple choice grid question:
+A example of a completed multiple choice grid question with limit to one response per column set:
 ![Finished](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/questions/2_finished.png?raw=true)
 
 ## Conclusion
