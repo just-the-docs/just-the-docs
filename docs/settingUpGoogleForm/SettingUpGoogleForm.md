@@ -35,7 +35,7 @@ As Google Forms is part of the G Suite collection, you will need to have a Googl
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
 **Note:** You will see the page below _only_ if you are not already signed onto a google account. _Skip to [Step 3](#3-creating-new-google-form) if you are already signed in._
 
-![Google Form Homepage](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/1_Google_login.png?raw=true){: height="25%" width="25%"}
+![Google Form Homepage](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/1_Google_login.png?raw=true){: height="50%" width="50%"}
 
 **3. Click on `Blank` on the top left corner.**
 

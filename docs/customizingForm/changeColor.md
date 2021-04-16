@@ -12,7 +12,7 @@ Before sending your Google Form, you would probably like to customize your Googl
 
 ---
 
-**1. First click on ![palette](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/paint-palette.png?raw=true){: height="4%" width="4%"} icon on the top right.**
+**1. Click on ![palette](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/paint-palette.png?raw=true){: height="4%" width="4%"} icon on the top right.**
 
 ![Google Form Header](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/customizingForm/1_changing_header.png?raw=true)
 
