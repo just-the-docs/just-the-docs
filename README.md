@@ -1,6 +1,6 @@
 <h1 align="center">Google Forms Guide</h1>
 
-<p align="center>A basic walkthrough of how to create a form on Google Forms</p>
+<p align="center">A basic walkthrough of how to create a form on Google Forms</p>
 
 <hr>
 
@@ -40,4 +40,10 @@ We also used the Inverted Pyramid style of writing, which delivers the most cruc
 
 ### Issues We Ran into
 
-During the writing process, we came across several issues. Some were a bit minor, such as accidentally merging with the wrong GitHub branch. Larger issues we ran into were related to formatting. Our icons would sometimes be an awkward size, or our paragraphs would display as a block of code. However, these problems were solved after a quick Google search or asking our more experienced peers.
+During the writing process, we came across several issues. Some were a bit minor, such as accidentally merging with the wrong GitHub branch.
+
+Larger issues we ran into were related to formatting. Our icons would sometimes be an awkward size, or our paragraphs would display as a block of code. However, these problems were solved after a quick Google search or asking our more experienced peers.
+
+A major issue that we faced was deciding on the best way to structure our writing. We had clashing views on what sections were big enough to have their own pages and such. These conflicts were resolved over a group meeting.
+
+### Conclusion
