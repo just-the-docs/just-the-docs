@@ -17,13 +17,13 @@ Before we begin, you will want to have a Google Form set up. To set up a Google 
 
 ---
 
-## 1. Go to [Google Forms](https://docs.google.com/forms/)
+**1. Go to [Google Forms](https://docs.google.com/forms/)**
 
 This link is where you will be able to start creating your Google Form.
 
 Link to Google Forms: <https://docs.google.com/forms/>
 
-## 2. Log In Using a Google Account.
+**2. Log In Using a Google Account.**
 
 As Google Forms is part of the G Suite collection, you will need to have a Google Account to use it.
 
@@ -35,23 +35,17 @@ As Google Forms is part of the G Suite collection, you will need to have a Googl
 ![Bell](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/icons/bell.png?raw=true){: height="8%" width="8%" style="float: left"}
 **Note:** You will see the page below _only_ if you are not already signed onto a google account. _Skip to [Step 3](#3-creating-new-google-form) if you are already signed in._
 
-![Google Form Homepage](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/1_Google_login.png?raw=true)
+![Google Form Homepage](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/1_Google_login.png?raw=true){: height="25%" width="25%"}
 
-## 3. Creating a New Google Form
-
-Go to the left corner and click on `Blank`.
+**3. Click on `Blank` on the top left corner.**
 
 ![Google Form page](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/2_Google_Form_Homepage.png?raw=true)
 
-## 4. Naming Your Google Form
-
-Go to the top left corner and click on `Untitled Form` to change form name.
+**4. Click on `Untitled Form` on the top left corner to change form name.**
 
 ![Google Form Page](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/3_Untitled_form1.png?raw=true)
 
-## 5. Giving Your Google Form a Description
-
-Next, click on `form description` to add a description to the form.
+**5. Click on `form description` to add a description to the form.**
 
 ![Google Form](https://github.com/kevtrng/Google-Forms-Guide/blob/gh-pages/docs/images/SettingUpGoogleForm/4_Untitled_form2.png?raw=true)
 
