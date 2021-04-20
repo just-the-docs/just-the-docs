@@ -42,26 +42,26 @@ Each squad has a squad leader that is the point of contact for inter-squad coord
 
 **Current DXdao Squad Leaders**:  
 
--   [Sky](https://daotalk.org/u/sky/summary) -- Business Development and Partnerships
+-   <a href="https://daotalk.org/u/sky/summary" target="_blank">Sky</a> -- Business Development and Partnerships
     
--   [John](https://daotalk.org/u/johnkelleher/summary) -- Ecosystem and Product Development
+-   <a href="https://daotalk.org/u/johnkelleher/summary" target="_blank">John</a> -- Ecosystem and Product Development
     
--   [Chris](https://daotalk.org/u/powers/summary) -- Governance
+-   <a href="https://daotalk.org/u/powers/summary" target="_blank">Chris</a> -- Governance
     
--   [Keenan](https://daotalk.org/u/keenanl/summary) -- Marketing / Communications
+-   <a href="https://daotalk.org/u/keenanl/summary" target="_blank">Keenan</a> -- Marketing / Communications
     
--   [Martin](https://daotalk.org/u/martinkrung/summary) -- Mesa
+-   <a href="https://daotalk.org/u/martinkrung/summary" target="_blank">Martin</a> -- Mesa
     
--   [Geronimo](https://daotalk.org/u/corkus/summary) -- Omen
+-   <a href="https://daotalk.org/u/corkus/summary" target="_blank">Geronimo</a> -- Omen
     
--   [Zett](https://daotalk.org/u/zett/summary) -- Swapr
+-   <a href="https://daotalk.org/u/zett/summary" target="_blank">Zett</a> -- Swapr
     
 
 ### Business Hours
 
 As a jurisdictionless organization that exists on the Ethereum blockchain, DXdao does not have set business hours. Workers are expected to be available during the week and may participate in weekend meetings, when necessary.
 
-Each worker should communicate the timezone and hours in which she is available to the people in her squad(s) and to [Keenan](https://daotalk.org/u/keenanl/summary). Your hours will be placed on a DXdao airtable for others to access.
+Each worker should communicate the timezone and hours in which she is available to the people in her squad(s) and to <a href="https://daotalk.org/u/keenanl/summary" target="_blank">Keenan</a>. Your hours will be placed on a DXdao airtable for others to access.
 
 ### Holidays
 

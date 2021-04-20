@@ -74,17 +74,17 @@ Once a worker proposal has been boosted, the proposal takes approximately 7 days
 
 **Bounty**
     
--   [Bounty: Build a Dune Analytics Dashboard for Omen.eth](https://daotalk.org/t/bounty-build-a-dune-analytics-dashboard-for-omen-eth/1684)
+-    <a href="https://daotalk.org/t/bounty-build-a-dune-analytics-dashboard-for-omen-eth/1684" target="_blank">Bounty: Build a Dune Analytics Dashboard for Omen.eth</a>
 
 **Developer**
     
--   First Full-Time Proposal: [Worker Proposal for 01/2021 Github:nicoelzer](https://daotalk.org/t/worker-proposal-for-01-2021-github-nicoelzer/2482)
+-   First Full-Time Proposal:  <a href="https://daotalk.org/t/worker-proposal-for-01-2021-github-nicoelzer/2482" target="_blank">Worker Proposal for 01/2021 Github:nicoelzer</a>
     
--   Ongoing: [Corkus Draft Worker Proposal 14/09/2020-15/11/2020](https://daotalk.org/t/corkus-draft-worker-proposal-14-09-2020-15-11-2020/2100)
+-   Ongoing:  <a href="https://daotalk.org/t/corkus-draft-worker-proposal-14-09-2020-15-11-2020/2100" target="_blank">Corkus Draft Worker Proposal 14/09/2020-15/11/2020</a>
     
 **Non-Tech**
 
--   Ongoing: [Caney Fork Worker Proposal 12/1-1-31](https://daotalk.org/t/caney-fork-worker-proposal-12-1-1-31/2491)
+-   Ongoing: <a href="https://daotalk.org/t/caney-fork-worker-proposal-12-1-1-31/2491" target="_blank">Caney Fork Worker Proposal 12/1-1-31</a> 
     
 ### [How-to: Submit You Worker Proposal on Alchemy Guide]({% link docs/ContributorHub/worker-proposals/Mainnet-Worker-Proposal-Guide.md %})
 

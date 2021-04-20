@@ -10,11 +10,11 @@ nav_order: 2
 
 ### CONTRIBUTOR ONBOARDING / HOW TO ENGAGE
 
-1.  Join Keybase. Go to the [dx_dao](https://keybase.io/team/dx_dao) Keybase. Introduce yourself to the community and express your interests. Then join the #getting-started Keybase channel.
+1.  Join Keybase. Go to the <a href="https://keybase.io/team/dx_dao" target="_blank">dx_dao</a> Keybase. Introduce yourself to the community and express your interests. Then join the #getting-started Keybase channel.
     
 2.  Join Daotalk.org. Start reviewing topic discussions and contribute.
     
-3.  Attend meetings. Check our weekly [meeting schedule](https://calendar.google.com/calendar/u/0/embed?src=0ptn8lds9nlbj483rpmibnqqfc@group.calendar.google.com) to attend some meetings in the coming week. Make sure to attend meetings that relate to the products and/or areas you would like to work in.
+3.  Attend meetings. Check our weekly <a href="https://calendar.google.com/calendar/u/0/embed?src=0ptn8lds9nlbj483rpmibnqqfc@group.calendar.google.com" target="_blank">meeting schedule</a> to attend some meetings in the coming week. Make sure to attend meetings that relate to the products and/or areas you would like to work in.
     
 4.  Look at [Open Positions and Bounties]({% link docs/ContributorHub/open-positions-and-bounties.md %}). If you see an open opportunity that fits your skillset or a general need that is not being filled, reach out on keybase to get connected with at least one current full-time worker to discuss opportunities. DXdao now has squad leaders that you can also message for more information. See the Squad Leaders section below for a list of current squad leaders.
     

@@ -30,4 +30,4 @@ DXventures is a great way to create deal flow for Mesa and Swapr. You can imagin
 
 ## Open Call to Projects that are Solving the Needs of DAOs
 
-If you are an individual or team that is solving the pain points that DAOs face, and you are interested in learning more about DXventures, please join the DXdao [Discord](https://discord.gg/4QXEJQkvHH) and let us know what you are working on!
+If you are an individual or team that is solving the pain points that DAOs face, and you are interested in learning more about DXventures, please join the DXdao <a href="https://discord.gg/4QXEJQkvHH" target="_blank">Discord</a> and let us know what you are working on!

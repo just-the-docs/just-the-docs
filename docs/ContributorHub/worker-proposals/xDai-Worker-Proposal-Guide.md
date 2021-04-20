@@ -18,7 +18,7 @@ nav_order: 1
     
 -   For details on what should be in the worker proposal, go to DXdao’s Contributor Guidelines -- Worker Compensation section.
     
--   After the [xDai authorization proposal](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0x2a4f24200eb1ef626e9aea29bad2494689f979c00c6fff17b5b0cd38712be426), workers can now submit proposals on xDXdao base on xDai and save gas.
+-   After the <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0x2a4f24200eb1ef626e9aea29bad2494689f979c00c6fff17b5b0cd38712be426" target="_blank">xDai authorization proposal</a> , workers can now submit proposals on xDXdao base on xDai and save gas.
     
 ### When to Submit Your Worker Proposal:
 
@@ -32,7 +32,7 @@ nav_order: 1
     
 -   You can boost your own worker proposal once it is eligible to be boosted.
     
--   For more info on how Daostack’s holographic consensus see [Alchemy Parameters](https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained).
+-   For more info on how Daostack’s holographic consensus see <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">Alchemy Parameters</a> .
     
 
   
@@ -45,19 +45,19 @@ nav_order: 1
 	-   Example: 0xed6fA573B2ddB34F6a9a6941b53f7833bF283b02
     
 
--   [See this guide](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup) to set up your Metamask wallet to access xDai
+-   <a href="https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup" target="_blank">See this guide</a> to set up your Metamask wallet to access xDai
     
 
   
 
-**Step 1**: Go to [Alchemy, xDXdao’s voting interface](https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f), and Click ‘[Plugins](https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/schemes)’
+**Step 1**: Go to <a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f" target="_blank">Alchemy, xDXdao’s voting interface</a>, and Click ‘<a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/schemes" target="_blank">Plugins</a>’
 
   
   
 
 ![](https://lh6.googleusercontent.com/3QiCZhU4ZsxlSMp0jXVrPbPoPzhWOJni4RjALjwO-Dp9WgB_W9c01Vb29VH_EZK4T5WIgEs-TuVq5Dm0hab7BbB8wXrhBpKcDOKNUBElMeY66UwSkDr4Dq8yL9gq8lp_lmKuMlVV)
 
-**Step 2**: Click the ‘[Funding and Voting Power](https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/scheme/0xd42eee8731e00be92c283377f38126269a004f3c12da32e9a87d72f197b0540c)’ scheme.
+**Step 2**: Click the ‘<a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/scheme/0xd42eee8731e00be92c283377f38126269a004f3c12da32e9a87d72f197b0540c" target="_blank">Funding and Voting Power</a>’ scheme.
 
 [![](https://lh3.googleusercontent.com/TYZo_8Tik0V2RQFpMUCbX0brzJsVLhuinSu796nJdi2jYLFvuv1g3WZFZhx8C71Szu3i4fu3mmsNN0jUuQZc1p7S41otSYaRzHrOsy30bqSocW5hg0xrQZ0yxqYW-m8gzzPqaUOi)](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/scheme/0x28d5c82734905e9708c4d1332ba6d4753ac04836a4fcf4c5451c2dc5d5d76237)
 
@@ -69,7 +69,7 @@ nav_order: 1
 
 [![](https://lh3.googleusercontent.com/oHIEaPL8vNeFmzWeEYv0rnup97azxESOY3tPm1LHYkdzRbaWs17NflqwX6QiprZGRFUSbt0Q6i1qgFjsTrlJ9VsE4BECRNKxTWfiivV-AOS6BU5GvwotZLbfpANlgzlRx2lRkONd)](https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit?usp=sharing)
 
--   Use [this calculator](https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit?usp=sharing) to calculate. Fill in the Blue squares with your information.
+-   Use <a href="" target="_blank">this calculator</a> [this calculator](https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit?usp=sharing) to calculate. Fill in the Blue squares with your information.
     
 -   Calculate the amount of ETH/Dai for your worker proposal payment using your determined monthly compensation level. See [Contributor Guidelines](https://gateway.pinata.cloud/ipfs/QmXwDuxLzMdyg3eEsYM95BJscFrHECsTaKaSRJxjK3njqv/DXdao%20Contributor%20Guidelines.pdf) -- DXdao Compensation Table. Find the ETH price if you are requesting WETH
     

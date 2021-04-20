@@ -24,11 +24,11 @@ Mesa is a decentralized application built on the Gnosis Protocol, a fully permis
  
 Gnosis Protocol enables ring trades to maximize liquidity. Ring trades are order settlements that share liquidity across all orders, rather than a single token pair, and uniquely suited for trading prediction market tokens and the long tail of all tokenized assets.  
  
-Read more about the protocol’s mechanism on the Gnosis [Developer Portal](https://docs.gnosis.io/protocol/docs/introduction1/).  
+Read more about the protocol’s mechanism on the Gnosis <a href="https://docs.gnosis.io/protocol/docs/introduction1/" target="_blank">Developer Portal</a>.  
  
 ## How are trades matched?  
  
-Orders are collected in batches every 5 minutes, and external participants called solvers (everyone can participate as a solver) propose a settlement solution to the smart contract. The smart contract selects the solution that maximizes [trader welfare](https://docs.gnosis.io/protocol/docs/devguide01/). The utility in this optimization function is the difference between what a trader is willing to pay and what they pay once a batch is cleared. After a solution is selected, orders are matched and settled accordingly and on-chain.
+Orders are collected in batches every 5 minutes, and external participants called solvers (everyone can participate as a solver) propose a settlement solution to the smart contract. The smart contract selects the solution that maximizes <a href="https://docs.gnosis.io/protocol/docs/devguide01/" target="_blank">trader welfare</a>. The utility in this optimization function is the difference between what a trader is willing to pay and what they pay once a batch is cleared. After a solution is selected, orders are matched and settled accordingly and on-chain.
  
 ## What advantages do ring trades bring?  
  
@@ -36,7 +36,7 @@ Ring trades are order settlements that share liquidity across all orders, rather
  
 ## Is Gnosis Protocol secure?  
  
-The Gnosis Protocol smart contracts have been audited externally. Check this section on their [Developer Portal](https://docs.gnosis.io/protocol/docs/devguide04/) for further information, including the audit report and the code repository.  
+The Gnosis Protocol smart contracts have been audited externally. Check this section on their <a href="https://docs.gnosis.io/protocol/docs/devguide04/" target="_blank">Developer Portal</a> for further information, including the audit report and the code repository.  
  
 ## Can I create a trade without depositing to the smart contract? 
  
@@ -58,4 +58,4 @@ Users must also have at least one of the tokens of their liquidity provision dep
  
 Importantly, don’t forget that **all** orders placed by an Ethereum address share the same deposited liquidity! Consider participating with separate addresses for separate strategies when partaking in the liquidity provision and when trading normally.
  
-Learn more about liquidity provision on [this section](https://docs.gnosis.io/protocol/docs/liquidity1/) of the Gnosis Developer Portal.
+Learn more about liquidity provision on <a href="https://docs.gnosis.io/protocol/docs/liquidity1/" target="_blank">this section</a> of the Gnosis Developer Portal.

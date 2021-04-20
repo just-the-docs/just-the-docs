@@ -24,7 +24,7 @@ DXD is locked with 50% vesting after 1 year of the worker contract start date, a
 
 ETH payment is determined by the price of ETH at the date and time of proposal submission. Because of the high volatility of ETH price, workers may also determine the ETH payment based on the weekly average of the ETH price.
 
-DXD payment is set to the all-time high (ATH) price in US dollars on [coingecko](https://www.coingecko.com/en/coins/dxdao).
+DXD payment is set to the all-time high (ATH) price in US dollars on <a href="https://www.coingecko.com/en/coins/dxdao" target="_blank">coingecko</a>.
 
 ### REP
 

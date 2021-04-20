@@ -14,7 +14,7 @@ nav_order: 2
 
 -   Congratulations on getting the signal to submit a worker proposal to DXdao!
     
--   At this point, you’ve started the onboarding process, posted a draft of your worker proposal on [daotalk.org](https://daotalk.org), and the proposal was signalled for an on-chain DXdao vote.
+-   At this point, you’ve started the onboarding process, posted a draft of your worker proposal on <a href="https://daotalk.org" target="_blank">daotalk.org</a> , and the proposal was signalled for an on-chain DXdao vote.
     
 -   For details on what should be in the worker proposal, go to DXdao’s Contributor Guidelines -- Worker Compensation section.
     
@@ -30,7 +30,7 @@ nav_order: 2
     
 -   You can boost your own worker proposal once it is eligible to be boosted.
     
--   For more info on how Daostack’s holographic consensus see [Alchemy Parameters](https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained).
+-   For more info on how Daostack’s holographic consensus see <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">Alchemy Parameters</a> .
     
 ### What You’ll Need:
 
@@ -45,7 +45,7 @@ nav_order: 2
 
   
 
-**Step 1**: Go to [Alchemy, DXdao’s voting interface](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a), and Click ‘[Plugins](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/schemes)’.
+**Step 1**: Go to <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a" target="_blank">Alchemy, DXdao’s voting interface</a>, and Click ‘<a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/schemes" target="_blank">Plugins</a>’.
 
   
   
@@ -54,7 +54,7 @@ nav_order: 2
 
 
 
-**Step 2**: Click the ‘[Funding and Voting Power](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/scheme/0x28d5c82734905e9708c4d1332ba6d4753ac04836a4fcf4c5451c2dc5d5d76237)’ scheme.
+**Step 2**: Click the ‘<a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/scheme/0x28d5c82734905e9708c4d1332ba6d4753ac04836a4fcf4c5451c2dc5d5d76237" target="_blank">Funding and Voting Power</a>’ scheme.
 
 [![](https://lh3.googleusercontent.com/j_Ibex7aVCHcptklwbRR5Jz0V3BGmiYhAtDE9lH1U24fgrgWHu-X9ZHNfryCIlvVMqH3cacg2hT7hTD1hp0n_R57PplQR-mn6IxZhurmrY10rPxs2IWi3XPB6xSlVR4R-2ALy7V_)](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/scheme/0x28d5c82734905e9708c4d1332ba6d4753ac04836a4fcf4c5451c2dc5d5d76237)
 
@@ -103,7 +103,7 @@ nav_order: 2
 **Step 4**: Calculate your payment allocation
 
 
--   Go to [etherscan.io](https://etherscan.io/chart/etherprice) and check the current price of ETH (USD).
+-   Go to <a href="https://etherscan.io/chart/etherprice" target="_blank">etherscan.io</a> and check the current price of ETH (USD).
     
 -   Workers can use the current price of ETH or the average weekly ETH price.
     
@@ -160,7 +160,7 @@ nav_order: 2
   
   
 
-**Note**: Submitting a proposal will require gas, but don’t worry! DXdao refunds 75% of gas costs. [Find more information here](https://daotalk.org/t/dxdao-governance-refunds-round-2/2361)
+**Note**: Submitting a proposal will require gas, but don’t worry! DXdao refunds 75% of gas costs. <a href="https://daotalk.org/t/dxdao-governance-refunds-round-2/2361" target="_blank">Find more information here</a>
 
   
 
@@ -190,4 +190,4 @@ Anyone using Keybase will be able to “Verify” what the Signed Message is and
 
   
 
-**Any questions?** Reach out to the [DXdao Discord](https://discord.gg/4QXEJQkvHH), the [DXdao Keybase](https://keybase.io/team/dx_dao), [Chris](https://daotalk.org/u/Powers), or [Pulp](https://daotalk.org/u/pulpmachina/summary).
+**Any questions?** Reach out to the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>, or the <a href="https://keybase.io/team/dx_dao" target="_blank">DXdao Keybase</a>, <a href="https://daotalk.org/u/Powers" target="_blank">Chris</a>, or <a href="https://daotalk.org/u/pulpmachina/summary" target="_blank">Pulp</a>.

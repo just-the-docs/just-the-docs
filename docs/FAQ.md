@@ -33,7 +33,7 @@ DXdao’s current suite of products include:
 
 ## What revenues does DXdao have?
 
-DXdao currently has two main paths of earning revenue, the first is directly from its products and the second is deals that DXdao makes with other entities. DXdao is preparing to earn protocol fees directly from each of its products. Contributors are actively exploring profit distribution methods following the [pause of the bonding curve](https://dxdao.medium.com/dxdao-hits-pause-on-dxd-bonding-curve-98166199925a) including buyback-and-burn, and dividend models.
+DXdao currently has two main paths of earning revenue, the first is directly from its products and the second is deals that DXdao makes with other entities. DXdao is preparing to earn protocol fees directly from each of its products. Contributors are actively exploring profit distribution methods following the <a href="https://dxdao.medium.com/dxdao-hits-pause-on-dxd-bonding-curve-98166199925a" target="_blank">pause of the bonding curve</a> including buyback-and-burn, and dividend models.
 
 ## How does the DXdao come to own and operate these protocols, products, or services?
 
@@ -41,9 +41,9 @@ DXdao has both built and been gifted products. DXdao has products running on per
 
 ## How did the Bonding curve work?
 
-DXdao has voted to [pause the bonding curve](https://dxdao.medium.com/dxdao-hits-pause-on-dxd-bonding-curve-98166199925a), preventing additional minting and limiting the supply to 148,976 DXD.
+DXdao has voted to <a href="https://dxdao.medium.com/dxdao-hits-pause-on-dxd-bonding-curve-98166199925a" target="_blank">pause the bonding curve</a>, preventing additional minting and limiting the supply to 148,976 DXD.
 
-You can dive into the details of how the Continuous Token Offering (CTO) worked [here](https://github.com/levelkdev/openraise-dapp/blob/master/docs/ContinuousOrganization.md).
+You can dive into the details of how the Continuous Token Offering (CTO) worked <a href="https://github.com/levelkdev/openraise-dapp/blob/master/docs/ContinuousOrganization.md" target="_blank">here</a>.
 
 ## Who makes up DXdao?
 
@@ -68,4 +68,4 @@ DXD and reputation holders need not overlap, but it is likely some part of each 
 
 ## How do I get involved?
 
-Check out the Open Positions and Bounties page for ways to contribute. Join the [Discord](https://discord.gg/4QXEJQkvHH), [Telegram](https://t.me/dxDAO), [Keybase](https://keybase.io/team/dx_dao), and follow DXdao on [Twitter](https://twitter.com/Dxdao_).
+Check out the Open Positions and Bounties page for ways to contribute. Join the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">Discord</a>, <a href="https://t.me/dxDAO" target="_blank">Telegram</a>, <a href="https://keybase.io/team/dx_dao" target="_blank">Keybase</a>, and follow DXdao on <a href="https://twitter.com/Dxdao_" target="_blank">Twitter</a>.

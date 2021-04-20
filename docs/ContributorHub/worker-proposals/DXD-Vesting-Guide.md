@@ -43,8 +43,7 @@ This walkthrough explains how to use Etherscan and MetaMask to help accomplish t
     
 
   
-
-[*Useful tool for Unix TimeStamp Conversion*](https://www.unixtimestamp.com/index.php)
+<i><a href="https://www.unixtimestamp.com/index.php" target="_blank">Useful tool for Unix TimeStamp Conversion</a></i>
 
   
   
@@ -76,7 +75,7 @@ This walkthrough explains how to use Etherscan and MetaMask to help accomplish t
 
 ## Steps to follow:
 
-### 1) Navigate to the [TokenVesting Factory contract on Etherscan](https://etherscan.io/address/0x9a75944ed8b1fff381f1ebf9dd0a75ea72f75727#writeContract).
+### 1) Navigate to the <a href="https://etherscan.io/address/0x9a75944ed8b1fff381f1ebf9dd0a75ea72f75727#writeContract" target="_blank">TokenVesting Factory contract on Etherscan</a>
 
 ### 2) Click “Connect to Web3” and connect using MetaMask.
 
@@ -131,4 +130,4 @@ The process is not too complex, just create your vesting, send your DXD and rece
 
 **NOTE: It is better to do your contract creation when gas prices are low!**
 
-**Any questions?** Reach out to the [DXdao Discord](https://discord.gg/4QXEJQkvHH), or the [DXdao Keybase](https://keybase.io/team/dx_dao).
+**Any questions?** Reach out to the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>, or the <a href="https://keybase.io/team/dx_dao" target="_blank">DXdao Keybase</a>.

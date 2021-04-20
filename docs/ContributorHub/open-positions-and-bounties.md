@@ -28,7 +28,7 @@ DXdao is entirely on-chain. Everything from hiring decisions to product updates 
   
 -   Biz dev whiz
 
-To get involved, reach out in the [#introductions channel on DXdao’s Keybase](https://keybase.io/team/dx_dao).    
+To get involved, reach out in the <a href="https://keybase.io/team/dx_dao" target="_blank">#introductions channel on DXdao’s Keybase</a>.    
 
 ---
 
