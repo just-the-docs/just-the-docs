@@ -28,11 +28,11 @@ There were 3 major ways to receive REP during the launch phase:
 
 ## DXD Fundraiser 
 
-After the initial REP distribution, DXdao moved to launch a token (DXD) to raise funds for the DAO. REP holders [voted on April 25, 2020](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xeb9cf2b3d76664dc1e983137f33b2400ad11966b1d79399d7ca55c25ad6283fa) to launch a bonding curve to mint DXD in exchange for ETH to be held in DXdao’s treasury, which is controlled by REP holders. The price to mint DXD is DXdao Manifesto denominated in ETH and goes up linearly as more DXD is minted. DXdao has a 100k DXD pre-mint that unlocks continuously over three years. DXD holders are entitled to the profits created from DXdao products.
+After the initial REP distribution, DXdao moved to launch a token (DXD) to raise funds for the DAO. REP holders <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xeb9cf2b3d76664dc1e983137f33b2400ad11966b1d79399d7ca55c25ad6283fa" target="_blank">voted on April 25, 2020</a> to launch a bonding curve to mint DXD in exchange for ETH to be held in DXdao’s treasury, which is controlled by REP holders. The price to mint DXD is DXdao Manifesto denominated in ETH and goes up linearly as more DXD is minted. DXdao has a 100k DXD pre-mint that unlocks continuously over three years. DXD holders are entitled to the profits created from DXdao products.
 
-DXdao has since voted to [pause the bonding curve](https://dxdao.medium.com/dxdao-hits-pause-on-dxd-bonding-curve-98166199925a), preventing additional minting and limiting the supply to 148,976 DXD. Contributors are actively exploring revised profit distribution methods including buyback-and-burn, dividend distribution, and more.
+DXdao has since voted to <a href="https://dxdao.medium.com/dxdao-hits-pause-on-dxd-bonding-curve-98166199925a" target="_blank">pause the bonding curve</a>, preventing additional minting and limiting the supply to 148,976 DXD. Contributors are actively exploring revised profit distribution methods including buyback-and-burn, dividend distribution, and more.
 
-The full DXdao treasury can be seen [here](https://etherscan.io/tokenholdings?a=0x519b70055af55a007110b4ff99b0ea33071c720a). 
+The full DXdao treasury can be seen <a href="https://etherscan.io/tokenholdings?a=0x519b70055af55a007110b4ff99b0ea33071c720a" target="_blank">here</a>. 
 
 ## DXdao is on-chain 
 
@@ -44,7 +44,7 @@ The full DXdao treasury can be seen [here](https://etherscan.io/tokenholdings?a=
 
 - The entire history of DXdao can be viewed on the Ethereum blockchain. Major decisions should be discussed openly and ultimately resolved by REP holders on-chain. 
 
-### [Holographic Consensus](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) 
+### <a href="https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c" target="_blank">Holographic Consensus</a>
 
 - proposals are passed through a majority vote of REP holders, but in order to scale its decision-making, DXdao employs holographic consensus to pass proposals with just a relative majority. With holographic consensus, when a regular proposal is submitted, anyone can stake on the outcome of the proposal and if it reaches a certain threshold of staked tokens, it is “boosted” and can be passed with a relative majority. 
 

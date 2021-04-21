@@ -33,7 +33,7 @@ DXdao’s current suite of products include:
 
 ## What revenues does DXdao have?
 
-DXdao currently has two main paths of earning revenue, the first is directly from its products and the second is deals that DXdao makes with other entities. DXdao is preparing to earn protocol fees directly from each of its products. Contributors are actively exploring profit distribution methods following the [pause of the bonding curve](https://dxdao.medium.com/dxdao-hits-pause-on-dxd-bonding-curve-98166199925a) including buyback-and-burn, and dividend models.
+DXdao currently has two main paths of earning revenue, the first is directly from its products and the second is deals that DXdao makes with other entities. DXdao is preparing to earn protocol fees directly from each of its products. Contributors are actively exploring profit distribution methods following the <a href="https://dxdao.medium.com/dxdao-hits-pause-on-dxd-bonding-curve-98166199925a" target="_blank">pause of the bonding curve</a> including buyback-and-burn, dividends, and more.
 
 ## How does the DXdao come to own and operate these protocols, products, or services?
 

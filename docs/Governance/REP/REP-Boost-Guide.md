@@ -12,7 +12,7 @@ ___
 
 ## Congratulations on being nominated for a REP boost!
     
--   Reputation (REP) holders govern <a href="https://ipfs.io/ipfs/QmfGgQYwL4ZrXLVshYuwH2WHeSvPFQCDXeYTzPPFReCJqJ" target="_blank">DXdao</a>. REP is non-transferable, so use an Ethereum address that you will have access to in the future.
+-   Reputation (REP) holders govern [DXdao]({% link docs/Manifesto.md %}). REP is non-transferable, so use an Ethereum address that you will have access to in the future.
     
 -   Community REP boosts are 0.1% of total REP. In order to receive it, you must submit a proposal to DXdao. A step-by-step guide is below.
   
@@ -68,7 +68,7 @@ https://daotalk.org/t/community-rep-boosts-december-2020/2435/4
 
 -   Paste the URL from the DAOtalk Community REP boost with your nomination.
     
--   Submitting a proposal will require gas, but don’t worry! DXdao refunds 75% of gas costs. [Find more information here](https://daotalk.org/t/dxdao-governance-refunds-round-2/2361).
+-   Submitting a proposal will require gas, but don’t worry! DXdao refunds 75% of gas costs. <a href="https://daotalk.org/t/dxdao-governance-refunds-round-2/2361" target="_blank">Find more information here</a>.
     
 **Any questions?** Reach out to the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>, <a href="https://daotalk.org/u/sky/summary" target="_blank">Sky</a> or <a href="https://daotalk.org/u/powers/summary" target="_blank">Chris</a>.
 

@@ -14,7 +14,7 @@ nav_order: 2
     
 2.  Join Daotalk.org. Start reviewing topic discussions and contribute.
     
-3.  Attend meetings. Check our weekly <a href="https://calendar.google.com/calendar/u/0/embed?src=0ptn8lds9nlbj483rpmibnqqfc@group.calendar.google.com" target="_blank">meeting schedule</a> to attend some meetings in the coming week. Make sure to attend meetings that relate to the products and/or areas you would like to work in.
+3.  Attend meetings. Check our weekly [meeting schedule]({% link docs/Meetings/index.md %}) to attend some meetings in the coming week. Make sure to attend meetings that relate to the products and/or areas you would like to work in.
     
 4.  Look at [Open Positions and Bounties]({% link docs/ContributorHub/open-positions-and-bounties.md %}). If you see an open opportunity that fits your skillset or a general need that is not being filled, reach out on keybase to get connected with at least one current full-time worker to discuss opportunities. DXdao now has squad leaders that you can also message for more information. See the Squad Leaders section below for a list of current squad leaders.
     

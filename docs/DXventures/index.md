@@ -33,4 +33,4 @@ If you are an individual or team that is solving the pain points that DAOs face,
 
 Looking to make an inquiry in private?
 
-Contact Sky, DXventures lead, on [Daotalk](https://daotalk.org/u/sky/) or [Keybase](https://keybase.io/skymine).
+Contact Sky, DXventures lead, on <a href="https://daotalk.org/u/sky/" target="_blank">Daotalk</a> or <a href="https://keybase.io/skymine" target="_blank">Keybase</a>.

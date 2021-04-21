@@ -14,7 +14,7 @@ nav_order: 2
 
 -   Congratulations on getting the signal to submit a worker proposal to DXdao!
     
--   At this point, you’ve started the onboarding process, posted a draft of your worker proposal on <a href="https://daotalk.org" target="_blank">daotalk.org</a> , and the proposal was signalled for an on-chain DXdao vote.
+-   At this point, you’ve started the onboarding process, posted a draft of your worker proposal on <a href="https://daotalk.org" target="_blank">Daotalk</a>, and the proposal was signalled for an on-chain DXdao vote.
     
 -   For details on what should be in the worker proposal, go to DXdao’s Contributor Guidelines -- Worker Compensation section.
     
@@ -30,7 +30,7 @@ nav_order: 2
     
 -   You can boost your own worker proposal once it is eligible to be boosted.
     
--   For more info on how Daostack’s holographic consensus see <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">Alchemy Parameters</a> .
+-   For more info on how Daostack’s holographic consensus see <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">Alchemy Parameters</a>.
     
 ### What You’ll Need:
 
@@ -160,7 +160,7 @@ nav_order: 2
   
   
 
-**Note**: Submitting a proposal will require gas, but don’t worry! DXdao refunds 75% of gas costs. <a href="https://daotalk.org/t/dxdao-governance-refunds-round-2/2361" target="_blank">Find more information here</a>
+**Note**: Submitting a proposal will require gas, but don’t worry! DXdao refunds 75% of gas costs. <a href="https://daotalk.org/t/dxdao-governance-refunds-round-2/2361" target="_blank">Find more information here</a>.
 
   
 
@@ -190,4 +190,4 @@ Anyone using Keybase will be able to “Verify” what the Signed Message is and
 
   
 
-**Any questions?** Reach out to the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>, or the <a href="https://keybase.io/team/dx_dao" target="_blank">DXdao Keybase</a>, <a href="https://daotalk.org/u/Powers" target="_blank">Chris</a>, or <a href="https://daotalk.org/u/pulpmachina/summary" target="_blank">Pulp</a>.
+**Any questions?** Reach out to the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>, the <a href="https://keybase.io/team/dx_dao" target="_blank">DXdao Keybase</a>, <a href="https://daotalk.org/u/Powers" target="_blank">Chris</a>, or <a href="https://daotalk.org/u/pulpmachina/summary" target="_blank">Pulp</a>.

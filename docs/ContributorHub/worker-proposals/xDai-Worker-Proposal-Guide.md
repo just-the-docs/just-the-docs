@@ -14,7 +14,7 @@ nav_order: 1
 
 -   Congratulations on getting the signal to submit a worker proposal to DXdao!
     
--   At this point, you’ve started the onboarding process, posted a draft of your worker proposal on [daotalk.org](https://daotalk.org), and the proposal was signalled for an on-chain DXdao vote.
+-   At this point, you’ve started the onboarding process, posted a draft of your worker proposal on <a href="https://daotalk.org" target="_blank">Daotalk</a>, and the proposal was signalled for an on-chain DXdao vote.
     
 -   For details on what should be in the worker proposal, go to DXdao’s Contributor Guidelines -- Worker Compensation section.
     
@@ -32,7 +32,7 @@ nav_order: 1
     
 -   You can boost your own worker proposal once it is eligible to be boosted.
     
--   For more info on how Daostack’s holographic consensus see <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">Alchemy Parameters</a> .
+-   For more info on how Daostack’s holographic consensus see <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">Alchemy Parameters</a>.
     
 
   
@@ -69,9 +69,9 @@ nav_order: 1
 
 [![](https://lh3.googleusercontent.com/oHIEaPL8vNeFmzWeEYv0rnup97azxESOY3tPm1LHYkdzRbaWs17NflqwX6QiprZGRFUSbt0Q6i1qgFjsTrlJ9VsE4BECRNKxTWfiivV-AOS6BU5GvwotZLbfpANlgzlRx2lRkONd)](https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit?usp=sharing)
 
--   Use <a href="" target="_blank">this calculator</a> [this calculator](https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit?usp=sharing) to calculate. Fill in the Blue squares with your information.
+-   Use <a href="" target="_blank">this calculator</a> to calculate. Fill in the Blue squares with your information.
     
--   Calculate the amount of ETH/Dai for your worker proposal payment using your determined monthly compensation level. See [Contributor Guidelines](https://gateway.pinata.cloud/ipfs/QmXwDuxLzMdyg3eEsYM95BJscFrHECsTaKaSRJxjK3njqv/DXdao%20Contributor%20Guidelines.pdf) -- DXdao Compensation Table. Find the ETH price if you are requesting WETH
+-   Calculate the amount of ETH/Dai for your worker proposal payment using your determined monthly compensation level. See the DXdao [Compensation Table]({% link docs/ContributorHub/worker-compensation.md %}). Find the ETH price if you are requesting WETH.
     
 -   For DXD, find the monthly amount on Contributor Guidelines, and then divide that number by the all-time price of DXD on Coingecko (currently $523). This must be vested. While we build a vesting contract system, please record the # of DXD for your worker proposal in the proposal text
     
@@ -120,7 +120,7 @@ nav_order: 1
   
   
 
-**Note**: Submitting a proposal will require gas, but don’t worry! DXdao refunds 75% of gas costs. [Find more information here](https://daotalk.org/t/dxdao-governance-refunds-round-2/2361)
+**Note**: Submitting a proposal will require gas, but don’t worry! DXdao refunds 75% of gas costs. <a href="https://daotalk.org/t/dxdao-governance-refunds-round-2/2361" target="_blank">Find more information here</a>.
 
   
 
@@ -144,4 +144,4 @@ To do this, follow these steps:
     
 Anyone using Keybase will be able to “Verify” what the Signed Message is and that it is from your Keybase handle.
 
-**Any questions?** Reach out to the [DXdao Discord](https://discord.gg/4QXEJQkvHH), the [dx_dao Keybase](https://keybase.io/team/dx_dao), [Chris](https://daotalk.org/u/Powers), or [Pulp](https://daotalk.org/u/pulpmachina/summary).
+**Any questions?** Reach out to the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>, the <a href="https://keybase.io/team/dx_dao" target="_blank">DXdao Keybase</a>, <a href="https://daotalk.org/u/Powers" target="_blank">Chris</a>, or <a href="https://daotalk.org/u/pulpmachina/summary" target="_blank">Pulp</a>.
