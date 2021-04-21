@@ -78,7 +78,7 @@ Each building is available in 3 [levels-of-details](https://3d.bk.tudelft.nl/lod
 [https://3dbag.nl](https://3dbag.nl)
 
 
-## The Netherlands in 3D
+## The topography of the Netherlands in 3D
 
 Every building (in LoD1.2), every canals, every road, every bridge, in 3D. In CityJSON.
 
