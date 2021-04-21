@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Products
-nav_order: 2
+title: DXdao Products
+nav_order: 1
 has_children: true
 
 ---

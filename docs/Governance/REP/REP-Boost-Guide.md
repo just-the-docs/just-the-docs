@@ -6,9 +6,11 @@ grand_parent: Governance
 nav_order: 1
 ---
 
-## DXdao Community REP Boost Guide
+# DXdao Community REP Boost Guide
 
--   Congratulations on being nominated for a REP boost!
+___
+
+## Congratulations on being nominated for a REP boost!
     
 -   Reputation (REP) holders govern [DXdao](https://ipfs.io/ipfs/QmfGgQYwL4ZrXLVshYuwH2WHeSvPFQCDXeYTzPPFReCJqJ). REP is non-transferable, so use an Ethereum address that you will have access to in the future.
     

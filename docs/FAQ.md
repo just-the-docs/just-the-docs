@@ -1,27 +1,49 @@
 ---
 layout: default
 title: FAQ
-nav_order: 4
+nav_order: 6
 ---
+
+# DXdao FAQ
+{: .no_toc }
+
+___
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 ## What is DXdao all about?
 
-The best place to learn about DXdao is to check out the [DXdao Manifesto](https://dxdao.eth.link/#/manifesto).
+The best place to learn about DXdao is to check out the [**DXdao Manifesto**]({% link docs/Manifesto.md %}).
 
-## What products does the DXdao currently own or operate?
+## What products does DXdao currently own or operate?
 
-DXdao’s current suite of products include [Omen](https://omen.eth.link/), a prediction market; [Swapr](https://swapr.eth.link/), a governance-enabled AMM; and [Mesa](https://mesa.eth.link/), a front-running resistant DEX.
+DXdao’s current suite of products include: 
 
-## What revenues does the DXdao have?
+[**Omen**]({% link docs/Products/omen/index.md %}) – a prediction market platform; 
 
-DXdao currently has two main paths of earning revenue, the first is directly from its products and the second is deals that DXdao can make with other entities. DXdao is beginning to earn protocol fees directly from Swapr. Also this year, DXdao has begun to earn revenue through an incentive program on Mesa structured with Gnosis. Revenue flows to DXD via the [bonding curve](https://dxtrust.eth.link/#/). Currently, DXdao’s other products do not have revenue paths turned on as the focus is on growing the user base.
+[**Swapr**]({% link docs/Products/swapr/index.md %}) – a governance-enabled AMM; 
+
+[**Mesa**]({% link docs/Products/mesa/index.md %}) – a front-running resistant DEX built on the Gnosis Protocol, transitioning to an IDO platform.
+
+## What revenues does DXdao have?
+
+DXdao currently has two main paths of earning revenue, the first is directly from its products and the second is deals that DXdao makes with other entities. DXdao is preparing to earn protocol fees directly from each of its products. Contributors are actively exploring profit distribution methods following the [pause of the bonding curve](https://dxdao.medium.com/dxdao-hits-pause-on-dxd-bonding-curve-98166199925a) including buyback-and-burn, and dividend models.
 
 ## How does the DXdao come to own and operate these protocols, products, or services?
 
-DXdao has both built and been gifted products. DXdao has products running on permissionless protocols deployed onto Ethereum.
+DXdao has both built and been gifted products. DXdao has products running on permissionless protocols deployed onto Ethereum and xDai, and is targeting additional chains in the future.
 
-## How does the Bonding curve work?
+## How did the Bonding curve work?
 
-You can dive into the details of how the Continuous Token Offering (CTO) works [here](https://github.com/levelkdev/openraise-dapp/blob/master/docs/ContinuousOrganization.md).
+DXdao has voted to [pause the bonding curve](https://dxdao.medium.com/dxdao-hits-pause-on-dxd-bonding-curve-98166199925a), preventing additional minting and limiting the supply to 148,976 DXD.
+
+You can dive into the details of how the Continuous Token Offering (CTO) worked [here](https://github.com/levelkdev/openraise-dapp/blob/master/docs/ContinuousOrganization.md).
 
 ## Who makes up DXdao?
 
@@ -29,16 +51,18 @@ DXdao is made up of stakeholders, otherwise known as "reputation holders". Your 
 
 ## How does one earn Reputation (“REP”) in DXdao?
 
-One can earn Reputation in DXdao by contributing to DXdao itself. This is done by a proposal which is put to a vote. For example: currently, a full-time contributor requests 0.1667% of reputation (to their Ethereum address) for work completed. DXdao members can then cast on-chain votes weighted by reputation. If the proposal passes, the new member is automatically granted reputation.
+One can earn Reputation in DXdao by contributing to DXdao itself. This is done by a proposal which is put to a vote. For example: currently, a full-time contributor requests 0.1667% of reputation (to their Ethereum address) for work completed. DXdao members can then cast on-chain votes weighted by reputation. If the proposal passes, the new member is automatically granted reputation. You can learn more at the [REP]({% link docs/Governance/REP/index.md %}) section.
 
 ## How does decision making happen in the DXdao?
 
 DXdao reputation holders vote on proposals on-chain, using DAOstack's Alchemy interface and holographic consensus. This means some proposals can pass by a relative majority, and other times an absolute majority is needed. This depends on the type of proposal, and if the proposal is boosted by reaching a specific staking threshold. In general, though, the DXdao coalesces around ideas and achieves rough consensus via off-chain, less formal methods, such as weekly calls, discussion forums, chat groups, etc. All of these are open to the public.
 
+Looking to learn more? Read more about DXdao [Governance]({% link docs/Governance/index.md %}).
+
 ## What is the difference between DXD and Reputation (“REP”)?
 
 DXD is the economic token of the DXdao. It is a transferable ERC20 token which grants its holders a share of the revenue of DXdao, as well as certain privileges or premier services on DXdao-owned products.  
-Reputation (“REP”) is the governance mechanism that controls the DXdao. It is non-transferrable and holders have a right - and implicit duty - to govern and direct the collective.  
+Reputation (“[**REP**]({% link docs/Governance/REP/index.md %})”) is the governance mechanism that controls the DXdao. It is non-transferrable and holders have a right - and implicit duty - to govern and direct the collective.  
   
 DXD and reputation holders need not overlap, but it is likely some part of each stakeholder group will hold both to more tightly couple their interests. As holding DXD is the more passive path - and the one tied to economic success - it will likely be the more widely owned stake in the system.
 

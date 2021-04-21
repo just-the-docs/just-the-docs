@@ -6,18 +6,9 @@ nav_order: 4
 has_children: true
 ---
 
-# Alchemy
-{: .no_toc }
+# ALCHEMY
 
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
----
-
-## ALCHEMY
+___
 
 [Alchemy](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a) is DXdao’s on-chain governance system that was created by DAOstack. On DXdao’s Alchemy portal, REP holders can vote for on-chain proposals for the budgeting, resource allocation, and strategy decisions of DXdao.
 
@@ -27,7 +18,7 @@ Anyone can predict through staking GEN tokens on whether a proposal is going to 
 
 Currently, only REP holders can vote on proposals. DXdao is, however, finalizing its Governance 2.0 initiative, which will give on-chain voting power to both DXD and REP holders that stake DXD in DXdao’s governance contract, lock liquidity on Swapr, or stake DXD in an Omen prediction market.
 
-## ALCHEMY VOTING PARAMETERS
+## Alchemy Voting Parameters
 
 Alchemy created the Genesis Protocol, which is an implementation of holographic consensus as a smart contract on the Ethereum blockchain.
 

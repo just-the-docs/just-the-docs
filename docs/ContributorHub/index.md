@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contributor Hub
-nav_order: 5
+nav_order: 7
 has_children: true
 ---
 
