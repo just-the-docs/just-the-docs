@@ -29,11 +29,11 @@ Omen is an information market platform. Users can create and/or participate in i
  
 ## What do I need to participate in Omen? 
  
-You will need [Metamask](https://metamask.io/) or [Wallet Connect](https://walletconnect.org/apps/), some amount of ETH to execute transactions, and the collateral token of the market in which you want to participate. If you don’t have that token yet, you can exchange tokens at [Swapr.eth](https://swapr.eth.link/)
+You will need <a href="https://metamask.io/" target="_blank">Metamask</a> or <a href="https://walletconnect.org/apps/" target="_blank">Wallet Connect</a>, some amount of ETH to execute transactions, and the collateral token of the market in which you want to participate. If you don’t have that token yet, you can exchange tokens at <a href="https://swapr.eth.link/" target="_blank">Swapr.eth</a>
  
 ## Where do I see my outcome tokens? 
  
-You can see your outcome token balance in the Omen user interface. Your outcome tokens are [ERC-1155 tokens](https://eips.ethereum.org/EIPS/eip-1155). Etherscan and most wallets currently do not show ERC-1155 tokens. Soon, there will be a blockchain explorer and more wallets that will show these tokens. 
+You can see your outcome token balance in the Omen user interface. Your outcome tokens are <a href="https://eips.ethereum.org/EIPS/eip-1155" target="_blank">ERC-1155 tokens</a>. Etherscan and most wallets currently do not show ERC-1155 tokens. Soon, there will be a blockchain explorer and more wallets that will show these tokens. 
  
 ## Is there a risk in buying outcome tokens? 
  
@@ -77,11 +77,11 @@ What are the three states of Markets?
  
 ## How are Markets on Omen resolved? 
  
-Once a market is Closed, the outcome is then determined by the market reporter [Realitio](http://realitio.github.io/), a mechanism for verifying real-world events for smart contracts. Most markets will be resolved following that. 
+Once a market is Closed, the outcome is then determined by the market reporter <a href="http://realitio.github.io/" target="_blank">Realitio</a>, a mechanism for verifying real-world events for smart contracts. Most markets will be resolved following that. 
  
 In some cases, a market outcome will be contested where users can pay for rounds of arbitration until the matter is resolved, or users wish to no longer pay for arbitration. 
  
-When a prediction market reaches its resolution date, the outcome is determined by [Realitio](https://realitio.github.io/). Users on Realitio post bonds for their chosen outcomes, and they can be challenged by someone posting a new answer, and doubling the bond. This may happen for several cycles until the posting stops, and the answer is determined by the last one to post their bond. If someone doesn’t agree with Realitio’s outcome as a market reporter, they can dispute it through realitio by requesting [Kleros](http://kleros.io/) to arbitrate the dispute. 
+When a prediction market reaches its resolution date, the outcome is determined by <a href="https://realitio.github.io/" target="_blank">Realitio</a>. Users on Realitio post bonds for their chosen outcomes, and they can be challenged by someone posting a new answer, and doubling the bond. This may happen for several cycles until the posting stops, and the answer is determined by the last one to post their bond. If someone doesn’t agree with Realitio’s outcome as a market reporter, they can dispute it through realitio by requesting <a href="http://kleros.io/" target="_blank">Kleros</a> to arbitrate the dispute. 
  
 Kleros selects a randomized subset of jurors from a juror pool by sortition and applies game-theoretical incentivization to align the pseudonymous voters to consensus. Those who stake on the correct outcomes collect from those who staked on the incorrect outcome. In the future, the DXdao, the self-governing organization behind Omen, could also function as a competent arbiter. 
  
@@ -125,5 +125,5 @@ By way of example, if a liquidity provider adds 10 DAI of liquidity to a binary 
  
 ## Where can I learn more about the Conditional Token Framework? 
  
-Please refer to the [developer portal](https://docs.gnosis.io/conditionaltokens/) around conditional tokens. 
+Please refer to the <a href="https://docs.gnosis.io/conditionaltokens/" target="_blank">developer portal</a> around conditional tokens. 
  

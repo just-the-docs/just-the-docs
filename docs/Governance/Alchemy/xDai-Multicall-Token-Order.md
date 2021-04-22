@@ -19,7 +19,7 @@ ___
 
 **Steps**:
 
-1) On xDai Chain, go to xDXdao’s GenericSchemeMultiCall plugin [here](https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/scheme/0xbcfb334e74c4c6161b4bb67b9de23b42034bfe0d0a2f0a59e95f58c923a1e90d).
+1) On xDai Chain, go to xDXdao’s GenericSchemeMultiCall plugin <a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/scheme/0xbcfb334e74c4c6161b4bb67b9de23b42034bfe0d0a2f0a59e95f58c923a1e90d" target="_blank">here</a>.
 
 2) Click “ **+ New Proposal**” button
 
@@ -28,7 +28,7 @@ ___
 4) In “**Add custom contract**” field, paste in the GnosisProtocolRelayer contract:
 **0x0B0704f4F7813fA86d0DCc74E78E8447adB5Dbd7**
 
-The contract can be found here on [BlockScout](https://blockscout.com/poa/xdai/address/0x0B0704f4F7813fA86d0DCc74E78E8447adB5Dbd7/transactions).
+The contract can be found here on <a href="https://blockscout.com/poa/xdai/address/0x0B0704f4F7813fA86d0DCc74E78E8447adB5Dbd7/transactions" target="_blank">BlockScout</a>.
 
 
 You will be notified of “**Contract added successfully!**”

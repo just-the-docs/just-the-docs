@@ -10,7 +10,7 @@ has_children: true
 
 ___
 
-[Alchemy](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a) is DXdao’s on-chain governance system that was created by DAOstack. On DXdao’s Alchemy portal, REP holders can vote for on-chain proposals for the budgeting, resource allocation, and strategy decisions of DXdao.
+<a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a" target="_blank">Alchemy</a> is DXdao’s on-chain governance system that was created by DAOstack. On DXdao’s Alchemy portal, REP holders can vote for on-chain proposals for the budgeting, resource allocation, and strategy decisions of DXdao.
 
 Anyone can make proposals on Alchemy. A proposal is equivalent to a project pitch that contains an explanation of objectives, methods, costs and milestones of the proposed project.
 

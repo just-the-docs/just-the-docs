@@ -17,7 +17,7 @@ ___
 
 **Steps**:
 
-1) On Mainnet, go to DXdao’s GenericSchemeMultiCall plugin [here](https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/scheme/0xda346ede8c60016d80a59642744407a5bf77392c259e584e8c8202705c4618a2).
+1) On Mainnet, go to DXdao’s GenericSchemeMultiCall plugin <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/scheme/0xda346ede8c60016d80a59642744407a5bf77392c259e584e8c8202705c4618a2" target="_blank">here</a>.
 
 2) Click “ **+ New Proposal**” button.
 
@@ -26,7 +26,7 @@ ___
 4) In “ * **Contract Address**” field, choose the GnosisProtocolRelayer contract from the drop down list.
 **0x30AAD48F5eA5e8b2277612eB2A375fC173bB049e**
 
-The contract can be found here on [Etherscan](https://etherscan.io/address/0x30AAD48F5eA5e8b2277612eB2A375fC173bB049e#code).
+The contract can be found here on <a href="https://etherscan.io/address/0x30AAD48F5eA5e8b2277612eB2A375fC173bB049e#code" target="_blank">Etherscan</a>.
 
 
 
