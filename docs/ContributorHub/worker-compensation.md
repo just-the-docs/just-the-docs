@@ -6,7 +6,11 @@ nav_order: 3
 
 ---
 
-## WORKER COMPENSATION
+# Worker Compensation
+
+___
+
+## Compensation Structure
 
 ### Base Compensation in ETH or Stablecoins 
 
@@ -40,7 +44,7 @@ Workers that have completed their first 2.5 months with DXdao: You will request 
 
 A single worker may receive a maximum of 4% REP for their paid contributions to DXdao.
 
-### Calculating Monthly Compensation For Worker Proposals:
+## Calculating Monthly Compensation For Worker Proposals
 
 1.  Pick your experience Level 1 through 5, based on experience guidelines (below) and in consultation with the DXdao community.
     
@@ -66,39 +70,35 @@ A single worker may receive a maximum of 4% REP for their paid contributions to 
 | Level 2          | $3,000                    |
 | Level 3          | $4,000                    |
 | Level 4          | $5,000                    |
-| Level 5          | $5,000                    |
+| Level 5          | $6,000                    |
 
 
 ⠀
 ### Experience Guidelines:
 
-1.  `I’m new! I don’t have many marketable life skills, but I’m passionate about DXdao and eager to learn.`
+1.  I’m new! I don’t have many marketable life skills, but I’m passionate about DXdao and eager to learn.
     
-2.  `I have some work experience, but I have not yet developed specialized skills. Perhaps I have worked in a related industry, but I might lack direct experience in Web3/DeFi/DAOs. I’m eager to get more expertise in my vertical.`
+2.  I have some work experience, but I have not yet developed specialized skills. Perhaps I have worked in a related industry, but I might lack direct experience in Web3/DeFi/DAOs. I’m eager to get more expertise in my vertical.
     
-3.  `I’ve been around the block and know how to work independently, but I still need help coming up with a scope of work and working with people outside of my area of focus. I’m eager to grow horizontally and vertically.`
+3.  I’ve been around the block and know how to work independently, but I still need help coming up with a scope of work and working with people outside of my area of focus. I’m eager to grow horizontally and vertically.
     
-4.  `I know what’s going on and some (maybe even myself) would consider me an “expert” on my specialty. I can work with different stakeholders and drive initiatives internally. I’m eager to fill gaps in my skill set.`
+4.  I know what’s going on and some (maybe even myself) would consider me an “expert” on my specialty. I can work with different stakeholders and drive initiatives internally. I’m eager to fill gaps in my skill set.
     
-5.  `I have deep expertise in a particular vertical or have direct experience that is relevant to Web3/DeFi/DAOs. I’m eager to further the mission of DXdao and work with other engaging and ambitious people.`
+5.  I have deep expertise in a particular vertical or have direct experience that is relevant to Web3/DeFi/DAOs. I’m eager to further the mission of DXdao and work with other engaging and ambitious people.
 
-### [Example] Compensation Structure:
+## Example Compensation Structure
+    
+### **Experience Level**: 3
 
--   **Past experience**: 4 years as full-stack web developer but just getting started in Web3/DeFi/DAO
-    
--   **Experience Level**: 3
-    
--   Third Month working for DXdao
+### **Time commitment**: 100%; full-time
 
--   **Full-time**
-
--   **Monthly Salary**
+### **Monthly Salary**:
     
-	-   $6,000 (ETH) distributed monthly
+-   $6,000 (ETH) distributed monthly
     
-	-   $2,000 (DXD) 50% vested after a 1-year cliff and the remaining $2,000 (DXD) after the first year on a linear schedule
+-   $4,000 (DXD) vested continuously over two years with a one year cliff
     
-	-   0.1667% REP (voting power in DXdao)
+-   0.1667% REP (voting power in DXdao)
     
 
 

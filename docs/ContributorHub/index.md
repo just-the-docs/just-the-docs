@@ -27,4 +27,4 @@ Take a look at [**Open Positions and Bounties**]({% link docs/ContributorHub/ope
 
 Interested in learning more about DXdao's inner workings? Read [**How we Work**]({% link docs/ContributorHub/how-we-work.md %}).  
 
-Ready to integrate yourself as a contributor with the DXdao community? Start with [**Employment**]({% link docs/ContributorHub/employment.md %}).
+Ready to integrate yourself as a contributor with the DXdao community? Start with [**Contributor Onboarding**]({% link docs/ContributorHub/contributor-onboarding.md %}).

@@ -6,51 +6,49 @@ grand_parent: Contributor Hub
 nav_order: 1
 ---
 
-## Alchemy Worker Proposal Guide [xDai]
+#  xDai Worker Proposal Guide
 
-  
+___
 
-### Intro:
+
+## Intro:
 
 -   Congratulations on getting the signal to submit a worker proposal to DXdao!
     
 -   At this point, you’ve started the onboarding process, posted a draft of your worker proposal on <a href="https://daotalk.org" target="_blank">Daotalk</a>, and the proposal was signalled for an on-chain DXdao vote.
     
--   For details on what should be in the worker proposal, go to DXdao’s Contributor Guidelines -- Worker Compensation section.
+-   For details on what should be in the worker proposal, visit the [Worker Compensation]({% link docs/ContributorHub/worker-proposals/index.md %}) section.
     
 -   After the <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0x2a4f24200eb1ef626e9aea29bad2494689f979c00c6fff17b5b0cd38712be426" target="_blank">xDai authorization proposal</a> , workers can now submit proposals on xDXdao base on xDai and save gas.
     
-### When to Submit Your Worker Proposal:
+## When to Submit Your Worker Proposal:
 
--   A boosted worker proposal takes approximately 5 days to pass.
+-   How long a boosted worker proposal would take depends on funding and voting power scheme. For mainnet DXdao that’s 7 days to pass after boosting, and for xDXdao on xDai that’s 4 days. Boosted proposals can pass with a relative majority.
     
--   If a proposal is not boosted, the voting period will last 21 days.
+-   If a proposal is not boosted, the voting period will last 21 days. Unboosted proposals must pass with an absolute majority.
     
--   A proposal is generally eligible to be boosted 1 day after the proposal is posted on Alchemy.
+-   A proposal is generally eligible to be boosted 1 day after it’s been posted on Alchemy. Boosting a proposal is a ‘bet’ that the proposal will pass. Boosters receive a reward if the proposal passes and lose their stake if the proposal fails.  You can boost your own worker proposal once it is eligible to be boosted, request to be boosted from a member of the Contributor Experience squad or any DXdao community member. 
     
--   **The Point**:  *You should post your alchemy proposal 1 week before you intend to receive payment for your work with DXdao, and the proposal must be boosted in order for the voting period to shrink to 1 week.*
+-   **The Point**:  *If you intend to receive payment for your work with DXdao by a certain date, you must submit your Alchemy worker proposal at least 1 week in advance and request to have it boosted the next day, in order for the voting period to shrink to 1 week.*
     
--   You can boost your own worker proposal once it is eligible to be boosted.
-    
--   For more info on how Daostack’s holographic consensus see <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">Alchemy Parameters</a>.
+-   An explanation of Daostack’s holographic consensus from its architect can be found <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">here</a>.
     
 
   
 
-### What You’ll Need:
+## What You’ll Need:
 
--   Your ETH account address on xDai where you will receive your ETH payment when the proposal passes.
+1. An ERC-20 token wallet where you will receive your payment once a proposal passes.
+2. A small amount of xDai (less than $0.25 USD), in order to submit the proposal. Feel free to reach out to someone on the Contributor Experience squad or any DXdao contributor to send you a small amount of xDai to complete your transaction.
+3. If you want to boost your own proposal, get some GEN, the Daostack token. This is not necessary, but DXdao contributors can boost proposals by staking GEN to speed up the execution process. 
+4. A wallet address where you’ll receive your REP: non-transferable voting rights used for voting on proposals. This can be the same as your payment address, but as REP cannot be transferred, pick an address that you will always have access to.
     
-
-	-   Example: 0xed6fA573B2ddB34F6a9a6941b53f7833bF283b02
-    
-
--   <a href="https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup" target="_blank">See this guide</a> to set up your Metamask wallet to access xDai
+**Recommended**: Use a <a href="https://metamask.io/" target="_blank">Metamask</a> wallet that has the same address on xDai and Ethereum. <a href="https://metamask.zendesk.com/hc/en-us/articles/360052711572-How-to-connect-to-the-xDai-network" target="_blank">Here</a> you’ll find guidance on how to add xDai to your wallet’s network list.
     
 
   
 
-**Step 1**: Go to <a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f" target="_blank">Alchemy, xDXdao’s voting interface</a>, and Click ‘<a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/schemes" target="_blank">Plugins</a>’
+**Step 1**: Go to <a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f" target="_blank">Alchemy, DXdao’s voting interface</a>, and click ‘<a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/schemes" target="_blank">Plugins</a>’. Now is the best time to connect your wallet and switch to **xDai network**.
 
   
   
@@ -63,9 +61,13 @@ nav_order: 1
 
   
 
-**Step 3**: Calculate your ETH/Dai, DXD and REP compensation payment
+**Step 3**: Calculate your REP allocation
 
-  
+- First, determine if you are a full-time or part-time worker.
+	- Full-time workers: may claim 0.1667% REP  for each month they work for DXdao. 
+	- Part-time workers: may claim 0.08335% REP per month.   
+	- Other compensation proposals (bounties, limited contractors, etc.): 	To determine how much REP to request, ask community members and state the amount in your daotalk.org worker proposal post. The amount will be somewhere between 0.1% to 0.1667% REP. 
+	- Please use the Worker Compensation Calculator to assist with determining your REP allocation.
 
 [![](https://lh3.googleusercontent.com/oHIEaPL8vNeFmzWeEYv0rnup97azxESOY3tPm1LHYkdzRbaWs17NflqwX6QiprZGRFUSbt0Q6i1qgFjsTrlJ9VsE4BECRNKxTWfiivV-AOS6BU5GvwotZLbfpANlgzlRx2lRkONd)](https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit?usp=sharing)
 
