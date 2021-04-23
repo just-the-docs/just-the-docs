@@ -30,7 +30,7 @@ DXdao functions in teams of workers that are referred to as squads. Workers with
     
 -   Governance
     
--   Marketing / Communications
+-   Marketing / Communications / Community
     
 -   Mesa
     
@@ -40,7 +40,7 @@ DXdao functions in teams of workers that are referred to as squads. Workers with
     
 ## Squad Leaders
 
-Each squad has a squad leader that is the point of contact for inter-squad coordination and new workers. The squad leader takes on an organizational role in roadmapping strategy and tracking the progress of workers within the squad. This is a relatively new position that has been recently created in DXdao. The intention is to have rotating squad leaders
+Each squad has a squad leader that is the point of contact for inter-squad coordination and new workers. The squad leader takes on an organizational role in roadmapping strategy and tracking the progress of workers within the squad. This is a relatively new position that has been recently created in DXdao. The intention is to have rotating squad leaders.
 
 **Current DXdao Squad Leaders**:  
 
