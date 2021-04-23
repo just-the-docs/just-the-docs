@@ -29,11 +29,11 @@ Read more in the [**DXD**]({% link docs/DXD.md %}) section.
   
 The suite of DeFi products built and governed by DXdao currently includes:
 
-[**Omen**]({% link docs/Products/omen/index.md %}) – A prediction market platform.
+[**Omen**]({% link docs/Products/omen/index.md %}) – A fully decentralized multi-chain prediction market platform.
 
-[**Swapr**]({% link docs/Products/swapr/index.md %}) – A governance enabled fork of Uniswap.
+[**Swapr**]({% link docs/Products/swapr/index.md %}) – A multi-chain AMM with a suite of unique features including LP governance, DIY farming, and much more.
 
-[**Mesa**]({% link docs/Products/mesa/index.md %}) – A DEX built on the Gnosis Protocol, transitioning to an IDO platform.
+[**Mesa**]({% link docs/Products/mesa/index.md %}) – A fair auction IDO launchpad.
   
 ## Looking to contribute?  
   

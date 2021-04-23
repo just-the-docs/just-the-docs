@@ -17,7 +17,7 @@ ___
     
 -   At this point, you’ve started the onboarding process, posted a draft of your worker proposal on <a href="https://daotalk.org" target="_blank">Daotalk</a>, and the proposal was signalled for an on-chain DXdao vote.
     
--   For details on what should be in the worker proposal, visit the [Worker Compensation]({% link docs/ContributorHub/worker-proposals/index.md %}) section.
+-   For details on what should be in the worker proposal, visit the [Worker Proposals]({% link docs/ContributorHub/worker-proposals/index.md %}) section.
     
 -   After the <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0x2a4f24200eb1ef626e9aea29bad2494689f979c00c6fff17b5b0cd38712be426" target="_blank">xDai authorization proposal</a> , workers can now submit proposals on xDXdao base on xDai and save gas.
     
@@ -61,32 +61,25 @@ ___
 
   
 
-**Step 3**: Calculate your REP allocation
+**Step 3**: Calculate your REP and payment allocation
 
 - First, determine if you are a full-time or part-time worker.
 	- Full-time workers: may claim 0.1667% REP  for each month they work for DXdao. 
-	- Part-time workers: may claim 0.08335% REP per month.   
-	- Other compensation proposals (bounties, limited contractors, etc.): 	To determine how much REP to request, ask community members and state the amount in your daotalk.org worker proposal post. The amount will be somewhere between 0.1% to 0.1667% REP. 
-	- Please use the Worker Compensation Calculator to assist with determining your REP allocation.
+	- Part-time workers: may claim REP based on their commitment percentage each month. 
+		- *EG. 50% commitment would be entitled to (0.1667x0.5) 0.08335% REP*
+	- **Other compensation proposals (bounties, limited contractors, etc.)**: 	To determine how much REP to request, ask community members and state the amount in your daotalk.org worker proposal post. The amount will be somewhere between 0.1% to 0.1667% REP. 
+	- Please use the <a href="https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit#gid=1106150815" target="_blank">Worker Compensation Calculator</a> to assist with determining your REP and payment allocation. Fill in the Blue squares with your information.
 
 [![](https://lh3.googleusercontent.com/oHIEaPL8vNeFmzWeEYv0rnup97azxESOY3tPm1LHYkdzRbaWs17NflqwX6QiprZGRFUSbt0Q6i1qgFjsTrlJ9VsE4BECRNKxTWfiivV-AOS6BU5GvwotZLbfpANlgzlRx2lRkONd)](https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit?usp=sharing)
 
--   Use <a href="" target="_blank">this calculator</a> to calculate. Fill in the Blue squares with your information.
-    
--   Calculate the amount of ETH/Dai for your worker proposal payment using your determined monthly compensation level. See the DXdao [Compensation Table]({% link docs/ContributorHub/worker-compensation.md %}). Find the ETH price if you are requesting WETH.
-    
--   For DXD, find the monthly amount on Contributor Guidelines, and then divide that number by the all-time price of DXD on Coingecko (currently $523). This must be vested. While we build a vesting contract system, please record the # of DXD for your worker proposal in the proposal text
-    
--   For REP, each worker is due 0.1667% of mainnet REP each month. As the total amount of REP changes, the amount of REP to each worker is noted at the beginning of each month on the xDai Authorization forum thread. Use this number for your REP award on xDai (prorated if part-time) and also note the main net REP award amount in the proposal text.
-    
--   xDai proposals cannot reward mainnet REP - awards will be batched and sent to multiple addresses once a quarter. You can ask for your monthly contributor REP award in xDai REP. This will allow you to vote on proposals on xDai. .
-    
-
-  
+- A worker proposal period is generally **2 months**, unless this is your first time submitting a proposal. In that case, it will be for 2.5 months, to account for your 2 week trial period.
+	- Workers submit a proposal for 50% of compensation (ETH or stable currency) to be paid when they start their work period. 
+	- Workers then submit a separate worker payment request for the remaining 50% of their compensation (ETH or stable currency, plus the total 2 months of REP) at the end of the worker period.
+	- DXD is **not** to be requested in this proposal.  Please see [Alchemy DXD Vesting Proposal Guide]({% link docs/ContributorHub/worker-proposals/DXD-Vesting-Guide.md %}) for further details on how and when to request DXD.
 
 **Step 4**: Click on the ‘+ New Proposal’ button in the top right corner and connect your wallet.
 
-  
+- Ensure you are on the "Funding and Voting Power" scheme to find the correct fields.
 
 ![](https://lh3.googleusercontent.com/RnkZK-NKPjiRqLpm2Xd11_iP_ZwO78HqhOO4b195RrnjuPpQTfKpvGxe0ntAJhLxvgrbNS2JuJeH8A4piXkDTXbVDqIOxkgbdE1ScJc-DK361X5B2t_03DJkdp7EIwSdHIgmathS)
 
@@ -96,35 +89,30 @@ ___
 
   
 
-### Proposal information:
+### xDai Proposal information:
 
 -   **Title**: [NAME] Worker Proposal [DATE - DATE]
     
--   **Proposal text**: Copy and paste the worker proposal text you used in your Daotalk post. See Contributor Guidelines -- Worker Proposals for sample text.
+-   **Description**: Copy and paste the worker proposal text you used in your Daotalk post. See [Worker Proposals]({% link docs/ContributorHub/worker-proposals/index.md %}) for sample text.
     
--   **DXD & Mainnet REP**:
+-   **Tags**: Use "worker proposal", plus any areas you will be working in. *(e.g., Omen, governance, etc..)*
     
--   **Tags**: worker proposal, plus any areas you will be working in (e.g., Omen, governance, etc.)
+-   **URL**: link to your DAOtalk Worker Proposal post.
     
--   **URL**: link to your DAOtalk Worker Proposal post
+-   **Recipient, if not you**: Provided you have connected with your desired address, leave this field blank.
     
--   **Recipient**: Your ETH address
+-   **xDAI Reward**: Calculated Monthly Payment Allocation.
     
--   **ETH Reward**: Calculated Monthly ETH Payment Allocation
+-   **Reputation Reward**: Calculated Monthly REP Allocation.
     
--   **Reputation Reward**: Calculated Monthly REP Allocation
-    
--  **External Token Reward**: If you choose to be paid in stable currencies, you may find them here.
+-  **External Token Reward**: If you choose to be paid in different stable currencies then xDai, you may find them here. You may also select ETH if you would rather be paid in Ethereum.
+
+- **DAO token (XDXD) Reward**: Unless you are making a [DXD Vesting Proposal]({% link docs/ContributorHub/worker-proposals/DXD-Vesting-Guide.md %}), leave this field blank.
   
 
-![](https://lh6.googleusercontent.com/NSJwa2BCStWetNI35H_4SFeqBd4_mvfAzo_7-4Sd_bShAsZHzvZnBetwn9oeWGQ25jIPoNfeIOnWUy8lKY24JVpN82OXsARhNrk9SXA4DcjeF3miOV2Hcr89gn0Z0p9pQ0QVpC0F)
 
-  
-  
+![](https://lh5.googleusercontent.com/TKhbkOWYv8Ui2Ssii-HWigr_t82m0CqOI-4ag3t4NpgYpc_eQUWZf8dAdecYaYkDIeUbOaAJs-gJWQH6QlqIJPbpeUtvU_98cgud8Ab8jp9sOg5Stu6bJpCJhgs19jB1ry7MfVje)
 
-**Note**: Submitting a proposal will require gas, but don’t worry! DXdao refunds 75% of gas costs. <a href="https://daotalk.org/t/dxdao-governance-refunds-round-2/2361" target="_blank">Find more information here</a>.
-
-  
 
 ### Recommended step:  
   
@@ -146,4 +134,4 @@ To do this, follow these steps:
     
 Anyone using Keybase will be able to “Verify” what the Signed Message is and that it is from your Keybase handle.
 
-**Any questions?** Reach out to the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>, the <a href="https://keybase.io/team/dx_dao" target="_blank">DXdao Keybase</a>, <a href="https://daotalk.org/u/Powers" target="_blank">Chris</a>, or <a href="https://daotalk.org/u/pulpmachina/summary" target="_blank">Pulp</a>.
+**Any questions?** Reach out to the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>, the <a href="https://keybase.io/team/dx_dao" target="_blank">DXdao Keybase</a>, <a href="https://daotalk.org/u/melanie/" target="_blank">Melanie</a>, <a href="https://daotalk.org/u/allyq/" target="_blank">Ally</a>, or <a href="https://daotalk.org/u/Powers" target="_blank">Chris</a>.

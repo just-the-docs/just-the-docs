@@ -75,7 +75,9 @@ Work completed in good faith is determined by the squad leader, all relevant wor
 
 ### Trial Period Checklist
 
--   Attend all squad calls, the community call + at least one (1) other regular DXdao call.
+-   Attend all squad calls, the community recap call, and any regular DXdao calls relevant to your contribution.
+
+    - You can find the current call schedule [here]({% link docs/Meetings/index.md %}).
     
 -   Check-in directly on Keybase with your squad guide directly at least once a week.
     
