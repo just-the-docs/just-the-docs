@@ -10,11 +10,11 @@ nav_order: 4
 
 ---
 
-DXdao Community calls alternate bi-weekly between Community Recap, and Resource Coordination.
+DXdao Community calls alternate bi-weekly between Community Recap, and Community Discussion.
 
 Community Recap calls cover a synopsis of the preceding 2 weeks, OK-R updates, Roadmap changes, and other associated topics. 
 
-Resource Coordination calls predominantly aim to align DXdao members on various topics and discuss utilization of stagnant resources. 
+Community Discussion calls predominantly aim to provide an avenue for DXdao community members to voice their opinions and share open discussion with DXdao contributors. 
 
 The below table includes upcoming and previous calls, meeting notes and recordings, and will be converted to your local time automatically.
 

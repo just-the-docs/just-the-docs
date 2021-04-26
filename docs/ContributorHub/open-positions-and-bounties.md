@@ -17,8 +17,6 @@ DXdao is entirely on-chain. Everything from hiring decisions to product updates 
 ### Current openings (full or part)
 
 -  Senior Solidity Engineer
-
--   HR/People Mover
     
 -   Marketing/Narrative Builder
     
@@ -58,34 +56,6 @@ DXdao is a decentralized collective native to the internet that is building a su
 -   Strong focus on security and testing
     
 -   Team player who communicates well
-
-# HR/People Mover
-
-___
-
-DXdao is a decentralized collective, native to the internet, but it still needs processes and norms on how we work (well) together. This role will need to think about the traditional things that HR focuses on, hiring/retaining top talent + creating a fair and fun work environment, but will need to build new frameworks and standards for a new type of organization.
-
-**An HR/People Mover will**:
-
--   Own the worker onboarding process and help workers navigate on-chain proposals
-    
--   Build tools and processes to allow for cross-collaboration and management without a bureaucratic hierarchy
-    
--   Have an eye for talent and know how to attract and retain the best
-    
--   Develop people operations that drive a continuous feedback culture
-    
--   Help make DXdao a global, decentralized collective, where anyone in the world can contribute to
-   
-**DXdao is looking for**:
-
--   A DAO/DeFi enthusiast who believes in the power of decentralization
-    
--   Someone who has empowered remote teams in previous roles
-    
--   Thinks constantly about how work can be redefined in the digital/crypto age
-    
--   An independent, forward-thinking person - everything is on-chain
     
 # Marketing/Narrative Builder
 

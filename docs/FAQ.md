@@ -25,11 +25,11 @@ The best place to learn about DXdao is to check out the [**DXdao Manifesto**]({%
 
 DXdao’s current suite of products include: 
 
-[**Omen**]({% link docs/Products/omen/index.md %}) – a prediction market platform; 
+[**Omen**]({% link docs/Products/omen/index.md %}) – A fully decentralized multi-chain prediction market platform.
 
-[**Swapr**]({% link docs/Products/swapr/index.md %}) – a governance-enabled AMM; 
+[**Swapr**]({% link docs/Products/swapr/index.md %}) – A multi-chain AMM with a suite of unique features including LP governance, DIY farming, and much more.
 
-[**Mesa**]({% link docs/Products/mesa/index.md %}) – a front-running resistant DEX built on the Gnosis Protocol, transitioning to an IDO platform.
+[**Mesa**]({% link docs/Products/mesa/index.md %}) – A fair auction IDO launchpad.
 
 ## What revenues does DXdao have?
 

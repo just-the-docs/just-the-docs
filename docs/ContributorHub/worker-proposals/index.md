@@ -6,71 +6,81 @@ nav_order: 4
 has_children: true
 ---
 
-## WORKER PROPOSALS
+# Worker Proposals
 
-### When to Submit a Worker Proposal.
+___
 
-Once a worker proposal has been boosted, the proposal takes approximately 7 days to pass. With this time-frame in mind, a worker should submit their proposal on Alchemy one week before she intends to be compensated for her work. It is the worker’s responsibility to submit her worker proposals in a timely manner. And keep track of what she has been paid.
+## When to Submit a Worker Proposal
 
-### Worker Proposal Format -- What to Include
+Once a worker proposal has been boosted, the proposal takes approximately 7 days to pass. With this time-frame in mind, a worker should submit their proposal on Alchemy one week before she intends to be compensated for her work. It is the worker’s responsibility to submit her worker proposals in a timely manner, and keep track of what she has been paid.
 
--   **Title:** [NAME] Worker Proposal [DATE - DATE]
+## Worker Proposal Format -- What to Include
 
--   **Background**:
+### **Title**:
 
-	-   If this is your first worker proposal, state any context for making the proposal, including:
-    
+[NAME] Worker Proposal [DATE - DATE]
 
-		-   What position you will be filling -- i.e. developer, marketing, governance, etc.
-    
-		-   Who you have been in contact with regarding the position (add their DAOtalk usernames)
-    
+### **Background**:
 
-	-   If you are a continuing worker, state which products and areas you are working on / any other relevant background information
-    
--   **Timeframe**: state the date range, typically 2 months (2.5 months for first-time workers)
+If this is your first worker proposal, state any context for making the proposal, including:
     
 
--   **Goals**: State the products and / or strategy areas you will be working under. E.g. Omen and governance. Include both short-term goals that you seek to accomplish during the working period and long-term goals.
+-   What position you will be filling -- i.e. developer, marketing, governance, etc.
+    
+-   Who you have been in contact with regarding the position (add their DAOtalk usernames)
+    
+If you are a continuing worker, state which products and areas you are working on / any other relevant background information
+    
+### **Timeframe**: 
+
+State the date range, typically 2 months (2.5 months for first-time workers).
     
 
--   **Responsibilities**: List the specific deliverables you will be either completing and / or working on during the working period. Try to state which deliverables you intend to complete within the period and which are long-term or ongoing projects.
+### **Goals**: 
+
+State the products and / or strategy areas you will be working under. *E.g. Omen and governance.* 
+
+Include both short-term goals that you seek to accomplish during the working period and long-term goals.
+    
+### **Responsibilities**: 
+
+List the specific deliverables you will be either completing and / or working on during the working period. Try to state which deliverables you intend to complete within the period and which are long-term or ongoing projects.
     
 
--   **If You Are A Returning Worker, Write a Self-Reflection**:
+### **If You Are A Returning Worker, Write a Self-Reflection**:
     
-	-   state what you did well, what you did okay, and what you need to improve on
+State what you did well, what you did okay, and what you need to improve on.
 
--   **Compensation**:
+### **Compensation**:
     
-	-   Experience Level: 1-5
+-   Experience Level: 1-5
     
-	-   Time commitment: Full-time, Part-time, Percent (%) time
+-   Time commitment: Full-time, Part-time, Percent (%) time
     
-	-   [ETH AMT] for 2 months of work at level 4, to be sent half on the first payment proposal and half on the second payment
+-   Salary for 2 months of work at specified level, to be sent half on the first payment proposal and half on the second payment
     
-	-   [DXD AMT] vested for 2 years with a 1 year cliff starting the [DATE WORK PERIOD STARTS]
+-   DXD vested for 2 years with a 1 year cliff starting the [DATE WORK PERIOD STARTS]
     
-	-   [% AMT REP] = to be sent in the second payment proposal
+-   Designated REP to be sent in the second payment proposal
     
--   **Work Experience**:
+### **Work Experience**:
     
-	-   Prior DXdao work proposals (if applicable)
+-   Prior DXdao work proposals (if applicable)
     
-	-   Past Work for DXdao
+-   Past Work for DXdao
 
-		-   If a developer, Github links
+	-   If a developer, Github links
     
-		-   If a non-tech worker, doc links or described deliverables
+	-   If a non-tech worker, doc links or described deliverables
     
-	-   If new, past relevant work experience
+-   If new, past relevant work experience
     
-		-   Developers: Github profile link
+	-   Developers: Github profile link
     
-		-   Non-tech: suggested linkedin / other references
+	-   Non-tech: suggested linkedin / other references
     
 
-### Sample Worker Proposals
+## Sample Worker Proposals
 
 **Bounty**
     

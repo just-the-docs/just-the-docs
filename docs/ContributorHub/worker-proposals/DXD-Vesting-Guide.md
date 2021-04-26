@@ -6,9 +6,9 @@ grand_parent: Contributor Hub
 nav_order: 3
 ---
 
-## DXD Vesting Contract Creation
+# DXD Vesting Contract Creation
 
-  
+___
 
 The below step-by-step instructions outline the detailed process for a DXdao contributor to create a DXD Vesting contract to be used with a worker payment.
 
@@ -18,7 +18,7 @@ This walkthrough explains how to use Etherscan and MetaMask to help accomplish t
 
   
 
-### How it works
+## How it works
 
 1.  Create your own unique token vesting contract with the desired parameters calling the create function in the TokenVesting Factory
     
@@ -29,7 +29,7 @@ This walkthrough explains how to use Etherscan and MetaMask to help accomplish t
 
   
 
-### What you will need:
+## What you will need:
 
 1.  Your ETH account where you will eventually receive the vested DXD tokens
     
@@ -48,27 +48,27 @@ This walkthrough explains how to use Etherscan and MetaMask to help accomplish t
   
   
 
-### Current parameters for DXdao full-time contributors
+## Current parameters for DXdao full-time contributors
 
 1.  Your ETH account where you will eventually receive the vested DXD tokens.
 
-	`Example: 0xed6fA573B2ddB34F6a9a6941b53f7833bF283b02`
+	*Example: 0xed6fA573B2ddB34F6a9a6941b53f7833bF283b02*
 
 2.  The start time in format of unix timestamp = The start date of your Worker Proposal
 
-	`Example: Start date of 11/01/2020 @ 12:00pm (UTC) is 1604232000`
+	*Example: Start date of 11/01/2020 @ 12:00pm (UTC) is 1604232000*
 
 3.  The duration of the cliff period in seconds = 1 year from Start Date
 
-	`Example: If Cliff date of 11/01/2021 @ 12:00pm (UTC) is 1635768000, the cliff duration is 1635768000 - 1604232000 = 31536000 seconds`
+	*Example: If Cliff date of 11/01/2021 @ 12:00pm (UTC) is 1635768000, the cliff duration is 1635768000 - 1604232000 = 31536000 seconds*
 
 4.  The duration of the vesting period in seconds = 2 years from Start Date
 
-	`Example: If End date of 11/01/2022 @ 12:00pm (UTC) is 1667304000, the cliff duration is 1635768000 - 1604232000 = 63072000 seconds`
+	*Example: If End date of 11/01/2022 @ 12:00pm (UTC) is 1667304000, the cliff duration is 1635768000 - 1604232000 = 63072000 seconds*
 
 5.  If your contract can be terminated by the DXdao or not. 
 
-	`Currently, the input would be “false”`
+	*Currently, the input would be “false”*
     
 
   

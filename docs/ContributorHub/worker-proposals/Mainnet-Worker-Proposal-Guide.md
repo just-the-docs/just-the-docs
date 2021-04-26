@@ -6,11 +6,11 @@ grand_parent: Contributor Hub
 nav_order: 2
 ---
 
-## Alchemy Worker Proposal Guide
+# Mainnet Worker Proposal Guide
 
-  
+___
 
-### Intro:
+## Intro:
 
 -   Congratulations on getting the signal to submit a worker proposal to DXdao!
     
@@ -18,7 +18,7 @@ nav_order: 2
     
 -   For details on what should be in the worker proposal, go to DXdao’s Contributor Guidelines -- Worker Compensation section.
     
-### When to Submit Your Worker Proposal:
+## When to Submit Your Worker Proposal:
 
 -   A boosted worker proposal takes approximately **7 days** to pass.
     
@@ -32,7 +32,7 @@ nav_order: 2
     
 -   For more info on how Daostack’s holographic consensus see <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">Alchemy Parameters</a>.
     
-### What You’ll Need:
+## What You’ll Need:
 
 -   Your ETH account address where you will receive your ETH payment when the proposal passes.
     

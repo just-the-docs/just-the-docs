@@ -1,18 +1,20 @@
 ---
 layout: default
-title: Employment
+title: Contributor Onboarding
 parent: Contributor Hub
 nav_order: 2
 
 ---
 
-## Employment
+# Contributor Onboarding
 
-### CONTRIBUTOR ONBOARDING / HOW TO ENGAGE
+___
 
-1.  Join Keybase. Go to the <a href="https://keybase.io/team/dx_dao" target="_blank">dx_dao</a> Keybase. Introduce yourself to the community and express your interests. Then join the #getting-started Keybase channel.
+## HOW TO ENGAGE
+
+1.  Join Keybase. Go to the <a href="https://keybase.io/team/dx_dao" target="_blank">DXdao Keybase</a>. Introduce yourself to the community and express your interests. Then join the **#getting-started** Keybase channel.
     
-2.  Join Daotalk.org. Start reviewing topic discussions and contribute.
+2.  Join <a href="https://daotalk.org/c/dx-dao/15" target="_blank">Daotalk</a>, DXdao's forum of choice. Start reviewing topic discussions and contribute.
     
 3.  Attend meetings. Check our weekly [meeting schedule]({% link docs/Meetings/index.md %}) to attend some meetings in the coming week. Make sure to attend meetings that relate to the products and/or areas you would like to work in.
     
@@ -73,7 +75,9 @@ Work completed in good faith is determined by the squad leader, all relevant wor
 
 ### Trial Period Checklist
 
--   Attend all squad calls, the community call + at least one (1) other regular DXdao call.
+-   Attend all squad calls, the community recap call, and any regular DXdao calls relevant to your contribution.
+
+    - You can find the current call schedule [here]({% link docs/Meetings/index.md %}).
     
 -   Check-in directly on Keybase with your squad guide directly at least once a week.
     
