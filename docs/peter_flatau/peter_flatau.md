@@ -15,3 +15,4 @@ Pete the house Gremlin
 3. House gremlins may put surprises in your shoes (stickers from the yard)
 4. House gremlins will steal batteries
 5. House gremlins hide in cabinetry
+6. Stealing/using Keys
