@@ -21,7 +21,7 @@ The [**DXdao Manifesto**]({% link docs/Manifesto.md %}) and [**FAQ**]({% link do
 
 ## What can I do with DXD?
 
-DXD token holders have an economic claim to DXdao´s profit. DXD holders also have future access to a suite of services and premium features in decentralized applications, such as gasless transactions, feeless anonymizing of assets, reduced trading fees on DEX protocols, and more.  
+DXD token holders have an economic claim to DXdao´s profit. DXD holders also have future access to a suite of services and premium features in decentralized applications, such as gasless transactions, feeless bridge transactions, reduced trading fees on DEX protocols, and more.  
   
 Read more in the [**DXD**]({% link docs/DXD.md %}) section.
 
