@@ -457,6 +457,18 @@ jtd.setTheme = function(theme) {
   cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | absolute_url }}' + theme + '.css');
 }
 
+// Scroll site-nav to ensure the link to the current page is visible
+
+function scrollNav() {
+  const href = document.location.href.split('#')[0].replace(/(.+?)\/+$/, "$1");
+  const siteNav = document.getElementById('site-nav');
+  const targetLink = siteNav.querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
+  if(targetLink){
+    const rect = targetLink.getBoundingClientRect();
+    siteNav.scrollBy(0, rect.top - 3*rect.height);
+  }
+}
+
 // Document ready
 
 jtd.onReady(function(){
@@ -464,6 +476,7 @@ jtd.onReady(function(){
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
+  scrollNav();
 });
 
 })(window.jtd = window.jtd || {});
