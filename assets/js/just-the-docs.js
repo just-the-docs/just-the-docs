@@ -460,11 +460,13 @@ jtd.setTheme = function(theme) {
 // Scroll site-nav to ensure the link to the current page is visible
 
 function scrollNav() {
-  const href = document.location.href.split('#')[0];
+  const href = document.location.href.split('#')[0].replace(/(.+?)\/+$/, "$1");
   const siteNav = document.getElementById('site-nav');
-  const targetLink = siteNav.querySelector('[href="' + href + '"]');
-  const rect = targetLink.getBoundingClientRect();
-  siteNav.scrollBy(0, rect.top - 3*rect.height);
+  const targetLink = siteNav.querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
+  if(targetLink){
+    const rect = targetLink.getBoundingClientRect();
+    siteNav.scrollBy(0, rect.top - 3*rect.height);
+  }
 }
 
 // Document ready
