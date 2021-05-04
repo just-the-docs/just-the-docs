@@ -463,7 +463,8 @@ function scrollNav() {
   const href = document.location.href.split('#')[0];
   const siteNav = document.getElementById('site-nav');
   const targetLink = siteNav.querySelector('[href="' + href + '"]');
-  siteNav.scrollBy(0, targetLink.getBoundingClientRect().top);
+  const rect = targetLink.getBoundingClientRect();
+  siteNav.scrollBy(0, rect.top - 3*rect.height);
 }
 
 // Document ready
