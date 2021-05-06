@@ -16,3 +16,4 @@ Pete the house Gremlin
 4. House gremlins will steal batteries
 5. House gremlins hide in cabinetry
 6. Stealing/using Keys
+7. Is always looking for Bagen
