@@ -27,8 +27,8 @@ critical questions.
 
 **Goals**:
 
-  - Get an initial understanding of the problem, and the project success
-    vision. Start the stakeholder map, so we can loop those people in
+  - Get an initial understanding of the problem, and the impact of solving it. 
+  - Start the stakeholder map, so we can loop those people in
     and make them feel part of the team.
   - Get clarity and empathy on what the users really need, and set the
     process underway to refine that knowledge (Get buy-in on user
@@ -41,7 +41,7 @@ Clearly define the problem:
     hypothesis or value proposition or "Epics").
   - How are the users currently solving or working around the problem?
   - What is the SINGLE most important benefit you expect this project to
-    provide to the user?
+    provide to the user? How much is this worth? Is it worth the effort?
 
 Describe the impact of solving the problem:
 
@@ -49,7 +49,8 @@ Describe the impact of solving the problem:
     detail as possible about that vision.
   - How will success overall be measured (what numbers would move)?
   - What is the ideal overall measurable impact of the project to the
-    organization? What about on those it serves?
+    organization? What about on those it serves? It's important for the
+    whole team to be aligned on what this impact is.
 
 Identify stakeholders:
 
