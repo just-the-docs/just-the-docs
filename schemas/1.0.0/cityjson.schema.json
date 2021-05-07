@@ -1,0 +1,149 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "CityJSON v1.0.0",
+  "description": "CityJSON specifications v1.0.0",
+  "type": "object",
+
+  "properties": {
+    "type": { "enum": ["CityJSON"] },
+    "version": { 
+      "type": "string",
+      "pattern": "^(\\d\\.)(\\d)$"
+    },
+    "metadata": {
+      "type": "object",
+      "$ref": "metadata.schema.json#/metadata"
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": { 
+        "type": "object",
+        "properties": {
+          "url": { 
+            "type": "string",  
+            "format": "uri-reference"
+          },
+          "version": { 
+            "type": "string",
+            "pattern": "^(\\d\\.)(\\d)$"
+          }  
+        },
+        "required": ["url", "version"]
+      }
+    },
+    "CityObjects": {
+      "type": "object",
+      "additionalProperties": {
+        "oneOf": [
+          { "$ref": "cityobjects.schema.json#/CityObjectGroup" },
+          { "$ref": "cityobjects.schema.json#/Building" },
+          { "$ref": "cityobjects.schema.json#/BuildingPart" },
+          { "$ref": "cityobjects.schema.json#/BuildingInstallation" },
+          { "$ref": "cityobjects.schema.json#/Road" },
+          { "$ref": "cityobjects.schema.json#/Railway" },
+          { "$ref": "cityobjects.schema.json#/TransportSquare" },
+          { "$ref": "cityobjects.schema.json#/TINRelief" },
+          { "$ref": "cityobjects.schema.json#/WaterBody" },
+          { "$ref": "cityobjects.schema.json#/LandUse" },
+          { "$ref": "cityobjects.schema.json#/GenericCityObject" },
+          { "$ref": "cityobjects.schema.json#/CityFurniture" },
+          { "$ref": "cityobjects.schema.json#/SolitaryVegetationObject" },
+          { "$ref": "cityobjects.schema.json#/PlantCover" },
+          { "$ref": "cityobjects.schema.json#/Bridge" },
+          { "$ref": "cityobjects.schema.json#/BridgePart" },
+          { "$ref": "cityobjects.schema.json#/BridgeInstallation" },
+          { "$ref": "cityobjects.schema.json#/BridgeConstructionElement" },
+          { "$ref": "cityobjects.schema.json#/Tunnel" },
+          { "$ref": "cityobjects.schema.json#/TunnelPart" },
+          { "$ref": "cityobjects.schema.json#/TunnelInstallation" },
+          { "$ref": "cityobjects.schema.json#/ExtensionObject" }
+        ]
+      }
+    },
+    "vertices": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {"type": "number"},
+        "minItems": 3,    
+        "maxItems": 3
+      }
+    },
+    "transform": {
+      "type": "object",
+      "properties": {
+        "scale": {
+          "type": "array",
+          "items": {"type": "number"},
+          "minItems": 3,    
+          "maxItems": 3
+        },
+        "translate": {
+          "type": "array",
+          "items": {"type": "number"},
+          "minItems": 3,    
+          "maxItems": 3
+        }
+      },
+      "required": ["scale", "translate"],
+      "additionalProperties": false
+    },
+    "appearance": {
+      "type": "object",
+      "properties": {
+        "default-theme-texture": {"type": "string"},
+        "default-theme-material": {"type": "string"},
+        "materials": {
+          "type": "array",
+          "items": {"$ref": "appearance.schema.json#/Material"}
+        },
+        "textures": {
+          "type": "array",
+          "items": {"$ref": "appearance.schema.json#/Texture"}
+        },
+        "vertices-texture": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {"type": "number"},
+            "minItems": 2,    
+            "maxItems": 2
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "geometry-templates": {
+      "type": "object",
+      "properties": {
+        "templates": {
+          "type": "array",
+          "items": {
+            "oneOf": [
+              {"$ref": "geomprimitives.schema.json#/MultiPoint"},
+              {"$ref": "geomprimitives.schema.json#/MultiLineString"},
+              {"$ref": "geomprimitives.schema.json#/Solid"},
+              {"$ref": "geomprimitives.schema.json#/MultiSolid"},
+              {"$ref": "geomprimitives.schema.json#/CompositeSolid"},
+              {"$ref": "geomprimitives.schema.json#/MultiSurface"},
+              {"$ref": "geomprimitives.schema.json#/CompositeSurface"}            
+            ] 
+          }
+        },
+        "vertices-templates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "number" },
+            "minItems": 3,    
+            "maxItems": 3
+          }
+        }
+      },
+      "required": ["templates", "vertices-templates"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["type", "version", "CityObjects", "vertices"]
+}
+

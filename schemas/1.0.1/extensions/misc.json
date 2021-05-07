@@ -1,0 +1,150 @@
+{
+  "type": "CityJSON_Extension",
+  "name": "Misc",
+  "uri": "https://someurl.org/misc.json",
+  "version": "0.1",
+  "description": "Extension that demonstrate some possibilities, innit?",
+
+
+  "extraRootProperties": {
+
+    "+onetest": {
+      "type": "object",
+      "properties": {
+        "un": { "type": "integer"},
+        "deux": { "type": "integer"},
+        "trois": { "type": "integer"}
+      },
+      "required": ["un", "deux", "trois"],
+      "additionalProperties": false
+    },
+
+    "+census": {
+      "type": "object",
+      "properties": {
+        "percent_men": { 
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 100.0
+        },
+        "percent_women": { 
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 100.0
+        }
+      }
+    }
+  
+  },
+
+   
+  "extraAttributes": {
+    
+    "Building": {
+      "+colour": {
+        "type": "object",
+        "properties": {
+          "rgba": {
+            "type": "array",
+            "items": {"type": "number"},
+            "minItems": 4,    
+            "maxItems": 4
+          }
+        },
+        "required": ["rgba"],
+        "additionalProperties": false
+      },
+      "+area-parcel": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "number" },
+          "uom": { "type": "string", "enum": ["m2", "feet2"] }
+        },
+        "required": ["value", "uom"],
+        "additionalProperties": false
+      }      
+    }
+    
+  },
+
+
+  "extraCityObjects": {
+
+    "+NoiseBuilding": {
+      "allOf": [
+        { "$ref": "../cityobjects.schema.json#/_AbstractBuilding" },
+        {
+          "properties": {
+            "type": { "enum": ["+NoiseBuilding"] },
+            "attributes": {
+              "properties": {
+                "buildingLDenMin": {"type": "number"}
+              }
+            }
+          },
+          "required": ["type"]
+        }
+      ]
+    },
+
+    "+NoiseCityFurniture": {
+      "allOf": [
+        { "$ref": "../cityobjects.schema.json#/_AbstractCityObject"},
+        {
+          "properties": {
+            "type": { "enum": ["+NoiseCityFurniture"] },
+            "children": {
+              "type": "array",
+              "description": "the IDs of the +NoiseCityFurnitureSegment",
+              "items": {"type": "string"}
+            },
+            "geometry": {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {"$ref": "../geomprimitives.schema.json#/MultiPoint"},
+                  {"$ref": "../geomprimitives.schema.json#/MultiLineString"},
+                  {"$ref": "../geomprimitives.schema.json#/Solid"},
+                  {"$ref": "../geomprimitives.schema.json#/MultiSolid"},
+                  {"$ref": "../geomprimitives.schema.json#/CompositeSolid"},
+                  {"$ref": "../geomprimitives.schema.json#/MultiSurface"},
+                  {"$ref": "../geomprimitives.schema.json#/CompositeSurface"},
+                  {"$ref": "../geomtemplates.schema.json#/GeometryInstance"}
+                ]
+              }
+            }        
+          },
+          "required": ["type", "geometry"]
+        }
+      ]
+    },
+
+    "+NoiseCityFurnitureSegment": {
+      "allOf": [
+        { "$ref": "../cityobjects.schema.json#/_AbstractCityObject"},
+        {
+          "properties": {
+            "type": { "enum": ["+NoiseCityFurnitureSegment"] },
+            "parent": {
+              "type": "string",
+              "description": "the ID of the children +NoiseCityFurniture"
+            },
+            "geometry": {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  {"$ref": "../geomprimitives.schema.json#/MultiLineString"}
+                ]
+              }
+            }        
+          },
+          "required": ["type", "parent", "geometry"]
+        }
+      ]
+    }
+
+  }
+
+
+}
+ 

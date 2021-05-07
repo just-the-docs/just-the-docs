@@ -16,4 +16,4 @@ permalink: /specs/overview/
 
 # Schemas
 
-[<i class="fas fa-external-link-alt"></i> https://3d.bk.tudelft.nl/schemas/cityjson/](https://3d.bk.tudelft.nl/schemas/cityjson/)
+[https://cityjson.org/schemas/]({{ '../../schemas/' }})

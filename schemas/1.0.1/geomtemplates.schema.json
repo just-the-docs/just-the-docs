@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CityJSON geometry templates schema v1.0.1",
+  
+  "GeometryInstance": {
+    "type": "object",
+    "properties": {
+      "type": { "enum": ["GeometryInstance"] },
+      "template": { "type": "integer" },
+      "boundaries": { 
+        "type": "array",
+        "items": { "type": "integer" },
+        "minItems": 1,    
+        "maxItems": 1          
+      },
+      "transformationMatrix": {
+        "type": "array",
+        "items": { "type": "number" },
+        "minItems": 16,    
+        "maxItems": 16          
+      }
+    },
+    "required": ["type", "template", "boundaries", "transformationMatrix"],
+    "additionalProperties": false
+  }
+
+}

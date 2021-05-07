@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "CityJSON Extension specifications v1.0.0",
+  "type": "object",
+
+  "definitions": {
+
+    "Plus": {
+      "patternProperties": {
+        "(\\+)\\w+": {}
+      },
+      "additionalProperties": false
+    }
+
+  },
+
+
+  "properties": {
+    "type": { "enum": ["CityJSON_Extension"] },
+    "name": { 
+      "type": "string",
+      "pattern": "^\\w[a-zA-Z@#0-9._]*$",
+      "description": "no spaces allowed"
+    },
+    "version": { 
+      "type": "string",
+      "pattern": "^(\\d\\.)(\\d+\\.)?(\\*|\\d+)$"
+    },
+    "uri": { 
+      "type": "string",
+      "format": "uri-reference",
+      "description": "good to host the extension at a URI so that others can access it"
+    },
+    "description": { "type": "string" },
+    "definitions": {},
+    
+    "extraRootProperties":{
+      "patternProperties": {
+        "(\\+)\\w+": {}
+      },
+      "additionalProperties": false
+    },
+
+    "extraAttributes": {
+      "type": "object",
+      "properties": {
+        "CityObjectGroup": { "$ref": "#/definitions/Plus" },
+        "Building": { "$ref": "#/definitions/Plus" },
+        "BuildingPart": { "$ref": "#/definitions/Plus" },
+        "BuildingInstallation": { "$ref": "#/definitions/Plus" },
+        "Road": { "$ref": "#/definitions/Plus" },
+        "Railway": { "$ref": "#/definitions/Plus" },
+        "TransportSquare": { "$ref": "#/definitions/Plus" },
+        "TINRelief": { "$ref": "#/definitions/Plus" },
+        "WaterBody": { "$ref": "#/definitions/Plus" },
+        "LandUse": { "$ref": "#/definitions/Plus" },
+        "GenericCityObject": { "$ref": "#/definitions/Plus" },
+        "CityFurniture": { "$ref": "#/definitions/Plus" },
+        "SolitaryVegetationObject": { "$ref": "#/definitions/Plus" },
+        "PlantCover": { "$ref": "#/definitions/Plus" },
+        "Bridge": { "$ref": "#/definitions/Plus" },
+        "BridgePart": { "$ref": "#/definitions/Plus" },
+        "BridgeInstallation": { "$ref": "#/definitions/Plus" },
+        "BridgeConstructionElement": { "$ref": "#/definitions/Plus" },
+        "Tunnel": { "$ref": "#/definitions/Plus" },
+        "TunnelPart": { "$ref": "#/definitions/Plus" },
+        "TunnelInstallation": { "$ref": "#/definitions/Plus" }
+      },
+      "additionalProperties": false
+    },
+
+    "extraCityObjects": {
+      "patternProperties": {
+        "(\\+)([A-Z])\\w+": {}
+      },
+      "additionalProperties": false
+    }
+
+  },
+  "required": ["type", "name", "version", "uri"],
+  "additionalProperties": false
+}
+

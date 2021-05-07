@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CityJSON appearance schema v1.0.1",
+  
+  "Material": {
+    "type": "object",
+    "properties": {
+      "name" : {"type": "string"},
+      "ambientIntensity": {"type": "number"},
+      "diffuseColor": {
+        "type": "array",
+        "items": {"type": "number"},
+        "minItems": 3,    
+        "maxItems": 3          
+      },
+      "emissiveColor": {
+        "type": "array",
+        "items": {"type": "number"},
+        "minItems": 3,    
+        "maxItems": 3          
+      },
+      "specularColor": {
+        "type": "array",
+        "items": {"type": "number"},
+        "minItems": 3,    
+        "maxItems": 3
+      },
+      "shininess": {"type": "number"},
+      "transparency": {"type": "number"},
+      "isSmooth": {"type": "boolean"}
+    },
+    "required": ["name"],
+    "additionalProperties": false
+  },
+
+  "Texture": {
+    "type": "object",
+    "properties": {
+      "type": { "enum": ["PNG", "JPG"] },
+      "image": {"type": "string"},
+      "wrapMode": { "enum": ["none", "wrap", "mirror", "clamp", "border"] },
+      "textureType": { "enum": ["unknown", "specific", "typical"] },
+      "borderColor": {
+        "type": "array",
+        "items": {"type": "number"},
+        "minItems": 3,    
+        "maxItems": 4
+      }
+    },
+    "additionalProperties": false
+  }
+
+}
