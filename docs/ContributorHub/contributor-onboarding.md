@@ -24,7 +24,6 @@ ___
     
 6.  **Submit your proposal on-chain.** Once your proposal is posted on DAOtalk, please allow up to 7 days for contributors to give feedback on your draft proposal and for you to make any necessary changes. Once this is completed, you can post your proposal on Alchemy and request compensation. See the Contributor Proposal Guide on how to submit your first proposal on Alchemy.
 
-
 ## CONTRIBUTION TYPES & TIME COMMITMENTS
 
 DXdao is a growing community that welcomes contributors in a variety of contexts and for a range of time commitments. This section outlines the various contribution levels with DXdao.
