@@ -7,6 +7,7 @@ nav_order: 1
 ---
 
 # Open Positions
+{: .no_toc }
 
 ___
 
@@ -14,18 +15,11 @@ DXdao is a decentralized collective that builds and governs DeFi protocols. Foun
 
 DXdao is an entirely on-chain organization. Everything from hiring decisions to product updates happen through its community-driven governance system, based on holographic consensus. 
 
-### Current openings (full or part)
+## Current openings
+{: .no_toc }
 
-- Marketing Lead/Narrative Builder
-- Senior Web 3 Front-End Developer
-- UX Wizard
-- Senior Solidity Engineer
-- Solidity Engineer
-- Asia-Focused Marketing Guru
-- Product Support Manager
-- QA Engineer
-
-
+- TOC
+{:toc}
 
     
 # Marketing/Narrative Builder
@@ -35,6 +29,7 @@ ___
 DXdao is looking for an experienced marketer that can build a cohesive narrative around its innovative structure in the DeFi space. Moreover,  each of DXdao’s products comes with its own brand story that needs to be further developed. This is an opportunity to build a marketing team that gives full attention to each product to complement the DXdao brand and grow the DXdao community. 
 
 ### DXdao is looking for:
+{: .no_toc }
 
 - A marketing guru who is familiar with the cryptocurrency, DeFi, blockchain marketplaces, and ecosystems
 - An independent, forward thinking person that can work and coordinate a team across time zones and cultures
@@ -44,8 +39,10 @@ DXdao is looking for an experienced marketer that can build a cohesive narrative
 - An advocate for DXdao, its products and the community 
 
 ## Responsibilities
+{: .no_toc }
 
 ### Growth Marketing
+{: .no_toc }
 
 - Lead the growth marketing campaigns across all audience channels targeting developers and companies interested in blockchains, cryptocurrencies, and decentralized applications
 - Create and run viral campaigns to capture wide audiences of external developer communities; raise awareness, lead the acquisition, and activation of external developers and developer communities
@@ -53,6 +50,7 @@ DXdao is looking for an experienced marketer that can build a cohesive narrative
 - Analyze data and track metrics to optimize campaigns and ads
 
 ### Social Engagement
+{: .no_toc }
 
 - Drive social engagement through community and ambassador networks and growth marketing campaigns
 - Provide engaging content in a variety of forms, such as text, image, and video, for social media accounts
@@ -60,6 +58,7 @@ DXdao is looking for an experienced marketer that can build a cohesive narrative
 - Ability to identify, track, and analyze relevant community metrics
 
 ### Communications 
+{: .no_toc }
 
 - Plan and execute engaging media relations and content campaigns
 - Assist with ideating and executing campaigns across owned and media channels
@@ -75,6 +74,7 @@ DXdao is building a suite of Web3 products. As such, it heavily relies on the te
 
 
 ### What you should be interested in doing:
+{: .no_toc }
 
 - Interested in DeFi and solving complex problems (a background in finance/STEM preferred)
 - Collaborating with others on writing, testing, and deploying maintainable code that interacts with the Ethereum blockchain
@@ -86,6 +86,7 @@ DXdao is building a suite of Web3 products. As such, it heavily relies on the te
 
 
 ### DXdao is looking for:
+{: .no_toc }
 
 - A DAO/DeFi enthusiast who believes in the power of decentralization
 - An independent, self-starter who is comfortable working in a fast-paced environment
@@ -105,6 +106,7 @@ DXdao is a decentralized collective native to the internet that is building a su
 
 
 ### What you should be interested in doing:
+{: .no_toc }
 
 - Executing on all phases on the UX design process- from helping to evaluate user stories and collecting user feedback to creating user flows, lo-hi/hi-fi wireframing and prototyping, and designing highly professional visuals
 - Creating visually striking UI design, fitting the brand aesthetics and design standards while incorporating usability findings, feedback and metrics
@@ -113,6 +115,7 @@ DXdao is a decentralized collective native to the internet that is building a su
 - Performing analysis to help drive UX optimization and efficiency
 
 ### DXdao is looking for:
+{: .no_toc }
 
 - A DAO/DeFi enthusiast who believes in the power of decentralization
 - An independent, self-starter who is comfortable working in a fast-paced environment
@@ -127,6 +130,7 @@ DXdao is building a suite of Web3 products. As such, it heavily relies on the te
 
 
 ### What you should be interested in doing:
+{: .no_toc }
 
 - Building the next generation of DeFi products
 - Working on the cutting edge of decentralization
@@ -136,6 +140,7 @@ DXdao is building a suite of Web3 products. As such, it heavily relies on the te
 - Driving high-level decisions about DXdao protocol architecture, features, quality standards, and best practices
 
 ### DXdao is looking for:
+{: .no_toc }
 
 - A DAO/DeFi enthusiast who believes in the power of decentralization
 - An independent, self-starter who is comfortable working in a fast-paced environment
@@ -150,6 +155,7 @@ DXdao is a decentralized collective native to the internet that is building a su
 
 
 ### What you should be interested in doing:
+{: .no_toc }
 
 - Building the next generation of DeFi products
 - Working on the cutting edge of decentralization
@@ -159,6 +165,7 @@ DXdao is a decentralized collective native to the internet that is building a su
 - Collaborating with a team to define architecture, quality standards and best practices 
 
 ### DXdao is looking for:
+{: .no_toc }
 
 - A DAO/DeFi enthusiast who believes in the power of decentralization
 - An independent, self-starter who is comfortable working in a fast-paced environment
@@ -175,6 +182,7 @@ DXdao is an entirely on-chain organization. Everything from hiring decisions to 
 
 
 ### What you should be interested in doing:
+{: .no_toc }
 
 - Working with the community and product teams to construct a narrative for DXdao and its products 
 - Executing end-to-end marketing campaigns, coordinate content creation and brand continuity
@@ -182,6 +190,7 @@ DXdao is an entirely on-chain organization. Everything from hiring decisions to 
 - Being an advocate for DXdao, its products and the community
 
 ### DXdao is looking for:
+{: .no_toc }
 
 - A DAO/DeFi enthusiast who believes in the power of decentralization
 - An independent, self-starter who is comfortable working in a fast-paced environment
@@ -198,6 +207,7 @@ DXdao is a decentralized collective native to the internet that is building a su
 
 
 ### What you should be interested in doing:
+{: .no_toc }
 
 - Working on the cutting edge of decentralization
 - Contributing to a distributed, consensus based, onchain organization
@@ -205,6 +215,7 @@ DXdao is a decentralized collective native to the internet that is building a su
 - Translating product strategy into detailed requirements and prototypes
 
 ### DXdao is looking for:
+{: .no_toc }
 
 - A DAO/DeFi enthusiast who believes in the power of decentralization
 - An independent, self-starter who is comfortable working in a fast-paced environment
@@ -222,6 +233,7 @@ DXdao is a decentralized collective native to the internet that is building a su
 
 
 ### What you should be interested in doing:
+{: .no_toc }
 
 - Working on the cutting edge of decentralization
 - Contributing to a distributed, consensus based, onchain organization
@@ -234,6 +246,7 @@ DXdao is a decentralized collective native to the internet that is building a su
 
 
 ### DXdao is looking for:
+{: .no_toc }
 
 - A DAO/DeFi enthusiast who believes in the power of decentralization
 - An independent, self-starter who is comfortable working in a fast-paced environment
