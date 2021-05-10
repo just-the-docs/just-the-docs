@@ -12,7 +12,7 @@ ___
 
 ## Diversity
 
-DXDao strongly values diversity and is committed to equal opportunity and inclusion in all of its practices and policies. In order to provide equal opportunities to all individuals, contributor decisions for DXdao will be based on merit, qualifications, abilities, and past contributions. DXdao does not discriminate contributor opportunities or practices because of race, ethnicity, culture, color, religion, sex, gender, sexual orientation or preferences, nationality, age, socioeconomic status, or dis/ability.
+DXdao strongly values diversity and is committed to equal opportunity and inclusion in all of its practices and policies. In order to provide equal opportunities to all individuals, contributor decisions for DXdao will be based on merit, qualifications, abilities, and past contributions. DXdao does not discriminate contributor opportunities or practices because of race, ethnicity, culture, color, religion, sex, gender, sexual orientation or preferences, nationality, age, socioeconomic status, or dis/ability.
 
 DXdao will make accommodations for qualified individuals with known disabilities unless doing so would result in an undue hardship. This policy governs all aspects of contribution, including selection, job assignment, compensation, discipline, termination, and access to benefits and training.
 
