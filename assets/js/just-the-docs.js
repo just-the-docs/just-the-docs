@@ -370,6 +370,7 @@ function searchLoaded(index, docs) {
         parent.appendChild(highlight);
       }
       var span = document.createElement('span');
+
       span.innerHTML = text.substring(index, end);
       parent.appendChild(span);
     }
