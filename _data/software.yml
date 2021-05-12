@@ -4,7 +4,6 @@
 #   - generator
 #   - parser
 #   - editor
-#   - transformer
 #   - validator
 #   - converter
 #   - applications
@@ -28,7 +27,6 @@
   foss: true
   category: 
     - storage
-    - transformer
   interface: gui
   type: app
 
@@ -64,7 +62,6 @@
   description: CLI created with citygml4j, it allows us to convert CityJSON <-> CityGML in one-click. 
   foss: true
   category: 
-    - transformer
     - converter
   interface: cli
   type: both
@@ -76,7 +73,6 @@
   category: 
     - validator
     - converter
-    - transformer
     - parser
   interface: cli
   type: both
@@ -146,7 +142,6 @@
   foss: true
   category: 
     - viewer
-    - transformer
     - applications
     - editor
   interface: gui
