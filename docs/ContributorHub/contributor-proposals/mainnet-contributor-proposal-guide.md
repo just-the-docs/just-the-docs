@@ -1,26 +1,26 @@
 ---
 layout: default
-title: Mainnet Worker Proposal Guide
-parent: Worker Proposals
+title: Mainnet Contributor Proposal Guide
+parent: Contributor Proposals
 grand_parent: Contributor Hub
 nav_order: 2
 ---
 
-# Mainnet Worker Proposal Guide
+# Mainnet Contributor Proposal Guide
 
 ___
 
 ## Intro:
 
--   Congratulations on getting the signal to submit a worker proposal to DXdao!
+-   Congratulations on getting the signal to submit a contributor proposal to DXdao!
     
--   At this point, you’ve started the onboarding process, posted a draft of your worker proposal on <a href="https://daotalk.org" target="_blank">Daotalk</a>, and the proposal was signalled for an on-chain DXdao vote.
+-   At this point, you’ve started the onboarding process, posted a draft of your contributor proposal on <a href="https://daotalk.org" target="_blank">Daotalk</a>, and the proposal was signalled for an on-chain DXdao vote.
     
--   For details on what should be in the worker proposal, go to DXdao’s Contributor Guidelines -- Worker Compensation section.
+-   For details on what should be in the contributor proposal, go to DXdao’s Contributor Guidelines -- Contributor Compensation section.
     
-## When to Submit Your Worker Proposal:
+## When to Submit Your Contributor Proposal:
 
--   A boosted worker proposal takes approximately **7 days** to pass.
+-   A boosted contributor proposal takes approximately **7 days** to pass.
     
 -   If a proposal is not boosted, the voting period will last **21 days**.
     
@@ -28,7 +28,7 @@ ___
     
 -   **The Point**:  *You should post your alchemy proposal 1 week before you intend to receive payment for your work with DXdao, and the proposal must be boosted in order for the voting period to shrink to 1 week.*
     
--   You can boost your own worker proposal once it is eligible to be boosted.
+-   You can boost your own contributor proposal once it is eligible to be boosted.
     
 -   For more info on how Daostack’s holographic consensus see <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">Alchemy Parameters</a>.
     
@@ -64,22 +64,22 @@ ___
 
   
 
--   First, determine if you are a **full-time** or **part-time** worker.
+-   First, determine if you are a **full-time** or **part-time** contributor.
     
 
-    -   Full-time workers may claim **0.1667% REP** for each month they work for DXdao.
+    -   Full-time contributors may claim **0.1667% REP** for each month they work for DXdao.
     
-    -   Part-time workers may claim **0.08335% REP** per month.
+    -   Part-time contributors may claim **0.08335% REP** per month.
     
-    -   Other compensation proposals (bounties, limited contractors, etc.): determine how much REP to request by asking community members and stating the amount in your daotalk.org worker proposal post. The amount will be somewhere between 0.1% to 0.1667% REP.
-    
-
--   A worker proposal period is generally 2 months. Unless this is your first time submitting a proposal. In that case, it will be for 2.5 months, to account for your trial period.
+    -   Other compensation proposals (bounties, limited contractors, etc.): determine how much REP to request by asking community members and stating the amount in your daotalk.org contributor proposal post. The amount will be somewhere between 0.1% to 0.1667% REP.
     
 
-    -   Workers submit a proposal for 50% of compensation to be paid when they start their work period.
+-   A contributor proposal period is generally 2 months. Unless this is your first time submitting a proposal. In that case, it will be for 2.5 months, to account for your trial period.
     
-    -   Workers then submit a separate worker payment request for the remaining 50% of their compensation at the end of the worker period, AND two (2) months of REP will also be requested to account for the two (2) months the worker has been employed by DXdao (0.1667 x 2 = 0.3334).
+
+    -   Contributors submit a proposal for 50% of compensation to be paid when they start their work period.
+    
+    -   Contributors then submit a separate contributor payment request for the remaining 50% of their compensation at the end of the contributor period, AND two (2) months of REP will also be requested to account for the two (2) months the contributor has been employed by DXdao (0.1667 x 2 = 0.3334).
     
 
   
@@ -93,7 +93,7 @@ ___
 
 ![](https://lh5.googleusercontent.com/pF99jUqOMbkJ_QLOdXHNKQSCq0vjaLoUDtnTJbUrjOnv_qoi5tZYb6m_Guy7tnDqZUNOGSFS7G37r8KEmyDg8AKQn-J6c3DBTGnMFRW0Wb5NIwKyw8X-dY6wTdcKB1WUQb0OA_2q)
 
--   Each worker takes this number and multiplies it by the num 0.1667% (0.001667) or 0.08335% (0.0008335).
+-   Each contributor takes this number and multiplies it by the num 0.1667% (0.001667) or 0.08335% (0.0008335).
     
     -   E.g. 1,447,134.31 X .001667 = 2412.37
     
@@ -105,11 +105,11 @@ ___
 
 -   Go to <a href="https://etherscan.io/chart/etherprice" target="_blank">etherscan.io</a> and check the current price of ETH (USD).
     
--   Workers can use the current price of ETH or the average weekly ETH price.
+-   Contributors can use the current price of ETH or the average weekly ETH price.
     
-    -   Calculate the amount of ETH for your worker proposal payment using your determined monthly compensation level. See Contributor Guidelines -- DXdao Compensation Table.
+    -   Calculate the amount of ETH for your contributor proposal payment using your determined monthly compensation level. See Contributor Guidelines -- DXdao Compensation Table.
     
-    -   Divide your monthly ETH compensation amount in USD by the current price of ETH (USD) to determine the amount of ETH to request in your worker proposal.
+    -   Divide your monthly ETH compensation amount in USD by the current price of ETH (USD) to determine the amount of ETH to request in your contributor proposal.
     
     -   Current Monthly ETH Payment (USD) / ETH Price (USD) = ETH Amount
     
@@ -119,7 +119,7 @@ ___
 
     -   Put this number in the ‘ETH Reward’ field when you create the proposal.
     
-- Alternatively, you may request stable currencies equivilent to a workers denoted salary.
+- Alternatively, you may request stable currencies equivilent to a contributors denoted salary.
 
    - More on this in the proposal.
   
@@ -138,13 +138,13 @@ ___
 
 ### Proposal information:
 
--   **Title**: [NAME] Worker Proposal [DATE - DATE]
+-   **Title**: [NAME] Contributor Proposal [DATE - DATE]
     
--   **Proposal text**: Copy and paste the worker proposal text you used in your Daotalk post. See Contributor Guidelines -- Worker Proposals for sample text.
+-   **Proposal text**: Copy and paste the contributor proposal text you used in your Daotalk post. See Contributor Guidelines -- Contributor Proposals for sample text.
     
--   **Tags**: worker proposal, plus any areas you will be working in (e.g., Omen, governance, etc.)
+-   **Tags**: Contributor proposal, plus any areas you will be working in (e.g., Omen, governance, etc.)
     
--   **URL**: link to your DAOtalk Worker Proposal post
+-   **URL**: link to your DAOtalk Contributor Proposal post
     
 -   **Recipient**: Your ETH address
     

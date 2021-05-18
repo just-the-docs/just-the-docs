@@ -27,4 +27,4 @@ Community members that receive a REP boost need to submit a REP boost proposal o
 
 If you believe that you should receive REP for a DXdao contribution, contact <a href="https://daotalk.org/u/powers/summary" target="_blank">Chris</a> on DAOtalk.org to be nominated. DXdao welcomes nominating new community members for REP, and we are looking for new effective ways to allocate REP, while still honoring DXdao’s merit-based governance system. If you have a suggestion on how to allocate REP, please state it in the #governance channel on the <a href="https://keybase.io/team/dx_dao" target="_blank">DXdao Keybase</a> or <a href="https://daotalk.org/c/dx-dao/15" target="_blank">DAOtalk.org</a>.
 
-Full-time workers may earn up to 4% REP for paid contributions to DXdao. A worker may request 0.1667% of REP for each month she has worked.
+Full-time contributors may earn up to 4% REP for paid contributions to DXdao. A contributor may request 0.1667% of REP for each month she has worked.

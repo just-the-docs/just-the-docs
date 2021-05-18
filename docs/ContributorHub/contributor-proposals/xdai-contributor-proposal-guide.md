@@ -1,35 +1,35 @@
 ---
 layout: default
-title: xDai Worker Proposal Guide
-parent: Worker Proposals
+title: xDai Contributor Proposal Guide
+parent: Contributor Proposals
 grand_parent: Contributor Hub
 nav_order: 1
 ---
 
-#  xDai Worker Proposal Guide
+#  xDai Contributor Proposal Guide
 
 ___
 
 
 ## Intro:
 
--   Congratulations on getting the signal to submit a worker proposal to DXdao!
+-   Congratulations on getting the signal to submit a contributor proposal to DXdao!
     
--   At this point, you’ve started the onboarding process, posted a draft of your worker proposal on <a href="https://daotalk.org" target="_blank">Daotalk</a>, and the proposal was signalled for an on-chain DXdao vote.
+-   At this point, you’ve started the onboarding process, posted a draft of your contributor proposal on <a href="https://daotalk.org" target="_blank">Daotalk</a>, and the proposal was signalled for an on-chain DXdao vote.
     
--   For details on what should be in the worker proposal, visit the [Worker Proposals]({% link docs/ContributorHub/worker-proposals/index.md %}) section.
+-   For details on what should be in the contributor proposal, visit the [Contributor Proposals]({% link docs/ContributorHub/contributor-proposals/index.md %}) section.
     
--   After the <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0x2a4f24200eb1ef626e9aea29bad2494689f979c00c6fff17b5b0cd38712be426" target="_blank">xDai authorization proposal</a> , workers can now submit proposals on xDXdao base on xDai and save gas.
+-   After the <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0x2a4f24200eb1ef626e9aea29bad2494689f979c00c6fff17b5b0cd38712be426" target="_blank">xDai authorization proposal</a> , contributors can now submit proposals on xDXdao base on xDai and save gas.
     
-## When to Submit Your Worker Proposal:
+## When to Submit Your Contributor Proposal:
 
--   How long a boosted worker proposal would take depends on funding and voting power scheme. For mainnet DXdao that’s 7 days to pass after boosting, and for xDXdao on xDai that’s 4 days. Boosted proposals can pass with a relative majority.
+-   How long a boosted contributor proposal would take depends on funding and voting power scheme. For mainnet DXdao that’s 7 days to pass after boosting, and for xDXdao on xDai that’s 4 days. Boosted proposals can pass with a relative majority.
     
 -   If a proposal is not boosted, the voting period will last 21 days. Unboosted proposals must pass with an absolute majority.
     
--   A proposal is generally eligible to be boosted 1 day after it’s been posted on Alchemy. Boosting a proposal is a ‘bet’ that the proposal will pass. Boosters receive a reward if the proposal passes and lose their stake if the proposal fails.  You can boost your own worker proposal once it is eligible to be boosted, request to be boosted from a member of the Contributor Experience squad or any DXdao community member. 
+-   A proposal is generally eligible to be boosted 1 day after it’s been posted on Alchemy. Boosting a proposal is a ‘bet’ that the proposal will pass. Boosters receive a reward if the proposal passes and lose their stake if the proposal fails.  You can boost your own contributor proposal once it is eligible to be boosted, request to be boosted from a member of the Contributor Experience squad or any DXdao community member. 
     
--   **The Point**:  *If you intend to receive payment for your work with DXdao by a certain date, you must submit your Alchemy worker proposal at least 1 week in advance and request to have it boosted the next day, in order for the voting period to shrink to 1 week.*
+-   **The Point**:  *If you intend to receive payment for your work with DXdao by a certain date, you must submit your Alchemy contributor proposal at least 1 week in advance and request to have it boosted the next day, in order for the voting period to shrink to 1 week.*
     
 -   An explanation of Daostack’s holographic consensus from its architect can be found <a href="https://daostack.zendesk.com/hc/en-us/articles/360002000537-Genesis-Protocol-v0-2-Parameters-Explained" target="_blank">here</a>.
     
@@ -63,19 +63,19 @@ ___
 
 **Step 3**: Calculate your REP and payment allocation
 
-- First, determine if you are a full-time or part-time worker.
-	- Full-time workers: may claim 0.1667% REP  for each month they work for DXdao. 
-	- Part-time workers: may claim REP based on their commitment percentage each month. 
+- First, determine if you are a full-time or part-time contributor.
+	- Full-time contributors: may claim 0.1667% REP  for each month they work for DXdao. 
+	- Part-time contributors: may claim REP based on their commitment percentage each month. 
 		- *EG. 50% commitment would be entitled to (0.1667x0.5) 0.08335% REP*
-	- **Other compensation proposals (bounties, limited contractors, etc.)**: 	To determine how much REP to request, ask community members and state the amount in your daotalk.org worker proposal post. The amount will be somewhere between 0.1% to 0.1667% REP. 
-	- Please use the <a href="https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit#gid=1106150815" target="_blank">Worker Compensation Calculator</a> to assist with determining your REP and payment allocation. Fill in the Blue squares with your information.
+	- **Other compensation proposals (bounties, limited contractors, etc.)**: 	To determine how much REP to request, ask community members and state the amount in your daotalk.org contributor proposal post. The amount will be somewhere between 0.1% to 0.1667% REP. 
+	- Please use the <a href="https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit#gid=1106150815" target="_blank">Contributor Compensation Calculator</a> to assist with determining your REP and payment allocation. Fill in the Blue squares with your information.
 
 [![](https://lh3.googleusercontent.com/oHIEaPL8vNeFmzWeEYv0rnup97azxESOY3tPm1LHYkdzRbaWs17NflqwX6QiprZGRFUSbt0Q6i1qgFjsTrlJ9VsE4BECRNKxTWfiivV-AOS6BU5GvwotZLbfpANlgzlRx2lRkONd)](https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit?usp=sharing)
 
-- A worker proposal period is generally **2 months**, unless this is your first time submitting a proposal. In that case, it will be for 2.5 months, to account for your 2 week trial period.
-	- Workers submit a proposal for 50% of compensation (ETH or stable currency) to be paid when they start their work period. 
-	- Workers then submit a separate worker payment request for the remaining 50% of their compensation (ETH or stable currency, plus the total 2 months of REP) at the end of the worker period.
-	- DXD is **not** to be requested in this proposal.  Please see [Alchemy DXD Vesting Proposal Guide]({% link docs/ContributorHub/worker-proposals/DXD-Vesting-Guide.md %}) for further details on how and when to request DXD.
+- A contributor proposal period is generally **2 months**, unless this is your first time submitting a proposal. In that case, it will be for 2.5 months, to account for your 2 week trial period.
+	- Contributors submit a proposal for 50% of compensation (ETH or stable currency) to be paid when they start their work period. 
+	- Contributors then submit a separate contributor payment request for the remaining 50% of their compensation (ETH or stable currency, plus the total 2 months of REP) at the end of the contributor period.
+	- DXD is **not** to be requested in this proposal.  Please see [Alchemy DXD Vesting Proposal Guide]({% link docs/ContributorHub/contributor-proposals/DXD-vesting-guide.md %}) for further details on how and when to request DXD.
 
 **Step 4**: Click on the ‘+ New Proposal’ button in the top right corner and connect your wallet.
 
@@ -91,13 +91,13 @@ ___
 
 ### xDai Proposal information:
 
--   **Title**: [NAME] Worker Proposal [DATE - DATE]
+-   **Title**: [NAME] Contributor Proposal [DATE - DATE]
     
--   **Description**: Copy and paste the worker proposal text you used in your Daotalk post. See [Worker Proposals]({% link docs/ContributorHub/worker-proposals/index.md %}) for sample text.
+-   **Description**: Copy and paste the contributor proposal text you used in your Daotalk post. See [Contributor Proposals]({% link docs/ContributorHub/contributor-proposals/index.md %}) for sample text.
     
--   **Tags**: Use "worker proposal", plus any areas you will be working in. *(e.g., Omen, governance, etc..)*
+-   **Tags**: Use "contributor proposal", plus any areas you will be working in. *(e.g., Omen, governance, etc..)*
     
--   **URL**: link to your DAOtalk Worker Proposal post.
+-   **URL**: link to your DAOtalk Contributor Proposal post.
     
 -   **Recipient, if not you**: Provided you have connected with your desired address, leave this field blank.
     
@@ -107,7 +107,7 @@ ___
     
 -  **External Token Reward**: If you choose to be paid in different stable currencies then xDai, you may find them here. You may also select ETH if you would rather be paid in Ethereum.
 
-- **DAO token (XDXD) Reward**: Unless you are making a [DXD Vesting Proposal]({% link docs/ContributorHub/worker-proposals/DXD-Vesting-Guide.md %}), leave this field blank.
+- **DAO token (XDXD) Reward**: Unless you are making a [DXD Vesting Proposal]({% link docs/ContributorHub/contributor-proposals/DXD-vesting-guide.md %}), leave this field blank.
   
 
 

@@ -43,7 +43,7 @@ DXdao is a growing community that welcomes contributors in a variety of contexts
 
 -   Part-time: any contributor that works no more than 20 hours per week is a part-time contributor. Any part-time contributors will be working on a contract, non-hourly, basis, and so is exempt from claiming overtime hours.
 
--   Percent (%) of Time: Some contributors have other commitments and so have opted to commit a percentage of 40 hours per week. A contributor's compensation, based on the Worker Compensation Table, is then calculated on a pro rata basis.
+-   Percent (%) of Time: Some contributors have other commitments and so have opted to commit a percentage of 40 hours per week. A contributor's compensation, based on the Contributor Compensation Table, is then calculated on a pro rata basis.
 
 For example, if a contributors commits to working 30 hours per week at a level 4 experience level ($7,000 per month in ETH), her salary for the month is adjusted to 75% of $7,000, which would be $5250 in ETH. The same adjustment is also made to the DXD vesting payment.
 
@@ -53,7 +53,7 @@ For example, if a contributors commits to working 30 hours per week at a level 4
 
 There is a 2-week trial period at the start of a new contributor's first pay period. The first pay period is 2.5 months. The point of the 2-week trial period is to confirm that the contributor is “who they say they are,” meaning she is able and willing to complete the required scope of work. Think of this as an anti-sybil defense.
 
-The trial period is paid at a 50% of salary rate. This also affects REP distribution, meaning REP will be distributed at a 50% rate for the 2-week trial period. To learn more about how to determine your salary rate and REP distribution, see the Worker Compensation section, below.
+The trial period is paid at a 50% of salary rate. This also affects REP distribution, meaning REP will be distributed at a 50% rate for the 2-week trial period. To learn more about how to determine your salary rate and REP distribution, see the Contributor Compensation section, below.
 
 ### During the Trial Period
 
@@ -61,7 +61,7 @@ The contributor should check-in with her squad and / or onboarding guide every c
 
 ### At the End of the Trial Period
 
-The contributor will meet with her squad guide to discuss her trial period review. This is an opportunity to determine progress and appropriate work fit. If the worker is able to complete her described scope of work, perfect. Keep doing what you’re doing. We welcome your further contributions to DXdao.
+The contributor will meet with her squad guide to discuss her trial period review. This is an opportunity to determine progress and appropriate work fit. If the contributor is able to complete her described scope of work, perfect. Keep doing what you’re doing. We welcome your further contributions to DXdao.
 
 However, if the contributor is not able to complete her described scope of work, the contributor will be compensated for the work she has completed in good faith during the 2-week trial period. The community will notify the contributor that she is no longer a contributor at DXdao and will not be compensated for future work.
 
