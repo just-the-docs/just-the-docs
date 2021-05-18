@@ -63,7 +63,7 @@ Each squad has a squad leader that is the point of contact for inter-squad coord
 
 As a jurisdictionless organization that exists on the Ethereum blockchain, DXdao does not have set business hours. Contributors are expected to be available during the week and may participate in weekend meetings, when necessary.
 
-Each contributor should communicate the timezone and hours in which she is available to the people in her squad(s).
+Each contributor should communicate the timezone and hours in which they are available to the people in their squad(s).
 
 ## Holidays
 

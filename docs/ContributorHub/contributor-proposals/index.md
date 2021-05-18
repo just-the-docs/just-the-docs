@@ -12,7 +12,7 @@ ___
 
 ## When to Submit a Contributor Proposal
 
-Once a contributor proposal has been boosted, the proposal takes approximately 7 days to pass. With this time-frame in mind, a contributor should submit their proposal on Alchemy one week before she intends to be compensated for her work. It is the contributor’s responsibility to submit her contributor proposals in a timely manner, and keep track of what she has been paid.
+Once a contributor proposal has been boosted, the proposal takes approximately 7 days to pass. With this time-frame in mind, a contributor should submit their proposal on Alchemy one week before they intend to be compensated for their work. It is the contributor’s responsibility to submit their contributor proposals in a timely manner, and keep track of what they have been paid.
 
 ## Contributor Proposal Format -- What to Include
 
