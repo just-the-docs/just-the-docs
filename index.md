@@ -5,11 +5,11 @@ nav_order: 0
 permalink: /
 ---
 
-# DXdao Documentation
+# DXdocs
 
 ___
 
-## Welcome to the DXdao documentation book!  
+## Welcome to the DXdao documentation resource, DXdocs!  
   
 This site is the number one location for DXdao information, tutorials and content. It will evolve alongside DXdao with consistent additions and modifications; as a result, these pages are to be considered “work-in-progress”.  
   
@@ -37,6 +37,6 @@ The suite of DeFi products built and governed by DXdao currently includes:
   
 ## Looking to contribute?  
   
-DXdao is always open to talent looking to make an impact in the decentralized ecosystem. Passionate about web3? Join us.  
+DXdao is always open to talent looking to make an impact in the decentralized ecosystem. Passionate about Web3? Join us.  
   
 Check out the current [**Open Positions**]({% link docs/ContributorHub/open-positions-and-bounties.md %}), and learn more about contributing at DXdao in the [**Contributor Hub**]({% link docs/ContributorHub/index.md %}).
