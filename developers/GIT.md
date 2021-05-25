@@ -137,13 +137,13 @@ review.
   - The main goal of code reviews is for everyone to learn from each
     other. So, ask your questions and discuss using the pull request
     comments\!
-  - It's a good idea to review code within 2 days of it being written,
+  - It's ideal to review code within a few days of it being written,
     because then the author has it fresh in their mind and can make
     corrections easily based on your suggestions.
   - It's up to the reviewer's judgement how much time they spend on a
     code review. It could be quick or more in-depth.
   - The reviewer should understand what the code is doing. If it's
-    unclear, ask in a review comment what it does.
+    unclear, ask what it does.
   - Reviewer should point out anything that's not following project
     conventions. Are we doing something a new way, when a perfectly good
     way existed before?
@@ -151,3 +151,6 @@ review.
   - Review these [Code Review Guidelines](https://phauer.com/2018/code-review-guidelines/)
   - If you review code, always indicate you did so. Either click
     "approve", or leave a comment.
+  - The original developer should always respond to comments, to ensure they saw them. It's up to the developer how to handle the code review.
+  - Please spend at least 10 minutes a week (or more!) on code reviews. It's worth it!
+
