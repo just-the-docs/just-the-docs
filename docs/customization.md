@@ -58,7 +58,7 @@ where you override theme variables to change colors, fonts, spacing, etc.
 
 Available variables are listed in the [_variables.scss](https://github.com/pmarsceill/just-the-docs/tree/master/_sass/support/_variables.scss) file.
 
-For example, to change the link color from the purple default to blue, include the following inside your scheme file:
+For example, to change the link color from the purple default jhjhjj to blue, include the following inside your scheme file:
 
 #### Example
 {: .no_toc }
