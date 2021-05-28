@@ -1,7 +1,7 @@
 ---
 layout: default
 title: DXD Vesting Guide
-parent: Worker Proposals
+parent: Contributor Proposals
 grand_parent: Contributor Hub
 nav_order: 3
 ---
@@ -10,7 +10,7 @@ nav_order: 3
 
 ___
 
-The below step-by-step instructions outline the detailed process for a DXdao contributor to create a DXD Vesting contract to be used with a worker payment.
+The below step-by-step instructions outline the detailed process for a DXdao contributor to create a DXD Vesting contract to be used with a contributor payment.
 
   
 
@@ -54,7 +54,7 @@ This walkthrough explains how to use Etherscan and MetaMask to help accomplish t
 
 	*Example: 0xed6fA573B2ddB34F6a9a6941b53f7833bF283b02*
 
-2.  The start time in format of unix timestamp = The start date of your Worker Proposal
+2.  The start time in format of unix timestamp = The start date of your Contributor Proposal
 
 	*Example: Start date of 11/01/2020 @ 12:00pm (UTC) is 1604232000*
 

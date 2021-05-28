@@ -16,13 +16,13 @@ DXdao strongly values diversity and is committed to equal opportunity and inclus
 
 DXdao will make accommodations for qualified individuals with known disabilities unless doing so would result in an undue hardship. This policy governs all aspects of contribution, including selection, job assignment, compensation, discipline, termination, and access to benefits and training.
 
-DXdao expressly prohibits any form of harassment or discrimination. Workers or community members with questions or concerns about discrimination on DXdao forums, meetings, chats, or any other form of communication are encouraged to bring these issues to the attention of the DXdao community. Anyone can raise concerns without fear of reprisal. Anyone found to be engaging in such behavior will be subject to the appropriate corrective action found in the below Enforcement Guidelines.
+DXdao expressly prohibits any form of harassment or discrimination. Contributors or community members with questions or concerns about discrimination on DXdao forums, meetings, chats, or any other form of communication are encouraged to bring these issues to the attention of the DXdao community. Anyone can raise concerns without fear of reprisal. Anyone found to be engaging in such behavior will be subject to the appropriate corrective action found in the below Enforcement Guidelines.
 
 ## Conflicts of Interest
 
-Workers have an obligation to the DXdao community to conduct business within guidelines that prohibit actual or potential conflicts of interest. DXdao’s conflict of interest policy establishes only the framework within which DXdao chooses to conduct business. The purpose of these guidelines is to provide workers with general information so that you can get further direction from other community members when you need guidance on issues related to a possible conflict of interest.
+Contributors have an obligation to the DXdao community to conduct business within guidelines that prohibit actual or potential conflicts of interest. DXdao’s conflict of interest policy establishes only the framework within which DXdao chooses to conduct business. The purpose of these guidelines is to provide contributors with general information so that you can get further direction from other community members when you need guidance on issues related to a possible conflict of interest.
 
-Workers may not engage in outside activities that conflict with, or could be perceived as conflicting with, the interests of DXdao, including but not limited to:  
+Contributors may not engage in outside activities that conflict with, or could be perceived as conflicting with, the interests of DXdao, including but not limited to:  
 
 -   Using your position to influence a decision that may result in personal gain for you, a relative, or a friend as a result of DXdao’s business dealings.
 
@@ -32,7 +32,7 @@ Workers may not engage in outside activities that conflict with, or could be per
     
 ## Duty of Good Faith and Fair Dealing
 
-Workers have an obligation to act in good faith and to deal fairly with other DXdao workers and contributors. Examples of not acting in good faith are the following:
+Contributors have an obligation to act in good faith and to deal fairly with other DXdao contributors and contributors. Examples of not acting in good faith are the following:
 
 -   Pretending to be someone else for the purpose of obtaining a position with DXdao.  
 

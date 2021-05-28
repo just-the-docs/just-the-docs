@@ -1,39 +1,39 @@
 ---
 layout: default
-title: Worker Proposals
+title: Contributor Proposals
 parent: Contributor Hub
 nav_order: 4
 has_children: true
 ---
 
-# Worker Proposals
+# Contributor Proposals
 
 ___
 
-## When to Submit a Worker Proposal
+## When to Submit a Contributor Proposal
 
-Once a worker proposal has been boosted, the proposal takes approximately 7 days to pass. With this time-frame in mind, a worker should submit their proposal on Alchemy one week before she intends to be compensated for her work. It is the worker’s responsibility to submit her worker proposals in a timely manner, and keep track of what she has been paid.
+Once a contributor proposal has been boosted, the proposal takes approximately 7 days to pass. With this time-frame in mind, a contributor should submit their proposal on Alchemy one week before they intend to be compensated for their work. It is the contributor’s responsibility to submit their contributor proposals in a timely manner, and keep track of what they have been paid.
 
-## Worker Proposal Format -- What to Include
+## Contributor Proposal Format -- What to Include
 
 ### **Title**:
 
-[NAME] Worker Proposal [DATE - DATE]
+[NAME] Contributor Proposal [DATE - DATE]
 
 ### **Background**:
 
-If this is your first worker proposal, state any context for making the proposal, including:
+If this is your first contributor proposal, state any context for making the proposal, including:
     
 
 -   What position you will be filling -- i.e. developer, marketing, governance, etc.
     
 -   Who you have been in contact with regarding the position (add their DAOtalk usernames)
     
-If you are a continuing worker, state which products and areas you are working on / any other relevant background information
+If you are a continuing contributor, state which products and areas you are working on / any other relevant background information
     
 ### **Timeframe**: 
 
-State the date range, typically 2 months (2.5 months for first-time workers).
+State the date range, typically 2 months (2.5 months for first-time contributors).
     
 
 ### **Goals**: 
@@ -47,7 +47,7 @@ Include both short-term goals that you seek to accomplish during the working per
 List the specific deliverables you will be either completing and / or working on during the working period. Try to state which deliverables you intend to complete within the period and which are long-term or ongoing projects.
     
 
-### **If You Are A Returning Worker, Write a Self-Reflection**:
+### **If You Are A Returning Contributor, Write a Self-Reflection**:
     
 State what you did well, what you did okay, and what you need to improve on.
 
@@ -71,7 +71,7 @@ State what you did well, what you did okay, and what you need to improve on.
 
 	-   If a developer, Github links
     
-	-   If a non-tech worker, doc links or described deliverables
+	-   If a non-tech contributor, doc links or described deliverables
     
 -   If new, past relevant work experience
     
@@ -80,7 +80,7 @@ State what you did well, what you did okay, and what you need to improve on.
 	-   Non-tech: suggested linkedin / other references
     
 
-## Sample Worker Proposals
+## Sample Contributor Proposals
 
 **Bounty**
     
@@ -96,7 +96,7 @@ State what you did well, what you did okay, and what you need to improve on.
 
 -   Ongoing: <a href="https://daotalk.org/t/caney-fork-worker-proposal-12-1-1-31/2491" target="_blank">Caney Fork Worker Proposal 12/1-1-31</a> 
     
-### [How-to: Submit You Worker Proposal on Alchemy Guide]({% link docs/ContributorHub/worker-proposals/Mainnet-Worker-Proposal-Guide.md %})
+### [How-to: Submit You Contributor Proposal on Alchemy Guide]({% link docs/ContributorHub/contributor-proposals/mainnet-contributor-proposal-guide.md %})
 
-### [How-to: Alchemy DXD Vesting Proposal Guide]({% link docs/ContributorHub/worker-proposals/DXD-Vesting-Guide.md %})
+### [How-to: Alchemy DXD Vesting Proposal Guide]({% link docs/ContributorHub/contributor-proposals/DXD-vesting-guide.md %})
 
