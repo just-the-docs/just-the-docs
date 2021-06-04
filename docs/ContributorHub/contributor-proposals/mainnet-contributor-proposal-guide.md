@@ -10,6 +10,8 @@ nav_order: 2
 
 ___
 
+**Warning**: DXdao contributors currently recommend posting contributor proposals on its xDai base for its massively reduced gas costs. You can find that guide [here]({% link docs/ContributorHub/contributor-proposals/xdai-contributor-proposal-guide.md %}).
+
 ## Intro:
 
 -   Congratulations on getting the signal to submit a contributor proposal to DXdao!

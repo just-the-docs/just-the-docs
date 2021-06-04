@@ -10,12 +10,13 @@ nav_order: 1
 
 ___
 
+**Note**: because of its cheap gas prices, xDai is now recommended for all contributor proposals. Contributors are welcome to create proposals on mainnet if the costs are reasonable to them. You can find that guide [here]({% link docs/ContributorHub/contributor-proposals/xdai-contributor-proposal-guide.md %}).
 
 ## Intro:
 
--   Congratulations on getting the signal to submit a contributor proposal to DXdao!
+-   Congratulations on getting the signal to submit a contributor proposal to xDXdao!
     
--   At this point, you’ve started the onboarding process, posted a draft of your contributor proposal on <a href="https://daotalk.org" target="_blank">Daotalk</a>, and the proposal was signalled for an on-chain DXdao vote.
+-   At this point, you’ve started the onboarding process, posted a draft of your contributor proposal on <a href="https://daotalk.org" target="_blank">DAOtalk</a>, and the proposal was signalled for an on-chain DXdao vote.
     
 -   For details on what should be in the contributor proposal, visit the [Contributor Proposals]({% link docs/ContributorHub/contributor-proposals/index.md %}) section.
     
