@@ -403,6 +403,7 @@ function searchLoaded(index, docs) {
           if (active.parentElement.previousSibling) {
             var previous = active.parentElement.previousSibling.querySelector('.search-result');
             previous.classList.add('active');
+            previous.scrollIntoView(true);
           }
         }
         return;
@@ -414,6 +415,7 @@ function searchLoaded(index, docs) {
             var next = active.parentElement.nextSibling.querySelector('.search-result');
             active.classList.remove('active');
             next.classList.add('active');
+            next.scrollIntoView(false);
           }
         } else {
           var next = document.querySelector('.search-result');
