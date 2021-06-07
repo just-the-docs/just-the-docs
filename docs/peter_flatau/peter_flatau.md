@@ -17,3 +17,4 @@ Pete the house Gremlin
 5. House gremlins hide in cabinetry
 6. Stealing/using Keys
 7. Is always looking for Bagen
+8. House gremlines can only see the color pink
