@@ -168,3 +168,4 @@ Made with help from
 
 1. Explain config files more (DNS | Keep alive | etc)
 2. Fix Docker file/instructions
+3. Add info on Pihole DNS for easy computer access
