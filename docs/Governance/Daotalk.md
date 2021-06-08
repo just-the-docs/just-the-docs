@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Daotalk
+title: DAOtalk
 parent: Governance
 nav_order: 2
 ---
 
-# DAOTALK
+# DAOtalk
 
 ___
 

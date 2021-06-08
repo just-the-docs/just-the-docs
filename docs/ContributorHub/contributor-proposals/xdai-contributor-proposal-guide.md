@@ -10,7 +10,7 @@ nav_order: 1
 
 ___
 
-**Note**: because of its cheap gas prices, xDai is now recommended for all contributor proposals. Contributors are welcome to create proposals on mainnet if the costs are reasonable to them. You can find that guide [here]({% link docs/ContributorHub/contributor-proposals/xdai-contributor-proposal-guide.md %}).
+**Note**: Because of its cheap gas prices, xDai is now recommended for all contributor proposals. Contributors are welcome to create proposals on mainnet if the costs are reasonable to them. You can find that guide [here]({% link docs/ContributorHub/contributor-proposals/mainnet-contributor-proposal-guide.md %}).
 
 ## Intro:
 
@@ -68,7 +68,7 @@ ___
 	- Full-time contributors: may claim 0.1667% REP  for each month they work for DXdao. 
 	- Part-time contributors: may claim REP based on their commitment percentage each month. 
 		- *EG. 50% commitment would be entitled to (0.1667x0.5) 0.08335% REP*
-	- **Other compensation proposals (bounties, limited contractors, etc.)**: 	To determine how much REP to request, ask community members and state the amount in your daotalk.org contributor proposal post. The amount will be somewhere between 0.1% to 0.1667% REP. 
+	- **Other compensation proposals (bounties, limited contractors, etc.)**: 	To determine how much REP to request, ask community members and state the amount in your DAOtalk contributor proposal post. The amount will be somewhere between 0.1% to 0.1667% REP. 
 	- Please use the <a href="https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit#gid=1106150815" target="_blank">Contributor Compensation Calculator</a> to assist with determining your REP and payment allocation. Fill in the Blue squares with your information.
 
 [![](https://lh3.googleusercontent.com/oHIEaPL8vNeFmzWeEYv0rnup97azxESOY3tPm1LHYkdzRbaWs17NflqwX6QiprZGRFUSbt0Q6i1qgFjsTrlJ9VsE4BECRNKxTWfiivV-AOS6BU5GvwotZLbfpANlgzlRx2lRkONd)](https://docs.google.com/spreadsheets/d/18K5jVn8HmwQZ9Ve48S90vQAYklIm0heKTTDGHfWXc5s/edit?usp=sharing)
@@ -94,7 +94,7 @@ ___
 
 -   **Title**: [NAME] Contributor Proposal [DATE - DATE]
     
--   **Description**: Copy and paste the contributor proposal text you used in your Daotalk post. See [Contributor Proposals]({% link docs/ContributorHub/contributor-proposals/index.md %}) for sample text.
+-   **Description**: Copy and paste the contributor proposal text you used in your DAOtalk post. See [Contributor Proposals]({% link docs/ContributorHub/contributor-proposals/index.md %}) for sample text.
     
 -   **Tags**: Use "contributor proposal", plus any areas you will be working in. *(e.g., Omen, governance, etc..)*
     

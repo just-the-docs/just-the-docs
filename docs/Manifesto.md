@@ -4,7 +4,7 @@ title: Manifesto
 nav_order: 5
 ---
 
-# DXdao Manifesto
+# Manifesto
 
 ___
 

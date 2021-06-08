@@ -11,7 +11,7 @@ ___
 
 ## Welcome to the DXdao documentation resource, DXdocs!  
   
-This site is the number one location for DXdao information, tutorials and content. It will evolve alongside DXdao with consistent additions and modifications; as a result, these pages are to be considered “work-in-progress”.  
+This site is the number one location for DXdao information, guides and content. It will evolve alongside DXdao with consistent additions and modifications; as a result, these pages are to be considered “work-in-progress”.  
   
 ## What is DXdao
 

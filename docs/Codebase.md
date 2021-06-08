@@ -4,7 +4,7 @@ title: Codebase
 nav_order: 10
 ---
 
-# DXdao Codebase
+# Codebase
 
 ___
 
