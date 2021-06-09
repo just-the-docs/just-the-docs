@@ -14,8 +14,8 @@ DXdao has five regular calls held weekly. They are as follows:
 - [**BizDev**]({% link docs/Meetings/BizDev.md %}): DXdao Business Development, ecosystem discussion, and associated topics. Held on Mondays.
 - [**Development**]({% link docs/Meetings/Development.md %}): DXdao development and technical discussion. Held on Tuesdays.
 - [**Governance**]({% link docs/Meetings/Governance.md %}): DXdao Governance discussion. Held on Wednesdays.
-- [**Community**]({% link docs/Meetings/Community.md %}): DXdao community calls. Bi-weekly rotation between Community Recap and Resource Coordination. Held on Thursdays.
-- [**Product Strategy**]({% link docs/Meetings/ProductStrategy.md %}): Strategy surrounding DXdao's product suite. Held on Fridays.
+- [**Community**]({% link docs/Meetings/Community.md %}): DXdao community calls. Bi-weekly rotation between Community Recap and Community Discussion. Held on Thursdays.
+- [**Product Strategy**]({% link docs/Meetings/ProductStrategy.md %}): Strategy surrounding DXdao's product suite, and resource coordination. Held on Fridays.
 
 ## Calendar 
 
