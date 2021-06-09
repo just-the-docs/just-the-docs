@@ -100,3 +100,4 @@ State what you did well, what you did okay, and what you need to improve on.
 
 ### [How-to: Alchemy DXD Vesting Proposal Guide]({% link docs/ContributorHub/contributor-proposals/DXD-vesting-guide.md %})
 
+### [How-to: xDai to Mainnet bridge guide]({% link docs/ContributorHub/contributor-proposals/xdai-mainnet-bridge-guide.md %})
