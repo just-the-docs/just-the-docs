@@ -3,7 +3,7 @@ layout: default
 title: REP Boost Guide
 parent: REP
 grand_parent: Governance
-nav_order: 1
+nav_order: 2
 ---
 
 # DXdao Community REP Boost Guide
