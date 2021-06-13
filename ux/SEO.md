@@ -14,6 +14,13 @@ Identify our SEO practices.
 
 Relatively outdated content.
 
+### Basics
+
+All our sites which are publicly available must observe the most basic SEO practices listed here.
+ - The TTFB (load time) should be under a second on a fast connection.
+ - There should be a unique title tag for each page, rendered on the server.
+ - There should be a unique descriptive meta description tag for each page, rendered on the server.
+
 ### Page Titles
 
 Should be 60 chars or so. Include keywords "real estate prices" or
