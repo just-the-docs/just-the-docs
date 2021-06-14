@@ -16,4 +16,6 @@ ___
 
 Mesa is currently undergoing a transition process to focus on <a href="https://youtu.be/VzdgNeN73Zk?t=996" target="_blank">initial DEX offerings, or IDO’s</a>.
 
-[Trade via Mesa v1!](https://mesa.eth.link/){: .btn .btn-blue }
+⠀
+
+[Visit the Mesa V1 dapp](https://mesa.eth.link/){: .btn .btn-blue }

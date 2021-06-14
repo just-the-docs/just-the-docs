@@ -16,4 +16,6 @@ ___
 
 When an Omen market reaches its closing date, anyone can start the process of crowdsourcing the search for the correct answer, made possible by <a href="https://reality.eth.link/" target="_blank">reality.eth.link</a>. In the event of a dispute, an arbitrator may be appointed to make a judgement.  
 
-[Start predicting with Omen!](https://omen.eth.link/){: .btn .btn-blue }
+⠀
+
+[Visit the Omen dapp](https://omen.eth.link/){: .btn .btn-blue }
