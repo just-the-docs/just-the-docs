@@ -10,7 +10,7 @@ nav_order: 5
 
 ---
 
-DXdao Product Strategy calls cover the plans of current and potential DXdao products. 
+DXdao Product Strategy calls cover the plans of current and potential DXdao products. It also aims to cover resource coordination. 
 
 The below table includes upcoming and previous calls, meeting notes and recordings, and will be converted to your local time automatically.
 

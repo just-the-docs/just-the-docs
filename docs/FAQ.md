@@ -4,7 +4,7 @@ title: FAQ
 nav_order: 6
 ---
 
-# DXdao FAQ
+# FAQ
 {: .no_toc }
 
 ___

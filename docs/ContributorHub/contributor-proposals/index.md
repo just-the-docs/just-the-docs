@@ -96,7 +96,8 @@ State what you did well, what you did okay, and what you need to improve on.
 
 -   Ongoing: <a href="https://daotalk.org/t/caney-fork-worker-proposal-12-1-1-31/2491" target="_blank">Caney Fork Worker Proposal 12/1-1-31</a> 
     
-### [How-to: Submit You Contributor Proposal on Alchemy Guide]({% link docs/ContributorHub/contributor-proposals/mainnet-contributor-proposal-guide.md %})
+### [How-to: Submit Your Contributor Proposal on Alchemy Guide]({% link docs/ContributorHub/contributor-proposals/xdai-contributor-proposal-guide.md %})
 
 ### [How-to: Alchemy DXD Vesting Proposal Guide]({% link docs/ContributorHub/contributor-proposals/DXD-vesting-guide.md %})
 
+### [How-to: xDai to Mainnet bridge guide]({% link docs/ContributorHub/contributor-proposals/xdai-mainnet-bridge-guide.md %})

@@ -3,18 +3,20 @@ layout: default
 title: Mainnet Contributor Proposal Guide
 parent: Contributor Proposals
 grand_parent: Contributor Hub
-nav_order: 2
+nav_exclude: true
 ---
 
 # Mainnet Contributor Proposal Guide
 
 ___
 
+**Warning**: DXdao contributors currently recommend posting contributor proposals on its xDai base for its massively reduced gas costs. You can find that guide [here]({% link docs/ContributorHub/contributor-proposals/xdai-contributor-proposal-guide.md %}).
+
 ## Intro:
 
 -   Congratulations on getting the signal to submit a contributor proposal to DXdao!
     
--   At this point, you’ve started the onboarding process, posted a draft of your contributor proposal on <a href="https://daotalk.org" target="_blank">Daotalk</a>, and the proposal was signalled for an on-chain DXdao vote.
+-   At this point, you’ve started the onboarding process, posted a draft of your contributor proposal on <a href="https://daotalk.org" target="_blank">DAOtalk</a>, and the proposal was signalled for an on-chain DXdao vote.
     
 -   For details on what should be in the contributor proposal, go to DXdao’s Contributor Guidelines -- Contributor Compensation section.
     
@@ -71,7 +73,7 @@ ___
     
     -   Part-time contributors may claim **0.08335% REP** per month.
     
-    -   Other compensation proposals (bounties, limited contractors, etc.): determine how much REP to request by asking community members and stating the amount in your daotalk.org contributor proposal post. The amount will be somewhere between 0.1% to 0.1667% REP.
+    -   Other compensation proposals (bounties, limited contractors, etc.): determine how much REP to request by asking community members and stating the amount in your DAOtalk contributor proposal post. The amount will be somewhere between 0.1% to 0.1667% REP.
     
 
 -   A contributor proposal period is generally 2 months. Unless this is your first time submitting a proposal. In that case, it will be for 2.5 months, to account for your trial period.
@@ -140,7 +142,7 @@ ___
 
 -   **Title**: [NAME] Contributor Proposal [DATE - DATE]
     
--   **Proposal text**: Copy and paste the contributor proposal text you used in your Daotalk post. See Contributor Guidelines -- Contributor Proposals for sample text.
+-   **Proposal text**: Copy and paste the contributor proposal text you used in your DAOtalk post. See Contributor Guidelines -- Contributor Proposals for sample text.
     
 -   **Tags**: Contributor proposal, plus any areas you will be working in (e.g., Omen, governance, etc.)
     

@@ -5,7 +5,7 @@ parent: Governance
 nav_order: 3
 ---
 
-# SNAPSHOT  
+# Snapshot 
 
 ___
 

@@ -10,7 +10,7 @@ ___
 
 In May 2020, REP holders voted to establish a bonding curve in order to raise funds for further product development and DXdao operations. In December 2020, REP holders voted through a signal proposal to begin the process of closing the bonding curve.
 
-DXD token holders have an economic claim to DXdao´s profit. DXD holders also have future access to a suite of services and premium features in decentralized applications, such as gasless transactions, feeless bridge transactions, reduced trading fees on DEX protocols, and more.
+DXD is the DXdao native ERC20 token. DXD token holders own future access to a suite of services, premium features, and a portion of fees accrued in the decentralised applications that the DXdao community creates.
 
 Currently, DXD holders do not have direct on-chain voting power over DXdao treasury decisions. However, DXdao is in the process of implementing a new governance regime that gives DXD holders voting rights equal to that of REP holders. For a full summary of DXdao’s new governance regime, see the <a href="https://dxdao.medium.com/dxdao-agrees-to-governance-upgrade-7cbe7909ddba" target="_blank">Governance 2.0 upgrade article</a>.
 

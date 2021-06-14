@@ -4,7 +4,7 @@ title: Brand Assets
 nav_order: 9
 ---
 
-# DXdao Brand Assets
+# Brand Assets
 
 ___
 
