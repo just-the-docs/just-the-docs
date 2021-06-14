@@ -21,7 +21,7 @@ The [**DXdao Manifesto**]({% link docs/Manifesto.md %}) and [**FAQ**]({% link do
 
 ## What can I do with DXD?
 
-DXD token holders have an economic claim to DXdao´s profit. DXD holders also have future access to a suite of services and premium features in decentralized applications, such as gasless transactions, feeless bridge transactions, reduced trading fees on DEX protocols, and more.  
+DXD is the DXdao native ERC20 token. DXD token holders own future access to a suite of services, premium features, and a portion of fees accrued in the decentralised applications that the DXdao community creates. With the passage of the <a href="https://daotalk.org/t/governance-2-0-signal-proposal/2600" target="_blank">Governance 2.0 signal proposal</a>, DXD will also be a DXdao governance token that manages the DXdao on-chain treasury.
   
 Read more in the [**DXD**]({% link docs/DXD.md %}) section.
 
