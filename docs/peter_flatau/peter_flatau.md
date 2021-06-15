@@ -18,3 +18,4 @@ Pete the house Gremlin
 6. Stealing/using Keys
 7. Is always looking for Bagen
 8. House gremlines can only see the color pink
+9. Some house gremlins know magic and will smite you from time to time
