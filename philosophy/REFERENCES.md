@@ -73,7 +73,7 @@ materials you will usually be approved, but ask first.
   - 12factor.net
 
 ### Technical
-
+  - The Unix Philosophy https://homepage.cs.uri.edu/~thenry/resources/unix_art/ch01s06.html
   - Domain Driven Design
   - Javascript: The Good Parts
 

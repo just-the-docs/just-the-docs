@@ -97,6 +97,16 @@ Run your Jenkins job to test the software works.
 
 Note, command history is stored on servers, and is not private. It's useful to debug problems so any administrator can review others' history.
 
+#### Migrations
+
+We may sometimes want to move docker networks across different hardware infrastructure. Here's the suggested process.
+
+1. Spin up the new environment.
+2. Sync the database (and any other assets like file uploads if not in S3) to the new system.
+3. Update DNS to point to the new system.
+4. As quickly as possible, redirect the old system to the new (ie, via HAPROXY on the old one).
+5. Shut down the old system. It's best to just `docker-compose down` but wait a week before deleting it completely. Keep an offline snapshot of the old system, if in doubt.
+
 #### Future Work
 
 TODO

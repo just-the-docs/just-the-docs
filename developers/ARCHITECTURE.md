@@ -156,3 +156,7 @@ high level:
     associated with functions/classes.
   - Learn list comprehensions.
   - Use `dict` and the slice operator a lot.
+
+### Unix Philosophy
+
+To some degree, great architecture comes from experience. A great condensed resource of these lessons, mostly still relevant today, is the [Unix Philosophy](https://homepage.cs.uri.edu/~thenry/resources/unix_art/ch01s06.html). This is highly recommended reading and will help you become better at designing systems.

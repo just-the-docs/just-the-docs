@@ -105,3 +105,20 @@ files. For example, `urls.py` should really only import from `views.py`
     with sentry.countable.ca
   - In prod and staging environments, set DEBUG=False, so the ADMINS get
     emails with any stack traces.
+
+
+### Performance
+
+The most common performance issue in Django is when we put queries inside of iteration. Queries shoudl always happen OUTSIDE of for loops, for example.
+
+```
+bad:
+for x in Modelname.objects.filter(...):
+    print(x.foreign_key)
+bad:
+for x in Modelname.objects.filter(...):
+    print(ForeignModel.objects.get(modelname=x))
+good:
+for x in Modelname.objects.filter(...).select_related('foreign_key')
+    print(x.foreign_key.foreign_key)
+```

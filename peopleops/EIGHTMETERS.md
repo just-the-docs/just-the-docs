@@ -53,6 +53,7 @@ if you're not sure what some of the slugs you see are for.
         * *Good example:* Completed Trello Task "Title copied here". Changed deployment parameters so that we could meet our goal of reducing downtime during deploys. Prepared report on test coverage, based on request from client.
 *  **Trello or BitBucket ref:**
     * Also include at least one of: references to issues in Trello, Commit IDs. Link to trello cards can be found in "Share and more..." after opening a card.
+    * If you are working on a given client all day, or two clients, you can bill 5 to 15 minutes for time administering time entry or OKRs. Do not record that you are doing in this in the notes, or anything else that we know you're doing every day.
 
     
 ### How to Enter Your Expenses 
@@ -82,6 +83,11 @@ Include time spent on both admin and technical overhead (see the bottom of this 
   * Any time administering your work, such as entering timesheets, doing OKRs, updating your work hours in your calendar, and time spent conversing with your team about work (ie, any time on Slack, your work email, Trello) is all billable.
   * Training is only billable if it's requested by the company that you complete specific materials, or you're learning something immediately required to solve a problem in your work.
   * Lunch break is billable up to half an hour, **if attended with a client or colleague**.
+  * You are expected to continuously develop your judgement to approach problem solving. Researching, testing, prototyping, discussing and any other activity you belivieve important for having great results in your work, are all billable activities. This includes failed attempts, because those result in necessary learning.
+  * If a client urgently asks for help when you are not already working, record a minimum 30 minutes of work to compensate for the disruption of your time off.
+  * Occasional breaks up to 15 minutes.
+  * Professional development directly related to what you're working on, creating systems to improve our performance, documenting items in the Ops Manual.
+  * Professional development time, requested by the company.
  
  #### What Time is Not Billable
  
@@ -89,4 +95,6 @@ Include time spent on both admin and technical overhead (see the bottom of this 
   * Attending events, conferences, etc, is not paid unless we require you to go for marketing or another purpose (but we'll often pay for your tickets in any case).
   * Meal breaks, if taken alone.
   * Commuting is not paid unless it's to a client's office. If we go to a workspace with no clients, transit time is not billable. When visiting clients, travel time is billable.
+  * Breaks from work over 15 minutes.
   * Checking your personal messaging channels such as your personal email.
+  * Formal professional development tuition or fees, requested by you, will (upon approval) be paid by the company, but not for your time.
