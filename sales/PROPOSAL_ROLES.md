@@ -29,7 +29,8 @@ right away.
 * We finish early so we have time (ideally 5 days) for
 external review. 
 * Double-check each contributor doesn't miss any
-mandatory requirements or scored criteria. 
+mandatory requirements or scored criteria.
+* Confirm and determine the proposal submission format, and ensure that the team observes it. 
 * Compiling the final
 deliverables in the correct format for submission. 
 * The proposal is
