@@ -3,6 +3,7 @@ layout: default
 title: FAQ
 parent: Omen
 grand_parent: Products
+nav_order: 2
 
 ---
 
