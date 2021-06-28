@@ -18,5 +18,7 @@ ___
 {:toc}
 
 ---
-## What is Aqua?  
+## Coming soon
+
+The Aqua FAQ will be fleshed out when the dApp is accessible.
  
