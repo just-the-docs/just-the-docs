@@ -3,6 +3,7 @@ layout: default
 title: Market Resolution Rules
 parent: Omen
 grand_parent: Products
+nav_order: 3
 
 ---
 
