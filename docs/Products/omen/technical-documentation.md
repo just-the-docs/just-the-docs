@@ -7,7 +7,7 @@ nav_order: 5
 
 ---
 
-# Omen Technical Documentation
+# Technical Documentation
 
 ___
 
