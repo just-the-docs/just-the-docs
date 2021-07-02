@@ -54,6 +54,7 @@ there is ambiguity on where to save or retrieve a file.
 
 ### General Guidelines
 
+  - File Names are IMPORTANT on Google Drive. One of the primary ways to search on Google Drive is by filename, so please always rename files to be searchable. What keywords will your team use to find them later? ie) `Bad: "IMG0072.JPG", Better: "Clark Van Oyen.jpg", Even better: "Clark Portrait Photo for Cortico.jpg"`
   - Our work should be organized based on how how it's used. For
     example, artwork will typically need an editable copy for
     developers.
