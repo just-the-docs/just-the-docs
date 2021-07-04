@@ -28,9 +28,11 @@ We may measure some of these principles, making them into "committed
 OKRs".
 
   - *Results are sacred* - Processes, Roles, and other inputs are
-    flexible and can be changed when necessary to achieve results.
-  - *Ownership* - Take ownership, or be aware of who has taken ownership
-    for any outcome we attempt. Tell each other "i've got this."
+    flexible and can be changed when necessary to achieve the desired outcome (results).
+  - *Ownership* - Tell each other "i've got this." with regard to specific results.
+    Lead by example. If you want to improve something at the company, do it yourself and
+    tell the story of how it's better. If you don't try it yourself first and share results,
+    that's just an idea. It's fine to discuss, but showing is better than telling.
   - *Privacy through simplicity* - We MUST always be confident that
     anyone's private data is secure. When it comes to security private
     data, you SHOULD use the simplest solution as it's the most likely
