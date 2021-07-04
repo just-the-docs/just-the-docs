@@ -18,15 +18,16 @@ provide references at the end that have influenced these philosophies.
 
 ## Our Purpose at Countable
 
-This is tough. In the way Google set out to organize the world's data, as opposed to just organizing the data, we want to solve the problem of information
+At Countable, we want to solve the problem of information
 context. With more data available than ever, the problem becomes getting
-the right data at the right time.
+the ideal information, presented a useful way, at the optimal time.
 
 To be less abstract, this typically manifests as:
 
   - Fixing feedback loops. Giving all stakeholders the right information
     at the right time to optimize decision making.
   - Involve customers and users in the system design and testing process.
+  - Our team members lead through example, and incrementally make improvements, using the successes as evidence to inspire compound improvements.
 
 Examples of how we embody this purpose:
 
