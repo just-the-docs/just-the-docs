@@ -3,6 +3,8 @@
 //
 // stylelint-disable selector-no-qualifying-type, declaration-block-semicolon-newline-after,declaration-block-single-line-max-declarations, selector-no-type, selector-max-type
 
+// {% raw %}
+
 code {
   padding: 0.2em 0.15em;
   font-weight: 400;
@@ -338,3 +340,5 @@ figure.highlight {
     border-top-right-radius: 0;
   }
 }
+
+// {% endraw %}
