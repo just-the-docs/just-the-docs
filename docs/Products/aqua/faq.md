@@ -20,5 +20,5 @@ ___
 ---
 ## Coming soon
 
-The Aqua FAQ will be fleshed out when the dApp is accessible.
+The Aqua FAQ will be fleshed out when the dApp has launched. Pay attention to the <a href="https://twitter.com/DXdao_" target="_blank">DXdao Twitter</a> for further updates.
  

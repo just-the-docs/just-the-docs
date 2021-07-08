@@ -29,7 +29,9 @@ DXdao’s current suite of products include:
 
 [**Swapr**]({% link docs/Products/swapr/index.md %}) – A multi-chain AMM with a suite of unique features including LP governance, DIY farming, and much more.
 
-[**Mesa**]({% link docs/Products/mesa/index.md %}) – A fair auction IDO launchpad.
+[**Aqua**]({% link docs/Products/aqua/index.md %}) – A fair auction IDO launchpad.
+
+[**Mesa**]({% link docs/Products/mesa/index.md %}) – A permissionless DEX that enables ring trades to maximize liquidity.
 
 ## What revenues does DXdao have?
 
