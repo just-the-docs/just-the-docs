@@ -24,9 +24,15 @@ A multi-chain AMM with a suite of unique features including LP governance, DIY f
 
 You can visit the Swapr Dapp <a href="https://swapr.eth.link/#/swap" target="_blank">here</a> or learn more about Swapr [here]({% link docs/Products/swapr/index.md %}).
 
+## Aqua
+
+A fair auction IDO launchpad.
+
+You can visit the Aqua Dapp <a href="https://aqua.eth.link/" target="_blank">here</a> or learn more about Aqua [here]({% link docs/Products/aqua/index.md %}).
+
 ## Mesa
 
-A fair auction IDO launchpad to-be.
+A permissionless DEX that enables ring trades to maximize liquidity
 
 You can visit the Mesa V1 Dapp <a href="https://mesa.eth.link/" target="_blank">here</a> or learn more about Mesa [here]({% link docs/Products/mesa/index.md %}).
 
