@@ -107,3 +107,8 @@ One important point is ensuring that the files you produce and manipulate are va
 
 Several datasets can be downloaded from the [datasets page]({{ '/datasets/' | prepend: site.baseurl }}), but more importantly, it is possible to convert any CityGML file, see [our tutorial]({{ '/tutorials/conversion/' | prepend: site.baseurl }}).
 
+
+## Questions and need help?
+
+[CityJSON has its own forum](https://github.com/cityjson/specs/discussions), don't hesitate to ask if you're struggling with reading/manipulating/creating CityJSON datasets.
+
