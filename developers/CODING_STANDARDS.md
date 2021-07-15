@@ -116,6 +116,7 @@ this topic and on writing short functions.
   - Do not leave actual code commented out unless you have a good
     reason. If you do have one, document that reason as a comment as
     well.
+  - See this excellent guide from Stack Overflow's team: https://stackoverflow.blog/2021/07/05/best-practices-for-writing-code-comments/
 
 ## Minimize Code
 
