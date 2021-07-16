@@ -1,4 +1,8 @@
-
+---
+layout: default
+parent: People Ops
+title: Management
+---
 
 # Management
 
