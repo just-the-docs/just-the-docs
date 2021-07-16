@@ -4,9 +4,10 @@
 
 ## Purpose
 
-Provide high level guidance to managers at the company to set them up for success.
+Provide high level guidance to managers at the company to set them up for success. Managers should primarily act as a coach to help
+the employee grow at the company, and to help create clear goals on outcomes that are good for the team.
 
-## Principles
+## Feedback
 
  * Hold monthly one-on-one meetings with your reports. This is meant to ensure the person is enjoying their time at the company, learning, improving and having positive interactions with others at the company.
  * You should pay lots of attention to the outputs of your team, and provide feedback on those. Give feedback on what they produce NOT how they do it generally (that is micro managing).
