@@ -93,9 +93,12 @@ this topic and on writing short functions.
   - Error messags must be uniquly identifiable so the root cause in code
     can be traced. They should contain unique text.
 
-  - 500) Errors should be sent to administrators when on production (or
-         Sentry)
+  - The developer must differentiate between failures of our system and failures of other systems, because they are handled very differently.
 
+  - When our system behaves incorrect, there should be a "500" error (often a stack trace), and it should be sent to a high urgency tracker like Sentry. These errors are a system design flaw that should always be fixed by us permanently. We should never 'expect' anything to appear in Sentry. We should be willing to bet it will always be empty.
+
+  - By contrast, when external systems fail (users enter something invalid, an external API rejects data, etc), these failures should result in a "400" error. They often will not require a code change by us, and should not be tracked in Sentry. They can generally be tracked in our application logs at the WARNING or ERROR level, and where possible, give feedback directly to the failed system (ie, tell the user their data is invalid).
+ 
   - When we are in an invalid state, it's better to throw an exception
     and avoid corrupting data or causing more confusing downstream
     issues. Catch errors early and loudly.
