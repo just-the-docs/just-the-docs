@@ -64,3 +64,7 @@ Check out our page on [how we use Trello](TRELLO.md).
 ## Tools - Screencastify
 
 Check out our page on [recording short screencast videos](SCREENCASTIFY.md).
+
+## Tools - Transferwise
+
+Transferwise makes paying our international team easier and 5x cheaper than banks. If you sign up, use this [Affiliate link](https://wise.com/invite/spu/clarkv4) to avoid fees on the first $800.
