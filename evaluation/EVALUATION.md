@@ -56,6 +56,11 @@ manager should indicate their perspective on your biggest opportunity
 for improvement and strength as well.
 
 The evaluation document template can be found [here](https://docs.google.com/spreadsheets/d/1WZq39ujt32hhRJetP0syLyTML57cgmhMF3ijfzIb3gU/edit#gid=0).
+Upon navigating to the document, please make a copy and save with your name and the month and year in the title.
+
+If you are completing this self evaluation for the first time, start with
+"Level 1" and if you feel you adequately meet 75% or greater of the general
+criteria (per the template spreadsheet) you can continue to evaluation at Level 2.
 
 ### General Criteria
 
@@ -78,7 +83,8 @@ closely corresponding to your main job responsibilities. You are free to
 be a part of of other guilds, of course, but you will only be
 self-evaluating based on tasks from your main track.
 
-Please only fill the level you expect, and then if you pass (75%), do the level above. If you fail, the level below.
+Please only fill the level you expect, and then if you pass (75%), 
+do the level above. If you fail, the level below.
 
 ## Evaluation Questions by Job Level
 
@@ -89,33 +95,33 @@ This section is used in the Process above for self-evaluation.
 An internship or Junior. Evaluation of fit to Countable's culture, work
 style and technical needs.
 
-See [Self Evaluation Questions here](LEVEL_1_QUESTIONS.md).
+See some example [Level 1 Questions here](LEVEL_1_QUESTIONS.md).
 
 ## Level 2
 
 Considered a permanent position. Works directly with clients and other
 stakeholders on delivering results, only escalating as needed.
 
-See [Self Evaluation Questions here](LEVEL_2_QUESTIONS.md).
+See some example [Level 2 Questions here](LEVEL_2_QUESTIONS.md).
 
 ## Level 3
 
 Owns a client relationship, leads in a technical area within a guild, or
 takes on another area of responsibility.
 
-See [Self Evaluation Questions here](LEVEL_3_QUESTIONS.md).
+See some example [Level 3 Questions here](LEVEL_3_QUESTIONS.md).
 
 ## Level 4
 
 Owns a guild, major client group or customer base (business line).
 
-See [Self Evaluation Questions here](LEVEL_4_QUESTIONS.md).
+See some example [Level 4 Questions here](LEVEL_4_QUESTIONS.md).
 
 ## Level 5
 
 Leads the company's vision, mission, and high-level goals.
 
-See [Self Evaluation Questions here](LEVEL_5_QUESTIONS.md).
+See some example [Level 5 Questions here](LEVEL_5_QUESTIONS.md).
 
 -----
 References and further reading:
