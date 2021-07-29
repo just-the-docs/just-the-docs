@@ -43,7 +43,7 @@ Here are the components to be tracked:
     for about 70% overall- some months you might get a zero and that's ok.
 3.  What do you score in the **general criteria** for your level? You
     can assign yourself 0, 0.5, or 1. (In order to progress to the next
-    level, you must achieve at least 75% on these)
+    level, you must achieve at least 75% on these). Fill out the highest level you pass (75%) and the lowest level you fail. For example if you have 55% on level 2 and 96% of level 1, fill out both those levels and no others.
 3.  What do you score in the **guild-specific criteria** for your level?
     (You must achieve these fully to progress to the next level)
 4.  What is your **biggest opportunity for improvement** (getting to the
