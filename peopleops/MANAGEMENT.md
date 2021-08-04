@@ -20,6 +20,14 @@ the employee grow at the company, and to help create clear goals on outcomes tha
  * If the above doesn't fit well, try asking an open ended question about the topic "I wonder if this outcome works well for your team mate...", and let them fill the blanks.
  * Feedback should be given as if you're helping someone remember what they forgot, not what they couldn't see.
 
+## Delegation + Teaching
+ * Make the goal of the task very clear.
+ * When someone new is learning something that you've done before, it will be MORE work for you the first time you hand it off, not less.
+ * The learner should shadow you doing the task in slow motion, and be encouraged to ask questions. This means one of you (the learner if possible) completes the task while screen sharing, with you providing instruction.
+ * You do not want to micro-manage nor abdicate. You want to coach, support, and give feedback on outcomes.
+ * Once the person has a basic idea, let them figure out *how* to do the work, and give them feedback mostly on their *outputs*. It is often fine if they do it a little differently than you, and they will be motivated if they are more autonomous. Where the teacher comes in is helping them evaluate the work outcomes. Did they actually achieve the required goal? Your job as the teacher is to make that very clear.
+ * Finally, once you've validated they understand the expected outputs and what makes those outcomes excellent, and can achieve those outcomes, you're essentially done. You now have a new peer and you can both provide feedback to each other periodically in order to improve all around.
+
 ## Resources
 
 Starting with some well-receved, relevant resources.
