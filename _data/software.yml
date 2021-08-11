@@ -79,7 +79,7 @@
 
 - name: FME
   webpage: https://github.com/safesoftware/fme-CityJSON
-  description: A (beta) reader/writer for [FME](https://www.safe.com/fme/). For the latest version, download and compile the open-source code from GitHub. The latest [FME beta](https://www.safe.com/support/downloads/#beta) has the latest code too.
+  description: A reader/writer for [FME](https://www.safe.com/fme/). The visualiser is the only one supporting textures.
   foss: false
   category: 
     - viewer
