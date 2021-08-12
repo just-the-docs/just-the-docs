@@ -13,10 +13,22 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title:
-description: A Jekyll theme for documentation
+title: DXdocs
+description: DXdao's native documentation resource
+tagline: DXdao Information
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Image defaults
+# Twitter, Facebook, etc..
+# Doesn't seem to have the intended effect, will need a hand here
+
+# defaults:
+#  - 
+#    scope:
+#      path: ""
+#    values:
+#      image: /assets/images/connectedIcons/default-card.png
 
 permalink: pretty
 remote_theme: pmarsceill/just-the-docs
@@ -66,11 +78,11 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "DXdao Blog on Github":
+  "DXdocs on Github":
     - "//github.com/Mi-Lan/dxDaoBlog"
 
 # Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
+aux_links_new_tab: true
 
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
