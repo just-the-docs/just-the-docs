@@ -40,13 +40,20 @@ We believe that you should use CityJSON because:
 
 ## Is it an international standard?
 
-While CityJSON itself is not officially standardised, it is an encoding for a subset of the [OGC CityGML](http://www.opengeospatial.org/standards/citygml) data model (version 2.0.0), which is an open standardised data model and exchange format (in [GML](http://www.opengeospatial.org/standards/gml)) to store digital 3D models of cities and landscapes. 
+<img src="{{ '/assets/images/OGC_Logo_2D_Black.png' | prepend: site.baseurl }}" width="200">
+
+Yes, CityJSON is an official standard of the [Open Geospatial Consortium (OGC)](https://www.ogc.org/). 
+
+[<i class="fas fa-external-link-alt"></i> document 20-072r2](https://docs.ogc.org/cs/20-072r2/20-072r2.html)
+
+---
+
+## What's its relationship to CityGML?
+
+CityJSON is an encoding for a subset of the [OGC CityGML](http://www.opengeospatial.org/standards/citygml) data model (version 2.0.0), which is an open standardised data model and exchange format (in [GML](http://www.opengeospatial.org/standards/gml)) to store digital 3D models of cities and landscapes. 
 The few features that are not currently supported are either because they are seldom used, or because they would overcomplicate the JSON encoding; see the [CityGML compatibility page]({{ site.baseurl }}/citygml-compatibility/).
 
 And because we offer [bidirectional conversion]({{ "/tutorials/conversion/" | prepend: site.baseurl }}) between CityJSON and CityGML, using CityJSON means that you are using the CityGML data model.
-
-CityJSON was started, and is maintained, by the [3D geoinformation group at TU Delft](https://3d.bk.tudelft.nl).
-Others have since joined its development.
 
 ---
 
