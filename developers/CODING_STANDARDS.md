@@ -207,6 +207,13 @@ cheap way to get information and save cost overall, as long as you don’t
 neglect to refactor or rewrite the prototype if you decide to keep the
 code.
 
+## Performance Tuning
+
+  * Optimize for subjective performance. (Usability tests, perceived wait time). Don't optimize what users won't notice.
+  * Be frugal with load times. Aim for an order of magnitude (10x) faster than necessary. (A good UX is 1s load time, aim for 100ms).
+  * When slow performance is perceived, try (or get help finding) the bottleneck. Or most helpful sufficient cause. Look at load time breakdown in network panel.
+  * Caching probably isn't the first resort, but caching a very short time can be safe. Carefully consider the implications and worst case of stale cache data.
+
 ## Coding Standards for Specific Languages
 
 Check out the individual pages for [HTML/CSS](HTML_CSS.md),
