@@ -214,6 +214,7 @@ code.
   * When slow performance is perceived, try (or get help finding) the bottleneck. Or most helpful sufficient cause. Look at load time breakdown in network panel.
   * Caching probably isn't the first resort, but caching a very short time can be safe. Carefully consider the implications and worst case of stale cache data.
   * Webpages should load in 2 seconds, and make less than 50 queries as a rule of thumb.
+  * if you notice a slow user experience, ask for help! Someone on the team is an expert in your bottleneck.
 
 ## Coding Standards for Specific Languages
 
