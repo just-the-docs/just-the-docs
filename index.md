@@ -2,16 +2,14 @@
 layout: default
 title: Home
 nav_order: 1
-description: "As described in the Scrum Guide, the Scrum Master is responsible for promoting and supporting Scrum. This means helping everyone understand Scrum theory, practices, rules, and values. This provides a structured guide to help better understand the role of the Scrum Master.
-
-It has been organised by a set of Professional Scrum Competencies which each contain a number of focus areas."
+description: "As described in the Scrum Guide, the Scrum Master is responsible for promoting and supporting Scrum. This means helping everyone understand Scrum theory, practices, rules, and values. This provides a structured guide to help better understand the role of the Scrum Master."
 permalink: /
 ---
 
 # Understanding Scrum
 {: .fs-9 }
 
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
+This site has been organised by a set of Professional Scrum Competencies which each contain a number of focus areas to help better understand Scrum.
 {: .fs-6 .fw-300 }
 
 [Starting Scrum](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [Professional Scrum Competencies](https://github.com/pmarsceill/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
