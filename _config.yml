@@ -54,10 +54,10 @@ search:
   tokenizer_separator: /[\s/]+/
   # Display the relative url in search results
   # Supports true (default) or false
-  rel_url: true
+  rel_url: false
   # Enable or disable the search button that appears in the bottom right corner of every page
   # Supports true or false (default)
-  button: false
+  button: true
 
 # Enable or disable heading anchors
 heading_anchors: true
@@ -89,7 +89,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 
 
 
-# Footer "Edit this page on GitHub" link text
+Footer: "Edit this page on GitHub"
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/AriesTropixDev/just-the-docs" # the github URL for your repo
