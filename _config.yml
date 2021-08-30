@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: AudioArchive Docs
 description: The Documentation to AudioArchive
-baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
+baseurl: "/audioarchive" # the subpath of your site, e.g. /blog
 url: "https://ariestropixdev.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
@@ -64,8 +64,8 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/AriesTropixDev/just-the-docs"
+  "AudioArchive Docs":
+    - "//ariestropixdev.github.io/audioarchive/"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -81,7 +81,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright &copy; 2021-2031 . Distributed by <a href=\"https://github.com/AriesTropixDev/audioarchive/tree/master/LICENSE\">Ram Tech License</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
