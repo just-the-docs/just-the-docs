@@ -22,3 +22,11 @@ AudioArchive.
 ### What happened to Lockfile?
 
 I had something better instead of Lockfile! You are looking at its docs right now!😉
+
+### What is AudioArchive's Priority?
+
+AudioArchives Priority is giving people more accessability to free music, audiobooks and, e-books.
+
+### Who made AudioArchives Logo?
+
+One of AriesTropixDev's Friends RenGen has made it. And I hope you think he did a good job!😊
