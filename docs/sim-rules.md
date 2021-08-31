@@ -49,7 +49,7 @@ Examples of this include:
 ### GUNS:
 1. Don't use Mono bullets. We will revoke your ability to rez bullets if you do this shit.
     * We've shown ALL of you why Mono bullets are a bad idea, and it takes literally 10 seconds to swap a script from mono 
-2. Don't use Hue cannons. We put a lot of effort into actually balancing our weaponry, and free equipment is provided in the hub.
+2. Don't use Hue cannons; these are guns with very quick reloads or none at all, high magazine capacity, tight spread, and high rates of fire all combined. We put a lot of effort into actually balancing our weaponry, and free equipment is provided in the hub.
 3. ALL WEAPONRY MUST HAVE A VISIBLE PROJECTILE! 
     * THIS MEANS - YOUR RAYCAST WEAPONRY MUST HAVE A VISUAL TRAIL, LIKE A LASER, FROM THE POINT OF EMISSION TO POINT OF CONTACT
     * ALL BULLETS MUST BE CLEARLY VISIBLE, NO INVISIBLE OR NEARLY INVISIBLE BLACK BULLETS! 
