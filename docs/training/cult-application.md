@@ -6,12 +6,12 @@ grand_parent: Training
 nav_order: 1
 ---
 
-# ❋ Chaos Indivisvm Application v9.15❋
+# ❋ Chaos Indivisvm Application v.9.21❋
 {: .no_toc }
 
 Please read the ENTIRE application. There are important requirements and expectations to read. Also there are questions placed throughout, not just in certain sections. So make sure you read EVERYTHING.
 
-Chaos Indivism is located at **Milopolis**
+Chaos Indivisvm is located at **Milopolis**
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -37,7 +37,7 @@ Q: how much of this application do you have to read? A:
 
 - If accepted, you must leave all other SLMC groups, Veteran groups, however, are allowed. i.e.: Any equivalent to our Militia or a defender group is OK.
 
-- We use Mumble to communicate during raids. You are expected to have a microphone of some sort and participate in comms during raids. You MUST have a microphone AND USE IT while in cult phase or you will not be accepted into the main group. Unrelated: The answer to the bonus question below is YELLOW!
+- We use Discord and Mumble to communicate during raids. You are expected to have a microphone of some sort and participate in comms during raids. You MUST have a microphone AND USE IT while in cult phase or you will not be accepted into the main group. Unrelated: The answer to the bonus question below is YELLOW!
 
 - Knowledge of script time & rendering cost, & the willingness to adjust your avatar to lower your script number & time to promote sim health.
 
@@ -64,7 +64,7 @@ How much time do you think you'd be able to devote to the group per week? (how m
 
 Why join Chaos Indivisvm?:
 
-How did you hear about Chaos Indivism?
+How did you hear about Chaos Indivisvm?
 
 Do you have a microphone and are you willing and able to use it? (as mentioned above, you are expected to have one AND use it) :
 
@@ -88,9 +88,10 @@ As of October 16th, 2019, we have changed our policy on accepting EX-FURRIES (no
 
 If you are approved, and at any later time additional-past or new furry-involvement proof is discovered, you MAY still be ejected or have your application denied depending on the severity of the new information so it is VERY important to be honest and not leave anything out here.
 
+Do not lie to us. If you feel you have something to hide, either be honest here or don't bother applying. We'd prefer you in militia hanging out, we're not going to tolerate you in militia if you try to outsmart us here.
+
 Know that any and all decisions regarding approval of new applicants with past furry-involvement will be made by command and/or enforcer staff ONLY.
 No exceptions.
-
 
 1. Are a furry currently:
     YES/NO
@@ -152,7 +153,7 @@ Read all this crap and type your Avatar Name or mark off in some way under each 
 
 
 I hereby understand & agree to abide by all of the rules
-within Chaos Indivism & its operational boundaries.
+within Chaos Indivisvm & its operational boundaries.
 
 X_
 
@@ -201,7 +202,7 @@ X_
 I hereby understand that Chaos reserves the right to turn
 down an avatar due to past actions & the company that
 they keep. I also acknowledge that upon enlistment, I will
-start as an E-1, and that nobody will be handed a rank,
+start as a Renegade, and that nobody will be handed a rank,
 bypass mandatory training, treated unfairly, or
 given special treatment within these ranks.
 
@@ -267,7 +268,8 @@ STOP WAITING!
 
 THE END!
 
-Recruitment Application v.9.2
+Recruitment Application v.9.21
+Update 8/31/2021 by Tyro, added mention of Discord, minor changes, spelling corrections
 Update 7/23/2020 by Hadet, converted to the Docs website.
 Update 7/15/2019 by Zalera, added details about activity requirements
 Update 9/17/2019 by Zalera and Sam to v9.0. Cleaned up the app a LOT. took out of lot of extra shit and unnecessary crap, cut down the app to the essentials and nothing more.
