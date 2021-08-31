@@ -81,7 +81,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 
 # Back to top link
 back_to_top: true
-back_to_top_text: "^"
+back_to_top_text: "Back to Top"
 
 footer_content: "Copyright &copy; 2021-2031 . Distributed by <a href=\"https://github.com/AriesTropixDev/audioarchive/tree/master/LICENSE\">Ram Tech License</a>"
 
