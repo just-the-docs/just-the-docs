@@ -29,4 +29,4 @@ AudioArchives Priority is giving people more accessability to free music, audiob
 
 ### Who made AudioArchives Logo?
 
-One of AriesTropixDev's Friends RenGen has made it. And I hope you think he did a good job!😊
+One of AriesTropixDev's Friends, RenGen has made it. And I hope you think he did a good job!😊
