@@ -1,3 +1,9 @@
+---
+layout: default
+title: Is Degoo Cloud a Secure Site?
+nav_order: 3
+---
+
 # Is Degoo Cloud a Secure Site?
 
 Totally Secure! Degoo Cloud Beats all other Cloud Storage Services 
