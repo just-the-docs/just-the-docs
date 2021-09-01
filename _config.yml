@@ -1,5 +1,5 @@
 # Site Settings
-name: AudioArchive Docs
+tit;e: AudioArchive Docs
 description: The Documentation to AudioArchive
 baseurl: "/audioarchive" # the subpath of your site, e.g. /blog
 url: "https://ariestropixdev.github.io" # the base hostname & protocol for your site, e.g. http://example.com
@@ -77,6 +77,6 @@ compress_html:
   endings: all
   startings: []
   blanklines: false
-  profile: false
+  profile: true
   # ignore:
   #   envs: all
