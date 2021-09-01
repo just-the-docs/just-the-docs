@@ -114,7 +114,7 @@ Command of any given situation is usually defaulted to the Overlord on duty. In 
 + Uniform Standards:
 - You may customize your armor via tinting, However this must be approved by an Overlord.
 - You may add decorations and 'Trophies' to your armor as long as they fit the 'Chaos' Theme.
-- No form of furfaggotry including Nekos, Bronies and Japanese weeaboos.
+- No form of furryshit including Nekos, Bronies and Japanese weeaboos.
 - You must be wearing boots. Leg modifications must be approved by an Overlord.
 - The Sororitas Armor by Heretech is allowed to be worn by female avatars, provided that an acceptable color is used.
 ( Direct link to this armor - https://marketplace.secondlife.com/stor ... ?id=161060)
@@ -325,7 +325,7 @@ SHOOT:
 - Armed
 - Actively attacking
 - Authorization of Officer to engage target
-- Furfags or Bronies (after they give us traffic)
+- Furries or Bronies (after they give us traffic)
 
 
 ###. Additional Reading
