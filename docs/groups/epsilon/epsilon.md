@@ -9,7 +9,6 @@ has_children: true
 
 Epsilon Security Consulting is a sci-fi themed group within the Second Life Military Community, created with the aim to spread (and return) the fun of combat across the community, and one day, the grid.
 
-Teleport to http://maps.secondlife.com/secondlife/Araxia/92/112/3501 to apply!
+They're even bigger pussies than Grand Federation. Congrats boys, you did it.
 
-
-
+Teleport to http://maps.secondlife.com/secondlife/buhbuhbuh/150/97/3304 to apply!
