@@ -7,7 +7,7 @@ nav_order: 7
 {: .no_toc }
 - Sim Rules
 
-Updated: 08/13/2020 - August 13th, 2020
+Updated: 09/01/2021 - September 1st, 2021
 
 Authors: Dread Hudson, Hadet Sonnenkern, & Sam Huntsman
 
