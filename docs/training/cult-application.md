@@ -33,7 +33,7 @@ Q: how much of this application do you have to read? A:
 
 - Thick skin and a resilience to trolling/a good sense of humor is a huge plus. We are not nice. especially not to cultists.
 
-- Don't bring any bullshit drama into our group. leave that shitty baby yiffy bullshit in the garbage where you came from. We are also not a fucking dating group so fuck off with that dorito fedora shit you incel trash pile.
+- Don't bring any bullshit drama into our group. leave that shitty baby yiffy bullshit in the garbage where you came from. We are also not a fucking dating group so fuck off with that dorito fedora shit you dweeb trash pile.
 
 - If accepted, you must leave all other SLMC groups, Veteran groups, however, are allowed. i.e.: Any equivalent to our Militia or a defender group is OK.
 
@@ -99,10 +99,10 @@ No exceptions.
 2. Have you EVER been a furry in any regard in the past?
     YES/NO
 
-3. If answered yes to question 2: How long ago did the furry-related faggotry occur and for how long did it go on?
+3. If answered yes to question 2: How long ago did the furry-related dweebshit occur and for how long did it go on?
     EXPLAIN:
 
-4. If answered yes to question 2: Why the fuck were you a furry? And what made you finally see reason to leave the life of pedophilia and animal raping behind you? (please be very detailed here!)
+4. If answered yes to question 2: Why the fuck were you a furry? And what made you finally see reason to leave it behind you? (please be very detailed here!)
     EXPLAIN:
 
 5. Anything else we should know?
@@ -269,7 +269,7 @@ STOP WAITING!
 THE END!
 
 Recruitment Application v.9.21
-Update 8/31/2021 by Tyro, added mention of Discord, minor changes, spelling corrections
+Update 8/31/2021 by Tyro, added mention of Discord, minor changes, spelling corrections, compliance edits to github's CoC
 Update 7/23/2020 by Hadet, converted to the Docs website.
 Update 7/15/2019 by Zalera, added details about activity requirements
 Update 9/17/2019 by Zalera and Sam to v9.0. Cleaned up the app a LOT. took out of lot of extra shit and unnecessary crap, cut down the app to the essentials and nothing more.
