@@ -24,6 +24,15 @@ If your group declares its intentions to be obnoxious little assholes don't expe
 {:toc}
 
 # General Rules - TL;DR VERSION
+1. Don't shoot through walls
+2. Don't wireframe
+3. Don't use Mono or Invisible bullets, if you're shooting the round must be visible. This includes raycast, glowy lasers are cool and high visibility is a tradeoff.
+4. Raycast your Explosions, Melees, and Interceptors. If they go through walls don't use them here. No group safe or repair munitions, and no auto melees.
+5. Explosives should be interceptable, counter interceptors with chaff.
+6. Infantry repair tools only
+7. Don't beta test gear without asking the OIC
+
+# Expanded Rules - LONG VERSION 
 
 ## I. Don't be an Asshole:
 Examples of this include:
@@ -49,8 +58,7 @@ Examples of this include:
 ### GUNS:
 1. Don't use Mono bullets. We will revoke your ability to rez bullets if you do this shit.
     * We've shown ALL of you why Mono bullets are a bad idea, and it takes literally 10 seconds to swap a script from mono 
-2. Don't use Hue cannons. We put a lot of effort into actually balancing our weaponry, and free equipment is provided in the hub.
-3. ALL WEAPONRY MUST HAVE A VISIBLE PROJECTILE! 
+2. ALL WEAPONRY MUST HAVE A VISIBLE PROJECTILE! 
     * THIS MEANS - YOUR RAYCAST WEAPONRY MUST HAVE A VISUAL TRAIL, LIKE A LASER, FROM THE POINT OF EMISSION TO POINT OF CONTACT. DO NOT MIX YOUR TRAIL AND KILL PRIM.
     * ALL BULLETS MUST BE CLEARLY VISIBLE, NO INVISIBLE OR NEARLY INVISIBLE BLACK BULLETS! 
     * EXCEPTIONS CAN BE MADE FOR SUPPRESSED GUNS FIRING AT UNDER 150 M/S 
@@ -73,8 +81,7 @@ Examples of this include:
 1. Dodgerolls must be a standard 10 meters or less, and may not be triggered mid air. 
 2. Grappling hooks may be used only IF they are of the reeling variety. Examples of this are the issued Chaos Indivisvm grappling hook and the DECO Hook. Bathooks are not allowed!
 3. Jetpacks & Jump packs - Depending on the day and OIC, these may be allowed, however Jump and Jet packs MAY NOT refuel mid air.
-    * Check with the OIC or provided display in the attacker spawn.
-    * Limit the use of these to either 1 per 5 defenders or a matching number of packs in use for the defenders. This will also be enforced by a scripted system.
+    * There will be a display in the spawn informing you if we are limiting jump packs, if we are the scripted system will take care of the details.
 
 ## Deployables:
 
@@ -93,16 +100,12 @@ Examples of this include:
 2. Drop Pods are also considered teleporters, and must have a end beacon that adheres to the same size requirement as teleporters.
             
 ### Auto Turrets:
-1. During Capture-the-Flag : Turrets are limited to 3 per side
-2. Turrets must have a lockon time of GREATER THAN 1 second, PREFERABLY adjusted to be longer the farther away a target is.
-3. Turrets must not actively target through objects.
-4. Turrets that deliver seeking munitions MUST utilize some sort of power grid system. We will be the arbiters of whether that system is sufficiently balanced.
-5. We REQUIRE you to have specialized turrets for specialized things (if you use them at all), instead of using 'jack of all trades' style turrets.
-    * i.e. Anti-Air Turrets should not attack ground targets.
+1. Turrets must have a lockon time of GREATER THAN 1 second, PREFERABLY adjusted to be longer the farther away a target is.
+2. Turrets must not actively target through objects. Raycast that shit.
+3. Turrets need to use a power grid and should be specialized, ie anti-infantry, anti-tank, anti-air, not anti-everything
             
-## Repair capable Deployables
-Are not allowed at this time. 
-
+### Repair capable Deployables
+Repair deployables are not allowed.
 This includes drones and deployable repair auras, basically any deployable that repairs anything else, regardless if it's armor, other deployables, or anything else you can think of. The only thing doing repairs should be a dedicated repair tool. These always snowball extremely hard and nobody ever makes them as fragile as they 'ought to be.
 A deployable that repairs itself will NEVER be allowed in a Chaos Sim.
 
