@@ -7,7 +7,7 @@ nav_order: 7
 {: .no_toc }
 - Sim Rules
 
-Updated: 08/26/2021 - August 26th, 2021
+Updated: 09/09/2021 - September 9th, 2021
 
 Authors: Dread Hudson, Hadet Sonnenkern, & Sam Huntsman
 
@@ -33,7 +33,6 @@ If your group declares its intentions to be obnoxious little assholes don't expe
 7. Don't beta test gear without asking the OIC
 
 # Expanded Rules - LONG VERSION 
-
 ## I. Don't be an Asshole:
 Examples of this include:
 1. Intentional Primshooting
