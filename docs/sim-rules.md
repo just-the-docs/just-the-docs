@@ -41,6 +41,7 @@ Examples of this include:
 ## ALL EQUIPMENT:
 1. You are to use the most up to date versions of your gear at all times.
     * If you are using an outdated piece of equipment in order to gain an advantage over someone, you will be shit on.
+    * Don't Alpha-Beta-Tantrum test gear in our sim without asking the OIC. Having a piece of gear wildly change how it works based on how frustrated you get during the fight isn't cool.
 2. The rule of cool applies - If you do something cool that bends one of these rules, but let us know what it does and how it bends a rule, we may allow it.
             
 ## Weaponry :
