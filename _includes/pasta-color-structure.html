@@ -1,0 +1,135 @@
+<div class="colorStructure" data-color-name="{{ include.color-name }}">
+  <h3>{{ include.color-name }}</h3>
+  <!-- Widget -->
+  <div class="colorWidget">
+    <div class="colorPickerWrapper">
+      <input type="color" value="{{ include.color-hex-value }}" class="colorPicker">
+    </div>
+    <input type="text" value="{{ include.color-hex-value }}" class="colorInput">
+  </div>
+  <p class="colorLabel">Colour Name</p>
+  <!-- The Tokens -->
+  <details>
+    <summary>Tokens</summary>
+    <div  class="flex-1_1-cols">
+
+      <!-- SCSS -->
+      <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+      <pre class="highlight">
+      <code class="tokensCodeScss">
+        TKC.cyan~teal.400.hue
+        TKC.cyan~teal.400.saturation
+        TKC.cyan~teal.400.lightness
+      </code>
+      </pre>
+      </div>
+      </div>
+
+      <!-- Figma -->
+      <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+      <pre class="highlight">
+      <code class="tokensCodeFigma">
+        TKC.cyan~teal.400.hue
+        TKC.cyan~teal.400.saturation
+        TKC.cyan~teal.400.lightness
+      </code>
+      </pre>
+      </div>
+      </div>
+
+    </div>
+  </details>
+  <!-- The Color Table   -->
+  <table class="headless">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Criterion</th>
+        <th>LCH</th>
+        <th>HEX</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Control Fill</td>
+        <td>Criterion 1.4.3 & 6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr data-tokenSuffix="controlFill.whiteText.AA">
+        <td>With white text</td>
+        <td>AA</td>
+        <td class="colorLCHvalue">lch(0,0,0)</td>
+        <td class="colorHEXvalue">#000000</td>
+        <td><div class="colorChip"></div></td>
+      </tr>
+      <tr data-tokenSuffix="controlFill.whiteText.AAA">
+        <td>With white text</td>
+        <td>AAA</td>
+        <td class="colorLCHvalue">lch(0,0,0)</td>
+        <td class="colorHEXvalue">#000000</td>
+        <td><div class="colorChip"></div></td>
+      </tr>
+      <tr data-tokenSuffix="controlFill.blackText.AA">
+        <td>With black text</td>
+        <td>AA</td>
+        <td class="colorLCHvalue">lch(0,0,0)</td>
+        <td class="colorHEXvalue">#000000</td>
+        <td><div class="colorChip"></div></td>
+      </tr>
+      <tr data-tokenSuffix="controlFill.blackText.AAA">
+        <td>With black text</td>
+        <td>AAA</td>
+        <td class="colorLCHvalue">lch(0,0,0)</td>
+        <td class="colorHEXvalue">#000000</td>
+        <td><div class="colorChip"></div></td>
+      </tr>
+      <tr>
+        <td>Text</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr data-tokenSuffix="text.large.AA">
+        <td>Text ≧ 18pt (large)</td>
+        <td>AA</td>
+        <td class="colorLCHvalue">lch(0,0,0)</td>
+        <td class="colorHEXvalue">#000000</td>
+        <td><div class="colorChip"></div></td>
+      </tr>
+      <tr data-tokenSuffix="text.large.AAA">
+        <td>Text ≧ 18pt (large)</td>
+        <td>AAA</td>
+        <td class="colorLCHvalue">lch(0,0,0)</td>
+        <td class="colorHEXvalue">#000000</td>
+        <td><div class="colorChip"></div></td>
+      </tr>
+      <tr>
+        <td>Small text and outlines</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr data-tokenSuffix="text.standard.AA">
+        <td>Text < 18pt (standard)</td>
+        <td>AA</td>
+        <td class="colorLCHvalue">lch(0,0,0)</td>
+        <td class="colorHEXvalue">#000000</td>
+        <td><div class="colorChip"></div></td>
+      </tr>
+      <tr data-tokenSuffix="text.standard.AAA">
+        <td>Text < 18pt</td>
+        <td>AAA</td>
+        <td class="colorLCHvalue">lch(0,0,0)</td>
+        <td class="colorHEXvalue">#000000</td>
+        <td><div class="colorChip"></div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
