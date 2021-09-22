@@ -38,7 +38,7 @@ From the latter:
 > branching models that feature multiple long-running branches. You can
 > either do a direct to trunk commit/push (v small teams) or a
 > Pull-Request workflow, as long as those feature branches are
-> short-lived and the product of a single person.
+> [short-lived](https://insights.sei.cmu.edu/blog/programmer-moneyball-challenging-the-myth-of-individual-programmer-productivity/) (see tips at bottom of article) and the product of a single person.
 
 ## Contributing To A Project
 
