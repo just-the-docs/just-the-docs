@@ -136,7 +136,7 @@ external project stakeholders).
 reminders). We use variants of Scrum, details [here](../TRELLO/).
 
 ### Office Hours and Presence
-
+  - Please summarize your hours when you are most likely to be reachable (no more than your contracted hours), in your slack description.
   - Overall objective: achieving our goals but also balancing work &
     private life in a meaningful way
   - However, also take team spirit, team efficiency and feeling of
