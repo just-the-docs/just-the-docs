@@ -28,7 +28,7 @@ projects and teams.
 Once you have a countable-issued email address, you can
 use that to log in to [eightmeters.countable.ca](http://eightmeters.countable.ca/) via Google Login.
 
-Reach out to [operations@countable.ca](mailto:operations@countable.ca) if you do not see any project or team tags after login- they may need to add you!
+Reach out to [operations@countable.ca](mailto:operations@countable.ca) or the Slack #operations channel, if you do not see any project you ar working on after login - they may need to add you!
 
 ### How to Enter Your Time
 
