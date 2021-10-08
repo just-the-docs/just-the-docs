@@ -76,7 +76,7 @@ Include time spent on both admin and technical overhead (see the bottom of this 
 
  *Admin overhead* is any non-technical work or research done in order to complete tasks (e.g. gathering relevant information through Slack or email, clarifying requirements, confirming if the bug is reproducible). *Technical overhead* is any technical work or research done which isn't directly a part of the work you are delivering but is necessary for its completion (e.g. local environment setup, reading code documentation, Googling code/tech issues).
  
- #### What Time is Billable
+### What Time is Billable
  
   * Generally, anything the company asks and/or expects you to do.
   * Any time spent rendering services (offered by the company) to clients or customers.
@@ -89,7 +89,7 @@ Include time spent on both admin and technical overhead (see the bottom of this 
   * Professional development directly related to what you're working on, creating systems to improve our performance, documenting items in the Ops Manual.
   * Professional development time, requested by the company.
  
- #### What Time is Not Billable
+### What Time is Not Billable
  
   * Anything provide to attend at your option is not. ie) Social events, ,professional development options, team trips.
   * Attending events, conferences, etc, is not paid unless we require you to go for marketing or another purpose (but we'll often pay for your tickets in any case).
