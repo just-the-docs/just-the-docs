@@ -154,3 +154,19 @@ review.
   - The original developer should always respond to comments, to ensure they saw them. It's up to the developer how to handle the code review.
   - Please spend at least 10 minutes a week (or more!) on code reviews. It's worth it!
 
+## Reverting git merges
+
+Occasionally you might accidentally merge your pull request into the wrong branch and need to revert it (e.g. you merged it into `master` instead of `develop`, but don't want to be releasing your last minute, untested changes).
+
+If you view the `git log`, you can see that a merge commit consists of merging two parent commits:
+
+```
+commit 1712b5b93cd029685f68555c1c3819369a6c25ba
+Merge: 5bc589318 398800a71 <-- two parent commmits
+Author: ...
+Date: ...
+```
+
+If you run `git revert 1712b5b93cd029685f68555c1c3819369a6c25ba -m 1`, you will go back to the tree in commit `5bc589318`, and if you do `-m 2`, you will go back to the tree in `398800a71`. `-m 1` refers to the (previous) latest commit of the branch that was the merge destination, and `-m 2` refers to the latest commit of the branch that got merged in.
+
+Read more here: https://stackoverflow.com/a/66707438/1989186
