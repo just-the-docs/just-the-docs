@@ -6,7 +6,9 @@ permalink: /specs/overview/
 ---
 
 
-- [version 1.0.1 (latest)]({{ '../1.0.1/' }})
+- [version 1.0.3 (latest)]({{ '../1.0.3/' }})
+- [version 1.0.2]({{ '../1.0.2/' }})
+- [version 1.0.1]({{ '../1.0.1/' }})
 - [version 1.0.0]({{ '../1.0.0/' }})
 - [version 0.9](https://github.com/cityjson/specs/blob/0.9/docs/specs.rst)
 - [version 0.8](https://github.com/cityjson/specs/blob/0.8/docs/specs.rst)

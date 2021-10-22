@@ -55,12 +55,12 @@ permalink: /datasets/
 
 ## Simple geometries
 
-  - [cube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/cube.json) -- a unit cube
-  - [tetra.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/tetra.json) -- a simple tetrahedron
-  - [torus.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/torus.json) -- a unit cube with a genus of one
-  - [msol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/msol.json) -- one MultiSolid: 2 unit cubes that are not adjacent
-  - [csol.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/csol.json) -- one CompositeSolid: 2 adjacent unit cubes
-  - [twocube.json](https://github.com/cityjson/specs/blob/develop/example-datasets/simplegeom/twocube.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
+  - [cube.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/cube.json) -- a unit cube
+  - [tetra.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/tetra.json) -- a simple tetrahedron
+  - [torus.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/torus.json) -- a unit cube with a genus of one
+  - [msol.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/msol.json) -- one MultiSolid: 2 unit cubes that are not adjacent
+  - [csol.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/csol.json) -- one CompositeSolid: 2 adjacent unit cubes
+  - [twocube.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/twocube.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
 
 For different City Objects (buildings, trees, roads, etc.) and different geometries, see the latest [CityJSON specifications](https://www.cityjson.org/specs/), and to understand how the hierarchical brackets work, see [this guide](https://www.cityjson.org/dev/geom-arrays/).
 
@@ -70,14 +70,21 @@ For different City Objects (buildings, trees, roads, etc.) and different geometr
 It is possible to generate automatically a 3D city model in CityJSON with [3dfier](https://github.com/tudelft3d/3dfier), just follow that simple [tutorial](https://tudelft3d.github.io/3dfier/generate_lod1.html).
 
 
-## The Netherlands in 3D
+## Every buildings (~10M) in the Netherlands
 
-Every building, every canals, every road, every bridge, in 3D. In CityJSON.
+Every building in the Netherlands, automatically reconstructed.
+Each building is available in 3 [levels-of-details](https://3d.bk.tudelft.nl/lod): LoD1.2, LoD1.3, and LoD2.2.
+
+[https://3dbag.nl](https://3dbag.nl)
+
+
+## The topography of the Netherlands in 3D
+
+Every building (in LoD1.2), every canals, every road, every bridge, in 3D. In CityJSON.
 
 <a href="https://brt.kadaster.nl/basisvoorziening-3d/"><i class="fas fa-external-link-alt"></i> PDOK 3D Topografie</a>
 
 <i class="fas fa-exclamation-circle"></i> Please be aware that the tiles are very big, and they will most likely bring [ninja](https://ninja.cityjson.org) or QGIS to their knees... The solution for the time being is to use a computer with 16GB+ of RAM, and use [cjio]({{ '/tutorials/getting-started/#manipulate-and-edit-it-with-cjio' | relative_url }}) to extract only the buildings for instance. 
-
 
 ## All USA buildings
 

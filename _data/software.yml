@@ -4,7 +4,6 @@
 #   - generator
 #   - parser
 #   - editor
-#   - transformer
 #   - validator
 #   - converter
 #   - applications
@@ -28,7 +27,6 @@
   foss: true
   category: 
     - storage
-    - transformer
   interface: gui
   type: app
 
@@ -64,7 +62,6 @@
   description: CLI created with citygml4j, it allows us to convert CityJSON <-> CityGML in one-click. 
   foss: true
   category: 
-    - transformer
     - converter
   interface: cli
   type: both
@@ -76,14 +73,13 @@
   category: 
     - validator
     - converter
-    - transformer
     - parser
   interface: cli
   type: both
 
 - name: FME
-  webpage: https://github.com/safesoftware/fme-CityJSON
-  description: A (beta) reader/writer for [FME](https://www.safe.com/fme/). For the latest version, download and compile the open-source code from GitHub. The latest [FME beta](https://www.safe.com/support/downloads/#beta) has the latest code too.
+  webpage: https://www.safe.com/fme/
+  description: FME 2020+ has built-in capabilities to read/write CityJSON. And its viewer is the only one supporting textures (at this moment).
   foss: false
   category: 
     - viewer
@@ -146,7 +142,6 @@
   foss: true
   category: 
     - viewer
-    - transformer
     - applications
     - editor
   interface: gui
@@ -161,5 +156,13 @@
   interface: cli
   type: app
 
+- name: IFCCityJSON
+  webpage: https://github.com/IfcOpenShell/IfcOpenShell/tree/v0.6.0/src/ifccityjson
+  description: Convert CityJSON files to IFC
+  foss: true
+  category:
+    - converter
+  interface: cli
+  type: app
 
 

@@ -38,7 +38,7 @@ The types of objects stored in CityGML are grouped into different modules, and C
 10. **Vegetation**: everything is supported
 11. **WaterBody**: everything is supported
 12. **Generics**: everything is supported
-13. **Groups**: everything is supported, except that groups can only be for grouping City Objects (and not surfaces or parts of City Objects as it can be in CityGML)
+
 
 __Extensions__ to the core data model are also supported (called ADEs in CityGML -- Application Domain Extensions).
 CityJSON Extensions are however different from CityGML ADEs, they do not follow the same rules and thus cannot be considered as a direct JSON translation.

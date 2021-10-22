@@ -33,9 +33,9 @@ To convert it to CityJSON:
 
 Voilà, this creates a new CityJSON file: `/Users/hugo/temp/data/DenHaag_01.json`
 
-If you drag that file in the [CityJSON web-viewer](http://tudelft3d.github.io/CityJSON-viewer/), you can view it:
+If you drag that file into the viewer [ninja](https://ninja.cityjson.org/), you can view it:
 
-![](../files/c-webview.png)
+![](../files/c-ninja.png)
 
 
 ## Conversion CityJSON -> CityGML

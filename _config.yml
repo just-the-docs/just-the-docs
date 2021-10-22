@@ -18,7 +18,7 @@ description: CityGML without the GML
 # url: "https://tudelft3d.github.io"
 # baseurl: "/cityjson-website"
 
-lastversion: "1.0.1"
+lastversion: "1.0.3"
 
 
 baseurl: "" # the subpath of your site, e.g. /blog
