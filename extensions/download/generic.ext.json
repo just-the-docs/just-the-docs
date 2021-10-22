@@ -1,0 +1,38 @@
+{
+  "type": "CityJSON_Extension",
+  "name": "Generic",
+  "uri": "http://someurl.org/generic.ext.json",
+  "version": "1.0.0",
+  "description": "Extension to handle GenericCityObject; meant as a template to learn how to construct an Extension",
+  
+  
+  "extraCityObjects": {
+    "+GenericCityObject": {
+      "allOf": [
+        { "$ref": "../cityobjects.schema.json#/_AbstractCityObject" },
+        {
+          "properties": {
+            "type": { "enum": [ "+GenericCityObject" ] },
+            "attributes": {
+              "type": "object",
+              "properties": {
+                "my-attribute": { "type": "string" }
+              }
+            },
+            "geometry": {
+              "type": "array",
+              "items": {
+                "oneOf": [
+                  { "$ref": "../geomprimitives.schema.json#/Solid" },
+                  { "$ref": "../geomprimitives.schema.json#/MultiSurface" }
+                ]
+              }
+            }
+          },
+          "required": [ "type", "geometry" ]
+        }
+      ]
+    }
+  }
+  
+}
