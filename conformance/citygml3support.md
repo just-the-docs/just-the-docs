@@ -2,7 +2,7 @@
 layout: default
 title: CityGML v3.0 conformance
 nav_exclude: true
-permalink: /citygml3-conformance/
+permalink: /conformance/v30/
 ---
 
 # Conformance of CityJSON v1.1 with CityGML 3.0
@@ -33,7 +33,7 @@ As the "modularisation" allows us to select which modules are supported by an en
 
 | CityGML module   | compliant?  | extra info |
 |:-----------------|:-----------:|:-----------|
-| Core             | ⚠️          | All geometries can be represented, Implicit Geometries are supported (called [Geometry Templates](https://www.cityjson.org/specs/#geometry-templates)). Only the `ExternalReferences` are not supported.   |
+| Core             | ⚠️          | all geometries can be represented, Implicit Geometries are supported (called [Geometry Templates](https://www.cityjson.org/specs/#geometry-templates)). Only the `ExternalReferences` are not supported.   |
 | Appearance       | ⚠️          | the CityGML class `TexCoordGen` is not supported, ie one must specify the UV coordinates in the texture files.   |
 | Bridge           | ✅          |   |
 | Building         | ✅          |   |  
@@ -43,8 +43,8 @@ As the "modularisation" allows us to select which modules are supported by an en
 | Dynamizer        | ❌          |   | 
 | Generics         | ✅          | everything supported, but implemention differs, [see details below](./#generics-module)  | 
 | LandUse          | ✅          |   |
-| PointCloud       | ❌          |   | 
-| Relief           | ⚠️          | only the `TINRelief/TriangulatedSurface` is  supported. `Tin` (where only elevation points and break lines are stored) is not supported since it would require viewer/applications to have a *constrained Delaunay triangulator*, which is problematic (especially for web-based tools). Also, it is not possible to store areas over a terrain that would support different resolutions (as in Figure 25 of the [CityGML standard document](https://portal.opengeospatial.org/files/?artifact_id=47842)). `RasterRelief` is also not supported.  |
+| PointCloud       | ❌          | [this Extension](https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLIII-B4-2021/301/2021/) can be used  | 
+| Relief           | ⚠️          | only the `TINRelief/TriangulatedSurface` is  supported. `Tin` (where only elevation points and break lines are stored) is not supported since it would require viewer/applications to have a *constrained Delaunay triangulator*, which is problematic (especially for web-based tools). Also, it is not possible to store areas over a terrain that would support different resolutions. `RasterRelief` is also not supported.  |
 | Transportation   | ✅          |   | 
 | Tunnel           | ✅          |   |
 | Vegetation       | ✅          |   | 
@@ -67,7 +67,7 @@ CityJSON implements these but the handling differs from CityGML slightly.
 One of the philosophy of JSON is "schema-less", which means that one is allowed to define new properties for the JSON objects without documenting them in a JSON schema. 
 While this is in contrast to CityGML (and GML as a whole) where the schemas are central, the schemas of CityJSON are partly following that philosophy. 
 That is, for a given City Object, the "allowed" properties/attributes are listed in the schema, but it is not an error to add new ones. 
-The "official validator" of CityJSON (cjio with the option `--validate`) does more than simply validate a dataset against the schemas, and will return a warning if an attribute is not in the schema, but it is not considered as invalid in CityJSON.
+The "official validator" of CityJSON ([cjval](https://github.com/cityjson/cjval)) does more than simply validate a dataset against the schemas, and will return a warning if an attribute is not in the schema, but it is not considered as invalid in CityJSON.
 
 ### Extensions to extend the data model
 
@@ -81,7 +81,6 @@ Extensions allows us to: (1) add new complex attributes to existing City Objects
 
 ## Specific CityGML v3.0 features __not__ supported
 
-
   1. __Several CRSs in the same datasets.__ In CityJSON, all geometries in a given CityJSON object must use the same CRS. In CityGML, 3 adjacent buildings can all have different CRSs, and some of the geometries to represent the walls can be in yet another CRS (although admittedly it is seldom used!).
   1. __Identifiers for low-level geometries.__ In CityGML most objects can have an ID (usually a `gml:id). That is, not only can one building have an ID, but also each of the 3D primitives forming its geometry can have an ID. In CityJSON, only city objects and semantic surfaces can have IDs.
   1. __topological relationships,__ eg *relativeToTerrain* and *relativeToWater*, which qualify relationships, are not supported. XLinks to identify that some surfaces are shared between 2 objects is also not supported, however the fact that more topology is explicitly stored compensates somehow.
@@ -91,7 +90,6 @@ Extensions allows us to: (1) add new complex attributes to existing City Objects
 
 ## Extra features (not in CityGML)
 
-  1. CityJSON has built-in support for the metadata of a dataset (and is ISO 19115-compliant), while, surprisingly, CityGML does not offer that possibility.
   1. CityJSON supports the so-called ["TU Delft LoDs"](https://3d.bk.tudelft.nl/lod), which refine and improve the 5 LoDs in CityGML (only for buildings).
   1. CityJSON addresses the issue of very large files, and how to stream them.
 

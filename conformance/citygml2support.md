@@ -2,7 +2,7 @@
 layout: default
 title: CityGML compatibility
 nav_exclude: true
-permalink: /citygml2-conformance/
+permalink: /conformance/v20/
 ---
 
 # Conformance of CityJSON v1.0 with CityGML 2.0
