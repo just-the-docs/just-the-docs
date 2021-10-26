@@ -21,10 +21,10 @@ description: CityGML without the GML
 lastversion: "1.1.0"
 
 
-# baseurl: "" # the subpath of your site, e.g. /blog
-# url: "https://www.cityjson.org" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/23t4p/cj11website" # the subpath of your site, e.g. /blog
-url: "https://homepage.tudelft.nl" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.cityjson.org" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/23t4p/cj11website" # the subpath of your site, e.g. /blog
+# url: "https://homepage.tudelft.nl" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 
