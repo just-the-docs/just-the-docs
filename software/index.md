@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Software
-nav_order: 8
+nav_order: 3
 description: "CityJSON homepage"
 permalink: /software/
 ---

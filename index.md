@@ -20,10 +20,22 @@ A JSON-based encoding for 3D city models
 
 ---
 
-CityJSON is a [JSON-based](http://json.org) encoding for storing 3D city models, also called digital maquettes or digital twins.
+## Latest news
+
+{% for post in site.posts limit:3 %}
+  <p><span class="text-delta">{{ post.date | date_to_string }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+{% endfor %}
+
+[All the news]({{ site.baseurl }}/news/)
+
+---
+
+## What is CityJSON?
+
+CityJSON is a [JSON-based](http://json.org) encoding for storing 3D city models, also called digital maquettes or digital twins ([longer explanation]({{ site.baseurl }}/about/)).
 
 The aim of CityJSON is to offer a compact and developer-friendly format, so that files can be easily visualised, manipulated, and edited.
-It was designed with programmers in mind, so that tools and APIs supporting it can be quickly built, and [several]({{ "/software/" | prepend: site.baseurl }}) have been created already.
+It was designed with programmers in mind, so that tools and APIs supporting it can be quickly built, and [several]({{ "/software/" | prepend: site.baseurl }}) are available (most as open-source).
 
 We believe that you should use CityJSON because: 
 

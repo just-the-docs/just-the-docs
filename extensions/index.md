@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Extensions
-nav_order: 7
+nav_order: 2
 permalink: /extensions/
 ---
 

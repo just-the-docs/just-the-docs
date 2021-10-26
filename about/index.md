@@ -1,7 +1,7 @@
 ---
 layout: default
 title: What is CityJSON?
-nav_order: 2
+nav_exclude: true
 permalink: /about/
 ---
 
@@ -21,8 +21,10 @@ permalink: /about/
 
 ## Overview
 
-CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [CityGML](https://www.opengeospatial.org/standards/citygml) data model (version 2.0.0), which is an open standardised data model and exchange format to store digital 3D models of cities and landscapes.
+CityJSON is a [JSON-based](http://json.org) encoding for a subset of the [CityGML](https://www.opengeospatial.org/standards/citygml) data model (version 3.0.0), which is an open standardised data model and exchange format to store digital 3D models of cities and landscapes.
 CityGML is an official standard of the [Open Geospatial Consortium](http://www.opengeospatial.org).
+
+CityJSON is also an official international standard: [OGC document 20-072r2](https://docs.ogc.org/cs/20-072r2/20-072r2.html).
 
 CityJSON defines ways to describe most of the common 3D features and objects found in cities (such as buildings, roads, rivers, bridges, vegetation and city furniture) and the relationships between them.
 It also defines different standard levels of detail (LoDs) for the 3D objects, which allows us to represent different resolutions of objects for different applications and purposes.
@@ -40,7 +42,7 @@ This considerably simplifies the storage of a city model, and furthermore does n
 CityJSON supports the extension of the core modules in a structured way (new city objects and complex attributes), see the [page about Extensions]({{ site.baseurl }}/extensions/) to know how to create yours or to download an existing one.
 
 By using CityJSON, you can build on the expertise on 3D city modelling that has accumulated over the years. 
-There is now a growing number [software tools]({{ site.baseurl }}/software/) that support the format, and a long list of potential [applications]({{ site.baseurl }}/applications/).
+There is now a growing number of [software tools]({{ site.baseurl }}/software/) that support the format, and a long list of potential [applications]({{ site.baseurl }}/applications/).
 
 
 ## What can be stored in CityJSON?
@@ -80,16 +82,16 @@ The structure of a CityJSON file is a fairly simple to understand and can be eas
 ```js
 {
   "type": "CityJSON",
-  "version": "1.0",
+  "version": "1.1",
   "extensions": {...},
-  "metadata": { "referenceSystem": "urn:ogc:def:crs:EPSG::7415" },
+  "metadata": { "referenceSystem": "https://www.opengis.net/def/crs/EPSG/0/7415" },
   "CityObjects": {
     "id-1": {
       "type": "Building",
-      "attributes": { "roofType": "gable" },
+      "attributes": { "roofType": "gabled roof" },
       "geometry": [{
         "type": "Solid",
-        "lod": 2,
+        "lod": 2.2,
         "boundaries": [...]
       }]
     },
@@ -110,15 +112,14 @@ The structure of a CityJSON file is a fairly simple to understand and can be eas
 
 ## Which features of CityGML are supported?
 
-Almost all of them, see the [CityGML compatibility page]({{ site.baseurl }}/citygml-compatibility/). 
+Most of them, see the [CityGML v3 conformance page]({{ site.baseurl }}/conformance/v30/). 
 
 
 ## A JSON encoding of GML, huh?!?
 
-While its name otherwise implies, CityGML is not only a GML encoding, but is actually an open standardised data model and it currently has 2 implementations:
+While its name otherwise implies, CityGML is not only a GML encoding, but is actually an open standardised data model and it currently has 3 implementations:
 
-  1. the GML encoding is the only official one, and is defined in the [official documentation](https://portal.opengeospatial.org/files/?artifact_id=47842)
+  1. the GML encoding (not released yet for v3)
   2. a database schema called [3DCityDB](http://www.3dcitydb.org), which can be implemented both for [PostgreSQL](https://www.postgresql.org) and [Oracle Spatial](https://www.oracle.com/database/spatial/index.html). This is *not* an official standard.
-
-CityJSON can be considered as the third implementation of the CityGML data model.
+  3. CityJSON v1.1 
 

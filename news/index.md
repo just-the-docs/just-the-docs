@@ -1,7 +1,7 @@
 ---
 layout: page
 title: News
-nav_order: 3
+nav_exclude: true
 description: "CityJSON news"
 permalink: /news/
 ---

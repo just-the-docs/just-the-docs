@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Datasets
-nav_order: 6
+nav_order: 1
 description: "CityJSON datasets"
 permalink: /datasets/
 ---
