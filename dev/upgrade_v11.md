@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Modifying code for v1.1
+title: Upgrading your code for v1.1
 parent: Help for developers
 nav_order: 4
 permalink: /dev/upgrade11/
 ---
 
-The following 10 changes are the differences:
+The following 10 changes need to be considered:
 
 1. TOC
 {:toc}
