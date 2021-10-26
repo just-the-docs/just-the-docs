@@ -120,6 +120,11 @@ The automatic upgrade function in cjio transform them to `"+GenericCityObject"` 
 These behave exactly as the other City Objects (and thus no code shouldn't have to be modified).
 
 
-## 10. `"geometry"` is not mandatory anymore
+## 10. `"BridgeConstructionElement"` -> `"BridgeConstructiveElement"`
+
+For reasons that are not understood by nobody, CityGML v3 decided to rename `"BridgeConstructionElement"` to `"BridgeConstructiveElement"`.
+
+
+## 11. `"geometry"` is not mandatory anymore
 
 City Objects do not have to have a `"geometry"` property anymore.
