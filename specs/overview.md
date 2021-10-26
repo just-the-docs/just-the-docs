@@ -16,6 +16,4 @@ permalink: /specs/overview/
 <i class="fas fa-external-link-alt"></i> See the [change log file](https://github.com/cityjson/specs/blob/master/changelog.md) to know what has exactly changed between versions.
 
 
-# Schemas
 
-[https://cityjson.org/schemas/]({{ '../../schemas/' }})
