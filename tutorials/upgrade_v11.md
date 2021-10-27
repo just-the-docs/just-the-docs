@@ -14,9 +14,9 @@ permalink: /tutorials/upgrading-v11/
 
 ---
 
-## Upgrade is done with cjio 
+## Upgrading a file -> cjio 
 
-Your CityJSON v1.0 files can be automatically upgraded to v1.1 with [cjio](https://github.com/cityjson/cjio).
+Your CityJSON v1.0 files can be *automatically* upgraded to v1.1 with [cjio](https://github.com/cityjson/cjio).
 
 First install or upgrade cjio:
 ```
@@ -25,8 +25,7 @@ pip install -U cjio
 
 After the installation, you have a small program called `cjio` (with version >=0.8).
 
-To upgrade your file myfile.json:
-
+To upgrade your file `myfile.json`:
 ```
 cjio myfile upgrade.json save myfile_v11.city.json
 ```
@@ -61,11 +60,19 @@ This is the new way in v1.1:
 ```
 
 
-## Make your file publicily accessible
+## Make your file publicly accessible
 
 It is good practice to make your Extension publicly accessible so that data files using it can fetch the schema automatically.
-You can put them on a repository in GitHub and link to the file directly.
+You can put them on a repository in GitHub and link to the file directly, eg:
 
+```json
+"extensions": {
+  "MyExtension": {
+    "url" : "https://raw.githubusercontent.com/cityjson/specs/v1.1/extensions/Generic/generic.ext.json",
+    "version": "0.2"
+  }
+}
+```
 
 ## Validation of your Extension
 
