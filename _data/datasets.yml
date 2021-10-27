@@ -2,7 +2,7 @@
 
 - name: "Zürich"
   url:  https://data.stadt-zuerich.ch/dataset?q=&tags=3d-stadtmodell
-  json: Zurich_Building_LoD2_V10.json
+  json: Zurich_Building_LoD2_V10.city.json
   json-size: 292.9
   gml: Zurich_Building_LoD2_V10.gml
   gml-size: 3030
@@ -13,7 +13,7 @@
 - name: "Den Haag"
   url:  https://denhaag.dataplatform.nl/#/data/756d6fe7-f334-4ced-af13-61d612d92b1a
   image: dataset_denhaag.png
-  json: DenHaag_01.json
+  json: DenHaag_01.city.json
   json-size: 2.9
   gml:  DenHaag_01.xml
   gml-size: 23
@@ -24,7 +24,7 @@
 - name: Montréal 
   url:  http://donnees.ville.montreal.qc.ca/dataset/maquette-numerique-batiments-citygml-lod2-avec-textures/resource/36047113-aa19-4462-854a-cdcd6281a5af
   image: dataset_montreal.png
-  json: VM05_2009.json
+  json: VM05_2009.city.json
   json-size: 5.4
   gml:  VM05_2009.gml
   gml-size: 56
@@ -35,7 +35,7 @@
 - name: New York 
   url:  https://www1.nyc.gov/site/doitt/initiatives/3d-building.page
   image: dataset_newyork.png
-  json: DA13_3D_Buildings_Merged.json
+  json: DA13_3D_Buildings_Merged.city.json
   json-size: 105
   gml:  DA13_3D_Buildings_Merged.gml
   gml-size: 590
@@ -46,7 +46,7 @@
 - name: Rotterdam 
   url:  http://rotterdamopendata.nl/dataset/rotterdam-3d-bestanden/resource/edacea54-76ce-41c7-a0cc-2ebe5750ac18
   image: dataset_rotterdam.png
-  json: 3-20-DELFSHAVEN.json
+  json: 3-20-DELFSHAVEN.city.json
   json-size: 2.6
   gml:  3-20-DELFSHAVEN.xml
   gml-size: 16.0
@@ -57,7 +57,7 @@
 - name: "Railway" 
   url:  https://www.citygml.org
   image: dataset_railway.jpg
-  json: LoD3_Railway.json
+  json: LoD3_Railway.city.json
   json-size: 4.3
   gml:  LoD3_Railway.gml
   gml-size: 45
@@ -68,7 +68,7 @@
 - name: Vienna 
   url:  https://www.data.gv.at/katalog/dataset/86d88cae-ad97-4476-bae5-73488a12776d
   image: dataset_vienna.png
-  json: Vienna_102081.json 
+  json: Vienna_102081.city.json 
   json-size: 5.3
   gml:  Vienna_102081.gml
   gml-size: 37
