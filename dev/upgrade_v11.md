@@ -47,14 +47,7 @@ http://www.opengis.net/def/crs/{authority}/{version}/{code}
 where `{authority}` designates the authority responsible for the definition of this CRS (usually "EPSG" or "OGC"), and where `{version}` designates the specific version of the CRS ("0" (zero) is used if there is no version).
 
 
-## 5. `"metadata/geographic/AL/Extent"` has a slightly different name
-
-`"metadata/geographicalExtent"` -> `"metadata/geographicExtent"`
-
-It has been renamed to be compliant with ISO19115.
-
-
-## 6. Metadata properties are now limited to those 6
+## 5. Metadata properties are now limited to those 6
 
 ```json
 "metadata": {
@@ -78,14 +71,14 @@ It has been renamed to be compliant with ISO19115.
 The storage of additional ISO19115-compliant metadata attributes and/or of statistics related to 3D city models can be done with the [MetadataExtended Extension](https://github.com/cityjson/metadata-extended).
 
 
-## 7. `"CityObjectGroup"`: `"members"` -> `"children"` 
+## 6. `"CityObjectGroup"`: `"members"` -> `"children"` 
 
 and the children need to add the group ID as a `"parents"`
 
 This harmonises the `"CityObjectGroup"` with the other City Objects in CityJSON.
 
 
-## 8. `"GenericCityObject"` does not exist anymore
+## 7. `"GenericCityObject"` does not exist anymore
 
 Instead, an Extension needs to be used.
 
@@ -102,7 +95,7 @@ The automatic upgrade function in cjio transform them to `"+GenericCityObject"` 
 },
 ```
 
-## 9. New City Objects from CityGML v3.0 have been added
+## 8. New City Objects from CityGML v3.0 have been added
 
   - `"BridgeRoom"`
   - `"BridgeFurniture"`
@@ -120,11 +113,11 @@ The automatic upgrade function in cjio transform them to `"+GenericCityObject"` 
 These behave exactly as the other City Objects (and thus no code shouldn't have to be modified).
 
 
-## 10. `"BridgeConstructionElement"` -> `"BridgeConstructiveElement"`
+## 9. `"BridgeConstructionElement"` -> `"BridgeConstructiveElement"`
 
 For reasons that are not understood by nobody, CityGML v3 decided to rename `"BridgeConstructionElement"` to `"BridgeConstructiveElement"`.
 
 
-## 11. `"geometry"` is not mandatory anymore
+## 10. `"geometry"` is not mandatory anymore
 
 City Objects do not have to have a `"geometry"` property anymore.
