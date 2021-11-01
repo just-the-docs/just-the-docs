@@ -19,39 +19,42 @@ Validation of a CityJSON dataset means that one must ensure that it respects the
 
 ## Schema validation (is the syntax of the file OK?)
 
-The JSON schemas of CityJSON can be downloaded, for each version, at [https://3d.bk.tudelft.nl/schemas/cityjson/](https://3d.bk.tudelft.nl/schemas/cityjson/).
+The JSON schemas of CityJSON can be downloaded, for each version, at [https://www.cityjson.org/schemas/](https://www.cityjson.org/schemas/).
 These are based on the [JSON Schema project](https://json-schema.org/).
 
 To validate a given file you can use any software listed [here](https://json-schema.org/implementations.html#validators).
 However, it is rather tricky to stitch all the schemas together, and the handling of [Extensions]({{ '/extensions/' | prepend: site.baseurl }}) will not work.
 
-The "official validator" for CityJSON is [cjio](https://github.com/cityjson/cjio) with the operator `validate`.
-If you installed cjio, then the schemas are built-in and can be used readily.
+The "official validator" for CityJSON is [cjval](https://github.com/cityjson/cjval), which is [available as a web-app](https://validator.cityjson.org) and with cjio.
 
-To validate the file [twobuilding.json](../files/twobuildings.json), simply `cjio twobuildings.json validate`
+To validate the file [twobuildings.city.json](../files/twobuildings.city.json), simply drag it to [https://validator.cityjson.org](https://validator.cityjson.org):
+
+![](../files/v-cjval-wasm.png)
+
+Or alternatively type `cjio twobuildings.city.json validate`
 
 ![](../files/v-cjio.png)
 
 Observe that not only the schema was tested, but also the internal consistency of the file was tested.
 The following were tested:
-  - Vertex indices coherent
-  - Specific for CityGroups
-  - Semantic arrays coherent with geometry
-  - Root properties
-  - Empty geometries
-  - Duplicate vertices
-  - Orphan vertices
-  - CityGML attributes
+  1. JSON syntax
+  1. CityJSON schemas
+  1. Extension schemas
+  1. parent_children_consistency
+  1. wrong_vertex_index
+  1. semantics_array
+  1. extra_root_properties
+  1. duplicate_vertices
+  1. unused_vertices
 
-It is possible that the validation returns warnings, eg when an attribute is not an "official" one in the CityGML dataset. 
-It is not considered an error and thus only a warning is raised.
+It is possible that the validation returns warnings, eg when there are duplicate vertices, those are not considered errors and thus only a warning is raised.
 
-Now download the [invalid file twobuilding_invalid.json](../files/twobuildings_invalid.json), and try to validate it.
+Now download the [invalid file twobuildings_invalid.city.json](../files/twobuildings_invalid.city.json), and try to validate it.
 You should get an error that `"CityObjects"` is a required property, and that it is missing from the file:
 
 ![](../files/v-invalid.png)
 
-Fixing this is rather easy: remove the space between "City" and "Objects" at line 14 and then the file should be valid.
+Fixing this is rather easy: remove the space between "City" and "Objects" at line 16 and then the file should be valid.
 
 ## Geometry (are the geometric primitives valid?)
 
@@ -78,7 +81,7 @@ val3dity myfile.json
 ```
 
 This will read the file and validate one-by-one each of the geometric primitives in the file and produce a summary.
-If the file [twobuilding.json](../files/twobuildings.json) is used, then the following should be obtained:
+If the file [twobuildings.city.json](../files/twobuildings.city.json) is used, then the following should be obtained:
 
 ![](../files/v-summary.png)
 
