@@ -3,7 +3,7 @@ layout: page
 title: Upgrading to v1.1
 parent: Tutorials
 nav_order: 5
-permalink: /tutorials/upgrading-v11/
+permalink: /tutorials/upgrade11/
 ---
 
 ## Table of contents
