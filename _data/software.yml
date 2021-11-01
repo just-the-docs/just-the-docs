@@ -77,6 +77,15 @@
   interface: cli
   type: both
 
+- name: cjval
+  webpage: https://validator.cityjson.org
+  description: Used as the official validator for CityJSON files.
+  foss: true
+  category: 
+    - validator
+  interface: both
+  type: both  
+
 - name: FME
   webpage: https://www.safe.com/fme/
   description: FME 2020+ has built-in capabilities to read/write CityJSON. And its viewer is the only one supporting textures (at this moment).
