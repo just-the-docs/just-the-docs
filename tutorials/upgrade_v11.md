@@ -23,11 +23,11 @@ First install or upgrade cjio:
 pip install -U cjio
 ```
 
-After the installation, you have a small program called `cjio` (with version >=0.8).
+After the installation, you have a small program called `cjio` (with version >=0.7).
 
 To upgrade your file `myfile.json`:
 ```
-cjio myfile upgrade.json save myfile_v11.city.json
+cjio myfile.json upgrade save myfile_v11.city.json
 ```
 
 which will save a new file `myfile_v11.city.json`.
@@ -76,5 +76,5 @@ You can put them on a repository in GitHub and link to the file directly, eg:
 
 ## Validation of your Extension
 
-The new validator of CityJSON is [cjval](https://github.com/cityjson/cjval), and it validates files with Extensions, see the tutorial.
+The new validator of CityJSON is [cjval](https://validator.cityjson.org), and it validates files with Extensions, see the tutorial.
 
