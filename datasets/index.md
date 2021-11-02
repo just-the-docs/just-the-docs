@@ -55,12 +55,12 @@ permalink: /datasets/
 
 ## Simple geometries
 
-  - [cube.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/cube.json) -- a unit cube
-  - [tetra.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/tetra.json) -- a simple tetrahedron
-  - [torus.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/torus.json) -- a unit cube with a genus of one
-  - [msol.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/msol.json) -- one MultiSolid: 2 unit cubes that are not adjacent
-  - [csol.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/csol.json) -- one CompositeSolid: 2 adjacent unit cubes
-  - [twocube.json](https://github.com/cityjson/specs/blob/master/example-datasets/simplegeom/twocube.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
+  - [cube.city.json](https://github.com/cityjson/specs/blob/main/example-datasets/simplegeom/cube.city.json) -- a unit cube
+  - [tetra.city.json](https://github.com/cityjson/specs/blob/main/example-datasets/simplegeom/tetr.citya.json) -- a simple tetrahedron
+  - [torus.city.json](https://github.com/cityjson/specs/blob/main/example-datasets/simplegeom/toru.citys.json) -- a unit cube with a genus of one
+  - [msol.city.json](https://github.com/cityjson/specs/blob/main/example-datasets/simplegeom/msol.city.json) -- one MultiSolid: 2 unit cubes that are not adjacent
+  - [csol.city.json](https://github.com/cityjson/specs/blob/main/example-datasets/simplegeom/csol.city.json) -- one CompositeSolid: 2 adjacent unit cubes
+  - [twocube.city.json](https://github.com/cityjson/specs/blob/main/example-datasets/simplegeom/twoc.cityube.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
 
 For different City Objects (buildings, trees, roads, etc.) and different geometries, see the latest [CityJSON specifications](https://www.cityjson.org/specs/), and to understand how the hierarchical brackets work, see [this guide](https://www.cityjson.org/dev/geom-arrays/).
 
