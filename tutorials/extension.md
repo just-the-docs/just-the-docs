@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mapping the CityGML Noise ADE to a CityJSON Extension
+title: Mapping the Noise ADE to a CityJSON Extension
 parent: Tutorials
 nav_order: 4
 permalink: /tutorials/extension/
@@ -19,8 +19,8 @@ The XSDs and some test datasets are available [here](http://schemas.opengis.net/
 
 The resulting files for this tutorial are available:
 
-  - [noise.json](../files/noise.json)
-  - [noise_data.json](../files/noise_data.json)
+  - [noise.ext.json](../files/noise.ext.json)
+  - [noise_data.city.json](../files/noise_data.city.json)
 
 
 ## Adding new attributes to Buildings
@@ -67,14 +67,16 @@ A CityJSON file containing this new City Object would look like this:
 ```javascript
 {
   "type": "CityJSON",
-  "version": "1.0",
+  "version": "1.1",
   "extensions": {
-    "Noise": "https://someurl.org/noise.json" 
+    "Noise": {
+      "url" : "https://someurl.org/noise.json",
+      "version": "1.1"
+    }
   },
   "CityObjects": {
     "1234": {
       "type": "Building",
-      "toplevel": true,
       "attributes": {
         "roofType": "gable",
         "+noise-buildingReflectionCorrection": {
@@ -107,11 +109,10 @@ The steps to follow are thus:
 ```javascript
 "+NoiseCityFurnitureSegment": {
   "allOf": [
-    { "$ref": "../cityobjects.json#/_AbstractCityObject"},
+    { "$ref": "cityobjects.schema.json#/_AbstractCityObject"},
     {
       "properties": {
         "type": { "enum": ["+NoiseCityFurnitureSegment"] },
-        "toplevel": { "type": "boolean" },
         "attributes": {
           "properties": {
             "reflection": { "type": "string" },
@@ -128,12 +129,12 @@ The steps to follow are thus:
           "type": "array",
           "items": {
             "oneOf": [
-              {"$ref": "../geomprimitives.json#/MultiLineString"}
+              {"$ref": "geomprimitives.schema.json#/MultiLineString"}
             ]
           }
         }        
       },
-      "required": ["type", "toplevel", "parent", "geometry"]
+      "required": ["type", "parent", "geometry"]
     }
   ]
 }
@@ -145,8 +146,7 @@ The steps to follow are thus:
   "geometry": [
     {
       "type": "Solid",
-      "toplevel": true,
-      "lod": 2,
+      "lod": "2",
       "boundaries": [
         [ [[0, 3, 2, 1]], [[4, 5, 6, 7]], [[0, 1, 5, 4]], [[1, 2, 6, 5]], [[2, 3, 7, 6]], [[3, 0, 4, 7]] ] 
       ]
@@ -159,8 +159,7 @@ The steps to follow are thus:
   "geometry": [
     {
       "type": "MultiLineString",
-      "toplevel": false,
-      "lod": 0,
+      "lod": "0",
       "boundaries": [
         [2, 3, 5], [77, 55, 212]
       ]
@@ -173,48 +172,22 @@ The steps to follow are thus:
 }    
 ```
 
-## Validation of the CityJSON_Extension file
 
-We offer a small [validation script](https://github.com/cityjson/cityjson-example-code/tree/master/validate-extension) for the CityJSON_Extension.
+## Validation of the CityJSONExtension file
 
-For it to function properly, you need to add the CityJSON_Extension file (`noise.json` in our case) in the folder `/extensions` of the [CityJSON schemas]({{ '/schemas/' | prepend: site.baseurl }}); you need to download them locally. 
-The files will therefore be structured as follows:
+First use [this simple JSON schema](https://github.com/cityjson/specs/blob/main/extensions/extension.schema.json) to ensure that your `CityJSONExtension` is syntactically valid.
+You can use an [online JSON Schema validator](https://jsonschemalint.com/#!/version/draft-07/markup/json):
 
-```
-|-- appearance.schema.json
-|-- cityjson.schema.json
-|-- cityobjects.schema.json
-|-- geomprimitives.schema.json
-|-- geomtemplates.schema.json
-|-- metadata.schema.json
-|-- /extensions
-    |-- extension.schema.json
-    |-- noise.json
-    |-- other_extensions.json
-```  
-
-To validate your extension (against the schema `extension.schema.json`) you can simply do:
-
-```bash
-python validate-extension.py noise.json
-```
+<img src="../files/noise-jsonschema.png">
 
 
-## Validation of CityJSON files containing extensions
+To validate a given CityJSON file and test it locally with your Extension you have to use [cjval](https://github.com/cityjson/cjval).
+If you use the option `--extensionfile` when validating, the Extension schemas will not be fetched automatically.
 
-The validation of a CityJSON file containing extensions needs to be performed as a 2-step operation:
+<img src="../files/noise-results.png">
 
-  1.  The standard validation of all City Objects (except the new ones; those starting with `"+"` are ignored at this step);
-  2.  Each City Object defined in the Extensions is (individually) validated against its schema defined in the new schema file.
 
-While this could be done with any JSON schema validator, resolving all the JSON references could be slightly tricky. 
-Thus, [cjio](https://github.com/cityjson/cjio) (with the option `--validate`) has automated this process. 
+Alternatively (if you don't want to install cjval), you can put your file `noise.ext.json` somewhere where it can be fetched (eg http://mywebsite.org/noise.ext.json), put that URL at line 6 and use the [online validator](https://validator.cityjson.org)
 
-You just need to add the CityJSON_Extension files in the folder `/extensions`, as explained above.
-Then specify the folder where the schemas are with the option `--folder_schemas`.
-
-```bash
-cjio noise_data.json validate --folder_schemas /home/elvis/cityjson/schema/
-```
 
 
