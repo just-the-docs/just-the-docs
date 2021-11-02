@@ -36,9 +36,9 @@ This [tutorials to create a noise extension]({{ '/tutorials/extension/' | prepen
   v{{ i.status }} |
   {% endif %}
   <a href="{{ i.url }}">schema</a>
-  {% if i.paper %}
+  {% if i.details %}
   | 
-  <a href="{{ i.paper }}">scientific article</a>
+  <a href="{{ i.details }}">details</a>
   {% endif %}
   {% if i.organisation %}
   | 

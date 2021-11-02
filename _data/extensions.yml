@@ -4,20 +4,21 @@
   description: "Support LAS 3D point clouds for CityObjects geometries"
   status: 1.0
   organisation: "[Gilles-Antoine Nys, Université Liège](https://github.com/GANys)"
-  paper: http://dx.doi.org/10.5194/isprs-archives-XLIII-B4-2021-301-2021
+  details: http://dx.doi.org/10.5194/isprs-archives-XLIII-B4-2021-301-2021
 
 - name: Noise
-  url:  https://3d.bk.tudelft.nl/schemas/cityjson/1.0.0/extensions/noise.json
+  url:  https://cityjson.org/tutorials/files/noise.ext.json
   description: "Conversion of the CityGML Noise ADE"
-  status: 1.0
+  status: 1.1
   organisation: "[3D geoinformation TU Delft](https://3d.bk.tudelft.nl)"
+  details: https://cityjson.org/tutorials/extension/
 
 - name: Linear Cell Complex
   url: https://github.com/tudelft3d/cityjson-lcc-extension/blob/master/linearcellcomplex.json
   description: "An extension that allows topological information of a city model to be stored as a Combinatorial Map based Linear Cell Complex"
   status: 0.2
   organisation: "[3D geoinformation TU Delft](https://3d.bk.tudelft.nl)"
-  paper: https://doi.org/10.3390/ijgi8080347
+  details: https://doi.org/10.3390/ijgi8080347
   
 # - name: Energy
 #   url:  https://github.com/tudelft3d/cityjson/blob/master/schema/v09/extensions/noise.json
