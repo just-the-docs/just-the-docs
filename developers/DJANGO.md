@@ -122,3 +122,20 @@ good:
 for x in Modelname.objects.filter(...).select_related('foreign_key')
     print(x.foreign_key.foreign_key)
 ```
+
+
+### Templates
+
+Django templates should generally be replaced by a modern, API-driven front-end. However, when using templates keep the following in mind:
+
+If you're passing `|safe` (i.e. HTML or JSON) strings directly in an HTML template, you should use the `backtick` string templates, because they support newlines that would otherwise break the page rendering where "regular quoted strings" don't.
+
+```
+const customDisabledPrivatePatientSignupMessage = `{{ request.clinic.custom_disabled_private_patient_signup_message|safe }}`;
+```
+
+Also, when referencing static files, be sure to manage the cache proactively using a token. A Git Hash works well:
+
+```
+<script src="{% static 'asset.js' %}?ver={{ request.git_hash }}"></script>
+```
