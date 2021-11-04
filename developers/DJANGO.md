@@ -136,6 +136,8 @@ const customDisabledPrivatePatientSignupMessage = `{{ request.clinic.custom_disa
 
 Also, when referencing static files, be sure to manage the cache proactively using a token. A Git Hash works well:
 
+{% raw %}
 ```
-<script src="{%% static 'asset.js' %%}?ver={{ request.git_hash }}"></script>
+<script src="{% static 'asset.js' %}?ver={{ request.git_hash }}"></script>
 ```
+{% endraw %}
