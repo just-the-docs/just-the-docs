@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Clonezilla
+title: Digital Ocean Admin
 parent: Server
 nav_order: 2
 ---
