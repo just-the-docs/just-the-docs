@@ -12,15 +12,16 @@ https://github.com/dani-garcia/vaultwarden/wiki/Enabling-HTTPS
 
 ```
 
-docker run -d --name bitwarden \
-  -e ROCKET_TLS='{certs="/ssl/certs.pem",key="/ssl/key.pem"}' \
-  -v /ssl/keys/:/ssl/ \
-  -v /vw-data/:/data/ \
-  -p 443:80 \
+docker run -d --name vaultwarden \
+  -e ROCKET_TLS='{certs="fullchain.pem", key="privkey.pem"}' \
+  -v /root/vaultwarden/:/ssl/ \
+  -v /root/vaultwarden/:/data/ \
+  -p 443:81 \
   vaultwarden/server:latest
 
   ```
 
+## RAN FROM Vaultwarden folder??
 
   ## make certs
 
@@ -34,3 +35,13 @@ docker run -d --name bitwarden \
 
 
 sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+
+### THESE WORK
+```
+openssl genrsa > privkey.pem
+openssl req -new -x509 -key privkey.pem > fullchain.pem
+```
+
+https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/
+
+https://github.com/dani-garcia/vaultwarden/wiki/Private-CA-and-self-signed-certs-that-work-with-Chrome
