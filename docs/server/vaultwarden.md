@@ -47,3 +47,10 @@ openssl req -new -x509 -key privkey.pem > fullchain.pem
 https://deliciousbrains.com/ssl-certificate-authority-for-local-https-development/
 
 https://github.com/dani-garcia/vaultwarden/wiki/Private-CA-and-self-signed-certs-that-work-with-Chrome
+
+
+##generate admin token
+
+`openssl rand -base64 48`
+
+
