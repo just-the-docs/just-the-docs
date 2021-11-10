@@ -54,3 +54,5 @@ https://github.com/dani-garcia/vaultwarden/wiki/Private-CA-and-self-signed-certs
 `openssl rand -base64 48`
 
 
+https://letsencrypt.org/docs/certificates-for-localhost/
+
