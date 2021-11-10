@@ -53,6 +53,28 @@ https://github.com/dani-garcia/vaultwarden/wiki/Private-CA-and-self-signed-certs
 
 `openssl rand -base64 48`
 
+## UNRAID INSTRUCTIONS
 
+### DO THIS TO GENERATE TOKENS (LOCALHOST)
 https://letsencrypt.org/docs/certificates-for-localhost/
+
+### THIS IS THE WORKING NGINX CONFIG
+
+```
+   server {
+        listen 8080 ssl http2;
+        listen [::]:8080 ssl http2;
+        server_name localhost;
+
+        ssl_certificate /config/nginx/config/localhost.crt;
+        ssl_certificate_key /config/nginx/config/localhost.key;
+
+        location / {
+            proxy_set_header Host $host;
+            proxy_set_header X-Forwarded-Proto http;
+
+            proxy_pass http://$host:85;
+        }
+    }
+```
 
