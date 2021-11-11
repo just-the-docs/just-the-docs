@@ -23,7 +23,7 @@ A JSON-based encoding for 3D city models
 ## Latest news
 
 {% for post in site.posts limit:3 %}
-  <p><span class="text-delta">{{ post.date | date_to_string }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></p>
+  <span class="text-delta">{{ post.date | date_to_string }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
 {% endfor %}
 
 [All the news]({{ site.baseurl }}/news/)
