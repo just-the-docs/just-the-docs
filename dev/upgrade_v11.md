@@ -6,7 +6,7 @@ nav_order: 4
 permalink: /dev/upgrade11/
 ---
 
-The following 10 changes need to be considered:
+The following 11 changes need to be considered:
 
 1. TOC
 {:toc}
@@ -30,7 +30,7 @@ Files are thus always compressed.
 "lod": "2.2"
 ```
 
-## 4. `"Metadata/referenceSystem"` is now using OGC URLs
+## 4. `"metadata/referenceSystem"` is now using OGC URLs
 
 ```json
 "metadata": {
@@ -121,3 +121,10 @@ For reasons that are not understood by nobody, CityGML v3 decided to rename `"Br
 ## 10. `"geometry"` is not mandatory anymore
 
 City Objects do not have to have a `"geometry"` property anymore.
+
+
+## 11. If relevant, support the type `"CityJSONFeature"`
+
+This is relevant in the context of streaming datasets on the web, eg for the [OGC API - Features](https://github.com/opengeospatial/ogcapi-features).
+
+See [the specifications for more details](https://cityjson.org/specs/1.1.0/#text-sequences-and-streaming-with-cityjsonfeature).
