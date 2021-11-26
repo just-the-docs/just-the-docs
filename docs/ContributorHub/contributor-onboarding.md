@@ -18,9 +18,9 @@ ___
     
 3.  **Attend meetings.** Check our [Weekly Meeting Schedule]({% link docs/Meetings/index.md %}) and attend a meeting in the upcoming week. Make sure to attend a meeting that relates to your position of interest, as well as our Community Call for an introduction.
     
-4.  **Draft a Trial Period Proposal.** Create a 2-Week Trial Period Proposal with the Contributor Experience Squad (or any other full-time contributor you're chatting with). This proposal could be for part-time work (<40 hours per week), full-time work (40 hours per week), or a specific project. To clarify your scope of work, contact the Squad Leader for the position you're interested in.
+4.  **Draft a Trial Period Proposal.** Create a 1 month Trial Period Proposal with the Contributor Experience Squad (or any other full-time contributor you’re chatting with). This proposal could be for part-time work (<40 hours per week), full-time work (40 hours per week), or a specific project. To clarify your scope of work, contact the Squad Leader for the position you’re interested in.
     
-5.  **Post your proposal to <a href="https://daotalk.org/c/dx-dao/15" target="_blank">DAOtalk</a>.** Along with a successful 2-Week Trial Period, your draft proposal will contain your next 2 months of work (making it a 2.5-month period). The 2-Week Trial Period is at a 50% compensation rate and the following 2 months at an 80% compensation rate. See the Contributor Compensation and Contributor Proposal Sections for how to draft and submit a contributor proposal.
+5.  **Post your proposal to <a href="https://daotalk.org/c/dx-dao/15" target="_blank">DAOtalk</a>.** Along with a successful 1 month Trial Period, your draft proposal will contain your next 2 months of work (making it a 3-month period). The 1 month Trial Period is at a 50% compensation rate and the following 2 months at an 80% compensation rate. See the Contributor Compensation and Contributor Proposal Sections for how to draft and submit a contributor proposal.
     
 6.  **Submit your proposal on-chain.** Once your proposal is posted on DAOtalk, please allow up to 7 days for contributors to give feedback on your draft proposal and for you to make any necessary changes. Once this is completed, you can post your proposal on Alchemy and request compensation. See the Contributor Proposal Guide on how to submit your first proposal on Alchemy.
 
@@ -49,11 +49,11 @@ For example, if a contributors commits to working 30 hours per week at a level 4
 
 ## TRIAL PERIOD
 
-### 2-Week Trial Period
+### 1 Month Trial Period
 
-There is a 2-week trial period at the start of a new contributor's first pay period. The first pay period is 2.5 months. The point of the 2-week trial period is to confirm that the contributor is “who they say they are,” meaning they are able and willing to complete the required scope of work. Think of this as an anti-sybil defense.
+There is a 1 month trial period at the start of a new contributor's first pay period. The first pay period is 3 months. The point of the 1 month trial period is to confirm that the contributor is “who they say they are,” meaning they are able and willing to complete the required scope of work. Think of this as an anti-sybil defense.
 
-The trial period is paid at a 50% of salary rate. This also affects REP distribution, meaning REP will be distributed at a 50% rate for the 2-week trial period. To learn more about how to determine your salary rate and REP distribution, see the Contributor Compensation section, below.
+The trial period is paid at a 50% of salary rate. This also affects REP distribution, meaning REP will be distributed at a 50% rate for the 1 month trial period. To learn more about how to determine your salary rate and REP distribution, see the Contributor Compensation section, below.
 
 ### During the Trial Period
 
@@ -63,6 +63,6 @@ The contributor should check-in with their squad and / or onboarding guide every
 
 The contributor will meet with their squad guide to discuss their trial period review. This is an opportunity to determine progress and appropriate work fit. If the contributor is able to complete their described scope of work, perfect. Keep doing what you’re doing. We welcome your further contributions to DXdao.
 
-However, if the contributor is not able to complete their described scope of work, the contributor will be compensated for the work they have completed in good faith during the 2-week trial period. The community will notify the contributor that they are no longer a contributor at DXdao and will not be compensated for future work.
+However, if the contributor is not able to complete their described scope of work, the contributor will be compensated for the work they have completed in good faith during the 1 month trial period. The community will notify the contributor that they are no longer a contributor at DXdao and will not be compensated for future work.
 
 Work completed in good faith is determined by the squad leader, all relevant contributors that have personal knowledge of what the contributor did or did not complete, and any other relevant community members that have personal knowledge of the work completed by the contributor during the trial period.
