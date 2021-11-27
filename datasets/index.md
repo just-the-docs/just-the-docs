@@ -86,12 +86,6 @@ Every building (in LoD1.2), every canals, every road, every bridge, in 3D. In Ci
 
 <i class="fas fa-exclamation-circle"></i> Please be aware that the tiles are very big, and they will most likely bring [ninja](https://ninja.cityjson.org) or QGIS to their knees... The solution for the time being is to use a computer with 16GB+ of RAM, and use [cjio]({{ '/tutorials/getting-started/#manipulate-and-edit-it-with-cjio' | relative_url }}) to extract only the buildings for instance. 
 
-## All USA buildings
-
-The project [Open City Model](https://github.com/opencitymodel/opencitymodel) has converted all buildings in the USA to LoD1 buildings and offers them in CityJSON.
-
-<i class="fas fa-exclamation-circle"></i> Watch out: the coordinates are in (lat, long, meters), which means that there's a mix of units (degrees and meters) and several viewers and processing software do not like this very much...
-
 
 ## Paid datasets <span class="label label-purple">$$$</span>
 
