@@ -1,0 +1,1364 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://www.cityjson.org/schemas/1.1.0/cityobjects.schema.json",
+  "title": "CityJSON City Objects schema v1.1.0",
+  
+  "ExtensionObject": {
+    "type": "object",
+    "properties": {
+      "type": {
+        "type": "string",
+        "pattern": "(\\+)([A-Z])\\w+"
+      }
+    },
+    "required": [
+      "type"
+    ]
+  },
+  "_AbstractCityObject": {
+    "properties": {
+      "attributes": { 
+        "type": "object" 
+      },
+      "parents": {
+        "type": "array",
+        "description": "the IDs of the parents",
+        "items": {
+          "type": "string"
+        }
+      },
+      "children": {
+        "type": "array",
+        "description": "the IDs of children",
+        "items": {
+          "type": "string"
+        }
+      },
+      "geographicalExtent": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "minItems": 6,
+        "maxItems": 6
+      }
+    }
+  },
+  "OtherConstruction": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "OtherConstruction"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },  
+  "_AbstractBuilding": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "address": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                }
+              }
+            }
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Building": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractBuilding"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "Building"
+            ]
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },
+  "BuildingPart": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractBuilding"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BuildingPart"
+            ]
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },
+  "BuildingInstallation": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BuildingInstallation"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },
+  "BuildingFurniture": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BuildingFurniture"
+            ]
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },
+  "BuildingRoom": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BuildingRoom"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },
+  "BuildingUnit": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BuildingUnit"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },  
+  "BuildingStorey": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BuildingStorey"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },  
+  "CityObjectGroup": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "CityObjectGroup"
+            ]
+          },
+          "children_roles": {
+            "type": "array",
+            "description": "the role of each of the CityObjects members of that group",
+            "items": {
+              "type": "string"
+            }
+          }, 
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                }
+              ]
+            },
+            "minItems": 0,
+            "maxItems": 1
+          }
+        },
+        "required": [
+          "type",
+          "children"
+        ]
+      }
+    ]
+  },
+
+  "Tunnel": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "Tunnel"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {               
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {               
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },  
+  "TunnelPart": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "TunnelPart"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {               
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {               
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },
+  "TunnelInstallation": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "TunnelInstallation"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },
+  "TunnelConstructiveElement": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "TunnelConstructiveElement"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },
+  "TunnelHollowSpace": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "TunnelHollowSpace"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },  
+  "TunnelFurniture": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "TunnelFurniture"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },  
+
+  "Bridge": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "Bridge"
+            ]
+          },
+          "address": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                }
+              }
+            }
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {               
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {               
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },  
+  "BridgePart": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BridgePart"
+            ]
+          },
+          "address": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "location": {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                }
+              }
+            }
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {               
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {               
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },
+  "BridgeInstallation": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BridgeInstallation"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },
+  "BridgeConstructiveElement": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BridgeConstructiveElement"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },
+  "BridgeRoom": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BridgeRoom"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },  
+  "BridgeFurniture": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "BridgeFurniture"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type",
+          "parents"
+        ]
+      }
+    ]
+  },  
+
+  "_AbstractTransportationComplex": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "_AbstractTransportationWay": {
+    "allOf": [
+      {
+        "properties": {
+          "attributes": {
+            "properties": {
+              "trafficDirection": {
+                "enum": [
+                  "one-way",
+                  "two-way"
+                ]
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "Road": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractTransportationComplex"
+      },
+      {
+        "$ref": "#/_AbstractTransportationWay"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "Road"
+            ]
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },
+  "Railway": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractTransportationComplex"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "Railway"
+            ]
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },
+  "TransportSquare": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractTransportationComplex"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "TransportSquare"
+            ]
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },
+  "Waterway": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractTransportationComplex"
+      },
+      {
+        "$ref": "#/_AbstractTransportationWay"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "Waterway"
+            ]
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },
+  "TINRelief": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "TINRelief"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },
+  "WaterBody": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "WaterBody"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },
+  "PlantCover": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "PlantCover"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },
+  "SolitaryVegetationObject": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "SolitaryVegetationObject"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },
+  "LandUse": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "LandUse"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  },
+  "CityFurniture": {
+    "allOf": [
+      {
+        "$ref": "#/_AbstractCityObject"
+      },
+      {
+        "properties": {
+          "type": {
+            "enum": [
+              "CityFurniture"
+            ]
+          },
+          "geometry": {
+            "type": "array",
+            "items": {
+              "oneOf": [
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiPoint"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiLineString"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/Solid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSolid"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/MultiSurface"
+                },
+                {
+                  "$ref": "geomprimitives.schema.json#/CompositeSurface"
+                },
+                {
+                  "$ref": "geomtemplates.schema.json#/GeometryInstance"
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      }
+    ]
+  }
+}

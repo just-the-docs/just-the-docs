@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://www.cityjson.org/schemas/1.1.0/metadata.schema.json",
+  "title": "CityJSON metadata schema v1.1.0",
+
+  "definitions": {  
+    "contactDetails": {
+      "type": "object",
+      "properties": {
+        "contactName": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        },
+        "emailAddress": {
+          "type": "string",
+          "format": "email"
+        },
+        "contactType": {
+          "type": "string",
+          "enum": [ "individual", "organization" ]
+        },
+        "role": {
+          "type": "string",
+          "description": "from ISO 19115 codelist",
+          "enum": [
+            "resourceProvider",
+            "custodian",
+            "owner",
+            "user",
+            "distributor",
+            "originator",
+            "pointOfContact",
+            "principalInvestigator",
+            "processor",
+            "publisher",
+            "author",
+            "sponsor",
+            "co-author",
+            "collaborator",
+            "editor",
+            "mediator",
+            "rightsHolder",
+            "contributor",
+            "funder",
+            "stakeholder"
+          ]
+        },
+        "organization": {
+          "type": "string"
+        },
+        "website": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^(https?)://"
+        }
+      },
+      "required": [
+            "contactName",
+            "emailAddress"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "metadata": {
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "type": "string"
+      },
+      "pointOfContact": {
+        "$ref": "#/definitions/contactDetails"
+      },
+      "referenceDate": {
+        "type": "string",
+        "format": "date"
+      },
+      "title": {
+        "type": "string"
+      },
+      "geographicalExtent": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "minItems": 6,
+        "maxItems": 6
+      },
+      "referenceSystem": {
+        "type": "string",
+        "pattern": "^(http|https)://www.opengis.net/def/crs/"
+      }
+    },
+    "additionalProperties": false
+  }
+}
