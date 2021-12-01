@@ -1,6 +1,6 @@
 
 - name: Generic
-  url:  https://cityjson.org/extension/download/generic.ext.json
+  url:  https://cityjson.org/extensions/download/generic.ext.json
   description: "Extension to handle GenericCityObject in v1.1"
   status: 1.1
   organisation: "CityJSON core team"
