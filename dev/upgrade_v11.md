@@ -89,7 +89,7 @@ The automatic upgrade function in cjio transform them to `"+GenericCityObject"` 
 {
     "Generic":
     {
-        "url": "https://homepage.tudelft.nl/23t4p/generic.ext.json",
+        "url": "https://www.cityjson.org/extensions/download/generic.ext.json",
         "version": "1.0"
     }
 },
@@ -110,17 +110,19 @@ The automatic upgrade function in cjio transform them to `"+GenericCityObject"` 
   - `"TunnelFurniture"`
   - `"Waterway"`
 
-These behave exactly as the other City Objects (and thus no code shouldn't have to be modified).
+These behave exactly as the other City Objects (and thus no code should have to be modified).
 
 
 ## 9. `"BridgeConstructionElement"` -> `"BridgeConstructiveElement"`
 
 For reasons that are not understood by nobody, CityGML v3 decided to rename `"BridgeConstructionElement"` to `"BridgeConstructiveElement"`.
 
+So CityJSON did the same too.
+
 
 ## 10. `"geometry"` is not mandatory anymore
 
-City Objects do not have to have a `"geometry"` property anymore.
+City Objects do not have to have a `"geometry"` property anymore (in v1.0 an empty array was required).
 
 
 ## 11. If relevant, support the type `"CityJSONFeature"`
