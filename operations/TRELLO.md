@@ -33,8 +33,8 @@ specific Trello methodology.
 > 1.  "Own" your cards. **If you're assigned to it, you should post
 >     updates when there are changes, blockers, or reconfiguration**. If
 >     others' tasks rely on yours, directly "@" comment them as needed.
-> 2.  **If it's in a Sprint, it needs to be assigned to one primary team
->     member for accountability**.
+> 2.  **If it's in a Sprint, it needs to be assigned to exactly one primary team
+>     member for accountability**. Don't assign cards to 2 or more people.
 
 Without anyone assigned, cards get lost. If a card is complex enough
 that it needs multiple team members accountable, decompose it into
@@ -56,11 +56,11 @@ of a set of **Cards** (tasks) arranged in **Columns**.
 ## Trello Cards
 
 A card should contain a clear description of work to be done by one
-person required to support a given [User Story](USER_STORIES.md). This may correspond to a single User
-Acceptance Test.
+person required to support a given [User Story](USER_STORIES.md).
 
-During composition, the author of the Trello card should always assume
-that the assigned members are without context of the given task.
+During composition, the author of the Trello card should base to assuming
+that the assigned members are without context of the given task and link
+to relevant background.
 
 Before assignment, the details and scope of the card should already be
 finalized to prevent confusion.
@@ -78,10 +78,9 @@ Details should include important information depending on what kind
 
 **Feature cards should include:**
 
-  - **Current Behavior** - If a current feature is proposed to be
-    improved or changed, a specific and clear description should be
-    provided to direct the members where the improvement or change is
-    applied. For front-end related requests, include screenshots, URL of
+  - **Current Behavior** (optional) - If an existing feature is proposed to be
+    improved or changed, summarize current behaviour to be enhanced.
+    For front-end related requests, include screenshots, URL of
     the page if possible, and XD & Google Drive links (if applicable).
     [Tutorial video for front-end cards](https://www.loom.com/share/3c91d0cf0348471abb3eed20fc63b4ab)
   - **Proposed Behavior** - Key points should be well-defined. For
@@ -91,6 +90,7 @@ Details should include important information depending on what kind
     internal ideas, define why the feature is beneficial. For external
     requests, include references of discussion threads (e.g. Groove
     tickets, Slack discussion).
+  - **Checklist** - Optional. For small related tasks that will be done together, include a checklist within one card rather than many cards.
 
 **Bug fix cards should include:**
 
@@ -116,11 +116,11 @@ Details should include important information depending on what kind
 
 This is the starting point for anyone to add cards, and where cards the
 client has requested live until the Scrum Master can review and ensure
-they're actionable and clear.
+they're actionable and clear. Everyone should generally add cards here.
 
 If they're actionable, move them to Backlog. If they're not, write a
 comment to the client asking for more information in order to make it
-actionable, and leave it in the deferred column.
+actionable, and leave it in the feedback or requests column.
 
 If any additional requirements steps such as a mockup are required,
 mention that in the card. Attach any additional examples and/or
@@ -174,10 +174,13 @@ For this objective, we suggest that you:
 3)  Use "Screencastify" chrome extension for recording short screencasts
     and attaching into your trello ticket
 
-## The "critical" label
+## Labels
+
+Labels can be added to help the team organize cards. Some labels are common across
+project, such as the `bug` label.
 
 If you find something that's severly broken in any of our websites,
-please create a Trello card with a red label `critical`, and tell the
+please create a Trello card with a red label `bug`, and tell the
 developer who you've assigned it to. Do this sparingly: only when it's
 something we're likely to quickly lose customers over such as a service
 being down completely or a button not working.
@@ -186,16 +189,8 @@ For less serious bugs, don't use this label, just make a regular card.
 
 ## Boards
 
-We typically have one board per codebase with a client, and one per
+We generally have one board per codebase with a client, and one per
 internal product or project.
-
-The board background color indicates the following:
-
-  - Green - nonprofit or government client (private)
-  - Orange - corporate client (private)
-  - Red - internal operations (private)
-  - Purple - open source project, or other public board (public)
-  - Blue - internal product (private)
 
 ## Forwarding Client Emails to Trello
 
@@ -206,6 +201,5 @@ Go to their Trello board, and click settings -\> email-to-board
 settings, and add that email address as a contact in your email. You can
 then forward emails directly to your trello board.
 
-However, it does make a bit of a mess since email signature images and
-other junk show up in the tickets, so it's nice to clean them up when
+However, it does make a bit of a mess since email signature images are copied into the tickets, so please clean them up when
 you look at them in Trello.
