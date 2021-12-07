@@ -107,9 +107,9 @@
   interface: gui
   type: app
 
-- name: ninja
+- name: ninja 
   webpage: https://ninja.cityjson.org/
-  description: A viewer with support for holes and the ability to edit, all within the ease of your browser. The [repository](https://github.com/cityjson/ninja) has the latest code too.
+  description: Official CityJSON viewer. A viewer with support for holes and the ability to edit, all within the ease of your browser. The [repository](https://github.com/cityjson/ninja) has the latest code too.
   foss: true
   category: 
     - viewer
@@ -173,5 +173,14 @@
     - converter
   interface: cli
   type: app
+
+- name: xeokit
+  webpage: https://www.notion.so/Viewing-a-CityJSON-Model-with-XKTLoaderPlugin-d49f636c2e31470dbda5c82716c0e3d2
+  description: Open-source web programming toolkit, offers a converter from CityJSON to their own format
+  foss: true
+  category: 
+    - viewer
+  interface: gui
+  type: app  
 
 
