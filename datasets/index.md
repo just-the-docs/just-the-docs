@@ -31,11 +31,11 @@ permalink: /datasets/
   {% for i in ds %}
     <tr>
       <td><a href="{{ i.url }}">{{ i.name }}</a></td>
-      <td><a href="https://3d.bk.tudelft.nl/opendata/cityjson/citygml/{{ i.gml }}">[GML]</a> ({{ i.gml-size }}MB)</td>
-      <td><a href="https://github.com/cityjson/example-datasets/raw/main/3dcities/v1.1/{{ i.json }}">[JSON]</a> ({{ i.json-size }}MB)</td>
+      <td><a href="https://3d.bk.tudelft.nl/opendata/cityjson/3dcities/citygml/{{ i.gml }}">[GML]</a> ({{ i.gml-size }}MB)</td>
+      <td><a href="https://3d.bk.tudelft.nl/opendata/cityjson/3dcities/v1.1/{{ i.json }}">[JSON]</a> ({{ i.json-size }}MB)</td>
       <td>
         {% if i.textures %}
-          <a href="https://3d.bk.tudelft.nl/opendata/cityjson/citygml/{{ i.textures }}">[ZIP]</a>
+          <a href="https://3d.bk.tudelft.nl/opendata/cityjson/3dcities/citygml/{{ i.textures }}">[ZIP]</a>
         {% else %}
           none
         {% endif %}
@@ -55,12 +55,12 @@ permalink: /datasets/
 
 ## Simple geometries
 
-  - [cube.city.json](https://github.com/cityjson/example-datasets/raw/main/simplegeom/v1.1/cube.city.json) -- a unit cube
-  - [tetra.city.json](https://github.com/cityjson/example-datasets/raw/main/simplegeom/v1.1/tetra.city.json) -- a simple tetrahedron
-  - [torus.city.json](https://github.com/cityjson/example-datasets/raw/main/simplegeom/v1.1/torus.city.json) -- a unit cube with a genus of one
-  - [msol.city.json](https://github.com/cityjson/example-datasets/raw/main/simplegeom/v1.1/msol.city.json) -- one MultiSolid: 2 unit cubes that are not adjacent
-  - [csol.city.json](https://github.com/cityjson/example-datasets/raw/main/simplegeom/v1.1/csol.city.json) -- one CompositeSolid: 2 adjacent unit cubes
-  - [twocube.city.json](https://github.com/cityjson/example-datasets/raw/main/simplegeom/v1.1/twocube.city.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
+  - [cube.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/cube.city.json) -- a unit cube
+  - [tetra.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/tetra.city.json) -- a simple tetrahedron
+  - [torus.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/torus.city.json) -- a unit cube with a genus of one
+  - [msol.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/msol.city.json) -- one MultiSolid: 2 unit cubes that are not adjacent
+  - [csol.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/csol.city.json) -- one CompositeSolid: 2 adjacent unit cubes
+  - [twocube.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/twocube.city.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
 
 For different City Objects (buildings, trees, roads, etc.) and different geometries, see the latest [CityJSON specifications](https://www.cityjson.org/specs/), and to understand how the hierarchical brackets work, see [this guide](https://www.cityjson.org/dev/geom-arrays/).
 

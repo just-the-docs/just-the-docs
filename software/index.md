@@ -36,7 +36,7 @@ Most of the software are recent and well-maintained; if you believe your softwar
     </tr>
   </thead>
   <tbody>
-    {% assign software = site.data.software %}
+    {% assign software = site.data.software | sort_natural: 'name'%}
     {% for sf in software %}
       <tr>
         <th scope="row" style="text-align:left"><a style="font-size: 13px" href="{{ sf.webpage }}">{{ sf.name }} {% if sf.foss == true %}<img style="height: 13px" src="{{ '/assets/images/foss.svg' | prepend: site.baseurl }}"> {% endif %}</a></th>
