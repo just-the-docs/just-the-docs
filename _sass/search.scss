@@ -140,7 +140,7 @@
   }
 }
 
-.search-result-title {
+.search-result-npm_package_name {
   display: block;
   padding-top: $sp-2;
   padding-bottom: $sp-2;
@@ -175,7 +175,7 @@
     flex-shrink: 0;
   }
 
-  .search-result-doc-title {
+  .search-result-doc-npm_package_name {
     overflow: auto;
   }
 }

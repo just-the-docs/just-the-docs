@@ -1,14 +1,29 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  {% if page.url == {{ site.url }} %}
+  <title>Roviret - Find an npm package for your next project</title>
+  <meta name="description" content="Roviret is the place where developers like you come to find an ideal npm package for their next project. Find insights on the package's popularity, community, and more.">
+  <meta name=”robots” content="index, follow">
+  <meta property="og:title" content="Roviret - Find an npm package for your next project" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:description" content="Roviret is the place where developers like you come to find an ideal npm package for their next project. Find insights on the package's popularity, community, and more." />
+  <meta property="og:type" content="article" />
+  {% endif %}
+  {% if page.npm_package_name != nil %}
+  <title>{{ page.npm_package_name }} npm package - {{ site.title }}</title>
+  <meta name="description" content="Learn about {{ page.npm_package_name }} npm package's popularity, maintenance, readme file, and more.">
+  <meta name=”robots” content="index, follow">
+  <meta property="og:title" content="{{ page.npm_package_name }} npm package - {{ site.title }}" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+  <meta property="og:description" content="Learn about {{ page.npm_package_name }} npm package's popularity, maintenance, readme file, and more." />
+  <meta property="og:type" content="article" />
+  {% endif %}
+  {% if page.url contains 404 %}
+  <meta name=”robots” content="noindex, nofollow">  
+  {% endif %}
 
-  {% unless site.plugins contains "jekyll-seo-tag" %}
-    <title>{{ page.title }} - {{ site.title }}</title>
-
-    {% if page.description %}
-      <meta name="Description" content="{{ page.description }}">
-    {% endif %}
-  {% endunless %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
   <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
 
@@ -32,8 +47,6 @@
   <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  {% seo %}
 
   {% include head_custom.html %}
 

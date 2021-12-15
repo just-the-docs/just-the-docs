@@ -39,7 +39,8 @@ layout: table_wrappers
       </svg>
     </symbol>
   </svg>
-
+  <!--Remove this line to enable sidebar-->
+  <!--   
   <div class="side-bar">
     <div class="site-header">
       <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
@@ -65,16 +66,17 @@ layout: table_wrappers
         {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
-    <footer class="site-footer">
-      This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-    </footer>
-  </div>
+  </div> -->
+  <!--Remove this line to enable sidebar-->
   <div class="main" id="top">
     <div id="main-header" class="main-header">
+      <!--Remove this line to enable sidebar-->
+      <div class="site-header"> <a href="http://localhost:4000/" class="site-title lh-tight"> Roviret </a> <a href="#" id="menu-button" class="site-button nav-open"> <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg> </a></div> 
+      <!--Remove this line to enable sidebar-->
       {% if site.search_enabled != false %}
         <div class="search">
           <div class="search-input-wrap">
-            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search for an npm package" aria-label="Search for an npm package" autocomplete="off">
             <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
           </div>
           <div id="search-results" class="search-results"></div>

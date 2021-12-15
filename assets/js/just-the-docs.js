@@ -79,7 +79,7 @@ function initSearch() {
 
       var index = lunr(function(){
         this.ref('id');
-        this.field('title', { boost: 200 });
+        this.field('npm_package_name', { boost: 200 });
         this.field('content', { boost: 2 });
         {%- if site.search.rel_url != false %}
         this.field('relUrl');
@@ -89,7 +89,7 @@ function initSearch() {
         for (var i in docs) {
           this.add({
             id: i,
-            title: docs[i].title,
+            title: docs[i].npm_package_name,
             content: docs[i].content,
             {%- if site.search.rel_url != false %}
             relUrl: docs[i].relUrl
@@ -213,39 +213,39 @@ function searchLoaded(index, docs) {
       resultLink.setAttribute('href', doc.url);
       resultsListItem.appendChild(resultLink);
 
-      var resultTitle = document.createElement('div');
-      resultTitle.classList.add('search-result-title');
-      resultLink.appendChild(resultTitle);
+      var resultnpm_package_name = document.createElement('div');
+      resultnpm_package_name.classList.add('search-result-npm_package_name');
+      resultLink.appendChild(resultnpm_package_name);
 
       var resultDoc = document.createElement('div');
       resultDoc.classList.add('search-result-doc');
       resultDoc.innerHTML = '<svg viewBox="0 0 24 24" class="search-result-icon"><use xlink:href="#svg-doc"></use></svg>';
-      resultTitle.appendChild(resultDoc);
+      resultnpm_package_name.appendChild(resultDoc);
 
-      var resultDocTitle = document.createElement('div');
-      resultDocTitle.classList.add('search-result-doc-title');
-      resultDocTitle.innerHTML = doc.doc;
-      resultDoc.appendChild(resultDocTitle);
-      var resultDocOrSection = resultDocTitle;
+      var resultDocnpm_package_name = document.createElement('div');
+      resultDocnpm_package_name.classList.add('search-result-doc-npm_package_name');
+      resultDocnpm_package_name.innerHTML = doc.doc;
+      resultDoc.appendChild(resultDocnpm_package_name);
+      var resultDocOrSection = resultDocnpm_package_name;
 
-      if (doc.doc != doc.title) {
+      if (doc.doc != doc.npm_package_name) {
         resultDoc.classList.add('search-result-doc-parent');
         var resultSection = document.createElement('div');
         resultSection.classList.add('search-result-section');
-        resultSection.innerHTML = doc.title;
-        resultTitle.appendChild(resultSection);
+        resultSection.innerHTML = doc.npm_package_name;
+        resultnpm_package_name.appendChild(resultSection);
         resultDocOrSection = resultSection;
       }
 
       var metadata = result.matchData.metadata;
-      var titlePositions = [];
+      var npm_package_namePositions = [];
       var contentPositions = [];
       for (var j in metadata) {
         var meta = metadata[j];
-        if (meta.title) {
-          var positions = meta.title.position;
+        if (meta.npm_package_name) {
+          var positions = meta.npm_package_name.position;
           for (var k in positions) {
-            titlePositions.push(positions[k]);
+            npm_package_namePositions.push(positions[k]);
           }
         }
         if (meta.content) {
@@ -295,10 +295,10 @@ function searchLoaded(index, docs) {
         }
       }
 
-      if (titlePositions.length > 0) {
-        titlePositions.sort(function(p1, p2){ return p1[0] - p2[0] });
+      if (npm_package_namePositions.length > 0) {
+        npm_package_namePositions.sort(function(p1, p2){ return p1[0] - p2[0] });
         resultDocOrSection.innerHTML = '';
-        addHighlightedText(resultDocOrSection, doc.title, 0, doc.title.length, titlePositions);
+        addHighlightedText(resultDocOrSection, doc.npm_package_name, 0, doc.npm_package_name.length, npm_package_namePositions);
       }
 
       if (contentPositions.length > 0) {
@@ -352,7 +352,7 @@ function searchLoaded(index, docs) {
       var resultRelUrl = document.createElement('span');
       resultRelUrl.classList.add('search-result-rel-url');
       resultRelUrl.innerText = doc.relUrl;
-      resultTitle.appendChild(resultRelUrl);
+      resultnpm_package_name.appendChild(resultRelUrl);
       {%- endif %}
     }
 

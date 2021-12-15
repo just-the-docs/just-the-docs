@@ -19,7 +19,9 @@
   }
 
   @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    // Remove this line to enable sidebar
+    // width: calc((100% - #{$nav-width + $content-width}) / 19 + #{$nav-width});
+    // Remove this line to enable sidebar
     min-width: $nav-width;
   }
 }
@@ -27,14 +29,20 @@
 .main {
   @include mq(md) {
     position: relative;
-    max-width: $content-width;
-    margin-left: $nav-width-md;
+    // Remove this line to enable sidebar
+    // max-width: $content-width;
+    // margin-left: $nav-width-md;
+    margin-left: 100px;
+    margin-right: 100px;
+    // Remove this line to enable sidebar
   }
 
   @include mq(lg) {
-    margin-left: calc(
-      (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
-    );
+    // Remove this line to enable sidebar
+    // margin-left: calc(
+    //   (100% - #{$nav-width + $content-width}) / 19 + #{$nav-width}
+    // );
+    // Remove this line to enable sidebar
   }
 }
 
