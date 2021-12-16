@@ -22,7 +22,7 @@ Often, contributors request 50% payment at the passing of their Alchemy proposal
 
 ### DXD Compensation on Top of Base Compensation
 
-DXD is locked with 50% vesting after 1 year of the contributor contract start date, and the remaining 50% is vested through a linear schedule after the 1-year cliff, fully vested at 2 years. Contributors may not request liquid DXD in their contributor proposals.
+DXD is locked with 50% vesting after 1 year of the contributor contract start date, and the remaining 50% is vested through a linear schedule after the 1-year cliff, fully vested at 2 years. Contributors may not request liquid DXD in their contributor proposals. As mentioned below, DXD payment is set to the all-time high (ATH) price in US dollars on <a href="https://www.coingecko.com/en/coins/dxdao" target="_blank">coingecko</a>.
 
 ### Determination of Price
 
