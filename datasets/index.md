@@ -75,7 +75,7 @@ It is possible to generate automatically a 3D city model in CityJSON with [3dfie
 Every building in the Netherlands, automatically reconstructed.
 Each building is available in 3 [levels-of-details](https://3d.bk.tudelft.nl/lod): LoD1.2, LoD1.3, and LoD2.2.
 
-[https://3dbag.nl](https://3dbag.nl)
+<a href="https://3dbag.nl"><i class="fas fa-external-link-alt"></i> https://3dbag.nl</a>
 
 
 ## The topography of the Netherlands in 3D
