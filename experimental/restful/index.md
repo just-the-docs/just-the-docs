@@ -31,3 +31,12 @@ If `/stream/` is added to the URL of any collections in the demo, then a [JSON L
 This is realised with `cjio myfile.city.json export --format jsonl`.
 
 <i class="fas fa-external-link-alt"></i> <a href="http://cityjson.pythonanywhere.com/collections/tudelft/stream/">http://cityjson.pythonanywhere.com/collections/tudelft/stream/</a>
+
+
+## MSc thesis on the topic
+
+[![](msc-li.png){:width="250px"}](https://repository.tudelft.nl/islandora/object/uuid:e6bb2142-c113-4add-a466-41bf0fea3b11?collection=education)
+
+
+Xiaoai Li. *CityREST: CityJSON in a database + RESTful access*. MSc thesis in Geomatics, Delft University of Technology. 2021. <small><a href="http://resolver.tudelft.nl/uuid:e6bb2142-c113-4add-a466-41bf0fea3b11"><i class="fas fa-book" title="thesis"></i></a></small> <small><a href="https://github.com/xiaoai-li/api_cityjson"><i class="fab fa-github" title="github"></i></a></small> 
+        
