@@ -22,7 +22,8 @@ branch naming.
 ![image](git-flow.png)
 
 1.  `develop` is the main branch developers work on and test.
-2.  `master` is the stable branches released to production. (most
+2.  `master` is the "staging" branch, where the upcoming release is deployed weekly for testing and previews among the team.
+3.  `release` is the stable branch released to production. (most
     projects do not use release branches, we just continuously deploy
     `master`)
 3.  `feature/my-feature-name` feature branches contain your work for up
