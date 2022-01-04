@@ -22,13 +22,13 @@ Often, contributors request 50% payment at the passing of their Alchemy proposal
 
 ### DXD Compensation on Top of Base Compensation
 
-DXD is locked with 50% vesting after 1 year of the contributor contract start date, and the remaining 50% is vested through a linear schedule after the 1-year cliff, fully vested at 2 years. Contributors may not request liquid DXD in their contributor proposals. As mentioned below, DXD payment is set to the all-time high (ATH) price in US dollars on <a href="https://www.coingecko.com/en/coins/dxdao" target="_blank">coingecko</a>.
+DXD is locked with ⅓ vesting after 1 year of the contributor contract start date, and the remaining ⅔ is vested through a linear schedule after the 1-year cliff, fully vested at 3 years. Contributors may not request liquid DXD in their contributor proposals.
 
 ### Determination of Price
 
 ETH payment is determined by the price of ETH at the date and time of proposal submission. Because of the high volatility of ETH price, contributors may also determine the ETH payment based on the weekly average of the ETH price.
 
-DXD payment is set to the all-time high (ATH) price in US dollars on <a href="https://www.coingecko.com/en/coins/dxdao" target="_blank">coingecko</a>.
+DXD payment is set to market price, determined by taking the average DXD price over the last 1 month in US dollars calculated on <a href="https://swapr.eth.link/#/swap" target="_blank">Swapr</a>. 
 
 ### REP
 
@@ -46,7 +46,7 @@ A single contributor may receive a maximum of 4% REP for their paid contribution
 
 ## Calculating Monthly Compensation For Contributor Proposals
 
-1.  Pick your experience Level 1 through 5, based on experience guidelines (below) and in consultation with the DXdao community.
+1.  Pick your experience Level 1 through 8, based on experience guidelines (below) and in consultation with the DXdao community.
     
 2.  Select Base Salary + DXD from the DXdao Compensation Table (below).
     
@@ -58,33 +58,45 @@ A single contributor may receive a maximum of 4% REP for their paid contribution
 
 | Experience Level | Monthly Base Compensation |
 |:-----------------|:--------------------------|
-| Level 1          | $4,000                    |
-| Level 2          | $5,000                    |
-| Level 3          | $6,000                    |
-| Level 4          | $7,000                    |
-| Level 5          | $8,000                    |
+| Level 1          | $3,000                    |
+| Level 2          | $4,000                    |
+| Level 3          | $5,000                    |
+| Level 4          | $6,000                    |
+| Level 5          | $7,000                    |
+| Level 6          | $8,000                    |
+| Level 7          | $9,000                    |
+| Level 8          | $9,000                    |
 
 | Experience Level | Monthly DXD Compensation |
 |:-----------------|:--------------------------|
-| Level 1          | $2,000                    |
-| Level 2          | $3,000                    |
-| Level 3          | $4,000                    |
-| Level 4          | $5,000                    |
-| Level 5          | $6,000                    |
+| Level 1          | $1,500                    |
+| Level 2          | $2,000                    |
+| Level 3          | $3,000                    |
+| Level 4          | $4,000                    |
+| Level 5          | $5,000                    |
+| Level 6          | $6,000                    |
+| Level 7          | $7,500                    |
+| Level 8          | $9,500                    |
 
 
 ⠀
 ### Experience Guidelines:
 
-1.  I’m new! I don’t have many marketable life skills, but I’m passionate about DXdao and eager to learn.
+1.  I’m just starting out and looking to gain experience. I’m passionate about DXdao, DAOs, DeFi and decentralization and eager to contribute in any way!
     
-2.  I have some work experience, but I have not yet developed specialized skills. Perhaps I have worked in a related industry, but I might lack direct experience in Web3/DeFi/DAOs. I’m eager to get more expertise in my vertical.
+2.  I have limited skills from previous experiences that will carry over in my work for DXdao, but I do have some web development work, prior writing experience or business development.
     
-3.  I’ve been around the block and know how to work independently, but I still need help coming up with a scope of work and working with people outside of my area of focus. I’m eager to grow horizontally and vertically.
+3.  I have skills and experience in Web3/DeFi/DAOs that translate directly to DXdao. I can provide value to key initiatives for DXdao but need guidance on how to complete and check tasks.
     
-4.  I know what’s going on and some (maybe even myself) would consider me an “expert” on my specialty. I can work with different stakeholders and drive initiatives internally. I’m eager to fill gaps in my skill set.
+4.  I have a clear track record for success in my specific field. I might not have as much experience with crypto, but still have relevant prior experience. I can work independently on tasks assigned to them but still require some direction and review.
     
-5.  I have deep expertise in a particular vertical or have direct experience that is relevant to Web3/DeFi/DAOs. I’m eager to further the mission of DXdao and work with other engaging and ambitious people.
+5.  I have sought after skills in Web3/DeFi/DAOs. I understand the industry and how to operate the tools needed for their trade. I can own tasks assigned to them, carrying them independently to completion. I can begin to formulate my own ideas for product ideas or DXdao initiatives.
+
+6. I have been around the block and am interested in furthering my career with DXdao.  I can collaborate easily with other contributors and manage their own scope of work.
+
+7. I have thorough experience in my vertical as well as Web3/DeFi/DAOs. I am reliable and effective at completing tasks, and may even drive certain initiatives.
+
+8. I am considered to be among the best in their field and have extensive experience with Web3/DeFi/DAOs. 
 
 ## Example Compensation Structure
     
@@ -94,9 +106,9 @@ A single contributor may receive a maximum of 4% REP for their paid contribution
 
 ### **Monthly Salary**:
     
--   $6,000 (ETH) distributed monthly
+-   $5,000 (ETH) distributed monthly
     
--   $4,000 (DXD) vested continuously over two years with a one year cliff
+-   $3,000 (DXD) vested continuously over two years with a one year cliff
     
 -   0.1667% REP (voting power in DXdao)
     
