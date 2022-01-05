@@ -15,3 +15,5 @@ nav_order: 2
   - Our internal governance application
   - Governance 2.0 platform - UNDER CONSTRUCTION
 - Guilds
+
+![Roadmap](/assets/images/dxgov/22roadmap.png)
