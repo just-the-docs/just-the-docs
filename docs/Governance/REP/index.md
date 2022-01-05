@@ -23,7 +23,7 @@ Voting power is derived through REP, a non-transferrable asset on the Ethereum b
 
 Any community member that contributes to DXdao, either by participating in community discussions, making posts on DAOtalk.org, or contributing in any meaningful way may also receive REP. DXdao currently operates a <a href="https://daotalk.org/t/community-rep-boosts-jan-2021/2562" target="_blank">REP Boost Program</a> where community members that make a contribution to DXdao during a given month are nominated for a 0.1% REP boost.
 
-Community members that receive a REP boost need to submit a REP boost proposal on <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a" target="_blank">Alchemy</a>. Here is a link for [How-to Submit a REP Boost Proposal on Alchemy.](REP-Boost-Guide)
+Community members that receive a REP boost need to submit a REP boost proposal on <a href="https://dxvote.eth.link" target="_blank">DXvote</a>. Here is a link for [How-to Submit a REP Boost Proposal on Alchemy.](REP-Boost-Guide)
 
 If you believe that you should receive REP for a DXdao contribution, contact <a href="https://daotalk.org/u/powers/summary" target="_blank">Chris</a> on DAOtalk.org to be nominated. DXdao welcomes nominating new community members for REP, and we are looking for new effective ways to allocate REP, while still honoring DXdao’s merit-based governance system. If you have a suggestion on how to allocate REP, please state it in the #governance channel on the <a href="https://keybase.io/team/dx_dao" target="_blank">DXdao Keybase</a> or <a href="https://daotalk.org/c/dx-dao/15" target="_blank">DAOtalk.org</a>.
 
