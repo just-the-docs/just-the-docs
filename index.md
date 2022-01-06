@@ -14,8 +14,9 @@ A JSON-based encoding for 3D city models
 {: .fs-6 .fw-300 }
 
 [Getting started]({{ '/tutorials/getting-started/' | prepend: site.baseurl }}){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2 } 
-[Specifications (v{{ site.lastversion }}) <span class="label label-yellow">new!</span>]({{ '/specs/' | append: site.lastversion | prepend: site.baseurl }}){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 }
-<!-- [Web-viewer](https://tudelft3d.github.io/CityJSON-viewer/){: .btn .fs-5 .mb-4 .mb-md-0 } -->
+[Specs (v{{ site.lastversion }}) <span class="label label-yellow">new!</span>]({{ '/specs/' | append: site.lastversion | prepend: site.baseurl }}){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2} 
+[Web-viewer](https://ninja.cityjson.org/){: .btn .btn-outline  .fs-5 .mb-4 .mb-md-0 .mr-2}
+[Validator](https://validator.cityjson.org/){: .btn .btn-outline  .fs-5 .mb-4 .mb-md-0 .mr-2}
 <!-- [<i class="fab fa-github"></i> GitHub repository](https://github.com/tudelft3d/cityjson/){: .btn .fs-5 .mb-4 .mb-md-0 } -->
 
 ---
