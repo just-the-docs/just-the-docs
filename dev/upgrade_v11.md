@@ -82,7 +82,7 @@ This harmonises the `"CityObjectGroup"` with the other City Objects in CityJSON.
 
 Instead, an Extension needs to be used.
 
-The automatic upgrade function in cjio transform them to `"+GenericCityObject"` and uses a built-in Extension from CityJSON.
+You can just use the type `"+GenericCityObject"` we have defined with its [Extension schema hosted there](https://www.cityjson.org/extensions/download/generic.ext.json).
 
 ```json
 "extensions":
@@ -94,6 +94,10 @@ The automatic upgrade function in cjio transform them to `"+GenericCityObject"` 
     }
 },
 ```
+
+The [resulting file would look like this](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/cube.city.json).
+
+
 
 ## 8. New City Objects from CityGML v3.0 have been added
 
