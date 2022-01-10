@@ -30,3 +30,10 @@
 # - name: Energy
 #   url:  https://github.com/tudelft3d/cityjson/blob/master/schema/v09/extensions/noise.json
 #   description: "Conversion of the [CityGML Energy ADE](https://github.com/cstb/citygml-energy)"
+
+- name: Data Quality
+  url: https://github.com/TheGreatWizard/data-quality/blob/main/cityjson-spec/1.1/extension/quality.schema.json
+  description: "A collection of metrics to represent city model data quality"
+  status: 1.0
+  organisation: "Grigory Ilizirov & Sagi Daliot"
+  details: https://github.com/TheGreatWizard/data-quality/blob/main/docs/Data%20Quality%20extention%20for%20CityGML%20JSON.pdf
