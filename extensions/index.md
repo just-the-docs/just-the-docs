@@ -24,7 +24,7 @@ This [tutorials to create a noise extension]({{ '/tutorials/extension/' | prepen
 
 ## Registry of current Extensions
 
-{% assign extensions = site.data.extensions | better_sort: 'name' %}
+{% assign extensions = site.data.extensions | sort_natural: 'name' %}
 
 {% for i in extensions %}
 <p>
