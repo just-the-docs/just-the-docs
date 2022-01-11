@@ -7,7 +7,7 @@ has_children: true
 ---
 
 # I’ve heard new wallet schemes fix everything - why?
-The new wallet schemes take concepts originally from the DAOstack architecture and build on them to give us better tools for governance. Most of the logic here comes from the programming concept “Seperation of concerns”, except in relation to governance. 
+The new wallet schemes take concepts originally from the DAOstack architecture and build on them to give us better tools for governance. Most of the logic here comes from the programming concept “Separation of concerns”, except in relation to governance. 
 
 With new wallet schemes we have the ability to:
 - Abstract funds away from avatar treasury
@@ -27,4 +27,4 @@ The quick wallet scheme is just an example, there could be any number of these s
 ## Example
 We will always have a scheme capable of directly controlling the avatar that has the most control and power over the DAO. This is closest to what legacy schemes looked like and they were always slow due to needing maximal security as every proposal had the potential to access avatar funds. Now we can have even more security for schemes with access to avatar but we can deploy individual schemes designed to move fast and be used for a singular purpose. 
 
-We can deploy schemes meant for specific tasks such as one for Contributor Payments, ENS, SWPR
+We can deploy schemes meant for specific tasks such as one for Contributor Payments, ENS, SWPR, etc

@@ -6,7 +6,7 @@ nav_order: 4
 has_children: true
 ---
 
-# Competition scheme
+# Competition scheme 
 
 In guilds we have the concept of actions. A single action is a list of ethereum calls that can be executed. In a single proposal we can have a number possible actions that act as different outcomes of a proposal.
 

@@ -11,11 +11,11 @@ has_children: true
 ___
 
 <a href="https://guilds.eth.link" target="_blank">Guilds</a> are our minimal governance solution. These DAOs fit into the existing liquid token governance model popular in the space and familiar to most. Normal ethereum tokens are locked/staked in return for voting power. 
-Guilds offer far more decentralisation due to being managed on-chain but with the user experience voters have come to expect with free signed voting, automated execution of actions and more. 
+Guilds offer far more decentralization due to being managed on-chain but with the user experience voters have come to expect with free signed voting, automated execution of actions and more. 
 
-This doesn't solve any major governance issues but does push the space into a more decentralised form of governance necessary considering the amount of funds and increased importance 
+This doesn't solve any major governance issues but does push the space into a more decentralized form of governance necessary considering the amount of liquidity and increased importance of the space as a whole.
 
-Guilds also act as a way for new DAOs to begin operating in a simpler way, getting used to the community, operations, etc. This can then lead to a more advanced DAO that would utilise governance 2.0.
+Guilds also act as a way for new DAOs to begin learning how to run a real DAO, getting used to the community, operations, etc. This can then lead to a more advanced DAO that would utilise governance 2.0.
 
 The guild **executes previously authorized functions** to smart contracts after a proposal action to execute that function reaches the **minimum amount of votes** using **locked tokens as voting power** after a **period of time**.
 
