@@ -13,3 +13,7 @@ permalink: /
 
 * Start all stopped containers
 * `sudo docker start $(docker ps -a -q)`
+
+
+## MOUSE LAGGING
+* If mouse is lagging, change the wifi channel (2.4GHZ seems to be the main culprit)
