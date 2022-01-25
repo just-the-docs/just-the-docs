@@ -26,3 +26,7 @@ nav_order: 2
 * stop and remove the webserver container
 * `docker system prune` to make sure everything is gone (this removes the network, could be an issue for APIS?)
 * `docker-compose up -d --force-recreate` to get running again
+
+## RUNNING DOCKER COMPOSE (keygen and ssl files)
+
+* Use the '-f' flag for custom file names (not docker-compose.yml): `docker-compose -f docker-compose.test.yml up`
