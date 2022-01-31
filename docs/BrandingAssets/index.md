@@ -18,15 +18,16 @@ ___
 
 ## Brand Guidelines
 {: .no_toc }
-Welcome to DXdao's brand asset page. These guidelines help DXdao and its products protect their brand image through appropriate external presentation. We ask that the following material be followed by all external applications of the DXdao brand or its products. Any logos or images not found on this page should not be used.
+Welcome to DXdao's brand asset page. These guidelines help DXdao and its products protect their brand image through appropriate external presentation. We ask that the following material be followed by all applications of the DXdao brand or its products. Any logos or images not found on this page should not be used, or confirmed with a relevant contributor in the [DXdao Discord](https://discord.gg/4QXEJQkvHH).
 
 To get a better understanding of DXdao's history, intentions and principles, read the [DXdao Manifesto]({% link docs/Manifesto.md %}).
 
 ## DXdao Brand Assets
 
-|<img src="DXdaoBlue.png" width="50">|  <span style="font-weight:normal">This is the main DXdao logo and should always be used as is. When representing the collective or DXD token, such as when partnering with us, this logo should be used.</span> |
+|<img src="DXdaoBlue.png" width="50">|  <span style="font-weight:normal">This is a collection of DXdao brand assets, hosted through IPFS. When representing the collective or DXD token, such as when partnering with us, the below assets should be used. For convenience, a Google drive link containing all assets is available, but it should never be trusted above its decentralized counterparts.</span> |
 |-----------------------------------|--|
-|     [**Full Guidelines**](DXdaoBrandGuidelines.pdf)                            | Black: [svg](DXdaoBrandGuidelines.pdf) |
+|     [**Full Guidelines**](https://bafybeic6pog3yv5pxquc3t4cfqzjfv33rfs4ltltrhl2luqhc3zbxsyr6y.ipfs.dweb.link/?filename=DXdaoBrandGuidelines.pdf)                            | These "Brand Guidelines" include proper use of the DXdao logo, typeface and color schemes. We request that this is adhered to at all times. |
+|     **DXdao Logos**                            | [DXdao Blue](DXdaoBlue.png) |
 
 ## Swapr Brand Assets
 
