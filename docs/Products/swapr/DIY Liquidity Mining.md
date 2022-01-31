@@ -3,7 +3,7 @@ layout: default
 title: DIY Liquidity Mining
 parent: Swapr
 grand_parent: Products
-nav_order: 4
+nav_order: 5
 
 ---
 
