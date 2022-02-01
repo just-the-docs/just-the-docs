@@ -1,12 +1,12 @@
 ---
 layout: default
-title: xDai to Mainnet Bridge Guide
+title: Gnosis Chain to Mainnet Bridge Guide
 parent: Contributor Proposals
 grand_parent: Contributor Hub
 nav_order: 2
 ---
 
-# xDai to Mainnet Bridge Guide
+# Gnosis Chain to Mainnet Bridge Guide
 
 ___
 
@@ -17,15 +17,15 @@ ___
 -   A small amount of xDai (less than 0.2) and an additional amount of Eth to process the claim transaction on Ethereum.
     
 
-	-   xDai for this transaction can be obtained for free from a faucet [such as this one](https://xdai-app.herokuapp.com/faucet). Working faucets can be found in the #faucet-requests channel of [xDai’s Discord channel](https://discord.gg/mPJ9zkq). Gas on xDai is paid using xDai, and only 1 gwei is required for transactions to execute.
+	-   xDai for this transaction can be obtained for free from a faucet [such as this one](https://xdai-app.herokuapp.com/faucet). Working faucets can be found in the #faucet-requests channel of [Gnosis Chain’s Discord channel](https://discord.gg/mPJ9zkq). Gas on Gnosis Chain is paid using xDai, and only 1 gwei is required for transactions to execute.
     
 <img src="https://lh6.googleusercontent.com/lroz8Q5dB0C46-w7wmHVQ8voF0mRNkmOlGQUBdGTg0gcsuECjAR5SdjwdEEsMWYRGrKP6IHTUs-oIs_YlQqp2aPI_UzCqPf21PrhzPhtUdjK1XwFNCJC4vCbAkPG0l_kvHyobEMp" alt="Metamask" width="300"/> 
 
-**Step 1.** Make sure your wallet ([Metamask](https://metamask.io/), etc.) is open and connected to the xdai network. To connect to the xDai network using Metamask’s Chrome extension, click on the dropdown box and select the xDai network. If you are yet to add the xDAI network to your wallet, you can find a guide [here](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup).
+**Step 1.** Make sure your wallet ([Metamask](https://metamask.io/), etc.) is open and connected to the Gnosis Chain network. To connect to the Gnosis Chain network using Metamask’s Chrome extension, click on the dropdown box and select the Gnosis Chain network. If you are yet to add the Gnosis Chain network to your wallet, you can find a guide [here](https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup).
 
 
 
-**Step 2.** Open up the [xDaichain Token Bridge](https://bridge.xdaichain.com/).
+**Step 2.** Open up the [Gnosis Chain Token Bridge](https://bridge.xdaichain.com/).
 
   
 

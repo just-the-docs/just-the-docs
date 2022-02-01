@@ -10,19 +10,25 @@ has_children: true
 
 ___
 
-DXdao owns and operates DeFI products and protocols on Ethereum and xDai. DXdao’s current suite of products include:
-
-## Omen
-
-A fully decentralized multi-chain prediction market platform.
-
-You can visit the Omen Dapp <a href="https://omen.eth.link/#/liquidity" target="_blank">here</a> or learn more about Omen [here]({% link docs/Products/omen/index.md %}).
+DXdao owns and operates DeFI products and protocols on Ethereum, Arbitrum, and Gnosis Chain. DXdao’s current suite of products include:
 
 ## Swapr
 
 A multi-chain AMM with a suite of unique features including LP governance, DIY farming, and much more.
 
 You can visit the Swapr Dapp <a href="https://swapr.eth.link/#/swap" target="_blank">here</a> or learn more about Swapr [here]({% link docs/Products/swapr/index.md %}).
+
+## Carrot
+
+A multi-chain AMM with a suite of unique features including LP governance, DIY farming, and much more.
+
+You can visit the Carrot Dapp <a href="https://carrot.eth.link/#/swap" target="_blank">here</a> or learn more about Carrot [here]({% link docs/Products/carrot/index.md %}).
+
+## Omen
+
+A fully decentralized multi-chain prediction market platform.
+
+You can visit the Omen Dapp <a href="https://omen.eth.link/#/liquidity" target="_blank">here</a> or learn more about Omen [here]({% link docs/Products/omen/index.md %}).
 
 ## Aqua
 

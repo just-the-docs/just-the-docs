@@ -99,7 +99,7 @@ The SWPR airdrop was claimable on Arbitrum One. Users would have to switch netwo
 
 Within the SWPR token launch year, 14% of the issuance is delegated to a liquidity mining campaign. In this initial configuration, each campaign will run on two-week Epoch’s with a base issuance of 140,000 SWPR. These values are boosted up to 8x for the first 13 Epoch’s in order to kickstart liquidity and secure an initial distribution to individuals with an early commitment to Swapr.
 
-[SWPR token will have a multi-chain distribution starting on  **September 16th, 2021**  which targets the launch of the Arbitrum network.](https://medium.com/swapr/introducing-swpr-token-farming-rewards-7fbdcc9507ae)  More specifically, the initial configuration points 80% of the issuance to Arbitrum, 10% to Mainnet Ethereum, and 10% to xDai chain. Swapr Guild Governance will ultimately be able to vote on these allocations.
+[SWPR token will have a multi-chain distribution starting on  **September 16th, 2021**  which targets the launch of the Arbitrum network.](https://medium.com/swapr/introducing-swpr-token-farming-rewards-7fbdcc9507ae)  More specifically, the initial configuration points 80% of the issuance to Arbitrum, 10% to Mainnet Ethereum, and 10% to Gnosis Chain. Swapr Guild Governance will ultimately be able to vote on these allocations.
 
 ![](https://miro.medium.com/max/700/1*gnu1_rigQg90eCoGKnOi0Q.png)
 

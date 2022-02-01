@@ -1,25 +1,25 @@
 ---
 layout: default
-title: xDai Multicall Token Order
+title: Gnosis Chain Multicall Token Order
 parent: Alchemy
 grand_parent: Governance
 nav_order: 1
 ---
 
-# xDai MultiCall Token Orders
+# Gnosis Chain MultiCall Token Orders
 
 ___
 
-## Using MultiCall Scheme on xDai Chain to Initiate a Token Order on Gnosis Protocol
+## Using MultiCall Scheme on Gnosis Chain to Initiate a Token Order on Gnosis Protocol
 
   
 
-### Important Note: This is for xDXdao on xDai Chain
+### Important Note: This is for xDXdao on Gnosis Chain
 ⠀
 
 **Steps**:
 
-1) On xDai Chain, go to xDXdao’s GenericSchemeMultiCall plugin <a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/scheme/0xbcfb334e74c4c6161b4bb67b9de23b42034bfe0d0a2f0a59e95f58c923a1e90d" target="_blank">here</a>.
+1) On Gnosis Chain, go to xDXdao’s GenericSchemeMultiCall plugin <a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/scheme/0xbcfb334e74c4c6161b4bb67b9de23b42034bfe0d0a2f0a59e95f58c923a1e90d" target="_blank">here</a>.
 
 2) Click “ **+ New Proposal**” button
 
