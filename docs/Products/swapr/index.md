@@ -3,7 +3,7 @@ layout: default
 title: Swapr
 parent: Products
 has_children: true
-nav_order: 2
+nav_order: 1
 ---
 
 # Welcome to Swapr!
