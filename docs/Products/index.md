@@ -20,7 +20,7 @@ You can visit the Swapr Dapp <a href="https://swapr.eth.link/#/swap" target="_bl
 
 ## Carrot
 
-A multi-chain AMM with a suite of unique features including LP governance, DIY farming, and much more.
+A community-driven programmable incentives platform designed to distribute rewards when set criteia have been met.
 
 You can visit the Carrot Dapp <a href="https://carrot.eth.link/#/swap" target="_blank">here</a> or learn more about Carrot [here]({% link docs/Products/carrot/index.md %}).
 

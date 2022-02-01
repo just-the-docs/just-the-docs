@@ -1,14 +1,15 @@
 ---
 layout: default
-title: Codebase
-nav_order: 10
+title: Contract Addresses
+parent: Technical Documentation
+nav_order: 2
 ---
 
-# Codebase
+# Contract Addresses
 
 ___
 
-This page contains Github and IPFS links to DXdao project repositories and source code. If you see an outdated link or missing repository, please reach out on the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>.
+This page contains all DXdao contract addresses on Ethereum, Arbitrum, and Gnosis Chain. If you see a contract address you suspect is outdated or missing, please reach out on the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>.
 
 ## DXdao Official Projects
 
