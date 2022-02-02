@@ -11,21 +11,49 @@ ___
 
 This page contains Github and IPFS links to DXdao project repositories and source code. If you see an outdated link or missing repository, please reach out on the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>.
 
-## DXdao Official Projects
+## DXdao
 
 | Project Name | Repository/Source Code (IPFS) | Version | Related Links |
 |--------------|:-------------------------------:|---------|---------------|
 |openraise-dapp     | <a href="https://github.com/levelkdev/openraise-dapp" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> ⠀<a href="https://gateway.ipfs.io/ipfs/QmUJKG2kjQYrsGmkyCR2NVcoif8nXRa8uCARoZWuoZuNxV" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a> |0.2.3| <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xc10a5bbf78e0013dae5d62b4b6dbb174be8cfc6c3e7c3a48869565349162a276" target="_blank">Proposal #1</a>, <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0xf3ace9e04caccd90316c344ba3bd32408498f1851a3db08bfbcf7b88181d6c47" target="_blank">Proposal #2</a>|
-|dxdao-landing-page |<a href="https://github.com/pimato/dxdao-landing-page" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a>|0.2.3|   |
+|dxdao-landing-page |<a href="https://github.com/KeenanLukeOM/DXdaoLandingPage" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a>|0.2.3|   |
 |dxdao-snapshot     | <a href="https://github.com/AugustoL/dxdao-snapshot" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a>⠀ <a href="https://gateway.pinata.cloud/ipfs/QmU9tEdECx9H4S7YcM7AUKGseRP7WSNeW56d1NcwC7jYMP/src/dxdao-snapshot-0.1.0" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a> | 0.1.0 | <a href="https://daotalk.org/t/dxdao-snapshot-a-tool-for-monitoring/1429" target="_blank">DAOtalk Topic</a>    |
+|mesa-dapp          | <a href="https://github.com/dOrgTech/dex-react" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> ⠀<a href="https://gateway.ipfs.io/ipfs/QmWP3AHj4d9zWfbKxhHgF5tWKTQrgg8WQC24F8ew6cFiHV" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a> | 1.5.2 | <a href="https://mesa.eth.link/" target="_blank">Mesa Dapp</a> |
+|rails              | <a href="https://github.com/luzzif/rails" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> ⠀<a href="https://gateway.ipfs.io/ipfs/QmSzjFGSGmbm7anc6pJV5kCWESQcCAGBw6byTvcrW8UDdN" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a> |1.1.0|<a href="https://rails.eth.link/" target="_blank">Rails Dapp</a>|
+
+## Swapr
+
+| Project Name | Repository/Source Code (IPFS) | Version | Related Links |
+|--------------|:-------------------------------:|---------|---------------|
 |dxswap-core        |<a href="https://github.com/levelkdev/dxswap-core" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | 0.3.1  | <a href="https://daotalk.org/t/uniswap-v2-s-path-to-sustainability-and-the-dxdao-forking-uniswap-v2/1317" target="_blank">DAOtalk Topic</a>|
 |dxswap-periphery   | <a href="https://github.com/levelkdev/dxswap-periphery" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | 0.3.1 |   |
 |dxswap-dapp        | <a href="https://github.com/levelkdev/dxswap-dapp" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a>⠀ <a href="https://gateway.ipfs.io/ipfs/QmZVVyQuX3QW6u9iQew66FeDEfchpEURaSPE5RJ6B5aS96/#/swap" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a> | 1.1.0 Alpha 1 | <a href="https://swapr.eth.link/" target="_blank">Swapr Dapp</a> |
-|mesa-dapp          | <a href="https://github.com/dOrgTech/dex-react" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> ⠀<a href="https://gateway.ipfs.io/ipfs/QmWP3AHj4d9zWfbKxhHgF5tWKTQrgg8WQC24F8ew6cFiHV" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a> | 1.5.2 | <a href="https://mesa.eth.link/" target="_blank">Mesa Dapp</a> |
-|omen-dapp          | <a href="https://github.com/protofire/gnosis-conditional-exchange" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> ⠀<a href="https://gateway.ipfs.io/ipfs/QmUqN9F8gbmgS933U2ubvrqWGCibNuVdG6FjQny8ywKJVp" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a>  | 1.2.0 | <a href="https://omen.eth.link/" target="_blank">Omen Dapp</a>|
-|rails              | <a href="https://github.com/luzzif/rails" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> ⠀<a href="https://gateway.ipfs.io/ipfs/QmSzjFGSGmbm7anc6pJV5kCWESQcCAGBw6byTvcrW8UDdN" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a> |1.1.0|<a href="https://rails.eth.link/" target="_blank">Rails Dapp</a>|
 
-## DXdao Community Projects
+## Carrot
+
+| Project Name | Repository/Source Code (IPFS) | Version | Related Links |
+|--------------|:-------------------------------:|---------|---------------|
+|          | |  | |
+
+## Omen
+
+| Project Name | Repository/Source Code (IPFS) | Version | Related Links |
+|--------------|:-------------------------------:|---------|---------------|
+|omen-dapp          | <a href="https://github.com/protofire/gnosis-conditional-exchange" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> ⠀<a href="https://gateway.ipfs.io/ipfs/QmUqN9F8gbmgS933U2ubvrqWGCibNuVdG6FjQny8ywKJVp" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a>  | 1.2.0 | <a href="https://omen.eth.link/" target="_blank">Omen Dapp</a>|
+
+## Aqua
+
+| Project Name | Repository/Source Code (IPFS) | Version | Related Links |
+|--------------|:-------------------------------:|---------|---------------|
+|          | |  | |
+
+## DXgov
+
+| Project Name | Repository/Source Code (IPFS) | Version | Related Links |
+|--------------|:-------------------------------:|---------|---------------|
+|          | |  | |
+
+## Community Projects/Miscellaneous
 
 | Project Name | Repository/Source Code (IPFS) | Version | Related Links |
 |--------------|:-------------------------------:|---------|---------------|
