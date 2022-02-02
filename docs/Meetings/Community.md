@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Community
-parent: Meetings
+parent: Weekly Meetings
 nav_order: 4
 ---
 
