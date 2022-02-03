@@ -15,16 +15,16 @@ This page contains all DXdao audits for its various products. If you think an au
 
 | Subgraph Name | Subgraph Link | Github | Deployed Chain |
 |--------------|:-------------------------------:|:-------:|---------------|
-
+||||
 
 ## Carrot
 
 | Subgraph Name | Subgraph Link | Github | Deployed Chain |
 |--------------|:-------------------------------:|:-------:|---------------|
-
+||||
 
 ## Aqua
 
 | Subgraph Name | Subgraph Link | Github | Deployed Chain |
 |--------------|:-------------------------------:|:-------:|---------------|
-
+||||
