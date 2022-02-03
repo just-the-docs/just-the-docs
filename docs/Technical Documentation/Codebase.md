@@ -26,14 +26,17 @@ This page contains Github and IPFS links to DXdao project repositories and sourc
 | Project Name | Repository/Source Code (IPFS) | Version | Related Links |
 |--------------|:-------------------------------:|---------|---------------|
 |dxswap-core        |<a href="https://github.com/levelkdev/dxswap-core" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | 0.3.1  | <a href="https://daotalk.org/t/uniswap-v2-s-path-to-sustainability-and-the-dxdao-forking-uniswap-v2/1317" target="_blank">DAOtalk Topic</a>|
-|dxswap-periphery   | <a href="https://github.com/levelkdev/dxswap-periphery" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | 0.3.1 |   |
-|dxswap-dapp        | <a href="https://github.com/levelkdev/dxswap-dapp" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a>⠀ <a href="https://gateway.ipfs.io/ipfs/QmZVVyQuX3QW6u9iQew66FeDEfchpEURaSPE5RJ6B5aS96/#/swap" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a> | 1.1.0 Alpha 1 | <a href="https://swapr.eth.link/" target="_blank">Swapr Dapp</a> |
+|dxswap-periphery   | <a href="https://github.com/levelkdev/dxswap-periphery" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | 0.3.2 |   |
+|dxswap-dapp        | <a href="https://github.com/levelkdev/dxswap-dapp" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a>⠀ <a href="https://gateway.ipfs.io/ipfs/QmZVVyQuX3QW6u9iQew66FeDEfchpEURaSPE5RJ6B5aS96/#/swap" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a> | 1.0.0 Beta 10 | <a href="https://swapr.eth.link/" target="_blank">Swapr Dapp</a> |
+|dxswap-sdk        | <a href="https://github.com/levelkdev/dxswap-sdk" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | 0.11.0 |  |
 
 ## Carrot
 
 | Project Name | Repository/Source Code (IPFS) | Version | Related Links |
 |--------------|:-------------------------------:|---------|---------------|
-|          | |  | |
+|frontend        | <a href="https://github.com/carrot-kpi/frontend" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | 1.0.0 Alpha 4 | <a href="https://carrot.eth.link/" target="_blank">Carrot Dapp</a> |
+|contracts        | <a href="https://github.com/carrot-kpi/contracts" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | 1.0.0 Alpha 4 |  |
+|sdk        | <a href="https://github.com/carrot-kpi/sdk" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | 1.0.0 Alpha 3 |  |
 
 ## Omen
 
@@ -45,13 +48,13 @@ This page contains Github and IPFS links to DXdao project repositories and sourc
 
 | Project Name | Repository/Source Code (IPFS) | Version | Related Links |
 |--------------|:-------------------------------:|---------|---------------|
-|          | |  | |
+|aqua-interface     | <a href="https://github.com/cryptonative-ch/aqua-interface" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> |0.1.1| |
 
 ## DXgov
 
 | Project Name | Repository/Source Code (IPFS) | Version | Related Links |
 |--------------|:-------------------------------:|---------|---------------|
-|          | |  | |
+|dxvote     | <a href="https://github.com/DXgovernance/dxvote" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> |1.0.9| <a href="https://dxvote.eth.link/" target="_blank">dApp</a>|
 
 ## Community Projects/Miscellaneous
 
@@ -59,3 +62,4 @@ This page contains Github and IPFS links to DXdao project repositories and sourc
 |--------------|:-------------------------------:|---------|---------------|
 |voting-dapp-daostack     | <a href="https://github.com/AugustoL/voting-dapp-daostack/tree/2d0c7e23f893fe733592c1401a801ec8007f3567" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> ⠀<a href="https://gateway.pinata.cloud/ipfs/QmU9tEdECx9H4S7YcM7AUKGseRP7WSNeW56d1NcwC7jYMP/src/voting-dapp-daostack-2d0c7e23f893fe733592c1401a801ec8007f3567" target="_blank"> <img src="https://lh3.googleusercontent.com/x8txwKpkkCf-0afIbQD1lnRX-8Jxk1wrqIN2ECsDwBIl2tCJR1EAc9x4owhfKaO8QWoJz-nqIIWkFttyDUbbBr8KD0ko1TXojj-0qe6UzsRtW7dYpB66-OpsK2X_IjcCUgt34YVC"/> </a> |0.2.3| <a href="https://daotalk.org/t/presenting-voting-dapp-4-daostack-daos/1345" target="_blank">DAOtalk Topic</a>, <a href="http://vote.dxtest.eth.link/" target="_blank">Test Link</a>|
 |arc-react |<a href="https://github.com/dOrgTech/arc.react" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a>|0.2.3|   |
+|dungeons-daos-dragons |<a href="https://github.com/DXgovernance/dungeons-daos-dragons" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a>|0.0.1|  <a href="https://devpost.com/software/dungeons-daos-and-dragons-8l39dc" target="_blank">Devpost</a> |
