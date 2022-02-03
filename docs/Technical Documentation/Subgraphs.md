@@ -34,3 +34,10 @@ This page contains all DXdao subgraphs on Ethereum, Arbitrum, and Gnosis Chain. 
 | Subgraph Name | Subgraph Link | Github | Deployed Chain |
 |--------------|:-------------------------------:|:-------:|---------------|
 | Aqua xDAI | <a href="https://thegraph.com/hosted-service/subgraph/dxgraphs/aqua-xdai" target="_blank"> <img src="https://lh6.googleusercontent.com/xkpAPr_7r6Nb2GzJRdT-w5RbILD46WJ2twny-jhhr4ZFRt3Bd_uIqVtfgeU0LOnPsq_TxNL9TujolOCfjm_hQEAV7hGwarhTNeLI8mmRqH-XGNcSL2wCYDmsDGa__aoFbAuQ7hdu"/> </a> | <a href="https://github.com/dxgraphs/aqua-subgraph" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | Gnosis Chain |
+
+## DXgov
+
+| Subgraph Name | Subgraph Link | Github | Deployed Chain |
+|--------------|:-------------------------------:|:-------:|---------------|
+| DAOstack v41_11 | <a href="https://thegraph.com/hosted-service/subgraph/daostack/v41_11" target="_blank"> <img src="https://lh6.googleusercontent.com/xkpAPr_7r6Nb2GzJRdT-w5RbILD46WJ2twny-jhhr4ZFRt3Bd_uIqVtfgeU0LOnPsq_TxNL9TujolOCfjm_hQEAV7hGwarhTNeLI8mmRqH-XGNcSL2wCYDmsDGa__aoFbAuQ7hdu"/> </a> | <a href="https://github.com/daostack/subgraph" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | Mainnet Ethereum |
+| DAOstack v41_11_xdai | <a href="https://thegraph.com/hosted-service/subgraph/daostack/v41_11_xdai" target="_blank"> <img src="https://lh6.googleusercontent.com/xkpAPr_7r6Nb2GzJRdT-w5RbILD46WJ2twny-jhhr4ZFRt3Bd_uIqVtfgeU0LOnPsq_TxNL9TujolOCfjm_hQEAV7hGwarhTNeLI8mmRqH-XGNcSL2wCYDmsDGa__aoFbAuQ7hdu"/> </a> | <a href="https://github.com/daostack/subgraph" target="_blank"> <img src="https://lh4.googleusercontent.com/LLYSBp37wqUiXbYff3hR--498sN2duVVpnCtYY6IFS7wn0lQAT0g0q5BqsuaxQkwzPzMUUUan3g60-QQjYBDooxxe6Izivfgz52PjW52h-VIWUcCmUcTefdFUCf0VL_Ma73rMxwH"/> </a> | Gnosis Chain |
