@@ -46,4 +46,4 @@ With new wallet schemes we have the ability to:
 - More permissions
 - We can dial in exactly what permissions to send and interact with contracts we want specific schemes to have
 
-You can also refer to the [**wallet schemes page**]({% link docs/products/dxgov/DXvote/wallet-schemes.md %}) for more detailed on this new addition to the architecture.
+You can also refer to the [**wallet schemes page**]({% link docs/Products/dxgov/DXvote/wallet-schemes.md %}) for more detailed on this new addition to the architecture.
