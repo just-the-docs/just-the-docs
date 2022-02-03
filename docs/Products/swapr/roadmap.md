@@ -3,7 +3,7 @@ layout: default
 title: Roadmap
 parent: Swapr
 grand_parent: Products
-nav_order: 3
+nav_order: 2
 
 ---
 
@@ -11,6 +11,6 @@ nav_order: 3
 
 ___
 
-The most recent Swapr roadmap can be found below. In the case where it has become outdated, check in with the Swapr channels on the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>.
+![](https://media.discordapp.net/attachments/914408536677691470/938203844662394960/Roadmap_2022_Q1-Q2.png)
 
-[![](https://media.discordapp.net/attachments/819277847058448395/819980042263330876/swapr-roadmap-q1.png)](https://discord.gg/4QXEJQkvHH)
+The most recent Swapr roadmap can be found above, posted on 02/01/2022. In the case where it has become outdated, check in with the Swapr channels on the <a href="https://discord.gg/4QXEJQkvHH" target="_blank">DXdao Discord</a>.

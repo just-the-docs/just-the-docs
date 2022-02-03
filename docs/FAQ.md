@@ -39,7 +39,7 @@ DXdao currently has two main paths of earning revenue, the first is directly fro
 
 ## How does the DXdao come to own and operate these protocols, products, or services?
 
-DXdao has both built and been gifted products. DXdao has products running on permissionless protocols deployed onto Ethereum and xDai, and is targeting additional chains in the future.
+DXdao has both built and been gifted products. DXdao has products running on permissionless protocols deployed onto Ethereum, Arbitrum, and Gnosis Chain, and is targeting additional chains in the future.
 
 ## How did the Bonding curve work?
 

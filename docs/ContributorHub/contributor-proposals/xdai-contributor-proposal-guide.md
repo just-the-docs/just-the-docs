@@ -1,16 +1,16 @@
 ---
 layout: default
-title: xDai Contributor Proposal Guide
+title: Gnosis Chain Contributor Proposal Guide
 parent: Contributor Proposals
 grand_parent: Contributor Hub
 nav_order: 1
 ---
 
-#  xDai Contributor Proposal Guide
+#  Gnosis Chain Contributor Proposal Guide
 
 ___
 
-**Note**: Because of its cheap gas prices, xDai is now recommended for all contributor proposals. Contributors are welcome to create proposals on mainnet if the costs are reasonable to them. You can find that guide [here]({% link docs/ContributorHub/contributor-proposals/mainnet-contributor-proposal-guide.md %}).
+**Note**: Because of its cheap gas prices, Gnosis Chain is now recommended for all contributor proposals. Contributors are welcome to create proposals on mainnet if the costs are reasonable to them. You can find that guide [here]({% link docs/ContributorHub/contributor-proposals/mainnet-contributor-proposal-guide.md %}).
 
 ## Intro:
 
@@ -20,11 +20,11 @@ ___
     
 -   For details on what should be in the contributor proposal, visit the [Contributor Proposals]({% link docs/ContributorHub/contributor-proposals/index.md %}) section.
     
--   After the <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0x2a4f24200eb1ef626e9aea29bad2494689f979c00c6fff17b5b0cd38712be426" target="_blank">xDai authorization proposal</a> , contributors can now submit proposals on xDXdao base on xDai and save gas.
+-   After the <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a/proposal/0x2a4f24200eb1ef626e9aea29bad2494689f979c00c6fff17b5b0cd38712be426" target="_blank">Gnosis Chain authorization proposal</a> , contributors can now submit proposals on xDXdao base on Gnosis Chain and save gas.
     
 ## When to Submit Your Contributor Proposal:
 
--   How long a boosted contributor proposal would take depends on funding and voting power scheme. For mainnet DXdao that’s 7 days to pass after boosting, and for xDXdao on xDai that’s 4 days. Boosted proposals can pass with a relative majority.
+-   How long a boosted contributor proposal would take depends on funding and voting power scheme. For mainnet DXdao that’s 7 days to pass after boosting, and for xDXdao on Gnosis Chain that’s 4 days. Boosted proposals can pass with a relative majority.
     
 -   If a proposal is not boosted, the voting period will last 21 days. Unboosted proposals must pass with an absolute majority.
     
@@ -44,12 +44,12 @@ ___
 3. If you want to boost your own proposal, get some GEN, the Daostack token. This is not necessary, but DXdao contributors can boost proposals by staking GEN to speed up the execution process. 
 4. A wallet address where you’ll receive your REP: non-transferable voting rights used for voting on proposals. This can be the same as your payment address, but as REP cannot be transferred, pick an address that you will always have access to.
     
-**Recommended**: Use a <a href="https://metamask.io/" target="_blank">Metamask</a> wallet that has the same address on xDai and Ethereum. <a href="https://metamask.zendesk.com/hc/en-us/articles/360052711572-How-to-connect-to-the-xDai-network" target="_blank">Here</a> you’ll find guidance on how to add xDai to your wallet’s network list.
+**Recommended**: Use a <a href="https://metamask.io/" target="_blank">Metamask</a> wallet that has the same address on Gnosis Chain and Ethereum. <a href="https://www.xdaichain.com/for-users/wallets/metamask/metamask-setup" target="_blank">Here</a> you’ll find guidance on how to add Gnosis Chain to your wallet’s network list.
     
 
   
 
-**Step 1**: Go to <a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f" target="_blank">Alchemy, DXdao’s voting interface</a>, and click ‘<a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/schemes" target="_blank">Plugins</a>’. Now is the best time to connect your wallet and switch to **xDai network**.
+**Step 1**: Go to <a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f" target="_blank">Alchemy, DXdao’s voting interface</a>, and click ‘<a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f/schemes" target="_blank">Plugins</a>’. Now is the best time to connect your wallet and switch to **Gnosis Chain network**.
 
   
   
@@ -90,7 +90,7 @@ ___
 
   
 
-### xDai Proposal information:
+### Gnosis Chain Proposal information:
 
 -   **Title**: [NAME] Contributor Proposal [DATE - DATE]
     

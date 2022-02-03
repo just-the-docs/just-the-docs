@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Community
-parent: Meetings
+parent: Weekly Meetings
 nav_order: 4
 ---
 
@@ -10,9 +10,7 @@ nav_order: 4
 
 ---
 
-DXdao Community calls alternate bi-weekly between Community Recap, and Community Discussion.
-
-Community Recap calls cover a synopsis of the preceding 2 weeks, OK-R updates, Roadmap changes, and other associated topics. 
+Community Recap calls cover a synopsis of the preceding weeks, interesting ecosystem discussions, Roadmap and product changes, and other associated topics. 
 
 Community Discussion calls predominantly aim to provide an avenue for DXdao community members to voice their opinions and share open discussion with DXdao contributors. 
 

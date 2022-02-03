@@ -12,9 +12,9 @@ ___
 
 ## How to vote on Alchemy using REP
 
-*Note: This guide follows Alchemy on xDaichain. The steps are similar for Ethereum mainnet with a few denoted differences.*
+*Note: This guide follows Alchemy on Gnosis Chain. The steps are similar for Ethereum mainnet with a few denoted differences.*
     
-**Step 1:**  Go to <a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f" target="_blank">Alchemy on xDaichain</a>. If you are looking for mainnet, visit <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a" target="_blank">Alchemy on Ethereum</a>. Ensure your wallet is connected to the correct network.
+**Step 1:**  Go to <a href="https://alchemy.daostack.io/dao/0xe716ec63c5673b3a4732d22909b38d779fa47c3f" target="_blank">Alchemy on Gnosis Chain</a>. If you are looking for mainnet, visit <a href="https://alchemy.daostack.io/dao/0x519b70055af55a007110b4ff99b0ea33071c720a" target="_blank">Alchemy on Ethereum</a>. Ensure your wallet is connected to the correct network.
     
 **Step 2:** Scrolling through the list of posts, you’ll see a variety of proposals needing to be passed through DXdao's governance. Next to each proposal on the right hand side you’ll see “Executed”, “Passing”, “Failing”, among a few other options. This will let you know whether the proposal is passing or failing, or if voting has already concluded.
 
@@ -38,7 +38,7 @@ ___
 ![](https://lh4.googleusercontent.com/TatY0XkdsOvt9AsoYZbKa7-0MO_Q-yK9QJP0dlR2KcSL2JtP1Q0EECW2A6ouipZYwkWx5hregD0qxlbYvoPXq5-QGRIjZzugH0K9lidzbkhVwgrw6mEX8AL38fx-q8E-qcQrXiVV)
     
 
-**Step 5:** Another pop-up will then appear in the top right hand of your screen (i.e. MetaMask). This again confirms you wish to use your REP to vote for a proposal to pass. Click “Confirm” and your vote will be processed and accepted. If you are on xDaichain, input 1 GWEI to the "Gas Price" since transactions on this chain will always go through at this price.
+**Step 5:** Another pop-up will then appear in the top right hand of your screen (i.e. MetaMask). This again confirms you wish to use your REP to vote for a proposal to pass. Click “Confirm” and your vote will be processed and accepted. If you are on Gnosis Chain, input 1 GWEI to the "Gas Price" since transactions on this chain will always go through at this price.
     
 
 *Example:* 
