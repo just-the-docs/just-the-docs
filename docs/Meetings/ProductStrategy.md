@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Product Strategy
-parent: Meetings
+parent: Weekly Meetings
 nav_order: 5
 ---
 

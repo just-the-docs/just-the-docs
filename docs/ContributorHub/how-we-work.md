@@ -50,13 +50,17 @@ Each squad has a squad leader that is the point of contact for inter-squad coord
     
 -   <a href="https://daotalk.org/u/powers/summary" target="_blank">Chris</a> -- Governance
     
--   <a href="https://daotalk.org/u/keenanl/summary" target="_blank">Keenan</a> -- Marketing / Communications / Community
+-   <a href="https://daotalk.org/u/keenanl/summary" target="_blank">Keenan</a> -- DXvoice
+
+-   <a href="https://daotalk.org/u/melanie/summary" target="_blank">Melanie</a> -- Contributor Experience
     
--   <a href="https://daotalk.org/u/martinkrung/summary" target="_blank">Martin</a> -- Mesa
+-   <a href="https://daotalk.org/u/ross/summary" target="_blank">Ross</a> -- Aqua
     
 -   <a href="https://daotalk.org/u/corkus/summary" target="_blank">Geronimo</a> -- Omen
     
 -   <a href="https://daotalk.org/u/zett/summary" target="_blank">Zett</a> -- Swapr
+
+-   <a href="https://daotalk.org/u/luzzifoss/summary" target="_blank">Luzzifoss</a> -- Carrot
     
 
 ## Business Hours

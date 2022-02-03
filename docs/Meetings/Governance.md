@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Governance
-parent: Meetings
+parent: Weekly Meetings
 nav_order: 3
 ---
 

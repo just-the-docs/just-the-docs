@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Development
-parent: Meetings
+parent: Weekly Meetings
 nav_order: 2
 ---
 

@@ -29,9 +29,11 @@ Read more in the [**DXD**]({% link docs/DXD.md %}) section.
   
 The suite of DeFi products built and governed by DXdao currently includes:
 
-[**Omen**]({% link docs/Products/omen/index.md %}) – A fully decentralized multi-chain prediction market platform.
-
 [**Swapr**]({% link docs/Products/swapr/index.md %}) – A multi-chain AMM with a suite of unique features including LP governance, DIY farming, and much more.
+
+[**Carrot**]({% link docs/Products/carrot/index.md %}) – A community-driven programmable incentives platform to distribute rewards alongside set criteria.
+
+[**Omen**]({% link docs/Products/omen/index.md %}) – A fully decentralized multi-chain prediction market platform.
 
 [**Aqua**]({% link docs/Products/aqua/index.md %}) – A fair auction IDO launchpad.
 

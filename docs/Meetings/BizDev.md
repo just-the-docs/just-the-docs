@@ -1,7 +1,7 @@
 ---
 layout: default
 title: BizDev
-parent: Meetings
+parent: Weekly Meetings
 nav_order: 1
 ---
 

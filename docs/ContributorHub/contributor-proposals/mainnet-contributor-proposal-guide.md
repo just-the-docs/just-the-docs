@@ -10,7 +10,7 @@ nav_exclude: true
 
 ___
 
-**Warning**: DXdao contributors currently recommend posting contributor proposals on its xDai base for its massively reduced gas costs. You can find that guide [here]({% link docs/ContributorHub/contributor-proposals/xdai-contributor-proposal-guide.md %}).
+**Warning**: DXdao contributors currently recommend posting contributor proposals on its Gnosis Chain base for its massively reduced gas costs. You can find that guide [here]({% link docs/ContributorHub/contributor-proposals/xdai-contributor-proposal-guide.md %}).
 
 ## Intro:
 
