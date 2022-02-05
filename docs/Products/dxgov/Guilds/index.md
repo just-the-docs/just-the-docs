@@ -1,8 +1,9 @@
 ---
 layout: default
 title: Guilds
-parent: Guilds
-nav_order: 4
+parent: DXgov
+grand_parent: Products
+nav_order: 2
 has_children: true
 ---
 

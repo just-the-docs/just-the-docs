@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Guilds vs DAO vs Governance 2.0
+title: Setting Pinata
 parent: DXvote
-grand_parent: Products
-nav_order: 4
+grand_parent: Governance
+nav_order: 3
 
 ---
 

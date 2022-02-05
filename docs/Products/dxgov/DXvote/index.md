@@ -2,7 +2,8 @@
 layout: default
 title: DXvote
 parent: DXgov
-nav_order: 4
+grand_parent: Products
+nav_order: 1
 has_children: true
 ---
 

@@ -2,7 +2,7 @@
 layout: default
 title: DAOtalk
 parent: Governance
-nav_order: 2
+nav_order: 3
 ---
 
 # DAOtalk

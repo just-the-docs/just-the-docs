@@ -1,9 +1,9 @@
 ---
 layout: default
 title: Guilds vs DAO vs Governance 2.0
-parent: DXgov
-grand_parent: Products
-nav_order: 2
+parent: Guilds
+grand_parent: DXgov
+nav_order: 3
 
 ---
 

@@ -2,7 +2,7 @@
 layout: default
 title: DXvote
 parent: Governance
-nav_order: 4
+nav_order: 2
 has_children: true
 ---
 
