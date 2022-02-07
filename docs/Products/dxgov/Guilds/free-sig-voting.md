@@ -2,8 +2,7 @@
 layout: default
 title: Free Signature Voting
 parent: Guilds
-nav_order: 4
-has_children: true
+nav_exclude: true
 ---
 
 # Signature voting

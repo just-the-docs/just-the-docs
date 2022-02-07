@@ -2,8 +2,7 @@
 layout: default
 title: Competition Scheme
 parent: Guilds
-nav_order: 4
-has_children: true
+nav_exclude: true
 ---
 
 # Competition scheme 

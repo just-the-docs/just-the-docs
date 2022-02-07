@@ -2,8 +2,8 @@
 layout: default
 title: DXgov
 parent: Products
-has_children: true
 nav_order: 3
+has_children: true
 ---
 
 # Hitchhiker's guide to DXgov!

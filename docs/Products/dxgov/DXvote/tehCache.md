@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Guilds vs DAO vs Governance 2.0
+title: Teh Cache
 parent: DXvote
-grand_parent: Products
-nav_order: 2
+nav_exclude: true
 
 ---
 

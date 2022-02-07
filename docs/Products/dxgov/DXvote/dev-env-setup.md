@@ -1,9 +1,8 @@
 ---
 layout: default
-title: Dev environment setup
+title: Dev Environment Setup
 parent: DXvote
-nav_order: 4
-has_children: true
+nav_exclude: true
 ---
 
 ## Setup

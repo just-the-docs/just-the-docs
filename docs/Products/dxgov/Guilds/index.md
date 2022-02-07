@@ -11,6 +11,15 @@ has_children: true
 
 ___
 
+## Table of contents
+{: .text-delta }
+
+1. <a href="{% link docs/Products/dxgov/Guilds/GuildsvsDAOvsGovernance2.0.md %}" target="_blank">Guilds vs DAO vs Governance 2.0?</a>
+2. <a href="{% link docs/Products/dxgov/Guilds/competition-scheme.md %}" target="_blank">	Competition Scheme</a>
+3. <a href="{% link docs/Products/dxgov/Guilds/free-sig-voting.md %}" target="_blank">Free Signature Voting</a>
+
+___
+
 <a href="https://guilds.eth.link" target="_blank">Guilds</a> are our minimal governance solution. These DAOs fit into the existing liquid token governance model popular in the space and familiar to most. Normal ethereum tokens are locked/staked in return for voting power. 
 Guilds offer far more decentralization due to being managed on-chain but with the user experience voters have come to expect with free signed voting, automated execution of actions and more. 
 

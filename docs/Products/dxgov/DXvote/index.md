@@ -11,6 +11,19 @@ has_children: true
 
 ___
 
+## Table of contents
+{: .text-delta }
+
+1. <a href="{% link docs/Products/dxgov/DXvote/holo.md %}" target="_blank">Holographic Consensus</a>
+2. <a href="{% link docs/Products/dxgov/DXvote/gov2.md %}" target="_blank">Governance 2.0</a>
+3. <a href="{% link docs/Products/dxgov/DXvote/tehCache.md %}" target="_blank">Teh Cache</a>
+4. <a href="{% link docs/Products/dxgov/DXvote/wallet-schemes.md %}" target="_blank">New Wallet Schemes</a>
+5. <a href="{% link docs/Products/dxgov/DXvote/hashing.md %}" target="_blank">Hashing</a>
+6. <a href="{% link docs/Products/dxgov/DXvote/dev-env-setup.md %}" target="_blank">Dev Environment Setup</a>
+7. <a href="{% link docs/Products/dxgov/DXvote/contracts.md %}" target="_blank">Contracts</a>
+
+___
+
 <a href="https://dxvote.eth.link" target="_blank">DXvote</a>, our governance application, is responsible for interfacing with the smart contracts that keep our DAO and treasury safe and well governed. 
 DXvote is all about maximal decentralization and replaces the legacy alchemy interface in favour of our own. 
 

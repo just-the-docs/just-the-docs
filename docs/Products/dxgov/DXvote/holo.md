@@ -2,8 +2,7 @@
 layout: default
 title: Holographic Consensus
 parent: DXvote
-grandparent: DXgov
-nav_order: 4
+nav_exclude: true
 ---
 
 # Holographic consensus - SciFi in governance

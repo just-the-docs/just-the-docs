@@ -2,8 +2,7 @@
 layout: default
 title: New Wallet Schemes
 parent: DXvote
-nav_order: 4
-has_children: true
+nav_exclude: true
 ---
 
 # I’ve heard new wallet schemes fix everything - why?

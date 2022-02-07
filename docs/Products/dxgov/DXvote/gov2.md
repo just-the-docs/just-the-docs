@@ -2,8 +2,7 @@
 layout: default
 title: Governance 2.0
 parent: DXvote
-nav_order: 4
-has_children: true
+nav_exclude: true
 ---
 
 # Governance 2.0 - The big one

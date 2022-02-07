@@ -2,8 +2,7 @@
 layout: default
 title: Contracts
 parent: DXvote
-grand_parent: Products
-nav_order: 2
+nav_exclude: true
 
 ---
 
