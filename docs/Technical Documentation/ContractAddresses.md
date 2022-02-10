@@ -17,21 +17,22 @@ This page contains all DXdao contract addresses on Ethereum, Arbitrum, and Gnosi
 
 | Contract Name | Address | Explorer | Interface |
 |--------------|:-------------------------------:|---------|---------------|
-|DXdao Ethereum Base |0x519b70055af55a007110b4ff99b0ea33071c720a | [Etherscan](https://etherscan.io/address/0x519b70055af55a007110b4ff99b0ea33071c720a)| [DXvote Governance](https://dxvote.eth.link/#/mainnet/info?view=governance) |
+|DXdao Ethereum Avatar |0x519b70055af55a007110b4ff99b0ea33071c720a | [Etherscan](https://etherscan.io/address/0x519b70055af55a007110b4ff99b0ea33071c720a)| [DXvote Governance](https://dxvote.eth.link/#/mainnet/info?view=governance) |
 |DXD Token/Bonding Curve |0xa1d65E8fB6e87b60FECCBc582F7f97804B725521 | [Etherscan](https://etherscan.io/address/0xa1d65E8fB6e87b60FECCBc582F7f97804B725521)| [DXtrust](https://dxtrust.eth.link/) |
-
 
 ### Arbitrum
 
 | Contract Name | Address | Explorer | Interface |
 |--------------|:-------------------------------:|---------|---------------|
-|DXdao Arbitrum Base |0x2b240b523f69b9af3adb1c5924f6db849683a394 | [Arbiscan](https://arbiscan.io/address/0x2b240b523f69b9af3adb1c5924f6db849683a394#code)| [DXvote](https://dxvote.eth.link/#/arbitrum/info?view=governance) |
+|DXD Token |0xc3ae0333f0f34aa734d5493276223d95b8f9cb37 | [Arbiscan](https://arbiscan.io/address/0xc3ae0333f0f34aa734d5493276223d95b8f9cb37#code)| |
+|DXdao Arbitrum Avatar |0x2b240b523f69b9af3adb1c5924f6db849683a394 | [Arbiscan](https://arbiscan.io/address/0x2b240b523f69b9af3adb1c5924f6db849683a394#code)| [DXvote](https://dxvote.eth.link/#/arbitrum/info?view=governance) |
+|SWPR Wallet Scheme 1.0 |0x3172eDDa6ff8B2b2Fa7FeD40EE1fD92F1F4dd424 | [Arbiscan](https://arbiscan.io/address/0x3172eDDa6ff8B2b2Fa7FeD40EE1fD92F1F4dd424#code)| [DXvote](https://dxvote.eth.link/#/arbitrum) |
 
 ### Gnosis Chain
 
 | Contract Name | Address | Explorer | Interface |
 |--------------|:-------------------------------:|---------|---------------|
-|DXdao Gnosis Chain Base |0xe716ec63c5673b3a4732d22909b38d779fa47c3f | [Blockscout](https://blockscout.com/poa/xdai/address/0xe716EC63C5673B3a4732D22909b38d779fa47c3F/transactions)| [DXvote](https://dxvote.eth.link/#/xdai/info?view=governance) |
+|DXdao Gnosis Chain Avatar |0xe716ec63c5673b3a4732d22909b38d779fa47c3f | [Blockscout](https://blockscout.com/poa/xdai/address/0xe716EC63C5673B3a4732D22909b38d779fa47c3F/transactions)| [DXvote](https://dxvote.eth.link/#/xdai/info?view=governance) |
 |Genesis Protocol |0xDA309aDF1c84242Bb446F7CDBa96B570E901D4CF | [Blockscout](https://blockscout.com/poa/xdai/address/0xDA309aDF1c84242Bb446F7CDBa96B570E901D4CF/transactions)|  |
 
 ## Swapr
@@ -86,46 +87,6 @@ This page contains all DXdao contract addresses on Ethereum, Arbitrum, and Gnosi
 |--------------|:-------------------------------:|---------|---------------|
 |KPI Tokens Factory | 0xe82c4D8b993D613a28600B953e91A3A93Ae69Fd6 | [Blockscout](https://blockscout.com/xdai/mainnet/address/0xe82c4D8b993D613a28600B953e91A3A93Ae69Fd6/transactions) | |
 
-## Omen
-
-### Mainnet Ethereum
-
-| Contract Name | Address | Explorer | Interface |
-|--------------|:-------------------------------:|---------|---------------|
-| | | |
-
-### Gnosis Chain
-
-| Contract Name | Address | Explorer | Interface |
-|--------------|:-------------------------------:|---------|---------------|
-| | | |
-
-## Aqua
-
-| Contract Name | Address | Explorer | Interface |
-|--------------|:-------------------------------:|---------|---------------|
-|          | |  | |
-
-## DXgov
-
-### Mainnet Ethereum
-
-| Contract Name | Address | Explorer | Interface |
-|--------------|:-------------------------------:|---------|---------------|
-| | | |
-
-### Arbitrum
-
-| Contract Name | Address | Explorer | Interface |
-|--------------|:-------------------------------:|---------|---------------|
-| | | |
-
-### Gnosis Chain
-
-| Contract Name | Address | Explorer | Interface |
-|--------------|:-------------------------------:|---------|---------------|
-| | | |
-
 ## Mesa
 
 ### Mainnet Ethereum
@@ -145,6 +106,8 @@ This page contains all DXdao contract addresses on Ethereum, Arbitrum, and Gnosi
 | Multi-sig Name | Address | Explorer and Safe | Network |
 |--------------|:-------------------------------:|---------|---------------|
 |DXdao Dev Multisig | 0x5F239a6671BC6d2bAEf6D7Cd892296e678810882 | [Etherscan](https://etherscan.io/address/0x5f239a6671bc6d2baef6d7cd892296e678810882), [Safe](https://gnosis-safe.io/app/#/safes/0x5F239a6671BC6d2bAEf6D7Cd892296e678810882) | Mainnet Ethereum|
+|DXdao Multi-chain Multisig | 0x9467dcfd4519287e3878c018c02f5670465a9003 | [Etherscan](https://etherscan.io/address/0x9467dcfd4519287e3878c018c02f5670465a9003), [Safe](https://gnosis-safe.io/app/#/safes/0x9467dcfd4519287e3878c018c02f5670465a9003) | Multi-chain|
+|DXvoice Multisig | 0x35685398af991F43813475E189F791610ad0BE2b | [Etherscan](https://etherscan.io/address/0x35685398af991F43813475E189F791610ad0BE2b), [Safe](https://gnosis-safe.io/app/#/safes/0x35685398af991F43813475E189F791610ad0BE2b) | Mainnet Ethereum|
 
 ## Community Projects / Miscellaneous / External
 
@@ -156,13 +119,6 @@ This page contains all DXdao contract addresses on Ethereum, Arbitrum, and Gnosi
 |ENS Base Registrar Implementation |0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85 | [Etherscan](https://etherscan.io/address/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85)|  |
 |ENS Public Resolver |0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41 | [Etherscan](https://etherscan.io/address/0x4976fb03c32e5b8cfe2b6ccb31c09ba78ebaba41)|  |
 |Radicle Registry |0x37723287Ae6F34866d82EE623401f92Ec9013154 | [Etherscan](https://etherscan.io/address/0x37723287Ae6F34866d82EE623401f92Ec9013154)|  |
-
-
-### Arbitrum
-
-| Contract Name | Address | Explorer | Interface |
-|--------------|:-------------------------------:|---------|---------------|
-
 
 ### Gnosis Chain
 

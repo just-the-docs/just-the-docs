@@ -26,9 +26,9 @@ To get a better understanding of DXdao's history, intentions and principles, rea
 
 |<img src="DXdaoBlue.png" width="50">|  <span style="font-weight:normal">This is a collection of DXdao brand assets, hosted through IPFS. When representing the collective or DXD token, such as when partnering with us, the below assets should be used. For convenience, a Google drive link containing all assets is available, but it should never be trusted above its decentralized counterparts.</span> |
 |-----------------------------------|--|
-|     [**Full Guidelines**](https://bafybeic6pog3yv5pxquc3t4cfqzjfv33rfs4ltltrhl2luqhc3zbxsyr6y.ipfs.dweb.link/?filename=DXdaoBrandGuidelines.pdf)                            | These "Brand Guidelines" include proper use of the DXdao logo, typeface and color schemes. We request that this is adhered to at all times. If this link is having difficulty loading, the same guidelines can be found in the below Google drive. |
+|     **Full Guidelines**  | [**Figma**](https://www.figma.com/proto/L1AKhFqUsJkCOgCOgtO9gk/DXdao-Brand-Guidelines?page-id=2%253A9&node-id=133%253A395&viewport=368%252C48%252C0.18&scaling=contain&starting-point-node-id=133%253A395&hide-ui=1), [**IPFS**](https://bafybeic6pog3yv5pxquc3t4cfqzjfv33rfs4ltltrhl2luqhc3zbxsyr6y.ipfs.dweb.link/?filename=DXdaoBrandGuidelines.pdf). These "Brand Guidelines" include proper use of the DXdao logo, typeface and color schemes. We request that this is adhered to at all times. If this link is having difficulty loading, the same guidelines can be found in the below Google drive. |
 |     **Logos**                            | [DXdao Blue](DXdaoBlue.png), [DXdao Black](DXdaoBlack.png), [DXdao White](DXdaoWhite.png) |
-|     **Logos with Typeface**                            | [DXdao Black](DXdaoBlackTypeface.png), [DXdao White](DXdaoWhiteTypeface.png)  |
+|     **Logos with Typeface**                            | [DXdao Black Wide](DXdaoLogoBlackW.png), [DXdao Black Tall](DXdaoLogoBlackT.png), [DXdao White Wide](DXdaoLogoWhiteW.png), [DXdao White Tall](DXdaoLogoWhiteT.png), [DXdao Full Black](DXdaoBlackTypeface.png), [DXdao Full White](DXdaoWhiteTypeface.png)  |
 |     **File Collection**                            | [DXdao Google Drive](https://drive.google.com/drive/folders/1RJAj9IXqWkBaAfXmi1XHqDX5wGunud9U?usp=sharing)  |
 
 ## Swapr Brand Assets
