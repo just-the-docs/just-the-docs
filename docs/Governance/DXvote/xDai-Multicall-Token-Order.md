@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Gnosis Chain Multicall Token Order
-parent: Alchemy
+parent: DXvote
 grand_parent: Governance
 nav_order: 1
 ---
@@ -10,7 +10,7 @@ nav_order: 1
 
 ___
 
-## Using MultiCall Scheme on Gnosis Chain to Initiate a Token Order on Gnosis Protocol
+## Using MultiCall Scheme on Gnosis Chain to Initiate a Token Order on Gnosis Protocol through Alchemy
 
   
 
