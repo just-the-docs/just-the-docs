@@ -45,7 +45,7 @@ If you drag that file into the viewer [ninja](https://ninja.cityjson.org/), you 
 
 ## Conversion CityJSON -> CityGML
 
-From the CityJSON file, a new GML file can be created with that command `from_cityjson`
+From the CityJSON file, a new GML file can be created with that command `from-cityjson`
 
 
 
