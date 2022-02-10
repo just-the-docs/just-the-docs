@@ -24,6 +24,12 @@ A community-driven programmable incentives platform designed to distribute rewar
 
 You can visit the Carrot Dapp <a href="https://carrot.eth.link/#/swap" target="_blank">here</a> or learn more about Carrot [here]({% link docs/Products/carrot/index.md %}).
 
+## DXgov
+
+DXgov is the squad responsible for and umbrella term for all our governance products. This includes the internal development of our own DAO as well as external facing products to serve and govern other DAOs.
+
+You can learn more about DXgov [here]({% link docs/Products/dxgov/index.md %}).
+
 ## Omen
 
 A fully decentralized multi-chain prediction market platform.

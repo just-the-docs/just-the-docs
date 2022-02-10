@@ -33,6 +33,8 @@ The suite of DeFi products built and governed by DXdao currently includes:
 
 [**Carrot**]({% link docs/Products/carrot/index.md %}) – A community-driven programmable incentives platform to distribute rewards alongside set criteria.
 
+[**DXgov**]({% link docs/Products/dxgov/index.md %}) – The umbrella term for all our governance products.
+
 [**Omen**]({% link docs/Products/omen/index.md %}) – A fully decentralized multi-chain prediction market platform.
 
 [**Aqua**]({% link docs/Products/aqua/index.md %}) – A fair auction IDO launchpad.

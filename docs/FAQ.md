@@ -25,9 +25,13 @@ The best place to learn about DXdao is to check out the [**DXdao Manifesto**]({%
 
 DXdao’s current suite of products include: 
 
-[**Omen**]({% link docs/Products/omen/index.md %}) – A fully decentralized multi-chain prediction market platform.
-
 [**Swapr**]({% link docs/Products/swapr/index.md %}) – A multi-chain AMM with a suite of unique features including LP governance, DIY farming, and much more.
+
+[**Carrot**]({% link docs/Products/carrot/index.md %}) – A community-driven programmable incentives platform to distribute rewards alongside set criteria.
+
+[**DXgov**]({% link docs/Products/dxgov/index.md %}) – The umbrella term for all our governance products.
+
+[**Omen**]({% link docs/Products/omen/index.md %}) – A fully decentralized multi-chain prediction market platform.
 
 [**Aqua**]({% link docs/Products/aqua/index.md %}) – A fair auction IDO launchpad.
 
