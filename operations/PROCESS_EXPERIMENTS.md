@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: Sales
-title: Niche Experiments
+parent: Operations
+title: Process Experiments
 ---
 
 ## Purpose
