@@ -120,7 +120,7 @@ end
 
 ### Small image
 
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
+![](../assets/images/search.svg)
 
 ### Large image
 
