@@ -61,7 +61,7 @@ You can add custom schemes.
 If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name)
 where you override theme variables to change colors, fonts, spacing, etc.
 
-Available variables are listed in the [\_variables.scss](https://github.com/just-the-docs/just-the-docs/tree/master/_sass/support/_variables.scss) file.
+Available variables are listed in the [\_variables.scss](https://github.com/just-the-docs/just-the-docs/tree/main/_sass/support/_variables.scss) file.
 
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
@@ -89,9 +89,10 @@ color_scheme: foo
 If you want to be able to change the scheme dynamically, for example via javascript, just add a file `assets/css/just-the-docs-foo.scss` (replace `foo` by your scheme name)
 with the following content:`
 
-{% raw %}
+## {% raw %}
+
 ---
----
+
 {% include css/just-the-docs.scss.liquid color_scheme="foo" %}
 {% endraw %}
 
