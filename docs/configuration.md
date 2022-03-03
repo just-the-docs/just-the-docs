@@ -5,23 +5,22 @@ nav_order: 2
 ---
 
 # Configuration
+
 {: .no_toc }
 
-
-Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's _config.yml file.
+Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's \_config.yml file.
 {: .fs-6 .fw-300 }
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
-{:toc}
+   {:toc}
 
 ---
 
-
-View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file as an example.
-
+View this site's [\_config.yml](https://github.com/just-the-docs/just-the-docs/tree/master/_config.yml) file as an example.
 
 ## Site logo
 
@@ -68,7 +67,7 @@ search:
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+    - "//github.com/just-the-docs/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -91,7 +90,7 @@ heading_anchors: true
 # appears at the bottom of every page's main content
 # Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust
 markup / liquid-based content.
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/just-the-docs/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -100,7 +99,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
-gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
+gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
@@ -121,6 +120,7 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 ```
+
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -154,6 +154,7 @@ By default, the navigation and search include normal [pages](https://jekyllrb.co
 Instead, you can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
 
 For example, put all your documentation files in the `_docs` folder and create the `docs` collection:
+
 ```yaml
 # Define Jekyll collections
 collections:
@@ -179,6 +180,7 @@ just_the_docs:
 
 You can reference multiple collections.
 This creates categories in the navigation with the configured names.
+
 ```yaml
 collections:
   docs:
@@ -195,4 +197,3 @@ just_the_docs:
     tutorials:
       name: Tutorials
 ```
-

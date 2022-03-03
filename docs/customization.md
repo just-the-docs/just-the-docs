@@ -5,17 +5,20 @@ nav_order: 6
 ---
 
 # Customization
+
 {: .no_toc }
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
-{:toc}
+   {:toc}
 
 ---
 
 ## Color schemes
+
 {: .d-inline-block }
 
 New
@@ -26,12 +29,14 @@ Just the Docs supports two color schemes: light (default), and dark.
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
 
 #### Example
+
 {: .no_toc }
 
 ```yaml
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 ```
+
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -53,14 +58,15 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 ### Define a custom scheme
 
 You can add custom schemes.
-If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name) 
+If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name)
 where you override theme variables to change colors, fonts, spacing, etc.
 
-Available variables are listed in the [_variables.scss](https://github.com/pmarsceill/just-the-docs/tree/master/_sass/support/_variables.scss) file.
+Available variables are listed in the [\_variables.scss](https://github.com/just-the-docs/just-the-docs/tree/master/_sass/support/_variables.scss) file.
 
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
 #### Example
+
 {: .no_toc }
 
 ```scss
@@ -73,6 +79,7 @@ Please use scheme files.
 ### Use a custom scheme
 
 To use the custom color scheme, only set the `color_scheme` parameter in your site's `_config.yml` file:
+
 ```yaml
 color_scheme: foo
 ```
@@ -83,15 +90,15 @@ If you want to be able to change the scheme dynamically, for example via javascr
 with the following content:`
 
 {% raw %}
-    ---
-    ---
-    {% include css/just-the-docs.scss.liquid color_scheme="foo" %}
+---
+---
+{% include css/just-the-docs.scss.liquid color_scheme="foo" %}
 {% endraw %}
 
 This allows you to switch the scheme via the following javascript.
 
 ```js
-jtd.setTheme('foo');
+jtd.setTheme("foo")
 ```
 
 ## Override and completely custom styles
@@ -104,12 +111,19 @@ This will allow for all overrides to be kept in a single file, and for any upstr
 For example, if you'd like to add your own styles for printing a page, you could add the following styles.
 
 #### Example
+
 {: .no_toc }
 
 ```scss
 // Print-only styles.
 @media print {
-  .side-bar, .page-header { display: none; }
-  .main-content { max-width: auto; margin: 1em;}
+  .side-bar,
+  .page-header {
+    display: none;
+  }
+  .main-content {
+    max-width: auto;
+    margin: 1em;
+  }
 }
 ```
