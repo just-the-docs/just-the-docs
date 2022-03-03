@@ -13,6 +13,17 @@
 
 ## Installation
 
+### via GitHub Pages remote theme
+
+The quickiest way to use Just The Docs is to use GitHub pages [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/) feature in your `config.yml` file:
+
+```yaml
+remote_theme: just-the-docs/just-the-docs
+```
+### via RubyGems:
+
+Alternatively you can install it as a Ruby Gem.
+
 Add this line to your Jekyll site's Gemfile:
 
 ```ruby
