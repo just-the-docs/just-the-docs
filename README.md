@@ -5,7 +5,7 @@
 <p align="center">
     <h1 align="center">Just the Docs</h1>
     <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
-    <p align="center"><strong><a href="https://pmarsceill.github.io/just-the-docs/">See it in action!</a></strong></p>
+    <p align="center"><strong><a href="https://just-the-docs.github.io/just-the-docs/">See it in action!</a></strong></p>
     <br><br><br>
 </p>
 
@@ -39,7 +39,7 @@ Alternatively, you can run it inside Docker while developing your site
 
 ## Usage
 
-[View the documentation](https://pmarsceill.github.io/just-the-docs/) for usage information.
+[View the documentation](https://just-the-docs.github.io/just-the-docs/) for usage information.
 
 ## Contributing
 

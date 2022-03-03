@@ -5,15 +5,13 @@ nav_order: 6
 ---
 
 # Customization
-
 {: .no_toc }
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
 1. TOC
-   {:toc}
+{:toc}
 
 ---
 
@@ -29,7 +27,6 @@ Just the Docs supports two color schemes: light (default), and dark.
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -66,7 +63,6 @@ Available variables are listed in the [\_variables.scss](https://github.com/just
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
 #### Example
-
 {: .no_toc }
 
 ```scss
@@ -87,13 +83,12 @@ color_scheme: foo
 ### Switchable custom scheme
 
 If you want to be able to change the scheme dynamically, for example via javascript, just add a file `assets/css/just-the-docs-foo.scss` (replace `foo` by your scheme name)
-with the following content:`
+with the following content:
 
-## {% raw %}
-
----
-
-{% include css/just-the-docs.scss.liquid color_scheme="foo" %}
+{% raw %}
+    ---
+    ---
+    {% include css/just-the-docs.scss.liquid color_scheme="foo" %}
 {% endraw %}
 
 This allows you to switch the scheme via the following javascript.
@@ -112,7 +107,6 @@ This will allow for all overrides to be kept in a single file, and for any upstr
 For example, if you'd like to add your own styles for printing a page, you could add the following styles.
 
 #### Example
-
 {: .no_toc }
 
 ```scss
