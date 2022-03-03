@@ -1,14 +1,14 @@
 ---
 layout: default
-title: A
+title: Tests for disambiguation B
 has_children: true
 ---
 
-# A
+# B
 
 A top-level page
 
 ```yaml
-title: A
+title: Tests for disambiguation B
 has_children: true
 ```
