@@ -5,6 +5,7 @@ nav_order: 5
 ---
 
 # Navigation Structure
+
 {: .no_toc }
 
 <details open markdown="block">
@@ -31,6 +32,7 @@ By default, all pages will appear as top level pages in the main nav unless a pa
 To specify a page order, you can use the `nav_order` parameter in your pages' YAML front matter.
 
 #### Example
+
 {: .no_toc }
 
 ```yaml
@@ -39,6 +41,7 @@ layout: default
 title: Customization
 nav_order: 4
 ---
+
 ```
 
 The parameter values determine the order of the top-level pages, and of child pages with the same parent. You can reuse the same parameter values (e.g., integers starting from 1) for the child pages of different parents.
@@ -47,7 +50,7 @@ The parameter values can be numbers (integers, floats) and/or strings. When you 
 
 By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case. Enclosing strings in quotation marks is optional.
 
-> *Note for users of previous versions:* `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated. 
+> _Note for users of previous versions:_ `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated.
 
 ---
 
@@ -56,6 +59,7 @@ By default, all Capital letters come before all lowercase letters; you can add `
 For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
 
 #### Example
+
 {: .no_toc }
 
 ```yaml
@@ -64,11 +68,12 @@ layout: default
 title: 404
 nav_exclude: true
 ---
+
 ```
 
 The `nav_exclude` parameter does not affect the [auto-generating list of child pages](#auto-generating-table-of-contents), which you can use to access pages excluded from the main navigation.
 
-Pages with no `title` are automatically excluded from the navigation. 
+Pages with no `title` are automatically excluded from the navigation.
 
 ---
 
@@ -104,9 +109,11 @@ Sometimes you will want to create a page with many children (a section). First, 
 ```
 
 On the parent pages, add this YAML front matter parameter:
--  `has_children: true` (tells us that this is a parent page)
+
+- `has_children: true` (tells us that this is a parent page)
 
 #### Example
+
 {: .no_toc }
 
 ```yaml
@@ -116,16 +123,19 @@ title: UI Components
 nav_order: 2
 has_children: true
 ---
+
 ```
 
 Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, which has children and is ordered second in the main nav.
 
 ### Child pages
+
 {: .text-gamma }
 
 On child pages, simply set the `parent:` YAML front matter to whatever the parent's page title is and set a nav order (this number is now scoped within the section).
 
 #### Example
+
 {: .no_toc }
 
 ```yaml
@@ -135,6 +145,7 @@ title: Buttons
 parent: UI Components
 nav_order: 2
 ---
+
 ```
 
 The Buttons page appears as a child of UI Components and appears second in the UI Components section.
@@ -144,6 +155,7 @@ The Buttons page appears as a child of UI Components and appears second in the U
 By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set `has_toc: false` in the parent page's YAML front matter.
 
 #### Example
+
 {: .no_toc }
 
 ```yaml
@@ -154,9 +166,11 @@ nav_order: 2
 has_children: true
 has_toc: false
 ---
+
 ```
 
 ### Children with children
+
 {: .text-gamma }
 
 Child pages can also have children (grandchildren). This is achieved by using a similar pattern on the child and grandchild pages.
@@ -165,6 +179,7 @@ Child pages can also have children (grandchildren). This is achieved by using a 
 1. Add the `parent` and `grand_parent` attribute to the grandchild
 
 #### Example
+
 {: .no_toc }
 
 ```yaml
@@ -175,6 +190,7 @@ parent: UI Components
 nav_order: 2
 has_children: true
 ---
+
 ```
 
 ```yaml
@@ -185,6 +201,7 @@ parent: Buttons
 grand_parent: UI Components
 nav_order: 1
 ---
+
 ```
 
 This would create the following navigation structure:
@@ -210,13 +227,14 @@ This would create the following navigation structure:
 To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
 
 #### Example
+
 {: .no_toc }
 
 ```yaml
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+    - "//github.com/just-the-docs/just-the-docs"
 ```
 
 ---
@@ -226,20 +244,23 @@ aux_links:
 To generate a Table of Contents on your docs pages, you can use the `{:toc}` method from Kramdown, immediately after an `<ol>` in Markdown. This will automatically generate an ordered list of anchor links to various sections of the page based on headings and heading levels. There may be occasions where you're using a heading and you don't want it to show up in the TOC, so to skip a particular heading use the `{: .no_toc }` CSS class.
 
 #### Example
+
 {: .no_toc }
 
 ```markdown
 # Navigation Structure
+
 {: .no_toc }
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
-{:toc}
+   {:toc}
 ```
 
-This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself. To get an unordered list, replace  `1. TOC` above by `- TOC`.
+This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself. To get an unordered list, replace `1. TOC` above by `- TOC`.
 
 ### Collapsible Table of Contents
 

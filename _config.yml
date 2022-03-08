@@ -16,7 +16,7 @@
 title: Just the Docs
 description: A Jekyll theme for documentation
 baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
-url: "https://pmarsceill.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://just-the-docs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
@@ -65,7 +65,7 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+    - "//github.com/just-the-docs/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -81,7 +81,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt\">MIT license.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -92,8 +92,8 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
-gh_edit_branch: "master" # the branch that your docs is served from
+gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
