@@ -5,13 +5,15 @@ nav_order: 7
 ---
 
 # Search
+
 {: .no_toc }
 
 ## Table of contents
+
 {: .no_toc .text-delta }
 
 1. TOC
-{:toc}
+   {:toc}
 
 ---
 
@@ -76,7 +78,7 @@ To allow search for hyphenated words:
 search.tokenizer_separator: /[\s/]+/
 ```
 
-### Display URL in search results 
+### Display URL in search results
 
 ```yaml
 # Display the relative url in search results
@@ -94,13 +96,13 @@ The search button displays in the bottom right corner of the screen and triggers
 search.button: true
 ```
 
-
 ## Hiding pages from search
 
 Sometimes you might have a page that you don't want to be indexed for the search nor to show up in search results, e.g, a 404 page.
 To exclude a page from search, add the `search_exclude: true` parameter to the page's YAML front matter:
 
 #### Example
+
 {: .no_toc }
 
 ```yaml
@@ -110,8 +112,8 @@ title: Page not found
 nav_exclude: true
 search_exclude: true
 ---
-```
 
+```
 
 ## Generate search index when used as a gem
 
@@ -124,4 +126,4 @@ $ bundle exec just-the-docs rake search:init
 ```
 
 This command creates the `assets/js/zzzz-search-data.json` file that Jekyll uses to create your search index.
-Alternatively, you can create the file manually with [this content]({{ site.github.repository_url }}/blob/master/assets/js/zzzz-search-data.json).
+Alternatively, you can create the file manually with [this content]({{ site.github.repository_url }}/blob/main/assets/js/zzzz-search-data.json).
