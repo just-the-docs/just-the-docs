@@ -53,7 +53,7 @@ remote_theme: just-the-docs/just-the-docs
   $ bundle exec just-the-docs rake search:init
   ```
 
-3. Run you local Jekyll server
+3. Run your local Jekyll server
   ```bash
   $ jekyll serve
   ```
@@ -61,6 +61,7 @@ remote_theme: just-the-docs/just-the-docs
   # .. or if you're using a Gemfile (bundler)
   $ bundle exec jekyll serve
   ```
+
 
 4. Point your web browser to [http://localhost:4000](http://localhost:4000)
 
