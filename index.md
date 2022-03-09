@@ -39,7 +39,7 @@ remote_theme: just-the-docs/just-the-docs
   $ gem install just-the-docs
   ```
   ```yaml
-  # .. or add it to your your Jekyll site’s Gemfile
+  # .. or add it to your Jekyll site’s Gemfile
   gem "just-the-docs"
   ```
 
