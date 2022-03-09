@@ -228,7 +228,7 @@ This example skips the page name heading (`#`) from the TOC, as well as the head
 
 ## External Navigation
 
-To add external links to the navbar, add it to the `external_navigation` configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#external_navigation) in your site's `_config.yml` file. All external links will appear other items in the nav bar.
+To add external links to the navbar, add it to the `external_navigation` configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#external_navigation) in your site's `_config.yml` file. All external links will appear below the other items in the nav bar.
 
 ### Example
 
