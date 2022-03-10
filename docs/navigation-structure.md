@@ -112,6 +112,10 @@ On the parent pages, add this YAML front matter parameter:
 
 - `has_children: true` (tells us that this is a parent page)
 
+Additionally, you can optionally add the following to the YAML front matter to change the default sort order of child pages from ascending to desending order:
+
+- `child_nav_order: desc`
+
 #### Example
 
 {: .no_toc }
