@@ -74,6 +74,7 @@ materials you will usually be approved, but ask first.
   - Domain Driven Design
   - Javascript: The Good Parts
   - [Philosophy of Software Design](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201)
+  - Clean Code
 
 ### Write Down What You Learn
 
