@@ -4,7 +4,7 @@ parent: Philosophy
 title: Philosophical References
 ---
 
-# References That Drive Our Philosophy
+# References
 
 **Purpose**
 
@@ -56,32 +56,27 @@ materials you will usually be approved, but ask first.
 ### Understand What Matters
 
   - The Culture Code, Daniel Coyle
-  - Crucial Conversations, Patterson, Grenny, McMillan, Switzler
+  - Nonviolent Communiction, MarshalL Rosenberg
 
 ### Make Clear Shared Goals
 
-  - Measure What Matters, John Doerr
   - The Five Dysfunctions of a Team, Patrick Lencioni
 
 ### Make and Measure Progress on Goals
 
   - Scrum: The art of Doing Twice the Work in Half the Time, Jeff
     Sutherland
-  - Scrum Mastery, Geoff Watts
   - Originals: How Non-Conformists Move the World, Adam Grant
-  - Javascript: The Good Parts, Douglas Crockford
   - 12factor.net
 
 ### Technical
-  - The Unix Philosophy https://homepage.cs.uri.edu/~thenry/resources/unix_art/ch01s06.html
+  - [The Unix Philosophy](https://homepage.cs.uri.edu/~thenry/resources/unix_art/ch01s06.html)
   - Domain Driven Design
   - Javascript: The Good Parts
+  - [Philosophy of Software Design](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201)
 
 ### Write Down What You Learn
 
   - Principles, Ray Dalio
   - The E-Myth, Seth Godin
-
-### Repeat
-
   - The Great CEO Within, Matt Mochary
