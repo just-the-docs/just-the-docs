@@ -112,10 +112,6 @@ On the parent pages, add this YAML front matter parameter:
 
 - `has_children: true` (tells us that this is a parent page)
 
-Additionally, you can optionally add the following to the YAML front matter to change the default sort order of child pages from ascending to desending order:
-
-- `child_nav_order: desc`
-
 #### Example
 
 {: .no_toc }
@@ -153,6 +149,12 @@ nav_order: 2
 ```
 
 The Buttons page appears as a child of UI Components and appears second in the UI Components section.
+
+### Ordering child pages
+
+You can optionally add the following to the YAML front matter to change the default sort order of child pages from ascending to desending order:
+
+- `child_nav_order: desc`
 
 ### Auto-generating Table of Contents
 
