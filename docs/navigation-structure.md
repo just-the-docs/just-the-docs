@@ -156,6 +156,15 @@ You can optionally add the following to the YAML front matter to change the defa
 
 - `child_nav_order: desc`
 
+#### Example
+{: .no_toc }
+```yaml
+---
+layout: default
+title: Descending Child Pages
+child_nav_order: desc
+---
+
 ### Auto-generating Table of Contents
 
 By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set `has_toc: false` in the parent page's YAML front matter.
