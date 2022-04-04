@@ -7,7 +7,7 @@
   "bugs": "https://github.com/just-the-docs/just-the-docs/issues",
   "devDependencies": {
     "stylelint": "^13.7.2",
-    "@primer/css": "^15.2.0",
+    "@primer/css": "^19.8.0",
     "prettier": "^2.5.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-primer": "^9.2.1",
