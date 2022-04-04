@@ -81,3 +81,5 @@ materials you will usually be approved, but ask first.
   - Principles, Ray Dalio
   - The E-Myth, Seth Godin
   - The Great CEO Within, Matt Mochary
+
+![golden knowledge](https://i.imgur.com/gb9SZdp.png)
