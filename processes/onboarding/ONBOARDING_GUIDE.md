@@ -19,6 +19,20 @@ If anything is unclear, let's fix it so it's clear for the next person.
 
 Covers all the onboarding steps for a new Countable Team Member.
 
+**Sub-Pages**
+
+* [Countable's Compensation Strategy](COMPENSATION_STRATEGY.md)
+* [Doing Your Job](DOING_YOUR_JOB.md)
+* [Eightmeters](EIGHTMETERS.md)
+* [Guilds and Teams](GUILDS_TEAMS.md)
+* [Locations](LOCATIONS.md)
+* [Screencastify](SCREENCASTIFY.md)
+* [Setting Up Your Desk](SETTING_UP.md)
+* [Subcontractor Agreement](SUBCONTRACTOR_AGREEMENT.md)
+* [Subcontractor's Guide](SUBCONTRACTORS_GUIDE.md)
+* [Dismissal](DISMISSAL.md)
+
+
 ## First Steps
 
 PROCESS

@@ -15,8 +15,11 @@ To transparently define a replicable recruiting process for the Countable team.
 
 Covers the hiring process all the way up to onboarding.
 
-**See Also**
+**Sub-Pages**
 
+We provide an [Applicant Guide](APPLICANT_GUIDE.md) for review.
+Check out our philosophy on [Hiring Fit](HIRING_FIT.md).
+We compile our generalized [Job Postings](JOB_POSTINGS.md) for ease of access.
 The [Recruiting Strategy](RECRUITING_STRATEGY.md) that informs our processes.
 
 ## Recruiting for Staff Contractors

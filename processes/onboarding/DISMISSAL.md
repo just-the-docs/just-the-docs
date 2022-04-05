@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Evaluation
+parent: Onboarding
 title: Dismissal
 ---
 
