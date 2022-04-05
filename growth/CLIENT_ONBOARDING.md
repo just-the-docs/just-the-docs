@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Operations
+parent: Growth
 title: Client Onboarding
 ---
 

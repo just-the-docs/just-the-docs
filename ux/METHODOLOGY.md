@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Operations
+parent: UX
 title: Methodology Toolkit
 ---
 

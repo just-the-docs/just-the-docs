@@ -1,8 +1,7 @@
 ---
 layout: default
 title: Proposals
-parent: Sales
-has_children: true
+parent: Growth
 ---
 
 # Proposals

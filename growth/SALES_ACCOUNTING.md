@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Sales
+parent: Growth
 title: Sales Accounting
 ---
 

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Operations ahd PeopleOps
+title: People Ops
 has_children: true
 ---
 
-# Operations
+# Operations and People Ops
 
 **Purpose**
 

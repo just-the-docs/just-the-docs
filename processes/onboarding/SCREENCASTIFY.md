@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Operations
+parent: Onboarding
 title: Screencastify
 ---
 

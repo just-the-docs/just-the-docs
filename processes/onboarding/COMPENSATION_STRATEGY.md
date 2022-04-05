@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: People Ops
+parent: Onboarding
 title: Compensation Strategy and Benefits
 ---
 

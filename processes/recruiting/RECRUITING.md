@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
-title: Recruiting Process
+parent: Processes
+title: Recruiting
+has_children: true
 ---
 
 # Recruiting Process

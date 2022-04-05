@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: People Ops
+parent: Onboarding
 title: Setting Up Your Desk
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: People Ops
+parent: Philosophy
 title: Diversity and Inclusion Principles
 ---
 

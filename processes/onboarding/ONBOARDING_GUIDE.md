@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
-title: Onboarding Guide
+parent: Processes
+title: Onboarding
+has_children: true
 ---
 
 # Onboarding Guide

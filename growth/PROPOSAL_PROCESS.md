@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Proposals
+parent: Growth
 title: Proposal Writing Process
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: People Ops
+parent: Processes
 title: Evaluation
 has_children: true
 ---

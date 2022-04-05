@@ -1,6 +1,6 @@
 ---
 layout: default
-parent: Operations
+parent: Growth
 title: Communicating with Clients
 ---
 
