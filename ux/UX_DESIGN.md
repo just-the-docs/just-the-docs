@@ -100,7 +100,7 @@ While user experience design can be front-loaded in a project somewhat,
 it's critical to continue throughout the project to ensure incremental
 improvements are made and a great end result is achieved.
 
-  - Conduct [usability tests](../USABILITY_TESTING.md) of the functional
+  - Conduct [usability tests](USABILITY_TESTING.md) of the functional
     prototype as you iterate on it, each sprint.
   - Perform follow-up interviews on users after they've tried the
     product.

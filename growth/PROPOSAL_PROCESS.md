@@ -21,7 +21,7 @@ effort, just time to leave open)
 
 1.  CAPTURE - find RFPs you can win (This should be happening all the
     time as described in
-    [Sales](../sales/SALES))
+    [Growth](GROWTH.md))
 2.  PRE-QUALIFY - look a bit deeper (Score in our OPPORTUNITIES sheet)
 3.  QUALIFY - (5 days) (ask questions as soon as possible after deciding
     to write, wait for responses)

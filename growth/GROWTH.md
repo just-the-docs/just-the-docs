@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Sales
+title: Growth
 has_children: true
 ---
 
-# Sales
+# Growth
 
 **Purpose**
 
-This chapter documents our approach to taking on new work so we curate a group of clients we love working with over time, and stay profitable.
+This chapter documents our approach to taking on new work so we curate a group of clients we love working with over time, and stay profitable. Formerly titled "Sales" and renamed to reflect our expansion of diverse revenue streams.
 
 **Scope**
 
@@ -37,7 +37,7 @@ In summary, we want to steer everything (salesbot included) to find **4 or 5 $30
 A dedicated staff member would be hired for the heavy-lifting, and we could win 1 deal a month, which is more sustainable than one every \~3 months as we do now.
 
 See also
-[Discovery](sales/DISCOVERY/)
+[Discovery](DISCOVERY.md)
 
 ### Day to Day Practices
 
@@ -96,4 +96,4 @@ further work.
 
 Defines how we communicate with potential clients. It screens for
 clients with similar values, with whom we'd like to collaborate on
-exciting projects. To anchor this, revisit our [Value Prop for Clients](sales/VALUE_PROP/)
+exciting projects. To anchor this, revisit our [Value Prop for Clients](VALUE_PROP.md)

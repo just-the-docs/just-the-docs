@@ -19,7 +19,7 @@ The agenda of for a kick-off meeting, and next steps.
 
 ## Kick-off Meeting
 
-Before starting the project, ensure the [Project Structure](PROJECT_STRUCTURE.md) is set up.
+Before starting the project, ensure the [Project Structure](NEW_PROJECTS.md) is set up.
 
 For the Kick-off Meeting, meet the product owner (client) in person or
 over video chat. Text based interaction isn't good enough for these
@@ -83,7 +83,7 @@ Project planning materials:
 ### User Experience Design (UX) Planning
 
 The next phase of the project after discovery is to use the above
-answers to develop a [user experience design](ux/UX_DESIGN/)
+answers to develop a [user experience design](/ux/UX_DESIGN.md)
 research plan.
 
 ### For Branding and Visual Design Projects

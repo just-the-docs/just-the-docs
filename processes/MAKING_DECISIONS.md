@@ -8,7 +8,7 @@ title: Making Decisions
 
 **Purpose**
 
-It can be confusing how decisions are made, so let's shed light on it.
+It can be confusing how decisions are made, so we define different types of decisions and the processes we hold around them.
 
 **Scope**
 
@@ -49,7 +49,7 @@ Please give feedback\! This document is a process proposal, which is a consultat
   - When a decision is made in the meeting, include it in the minutes and inform any other team members outside the meeting.
   - Document the decision in this manual if it's relevant to future work for more than one specific client.
 
-## Guidelines for making Good Decisions
+## Guidelines for Making Good Decisions
 
   - What is the biggest opportunity, biggest risk, and expected outcome of each path?
   - Consider whether your decision offers an incremental, geometric or exponential benefit.

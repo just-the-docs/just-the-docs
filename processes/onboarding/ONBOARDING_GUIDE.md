@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: People Ops
-title: Onboarding
+title: Onboarding Guide
 ---
 
 # Onboarding Guide
@@ -11,7 +11,7 @@ title: Onboarding
 The goal of this guide is to help new members of Countable get connected
 with the team, efficiently set up accounts, and learn key things to help
 you get started contributing\! If you find a way to improve this
-document, send a [Pull Request](https://github.com/countable-web/ops-manual/pull/new/master)\!
+document, send a [Pull Request](https://github.com/countable-web/ops/pull/new/master)\!
 If anything is unclear, let's fix it so it's clear for the next person.
 
 **Scope**
@@ -19,6 +19,7 @@ If anything is unclear, let's fix it so it's clear for the next person.
 Covers all the onboarding steps for a new Countable Team Member.
 
 ## First Steps
+
 PROCESS
 {: .label .label-purple }
 
@@ -36,6 +37,7 @@ PROCESS
   - Use the team to answer your other questions.
 
 ### Set your work availability and subscribe to group calendars
+
 PROCESS
 {: .label .label-purple }
 
@@ -47,6 +49,7 @@ PROCESS
       - For our Countable Holidays/absences calendar, enter the following into the subscription open entry field: countable.ca_viropu5cs7rjoo5l5520q5j564@group.calendar.google.com
 
 ### Set your profile photo
+
 PROCESS
 {: .label .label-purple }
 
@@ -55,12 +58,14 @@ PROCESS
     photo to all accounts, especially Slack, Email, BitBucket, GitHub.
 
 ### Set up Eightmeters
+
 PROCESS
 {: .label .label-purple }
 
 [See here](EIGHTMETERS.md)
 
 ### Team Calendar
+
 PROCESS
 {: .label .label-purple }
 
@@ -70,6 +75,7 @@ PROCESS
     and whether you're working 50% or 0%.
 
 ### Payment Info
+
 PROCESS
 {: .label .label-purple }
 
@@ -101,7 +107,7 @@ Join these using your Google account:
 
 ### How to Do Work
 
-Skim this so you know the language and how we work: [Project Management](../../operations/PROJECT_MANAGEMENT/).
+Skim this so you know the language and how we work: [Project Management](../../growth/PROJECT_MANAGEMENT/).
 
 ### Confirm
 
@@ -134,7 +140,7 @@ complete tasks every day when you work. But, you are expected to:
   - Try your best to complete a tiny task, rather than partially
     finishing a big task.
   - Expectations that are required to be part of Countable (level 1) and
-    for promotion are documented here: [Evaluation](/peopleops/evaluation/EVALUATION/).
+    for promotion are documented here: [Evaluation](/evaluation/EVALUATION/).
 
 ### How To Ask For Help
 
@@ -155,4 +161,4 @@ See [this video](https://www.youtube.com/watch?v=hY14Er6JX2s), skip to
 ### What's Next?
 
 The team should spend lots of time with new staff, and over-communicate.
-Until we provide more guidelines here's a link [to some questions managers should review with new employees after the first month](https://www.gqrgm.com/questions-ask-new-employees-first-month/)
+Until we provide more guidelines here's a link [to some questions managers should review with new employees after the first month](https://www.gqrgm.com/questions-ask-new-employees-first-month/).

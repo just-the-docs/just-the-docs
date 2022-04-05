@@ -29,7 +29,7 @@ the benefits of stability.
 So, every Dwarf (team member) will probably have ideas where the next large vein of gold is. Everyone from the dwarven leaders
 all the way to individual miners. It's often problematic when anyone, especially leaders, share too many ideas. Instead,
 dwarves should go off and mine on their own or in small groups. They should tell their team where they are going "I'm going to
-search for rubies in the easter catacomb." . If they discover rubies, that is the time to make a lot of noise and
+search for rubies in the easter catacomb." If they discover rubies, that is the time to make a lot of noise and
 get all the dwarves excited and rally the team's resources to extract the precious stones, not before.
 
 ### Guidelines

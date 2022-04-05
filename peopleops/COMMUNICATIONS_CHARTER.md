@@ -133,7 +133,7 @@ external project stakeholders).
 ### Trello
 
   - Trello is for tracking what we need to get done (actionable tasks and
-reminders). We use variants of Scrum, details [here](../TRELLO/).
+reminders). We use variants of Scrum, details [here](/growth/TRELLO.md).
 
 ### Office Hours and Presence
   - Please summarize your hours when you are most likely to be reachable (no more than your contracted hours), in your slack description.
@@ -146,7 +146,7 @@ reminders). We use variants of Scrum, details [here](../TRELLO/).
 
 ## Meetings
 
-See [Meetings](../../peopleops/MEETINGS/)
+See [Meetings](/peopleops/MEETINGS.md)
 
 ## Slack Hygiene
 

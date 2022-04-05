@@ -20,7 +20,7 @@ Countable generally works with Fixed Price Agreements determined based on meetin
 
 ## Discovery
 
-Holding a kick-off meeting with a [discovery](../sales/DISCOVERY) process is one key a successful project outcome.
+Holding a kick-off meeting with a [discovery](DISCOVERY.md) process is one key a successful project outcome.
 
 ## Inception Project
 
@@ -32,7 +32,7 @@ This process has many benefits.
 
 ## Delivery
 
-Countable uses [Scrum](./SCRUM) to deliver project work.
+Countable uses [Scrum](SCRUM.md) to deliver project work.
   * Typically, the Product Owner role is held on the client's side.
   * This person will typically provide access to end-users and subject matter experts as well.
   * The product owner also oversees the Backlog, a list of requirements including mechanisms for change management.

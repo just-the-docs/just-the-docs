@@ -28,15 +28,12 @@ When does Countable use Scrum? Projects with at least 2 staff assigned, working 
     "work in progress" to remain unreleased. Instead, plan your work so it
     can be released every 2 weeks or *ideally, every day*. You can do this via feature flagging, having a stage site, or just planning work in small, releasable chunks.
 2.  Reflect weekly and share openly about how we can work better together.
-3.  See also the official Scrum values at https://agilemanifesto.org/
+3.  See also the official Scrum values at [Agile Manifesto](https://agilemanifesto.org/)
 
 ## User Stories
 
-User Stories (while not technically part of Scrum) serve as the central planning document for any given
-project. The purpose of User Stories is to ensure all stakeholders can
-understand what we're trying to accomplish, no matter their level of
-technical expertise. Check out the [User Stories](../USER_STORIES/) page for more detail and how
-to compose User Stories.
+User Stories (while not technically part of Scrum) serve as the central planning document for any given project. The purpose of User Stories is to ensure all stakeholders can
+understand what we're trying to accomplish, no matter their level of technical expertise. Check out the [User Stories](/ux/USER_STORIES.md) page for more detail and how to compose User Stories.
 
 ## SCRUM Process
 
@@ -55,7 +52,7 @@ all of your work. Please prepare something so it can be shown quickly.
 
 #### Sprint Plan
 
-The Product Owner articulates the overall goal of the sprint. Team members may want to discuss how the goal relates to (or conflicts with) their [OKRs](../OKRS/).
+The Product Owner articulates the overall goal of the sprint. Team members may want to discuss how the goal relates to (or conflicts with) their [OKRs](/peopleops/OKRS.md).
 Prior to the sprint plan, the Product Owner should ensure the backlog is refined, meaning it's already ordered by priority and the items (User Stories) explain who they are for, what is needed, and why it's needed. For each item in the "Requests" column, the PO ensures they are sufficiently detailed, and moves them to Backlog.
 
 The Scrum master reviews items and moves them to the Sprint. The Product Owner determines what order the items are reviewed in, and the developers determine to how much they can finish that week. For each item, the SM asks "When can we do this?".
@@ -68,16 +65,18 @@ Each team member shares their ideas for what problems we have, and how we could 
 
 Countable usually doesn't hold synchronous stand-up meetings. Instead, every
 day, each developer shares something on your team's public slack channel
-regarding the work you did. It's best to show a screenshot of your work
-for feedback. They also share the number one thing that's blocking them, or would help accelerate their work.
-Team members manage dependencies, hand off staged work, coordinate code reviews and learnings, and
-figure out logistics to ship their work every sprint.
+regarding the work you did. 
+
+It's best to show a screenshot of your work for feedback. They also share the number one thing that's blocking them, or would help accelerate their work.
+
+Team members manage dependencies, hand off staged work, coordinate code reviews and learnings, and figure out logistics to ship their work every sprint.
 
 ### SCRUM Roles
 
 These are the duties we must assigned when doing Scrum.
 
 #### Product Owner
+
   - Represents the User/Customer, and maximizes the product's value to them
   - Articulates the product vision to the team
   - Owns the Backlog, and keeps it clear and prioritized

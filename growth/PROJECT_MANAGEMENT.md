@@ -19,10 +19,10 @@ Countable to assist with onboarding.
 ## Project Management Process
 
   - Every project has a "Purpose" which must be documented and visible.
-  - Every project has at least one [Objective and Key Result](OKRS.md) every month.
+  - Every project has at least one [Objective and Key Result](/peopleops/OKRS.md) every month.
   - We use Scrum like [this](SCRUM.md).
   - Every day, try to get some
-    [feedback](../../peopleops/FEEDBACK_LOOPS/) on your work.
+    [feedback](/processes/FEEDBACK_LOOPS.md) on your work.
   - Every day, coordinate with team mates on slack and prioritize.
   - Work together to minimize the amount of time anyone is blocked or
     waiting for someone's output as their input. The list of items in
@@ -63,7 +63,7 @@ Check out our page on [how we use Trello](TRELLO.md).
 
 ## Tools - Screencastify
 
-Check out our page on [recording short screencast videos](SCREENCASTIFY.md).
+Check out our page on [recording short screencast videos](/processes/onboarding/SCREENCASTIFY.md).
 
 ## Tools - Transferwise
 

@@ -42,10 +42,8 @@ and clients, and maintaining their confidence by acting professionally.
 In practice this means:
 
   - We allow people to work from anywhere in the world, and have
-    flexible schedules. However, we do our best to prevent our clients
-    needing to worry about this.
-  - It's not a secret if you're taking classes, travelling overseas,
-    etc. But we don't advertise these things to the client. If the
+    flexible schedules. However, we do our best to prevent our clients needing to worry about this.
+  - It's not a secret if you're taking classes, travelling overseas, etc. But we don't  advertise these things to the client. If the
     client asks, you can discuss it, but don't volunteer this
     information because the conversation should be about our client (not
     you, and not Countable).

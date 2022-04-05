@@ -56,7 +56,7 @@ of a set of **Cards** (tasks) arranged in **Columns**.
 ## Trello Cards
 
 A card should contain a clear description of work to be done by one
-person required to support a given [User Story](USER_STORIES.md).
+person required to support a given [User Story](/ux/USER_STORIES.md).
 
 During composition, the author of the Trello card should base to assuming
 that the assigned members are without context of the given task and link

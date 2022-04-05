@@ -33,15 +33,15 @@ This section of the checklist covers timekeeping, updating your working hours wh
 
 Under this checklist, we allot 1-on-1’s with your manager, rating of OKRs of the month, and start drafting for next month’s OKRs.
 
-* Book a 1-on-1 with your manager for the coming month using their Calendly link
-* Review and rate your OKRs from last month on Eightmeters
-* Think about, and draft, at least two OKRs on Eightmeters for the upcoming month
+* Book a 1-on-1 with your manager for the coming month using their Calendly link.
+* Review and rate your OKRs from last month on Eightmeters.
+* Think about, and draft, at least two OKRs on Eightmeters for the upcoming month.
 
 ## Twice Annually
 
 Doing self-evaluation and setting up personal learning goals twice a year gives us insight into whether the team is rowing in the same direction to move the company forward.
 
-* Self-Evaluation - assess your performance based on [these evaluation questions](https://countable-web.github.io/ops/peopleops/evaluation/EVALUATION/#evaluation-questions-by-job-level) by job level
-* Learning Goals - set three objectives for team tools/methodologies you want to learn more about
+* Self-Evaluation - assess your performance based on [these evaluation questions](https://countable-web.github.io/ops/peopleops/evaluation/EVALUATION/#evaluation-questions-by-job-level) by job level.
+* Learning Goals - set three objectives for team tools/methodologies you want to learn more about.
 
 
