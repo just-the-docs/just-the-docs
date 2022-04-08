@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Install the Web Pixel
 parent: Web Pixel
 ---

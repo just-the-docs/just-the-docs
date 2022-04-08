@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Inside Sales Setup
 parent: Inside Sales
 nav_order: 3
