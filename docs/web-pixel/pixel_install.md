@@ -1,7 +1,6 @@
 ---
 title: Install the Web Pixel
 parent: Web Pixel
-permalink: /installation
 ---
 
 {: .no_toc }
