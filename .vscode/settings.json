@@ -1,0 +1,30 @@
+{
+    "files.exclude": {
+        "**/.git/hooks": false
+   },
+   "files.associations": {
+    "*.quke": "q"
+   },
+   "editor.tokenColorCustomizations": {
+    "textMateRules": [
+        {
+            "scope":"comment.line.attention",
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#e70953c4"
+            }
+        },
+        {
+            "scope":"comment.line.todo",
+            "settings": {
+                "fontStyle": "bold",
+                "foreground": "#caeb0f"
+            }
+        }
+    ]
+    },
+    "thunder-client.workspaceRelativePath": "/docs",
+    "thunder-client.loadFromProject": true,
+    "thunder-client.enableSaveOption": true,
+    "jupyter.jupyterServerType": "local"
+}

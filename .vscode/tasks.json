@@ -2,25 +2,90 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
+
+    // Override the default shell (https://stackoverflow.com/questions/54810355/how-to-run-task-in-another-terminal-with-vscode-integrated-terminal)
+    "windows": {
+        "options": {
+            "shell": {
+                "executable": "wsl.exe"
+            }
+        }
+    },
     "tasks": [
         {
-            "label": "Serve",
+            "label": "Git: Delete Remote & Local Tags",
             "type": "shell",
-            "command": "bundle exec jekyll serve --livereload",
+            "command": "git fetch --prune --prune-tags && export TAGS=$(git tag|grep  ${input:tagSearch}) && git push ${REMOTE_NAME:-origin} --delete $TAGS && git tag -d $TAGS",
             "group": {
-                "kind": "test",
-                "isDefault": true
-            },
-            "isBackground": true,
+              "kind": "build",
+              "isDefault": true
+            }
         },
         {
-            "label": "Build",
+            "label": "Docker: Nuke",
             "type": "shell",
-            "command": "bundle exec jekyll build",
+            "command": "docker stop $(docker ps -a -q) && docker rm -vf $(docker ps -a -q) && docker rmi -f $(docker images -a -q)",
+            "problemMatcher": [],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
+            }
+        },
+        {
+            //https://phoenixnap.com/kb/how-to-install-python-3-ubuntu
+            "label": "Python: Install Python3",
+            "type": "shell",
+            "command": "sudo apt update -y && sudo apt install -y software-properties-common && sudo add-apt-repository ppa:deadsnakes/ppa && sudo apt update -y && sudo apt install python3.8 && sudo apt install python3-pip && pip install ipykernel",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            //https://phoenixnap.com/kb/how-to-install-python-3-ubuntu
+            "label": "Python: Install Anaconda",
+            "type": "shell",
+            "command": "wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh && bash Anaconda3-2020.02-Linux-x86_64.sh -u",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Python: Init Anaconda",
+            "type": "shell",
+            "command": "source ~/anaconda3/etc/profile.d/conda.sh && conda init && conda config --set auto_activate_base false",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Python: Activate Anaconda",
+            "type": "shell",
+            "command": "conda activate",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "containerID",
+            "description": "Container ID:",
+            "default": "",
+            "type": "promptString"
+        },
+        {
+            "id": "tagSearch",
+            "description": "Tag Pattern:",
+            "default": "beta",
+            "type": "promptString"
         }
     ]
 }

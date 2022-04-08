@@ -1,0 +1,31 @@
+{
+  "recommendations": [
+    "jshinonome.vscode-q",
+    "dracula-theme.theme-dracula",
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    "donjayamanne.githistory",
+    "codezombiech.gitignore",
+    "ldez.ignore-files",
+    "mutantdino.resourcemonitor",
+    "ms-toolsai.jupyter",
+    "purocean.drawio-preview",
+    "hediet.vscode-drawio",
+    "janisdd.vscode-edit-csv",
+    "grapecity.gc-excelviewer",
+    "mechatroner.rainbow-csv",
+    "irongeek.vscode-env",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "vscode-icons-team.vscode-icons",
+    "redhat.vscode-yaml",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-wsl",
+    "ms-mssql.mssql",
+    "rangav.vscode-thunder-client",
+    "randomfractalsinc.vscode-data-preview",
+    "2gua.rainbow-brackets"
+  ]
+}
