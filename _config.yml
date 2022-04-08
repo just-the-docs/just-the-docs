@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Prelytix Knowledge Base
 description: Home for Prelytix User Documentation
-baseurl: "/prelytix-jekyll" # the subpath of your site, e.g. /blog
+baseurl: "/prelytix-docs" # the subpath of your site, e.g. /blog
 url: "https://mrpfd.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
