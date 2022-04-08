@@ -1,8 +1,8 @@
 ---
-layout: default
 title: Inside Sales Setup
+parent: Inside Sales
 nav_order: 3
-permalink: /inside-sales
+permalink: /setup
 ---
 
 ## Inside Sales
