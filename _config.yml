@@ -23,7 +23,7 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 
 
 ######### Customisations #####
-logo: /assets/iamges/logo.png
+logo: /assets/images/logo.png
 # Set defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
 defaults:
   -
