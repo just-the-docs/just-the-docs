@@ -27,6 +27,13 @@ View this site's [\_config.yml](https://github.com/just-the-docs/just-the-docs/t
 logo: "/assets/images/just-the-docs.png"
 ```
 
+## Site Favicon
+
+To add a custom favicon, create `_includes/head_custom.html` and add:
+```html
+<link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/path/to/your/favicon.png">
+```
+
 ## Search
 
 ```yaml
