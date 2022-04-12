@@ -15,6 +15,7 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+		"GitHub.vscode-pull-request-github",
 		"jshinonome.vscode-q",
 		"dracula-theme.theme-dracula",
 		"purocean.drawio-preview",
@@ -40,19 +41,20 @@
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
-	"features": {
-		"docker-in-docker": "20.10",
-		"docker-from-docker": "20.10",
-		"git": "os-provided",
-		"git-lfs": "latest",
-		"github-cli": "latest",
-		"aws-cli": "latest",
-		"sshd": "latest",
-		"desktop-lite": "latest",
-		"node": "16",
-		"python": "os-provided",
-		"golang": "1.18",
-		"ruby": "3.1",
-		"powershell": "latest"
-	}
+	
+	//"features": {
+	//	"docker-in-docker": "20.10",
+	//	"docker-from-docker": "20.10",
+	//	"git": "os-provided",
+	//	"git-lfs": "latest",
+	//	"github-cli": "latest",
+	//	"aws-cli": "latest",
+	//	"sshd": "latest",
+	//	"desktop-lite": "latest",
+	//	"node": "16",
+	//	"python": "os-provided",
+	//	"golang": "1.18",
+	//	"ruby": "3.1",
+	//	"powershell": "latest"
+	//}
 }
