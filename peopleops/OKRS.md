@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: OKRs
+parent: People Ops
+nav_order: 17
 ---
 
 # OKRs

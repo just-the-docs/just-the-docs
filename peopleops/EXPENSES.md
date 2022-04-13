@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Expenses at Countable
+parent: People Ops
+nav_order: 16
 ---
 
 # Expenses at Countable

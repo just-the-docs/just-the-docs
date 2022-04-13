@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Making Decisions
+parent: People Ops
+nav_order: 8
 ---
 
 # Making Decisions

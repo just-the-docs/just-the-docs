@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Communications Charter
+parent: People Ops
+nav_order: 4
 ---
 
 # Communications Charter 

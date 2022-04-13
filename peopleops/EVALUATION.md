@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Processes
 title: Evaluation
+parent: People Ops
+nav_order: 18
 has_children: true
 ---
 

@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Compensation Strategy and Benefits
+parent: People Ops
+nav_order: 15
 ---
 
 # Compensation Strategy and Benefits

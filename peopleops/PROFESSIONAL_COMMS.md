@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Professional Conduct and Communication
+parent: People Ops
+nav_order: 5
 ---
 
 # Professional Conduct and Communication

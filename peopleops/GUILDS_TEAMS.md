@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Guilds and Teams
+parent: People Ops
+nav_order: 10
 ---
 
 # Guilds and Teams

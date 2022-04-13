@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Processes
 title: End-of-Month Checklist
+parent: Processes
+grand_parent: Operations
+nav_order: 4
 ---
 
 **Purpose**

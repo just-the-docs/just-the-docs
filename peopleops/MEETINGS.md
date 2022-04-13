@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Meetings
+parent: People Ops
+nav_order: 9
 ---
 
 # Meetings

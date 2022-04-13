@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Processes
 title: Feedback Loops
+parent: People Ops
+nav_order: 7
 ---
 
 # Feedback Loops

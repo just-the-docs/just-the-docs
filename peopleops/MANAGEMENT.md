@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Management
+parent: People Ops
+nav_order: 9
 ---
 
 # Management

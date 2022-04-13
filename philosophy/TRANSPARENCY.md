@@ -2,6 +2,7 @@
 layout: default
 parent: Philosophy
 title: Transparency Policy
+nav_order: 4
 ---
 
 # Transparency Policy

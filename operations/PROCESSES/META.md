@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Processes
 title: Meta
+parent: Processes
+grand_parent: Operations
+nav_order: 1
 ---
 
 # Contributing to the Ops Manual

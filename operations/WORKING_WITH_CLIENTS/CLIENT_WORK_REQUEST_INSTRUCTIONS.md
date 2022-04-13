@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Clients
 title: Client Work Request Instructions
+parent: Clients
+grand_parent: Operations
+nav_order: 4
 ---
 
 # Client Work Request Instructions

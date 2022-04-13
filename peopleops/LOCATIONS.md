@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Locations
+parent: People Ops
+nav_order: 11
 ---
 
 # Locations

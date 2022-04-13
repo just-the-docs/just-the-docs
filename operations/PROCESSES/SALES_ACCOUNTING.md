@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Processes
 title: Sales Accounting
+parent: Processes
+grand_parent: Operations
+nav_order: 5
 ---
 
 # Sales Accounting

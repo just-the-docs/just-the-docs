@@ -2,6 +2,7 @@
 layout: default
 parent: Philosophy
 title: Principles
+nav_order: 3
 ---
 
 # Principles

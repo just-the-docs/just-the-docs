@@ -3,6 +3,7 @@ layout: default
 parent: Operations
 title: Clients
 has_children: true
+nav_order: 4
 ---
 
 # Building Our Client Base

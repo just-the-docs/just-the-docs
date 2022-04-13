@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Setting Up Your Desk
+parent: People Ops
+nav_order: 3
 ---
 
 # Setting Up Your Desk

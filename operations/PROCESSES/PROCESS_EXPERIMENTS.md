@@ -1,8 +1,12 @@
 ---
 layout: default
-parent: Processes
 title: Process Experiments
+parent: Processes
+grand_parent: Operations
+nav_order: 3
 ---
+
+# Process Experiments 
 
 ## Purpose
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Philosophy
+nav_order: 1
 has_children: true
 ---
 

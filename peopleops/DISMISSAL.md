@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Dismissal
+parent: People Ops
+nav_order: 19
 ---
 
 # Dismissal

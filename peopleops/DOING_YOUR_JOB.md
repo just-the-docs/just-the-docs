@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Doing Your Job
+parent: People Ops
+nav_order: 2
 ---
 
 # Doing Your Job

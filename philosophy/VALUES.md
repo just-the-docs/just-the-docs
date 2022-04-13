@@ -2,6 +2,7 @@
 layout: default
 parent: Philosophy
 title: Values
+nav_order: 2
 ---
 
 # Values
@@ -39,7 +40,7 @@ results are:
 We also tried keyvalues.com and this was our consensus selections
 together.
 
-![Key Values Exercise](keyvalues.org.png)
+![Key Values Exercise](/assets/images/keyvalues.org.png)
 
 ### Good Questions To Ask
 

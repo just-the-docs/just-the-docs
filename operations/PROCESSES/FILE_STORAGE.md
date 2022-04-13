@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Operations
 title: File Storage
+parent: Processes
+grand_parent: Operations
+nav_order: 2
 ---
 
 # File Storage

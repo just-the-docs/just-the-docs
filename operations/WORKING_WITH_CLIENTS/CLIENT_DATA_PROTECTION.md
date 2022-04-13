@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Clients
 title: Client Data Protection
+parent: Clients
+grand_parent: Operations
+nav_order: 5
 ---
 
 # Client Data Protection

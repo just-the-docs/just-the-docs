@@ -2,9 +2,10 @@
 layout: default
 parent: Philosophy
 title: Philosophical References
+nav_order: 6
 ---
 
-# References
+# Philosophical References
 
 **Purpose**
 

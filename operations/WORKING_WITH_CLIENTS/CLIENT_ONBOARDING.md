@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Clients
 title: Client Onboarding
+parent: Clients
+grand_parent: Operations
+nav_order: 3
 ---
 
 # Client Onboarding

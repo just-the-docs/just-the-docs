@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Clients
 title: Working With Government
+parent: Clients
+grand_parent: Operations
+nav_order: 7
 ---
 
 # Working With Government

@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Recruiting
 title: Recruiting Strategy
+parent: Recruiting
+grand_parent: People Ops
+nav_order: 3
 ---
 
 # Recruiting Strategy

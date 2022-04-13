@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Eightmeters
+parent: People Ops
+nav_order: 6
 ---
 
 # Eightmeters

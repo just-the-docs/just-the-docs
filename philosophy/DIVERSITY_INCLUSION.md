@@ -2,6 +2,7 @@
 layout: default
 parent: Philosophy
 title: Diversity and Inclusion Principles
+nav_order: 5
 ---
 
 # Diversity and Inclusion Principles

@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Recruiting
 title: Hiring Fit
+parent: Recruiting
+grand_parent: People Ops
+nav_order: 2
 ---
 
 # Hiring Fit

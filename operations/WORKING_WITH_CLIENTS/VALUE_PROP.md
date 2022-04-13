@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Proposals
 title: Value Proposition
+parent: Clients
+grand_parent: Operations
+nav_order: 6
 ---
 
 # Value Proposition

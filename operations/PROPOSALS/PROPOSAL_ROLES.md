@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Proposals
 title: Proposal Team Roles
+parent: Proposals
+grand_parent: Operations
+nav_order: 2
 ---
 
 # Proposal Team Roles

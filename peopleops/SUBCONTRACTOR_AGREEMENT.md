@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Subcontractor Work Agreement
+parent: People Ops
+nav_order: 12
 ---
 
 # Subcontractor Work Agreement

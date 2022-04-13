@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Subcontractor's Guide
+parent: People Ops
+nav_order: 13
 ---
 
 # Subcontractor's Guide

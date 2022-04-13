@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: People Ops
 title: Recruiting
+parent: People Ops
+nav_order: 14
 has_children: true
 ---
 

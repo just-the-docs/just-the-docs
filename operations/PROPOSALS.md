@@ -3,6 +3,7 @@ layout: default
 parent: Operations
 title: Proposals
 has_children: true
+nav_order: 3
 ---
 
 # Proposals

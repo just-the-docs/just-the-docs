@@ -2,6 +2,7 @@
 layout: default
 parent: Philosophy
 title: Vision
+nav_order: 1
 ---
 
 # Vision

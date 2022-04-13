@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Recruiting
 title: Applicant Guide
+parent: Recruiting
+grand_parent: People Ops
+nav_order: 1
 ---
 
 # Applicant Guide

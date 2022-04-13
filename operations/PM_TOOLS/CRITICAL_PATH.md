@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: Operations
-title: Project Management
+parent: Project Management
+title: Critical Path
 ---
 
 # Critical Path

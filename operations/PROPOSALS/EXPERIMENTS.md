@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Proposals
 title: Niche Experiments
+parent: Proposals
+grand_parent: Operations
+nav_order: 3
 ---
 
 # Niche Experiments

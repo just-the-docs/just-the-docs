@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Clients
 title: Discovery
+parent: Clients
+grand_parent: Operations
+nav_order: 2
 ---
 
 # Discovery

@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Proposals
 title: Proposal Writing Process
+parent: Proposals
+grand_parent: Operations
+nav_order: 1
 ---
 
 # Proposal Writing Process
