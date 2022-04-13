@@ -13,78 +13,19 @@
     },
     "tasks": [
         {
-            "label": "Git: Delete Remote & Local Tags",
+            "label": "Git: Create new branch",
             "type": "shell",
-            "command": "git fetch --prune --prune-tags && export TAGS=$(git tag|grep  ${input:tagSearch}) && git push ${REMOTE_NAME:-origin} --delete $TAGS && git tag -d $TAGS",
+            "command": "git fetch origin && git checkout trunk && git pull && git checkout -b ${input:branchName}",
             "group": {
               "kind": "build",
               "isDefault": true
-            }
-        },
-        {
-            "label": "Docker: Nuke",
-            "type": "shell",
-            "command": "docker stop $(docker ps -a -q) && docker rm -vf $(docker ps -a -q) && docker rmi -f $(docker images -a -q)",
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            //https://phoenixnap.com/kb/how-to-install-python-3-ubuntu
-            "label": "Python: Install Python3",
-            "type": "shell",
-            "command": "sudo apt update -y && sudo apt install -y software-properties-common && sudo add-apt-repository ppa:deadsnakes/ppa && sudo apt update -y && sudo apt install python3.8 && sudo apt install python3-pip && pip install ipykernel",
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            //https://phoenixnap.com/kb/how-to-install-python-3-ubuntu
-            "label": "Python: Install Anaconda",
-            "type": "shell",
-            "command": "wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh && bash Anaconda3-2020.02-Linux-x86_64.sh -u",
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            "label": "Python: Init Anaconda",
-            "type": "shell",
-            "command": "source ~/anaconda3/etc/profile.d/conda.sh && conda init && conda config --set auto_activate_base false",
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            "label": "Python: Activate Anaconda",
-            "type": "shell",
-            "command": "conda activate",
-            "problemMatcher": [],
-            "group": {
-                "kind": "build",
-                "isDefault": true
             }
         }
     ],
     "inputs": [
         {
-            "id": "containerID",
-            "description": "Container ID:",
-            "default": "",
-            "type": "promptString"
-        },
-        {
-            "id": "tagSearch",
-            "description": "Tag Pattern:",
-            "default": "beta",
+            "id": "branchName",
+            "description": "Branch Name:",
             "type": "promptString"
         }
     ]
