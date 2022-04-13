@@ -67,8 +67,11 @@ aux_links:
   "Ops Manual on GitHub":
     - "//github.com/countable-web/ops"
 
+  "META":
+    - "https://countable-web.github.io/ops/operations/PROCESSES/META/"
+
 # Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
+aux_links_new_tab: true
 
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
