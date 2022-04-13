@@ -5,7 +5,6 @@ parent: Processes
 grand_parent: Operations
 nav_order: 1
 toc: true
-categories: processes
 ---
 
 # Contributing to the Ops Manual
