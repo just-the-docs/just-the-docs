@@ -4,6 +4,8 @@ title: Meta
 parent: Processes
 grand_parent: Operations
 nav_order: 1
+toc: true
+categories: processes
 ---
 
 # Contributing to the Ops Manual
@@ -30,11 +32,9 @@ TODO
 {: .label .label-yellow }
 Something you want to remember to write later.
 
-```
-TODO
+```TODO
 {: .label .label-yellow }
-Something you want to remember to write later.
-```
+Something you want to remember to write later.```
 
 DRAFT
 {: .label .label-green }
@@ -55,7 +55,7 @@ Something that is critical and we want to draw special attention to it. (Safety,
 
 ## Data Headers for New Pages
 
-When you create a new page in the ops manual, you will need to include a few lines of simple information at the very top of the page. (If there is a space or line before it, the header will not be parsed correctly.)
+When you create a new page in the ops manual, you will need to include a few lines of simple information at the very top of the page. (If there is a space or line before it, the header will not be parsed correctly.) This follows the convention of [YAML](https://yaml.org/) within the context of Jekyll static sites' ["Front Matter"](https://jekyllrb.com/docs/front-matter/).
 
 There are two primary page scenarios for header templates:
 
