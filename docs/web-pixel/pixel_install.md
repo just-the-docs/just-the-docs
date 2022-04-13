@@ -14,7 +14,13 @@ parent: Web Pixel
 {:toc}
 </details>
 
+<<<<<<< HEAD
 ## Install the MRP Prelytix Web Pixel
+=======
+> Out of the box, the MRP Prelytix Web Pixel is GDPR compliant and does not collect any user-level data by utilizing cookies.
+
+# Install the MRP Prelytix Web Pixel
+>>>>>>> a51e12bf7f818485bf0636e371f4a2efd2042bd7
 
 <div style="background: ghostwhite; font-size: 20px; padding: 10px; border: 1px solid lightgray; margin: 10px;">
   &#9432; Out of the box, the MRP Prelytix Web Pixel is GDPR compliant and does not collect any user-level data by utilizing cookies.
@@ -24,7 +30,7 @@ The MRP Prelytix Web Pixel is a piece of code added to your website that provide
 
 ### How to obtain the pixel snippet
 
-In Prelytix, go to the Admin Studio and select ‘Implement Web Pixel’.
+In Prelytix, go to the Admin Studio and select ‘Implement Web Pixel’:
 
 1. Input your website’s domain in the domain field
 2. Select ‘Generate pixel’ to generate your snippet
