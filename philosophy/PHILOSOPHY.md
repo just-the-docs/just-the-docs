@@ -7,6 +7,15 @@ has_children: true
 
 # Philosophy
 
+{: .no_toc }
+
+## Table of Contents
+
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
+   
 **Purpose**
 
 To provide a foundation for all we do at Countable (processes) rooted in why we do it (philosophy).

@@ -8,6 +8,15 @@ nav_order: 4
 
 # Building Our Client Base
 
+{: .no_toc }
+
+## Table of Contents
+
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
+
 **Purpose**
 
 This chapter documents our approach to taking on new work so we curate a group of clients we love working with over time, and stay profitable. Formerly titled "Sales" and renamed to reflect our increasing focus on stable long-term clients and SaaS-style opportunities.

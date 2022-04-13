@@ -8,6 +8,15 @@ nav_order: 3
 
 # Proposals
 
+{: .no_toc }
+
+## Table of Contents
+
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
+
 **Purpose**
 
 The following are actionable tactics to improve the ROI of time spent

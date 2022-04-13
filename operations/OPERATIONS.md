@@ -7,6 +7,15 @@ has_children: true
 
 # Operations and People Ops
 
+{: .no_toc }
+
+## Table of Contents
+
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
+
 **Purpose**
 
 Operations is the process of treating our own team members as "example users" in user research, and collaboratively defining the best pathway forward in any given work circumstances.

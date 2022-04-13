@@ -8,6 +8,15 @@ has_children: true
 
 # Evaluation
 
+{: .no_toc }
+
+## Table of Contents
+
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
+
 **Purpose**
 
 To outline a clear, fair, and replicable process for performance

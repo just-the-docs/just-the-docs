@@ -7,6 +7,15 @@ has_children: true
 
 # Programming
 
+{: .no_toc }
+
+## Table of Contents
+
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
+
 **Purpose**
 
 The purpose of this section is to standardize key (not all) engineering
@@ -67,3 +76,9 @@ We accomplish this via:
 >   - Monthly meetings with workshops and presentations.
 >   - Mob / pair coding sessions.
 >   - Code reviews.
+
+## See Also
+
+[Guilds and Teams](/peopleops/GUILDS_TEAMS/)
+
+[DevOps](/devops/DEVOPS.md)
