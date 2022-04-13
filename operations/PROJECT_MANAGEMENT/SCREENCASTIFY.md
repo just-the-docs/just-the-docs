@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Project Management
 title: Screencastify
+parent: Project Management
+grand_parent: Operations
+nav_order: 5
 ---
 
 # Screencastify

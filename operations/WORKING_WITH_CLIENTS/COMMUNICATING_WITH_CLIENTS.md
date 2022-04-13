@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Client Work Request Instructions
+title: Communicating with Clients
 parent: Clients
 grand_parent: Operations
 nav_order: 1

@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Project Management
 title: Scrum
+parent: Project Management
+grand_parent: Operations
+nav_order: 1
 ---
 
 # Scrum

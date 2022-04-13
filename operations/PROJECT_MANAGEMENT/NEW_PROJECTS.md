@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Project Management
 title: Setting Up A Project
+parent: Project Management
+grand_parent: Operations
+nav_order: 3
 ---
 
 # Setting Up A Project

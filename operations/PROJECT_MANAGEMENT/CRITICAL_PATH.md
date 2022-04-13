@@ -1,7 +1,9 @@
 ---
 layout: default
-parent: Project Management
 title: Critical Path
+parent: Project Management
+grand_parent: Operations
+nav_order: 4
 ---
 
 # Critical Path
