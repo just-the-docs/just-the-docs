@@ -14,13 +14,7 @@ parent: Web Pixel
 {:toc}
 </details>
 
-<<<<<<< HEAD
 ## Install the MRP Prelytix Web Pixel
-=======
-> Out of the box, the MRP Prelytix Web Pixel is GDPR compliant and does not collect any user-level data by utilizing cookies.
-
-# Install the MRP Prelytix Web Pixel
->>>>>>> a51e12bf7f818485bf0636e371f4a2efd2042bd7
 
 <div style="background: ghostwhite; font-size: 20px; padding: 10px; border: 1px solid lightgray; margin: 10px;">
   &#9432; Out of the box, the MRP Prelytix Web Pixel is GDPR compliant and does not collect any user-level data by utilizing cookies.
