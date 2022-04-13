@@ -22,7 +22,7 @@ The MRP Prelytix Web Pixel is a piece of code added to your website that provide
 
 ### How to obtain the pixel snippet
 
-In Prelytix, go to the Admin Studio and select ‘Implement Web Pixel’.
+In Prelytix, go to the Admin Studio and select ‘Implement Web Pixel’:
 
 1. Input your website’s domain in the domain field
 2. Select ‘Generate pixel’ to generate your snippet
