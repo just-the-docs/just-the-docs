@@ -1,0 +1,11 @@
+_includes/          @mrpfd/prelytix-web
+_layouts/           @mrpfd/prelytix-web
+_sass/              @mrpfd/prelytix-web
+assets/             @mrpfd/prelytix-web
+lib/                @mrpfd/prelytix-web
+script/             @mrpfd/prelytix-web
+
+.devcontainer/      @mrpfd/devops
+.vscode/            @mrpfd/devops
+_config.yml         @mrpfd/devops
+
