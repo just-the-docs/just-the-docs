@@ -59,31 +59,30 @@ When you create a new page in the ops manual, you will need to include a few lin
 
 There are two primary page scenarios for header templates:
 
-##### Headers for New Sub-Pages
+##### New "Child" Pages
 
-If you are creating a page within an existing folder (99% of the time), you will include the following header content: 
+If you are creating a page within an existing root level folder (99% of the time), you will include the following header content: 
+
 
 ```
 ---
 layout: default
-parent: Operations
 title: Contributing to the Ops Manual
+parent: Processes
+nav_order: 1
 ---
 ```
 
-##### Headers for New Collections
+* **Layout** : for now, we always use default here. Custom layouts can be viewed in 
 
-If you are creating a new collection (*very* rare, please consult with ops guild before doing so), you will include the following header content: 
+Copy the value for "parent" *directly* from the header of the parent page; in the example above, [the very page we're on right now!](META.md). 
 
-```
----
-layout: default
-title: Operations
-has_children: true
----
-```
 
-Note that any child pages created "below" that collection page will have to reference its title in their own data headers, so please choose a succinct title for these.
+
+##### New Grand-child Pages
+
+
+
 
 ## Writing Ops Manual Pages
 

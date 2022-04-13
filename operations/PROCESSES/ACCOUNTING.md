@@ -15,7 +15,7 @@ To outline all accounting guidelines and processes related to sales.
 **Scope**
 
 Currently covers commission payout, cost estimation, quoting and
-billing.
+billing. 
 
 ## Commission
 
