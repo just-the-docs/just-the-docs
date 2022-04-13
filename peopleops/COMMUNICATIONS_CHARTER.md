@@ -133,7 +133,7 @@ external project stakeholders).
 ### Trello
 
   - Trello is for tracking what we need to get done (actionable tasks and
-reminders). We use variants of Scrum, details [here](/growth/TRELLO.md).
+reminders). We use variants of Scrum, details [here](/operations/PM_TOOLS/SCRUM.md).
 
 ### Office Hours and Presence
   - Please summarize your hours when you are most likely to be reachable (no more than your contracted hours), in your slack description.
@@ -146,7 +146,7 @@ reminders). We use variants of Scrum, details [here](/growth/TRELLO.md).
 
 ## Meetings
 
-See [Meetings](/peopleops/MEETINGS.md)
+See [Meetings](MEETINGS.md)
 
 ## Slack Hygiene
 
@@ -155,7 +155,7 @@ updates.
 
 Use the following notification setting. You should only be notified when
 people direct message or mention you, and only during your work hours.
-![Slack Notification Setting](recommended-slack-setting.png)
+![Slack Notification Setting](/assets/images/recommended-slack-setting.png)
 
   - Go straight to the point. Don't send people messages to check if
     someone's online, like "Clark", "hey, you there?", or "Can I ask you
@@ -213,7 +213,7 @@ improve. Some references on why this is:
 
 ### When To Give Feedback
 
-  - Code reviews (following norms [here](../../developers/GIT/) The benefits
+  - Code reviews (following norms [here](/developers/GIT.md) The benefits
     of Senior developers reviewing Junior developers' code is obvious I
     hope, but it's just as critical to provide feedback as a Jr
     dev because:

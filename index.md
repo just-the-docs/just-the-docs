@@ -107,16 +107,16 @@ the technology they depend on. Now that's a feedback loop\!
 Finding the right people is one of our biggest challenges, so we need
 every advantage we can find in this way.
 
-  - [General Posting](processes/recruiting/JOB_POSTINGS/)
-  - [Are You A Good Fit For Countable](processes/recruiting/HIRING_FIT/)?
+  - [General Posting](peopleops/recruiting/JOB_POSTINGS/)
+  - [Are You A Good Fit For Countable](peopleops/recruiting/HIRING_FIT/)?
 
 ### Marketing
 
 Helps us find the best partners and team members who share our passion.
 
-  - [Value Proposition](growth/VALUE_PROP)
+  - [Value Proposition](/operations/WORKING_WITH_CLIENTS/VALUE_PROP/)
   - [Creative Brief](ux/CREATIVE_BRIEF/)
-  - [Design Asset Storage](processes/onboarding/FILE_STORAGE/)
+  - [Design Asset Storage](operations/FILE_STORAGE/)
   - [Social Media Posting Policy](ux/SOCIAL_MEDIA_POSTING/)
   - [SEO](ux/SEO/)
   - [Usability](ux/USABILITY_TESTING/)
@@ -125,22 +125,22 @@ Helps us find the best partners and team members who share our passion.
 
 If you're a new Countable team member, start here\!
 
-  - [Onboarding](processes/onboarding/ONBOARDING_GUIDE/)
-  - [Your Contract](processes/onboarding/SUBCONTRACTOR_AGREEMENT/)
+  - [Onboarding](peopleops/ONBOARDING_GUIDE/)
+  - [Your Contract](peopleops/SUBCONTRACTOR_AGREEMENT/)
   - [Diversity and Inclusion](philosophy/DIVERSITY_INCLUSION/)
-  - [Physical Setup](processes/onboarding/DOING_YOUR_JOB/)
-  - [Project Management](growth/PROJECT_MANAGEMENT/)
-  - [Evaluation](processes/evaluation/EVALUATION/)
-  - [Compensation](processes/onboarding/COMPENSATION_STRATEGY/)
-  - [Scrum](growth/SCRUM/)
-  - [Trello](growth/TRELLO/)
-  - [Client Data Protection](growth/CLIENT_DATA_PROTECTION/)
+  - [Physical Setup](peopleops/DOING_YOUR_JOB/)
+  - [Project Management](operations/PROJECT_MANAGEMENT/)
+  - [Evaluation](peopleops/EVALUATION/)
+  - [Compensation](peopleops/COMPENSATION_STRATEGY/)
+  - [Scrum](operations/PM_TOOLS/SCRUM/)
+  - [Trello](operations/PM_TOOLS/TRELLO/)
+  - [Client Data Protection](operations/WORKING_WITH_CLIENTS/CLIENT_DATA_PROTECTION/)
 
 If you're a new client, start here\!
 
-  - [Scrum](growth/SCRUM/)
-  - [Trello](growth/TRELLO/)
-  - [Requesting Work from Countable](growth/CLIENT_WORK_REQUEST_INSTRUCTIONS/)
+  - [Scrum](operations/PM_TOOLS/SCRUM/)
+  - [Trello](operations/PM_TOOLS/TRELLO/)
+  - [Requesting Work from Countable](operations/WORKING_WITH_CLIENTS/CLIENT_WORK_REQUEST_INSTRUCTIONS/)
 
 ### Engineering
 
@@ -165,18 +165,17 @@ The purpose of this section is to standardize key (not all) product/engineering 
 How to provide the best results for clients.
 
   - [Methodology](ux/METHODOLOGY/)
-  - [Communicating with Clients](growth/CLIENTS/)
+  - [Communicating with Clients](operations/WORKING_WITH_CLIENTS/COMMUNICATING_WITH_CLIENTS/)
 
 ## Operations
 
   - [Meetings](peopleops/MEETINGS/)
-  - [Processes](processes/PROCESSES/)
-  - [Storage](processes/onboarding/FILE_STORAGE/)
+  - [Processes](operations/PROCESSES/)
   - [Gathering Team Feedback](peopleops/COMMUNICATIONS_CHARTER/)
 
 ## Contributing
 
-Technical things to learn when working on this manual: [Contributing](peopleops/META/)
+Technical things to learn when working on this manual: [Contributing](operations/PROCESSES/META/)
 
 If you want to suggest a change to Countable Web Productions, make a
 pull request. The rules:

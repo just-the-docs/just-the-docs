@@ -112,7 +112,7 @@ All active projects should have a Sprint meeting every 1 to 4 weeks.
 
   - Discuss how the current sprint will accomplish our "OKR" for the
     project.
-  - See [Scrum](/growth/SCRUM.md) for full instructions
+  - See [Scrum](/operations/PM_TOOLS/SCRUM.md) for full instructions
 
 ## One-on-one Meetings
 

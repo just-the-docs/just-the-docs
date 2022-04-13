@@ -31,6 +31,6 @@ the employee grow at the company, and to help create clear goals on outcomes tha
 ## Resources
 
 Starting with some well-receved, relevant resources.
- * Google's data driven management performance rules - https://www.govexec.com/management/2013/01/googles-8-simple-rules-being-better-manager/60882/
- * On Accountability - https://medium.dave-bailey.com/a-manager-guide-to-holding-your-team-accountable-a05aac67294c
- * On Giving Great Feedback - https://medium.dave-bailey.com/how-to-create-a-feedback-culture-6ba43db875dd
+ * [Google's data driven management performance rules](https://www.govexec.com/management/2013/01/googles-8-simple-rules-being-better-manager/60882/)
+ * [On Accountability](https://medium.dave-bailey.com/a-manager-guide-to-holding-your-team-accountable-a05aac67294c)
+ * [On Giving Great Feedback](https://medium.dave-bailey.com/how-to-create-a-feedback-culture-6ba43db875dd)
