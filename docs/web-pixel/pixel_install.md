@@ -16,7 +16,7 @@ parent: Web Pixel
 
 >ℹ Out of the box, the MRP Prelytix Web Pixel is GDPR compliant and does not collect any user-level data by utilizing cookies.
 
-## Install the MRP Prelytix Web Pixel
+# Install the MRP Prelytix Web Pixel
 
 The MRP Prelytix Web Pixel is a piece of code added to your website that provides statistics on which accounts are visiting your website, what pages they’re viewing, and how frequently they are doing so. This data is then coupled with other analytics to help score and prioritize the account for you.
 
