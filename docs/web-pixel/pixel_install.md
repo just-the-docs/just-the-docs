@@ -14,7 +14,7 @@ parent: Web Pixel
 {:toc}
 </details>
 
->ℹ Out of the box, the MRP Prelytix Web Pixel is GDPR compliant and does not collect any user-level data by utilizing cookies.
+> Out of the box, the MRP Prelytix Web Pixel is GDPR compliant and does not collect any user-level data by utilizing cookies.
 
 ## Install the MRP Prelytix Web Pixel
 
