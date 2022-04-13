@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Sales Accounting
+title: Accounting
 parent: Processes
 grand_parent: Operations
 nav_order: 5
 ---
 
-# Sales Accounting
+# Accounting
 
 **Purpose**
 

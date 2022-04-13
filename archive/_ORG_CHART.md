@@ -1,8 +1,10 @@
 ---
 layout: default
-parent: Operations
 title: Org Chart
+search_exclude: true
 ---
+
+# Org Chart
 
 (deprecated)
 

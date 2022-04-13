@@ -1,3 +1,9 @@
+---
+layout: default
+title: Effort vs Impact Tags
+search_exclude: true
+---
+
 # Effort vs Impact Tags
 
 As described on our onboarding guide, we use Trello for project management due to its simplicity and effectiveness in assisting us on our daily goals. Since we're dealing with a significative amount of tasks within a limited time frame we've implemented a **prioritizing system** where the product owner or the person that's assigned to the task could **estimate** the effort and impact that a certain card has.

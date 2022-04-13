@@ -1,3 +1,9 @@
+---
+layout: default
+title: KPIs
+search_exclude: true
+---
+
 # KPI
 
 DRAFT

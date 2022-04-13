@@ -18,7 +18,7 @@ Currently holds content on linking best practices, a draft on Writing Ops Manual
 
 ## How to Add Links
 
-Best convention for linking to other files: `../devops/DEVOPS`
+Best convention for linking to other files: `../devops/DEVOPS` or `/devops/DEVOPS/`
 
 You can link directly to a single file within the same folder by using `DEVOPS.md`. From preliminary testing, in this use the .md *is* needed.
 
@@ -29,6 +29,12 @@ The jekyll template we use, [just-the-docs](https://pmarsceill.github.io/just-th
 TODO
 {: .label .label-yellow }
 Something you want to remember to write later.
+
+```
+TODO
+{: .label .label-yellow }
+Something you want to remember to write later.
+```
 
 DRAFT
 {: .label .label-green }

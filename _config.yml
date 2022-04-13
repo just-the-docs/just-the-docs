@@ -41,7 +41,7 @@ search:
   heading_level: 6
   # Maximum amount of previews per search result
   # Default: 3
-  previews: 2
+  previews: 3
   # Maximum amount of words to display before a matched word in the preview
   # Default: 5
   preview_words_before: 3
@@ -80,11 +80,12 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 # Footer content
 # appears at the bottom of every page's main content
 
+footer_content: "Content Copyright 2022, <a href=\"https://countable.ca/\">Countable Web Productions, Inc.</a>" Utilizing Patrick Marsceill's <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT licensed just-the-docs Jekyll template.</a>"
+
 # Back to top link
 back_to_top: true
 back_to_top_text: "Back to top"
 
-footer_content: "Content Copyright 2020, Countable Web Productions, Inc. Utilizing Patrick Marsceill's <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT licensed just-the-docs Jekyll template.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter

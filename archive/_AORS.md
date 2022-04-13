@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: Operations
 title: Areas of Responsibility
+search_exclude: true
 ---
 
 (deprecated)
