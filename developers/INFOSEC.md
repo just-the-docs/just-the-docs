@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Programming
 title: Information Security
+parent: Programming
+nav_order: 6
 ---
 
 # Information Security

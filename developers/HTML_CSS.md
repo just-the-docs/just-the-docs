@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Programming
 title: HTML/CSS
+parent: Programming
+nav_order: 9
 ---
 
 # HTML/CSS

@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Programming
 title: Coding Standards and Style
+parent: Programming
+nav_order: 2
 ---
 
 # Coding Standards and Style

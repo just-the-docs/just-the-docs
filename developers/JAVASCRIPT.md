@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Programming
 title: Javascript
+parent: Programming
+nav_order: 10
 ---
 
 # Javascript

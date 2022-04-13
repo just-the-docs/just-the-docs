@@ -8,6 +8,15 @@ has_children: true
 
 # Recruiting Process
 
+{: .no_toc }
+
+## Table of Contents
+
+{: .no_toc .text-delta }
+
+- TOC
+   {:toc}
+   
 **Purpose**
 
 To transparently define a replicable recruiting process for the Countable team.

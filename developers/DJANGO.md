@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Programming
 title: Django
+parent: Programming
+nav_order: 12
 ---
 
 # Django
@@ -47,7 +48,7 @@ Certain files in Django should only import from other certain types of
 files. For example, `urls.py` should really only import from `views.py`
 (and `utils.py`).
 
-![import flow](./django_import_flow.jpg)
+![import flow](/assets/images/django_import_flow.jpg)
 
 ### Models
 

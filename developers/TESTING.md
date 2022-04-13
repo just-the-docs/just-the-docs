@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Programming
 title: Testing
+parent: Programming
+nav_order: 8
 ---
 
 # Testing

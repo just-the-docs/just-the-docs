@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Programming
 title: Git
+parent: Programming
+nav_order: 5
 ---
 
 # Git
@@ -16,10 +17,9 @@ Broad coverage of multiple elements of git workflow.
 
 ## Git Branches
 
-Countable uses [git flow](https://jeffkreeftmeijer.com/git-flow/) for
-branch naming.
+Countable uses [git flow](https://jeffkreeftmeijer.com/git-flow/) for branch naming.
 
-![image](git-flow.png)
+![image](/assets/images/git-flow.png)
 
 1.  `develop` is the main branch developers work on and test.
 2.  `master` is the "staging" branch, where the upcoming release is deployed weekly for testing and previews among the team.

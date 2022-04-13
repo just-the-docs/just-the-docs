@@ -1,55 +1,43 @@
 ---
 layout: default
-parent: Programming
 title: Dependencies
+parent: Programming
+nav_order: 7
 ---
 
 # Dependencies
 
 **Purpose**
 
-This page covers dependency and framework selection and management. See
-also [here](https://web.archive.org/web/20180223065908/http://discuss.joelonsoftware.com/default.asp?joel.3.219431).
+This page covers dependency and framework selection and management. See also [here](https://web.archive.org/web/20180223065908/http://discuss.joelonsoftware.com/default.asp?joel.3.219431).
 
 **Scope**
 
-Currently the page gives overall guidance on picking dependencies, and
-provides more specific deep guidance on Javascript frameworks in
-particular.
+Currently the page gives overall guidance on picking dependencies, and provides more specific deep guidance on Javascript frameworks in particular.
 
 ## How to Pick Dependencies
 
   - Dependencies have a maintenance cost. Use as few as possible.
-  - Pick dependencies that do what you need, and expect to need, and no
-    more.
-  - Pick dependencies with active support (\> 5000 GitHub stars, recent
-    commits)
-  - If you really need a dependency with under 5000 GitHub stars, assume
-    you may need to fork it in the future. These kinds of projects are
-    at very high risk of becoming abandoned.
-  - Be wary of sub-dependencies (jquery-cors). It's better to use a
-    dependency with fewer upstreams (node-cors).
-  - Minimize the size of the entire dependency tree. Dependencies closer
-    to the underlying language or browser are better, and more likely to
-    have a reasonable upgrade path because they are higher in the tree.
+  - Pick dependencies that do what you need, and expect to need, and no more.
+  - Pick dependencies with active support (\> 5000 GitHub stars, recent commits)
+  - If you really need a dependency with under 5000 GitHub stars, assume you may need to fork it in the future. These kinds of projects are at very high risk of becoming abandoned.
+  - Be wary of sub-dependencies (jquery-cors). It's better to use a dependency with fewer upstreams (node-cors).
+  - Minimize the size of the entire dependency tree. Dependencies closer to the underlying language or browser are better, and more likely to have a reasonable upgrade path because they are higher in the tree.
 
 ## Javascript Frameworks
 
-Javascript frameworks are a big discussion and there isn't a nice answer
-IMO. The problem is our projects often live for 5 to 10 years.
-*Javascript frameworks do not.*
+Javascript frameworks are a big discussion and there isn't a nice answer IMO. 
 
-The problem of using the "framework of the day" is that Javascript
-frameworks only grow for about 3 years and then they always slowly die.
+The problem is our projects often live for 5 to 10 years. *Javascript frameworks do not.*
 
-jQuery is slowly fading away now, Angular has peaked and is losing
-market share to React. React is close to peaking and is starting to lose
-to Vue. By next year, Vue will be more popular than either Angular and
-React and it's a better framework so the answer is to use Vue, right?
+The problem of using the "framework of the day" is that Javascript frameworks only grow for about 3 years and then they always slowly die.
 
-The problem is, we build 5 apps in Vue, and then something else replaces
-it in 2 to 3 years, and we now have to support old apps in so many
-frameworks with dying communities. here are Pros and Cons of the major
+jQuery is slowly fading away now, Angular has peaked and is losing market share to React. 
+
+React is close to peaking and is starting to lose
+to Vue. By next year, Vue will be more popular than either Angular and React and it's a better framework so the answer is to use Vue, right?
+
+The problem is, we build 5 apps in Vue, and then something else replaces it in 2 to 3 years, and we now have to support old apps in so many frameworks with dying communities. here are Pros and Cons of the major
 frameworks we consider:
 
   - jQuery is kind of unique since it's really a DOM library and not a

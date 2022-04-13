@@ -1,7 +1,8 @@
 ---
 layout: default
-parent: Programming
 title: Training
+parent: Programming
+nav_order: 13
 ---
 
 # Training
