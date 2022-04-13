@@ -1,12 +1,12 @@
 ---
 layout: default
 parent: Operations
-title: Processes at Countable
+title: Processes
 has_children: true
 nav_order: 1
 ---
 
-# Processes at Countable
+# Processes
 
 **Purpose**
 
