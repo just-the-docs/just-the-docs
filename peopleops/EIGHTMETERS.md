@@ -6,6 +6,13 @@ nav_order: 6
 ---
 
 # Eightmeters
+{: .no_toc }
+
+## Table of Contents
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
 
 **Purpose**
 
@@ -13,10 +20,9 @@ To identify how to use our in-house social timesheet application.
 
 **Scope**
 
-Currently a basic draft, with room for further detail and feature
-exploration.
+Currently a basic draft, with room for further detail and feature exploration.
 
-## What is Eightmeters
+## What is Eightmeters?
 
 Eightmeters is a "social timesheet" web app that we
 created internally at Countable to help us feel more
@@ -24,7 +30,7 @@ connected as virtual workers. It allows us to see
 the stream of what others are working on, within our
 projects and teams.
 
-### Getting Started
+## Getting Started
 
 Once you have a countable-issued email address, you can
 use that to log in to [eightmeters.countable.ca](http://eightmeters.countable.ca/) via Google Login.
@@ -33,10 +39,9 @@ Reach out to [operations@countable.ca](mailto:operations@countable.ca) or the Sl
 
 ### How to Enter Your Time
 
-First navigate to the affiliated team, then select the specific
-project or category you worked on for this time period. These
-are lists of standardized slugs; clarify with your direct manager
-if you're not sure what some of the slugs you see are for.
+First navigate to the affiliated team, then select the specific project or category you worked on for this time period. 
+
+These are lists of standardized slugs; clarify with your direct manager if you're not sure what some of the slugs you see are for.
 
 #### Entry Fields for Recording Time
 
@@ -65,7 +70,11 @@ if you're not sure what some of the slugs you see are for.
 
 ## Describing Your Work In Eightmeters
 
-Include time spent on both admin and technical overhead (see the bottom of this section for definitions of these domains). Missing either of these two, or both, will lead to underbilling (which we do not promote). On paper, it may seem like underbilling is good because it saves the company money, but in the long-run, it creates frustration and can cost us valuable employees. However, while you should include the *time* from these, focus your work descriptions in eightmeters on the higher-level tasks and goals the overall work was in pursuit of:
+Include time spent on both admin and technical overhead (see the bottom of this section for definitions of these domains). Missing either of these two, or both, will lead to underbilling (which we do not promote). 
+
+On paper, it may seem like underbilling is good because it saves the company money, but in the long-run, it creates frustration and can cost us valuable employees. 
+
+However, while you should include the *time* from these, focus your work descriptions in eightmeters on the higher-level tasks and goals the overall work was in pursuit of:
 
   * Describe the work in a few words that indicate specific outcomes you worked on for most of that day. Between 3 and 20 words is the right level of detail.
   * Do not enter the same description for multiple days. Indicate what was different about each day you worked. This is easy if you enter your time every day.
@@ -75,7 +84,9 @@ Include time spent on both admin and technical overhead (see the bottom of this 
 
 #TODO - break down main countable billing tags and explain what should go under each
 
- *Admin overhead* is any non-technical work or research done in order to complete tasks (e.g. gathering relevant information through Slack or email, clarifying requirements, confirming if the bug is reproducible). *Technical overhead* is any technical work or research done which isn't directly a part of the work you are delivering but is necessary for its completion (e.g. local environment setup, reading code documentation, Googling code/tech issues).
+ *Admin overhead* is any non-technical work or research done in order to complete tasks (e.g. gathering relevant information through Slack or email, clarifying requirements, confirming if the bug is reproducible). 
+ 
+ *Technical overhead* is any technical work or research done which isn't directly a part of the work you are delivering but is necessary for its completion (e.g. local environment setup, reading code documentation, Googling code/tech issues).
  
 ### What Time is Billable
  

@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: DevOps
 title: DevOps Information Security
+parent: DevOps
 ---
 
 # DevOps Information Security
@@ -52,5 +52,9 @@ DevOps, CSO and ACSO team members must observe the following practices:
 - Most password formatting requirements such as specific characters REDUCES entropy and makes brute force attacks easier.
 - Your local hard drive must be encrypted with a 70-bit password.
 - Do not store important or sensitive data locally. Store it in a secured cloud location with 2 factor auth.
+
+## See Also
+
+[General Information Security](/developers/INFOSEC.md)
 
 \[1\] [DP Kumar Your Container is in Security Risk By Design](https://medium.com/@dpkumar/your-container-is-in-security-risk-by-design-8a7034f2f9b1)

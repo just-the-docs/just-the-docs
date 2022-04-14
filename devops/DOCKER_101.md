@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: DevOps
 title: Docker 101
+parent: DevOps
 ---
 
 # Docker 101

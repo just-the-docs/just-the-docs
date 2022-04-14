@@ -6,15 +6,13 @@ has_children: true
 ---
 
 # DevOps
-
 {: .no_toc }
 
 ## Table of Contents
-
 {: .no_toc .text-delta }
 
 - TOC
-   {:toc}
+{:toc}
 
 **Purpose**
 

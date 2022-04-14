@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: DevOps
 title: Docker Troubleshooting
+parent: DevOps
 ---
 
 # Docker Troubleshooting

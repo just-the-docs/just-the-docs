@@ -1,8 +1,10 @@
 ---
 layout: default
-parent: DevOps
 title: Docker
+parent: DevOps
 ---
+
+# Docker
 
 **Purpose**
 

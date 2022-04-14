@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: DevOps
 title: Jenkins
+parent: DevOps
 ---
 
 # Jenkins

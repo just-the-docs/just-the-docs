@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: DevOps
 title: Stack Choices
+parent: DevOps
 ---
 
 # Stack Choices

@@ -27,3 +27,9 @@ move actual policies we defined into here from Docs
   * Avoid storing sensitive information on disk. Keep it in cloud based accounts.
   * For laptops - please encrypt your disk if you have sensitiive information or access credentials for sensitive information stored there. DevOps staff must have encrypted disks with passphrase (entropy as above)
   * Working from WiFi outside your home network? Use a VPN.
+
+## See Also
+
+[Client Data Protection](../operations/WORKING_WITH_CLIENTS/CLIENT_DATA_PROTECTION.md)
+
+[DevOps Information Security](../devops/DEVOPS_INFOSEC.md)

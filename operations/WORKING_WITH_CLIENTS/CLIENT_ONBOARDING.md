@@ -30,20 +30,25 @@ For large projects, we recommend spending 5% to 10% of the project budget on pla
 This process has many benefits.
   * At low cost, we can determine if our teams are a great fit. If not, the client still benefits from a detailed specification to help them hire another agency for the delivery.
   * We are able to quote on the larger project more accurately (reducing our cost of underwriting scope uncertainty, with savings passed to you)
-  * 
 
 ## Delivery
 
-Countable uses [Scrum](SCRUM.md) to deliver project work.
+Countable uses [Scrum](../PROJECT_MANAGEMENT/SCRUM.md) to deliver project work.
   * Typically, the Product Owner role is held on the client's side.
   * This person will typically provide access to end-users and subject matter experts as well.
   * The product owner also oversees the Backlog, a list of requirements including mechanisms for change management.
 
-It is important to get all stakeholders aligned on release schedules and stick to them. The feature set is flexible and the release schedule is not. By design the release schedule is made as iterative as possible. Releasing work that provides value in the real world early and often is one of the best ways to ensure your project will succeed (as opposed to a monolithic release at the project end)
+It is important to get all stakeholders aligned on release schedules and stick to them. 
+
+The feature set is flexible and the release schedule is not. By design the release schedule is made as iterative as possible. 
+
+Releasing work that provides value in the real world early and often is one of the best ways to ensure your project will succeed (as opposed to a monolithic release at the project end).
 
 ## Maintenance
 
 A web application operating in production should be monitored and maintained.
-  * While our team provides testing, it's the client's responsibility to identify any defects or bugs by the project's work deadline. We recommend continuing the projcet work (Sprints) into production for this reason, ideally for a month or more. When the project work finishes, there is a 2 week grace period for the client to review the deliverables and make a complete list of any defects or bugs the team may have missed. After this time, any new discovered change requests must be handled by your support contract.
+  * While our team provides testing, it's the client's responsibility to identify any defects or bugs by the project's work deadline. 
+  * We recommend continuing the project work (Sprints) into production for this reason, ideally for a month or more. 
+  * When the project work finishes, there is a 2 week grace period for the client to review the deliverables and make a complete list of any defects or bugs the team may have missed. After this time, any new discovered change requests must be handled by your support contract.
   * If you prefer to use Countable for this, we can perform maintenance work at our standard rates. The amount of effort to keep a web application secure and up-to-date.
   * For support response time and service level assurance, please see our various on call support plans. [Latest plans here](https://docs.google.com/document/d/1_6hdlm3_NB19NR0ev6__aBxrzN8GxYiVoqy7Mb9Mnfs/edit?usp=sharing).

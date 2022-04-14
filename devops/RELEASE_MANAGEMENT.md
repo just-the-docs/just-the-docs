@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: DevOps
 title: Release Management
+parent: DevOps
 ---
 
 # Release Management

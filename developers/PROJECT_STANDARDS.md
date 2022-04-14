@@ -19,24 +19,17 @@ Covers project requirements, processes, automation, and structure.
 
 ALL projects **MUST**:
 
-  - Have a README.md file with all information and/or links required for
-    a new person to run the project locally, and any special
-    requirements for deploying to production.
+  - Have a README.md file with all information and/or links required for a new person to run the project locally, and any special requirements for deploying to production.
   - Be Dockerized, using docker-compose.yml.
-  - Not reference the production URL in code. Save this in the
-    docker-compose.override.yml for the specific ENV.
+  - Not reference the production URL in code. Save this in the docker-compose.override.yml for the specific ENV.
   - Not save secrets in code. Save these in the specific
     docker-compose.override.yml for the specific ENV.
 
 ALL projects **SHOULD**:
 
-  - Use PORT 80 to access via the browser, and to access APIs. This way
-    we never have to think about what port things are on in different
-    environments.
+  - Use PORT 80 to access via the browser, and to access APIs. This way we never have to think about what port things are on in different environments.
   - Use our standard stack choices.
-  - Automatically run tests, stage the `develop` branch for anyone to
-    look at, and automatically deploy the project to production from the
-    `master` branch.
+  - Automatically run tests, stage the `develop` branch for anyone to look at, and automatically deploy the project to production from the `master` branch.
 
 ## Automation
 
@@ -80,9 +73,7 @@ The front-end Dockerfile should run a development server, but for production sho
 DRAFT
 {: .label .label-green }
 
-Front-end development is exciting, but also a challenge. This is due to
-the fact that there are so many tools available for so many different
-things, and this side of the world moves fast. Main considerations:
+Front-end development is exciting, but also a challenge. This is due to the fact that there are so many tools available for so many different things, and this side of the world moves fast. Main considerations:
 
 1.  **Browser compability** - Does the website look good on Chrome? Firefox? Ipad? Galaxy? iPhone?
 2.  **Device compatibility** (Responsive Design) - On monitors that are not 1080p? 10 inch laptops at 1280 x 720?

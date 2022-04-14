@@ -25,3 +25,12 @@ Reach out to [Chelsea](mailto:chelsea@countable.ca) with any questions about Van
 ## Davao
 
 Reach out to [Justin](mailto:justin@countable.ca) with any questions about Davao team norms.
+
+## COVID-19 Safety Plan
+
+For all staff and subcontractors:
+
+  - As a remote-first company, it's much easier for us to manage COVID-19 safety by default.
+  - Do not attend the office if you have any symptoms.
+  - If you do attend the office, avoid touching your face, approaching within 6 feet of a colleague, and wash your hands regularly.
+  - If you suspect you may be infected, refer to the Cortico COVID-19 screening form for a list of symptoms and book an appointment if you have concerns at [KMC's walk-in](https://kmc.cortico.ca/book/first-available-walk-in/)

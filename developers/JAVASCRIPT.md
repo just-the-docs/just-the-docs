@@ -9,8 +9,7 @@ nav_order: 10
 
 **Purpose**
 
-Document our coding standards and best practices for the Javascript
-language ecosystem.
+Document our coding standards and best practices for the Javascript language ecosystem.
 
 **Scope**
 
@@ -18,8 +17,7 @@ Covers the specifics of multiple tools and frameworks.
 
 ## General Javascript Standards
 
-  - Prefer ES6 template strings to other methods of string
-    concatenation.
+  - Prefer ES6 template strings to other methods of string concatenation.
 
 Use the [Prettier autoformatter and standard](https://github.com/prettier/prettier).
 
@@ -32,24 +30,21 @@ have a `.prettierrc.js` in your project root, like this.
           tabWidth: 2
     }
 
-Alternatively, in VS Code, you can do `ctrl-,` to open settings, and
-search for "prettier". Scroll down to change the above settings
-manually.
+Alternatively, in VS Code, you can do `ctrl-,` to open settings, and search for "prettier". 
+
+Scroll down to change the above settings manually.
 
 # jQuery
 
-While we won't normally use jQuery for a new project at Countable,
-several older projects do use it. jQuery has been unpopular for large
-software projects due to maintainability issues, and thsoe concerns are
-founded. However, taking some care in how you use the library helps keep
-jQuery projects maintainable.
+While we won't normally use jQuery for a new project at Countable, several older projects do use it. 
 
-Most of the problems maintaining jQuery apps come from [DOM Manipulation](https://api.jquery.com/category/manipulation/) which leads
-to needlessly complex state. To minimize this, here are some guidelines
-to use where possible.
+jQuery has been unpopular for large software projects due to maintainability issues, and those concerns are founded. 
 
-Where possible, just `.hide()` and `.show()` different pieces of
-pre-defined content instead of creating it on the fly. eg:
+However, taking some care in how you use the library helps keep jQuery projects maintainable.
+
+Most of the problems maintaining jQuery apps come from [DOM Manipulation](https://api.jquery.com/category/manipulation/) which leads to needlessly complex state. To minimize this, here are some guidelines to use where possible.
+
+Where possible, just `.hide()` and `.show()` different pieces of pre-defined content instead of creating it on the fly. eg:
 
     // bad
     $(".some-selector").append("<a id='abc_error_message' class='error hidden'>error message here</a>")
@@ -58,13 +53,11 @@ pre-defined content instead of creating it on the fly. eg:
     // <a id='abc_error_message' class='error hidden'>error message here</a> <!--already in index-->
     $("#abc_error_message").show()
 
-If you must dynamically generate HTML, `` and `.text` for setting a
-large block of generated information, with ES6 strings.
+If you must dynamically generate HTML, `` and `.text` for setting a large block of generated information, with ES6 strings.
 
     $("#parent_id")(`<b> here is a dynamic fragment. ${variable} ${variable}</b>`)
 
-To make small changes to how something looks, animate it, open/close,
-etc. use `addClass` and `removeClass`.
+To make small changes to how something looks, animate it, open/close, etc. use `addClass` and `removeClass`.
 
     // bad
     $("#accordion").css('height', '25px')
@@ -81,9 +74,7 @@ Use ID instead of class for selecting items in jQuery:
     // better
     $("#main-modal-next-button")
 
-This prevents surprising behaviour for people maintaining the code later
--- changing a CSS class should not cause JavaScript behaviour to change,
-and changing an ID should not cause CSS styling to change.
+This prevents surprising behaviour for people maintaining the code later: changing a CSS class should not cause JavaScript behaviour to change, and changing an ID should not cause CSS styling to change.
 
 When manipulating the DOM, as in
 `https://api.jquery.com/category/manipulation/`, prefer:
@@ -111,12 +102,12 @@ avoid:
       <div>
     <div>
 
-It is better to query the DOM once, cache it then use the `find` method
-to grab elements. See cache.find [performance test here](https://jsperf.com/selector-vs-find-again/11)
+It is better to query the DOM once, cache it then use the `find` method to grab elements. See cache.find [performance test here](https://jsperf.com/selector-vs-find-again/11)
 
 
 TODO
 {: .label .label-yellow }
+
 The above performance test link is broken, can't find a replacement via search.
 Need technical eyes to find & suggest a good replacement.
 
@@ -154,8 +145,7 @@ Need technical eyes to find & suggest a good replacement.
 
 ## Prefer Event Delegation in jQuery
 
-Event delegation means you'll never have bugs with event handlers being
-created too late or being lost due to dom updates.
+Event delegation means you'll never have bugs with event handlers being created too late or being lost due to dom updates.
 
     // It's bad to do this, particularly if #confirm_popup_button might not exist.
     $('#confirm_popup_btn').click(function () {...})
@@ -165,16 +155,9 @@ created too late or being lost due to dom updates.
 
 # Vue and React
 
-  - Instead of returning functions that render a component, prefer to
-    return functions that return the necessary information to render a
-    component. In the first we are instructing what to do(render
-    precisely this thing), while in the second we’re just returning some
-    information (use this information to do something).
-  - Communicating between siblings, instead of through components. Try
-    to only communicate with other components through props.
-  - Use pure functional components where possible. Because these
-    components don’t have lifecycle methods, they require you to rely on
-    a declarative, props-based approach.
+  - Instead of returning functions that render a component, prefer to return functions that return the necessary information to render a component. In the first we are instructing what to do(render precisely this thing), while in the second we’re just returning some information (use this information to do something).
+  - Communicating between siblings, instead of through components. Try to only communicate with other components through props.
+  - Use pure functional components where possible. Because these components don’t have lifecycle methods, they require you to rely on a declarative, props-based approach.
 
 ## References
 

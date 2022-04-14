@@ -6,15 +6,13 @@ has_children: true
 ---
 
 # Operations and People Ops
-
 {: .no_toc }
 
 ## Table of Contents
-
 {: .no_toc .text-delta }
 
 - TOC
-   {:toc}
+{:toc}
 
 **Purpose**
 
@@ -90,12 +88,3 @@ Countable has projects, and some of those projects can turn into new businesses 
 Those businesses stay in the team as a project for all intends and purposes at first, but over time they may become more independent. This depends on when they need space to focus on different problems than Countable. 
 
 This model is to help us reconcile the difference between consulting and start-ups. Consulting is a source of information to help us understand problems in the world. If we solve a problem in this area which is replicable, we can spin it off into a new product/business.
-
-### COVID-19 Safety Plan
-
-For all staff and subcontractors:
-
-  - As a remote-first company, it's much easier for us to manage COVID-19 safety by default.
-  - Do not attend the office if you have any symptoms.
-  - If you do attend the office, avoid touching your face, approaching within 6 feet of a colleague, and wash your hands regularly.
-  - If you suspect you may be infected, refer to the Cortico COVID-19 screening form for a list of symptoms and book an appointment if you have concerns at [KMC's walk-in](https://kmc.cortico.ca/book/first-available-walk-in/)

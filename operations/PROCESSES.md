@@ -1,21 +1,19 @@
 ---
 layout: default
-parent: Operations
 title: Processes
+parent: Operations
 has_children: true
 nav_order: 1
 ---
 
 # Processes
-
 {: .no_toc }
 
 ## Table of Contents
-
 {: .no_toc .text-delta }
 
 - TOC
-   {:toc}
+{:toc}
    
 **Purpose**
 

@@ -7,10 +7,12 @@ nav_order: 9
 
 # Management
 
-## Purpose
+**Purpose**
 
-Provide high level guidance to managers at the company to set them up for success. Managers should primarily act as a coach to help
-the employee grow at the company, and to help create clear goals on outcomes that are good for the team.
+Provide high level guidance to managers at the company to set them up for success. Managers should primarily act as a coach to help the employee grow at the company, and to help create clear goals on outcomes that are good for the team.
+
+**Scope**
+Currently covers providing feedback, delegation, and teaching. Needs more content on the actual structure and processes of management at Countable.
 
 ## Feedback
 

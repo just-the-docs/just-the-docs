@@ -1,3 +1,4 @@
+<!---
 ---
 layout: default
 title: Accounting
@@ -14,8 +15,7 @@ To outline all accounting guidelines and processes related to sales.
 
 **Scope**
 
-Currently covers commission payout, cost estimation, quoting and
-billing. 
+Currently covers commission payout, cost estimation, quoting and billing. 
 
 ## Commission
 
@@ -182,3 +182,5 @@ days and every 30 days after, and the invoiced amount does not exceed
 their credit. 4 weeks overdue: We stop doing any work for the client,
 including urgent maintenance work. 5 weeks overdue: The debt is sold to
 a collection agency, and the client is black-listed.
+
+--->

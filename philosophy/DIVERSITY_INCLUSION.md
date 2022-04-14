@@ -1,7 +1,7 @@
 ---
 layout: default
-parent: Philosophy
 title: Diversity and Inclusion Principles
+parent: Philosophy
 nav_order: 5
 ---
 
@@ -30,4 +30,4 @@ Representation matters, and Countable's team of knowledge workers has consistent
 
 We come from a wide variety of backgrounds, with one shared thread running through all our lives: we love to learn and solve problems.
 
-We welcome any team members who have questions or would like to request feedback around a diversity & inclusion matter to [contact us](mailto:peopleops@countable.ca). 
+We welcome any team members who have questions or would like to request feedback around a diversity & inclusion matter to [contact us](MAILTO:operations@countable.ca). 

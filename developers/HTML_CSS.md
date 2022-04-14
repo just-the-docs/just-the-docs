@@ -17,8 +17,7 @@ Currently covers HTML, CSS, our preferred use of SCSS, and formatting.
 
 ## HTML Coding Standards
 
-Opening and closing tag should have same indentation level, or on the
-same line. Use 4 spaces per indent level.
+Opening and closing tag should have same indentation level, or on the same line. Use 4 spaces per indent level.
 
 Bad:
 
@@ -43,8 +42,7 @@ Good:
 
     <div class="white-bg"></div>
 
-Avoid more than one blank line in a row, but content on a new line is
-fine.
+Avoid more than one blank line in a row, but content on a new line is fine.
 
 Bad:
 
@@ -66,23 +64,15 @@ Use the [Prettier autoformatter and standard](https://github.com/prettier/pretti
 
   - Don't use \!important
   - Use `.class` not `#id` for styling, because it is more reusable.
-    Also, it prevents surprising behaviour for people maintaining the
-    code later -- changing a CSS class should not cause JavaScript
-    behaviour to change, and changing an ID should not cause CSS styling
+    - Also, it prevents surprising behaviour for people maintaining the code later -- changing a CSS class should not cause JavaScript behaviour to change, and changing an ID should not cause CSS styling
     to change.
-  - Try to write classes to be modular and reusable. This means that
-    classes should reflect their function (e.g. `.success-message`)
-    rather than the page element (`.my-feature-message`) if possible.
-  - Separate globally applicable CSS by typography, colors, layout and
-    reset.
-  - Break CSS up by component. Some frameworks encourage or endorce
-    this, but it's a good practice for all projects.
-  - Don't use capital letters or underscores for selector (class, id)
-    names. Use dashes and lowerase.
+  - Try to write classes to be modular and reusable. This means that classes should reflect their function (e.g. `.success-message`) rather than the page element (`.my-feature-message`) if possible.
+  - Separate globally applicable CSS by typography, colors, layout and reset.
+  - Break CSS up by component. Some frameworks encourage or endorse this, but it's a good practice for all projects.
+  - Don't use capital letters or underscores for selector (class, id) names. Use dashes and lowerase.
   - Avoid inline styling, use classes instead.
 
-<!-- end list -->
-
+```
     .parent {
         font-weight: bold;
     }
@@ -93,15 +83,15 @@ Use the [Prettier autoformatter and standard](https://github.com/prettier/pretti
     .next {
         color: #0000FF;
     }
+```
 
-If you want to dive deeper, see [CSS Guidelines](https://cssguidelin.es/)
+If you want to dive deeper, see [CSS Guidelines](https://cssguidelin.es/).
 
 ## SCSS
 
 We prefer to use SCSS over bare CSS. This enabled the following:
 
-  - Use mixins to avoid repeating code, but take care to avoid the
-    output CSS getting too large.
+  - Use mixins to avoid repeating code, but take care to avoid the output CSS getting too large.
   - Define variables globally with brand colors.
   - Make modular files for each concern, and have SCSS combine them.
 
@@ -109,8 +99,7 @@ We prefer to use SCSS over bare CSS. This enabled the following:
 
 Use the [Prettier autoformatter and standard](https://github.com/prettier/prettier).
 
-For projects using node, and supported editors (like VS Code) you can
-have a `.prettierrc.js` in your project root, like this.
+For projects using node, and supported editors (like VS Code) you can have a `.prettierrc.js` in your project root, like this.
 
     {
           semi: false,
@@ -118,6 +107,4 @@ have a `.prettierrc.js` in your project root, like this.
           tabWidth: 2
     }
 
-Alternatively, in VS Code, you can do `ctrl-,` to open settings, and
-search for "prettier". Scroll down to change the above settings
-manually.
+Alternatively, in VS Code, you can do `ctrl-,` to open settings, and search for "prettier". Scroll down to change the above settings manually.

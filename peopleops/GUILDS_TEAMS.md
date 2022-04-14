@@ -6,6 +6,13 @@ nav_order: 10
 ---
 
 # Guilds and Teams
+{: .no_toc }
+
+## Table of Contents
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
 
 **Purpose**
 

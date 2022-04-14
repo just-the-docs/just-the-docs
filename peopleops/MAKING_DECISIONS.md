@@ -6,6 +6,13 @@ nav_order: 8
 ---
 
 # Making Decisions
+{: .no_toc }
+
+## Table of Contents
+{: .no_toc .text-delta }
+
+- TOC
+{:toc}
 
 **Purpose**
 
@@ -34,8 +41,12 @@ Type 1 decisions, and make Type 2 decisions quickly on your own (provided it's w
 
 [More on this distinction](https://www.businessinsider.com/jeff-bezos-on-type-1-and-type-2-decisions-2016-4)
 
-  - irreversible (also called **Type 1** by Jeff Bezos) or difficult to reverse decisions. Requires committing an investment. These are more rare and great care must be taken. Hiring someone is a type one decision as it's expensive to onboard someone. These decisions should be escalated if you come across them.
-  - reversible (also called Type 2 by Jeff) decisons. Typical everyday decisions can easily be backed out. When in doubt, just guess and move forward. For example, from a recent discussion, updating the logo on our website is technically type 2. Even though it could be very annoying on other fronts and make us confused about process if not considered carefully, it's actually easy to change back. Updating the logo on physical stuff is Type 1, assuming we can't cheaply return stuff we order. So our discussion in the meeting today about the logo made perfect sense. Valentina was experimenting with Type 2 (reversible) logo decisions until we hit on a Type 1 (irreversible) effect which Julie correctly raised, the need to deploy the logo widely and on physical items.
+  - **irreversible** (also called *Type 1* by Jeff Bezos) or difficult to reverse decisions. Requires committing an investment. These are more rare and great care must be taken. Hiring someone is a type one decision as it's expensive to onboard someone. These decisions should be escalated if you come across them.
+  - **reversible** (also called *Type 2* by Jeff) decisons. Typical everyday decisions can easily be backed out. When in doubt, just guess and move forward. 
+  
+  *For example*: updating the logo on our website is technically type 2. Even though it could be very annoying on other fronts and make us confused about process if not considered carefully, it's actually easy to change back. 
+  
+  Updating the logo on physical stuff is Type 1, assuming we can't cheaply return stuff we order. This highlights that we can't necessarily set broad categorical rules around decisionmaking, as even the same exact topic (changing a logo) can have different sorts of impact based on the context (physical printed goods).
 
 **A rule of thumb is, does it cost hundreds of dollars to change the decision back (in people's time, etc)?**
 
@@ -74,24 +85,12 @@ Create a survey on slack \#general using emoticon reaction. Provide 8 "straw man
 
 Script:
 
-@channel there are a ton of things we can choose to work on internally
-(many in the Systems board in Trello). We want to find the ones that
-will move us towards accomplishng our mission fastest. However, we can't
-do everything so here's a list. Your job is to make regular yellow
-ciricle emoticon to show how you feel about each, I will exemplify. Also
-everyone please suggest the top thing you think we need to address
-that's NOT in this list. Put an emoticon under 9 then. :smile\_cat: or
-:smile: or :grin: or :simple\_smile:, in order of how much you support
-it, high to low. Or use any emote that fits, like :partyparrot: if
-you're so excited that you have to. Please react to max 5 of these.
+@channel there are a ton of things we can choose to work on internally(many in the Systems board in Trello). We want to find the ones that will move us towards accomplishing our mission fastest. 
+However, we can't do everything so here's a list. Your job is to make regular yellow circle emoticon to show how you feel about each, I will exemplify. 
+Also everyone please suggest the top thing you think we need to address that's NOT in this list. Put an emoticon under 9 then. :smile\_cat: or :smile: or :grin: or :simple\_smile:, in order of how much you support it, high to low. Or use any emote that fits, like :partyparrot: if you're so excited that you have to. Please react to max 5 of these.
 Please consider the items added by other team mates below this as well.
 (edited)
 
-Any items with 25% or more of the team supporting it should be moved
-into Trello "Company Design" Board requests for discussion on how to
-implement. Mention all those who voted for the item, in the card. Add
-the "staff pick" label to the card.
+Any items with 25% or more of the team supporting it should be moved into Trello "Company Design" Board requests for discussion on how to implement. Mention all those who voted for the item in the card. Add the "staff pick" label to the card.
 
-Items with 2 or more votes can be discussed briefly with the voters on
-how they'd approach it and have them articulate it better. If there's a
-quick fix, go ahead.
+Items with 2 or more votes can be discussed briefly with the voters on how they'd approach it and have them articulate it better. If there's a quick fix, go ahead.
