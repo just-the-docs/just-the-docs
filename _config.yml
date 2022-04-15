@@ -15,8 +15,10 @@
 # in the templates via {{ site.myvariable }}.
 title: Prelytix Knowledge Base
 description: Home for Prelytix User Documentation
-baseurl: "/prelytix-docs" # the subpath of your site, e.g. /blog
-url: "https://mrpfd.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#baseurl: "/prelytix-docs" # the subpath of your site, e.g. /blog
+#url: "https://mrpfd.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+#url: "https://cbath-mrpfd-prelytix-docs-76vq9v742xwgq-4000.githubpreview.dev"
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "docs/tests/"]
@@ -24,16 +26,6 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "pac
 
 ######### Customisations #####
 logo: /assets/images/logo.png
-
-# Set defaults https://jekyllrb.com/docs/configuration/front-matter-defaults/
-#defaults:
-#  -
-#    scope:
-#      path: "*"
-#    values:
-#      layout: "default"
-
-##############################      
 
 # Regression tests
 # By default, the pages in /docs/tests are excluded when the ste is built.

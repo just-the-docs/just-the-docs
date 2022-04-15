@@ -53,7 +53,7 @@
         {
             "label": "Jekyll: Serve Site Locally",
             "type": "shell",
-            "command": "sudo bundler install && sudo bundler exec jekyll serve --livereload",
+            "command": "bundle install && JEKYLL_ENV=testing jekyll build && JEKYLL_ENV=testing bundle exec jekyll serve --livereload",
             "group": {
             "kind": "build",
             "isDefault": true
