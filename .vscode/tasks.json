@@ -31,25 +31,7 @@
               "isDefault": true
             }
         },
-        // Jekyll Documentation (Only running on wsl currently)
-        {   
-            "label": "Jekyll: Install on linux locally",
-            "type": "shell",
-            "command": "sudo apt-get install -y ruby-full build-essential zlib1g-dev && sudo gem install jekyll bundler",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        },
-        {
-            "label": "Jekyll: Update Gems on linux Locally",
-            "type": "shell",
-            "command": "sudo bundler update && sudo bundler install",
-            "group": {
-            "kind": "build",
-            "isDefault": true
-            }
-        },
+        // Jekyll Documentation
         {
             "label": "Jekyll: Serve Site Locally",
             "type": "shell",
