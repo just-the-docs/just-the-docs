@@ -13,9 +13,18 @@
     },
     "tasks": [
         {
-            "label": "Git: Create new branch",
+            "label": "Git: Refresh Code & Create New Branch",
             "type": "shell",
             "command": "git fetch origin && git checkout trunk && git pull && git checkout -b ${input:branchName}",
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
+        },
+        {
+            "label": "Git: Save Changes & Push Current Branch",
+            "type": "shell",
+            "command": "git push -u origin $(git branch --show-current)",
             "group": {
               "kind": "build",
               "isDefault": true
