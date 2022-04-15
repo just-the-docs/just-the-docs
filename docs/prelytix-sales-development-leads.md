@@ -9,6 +9,9 @@ nav_order: 2
 
 Access and export your Inside Sales leads seamlessly within the Insights Studio.  
 
+<div style="background: ghostwhite; font-size: 20px; padding: 10px; border: 1px solid lightgray; margin: 10px;">
+  &#x1F6C8; Company Admins and Members can access Sales Development Leads </div>
+
 ## Requesting an audit
 If you'd like MRP to audit a lead for any reason, please reach out to your Customer Growth representative. The audit will be completed within 5 business days. 
 

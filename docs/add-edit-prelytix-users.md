@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Adding and Editing a User
+title: Add and Edit a User
 parent: Admin Studio
 nav_order: 1
 ---
 ---
 
-# <font color="#c54092">Adding and Editing a User</font>
+# <font color="#c54092">Add and Edit a User</font>
 
 <div style="background: ghostwhite; font-size: 20px; padding: 10px; border: 1px solid lightgray; margin: 10px;">
   &#x1F6C8; Only Company Admins can add or edit a user. </div>
 
-Company Admins can create and edit other Company Admins and Members.
+Company Admins can create and edit Company Admins and Members.
 
 ## Adding a User
 

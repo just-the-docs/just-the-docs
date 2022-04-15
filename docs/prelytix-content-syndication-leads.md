@@ -9,6 +9,9 @@ nav_order: 1
 
 Access and export your Content Syndication leads seamlessly within the Insights Studio. 
 
+<div style="background: ghostwhite; font-size: 20px; padding: 10px; border: 1px solid lightgray; margin: 10px;">
+  &#x1F6C8; Company Admins and Members can access Content Syndication Leads </div>
+
 ## Accessing your leads 
 
 Content Syndication leads go through a thorough multi-touch quality assurance and exclusion process. This full process can take 1-2 business days to be completed, but timing is of the essence when it comes to lead follow up. To ensure lead follow-up can happen as quickly as possible, you will obtain access to your leads following the first automated process. 

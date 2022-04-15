@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Data Studio Upload
+title: Upload an Account List
 parent: Data Studio
 nav_order: 1
 ---
 
-# <font color="#c54092"> Uploading an Account List in Data Studio</font>
+# <font color="#c54092"> Upload an Account List</font>
 
 This documentation provides templates, requirements and best practices for using <strong>Upload</strong> to upload and match your own lists of accounts with Prelytix accounts. 
 
