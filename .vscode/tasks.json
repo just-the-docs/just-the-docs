@@ -16,7 +16,7 @@
         {
             "label": "Git: Refresh Code & Create New Branch",
             "type": "shell",
-            "command": "git fetch origin && git checkout trunk && git pull && git checkout -b ${input:branchName}",
+            "command": "git fetch origin && git checkout trunk && git pull && git checkout -b ${input:branchName} && git push -u origin $(git branch --show-current)",
             "group": {
               "kind": "build",
               "isDefault": true
