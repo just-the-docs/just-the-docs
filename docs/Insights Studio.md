@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Inside Sales
+title: Insights Studio
 nav_order: 3
 has_children: true
 ---
 
-## Inside Sales
+## Insights Studio
 
-Inside Sales
+

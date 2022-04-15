@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Setup
-parent: Content Syndication
-nav_order: 3
+title: Content Syndication Leads
+parent: Insights Studio
+nav_order: 1
 ---
 
-## Content Syndication Leads
+# <font color="#c54092">Content Syndication Leads</font>
 
-Access and export your Content Syndication leads seamlessly within the MRP Prelytix Insights Studio. 
+Access and export your Content Syndication leads seamlessly within the Insights Studio. 
 
 ## Accessing your leads 
 
