@@ -33,9 +33,18 @@
         },
         // Jekyll Documentation
         {
-            "label": "Jekyll: Serve Site Locally",
+            "label": "Jekyll: Start Site Locally",
             "type": "shell",
             "command": "bundle install && JEKYLL_ENV=testing jekyll build && JEKYLL_ENV=testing bundle exec jekyll serve --livereload",
+            "group": {
+            "kind": "build",
+            "isDefault": true
+            }
+        },
+        {
+            "label": "Jekyll: Force Start Site Locally",
+            "type": "shell",
+            "command": "sudo gem install bundler && sudo bundle install && JEKYLL_ENV=testing jekyll build && JEKYLL_ENV=testing bundle exec jekyll serve --livereload",
             "group": {
             "kind": "build",
             "isDefault": true
