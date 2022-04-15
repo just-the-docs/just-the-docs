@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Install the Web Prelytix Pixel
+title: Install the Prelytix Web Pixel
 parent: Admin Studio
 nav_order: 1
 ---
