@@ -73,11 +73,11 @@ layout: table_wrappers
     <div id="main-header" class="main-header">
       {% if site.search_enabled != false %}
 
-        {% capture search_placeholder %}{% if site.search.placeholder_text %}{{site.search.placeholder_text}}{% else %}Search {{ site.title }}{% endif %}{% endcapture %}
+        {% capture search_placeholder %}{% include search_placeholder_custom.html %}{% endcapture %}
 
         <div class="search">
           <div class="search-input-wrap">
-            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="{{search_placeholder}}" aria-label="{{search_placeholder}}" autocomplete="off">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="{{search_placeholder}}" aria-label="{{search_placeholder | strip_html}}" autocomplete="off">
             <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
           </div>
           <div id="search-results" class="search-results"></div>
