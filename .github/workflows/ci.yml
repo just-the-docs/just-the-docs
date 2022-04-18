@@ -17,7 +17,7 @@ jobs:
       matrix:
         jekyll-version: [3.8.5, latest]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Build the site in the jekyll/jekyll container
       run: |
         docker run --rm \
@@ -33,7 +33,7 @@ jobs:
         node-version: [16.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
