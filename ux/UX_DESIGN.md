@@ -32,7 +32,7 @@ These will overlap and repeat to some extent.
 
 It's valuable to front-load much of the user research in a software project so other work can be informed by information about real users, not our assumptions.
 
- ![User Research](user-research-countable.png)
+ ![User Research](./user-research-countable.png)
 
 #### Persona Development
 
