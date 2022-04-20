@@ -47,8 +47,9 @@ Text based interaction isn't good enough for these critical questions.
 **Identify stakeholders**:
 
   - Identify roles on project team: scrum master (Countable), product owner (usually client, assisted by UX researcher), developers.
+  - Please begin a list of user interviewees. This should be a list of (2-6) people who will actually use the product.
+  - Who else is involved with, affected by, or has input into this project, and how? It's important we hear the needs of each stakeholder and share with the team.
   - Who will we get to work with and in what capacity? (make a list) Book dates/times to meet them. Book any travel plans necessary.
-  - Who else is involved with, affected by, or has input into this project, and how?
 
 **Next Steps (discuss and assign who does each, by when)**:
 
