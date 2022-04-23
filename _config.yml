@@ -122,3 +122,10 @@ compress_html:
   profile: false
   # ignore:
   #   envs: all
+
+# Enable support for mermaid, defaults to true
+mermaid_enabled: true
+# pick from https://cdnjs.com/libraries/mermaid
+mermaid_version: "9.0.0"
+# choices: https://mermaid-js.github.io/mermaid/#/theming
+mermaid_theme: "forest"

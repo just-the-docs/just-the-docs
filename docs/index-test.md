@@ -179,3 +179,19 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 ```
 The final element.
 ```
+
+### Mermaid
+
+[Mermaid](https://mermaid-js.github.io) examples:
+
+[Flowchart](https://mermaid-js.github.io/mermaid/#/./flowchart?id=flowcharts-basic-syntax)
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+Online [editor](https://mermaid-js.github.io/mermaid-live-editor/)

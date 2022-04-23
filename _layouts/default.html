@@ -199,4 +199,18 @@ layout: table_wrappers
     {% endif %}
   </div>
 </body>
+{% if site.mermaid_enabled != false %}
+<script>
+  var config = {
+    startOnLoad:true,
+    theme: '{{ site.mermaid_theme }}',
+    flowchart:{
+      useMaxWidth:false,
+      htmlLabels:true
+    }
+  };
+  mermaid.initialize(config);
+  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>
+{% endif %}
 </html>
