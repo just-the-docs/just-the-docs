@@ -213,10 +213,6 @@
     margin-top: 1.5em;
     margin-bottom: 0.25em;
 
-    &:first-child {
-      margin-top: $sp-2;
-    }
-
     + table,
     + .table-wrapper,
     + .code-example,
@@ -228,5 +224,19 @@
     + p {
       margin-top: 0;
     }
+  }
+
+  > h1:first-child,
+  > h2:first-child,
+  > h3:first-child,
+  > h4:first-child,
+  > h5:first-child,
+  > h6:first-child,
+  > .sect1:first-child > h2,
+  > .sect2:first-child > h3,
+  > .sect3:first-child > h4,
+  > .sect4:first-child > h5,
+  > .sect5:first-child > h6 {
+    margin-top: $sp-2;
   }
 }
