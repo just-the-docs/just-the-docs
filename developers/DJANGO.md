@@ -73,6 +73,17 @@ For example, `urls.py` should really only import from `views.py` (and `utils.py`
         return HttpResponse(...)
 ```
 
+**Concurrency safety**
+
+When saving a model, you should ensure you load a fresh copy right before saving if it could have been modified. This can lead to very difficult-to-track bugs.
+```
+clinic.long_running_process_that_updates_data()
+# Clinic might be stale.
+fresh_clinic = Clinic.objects.get(pk=clinic.id)
+fresh_clinic.__dict__.update(clinic.__dict__) # update all attributes,probably this is a too tricky and you can do it more cleanly.
+fresh_clinic.save()
+```
+
 ### Guidelines
 
  - Use <span class="title-ref">help\_text</span> in your models because it helps both devs and users in the `/admin` . 
