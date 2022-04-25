@@ -50,6 +50,16 @@ For example, `urls.py` should really only import from `views.py` (and `utils.py`
 
  - Keep models *normalized*: no duplicate data or extra foreign keys.
  - Schema changes should be reviewed by a senior dev, as any bad designs here will cascade to other layers.
+**Concurrency safety**
+
+When saving a model, you should ensure you load a fresh copy right before saving if it could have been modified. This can lead to very difficult-to-track bugs.
+```
+clinic.long_running_process_that_updates_data()
+# Clinic might be stale.
+fresh_clinic = Clinic.objects.get(pk=clinic.id)
+fresh_clinic.some_attribute = "new value"
+fresh_clinic.save()
+```
 
 ### Views
 
@@ -73,16 +83,7 @@ For example, `urls.py` should really only import from `views.py` (and `utils.py`
         return HttpResponse(...)
 ```
 
-**Concurrency safety**
 
-When saving a model, you should ensure you load a fresh copy right before saving if it could have been modified. This can lead to very difficult-to-track bugs.
-```
-clinic.long_running_process_that_updates_data()
-# Clinic might be stale.
-fresh_clinic = Clinic.objects.get(pk=clinic.id)
-fresh_clinic.__dict__.update(clinic.__dict__) # update all attributes,probably this is a too tricky and you can do it more cleanly.
-fresh_clinic.save()
-```
 
 ### Guidelines
 
