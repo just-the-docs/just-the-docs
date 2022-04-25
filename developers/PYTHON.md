@@ -86,6 +86,12 @@ Lines of up to 119 chars are ok, instead of the default 79 chars. The reason for
 
   - attributes\_names - Attributes (and local variables) should use lowercase with underscores
 
+## Common Gotchas
+
+**Python Requests**
+
+- By default, [Python Requests does not provide the `timeout` parameter](https://docs.python-requests.org/en/latest/user/advanced/#timeouts), which can cause timeouts in HTTP requests to bring down all Django workers in your app. It is recommended to always provide the `timeout` parameter when using Python Requests. A reasonable timeout time is 10 seconds, or longer (e.g. 30 seconds or more) if you're expecting a long-running request.
+
 ## Debugging Python
 
 ### Basics
