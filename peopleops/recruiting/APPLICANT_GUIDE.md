@@ -28,7 +28,6 @@ about who we expect to be a good fit.
       - Read about who we think is a good [Hiring Fit](HIRING_FIT.md)
       - Check out countable.ca (and cortico.ca) to see a bit about our
         work.
-      - See [our team page](https://countable.ca/careers). 
 
   - Email us with the following:
     
