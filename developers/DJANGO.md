@@ -51,7 +51,6 @@ For example, `urls.py` should really only import from `views.py` (and `utils.py`
  - Keep models *normalized*: no duplicate data or extra foreign keys.
  - Schema changes should be reviewed by a senior dev, as any bad designs here will cascade to other layers.
 
-
 ### Views
 
  - We generally use function based views (FBV) instead of class based views (CBV) at Countable.
@@ -73,8 +72,6 @@ For example, `urls.py` should really only import from `views.py` (and `utils.py`
             return Http400(...)
         return HttpResponse(...)
 ```
-
-
 
 ### Guidelines
 
@@ -144,3 +141,27 @@ fresh_clinic = Clinic.objects.get(pk=clinic.id)
 fresh_clinic.some_attribute = "new value"
 fresh_clinic.save()
 ```
+
+**Querying models in apps with multitenancy**
+
+When querying models in apps with multitenancy where most of the models have a foreign key back to a main or identifying model, it's better to access these secondary models by reverse foreign key rather than querying the object directly. For example:
+
+```
+class Clinic(models.Model):
+    # the main model
+    # fields...
+
+class Workflow(models.Model):
+    # secondary model, specific to a clinic
+    clinic = models.ForeignKey(Clinic)
+    # fields...
+
+clinic = Clinic.objects.get(...)
+
+# bad
+Workflow.objects.get(clinic=clinic, ...)
+
+# preferred
+clinic.workflow_set.get(...)
+```
+The second method is preferred because it avoids an easy mistake (forgetting to add the `clinic=clinic` filter) that causes serious issues (mixing data between customers).
