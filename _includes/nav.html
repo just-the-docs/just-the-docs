@@ -1,6 +1,8 @@
-<div role="radio" id="mode-skin-switcher">
+{% if site.baseurl = "/pasta" %}
+  <div role="radio" id="mode-skin-switcher">
     <input type="checkbox" id="mode-dark-light" /><label for="mode-dark-light">Dark</label>
-</div>
+  </div>
+{% endif %}
 <ul class="nav-list">
   {%- assign titled_pages = include.pages
         | where_exp:"item", "item.title != nil" -%}
