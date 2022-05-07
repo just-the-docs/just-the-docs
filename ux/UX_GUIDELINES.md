@@ -15,6 +15,9 @@ Provides the Countable team with guidelines for when our work intersects with th
 
 This document currently sets guidelines for usability, content writing, publishing on social media, and SEO.
 
+## Design Principles
+[Here](https://www.toptal.com/designers/gui/principles-of-design-infographic) is a guide to design principles which is simple and easily digestible for non-designer team members.
+
 ## Usability
 
 Company-wide usability standards and guidelines, so we maintain a minimum bar for our work and clients' work.
