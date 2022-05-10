@@ -23,32 +23,25 @@ They also should:
 
 After the above requirements have been met, the trainee should be promoted to Veteran. THEN they may continue their training below.
 
-Keep in mind, they will have to complete BOTH sections 4 AND 5 to be eligible for promotion to Marauder but get them through sections 6 and 7 first if possible.
+Keep in mind, they will have to complete section 5 to be eligible for promotion to Marauder but get them through section 6 first if possible.
 
 
 ---
-# Section 6: Advanced General Training [Veteran]
+# Section 5: Advanced Veteran Training
 ---
 
 ## Table of Contents
 {: .no_toc .text-delta }
 
-I. Advanced Weapons, General
+I. Veteran Weapons
 
-II. Advanced Vehicles, General
+II. Veteran Vehicles
 
-III. Advanced Weapons, Heavy Support
+III. Advanced Movement Obstacle
 
-IV. Advanced Vehicles, Heavy Support
-
-V. Advanced Weapons, Fast Attack
-
-VI. Advanced Vehicles, Fast Attack
-
-VII. Advanced Movement Obstacle
 
 ---
-## S6, I. General Pool Veteran Weapons
+## S5, I. Veteran Weapons
 ---
 
 ### PARAPHRASE / TEACH THE FOLLOWING!
@@ -72,6 +65,7 @@ VII. Advanced Movement Obstacle
 + May reload below 25 units of fuel (2.5 seconds)
 + Changing to flamer from other weapon initiates reload animation
 
+
 #### Bolter
 {: .no_toc .text-delta }
 + Layer 1
@@ -81,8 +75,17 @@ VII. Advanced Movement Obstacle
   + 40-round belt available as unlockable wargear.
     + Switch magazine types with /1 mag
   + Belt lowers fire rate and accuracy. This is true of any belt mag.
++ Bayonet available (/1 bayo)
 
 The bolter is a potent suppression weapon that can also act as a force multiplier when we have the high ground. The bullets will detonate as small explosions, so if you haven't worked it out, shooting down at people allows you to levy the explosive ammunition to its full potential and aim at the ground of where someone is going to better secure a kill.
+
+
+#### Heavy Bolter
+{: .no_toc .text-delta }
++ Layer 1
++ Is essentially a heavy stubber with bolter rounds and a 60 round mag.
++ Exploding rounds means higher position relative to a target = better.
++ Can deploy for more accuracy (press C) on almost any cover from around your knees to your nips in height.
 
 
 #### Bolt Pistol
@@ -94,12 +97,11 @@ The bolter is a potent suppression weapon that can also act as a force multiplie
   + Switch magazine types with /1 mag
 
 
-#### Heavy Bolter
-{: .no_toc .text-delta }
-+ Layer 1
-+ Is essentially a heavy stubber with bolter rounds and a 60 round mag.
-+ Exploding rounds means higher position relative to a target = better.
-+ Can deploy for more accuracy (press C) on almost any cover from around your knees to your nips in height.
+#### Battle Standard
+  {: .no_toc .text-delta }
+  + 5m range melee.
+  + Can be planted with Q.
+  + Hands applications to people that click it.
 
 
 #### MeltaGun
@@ -113,6 +115,7 @@ The bolter is a potent suppression weapon that can also act as a force multiplie
 Meltas do not like armor. If you get close enough to anything, the melta will kill it. A meltagun in the middle of high-HP enemy deployables with an inferno already on their teleporter can really fuck with their front line.
 
 As above, unless you have someone doing a good job stopping aircraft, don't just assume you don't have a responsibility to switch weapons to give the group a better edge. Stay aware of the situation, with the meltagun especially.
+
 
 #### Catachan Pattern Grenade Launcher
 {: .no_toc .text-delta }
@@ -133,14 +136,9 @@ Our grenade launcher is very similar to the mortar, though it has slightly more 
 + Tap/let go of C to do instant kill (avatars)
 + Collects skulls.
 
-#### Battle Standard
-{: .no_toc .text-delta }
-+ 5m range melee.
-+ Can be planted with Q.
-+ Hands applications to people that click it.
 
 ---
-## S6, II. General Pool Veteran Vehicles
+## S5, II. Veteran Vehicles
 ---
 
 ### PARAPHRASE / TEACH THE FOLLOWING:
@@ -182,29 +180,16 @@ Have them get used to the controls and do a skirmish. Make sure they understand 
 
 + Vanquisher Turret:
   + Primarily an anti-tank turret with high burst damage. Has no HE shells.
-  + Vanquisher shells deal 75 AT per shot on a direct hit, 15 on a splash.
+  + Vanquisher shells deal 80 AT per shot on a direct hit, 15 on a splash.
   + Beast hunter shells deal 35 AT on a direct hit and have no splash. Instead they deploy pools of bio-mutagenic acid (as the acid grenade). A shell that directly hits a scripted object with an NPC flag will instead deal 90 AT.
 
 
 + Annihilator Turret:
     + Solely an anti-tank turret, as the only weaponry it has are twin-linked lascannons. Bring backup to deal with infantry or die a fool's death.
-    + Deals 25 AT per shot with the safety toggled on.
-    + Press 1 to turn the safety protocols off. With safety off, every shot will deal 35 damage and build 15 heat. At 70 heat, the tank will start dealing damage to itself. After 100 heat, each shot has a chance to shut the turret down until the excess heat dissipates.
+    + Deals 35 AT per shot with the safety toggled on.
+    + Press 1 to turn the safety protocols off. With safety off, every shot will deal 45 damage and build 16 heat. At 100 heat, the tank will start dealing damage to itself. At 200 heat, the turret **will** shut down until heat falls below 100.
 
----
-## S6, III. Ferrum/Heavy Support Veteran Weapons
----
 
-### PARAPHRASE / TEACH THE FOLLOWING:
-{: .no_toc .text-delta }
-
-Nothing here! Our training has been gutted! My line has ended!
-
-Encourage trainee to experiment with different weapons, loadouts, and styles of fighting: for instance, despite the suppression applications of the bolter and grenade launcher, both can very effectively push a line, especially when used from elevated positions. The meltagun in particular is great in close quarters. Just re-iterate Ferrum will prioritize securing positions, but they shouldn't be afraid of aggression.
-
----
-## S6, IV. Ferrum/Heavy Support Veteran Vehicles
----
 
 #### Wyvern Suppression Tank (Unreleased, get Sam or Dread to demonstrate functions)
 {: .no_toc .text-delta }
@@ -226,11 +211,11 @@ Encourage trainee to experiment with different weapons, loadouts, and styles of 
 + C+left click while in mouselook also locks coords
 + C clears the current coordinates
 
-Based closely on the Hydra design, the Wyvern exchanges the Hydras anti-aircraft cannons for a pair of twin-linked Stormshard Mortars. The Mortars unleash a torrent of airbursting shrapnel shells which shred enemy infantry.
+    Based closely on the Hydra design, the Wyvern exchanges the Hydras anti-aircraft cannons for a pair of twin-linked Stormshard Mortars. The Mortars unleash a torrent of airbursting shrapnel shells which shred enemy infantry.
 
-Wyvern (when it's released) is a burst-fire tank mortar of death. Use it to shell entrenched positions or lines of advancing forces, but otherwise treat it like a Hydra, except you can use it at high positions. Be mindful that if something is above you, hey guess what you're useless.
+    Wyvern (when it's released) is a burst-fire tank mortar of death. Use it to shell entrenched positions or lines of advancing forces, but otherwise treat it like a Hydra, except you can use it at high positions. Be mindful that if something is above you, hey guess what you're useless.
 
-Aside from the HE shells, you have stormshards (airburst shotgun shells), airburst (scatter MIRV shells), razorwire shells, inferno shells, and krak shells.
+    Aside from the HE shells, you have stormshards (airburst shotgun shells), airburst (scatter MIRV shells), razorwire shells, inferno shells, and krak shells.
 
 
 #### The Vulture Gunship
@@ -275,26 +260,6 @@ Aside from the HE shells, you have stormshards (airburst shotgun shells), airbur
 
 Have them practice flying around the sim. Note that due to their fragility, it is good practice to not stay exposed for too long. Line up a strafing run or a target, ascend from cover, strike on the move whilst popping flares on the way, and descend behind cover. Holding E whilst pointing the nose of the craft diagonally downwards and flying forwards will prevent them from slamming into the ground while doing a strafing run. Note that it is best used in urban builds with tall buildings along relatively wide roads, or wherever else has decent air cover
 
----
-## S6, V. Fast Attack Pool Veteran Weapons
----
-
-### PARAPHRASE / TEACH THE FOLLOWING:
-{: .no_toc .text-delta }
-
-#### Dual Mortis Autopistols
-{: .no_toc .text-delta }
-
-+ Layer 2
-+ The Mortis-pattern autopistol… but two of them.
-+ Double the fun means around twice the reload time
-+ Ideal for grav chute deployment
-+ /1 mode to change from simultaneous fire to manual fire
-  + While in this mode, mouse1 fires right-hand weapon, C fires left-hand weapon.
-
----
-## S6, VI. Mortis/Fast Attack Veteran Vehicles
----
 
 #### The Valkyrie
 {: .no_toc .text-delta }
@@ -399,7 +364,7 @@ Note from Sam: This is **not** to be used in an anti tank capacity until its mun
 
 
 ---
-## S6, VII. OPTIONAL - Advanced Movement Obstacle Course
+## S5, III. OPTIONAL - Advanced Movement Obstacle Course
 ---
 
 + While it's a way of further teaching about prim-jumping as legit movement, it is in no way testing superiority in SL movement. IT IS THE ULTIMATE TEST OF PATIENCE.
@@ -408,12 +373,14 @@ Note from Sam: This is **not** to be used in an anti tank capacity until its mun
 
 + Start home at green line, 2 checkpoints in Green Boxes halfway in to set home. For them to complete the course they must land on the red prim at the very end, and must have jumped through the course.
 
++ If they manage to get through this, tell an officer to toss 'em 2k corruption. It's a big pain in the dick so they earned it.
+
 ---
-# Section 7: Battlefleet Training [Veteran]
+# Section 6: Battlefleet Training [Veteran]
 ---
 
 ---
-## S7, I. Battlefleet Training
+## S6, I. Battlefleet Training
 ---
 
 ### Basic Controls and Commands
@@ -504,7 +471,7 @@ These are designed for Massive damage during ship-to-ship engagements.
 ## Veteran Training Requirements & Marauder Promotion
 
  In order to be promoted to Marauder the trainee must have:
-  + Complete Sections 1 through 7 of this document’s training Including both mortis AND ferrum training (do the Section that was not done as a Renegade before Veteran divisional/doctrine material)
+  + Complete Sections 1 through 6 of this document’s training Including Veteran training.
   + Battlefleet and ALL courses must be completed
   + Be active in the group for at least 90 days after attaining the rank of Veteran
   + Be recommended by AT LEAST 2 active members of Chosen rank or higher
@@ -518,7 +485,7 @@ These are designed for Massive damage during ship-to-ship engagements.
 + Once the trainee has been promoted to Marauder, they may continue the optional training below to familiarize themselves with the new weapons, gear, and vehicles.
 
 ---
-# Section 8: OPTIONAL: Marauder Gear and Corruption Unlocks
+# Section 7: OPTIONAL: Marauder Gear and Corruption Unlocks
 ---
 
 Table of Contents:
@@ -592,27 +559,23 @@ IV. God Favor Weapons/Gear
 {: .no_toc .text-delta }
 
 + Corruption: 500
-+ Renegade Rank Required
 
 ### Heretic's Axe
 {: .no_toc .text-delta }
 
 + Corruption: 500
-+ Renegade Rank Required
 + Simply a 5m melee, but looks better than the heretic blade.
 
 ### Mk III Bolt Pistol, Left-handed
 {: .no_toc .text-delta }
 
 + Corruption: 750
-+ Veteran Rank Required
 
 ### Hand Flamer
 {: .no_toc .text-delta }
 
 + Corruption: 750
 + Layer 2
-+ Veteran Rank Required
 + The flamer, but smol.
 + Smol size means smol reload time and mag size.
 + Explain the situational use of using the Hand Flamer such as using it as area of denial.
@@ -626,7 +589,6 @@ IV. God Favor Weapons/Gear
 {: .no_toc .text-delta }
 
 + Corruption: 1000
-+ Renegade Rank Required
 + Less range than the pump-action shotgun.
 + Press Q to change mags to a 20-round drum
 + Type /1 auto to change to full automatic fire.
@@ -639,7 +601,6 @@ IV. God Favor Weapons/Gear
 {: .no_toc .text-delta }
 
 + Corruption: 1000
-+ Veteran Rank Required
 + Hold C to deploy shield.
 + Shield repairs itself when not in use.
 + Shield repairs faster when destroyed, but is not usable until it returns to full HP.
@@ -648,7 +609,7 @@ IV. God Favor Weapons/Gear
 {: .no_toc .text-delta }
 
 + Corruption: 1000
-+ Renegade Rank and Mortis Flag Required
++ Mortis Flag Required (If a militia member asks for a mortis flag give it to them, it's nbd)
 + Layer 2
 + Double the fun means around twice the reload time
 + Ideal for grav chute deployment
@@ -657,7 +618,6 @@ IV. God Favor Weapons/Gear
 {: .no_toc .text-delta }
 
 + Corruption: 1000
-+ Veteran Rank Required
 + Turns the general-pool flamer into a sustained fire weapon.
 + Fuel recharges over time instead of reloading.
 + Does minor AT to EVERYTHING.
@@ -668,7 +628,6 @@ IV. God Favor Weapons/Gear
 {: .no_toc .text-delta }
 
 + Corruption: 1000
-+ Renegade Rank Required
 + Layer 2
 + Double the fun means around twice the reload time
 + Ideal for grav chute deployment
@@ -677,20 +636,17 @@ IV. God Favor Weapons/Gear
 {: .no_toc .text-delta }
 
 + Corruption: 1200
-+ Renegade Rank Required
 
 ### Chimera Autocannon Turet
 {: .no_toc .text-delta }
 
 + Corruption: 1200
-+ Renegade Rank Required
 
 ### Tech-Axe
 {: .no_toc .text-delta }
 
 + Corruption: 2000
 + Layer 1
-+ Renegade Rank Required
 + Repairs LBA armor at a rate of 15 hp per second
 + Delivers 10 AT per swing
 
@@ -699,7 +655,6 @@ IV. God Favor Weapons/Gear
 
 + Corruption: 2000
 + Layer 1
-+ Renegade Rank Required
 + Collects Skulls
 + SMASH IT ON THE GROUND GO BOOM BOOM LIGHTNING PEW PEW
 + Useable with the Assault pack for ground pound, turning the 2-second stun of the assault pack ground pound into a 90-degree arc of death. Ground pound deals 15 AT in an area all the way around the user.
@@ -710,7 +665,6 @@ IV. God Favor Weapons/Gear
 
 + Corruption: 2000
 + Layer 3
-+ Renegade Rank Required
 + Raycast Weapon
 + Used for anti-armor purposes
 + 3 charges/mag
@@ -723,7 +677,6 @@ IV. God Favor Weapons/Gear
 {: .no_toc .text-delta }
 
 + Corruption: 2000
-+ Renegade Rank Required
 + Layer 1
 + Deals 15 AT per swing
 + When used with an assault pack, the ground-pound maneuver will deal 20 AT and kill enemies in a lane in front of the user, similar to a claymore mine.
@@ -732,7 +685,6 @@ IV. God Favor Weapons/Gear
 {: .no_toc .text-delta }
 
 + Corruption: 5000
-+ Renegade Rank Required
 + Injects new buttons into the HUD, allowing us to deploy turrets and generators.
   + Generators have 250 health, and make a big boom when they die. They have enough power to run 3 turrets of any type that are placed within 50m or so. Generators can power turrets through walls.
   + Bolter Turrets are for anti-personnel purposes. They will attack unseated avatars within a certain range.
@@ -762,6 +714,57 @@ IV. God Favor Weapons/Gear
 + 16 rounds in the mag
 + Press 1 to switch between full and semi-auto
 + Has haze, but the haze wounds, blinds, and slows instead of killing outright.
+
+### Arc Pistol
+{: .no_toc .text-delta }
+
++ Corruption: 600
++ Layer 2
++ As the arc rifle, but smol.
+
+### Splinter Rifle
+{: .no_toc .text-delta }
+
++ Corruption: 750
++ Layer 1
++ Very accurate, high RoF rifle that deals partial damage.
++ Rounds have a small splash AoE, and if they strike an avi will detonate shortly afterwards, dealing damage based on how many rounds hit.
++ 3 rounds to kill.
+
+### Jammer Array
+{: .no_toc .text-delta }
+
++ Corruption: 400
++ Layer 3
++ As jammer array deployable, but in your hands.
+
+### Graia Pattern Stub Rifle
+{: .no_toc .text-delta }
+
++ Corruption: 250
++ Layer 1
++ Semi-automatic rifle with large rounds.
++ Bayonet available (/1 bayo)
++ Scope available (/1 scope). Increases accuracy, decreases spread recovery.
+
+### Escher Pattern Autocarbine
+{: .no_toc .text-delta }
+
++ Corruption: 500
++ Layer 1
++ Slightly higher firerate than Agripinaa autogun, but less accurate.
++ Drum mag on /1 drum, extended mag wargear on /1 extend
++ Stock option with /1 stock. No stock is less accurate but has a faster winddown, stock has more accuracy but slower winddown.
++ Suppressor available with /1 supp. Reduces velocity to 150m/s.
+
+### Agripinaa Pattern Autocarbine
+{: .no_toc .text-delta }
+
++ Corruption: 400
++ Layer 1
++ As the Escher autocarbine, but with stock options as well as normal underslung equipment.
++ Does not have 100rnd extended mag or suppressor options.
+
 
 ---
 ## S8, IV. God Favor Equipment
@@ -843,7 +846,7 @@ IV. God Favor Weapons/Gear
 + Layer 2
 + Collects skulls
 + 5m melee
-+ Hold C to hold the banner aloft. While held, **anyone** looking at the banner will take partial damage until they look away. Or until they stroke out and die.
++ Hold C to hold the banner aloft. While held, **anyone** looking at the banner within 160m will take partial damage until they look away. Or until they stroke out and die.
 + Press Q to plant the banner. Planted banners act as both an interceptor and a turret that fires doombolts at enemies within 30m. Both the interceptor and turret functions draw from the same ammo pool, which recharges over time. Planted banners also act as a less-damaging version of a banner held aloft. Walk over the banner to retrieve it. Destroyed banners respawn in your hand after 45 seconds.
 + At Tzeentch favor 6, you become immune to the damage caused by looking at an aloft or planted banner.
 
@@ -867,6 +870,6 @@ IV. God Favor Weapons/Gear
 
 Note from Sam:
 
-Congrats, dickhead, you're done. Thanks for sitting through and listening or reading all of this.
+Congrats, dickhead, you're done. Thanks for sitting through and listening to or reading all of this.
 
 No, really. You've done all the training. Get the fuck out of my office.
