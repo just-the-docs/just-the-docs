@@ -27,8 +27,7 @@ In order to begin this training the recruit must first have:
 
 In order to be promoted to Veteran the trainee must have:
 + Met all Cult training requirements listed above and have been promoted to Renegade
-+ Completed Sections 1 through 3 of this training. (Section 3 can be found in the next thread)
-+ Completed Sections 4 and/or 5 (just either/or for now, they will have to do both to get to Marauder, however.)
++ Completed Sections 1 through 4 of this training.
 + Be active in the group for at least 14 days after attaining the rank of Renegade
 + Be recommended by AT LEAST 2 active members of Marauder rank or higher
 
@@ -36,7 +35,7 @@ In order to be promoted to Veteran the trainee must have:
 {: .no_toc .text-delta }
 
 In order to be promoted to Marauder the trainee must have:
-+ Complete Sections 1 through 7 of this document’s training Including both mortis AND ferrum training (do the Section that was not done as a Renegade before Veteran divisional/doctrine material)
++ Complete Sections 1 through 7 of this document’s training.
 + Battlefleet and ALL courses must be completed
 + Be active in the group for at least 90 days after attaining the rank of Veteran
 + Be recommended by AT LEAST 2 active members of Chosen rank or higher
@@ -67,9 +66,9 @@ III. Basic Conduct as Renegade
 
 + Read and understand all the documents before conducting your first training. You don't need to be able to remember it by heart, but understand how much you are asking the person to do and learn. Each section of training (aside from Section 1) takes anywhere from 1-2 hours depending on many factors. One of those factors is your own ability to understand and teach: waste time NOW so you do not waste time LATER.
 
-+ STDs should begin 1-2 days after promotion to Renegade from Cult, but ideally right after promotion. If that is not possible, and they must wait, give them a crash course on how to throw a grenade, use their autogun, use a chainsword, laspistol, and rocket launcher. That will suffice until you can give detailed instructions. Consider this option if this is your first rodeo as a trainer and you haven't read this document in full yet.
++ STDs should begin 1-2 days after promotion to Renegade from Cult, but ideally right after promotion. If that is not possible, and they must wait, give them a crash course on how to throw a grenade, use their autogun, use the cleaver, laspistol, and rocket launcher. That will suffice until you can give detailed instructions. Consider this option if this is your first rodeo as a trainer and you haven't read this document in full yet.
 
-+ You can still mess with them and call them dumb and shit, but the hazing is over. It is very important they are able to understand the information you give to them.
++ You can still mess with them and call them dumb and shit, but the hazing is over. It is very important they are able to understand the information you give to them. Periodically ask if they have any questions as you complete sections. Once you start a new day of training, **check their information retention** by asking them what they learned the previous day. Do remedial training as needed.
 
 ### THINGS TO DO OR HAVE THEM DO BEFORE YOU START ANY TRAINING WITH THEM:
 {: .no_toc .text-delta }
@@ -86,13 +85,14 @@ III. Basic Conduct as Renegade
     * Chaos Enlisted HUD
     * Command HUD
     * Chaos Basic Gestures, and activate all of them (including the ones in the HUD and equipment like the grav chute)
-    * ALL Renegade general pool weapons and equipment (Marked by R or E-1)
+    * ALL Renegade general pool weapons, equipment, and vehicles (Marked by [R]).
     * you MAY want to wait until section 2 for this part as the weapons are explained in the order that they appear on the wall but it’s up to you.
 
 
 + To avoid getting black-screened, have them use [this preferences setup](http://i.imgur.com/Ui1l4uK.png)
 
-+ As for preventing Teleport failed Alert spam (and viewer lockup) : The XML file is also available in the teamspeak file browser in the main channel, or you can find it here.
++ As for preventing Teleport failed Alert spam (and viewer lockup):
+    * They can ask any oldfag for the old notecard on how to fix it.
     * notifications.xml can be found in the firestorm directory under skins > default > xui > en
     * Make sure they back it up first!!!
 
@@ -107,8 +107,7 @@ III. Basic Conduct as Renegade
 + Today is your first day of actual training. From here on out, your training will actually teach you useful information and will be designed to familiarize yourself with our gear, assess your skills, and encourage you to get better with our gear. The hazing process is over, so you are encouraged to ask any and all questions, no matter how stupid they might initially sound in your head. We are going to be going over a lot of information over a rather short period of time; if at any point you need to leave, we can continue this training at any date with myself or any other trainer. We will be keeping track of your progress, so you will not have to repeat any of these steps.
 
 + Right now you are a Renegade: from here, your goal should be to become a Veteran, and we're all here to help you do that. If you want to eventually train people and lead raids as well, you might become a Marauder- but to get there, you must get this shit done first. To become a Veteran, you must:
-    * Complete Sections 1-3 of your STD
-    * Complete either the Heavy Support/Ferrum OR Fast Attack/Mortis section of your STD
+    * Complete Sections 1-4 of your STD
     * Be active as a Renegade for at least 14 days.
     * Be recommended for promotion by at least two Marauders or higher.
 
@@ -125,9 +124,9 @@ III. Basic Conduct as Renegade
     * If you are confused about the terminology: If it isn't in the armory, given to you by Dread, or a Lord/Overlord hasn't approved of its use: IT ISN'T AUTHORIZED!
 
 
-+ CALL OUT when you are using more advanced/specific weaponry (snipers, mortars, vehicles, etc) so the officer-in-charge (OIC, whoever is the highest rank at the time leading, or assigned autonomously) knows how to conduct against the opposing forces- he needs to know what tools he has at his disposal and make adjustments as necessary.
++ CALL OUT (or ask as appropriate) when you are using more advanced/specific weaponry (snipers, mortars, bolters, plasma, etc) so the officer-in-charge (OIC, whoever is the highest rank at the time leading, or assigned autonomously) knows how to conduct against the opposing forces- he needs to know what tools he has at his disposal and make adjustments as necessary.
 
-+ Communication should be uncluttered, so keep it clear and convey only necessary information that your OIC needs to hear, like enemy positions and status. Do not be fucking annoying or disruptive during raids.
++ Communication should be uncluttered, so keep it clear and convey only necessary information that your OIC needs to hear, like enemy positions and status. Do not be fucking annoying or disruptive during raids. If you hear "Clear Comms!", you shut the fuck up immediately. Do not make people say it twice.
 
 ---
 # Section 2: Imperfectus - Infantry
@@ -182,7 +181,7 @@ VIII. Grav Chute Training Assessment
 
 + Tell them about the gun sets and gestures (Shift + 1/2/3/4)
     * Set 1: two-handed weapons (Lasgun, autogun, etc.)
-    * Set 2: one-handed weapons (autopistols, laspistols, Chainsword, etc.)
+    * Set 2: one-handed weapons (autopistols, laspistols, cleaver, etc.)
     * Set 3: Auxiliary weapons (Rocket Launcher, grenade launcher, infantry mortar etc.)
     * Set 4: Slings all weapons
 + Let them know that it is good form to wear all layers at once.]
@@ -211,15 +210,23 @@ VIII. Grav Chute Training Assessment
 
 ### S2, II. P1. Layer 1 Weapons
 
-+ Autogun
++ Agripinaa III Autogun
     * Basic Chaos Rifle
     * SECONDARY ATTACHMENTS! : Hold 'C' and left mouse click to fire. Can fire bullets and reload after shooting, but attachments resume reload after stopping, not during.
     * Grenade launcher (/1 gl) - Fires an explosive round at a small arc.
-    * Shotgun - Fires a burst of buckshot. Buckshot does partial damage.
+    * Shotgun - Fires 2 bursts of buckshot. Buckshot does partial damage. Also has explosive slug rounds available through /1 slug.
     * Bayonet (/1 bayo) - 5m melee with 'C'. Smaller arc than swords. Collects skulls. Skulls can be turned in for corruption (explained in Section 2, V.)
+    * Alternate 60 round drum mag available (/1 mag).
 
 
-+ Shotgun
++ Graia Pattern Autogun
+    * As the Agripinaa Autogun, possessing the same attachments and commands.
+    * Larger bullets
+    * More accurate
+    * Much slower firerate
+
+
++ Accatran Pattern Shotgun
     * A decent close-mid range weapon. Fires raycasted sensor cones of buckshot, reloads each shot individually
     + Controls:
       + 1 and 2 to cycle shell types.
@@ -242,19 +249,29 @@ VIII. Grav Chute Training Assessment
     * Take note of how the shotgun can be fired in the middle of a reload, because the shells are reloaded individually.
 
 
-+ Lasgun
++ Kantrael Pattern Lasgun
     * Modes: Full, semi and auto.
     * Raycast (/1 rc) and Non-raycast (/1 solid)
     * Damage Falls off at Range. Does less damage the further away the person is.
-    * Bayonet (/1 bayo) -5m melee with 'C'. Smaller arc than swords, same as autogun. Collects Skulls
+    * Possesses the same attachments as the  autogun (except for the larger mag option) with the same commands for each.
     * Has heat haze like the longlas. The total "Kill footprint," or area that becomes dangerous when you fire, is a 0.25m thick plus-shaped beam, if anyone asks.
       * After a certain distance the haze wounds for 70% instead of killing. This is true of all las weaponry **except for** the lascannon.
 
 
-+ Longlas
++ Kantrael Pattern Longlas
     * Projects 5 raycast beams in a cross, more margin of error for aiming than the lasgun
     * Easier to hit target than Lasgun, smaller magazine and longer reload.
     * Bayonet (/1 bayo) -5m melee with 'C'. Collects Skulls. You know the drill.
+
+
++ Plaidgun
+    * **Do not use the plaidgun without OIC permission. If you don't have an OIC and can't find an officer, don't use it.**
+    * Don't do it. Period. We'll fucking fire you.
+    * Very accurate raycast weapon with semi, burst, and full-auto firemodes.
+    * No haze but fires in semiautomatic as fast as you can click.
+    * Deals 4 AT to LBA Light.
+    * Alternate explosive RC available by pressing Q. Deals 4 AT to full LBA, 6 AT to LBA light.
+
 
 ### S2, II. P2. Layer 2 Weapons
 
@@ -262,12 +279,20 @@ VIII. Grav Chute Training Assessment
     * Paired with one-handed melee on Layer 2
 
 
-+ Autopistol
++ Voss Pattern Autopistol
     * High spread, high fire rate, small magazine. Like the autogun, no additional features.
     * One-handed
 
 
-+ Laspistol
++ Graia Pattern Stub Pistol
+    * Semi-auto physical bullet pistol.
+    * Large bullets.
+    * Extended mag available with /1 mag.
+    * Burst-fire available with /1 burst.
+    * Suppressor available with /1 supp. Lowers bullet size speed, and visibility.
+
+
++ Kantrael Pattern Laspistol
     * Toggle Physical and Raycast (/1 fm)
     * One-handed
     * Damage Falls off at Range. Does less damage the further away the person is.
@@ -285,12 +310,13 @@ VIII. Grav Chute Training Assessment
     * Trigger with 'C'
 
 
-+ Catachan Knife
++ Agripinaa III Combat Knife
     * 2m range
     * Guts collected have more value.
+    * Usable on any layer automatically with C, handy for layer 3 weapons with no melee option.
 
 
-+ Heretic's Cleaver & Axe
++ Heretic's Cleaver
     * Basic bitch 5m melee.
 
 ### S2, II. P3. Layer 3 Weapons
@@ -302,12 +328,10 @@ VIII. Grav Chute Training Assessment
             * Normal explosion, infantry, no drop off
             * Kills within 7.5m, partial damage out to 14m
             * Deals 10 AT on direct hit, 7 on splash
-            * A direct hit is not meant to deal splash damage, but sometimes occurs.
 
         * Krak
             * Krak explosion, mine, deployable, and vehicle killing rocket, very slight drop off
-            * Deals 35 AT on direct hit, 10 on splash
-            * A direct hit is not meant to deal splash damage, but sometimes occurs.
+            * Deals 45 AT on direct hit, 25 on splash
             * AT radius is approximately 7m. Avi damage radius begins falling off at 4m and falls to 0 damage at 6m.
 
         * Flakk
@@ -315,7 +339,9 @@ VIII. Grav Chute Training Assessment
             * Pay attention to name of target listed in local chat. Reload (R) to clear lock on (Watch who you target!)
             * AT Damage is 25
 
+
 + Infantry Mortar
+
     * SEE S2, VIII. FOR IN-DEPTH TRAINING. DO NOT LET THEM USE UNTIL YOU HAVE COVERED THAT SECTION.
 
 ### S2, II. P4. Equipment
@@ -328,7 +354,7 @@ VIII. Grav Chute Training Assessment
 
 + Cult Bomb
     * Explain that renegades SHOULD retain their cult bomb. Detonate it and laugh at them. Tell them they can use their own detonation hotkey (explained in HUD) to detonate anyone at a lower rank than them that they are looking at.
-    * Decent AT (30), very large explosion.
+    * Decent AT (50), very large explosion.
 
 
 + Assault Pack
@@ -422,7 +448,7 @@ VIII. Grav Chute Training Assessment
 
     * Melta Bomb
         * Will stick to objects you throw it at, or just land on the ground.
-        * After a few seconds, it detonates with 50 AT with a HUGE explosion (back off)
+        * After a few seconds, it detonates for 70 AT to whatever it's stuck to and 50 splash in a HUGE explosion (back off)
         * The area it detonated in will be engulfed in pinkish fire that also does approximately 100 AT. It hurts a lot.
         * You cannot throw it very far, it's very "heavy".
 
@@ -481,12 +507,16 @@ VIII. Grav Chute Training Assessment
 + Unlisted Grenades
     * Use the SWAP GRENADE advanced menu button of the HUD to switch to these. Feature explained below.
 
+    * Scatter
+        * Splits into multiple grenades.
+        * Pattern is very random, most effective air detonated.
+
     * Acid Grenade
         * Spews 4 puddles of bio-mutagenic acid on the ground.
         * ACID is distinguishable from FUEL by being BRIGHTER GREEN in colour, as well as emitting PARTICLES.
-        * Acid deals 12% damage every half second to anyone walking over it.
-        * Acid also deals 5 AT per half-second to scripted objects with the NPC flag.
-        * Acid may be DESTROYED by ANY AMOUNT of AT, but not ignited.
+        * Acid deals 16% damage every 0.33 seconds to anyone walking over it.
+        * Acid also deals 9 AT per second to scripted objects with the NPC flag.
+        * Acid may be DESTROYED by dealing 3 AT, but not ignited.
 
     * Beach Ball
         * Throws a temporary bouncy beach ball.
@@ -497,24 +527,27 @@ VIII. Grav Chute Training Assessment
         * Rock kills on contact until it bounces once.
         * Mainly for bragging rights.
 
-    * Stimm Gas Grenade
-        * Produces a DARK PINK cloud of stimulant gas.
-        * Allies within the gas benefit from an shorter dodge cooldown.
-        * After 2 seconds of exposure, anyone within the cloud will take 8% damage every 3 seconds due to blood toxicity.
-        * There is a random chance that anyone affected by the stimulant will go BERSERK.
-        * Berserk status causes the afflicted to lose control over their movement entirely, but gain a 60% damage automelee. Status ends on death.
 
 + God Favor Grenades (OPTIONAL)
 
-    * Khorne Scatter
-        * Splits into multiple grenades.
-        * Pattern is very random, most effective air detonated.
+    * Monowire Grenade
+        * Khorne favour grenade, unlocked at 2 points of favour.
+        * Deals damage in a 10m radius. Less damage than warp frag. Deals 10 AT.
+        * Avis caught in the blast spawn a blood pool at their feet. If they die it spawns 3 pools instead.
+        * Boiling blood deals 18% damage to avatars per tick and may be consumed by Khorne followers to activate weapon abilities.
+        * Boiling blood has no effect on avis with 2 points of Khorne favour or higher.
 
     * Tzeentch Gravity
         * Pulls avatars and slow projectiles.
         * Works on sims without push AND the effects are raycasted
             * meaning they do not pull you through walls.
-        * Can be shot to end its effect early.
+        * Detonates at the end of its lifetime, pushing objects and avatars away. Can be used to rocket jump with good timing.
+
+    * Immolation Grenade
+        * Second Tzeentch Favour grenade, unlocked at 3 Tzeentch favour.
+        * Produces a medium-sized gas cloud, which may be detonated by any fire pools or explosions.
+        * Ignites anyone within the cloud at the time.
+        * Kinda useless and uninspired.
 
     * Slaanesh Torment
         * Flashbangs (with SCREAMING!) and traps avatars with daemonic chains.
@@ -523,6 +556,14 @@ VIII. Grav Chute Training Assessment
         * Deals 10 avi damage if they move around while trapped.
         * Note that people walking into the radius while it is active will also be trapped.
         * Can be shot to end its effect early.
+
+    * Stimm Gas Grenade
+        * Second Slaanesh favour grenade, unlocked at 3 points of favour.
+        * Produces a DARK PINK cloud of stimulant gas.
+        * Allies within the gas benefit from an shorter dodge cooldown.
+        * After 2 seconds of exposure, anyone within the cloud will take 8% damage every 3 seconds due to blood toxicity.
+        * There is a random chance that anyone affected by the stimulant will go BERSERK.
+        * Berserk status causes the afflicted to lose control over their movement entirely, but gain a 60% damage automelee. Status ends after 1 minute.
 
     * Nurgle Infection
         * Infects avatars and spreads upon contact with other avatars. Upon spreading to another avatar, the stage or "gen" advances by 1. (Gens 1- 4)
@@ -589,6 +630,18 @@ VIII. Grav Chute Training Assessment
     * A ladder that has been destroyed can be quickly redeployed by simply firing the turret again, assuming said turret is intact.
 
 
++ Conversion Field Projector
+    * Deploys a small turret that, when adjusted with B, projects a bomb umbrella.
+    * Bomb umbrella angle can be adjusted up to 45 degrees from zero in any direction.
+    * The umbrella cannot be damaged (they must destroy the projector itself).
+    * The umbrella damages avis on contact.
+
+
++ Deployed Jammer Array
+    * Deploys a small turret that, when adjusted with B, constantly projects jammer waves.
+    * These waves act to deal partial damage to avis and set off enemy AMS deployables.
+    * Very annoying to the enemy. Use responsibly.
+
 ### S2, III. P4. Mines/Deployable Munitions
 
 + Strategy
@@ -602,6 +655,8 @@ VIII. Grav Chute Training Assessment
     * Explain that most non-triggered deployables will detonate if you walk right on top of them.
         * Or don't.
 
+    * Tell them that mine buttons can be reprogrammed in the same fashion as grenade buttons.
+
 
 + AP Mine
     * Anti-Infantry
@@ -613,7 +668,7 @@ VIII. Grav Chute Training Assessment
     * Double click AP mine
     * more damage to armored targets.
     * Still will detonate on infantry.
-    * Deals 30 AT
+    * Deals 45 AT on direct hit, 30 on splash.
     * THEY RAYCAST UP TO DETECT VEHICLES ABOVE THEM!!!!
 
 
@@ -665,6 +720,31 @@ VIII. Grav Chute Training Assessment
     * Good against jetpacks and some vehicles.
     * Deals 15 AT
 
+
++ Scrap spikes
+    * Can be destroyed by any AT or physical collision.
+    * Simply kills on contact.
+    * Really big and obvious for what they do. Tease the enemy mercilessly if they run into them.
+
+
++ Bear Trap
+    * Can be destroyed by any AT or physical collision.
+    * Deals 70% avi damage on contact and immobilizes.
+    * Deals 10% damage per tick if they try to struggle whilst trapped.
+    * Anyone within 2m can click and hold the bear trap to disarm it.
+    * If a trapped avi is killed, the trap will reset automatically.
+    * If an avi's upper torso or head is in contact with the trap, they'll be flashbanged.
+
+
++ Flash Mine
+    * Does exactly what you'd expect.
+    * Smallest mine we have.
+
+
++ Shredder Charge
+    * Like the shrapnel grenade, but in manually-detonatable charge form.
+
+
 ### S2, III. P5. Warp Gates
 {: .no_toc .text-delta }
 
@@ -698,9 +778,11 @@ VIII. Grav Chute Training Assessment
 
 
 + Cleanup
-    * /1 cleanup OR Chaos star button on top left of HUD.
+    * /1 cleanup OR advanced HUD menu > clean up.
     * Use it after every raid/defense. Even if no one tells you to.
     * Use it if you accidentally gas/infect our spawn.
+    * There are several cleanup commands through the advanced HUD menu accessible by hold-clicking the chaos star button until it beeps, then releasing.
+    * Clicking the chaos star briefly will remove MOST lingering effects. This is useful as a quick "oh shit" button in the case of firebombing the spawn or something. This will not remove your mines or deployables.
 
 
 + Ammo Counter
@@ -742,7 +824,8 @@ VIII. Grav Chute Training Assessment
     * Accessed by hold-clicking the chaos star in the top left. From here, you can access:
     * Manual Stats command
     * Manual HUD reset command
-    * Manual Cleanup command
+    * Manual cleanup command
+    * Manual AoE cleanup command
     * Manual Tech Deployable Cleanup command
     * Manual Lookup command (use UUIDs to see your friend's stats!)
     * Manual Corruption Transfer command
@@ -880,6 +963,15 @@ VIII. Grav Chute Training Assessment
     * Tell them to HIT THEIR CLEAN UP BUTTON when done fighting.
     * Have them use the Corruption Altar to deposit any skulls when they’re done.
 
+
++ Defensive/Offensive Drill
+    * Tell the trainee to pick a building in the sim.
+    * Give them 2 minutes of unmolested time to fortify their location as much as possible, including warpgates.
+    * They must stay within this general area, but can continue to fortify during combat.
+    * After 2 minutes pass, attempt to dislodge them. Time the fight. If you cannot dislodge them, destroying their gate and either destroying or co-opting 90% of their deployables in 15 minutes, they did a good job.
+    * Reverse this process and have them attempt to dislodge you. If they do so within half an hour (You should be better at this than they are), they did a good job.
+
+
 ## S2, VII. Grav Chute Training
 
 + Reminders
@@ -934,7 +1026,7 @@ VIII. Grav Chute Training Assessment
         * Shelling extremely mobile targets is a waste of time unless you're laying down razorwire or fire at a chokepoint.
     * Type in ‘/1target’ and input specific coordinates (<XXX,YYY,ZZZ>)
         * Note that you can copy/paste pings directly from local and it will work.
-        * You can also click a ping link in local and the mortar will auto-target those coordinates.
+        * You can also click a ping link in local and the mortar will auto-target those coordinates. This is **very important** to learn.
 
 + Rounds & Firing Modes
     * Mortar has two firing modes.
@@ -942,24 +1034,51 @@ VIII. Grav Chute Training Assessment
         * /1low - If you are at an elevated position, such as a tower.
             * Faster and more direct firing
             * Be wary of enemy cover. Again, this is the default mode for mouselook.
-    * Each round is almost exactly like a type of grenade, but more powerful in most cases.
+        * The alt-cam firing method attempts to have the trajectory peak at the target position +10m.
+        Pressing "Q" will open a dialog box where you can enter a number to choose a different trajectory peak. Leave it blank to return to the default trajectory.
+    * Each round is almost exactly like a type of grenade, but more powerful in some cases.
         * Hit '2' to change rounds.
 
 
-+ Available default rounds are:
++ Available rounds are:
     * Frag
         * Blast radius similar to a frag rocket rather than a frag grenade.
-        * Delivers 25 AT on a direct hit
+        * Delivers 20 AT on a direct hit
 
     * Krak
-        * Delivers 25 AT on direct hit
-        * plus 20 AT to every scripted object within the blast radius
+        * Delivers 20 AT on direct hit (this is true of every mortar round save the flare)
+        * plus 20 AT to every scripted object within the blast radius, including what it hit.
 
     * Chaff
         * Same as the chaff grenade.
 
     * Flash
         * Same as the flash grenade.
+
+    * Smoke
+        * As the grenade.
+
+
++ Wargear rounds:
+    * Inferno
+        * Airburst inferno round
+
+    * Airburst
+        * Airburst scatter round. Essentially a cluster round.
+
+    * Razorwire
+        * Airburst razorwire round. Significantly more wires than the grenade form.
+
+    * Acid
+        * Airburst acid round. Significantly more pools than grenade form.
+
+    * Toxin
+        * As the grenade.
+
+    * Illumination flare
+        * As the grenade form.
+
+
 
 
 + COOL TRICKS
@@ -973,15 +1092,14 @@ VIII. Grav Chute Training Assessment
 
 + This completes the first two sections of Renegade training.
 
-+ After the first two parts of renegade training have been completed, please continue on with Imperfectus Vehicle Training, which can be found in the first part of the next thread. Once the first three sections are completed ENTIRETY, Renegades must choose role-specific training to undergo, either Heavy Support (Section 4)or Fast Attack (Section 5) which can also be found in the next thread under Section 3.
++ After the first two parts of renegade training have been completed, please continue on with Imperfectus Vehicle Training, which can be found in the first part of the next thread. Once the first three sections are completed ENTIRELY, Renegades must undergo advanced training (section 4)
 
 + Consideration for promotion to VETERAN includes:
-    * completion of training sections 1-3
-    * completion of one role-specific training section mentioned above
+    * completion of training sections 1-4
     * 14 days participation
     * recommendation of 2 members at rank Marauder or above.
 
 
-+ After promotion to Veteran, they must complete advanced Veteran training FIRST (Sections 6 and 7 found here), as well as the remaining role-specific in order to be considered for Marauder. This INCLUDES going back to EITHER Section 4 or 5 depending on their prior selection (ie, if you went Heavy Support, you must get the Fast Attack training before moving on to the Veteran Fast Attack training.)
++ After promotion to Veteran, they must complete advanced Veteran training (Sections 5 and 6 found here)
 
 ---

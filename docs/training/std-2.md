@@ -17,16 +17,14 @@ nav_order: 2
 
 After the first two parts of renegade training (Sections 1-2) have been completed, please continue on with Imperfectus Vehicle Training (Section 3) which can be found below.
 
-Once the first three sections are completed ENTIRETY, Renegades must choose role-specific training to undergo, either Heavy Support (Section 4) or Fast Attack (Section 5)
+Once the first three sections are completed ENTIRETY, Renegades must complete Advanced Renegade Training (section 4)
 
 Consideration for promotion to VETERAN includes:
-+ completion of training sections 1-3
-+ completion of one role-specific training section mentioned above
-+ 14 days participation
++ completion of training sections 1-4
++ 14 days participation after attaining the rank of Renegade.
 + recommendation of 2 members at rank Marauder or above.
 
-After promotion to Veteran, they must complete advanced Veteran training FIRST (Sections 6 and 7), as well as the remaining role-specific in order to be considered for Marauder.
-+ This INCLUDES going back to EITHER Section 4 or 5 depending on their prior selection (for example, if you went Heavy Support, you must get the Fast Attack training before moving on to the Veteran Fast Attack training.)
+After promotion to Veteran, they must complete advanced Veteran training FIRST (Sections 6 and 7) in order to be considered for Marauder.
 
 
 ---
@@ -251,6 +249,35 @@ All Training to be done on ground level of sim. This is so they get used to how 
 
 + It can be also be used against ground infantry (acts as explosive rounds rather than flak below certain height ceiling). However, the Hydra cannot fire below its chassis horizon, so be mindful of your angle of elevation to ensure continuous delivery of flak/explosive barrage. That means the Hydra is best used at low elevations, higher ground will gimp its horizon.
 
++ Hold C (or some other control input) whilst firing to achieve max firerate. This is caused by a bug in SL.
+
++ If the driver asks you to get out of the hatch because your ass is in his face, kindly do so.
+
+
+## S3, III, P2. The Tauros Venator
+{: .no_toc .text-delta }
+
++ Lightly-armoured scout/harassment vehicle.
++ Not meant for sustained engagements, use hit-and-run tactics to succeed.
++ Must be used with a turret gunner. Drivers are, however, allowed to toss grenades and use **sidearms** whilst in the cockpit.
+
+### Controls/Commands
+{: .no_toc .text-delta }
+
++ WSAD to drive forwards, turns left/right, and reverse.
++ Hold C to activate the handbrake.
++ Mouse1 honks the horn.
+
+### Available Turrets
+{: .no_toc .text-delta }
+
++ Autocannon
+  + Twin-linked autocannon with HE, AP, and Flak rounds.
+
+
++ Lascannon
+  + Twin-linked lascannon meant to deal heavy damage to full LBA vehicles
+
 ## S3, IV. Plane Training - The Avenger
 
 + Flying is HARD. [Say this.]
@@ -366,108 +393,81 @@ All Training to be done on ground level of sim. This is so they get used to how 
 
 
 ---
-# Section 4: Ferrum/Heavy Support Training
+# Section 4: Advanced Renegade Training
 ---
 
 ## Table of Contents
 {: .no_toc .text-delta }
 
-I. Ferrum Orientation
+I. Advanced Tactics Orientation
 
-II. Ferrum Infantry Equipment and Tactics
+II. Advanced Infantry Equipment
 
-## S4, I. Ferrum Orientation
+## S4, I. Advanced Tactics Orientation
 
 ### Read the following:
 {: .no_toc .text-delta }
 
-+ Ferrum and the Heavy Support Doctrine relies on heavy vehicles, explosives, and suppressing fire to maintain pressure and secure positions. Acting in the Heavy Support role is not just about your gear, it is about the mentality you’re in when you enter the fight.
++ In Chaos, there are a couple different major doctrines we rely on, that more than a few of us end up falling into. The nuances of how you play are ultimately up to you, but you may want to consider the tactical applications of these doctrines when determining your overall strategy on the field, or how to utilize the men and women available to you when leading a raid. These two doctrines are "Fast Assault" and "Heavy Support".
 
-## S4, II. Ferrum Infantry Equipment and Tactics
++ The Heavy Support Doctrine relies on heavy vehicles, explosives, and suppressing fire to maintain pressure, secure, and **fortify** positions. Acting in the Heavy Support role is not just about your gear, it is about the mentality you’re in when you enter the fight. This is not limited to being "In the rear with the gear", so to speak (otherwise we'd never gain ground), but performing a slow, grinding advance of heavily fortified and entrenched positions until the enemy has no ground left to even bury their dead is a powerful way to play.
 
-### Basic hud utilities, equipment, and additional weapons
-{: .no_toc .text-delta }
++ Conversely, the Fast Assault Doctrine relies on quick, decisive strikes at key locations, rolling in and deploying entire squads with the Chimera or Valkyrie, harassing heavily armored vehicles with hit-and-run tactics, skirmishing with enemy infantry to clear them from their own positions, all to gain that initial chink in the enemy's armor for Heavy Support to fully exploit. If Fast Assault is the hammer, and Heavy Support is the anvil, then the enemy is fucked.
 
-+ Shotgun Inferno Mode
- + The Shotgun's inferno mode fires a fireball in a parabolic arc that deals 3 AT for the initial shot, and around 18 AT from the fire pool left behind.
++ If you do decide to adopt one of these doctrines (which is again highly recommended), then above all, remember to **be flexible**. If we only have people doing Heavy Support things, for instance, playing passively is not going to get us anywhere. Clear an area and put a warp gate behind cover, seek and destroy enemy artillery: do not get stuck in one way of fighting.
 
-
-+ Heavy Stubber
- + High rpm, varying ammo capacity (/1mag). [120 Drum or 60 Box]
- + Higher ammo capacity, lower accuracy, longer reload time.
- + Moving while firing decreases accuracy.
- + Entrenchment mode
-   + Sit on barricade or activate with 'C' on cover you can see over
-   + Higher accuracy.
-   + Deactivates when unsat, moving, or looking up or down too far.
++ Further to the last point, remember that teamwork makes the dream work. If you are showboating in melee or something while all the friendlies around you are dying and an entire push is being blunted, while that's cool and all, very impressive, you soon won't have any buddies covering your ass, will get flanked, ganged up on, and end up on the next video from BLACKED.com and probably not in the way you'd like. Or maybe you would. Either way, support your team.
 
 ### Re-iterate use of deployables in HUD
 {: .no_toc .text-delta }
 
-+ Ferrum makes more use of deployables than Mortis.
++ Heavy Support makes more use of deployables than Fast Assault.
 + Barricades, DADS, Barbwires, Sandbags, warp gates, mines, EVERYTHING in your HUD is to be used in full force when you're fortifying an area.
  + Use some areas on sim as examples. Make it clear that you don't need to be specifically defending objectives
+ + Emphasize landmines as a way to passively defend fortified locations until you can get back to them in the case that you die. If you aren't actively tossing a grenade at some asshole, you should be looking for a good spot to place a mine or deployable. If the cooldown on deployables or grenades is off for longer than a minute or so, you're probably Doing It Wrong.
  + Many sims have areas of high cover that allow us to fortify more easily and stage attacks.
  + BACK-UP WARP GATES! In the heavy support role, you are primarily responsible for keeping our soldiers in the fight. If nobody has a backup placed, it is YOUR JOB to ensure one is there. Call it out.
 
 ### Re-explain the Rocket Launcher and Repair tool
 {: .no_toc .text-delta }
 
-+ Specifically, how ferrum is more easily able to seeker-rocket aircraft from the backline and how repairing deployables can be more useful than asking someone to replace them, or having them remember to replace them on death.
-- Use a repair tool to assist Mechanicus when possible. Fix barricades, turrets, and generators. The turrets need someone there to reload them, so be a good boy.
++ Specifically, how Heavy Support is more easily able to seeker-rocket aircraft from the backline and how repairing deployables can be more useful than asking someone to replace them, or having them remember to replace them on death.
++ Use a repair tool to assist Mechanicus when possible. Fix barricades, turrets, and generators. The turrets need someone there to reload them, so be a good boy.
 
-### Explain that despite being in Ferrum, being flexible is paramount.
+### Deployment Tactics
 {: .no_toc .text-delta }
 
-+ If we only have members of Ferrum on attack or defense, playing passively is not going to get us anywhere. Clear an area and put a warp gate behind cover, seek and destroy enemy artillery: do not get stuck in one way of fighting, just bear in mind that with our equipment you are predisposed to providing backline support, securing a position, and seeking to support a new one.
++ Impress upon the Renegade the importance of Fast Assault opening a hole in a line. This means quickly advancing and using every tool at their disposal to open up an opportunity for everyone else to move forward.
 
----
-# Section 5: Mortis/Fast Attack Training
----
-## Table of Contents
++ This includes, when permitted, setting up FORWARD Warp Gates and COMMUNICATING with the rest of the group when the warp gate is ready to be used. When the gate is in a safe position, half the current raid/defense team entering an area can very quickly turn the tide of a fight.
+
++ Take the initiative. Can a bike, chimera, hellblade, or valkyrie be used in this situation to even the odds? ASK TO USE IT! Do mines need to be cleared on an objective? Use krak grenades or krak rockets. Be the first one to solve a problem or suggest a solution.
+
+
+## S4, II. Advanced Infantry Equipment
+
+### Basic hud utilities, equipment, and additional weapons
 {: .no_toc .text-delta }
 
-I. Mortis Orientation
 
-II. Mortis Ground Equipment
++ Heavy Stubber
+ + High rpm, varying ammo capacity (/1mag). [160 Drum or 80 Box]
+ + Higher ammo capacity, lower accuracy, longer reload time.
+ + Entrenchment mode
+   + Sit on barricade or activate with 'C' on cover you can see over
+   + Higher accuracy.
+   + Deactivates when unsat, moving, or looking up or down too far.
+ + This is probably going to be your go-to weapon early on for the Heavy Support role. You can use it on the move, of course, but it **really** shines when deployed in a fortified location, such as on a barricade overlooking a major enemy thoroughfare with ample DADS and Bomb Umbrella cover.
 
-+ Part 1. Mortis Guns
-
-+ Part 2. The Assault Bike
-
-III. Mortis Deployment Tactics
-
-IV. The Hellblade
-
-## S5, I. Mortis Orientation
-
-### Read the following
-{: .no_toc .text-delta }
-
-+ The Mortis or Fast Attack doctrine emphasizes quickly taking positions and outmaneuvering a foe.
-+ Assault Packs take ground, assault bikes are hard to shoot at and can kill tanks, and the hellblade is one of the most effective interceptors in the entire SLMC.
-
-## S5, II. Mortis Ground Equipment
-
-### S5, II, P1. Mortis Guns
-
-#### Paraphrase/teach the following
-{: .no_toc .text-delta }
 
 + Mortis Pattern Autopistol
- + Make sure the trainee understands the spread of the weapon.
- + Has less ammo than Voss autopistol.
- + Is more accurate than Voss autopistol.
- + Has a higher firerate than Voss autopistol.
+  + Make sure the trainee understands the spread of the weapon.
+  + Has less ammo than Voss autopistol (20 instead of 30).
+  + Is more accurate than Voss autopistol.
+  + Has a higher firerate than Voss autopistol.
+  + This is going to again be a go-to sidearm for doing Fast Assault things. It's quick, both in firerate and on reload, and very good for performing snap-shot sprays at fuckers downrange.
 
-
-+ Accatran Flak Shotgun Munitions
- + This is an expansion to their shotgun training so not much needs to be explained
-   + Better against air targets (low flying / slow aircraft, jet/jump packers.)
-   + 15m height is where the flak activates
-
-
-### S5, II, P2. The Assault Bike
+### S4, II, P2. The Assault Bike
 
 #### Paraphrase/teach the following
 {: .no_toc .text-delta }
@@ -546,18 +546,8 @@ IV. The Hellblade
     Have another member of Chaos help you by hopping into a 200HP LBA Leman Russ.
     Have them use either grenades or their lance to take down the tank
 
-## S5, III. Mortis Deployment Tactics
 
-### Paraphrase the following
-{: .no_toc .text-delta }
-
-+ Impress upon the Renegade the importance of Mortis opening a hole in a line. This means quickly advancing and using every tool at their disposal to open up an opportunity for everyone else to move forward.
-
-+ This includes, when permitted, setting up FORWARD Warp Gates and COMMUNICATING with the rest of the group when the warp gate is ready to be used. When the gate is in a safe position, half the current raid/defense team entering an area can very quickly turn the tide of a fight.
-
-+ Take the initiative. Can a bike, chimera, hellblade, or Avenger be used in this situation to even the odds? ASK TO USE IT! Do mines need to be cleared on an objective? Use krak grenades or krak rockets. Be the first one to solve a problem or suggest a solution.
-
-## S5, IV. The Hellblade
+## S4, II, P3. The Hellblade
 
 ### Pre-training
 {: .no_toc .text-delta }
@@ -611,16 +601,19 @@ IV. The Hellblade
 
 + Missile Munitions
  + Frag Rocket
-   + Air to Ground missiles, 10 meter radius, 10 AT
+   + Air to Ground missiles, exactly as in the Infantry Rocket Launcher
    + 4 rounds in the magazine.
-  + Flakk Missile
+ + Krak Rocket
+   + Air to Ground missiles, exactly as in the Infantry Rocket Launcher
+   + 4 rounds in the magazine.
+ + Flakk Missile
    + Air to Air missiles, 25 AT Homing AAMS
    + Press F to activate, once you’re locked on press F again to fire.
    + Locked target will show in chat, if you accidentally lock onto one of us, hit R to reload. Always double check who you're locked on before you fire.
    + Cancel lock on by pressing F
    + 4 rounds in the magazine.
   + Concussive Torpedo
-   + Air to Ground bomb, 75 AT, 10 Meters
+   + Air to Ground bomb, 80 AT, 10 Meters
    + 2 rounds in the magazine.
 
 ### Hellblade Duel
@@ -645,11 +638,8 @@ IV. The Hellblade
 {: .no_toc .text-delta }
 
 + This concludes the Renegade Portion of Training; However, in order to be considered for promotion to Veteran, and to then proceed with the remainder of this training, the trainee must first:
- + Complete Sections 1 Through 3 of this training
- + Complete Sections 4 and/or 5 of this training
-      + OR is only necessary for Veteran promotion
-      + However keep in mind they WILL have to do BOTH to be promoted from Veteran to Marauder later on
- + Be an active member in the group for at LEAST 14 days after attaining the rank of Renegade
+ + Complete Sections 1 Through 4 of this training
+ + Be an active member in the group for at LEAST 14 days after attaining the rank of Renegade.
  + Be recommended for promotion by at least 2 active members of Marauder rank or higher.
 
 
