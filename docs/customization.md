@@ -131,18 +131,26 @@ To do this, create an `_includes` directory and make a copy of the specific file
 
 The following includes were made available to you:
 
-`/_includes/footer_custom.html`
+### Custom Footer
+
+`_includes/footer_custom.html`
 
 This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content]({% link docs/configuration.md %}#footer-content).
 
-`/_includes/head_custom.html`
+### Custom Head
+
+`_includes/head_custom.html`
 
 Any HTML added to this file will be inserted before the closing `<head>` tag. This might include additional `<meta>`, `<link>`, or `<script>` tags.
 
-`/_includes/header_custom.html`
+### Custom Header
+
+`_includes/header_custom.html`
 
 Content added to this file appears at the top of every page's main content between the site search and auxiliary links if they are enabled. If `search_enabled` were set to false and `aux_links` were removed, the content of `header_custom.html` would occupy the space at the top of every page.
 
-`/_includes/nav_footer_custom.html`
+### Custom Nav Footer
+
+`_includes/nav_footer_custom.html`
 
 Any content added to this file will appear at the bottom left of the page below the site's navigation. By default an attribution to Just the Docs is displayed which reads, `This site uses Just the Docs, a documentation theme for Jekyll.`.
