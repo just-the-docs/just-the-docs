@@ -133,7 +133,7 @@ The following includes were made available to you:
 
 `/_includes/footer_custom.html`
 
-This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content](/docs/configuration/#footer-content).
+This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content]({% link docs/configuration.md %}#footer-content).
 
 `/_includes/head_custom.html`
 
