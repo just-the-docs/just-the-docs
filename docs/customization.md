@@ -137,7 +137,7 @@ This content appears at the bottom of every page's main content. More info for t
 
 `/_includes/head_custom.html`
 
-Any html added to this file will be inserted before the closing `<head>` tag. This might include additional meta, link, or script tags.
+Any HTML added to this file will be inserted before the closing `<head>` tag. This might include additional `<meta>`, `<link>`, or `<script>` tags.
 
 `/_includes/header_custom.html`
 
