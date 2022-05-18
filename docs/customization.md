@@ -141,7 +141,7 @@ Any HTML added to this file will be inserted before the closing `<head>` tag. Th
 
 `/_includes/header_custom.html`
 
-Content added to this file appears at the top of every page's main content between the site search and Auxiliary links if they are enabled. If search_enabled were set to false and aux_links were removed, the content of `header_custom.html` would occupy the space at the top of every page.
+Content added to this file appears at the top of every page's main content between the site search and auxiliary links if they are enabled. If `search_enabled` were set to false and `aux_links` were removed, the content of `header_custom.html` would occupy the space at the top of every page.
 
 `/_includes/nav_footer_custom.html`
 
