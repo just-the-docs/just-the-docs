@@ -65,9 +65,7 @@ layout: table_wrappers
         {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
-    <footer class="site-footer">
-      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-    </footer>
+
   </div>
   <div class="main" id="top">
     <div id="main-header" class="main-header">
@@ -79,10 +77,11 @@ layout: table_wrappers
           </div>
           <div id="search-results" class="search-results"></div>
         </div>
+
       {% endif %}
       {% include header_custom.html %}
       {% if site.aux_links %}
-        <nav aria-label="Auxiliary" class="aux-nav">
+        <!-- <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
             {% for link in site.aux_links %}
               <li class="aux-nav-list-item">
@@ -96,7 +95,7 @@ layout: table_wrappers
               </li>
             {% endfor %}
           </ul>
-        </nav>
+        </nav> -->
       {% endif %}
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
