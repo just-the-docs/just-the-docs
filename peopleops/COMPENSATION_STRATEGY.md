@@ -5,7 +5,7 @@ parent: People Ops
 nav_order: 15
 ---
 
-# Compensation Strategy and Benefits
+# Compensation and Benefits
 
 **Purpose**
 
@@ -14,6 +14,12 @@ Establishes the norms and policies which guide our collaboration at Countable.
 **Scope**
 
 Covers the principles behind our compensation strategy, as well as benefits and medical provided to our team.
+
+## Compensation Schedule
+  * Staff must submit hours for a given month at the end date of that month in order to be paid on time.
+  * Domestic (Canada) staff (with Canadian bank accounts) are paid within 1 week of the start of the month, for the prior period.
+  * Other staff are paid within 2 weeks of the start of the month, for the prior period.
+  * If you are not paid within this period, please contact our current book keeper.
 
 ## Compensation Strategy Principles
 
