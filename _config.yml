@@ -82,6 +82,7 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 footer_content: "Copyright &copy; 2022 Shabab Hossain Rhythm."
+footer_contact: "Contact at shabab.hossain@ixorasolution.com"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
