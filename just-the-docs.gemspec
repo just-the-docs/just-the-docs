@@ -1,10 +1,10 @@
 # coding: utf-8
 
 Gem::Specification.new do |spec|
-  spec.name          = "just-the-docs"
+  spec.name          = "Flowcode-Generation-Documentation"
   spec.version       = "0.3.3"
-  spec.authors       = ["Patrick Marsceill"]
-  spec.email         = ["patrick.marsceill@gmail.com"]
+  spec.authors       = ["Shabab Hossain Rhythm"]
+  spec.email         = ["Shabab.hossain@ixorasolution.com"]
 
   spec.summary       = %q{A modern, highly customizable, and responsive Jekyll theme for documention with built-in search.}
   spec.homepage      = "https://github.com/just-the-docs/just-the-docs"
