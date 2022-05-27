@@ -64,8 +64,8 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/just-the-docs/just-the-docs"
+  "Flowcode Genearation Docs on GitHub":
+    - "//github.com/Shabab007/Shabab007"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -107,6 +107,7 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-spaceship
 
 kramdown:
   syntax_highlighter_opts:

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Importing types and objects
-nav_order: 2
+nav_order: 3
 ---
 
 # Importing types and objects

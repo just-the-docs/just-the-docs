@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Finishing up the process
-nav_order: 6
+nav_order: 7
 ---
 
 #  Finishing up the process.

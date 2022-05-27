@@ -47,3 +47,7 @@ Now you need to set these environment varibales `JFROG_FC_NPM_USERNAME` and `JFR
 > - If you are using `Docker`, You need to check how to set environment varibales in Docker.
 
 
+```mermaid!
+graph TD;
+Start --> A(UserInputs) -->|Colors, Patter, Url, Center Image| B(Creating FlowocdeOptions Object) --> |flowcodeOptions| C(Hitting the generator api) -->|https://stg-generator.flowcode.com/v1/flowcode?opsts=| D(Preview Flowcode) -->E(Save) -->F(Create StudioConfigId) -->|using decoded studioConFigId|G(Create BrachId)-->|https://stg-generator.flowcode.com/v1/flowcode?&data=url&studio_config_id=studioConfigId|H(Hit generator api To get the Flowcode image)-->End
+```
