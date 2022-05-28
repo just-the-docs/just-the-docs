@@ -127,6 +127,16 @@ Also, when referencing static files, be sure to manage the cache proactively usi
 ```
 {% endraw %}
 
+### Error Reporting and Sensitive Data
+
+When running in prod with error reporting for exceptions (e.g. Sentry or email logs), use Django's decorators `@sensitive_variables()` and `@sensitive_post_parameters` to avoid passing sensitive data to error handling systems. [Read more here](https://docs.djangoproject.com/en/4.0/howto/error-reporting/#filtering-sensitive-information).
+
+```
+@sensitive_variables('patient_id', 'cell_phone')
+def my_function():
+    # ...
+```
+
 ### Common Gotchas
 
 **Concurrency safety**
