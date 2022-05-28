@@ -129,10 +129,11 @@ Also, when referencing static files, be sure to manage the cache proactively usi
 
 ### Error Reporting and Sensitive Data
 
-When running in prod with error reporting for exceptions (e.g. Sentry or email logs), use Django's decorators `@sensitive_variables()` and `@sensitive_post_parameters` to avoid passing sensitive data to error handling systems. [Read more here](https://docs.djangoproject.com/en/4.0/howto/error-reporting/#filtering-sensitive-information).
+When running in prod with error reporting for exceptions (e.g. Sentry or email logs), use Django's decorators `@sensitive_variables()` and `@sensitive_post_parameters` to avoid passing sensitive data to error handling systems. **Make sure to put the `@sensitive_variables()` decorator first so that it works through the other decorators.** [Read more here](https://docs.djangoproject.com/en/4.0/howto/error-reporting/#filtering-sensitive-information).
 
 ```
-@sensitive_variables('patient_id', 'cell_phone')
+@sensitive_variables('patient_id', 'cell_phone')  # @sensitive_variables should always be the first decorator
+@my_other_decorator
 def my_function():
     # ...
 ```
