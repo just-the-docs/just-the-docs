@@ -1,5 +1,5 @@
 FROM python:3
 
 WORKDIR /code/
-RUN pip install mistune pygments
+RUN pip install mistune==0.8.4 pygments
 
