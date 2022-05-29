@@ -66,7 +66,7 @@ Interviews should be the primary source of information about your users, but you
 
 It's beneficial to involve your personas and other stakeholders in the below steps where practical (co-design workshop). This speeds up the "validation" step, below.
 
-  - For any project with a user interface, create wireframes that support the important user stories. 
+  - For any project with a user interface, create [wireframes](./WIREFRAMING) that support the important user stories. 
   - Validate these against conversations with the target market.
 
 Depending on the project, you may also want to develop:
