@@ -42,6 +42,6 @@ Your wireframe should:
 
 ## Resources
 
-[How Senior Designers Wireframe](https://youtu.be/66m1adPbHJk) - A video that contains more detail on what to include and pairs well with any of the more simplistic instructions for just drawing wireframes (which [most resources](https://www.smashingmagazine.com/2020/04/wireframe-design-success/) out there are)
-[Wireframing Guide from Smashing Magazine](https://www.smashingmagazine.com/2018/03/guide-wireframing-prototyping/) - A good overview of the entire process.
-[Usability Inspection by Balasmiq](https://balsamiq.com/learn/articles/usability-inspection/) - Introduces some thought process for considering early design choices.
+* [How Senior Designers Wireframe](https://youtu.be/66m1adPbHJk) - A video that contains more detail on what to include and pairs well with any of the more simplistic instructions for just drawing wireframes (which [most resources](https://www.smashingmagazine.com/2020/04/wireframe-design-success/) out there are)
+* [Wireframing Guide from Smashing Magazine](https://www.smashingmagazine.com/2018/03/guide-wireframing-prototyping/) - A good overview of the entire process.
+* [Usability Inspection by Balasmiq](https://balsamiq.com/learn/articles/usability-inspection/) - Introduces some thought process for considering early design choices.
