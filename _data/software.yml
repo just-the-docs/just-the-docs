@@ -137,7 +137,7 @@
   interface: gui
   type: app  
 
-- name: RhinoTerrain
+- name: RhinoCity
   webpage: https://rhinoterrain.com/en/rhinocity.html
   description: A plugin for Rhino to produce, edit, analyse, and texture 3D data. Reads and writes CityJSON.
   foss: false
