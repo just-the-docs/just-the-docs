@@ -29,15 +29,16 @@ Before Wireframing you should:
   * Complete User Stories (Clarify who uses the product, to accomplish what, and why they would do so)
   * Have Information Architecture (List of the different views and how the user navigates between them)
   * Look at similar products you or others worked on before, to glean what UI patterns work well for your problem domain.
-  * Understrand the Business Process Flow or User Journey (what steps does the user take in sequence?)
+  * Understand the Business Process Flow or User Journey (what steps does the user take in sequence?)
 
-The Wireframe serves as a way to consolidate all the information above and make it digestible for stakeholders.
+The Wireframe is the first visual representation of the product, and serves as a way to consolidate all the information above and make it digestible for stakeholders.
 
 Your wireframe should:
   * Show the full navigation of the app in at least one of your views, even if you are designing just a small section of UI inside that.
-  * Group components by task relatedness to minimize the user "jumping around" (visual heirarchy)
+  * Group components by priority and task relatedness to minimize the user "jumping around" (visual heirarchy)
   * Make it clear how the user accomplishes the User Stories, and the order of interactions.
   * Make it clear what task the user is doing in each view. (editing, viewing information, navigating)
+  * Use common conventions where available: You don't need to reinvent the wheel when it comes to sign-in, menus, inboxes, notification badges, error message/banner behaviours, etc. Users expect these basic patterns in their commonly used apps to feel similar.
 
 ## Resources
 
