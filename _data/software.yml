@@ -137,6 +137,16 @@
   interface: gui
   type: app  
 
+- name: RhinoTerrain
+  webpage: https://rhinoterrain.com/en/rhinocity.html
+  description: A plugin for Rhino to produce, edit, analyse, and texture 3D data. Reads and writes CityJSON.
+  foss: false
+  category: 
+    - generator
+    - editor
+  interface: gui
+  type: app  
+
 - name: QGIS plugin
   webpage: https://github.com/tudelft3d/cityjson-qgis-plugin
   description: A plugin that supports the loading of CityJSON datasets in QGIS3; these can be queried like any other layers in QGIS.
