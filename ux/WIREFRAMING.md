@@ -16,11 +16,13 @@ nav_order: 1
 
 **Purpose**
 
-A guide to getting started Wireframing effectively
+A guide to getting started Wireframing to effectively communicate the about a project's goals and solution approach to the project stakeholders. In particular, the wireframe contains everything needed to pass to a designer to develop high fidelity mock-ups, or to a developer to prototype an MVP.
 
 **Scope**
 
 Gives guidelines to get more information out the wireframing process.
+
+Use the following [Template](https://miro.com/app/board/uXjVOwU08tA=/) to create your wireframes in Miro.
 
 ## Guidelines
 
