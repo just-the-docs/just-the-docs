@@ -28,9 +28,9 @@ Use the following [Template](https://miro.com/app/board/uXjVOwU08tA=/) to create
 
 Before Wireframing you should do these tasks first (sections of Miro board above):
   * Undertake a [discovery](../operations/WORKING_WITH_CLIENTS/DISCOVERY.md) process to determine the main problem your product will solve.
-  * **Inspiration** Look at similar products you or others worked on before, to glean what UI patterns work well for your problem domain.* 
-  * **User Stories** (Clarify who uses the product, to accomplish what, and why they would do so)
-  * **Information Architecture** (List of the different views and how the user navigates between them)
+  * **Inspiration** Look at similar products you or others worked on before, to glean what UI patterns work well for your problem domain.
+  * **User Stories** Clarify who uses the product, to accomplish what, and why they would do so
+  * **Information Architecture** List of the different views and how the user navigates between them. These are the pages you will include in the wireframe.
   * **User Flows** Understand the Business Process Flow or User Journey (what steps does the user take in order to enact the user stories?)
 
 The Wireframe is the first visual representation of the product, and serves as a way to consolidate all the information above and make it digestible for stakeholders.
