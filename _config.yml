@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: CityJSON
-description: CityGML without the GML
+description: JSON-based encoding for 3D city models
 # url: "https://tudelft3d.github.io"
 # baseurl: "/cityjson-website"
 
