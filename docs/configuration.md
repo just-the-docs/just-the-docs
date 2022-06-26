@@ -176,7 +176,7 @@ callouts:
     opacity: 0.3
 ```
 
-You can change the default opacity (0.2) for all callouts, e.g.:
+You can change the default opacity (`0.2`) for all callouts, e.g.:
 
 ```yaml
 callouts_opacity: 0.3
