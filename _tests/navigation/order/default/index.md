@@ -17,5 +17,5 @@ Digits precede letters, and numeric titles are ordered lexicographically: `10` p
 {: .note }
 The default order of numeric titles depends on which version of Jekyll is used
 to build the site: 
-the default build on GitHub Pages uses Jekyll3.8 and gives lexicographic order,
+the default build on GitHub Pages uses Jekyll 3.8 and gives lexicographic order,
 but when using Jekyll4, `2` precedes `10`.
