@@ -19,7 +19,7 @@ collections:
   test_collection_4:
     permalink: "/:collection/:path:output_ext"
     output: true
-  test_collection_4:
+  test_collection_5:
     permalink: "/:collection/:path:output_ext"
     output: true
 
