@@ -1,5 +1,5 @@
 {% if site.logo %}
-$logo: "{{ site.logo | absolute_url }}";
+$logo: "{{ site.logo | relative_url }}";
 {% endif %}
 @import "./support/support";
 @import "./color_schemes/{{ include.color_scheme }}";
