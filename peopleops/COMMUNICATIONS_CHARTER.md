@@ -118,6 +118,12 @@ Use the following notification setting. You should only be notified when people 
     2. Create clarity around objectives and user stories. State your understanding in your own words, so teammates can confirm we're on
     the same page.
 
+## Presentations
+
+When presenting, be conversational if it's a small group, and view the last 15 minutes on slide decks in [this talk](https://www.youtube.com/watch?v=Unzc731iCUY). Try not to have more than 10 words per slide. Put those in your speaking notes instead, and use illustrations.
+
+# Feedback
+
 ## Giving Feedback to Teammates
 
 Our team must provide each other with feedback regularly in order to improve. Some references on why this is:
