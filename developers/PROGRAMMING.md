@@ -16,13 +16,17 @@ has_children: true
 
 **Purpose**
 
-The purpose of this section is to standardize key (not all) engineering processes in order to improve the team's performance, and take advantage of an experience curve by eliminating arbitrary process differences.
+To help our team write better code together.
 
 **Scope**
 
 This folder is for topics related to programming and technical architecture.
 
 ## Principles
+
+"We have seen that computer programming is an art, because it applies accumulated knowledge to the world, because it requires skill and ingenuity, and especially because it produces objects of beauty."
+
+-- [Donald Knuth](http://www.paulgraham.com/knuth.html)
 
 This is how we build things.
 
