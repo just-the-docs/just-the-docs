@@ -81,6 +81,16 @@ aux_links_new_tab: false
 heading_anchors: true
 ```
 
+## External navigation links
+
+```yaml
+# External navigation links
+nav_external_links:
+  - title: Just the Docs on GitHub
+    url: https://github.com/just-the-docs/just-the-docs
+    hide_icon: false # set to true to hide the external link icon - defaults to false
+```
+
 ## Footer content
 
 ```yaml
