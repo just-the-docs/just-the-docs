@@ -1,10 +1,10 @@
 
 - name: Energy Extension
-  url:  https://github.com/ozgetufan/cjenergy
+  url:  https://github.com/ozgetufan/cjenergy/blob/master/schemas/extensions/energy.ext.json
   description: "Energy Extension for Space Heating Demand Calculation (basically a conversion from the KIT Energy ADE)"
-  status: 1.0
+  status: 1.1.0
   organisation: "Özge Tufan"
-  details: http://resolver.tudelft.nl/uuid:0061d94c-46b6-4910-bb73-b6cdc9b85f84
+  details: https://github.com/ozgetufan/cjenergy/
 
 - name: Generic
   url:  https://cityjson.org/extensions/download/generic.ext.json
