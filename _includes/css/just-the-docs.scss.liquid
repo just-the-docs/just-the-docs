@@ -1,7 +1,8 @@
 {% if site.logo %}
-$logo: "{{ site.logo | absolute_url }}";
+$logo: "{{ site.logo | relative_url }}";
 {% endif %}
 @import "./support/support";
 @import "./color_schemes/{{ include.color_scheme }}";
 @import "./modules";
 {% include css/custom.scss.liquid %}
+{% include css/callouts.scss.liquid color_scheme = include.color_scheme %}
