@@ -82,14 +82,7 @@
     }
   }
 
-  .task-list {
-    padding-left: 0;
-  }
-
   .task-list-item {
-    display: flex;
-    align-items: center;
-
     &::before {
       content: "";
     }
@@ -97,6 +90,8 @@
 
   .task-list-item-checkbox {
     margin-right: 0.6em;
+    margin-left: -1.4em;
+    // The same margin-left is used above for ul > li::before
   }
 
   hr + * {

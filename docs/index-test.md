@@ -152,6 +152,30 @@ Some text
 - [ ] Hello, this is another TODO item
 - [x] Goodbye, this item is done
 
+### Nesting task lists
+
+- [ ] level 1 item (task)
+   - [ ] level 2 item (task)
+   - [ ] level 2 item (task)
+- [ ] level 1 item (task)
+- [ ] level 1 item (task)
+
+### Nesting a ul in a task list
+
+- [ ] level 1 item (task)
+   - level 2 item (ul)
+   - level 2 item (ul)
+- [ ] level 1 item (task)
+- [ ] level 1 item (task)
+
+### Nesting a task list in a ul
+
+- level 1 item (ul)
+   - [ ] level 2 item (task)
+   - [ ] level 2 item (task)
+- level 1 item (ul)
+- level 1 item (ul)
+
 ### Small image
 
 ![](../../assets/images/small-image.jpg)
