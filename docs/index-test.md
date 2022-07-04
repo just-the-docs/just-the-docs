@@ -78,6 +78,24 @@ end
 1.  Item three
 1.  Item four
 
+### And an ordered list, continued:
+
+1.  Item one
+1.  Item two
+
+Some text
+
+{:style="counter-reset:none"}
+1.  Item three
+1.  Item four
+
+### And an ordered list starting from 42:
+
+{:style="counter-reset:step-counter 41"}
+1.  Item 42
+1.  Item 43
+1.  Item 44
+
 ### And a nested list:
 
 - level 1 item
