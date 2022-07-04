@@ -42,12 +42,20 @@ layout: table_wrappers
 
   <div class="side-bar">
     <div class="site-header">
-      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
+      <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
       <a href="#" id="menu-button" class="site-button">
         <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
       </a>
     </div>
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      {% assign pages_top_size = site.html_pages
+          | where_exp:"item", "item.title != nil"
+          | where_exp:"item", "item.parent == nil"
+          | where_exp:"item", "item.nav_exclude != true"
+          | size %}
+      {% if pages_top_size > 0 %}
+        {% include nav.html pages=site.html_pages key=nil %}
+      {% endif %}
       {% if site.just_the_docs.collections %}
         {% assign collections_size = site.just_the_docs.collections | size %}
         {% for collection_entry in site.just_the_docs.collections %}
@@ -55,14 +63,26 @@ layout: table_wrappers
           {% assign collection_value = collection_entry[1] %}
           {% assign collection = site[collection_key] %}
           {% if collection_value.nav_exclude != true %}
-            {% if collections_size > 1 %}
-              <div class="nav-category">{{ collection_value.name }}</div>
+            {% if collections_size > 1 or pages_top_size > 0 %}
+              {% if collection_value.nav_fold == true %}
+                <ul class="nav-list nav-category-list">
+                  <li class="nav-list-item{% if page.collection == collection_key %} active{% endif %}">
+                    {%- if collection.size > 0 -%}
+                    <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+                    {%- endif -%}
+                    <div class="nav-category">{{ collection_value.name }}</div>
+                    {% include nav.html pages=collection key=collection_key %}
+                  </li>
+                </ul>
+              {% else %}
+                <div class="nav-category">{{ collection_value.name }}</div>
+                {% include nav.html pages=collection key=collection_key %}
+              {% endif %}
+            {% else %}
+              {% include nav.html pages=collection key=collection_key %}
             {% endif %}
-            {% include nav.html pages=collection %}
           {% endif %}
         {% endfor %}
-      {% else %}
-        {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
     <footer class="site-footer">
@@ -102,21 +122,6 @@ layout: table_wrappers
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
         {% if page.parent %}
-          {%- for node in pages_list -%}
-            {%- if node.parent == nil -%}
-              {%- if page.parent == node.title or page.grand_parent == node.title -%}
-                {%- assign first_level_url = node.url | absolute_url -%}
-              {%- endif -%}
-              {%- if node.has_children -%}
-                {%- assign children_list = pages_list | where: "parent", node.title -%}
-                {%- for child in children_list -%}
-                  {%- if page.url == child.url or page.parent == child.title -%}
-                    {%- assign second_level_url = child.url | absolute_url -%}
-                  {%- endif -%}
-                {%- endfor -%}
-              {%- endif -%}
-            {%- endif -%}
-          {%- endfor -%}
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
             <ol class="breadcrumb-nav-list">
               {% if page.grand_parent %}
@@ -141,10 +146,9 @@ layout: table_wrappers
           <hr>
           <h2 class="text-delta">Table of contents</h2>
           <ul>
-            {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%}
-            {% for child in children_list %}
+            {% for child in toc_list %}
               <li>
-                <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+                <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
               </li>
             {% endfor %}
           </ul>

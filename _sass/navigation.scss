@@ -137,7 +137,7 @@
   padding-bottom: $sp-2;
   padding-left: $gutter-spacing-sm;
   font-weight: 600;
-  text-align: end;
+  text-align: start;
   text-transform: uppercase;
   border-bottom: $border $border-color;
   @include fs-2;
@@ -150,6 +150,26 @@
 
     &:first-child {
       margin-top: 0;
+    }
+  }
+}
+
+.nav-list.nav-category-list {
+  > .nav-list-item {
+    margin: 0;
+
+    > .nav-list {
+      padding: 0;
+
+      > .nav-list-item {
+        > .nav-list-link {
+          color: $link-color;
+        }
+
+        > .nav-list-expander {
+          color: $link-color;
+        }
+      }
     }
   }
 }
