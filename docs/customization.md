@@ -69,6 +69,10 @@ For example, to change the link color from the purple default to blue, include t
 $link-color: $blue-000;
 ```
 
+Keep in mind that changing a variable will not automatically change the value of other variables that depend on it.
+For example, the default link color (`$link-color`) is set to `$purple-000`. However, redefining `$purple-000` in a custom color scheme will not automatically change `$link-color` to match it.
+Instead, each variable that relies on previously-cascaded values must be manually reimplemented by copying the dependent rules from `_variables.scss` — in this case, rewriting `$link-color: $purple-000;`.
+
 _Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
 Please use scheme files.
 
