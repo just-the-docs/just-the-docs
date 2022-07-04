@@ -78,6 +78,24 @@ end
 1.  Item three
 1.  Item four
 
+### And an ordered list, continued:
+
+1.  Item one
+1.  Item two
+
+Some text
+
+{:style="counter-reset:none"}
+1.  Item three
+1.  Item four
+
+### And an ordered list starting from 42:
+
+{:style="counter-reset:step-counter 41"}
+1.  Item 42
+1.  Item 43
+1.  Item 44
+
 ### And a nested list:
 
 - level 1 item
@@ -120,12 +138,13 @@ end
 
 ### Small image
 
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
+![](../../assets/images/small-image.jpg)
 
 ### Large image
 
-![](https://guides.github.com/activities/hello-world/branching.png)
+![](../../assets/images/large-image.jpg)
 
+"[Wroclaw University Library digitizing rare archival texts](https://www.flickr.com/photos/97810305@N08/9401451269)" by [j_cadmus](https://www.flickr.com/photos/97810305@N08) is marked with [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=openverse).
 
 ### Definition lists can be used with HTML syntax.
 
@@ -168,7 +187,7 @@ Term2
 
 : Second description of Term1 and Term2,
   possibly more than one line
-  
+
 ### More code
 
 ```
