@@ -246,7 +246,7 @@ To generate a Table of Contents on your docs pages, you can use the `{:toc}` met
 {: .no_toc .text-delta }
 
 1. TOC
-   {:toc}
+{:toc}
 ```
 
 This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself. To get an unordered list, replace `1. TOC` above by `- TOC`.
