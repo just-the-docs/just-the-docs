@@ -47,6 +47,7 @@
       &.external > svg {
         width: $sp-4;
         height: $sp-4;
+        vertical-align: text-bottom;
       }
 
       &.active {
