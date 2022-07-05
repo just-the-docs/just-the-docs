@@ -241,10 +241,12 @@ aux_links:
 
 ## External Navigation Links
 
-To add external links to the navigation, add them to the [`nav_external_links` configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#external-navigation-links) in your site's `_config.yml` file.
+To add external links to the navigation, add them to the `nav_external_links` [configuration]({{ site.baseurl }}{% link docs/configuration.md %}) option in your site's `_config.yml` file.
 External links will appear under all other items in the listing order.
 
 #### Example
+
+{: .no_toc }
 
 ```yaml
 # External navigation links
