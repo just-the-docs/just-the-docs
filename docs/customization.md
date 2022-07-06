@@ -147,6 +147,13 @@ This content appears at the bottom of every page's main content. More info for t
 
 Any HTML added to this file will be inserted before the closing `<head>` tag. This might include additional `<meta>`, `<link>`, or `<script>` tags.
 
+#### Example
+
+To add a custom favicon, create `_includes/head_custom.html` and add:
+```html
+<link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/path/to/your/favicon.png">
+```
+
 ### Custom Header
 
 `_includes/header_custom.html`
