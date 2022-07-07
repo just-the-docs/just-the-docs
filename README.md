@@ -70,3 +70,6 @@ When the theme is released, only the files in `_layouts`, `_includes`, and `_sas
 ## License
 
 The theme is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+
+`bundle exec jekyll serve -host 0.0.0.0`
