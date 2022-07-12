@@ -1,7 +1,7 @@
 //
 // Typography
 //
-// stylelint-disable primer/selector-no-utility, primer/no-override, selector-no-type, selector-max-type
+// stylelint-disable primer/selector-no-utility, primer/no-override, selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
 
 h1,
 .text-alpha {
@@ -10,7 +10,8 @@ h1,
 }
 
 h2,
-.text-beta {
+.text-beta,
+#toctitle {
   @include fs-6;
 }
 

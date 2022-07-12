@@ -38,6 +38,9 @@ a:visited code {
 //   > td.gutter.gl > pre.lineno
 //   | td.code > pre
 //
+// ----...---- (AsciiDoc)
+//   div.listingblock > div.content > pre.rouge.highlight
+//
 // fix_linenos removes the outermost pre when it encloses table.rouge-table
 //
 // See docs/index-test.md for some tests.
@@ -46,7 +49,8 @@ a:visited code {
 // Kramdown line_numbers = true: fences have a wider gutter than with Liquid?
 
 // ```[LANG]...```
-div.highlighter-rouge {
+div.highlighter-rouge,
+div.listingblock {
   padding: $sp-3;
   margin-top: 0;
   margin-bottom: $sp-3;
@@ -123,6 +127,7 @@ figure.highlight {
   border-radius: $border-radius;
 
   + .highlighter-rouge,
+  + .sectionbody .listingblock,
   + figure.highlight {
     position: relative;
     margin-top: -$sp-4;

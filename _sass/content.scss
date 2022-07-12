@@ -3,7 +3,7 @@
 //
 // Styles for rendered markdown in the .main-content container
 //
-// stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type
+// stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type, selector-max-specificity, selector-max-id
 
 .main-content {
   line-height: $content-line-height;
@@ -204,24 +204,36 @@
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  #toctitle {
     position: relative;
     margin-top: 1.5em;
     margin-bottom: 0.25em;
 
-    &:first-child {
-      margin-top: $sp-2;
-    }
-
     + table,
     + .table-wrapper,
     + .code-example,
-    + .highlighter-rouge {
+    + .highlighter-rouge,
+    + .sectionbody .listingblock {
       margin-top: 1em;
     }
 
     + p {
       margin-top: 0;
     }
+  }
+
+  > h1:first-child,
+  > h2:first-child,
+  > h3:first-child,
+  > h4:first-child,
+  > h5:first-child,
+  > h6:first-child,
+  > .sect1:first-child > h2,
+  > .sect2:first-child > h3,
+  > .sect3:first-child > h4,
+  > .sect4:first-child > h5,
+  > .sect5:first-child > h6 {
+    margin-top: $sp-2;
   }
 }
