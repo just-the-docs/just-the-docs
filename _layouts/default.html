@@ -214,4 +214,7 @@ layout: table_wrappers
     {% endif %}
   </div>
 </body>
+{% if site.mermaid_enabled != false %}
+  {%- include mermaid_init.html -%}
+{% endif %}
 </html>

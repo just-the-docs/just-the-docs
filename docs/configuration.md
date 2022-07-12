@@ -59,6 +59,31 @@ search:
   button: false
 ```
 
+## Mermaid Diagrams
+See [Code]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more information.
+
+```yaml
+# Enable or disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/)
+# Supports true or false (default)
+mermaid_enabled: false
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.3"
+  # Configured theme of mermaid diagrams
+  # Pick an avaiable theme from https://mermaid-js.github.io/mermaid/#/theming
+  theme: "default"
+  # Additional configuration available matching pattern as defined in https://mermaid-js.github.io/mermaid/#/./Setup.
+  # For example,
+  # logLevel: 'fatal',
+  # sequence:
+  #   diagramMarginX: 50
+  #   actorMargin: 50
+  # gantt:
+  #   barGap: 4
+  #   topPadding: 50
+```
+
 ## Aux links
 
 ```yaml
