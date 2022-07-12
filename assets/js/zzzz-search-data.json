@@ -3,7 +3,7 @@ permalink: /assets/js/search-data.json
 ---
 {
 {%- assign i = 0 -%}
-{%- assign pages_array = '' | split: '' -%}
+{%- assign pages_array = "" | split: "" -%}
 {%- assign pages_array = pages_array | push: site.html_pages -%}
 {%- if site.just_the_docs.collections -%}
   {%- for collection_entry in site.just_the_docs.collections -%}
@@ -50,7 +50,7 @@ permalink: /assets/js/search-data.json
     "doc": {{ page.title | jsonify }},
     "title": {{ title | jsonify }},
     "content": {{ content | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
-    "url": "{{ url | absolute_url }}",
+    "url": "{{ url | relative_url }}",
     "relUrl": "{{ url }}"
   }
         {%- assign i = i | plus: 1 -%}
@@ -61,7 +61,7 @@ permalink: /assets/js/search-data.json
     "doc": {{ page.title | jsonify }},
     "title": {{ page.title | jsonify }},
     "content": {{ parts[0] | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
-    "url": "{{ page.url | absolute_url }}",
+    "url": "{{ page.url | relative_url }}",
     "relUrl": "{{ page.url }}"
   }
         {%- assign i = i | plus: 1 -%}
