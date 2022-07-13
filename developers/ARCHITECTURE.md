@@ -44,11 +44,9 @@ Java also both has more cultural awareness of software architecture, and the lan
 which necessitates considering macrostructure and strategy earlier than (say) you can get away with using Python.
 
   - [Microservices](https://dwmkerr.com/the-death-of-microservice-madness-in-2018/). 
-    - This model had many [drawbacks](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/) if overused. 
+    - This model had many [drawbacks](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/) if overused. Only create new services when there is significant pain scaling existing ones.
     - It proposes a bias towards breaking up your application at the HTTP level (at least for
     our purposes). 
-    - At Countable, the decision to split off an HTTP service is made with a full consideration of the costs of doing so.
-    - A new HTTP service is usually not our first choice for adding a new function to an application.
 
   - [Domain Driven Design](https://dddcommunity.org/book/evans_2003/)
     - A set of models for thinking about software architecture in a business context.
