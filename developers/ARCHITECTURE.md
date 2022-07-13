@@ -27,6 +27,8 @@ The architecture should create a domain language and API that lets you do common
 
 ## Components
 
+### Django
+
   - Consider modularity of your application. Django has good conventions built in for this, study those. Use "fat models" and "skinny views" (from [2 Scoops of Django](https://www.feldroy.com/books/two-scoops-of-django-3-x))
   - Separate components by interface and responsibility. Example: 
     - all the dashboard routes should be in one file. 
@@ -42,7 +44,7 @@ Java also both has more cultural awareness of software architecture, and the lan
 which necessitates considering macrostructure and strategy earlier than (say) you can get away with using Python.
 
   - [Microservices](https://dwmkerr.com/the-death-of-microservice-madness-in-2018/). 
-    - This model had many drawbacks if overused. 
+    - This model had many [drawbacks](https://kenkantzer.com/learnings-from-5-years-of-tech-startup-code-audits/) if overused. 
     - It proposes a bias towards breaking up your application at the HTTP level (at least for
     our purposes). 
     - At Countable, the decision to split off an HTTP service is made with a full consideration of the costs of doing so.
