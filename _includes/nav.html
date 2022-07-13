@@ -104,6 +104,15 @@
       {%- endunless -%}
     {%- endif -%}
   {%- endfor -%}
+  {%- assign nav_external_links = site.nav_external_links -%}
+  {%- for node in nav_external_links -%}
+    <li class="nav-list-item external">
+      <a href="{{ node.url | absolute_url }}" class="nav-list-link external">
+        {{ node.title }}
+        {% unless node.hide_icon %}<svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>{% endunless %}
+      </a>
+    </li>
+  {%- endfor -%}
 </ul>
 
 {%- if page.collection == include.key -%}

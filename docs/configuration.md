@@ -106,6 +106,11 @@ aux_links_new_tab: false
 heading_anchors: true
 ```
 
+## External navigation links
+
+External links can be added to the navigation through the `nav_external_links` option.
+See [Navigation Structure]({{ site.baseurl }}{% link docs/navigation-structure.md %}#external-navigation-links) for more details.
+
 ## Footer content
 
 ```yaml
