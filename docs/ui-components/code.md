@@ -86,3 +86,21 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 [Link button](http://example.com/){: .btn }
 ```
 {% endhighlight %}
+
+---
+
+## Mermaid diagram code blocks
+
+[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. You can turn on support for mermaid by adding `mermaid_enabled: true` to your \_config.yml.
+
+The markdown for a simple flowchart example might look like the following:
+
+{% highlight markdown %}
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+{% endhighlight %}
