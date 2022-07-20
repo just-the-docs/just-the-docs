@@ -13,7 +13,7 @@ permalink: /assets/js/search-data.json
 ---
 {
 {%- assign i = 0 -%}
-{%- assign pages_array = '' | split: '' -%}
+{%- assign pages_array = "" | split: "" -%}
 {%- assign pages_array = pages_array | push: site.html_pages -%}
 {%- if site.just_the_docs.collections -%}
   {%- for collection_entry in site.just_the_docs.collections -%}
