@@ -159,20 +159,20 @@ fixes #291 #256 #293 #177
 - Bump stylelint-config-primer from 7.0.1 to 8.0.0 
 
 ### PR included
-#98 by @stefanoborini Introduces the possibility for a summary in the table of contents
-#141 by @ghabs Fix trailing comma bug in search-data.json
-#153 by @jacobherrington Change button copy on theme preview 
-#181 by @m3nu Recommend using index.md as parent page for sections
-#183 by @SgtSilvio Improve heading anchors 
-#187 by @SgtSilvio Improvement/site logo
-#200 Bump mixin-deep from 1.3.1 to 1.3.2
-#203 by @pdmosses Search config
-#205 by @pdmosses Fix blank_lines var to blanklines in config.yml 
-#206 by @iamcarrico Allow for custom overrides by the user
-#208 Bump @primer/css from 12.6.0 to 12.7.0
-#213 Bump mixin-deep from 1.3.1 to 1.3.2
-#214 Bump stylelint-config-primer from 7.0.1 to 8.0.0 
-#215 Bump @primer/css from 12.6.0 to 12.7.0
+- #98 by @stefanoborini Introduces the possibility for a summary in the table of contents
+- #141 by @ghabs Fix trailing comma bug in search-data.json
+- #153 by @jacobherrington Change button copy on theme preview 
+- #181 by @m3nu Recommend using index.md as parent page for sections
+- #183 by @SgtSilvio Improve heading anchors 
+- #187 by @SgtSilvio Improvement/site logo
+- #200 Bump mixin-deep from 1.3.1 to 1.3.2
+- #203 by @pdmosses Search config
+- #205 by @pdmosses Fix blank_lines var to blanklines in config.yml 
+- #206 by @iamcarrico Allow for custom overrides by the user
+- #208 Bump @primer/css from 12.6.0 to 12.7.0
+- #213 Bump mixin-deep from 1.3.1 to 1.3.2
+- #214 Bump stylelint-config-primer from 7.0.1 to 8.0.0 
+- #215 Bump @primer/css from 12.6.0 to 12.7.0
 
 ## v0.2.6
 
