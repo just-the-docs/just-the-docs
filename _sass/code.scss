@@ -75,6 +75,7 @@ figure.highlight {
   padding: $sp-3;
   margin-top: 0;
   margin-bottom: $sp-3;
+  overflow-x: auto;
   background-color: $code-background-color;
   border-radius: $border-radius;
   box-shadow: none;
