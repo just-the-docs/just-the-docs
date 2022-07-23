@@ -20,6 +20,7 @@ table {
 th,
 td {
   @include fs-3;
+
   min-width: 120px;
   padding-top: $sp-2;
   padding-right: $sp-3;

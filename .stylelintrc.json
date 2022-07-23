@@ -12,6 +12,7 @@
   "plugins": ["stylelint-prettier"],
   "rules": {
     "prettier/prettier": true,
+    "alpha-value-notation": null,
     "color-function-notation": null
   }
 }

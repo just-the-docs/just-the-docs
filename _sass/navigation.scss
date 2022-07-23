@@ -9,6 +9,7 @@
 
   .nav-list-item {
     @include fs-4;
+
     position: relative;
     margin: 0;
 
@@ -69,6 +70,7 @@
       @if $nav-list-expander-right {
         right: 0;
       }
+
       width: $nav-list-item-height-sm;
       height: $nav-list-item-height-sm;
       padding-top: #{$nav-list-item-height-sm / 4};

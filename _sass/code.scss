@@ -98,6 +98,7 @@ figure.highlight {
   td,
   pre {
     @include fs-2;
+
     min-width: 0;
     padding: 0;
     background-color: $code-background-color;
