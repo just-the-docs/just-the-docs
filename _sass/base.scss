@@ -1,7 +1,7 @@
 //
 // Base element style overrides
 //
-// stylelint-disable selector-no-type, selector-max-type
+// stylelint-disable selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
 
 * {
   box-sizing: border-box;
@@ -23,6 +23,7 @@ body {
   line-height: $body-line-height;
   color: $body-text-color;
   background-color: $body-background-color;
+  overflow-wrap: break-word;
 }
 
 ol,
@@ -45,7 +46,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+#toctitle {
   margin-top: 0;
   margin-bottom: 1em;
   font-weight: 500;
