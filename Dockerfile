@@ -1,4 +1,4 @@
-FROM ruby:2.6
+FROM ruby:2.7
 
 ENV LC_ALL C.UTF-8
 ENV LANG en_US.UTF-8
@@ -10,4 +10,3 @@ COPY Gemfile just-the-docs.gemspec ./
 RUN gem install bundler && bundle install
 
 EXPOSE 4000
-
