@@ -1,7 +1,11 @@
 @function rem($size, $unit: "") {
   $remSize: $size / $root-font-size;
 
+<<<<<<< HEAD
   @if ($unit == false) {
+=======
+  @if $unit == false {
+>>>>>>> 16d99cd (removes primer comments; runs npm run format)
     @return #{$remSize};
   } @else {
     @return #{$remSize}rem;
