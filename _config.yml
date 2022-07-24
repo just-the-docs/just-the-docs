@@ -51,6 +51,7 @@ search:
   # Supports true or false (default)
   button: false
   # Enable or disable the indexing of Jekyll posts
+  # Supports true or false (default)
   posts: false
 
 # Enable or disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/)

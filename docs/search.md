@@ -96,6 +96,16 @@ The search button displays in the bottom right corner of the screen and triggers
 search.button: true
 ```
 
+### Include posts in search
+
+By default the search only indexes pages. Posts can be included in the search index.
+
+```yaml
+# Enable or disable the indexing of Jekyll posts
+# Supports true or false (default)
+search.posts: true
+```
+
 ## Hiding pages from search
 
 Sometimes you might have a page that you don't want to be indexed for the search nor to show up in search results, e.g, a 404 page.

@@ -57,6 +57,9 @@ search:
   # Enable or disable the search button that appears in the bottom right corner of every page
   # Supports true or false (default)
   button: false
+  # Enable or disable the indexing of Jekyll posts
+  # Supports true or false (default)
+  posts: false
 ```
 
 ## Mermaid Diagrams
