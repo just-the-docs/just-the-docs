@@ -5,9 +5,17 @@
     "assets/css/just-the-docs-dark.scss",
     "_sass/vendor/**/*.scss"
   ],
-  "extends": ["stylelint-config-primer", "stylelint-config-prettier"],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
   "plugins": ["stylelint-prettier"],
   "rules": {
-    "prettier/prettier": true
+    "prettier/prettier": true,
+    "alpha-value-notation": null,
+    "color-function-notation": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "no-descending-specificity": null,
+    "scss/no-global-function-names": null
   }
 }

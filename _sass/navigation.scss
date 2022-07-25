@@ -1,6 +1,4 @@
-//
 // Main nav, breadcrumb, etc...
-//
 // stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type, selector-max-specificity
 
 .nav-list {
@@ -11,6 +9,7 @@
 
   .nav-list-item {
     @include fs-4;
+
     position: relative;
     margin: 0;
 
@@ -71,6 +70,7 @@
       @if $nav-list-expander-right {
         right: 0;
       }
+
       width: $nav-list-item-height-sm;
       height: $nav-list-item-height-sm;
       padding-top: #{$nav-list-item-height-sm / 4};

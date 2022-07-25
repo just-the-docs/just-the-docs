@@ -1,6 +1,4 @@
-//
 // Base element style overrides
-//
 // stylelint-disable selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
 
 * {
@@ -14,6 +12,7 @@
 
 html {
   @include fs-4;
+
   scroll-behavior: smooth;
 }
 

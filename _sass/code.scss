@@ -1,7 +1,5 @@
-//
 // Code and syntax highlighting
-//
-// stylelint-disable selector-no-qualifying-type, declaration-block-semicolon-newline-after,declaration-block-single-line-max-declarations, selector-no-type, selector-max-type
+// stylelint-disable selector-no-qualifying-type, declaration-block-semicolon-newline-after,declaration-block-single-line-max-declarations, selector-no-type, selector-max-type, scss/comment-no-empty
 
 // {% raw %}
 
@@ -100,6 +98,7 @@ figure.highlight {
   td,
   pre {
     @include fs-2;
+
     min-width: 0;
     padding: 0;
     background-color: $code-background-color;
