@@ -460,7 +460,7 @@ jtd.setTheme = function(theme) {
 // Scroll site-nav to ensure the link to the current page is visible
 
 function scrollNav() {
-  const href = document.location.href.split('#')[0].replace(/(.+?)\/+$/, "$1");
+  const href = document.location.pathname;
   const siteNav = document.getElementById('site-nav');
   const targetLink = siteNav.querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
   if(targetLink){
