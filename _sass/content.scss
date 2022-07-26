@@ -219,7 +219,7 @@
       margin-top: 1em;
     }
 
-    + p {
+    + p:not(.label) {
       margin-top: 0;
     }
   }

@@ -186,6 +186,29 @@ Some text
 
 "[Wroclaw University Library digitizing rare archival texts](https://www.flickr.com/photos/97810305@N08/9401451269)" by [j_cadmus](https://www.flickr.com/photos/97810305@N08) is marked with [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=openverse).
 
+### Labels
+
+I'm a label
+{: .label }
+
+blue
+{: .label .label-blue }
+green
+{: .label .label-green }
+purple
+{: .label .label-purple }
+yellow
+{: .label .label-yellow }
+red
+{: .label .label-red }
+
+**bold**
+{: .label }
+*italic*
+{: .label }
+***bold + italic***
+{: .label }
+
 ### Definition lists can be used with HTML syntax.
 
 <dl>
