@@ -6,7 +6,7 @@ All notable changes to this project are documented in this file.
 
 ## Head
 
-Major work in progress. Please see #779 for a v0.4.0 release candidate.
+Major work in progress. Please see [PR #892](https://github.com/just-the-docs/just-the-docs/pull/892) for a v0.4.0 release candidate.
 
 ## v0.3.3
 
