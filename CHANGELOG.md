@@ -27,6 +27,8 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
 * Fixed: anchor heading links should be visible on focus by @jacobhq in https://github.com/just-the-docs/just-the-docs/pull/846
 * Fixed: add `overflow-x: auto` to `figure.highlight` by @iridazzle in https://github.com/just-the-docs/just-the-docs/pull/727
 * Fixed: add `overflow-wrap: word-break` to `body` by @iridazzle in https://github.com/just-the-docs/just-the-docs/pull/889
+* Fixed: vertical alignment for consecutive labels by @Eisverygoodletter in https://github.com/just-the-docs/just-the-docs/pull/893
+* Fixed: allow links to wrap by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/905
 
 ### Documentation
 
@@ -54,6 +56,7 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
 * Updated: README by @pmarsceill in https://github.com/just-the-docs/just-the-docs/pull/777
 * Updated: Code of Conduct to Contributor Covenant v2.1 by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/790
 * Updated: CI files, Ruby & Node Versions by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/820
+* Updated: Stylelint to v14, extend SCSS plugins, remove primer-* configs, resolve issues by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/821
 
 ### Dependencies
 * Upgrade to GitHub-native Dependabot by @dependabot-preview in https://github.com/just-the-docs/just-the-docs/pull/627
@@ -86,6 +89,7 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
 * @SPGoding made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/876
 * @iridazzle made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/727
 * @ivanskodje made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/891
+* @Eisverygoodletter made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/893
 
 **Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.3.3...v0.4.0
 
