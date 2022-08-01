@@ -45,6 +45,7 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
 * Fixed: "you" -> "your" typo in `index.md` by @nathanjessen in https://github.com/just-the-docs/just-the-docs/pull/473
 * Fixed: spacing in toc example by @henryiii in https://github.com/just-the-docs/just-the-docs/pull/835
 * Fixed: typo in `README` on `_config.yml` by @ivanskodje in https://github.com/just-the-docs/just-the-docs/pull/891
+* Fixed: missing code fence in navigation structure docs by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/906
 
 ### Maintenance
 
