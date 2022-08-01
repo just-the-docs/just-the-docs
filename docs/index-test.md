@@ -69,6 +69,12 @@ end
 
 ###### [](#header-6)Header 6
 
+[This is a very long link which wraps and therefore doesn't overflow
+even when it comes at the beginning](.) of the line.
+  
+- [This is a very long link which wraps and therefore doesn't overflow the line
+  when used first in an item ](.) in a list.
+
 | head1        | head two          | three |
 |:-------------|:------------------|:------|
 | ok           | good swedish fish | nice  |
