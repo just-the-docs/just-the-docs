@@ -34,7 +34,12 @@ First notice that the transformation matrix has "1" in the diagonal so that the 
     "type": "GeometryInstance",
     "template": 0,
     "boundaries": [0],
-    "transformationMatrix": [1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ] 
+    "transformationMatrix": [
+      1, 0, 0, 0, 
+      0, 1, 0, 0, 
+      0, 0, 1, 0, 
+      0, 0, 0, 1 
+    ] 
   }
 ]
 ```
