@@ -11,7 +11,6 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
 ### Features
 
 * Added: Combination by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/578
-  
   - Added: dark highlighting in https://github.com/just-the-docs/just-the-docs/pull/463
   - Added: pages and collections in https://github.com/just-the-docs/just-the-docs/pull/448
   - Added: callouts in https://github.com/just-the-docs/just-the-docs/pull/466
@@ -24,7 +23,6 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
   - Added: collection configuration option `nav_fold` (no PR)
   - Fixed: indentation and color for folded collection navigation (no PR)
   - Fixed: scroll navigation to show the link to the current page https://github.com/just-the-docs/just-the-docs/pull/639
-  
 * Added: custom favicon `_includes` by @burner1024 in https://github.com/just-the-docs/just-the-docs/pull/364
 * Added: set color for search input by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/498
 * Added: search placeholder configuration by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/613
