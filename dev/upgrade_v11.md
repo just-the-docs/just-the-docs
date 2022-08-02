@@ -2,7 +2,7 @@
 layout: page
 title: Upgrading your code for v1.1
 parent: Help for developers
-nav_order: 4
+nav_order: 5
 permalink: /dev/upgrade11/
 ---
 

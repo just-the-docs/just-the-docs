@@ -2,7 +2,7 @@
 layout: page
 title: Geometric primitives and depth of arrays
 parent: Help for developers
-nav_order: 3
+nav_order: 4
 permalink: /dev/geom-arrays/
 ---
 

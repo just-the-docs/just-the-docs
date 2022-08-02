@@ -61,6 +61,7 @@ permalink: /datasets/
   - [msol.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/msol.city.json) -- one MultiSolid: 2 unit cubes that are not adjacent
   - [csol.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/csol.city.json) -- one CompositeSolid: 2 adjacent unit cubes
   - [twocube.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/twocube.city.json) -- one object as two geometries: 2 unit cubes adjacent (sharing a face)
+  - [geomtemplate.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v1.1/geomtemplate.city.json) -- one simple geometry template: a "cuboid tree" ([more details](https://www.cityjson.org/dev/geom-templates/))
 
 For different City Objects (buildings, trees, roads, etc.) and different geometries, see the latest [CityJSON specifications](https://www.cityjson.org/specs/), and to understand how the hierarchical brackets work, see [this guide](https://www.cityjson.org/dev/geom-arrays/).
 
