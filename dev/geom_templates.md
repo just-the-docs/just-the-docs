@@ -41,6 +41,12 @@ First notice that the transformation matrix has "1" in the diagonal so that the 
 
 The `"boundaries": [0]` means that the first vertex in `"vertices"` is used as the anchor point, and then the geometry template is a simple cube.
 
-How to calculate the (x,y,z) for the tree, see this figure:
+
+## Matrices for translation/scaling/rotation
+
+![](../files/matrices.png)
+
+
+## How to calculate the (x,y,z) for the tree
 
 ![](../files/realcoords.svg)
