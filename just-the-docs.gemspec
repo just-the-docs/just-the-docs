@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{A modern, highly customizable, and responsive Jekyll theme for documention with built-in search.}
   spec.homepage      = "https://github.com/just-the-docs/just-the-docs"
   spec.license       = "MIT"
-  s.metadata = {
+  spec.metadata      = {
     "bug_tracker_uri"   => "https://github.com/just-the-docs/just-the-docs/issues",
     "changelog_uri"     => "https://github.com/just-the-docs/just-the-docs/blob/main/CHANGELOG.md",
     "documentation_uri" => "https://just-the-docs.github.io/just-the-docs/",
