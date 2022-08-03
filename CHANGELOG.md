@@ -11,7 +11,18 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
 ### Features
 
 * Added: Combination by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/578
-  * TODO: enumerate Combination PRs
+  - Added: dark highlighting in https://github.com/just-the-docs/just-the-docs/pull/463
+  - Added: pages and collections in https://github.com/just-the-docs/just-the-docs/pull/448
+  - Added: callouts in https://github.com/just-the-docs/just-the-docs/pull/466
+  - Fixed: breadcrumb behaviour … by @AdityaTiwari2102 in https://github.com/just-the-docs/just-the-docs/pull/477
+  - Fixed: prevent rake command corrupting search data in https://github.com/just-the-docs/just-the-docs/pull/495 (also listed below)
+  - Fixed: nested lists in https://github.com/just-the-docs/just-the-docs/pull/496
+  - Fixed: set color for search input in https://github.com/just-the-docs/just-the-docs/pull/498 (also listed below)
+  - Fixed: sites with no child pages (no PR)
+  - Fixed: TOC/breadcrumbs for multiple collections in https://github.com/just-the-docs/just-the-docs/pull/494
+  - Added: collection configuration option `nav_fold` (no PR)
+  - Fixed: indentation and color for folded collection navigation (no PR)
+  - Fixed: scroll navigation to show the link to the current page https://github.com/just-the-docs/just-the-docs/pull/639
 * Added: custom favicon `_includes` by @burner1024 in https://github.com/just-the-docs/just-the-docs/pull/364
 * Added: set color for search input by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/498
 * Added: search placeholder configuration by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/613
