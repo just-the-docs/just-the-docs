@@ -40,6 +40,7 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
 * Fixed: add `overflow-wrap: word-break` to `body` by @iridazzle in https://github.com/just-the-docs/just-the-docs/pull/889
 * Fixed: vertical alignment for consecutive labels by @Eisverygoodletter in https://github.com/just-the-docs/just-the-docs/pull/893
 * Fixed: allow links to wrap by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/905
+* Fixed: nav scroll feature and absolute/relative URLs by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/898
 
 ### Documentation
 
