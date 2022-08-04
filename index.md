@@ -22,8 +22,12 @@ s.
 ---
 # Purpose
 
-The purpose of the Live Mache platform is to create
+The purpose of the Live Mache platform is to establish new methodologies that broaden participation of diverse stakeholders in the design of new technologies, enabling participatory design at scale.
+
+The first goal: Develop methods and tools for LPDF
+The second goal: Develop tools for handling future EM 
 
 # Target Audience 
 
-# Definitions and Abbreviations 
+The Target audience for LPDF and the Live Mache experience are those in EM roles.
+
