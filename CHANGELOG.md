@@ -22,7 +22,8 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
   - Fixed: TOC/breadcrumbs for multiple collections in https://github.com/just-the-docs/just-the-docs/pull/494
   - Added: collection configuration option `nav_fold` (no PR)
   - Fixed: indentation and color for folded collection navigation (no PR)
-  - Fixed: scroll navigation to show the link to the current page https://github.com/just-the-docs/just-the-docs/pull/639
+  - Fixed: scroll navigation to show the link to the current page in https://github.com/just-the-docs/just-the-docs/pull/639
+  - Fixed: Replace all uses of `absolute_url` by `relative_url`, by @svrooij in https://github.com/just-the-docs/just-the-docs/pull/544
 * Added: custom favicon `_includes` by @burner1024 in https://github.com/just-the-docs/just-the-docs/pull/364
 * Added: set color for search input by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/498
 * Added: search placeholder configuration by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/613
