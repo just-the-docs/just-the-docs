@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Search
+title: Definitions
 nav_order: 7
 ---
 ## Abbreviations 
