@@ -91,7 +91,7 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 
 ## Mermaid diagram code blocks
 
-[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. You can turn on support for mermaid by adding a `mermaid` key to your \_config.yml.
+[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. You can turn on support for mermaid by adding a `mermaid` key to your `_config.yml`.
 
 The minimum configuration requires a `version` and `theme` key:
 
