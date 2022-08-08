@@ -91,7 +91,41 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 
 ## Mermaid diagram code blocks
 
-[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. You can turn on support for mermaid by adding `mermaid_enabled: true` to your \_config.yml.
+[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. You can turn on support for mermaid by adding a `mermaid` key to your \_config.yml.
+
+The minimum configuration requires a `version` and `theme` key:
+
+```yaml
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.3"
+  # Configured theme of mermaid diagrams
+  # Pick an avaiable theme from https://mermaid-js.github.io/mermaid/#/theming
+  theme: "default"
+```
+
+As of version 9, all other YAML keys are forwarded to the mermaid config object:
+
+```yaml
+# Enable or disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/)
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.3"
+  # Configured theme of mermaid diagrams
+  # Pick an avaiable theme from https://mermaid-js.github.io/mermaid/#/theming
+  theme: "default"
+  # Additional configuration available matching pattern as defined in https://mermaid-js.github.io/mermaid/#/./Setup.
+  # For example,
+  logLevel: 'fatal',
+  sequence:
+    diagramMarginX: 50
+    actorMargin: 50
+  gantt:
+    barGap: 4
+    topPadding: 50
+```
 
 The markdown for a simple flowchart example might look like the following:
 
