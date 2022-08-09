@@ -5,20 +5,18 @@ nav_order: 2
 ---
 
 # Configuration
-
 {: .no_toc }
 
 Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's \_config.yml file.
 {: .fs-6 .fw-300 }
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
-----
+---
 
 View this site's [\_config.yml](https://github.com/just-the-docs/just-the-docs/tree/main/_config.yml) file as an example.
 
@@ -63,9 +61,7 @@ search:
 
 ## Mermaid Diagrams
 
-See [Code]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more information.
-
-The minimum configuration requires a `version` and `theme` key:
+The minimum configuration requires key for `version` ([from jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)) and `theme` ([from the deployable mermaid themes](https://mermaid-js.github.io/mermaid/#/theming)):
 
 ```yaml
 mermaid:
@@ -76,6 +72,8 @@ mermaid:
   # Pick an avaiable theme from https://mermaid-js.github.io/mermaid/#/theming
   theme: "default"
 ```
+
+See [the Code documentation]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more information.
 
 ## Aux links
 
@@ -277,6 +275,6 @@ just_the_docs:
       name: Tutorials
 ```
 
-When _all_ your pages are in a single collection, its name is not displayed.
+When *all* your pages are in a single collection, its name is not displayed.
 
 The navigation for each collection is a separate name space for page titles: a page in one collection cannot be a child of a page in a different collection, or of a normal page.

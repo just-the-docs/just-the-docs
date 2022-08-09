@@ -300,7 +300,7 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 
 ### Mermaid Diagrams
 
-This should only work with the `mermaid` key supplied in `_config.yml`
+The following code is displayed as a diagram only when a `mermaid` key supplied in `_config.yml`.
 
 ```mermaid
 graph TD;

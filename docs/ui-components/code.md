@@ -118,7 +118,7 @@ mermaid:
   theme: "default"
   # Additional configuration available matching pattern as defined in https://mermaid-js.github.io/mermaid/#/./Setup.
   # For example,
-  logLevel: 'fatal',
+  logLevel: 'fatal'
   sequence:
     diagramMarginX: 50
     actorMargin: 50

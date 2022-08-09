@@ -51,7 +51,7 @@ search:
   # Supports true or false (default)
   button: false
 
-# Enable or disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/)
+# Enable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/)
 # to use, uncomment the `mermaid` key and its children; only the key itself, version, and theme are required.
 # mermaid:
 #   # Version of mermaid library
