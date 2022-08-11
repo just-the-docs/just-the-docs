@@ -216,6 +216,10 @@ layout: table_wrappers
   </div>
 </body>
 {% if site.mermaid %}
-  {%- include mermaid_init.html -%}
+  <script>
+    var config = {% include mermaid_config.js %};
+    mermaid.initialize(config);
+    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+  </script>
 {% endif %}
 </html>

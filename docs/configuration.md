@@ -61,19 +61,16 @@ search:
 
 ## Mermaid Diagrams
 
-The minimum configuration requires key for `version` ([from jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)) and `theme` ([from the deployable mermaid themes](https://mermaid-js.github.io/mermaid/#/theming)):
+The minimum configuration requires the key for `version` ([from jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)) in `_config.yml`:
 
 ```yaml
 mermaid:
   # Version of mermaid library
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
   version: "9.1.3"
-  # Configured theme of mermaid diagrams
-  # Pick an avaiable theme from https://mermaid-js.github.io/mermaid/#/theming
-  theme: "default"
 ```
 
-See [the Code documentation]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more information.
+See [the Code documentation]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more configuration options and information.
 
 ## Aux links
 

@@ -93,41 +93,34 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 
 [Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. You can turn on support for mermaid by adding a `mermaid` key to your `_config.yml`.
 
-The minimum configuration requires a `version` and `theme` key:
+The minimum configuration requires a `version` key (matching a version in [jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)):
 
 ```yaml
 mermaid:
   # Version of mermaid library
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
   version: "9.1.3"
-  # Configured theme of mermaid diagrams
-  # Pick an avaiable theme from https://mermaid-js.github.io/mermaid/#/theming
-  theme: "default"
 ```
 
-As of version 9, all other YAML keys are forwarded to the mermaid config object:
+Additional configuration options are loaded through `_include/mermaid_config.js`. By default, the contents of the file are the empty object:
 
-```yaml
-# Enable or disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/)
-mermaid:
-  # Version of mermaid library
-  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
-  version: "9.1.3"
-  # Configured theme of mermaid diagrams
-  # Pick an avaiable theme from https://mermaid-js.github.io/mermaid/#/theming
-  theme: "default"
-  # Additional configuration available matching pattern as defined in https://mermaid-js.github.io/mermaid/#/./Setup.
-  # For example,
-  logLevel: 'fatal'
-  sequence:
-    diagramMarginX: 50
-    actorMargin: 50
-  gantt:
-    barGap: 4
-    topPadding: 50
+```js
+// _include/mermaid_config.js
+{}
 ```
 
-The markdown for a simple flowchart example might look like the following:
+This loads the default settings.
+
+The contents of this object should follow [mermaid's configuration API](https://mermaid-js.github.io/mermaid/#/./Setup?id=configuration). For example, to override the theme, change the `_include` to use:
+
+```js
+// _include/mermaid_config.js
+{
+  theme: "forest"
+}
+```
+
+Once mermaid is installed, it can be used in markdown files. The markdown for a simple flowchart example might look like the following:
 
 {% highlight markdown %}
 ```mermaid
