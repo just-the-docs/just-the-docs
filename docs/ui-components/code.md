@@ -102,19 +102,19 @@ mermaid:
   version: "9.1.3"
 ```
 
-Additional configuration options are loaded through `_include/mermaid_config.js`. By default, the contents of the file are the empty object:
+Additional configuration options are loaded through `_includes/mermaid_config.js`. By default, the contents of the file are the empty object:
 
 ```js
-// _include/mermaid_config.js
+// _includes/mermaid_config.js
 {}
 ```
 
 This loads the default settings.
 
-The contents of this object should follow [mermaid's configuration API](https://mermaid-js.github.io/mermaid/#/./Setup?id=configuration). For example, to override the theme, change the `_include` to use:
+The contents of this object should follow [mermaid's configuration API](https://mermaid-js.github.io/mermaid/#/./Setup?id=configuration). For example, to override the theme, change `_includes/mermaid_config.js` to:
 
 ```js
-// _include/mermaid_config.js
+// _includes/mermaid_config.js
 {
   theme: "forest"
 }
