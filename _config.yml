@@ -51,15 +51,14 @@ search:
   # Supports true or false (default)
   button: false
 
-# Enable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/)
-# to use, uncomment the `mermaid` and version keys
+# To enable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/),
+# uncomment the `mermaid` and `version` keys below
 # mermaid:
 #   # Version of mermaid library
 #   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
 #   version: "9.1.3"
-#   # Additional configuration, such as setting the theme, is done through the mermaid_config.js include;
-#   # see docs/ui-components for more
-
+#   # Put any additional configuration, such as setting the theme, in _includes/mermaid_config.js
+#   # See also docs/ui-components/code
 
 # Enable or disable heading anchors
 heading_anchors: true
