@@ -4,9 +4,75 @@ All notable changes to this project are documented in this file.
 
 *Note:* the project underwent a maintenance shift in the creation of v0.4.0.
 
-## Head
+## v0.4.0.rc1
 
-Major work in progress. Please see [PR #892](https://github.com/just-the-docs/just-the-docs/pull/892) for a v0.4.0 release candidate. The following changelog notes are a draft (and not final).
+### We're back!
+
+Hi all! The Just the Docs team is excited to have our first release in over two years! This release is jam-packed with features and bugfixes that have been requested by the community since 2020. They include:
+
+- The new callouts component
+- Allowing pages and collections to coexist on the navigation pane
+- New styling: dark syntax highlighting, support for jekyll-asciidoc, word-wrapping instead of overflow for various elements
+- More customization: external nav links, custom nav footers, favicon includes, search color and placeholder configuration, mermaid.js support, and nav sorting
+- Over 20 bugfixes! Big ones include fixing the `rake` command, using `relative_url`, and search input color
+- More documentation, especially on using custom includes.
+- Updating core dependencies to stable Ruby versions
+- A WIP [template repository](https://github.com/just-the-docs/just-the-docs-template) that allows you to setup your own repository using Just the Docs and GitHub Pages with one click - give it a shot! More documentation, etc. is on the way!
+
+We want your feedback! Are these changes helpful? Are our docs easy to understand? Should new features like `mermaid` be opt-in or opt-out? Please [open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) and let us know!
+
+### Trying out `v0.4.0.rc1`
+
+Due to the massive scope of these changes, we're releasing `v0.4.0.rc1` as a **release candidate** for the theme, with `v0.4.0` coming soon. We want your help in testing the theme! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc1` - if your version of Just the Docs is not pinned, you'll see the changes the next time you build / run `bundle install` (if you don't use a `Gemfile.lock`) or `bundle update just-the-docs` (if you do).
+
+To use this RC explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.4.0.rc1
+```
+
+To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install`:
+
+```Ruby
+gem "just-the-docs", "0.4.0.rc1"
+```
+
+### Staying on `v0.3.3`
+
+If you're not ready to make the switch, that's alright! If your version of just-the-docs is pinned to `v0.3.3` (i.e. by a `Gemfile.lock` or in `remote_theme`, then there's nothing you need to do.
+
+If you have not pinned your theme version, you should either:
+
+1. pin your gem version in your `Gemfile`, like so
+```Ruby
+gem "just-the-docs", "0.3.3"
+```
+2. freeze the `remote_theme`, like so
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.3.3
+```
+
+**Warning**: Use of branches for closed PRs (e.g., https://github.com/just-the-docs/just-the-docs/pull/466, https://github.com/just-the-docs/just-the-docs/pull/578) is now deprecated, as those branches have been (directly or indirectly) merged, and they will be deleted after the release of `v0.4.0.rc1`.
+
+### Maintenance
+
+Internally, our maintainer team has expanded: [Patrick Marsceill](https://github.com/pmarsceill), the original maintainer, has stepped down from an active role after almost 4 years! We're very thankful for the work that he's done to create and maintain one of the most popular Jekyll themes. Please join us in giving him thanks!
+
+The new core team currently consists of @mattxwang, @pdmosses, @skullface, @dougaitken, and @max06. Over the past six months, we've been triaging and merging in PRs, as well as contributing our own fixes. We'll continue to address open issues, merge in PRs from the community, and plan out the future of Just the Docs. If you'd like to contribute, now is a great time!
+
+### Roadmap
+
+In the short-term, we're committed to tidying up everything for a `v0.4.0` release. This involves fixing bugs reported from the community in this release, as well as continually merging in minor PRs.
+
+We're also scoping out medium and long-term projects, and want to keep you in the loop. These include:
+
+- upgrading to Jekyll 4, and stopping support for Jekyll 3
+- improved accessibility - issues [#566](https://github.com/just-the-docs/just-the-docs/issues/566), [#870](https://github.com/just-the-docs/just-the-docs/issues/870)
+- internationalization (i18n) - issue [#59](https://github.com/just-the-docs/just-the-docs/issues/59)
+- recursive/multi-level navigation - PR [#462](https://github.com/just-the-docs/just-the-docs/pull/462)
+- toggleable dark mode - issue [#234](https://github.com/just-the-docs/just-the-docs/issues/234)
+
+as well as DX improvements like better regression tests, CI, and tooling. If you're interested in any of these, please join us [on GitHub](https://github.com/just-the-docs/just-the-docs) - any contribution (raising an issue, writing docs, or submitting a PR) is welcome!
 
 ### Features
 
@@ -106,7 +172,7 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
 * @ivanskodje made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/891
 * @Eisverygoodletter made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/893
 
-**Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.3.3...v0.4.0
+**Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.3.3...v0.4.0.rc1
 
 ## v0.3.3
 
