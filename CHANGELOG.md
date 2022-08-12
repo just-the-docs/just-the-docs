@@ -32,6 +32,7 @@ Major work in progress. Please see [PR #892](https://github.com/just-the-docs/ju
 * Added: style fixes for jekyll-asciidoc by @alyssais in https://github.com/just-the-docs/just-the-docs/pull/829
 * Added: mermaid.js support by @nascosto in https://github.com/just-the-docs/just-the-docs/pull/857
 * Added: support for external navigation links by @SPGoding in https://github.com/just-the-docs/just-the-docs/pull/876
+* Added: refactor `mermaid` config to use `mermaid_config.js` include, only require `mermaid.version` in `_config.yml` by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/909
 * Fixed: prepend `site.collections_dir` if exists by @alexsegura in https://github.com/just-the-docs/just-the-docs/pull/519
 * Fixed: nested task lists (#517) by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/855
 * Fixed: suppress Liquid processing in CSS comments by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/686
