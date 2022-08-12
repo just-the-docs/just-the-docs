@@ -6,18 +6,15 @@
   "license": "MIT",
   "bugs": "https://github.com/just-the-docs/just-the-docs/issues",
   "devDependencies": {
-    "stylelint": "^13.7.2",
-    "@primer/css": "^15.2.0",
     "prettier": "^2.7.1",
-    "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-primer": "^9.2.1",
-    "stylelint-prettier": "^1.1.2",
-    "stylelint-selector-no-utility": "^4.0.0"
+    "stylelint": "^14.9.1",
+    "stylelint-config-prettier-scss": "0.0.1",
+    "stylelint-config-standard-scss": "^3.0.0",
+    "stylelint-prettier": "^2.0.0"
   },
   "scripts": {
     "test": "stylelint '**/*.scss'",
     "format": "prettier --write '**/*.{scss,js,json}'",
     "stylelint-check": "stylelint-config-prettier-check"
-  },
-  "dependencies": {}
+  }
 }
