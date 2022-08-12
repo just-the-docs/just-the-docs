@@ -86,3 +86,48 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 [Link button](http://example.com/){: .btn }
 ```
 {% endhighlight %}
+
+---
+
+## Mermaid diagram code blocks
+
+[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. You can turn on support for mermaid by adding a `mermaid` key to your `_config.yml`.
+
+The minimum configuration requires a `version` key (matching a version in [jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)):
+
+```yaml
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.3"
+```
+
+Additional configuration options are loaded through `_includes/mermaid_config.js`. By default, the contents of the file are the empty object:
+
+```js
+// _includes/mermaid_config.js
+{}
+```
+
+This loads the default settings.
+
+The contents of this object should follow [mermaid's configuration API](https://mermaid-js.github.io/mermaid/#/./Setup?id=configuration). For example, to override the theme, change `_includes/mermaid_config.js` to:
+
+```js
+// _includes/mermaid_config.js
+{
+  theme: "forest"
+}
+```
+
+Once mermaid is installed, it can be used in markdown files. The markdown for a simple flowchart example might look like the following:
+
+{% highlight markdown %}
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+{% endhighlight %}

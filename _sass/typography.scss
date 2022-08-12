@@ -1,16 +1,17 @@
-//
 // Typography
-//
-// stylelint-disable primer/selector-no-utility, primer/no-override, selector-no-type, selector-max-type
+
+// stylelint-disable selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
 
 h1,
 .text-alpha {
   @include fs-8;
+
   font-weight: 300;
 }
 
 h2,
-.text-beta {
+.text-beta,
+#toctitle {
   @include fs-6;
 }
 
@@ -22,6 +23,7 @@ h3,
 h4,
 .text-delta {
   @include fs-2;
+
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -34,13 +36,11 @@ h4 code {
 h5,
 .text-epsilon {
   @include fs-3;
-  color: $grey-dk-200;
 }
 
 h6,
 .text-zeta {
   @include fs-2;
-  color: $grey-dk-200;
 }
 
 .text-small {

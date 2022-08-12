@@ -16,11 +16,13 @@ Just the Docs gives your documentation a jumpstart with a responsive Jekyll them
 
 ---
 
+**New: version `0.4.0.rc1` has just been released! See [the changelog](https://github.com/just-the-docs/just-the-docs/blob/main/CHANGELOG.md) for a detailed breakdown!**
+
 ## Getting started
 
 ### Dependencies
 
-Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special plugins and can run on GitHub Pages' standard Jekyll compiler. The [Jekyll SEO Tag plugin](https://github.com/jekyll/jekyll-seo-tag) is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit the [Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
+Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [Jekyll quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special plugins and can run on GitHub Pages' standard Jekyll compiler. The [Jekyll SEO Tag plugin](https://github.com/jekyll/jekyll-seo-tag) is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit the [Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
 
 ### Quick start: Use as a GitHub Pages remote theme
 
@@ -39,7 +41,7 @@ remote_theme: just-the-docs/just-the-docs
   $ gem install just-the-docs
   ```
   ```yaml
-  # .. or add it to your your Jekyll site’s Gemfile
+  # .. or add it to your Jekyll site’s Gemfile
   gem "just-the-docs"
   ```
 
@@ -53,7 +55,7 @@ remote_theme: just-the-docs/just-the-docs
   $ bundle exec just-the-docs rake search:init
   ```
 
-3. Run you local Jekyll server
+3. Run your local Jekyll server
   ```bash
   $ jekyll serve
   ```
@@ -61,6 +63,7 @@ remote_theme: just-the-docs/just-the-docs
   # .. or if you're using a Gemfile (bundler)
   $ bundle exec jekyll serve
   ```
+
 
 4. Point your web browser to [http://localhost:4000](http://localhost:4000)
 
