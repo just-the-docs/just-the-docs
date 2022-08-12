@@ -51,26 +51,14 @@ search:
   # Supports true or false (default)
   button: false
 
-# Enable or disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/)
-# Supports true or false (default)
-mermaid_enabled: false
-mermaid:
-  # Version of mermaid library
-  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
-  version: "9.1.3"
-  # Configured theme of mermaid diagrams
-  # Pick an avaiable theme from https://mermaid-js.github.io/mermaid/#/theming
-  theme: "default"
-  # Additional configuration available matching pattern as defined in https://mermaid-js.github.io/mermaid/#/./Setup.
-  # For example,
-  # logLevel: 'fatal',
-  # sequence:
-  #   diagramMarginX: 50
-  #   actorMargin: 50
-  # gantt:
-  #   barGap: 4
-  #   topPadding: 50
-
+# To enable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/),
+# uncomment the `mermaid` and `version` keys below
+# mermaid:
+#   # Version of mermaid library
+#   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+#   version: "9.1.3"
+#   # Put any additional configuration, such as setting the theme, in _includes/mermaid_config.js
+#   # See also docs/ui-components/code
 
 # Enable or disable heading anchors
 heading_anchors: true

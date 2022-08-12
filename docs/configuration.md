@@ -60,29 +60,17 @@ search:
 ```
 
 ## Mermaid Diagrams
-See [Code]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more information.
+
+The minimum configuration requires the key for `version` ([from jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)) in `_config.yml`:
 
 ```yaml
-# Enable or disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/)
-# Supports true or false (default)
-mermaid_enabled: false
 mermaid:
   # Version of mermaid library
   # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
   version: "9.1.3"
-  # Configured theme of mermaid diagrams
-  # Pick an avaiable theme from https://mermaid-js.github.io/mermaid/#/theming
-  theme: "default"
-  # Additional configuration available matching pattern as defined in https://mermaid-js.github.io/mermaid/#/./Setup.
-  # For example,
-  # logLevel: 'fatal',
-  # sequence:
-  #   diagramMarginX: 50
-  #   actorMargin: 50
-  # gantt:
-  #   barGap: 4
-  #   topPadding: 50
 ```
+
+See [the Code documentation]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more configuration options and information.
 
 ## Aux links
 
@@ -186,7 +174,7 @@ A paragraph...
 ```
 
 [^dark]:
-    If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title. 
+    If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title.
 
 The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
 
@@ -261,6 +249,7 @@ just_the_docs:
       # Supports true or false (default)
       # search_exclude: true
 ```
+
 The navigation for all your normal pages (if any) is displayed before those in collections.
 
 You can reference multiple collections.
@@ -282,6 +271,7 @@ just_the_docs:
     tutorials:
       name: Tutorials
 ```
+
 When *all* your pages are in a single collection, its name is not displayed.
 
 The navigation for each collection is a separate name space for page titles: a page in one collection cannot be a child of a page in a different collection, or of a normal page.

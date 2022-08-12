@@ -71,7 +71,7 @@ end
 
 [This is a very long link which wraps and therefore doesn't overflow
 even when it comes at the beginning](.) of the line.
-  
+
 - [This is a very long link which wraps and therefore doesn't overflow the line
   when used first in an item ](.) in a list.
 
@@ -297,6 +297,19 @@ class conditions(object):
 ```
 Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
 ```
+
+### Mermaid Diagrams
+
+The following code is displayed as a diagram only when a `mermaid` key supplied in `_config.yml`.
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 
 ```
 The final element.
