@@ -1,6 +1,4 @@
-//
 // The basic two column layout
-//
 
 .side-bar {
   z-index: 0;
@@ -40,6 +38,7 @@
 
 .main-content-wrap {
   @include container;
+
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
 
@@ -111,6 +110,7 @@
 
 .site-title {
   @include container;
+
   flex-grow: 1;
   display: flex;
   height: 100%;
@@ -184,6 +184,7 @@ body {
 
 .site-footer {
   @include container;
+
   position: absolute;
   bottom: 0;
   left: 0;

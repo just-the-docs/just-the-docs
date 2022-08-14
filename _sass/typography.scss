@@ -1,11 +1,11 @@
-//
 // Typography
-//
-// stylelint-disable primer/selector-no-utility, primer/no-override, selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
+
+// stylelint-disable selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
 
 h1,
 .text-alpha {
   @include fs-8;
+
   font-weight: 300;
 }
 
@@ -23,6 +23,7 @@ h3,
 h4,
 .text-delta {
   @include fs-2;
+
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;

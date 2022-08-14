@@ -159,6 +159,7 @@ layout: default
 title: Descending Child Pages
 child_nav_order: desc
 ---
+```
 
 ### Auto-generating Table of Contents
 

@@ -67,9 +67,9 @@
         <a href="{{ node.url | relative_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
         {%- if node.has_children -%}
           {%- if node.child_nav_order == 'desc' -%}
-            {%- assign children_list = pages_list | where: "parent", node.title | reverse -%}
+            {%- assign children_list = pages_list | where: "parent", node.title | where_exp:"item", "item.grand_parent == nil" | reverse -%}
           {%- else -%}
-            {%- assign children_list = pages_list | where: "parent", node.title -%}
+            {%- assign children_list = pages_list | where: "parent", node.title | where_exp:"item", "item.grand_parent == nil" -%}
           {%- endif -%}
           <ul class="nav-list ">
           {%- for child in children_list -%}
@@ -119,7 +119,7 @@
 
   {%- for node in pages_list -%}
     {%- if node.parent == nil -%}
-      {%- if page.parent == node.title or page.grand_parent == node.title -%}
+      {%- if page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil -%}
         {%- assign first_level_url = node.url | relative_url -%}
       {%- endif -%}
       {%- if node.has_children -%}
