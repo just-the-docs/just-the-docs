@@ -26,7 +26,7 @@ url: "https://www.cityjson.org" # the base hostname & protocol for your site, e.
 # baseurl: "/23t4p/cj11website" # the subpath of your site, e.g. /blog
 # url: "https://homepage.tudelft.nl" # the base hostname & protocol for your site, e.g. http://example.com
 
-
+future:    true
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
