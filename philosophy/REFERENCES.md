@@ -19,6 +19,10 @@ Currently consists primarily of resources on management styles and lists the boo
 
 Some resources in line with our thinking on management styles.
 
+### Multipliers
+
+  - [Mulitpliers - How the Best Leaders Make Everyone Smarter](https://www.amazon.ca/Multipliers-Revised-Updated-Leaders-Everyone/dp/0062663070/ref=sr_1_1?)
+
 ### Just Shut Up
 
   - [Data Driven Investor post](https://medium.com/datadriveninvestor/are-you-a-manager-shut-up-494616dcea2f)
