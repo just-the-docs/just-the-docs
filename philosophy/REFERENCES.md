@@ -22,17 +22,14 @@ Some resources in line with our thinking on management styles.
 ### Multipliers
 
   - [Mulitpliers - How the Best Leaders Make Everyone Smarter](https://www.amazon.ca/Multipliers-Revised-Updated-Leaders-Everyone/dp/0062663070/ref=sr_1_1?)
-
-### Just Shut Up
-
-  - [Data Driven Investor post](https://medium.com/datadriveninvestor/are-you-a-manager-shut-up-494616dcea2f)
+  - [Data Driven Investor post on letting your team speak up](https://medium.com/datadriveninvestor/are-you-a-manager-shut-up-494616dcea2f)
 
 ### "The Culture Code"
 
 Team performance can be predicted by:
 
 1.  All members speak equally
-2.  Members maintain eye contact
+2.  Members maintain eye contact (please use video sometimes)
 3.  Members communicate directly with each other
 4.  Members break from the team to focus or explore, and bring skills
     back to the team
