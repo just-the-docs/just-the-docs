@@ -34,62 +34,20 @@ Alternatively, in VS Code, you can do `ctrl-,` to open settings, and search for 
 
 Scroll down to change the above settings manually.
 
-# jQuery
+## Library preferences
 
-While we won't normally use jQuery for a new project at Countable, several older projects do use it. 
+Use smaller and fewer libraries where possible, and recognize the many costs of adding libraries.
 
-jQuery has been unpopular for large software projects due to maintainability issues, and those concerns are founded. 
+These are the most preferred libraries, but if the project is heavily invested in something else it may not be worth switching right away. Use your judgement.
+  * Preact > React > Vue > Riot > Angular > jQuery
+  * MobX > Reducers > Redux
+  * Fetch > Axios
 
-However, taking some care in how you use the library helps keep jQuery projects maintainable.
+## Performance
 
-Most of the problems maintaining jQuery apps come from [DOM Manipulation](https://api.jquery.com/category/manipulation/) which leads to needlessly complex state. To minimize this, here are some guidelines to use where possible.
+ie) We should use Fetch if possible because it saves 50KB. This may not sound like much but makes a big difference in the long run. Most web apps take 5 seconds to load on an average connection becasue of devs making many small decisions to add size to the bundle which hits our load time both in terms of bundle transfer but in JS parsing, and this leads to a mediocre experience. When a busy (and perhaps, highly paid) person is in a hurry, it's excruciating to wait a few extra seconds. This is made far worse for browser extensions which have to load IN ADDITION to the base website and all the other extensions so they especially need to be lean. What is the rationale for using Axios? (edited) 
 
-Where possible, just `.hide()` and `.show()` different pieces of pre-defined content instead of creating it on the fly. eg:
 
-    // bad
-    $(".some-selector").append("<a id='abc_error_message' class='error hidden'>error message here</a>")
-    
-    // better
-    // <a id='abc_error_message' class='error hidden'>error message here</a> <!--already in index-->
-    $("#abc_error_message").show()
-
-If you must dynamically generate HTML, `` and `.text` for setting a large block of generated information, with ES6 strings.
-
-    $("#parent_id")(`<b> here is a dynamic fragment. ${variable} ${variable}</b>`)
-
-To make small changes to how something looks, animate it, open/close, etc. use `addClass` and `removeClass`.
-
-    // bad
-    $("#accordion").css('height', '25px')
-    
-    // better
-    // define the actual CSS in the .open-accordion class.
-    $("#accordion").addClass('open-accordion')
-
-Use ID instead of class for selecting items in jQuery:
-
-    // bad
-    $(".next")
-    
-    // better
-    $("#main-modal-next-button")
-
-This prevents surprising behaviour for people maintaining the code later: changing a CSS class should not cause JavaScript behaviour to change, and changing an ID should not cause CSS styling to change.
-
-When manipulating the DOM, as in
-`https://api.jquery.com/category/manipulation/`, prefer:
-
-  - `.hide()`, `.show()`, `.addClass()`, `.removeClass()`,
-    `.toggleClass()`, `.val()`
-
-if needed, use:
-
-  - `.text()`, `()`
-
-avoid:
-
-  - `.after()`, `.append()`, `.attr()`, `.before()`, `.clone()`,
-    `.css()`, `.remove()`, and everything else.
 
 **When traversing the DOM many times, load one into memory first\!**
 
@@ -158,6 +116,65 @@ Event delegation means you'll never have bugs with event handlers being created 
   - Instead of returning functions that render a component, prefer to return functions that return the necessary information to render a component. In the first we are instructing what to do(render precisely this thing), while in the second we’re just returning some information (use this information to do something).
   - Communicating between siblings, instead of through components. Try to only communicate with other components through props.
   - Use pure functional components where possible. Because these components don’t have lifecycle methods, they require you to rely on a declarative, props-based approach.
+  - Use useQuery for async data loading
+
+
+# jQuery
+
+While we won't normally use jQuery for a new project at Countable, several older projects do use it. 
+
+jQuery has been unpopular for large software projects due to maintainability issues, and those concerns are founded. 
+
+However, taking some care in how you use the library helps keep jQuery projects maintainable.
+
+Most of the problems maintaining jQuery apps come from [DOM Manipulation](https://api.jquery.com/category/manipulation/) which leads to needlessly complex state. To minimize this, here are some guidelines to use where possible.
+
+Where possible, just `.hide()` and `.show()` different pieces of pre-defined content instead of creating it on the fly. eg:
+
+    // bad
+    $(".some-selector").append("<a id='abc_error_message' class='error hidden'>error message here</a>")
+    
+    // better
+    // <a id='abc_error_message' class='error hidden'>error message here</a> <!--already in index-->
+    $("#abc_error_message").show()
+
+If you must dynamically generate HTML, `` and `.text` for setting a large block of generated information, with ES6 strings.
+
+    $("#parent_id")(`<b> here is a dynamic fragment. ${variable} ${variable}</b>`)
+
+To make small changes to how something looks, animate it, open/close, etc. use `addClass` and `removeClass`.
+
+    // bad
+    $("#accordion").css('height', '25px')
+    
+    // better
+    // define the actual CSS in the .open-accordion class.
+    $("#accordion").addClass('open-accordion')
+
+Use ID instead of class for selecting items in jQuery:
+
+    // bad
+    $(".next")
+    
+    // better
+    $("#main-modal-next-button")
+
+This prevents surprising behaviour for people maintaining the code later: changing a CSS class should not cause JavaScript behaviour to change, and changing an ID should not cause CSS styling to change.
+
+When manipulating the DOM, as in
+`https://api.jquery.com/category/manipulation/`, prefer:
+
+  - `.hide()`, `.show()`, `.addClass()`, `.removeClass()`,
+    `.toggleClass()`, `.val()`
+
+if needed, use:
+
+  - `.text()`, `()`
+
+avoid:
+
+  - `.after()`, `.append()`, `.attr()`, `.before()`, `.clone()`,
+    `.css()`, `.remove()`, and everything else.
 
 ## References
 
