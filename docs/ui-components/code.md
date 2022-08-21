@@ -91,7 +91,7 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 
 ## Mermaid diagram code blocks
 
-[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. You can turn on support for mermaid by adding a `mermaid` key to your `_config.yml`.
+[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. **It is disabled by default**. However, you can turn on support for mermaid by adding a `mermaid` key to your `_config.yml`.
 
 The minimum configuration requires a `version` key (matching a version in [jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)):
 
@@ -131,3 +131,15 @@ graph TD;
     C-->D;
 ```
 {% endhighlight %}
+
+which renders:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+*Note: for demonstration purposes, we've enabled mermaid on this site. It is still disabled by default, and users need to opt-in to use it.*
