@@ -32,7 +32,7 @@
                 </select>
 
             </p>
-            <a data-opt-in-preferences href="javascript:;">Privacy settings</a>
+            <a data-opt-in-preferences href="javascript:;" id="privacy_set">Privacy settings</a>
           <a data-wat-linkname="manage-ccpa-settings-footer-link" href="javascript:;">Do not sell my personal information</a>
           <a href="https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement">Privacy/Cookies</a>
       </footer>
@@ -139,6 +139,9 @@
       b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
       a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
     })();
+  </script>
+  <script type="text/javascript">
+    document.getElementById("privacy_set").target = "_self";
   </script>
 </body>
 </html>
