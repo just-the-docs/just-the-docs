@@ -1,11 +1,7 @@
-//
 // Import external dependencies
-//
-@import "./vendor/normalize.scss/normalize.scss";
+@import "./vendor/normalize.scss/normalize";
 
-//
 // Modules
-//
 @import "./base";
 @import "./layout";
 @import "./content";

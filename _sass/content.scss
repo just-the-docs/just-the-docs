@@ -1,9 +1,7 @@
 @charset "UTF-8";
 
-//
 // Styles for rendered markdown in the .main-content container
-//
-// stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type
+// stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type, selector-max-specificity, selector-max-id
 
 .main-content {
   line-height: $content-line-height;
@@ -21,7 +19,6 @@
   a {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
   }
 
   ul,
@@ -59,7 +56,7 @@
       ol {
         counter-reset: sub-counter;
 
-        li {
+        > li {
           &::before {
             content: counter(sub-counter, lower-alpha);
             counter-increment: sub-counter;
@@ -82,14 +79,7 @@
     }
   }
 
-  .task-list {
-    padding-left: 0;
-  }
-
   .task-list-item {
-    display: flex;
-    align-items: center;
-
     &::before {
       content: "";
     }
@@ -97,6 +87,9 @@
 
   .task-list-item-checkbox {
     margin-right: 0.6em;
+    margin-left: -1.4em;
+
+    // The same margin-left is used above for ul > li::before
   }
 
   hr + * {
@@ -121,6 +114,7 @@
     grid-column: 1;
     font-weight: 500;
     text-align: right;
+
     &::after {
       content: ":";
     }
@@ -130,6 +124,7 @@
     grid-column: 2;
     margin-bottom: 0;
     margin-left: 1em;
+
     blockquote,
     div,
     dl,
@@ -188,6 +183,7 @@
   }
 
   .anchor-heading:hover,
+  .anchor-heading:focus,
   h1:hover > .anchor-heading,
   h2:hover > .anchor-heading,
   h3:hover > .anchor-heading,
@@ -208,24 +204,36 @@
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  #toctitle {
     position: relative;
     margin-top: 1.5em;
     margin-bottom: 0.25em;
 
-    &:first-child {
-      margin-top: $sp-2;
-    }
-
     + table,
     + .table-wrapper,
     + .code-example,
-    + .highlighter-rouge {
+    + .highlighter-rouge,
+    + .sectionbody .listingblock {
       margin-top: 1em;
     }
 
-    + p {
+    + p:not(.label) {
       margin-top: 0;
     }
+  }
+
+  > h1:first-child,
+  > h2:first-child,
+  > h3:first-child,
+  > h4:first-child,
+  > h5:first-child,
+  > h6:first-child,
+  > .sect1:first-child > h2,
+  > .sect2:first-child > h3,
+  > .sect3:first-child > h4,
+  > .sect4:first-child > h5,
+  > .sect5:first-child > h6 {
+    margin-top: $sp-2;
   }
 }

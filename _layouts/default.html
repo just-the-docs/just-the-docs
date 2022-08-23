@@ -38,16 +38,25 @@ layout: table_wrappers
         <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
       </svg>
     </symbol>
+    {% include icons/external_link.html %}
   </svg>
 
   <div class="side-bar">
     <div class="site-header">
-      <a href="{{ '/' | absolute_url }}" class="site-title lh-tight">{% include title.html %}</a>
+      <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
       <a href="#" id="menu-button" class="site-button">
         <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
       </a>
     </div>
     <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+      {% assign pages_top_size = site.html_pages
+          | where_exp:"item", "item.title != nil"
+          | where_exp:"item", "item.parent == nil"
+          | where_exp:"item", "item.nav_exclude != true"
+          | size %}
+      {% if pages_top_size > 0 %}
+        {% include nav.html pages=site.html_pages key=nil %}
+      {% endif %}
       {% if site.just_the_docs.collections %}
         {% assign collections_size = site.just_the_docs.collections | size %}
         {% for collection_entry in site.just_the_docs.collections %}
@@ -55,26 +64,49 @@ layout: table_wrappers
           {% assign collection_value = collection_entry[1] %}
           {% assign collection = site[collection_key] %}
           {% if collection_value.nav_exclude != true %}
-            {% if collections_size > 1 %}
-              <div class="nav-category">{{ collection_value.name }}</div>
+            {% if collections_size > 1 or pages_top_size > 0 %}
+              {% if collection_value.nav_fold == true %}
+                <ul class="nav-list nav-category-list">
+                  <li class="nav-list-item{% if page.collection == collection_key %} active{% endif %}">
+                    {%- if collection.size > 0 -%}
+                    <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+                    {%- endif -%}
+                    <div class="nav-category">{{ collection_value.name }}</div>
+                    {% include nav.html pages=collection key=collection_key %}
+                  </li>
+                </ul>
+              {% else %}
+                <div class="nav-category">{{ collection_value.name }}</div>
+                {% include nav.html pages=collection key=collection_key %}
+              {% endif %}
+            {% else %}
+              {% include nav.html pages=collection key=collection_key %}
             {% endif %}
-            {% include nav.html pages=collection %}
           {% endif %}
         {% endfor %}
-      {% else %}
-        {% include nav.html pages=site.html_pages %}
       {% endif %}
     </nav>
-    <footer class="site-footer">
-      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-    </footer>
+
+    {% capture nav_footer_custom %}
+      {%- include nav_footer_custom.html -%}
+    {% endcapture %}
+    {% if nav_footer_custom != "" %}
+      {{ nav_footer_custom }}
+    {% else %}
+      <footer class="site-footer">
+        This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+      </footer>
+    {% endif %}
   </div>
   <div class="main" id="top">
     <div id="main-header" class="main-header">
       {% if site.search_enabled != false %}
+
+        {% capture search_placeholder %}{% include search_placeholder_custom.html %}{% endcapture %}
+
         <div class="search">
           <div class="search-input-wrap">
-            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
+            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="{{ search_placeholder | strip_html | strip }}" aria-label="{{ search_placeholder | strip_html| strip }}" autocomplete="off">
             <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
           </div>
           <div id="search-results" class="search-results"></div>
@@ -102,21 +134,6 @@ layout: table_wrappers
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
         {% if page.parent %}
-          {%- for node in pages_list -%}
-            {%- if node.parent == nil -%}
-              {%- if page.parent == node.title or page.grand_parent == node.title -%}
-                {%- assign first_level_url = node.url | absolute_url -%}
-              {%- endif -%}
-              {%- if node.has_children -%}
-                {%- assign children_list = pages_list | where: "parent", node.title -%}
-                {%- for child in children_list -%}
-                  {%- if page.url == child.url or page.parent == child.title -%}
-                    {%- assign second_level_url = child.url | absolute_url -%}
-                  {%- endif -%}
-                {%- endfor -%}
-              {%- endif -%}
-            {%- endif -%}
-          {%- endfor -%}
           <nav aria-label="Breadcrumb" class="breadcrumb-nav">
             <ol class="breadcrumb-nav-list">
               {% if page.grand_parent %}
@@ -141,10 +158,9 @@ layout: table_wrappers
           <hr>
           <h2 class="text-delta">Table of contents</h2>
           <ul>
-            {%- assign children_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%}
-            {% for child in children_list %}
+            {% for child in toc_list %}
               <li>
-                <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+                <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
               </li>
             {% endfor %}
           </ul>
@@ -177,7 +193,7 @@ layout: table_wrappers
                   site.gh_edit_view_mode
                 %}
                   <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
+                    <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}{% if page.collection and site.collections_dir %}/{{ site.collections_dir }}{% endif %}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
                   </p>
                 {% endif %}
               </div>
@@ -199,4 +215,11 @@ layout: table_wrappers
     {% endif %}
   </div>
 </body>
+{% if site.mermaid %}
+  <script>
+    var config = {% include mermaid_config.js %};
+    mermaid.initialize(config);
+    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+  </script>
+{% endif %}
 </html>

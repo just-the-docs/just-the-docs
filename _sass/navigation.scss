@@ -1,6 +1,4 @@
-//
 // Main nav, breadcrumb, etc...
-//
 // stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type, selector-max-specificity
 
 .nav-list {
@@ -11,6 +9,7 @@
 
   .nav-list-item {
     @include fs-4;
+
     position: relative;
     margin: 0;
 
@@ -44,6 +43,12 @@
         }
       }
 
+      &.external > svg {
+        width: $sp-4;
+        height: $sp-4;
+        vertical-align: text-bottom;
+      }
+
       &.active {
         font-weight: 600;
         text-decoration: none;
@@ -65,6 +70,7 @@
       @if $nav-list-expander-right {
         right: 0;
       }
+
       width: $nav-list-item-height-sm;
       height: $nav-list-item-height-sm;
       padding-top: #{$nav-list-item-height-sm / 4};
@@ -137,7 +143,7 @@
   padding-bottom: $sp-2;
   padding-left: $gutter-spacing-sm;
   font-weight: 600;
-  text-align: end;
+  text-align: start;
   text-transform: uppercase;
   border-bottom: $border $border-color;
   @include fs-2;
@@ -150,6 +156,26 @@
 
     &:first-child {
       margin-top: 0;
+    }
+  }
+}
+
+.nav-list.nav-category-list {
+  > .nav-list-item {
+    margin: 0;
+
+    > .nav-list {
+      padding: 0;
+
+      > .nav-list-item {
+        > .nav-list-link {
+          color: $link-color;
+        }
+
+        > .nav-list-expander {
+          color: $link-color;
+        }
+      }
     }
   }
 }
