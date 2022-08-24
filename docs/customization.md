@@ -165,3 +165,19 @@ Content added to this file appears at the top of every page's main content betwe
 `_includes/nav_footer_custom.html`
 
 Any content added to this file will appear at the bottom left of the page below the site's navigation. By default an attribution to Just the Docs is displayed which reads, `This site uses Just the Docs, a documentation theme for Jekyll.`.
+
+### Custom Search Placeholder
+
+The placeholder text in the search bar (and its `aria-label`) is rendered by `_includes/search_placeholder_custom.html`, **after stripping HTML and whitespace**. By default, the content of the include is:
+
+```liquid
+Search {{site.title}}
+```
+
+Override this file to render a custom placeholder. For example,
+
+```liquid
+Find a post
+```
+
+Would make the placeholder text "Find a post". Any plaintext or liquid variable is supported.
