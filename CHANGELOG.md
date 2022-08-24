@@ -9,6 +9,7 @@ All notable changes to this project are documented in this file.
 ### Changes
 
 - Added: docs load mermaid.js by default by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/935
+- Deleted: unused script directory by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/937
 
 ## v0.4.0.rc1
 
