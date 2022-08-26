@@ -1,57 +1,56 @@
 {%- comment -%}
   Pages with no `title` are implicitly excluded from the navigation.
   
-  The `title` and `nav_order` values can be numbers or strings.
-  Jekyll gives build failures when sorting on values of mixed types,
+  The values of `title` and `nav_order` can be numbers or strings.
+  Jekyll gives build failures when sorting on mixtures of different types,
   so numbers and strings need to be sorted separately.
 
-  Numbers are sorted by their values, and come before all strings.
-  An omitted `nav_order` value is equivalent to the page's `title` value.
+  Here, numbers are sorted by their values, and come before all strings.
+  An omitted `nav_order` value is equivalent to the page's `title` value
+  (except that a numerical `title` value is treated as a string).
 
   The case-sensitivity of string sorting is determined by `site.nav_sort`.
 {%- endcomment -%}
 
 {%- assign titled_pages = include.pages
-      | where_exp: "item", "item.title" -%}
+      | where_exp: "item", "item.title != nil" -%}
+
+{%- assign string_ordered_pages = titled_pages
+      | where_exp: "item", "item.nav_order == nil" -%}
+{%- assign nav_ordered_pages = titled_pages
+      | where_exp: "item", "item.nav_order != nil" -%}
 
 {%- comment -%}
-  Group titled pages that have explicit `nav_order` values:
+  Add the nav-ordered pages to the number-ordered pages or the string-ordered pages,
+  depending on their `nav_order` value.
+  
+  The first character of the `jsonify` result is `"` only for strings.
 {%- endcomment -%}
 
-{%- assign nav_ordered_groups = titled_pages
-      | where_exp: "item", "item.nav_order"
-      | group_by: "nav_order" -%}
+{%- assign nav_ordered_groups = nav_ordered_pages
+      | group_by_exp: "item", "item.nav_order | jsonify | slice: 0" -%}
+
+{%- assign number_ordered_pages = "" | split: "" -%}
+{%- for group in nav_ordered_groups -%}
+  {%- if group.name == '"' -%}
+    {%- assign string_ordered_pages = string_ordered_pages | concat: group.items -%}
+  {%- else -%}
+    {%- assign number_ordered_pages = number_ordered_pages | concat: group.items -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign sorted_number_ordered_groups = number_ordered_pages
+      | sort: "nav_order" | group_by: "nav_order" -%}
 
 {%- comment -%}
-  Sort the groups of pages that have numeric `nav_order` values:
+  Group the string-ordered pages by `nav_order`, if non-nil, and otherwise `title`
+  (but appending the empty string to a numeric title to convert it to a string).
+  
+  Then sort the groups according to the site setting for case (in)sensitivity.
 {%- endcomment -%}
 
-{%- assign sorted_number_ordered_groups = nav_ordered_groups
-      | where_exp: "group", "group.name[0] == empty"
-      | sort: "name" -%}
-
-{%- comment -%}
-  Group titled pages that have no `nav_order` by their `title` values,
-  appending '' to convert numbers to strings:
-{%- endcomment -%}
-
-{%- assign title_ordered_groups = titled_pages
-      | where_exp: "item", "item.nav_order == nil"
-      | group_by_exp: "item", "item.title | append: ''" -%}
-
-{%- comment -%}
-  Concatenate the groups of pages that have string `nav_order` values
-  with the groups of pages that have no `nav_order` values:
-{%- endcomment -%}
-
-{%- assign string_ordered_groups = nav_ordered_groups
-      | where_exp: "group", "group.name[0] != empty"
-      | concat: title_ordered_groups -%}
-
-{%- comment -%}
-  Sort the groups of pages with (explicit or implicit) string `nav_order` values,
-  taking account of the site case-insensitivity setting:
-{%- endcomment -%}
+{%- assign string_ordered_groups = string_ordered_pages
+      | group_by_exp:"item", "item.nav_order | default: item.title | append: '' " -%}
 
 {%- if site.nav_sort == 'case_insensitive' -%}
   {%- assign sorted_string_ordered_groups = string_ordered_groups
@@ -64,28 +63,8 @@
 {%- assign groups_list = sorted_number_ordered_groups
       | concat: sorted_string_ordered_groups -%}
 
-{%- comment -%}
-  We needed to group pages because Jekyll-Liquid lacks filters for sorting pages
-  by expression values. After sorting, the grouping is irrelevant: we only need
-  the sorted pages-list to generate the navigation links.
-  
-  Unfortunately, the obvious way of discarding the grouping (by concatenating the
-  lists of pages from each group) appears to be quadratic in the number of groups.
-  For example, it can take about 35 seconds to concatenate 130 one-item groups
-  using the following code:
-  
-  {%- assign sorted_string_ordered_pages = "" | split: "" -%}
-  {%- for group in sorted_string_ordered_groups -%}
-    {%- assign sorted_string_ordered_pages = sorted_string_ordered_pages
-          | concat: group.items -%}
-  {%- endfor -%}
-  
-  It is significantly more efficient (albeit it somewhat messier in the code)
-  to geneate the navigation links directly from the grouped pages:
-{%- endcomment -%}
-
 <ul class="nav-list">
-{%- for node_group in groups_list -%} 
+  {%- for node_group in groups_list -%} 
   {%- for node in node_group.items -%}
     {%- if node.parent == nil -%}
       {%- unless node.nav_exclude -%}
@@ -126,7 +105,7 @@
                 {%- for grandchild in grandchildren_list -%}
                   {%- unless grandchild.nav_exclude -%}
                   <li class="nav-list-item {% if page.url == grandchild.url %} active{% endif %}">
-                    <a href="{{ grandchild.url | relative_url }}" class="nav-list-link{% if page.url == grandchild.url %} active{% endif %}">{{ grandchild.title }}</a>
+                    <a href="{{ grandchild.url | relative_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grandchild.title }}</a>
                   </li>
                   {%- endunless -%}
                 {%- endfor -%}
@@ -141,25 +120,26 @@
       {%- endunless -%}
     {%- endif -%}
   {%- endfor -%}
-{%- endfor -%}
-
-{%- assign nav_external_links = site.nav_external_links -%}
-{%- for node in nav_external_links -%}
-  <li class="nav-list-item external">
-    <a href="{{ node.url | absolute_url }}" class="nav-list-link external">
-      {{ node.title }}
-      {% unless node.hide_icon %}<svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>{% endunless %}
-    </a>
-  </li>
-{%- endfor -%}
+  {%- endfor -%}
+  {%- assign nav_external_links = site.nav_external_links -%}
+  {%- for node in nav_external_links -%}
+    <li class="nav-list-item external">
+      <a href="{{ node.url | absolute_url }}" class="nav-list-link external">
+        {{ node.title }}
+        {% unless node.hide_icon %}<svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>{% endunless %}
+      </a>
+    </li>
+  {%- endfor -%}
 </ul>
 
 {%- if page.collection == include.key -%}
 
   {%- for node_group in groups_list -%}
-    {%- for node in node_group.items -%}
+  {%- for node in node_group.items -%}
     {%- if node.parent == nil -%}
-      {%- if page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil -%}
+      {%- if page.grand_parent == node.title 
+              or page.parent == node.title
+              and page.grand_parent == nil -%}
         {%- assign first_level_url = node.url | relative_url -%}
       {%- endif -%}
       {%- if node.has_children -%}
@@ -173,21 +153,24 @@
         {%- endif -%}
         {%- for child in children_list -%}
           {%- if child.has_children -%}
-            {%- if page.url == child.url or page.parent == child.title and page.grand_parent == child.parent -%}
+            {%- if page.url == child.url
+                    or page.parent == child.title
+                    and page.grand_parent == child.parent -%}
               {%- assign second_level_url = child.url | relative_url -%}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
       {%- endif -%}
     {%- endif -%}
-    {%- endfor -%}
+  {%- endfor -%}
   {%- endfor -%}
 
   {% if page.has_children == true and page.has_toc != false %}
     {%- assign toc_list = "" | split: "" -%}
     {%- for parent_group in groups_list -%}
-      {%- assign toc_list = toc_list | concat: 
-            parent_group.items | where: "parent", page.title
+      {%- assign toc_list = toc_list
+            | concat: parent_group.items
+            | where: "parent", page.title
             | where: "grand_parent", page.parent -%}
     {%- endfor -%}
     {%- if node.child_nav_order == 'desc' -%}
