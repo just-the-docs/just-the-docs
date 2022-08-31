@@ -448,12 +448,21 @@ function searchLoaded(index, docs) {
 // Switch theme
 
 jtd.getTheme = function() {
-  var cssFileHref = document.querySelector('[rel="stylesheet"]').getAttribute('href');
+  var cssFile = document.querySelector('[rel="stylesheet"]');
+  if(cssFile.hasAttribute('media')) return 'auto';
+  
+  var cssFileHref = cssFile.getAttribute('href');
   return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
 }
 
 jtd.setTheme = function(theme) {
-  var cssFile = document.querySelector('[rel="stylesheet"]');
+  var cssFiles = [...document.querySelectorAll('[rel="stylesheet"]')];
+  var cssFile = cssFiles[0];
+  if(cssFiles.length >= 1) {
+    cssFiles.shift();
+    cssFiles.forEach(it => it.remove());
+    cssFile.removeAttribute('media');
+  }
   cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | relative_url }}' + theme + '.css');
 }
 
