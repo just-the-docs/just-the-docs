@@ -10,6 +10,7 @@ All notable changes to this project are documented in this file.
 
 - Added: docs load mermaid.js by default by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/935
 - Fixed: table of contents on search docs by @robinpokorny in https://github.com/just-the-docs/just-the-docs/pull/940
+- Fixed: broken docs link (custom footer) by @olgarithms in https://github.com/just-the-docs/just-the-docs/pull/951
 - Deleted: unused script directory by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/937
 
 ## v0.4.0.rc1
