@@ -9,6 +9,7 @@ All notable changes to this project are documented in this file.
 ### Changes
 
 - Added: docs load mermaid.js by default by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/935
+- Added: accessible titles to nested page nav toggle by @JPrevost in https://github.com/just-the-docs/just-the-docs/pull/950
 - Fixed: table of contents on search docs by @robinpokorny in https://github.com/just-the-docs/just-the-docs/pull/940
 - Fixed: broken docs link (custom footer) by @olgarithms in https://github.com/just-the-docs/just-the-docs/pull/951
 - Fixed: exclude `vendor/` in Jekyll config by @manuelhenke in https://github.com/just-the-docs/just-the-docs/pull/941
