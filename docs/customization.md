@@ -148,6 +148,7 @@ This content appears at the bottom of every page's main content. More info for t
 Any HTML added to this file will be inserted before the closing `<head>` tag. This might include additional `<meta>`, `<link>`, or `<script>` tags.
 
 #### Example
+{: .no_toc }
 
 To add a custom favicon, create `_includes/head_custom.html` and add:
 ```html
