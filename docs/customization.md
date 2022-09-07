@@ -168,16 +168,26 @@ Any content added to this file will appear at the bottom left of the page below 
 
 ### Custom Search Placeholder
 
-The placeholder text in the search bar (and its `aria-label`) is rendered by `_includes/search_placeholder_custom.html`, **after stripping HTML and whitespace**. By default, the content of the include is:
+`_includes/search_placeholder_custom.html`
+
+Content added to this file will replace the default placeholder text in the search bar (and its `aria-label`), after stripping HTML and leading/trailing whitespace. By default, the content of the include is:
+
+{% raw %}
 
 ```liquid
 Search {{site.title}}
 ```
 
-Override this file to render a custom placeholder. For example,
+{% endraw %}
+
+Override this file to render a custom placeholder. One common use-case is internationalization; for example,
+
+{% raw %}
 
 ```liquid
-Find a post
+Chercher notre site
 ```
 
-Would make the placeholder text "Find a post". Any plaintext or liquid variable is supported.
+{% endraw %}
+
+would make the placeholder text "Chercher notre site". [Liquid code](https://jekyllrb.com/docs/liquid/) (including [Jekyll variables](https://jekyllrb.com/docs/variables/)) is also supported.
