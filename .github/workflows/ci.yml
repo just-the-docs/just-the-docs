@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        jekyll-version: [3.8.5, latest]
+        jekyll-version: [3.9.2, latest]
     steps:
     - uses: actions/checkout@v3
     - name: Build the site in the jekyll/jekyll container
