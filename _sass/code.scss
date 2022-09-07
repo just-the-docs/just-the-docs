@@ -48,7 +48,7 @@ a:visited code {
 
 // ```[LANG]...```
 div.highlighter-rouge,
-div.listingblock {
+div.listingblock > div.content {
   padding: $sp-3;
   margin-top: 0;
   margin-bottom: $sp-3;
@@ -119,7 +119,8 @@ figure.highlight {
 // Code examples (rendered)
 //
 
-.code-example {
+.code-example,
+.listingblock > .title {
   padding: $sp-3;
   margin-bottom: $sp-3;
   overflow: auto;
@@ -128,6 +129,7 @@ figure.highlight {
 
   + .highlighter-rouge,
   + .sectionbody .listingblock,
+  + .content,
   + figure.highlight {
     position: relative;
     margin-top: -$sp-4;
