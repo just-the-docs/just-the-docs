@@ -17,6 +17,7 @@ All notable changes to this project are documented in this file.
 - Fixed: table of contents on search docs by @robinpokorny in https://github.com/just-the-docs/just-the-docs/pull/940
 - Fixed: broken docs link (custom footer) by @olgarithms in https://github.com/just-the-docs/just-the-docs/pull/951
 - Fixed: exclude `vendor/` in Jekyll config by @manuelhenke in https://github.com/just-the-docs/just-the-docs/pull/941
+- Fixed: clarify version docs by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/955
 - Deleted: unused script directory by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/937
 
 ## Pre-release v0.4.0.rc1
