@@ -1,10 +1,12 @@
-# Changelog
+# CHANGELOG
 
 All notable changes to this project are documented in this file.
 
-*Note:* the project underwent a maintenance shift in the creation of v0.4.0.
+*Note:* The project underwent a major maintenance shift in March 2022.
 
-## Head
+## HEAD
+
+*Note:* This website is built from the `HEAD` of the `main` branch of the theme repository. It includes docs for the following changes, which are *not* in the latest pre-release!
 
 ### Changes
 
@@ -17,26 +19,26 @@ All notable changes to this project are documented in this file.
 - Fixed: exclude `vendor/` in Jekyll config by @manuelhenke in https://github.com/just-the-docs/just-the-docs/pull/941
 - Deleted: unused script directory by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/937
 
-## v0.4.0.rc1
+## Pre-release v0.4.0.rc1
 
 ### We're back!
 
-Hi all! The Just the Docs team is excited to have our first release in over two years! This release is jam-packed with features and bugfixes that have been requested by the community since 2020. They include:
+Hi all! The Just the Docs team is excited to have our first pre-release in over two years! It is jam-packed with features and bugfixes that have been requested by the community since 2020. They include:
 
 - The new callouts component
 - Allowing pages and collections to coexist on the navigation pane
 - New styling: dark syntax highlighting, support for jekyll-asciidoc, word-wrapping instead of overflow for various elements
 - More customization: external nav links, custom nav footers, favicon includes, search color and placeholder configuration, mermaid.js support, and nav sorting
 - Over 20 bugfixes! Big ones include fixing the `rake` command, using `relative_url`, and search input color
-- More documentation, especially on using custom includes.
+- More documentation, especially on using custom includes
 - Updating core dependencies to stable Ruby versions
 - A WIP [template repository](https://github.com/just-the-docs/just-the-docs-template) that allows you to setup your own repository using Just the Docs and GitHub Pages with one click - give it a shot! More documentation, etc. is on the way!
 
 We want your feedback! Are these changes helpful? Are our docs easy to understand? Should new features like `mermaid` be opt-in or opt-out? Please [open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) and let us know!
 
-### Trying out `v0.4.0.rc1`
+### Trying out pre-release `v0.4.0.rc1`
 
-Due to the massive scope of these changes, we're releasing `v0.4.0.rc1` as a **release candidate** for the theme, with `v0.4.0` coming soon. We want your help in testing the theme! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc1` - if your version of Just the Docs is not pinned, you'll see the changes the next time you build / run `bundle install` (if you don't use a `Gemfile.lock`) or `bundle update just-the-docs` (if you do).
+Due to the massive scope of these changes, we're making `v0.4.0.rc1` avaialble as a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc1` - if your version of Just the Docs is not pinned, you'll see the changes the next time you run `bundle install` (if you don't have a `Gemfile.lock`) or `bundle update just-the-docs` (if you do).
 
 To use this RC explicitly as a remote theme:
 
@@ -44,7 +46,7 @@ To use this RC explicitly as a remote theme:
 remote_theme: just-the-docs/just-the-docs@v0.4.0.rc1
 ```
 
-To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install`:
+To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
 
 ```Ruby
 gem "just-the-docs", "0.4.0.rc1"
@@ -75,11 +77,12 @@ The new core team currently consists of @mattxwang, @pdmosses, @skullface, @doug
 
 ### Roadmap
 
-In the short-term, we're committed to tidying up everything for a `v0.4.0` release. This involves fixing bugs reported from the community in this release, as well as continually merging in minor PRs.
+In the short-term, we're committed to tidying up everything for a `v0.4.0` release. This involves fixing bugs reported from the community in this pre-release, as well as continually merging in minor PRs.
 
 We're also scoping out medium and long-term projects, and want to keep you in the loop. These include:
 
 - upgrading to Jekyll 4, and stopping support for Jekyll 3
+- versioned docs - issue [#728](https://github.com/just-the-docs/just-the-docs/issues/728)
 - improved accessibility - issues [#566](https://github.com/just-the-docs/just-the-docs/issues/566), [#870](https://github.com/just-the-docs/just-the-docs/issues/870)
 - internationalization (i18n) - issue [#59](https://github.com/just-the-docs/just-the-docs/issues/59)
 - recursive/multi-level navigation - PR [#462](https://github.com/just-the-docs/just-the-docs/pull/462)
