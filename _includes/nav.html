@@ -99,8 +99,9 @@
               {%- if child.has_children -%}
                 {%- assign grandchildren_list = "" | split: "" -%}
                 {%- for grandparent_group in groups_list -%}
-                  {%- assign grandchildren_list = grandchildren_list | concat: 
-                        grandparent_group.items | where: "parent", child.title
+                  {%- assign grandchildren_list = grandchildren_list
+                        | concat: grandparent_group.items
+                        | where: "parent", child.title
                         | where: "grand_parent", node.title -%}
                 {%- endfor -%}
                 {%- if node.child_nav_order == 'desc' -%}
