@@ -78,8 +78,9 @@
         {%- if node.has_children -%}
           {%- assign children_list = "" | split: "" -%}
           {%- for parent_group in groups_list -%}
-            {%- assign children_list = children_list | concat: 
-                  parent_group.items | where: "parent", node.title
+            {%- assign children_list = children_list 
+                  | concat: parent_group.items
+                  | where: "parent", node.title
                   | where_exp:"item", "item.grand_parent == nil" -%}
           {%- endfor -%}
           {%- if node.child_nav_order == 'desc' -%}
