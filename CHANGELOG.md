@@ -6,7 +6,9 @@ All notable changes to this project are documented in this file.
 
 ## HEAD
 
-*Note:* This website is built from the `HEAD` of the `main` branch of the theme repository. It includes docs for the following changes, which are *not* in the latest pre-release!
+*Note:* This website is built from the `HEAD` of the `main` branch of the theme repository.
+
+(Changes to `main` that are *not* in the latest pre-release will be listed here.)
 
 ## Pre-release v0.4.0.rc2
 
