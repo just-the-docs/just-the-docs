@@ -63,6 +63,13 @@ remote_theme: just-the-docs/just-the-docs@v0.3.3
 - Fixed: clarify version docs by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/955
 - Deleted: unused script directory by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/937
 
+### New Contributors
+
+* @robinpokorny made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/940
+* @olgarithms made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/951
+* @manuelhenke made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/941
+* @JPrevost made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/950
+
 ## Pre-release v0.4.0.rc1
 
 ### We're back!
