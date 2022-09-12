@@ -8,18 +8,59 @@ All notable changes to this project are documented in this file.
 
 *Note:* This website is built from the `HEAD` of the `main` branch of the theme repository. It includes docs for the following changes, which are *not* in the latest pre-release!
 
-### Changes
+## Pre-release v0.4.0.rc2
 
-- Added: docs load mermaid.js by default by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/935
+Hey there! This is likely the last pre-release before releasing `v0.4.0`, which we plan on doing soon (i.e. before the end of the month) - very exciting! Some new additions to highlight:
+
+- significant improvement on build time of navigation panel by @pdmosses
+  - this is big: for a community member with over 300 pages, we shortened the build time from 3 minutes to 30 seconds!
+- improved accessibility features led by @JPrevost
+- more docs!
+
+The intention of this release candidate is to gather even more feedback on a potential `v0.4.0`. As it stands, we have not encountered any breaking changes with early adopters of `v0.4.0.rc1`. If you encounter any - for either of our prereleases - please let us know!
+
+### Trying out pre-release `v0.4.0.rc2`
+
+Simlar to the prior release, `v0.4.0.rc2` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc2` - if your version of Just the Docs is not pinned, you'll see the changes the next time you run `bundle install` (if you don't have a `Gemfile.lock`) or `bundle update just-the-docs` (if you do).
+
+To use this RC explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.4.0.rc2
+```
+
+To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```Ruby
+gem "just-the-docs", "0.4.0.rc2"
+```
+
+By default, **users will not be upgraded to `0.4.0.rc2`**. To enforce that explicitly, either:
+
+1. pin your gem version in your `Gemfile`, like so
+```Ruby
+gem "just-the-docs", "0.3.3"
+```
+2. freeze the `remote_theme`, like so
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.3.3
+```
+
+### Features
+
 - Added: accessible titles to nested page nav toggle by @JPrevost in https://github.com/just-the-docs/just-the-docs/pull/950
 - Added: better title styling for AsciiDoc examples by @alyssais in https://github.com/just-the-docs/just-the-docs/pull/944
 - Added: docs for custom search placeholder by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/939
 - Added: provide ability to skip to main content by @JPrevost in https://github.com/just-the-docs/just-the-docs/pull/949
+- Fixed: exclude `vendor/` in Jekyll config by @manuelhenke in https://github.com/just-the-docs/just-the-docs/pull/941
+- Fixed: improve build time of navigation panel by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/956
+
+### Documentation and Maintenance
+
+- Added: docs load mermaid.js by default by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/935
 - Fixed: table of contents on search docs by @robinpokorny in https://github.com/just-the-docs/just-the-docs/pull/940
 - Fixed: broken docs link (custom footer) by @olgarithms in https://github.com/just-the-docs/just-the-docs/pull/951
-- Fixed: exclude `vendor/` in Jekyll config by @manuelhenke in https://github.com/just-the-docs/just-the-docs/pull/941
 - Fixed: clarify version docs by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/955
-- Fixed: improve build time of navigation panel by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/956
 - Deleted: unused script directory by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/937
 
 ## Pre-release v0.4.0.rc1
@@ -286,18 +327,18 @@ as well as DX improvements like better regression tests, CI, and tooling. If you
 
 ### Bug fixes
 - Horizontal Alignment #103 @pmarsceill
-- Code snippet in headers do not inherit font size #140 @pmarsceill 
+- Code snippet in headers do not inherit font size #140 @pmarsceill
 - Fix duplicated title and description tags #294 @iefserge
 - Update nav.html for handling nav_exclude #282 @blawqchain
 - Fix duplicate entries in nav.html and default.html #239 @KasparEtter
-- Don't show pages with no title (e.g. redirects in nav) https://github.com/pmarsceill/just-the-docs/pull/295/commits/672de29f2e332a9350af7237e4fb6693c848989e @SgtSilvio 
+- Don't show pages with no title (e.g. redirects in nav) https://github.com/pmarsceill/just-the-docs/pull/295/commits/672de29f2e332a9350af7237e4fb6693c848989e @SgtSilvio
 - [SEARCH RAKE] Fix search generator #319 @RoiArthurB
 
 ### Enhancements
-- Improvement/custom themes #186 @SgtSilvio 
+- Improvement/custom themes #186 @SgtSilvio
 - feat: adds "edit this page" and "page last modified" to footer #217 @malsf21
 - feat: adds option to open aux links in new tab #229 @malsf21
-- Default nav order #236 @pdmosses 
+- Default nav order #236 @pdmosses
 - Enable IP anonymization in Google Analytics (GDPR) #250 @r-brown
 
 closes #240 #308 #266 #140 #103
@@ -320,7 +361,7 @@ closes #240 #308 #266 #140 #103
 - Update CI to test multiple versions of Jekyll
 - Update CI to check the rake command that builds the search file
 
-fixes #291 #256 #293 #177 
+fixes #291 #256 #293 #177
 
 ## v0.2.7
 
@@ -341,42 +382,42 @@ fixes #291 #256 #293 #177
 - Update docs to suggest using index.md as section page filename
 - Bump @primer/css from 12.6.0 to 12.7.0
 - Bump mixin-deep from 1.3.1 to 1.3.2
-- Bump stylelint-config-primer from 7.0.1 to 8.0.0 
+- Bump stylelint-config-primer from 7.0.1 to 8.0.0
 
 ### PR included
 - #98 by @stefanoborini Introduces the possibility for a summary in the table of contents
 - #141 by @ghabs Fix trailing comma bug in search-data.json
-- #153 by @jacobherrington Change button copy on theme preview 
+- #153 by @jacobherrington Change button copy on theme preview
 - #181 by @m3nu Recommend using index.md as parent page for sections
-- #183 by @SgtSilvio Improve heading anchors 
+- #183 by @SgtSilvio Improve heading anchors
 - #187 by @SgtSilvio Improvement/site logo
 - #200 Bump mixin-deep from 1.3.1 to 1.3.2
 - #203 by @pdmosses Search config
-- #205 by @pdmosses Fix blank_lines var to blanklines in config.yml 
+- #205 by @pdmosses Fix blank_lines var to blanklines in config.yml
 - #206 by @iamcarrico Allow for custom overrides by the user
 - #208 Bump @primer/css from 12.6.0 to 12.7.0
 - #213 Bump mixin-deep from 1.3.1 to 1.3.2
-- #214 Bump stylelint-config-primer from 7.0.1 to 8.0.0 
+- #214 Bump stylelint-config-primer from 7.0.1 to 8.0.0
 - #215 Bump @primer/css from 12.6.0 to 12.7.0
 
 ## v0.2.6
 
 ### Bugs fixed
-- Google Analytics tag has been updated #162 
+- Google Analytics tag has been updated #162
 - ~BaseURL has been modified #109~ Reverted -- seems the existing implementation worked
-- Titles can now wrap fixes #106 
+- Titles can now wrap fixes #106
 
 ### Enhancements
 - Search now displays content preview #135
-- Custom footer content added #179 
+- Custom footer content added #179
 - Now using GitHub Actions for CI #170
 
 ### Maintenance
-- lunrjs upgraded #135 
-- Nav generation is optimized #159 
-- Stylelint upgrade #143 
-- Stylelint config primer upgrade #149 
-- Lodash upgrade #160 
+- lunrjs upgraded #135
+- Nav generation is optimized #159
+- Stylelint upgrade #143
+- Stylelint config primer upgrade #149
+- Lodash upgrade #160
 
 ### PR included
 ~#109 by @daviddarnes - Fix baseurl link~ Reverted
@@ -390,7 +431,7 @@ fixes #291 #256 #293 #177
 
 ### Bugs fixed
 
-- Duplicate title tag when Jekyll SEO Plugin gem is used #125 #126 
+- Duplicate title tag when Jekyll SEO Plugin gem is used #125 #126
 
 ### Enhancements
 
@@ -398,7 +439,7 @@ fixes #291 #256 #293 #177
 
 ### Maintenance
 - Bump stylelint-config-primer from 6.0.0 to 7.0.0  #123
-- Bump @primer/css from 12.2.3 to 12.3.1 #129 
+- Bump @primer/css from 12.2.3 to 12.3.1 #129
 - Add workflow to publish to GPR
 - Fix workflow to publish to Ruby Gems
 
@@ -407,7 +448,7 @@ fixes #291 #256 #293 #177
 ### Bugs
 
 - #102 Remove unnecessary console.log() @JoeNyland
-- #97 Import custom Sass variable overrides before default variables are defined @montchr and @ptvandi 
+- #97 Import custom Sass variable overrides before default variables are defined @montchr and @ptvandi
 
 ### Additions
 - #117 Add links to docs for setting up GH pages locally @gnarea
@@ -416,14 +457,14 @@ fixes #291 #256 #293 #177
 ## v0.2.3
 
 ### Enhancements
-- Adds ability to use Google Analytics tracking by @pmarsceill 
+- Adds ability to use Google Analytics tracking by @pmarsceill
 
 ### Bug fixes
 - Fixes 404 error for "/assets/js//search-data.json" by @stephenedmondson
 - Fixes #80 Single quotes in the string were unescaped and ruby attempted variable substitution of amp within it (which failed) by @novelistparty
-- Fixes bug that would only show 2 or more search results (not one) by @ilivewithian 
-- Fixes a typo on the layout example by @woernfl 
-- Fixes #78 Page scroll position too far down on load by @pmarsceill 
+- Fixes bug that would only show 2 or more search results (not one) by @ilivewithian
+- Fixes a typo on the layout example by @woernfl
+- Fixes #78 Page scroll position too far down on load by @pmarsceill
 - Fixds ability to nest ul in ol without breaking style or counters
 
 ### Dependency updates
@@ -431,16 +472,16 @@ fixes #291 #256 #293 #177
 
 ## v0.2.2
 
-- Bumps stylelint-config-primer to 3.0.1 #44 
-- Bumps bundler req to 2.0.1 #61 
+- Bumps stylelint-config-primer to 3.0.1 #44
+- Bumps bundler req to 2.0.1 #61
 - Adds custom 404 page
-- Excludes package-lock.json from jekyll build #47 
-- Fixes keyboard scrolling / focus #48 
+- Excludes package-lock.json from jekyll build #47
+- Fixes keyboard scrolling / focus #48
 - Adds ARIA roles to navigation elements
 - Adds support for optional page description metadata (if present in yaml front matter)
-- Addresses some issues with search in #46 
-- Option to hide TOC on parent pages if turned off in page's YAML front matter #30 
-- Option to suppress an item from being indexed by search if present in page's YAML front matter #32 
+- Addresses some issues with search in #46
+- Option to hide TOC on parent pages if turned off in page's YAML front matter #30
+- Option to suppress an item from being indexed by search if present in page's YAML front matter #32
 
 ## v0.2.1
 
@@ -451,7 +492,7 @@ This update fixes security vulnerablities in the lodash sub-dependency and bumps
 Adds:
 - Dark mode via `color_scheme` parameter
 - Ability to exclude a page from the main nav with `nav_exclude` parameter closes #21
-- Ability for create children of children pages (3 nav levels) closes #25 
+- Ability for create children of children pages (3 nav levels) closes #25
 
 Changes:
 - Permalink structure for tiered navigation has been updated
@@ -461,14 +502,14 @@ Changes:
 
 ### Added
 
-- Support for task list styles #19 
+- Support for task list styles #19
 - Configuration docs
 - Configuration option to enable / disable search
 - Normalize.scss dependency pulled into project #16 #
 
 ### Fixed
 
-- Layout bug in navigation #17 
+- Layout bug in navigation #17
 
 ## v0.1.5
 
