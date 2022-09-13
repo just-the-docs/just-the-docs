@@ -19,11 +19,11 @@ Hey there! This is likely the last pre-release before releasing `v0.4.0`, which 
 - improved accessibility features led by @JPrevost
 - more docs!
 
-The intention of this release candidate is to gather even more feedback on a potential `v0.4.0`. As it stands, we have not encountered any breaking changes with early adopters of `v0.4.0.rc1`. If you encounter any - for either of our prereleases - please let us know!
+The intention of this release candidate is to gather even more feedback on a potential `v0.4.0`. As it stands, we have not encountered any breaking changes with early adopters of `v0.4.0.rc1`. If you encounter any - for either of our pre-releases - please let us know!
 
 ### Trying out pre-release `v0.4.0.rc2`
 
-Simlar to the prior release, `v0.4.0.rc2` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc2` - if your version of Just the Docs is not pinned, you'll see the changes the next time you run `bundle install` (if you don't have a `Gemfile.lock`) or `bundle update just-the-docs` (if you do).
+Simlar to the prior release, `v0.4.0.rc2` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc2`.
 
 To use this RC explicitly as a remote theme:
 
@@ -91,7 +91,7 @@ We want your feedback! Are these changes helpful? Are our docs easy to understan
 
 ### Trying out pre-release `v0.4.0.rc1`
 
-Due to the massive scope of these changes, we're making `v0.4.0.rc1` avaialble as a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc1` - if your version of Just the Docs is not pinned, you'll see the changes the next time you run `bundle install` (if you don't have a `Gemfile.lock`) or `bundle update just-the-docs` (if you do).
+Due to the massive scope of these changes, we're making `v0.4.0.rc1` avaialble as a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc1`.
 
 To use this RC explicitly as a remote theme:
 
