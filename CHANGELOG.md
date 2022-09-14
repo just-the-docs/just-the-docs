@@ -10,6 +10,8 @@ All notable changes to this project are documented in this file.
 
 (Changes to `main` that are *not* in the latest pre-release will be listed here.)
 
+- Fixed: spacing issue when search is disabled by @henryiii in https://github.com/just-the-docs/just-the-docs/pull/960
+
 ## Pre-release v0.4.0.rc2
 
 Hey there! This is likely the last pre-release before releasing `v0.4.0`, which we plan on doing soon (i.e. before the end of the month) - very exciting! Some new additions to highlight:
