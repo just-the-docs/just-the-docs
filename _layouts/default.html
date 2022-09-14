@@ -112,6 +112,8 @@ layout: table_wrappers
           </div>
           <div id="search-results" class="search-results"></div>
         </div>
+      {% else %}
+        <div></div>
       {% endif %}
       {% include header_custom.html %}
       {% if site.aux_links %}
