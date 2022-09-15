@@ -12,6 +12,7 @@ All notable changes to this project are documented in this file.
 
 - Fixed: spacing issue when search is disabled by @henryiii in https://github.com/just-the-docs/just-the-docs/pull/960
 - Fixed: active grandchild link class by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/962
+- Fixed: HTML validation issues (W3C validator) by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/964
 
 ## Pre-release v0.4.0.rc2
 
