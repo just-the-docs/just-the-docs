@@ -11,6 +11,7 @@ All notable changes to this project are documented in this file.
 (Changes to `main` that are *not* in the latest pre-release will be listed here.)
 
 - Fixed: spacing issue when search is disabled by @henryiii in https://github.com/just-the-docs/just-the-docs/pull/960
+- Fixed: active grandchild link class by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/962
 
 ## Pre-release v0.4.0.rc2
 
