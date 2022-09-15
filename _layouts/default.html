@@ -49,7 +49,7 @@ layout: table_wrappers
         <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
       </a>
     </div>
-    <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav">
+    <nav aria-label="Main" id="site-nav" class="site-nav">
       {% assign pages_top_size = site.html_pages
           | where_exp:"item", "item.title != nil"
           | where_exp:"item", "item.parent == nil"
@@ -217,12 +217,13 @@ layout: table_wrappers
       <div class="search-overlay"></div>
     {% endif %}
   </div>
-</body>
-{% if site.mermaid %}
+
+  {% if site.mermaid %}
   <script>
     var config = {% include mermaid_config.js %};
     mermaid.initialize(config);
     window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
   </script>
-{% endif %}
+  {% endif %}
+</body>
 </html>
