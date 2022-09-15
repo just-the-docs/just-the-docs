@@ -111,7 +111,7 @@
                 {%- for grandchild in grandchildren_list -%}
                   {%- unless grandchild.nav_exclude -%}
                   <li class="nav-list-item {% if page.url == grandchild.url %} active{% endif %}">
-                    <a href="{{ grandchild.url | relative_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grandchild.title }}</a>
+                    <a href="{{ grandchild.url | relative_url }}" class="nav-list-link{% if page.url == grandchild.url %} active{% endif %}">{{ grandchild.title }}</a>
                   </li>
                   {%- endunless -%}
                 {%- endfor -%}
