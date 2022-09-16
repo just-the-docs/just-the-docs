@@ -107,3 +107,14 @@ hr {
   background-color: $border-color;
   border: 0;
 }
+
+// adds a GitHub-style sidebar to blockquotes
+blockquote {
+  margin: 10px 0;
+
+  // resets user-agent stylesheets for blockquotes
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  padding-left: 15px;
+  border-left: 3px solid $border-color;
+}
