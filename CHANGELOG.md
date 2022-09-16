@@ -10,6 +10,7 @@ All notable changes to this project are documented in this file.
 
 (Changes to `main` that are *not* in the latest pre-release will be listed here.)
 
+- Added: styling for `<blockquote>` by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/965
 - Fixed: spacing issue when search is disabled by @henryiii in https://github.com/just-the-docs/just-the-docs/pull/960
 - Fixed: active grandchild link class by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/962
 - Fixed: HTML validation issues (W3C validator) by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/964
