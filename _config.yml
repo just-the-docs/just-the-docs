@@ -125,7 +125,7 @@ callouts:
     color: red
 
 # Dark color scheme; activates auto-switching if not nil. Supports "dark" or a custom color scheme
-dark_color_scheme: nil
+dark_color_scheme: dark
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
