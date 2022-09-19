@@ -149,7 +149,7 @@ To change the default TOC heading to "Contents", create `_includes/toc_heading_c
 <h2 class="text-delta">Contents</h2>
 ```
 
-The (optional) `text-delta` class capitalizes the text, so the heading appears as **Contents**{:.text-delta} .
+The (optional) `text-delta` class makes the heading appear as **Contents**{:.text-delta} .
 
 ### Custom Footer
 
