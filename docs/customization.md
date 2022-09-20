@@ -129,9 +129,9 @@ For example, if you'd like to add your own styles for printing a page, you could
 
 ## Override includes
 
-You can customize the theme by overriding any of the custom [Jekyll includes](https://jekyllrb.com/docs/includes/) files that it provides.
+The site can be modified by overriding any of the custom [Jekyll includes](https://jekyllrb.com/docs/includes/) provided by default in the theme.
 
-To do this, create an `_includes` directory and make a copy of the specific file you wish to modify. The content in this file will override the theme defaults. You can learn more about this process in the Jekyll docs for [Overriding theme defaults](https://jekyllrb.com/docs/themes/#overriding-theme-defaults).
+To do this, create an `_includes` directory and make a copy of the specific file you wish to modify. Any content added to this file will override the theme defaults. You can learn more about this process in the Jekyll docs for [Overriding theme defaults](https://jekyllrb.com/docs/themes/#overriding-theme-defaults).
 
 Just the Docs provides the following custom includes files:
 
