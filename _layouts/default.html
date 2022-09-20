@@ -159,7 +159,7 @@ layout: table_wrappers
 
         {% if page.has_children == true and page.has_toc != false %}
           <hr>
-          {% include toc_heading_custom.html %}
+          <h2 class="text-delta">Table of contents</h2>
           <ul>
             {% for child in toc_list %}
               <li>
