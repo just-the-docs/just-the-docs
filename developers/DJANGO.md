@@ -140,6 +140,21 @@ def my_function():
 
 ### Common Gotchas
 
+**Model fields that are JSONFields with default values**
+
+When making a JSONField model fields with default values, do not return a plain list (`[]`) or dict (`{}`), because this will cause that instance of list/dict to be shared across all model instances. Instead, return `list()` or `dict()`.
+
+```
+def get_default_json_list():
+    return []
+workflows = models.JSONField(default=get_default_json_list)  # bad
+
+
+def get_default_json_list():
+    return list()
+workflows = models.JSONField(default=get_default_json_list)  # correct
+```
+
 **Concurrency safety**
 
 When saving a model, make sure you load a fresh copy of the object right before saving to avoid a race condition. This will avoid very difficult-to-track bugs that are caused when another function/person modifies the object before your function saves the (now stale) object and overwrites their changes.
