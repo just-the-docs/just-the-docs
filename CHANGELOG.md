@@ -7,7 +7,8 @@ layout: default
 
 All notable changes to this project are documented in this file.
 
-*Note:* The project underwent a major maintenance shift in March 2022.
+{: .highlight }
+The project underwent a major maintenance shift in March 2022.
 
 ## HEAD
 
