@@ -88,6 +88,25 @@ Lines of up to 119 chars are ok, instead of the default 79 chars. The reason for
 
 ## Common Gotchas
 
+**Using lists and dicts in function parameters with default arguments**
+
+When providing lists or dicts as default arguments in functions, you must not use an instantiated list/dict because _this causes that exact object to be shared each time you call the function_, instead of recreating a new copy of the list/dict on each function call. Instead, use `None` and instantiate the object inside the function.
+```
+def my_function(objects=[]):
+    # bad
+    ...
+
+
+def my_function(objects=None):
+    # correct
+    if not objects:
+      objects = []    
+    ...
+```
+
+[Further reading](https://docs.python-guide.org/writing/gotchas/#mutable-default-arguments).
+
+
 **Python Requests**
 
 - By default, [Python Requests does not provide the `timeout` parameter](https://docs.python-requests.org/en/latest/user/advanced/#timeouts), which can cause timeouts in HTTP requests to bring down all Django workers in your app. It is recommended to always provide the `timeout` parameter when using Python Requests. A reasonable timeout time is 10 seconds, or longer (e.g. 30 seconds or more) if you're expecting a long-running request.
