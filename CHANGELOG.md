@@ -18,16 +18,20 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 Changes to `main` that are *not* in the latest pre-release:
 
 - Added: styling for `<blockquote>` by [@mattxwang] in [#965]
+- Added: custom include for TOC headers by [@pdmosses] in [#971]
 - Fixed: spacing issue when search is disabled by [@henryiii] in [#960]
 - Fixed: active grandchild link class by [@pdmosses] in [#962]
 - Fixed: HTML validation issues (W3C validator) by [@mattxwang] in [#964]
 - Fixed: link styling now uses `text-decoration` values by [@mattxwang] in [#967]
+- Fixed: CHANGELOG urls are now clickable by [@pdmosses] in [#977]
 
 [#965]: https://github.com/just-the-docs/just-the-docs/pull/965
 [#960]: https://github.com/just-the-docs/just-the-docs/pull/960
 [#962]: https://github.com/just-the-docs/just-the-docs/pull/962
 [#964]: https://github.com/just-the-docs/just-the-docs/pull/964
 [#967]: https://github.com/just-the-docs/just-the-docs/pull/967
+[#977]: https://github.com/just-the-docs/just-the-docs/pull/977
+[#971]: https://github.com/just-the-docs/just-the-docs/pull/971
 
 [@henryiii]: https://github.com/henryiii
 
