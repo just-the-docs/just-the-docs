@@ -1,28 +1,46 @@
+---
+title: CHANGELOG
+layout: default
+---
+
 # CHANGELOG
 
 All notable changes to this project are documented in this file.
 
-*Note:* The project underwent a major maintenance shift in March 2022.
+{: .highlight }
+The project underwent a major maintenance shift in March 2022.
 
 ## HEAD
 
-*Note:* This website is built from the `HEAD` of the `main` branch of the theme repository.
+{: .note }
+This website is built from the `HEAD` of the `main` branch of the theme repository.
 
-(Changes to `main` that are *not* in the latest pre-release will be listed here.)
+Changes to `main` that are *not* in the latest pre-release:
 
-- Added: styling for `<blockquote>` by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/965
-- Fixed: spacing issue when search is disabled by @henryiii in https://github.com/just-the-docs/just-the-docs/pull/960
-- Fixed: active grandchild link class by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/962
-- Fixed: HTML validation issues (W3C validator) by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/964
-- Fixed: link styling now uses `text-decoration` values by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/967
+- Added: styling for `<blockquote>` by [@mattxwang] in [#965]
+- Fixed: spacing issue when search is disabled by [@henryiii] in [#960]
+- Fixed: active grandchild link class by [@pdmosses] in [#962]
+- Fixed: HTML validation issues (W3C validator) by [@mattxwang] in [#964]
+- Fixed: link styling now uses `text-decoration` values by [@mattxwang] in [#967]
+
+[#965]: https://github.com/just-the-docs/just-the-docs/pull/965
+[#960]: https://github.com/just-the-docs/just-the-docs/pull/960
+[#962]: https://github.com/just-the-docs/just-the-docs/pull/962
+[#964]: https://github.com/just-the-docs/just-the-docs/pull/964
+[#967]: https://github.com/just-the-docs/just-the-docs/pull/967
+
+[@henryiii]: https://github.com/henryiii
 
 ## Pre-release v0.4.0.rc2
 
+{: .warning }
+This website includes docs for some new features that are not available in `v0.4.0.rc1` and `v0.3.3`!
+
 Hey there! This is likely the last pre-release before releasing `v0.4.0`, which we plan on doing soon (i.e. before the end of the month) - very exciting! Some new additions to highlight:
 
-- significant improvement on build time of navigation panel by @pdmosses
+- significant improvement on build time of navigation panel by [@pdmosses]
   - this is big: for a community member with over 300 pages, we shortened the build time from 3 minutes to 30 seconds!
-- improved accessibility features led by @JPrevost
+- improved accessibility features led by [@JPrevost]
 - more docs!
 
 The intention of this release candidate is to gather even more feedback on a potential `v0.4.0`. As it stands, we have not encountered any breaking changes with early adopters of `v0.4.0.rc1`. If you encounter any - for either of our pre-releases - please let us know!
@@ -56,27 +74,47 @@ remote_theme: just-the-docs/just-the-docs@v0.3.3
 
 ### Features
 
-- Added: accessible titles to nested page nav toggle by @JPrevost in https://github.com/just-the-docs/just-the-docs/pull/950
-- Added: better title styling for AsciiDoc examples by @alyssais in https://github.com/just-the-docs/just-the-docs/pull/944
-- Added: docs for custom search placeholder by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/939
-- Added: provide ability to skip to main content by @JPrevost in https://github.com/just-the-docs/just-the-docs/pull/949
-- Fixed: exclude `vendor/` in Jekyll config by @manuelhenke in https://github.com/just-the-docs/just-the-docs/pull/941
-- Fixed: improve build time of navigation panel by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/956
+- Added: accessible titles to nested page nav toggle by [@JPrevost] in [#950]
+- Added: better title styling for AsciiDoc examples by [@alyssais] in [#944]
+- Added: docs for custom search placeholder by [@mattxwang] in [#939]
+- Added: provide ability to skip to main content by [@JPrevost] in [#949]
+- Fixed: exclude `vendor/` in Jekyll config by [@manuelhenke] in [#941]
+- Fixed: improve build time of navigation panel by [@pdmosses] in [#956]
+
+[#950]: https://github.com/just-the-docs/just-the-docs/pull/950
+[#944]: https://github.com/just-the-docs/just-the-docs/pull/944
+[#939]: https://github.com/just-the-docs/just-the-docs/pull/939
+[#949]: https://github.com/just-the-docs/just-the-docs/pull/949
+[#941]: https://github.com/just-the-docs/just-the-docs/pull/941
+[#956]: https://github.com/just-the-docs/just-the-docs/pull/956
+
+[@alyssais]: https://github.com/alyssais
 
 ### Documentation and Maintenance
 
-- Added: docs load mermaid.js by default by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/935
-- Fixed: table of contents on search docs by @robinpokorny in https://github.com/just-the-docs/just-the-docs/pull/940
-- Fixed: broken docs link (custom footer) by @olgarithms in https://github.com/just-the-docs/just-the-docs/pull/951
-- Fixed: clarify version docs by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/955
-- Deleted: unused script directory by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/937
+- Added: docs load mermaid.js by default by [@mattxwang] in [#935]
+- Fixed: table of contents on search docs by [@robinpokorny] in [#940]
+- Fixed: broken docs link (custom footer) by [@olgarithms] in [#951]
+- Fixed: clarify version docs by [@pdmosses] in [#955]
+- Deleted: unused script directory by [@mattxwang] in [#937]
+
+[#935]: https://github.com/just-the-docs/just-the-docs/pull/935
+[#940]: https://github.com/just-the-docs/just-the-docs/pull/940
+[#951]: https://github.com/just-the-docs/just-the-docs/pull/951
+[#955]: https://github.com/just-the-docs/just-the-docs/pull/955
+[#937]: https://github.com/just-the-docs/just-the-docs/pull/937
 
 ### New Contributors
 
-* @robinpokorny made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/940
-* @olgarithms made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/951
-* @manuelhenke made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/941
-* @JPrevost made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/950
+* [@robinpokorny] made their first contribution in [#940]
+* [@olgarithms] made their first contribution in [#951]
+* [@manuelhenke] made their first contribution in [#941]
+* [@JPrevost] made their first contribution in [#950]
+
+[@robinpokorny]: https://github.com/robinpokorny
+[@olgarithms]: https://github.com/olgarithms
+[@manuelhenke]: https://github.com/manuelhenke
+[@JPrevost]: https://github.com/JPrevost
 
 ## Pre-release v0.4.0.rc1
 
@@ -132,7 +170,13 @@ remote_theme: just-the-docs/just-the-docs@v0.3.3
 
 Internally, our maintainer team has expanded: [Patrick Marsceill](https://github.com/pmarsceill), the original maintainer, has stepped down from an active role after almost 4 years! We're very thankful for the work that he's done to create and maintain one of the most popular Jekyll themes. Please join us in giving him thanks!
 
-The new core team currently consists of @mattxwang, @pdmosses, @skullface, @dougaitken, and @max06. Over the past six months, we've been triaging and merging in PRs, as well as contributing our own fixes. We'll continue to address open issues, merge in PRs from the community, and plan out the future of Just the Docs. If you'd like to contribute, now is a great time!
+The new core team currently consists of [@mattxwang], [@pdmosses], [@skullface], [@dougaitken], and [@max06]. Over the past six months, we've been triaging and merging in PRs, as well as contributing our own fixes. We'll continue to address open issues, merge in PRs from the community, and plan out the future of Just the Docs. If you'd like to contribute, now is a great time!
+
+[@mattxwang]: https://github.com/mattxwang
+[@pdmosses]: https://github.com/pdmosses
+[@skullface]: https://github.com/skullface
+[@dougaitken]: https://github.com/dougaitken
+[@max06]: https://github.com/max06
 
 ### Roadmap
 
@@ -141,13 +185,20 @@ In the short-term, we're committed to tidying up everything for a `v0.4.0` relea
 We're also scoping out medium and long-term projects, and want to keep you in the loop. These include:
 
 - upgrading to Jekyll 4, and stopping support for Jekyll 3
-- versioned docs - issue [#728](https://github.com/just-the-docs/just-the-docs/issues/728)
-- improved accessibility - issues [#566](https://github.com/just-the-docs/just-the-docs/issues/566), [#870](https://github.com/just-the-docs/just-the-docs/issues/870)
-- internationalization (i18n) - issue [#59](https://github.com/just-the-docs/just-the-docs/issues/59)
-- recursive/multi-level navigation - PR [#462](https://github.com/just-the-docs/just-the-docs/pull/462)
-- toggleable dark mode - issue [#234](https://github.com/just-the-docs/just-the-docs/issues/234)
+- versioned docs - issue [#728]
+- improved accessibility - issues [#566], [#870]
+- internationalization (i18n) - issue [#59]
+- recursive/multi-level navigation - PR [#462]
+- toggleable dark mode - issue [#234]
 
 as well as DX improvements like better regression tests, CI, and tooling. If you're interested in any of these, please join us [on GitHub](https://github.com/just-the-docs/just-the-docs) - any contribution (raising an issue, writing docs, or submitting a PR) is welcome!
+
+[#728]: https://github.com/just-the-docs/just-the-docs/issues/728
+[#566]: https://github.com/just-the-docs/just-the-docs/issues/566
+[#870]: https://github.com/just-the-docs/just-the-docs/issues/870
+[#59]: https://github.com/just-the-docs/just-the-docs/issues/59
+[#462]: https://github.com/just-the-docs/just-the-docs/pull/462
+[#234]: https://github.com/just-the-docs/just-the-docs/issues/234
 
 ### Features
 
