@@ -19,7 +19,29 @@ baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
 url: "https://just-the-docs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
-exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile", "vendor"]
+
+exclude:
+ # from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+ # specific to the theme website:
+   - bin/
+   - lib/
+   - "*.gemspec"
+   - "*.gem"
+   - LICENSE.txt
+   - package.json
+   - package-lock.json
+   - Rakefile
+   - README.md
 
 # Set a path/url to a logo that will be displayed instead of the title
 #logo: "/assets/images/just-the-docs.png"
