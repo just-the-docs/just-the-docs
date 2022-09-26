@@ -18,7 +18,7 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 Changes to `main` that are *not* in the latest pre-release:
 
 - Added: styling for `<blockquote>` by [@mattxwang] in [#965]
-- Addded: custom include for TOC heading by [@pdmosses] in [#980]
+- Added: custom include for TOC heading by [@pdmosses] in [#980]
 - Fixed: spacing issue when search is disabled by [@henryiii] in [#960]
 - Fixed: active grandchild link class by [@pdmosses] in [#962]
 - Fixed: HTML validation issues (W3C validator) by [@mattxwang] in [#964]
