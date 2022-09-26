@@ -23,6 +23,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: active grandchild link class by [@pdmosses] in [#962]
 - Fixed: HTML validation issues (W3C validator) by [@mattxwang] in [#964]
 - Fixed: link styling now uses `text-decoration` values by [@mattxwang] in [#967]
+- Fixed: cleaning up Jekyll excludes by [@pdmosses] in [#985]
 
 [#965]: https://github.com/just-the-docs/just-the-docs/pull/965
 [#960]: https://github.com/just-the-docs/just-the-docs/pull/960
@@ -30,6 +31,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#964]: https://github.com/just-the-docs/just-the-docs/pull/964
 [#967]: https://github.com/just-the-docs/just-the-docs/pull/967
 [#980]: https://github.com/just-the-docs/just-the-docs/pull/980
+[#985]: https://github.com/just-the-docs/just-the-docs/pull/985
 
 [@henryiii]: https://github.com/henryiii
 
