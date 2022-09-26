@@ -168,11 +168,12 @@ gem "just-the-docs", "0.3.3"
 remote_theme: just-the-docs/just-the-docs@v0.3.3
 ```
 
-**Warning**: Use of branches for closed PRs (e.g., https://github.com/just-the-docs/just-the-docs/pull/466, https://github.com/just-the-docs/just-the-docs/pull/578) is now deprecated, as those branches have been (directly or indirectly) merged, and they will be deleted after the release of `v0.4.0.rc1`.
+{: .warning }
+Use of branches for closed PRs (e.g., [#466], [#578]) is now deprecated, as those branches have been (directly or indirectly) merged, and they may be deleted after the pre-release of `v0.4.0.rc1`.
 
 ### Maintenance
 
-Internally, our maintainer team has expanded: [Patrick Marsceill](https://github.com/pmarsceill), the original maintainer, has stepped down from an active role after almost 4 years! We're very thankful for the work that he's done to create and maintain one of the most popular Jekyll themes. Please join us in giving him thanks!
+Internally, our maintainer team has expanded: [Patrick Marsceill][@pmarsceill], the original maintainer, has stepped down from an active role after almost 4 years! We're very thankful for the work that he's done to create and maintain one of the most popular Jekyll themes. Please join us in giving him thanks!
 
 The new core team currently consists of [@mattxwang], [@pdmosses], [@skullface], [@dougaitken], and [@max06]. Over the past six months, we've been triaging and merging in PRs, as well as contributing our own fixes. We'll continue to address open issues, merge in PRs from the community, and plan out the future of Just the Docs. If you'd like to contribute, now is a great time!
 
@@ -206,103 +207,198 @@ as well as DX improvements like better regression tests, CI, and tooling. If you
 
 ### Features
 
-* Added: Combination by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/578
-  - Added: dark highlighting in https://github.com/just-the-docs/just-the-docs/pull/463
-  - Added: pages and collections in https://github.com/just-the-docs/just-the-docs/pull/448
-  - Added: callouts in https://github.com/just-the-docs/just-the-docs/pull/466
-  - Fixed: breadcrumb behaviour … by @AdityaTiwari2102 in https://github.com/just-the-docs/just-the-docs/pull/477
-  - Fixed: prevent rake command corrupting search data in https://github.com/just-the-docs/just-the-docs/pull/495 (also listed below)
-  - Fixed: nested lists in https://github.com/just-the-docs/just-the-docs/pull/496
-  - Fixed: set color for search input in https://github.com/just-the-docs/just-the-docs/pull/498 (also listed below)
+* Added: Combination by [@pdmosses] in [#578]
+  - Added: dark highlighting in [#463]
+  - Added: pages and collections in [#448]
+  - Added: callouts in [#466]
+  - Fixed: breadcrumb behaviour … by [@AdityaTiwari2102] in [#477]
+  - Fixed: prevent rake command corrupting search data in [#495] (also listed below)
+  - Fixed: nested lists in [#496]
+  - Fixed: set color for search input in [#498] (also listed below)
   - Fixed: sites with no child pages (no PR)
-  - Fixed: TOC/breadcrumbs for multiple collections in https://github.com/just-the-docs/just-the-docs/pull/494
+  - Fixed: TOC/breadcrumbs for multiple collections in [#494]
   - Added: collection configuration option `nav_fold` (no PR)
   - Fixed: indentation and color for folded collection navigation (no PR)
-  - Fixed: scroll navigation to show the link to the current page in https://github.com/just-the-docs/just-the-docs/pull/639
-  - Fixed: Replace all uses of `absolute_url` by `relative_url`, by @svrooij in https://github.com/just-the-docs/just-the-docs/pull/544
-* Added: custom favicon `_includes` by @burner1024 in https://github.com/just-the-docs/just-the-docs/pull/364
-* Added: set color for search input by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/498
-* Added: search placeholder configuration by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/613
-* Added: 'child_nav_order' front matter to be able to sort navigation pages in reverse by @jmertic in https://github.com/just-the-docs/just-the-docs/pull/726
-* Added: `nav_footer_custom` include by @nathanjessen in https://github.com/just-the-docs/just-the-docs/pull/474
-* Added: style fixes for jekyll-asciidoc by @alyssais in https://github.com/just-the-docs/just-the-docs/pull/829
-* Added: mermaid.js support by @nascosto in https://github.com/just-the-docs/just-the-docs/pull/857
-* Added: support for external navigation links by @SPGoding in https://github.com/just-the-docs/just-the-docs/pull/876
-* Added: refactor `mermaid` config to use `mermaid_config.js` include, only require `mermaid.version` in `_config.yml` by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/909
-* Fixed: prepend `site.collections_dir` if exists by @alexsegura in https://github.com/just-the-docs/just-the-docs/pull/519
-* Fixed: nested task lists (#517) by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/855
-* Fixed: suppress Liquid processing in CSS comments by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/686
-* Fixed: prevent rake command from corrupting search data by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/495
-* Fixed: anchor heading links should be visible on focus by @jacobhq in https://github.com/just-the-docs/just-the-docs/pull/846
-* Fixed: add `overflow-x: auto` to `figure.highlight` by @iridazzle in https://github.com/just-the-docs/just-the-docs/pull/727
-* Fixed: add `overflow-wrap: word-break` to `body` by @iridazzle in https://github.com/just-the-docs/just-the-docs/pull/889
-* Fixed: vertical alignment for consecutive labels by @Eisverygoodletter in https://github.com/just-the-docs/just-the-docs/pull/893
-* Fixed: allow links to wrap by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/905
-* Fixed: nav scroll feature and absolute/relative URLs by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/898
+  - Fixed: scroll navigation to show the link to the current page in [#639]
+  - Fixed: Replace all uses of `absolute_url` by `relative_url`, by [@svrooij] in [#544]
+* Added: custom favicon `_includes` by [@burner1024] in [#364]
+* Added: set color for search input by [@pdmosses] in [#498]
+* Added: search placeholder configuration by [@mattxwang] in [#613]
+* Added: 'child_nav_order' front matter to be able to sort navigation pages in reverse by [@jmertic] in [#726]
+* Added: `nav_footer_custom` include by [@nathanjessen] in [#474]
+* Added: style fixes for jekyll-asciidoc by [@alyssais] in [#829]
+* Added: mermaid.js support by [@nascosto] in [#857]
+* Added: support for external navigation links by [@SPGoding] in [#876]
+* Added: refactor `mermaid` config to use `mermaid_config.js` include, only require `mermaid.version` in `_config.yml` by [@mattxwang] in [#909]
+* Fixed: prepend `site.collections_dir` if exists by [@alexsegura] in [#519]
+* Fixed: nested task lists (#517) by [@pdmosses] in [#855]
+* Fixed: suppress Liquid processing in CSS comments by [@pdmosses] in [#686]
+* Fixed: prevent rake command from corrupting search data by [@pdmosses] in [#495]
+* Fixed: anchor heading links should be visible on focus by [@jacobhq] in [#846]
+* Fixed: add `overflow-x: auto` to `figure.highlight` by [@iridazzle] in [#727]
+* Fixed: add `overflow-wrap: word-break` to `body` by [@iridazzle] in [#889]
+* Fixed: vertical alignment for consecutive labels by [@Eisverygoodletter] in [#893]
+* Fixed: allow links to wrap by [@pdmosses] in [#905]
+* Fixed: nav scroll feature and absolute/relative URLs by [@pdmosses] in [#898]
+
+[#578]: https://github.com/just-the-docs/just-the-docs/pull/578
+[#463]: https://github.com/just-the-docs/just-the-docs/pull/463
+[#448]: https://github.com/just-the-docs/just-the-docs/pull/448
+[#466]: https://github.com/just-the-docs/just-the-docs/pull/466
+[#477]: https://github.com/just-the-docs/just-the-docs/pull/477
+[#495]: https://github.com/just-the-docs/just-the-docs/pull/495
+[#496]: https://github.com/just-the-docs/just-the-docs/pull/496
+[#498]: https://github.com/just-the-docs/just-the-docs/pull/498
+[#494]: https://github.com/just-the-docs/just-the-docs/pull/494
+[#639]: https://github.com/just-the-docs/just-the-docs/pull/639
+[#544]: https://github.com/just-the-docs/just-the-docs/pull/544
+[#364]: https://github.com/just-the-docs/just-the-docs/pull/364
+[#498]: https://github.com/just-the-docs/just-the-docs/pull/498
+[#613]: https://github.com/just-the-docs/just-the-docs/pull/613
+[#726]: https://github.com/just-the-docs/just-the-docs/pull/726
+[#474]: https://github.com/just-the-docs/just-the-docs/pull/474
+[#829]: https://github.com/just-the-docs/just-the-docs/pull/829
+[#857]: https://github.com/just-the-docs/just-the-docs/pull/857
+[#876]: https://github.com/just-the-docs/just-the-docs/pull/876
+[#909]: https://github.com/just-the-docs/just-the-docs/pull/909
+[#519]: https://github.com/just-the-docs/just-the-docs/pull/519
+[#855]: https://github.com/just-the-docs/just-the-docs/pull/855
+[#686]: https://github.com/just-the-docs/just-the-docs/pull/686
+[#495]: https://github.com/just-the-docs/just-the-docs/pull/495
+[#846]: https://github.com/just-the-docs/just-the-docs/pull/846
+[#727]: https://github.com/just-the-docs/just-the-docs/pull/727
+[#889]: https://github.com/just-the-docs/just-the-docs/pull/889
+[#893]: https://github.com/just-the-docs/just-the-docs/pull/893
+[#905]: https://github.com/just-the-docs/just-the-docs/pull/905
+[#898]: https://github.com/just-the-docs/just-the-docs/pull/898
 
 ### Documentation
 
-* Added: docs on how to break an `ol` by @pdmosses in https://github.com/just-the-docs/just-the-docs/pull/856
-* Added: docs for custom includes by @nathanjessen in https://github.com/just-the-docs/just-the-docs/pull/806
-* Added: document caveat about variable dependencies by @waldyrious in https://github.com/just-the-docs/just-the-docs/pull/555
-* Added: docs on how to use `custom_head` to add a custom favicon by @UnclassedPenguin in https://github.com/just-the-docs/just-the-docs/pull/814
-* Fixed: `ol` on `index.md` by @pmarsceill in https://github.com/just-the-docs/just-the-docs/pull/778
-* Fixed: image link in Markdown kitchen sink by @JeffGuKang in https://github.com/just-the-docs/just-the-docs/pull/221
-* Fixed: images in Markdown kitchen sink by @dougaitken in https://github.com/just-the-docs/just-the-docs/pull/782
-* Fixed: clearer label of link to Jekyll quickstart by @waldyrious in https://github.com/just-the-docs/just-the-docs/pull/549
-* Fixed: remove extra spaces in component docs by @MichelleBlanchette in https://github.com/just-the-docs/just-the-docs/pull/554
-* Fixed: double "your" typo in `index.md` by @sehilyi in https://github.com/just-the-docs/just-the-docs/pull/499
-* Fixed: "you" -> "your" typo in `index.md` by @nathanjessen in https://github.com/just-the-docs/just-the-docs/pull/473
-* Fixed: spacing in toc example by @henryiii in https://github.com/just-the-docs/just-the-docs/pull/835
-* Fixed: typo in `README` on `_config.yml` by @ivanskodje in https://github.com/just-the-docs/just-the-docs/pull/891
-* Fixed: missing code fence in navigation structure docs by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/906
+* Added: docs on how to break an `ol` by [@pdmosses] in [#856]
+* Added: docs for custom includes by [@nathanjessen] in [#806]
+* Added: document caveat about variable dependencies by [@waldyrious] in [#555]
+* Added: docs on how to use `custom_head` to add a custom favicon by [@UnclassedPenguin] in [#814]
+* Fixed: `ol` on `index.md` by [@pmarsceill] in [#778]
+* Fixed: image link in Markdown kitchen sink by [@JeffGuKang] in [#221]
+* Fixed: images in Markdown kitchen sink by [@dougaitken] in [#782]
+* Fixed: clearer label of link to Jekyll quickstart by [@waldyrious] in [#549]
+* Fixed: remove extra spaces in component docs by [@MichelleBlanchette] in [#554]
+* Fixed: double "your" typo in `index.md` by [@sehilyi] in [#499]
+* Fixed: "you" -> "your" typo in `index.md` by [@nathanjessen] in [#473]
+* Fixed: spacing in toc example by [@henryiii] in [#835]
+* Fixed: typo in `README` on `_config.yml` by [@ivanskodje] in [#891]
+* Fixed: missing code fence in navigation structure docs by [@mattxwang] in [#906]
+
+[#856]: https://github.com/just-the-docs/just-the-docs/pull/856
+[#806]: https://github.com/just-the-docs/just-the-docs/pull/806
+[#555]: https://github.com/just-the-docs/just-the-docs/pull/555
+[#814]: https://github.com/just-the-docs/just-the-docs/pull/814
+[#778]: https://github.com/just-the-docs/just-the-docs/pull/778
+[#221]: https://github.com/just-the-docs/just-the-docs/pull/221
+[#782]: https://github.com/just-the-docs/just-the-docs/pull/782
+[#549]: https://github.com/just-the-docs/just-the-docs/pull/549
+[#554]: https://github.com/just-the-docs/just-the-docs/pull/554
+[#499]: https://github.com/just-the-docs/just-the-docs/pull/499
+[#473]: https://github.com/just-the-docs/just-the-docs/pull/473
+[#835]: https://github.com/just-the-docs/just-the-docs/pull/835
+[#891]: https://github.com/just-the-docs/just-the-docs/pull/891
+[#906]: https://github.com/just-the-docs/just-the-docs/pull/906
 
 ### Maintenance
 
-* Added: VScode devcontainer by @max06 in https://github.com/just-the-docs/just-the-docs/pull/783
-* Added: `webrick` to `Gemfile` by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/799
-* Added: 'This site is powered by Netlify.' to the footer by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/797
-* Updated: new repo path by @pmarsceill in https://github.com/just-the-docs/just-the-docs/pull/775
-* Updated: rename `master` -> `main` by @pmarsceill in https://github.com/just-the-docs/just-the-docs/pull/776
-* Updated: README by @pmarsceill in https://github.com/just-the-docs/just-the-docs/pull/777
-* Updated: Code of Conduct to Contributor Covenant v2.1 by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/790
-* Updated: CI files, Ruby & Node Versions by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/820
-* Updated: Stylelint to v14, extend SCSS plugins, remove primer-* configs, resolve issues by @mattxwang in https://github.com/just-the-docs/just-the-docs/pull/821
+* Added: VScode devcontainer by [@max06] in [#783]
+* Added: `webrick` to `Gemfile` by [@mattxwang] in [#799]
+* Added: 'This site is powered by Netlify.' to the footer by [@mattxwang] in [#797]
+* Updated: new repo path by [@pmarsceill] in [#775]
+* Updated: rename `master` -> `main` by [@pmarsceill] in [#776]
+* Updated: README by [@pmarsceill] in [#777]
+* Updated: Code of Conduct to Contributor Covenant v2.1 by [@mattxwang] in [#790]
+* Updated: CI files, Ruby & Node Versions by [@mattxwang] in [#820]
+* Updated: Stylelint to v14, extend SCSS plugins, remove primer-* configs, resolve issues by [@mattxwang] in [#821]
+
+[#783]: https://github.com/just-the-docs/just-the-docs/pull/783
+[#799]: https://github.com/just-the-docs/just-the-docs/pull/799
+[#797]: https://github.com/just-the-docs/just-the-docs/pull/797
+[#775]: https://github.com/just-the-docs/just-the-docs/pull/775
+[#776]: https://github.com/just-the-docs/just-the-docs/pull/776
+[#777]: https://github.com/just-the-docs/just-the-docs/pull/777
+[#790]: https://github.com/just-the-docs/just-the-docs/pull/790
+[#820]: https://github.com/just-the-docs/just-the-docs/pull/820
+[#821]: https://github.com/just-the-docs/just-the-docs/pull/821
 
 ### Dependencies
-* Upgrade to GitHub-native Dependabot by @dependabot-preview in https://github.com/just-the-docs/just-the-docs/pull/627
-* [Security] Bump y18n from 3.2.1 to 3.2.2 by @dependabot-preview in https://github.com/just-the-docs/just-the-docs/pull/606
-* [Security] Bump hosted-git-info from 2.7.1 to 2.8.9 by @dependabot-preview in https://github.com/just-the-docs/just-the-docs/pull/641
-* [Security] Bump lodash from 4.17.19 to 4.17.21 by @dependabot-preview in https://github.com/just-the-docs/just-the-docs/pull/640
-* [Security] Bump ini from 1.3.5 to 1.3.8 by @dependabot-preview in https://github.com/just-the-docs/just-the-docs/pull/511
-* Bump path-parse from 1.0.6 to 1.0.7 by @dependabot in https://github.com/just-the-docs/just-the-docs/pull/699
-* Bump ajv from 6.10.0 to 6.12.6 by @dependabot in https://github.com/just-the-docs/just-the-docs/pull/766
-* Bump prettier from 2.1.2 to 2.5.1 by @dependabot in https://github.com/just-the-docs/just-the-docs/pull/787
-* Bump prettier from 2.5.1 to 2.6.2 by @dependabot in https://github.com/just-the-docs/just-the-docs/pull/809
-* Bump prettier from 2.6.2 to 2.7.1 by @dependabot in https://github.com/just-the-docs/just-the-docs/pull/864
+
+* Upgrade to GitHub-native Dependabot by @dependabot-preview in [#627]
+* [Security] Bump y18n from 3.2.1 to 3.2.2 by @dependabot-preview in [#606]
+* [Security] Bump hosted-git-info from 2.7.1 to 2.8.9 by @dependabot-preview in [#641]
+* [Security] Bump lodash from 4.17.19 to 4.17.21 by @dependabot-preview in [#640]
+* [Security] Bump ini from 1.3.5 to 1.3.8 by @dependabot-preview in [#511]
+* Bump path-parse from 1.0.6 to 1.0.7 by @dependabot in [#699]
+* Bump ajv from 6.10.0 to 6.12.6 by @dependabot in [#766]
+* Bump prettier from 2.1.2 to 2.5.1 by @dependabot in [#787]
+* Bump prettier from 2.5.1 to 2.6.2 by @dependabot in [#809]
+* Bump prettier from 2.6.2 to 2.7.1 by @dependabot in [#864]
+
+[#627]: https://github.com/just-the-docs/just-the-docs/pull/627
+[#606]: https://github.com/just-the-docs/just-the-docs/pull/606
+[#641]: https://github.com/just-the-docs/just-the-docs/pull/641
+[#640]: https://github.com/just-the-docs/just-the-docs/pull/640
+[#511]: https://github.com/just-the-docs/just-the-docs/pull/511
+[#699]: https://github.com/just-the-docs/just-the-docs/pull/699
+[#766]: https://github.com/just-the-docs/just-the-docs/pull/766
+[#787]: https://github.com/just-the-docs/just-the-docs/pull/787
+[#809]: https://github.com/just-the-docs/just-the-docs/pull/809
+[#864]: https://github.com/just-the-docs/just-the-docs/pull/864
 
 ### New Contributors
-* @alexsegura made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/519
-* @burner1024 made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/364
-* @JeffGuKang made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/221
-* @dougaitken made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/782
-* @max06 made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/783
-* @sehilyi made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/499
-* @nathanjessen made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/473
-* @waldyrious made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/549
-* @MichelleBlanchette made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/554
-* @henryiii made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/835
-* @jmertic made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/726
-* @jacobhq made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/846
-* @UnclassedPenguin made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/814
-* @alyssais made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/829
-* @nascosto made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/857
-* @SPGoding made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/876
-* @iridazzle made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/727
-* @ivanskodje made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/891
-* @Eisverygoodletter made their first contribution in https://github.com/just-the-docs/just-the-docs/pull/893
+
+* [@AdityaTiwari2102] made their first contribution in [#477]
+* [@svrooij] made their first contribution in [#544]
+* [@alexsegura] made their first contribution in [#519]
+* [@burner1024] made their first contribution in [#364]
+* [@JeffGuKang] made their first contribution in [#221]
+* [@dougaitken] made their first contribution in [#782]
+* [@max06] made their first contribution in [#783]
+* [@sehilyi] made their first contribution in [#499]
+* [@nathanjessen] made their first contribution in [#473]
+* [@waldyrious] made their first contribution in [#549]
+* [@MichelleBlanchette] made their first contribution in [#554]
+* [@henryiii] made their first contribution in [#835]
+* [@jmertic] made their first contribution in [#726]
+* [@jacobhq] made their first contribution in [#846]
+* [@UnclassedPenguin] made their first contribution in [#814]
+* [@alyssais] made their first contribution in [#829]
+* [@nascosto] made their first contribution in [#857]
+* [@SPGoding] made their first contribution in [#876]
+* [@iridazzle] made their first contribution in [#727]
+* [@ivanskodje] made their first contribution in [#891]
+* [@Eisverygoodletter] made their first contribution in [#893]
+
+[@AdityaTiwari2102]: https://githhub.com/AdityaTiwari2102
+[@svrooij]: https://githhub.com/svrooij
+[@alexsegura]: https://githhub.com/alexsegura
+[@burner1024]: https://githhub.com/burner1024
+[@JeffGuKang]: https://githhub.com/JeffGuKang
+[@dougaitken]: https://githhub.com/dougaitken
+[@max06]: https://githhub.com/max06
+[@sehilyi]: https://githhub.com/sehilyi
+[@nathanjessen]: https://githhub.com/nathanjessen
+[@waldyrious]: https://githhub.com/waldyrious
+[@MichelleBlanchette]: https://githhub.com/MichelleBlanchette
+[@henryiii]: https://githhub.com/henryiii
+[@jmertic]: https://githhub.com/jmertic
+[@jacobhq]: https://githhub.com/jacobhq
+[@UnclassedPenguin]: https://githhub.com/UnclassedPenguin
+[@alyssais]: https://githhub.com/alyssais
+[@nascosto]: https://githhub.com/nascosto
+[@SPGoding]: https://githhub.com/SPGoding
+[@iridazzle]: https://githhub.com/iridazzle
+[@ivanskodje]: https://githhub.com/ivanskodje
+[@Eisverygoodletter]: https://githhub.com/Eisverygoodletter
 
 **Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.3.3...v0.4.0.rc1
+
+[@pmarsceill]: https://githhub.com/pmarsceill
 
 ## v0.3.3
 
