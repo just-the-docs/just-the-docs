@@ -24,12 +24,14 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: HTML validation issues (W3C validator) by [@mattxwang] in [#964]
 - Fixed: link styling now uses `text-decoration` values by [@mattxwang] in [#967]
 - Fixed: cleaning up Jekyll excludes by [@pdmosses] in [#985]
+- Fixed: docs, narrow styling for code highlighting with line numbers by [@pdmosses] in [#974]
 
 [#965]: https://github.com/just-the-docs/just-the-docs/pull/965
 [#960]: https://github.com/just-the-docs/just-the-docs/pull/960
 [#962]: https://github.com/just-the-docs/just-the-docs/pull/962
 [#964]: https://github.com/just-the-docs/just-the-docs/pull/964
 [#967]: https://github.com/just-the-docs/just-the-docs/pull/967
+[#974]: https://github.com/just-the-docs/just-the-docs/pull/974
 [#980]: https://github.com/just-the-docs/just-the-docs/pull/980
 [#985]: https://github.com/just-the-docs/just-the-docs/pull/985
 
