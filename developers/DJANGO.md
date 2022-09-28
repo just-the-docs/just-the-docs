@@ -191,3 +191,9 @@ Workflow.objects.get(clinic=clinic, ...)
 clinic.workflow_set.get(...)
 ```
 The second method is preferred because it avoids an easy mistake (forgetting to add the `clinic=clinic` filter) that causes serious issues (mixing data between customers).
+
+Note: if you're confused about the reverse foreign key lookup, the [Django docs](https://docs.djangoproject.com/en/dev/topics/db/queries/#following-relationships-backward) explain in more detail how managers work. If a custom `related_name` has not been set, the default format should be `[modelname]_set`. You can also open a Django shell; autocomplete will show you what the available reverse lookups are:
+```
+>>> clinic.specialization [press tab to autocomplete]
+clinic.specializationpolicies_set(  clinic.specializations(
+```
