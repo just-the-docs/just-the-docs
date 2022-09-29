@@ -229,6 +229,9 @@ This would create the following navigation structure:
 +-- ..
 ```
 
+{: .note }
+Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages.
+
 ---
 
 ## Auxiliary Links
