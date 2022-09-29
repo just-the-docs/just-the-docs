@@ -25,6 +25,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: link styling now uses `text-decoration` values by [@mattxwang] in [#967]
 - Fixed: cleaning up Jekyll excludes by [@pdmosses] in [#985]
 - Fixed: docs, narrow styling for code highlighting with line numbers by [@pdmosses] in [#974]
+- Fixed: default syntax highlighting in custom color schemes [@pdmosses] in [#986]
 
 [#965]: https://github.com/just-the-docs/just-the-docs/pull/965
 [#960]: https://github.com/just-the-docs/just-the-docs/pull/960
@@ -34,6 +35,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#974]: https://github.com/just-the-docs/just-the-docs/pull/974
 [#980]: https://github.com/just-the-docs/just-the-docs/pull/980
 [#985]: https://github.com/just-the-docs/just-the-docs/pull/985
+[#986]: https://github.com/just-the-docs/just-the-docs/pull/986
 
 [@henryiii]: https://github.com/henryiii
 
