@@ -58,6 +58,17 @@ You can add custom schemes.
 If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name)
 where you override theme variables to change colors, fonts, spacing, etc.
 
+{: .note }
+Since the default color scheme is `light`, your custom scheme is implicitly based on the variable settings used by the `light` scheme.
+
+If you want your custom scheme to be based on the `dark` scheme, you need to start your file with the following line:
+
+```scss
+@import "./color_schemes/dark";
+```
+
+You can define custom schemes based on other custom schemes in the same way.
+
 Available variables are listed in the [\_variables.scss](https://github.com/just-the-docs/just-the-docs/tree/main/_sass/support/_variables.scss) file.
 
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
