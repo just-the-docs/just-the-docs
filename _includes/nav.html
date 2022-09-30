@@ -103,9 +103,14 @@
         <a href="{{ node.url | relative_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
         {%- if node.has_children -%}
           {%- if node.child_nav_order == 'desc' -%}
-            {%- assign children_list = pages_list | where: "parent", node.title | where_exp:"item", "item.grand_parent == nil" | reverse -%}
+            {%- assign children_list = pages_list
+                  | where: "parent", node.title
+                  | where_exp:"item", "item.grand_parent == nil"
+                  | reverse -%}
           {%- else -%}
-            {%- assign children_list = pages_list | where: "parent", node.title | where_exp:"item", "item.grand_parent == nil" -%}
+            {%- assign children_list = pages_list
+                  | where: "parent", node.title
+                  | where_exp:"item", "item.grand_parent == nil" -%}
           {%- endif -%}
           <ul class="nav-list ">
           {%- for child in children_list -%}
@@ -118,10 +123,15 @@
               {%- endif -%}
               <a href="{{ child.url | relative_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
               {%- if child.has_children -%}
-                {%- if node.child_nav_order == 'desc' -%}
-                {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title | reverse -%}
+                {%- if child.child_nav_order == 'desc' -%}
+                  {%- assign grand_children_list = pages_list
+                        | where: "parent", child.title
+                        | where: "grand_parent", node.title
+                        | reverse -%}
                 {%- else -%}
-                {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title -%}
+                  {%- assign grand_children_list = pages_list
+                        | where: "parent", child.title
+                        | where: "grand_parent", node.title -%}
                 {%- endif -%}
                 <ul class="nav-list">
                 {%- for grand_child in grand_children_list -%}
@@ -173,8 +183,13 @@
     {%- endif -%}
   {%- endfor -%}
 
-  {% if page.has_children == true and page.has_toc != false %}
-    {%- assign toc_list = pages_list | where: "parent", page.title | where: "grand_parent", page.parent -%}
+  {%- if page.has_children == true and page.has_toc != false -%}
+    {%- assign toc_list = pages_list
+          | where: "parent", page.title
+          | where: "grand_parent", page.parent -%}
+    {%- if page.child_nav_order == "desc" -%}
+      {%- assign toc_list = toc_list | reverse -%}
+    {%- endif -%}
   {%- endif -%}
 
 {%- endif -%}
