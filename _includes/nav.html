@@ -19,6 +19,26 @@
 
 {%- assign title_pages = include.pages
       | where_exp: "item", "item.title != nil" -%}
+
+{%- comment -%}
+   A page with `nav_exclude: true` does not appear in the main navigation.
+  If it has a `parent`, it may appear in the parent's table of contents.
+  If it specifies `has_children: true`, it should appear in the breadcrumbs
+  of the child pages, but its order in relation to other pages is irrelevant.
+  Pages that never appear can be removed from the pages that need to be sorted.
+  This optimisation can be significant on a large site with a `404` page and
+  a large number of different `nav_order` numbers.
+  
+  In Jekyll 4 (https://jekyllrb.com/news/2019/08/20/jekyll-4-0-0-released/)
+  the pages to be sorted can be filtered by:
+  
+  {%- assign title_pages = title_pages
+        | where_exp: "item", "item.nav_exclude != true or item.parent != nil" -%}
+  
+  It doesn't seem possible to express this filter in Jekyll 3 (except by a loop)
+  so this optimization will have to wait for the move of the theme to Jekyll 4.
+{%- endcomment -%}
+
 {%- assign nav_order_pages = title_pages
       | where_exp: "item", "item.nav_order != nil"  -%}
 {%- assign title_order_pages = title_pages
