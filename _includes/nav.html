@@ -36,8 +36,30 @@
         | where_exp: "item", "item.nav_exclude != true or item.parent != nil" -%}
   
   It doesn't seem possible to express this filter in Jekyll 3 (except by a loop)
-  so this optimization will have to wait for the move of the theme to Jekyll 4.
+  so this optimization may have to wait for the move of the theme to Jekyll 4.
+
+  The following ugly code is for testing the cost of such a loop:
+  - just-the-docs-tests: ~ +2% (12.41 secs -> 12.62 secs) 108 pages, Jekyll 3.8.7, M2
+  - endoflife.date: ~ +7% (3.36 secs -> 3.64 secs) 138 pages, Jekyll 4.2.2, M2
+  - machinetranslate: ~ +5% (488 secs -> 513 secs) 350 pages, Jekyll 3.9.2, M2
+  - how2data: likely to be a significant gain, almost all pages unsorted.
 {%- endcomment -%}
+
+{%- assign unsorted_pages = title_pages
+      | where_exp: "item", "item.nav_exclude == true"
+      | where_exp: "item", "item.parent == nil" -%}
+{%- assign title_pages_size = title_pages | size -%}
+{%- assign unsorted_pages_percent = unsorted_pages.size
+      | times: 100 | divided_by: title_pages_size -%}
+{%- if unsorted_pages_percent > 50 -%}
+  {%- assign sorted_pages = "" | split: "" -%}
+  {%- for item in title_pages -%}
+    {%- if item.nav_exclude != true or item.parent -%}
+      {%- assign sorted_pages = sorted_pages | push: item -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign title_pages = sorted_pages -%}
+{%- endif -%}
 
 {%- assign nav_order_pages = title_pages
       | where_exp: "item", "item.nav_order != nil"  -%}
