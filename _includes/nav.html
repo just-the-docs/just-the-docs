@@ -2,15 +2,14 @@
   The `nav_order` values of pages affect the order in which they are shown in
   the navigation panel and in the automatically generated tables of contents.
   Sibling pages with the same `nav_order` value may be shown in any order.
+  Sibling pages with no `nav_order` value are shown after all pages that have
+  explicit `nav_order` values, ordered by their `title` values.
   
-  A `nav_order` value can be a number or a string. To avoid build failures,
-  we sort numbers and strings separately. We sort numbers by their values,
-  and strings lexicographically. The case-sensitivity of string sorting is
-  determined by the configuration setting of `nav_sort`.
-  
-  Omitting the `nav_order` value is equivalent to setting it to the page `title`.
-  Normal pages with omitted `title` values are always excluded from the navigation.
-  Pages in Jekyll collections have default `title` values, based on the file name. 
+  The `nav_order` and `title` values can be numbers or strings. To avoid build
+  failures, we sort numbers and strings separately. We sort numbers by their
+  values, and strings lexicographically. The case-sensitivity of string sorting
+  is determined by the configuration setting of `nav_sort`. Pages with no `title`
+  value are excluded from the navigation.
 
   Note: Numbers used as `title` or `nav_order` values should not be in quotes,
   unless you intend them to be lexicographically ordered. Numbers are written
@@ -19,12 +18,8 @@
   (Bounds on the magnitude and precision are presumably the same as in Liquid.)
 {%- endcomment -%}
 
-{%- if include.key -%}
-  {%- assign title_pages = include.pages -%}
-{%- else -%}
-  {%- assign title_pages = include.pages
-        | where_exp: "item", "item.title != nil" -%}
-{%- endif -%}
+{%- assign title_pages = include.pages
+      | where_exp: "item", "item.title != nil" -%}
 
 {%- comment -%}
   A page with `nav_exclude: true` does not appear in the main navigation.
@@ -32,23 +27,16 @@
   If it specifies `has_children: true`, it should appear in the breadcrumbs
   of the child pages, but its order in relation to other pages is irrelevant.
   Pages that never appear can be removed from the pages that need to be sorted.
-  This optimisation can be significant on a large site with a `404` page and
-  a large number of different `nav_order` numbers.
+  This optimisation can be significant on a site with many pages.
   
-  In Jekyll 4 (https://jekyllrb.com/news/2019/08/20/jekyll-4-0-0-released/)
-  the pages to be sorted can be filtered by:
+  In Jekyll 4, the pages to be sorted can be filtered by:
   
   {%- assign title_pages = title_pages
         | where_exp: "item", "item.nav_exclude != true or item.parent != nil" -%}
   
-  It doesn't seem possible to express this filter in Jekyll 3 (except by a loop)
-  so this optimization may have to wait for the move of the theme to Jekyll 4.
-
-  The following ugly code is for testing the cost of such a loop:
-  - just-the-docs-tests: ~ +2% (12.41 secs -> 12.62 secs) 108 pages, Jekyll 3.8.7, M2
-  - endoflife.date: ~ +7% (3.36 secs -> 3.64 secs) 138 pages, Jekyll 4.2.2, M2
-  - machinetranslate: ~ +5% (488 secs -> 513 secs) 350 pages, Jekyll 3.9.2, M2
-  - how2data: likely to be a significant gain, almost all pages unsorted.
+  That filter is not allowed in Jekyll 3. The following iterative code gives the
+  same effect, but it is activated only when it will filter more than 50% of the
+  pages.
 {%- endcomment -%}
 
 {%- assign unsorted_pages = title_pages
@@ -73,8 +61,8 @@
       | where_exp: "item", "item.nav_order == nil" -%}
 
 {%- comment -%}
-  First, the arrays of `nav_order_pages` anf `title_order_pages` are divided 
-  according to the type of value.
+  Divide the arrays of `nav_order_pages` and `title_order_pages` according to
+  the type of value.
   
   The first character of the result of `jsonify` is `"` only for strings.
   Grouping by a single character also ensures the number of groups is small.
@@ -86,11 +74,23 @@
       | group_by_exp: "item", "item.nav_order | jsonify | slice: 0" -%}
 {%- for group in nav_order_groups -%}
   {%- if group.name == '"' -%}
-    {%- assign nav_string_pages = nav_string_pages | concat: group.items -%}
+    {%- assign nav_string_pages = group.items -%}
   {%- else -%}
     {%- assign nav_number_pages = nav_number_pages | concat: group.items -%}
   {%- endif -%}
 {%- endfor -%}
+
+{%- unless nav_number_pages == empty -%}
+  {%- assign nav_number_pages = nav_number_pages | sort: "nav_order" -%}
+{%- endunless -%}
+
+{%- unless nav_string_pages == empty -%}
+  {%- if site.nav_sort == 'case_insensitive' -%}
+    {%- assign nav_string_pages = nav_string_pages | sort_natural: "nav_order" -%}
+  {%- else -%}
+    {%- assign nav_string_pages = nav_string_pages | sort: "nav_order" -%}
+  {%- endif -%}
+{%- endunless -%}
 
 {%- assign title_number_pages = "" | split: "" -%}
 {%- assign title_string_pages = "" | split: "" -%}
@@ -98,74 +98,34 @@
       | group_by_exp: "item", "item.title | jsonify | slice: 0" -%}
 {%- for group in title_order_groups -%}
   {%- if group.name == '"' -%}
-    {%- assign title_string_pages = title_string_pages | concat: group.items -%}
+    {%- assign title_string_pages = group.items -%}
   {%- else -%}
     {%- assign title_number_pages = title_number_pages | concat: group.items -%}
   {%- endif -%}
 {%- endfor -%}
 
-{%- comment -%}
-  The `title_number_pages` and `nav_number_pages` are sorted together.
-  When either or both of them is empty, `sorted_number_pages` is simple to compute.
-  Otherwise, we need to group their concatenation by their `nav_order` or
-  `title` values, sort the groups by those values, and concatenate the grouped
-  arrays of pages.
-{%- endcomment -%}
+{%- unless title_number_pages == empty -%}
+  {%- assign title_number_pages = title_number_pages | sort: "title" -%}
+{%- endunless -%}
 
-{%- if title_number_pages == empty and nav_number_pages == empty -%}
-  {%- assign sorted_number_pages = nav_number_pages -%}
-{%- elsif title_number_pages == empty -%}
-  {%- assign sorted_number_pages = nav_number_pages | sort: "nav_order" -%}
-{%- elsif nav_number_pages == empty -%}
-  {%- assign sorted_number_pages = title_number_pages | sort: "title" -%}
-{%- else -%}
-  {%- assign number_groups = nav_number_pages | concat: title_number_pages
-        | group_by_exp: "item", "item.nav_order | default: item.title" -%}
-  {%- assign sorted_number_groups = number_groups | sort: "name" -%}
-  {%- assign sorted_number_pages = "" | split: "" -%}
-  {%- for group in sorted_number_groups -%}
-    {%- assign sorted_number_pages = sorted_number_pages | concat: group.items -%}
-  {%- endfor -%}
-{%- endif -%}
-
-{%- comment -%}
-  The `title_string_pages` and `nav_string_pages` are sorted together.
-  When either or both of them is empty, `sorted_string_pages` is simple to compute.
-  Otherwise, we need to group their concatenation by their `nav_order` or
-  `title` values, sort the groups by those values, and concatenate the grouped
-  arrays of pages.
-{%- endcomment -%}
-
-{%- if title_string_pages == empty and nav_string_pages == empty -%}
-  {%- assign sorted_string_pages = nav_string_pages -%}
-{%- elsif title_string_pages == empty -%}
+{%- unless title_string_pages == empty -%}
   {%- if site.nav_sort == 'case_insensitive' -%}
-    {%- assign sorted_string_pages = nav_string_pages | sort_natural: "nav_order" -%}
+    {%- assign title_string_pages = title_string_pages | sort_natural: "title" -%}
   {%- else -%}
-    {%- assign sorted_string_pages = nav_string_pages | sort: "nav_order" -%}
+    {%- assign title_string_pages = title_string_pages | sort: "title" -%}
   {%- endif -%}
-{%- elsif nav_string_pages == empty -%}
-  {%- assign sorted_string_pages = title_string_pages -%}
-  {%- if site.nav_sort == 'case_insensitive' -%}
-    {%- assign sorted_string_pages = title_string_pages | sort_natural: "title" -%}
-  {%- else -%}
-    {%- assign sorted_string_pages = title_string_pages | sort: "title" -%}
-  {%- endif -%}
-{%- else -%}
-  {%- assign string_groups = nav_string_pages | concat: title_string_pages
-        | group_by_exp: "item", "item.nav_order | default: item.title" -%}
-  {%- if site.nav_sort == 'case_insensitive' -%}
-    {%- assign sorted_string_groups = string_groups | sort_natural: "name" -%}
-  {%- else -%}
-    {%- assign sorted_string_groups = string_groups | sort: "name" -%}
-  {%- endif -%}
-  {%- assign sorted_string_pages = "" | split: "" -%}
-  {%- for group in sorted_string_groups -%}
-    {%- assign sorted_string_pages = sorted_string_pages | concat: group.items -%}
-  {%- endfor -%}
-{%- endif -%}
+{%- endunless -%}
 
-{%- assign pages_list = sorted_number_pages | concat: sorted_string_pages -%}
+{%- assign pages_list = nav_number_pages | concat: nav_string_pages
+      | concat: title_number_pages | concat: title_string_pages -%}
+
+{%- assign first_level_pages = pages_list
+      | where_exp: "item", "item.parent == nil" -%}
+{%- assign second_level_pages = pages_list
+      | where_exp: "item", "item.parent != nil"
+      | where_exp: "item", "item.grand_parent == nil" -%}
+{%- assign third_level_pages = pages_list
+      | where_exp: "item", "item.grand_parent != nil" -%}
 
 {%- comment -%}
   The order of sibling pages in `pages_list` determines the order of display of
@@ -173,8 +133,7 @@
 {%- endcomment -%}
 
 <ul class="nav-list">
-{%- for node in pages_list -%}
-  {%- if node.parent == nil -%}
+{%- for node in first_level_pages -%}
     {%- unless node.nav_exclude -%}
       <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
         {%- if node.has_children -%}
@@ -184,9 +143,8 @@
         {%- endif -%}
         <a href="{{ node.url | relative_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
         {%- if node.has_children -%}
-          {%- assign children_list = pages_list
-                | where: "parent", node.title
-                | where_exp:"item", "item.grand_parent == nil" -%}
+          {%- assign children_list = second_level_pages
+                | where: "parent", node.title -%}
           {%- if node.child_nav_order == 'desc' -%}
             {%- assign children_list = children_list | reverse -%}
           {%- endif -%}
@@ -201,7 +159,7 @@
               {%- endif -%}
               <a href="{{ child.url | relative_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
               {%- if child.has_children -%}
-                {%- assign grand_children_list = pages_list
+                {%- assign grand_children_list = third_level_pages
                       | where: "parent", child.title
                       | where: "grand_parent", node.title -%}
                 {%- if child.child_nav_order == 'desc' -%}
@@ -224,7 +182,6 @@
         {%- endif -%}
       </li>
     {%- endunless -%}
-  {%- endif -%}
 {%- endfor -%}
 {%- assign nav_external_links = site.nav_external_links -%}
 {%- for node in nav_external_links -%}
@@ -250,13 +207,12 @@
 {%- endcomment -%}
 
 {%- if page.collection == include.key -%}
-  {%- for node in pages_list -%}
-    {%- if node.parent == nil -%}
+  {%- for node in first_level_pages -%}
       {%- if page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil -%}
         {%- assign first_level_url = node.url | relative_url -%}
       {%- endif -%}
       {%- if node.has_children -%}
-        {%- assign children_list = pages_list | where: "parent", node.title -%}
+        {%- assign children_list = second_level_pages | where: "parent", node.title -%}
         {%- for child in children_list -%}
           {%- if child.has_children -%}
             {%- if page.url == child.url or page.parent == child.title and page.grand_parent == child.parent -%}
@@ -265,7 +221,6 @@
           {%- endif -%}
         {%- endfor -%}
       {%- endif -%}
-    {%- endif -%}
   {%- endfor -%}
   {%- if page.has_children == true and page.has_toc != false -%}
     {%- assign toc_list = pages_list
