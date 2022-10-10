@@ -19,6 +19,7 @@ Changes to `main` that are *not* in the latest pre-release:
 
 - Added: styling for `<blockquote>` by [@mattxwang] in [#965]
 - Added: custom include for TOC heading by [@pdmosses] in [#980]
+- Added: experimental nav optimization for simple cases by [@pdmosses] in [#992]
 - Fixed: spacing issue when search is disabled by [@henryiii] in [#960]
 - Fixed: active grandchild link class by [@pdmosses] in [#962]
 - Fixed: HTML validation issues (W3C validator) by [@mattxwang] in [#964]
@@ -36,6 +37,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#980]: https://github.com/just-the-docs/just-the-docs/pull/980
 [#985]: https://github.com/just-the-docs/just-the-docs/pull/985
 [#986]: https://github.com/just-the-docs/just-the-docs/pull/986
+[#992]: https://github.com/just-the-docs/just-the-docs/pull/992
 
 [@henryiii]: https://github.com/henryiii
 
