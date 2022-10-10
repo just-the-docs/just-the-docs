@@ -61,7 +61,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/just-t
 - Open a [Pull Request](https://github.com/just-the-docs/just-the-docs/pulls)
 - Ensure all CI tests pass
 - Await code review
-- Bump the version number in `just-the-docs.gemspec` and `package.json` according to [semantic versioning](https://semver.org/).
 
 ### Design and development principles of this theme:
 

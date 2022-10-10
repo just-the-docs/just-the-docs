@@ -15,10 +15,61 @@ The project underwent a major maintenance shift in March 2022.
 {: .note }
 This website is built from the `HEAD` of the `main` branch of the theme repository.
 
+{: .warning }
+This website includes docs for some new features that are not available in `v0.4.0.rc2` and `v0.3.3`!
+
 Changes to `main` that are *not* in the latest pre-release:
+
+- N/A
+
+## Pre-release v0.4.0.rc3
+
+Hi there! This is (actually) hopefully the last prerelease before `v0.4.0`; in particular, if we find that this prerelease is stable, we'll re-release it as `v0.4.0`.
+
+In general, this is a more mature pre-release; there are few new features. However, we'll highlight [@pdmosses]'s work in [#992] to better optimize nav generation for large sites (ex 100+ pages). We don't expect this to affect most users; however, **it is technically a breaking change**, and we suggest testing your site before upgrading to this prerelease.
+
+We want your feedback! Please [open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) and let us know!
+
+As soon as we get stable test results from major downstream users, we'll push out a `v0.4.0` ASAP - closing out almost 2 years of backlogged work!
+
+### Trying out pre-release `v0.4.0.rc3`
+
+Simlar to the prior release, `v0.4.0.rc3` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc3`.
+
+To use this RC explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.4.0.rc3
+```
+
+To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```Ruby
+gem "just-the-docs", "0.4.0.rc3"
+```
+
+By default, **users will not be upgraded to `0.4.0.rc3`**. To enforce that explicitly, either:
+
+1. pin your gem version in your `Gemfile`, like so
+```Ruby
+gem "just-the-docs", "0.3.3"
+```
+2. freeze the `remote_theme`, like so
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.3.3
+```
+
+### Features
+
+Broadly, this prerelease is feature-light!
 
 - Added: styling for `<blockquote>` by [@mattxwang] in [#965]
 - Added: custom include for TOC heading by [@pdmosses] in [#980]
+
+### Bugfixes and Experimental Features
+
+*Note*: experimental nav optimization may be unstable. Please give us feedback!
+
 - Added: experimental nav optimization for simple cases by [@pdmosses] in [#992]
 - Fixed: spacing issue when search is disabled by [@henryiii] in [#960]
 - Fixed: active grandchild link class by [@pdmosses] in [#962]
@@ -40,6 +91,8 @@ Changes to `main` that are *not* in the latest pre-release:
 [#992]: https://github.com/just-the-docs/just-the-docs/pull/992
 
 [@henryiii]: https://github.com/henryiii
+
+**Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.4.0.rc2...v0.4.0.rc3
 
 ## Pre-release v0.4.0.rc2
 
