@@ -227,7 +227,7 @@
   {%- if page.has_children == true and page.has_toc != false -%}
     {%- assign toc_list = pages_list
           | where: "parent", page.title
-          | where: "grand_parent", page.parent -%}
+          | where_exp: "item", "item.grand_parent == page.parent" -%}
     {%- if page.child_nav_order == "desc" -%}
       {%- assign toc_list = toc_list | reverse -%}
     {%- endif -%}
