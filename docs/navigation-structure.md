@@ -252,10 +252,9 @@ aux_links:
 ## External Navigation Links
 
 To add external links to the navigation, add them to the `nav_external_links` [configuration]({{ site.baseurl }}{% link docs/configuration.md %}) option in your site's `_config.yml` file.
-External links will appear under all other items in the listing order.
+External links will appear in the navigation after the links to ordinary pages, but before any collections.
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -265,6 +264,9 @@ nav_external_links:
     url: https://github.com/just-the-docs/just-the-docs
     hide_icon: false # set to true to hide the external link icon - defaults to false
 ```
+
+The external links are decorated by an icon, which distinguishes them from internal links.
+You can suppress the icon by setting `hide_icon: true`.
 
 ---
 
