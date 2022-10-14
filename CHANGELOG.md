@@ -20,7 +20,11 @@ This website includes docs for some new features that are not available in `v0.4
 
 Changes to `main` that are *not* in the latest pre-release:
 
-- N/A
+- Fixed: typo in changelog links [@koppor] in [#1000]
+
+[#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
+
+[@koppor]: https://github.com/koppor
 
 ## Pre-release v0.4.0.rc3
 
