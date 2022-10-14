@@ -20,9 +20,11 @@ This website includes docs for some new features that are not available in `v0.4
 
 Changes to `main` that are *not* in the latest pre-release:
 
+- Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
 - Fixed: typo in changelog links [@koppor] in [#1000]
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
 
+[#999]: https://github.com/just-the-docs/just-the-docs/pull/999
 [#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
 [#1001]: https://github.com/just-the-docs/just-the-docs/pull/1001
 
