@@ -21,8 +21,10 @@ This website includes docs for some new features that are not available in `v0.4
 Changes to `main` that are *not* in the latest pre-release:
 
 - Fixed: typo in changelog links [@koppor] in [#1000]
+- Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
 
 [#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
+[#1001]: https://github.com/just-the-docs/just-the-docs/pull/1001
 
 [@koppor]: https://github.com/koppor
 
