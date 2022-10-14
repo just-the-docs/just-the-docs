@@ -433,31 +433,31 @@ as well as DX improvements like better regression tests, CI, and tooling. If you
 * [@ivanskodje] made their first contribution in [#891]
 * [@Eisverygoodletter] made their first contribution in [#893]
 
-[@AdityaTiwari2102]: https://githhub.com/AdityaTiwari2102
-[@svrooij]: https://githhub.com/svrooij
-[@alexsegura]: https://githhub.com/alexsegura
-[@burner1024]: https://githhub.com/burner1024
-[@JeffGuKang]: https://githhub.com/JeffGuKang
-[@dougaitken]: https://githhub.com/dougaitken
-[@max06]: https://githhub.com/max06
-[@sehilyi]: https://githhub.com/sehilyi
-[@nathanjessen]: https://githhub.com/nathanjessen
-[@waldyrious]: https://githhub.com/waldyrious
-[@MichelleBlanchette]: https://githhub.com/MichelleBlanchette
-[@henryiii]: https://githhub.com/henryiii
-[@jmertic]: https://githhub.com/jmertic
-[@jacobhq]: https://githhub.com/jacobhq
-[@UnclassedPenguin]: https://githhub.com/UnclassedPenguin
-[@alyssais]: https://githhub.com/alyssais
-[@nascosto]: https://githhub.com/nascosto
-[@SPGoding]: https://githhub.com/SPGoding
-[@iridazzle]: https://githhub.com/iridazzle
-[@ivanskodje]: https://githhub.com/ivanskodje
-[@Eisverygoodletter]: https://githhub.com/Eisverygoodletter
+[@AdityaTiwari2102]: https://github.com/AdityaTiwari2102
+[@svrooij]: https://github.com/svrooij
+[@alexsegura]: https://github.com/alexsegura
+[@burner1024]: https://github.com/burner1024
+[@JeffGuKang]: https://github.com/JeffGuKang
+[@dougaitken]: https://github.com/dougaitken
+[@max06]: https://github.com/max06
+[@sehilyi]: https://github.com/sehilyi
+[@nathanjessen]: https://github.com/nathanjessen
+[@waldyrious]: https://gihhub.com/waldyrious
+[@MichelleBlanchette]: https://github.com/MichelleBlanchette
+[@henryiii]: https://github.com/henryiii
+[@jmertic]: https://github.com/jmertic
+[@jacobhq]: https://github.com/jacobhq
+[@UnclassedPenguin]: https://gihhub.com/UnclassedPenguin
+[@alyssais]: https://github.com/alyssais
+[@nascosto]: https://github.com/nascosto
+[@SPGoding]: https://github.com/SPGoding
+[@iridazzle]: https://github.com/iridazzle
+[@ivanskodje]: https://gihhub.com/ivanskodje
+[@Eisverygoodletter]: https://github.com/Eisverygoodletter
 
 **Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.3.3...v0.4.0.rc1
 
-[@pmarsceill]: https://githhub.com/pmarsceill
+[@pmarsceill]: https://github.com/pmarsceill
 
 ## v0.3.3
 
