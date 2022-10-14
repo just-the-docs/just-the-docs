@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: One Community: New Hampshire
 description: 
-baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://cyberdoo.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
