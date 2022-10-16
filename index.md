@@ -2,117 +2,34 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "All the Custom-ROMs known for Google Pixel 3/3 XL"
 permalink: /
 ---
 
-# Focus on writing good documentation.
+# Welcome to BlueOrigin, the web for Pixel 3 and Pixel 3 XL documentation and ROMs
 {: .fs-9 }
 
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
+Hey! I think that this site may be very useful, you can find here documentation, ROMs and instructions for Pixel 3 and Pixel 3 XL
 {: .fs-6 .fw-300 }
 
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/just-the-docs/just-the-docs){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Start exploring](#start-exploring){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [Pixel 3/3XL Telegram](https://t.me/pixel3family){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
 {: .new }
-> **Pre-release version `0.4.0.rc3` is available!**
-> See [the CHANGELOG]({{ site.baseurl }}{% link CHANGELOG.md %}) for a detailed breakdown.
+> **Only supporting `blueline` and `crosshatch` for now**
+> Contact me on [Telegram](https://t.me) for device suggestions.
 
-{: .warning }
-> Specifying `gem "just-the-docs"` in your `Gemfile` uses the latest ***release*** (`v0.3.3`), ignoring all pre-releases!
-> To use this pre-release, pin it:
-> ```ruby
-> gem "just-the-docs", "0.4.0.rc3"
-> ```
-> and/or
-> ```yaml
-> remote_theme: just-the-docs/just-the-docs@v0.4.0.rc3
-> ```
+## Start exploring
 
-## Getting started
+### Documentation
 
-### Dependencies
+So you have doubts? No problem buddy. Here we have the needed documentation for `blueline` and `crosshatch`. Go to .[documentation page]({{ site.baseurl }}{% link docs/documentationpixel.md %}).
 
-Just the Docs is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [Jekyll quick start guide](https://jekyllrb.com/docs/) for more information. Just the Docs requires no special plugins and can run on GitHub Pages' standard Jekyll compiler. The [Jekyll SEO Tag plugin](https://github.com/jekyll/jekyll-seo-tag) is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit the [Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
+### Custom ROMs
 
-### Quick start: Use as a GitHub Pages remote theme
+I'm compiling all Pixel 3/3XL Custom ROMs that I know, this with their notes and documentation, updating all ROMs info and with their respective download links. Go to .[ROMs page]({{ site.baseurl }}{% link docs/roms.md %}).
 
-1. Add Just the Docs to your Jekyll site's `_config.yml` as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/)
+### You have another category suggestion?
 
-```yaml
-remote_theme: just-the-docs/just-the-docs
-```
-
-<small>You must have GitHub Pages enabled on your repo, one or more Markdown files, and a `_config.yml` file. [See an example repository](https://github.com/pmarsceill/jtd-remote)</small>
-
-### Local installation: Use the gem-based theme
-
-1. Install the Ruby Gem
-  ```bash
-  $ gem install just-the-docs
-  ```
-  ```yaml
-  # .. or add it to your Jekyll site’s Gemfile
-  gem "just-the-docs"
-  ```
-
-2. Add Just the Docs to your Jekyll site’s `_config.yml`
-  ```yaml
-  theme: "just-the-docs"
-  ```
-
-3. _Optional:_ Initialize search data (creates `search-data.json`)
-  ```bash
-  $ bundle exec just-the-docs rake search:init
-  ```
-
-3. Run your local Jekyll server
-  ```bash
-  $ jekyll serve
-  ```
-  ```bash
-  # .. or if you're using a Gemfile (bundler)
-  $ bundle exec jekyll serve
-  ```
-
-
-4. Point your web browser to [http://localhost:4000](http://localhost:4000)
-
-If you're hosting your site on GitHub Pages, [set up GitHub Pages and Jekyll locally](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll) so that you can more easily work in your development environment.
-
-### Configure Just the Docs
-
-- [See configuration options]({{ site.baseurl }}{% link docs/configuration.md %})
-
----
-
-## About the project
-
-Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](http://patrickmarsceill.com).
-
-### License
-
-Just the Docs is distributed by an [MIT license](https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt).
-
-### Contributing
-
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/just-the-docs/just-the-docs#contributing).
-
-#### Thank you to the contributors of Just the Docs!
-
-<ul class="list-style-none">
-{% for contributor in site.github.contributors %}
-  <li class="d-inline-block mr-1">
-     <a href="{{ contributor.html_url }}"><img src="{{ contributor.avatar_url }}" width="32" height="32" alt="{{ contributor.login }}"/></a>
-  </li>
-{% endfor %}
-</ul>
-
-### Code of Conduct
-
-Just the Docs is committed to fostering a welcoming community.
-
-[View our Code of Conduct](https://github.com/just-the-docs/just-the-docs/tree/main/CODE_OF_CONDUCT.md) on our GitHub repository.
+That's good to hear, if you want to, contact me by .[Telegram](https://t.me), don't be afraid, I don't bite.
