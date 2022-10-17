@@ -7,8 +7,7 @@ nav_order: 2
 # Configuration
 {: .no_toc }
 
-
-Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's _config.yml file.
+Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's \_config.yml file.
 {: .fs-6 .fw-300 }
 
 ## Table of contents
@@ -19,9 +18,7 @@ Just the Docs has some specific configuration parameters that can be defined in 
 
 ---
 
-
-View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file as an example.
-
+View this site's [\_config.yml](https://github.com/just-the-docs/just-the-docs/tree/main/_config.yml) file as an example.
 
 ## Site logo
 
@@ -62,13 +59,26 @@ search:
   button: false
 ```
 
+## Mermaid Diagrams
+
+The minimum configuration requires the key for `version` ([from jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)) in `_config.yml`:
+
+```yaml
+mermaid:
+  # Version of mermaid library
+  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
+  version: "9.1.3"
+```
+
+See [the Code documentation]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more configuration options and information.
+
 ## Aux links
 
 ```yaml
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+    - "//github.com/just-the-docs/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -84,6 +94,11 @@ aux_links_new_tab: false
 heading_anchors: true
 ```
 
+## External navigation links
+
+External links can be added to the navigation through the `nav_external_links` option.
+See [Navigation Structure]({{ site.baseurl }}{% link docs/navigation-structure.md %}#external-navigation-links) for more details.
+
 ## Footer content
 
 ```yaml
@@ -91,7 +106,7 @@ heading_anchors: true
 # appears at the bottom of every page's main content
 # Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust
 markup / liquid-based content.
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt\">MIT license.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -100,8 +115,8 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
-gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
-gh_edit_branch: "master" # the branch that your docs is served from
+gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
+gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 ```
@@ -111,7 +126,7 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 - the "page last modified" data will only display if a page has a key called `last_modified_date`, formatted in some readable date format
 - `last_edit_time_format` uses Ruby's DateTime formatter; see examples and more information [at this link.](https://apidock.com/ruby/DateTime/strftime)
 - `gh_edit_repository` is the URL of the project's GitHub repository
-- `gh_edit_branch` is the branch that the docs site is served from; defaults to `master`
+- `gh_edit_branch` is the branch that the docs site is served from; defaults to `main`
 - `gh_edit_source` is the source directory that your project files are stored in (should be the same as [site.source](https://jekyllrb.com/docs/configuration/options/))
 - `gh_edit_view_mode` is `"tree"` by default, which brings the user to the github page; switch to `"edit"` to bring the user directly into editing mode
 
@@ -121,6 +136,7 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 ```
+
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -139,6 +155,59 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
 
+## Callouts
+
+To use this feature, you need to configure a `color` and (optionally) `title` for each kind of callout you want to use, e.g.:
+
+```yaml
+callouts:
+  warning:
+    title: Warning
+    color: red
+```
+
+This uses the color `$red-000` for the background of the callout, and `$red-300` for the title and box decoration.[^dark] You can then style a paragraph as a `warning` callout like this:
+
+```markdown
+{: .warning }
+A paragraph...
+```
+
+[^dark]:
+    If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title.
+
+The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
+
+```scss
+$pink-000: #f77ef1;
+$pink-100: #f967f1;
+$pink-200: #e94ee1;
+$pink-300: #dd2cd4;
+```
+
+You can override the default `opacity` of the background for a particular callout, e.g.:
+
+```yaml
+callouts:
+  custom:
+    color: pink
+    opacity: 0.3
+```
+
+You can change the default opacity (`0.2`) for all callouts, e.g.:
+
+```yaml
+callouts_opacity: 0.3
+```
+
+You can also adjust the overall level of callouts.
+The value of `callouts_level` is either `quiet` or `loud`;
+`loud` increases the saturation and lightness of the backgrounds.
+The default level is `quiet` when using the `light` or custom color schemes,
+and `loud` when using the `dark color scheme.`
+
+See [Callouts]({{ site.baseurl }}{% link docs/ui-components/callouts.md %}) for more information.
+
 ## Google Analytics
 
 ```yaml
@@ -151,37 +220,44 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 ## Document collections
 
 By default, the navigation and search include normal [pages](https://jekyllrb.com/docs/pages/).
-Instead, you can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
+You can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
 
-For example, put all your documentation files in the `_docs` folder and create the `docs` collection:
+For example, put all your test files in the `_tests` folder and create the `tests` collection:
+
 ```yaml
 # Define Jekyll collections
 collections:
-  # Define a collection named "docs", its documents reside in the "_docs" directory
-  docs:
+  # Define a collection named "tests", its documents reside in the "_tests" directory
+  tests:
     permalink: "/:collection/:path/"
     output: true
 
 just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
-    # Reference the "docs" collection
-    docs:
+    # Reference the "tests" collection
+    tests:
       # Give the collection a name
-      name: Documentation
+      name: Tests
       # Exclude the collection from the navigation
       # Supports true or false (default)
-      nav_exclude: false
+      # nav_exclude: true
+      # Fold the collection in the navigation
+      # Supports true or false (default)
+      # nav_fold: true
       # Exclude the collection from the search
       # Supports true or false (default)
-      search_exclude: false
+      # search_exclude: true
 ```
+
+The navigation for all your normal pages (if any) is displayed before those in collections.
 
 You can reference multiple collections.
 This creates categories in the navigation with the configured names.
+
 ```yaml
 collections:
-  docs:
+  tests:
     permalink: "/:collection/:path/"
     output: true
   tutorials:
@@ -190,9 +266,12 @@ collections:
 
 just_the_docs:
   collections:
-    docs:
-      name: Documentation
+    tests:
+      name: Tests
     tutorials:
       name: Tutorials
 ```
 
+When *all* your pages are in a single collection, its name is not displayed.
+
+The navigation for each collection is a separate name space for page titles: a page in one collection cannot be a child of a page in a different collection, or of a normal page.

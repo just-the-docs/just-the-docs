@@ -1,8 +1,4 @@
-//
 // Utility classes for typography
-//
-
-// stylelint-disable primer/selector-no-utility, primer/no-override
 
 .fs-1 {
   @include fs-1;
@@ -87,5 +83,3 @@
 .text-uppercase {
   text-transform: uppercase !important;
 }
-
-// stylelint-enable primer/selector-no-utility

@@ -1,0 +1,30 @@
+// Skipnav
+// Skip to main content
+
+a.skip-to-main {
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -999;
+}
+
+a.skip-to-main:focus,
+a.skip-to-main:active {
+  color: $link-color;
+  background-color: $body-background-color;
+  left: auto;
+  top: auto;
+  width: 30%;
+  height: auto;
+  overflow: auto;
+  margin: 10px 35%;
+  padding: 5px;
+  border-radius: 15px;
+  border: 4px solid $btn-primary-color;
+  text-align: center;
+  font-size: 1.2em;
+  z-index: 999;
+}
