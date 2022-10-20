@@ -70,7 +70,7 @@ A CityJSON file containing this new City Object would look like this:
   "version": "1.1",
   "extensions": {
     "Noise": {
-      "url" : "https://someurl.org/noise.json",
+      "url" : "https://www.cityjson.org/tutorials/files/noise.ext.json",
       "version": "1.1"
     }
   },
@@ -180,14 +180,10 @@ You can use an [online JSON Schema validator](https://jsonschemalint.com/#!/vers
 
 <img src="../files/noise-jsonschema.png">
 
+To validate a given CityJSON file, you can use the [online validator](https://validator.cityjson.org): just drag the file `noise_data.city.json`, the validator will fetch the Extension schema automatically and validate the file (it should return valid here).
 
-To validate a given CityJSON file and test it locally with your Extension you have to use [cjval](https://github.com/cityjson/cjval).
+If you want to test things locally while developing your own Extension, you can do the same with the file locally. 
+First, install [cjval](https://github.com/cityjson/cjval) (the README explains how).
 If you use the option `--extensionfile` when validating, the Extension schemas will not be fetched automatically.
 
 <img src="../files/noise-results.png">
-
-
-Alternatively (if you don't want to install cjval), you can put your file `noise.ext.json` somewhere where it can be fetched (eg http://mywebsite.org/noise.ext.json), put that URL at line 6 and use the [online validator](https://validator.cityjson.org)
-
-
-
