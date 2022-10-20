@@ -1,7 +1,12 @@
+---
+layout: default
+title: UX For Devs
+parent: Programming
+nav_order: 1
+---
 
-
-## Don't Make Me Thing.
-  * [read this](https://www.amazon.ca/Dont-Make-Me-Think-Usability/dp/0321344758)
+## "Don't Make Me Think"
+  * [read this](https://www.amazon.ca/Dont-Make-Me-Think-Usability/dp/0321344758) great introduction on how to best help your users succeed with your product.
 
 ## Use Systems
   * Use Flowbite, a Figma+CSS designs system, to help make the default design obvious and attractive.
