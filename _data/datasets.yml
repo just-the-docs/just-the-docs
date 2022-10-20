@@ -63,7 +63,7 @@
   gml-size: 45
   textures: LoD3_Railway.zip
   validity: 74% features valid
-  details: CityGML demo. Buildings, Railway, Terrain, Vegetation (with Implicit Geometries), Water, Tunnels
+  details: CityGML demo. Buildings, Railway, Terrain, Vegetation (with Geometry Templates), Water, Tunnels
 
 - name: Vienna 
   url:  https://www.data.gv.at/katalog/dataset/86d88cae-ad97-4476-bae5-73488a12776d
