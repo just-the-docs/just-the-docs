@@ -18,7 +18,7 @@ This is conceptually akin to the *Application Domain Extensions* (ADEs) in CityG
 
 See the [Extensions specifications for v{{site.lastversion}}]({{ site.url }}{{ site.baseurl }}/specs/#extensions) for an overview of how the file should be structured.
 
-This [tutorials to create a noise extension]({{ '/tutorials/extension/' | prepend: site.baseurl }}) guides you through the process, and explains how to validate the extension itself and datasets that uses the extension.
+This [tutorial to create a noise extension]({{ '/tutorials/extension/' | prepend: site.baseurl }}) guides you through the process, and explains how to validate the extension itself and datasets that uses the extension.
 
 
 
