@@ -450,17 +450,17 @@ as well as DX improvements like better regression tests, CI, and tooling. If you
 [@max06]: https://github.com/max06
 [@sehilyi]: https://github.com/sehilyi
 [@nathanjessen]: https://github.com/nathanjessen
-[@waldyrious]: https://gihhub.com/waldyrious
+[@waldyrious]: https://github.com/waldyrious
 [@MichelleBlanchette]: https://github.com/MichelleBlanchette
 [@henryiii]: https://github.com/henryiii
 [@jmertic]: https://github.com/jmertic
 [@jacobhq]: https://github.com/jacobhq
-[@UnclassedPenguin]: https://gihhub.com/UnclassedPenguin
+[@UnclassedPenguin]: https://github.com/UnclassedPenguin
 [@alyssais]: https://github.com/alyssais
 [@nascosto]: https://github.com/nascosto
 [@SPGoding]: https://github.com/SPGoding
 [@iridazzle]: https://github.com/iridazzle
-[@ivanskodje]: https://gihhub.com/ivanskodje
+[@ivanskodje]: https://github.com/ivanskodje
 [@Eisverygoodletter]: https://github.com/Eisverygoodletter
 
 **Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.3.3...v0.4.0.rc1
