@@ -1,8 +1,8 @@
 {
   "type": "CityJSONExtension",
   "name": "Noise",
-  "uri": "https://www.cityjson.org/tutorials/files/noise.ext.json",
-  "version": "1.1.0",
+  "url": "https://www.cityjson.org/tutorials/files/noise.ext.json",
+  "version": "1.1.1",
   "versionCityJSON": "1.1",
   "description": "Extension for Noise Emission Simulation",
   
