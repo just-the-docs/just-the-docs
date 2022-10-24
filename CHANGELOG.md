@@ -23,12 +23,15 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
 - Fixed: typo in changelog links [@koppor] in [#1000]
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
+- Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
 
 [#999]: https://github.com/just-the-docs/just-the-docs/pull/999
 [#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
 [#1001]: https://github.com/just-the-docs/just-the-docs/pull/1001
+[#1010]: https://github.com/just-the-docs/just-the-docs/pull/1010
 
 [@koppor]: https://github.com/koppor
+[@deseo]: https://github.com/deseo
 
 ## Pre-release v0.4.0.rc3
 
