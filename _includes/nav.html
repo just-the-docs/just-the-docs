@@ -135,7 +135,7 @@
 <ul class="nav-list">
 {%- for node in first_level_pages -%}
     {%- unless node.nav_exclude -%}
-      <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+      <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil %} active{% endif %}">
         {%- if node.has_children -%}
           <a href="#" class="nav-list-expander" aria-label="toggle links in {{ node.title }} category">
             <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
