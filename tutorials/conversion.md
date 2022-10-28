@@ -23,7 +23,6 @@ The executable is at the root of the folder, type `./citygml-tools`:
 
 ## Conversion CityGML -> CityJSON
 
-<span class="label label-yellow">Coming soon for v1.1, only v1.0 at the moment</span>
 
 Download this [CityGML file of The Hague](https://3d.bk.tudelft.nl/opendata/cityjson/citygml/DenHaag_01.xml) (or any CityGML files; these can have textures too), and place it in a given folder (say `/home/elvis/temp/data/`)
 To convert it to CityJSON:
