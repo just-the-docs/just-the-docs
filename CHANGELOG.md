@@ -23,12 +23,15 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
 - Fixed: typo in changelog links [@koppor] in [#1000]
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
+- Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
 
 [#999]: https://github.com/just-the-docs/just-the-docs/pull/999
 [#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
 [#1001]: https://github.com/just-the-docs/just-the-docs/pull/1001
+[#1010]: https://github.com/just-the-docs/just-the-docs/pull/1010
 
 [@koppor]: https://github.com/koppor
+[@deseo]: https://github.com/deseo
 
 ## Pre-release v0.4.0.rc3
 
@@ -450,17 +453,17 @@ as well as DX improvements like better regression tests, CI, and tooling. If you
 [@max06]: https://github.com/max06
 [@sehilyi]: https://github.com/sehilyi
 [@nathanjessen]: https://github.com/nathanjessen
-[@waldyrious]: https://gihhub.com/waldyrious
+[@waldyrious]: https://github.com/waldyrious
 [@MichelleBlanchette]: https://github.com/MichelleBlanchette
 [@henryiii]: https://github.com/henryiii
 [@jmertic]: https://github.com/jmertic
 [@jacobhq]: https://github.com/jacobhq
-[@UnclassedPenguin]: https://gihhub.com/UnclassedPenguin
+[@UnclassedPenguin]: https://github.com/UnclassedPenguin
 [@alyssais]: https://github.com/alyssais
 [@nascosto]: https://github.com/nascosto
 [@SPGoding]: https://github.com/SPGoding
 [@iridazzle]: https://github.com/iridazzle
-[@ivanskodje]: https://gihhub.com/ivanskodje
+[@ivanskodje]: https://github.com/ivanskodje
 [@Eisverygoodletter]: https://github.com/Eisverygoodletter
 
 **Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.3.3...v0.4.0.rc1
