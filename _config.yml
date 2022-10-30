@@ -18,7 +18,7 @@ description: A brochure for NWRC+KOCSEA+Changbal 2022
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ksea-seattle-it.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-remote_theme: just-the-docs/just-the-docs
+remote_theme: KSEA-Seattle-IT/ksea-seattle-it.github.io
 
 permalink: pretty
 
