@@ -1,14 +1,13 @@
 ---
 layout: default
 title: Saturday, November 12
-nav_order: 8
+nav_order: 3
 ---
 
 <table>
   <tr>
     <td><b>Time</b></td>
     <td colspan="3"><b>Schedule</b></td>
-
   </tr>
   <tr>
     <td>08:00 AM - 08:30 AM</td>
