@@ -24,11 +24,13 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: typo in changelog links [@koppor] in [#1000]
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
 - Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
+- Fixed: top-level active link styling by [@pdmosses] in [#1015]
 
 [#999]: https://github.com/just-the-docs/just-the-docs/pull/999
 [#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
 [#1001]: https://github.com/just-the-docs/just-the-docs/pull/1001
 [#1010]: https://github.com/just-the-docs/just-the-docs/pull/1010
+[#1015]: https://github.com/just-the-docs/just-the-docs/pull/1015
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
