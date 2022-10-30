@@ -6,7 +6,7 @@ nav_order: 8
 
 | Time        | Speech           | To  |
 | :------------- |:-------------:| -----:|
-| 8:00 AM - 08:30 AM  | right-aligned | #colspan# |
+| 8:00 AM - 08:30 AM  | right-aligned | |
 | col 2 is      | centered      |   $12 |
 | zebra stripes | are neat      |    $1 |
 
