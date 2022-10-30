@@ -71,11 +71,120 @@ nav_order: 8
     </td>
   </tr>
   <tr>
-    <td>12:00 PM - 12:50 AM</td>
+    <td>12:00 PM - 01:00 PM</td>
     <td colspan="3">
         <b>Lunch</b>
         <br>
         Puget Sound Room
+    </td>
+  </tr>
+  <tr>
+    <td>01:00 PM - 02:00 PM</td>
+    <td colspan="2">
+        <b>Poster</b>
+        <br>
+        KSEA & KOCSEA
+        <br>
+        Cascade Ballroom I-A
+    </td>
+    <td>
+        <b>Session 4</b>
+        <br>
+        KAIST Alumni Networking
+        <br>
+        Olympic
+    </td>
+  </tr>
+  <tr>
+    <td>02:00 PM - 03:00 PM</td>
+    <td colspan="3">
+        <b>Keynote Speech 2</b>
+        <br>
+        Cascade Ballroom II
+        <br>
+        Speech 2 Topic
+        <br>
+        <b>Dr. Scott Carnz</b>, Provost, City University of Seattle
+    </td>
+  </tr>
+  <tr>
+    <td>03:00 PM - 03:10 PM</td>
+    <td colspan="3">
+        <b>Changbal Introduction</b>
+        <br>
+        Cascade Ballroom II
+    </td>
+  </tr>
+  <tr>
+    <td>03:10 PM - 03:50 PM</td>
+    <td colspan="3">
+        <b>Panel Talk, Designer/PM/Developer</b>
+        <br>
+        Cascade Ballroom II
+    </td>
+  </tr>
+  <tr>
+    <td>03:50 PM - 04:00 PM</td>
+    <td colspan="3">
+        <b>Coffee Break & Arts Display</b>
+        <br>
+        Cascade Foyer North
+    </td>
+  </tr>
+  <tr>
+    <td>04:00 PM - 05:40 PM</td>
+    <td>
+        <b>Session 5</b>
+        <br>
+        Changbal Mentoring - Design
+        <br>
+        Cascade Ballroom I-B
+    </td>
+    <td>
+        <b>Session 6</b>
+        <br>
+        Changbal Mentoring - PM
+        <br>
+        Olympic
+    </td>
+    <td>
+        <b>Session 7</b>
+        <br>
+        Changbal Mentoring - Developer
+        <br>
+        St. Helens
+    </td>
+  </tr>
+  <tr>
+    <td>05:40 PM - 05:50 PM</td>
+    <td colspan="3">
+        <b>Break, Move to Networking Reception</b>
+        <br>
+        Cascade Foyer North
+    </td>
+  </tr>
+  <tr>
+    <td>05:50 PM - 06:20 PM</td>
+    <td colspan="3">
+        <b>Networking & Reception For All</b>
+        <br>
+        Puget Sound
+    </td>
+  </tr>
+  <tr>
+    <td>06:20 PM - 06:30 PM</td>
+    <td colspan="3">
+        <b>Break, Move to Gala</b>
+        <br>
+        Cascade Foyer North
+    </td>
+  </tr>
+  <tr>
+    <td>06:30 PM - 08:30 PM</td>
+    <td colspan="3">
+        <b>Gala Dinner</b>
+        <br>
+        Cascade Ballroom II
     </td>
   </tr>
 </table>
