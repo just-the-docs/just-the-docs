@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About NWRC 2022
+title: Home
 nav_order: 1
 description: "Program Schedule for NWRC+KOCSEA+Changbal 2022."
 permalink: /
