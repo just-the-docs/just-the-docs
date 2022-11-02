@@ -13,6 +13,8 @@
 
 ## Installation
 
+### Use the template
+
 The [Just the Docs Template] provides the simplest, quickest, and easiest way to create a new website that uses the Just the Docs theme. To get started with creating a site, just click "[use the template]"!
 
 Note: To use the theme, you do ***not*** need to clone or fork the [Just the Docs repo]! You should do that only if you intend to browse the theme docs locally, contribute to the development of the theme, or develop a new theme based on Just the Docs.
@@ -27,6 +29,34 @@ More specifically, the created site:
 - uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
 
 Other than that, you're free to customize sites that you create with the template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+
+### Use RubyGems
+
+Alternatively, you can install the theme as a Ruby Gem, without creating a new site.
+
+Add this line to your Jekyll site's `Gemfile`:
+
+```ruby
+gem "just-the-docs"
+```
+
+And add this line to your Jekyll site's `_config.yml`:
+
+```yaml
+theme: just-the-docs
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install just-the-docs
+
+Alternatively, you can run it inside Docker while developing your site
+
+    $ docker-compose up
 
 ## Usage
 
