@@ -130,12 +130,36 @@
 {%- comment -%}
   The order of sibling pages in `pages_list` determines the order of display of
   links to them in lists of navigation links and in auto-generated TOCs.
+  
+  Note that Liquid evaluates conditions from right to left (and it does not allow
+  the use of parentheses). Some conditions are not so easy to express clearly...
+  
+  For example, consider the following condition:
+  
+    C: page.collection = = include.key and 
+       page.url = = node.url or 
+       page.grand_parent = = node.title or 
+       page.parent = = node.title and 
+       page.grand_parent = = nil
+ 
+  Here, `node` is a first-level page. The last part of the condition
+  -- namely: `page.parent = = node.title and page.grand_parent = = nil` --
+  is evaluated first; it holds if and only if `page` is a child of `node`.
+  
+  The condition `page.grand_parent = = node.title or ...` holds when 
+  `page` is a grandchild of node, OR `...` holds.
+  
+  The condition `page.url = = node.url or ...` holds when 
+  `page` is `node`, OR `...` holds.
+  
+  The condition C: `page.collection = = include.key and ...` holds when we are 
+  generating the nav links for a collection that includes `page`, AND `...` holds.
 {%- endcomment -%}
 
 <ul class="nav-list">
 {%- for node in first_level_pages -%}
     {%- unless node.nav_exclude -%}
-      <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.parent == node.title or page.grand_parent == node.title %} active{% endif %}">
+      <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil %} active{% endif %}">
         {%- if node.has_children -%}
           <a href="#" class="nav-list-expander" aria-label="toggle links in {{ node.title }} category">
             <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
