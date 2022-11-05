@@ -25,12 +25,16 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
 - Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
 - Fixed: top-level active link styling by [@pdmosses] in [#1015]
+- Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
+- Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
 
 [#999]: https://github.com/just-the-docs/just-the-docs/pull/999
 [#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
 [#1001]: https://github.com/just-the-docs/just-the-docs/pull/1001
 [#1010]: https://github.com/just-the-docs/just-the-docs/pull/1010
 [#1015]: https://github.com/just-the-docs/just-the-docs/pull/1015
+[#1018]: https://github.com/just-the-docs/just-the-docs/pull/1018
+[#1019]: https://github.com/just-the-docs/just-the-docs/pull/1019
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
