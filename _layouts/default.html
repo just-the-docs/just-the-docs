@@ -58,6 +58,18 @@ layout: table_wrappers
       {% if pages_top_size > 0 %}
         {% include nav.html pages=site.html_pages key=nil %}
       {% endif %}
+      {%- if site.nav_external_links -%}
+        <ul class="nav-list">
+          {%- for node in site.nav_external_links -%}
+            <li class="nav-list-item external">
+              <a href="{{ node.url | absolute_url }}" class="nav-list-link external">
+                {{ node.title }}
+                {% unless node.hide_icon %}<svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>{% endunless %}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
       {% if site.just_the_docs.collections %}
         {% assign collections_size = site.just_the_docs.collections | size %}
         {% for collection_entry in site.just_the_docs.collections %}
