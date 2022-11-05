@@ -21,10 +21,11 @@ This website includes docs for some new features that are not available in `v0.4
 Changes to `main` that are *not* in the latest pre-release:
 
 - Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
-- Fixed: typo in changelog links [@koppor] in [#1000]
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
 - Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
 - Fixed: top-level active link styling by [@pdmosses] in [#1015]
+- Fixed: external links for sites with no pages by [@pdmosses] in [#1021]
+- Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
 - Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
 
@@ -35,6 +36,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1015]: https://github.com/just-the-docs/just-the-docs/pull/1015
 [#1018]: https://github.com/just-the-docs/just-the-docs/pull/1018
 [#1019]: https://github.com/just-the-docs/just-the-docs/pull/1019
+[#1021]: https://github.com/just-the-docs/just-the-docs/pull/1021
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
