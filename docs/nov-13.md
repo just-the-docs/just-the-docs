@@ -23,6 +23,10 @@ nav_order: 3
         <b>Keynote Speech 3</b>
         <br>
         Cascade Ballroom II
+        <br>
+        <br>
+        <b>Steven Y. Ko</b>, Simon Fraser University
+        <ul><li>Title : Pushing the Boundaries of Mobile OSs: Techniques and Lessons Learned</li></ul>
     </td>
   </tr>
   <tr>
@@ -52,6 +56,18 @@ nav_order: 3
         <b>Session 9 - KOCSEA</b>
         <br>
         St. Helens
+        <br>
+        <br>
+        <b>Yonghwi Kwon</b>, University of Virginia
+        <ul><li>Title: Discovering and Exploiting Logic Flaws of Swarm Algorithms</li></ul>
+        <b>Junho Hong</b>, University of Michigan-Dearborn
+        <ul><li>Title: Cybersecurity of critical infrastructure: substations</li></ul>
+        <b>Hyo-Joo Han</b>, Georgia Gwinnett College
+        <ul><li>Title: Designer's Boundary Spanning Activities Crossing Knowledge Boundaries</li></ul>
+        <b>Ike Choi</b>, University of Georgia
+        <ul><li>Title: Building socially responsible interdisciplinary research programs</li></ul>
+        <b>Seon Ho Kim</b>, University of Southern California
+        <ul><li>Title: Data-driven Traffic Index from Sparse and Incomplete Data</li></ul>
     </td>
   </tr>
   <tr>
@@ -63,15 +79,7 @@ nav_order: 3
     </td>
   </tr>
   <tr>
-    <td>11:30 AM - 12:50 PM</td>
-    <td colspan="2">
-        <b>KOCSEA</b>
-        <br>
-        Cascade Ballroom II
-    </td>
-  </tr>
-  <tr>
-    <td>12:50 PM - 01:10 PM</td>
+    <td>11:30 AM - 12:00 PM</td>
     <td colspan="2">
         <b>Closing</b>
         <br>

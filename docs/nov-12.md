@@ -57,6 +57,18 @@ nav_order: 2
         <b>Session 2 - KOCSEA</b>
         <br>
         St. Helens
+        <br>
+        <br>
+        <b>Joohyung Lee</b>, Samsung Research
+        <ul><li>Title : Digital Human Powered with Large Scale AI</li></ul>
+        <b>Mingon Kang</b>, University of Nevada
+        <ul><li>Title : Sex-specific Interpretable Neural Network for Sexual Dimorphism Analysis</li></ul>
+        <b>Jaewoo Lee</b>, University of Georgia
+        <ul><li>Title : Towards Practical Deep Learning with Differential Privacy</li></ul>
+        <b>Byung-Hak Kim</b>, AKASA
+        <ul><li>Title : A Self-Supervised Framework to Learn Visual Representation in the Wild</li></ul>
+        <b>Yoonsuck Choe</b>, Texas A&M University
+        <ul><li>Title : Time, Brain, and Neural Networks</li></ul>
     </td>
     <td>
         <b>Session 3 - KSEA</b>
