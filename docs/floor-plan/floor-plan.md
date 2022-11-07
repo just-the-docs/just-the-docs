@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Floor Plan
-nav_order: 5
+nav_order: 4
 ---
 
 ![Lobby Level - First Floor](../first-floor.webp)

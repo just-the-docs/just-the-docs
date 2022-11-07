@@ -2,7 +2,7 @@
 layout: default
 title: Saturday, November 12
 description: ""
-nav_order: 3
+nav_order: 2
 ---
 
 <table>

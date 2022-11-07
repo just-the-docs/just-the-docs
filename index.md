@@ -10,8 +10,6 @@ permalink: /
 
 Please select the date to browse the detailed conference schedule.
 
-[Friday, Nov 11](./docs/nov-11/){: .btn .fs-5 .mb-4 .mb-md-0 }
-
 [Saturday, Nov 12](./docs/nov-12/){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 [Sunday, Nov 13](./docs/nov-13/){: .btn .fs-5 .mb-4 .mb-md-0 }
