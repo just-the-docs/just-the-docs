@@ -28,9 +28,7 @@ nav_order: 4
   <tr>
     <td>09:30 AM - 11:10 AM</td>
     <td>
-        <b>Session 8</b>
-        <br>
-        KSEA
+        <b>Session 8 - KSEA</b>
         <br>
         Olympic
         <br>
@@ -49,12 +47,9 @@ nav_order: 4
         <ul><li>Title: DNA as Material -- DNA Reaction Network For Modular Biologial Sensing</li></ul>
         <b>Byung Kim</b>, Professor, Boise State University, Physics
         <ul><li>Title: Self-Assembled Water Chains: A Scanning Probe Microscopy Approach</li></ul>
-
     </td>
     <td>
-        <b>Session 9</b>
-        <br>
-        KOCSEA
+        <b>Session 9 - KOCSEA</b>
         <br>
         St. Helens
     </td>
