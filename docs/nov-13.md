@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sunday, November 13
-nav_order: 4
+nav_order: 3
 ---
 
 <table>
