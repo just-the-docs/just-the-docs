@@ -13,7 +13,7 @@ nav_order: 3
   <tr>
     <td>08:00 AM - 08:30 AM</td>
     <td colspan="3">
-        <b>Registration & Arts Display & Coffee</b>
+        <b>Registration, Arts Display & Coffee</b>
         <br>
         Cascade Foyer North
     </td>
@@ -33,11 +33,9 @@ nav_order: 3
         <br>
         Cascade Ballroom II
         <br>
-        <ul>
-          <li>
-            <b>Title</b> - <b>Alex Choe</b>, President, CMES Robotics Inc.
-          </li>
-        </ul>
+        <br>
+        <b>Alex Choe</b>, President, CMES Robotics Inc.
+        <ul><li>Title : <b>TBD</b></li></ul>
     </td>
   </tr>
   <tr>
@@ -51,16 +49,12 @@ nav_order: 3
   <tr>
     <td>10:20 AM - 12:00 PM</td>
     <td>
-        <b>Session 1</b>
-        <br>
-        KSEA YG
+        <b>Session 1 - KSEA YG</b>
         <br>
         Olympic
     </td>
     <td>
-        <b>Session 2</b>
-        <br>
-        KOCSEA
+        <b>Session 2 - KOCSEA</b>
         <br>
         St. Helens
     </td>
@@ -68,20 +62,20 @@ nav_order: 3
         <b>Session 3 - KSEA</b>
         <br>
         Cascade Ballroom I-B
-        <ul>
-          <li>
-            <b>App Install Ads: Past, Present, and Future</b> - <b>Donghwan Jeon</b>, CTO, Moloco
-          </li>
-          <li>
-            <b>Cyber Security</b> - <b>James Taylor</b>, Assistant Professor, City University of Seattle
-          </li>
-          <li>
-            <b>The Interstate Drone League to Stimulate STEM Pipelines in KSEA Communities (iDrone KSEA)</b> - <b>Jae Ryu</b>, Associate Professor, University of Idaho
-          </li>
-          <li>
-            <b>Effects of Physical Activity on Children’s Math and Science Performance: A Meta-Analytic Approach</b> - <b>Taeho Yoh</b>, Professor, Southern Illinois University Carbondale
-          </li>
-        </ul>
+        <br>
+        <br>
+        <u>Invited Talks (20 min + 5 min Q&A)</u>
+        <br>
+        <b>Donghwan Jeon</b>, CTO, Moloco
+        <ul><li>Title : App Install Ads - Past, Present, and Future</li></ul>
+        <u>Speakers (10 min each + 5 min Q&A = total 60 min)</u>
+        <br>
+        <b>James Taylor</b>, Assistant Professor, City University of Seattle
+        <ul><li>Cyber Security</li></ul>
+        <b>Jae Ryu</b>, Associate Professor, University of Idaho
+        <ul><li>Title : The Interstate Drone League to Stimulate STEM Pipelines in KSEA Communities (iDrone KSEA)</li></ul>
+        <b>Taeho Yoh</b>, Professor, Southern Illinois University Carbondale
+        <ul><li>Title : Effects of Physical Activity on Children’s Math and Science Performance: A Meta-Analytic Approach</li></ul>
     </td>
   </tr>
   <tr>
@@ -116,11 +110,9 @@ nav_order: 3
         <br>
         Cascade Ballroom II
         <br>
-        <ul>
-          <li>
-            <b>Design Thinking for the STEM Disciplines</b> - <b>Dr. Scott Carnz</b>, Provost, City University of Seattle
-          </li>
-        </ul>
+        <br>
+        <b>Dr. Scott Carnz</b>, Provost, City University of Seattle
+        <ul><li>Title : Design Thinking for the STEM Disciplines</li></ul>
     </td>
   </tr>
   <tr>
@@ -150,23 +142,17 @@ nav_order: 3
   <tr>
     <td>04:00 PM - 05:40 PM</td>
     <td>
-        <b>Session 5</b>
-        <br>
-        Changbal Mentoring - Design
+        <b>Session 5 - Changbal Mentoring(Design)</b>
         <br>
         Cascade Ballroom I-B
     </td>
     <td>
-        <b>Session 6</b>
-        <br>
-        Changbal Mentoring - PM
+        <b>Session 6 - Changbal Mentoring(PM)</b>
         <br>
         Olympic
     </td>
     <td>
-        <b>Session 7</b>
-        <br>
-        Changbal Mentoring - Developer
+        <b>Session 7 - Changbal Mentoring(Developer)</b>
         <br>
         St. Helens
     </td>
