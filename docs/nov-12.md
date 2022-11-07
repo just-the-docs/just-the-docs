@@ -13,7 +13,7 @@ nav_order: 3
   <tr>
     <td>08:00 AM - 08:30 AM</td>
     <td colspan="3">
-        <b>Registration & Arts Display</b>
+        <b>Registration & Arts Display & Coffee</b>
         <br>
         Cascade Foyer North
     </td>
@@ -33,7 +33,7 @@ nav_order: 3
         <br>
         Cascade Ballroom II
         <br>
-        Speech 1 Topic
+        <b>Title: TBD</b>
         <br>
         <b>Mr. Alex Choe</b>, President, CMES Robotics Inc.
     </td>
@@ -47,7 +47,7 @@ nav_order: 3
     </td>
   </tr>
   <tr>
-    <td>10:20 AM - 12:00 AM</td>
+    <td>10:20 AM - 12:00 PM</td>
     <td>
         <b>Session 1</b>
         <br>
@@ -63,11 +63,23 @@ nav_order: 3
         St. Helens
     </td>
     <td>
-        <b>Session 3</b>
-        <br>
-        KSEA
+        <b>Session 3 - KSEA</b>
         <br>
         Cascade Ballroom I-B
+        <ul>
+          <li>
+            <b>App Install Ads: Past, Present, and Future</b> - <b>Donghwan Jeon</b>, CTO, Moloco
+          </li>
+          <li>
+            <b>Cyber Security</b> - <b>James Taylor</b>, Assistant Professor, City University of Seattle
+          </li>
+          <li>
+            <b>The Interstate Drone League to Stimulate STEM Pipelines in KSEA Communities (iDrone KSEA)</b> - <b>Jae Ryu</b>, Associate Professor, University of Idaho
+          </li>
+          <li>
+            <b>Effects of Physical Activity on Children’s Math and Science Performance: A Meta-Analytic Approach</b> - <b>Taeho Yoh</b>, Professor, Southern Illinois University Carbondale
+          </li>
+        </ul>
     </td>
   </tr>
   <tr>
@@ -75,7 +87,7 @@ nav_order: 3
     <td colspan="3">
         <b>Lunch</b>
         <br>
-        Puget Sound Room
+        Puget Sound
     </td>
   </tr>
   <tr>
@@ -102,7 +114,7 @@ nav_order: 3
         <br>
         Cascade Ballroom II
         <br>
-        Speech 2 Topic
+        <b>Title: Design Thinking for the STEM Disciplines</b>
         <br>
         <b>Dr. Scott Carnz</b>, Provost, City University of Seattle
     </td>
