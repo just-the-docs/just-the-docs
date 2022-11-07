@@ -35,12 +35,6 @@ nav_order: 4
         Olympic
         <br>
         <br>
-        <u>Co-Chairs</u>
-        <br>
-        <b>Byung Kim</b>, CP, Boise Chapter, Boise State University
-        <br>
-        <b>Brian Maeng</b>, CP, Seattle Chapter, City University of Seattle
-        <br>
         <u>Invited Talks (20 min + 5 min Q&A)</u>
         <br>
         <b>Joshua Pak</b>, Professor, Idaho State University, Chemistry
