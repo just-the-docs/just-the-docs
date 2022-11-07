@@ -13,7 +13,7 @@ nav_order: 3
   <tr>
     <td>08:00 AM - 08:30 AM</td>
     <td colspan="3">
-        <b>Registration & Arts Display</b>
+        <b>Registration, Arts Display & Coffee</b>
         <br>
         Cascade Foyer North
     </td>
@@ -33,9 +33,9 @@ nav_order: 3
         <br>
         Cascade Ballroom II
         <br>
-        Speech 1 Topic
         <br>
-        <b>Mr. Alex Choe</b>, President, CMES Robotics Inc.
+        <b>Alex Choe</b>, President, CMES Robotics Inc.
+        <ul><li>Title : <b>TBD</b></li></ul>
     </td>
   </tr>
   <tr>
@@ -47,27 +47,35 @@ nav_order: 3
     </td>
   </tr>
   <tr>
-    <td>10:20 AM - 12:00 AM</td>
+    <td>10:20 AM - 12:00 PM</td>
     <td>
-        <b>Session 1</b>
-        <br>
-        KSEA YG
+        <b>Session 1 - KSEA YG</b>
         <br>
         Olympic
     </td>
     <td>
-        <b>Session 2</b>
-        <br>
-        KOCSEA
+        <b>Session 2 - KOCSEA</b>
         <br>
         St. Helens
     </td>
     <td>
-        <b>Session 3</b>
-        <br>
-        KSEA
+        <b>Session 3 - KSEA</b>
         <br>
         Cascade Ballroom I-B
+        <br>
+        <br>
+        <u>Invited Talks (20 min + 5 min Q&A)</u>
+        <br>
+        <b>Donghwan Jeon</b>, CTO, Moloco
+        <ul><li>Title : App Install Ads - Past, Present, and Future</li></ul>
+        <u>Speakers (10 min each + 5 min Q&A = total 60 min)</u>
+        <br>
+        <b>James Taylor</b>, Assistant Professor, City University of Seattle
+        <ul><li>Cyber Security</li></ul>
+        <b>Jae Ryu</b>, Associate Professor, University of Idaho
+        <ul><li>Title : The Interstate Drone League to Stimulate STEM Pipelines in KSEA Communities (iDrone KSEA)</li></ul>
+        <b>Taeho Yoh</b>, Professor, Southern Illinois University Carbondale
+        <ul><li>Title : Effects of Physical Activity on Children’s Math and Science Performance: A Meta-Analytic Approach</li></ul>
     </td>
   </tr>
   <tr>
@@ -75,7 +83,7 @@ nav_order: 3
     <td colspan="3">
         <b>Lunch</b>
         <br>
-        Puget Sound Room
+        Puget Sound
     </td>
   </tr>
   <tr>
@@ -102,9 +110,9 @@ nav_order: 3
         <br>
         Cascade Ballroom II
         <br>
-        Speech 2 Topic
         <br>
         <b>Dr. Scott Carnz</b>, Provost, City University of Seattle
+        <ul><li>Title : Design Thinking for the STEM Disciplines</li></ul>
     </td>
   </tr>
   <tr>
@@ -134,23 +142,17 @@ nav_order: 3
   <tr>
     <td>04:00 PM - 05:40 PM</td>
     <td>
-        <b>Session 5</b>
-        <br>
-        Changbal Mentoring - Design
+        <b>Session 5 - Changbal Mentoring(Design)</b>
         <br>
         Cascade Ballroom I-B
     </td>
     <td>
-        <b>Session 6</b>
-        <br>
-        Changbal Mentoring - PM
+        <b>Session 6 - Changbal Mentoring(PM)</b>
         <br>
         Olympic
     </td>
     <td>
-        <b>Session 7</b>
-        <br>
-        Changbal Mentoring - Developer
+        <b>Session 7 - Changbal Mentoring(Developer)</b>
         <br>
         St. Helens
     </td>
