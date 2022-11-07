@@ -33,9 +33,11 @@ nav_order: 3
         <br>
         Cascade Ballroom II
         <br>
-        <b>Title: TBD</b>
-        <br>
-        <b>Mr. Alex Choe</b>, President, CMES Robotics Inc.
+        <ul>
+          <li>
+            <b>Title</b> - <b>Alex Choe</b>, President, CMES Robotics Inc.
+          </li>
+        </ul>
     </td>
   </tr>
   <tr>
@@ -114,9 +116,11 @@ nav_order: 3
         <br>
         Cascade Ballroom II
         <br>
-        <b>Title: Design Thinking for the STEM Disciplines</b>
-        <br>
-        <b>Dr. Scott Carnz</b>, Provost, City University of Seattle
+        <ul>
+          <li>
+            <b>Design Thinking for the STEM Disciplines</b> - <b>Dr. Scott Carnz</b>, Provost, City University of Seattle
+          </li>
+        </ul>
     </td>
   </tr>
   <tr>
