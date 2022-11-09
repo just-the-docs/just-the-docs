@@ -131,6 +131,10 @@ Some ideas to pick from, not needed every month.
 2.  Ask: Who did you work with this month, and how did that go? Why did it go that way?
 3.  Ask: What are you learning, and from whom? What are you teaching, and to whom? What would you like to learn?
 
+### Monthly Team Social
+
+We hold monthly staff-coordinated, funded team social events. Countable will pay for meals and up to 1 drink, if you go out with at least one team member in person, or attend a virtual event. Any event must be announced to all team members on #fun . 
+
 <!-- Commented out for now as this is not consistent with our current Evaluation processes, and as such represents a lot of extra, unclearly defined work! Chelsea will seek to incorporate these Q's into our existing evaluation processes 
 
 ### Performance Reviews
