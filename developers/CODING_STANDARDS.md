@@ -17,13 +17,17 @@ Covers principles of our coding standards, then branches out to specific languag
 
 [Philosophy of Sofware Design](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201) is highly recommended reading. It's the book which will make you a better programming in the ways that matter most.
 
+## Basics
+
+These things should go without saying, but we'll say them here just in case :)
+  - Don't keep dead (unused) code. For example, if you copy code, never leave the old copy in GIT. For example, a file like `index.html.old` that isn't used.
+
 ## Principles
 
   - Spend about 10% of your time on writing tests and refactoring to reduce complexity.
   - Every module, file, function, class and other component should have a clear "job" or clear set of related jobs. Someone who does not know the codebase should be able to deduce what a function is responsible fo.
   - Follow conventions. For projects that do not currently follow our standards (open source, or new projects shared with other dev teams) but follows a different one, stick with that project's conventions unless we make a conscious decision to refactor the whole thing. Don't mix conventions.
   - Make life easier for your team mates and future self by being consistent and thoughtful of what someone unfamiliar would think. The goal is your code should be obvious and easy to understand for a new programmer. Stick to conventions, and use comments to explain the story of your code, and why things are done a particular way.
-  - Choose abstractions and tools based on real problems, not the reverse.
   - Humans should not spend time thinking about whitespace formatting. We use auto-formatters in place of coding standards in every case possible.
 
 ## Literature
