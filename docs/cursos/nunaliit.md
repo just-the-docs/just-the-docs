@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Lists
-parent: UI Components
+title: Nunaliit
+parent: Cursos
 nav_order: 5
 ---
 
