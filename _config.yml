@@ -169,5 +169,3 @@ compress_html:
   profile: false
   # ignore:
   #   envs: all
-
-theme: just-the-docs
