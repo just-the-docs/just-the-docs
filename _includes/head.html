@@ -15,7 +15,13 @@
   <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
 
   {% if site.ga_tracking != nil %}
-    {% include google_analytics.html ga_property=site.ga_tracking %}
+    {% if site.ga_tracking.first %}
+      {% for ga_property in site.ga_tracking %}
+        {% include google_analytics.html ga_property=ga_property %}
+      {% endfor %}
+    {% else %}
+      {% include google_analytics.html ga_property=site.ga_tracking %}
+    {% endif %}
   {% endif %}
 
   {% if site.search_enabled != false %}
