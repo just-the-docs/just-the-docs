@@ -210,11 +210,32 @@ See [Callouts]({{ site.baseurl }}{% link docs/ui-components/callouts.md %}) for 
 
 ## Google Analytics
 
+{: .warning }
+> [Google Analytics 4 will replace Universal Analytics](https://support.google.com/analytics/answer/11583528). On **July 1, 2023**, standard Universal Analytics properties will stop processing new hits. The earlier you migrate, the more historical data and insights you will have in Google Analytics 4.
+
+Universal Analytics (UA) and Google Analytics 4 (GA4) properties are supported.
+
 ```yaml
 # Google Analytics Tracking (optional)
-# e.g, UA-1234567-89
-ga_tracking: UA-5555555-55
-ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
+# Supports one tracking ID string (eg. UA-1234567-89 or G-1AB234CDE5) or a list of tracking ID strings
+ga_tracking: UA-2709176-10
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+```
+
+You can also list multiple tracking IDs.
+
+This helps seamlessly transition your UA property to a GA4 property by tracking to both for a while.
+
+```yaml
+ga_tracking:
+  - UA-1234567-89
+  - G-1AB234CDE5
+```
+
+Once you've acquired enough data in your GA4 property, you can then retire your UA property.
+
+```yaml
+ga_tracking: G-1AB234CDE5
 ```
 
 ## Document collections
