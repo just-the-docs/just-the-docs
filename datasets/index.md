@@ -55,7 +55,7 @@ Here are 2 files with [Geometry templates](https://www.cityjson.org/specs/#geome
     <th>CityGML file (size)</th>
     <th>CityJSON file (size)</th>
     <th>textures</th>
-    <th>validity</th>
+    <th><a href="https://github.com/tudelft3d/val3dity">geometric validity</a></th>
     <th>details</th>
   </tr>
   {% for i in ds %}
