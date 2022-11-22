@@ -54,7 +54,7 @@ See [full specifications for a CityJSONFeature](https://www.cityjson.org/specs/#
 ## Streaming with CityJSONL
 
 Each CityJSON feature can become one line in a [JSON Lines text](https://jsonlines.org).
-Since we want to have access to some properties, eg `"transformation"` and the CRS, those need to be known by the client/software parsing the stream.
+Since we want to have access to some properties, eg `"transform"` and the CRS, those need to be known by the client/software parsing the stream.
 
 We can add one line to a JSON Lines text stream (eg the first line) with those properties in a `"CityJSON"` object, as shown below.
 
