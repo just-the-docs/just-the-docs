@@ -214,4 +214,11 @@
   interface: gui
   type: app  
 
-
+- name: C# library
+  webpage: https://github.com/bertt/cityjson
+  description: Open source C# library to read/write CityJSON
+  foss: true
+  category: 
+    - parser
+  interface: cli
+  type: lib
