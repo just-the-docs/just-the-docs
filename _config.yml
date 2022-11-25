@@ -18,7 +18,7 @@ description: JSON-based encoding for 3D city models
 # url: "https://tudelft3d.github.io"
 # baseurl: "/cityjson-website"
 
-lastversion: "1.1.2"
+lastversion: "1.1.3"
 
 
 baseurl: "" # the subpath of your site, e.g. /blog

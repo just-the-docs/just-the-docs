@@ -6,7 +6,8 @@ permalink: /specs/overview/
 ---
 
 
-- [version 1.1.2 (latest)]({{ '../1.1.2/' }})
+- [version 1.1.3 (latest)]({{ '../1.1.3/' }})
+- [version 1.1.2]({{ '../1.1.2/' }})
 - [version 1.1.1]({{ '../1.1.1/' }})
 - [version 1.1.0]({{ '../1.1.0/' }})
 - [version 1.0.3]({{ '../1.0.3/' }})
