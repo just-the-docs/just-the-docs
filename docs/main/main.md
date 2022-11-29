@@ -9,4 +9,4 @@ permalink: /docs/main
 # OLOSIA Main Home
 
 olosia.com 접속 첫 페이지 입니다.
-{: .fs-6 .fw-300 }
+
