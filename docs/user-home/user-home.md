@@ -8,4 +8,4 @@ permalink: /docs/user-home
 
 # OLOSIA User Home
 
-사용자 홈 첫 페이지 입니다.
+사용자 홈 관련 기능들을 안내합니다.
