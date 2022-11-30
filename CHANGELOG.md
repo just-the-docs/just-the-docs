@@ -5,4 +5,6 @@ layout: default
 
 # CHANGELOG
 
-All notable changes to this project are documented in this file.
+## 수요일, 2022년 11월 30일
+
+가이드문서 최초 작성
