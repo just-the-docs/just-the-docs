@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Settings
-parent: User Profile
+parent: Profile
 nav_order: 2
 ---
 
