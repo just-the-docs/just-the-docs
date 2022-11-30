@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Public Homes
-parent: Main Home
+parent: Main
 nav_order: 2
 ---
 
