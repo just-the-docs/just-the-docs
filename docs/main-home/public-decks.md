@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Public Decks
-parent: Main Home
+parent: Main
 nav_order: 1
 ---
 
