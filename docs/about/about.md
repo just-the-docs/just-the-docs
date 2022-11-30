@@ -8,4 +8,4 @@ permalink: /docs/about/about
 
 # About OLOSIA
 
-올로시아 서비스 안내
+올로시아 서비스 관련 메뉴들을 제공합니다.
