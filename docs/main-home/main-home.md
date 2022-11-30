@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Main Home
+title: Main
 nav_order: 1
 has_children: true
 permalink: /docs/main-home
