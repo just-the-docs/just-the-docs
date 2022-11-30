@@ -1,7 +1,7 @@
 ---
 layout: default
 title: My Home
-parent: User Profile
+parent: Profile
 nav_order: 1
 ---
 
