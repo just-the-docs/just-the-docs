@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Log out
-parent: User Profile
+parent: Profile
 nav_order: 3
 ---
 
