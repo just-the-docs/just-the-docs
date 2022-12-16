@@ -1,7 +1,7 @@
-# Shotgun Developer Documentation Theme
+# ShotGrid Developer Documentation Theme
 
 This is a clone of [just-the-docs](https://pmarsceill.github.io/just-the-docs) extended and tailored to
-serve the documentation needs of the Shotgun Ecosystem. For more information, see [tk-doc-generator](https://github.com/shotgunsoftware/tk-doc-generator).
+serve the documentation needs of the ShotGrid Ecosystem. For more information, see [tk-doc-generator](https://github.com/shotgunsoftware/tk-doc-generator).
 
 ----
 
