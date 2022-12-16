@@ -218,7 +218,8 @@
   the page's top-level breadcrumb (if any), and `second_level_url` to that used
   in the page's second-level breadcrumb (if any).
   
-  For pages with children, the code also sets `toc_list` to the list of child pages.
+  For pages with children, the code also sets `toc_list` to the list of child pages,
+  reversing the order if needed.
 {%- endcomment -%}
 
 {%- if page.collection == include.key -%}
@@ -241,7 +242,7 @@
     {%- assign toc_list = pages_list
           | where: "parent", page.title
           | where_exp: "item", "item.grand_parent == page.parent" -%}
-    {%- if page.child_nav_order == "desc" -%}
+    {%- if page.child_nav_order == 'desc' or page.child_nav_order == 'reversed' -%}
       {%- assign toc_list = toc_list | reverse -%}
     {%- endif -%}
   {%- endif -%}
