@@ -222,7 +222,7 @@ ga_tracking: UA-2709176-10
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 ```
 
-You can also track multiple tracking IDs. This helps seamlessly transition your UA property to a GA4 property by tracking to both for a while.
+This theme supports multiple comma-separated tracking IDs. This helps seamlessly transition UA properties to GA4 properties by tracking both for a while.
 
 ```yaml
 ga_tracking: "UA-1234567-89,G-1AB234CDE5"
