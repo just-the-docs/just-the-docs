@@ -14,9 +14,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', '{{ ga_tracking_ids.first }}'{% unless site.ga_tracking_anonymize_ip == nil %}, { 'anonymize_ip': true }{% endunless %});
-
-      {% for ga_property in ga_tracking_ids offset:1 %}
+      {% for ga_property in ga_tracking_ids %}
         gtag('config', '{{ ga_property }}'{% unless site.ga_tracking_anonymize_ip == nil %}, { 'anonymize_ip': true }{% endunless %});
       {% endfor %}
     </script>
