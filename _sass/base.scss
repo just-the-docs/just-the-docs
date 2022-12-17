@@ -1,7 +1,5 @@
-//
 // Base element style overrides
-//
-// stylelint-disable selector-no-type, selector-max-type
+// stylelint-disable selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
 
 * {
   box-sizing: border-box;
@@ -14,6 +12,7 @@
 
 html {
   @include fs-4;
+
   scroll-behavior: smooth;
 }
 
@@ -23,6 +22,7 @@ body {
   line-height: $body-line-height;
   color: $body-text-color;
   background-color: $body-background-color;
+  overflow-wrap: break-word;
 }
 
 ol,
@@ -45,7 +45,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+#toctitle {
   margin-top: 0;
   margin-bottom: 1em;
   font-weight: 500;
@@ -64,18 +65,12 @@ a {
 }
 
 a:not([class]) {
-  text-decoration: none;
-  background-image: linear-gradient($border-color 0%, $border-color 100%);
-  background-repeat: repeat-x;
-  background-position: 0 100%;
-  background-size: 1px 1px;
+  text-decoration: underline;
+  text-decoration-color: $border-color;
+  text-underline-offset: 2px;
 
   &:hover {
-    background-image: linear-gradient(
-      rgba($link-color, 0.45) 0%,
-      rgba($link-color, 0.45) 100%
-    );
-    background-size: 1px 1px;
+    text-decoration-color: rgba($link-color, 0.45);
   }
 }
 
@@ -105,4 +100,15 @@ hr {
   margin: $sp-6 0;
   background-color: $border-color;
   border: 0;
+}
+
+// adds a GitHub-style sidebar to blockquotes
+blockquote {
+  margin: 10px 0;
+
+  // resets user-agent stylesheets for blockquotes
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  padding-left: 15px;
+  border-left: 3px solid $border-color;
 }

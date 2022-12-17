@@ -2,16 +2,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  {% unless site.plugins contains "jekyll-seo-tag" %}
-    <title>{{ page.title }} - {{ site.title }}</title>
-
-    {% if page.description %}
-      <meta name="Description" content="{{ page.description }}">
-    {% endif %}
-  {% endunless %}
-
-  <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
-
   <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
 
   {% if site.ga_tracking != nil %}
@@ -27,9 +17,14 @@
   {% endif %}
 
   {% if site.search_enabled != false %}
-    <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
   {% endif %}
-  <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
+
+  {% if site.mermaid %}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js"></script>
+  {% endif %}
+
+  <script src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 

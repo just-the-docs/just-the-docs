@@ -10,7 +10,7 @@
   $value: map-get($media-queries, $name);
 
   // If the key exists in the map
-  @if $value != null {
+  @if $value {
     // Prints a media query based on the value
     @media (min-width: rem($value)) {
       @content;

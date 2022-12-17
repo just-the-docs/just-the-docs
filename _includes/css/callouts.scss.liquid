@@ -1,0 +1,93 @@
+{%- comment -%}
+  {% include css/callouts.scss.liquid color_scheme = string %}
+  produces SCSS for all the callouts in site.callouts. For the "dark"
+  color scheme, the levels of the text and background colors are reversed.
+{%- endcomment -%}
+
+{%- assign callout_background_hue = "000" -%}
+{%- assign callout_color_hue = "300" -%}
+{%- if site.callouts_level == "loud" or include.color_scheme == "dark" and site.callouts_level != "quiet" -%}
+  {%- assign callout_background_hue = "300" -%}
+  {%- assign callout_color_hue = "000" -%}
+{%- endif -%}
+
+div.opaque {
+  background-color: $body-background-color;
+}
+
+{%- for callout in site.callouts %}
+
+{%- assign callout_opacity = callout[1].opacity | default: site.callouts_opacity | default: 0.2 -%}
+
+p.{{ callout[0] }}, blockquote.{{ callout[0] }} {
+    background: rgba(${{ callout[1].color }}-{{ callout_background_hue }}, {{ callout_opacity }});
+    border-left: $border-radius solid ${{ callout[1].color }}-{{ callout_color_hue }};
+    border-radius: $border-radius;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: .8rem;
+    {% if callout[1].title %}
+    &::before {
+        color: ${{ callout[1].color }}-{{ callout_color_hue }};
+        content: "{{ callout[1].title }}";
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: .75em;
+        padding-bottom: .125rem;
+    }
+    {% endif %}
+    > .{{ callout[0] }}-title {
+      color: ${{ callout[1].color }}-{{ callout_color_hue }};
+      display: block;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: .75em;
+      padding-bottom: .125rem;
+    }
+}
+
+p.{{ callout[0] }}-title, blockquote.{{ callout[0] }}-title {
+    background: rgba(${{ callout[1].color }}-{{ callout_background_hue }}, {{ callout_opacity }});
+    border-left: $border-radius solid ${{ callout[1].color }}-{{ callout_color_hue }};
+    border-radius: $border-radius;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: .8rem;
+    > p:first-child {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: ${{ callout[1].color }}-{{ callout_color_hue }};
+      display: block;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: .75em;
+      padding-bottom: .125rem;
+    }
+}
+
+blockquote.{{ callout[0] }} {
+  margin-left: 0;
+  margin-right: 0;
+  
+  > p:first-child {
+    margin-top: 0;
+  }
+    
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+blockquote.{{ callout[0] }}-title {
+  margin-left: 0;
+  margin-right: 0;
+  
+  > p:nth-child(2) {
+    margin-top: 0;
+  }
+    
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+{% endfor -%}
