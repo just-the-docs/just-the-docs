@@ -26,6 +26,8 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: top-level active link styling by [@pdmosses] in [#1015]
 - Fixed: external links for sites with no pages by [@pdmosses] in [#1021]
 - Fixed: duplicate `title` if `jekyll-seo-tag` not in users's plugins
+- Fixed: removes (duplicate) `favicon.html`, shifts content to `head_custom.html` by [@mattxwang] in [#1027]
+- Fixed: add `reversed`, deprecate `desc` for nav `child_nav_order` by [@jmertic] in [#1061]
 - Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
 - Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
@@ -38,7 +40,9 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1018]: https://github.com/just-the-docs/just-the-docs/pull/1018
 [#1019]: https://github.com/just-the-docs/just-the-docs/pull/1019
 [#1021]: https://github.com/just-the-docs/just-the-docs/pull/1021
+[#1027]: https://github.com/just-the-docs/just-the-docs/pull/1027
 [#1040]: https://github.com/just-the-docs/just-the-docs/pull/1040
+[#1061]: https://github.com/just-the-docs/just-the-docs/pull/1061
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
