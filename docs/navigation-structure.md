@@ -146,17 +146,17 @@ The Buttons page appears as a child of UI Components and appears second in the U
 
 ### Ordering child pages
 
-You can optionally add the following to the YAML front matter to change the default sort order of child pages from ascending to descending order:
+You can optionally add the following to the YAML front matter to reverse the default sort order of child pages:
 
-- `child_nav_order: desc`
+- `child_nav_order: reversed`
 
 #### Example
 {: .no_toc }
 ```yaml
 ---
 layout: default
-title: Descending Child Pages
-child_nav_order: desc
+title: Reversed Child Pages
+child_nav_order: reversed
 ---
 ```
 
