@@ -20,6 +20,7 @@ This website includes docs for some new features that are not available in `v0.4
 
 Changes to `main` that are *not* in the latest pre-release:
 
+- Added: support multiple Google Analytics tracking IDs, document UA -> GA4 switch by [@MichelleBlanchette] in [#1029]
 - Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
 - Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
@@ -41,11 +42,13 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1019]: https://github.com/just-the-docs/just-the-docs/pull/1019
 [#1021]: https://github.com/just-the-docs/just-the-docs/pull/1021
 [#1027]: https://github.com/just-the-docs/just-the-docs/pull/1027
+[#1029]: https://github.com/just-the-docs/just-the-docs/pull/1029
 [#1040]: https://github.com/just-the-docs/just-the-docs/pull/1040
 [#1061]: https://github.com/just-the-docs/just-the-docs/pull/1061
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
+[@MichelleBlanchette]: https://github.com/MichelleBlanchette
 
 ## Pre-release v0.4.0.rc3
 
