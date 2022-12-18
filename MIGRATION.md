@@ -51,18 +51,22 @@ The name of its default branch is now `main`.
 The theme docs website is now published at <https://just-the-docs.github.io/just-the-docs>.
 
 GitHub provides access to previous versions of the theme repo.
-You can browse previous versions of the theme docs  website on the [Internet Archive].
+You can browse [previous versions of the theme docs website] on the [Internet Archive].
 
+[previous versions of the theme docs website]: https://web.archive.org/web/20220000000000*/https://just-the-docs.github.io/just-the-docs
 [Internet Archive]: https://web.archive.org/
 
-The README page on the theme repo repeats much of the information from the home page,
+The [README] page on the theme repo repeats much of the information from the [home page],
 formatted for browsing on GitHub.
 It also explains how to install the theme as a Ruby Gem, without creating a new site.
+
+[README]: https://github.com/just-the-docs/just-the-docs/blob/main/README.md
+[home page]: https://just-the-docs.github.io/just-the-docs
 
 ### Deploy previews
 
 When a PR builds successfully, Netlify provides a preview of how the theme docs website will look if the PR is merged.
-You can find links to the preview near the bottom of the Conversation tab.
+You can find links to the preview near the bottom of the Conversation tab of the PR.
 
 ### Just the Docs Template
 
@@ -94,58 +98,68 @@ If your repo has a customised copy of `_layouts/default.html` from a previous re
 try removing it, or replace it by a fresh copy of the theme file.
 
 {: .warning }
-The following changes made in v0.4.0 *might* break or adversely affect your website!
+The following changes made in v0.4.0 *might* break or adversely affect your website
+when you next rebuild it, unless you have pinned it!
 
 ### favicons
 
 The file `_includes/favicon.html` is now ignored by the theme.
+If you're using it, your website's favicon is no longer displayed by browsers.
 
-To fix: move the content of `_includes/favicon.html` to `_includes/head_custom.html`.
+To fix: Move the content of `_includes/favicon.html` to `_includes/head_custom.html`.
 
 ### Custom callout colors
 
-The file `_sass/custom/custom.scss` is now imported _after_ the configuration of callouts.
+The file `_sass/custom/custom.scss` is now imported last: _after_ the configuration of callouts.
+If you've defined custom color variables for callouts in `_sass/custom/custom.scss`
+(and used them when configuring your callouts in `_config.yml`)
+you will not be able to rebuild your website.
 
-To fix: move custom color variables for callouts in `_sass/custom/custom.scss` to `_sass/custom/variables.scss`.
+To fix: Move custom color variables for callouts in `_sass/custom/custom.scss` to `_sass/custom/variables.scss`.
 
 ### Pages and collections
 
-Links to ordinary pages now appear in the navigation also on sites that use collections.
+Links to ordinary pages now appear in the navigation on sites that use collections.
+You might want the navigation of your site to consist entirely of collections.
 
-To fix: add front matter `nav_exclude: true` to pages that are not to be shown in the navigation.
+To fix: Add the front matter `nav_exclude: true` to pages that the navigation should not display.
 
 ### Relative URLs
 
 All generated URLs are now relative.
+This is a bug fix, and unlikely to break any site.
 
 Relative links to pages within a website support deployment to different servers.
 
 ### Navigation order
 
-The order in which pages are listed in the navigation panel has been simplified.
-All pages with `nav_order` values now come before all pages that are ordered by `title`,
-with number-ordered pages preceding those string-ordered pages ordered by the same variable.
+The order in which the navigation panel lists pages has been simplified.
+All pages with `nav_order` values now come before all pages that are ordered by `title`.
 
 If your website has a group of *sibling* pages where some siblings have `nav_order`
-string values and others are ordered by numerical `title` values,
-you can obtain the previous order by adding `nav_order` values to the latter pages.
+string values, and others are ordered by numerical `title` values,
+the former now come before the latter.
+
+To fix: Add numerical `nav_order` values to the pages with numerical `title` values.
 
 ## DEPRECATIONS
 
 {: .warning }
 The following features are deprecated, and to be removed in a future release.
 
-### Jekyll v3
+### Jekyll 3
 
-You can still use Jekyll 3 (v3.8.5 or later) to build websites using v0.4.0 of the theme.
-However, some future release of the theme will use Jekyll 4 features;
-to take advantage of that release, you will need to stop using Jekyll 3 for Just the Docs websites.
+You can still use Jekyll 3 (3.8.5 or later) to build websites using v0.4.0 of the theme.
+However, future releases of the theme may require the use of Jekyll 4.
 
-You can already use Jekyll 4 to build your website locally.
-The only difference that you should notice is that the build is much quicker.
-The appearance of your website shouldn't change,
+You can already use Jekyll 4 to build your website *locally*.
+It should look exactly the same as when built with Jekyll 3.[^Jekyll4]
 
-To use Jekyll 4 when building your website on GitHub Pages, you need to run GitHub Actions.
+[^Jekyll4]:
+    Jekyll 4 depends on more recent versions of other gems than Jekyll 3,
+    and the differences between those versions may affect the files of your built site.
+
+To use Jekyll 4 when building your website *on GitHub Pages*, you need to run GitHub Actions.
 The simplest way of setting that up in a new repo is to create the repo using the Just the Docs template.
 To start running Jekyll 4 to build an existing repo on GitHub Pages,
 you can create a new repo with the template, then copy its `.github/workflows` directory,
@@ -173,14 +187,27 @@ The website now uses *callouts*[^callouts] to draw attention to important inform
     The theme website configuration defines the callout titles and colors used there.
     Websites that use the theme have to configure their own callout titles and colors.
 
-The label `NEW` in the theme docs indicates something that has changed or been added
-since the release of the previous *minor* version.[^minor]
-(The theme docs website is not versioned.)
+The theme uses [semantic versioning].
+A normal version number takes the form X.Y.Z,
+where X is the major version, Y is the minor version, and Z is the patch version.
+The theme uses version X.Y.Z.rcN for pre-release N of version X.Y.Z.
+When referring to version numbers on GitHub, we usually prefix them by 'v'.
 
-[^minor]:
-    With semantic versioning, the minor version number of `v0.y.z` is `y`.
-    The major version number `0` indicates that the theme is still in the initial development phase,
-    where features may change also between 'patches'.
+[semantic versioning]: https://semver.org
+
+Major version zero (0.Y.Z) is for initial development, where anything *may* change at any time.
+In practice, we increment the patch version Z for bug fixes and backwards compatible changes;
+we increment the minor version Y for changes that could break websites using the theme
+without pinning it to a specific version.
+
+The label `NEW` in the theme website indicates a feature that has been changed or added
+since the release of the previous *minor* version.
+For example, after the release of v0.4.Z, the theme website should label `NEW` all features that
+we have changed or added since v0.3.0 – not just since v0.3.3.
+When we release v0.5.0, we will remove all those labels, and add labels on features since v0.4.0.
+
+The theme docs website is not itself versioned.
+It changes incrementally, independently of theme releases.
 
 ### Home page
 
