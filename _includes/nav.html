@@ -169,7 +169,7 @@
         {%- if node.has_children -%}
           {%- assign children_list = second_level_pages
                 | where: "parent", node.title -%}
-          {%- if node.child_nav_order == 'desc' or child.child_nav_order == 'reversed' -%}
+          {%- if node.child_nav_order == 'desc' or node.child_nav_order == 'reversed' -%}
             {%- assign children_list = children_list | reverse -%}
           {%- endif -%}
           <ul class="nav-list ">
