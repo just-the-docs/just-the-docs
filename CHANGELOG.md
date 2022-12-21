@@ -5,7 +5,7 @@ layout: default
 
 # CHANGELOG
 
-All notable changes to this project are documented in this file.
+All notable user-facing changes to this project are documented in this file.
 
 {: .highlight }
 The project underwent a major maintenance shift in March 2022.
@@ -30,6 +30,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: removes (duplicate) `favicon.html`, shifts content to `head_custom.html` by [@mattxwang] in [#1027]
 - Fixed: add `reversed`, deprecate `desc` for nav `child_nav_order` by [@jmertic] in [#1061]
 - Fixed: `child.child_nav_order` to `node.child_nav_order` by [@mattxwang] in [#1065]
+- Fixed: remove all uses of `/` as SASS division by [@mattxwang] in [#1074]
 - Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
 - Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
@@ -47,6 +48,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1040]: https://github.com/just-the-docs/just-the-docs/pull/1040
 [#1061]: https://github.com/just-the-docs/just-the-docs/pull/1061
 [#1065]: https://github.com/just-the-docs/just-the-docs/pull/1065
+[#1074]: https://github.com/just-the-docs/just-the-docs/pull/1074
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
