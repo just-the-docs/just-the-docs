@@ -30,16 +30,13 @@ layout: table_wrappers
 
       </div>
     </div>
-
-    {% include components/search.html %}
+    {% if site.search_enabled != false %}
+      {% include components/search_footer.html %}
+    {% endif %}
   </div>
 
   {% if site.mermaid %}
-  <script>
-    var config = {% include mermaid_config.js %};
-    mermaid.initialize(config);
-    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-  </script>
+    {% include components/mermaid.html %}
   {% endif %}
 </body>
 </html>

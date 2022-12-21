@@ -1,34 +1,11 @@
 <div id="main-header" class="main-header">
   {% if site.search_enabled != false %}
-
-    {% capture search_placeholder %}{% include search_placeholder_custom.html %}{% endcapture %}
-
-    <div class="search">
-      <div class="search-input-wrap">
-        <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="{{ search_placeholder | strip_html | strip }}" aria-label="{{ search_placeholder | strip_html| strip }}" autocomplete="off">
-        <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
-      </div>
-      <div id="search-results" class="search-results"></div>
-    </div>
+    {% include components/search_header.html %}
   {% else %}
     <div></div>
   {% endif %}
   {% include header_custom.html %}
   {% if site.aux_links %}
-    <nav aria-label="Auxiliary" class="aux-nav">
-      <ul class="aux-nav-list">
-        {% for link in site.aux_links %}
-          <li class="aux-nav-list-item">
-            <a href="{{ link.last }}" class="site-button"
-              {% if site.aux_links_new_tab %}
-              target="_blank" rel="noopener noreferrer"
-              {% endif %}
-            >
-              {{ link.first }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </nav>
+    {% include components/aux_nav.html %}
   {% endif %}
 </div>
