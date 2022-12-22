@@ -1,5 +1,5 @@
 @function rem($size, $unit: "") {
-  $rem-size: calc($size / $root-font-size);
+  $rem-size: $size / $root-font-size;
 
   @if $unit == false {
     @return #{$rem-size};
