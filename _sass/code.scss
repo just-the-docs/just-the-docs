@@ -3,12 +3,14 @@
 
 // {% raw %}
 
-code {
-  padding: 0.2em 0.15em;
-  font-weight: 400;
-  background-color: $code-background-color;
-  border: $border $border-color;
-  border-radius: $border-radius;
+:not(pre) {
+  & > code {
+    padding: 0.2em 0.15em;
+    font-weight: 400;
+    background-color: $code-background-color;
+    border: $border $border-color;
+    border-radius: $border-radius;
+  }
 }
 
 // Avoid appearance of dark border around visited code links in Safari
@@ -48,17 +50,61 @@ a:visited code {
 
 // ```[LANG]...```
 div.highlighter-rouge,
-div.listingblock > div.content {
-  padding: $sp-3;
+div.listingblock > div.content,
+figure.highlight {
   margin-top: 0;
   margin-bottom: $sp-3;
-  overflow-x: auto;
   background-color: $code-background-color;
   border-radius: $border-radius;
   box-shadow: none;
   -webkit-overflow-scrolling: touch;
+  position: relative;
+  padding: 0;
 
-  div.highlight,
+  > button {
+    width: $sp-3;
+    height: $sp-3;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: $sp-3 solid $code-background-color;
+    background-color: $code-background-color;
+    outline: none;
+    color: $body-text-color;
+    box-sizing: content-box;
+
+    svg {
+      fill: $body-text-color;
+    }
+
+    &:active {
+      text-decoration: none;
+      outline: none;
+      opacity: 1;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &:hover {
+    > button {
+      opacity: 1;
+    }
+  }
+}
+
+div.highlighter-rouge,
+div.listingblock {
+  div.highlight {
+    overflow-x: auto;
+    padding: $sp-3;
+    margin: 0;
+    border: 0;
+  }
+
   pre.highlight,
   code {
     padding: 0;
@@ -70,18 +116,10 @@ div.listingblock > div.content {
 // {% highlight LANG %}...{% endhighlight %},
 // {% highlight LANG linenos %}...{% endhighlight %}:
 figure.highlight {
-  padding: $sp-3;
-  margin-top: 0;
-  margin-bottom: $sp-3;
-  overflow-x: auto;
-  background-color: $code-background-color;
-  border-radius: $border-radius;
-  box-shadow: none;
-  -webkit-overflow-scrolling: touch;
-
   pre,
-  code {
-    padding: 0;
+  :not(pre) > code {
+    overflow-x: auto;
+    padding: $sp-3;
     margin: 0;
     border: 0;
   }
@@ -108,6 +146,7 @@ figure.highlight {
   td.gl {
     width: 1em;
     padding-right: $sp-3;
+    padding-left: $sp-3;
   }
 
   pre {
