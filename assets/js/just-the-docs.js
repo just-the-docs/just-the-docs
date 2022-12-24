@@ -482,7 +482,7 @@ jtd.onReady(function(){
 // Copy button on code
 
 
-{%- if site.copy_button_on_code != false %}
+{%- if site.enable_copy_code_button != false %}
 
 jtd.onReady(function(){
 

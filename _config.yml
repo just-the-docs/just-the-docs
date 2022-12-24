@@ -74,7 +74,7 @@ search:
   button: false
 
 # For copy button on code
-copy_button_on_code: true
+enable_copy_code_button: true
 
 # To disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/),
 # comment out the `mermaid` and `version` keys below

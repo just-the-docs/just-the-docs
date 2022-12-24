@@ -146,11 +146,11 @@ graph TD;
 
 ## Copy button
 
-The copy button for code blocks can be enabled or disabled via the `copy_button_on_code` key in `_config.yml`. By default, the value of this key is `false`; users need to opt-in.
+The copy button for code blocks can be enabled or disabled via the `enable_copy_code_button` key in `_config.yml`. By default, the value of this key is `false`; users need to opt-in.
 
 ```yaml
 # For copy button on code
-copy_button_on_code: true
+enable_copy_code_button: true
 ```
 
 Note that this feature requires JavaScript; if JavaScript is disabled in the browser, this feature will not work.
