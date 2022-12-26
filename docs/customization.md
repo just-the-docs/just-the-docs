@@ -22,33 +22,58 @@ nav_order: 6
 New
 {: .label .label-green }
 
-Just the Docs supports two color schemes: light (default), and dark.
-
-To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
-
-#### Example
-{: .no_toc }
+Just the Docs supports two color schemas, and also allows automatic mode to enable the user's system light/dark selection. 
+Color scheme currently supports nil (default), "auto", "light", "dark" or a custom scheme that you define
 
 ```yaml
-# Color scheme supports "light" (default) and "dark"
-color_scheme: dark
+color_scheme: auto 
+```
+- `nil` is the default value and use the default color schema.
+- `"auto"` is use the user's system light/dark selection. This will enable automatic switching between ligth mode and dark mode.
+- `"light"` is use the light color schema. This will force the color schema.
+- `"dark"` is use the dark color schema. This will force the color schema.
+
+Show the switch theme button on the aux-nav-list
+
+```yaml
+enable_switch_theme_button: true 
+```
+- `true` enable switch theme button on the aux-nav-list that switch from the `auto`, `light` and `dark` mode.
+
+_note: this switch does not save to cache or local storage the last choice made by the user. 
+
+## Custom the switch script
+
+Currently, the switch script is as follows:
+```js
+jtd.switchThemeButton = function(button, event) {
+  const themes = ["auto", "light", "dark"];
+  var currentTheme = jtd.getTheme();
+  var nextTheme = themes[(themes.indexOf(currentTheme)+1)%themes.length];
+  jtd.setTheme(nextTheme);
+  button.getElementsByTagName('svg')[0].getElementsByTagName('use')[0].setAttribute('href',`#svg-${nextTheme}`);
+}
+```
+This script does not save the current theme in the local storage, but it is possible to add a variant in `custom.js` that saves, for example, in the local storage (this script makes an override of the default):
+
+```js
+jtd.switchThemeButton = function(button, event) {
+  [...]
+  window.localStorage.setItem('theme', 'nextTheme');
+}
 ```
 
-<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
-
-<script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-
-jtd.addEvent(toggleDarkMode, 'click', function(){
-  if (jtd.getTheme() === 'dark') {
-    jtd.setTheme('light');
-    toggleDarkMode.textContent = 'Preview dark color scheme';
-  } else {
-    jtd.setTheme('dark');
-    toggleDarkMode.textContent = 'Return to the light side';
-  }
+And add a script to load the theme from local storage, like:
+```js
+jtd.onReady(() => {
+  theme = window.localStorage.getItem('theme');
+  jtd.setTheme(theme);
+  var buttons = [...document.getElementsByClassName("color-scheme-switch-theme-button")];
+  buttons.forEach(button => button.getElementsByTagName('svg')[0].getElementsByTagName('use')[0].setAttribute('href',`#svg-${theme}`));
 });
-</script>
+```
+
+_note: this script is not recommended as it will create flashes in some browsers like Firefox.
 
 ## Custom schemes
 

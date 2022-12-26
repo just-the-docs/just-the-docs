@@ -132,26 +132,10 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 
 ## Color scheme
 
-```yaml
-# Color scheme supports "light" (default) and "dark"
-color_scheme: dark
-```
+- `color_scheme`: Color scheme currently supports `nil` (default), `"auto"`, `"light"`, `"dark"` or a custom scheme that you define.
+- `enable_switch_theme_button`: Show the switch theme button on the aux-nav-list.
 
-<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
-
-<script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-
-jtd.addEvent(toggleDarkMode, 'click', function(){
-  if (jtd.getTheme() === 'dark') {
-    jtd.setTheme('light');
-    toggleDarkMode.textContent = 'Preview dark color scheme';
-  } else {
-    jtd.setTheme('dark');
-    toggleDarkMode.textContent = 'Return to the light side';
-  }
-});
-</script>
+_note: this switch does not save to cache or local storage the last choice made by the user. 
 
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
 

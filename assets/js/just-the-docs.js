@@ -448,13 +448,42 @@ function searchLoaded(index, docs) {
 // Switch theme
 
 jtd.getTheme = function() {
-  var cssFileHref = document.querySelector('[rel="stylesheet"]').getAttribute('href');
+  var cssFile = document.querySelector('[rel="stylesheet"]');
+  if(cssFile.hasAttribute('media')) return 'auto';
+
+  var cssFileHref = cssFile.getAttribute('href');
   return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
 }
 
 jtd.setTheme = function(theme) {
   var cssFile = document.querySelector('[rel="stylesheet"]');
-  cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | relative_url }}' + theme + '.css');
+  var cssFiles = [...document.querySelectorAll('[rel="stylesheet"]')];
+  var cssFile = cssFiles[0];
+  if(cssFiles.length >= 1) {
+    cssFiles.shift();
+    cssFiles.forEach(it => it.remove());
+    cssFile.removeAttribute('media');
+  }
+  if(theme === "auto") {
+    cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-light.css" | relative_url }}');
+    cssFile.setAttribute('media', '(prefers-color-scheme: light)');
+    cssFile.insertAdjacentHTML('afterend', `<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}" media="(prefers-color-scheme: dark)">`);
+  } else {
+    cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | relative_url }}' + theme + '.css');
+  }
+}
+
+jtd.switchThemeButton = function(button, event) {
+  const themes = ["auto", "light", "dark"];
+  var currentTheme = jtd.getTheme();
+  var nextTheme = themes[(themes.indexOf(currentTheme)+1)%themes.length];
+  jtd.setTheme(nextTheme);
+  button.getElementsByTagName('svg')[0].getElementsByTagName('use')[0].setAttribute('href',`#svg-${nextTheme}`);
+}
+
+function initSwitchThemeButton() {
+  var buttons = [...document.getElementsByClassName("color-scheme-switch-theme-button")];
+  buttons.forEach(button => jtd.addEvent(button, 'click', event => jtd.switchThemeButton(button, event)));
 }
 
 // Scroll site-nav to ensure the link to the current page is visible
@@ -475,6 +504,9 @@ jtd.onReady(function(){
   initNav();
   {%- if site.search_enabled != false %}
   initSearch();
+  {%- endif %}
+  {%- if site.enable_switch_theme_button == true %}
+  initSwitchThemeButton();
   {%- endif %}
   scrollNav();
 });

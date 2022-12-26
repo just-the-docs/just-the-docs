@@ -2,7 +2,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+  {% assign color_scheme = site.color_scheme %}
+  {% case color_scheme %}
+  {% when "auto" %}
+    <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | relative_url }}" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}" media="(prefers-color-scheme: dark)">
+  {% when "light" %}
+    <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | relative_url }}">
+  {% when "dark" %}
+    <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}">
+  {% when nil %}
+    <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+  {% else %}
+    <link rel="stylesheet" href="{{ color_scheme | prepend: '/assets/css/just-the-docs-' | append: '.css' | relative_url }}">
+  {% endcase %}
 
   {% if site.ga_tracking != nil %}
     {% assign ga_tracking_ids = site.ga_tracking | split: "," %}
