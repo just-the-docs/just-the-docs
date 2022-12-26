@@ -59,7 +59,7 @@ This script does not save the current theme in the local storage, but it is poss
 ```js
 jtd.switchThemeButton = function(button, event) {
   [...]
-  window.localStorage.setItem('theme', 'nextTheme');
+  window.localStorage.setItem('theme', nextTheme);
 }
 ```
 
@@ -67,6 +67,7 @@ And add a script to load the theme from local storage, like:
 ```js
 jtd.onReady(() => {
   theme = window.localStorage.getItem('theme');
+  if(theme == null) return;
   jtd.setTheme(theme);
   var buttons = [...document.getElementsByClassName("color-scheme-switch-theme-button")];
   buttons.forEach(button => button.getElementsByTagName('svg')[0].getElementsByTagName('use')[0].setAttribute('href',`#svg-${theme}`));
