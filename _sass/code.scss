@@ -70,7 +70,6 @@ figure.highlight {
     right: 0;
     border: $sp-3 solid $code-background-color;
     background-color: $code-background-color;
-    outline: none;
     color: $body-text-color;
     box-sizing: content-box;
 
@@ -91,6 +90,7 @@ figure.highlight {
 
   &:hover {
     > button {
+      cursor: copy;
       opacity: 1;
     }
   }
