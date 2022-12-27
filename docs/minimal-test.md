@@ -1,7 +1,7 @@
 ---
 layout: minimal
 title: Minimal layout test
-nav_order: 99
+nav_order: 100
 ---
 
 [Return to main website]({{site.baseurl}}/)
