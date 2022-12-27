@@ -143,3 +143,14 @@ graph TD;
 ```
 
 *Note: for demonstration purposes, we've enabled mermaid on this site. It is still disabled by default, and users need to opt-in to use it.*
+
+## Copy button
+
+The copy button for code blocks can be enabled or disabled via the `enable_copy_code_button` key in `_config.yml`. By default, the value of this key is `false`; users need to opt-in.
+
+```yaml
+# For copy button on code
+enable_copy_code_button: true
+```
+
+Note that this feature requires JavaScript; if JavaScript is disabled in the browser, this feature will not work.
