@@ -234,7 +234,7 @@ By default, the navigation and search include normal [pages](https://jekyllrb.co
 You can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
 
 {: .warning }
-> Collection folders always start with an underscore (`_`), e.g. `_tests`. You won't see your collections if you skip the prefix.
+> Collection folders always start with an underscore (`_`), e.g. `_tests`. You won't see your collections if you omit the prefix.
 
 For example, put all your test files in the `_tests` folder and create the `tests` collection:
 
