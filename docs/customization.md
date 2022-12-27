@@ -285,6 +285,9 @@ Here is a simplified code example of what it looks like:
 #### Component summary
 {: .no_toc }
 
+{: .warning }
+Defining a new `_includes` with the same name as any of these components will significantly change the existing layout. Please proceed with caution when adjusting them.
+
 To briefly summarize each component:
 
 - `_includes/head.html` is the entire `<head>` tag for the site; this imports stylesheets, various JavaScript files (ex: analytics, mermaid, search, and Just the Docs code), and SEO / meta information.
