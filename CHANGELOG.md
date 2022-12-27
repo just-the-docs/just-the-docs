@@ -5,7 +5,7 @@ layout: default
 
 # CHANGELOG
 
-All notable changes to this project are documented in this file.
+All notable user-facing changes to this project are documented in this file.
 
 {: .highlight }
 The project underwent a major maintenance shift in March 2022.
@@ -21,6 +21,7 @@ This website includes docs for some new features that are not available in `v0.4
 Changes to `main` that are *not* in the latest pre-release:
 
 - Added: support multiple Google Analytics tracking IDs, document UA -> GA4 switch by [@MichelleBlanchette] in [#1029]
+- Added: copy code button to code snippets by [@simonebortolin] in [#945]
 - Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
 - Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
@@ -30,10 +31,14 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: removes (duplicate) `favicon.html`, shifts content to `head_custom.html` by [@mattxwang] in [#1027]
 - Fixed: add `reversed`, deprecate `desc` for nav `child_nav_order` by [@jmertic] in [#1061]
 - Fixed: `child.child_nav_order` to `node.child_nav_order` by [@mattxwang] in [#1065]
+- Fixed: remove all uses of `/` as SASS division by [@mattxwang] in [#1074]
+    - note: this was originally merged as [#1074] with a bug; it was reverted in [#1076], and then reimplemented in [#1077]
+- Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang] in [#1071]
 - Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
 - Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
 
+[#945]: https://github.com/just-the-docs/just-the-docs/pull/945
 [#999]: https://github.com/just-the-docs/just-the-docs/pull/999
 [#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
 [#1001]: https://github.com/just-the-docs/just-the-docs/pull/1001
@@ -47,10 +52,15 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1040]: https://github.com/just-the-docs/just-the-docs/pull/1040
 [#1061]: https://github.com/just-the-docs/just-the-docs/pull/1061
 [#1065]: https://github.com/just-the-docs/just-the-docs/pull/1065
+[#1071]: https://github.com/just-the-docs/just-the-docs/pull/1071
+[#1074]: https://github.com/just-the-docs/just-the-docs/pull/1074
+[#1076]: https://github.com/just-the-docs/just-the-docs/pull/1076
+[#1077]: https://github.com/just-the-docs/just-the-docs/pull/1077
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
 [@MichelleBlanchette]: https://github.com/MichelleBlanchette
+[@simonebortolin]: https://github.com/simonebortolin
 
 ## Pre-release v0.4.0.rc3
 
