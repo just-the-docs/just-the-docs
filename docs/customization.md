@@ -33,50 +33,38 @@ color_scheme: auto
 - `"light"` is use the light color schema. This will force the color schema.
 - `"dark"` is use the dark color schema. This will force the color schema.
 
-Show the switch theme button on the aux-nav-list
+### Enable or disable localstorage
+
+Since not all sites require local storage of the theme, and since local storage of the theme requires the use of a `<script>` in the `<head>` that blocks the loading of the rest of the html to avoid FART it can be disabled:
 
 ```yaml
-enable_switch_theme_button: true 
-```
-- `true` enable switch theme button on the aux-nav-list that switch from the `auto`, `light` and `dark` mode.
+enable_local_storage_theme: true # or false 
+``` 
 
-_note: this switch does not save to cache or local storage the last choice made by the user. 
+## Edit switch teme timeout for  avoid FART
 
-## Custom the switch script
+If the remote server is slow to respond and FART (Flash of inAccurate coloR Theme) occur, to avoid them it is possible to increase the time (the default is `100`) in which two themes are loaded correctly and then wait longer for the theme change:
 
-Currently, the switch script is as follows:
-```js
-jtd.switchThemeButton = function(button, event) {
-  const themes = ["auto", "light", "dark"];
-  var currentTheme = jtd.getTheme();
-  var nextTheme = themes[(themes.indexOf(currentTheme)+1)%themes.length];
-  jtd.setTheme(nextTheme);
-  button.getElementsByTagName('svg')[0].getElementsByTagName('use')[0].setAttribute('href',`#svg-${nextTheme}`);
-}
-```
-This script does not save the current theme in the local storage, but it is possible to add a variant in `custom.js` that saves, for example, in the local storage (this script makes an override of the default):
+```yaml
+switch_theme_available_timeout_fart: 1000 # the default is 100
+``` 
+{: .note }
+For accessibility reasons, it is very important to avoid any FART in a web page, so if the server is so slow that even increasing the timeout to a reasonable time will not solve it, it is recommended to disable local storage.
 
-```js
-jtd.switchThemeButton = function(button, event) {
-  [...]
-  window.localStorage.setItem('theme', nextTheme);
-}
+### Switch theme button
+
+This button will appear in the top navbar (the last button on the right, in the aux-nav-list). It is possible to enable or disable it, its enabling is independent of whether or not the theme is saved in local storage.
+
+```yaml
+enable_switch_theme_button: true  # or false 
 ```
 
-And add a script to load the theme from local storage, like:
-```js
-jtd.onReady(() => {
-  theme = window.localStorage.getItem('theme');
-  if(theme == null) return;
-  jtd.setTheme(theme);
-  var buttons = [...document.getElementsByClassName("color-scheme-switch-theme-button")];
-  buttons.forEach(button => button.getElementsByTagName('svg')[0].getElementsByTagName('use')[0].setAttribute('href',`#svg-${theme}`));
-});
+### Custom order of the switch theme button
+
+Just the Docs supports to edit the rotation carousel by:
+```yaml
+switch_theme_available_color_scheme: ["light", "dark", "auto"] # the default is ["auto", "light", "dark"]
 ```
-
-_note: this script is not recommended as it will create flashes in some browsers like Firefox.
-
-## Custom schemes
 
 ### Define a custom scheme
 
@@ -121,22 +109,49 @@ To use the custom color scheme, only set the `color_scheme` parameter in your si
 color_scheme: foo
 ```
 
-### Switchable custom scheme
+### Add a custom scheme to the switch theme button
 
-If you want to be able to change the scheme dynamically, for example via javascript, just add a file `assets/css/just-the-docs-foo.scss` (replace `foo` by your scheme name)
+Just the Docs, after create a new theme, supports to add a theme rotation carousel in 3 step:
+1. Just add a file `assets/css/just-the-docs-read.scss` (replace `read` by your scheme name)
 with the following content:
 
-{% raw %}
-    ---
-    ---
-    {% include css/just-the-docs.scss.liquid color_scheme="foo" %}
-{% endraw %}
+```
+{% raw %}---
+---
+{% include css/just-the-docs.scss.liquid color_scheme="read" %}{% endraw %}
+```
 
-This allows you to switch the scheme via the following javascript.
+{:style="counter-reset:none"}
+1. Just add a file `_sass/color_schemes/read.scss` (replace `read` by your scheme name) 
+1. Just add its name in `switch_theme_available_colour_scheme` (replace `read` by your scheme name):
+
+```yaml
+switch_theme_available_color_scheme: ["auto", "light", "dark", "read"] # add read theme 
+```
+
+{:style="counter-reset:none"}
+1. Jut put into `_includes/icons/custom.html` a custom icon for the scheme (the correct size is 24x24):
+
+```html
+<!-- Feather. MIT License: https://github.com/twbs/icons/blob/main/LICENSE.md -->
+<symbol id="svg-read" viewBox="0 0 24 24" pointer-events="all">
+  <title>Selected read safe colour scheme</title>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+  </svg>
+</symbol>
+```
+
+### Switchable theme scheme
+
+If you want to be able to change the scheme dynamically, for example via javascript, via the following javascript (replace `foo` by your scheme name).
 
 ```js
 jtd.setTheme("foo")
 ```
+
+The scheme name supported are: `auto`, `light`, `dark`, `default`
 
 ## Override and completely custom styles
 
