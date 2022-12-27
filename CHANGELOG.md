@@ -33,6 +33,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: `child.child_nav_order` to `node.child_nav_order` by [@mattxwang] in [#1065]
 - Fixed: remove all uses of `/` as SASS division by [@mattxwang] in [#1074]
     - note: this was originally merged as [#1074] with a bug; it was reverted in [#1076], and then reimplemented in [#1077]
+- Fixed: skip nav collection generation when site has no pages by [@pdmosses] in [#1092]
 - Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang] in [#1071]
 - Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
@@ -60,6 +61,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1077]: https://github.com/just-the-docs/just-the-docs/pull/1077
 [#1090]: https://github.com/just-the-docs/just-the-docs/pull/1090
 [#1091]: https://github.com/just-the-docs/just-the-docs/pull/1091
+[#1092]: https://github.com/just-the-docs/just-the-docs/pull/1092
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
