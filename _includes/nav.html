@@ -39,21 +39,23 @@
   pages.
 {%- endcomment -%}
 
-{%- assign unsorted_pages = title_pages
-      | where_exp: "item", "item.parent == nil" 
-      | where_exp: "item", "item.nav_exclude == true"-%}
-{%- assign title_pages_size = title_pages.size -%}
-{%- assign unsorted_pages_percent = unsorted_pages.size
-      | times: 100 | divided_by: title_pages_size -%}
-{%- if unsorted_pages_percent > 50 -%}
-  {%- assign sorted_pages = "" | split: "" -%}
-  {%- for item in title_pages -%}
-    {%- if item.nav_exclude != true or item.parent -%}
-      {%- assign sorted_pages = sorted_pages | push: item -%}
-    {%- endif -%}
-  {%- endfor -%}
-  {%- assign title_pages = sorted_pages -%}
-{%- endif -%}
+{%- unless title_pages == empty -%}
+  {%- assign unsorted_pages = title_pages
+        | where_exp: "item", "item.parent == nil" 
+        | where_exp: "item", "item.nav_exclude == true" -%}
+  {%- assign title_pages_size = title_pages.size -%}
+  {%- assign unsorted_pages_percent = unsorted_pages.size
+        | times: 100 | divided_by: title_pages_size -%}
+  {%- if unsorted_pages_percent > 50 -%}
+    {%- assign sorted_pages = "" | split: "" -%}
+    {%- for item in title_pages -%}
+      {%- if item.nav_exclude != true or item.parent -%}
+        {%- assign sorted_pages = sorted_pages | push: item -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- assign title_pages = sorted_pages -%}
+  {%- endif -%}
+{%- endunless -%}
 
 {%- assign nav_order_pages = title_pages
       | where_exp: "item", "item.nav_order != nil"  -%}
