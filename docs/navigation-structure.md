@@ -44,11 +44,10 @@ nav_order: 4
 
 The parameter values determine the order of the top-level pages, and of child pages with the same parent. You can reuse the same parameter values (e.g., integers starting from 1) for the child pages of different parents.
 
-The parameter values can be numbers (integers, floats) and/or strings. When you omit `nav_order` parameters, they default to the titles of the pages, which are ordered alphabetically. Pages with numerical `nav_order` parameters always come before those with strings or default `nav_order` parameters. If you want to make the page order independent of the page titles, you can set explicit `nav_order` parameters on all pages.
+The parameter values can be numbers (integers, floats) and/or strings. Pages with numerical `nav_order` parameters always come before those with string `nav_order` parameters. When you omit `nav_order` parameters, they default to the titles of the pages. If you want to make the page order independent of the page titles, you can set explicit `nav_order` parameters on all pages. All pages with explicit `nav_order` parameters
+come before all pages ordered by their `title` values.
 
-By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case. Enclosing strings in quotation marks is optional.
-
-> _Note for users of previous versions:_ `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated.
+By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case. Enclosing strings in (single or double) quotation marks is optional. Numeric values are not enclosed in quotation marks, e.g., `42`, `-1.0`; numbers in quotation marks are lexicographically ordered, so `"10"` comes before `"2"`, for example.
 
 ---
 
@@ -70,7 +69,7 @@ nav_exclude: true
 
 The `nav_exclude` parameter does not affect the [auto-generating list of child pages](#auto-generating-table-of-contents), which you can use to access pages excluded from the main navigation.
 
-Pages with no `title` are automatically excluded from the navigation.
+Pages with no `title` are automatically excluded from the main navigation.
 
 ---
 
@@ -147,17 +146,17 @@ The Buttons page appears as a child of UI Components and appears second in the U
 
 ### Ordering child pages
 
-You can optionally add the following to the YAML front matter to change the default sort order of child pages from ascending to descending order:
+You can optionally add the following to the YAML front matter to reverse the default sort order of child pages:
 
-- `child_nav_order: desc`
+- `child_nav_order: reversed`
 
 #### Example
 {: .no_toc }
 ```yaml
 ---
 layout: default
-title: Descending Child Pages
-child_nav_order: desc
+title: Reversed Child Pages
+child_nav_order: reversed
 ---
 ```
 
@@ -229,6 +228,9 @@ This would create the following navigation structure:
 +-- ..
 ```
 
+{: .note }
+Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages.
+
 ---
 
 ## Auxiliary Links
@@ -250,10 +252,9 @@ aux_links:
 ## External Navigation Links
 
 To add external links to the navigation, add them to the `nav_external_links` [configuration]({{ site.baseurl }}{% link docs/configuration.md %}) option in your site's `_config.yml` file.
-External links will appear under all other items in the listing order.
+External links will appear in the navigation after the links to ordinary pages, but before any collections.
 
 #### Example
-
 {: .no_toc }
 
 ```yaml
@@ -263,6 +264,9 @@ nav_external_links:
     url: https://github.com/just-the-docs/just-the-docs
     hide_icon: false # set to true to hide the external link icon - defaults to false
 ```
+
+The external links are decorated by an icon, which distinguishes them from internal links.
+You can suppress the icon by setting `hide_icon: true`.
 
 ---
 

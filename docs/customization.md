@@ -58,6 +58,17 @@ You can add custom schemes.
 If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name)
 where you override theme variables to change colors, fonts, spacing, etc.
 
+{: .note }
+Since the default color scheme is `light`, your custom scheme is implicitly based on the variable settings used by the `light` scheme.
+
+If you want your custom scheme to be based on the `dark` scheme, you need to start your file with the following line:
+
+```scss
+@import "./color_schemes/dark";
+```
+
+You can define custom schemes based on other custom schemes in the same way.
+
 Available variables are listed in the [\_variables.scss](https://github.com/just-the-docs/just-the-docs/tree/main/_sass/support/_variables.scss) file.
 
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
@@ -129,11 +140,27 @@ For example, if you'd like to add your own styles for printing a page, you could
 
 ## Override includes
 
-The site can be modified by overriding any of the custom [Jekyll includes](https://jekyllrb.com/docs/includes/) provided by default in the theme.
+You can customize the theme by overriding any of the custom [Jekyll includes](https://jekyllrb.com/docs/includes/) files that it provides.
 
-To do this, create an `_includes` directory and make a copy of the specific file you wish to modify. Any content added to this file will override the theme defaults. You can learn more about this process in the Jekyll docs for [Overriding theme defaults](https://jekyllrb.com/docs/themes/#overriding-theme-defaults).
+To do this, create an `_includes` directory and make a copy of the specific file you wish to modify. The content in this file will override the theme defaults. You can learn more about this process in the Jekyll docs for [Overriding theme defaults](https://jekyllrb.com/docs/themes/#overriding-theme-defaults).
 
-The following includes were made available to you:
+Just the Docs provides the following custom includes files:
+
+### Custom TOC Heading
+
+`_includes/toc_heading_custom.html`
+
+If the page has any child pages, and `has_toc` is not set to `false`, this content appears as a heading above the [auto-generating list of child pages]({{ site.baseurl }}{% link docs/navigation-structure.md %}#auto-generating-table-of-contents) after the page's content.
+
+#### Example
+{: .no_toc }
+
+To change the default TOC heading to "Contents", create `_includes/toc_heading_custom.html` and add:
+```html
+<h2 class="text-delta">Contents</h2>
+```
+
+The (optional) `text-delta` class makes the heading appear as **Contents**{:.text-delta} .
 
 ### Custom Footer
 
@@ -141,19 +168,27 @@ The following includes were made available to you:
 
 This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content]({{ site.baseurl }}{% link docs/configuration.md %}#footer-content).
 
-### Custom Head
+### Custom Head and Favicon
 
 `_includes/head_custom.html`
 
 Any HTML added to this file will be inserted before the closing `<head>` tag. This might include additional `<meta>`, `<link>`, or `<script>` tags.
 
-#### Example
+Note that by default, this file has the following contents:
+
+```html
+<link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
+```
+
+#### Example: Custom Favicon
 {: .no_toc }
 
 To add a custom favicon, create `_includes/head_custom.html` and add:
 ```html
-<link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/path/to/your/favicon.png">
+<link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
 ```
+
+If *no favicon* is desired, one needs to have a *blank* `_includes/head_custom.html`.
 
 ### Custom Header
 
