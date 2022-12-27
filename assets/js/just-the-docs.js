@@ -479,6 +479,47 @@ jtd.onReady(function(){
   scrollNav();
 });
 
+// Copy button on code
+
+
+{%- if site.enable_copy_code_button != false %}
+
+jtd.onReady(function(){
+
+  var codeBlocks = document.querySelectorAll('div.highlighter-rouge, div.listingblock, figure.highlight');
+
+  var svgCopied =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copied"></use></svg>';
+  var svgCopy =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copy"></use></svg>';
+
+  codeBlocks.forEach(codeBlock => {
+    var copyButton = document.createElement('button');
+    var timeout = null;
+    copyButton.type = 'button';
+    copyButton.ariaLabel = 'Copy code to clipboard';
+    copyButton.innerHTML = svgCopy;
+    codeBlock.append(copyButton);
+
+    copyButton.addEventListener('click', function () {
+      if(timeout === null) {
+        var code = codeBlock.querySelector('code').innerText.trim();
+        window.navigator.clipboard.writeText(code);
+
+        copyButton.innerHTML = svgCopied;
+
+        var timeoutSetting = 4000;
+
+        timeout = setTimeout(function () {
+          copyButton.innerHTML = svgCopy;
+          timeout = null;
+        }, timeoutSetting);
+      }
+    });
+  });
+
+});
+
+{%- endif %}
+
 })(window.jtd = window.jtd || {});
 
 {% include js/custom.js %}

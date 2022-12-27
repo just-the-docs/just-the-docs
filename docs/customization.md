@@ -168,19 +168,27 @@ The (optional) `text-delta` class makes the heading appear as **Contents**{:.tex
 
 This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content]({{ site.baseurl }}{% link docs/configuration.md %}#footer-content).
 
-### Custom Head
+### Custom Head and Favicon
 
 `_includes/head_custom.html`
 
 Any HTML added to this file will be inserted before the closing `<head>` tag. This might include additional `<meta>`, `<link>`, or `<script>` tags.
 
-#### Example
+Note that by default, this file has the following contents:
+
+```html
+<link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
+```
+
+#### Example: Custom Favicon
 {: .no_toc }
 
 To add a custom favicon, create `_includes/head_custom.html` and add:
 ```html
-<link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/path/to/your/favicon.png">
+<link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
 ```
+
+If *no favicon* is desired, one needs to have a *blank* `_includes/head_custom.html`.
 
 ### Custom Header
 
