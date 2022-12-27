@@ -459,18 +459,13 @@ jtd.setTheme = function(theme) {
   var cssFile = document.querySelector('[rel="stylesheet"]');
   var cssFiles = [...document.querySelectorAll('[rel="stylesheet"]')];
   var cssFile = cssFiles[0];
-  if(cssFiles.length >= 1) {
-    cssFiles.shift();
-    cssFiles.forEach(it => it.remove());
-    cssFile.removeAttribute('media');
-  }
   if(theme === "auto") {
-    cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-light.css" | relative_url }}');
-    cssFile.setAttribute('media', '(prefers-color-scheme: light)');
-    cssFile.insertAdjacentHTML('afterend', `<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}" media="(prefers-color-scheme: dark)">`);
+    cssFiles.at(-1).insertAdjacentHTML('afterend', `<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}" media="(prefers-color-scheme: dark)">`);
+    cssFiles.at(-1).insertAdjacentHTML('afterend', `<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | relative_url }}" media="(prefers-color-scheme: light)">`);
   } else {
-    cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | relative_url }}' + theme + '.css');
+    cssFiles.at(-1).insertAdjacentHTML('afterend', `<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-*.css' | relative_url }}">`.replace("*",theme));
   }
+  setTimeout(() => cssFiles.forEach(it => it.remove()), 100);
 }
 
 jtd.switchThemeButton = function(button, event) {
