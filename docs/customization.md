@@ -16,7 +16,6 @@ nav_order: 6
 ---
 
 ## Color schemes
-
 {: .d-inline-block }
 
 New
@@ -176,17 +175,24 @@ Any HTML added to this file will be inserted before the closing `<head>` tag. Th
 
 Note that by default, this file has the following contents:
 
+{% raw %}
+
 ```html
 <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
 ```
+{% endraw %}
 
 #### Example: Custom Favicon
 {: .no_toc }
 
 To add a custom favicon, create `_includes/head_custom.html` and add:
+
+{% raw %}
+
 ```html
 <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon">
 ```
+{% endraw %}
 
 If *no favicon* is desired, one needs to have a *blank* `_includes/head_custom.html`.
 
