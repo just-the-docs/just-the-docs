@@ -133,7 +133,12 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 ## Color scheme
 
 - `color_scheme`: Color scheme currently supports `nil` (default), `"auto"`, `"light"`, `"dark"` or a custom scheme that you define.
+- `enable_local_storage_theme`: Enable the local storage of the current theme
 - `enable_switch_theme_button`: Show the switch theme button on the aux-nav-list.
+- `switch_theme_available_color_scheme`: Set the available theme for the switch button, the default is `["auto", "light", "dark"]`. You can add a custom scheme or remove a scheme.
+- `switch_theme_available_timeout_fart`: If the remote server is slow to respond and FART (Flash of inAccurate coloR Theme) occur, to avoid them it is possible to increase the time (the default is `100`) in which two themes are loaded correctly and then wait longer for the theme change. 
+
+
 
 _note: this switch does not save to cache or local storage the last choice made by the user. 
 
