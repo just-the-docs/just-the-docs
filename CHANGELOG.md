@@ -37,6 +37,8 @@ Changes to `main` that are *not* in the latest pre-release:
 - Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
 - Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
+- Docs: fix two bugs in "Customization" (custom favicon, new annotation) by [@mattxwang] in [#1090]
+- Docs: Add warning about mandatory `_`-prefix for collections by [@max06] in [#1091]
 
 [#945]: https://github.com/just-the-docs/just-the-docs/pull/945
 [#999]: https://github.com/just-the-docs/just-the-docs/pull/999
@@ -56,6 +58,8 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1074]: https://github.com/just-the-docs/just-the-docs/pull/1074
 [#1076]: https://github.com/just-the-docs/just-the-docs/pull/1076
 [#1077]: https://github.com/just-the-docs/just-the-docs/pull/1077
+[#1090]: https://github.com/just-the-docs/just-the-docs/pull/1090
+[#1091]: https://github.com/just-the-docs/just-the-docs/pull/1091
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
