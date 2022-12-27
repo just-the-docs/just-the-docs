@@ -7,5 +7,7 @@
     {% include icons/document.html %}
     {% include icons/search.html %}
   {% endif %}
-  {% include icons/code_copy.html %}
+  {%- if site.enable_copy_code_button != false %}
+    {% include icons/code_copy.html %}
+  {% endif %}
 </svg>
