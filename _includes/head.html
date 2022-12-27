@@ -8,7 +8,7 @@
     head = document.getElementsByTagName('head')[0];
 
     if(theme === null) {
-      theme === "{{ site.color_scheme }}"
+      theme = "{{ site.color_scheme }}";
     }
     switch(theme) {
       case "auto":
