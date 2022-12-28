@@ -149,7 +149,7 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 
 
 
-_note: this switch does not save to cache or local storage the last choice made by the user. 
+*Note:* `enable_local_storage_theme` *must* be enabled for changes to persist across pages and sessions.
 
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
 
