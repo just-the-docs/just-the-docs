@@ -21,8 +21,7 @@ nav_order: 6
 New
 {: .label .label-green }
 
-Just the Docs supports two color schemas, and also allows automatic mode to enable the user's system light/dark selection. 
-Color scheme currently supports nil (default), "auto", "light", "dark" or a custom scheme that you define
+Just the Docs supports two static color schemes out of the box: light and dark. In addition, it allows for an automatic mode that switches based on the user's [preferred color scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) (a feature of most browsers).
 
 ```yaml
 color_scheme: auto 
