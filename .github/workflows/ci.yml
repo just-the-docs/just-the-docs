@@ -15,14 +15,22 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        jekyll-version: [3.8.5, latest]
+        jekyll-version: [3.9, 4.3]
     steps:
     - uses: actions/checkout@v3
-    - name: Build the site in the jekyll/jekyll container
-      run: |
-        docker run --rm \
-        --volume="${{ github.workspace }}:/srv/jekyll" \
-        jekyll/jekyll:${{ matrix.jekyll-version }} /bin/bash -c "gem install bundler && chmod -R 777 /srv/jekyll && bundle install && bundle exec jekyll build && bundle exec rake search:init"
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1' # Not needed with a .ruby-version file
+        bundler-cache: false
+    - name: Bundle Install
+      run: bundle install
+    - name: Install Jekyll ${{ matrix.jekyll-version }}
+      run: gem install jekyll -v ${{ matrix.jekyll-version }}
+    - name: Init Search
+      run: bundle exec rake search:init
+    - name: Build Site
+      run: bundle exec jekyll build
 
   assets:
     name: Test CSS and JS
@@ -30,7 +38,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [18.x]
 
     steps:
     - uses: actions/checkout@v3

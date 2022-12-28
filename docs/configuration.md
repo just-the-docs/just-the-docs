@@ -27,6 +27,15 @@ View this site's [\_config.yml](https://github.com/just-the-docs/just-the-docs/t
 logo: "/assets/images/just-the-docs.png"
 ```
 
+## Site favicon
+
+```yaml
+# Set a path/url to a favicon that will be displayed by the browser
+favicon_ico: "/assets/images/favicon.ico"
+```
+
+If the path to your favicon is `/favicon.ico`, you can leave `favicon_ico` unset.
+
 ## Search
 
 ```yaml
@@ -210,17 +219,31 @@ See [Callouts]({{ site.baseurl }}{% link docs/ui-components/callouts.md %}) for 
 
 ## Google Analytics
 
+{: .warning }
+> [Google Analytics 4 will replace Universal Analytics](https://support.google.com/analytics/answer/11583528). On **July 1, 2023**, standard Universal Analytics properties will stop processing new hits. The earlier you migrate, the more historical data and insights you will have in Google Analytics 4.
+
+Universal Analytics (UA) and Google Analytics 4 (GA4) properties are supported.
+
 ```yaml
 # Google Analytics Tracking (optional)
-# e.g, UA-1234567-89
-ga_tracking: UA-5555555-55
-ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
+# Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
+ga_tracking: UA-2709176-10
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+```
+
+This theme supports multiple comma-separated tracking IDs. This helps seamlessly transition UA properties to GA4 properties by tracking both for a while.
+
+```yaml
+ga_tracking: "UA-1234567-89,G-1AB234CDE5"
 ```
 
 ## Document collections
 
 By default, the navigation and search include normal [pages](https://jekyllrb.com/docs/pages/).
 You can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
+
+{: .warning }
+> Collection folders always start with an underscore (`_`), e.g. `_tests`. You won't see your collections if you omit the prefix.
 
 For example, put all your test files in the `_tests` folder and create the `tests` collection:
 

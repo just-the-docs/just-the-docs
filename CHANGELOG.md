@@ -5,7 +5,7 @@ layout: default
 
 # CHANGELOG
 
-All notable changes to this project are documented in this file.
+All notable user-facing changes to this project are documented in this file.
 
 {: .highlight }
 The project underwent a major maintenance shift in March 2022.
@@ -20,6 +20,9 @@ This website includes docs for some new features that are not available in `v0.4
 
 Changes to `main` that are *not* in the latest pre-release:
 
+- Added: support multiple Google Analytics tracking IDs, document UA -> GA4 switch by [@MichelleBlanchette] in [#1029]
+- Added: copy code button to code snippets by [@simonebortolin] in [#945]
+- Added: restore simple configuration of `favicon.ico` via `site.static_files` by [@pdmosses] in [#1095]
 - Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
 - Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
@@ -27,10 +30,19 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: external links for sites with no pages by [@pdmosses] in [#1021]
 - Fixed: duplicate `title` if `jekyll-seo-tag` not in users's plugins
 - Fixed: removes (duplicate) `favicon.html`, shifts content to `head_custom.html` by [@mattxwang] in [#1027]
+- Fixed: add `reversed`, deprecate `desc` for nav `child_nav_order` by [@jmertic] in [#1061]
+- Fixed: `child.child_nav_order` to `node.child_nav_order` by [@mattxwang] in [#1065]
+- Fixed: remove all uses of `/` as SASS division by [@mattxwang] in [#1074]
+    - note: this was originally merged as [#1074] with a bug; it was reverted in [#1076], and then reimplemented in [#1077]
+- Fixed: skip nav collection generation when site has no pages by [@pdmosses] in [#1092]
+- Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang] in [#1071]
 - Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
 - Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
+- Docs: fix two bugs in "Customization" (custom favicon, new annotation) by [@mattxwang] in [#1090]
+- Docs: Add warning about mandatory `_`-prefix for collections by [@max06] in [#1091]
 
+[#945]: https://github.com/just-the-docs/just-the-docs/pull/945
 [#999]: https://github.com/just-the-docs/just-the-docs/pull/999
 [#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
 [#1001]: https://github.com/just-the-docs/just-the-docs/pull/1001
@@ -40,10 +52,23 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1019]: https://github.com/just-the-docs/just-the-docs/pull/1019
 [#1021]: https://github.com/just-the-docs/just-the-docs/pull/1021
 [#1027]: https://github.com/just-the-docs/just-the-docs/pull/1027
+[#1029]: https://github.com/just-the-docs/just-the-docs/pull/1029
 [#1040]: https://github.com/just-the-docs/just-the-docs/pull/1040
+[#1061]: https://github.com/just-the-docs/just-the-docs/pull/1061
+[#1065]: https://github.com/just-the-docs/just-the-docs/pull/1065
+[#1071]: https://github.com/just-the-docs/just-the-docs/pull/1071
+[#1074]: https://github.com/just-the-docs/just-the-docs/pull/1074
+[#1076]: https://github.com/just-the-docs/just-the-docs/pull/1076
+[#1077]: https://github.com/just-the-docs/just-the-docs/pull/1077
+[#1090]: https://github.com/just-the-docs/just-the-docs/pull/1090
+[#1091]: https://github.com/just-the-docs/just-the-docs/pull/1091
+[#1092]: https://github.com/just-the-docs/just-the-docs/pull/1092
+[#1095]: https://github.com/just-the-docs/just-the-docs/pull/1095
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
+[@MichelleBlanchette]: https://github.com/MichelleBlanchette
+[@simonebortolin]: https://github.com/simonebortolin
 
 ## Pre-release v0.4.0.rc3
 
