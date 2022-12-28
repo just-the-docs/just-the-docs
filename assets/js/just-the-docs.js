@@ -455,39 +455,28 @@ jtd.getTheme = function() {
   return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
 }
 
-Element.prototype.appendAfter = function (element) {
-  element
-},false;
-
 jtd.setTheme = function(theme) {
-  var cssFiles = [...document.querySelectorAll('[rel="stylesheet"]')];
-  var cssFile = cssFiles[0];
-  if(theme === "auto") {
-    var linkLight  = document.createElement('link');
-    linkLight.rel  = 'stylesheet';
-    linkLight.type = 'text/css';
-    linkLight.href = "{{ '/assets/css/just-the-docs-light.css' | relative_url }}";
-    linkLight.media = '(prefers-color-scheme: light)';
-    cssFiles.at(-1).insertAdjacentElement('afterend',linkLight);
-    var linkDark  = document.createElement('link');
-    linkDark.rel  = 'stylesheet';
-    linkDark.type = 'text/css';
-    linkDark.href = "{{ '/assets/css/just-the-docs-dark.css' | relative_url }}";
-    linkDark.media = '(prefers-color-scheme: dark)';
-    cssFiles.at(-1).insertAdjacentElement('afterend',linkDark);
-  } else {
+  function createThemeStylesheet(theme, media) {
     var link  = document.createElement('link');
     link.rel  = 'stylesheet';
     link.type = 'text/css';
-    link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*", theme || "default");
-    cssFiles.at(-1).insertAdjacentElement('afterend',link);
+    link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*",theme);
+    if(media) link.media = media;
+    return link;
   }
-  setTimeout(() => cssFiles.forEach(it => it.remove()), {{ site.switch_theme_available_timeout_fart | default: 100 }});
+  var cssFiles = [...document.querySelectorAll('[rel="stylesheet"]')];
+  if(theme === "auto") {
+    cssFiles.at(-1).insertAdjacentElement('afterend', createThemeStylesheet('light', '(prefers-color-scheme: light)'));
+    cssFiles.at(-1).insertAdjacentElement('afterend', createThemeStylesheet('dark', '(prefers-color-scheme: dark)'));
+  } else {
+    cssFiles.at(-1).insertAdjacentElement('afterend', createThemeStylesheet(theme || "default"));
+  }
+  setTimeout(() => cssFiles.forEach(it => it.remove()), {{ site.switch_color_scheme_timeout_fart | default: 100 }});
 }
 
 jtd.switchThemeButton = function(button, event) {
-  {% if site.switch_theme_available_color_scheme %}
-  const themes = {{ site.switch_theme_available_color_scheme | jsonify }}; 
+  {% if site.switch_color_scheme_available %}
+  const themes = {{ site.switch_color_scheme_available | jsonify }}; 
   {% else %}
   const themes = ["auto", "light", "dark"];
   {% endif %}
@@ -495,14 +484,14 @@ jtd.switchThemeButton = function(button, event) {
   var nextTheme = themes[(themes.indexOf(currentTheme)+1)%themes.length];
   jtd.setTheme(nextTheme);
   button.getElementsByTagName('svg')[0].getElementsByTagName('use')[0].setAttribute('href',`#svg-${nextTheme}`);
-  {% if site.enable_local_storage_theme != false %}
+  {% if site.enable_localstorage_color_scheme != false %}
   window.localStorage.setItem('theme', nextTheme);
   {% endif %}
 }
 
 function initSwitchThemeButton() {
   var buttons = [...document.getElementsByClassName("color-scheme-switch-theme-button")];
-  {% if site.enable_local_storage_theme != false %}
+  {% if site.enable_localstorage_color_scheme != false %}
   theme = window.localStorage.getItem('theme');
   if(theme != null){
     buttons.forEach(button => button.getElementsByTagName('svg')[0].getElementsByTagName('use')[0].setAttribute('href',`#svg-${theme}`));
@@ -530,7 +519,7 @@ jtd.onReady(function(){
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
-  {%- if site.enable_switch_theme_button != false %}
+  {%- if site.enable_switch_color_scheme != false %}
   initSwitchThemeButton();
   {%- endif %}
   scrollNav();

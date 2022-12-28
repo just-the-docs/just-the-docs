@@ -139,17 +139,17 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 - `gh_edit_source` is the source directory that your project files are stored in (should be the same as [site.source](https://jekyllrb.com/docs/configuration/options/))
 - `gh_edit_view_mode` is `"tree"` by default, which brings the user to the github page; switch to `"edit"` to bring the user directly into editing mode
 
-## Color scheme
+## Color scheme (theme)
 
-- `color_scheme`: Color scheme currently supports `nil` (default), `"auto"`, `"light"`, `"dark"` or a custom scheme that you define.
-- `enable_local_storage_theme`: Enable the local storage of the current theme
-- `enable_switch_theme_button`: Show the switch theme button on the aux-nav-list.
-- `switch_theme_available_color_scheme`: Set the available theme for the switch button, the default is `["auto", "light", "dark"]`. You can add a custom scheme or remove a scheme.
-- `switch_theme_available_timeout_fart`: If the remote server is slow to respond and FART (Flash of inAccurate coloR Theme) occur, to avoid them it is possible to increase the time (the default is `100`) in which two themes are loaded correctly and then wait longer for the theme change. 
+- `color_scheme`: Color scheme (theme) currently supports `nil` (default), `"auto"` (based on the user's [preferred color scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme)), `"light"` (static), `"dark"` (static) or a custom scheme that you define.
+- `enable_local_storage_theme`: Enables the saving of the color scheme within the local site settings via the `localStorage` (GDPR compliant).
 
+{: .note }
+`enable_local_storage_theme` *must* be enabled for changes of color scheme (theme) to persist across pages and sessions.
 
-
-*Note:* `enable_local_storage_theme` *must* be enabled for changes to persist across pages and sessions.
+- `enable_switch_color_scheme_button`: Show the switch theme button on the aux-nav-list.
+- `switch_color_scheme_available_scheme`: Set the available theme for the switch button, the default is `["auto", "light", "dark"]`. You can add a custom scheme or remove a scheme.
+- `switch_color_scheme_timeout_fart`: If the remote server is slow to respond and FART (Flash of inAccurate coloR Theme) occur, to avoid them it is possible to increase the time (the default is `100`) in which two themes are loaded correctly and then wait longer for the theme change. 
 
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
 

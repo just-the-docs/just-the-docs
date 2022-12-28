@@ -2,63 +2,42 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  {% if site.enable_local_storage_theme != false %}
+  {% if site.enable_localstorage_color_scheme != false %}
   <script>
-    theme = window.localStorage.getItem('theme');
-    head = document.getElementsByTagName('head')[0];
-
-    if(theme === null) {
-      theme = "{{ site.color_scheme }}";
-    }
-    switch(theme) {
-      case "auto":
-        var linkLight  = document.createElement('link');
-        linkLight.rel  = 'stylesheet';
-        linkLight.type = 'text/css';
-        linkLight.href = "{{ '/assets/css/just-the-docs-light.css' | relative_url }}";
-        linkLight.media = '(prefers-color-scheme: light)';
-        head.appendChild(linkLight);
-        var linkDark  = document.createElement('link');
-        linkDark.rel  = 'stylesheet';
-        linkDark.type = 'text/css';
-        linkDark.href = "{{ '/assets/css/just-the-docs-dark.css' | relative_url }}";
-        linkDark.media = '(prefers-color-scheme: dark)';
-        head.appendChild(linkDark);
-        break;
-      case "light":
-        var linkLight  = document.createElement('link');
-        linkLight.rel  = 'stylesheet';
-        linkLight.type = 'text/css';
-        linkLight.href = "{{ '/assets/css/just-the-docs-light.css' | relative_url }}";
-        head.appendChild(linkLight);
-        break;
-      case "dark":
-        var linkDark  = document.createElement('link');
-        linkDark.rel  = 'stylesheet';
-        linkDark.type = 'text/css';
-        linkDark.href = "{{ '/assets/css/just-the-docs-dark.css' | relative_url }}";
-        head.appendChild(linkDark);
-        break;
-      default:
+    (function(){
+      function createThemeStylesheet(theme, media) {
         var link  = document.createElement('link');
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*", theme || "default");
-        head.appendChild(link);
-    }
+        link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*",theme);
+        if(media) link.media = media;
+        return link;
+      }
+
+      theme = window.localStorage.getItem('theme');
+      head = document.getElementsByTagName('head')[0];
+
+      if(theme === null) {
+        theme = "{{ site.color_scheme }}";
+      }
+      if(theme === "auto") {
+        head.appendChild(createThemeStylesheet('light', '(prefers-color-scheme: light)'));
+        head.appendChild(createThemeStylesheet('dark', '(prefers-color-scheme: dark)'));
+      } else {
+        head.appendChild(createThemeStylesheet(theme || "default"));
+      }
+    })();
   </script>
   {% else %}
     {% assign color_scheme = site.color_scheme %}
     {% case color_scheme %}
     {% when "auto" %}
-      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | relative_url }}" media="(prefers-color-scheme: light)">
-      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}" media="(prefers-color-scheme: dark)">
-    {% when "light" %}
-      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | relative_url }}">
-    {% when "dark" %}
-      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}">
+      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | relative_url }}" type="text/css" media="(prefers-color-scheme: light)">
+      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}" type="text/css" media="(prefers-color-scheme: dark)">
     {% when nil %}
-      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}" type="text/css">
+    {% else %}
+      <link rel="stylesheet" href="{{ color_scheme | prepend: '/assets/css/just-the-docs-' | append: '.css' | relative_url }}" type="text/css">  
     {% endcase %}
   {% endif %}
 

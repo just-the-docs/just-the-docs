@@ -131,7 +131,7 @@ layout: table_wrappers
         <div></div>
       {% endif %}
       {% include header_custom.html %}
-      {% if site.aux_links or site.enable_switch_theme_button == true %}
+      {% if site.aux_links or site.enable_switch_color_scheme == true %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
             {% for link in site.aux_links %}
@@ -145,11 +145,11 @@ layout: table_wrappers
                 </a>
               </li>
             {% endfor %}
-            {% if site.enable_switch_theme_button == true %}
+            {% if site.enable_switch_color_scheme == true %}
             <li class="aux-nav-list-item">
-              <a href="#" class="site-button color-scheme-switch-theme-button">
+              <button class="site-button color-scheme-switch-theme-button">
                 <svg aria-hidden="true" class="site-button-icon"><use href="#svg-{{ site.color_scheme | default: 'light' }}"></use></svg>
-              </a>
+              </button>
             </li>
             {% endif %}
           </ul>

@@ -15,54 +15,58 @@ nav_order: 6
 
 ---
 
-## Color schemes
+## Color schemes (theme)
 {: .d-inline-block }
 
 New
 {: .label .label-green }
 
-Just the Docs supports two static color schemes out of the box: light and dark. In addition, it allows for an automatic mode that switches based on the user's [preferred color scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) (a feature of most browsers).
+Just the Docs supports two static color schemes (theme) out of the box: light and dark. In addition, it allows for an automatic mode that switches based on the user's [preferred color scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) (a feature of most browsers).
 
 ```yaml
 color_scheme: auto 
 ```
-- `nil` is the default value and use the default color schema.
-- `"auto"` is use the user's system light/dark selection. This will enable automatic switching between ligth mode and dark mode.
-- `"light"` is use the light color schema. This will force the color schema.
-- `"dark"` is use the dark color schema. This will force the color schema.
+- `nil` is the default value and use the `default` color scheme.
+- `"auto"` is use the user's system light/dark selection. This will enable automatic switching between ligth mode and dark mode based on the user's [preferred color scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) (a feature of most browsers).
+- `"light"` is use the light color scheme. This will force the color scheme.
+- `"dark"` is use the dark color scheme. This will force the color scheme.
 
-### Enable or disable localstorage
 
-Since not all sites require local storage of the theme, and since local storage of the theme requires the use of a `<script>` in the `<head>` that blocks the loading of the rest of the html to avoid FART it can be disabled:
+### Switch color scheme button
+
+This button will appear in the top navbar (the last button on the right, in the `aux-nav-list`). It is possible to enable or disable it, its enabling is independent of whether the color scheme is saved in local storage.
 
 ```yaml
-enable_local_storage_theme: true # or false 
+enable_switch_color_scheme: true  # or false 
+```
+
+### Custom order of the switch color scheme button
+
+Just the Docs supports to edit the rotation carousel of the color scheme by:
+```yaml
+switch_color_scheme_available: ["light", "dark", "auto"] # the default is ["auto", "light", "dark"]
+```
+
+### Enable or disable `localstorage`
+
+Since not all sites require local storage of the theme, and since local storage of the theme requires the use of a `<script>` in the `<head>` that blocks the loading of the rest of the HTML to avoid FART it can be disabled:
+
+```yaml
+enable_localstorage_color_scheme: true # or false 
 ``` 
 
-## Edit switch teme timeout for  avoid FART
+{: .note }
+`enable_localstorage_color_scheme` *must* be enabled for changes of color scheme (theme) to persist across pages and sessions.
+
+### Edit switch color scheme timeout for avoid FART
 
 If the remote server is slow to respond and FART (Flash of inAccurate coloR Theme) occur, to avoid them it is possible to increase the time (the default is `100`) in which two themes are loaded correctly and then wait longer for the theme change:
 
 ```yaml
-switch_theme_available_timeout_fart: 1000 # the default is 100
+switch_color_scheme_timeout_fart: 1000 # the default is 100
 ``` 
 {: .note }
 For accessibility reasons, it is very important to avoid any FART in a web page, so if the server is so slow that even increasing the timeout to a reasonable time will not solve it, it is recommended to disable local storage.
-
-### Switch theme button
-
-This button will appear in the top navbar (the last button on the right, in the aux-nav-list). It is possible to enable or disable it, its enabling is independent of whether or not the theme is saved in local storage.
-
-```yaml
-enable_switch_theme_button: true  # or false 
-```
-
-### Custom order of the switch theme button
-
-Just the Docs supports to edit the rotation carousel by:
-```yaml
-switch_theme_available_color_scheme: ["light", "dark", "auto"] # the default is ["auto", "light", "dark"]
-```
 
 ### Define a custom scheme
 
@@ -96,7 +100,8 @@ Keep in mind that changing a variable will not automatically change the value of
 For example, the default link color (`$link-color`) is set to `$purple-000`. However, redefining `$purple-000` in a custom color scheme will not automatically change `$link-color` to match it.
 Instead, each variable that relies on previously-cascaded values must be manually reimplemented by copying the dependent rules from `_variables.scss` — in this case, rewriting `$link-color: $purple-000;`.
 
-_Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
+{: .note }
+Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
 Please use scheme files.
 
 ### Use a custom scheme
@@ -124,7 +129,7 @@ with the following content:
 1. Just add its name in `switch_theme_available_colour_scheme` (replace `read` by your scheme name):
 
 ```yaml
-switch_theme_available_color_scheme: ["auto", "light", "dark", "read"] # add read theme 
+switch_color_scheme_available: ["auto", "light", "dark", "read"] # add read theme 
 ```
 
 {:style="counter-reset:none"}

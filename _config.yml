@@ -129,11 +129,11 @@ gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
-color_scheme: auto # Color scheme currently supports nil (default), "auto", "light", "dark" or a custom scheme that you define
-enable_local_storage_theme: true # Enable the local storage of the current theme
-enable_switch_theme_button: true # Show the switch theme button on the aux-nav-list
-switch_theme_available_color_scheme: ["auto", "light", "dark"] # Set the available theme for the switch button. You can add a custom scheme or remove a scheme.
-# switch_theme_available_timeout_fart: 100 # if the remote server is slow to respond and FARTs (Flash of inAccurate coloR Theme) occur, to avoid them it is possible to increase the time in which two themes are loaded correctly and then wait longer for the theme change. 
+color_scheme: auto #  Color scheme currently supports nil (default), "auto" (based on the user’s preferred color scheme), "light" (static), "dark" (static) or a custom scheme that you define.
+enable_localstorage_color_scheme: true # nables the saving of the color scheme within the local site settings via the localStorage
+enable_switch_color_scheme: true # Show the switch color scheme button on the top navbar.
+switch_color_scheme_available: ["auto", "light", "dark"] # Set the available color scheme for the switch button. You can add a custom scheme or remove a scheme.
+# switch_color_scheme_timeout_fart: 100 # If the remote server is slow to respond and FART (Flash of inAccurate coloR Theme) occur, to avoid them it is possible to increase the time in which two color schemes are loaded correctly and then wait longer for the color scheme change.
 
 callouts_level: quiet # or loud
 callouts:
