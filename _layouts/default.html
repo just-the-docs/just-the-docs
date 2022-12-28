@@ -41,7 +41,9 @@ layout: table_wrappers
     </symbol>
     {% include icons/external_link.html %}
     {% include icons/code_copy.html %}
-    {% include icons/theme_switch.html %}
+    {% if site.enable_switch_color_scheme != false %}
+      {% include icons/switch_color_scheme.html %}
+    {% endif %}
     {% include icons/custom.html %}
   </svg>
 
