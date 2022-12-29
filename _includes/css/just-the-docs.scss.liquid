@@ -3,7 +3,18 @@ $logo: "{{ site.logo | relative_url }}";
 {% endif %}
 @import "./support/support";
 @import "./color_schemes/light";
-@import "./color_schemes/{{ include.color_scheme }}";
-@import "./modules";
+{% if include.color_scheme == "auto" %}
+  @media (prefers-color-scheme: dark) {
+    @import "./color_schemes/dark";
+    @import "./modules";
+  }
+  @media (prefers-color-scheme: light) {
+    @import "./color_schemes/light";
+    @import "./modules";
+  }
+{% else %}
+  @import "./color_schemes/{{ include.color_scheme }}";
+  @import "./modules";
+{% endif %}
 {% include css/callouts.scss.liquid color_scheme = include.color_scheme %}
 {% include css/custom.scss.liquid %}

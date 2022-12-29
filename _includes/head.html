@@ -4,41 +4,22 @@
 
   {% if site.enable_localstorage_color_scheme != false %}
   <script>
+    function createThemeStylesheet(theme) {
+      var link  = document.createElement('link');
+      link.rel  = 'stylesheet';
+      link.type = 'text/css';
+      link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*",theme);
+      return link;
+    }
+    
     (function(){
-      function createThemeStylesheet(theme, media) {
-        var link  = document.createElement('link');
-        link.rel  = 'stylesheet';
-        link.type = 'text/css';
-        link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*",theme);
-        if(media) link.media = media;
-        return link;
-      }
-
-      theme = window.localStorage.getItem('theme');
+      theme = window.localStorage.getItem('theme') ?? "{{ site.color_scheme }}";
       head = document.getElementsByTagName('head')[0];
-
-      if(theme === null) {
-        theme = "{{ site.color_scheme }}";
-      }
-      if(theme === "auto") {
-        head.appendChild(createThemeStylesheet('light', '(prefers-color-scheme: light)'));
-        head.appendChild(createThemeStylesheet('dark', '(prefers-color-scheme: dark)'));
-      } else {
-        head.appendChild(createThemeStylesheet(theme || "default"));
-      }
+      head.appendChild(createThemeStylesheet(theme || "default"));
     })();
   </script>
   {% else %}
-    {% assign color_scheme = site.color_scheme %}
-    {% case color_scheme %}
-    {% when "auto" %}
-      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | relative_url }}" type="text/css" media="(prefers-color-scheme: light)">
-      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}" type="text/css" media="(prefers-color-scheme: dark)">
-    {% when nil %}
-      <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}" type="text/css">
-    {% else %}
-      <link rel="stylesheet" href="{{ color_scheme | prepend: '/assets/css/just-the-docs-' | append: '.css' | relative_url }}" type="text/css">  
-    {% endcase %}
+    <link rel="stylesheet" href="{{ color_scheme | default: 'default' | prepend: '/assets/css/just-the-docs-' | append: '.css' | relative_url }}" type="text/css">  
   {% endif %}
 
   {% if site.ga_tracking != nil %}

@@ -58,16 +58,6 @@ enable_localstorage_color_scheme: true # or false
 {: .note }
 `enable_localstorage_color_scheme` *must* be enabled for changes of color scheme (theme) to persist across pages and sessions.
 
-### Edit switch color scheme timeout for avoid FART
-
-If the remote server is slow to respond and FART (Flash of inAccurate coloR Theme) occur, to avoid them it is possible to increase the time (the default is `100`) in which two themes are loaded correctly and then wait longer for the theme change:
-
-```yaml
-switch_color_scheme_timeout_fart: 1000 # the default is 100
-``` 
-{: .note }
-For accessibility reasons, it is very important to avoid any FART in a web page, so if the server is so slow that even increasing the timeout to a reasonable time will not solve it, it is recommended to disable local storage.
-
 ### Define a custom scheme
 
 You can add custom schemes.

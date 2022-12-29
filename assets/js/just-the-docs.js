@@ -449,29 +449,26 @@ function searchLoaded(index, docs) {
 
 jtd.getTheme = function() {
   var cssFile = document.querySelector('[rel="stylesheet"]');
-  if(cssFile.hasAttribute('media')) return 'auto';
-
   var cssFileHref = cssFile.getAttribute('href');
   return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
 }
 
+
+//  creation of the function createThemeStylesheet only if it has not already been created in head
+{% if site.enable_localstorage_color_scheme == false %}  
+function createThemeStylesheet(theme) {
+  var link  = document.createElement('link');
+  link.rel  = 'stylesheet';
+  link.type = 'text/css';
+  link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*",theme);
+  return link;
+}
+{% endif %}
+
 jtd.setTheme = function(theme) {
-  function createThemeStylesheet(theme, media) {
-    var link  = document.createElement('link');
-    link.rel  = 'stylesheet';
-    link.type = 'text/css';
-    link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*",theme);
-    if(media) link.media = media;
-    return link;
-  }
-  var cssFiles = [...document.querySelectorAll('[rel="stylesheet"]')];
-  if(theme === "auto") {
-    cssFiles.at(-1).insertAdjacentElement('afterend', createThemeStylesheet('light', '(prefers-color-scheme: light)'));
-    cssFiles.at(-1).insertAdjacentElement('afterend', createThemeStylesheet('dark', '(prefers-color-scheme: dark)'));
-  } else {
-    cssFiles.at(-1).insertAdjacentElement('afterend', createThemeStylesheet(theme || "default"));
-  }
-  setTimeout(() => cssFiles.forEach(it => it.remove()), {{ site.switch_color_scheme_timeout_fart | default: 100 }});
+  var cssFile = document.querySelector('[rel="stylesheet"]');
+  cssFile.insertAdjacentElement('afterend', createThemeStylesheet(theme || "default"));
+  setTimeout(() => cssFile.remove(), 100);
 }
 
 jtd.switchThemeButton = function(button, event) {
