@@ -471,7 +471,7 @@ jtd.setTheme = function(theme) {
   } else {
     cssFiles.at(-1).insertAdjacentElement('afterend', createThemeStylesheet(theme || "default"));
   }
-  setTimeout(() => cssFiles.forEach(it => it.remove()), {{ site.switch_color_scheme_timeout_fart | default: 100 }});
+  setTimeout(() => cssFiles.forEach(it => it.remove()), 100);
 }
 
 jtd.switchThemeButton = function(button, event) {

@@ -133,7 +133,6 @@ color_scheme: auto #  Color scheme currently supports nil (default), "auto" (bas
 enable_localstorage_color_scheme: true # nables the saving of the color scheme within the local site settings via the localStorage
 enable_switch_color_scheme: true # false or "selected_pages". Show the switch color scheme button on the top navbar.
 switch_color_scheme_available: ["auto", "light", "dark"] # Set the available color scheme for the switch button. You can add a custom scheme or remove a scheme.
-# switch_color_scheme_timeout_fart: 100 # If the remote server is slow to respond and FART (Flash of inAccurate coloR Theme) occur, to avoid them it is possible to increase the time in which two color schemes are loaded correctly and then wait longer for the color scheme change.
 
 # See docs/customization.md for more information.
 
