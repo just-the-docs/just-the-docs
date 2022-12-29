@@ -9,7 +9,7 @@
     <br><br><br>
 </p>
 
-![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
+<img src="assets/images/just-the-docs-readme.gif" height="100%" alt="Gif showcasing features on Just The Docs web application">
 
 ## Installation
 
