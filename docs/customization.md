@@ -34,10 +34,21 @@ color_scheme: auto
 
 ### Switch color scheme button
 
-This button will appear in the top navbar (the last button on the right, in the `aux-nav-list`). It is possible to enable or disable it, its enabling is independent of whether the color scheme is saved in local storage.
+This button will appear in the top navbar (the last button on the right, in the `aux-nav-list`). It is possible to enable, disable or show it only on selected pages, its enabling is independent of whether the color scheme is saved in local storage.
 
 ```yaml
-enable_switch_color_scheme: true  # or false 
+enable_switch_color_scheme: true # true # false or "selected_pages". Show the switch color scheme button on the top navbar.
+```
+
+{: .note }
+To enable it on selected pages, it must be added to the header of the page:
+
+```md
+---
+layout: default
+title: Home
+enable_switch_color_scheme: true
+---
 ```
 
 ### Custom order of the switch color scheme button

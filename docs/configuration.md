@@ -148,6 +148,7 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 `enable_local_storage_theme` *must* be enabled for changes of color scheme (theme) to persist across pages and sessions.
 
 - `enable_switch_color_scheme_button`: Show the switch theme button on the aux-nav-list.
+- `enable_switch_color_scheme`: `true`, `false` or `"selected_pages"`. Show the switch color scheme button on the top navbar. 
 - `switch_color_scheme_available_scheme`: Set the available theme for the switch button, the default is `["auto", "light", "dark"]`. You can add a custom scheme or remove a scheme.
 
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.

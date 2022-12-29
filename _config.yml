@@ -131,8 +131,10 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 
 color_scheme: auto #  Color scheme currently supports nil (default), "auto" (based on the user’s preferred color scheme), "light" (static), "dark" (static) or a custom scheme that you define.
 enable_localstorage_color_scheme: true # nables the saving of the color scheme within the local site settings via the localStorage
-enable_switch_color_scheme: true # Show the switch color scheme button on the top navbar.
+enable_switch_color_scheme: true # false or "selected_pages". Show the switch color scheme button on the top navbar.
 switch_color_scheme_available: ["auto", "light", "dark"] # Set the available color scheme for the switch button. You can add a custom scheme or remove a scheme.
+
+# See docs/customization.md for more information.
 
 callouts_level: quiet # or loud
 callouts:
