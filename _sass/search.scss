@@ -123,7 +123,7 @@
 
 .search-result {
   display: block;
-  padding-top: $sp-1 $sp-3 $sp-1 $sp-3;
+  padding-top: $sp-1 $sp-3;
 
   &:hover,
   &.active {
@@ -216,7 +216,7 @@
 }
 
 .search-no-result {
-  padding: $sp-2 $sp-3 $sp-2 $sp-3;
+  padding: $sp-2 $sp-3;
   @include fs-3;
 }
 
