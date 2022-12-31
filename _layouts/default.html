@@ -41,7 +41,7 @@ layout: table_wrappers
     </symbol>
     {% include icons/external_link.html %}
     {% include icons/code_copy.html %}
-    {% if site.enable_switch_color_scheme == "selected_pages" and page.enable_switch_color_scheme == true or site.enable_switch_color_scheme == true %}
+    {% if site.enable_switch_color_scheme == true or site.enable_switch_color_scheme == "selected_pages" and page.enable_switch_color_scheme == true %}
       {% include icons/switch_color_scheme.html %}
     {% endif %}
   </svg>
@@ -131,7 +131,7 @@ layout: table_wrappers
       {% else %}
         <div></div>
       {% endif %}
-      {% if site.enable_switch_color_scheme == "selected_pages" and page.enable_switch_color_scheme == true or site.enable_switch_color_scheme == true or site.aux_links %}
+      {% if site.enable_switch_color_scheme == true or site.aux_links or site.enable_switch_color_scheme == "selected_pages" and page.enable_switch_color_scheme == true %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
             {% for link in site.aux_links %}
@@ -145,9 +145,9 @@ layout: table_wrappers
                 </a>
               </li>
             {% endfor %}
-            {% if site.enable_switch_color_scheme == "selected_pages" and page.enable_switch_color_scheme == true or site.enable_switch_color_scheme == true %}
+            {% if site.enable_switch_color_scheme == true or site.enable_switch_color_scheme == "selected_pages" and page.enable_switch_color_scheme == true %}
             <li class="aux-nav-list-item">
-              <button class="site-button color-scheme-switch-theme-button">
+              <button class="site-button color-scheme-switch-theme-button" aria-label="Switch color scheme">
                 <svg aria-hidden="true" class="site-button-icon"><use href="#svg-{{ site.color_scheme | default: 'light' }}"></use></svg>
               </button>
             </li>
