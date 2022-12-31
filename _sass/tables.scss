@@ -22,10 +22,7 @@ td {
   @include fs-3;
 
   min-width: 120px;
-  padding-top: $sp-2;
-  padding-right: $sp-3;
-  padding-bottom: $sp-2;
-  padding-left: $sp-3;
+  padding: $sp-2 $sp-3;
   background-color: $table-background-color;
   border-bottom: $border rgba($border-color, 0.5);
   border-left: $border $border-color;

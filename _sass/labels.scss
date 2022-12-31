@@ -3,10 +3,7 @@
 .label,
 .label-blue {
   display: inline-block;
-  padding-top: 0.16em;
-  padding-right: 0.56em;
-  padding-bottom: 0.16em;
-  padding-left: 0.56em;
+  padding-top: 0.16em 0.56em;
   margin-right: $sp-2;
   margin-left: $sp-2;
   color: $white;
