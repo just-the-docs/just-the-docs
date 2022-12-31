@@ -149,6 +149,9 @@ callouts:
     title: Warning
     color: red
 
+# Dark color scheme; activates auto-switching if not nil. Supports "dark" or a custom color scheme
+dark_color_scheme: dark
+
 # Google Analytics Tracking (optional)
 # Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
 ga_tracking: UA-2709176-10

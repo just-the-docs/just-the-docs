@@ -162,6 +162,16 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
+You can also have your site auto-switch based on the browser setting:
+
+```yaml
+# The default
+color_scheme: light
+
+# Dark color scheme; activates auto-switching if not empty.
+dark_color_scheme: dark
+```
+
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
 
 ## Callouts
