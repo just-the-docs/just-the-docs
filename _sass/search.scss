@@ -41,10 +41,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  padding-top: $sp-2;
-  padding-right: $gutter-spacing-sm;
-  padding-bottom: $sp-2;
-  padding-left: #{$gutter-spacing-sm + $sp-5};
+  padding: $sp-2 $gutter-spacing-sm $sp-2 #{$gutter-spacing-sm + $sp-5};
   font-size: 16px;
   color: $body-text-color;
   background-color: $search-background-color;
@@ -55,9 +52,7 @@
   border-radius: 0;
 
   @include mq(md) {
-    padding-top: $gutter-spacing-sm;
-    padding-bottom: $gutter-spacing-sm;
-    padding-left: #{$gutter-spacing + $sp-5};
+    padding: $sp-2 $gutter-spacing-sm $sp-2 #{$gutter-spacing + $sp-5};
     font-size: 14px;
     background-color: $body-background-color;
     transition: padding-left linear #{$transition-duration * 0.5};
@@ -128,10 +123,7 @@
 
 .search-result {
   display: block;
-  padding-top: $sp-1;
-  padding-right: $sp-3;
-  padding-bottom: $sp-1;
-  padding-left: $sp-3;
+  padding-top: $sp-1 $sp-3;
 
   &:hover,
   &.active {
@@ -224,10 +216,7 @@
 }
 
 .search-no-result {
-  padding-top: $sp-2;
-  padding-right: $sp-3;
-  padding-bottom: $sp-2;
-  padding-left: $sp-3;
+  padding: $sp-2 $sp-3;
   @include fs-3;
 }
 
