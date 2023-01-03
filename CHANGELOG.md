@@ -36,6 +36,7 @@ Changes to `main` that are *not* in the latest pre-release:
     - note: this was originally merged as [#1074] with a bug; it was reverted in [#1076], and then reimplemented in [#1077]
 - Fixed: skip nav collection generation when site has no pages by [@pdmosses] in [#1092]
 - Fixed: standardize SCSS with `declaration-block-no-redundant-longhand-properties` by [@simonebortolin] in [#1102]
+- Fixed: incorrect `padding` property value pair in `labels.scss` by [@SConaway] in [#1104]
 - Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang] in [#1071]
 - Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
@@ -66,11 +67,13 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1092]: https://github.com/just-the-docs/just-the-docs/pull/1092
 [#1095]: https://github.com/just-the-docs/just-the-docs/pull/1095
 [#1102]: https://github.com/just-the-docs/just-the-docs/pull/1102
+[#1104]: https://github.com/just-the-docs/just-the-docs/pull/1104
 
 [@koppor]: https://github.com/koppor
 [@deseo]: https://github.com/deseo
 [@MichelleBlanchette]: https://github.com/MichelleBlanchette
 [@simonebortolin]: https://github.com/simonebortolin
+[@SConaway]: https://github.com/SConaway
 
 ## Pre-release v0.4.0.rc3
 
