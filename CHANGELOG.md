@@ -37,6 +37,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: skip nav collection generation when site has no pages by [@pdmosses] in [#1092]
 - Fixed: standardize SCSS with `declaration-block-no-redundant-longhand-properties` by [@simonebortolin] in [#1102]
 - Fixed: incorrect `padding` property value pair in `labels.scss` by [@SConaway] in [#1104]
+- Fixed: various bugs with copy code button by [@simonebortolin] in [#1096]
 - Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang] in [#1071]
 - Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
