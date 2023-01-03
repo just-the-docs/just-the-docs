@@ -501,7 +501,7 @@ jtd.onReady(function(){
 
     copyButton.addEventListener('click', function () {
       if(timeout === null) {
-        var code = codeBlock.querySelector('code').innerText.trim();
+        var code = codeBlock.querySelector('pre:not(.lineno)').innerText;
         window.navigator.clipboard.writeText(code);
 
         copyButton.innerHTML = svgCopied;
