@@ -1,0 +1,345 @@
+// Moved from _sass/code.scss
+
+.highlight {
+  // comment
+  .c {
+    color: #586e75;
+  }
+
+  // error
+  .err {
+    color: #93a1a1;
+  }
+
+  // generic
+  .g {
+    color: #93a1a1;
+  }
+
+  // keyword
+  .k {
+    color: #859900;
+  }
+
+  // literal
+  .l {
+    color: #93a1a1;
+  }
+
+  // name
+  .n {
+    color: #93a1a1;
+  }
+
+  // operator
+  .o {
+    color: #859900;
+  }
+
+  // other
+  .x {
+    color: #cb4b16;
+  }
+
+  // punctuation
+  .p {
+    color: #93a1a1;
+  }
+
+  // comment.multiline
+  .cm {
+    color: #586e75;
+  }
+
+  // comment.preproc
+  .cp {
+    color: #859900;
+  }
+
+  // comment.single
+  .c1 {
+    color: #586e75;
+  }
+
+  // comment.special
+  .cs {
+    color: #859900;
+  }
+
+  // generic.deleted
+  .gd {
+    color: #2aa198;
+  }
+
+  // generic.emph
+  .ge {
+    font-style: italic;
+    color: #93a1a1;
+  }
+
+  // generic.error
+  .gr {
+    color: #dc322f;
+  }
+
+  // generic.heading
+  .gh {
+    color: #cb4b16;
+  }
+
+  // generic.inserted
+  .gi {
+    color: #859900;
+  }
+
+  // generic.output
+  .go {
+    color: #93a1a1;
+  }
+
+  // generic.prompt
+  .gp {
+    color: #93a1a1;
+  }
+
+  // generic.strong
+  .gs {
+    font-weight: bold;
+    color: #93a1a1;
+  }
+
+  // generic.subheading
+  .gu {
+    color: #cb4b16;
+  }
+
+  // generic.traceback
+  .gt {
+    color: #93a1a1;
+  }
+
+  // keyword.constant
+  .kc {
+    color: #cb4b16;
+  }
+
+  // keyword.declaration
+  .kd {
+    color: #268bd2;
+  }
+
+  // keyword.namespace
+  .kn {
+    color: #859900;
+  }
+
+  // keyword.pseudo
+  .kp {
+    color: #859900;
+  }
+
+  // keyword.reserved
+  .kr {
+    color: #268bd2;
+  }
+
+  // keyword.type
+  .kt {
+    color: #dc322f;
+  }
+
+  // literal.date
+  .ld {
+    color: #93a1a1;
+  }
+
+  // literal.number
+  .m {
+    color: #2aa198;
+  }
+
+  // literal.string
+  .s {
+    color: #2aa198;
+  }
+
+  // name.attribute
+  .na {
+    color: #555;
+  }
+
+  // name.builtin
+  .nb {
+    color: #b58900;
+  }
+
+  // name.class
+  .nc {
+    color: #268bd2;
+  }
+
+  // name.constant
+  .no {
+    color: #cb4b16;
+  }
+
+  // name.decorator
+  .nd {
+    color: #268bd2;
+  }
+
+  // name.entity
+  .ni {
+    color: #cb4b16;
+  }
+
+  // name.exception
+  .ne {
+    color: #cb4b16;
+  }
+
+  // name.function
+  .nf {
+    color: #268bd2;
+  }
+
+  // name.label
+  .nl {
+    color: #555;
+  }
+
+  // name.namespace
+  .nn {
+    color: #93a1a1;
+  }
+
+  // name.other
+  .nx {
+    color: #555;
+  }
+
+  // name.property
+  .py {
+    color: #93a1a1;
+  }
+
+  // name.tag
+  .nt {
+    color: #268bd2;
+  }
+
+  // name.variable
+  .nv {
+    color: #268bd2;
+  }
+
+  // operator.word
+  .ow {
+    color: #859900;
+  }
+
+  // text.whitespace
+  .w {
+    color: #93a1a1;
+  }
+
+  // literal.number.float
+  .mf {
+    color: #2aa198;
+  }
+
+  // literal.number.hex
+  .mh {
+    color: #2aa198;
+  }
+
+  // literal.number.integer
+  .mi {
+    color: #2aa198;
+  }
+
+  // literal.number.oct
+  .mo {
+    color: #2aa198;
+  }
+
+  // literal.string.backtick
+  .sb {
+    color: #586e75;
+  }
+
+  // literal.string.char
+  .sc {
+    color: #2aa198;
+  }
+
+  // literal.string.doc
+  .sd {
+    color: #93a1a1;
+  }
+
+  // literal.string.double
+  .s2 {
+    color: #2aa198;
+  }
+
+  // literal.string.escape
+  .se {
+    color: #cb4b16;
+  }
+
+  // literal.string.heredoc
+  .sh {
+    color: #93a1a1;
+  }
+
+  // literal.string.interpol
+  .si {
+    color: #2aa198;
+  }
+
+  // literal.string.other
+  .sx {
+    color: #2aa198;
+  }
+
+  // literal.string.regex
+  .sr {
+    color: #dc322f;
+  }
+
+  // literal.string.single
+  .s1 {
+    color: #2aa198;
+  }
+
+  // literal.string.symbol
+  .ss {
+    color: #2aa198;
+  }
+
+  // name.builtin.pseudo
+  .bp {
+    color: #268bd2;
+  }
+
+  // name.variable.class
+  .vc {
+    color: #268bd2;
+  }
+
+  // name.variable.global
+  .vg {
+    color: #268bd2;
+  }
+
+  // name.variable.instance
+  .vi {
+    color: #268bd2;
+  }
+
+  // literal.number.integer.long
+  .il {
+    color: #2aa198;
+  }
+}

@@ -57,18 +57,24 @@ You can add custom schemes.
 If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name)
 where you override theme variables to change colors, fonts, spacing, etc.
 
-{: .note }
-Since the default color scheme is `light`, your custom scheme is implicitly based on the variable settings used by the `light` scheme.
+After which you add a file `assets/css/just-the-docs-foo.scss` (replace `foo` by your scheme name) that contains:
+```{% raw %}
+---
+---
+{% include css/just-the-docs.scss.liquid color_scheme="foo" %}{% endraw %}
+```
 
-If you want your custom scheme to be based on the `dark` scheme, you need to start your file with the following line:
+{: .note }
+
+If there is no mapping for a highlight scheme, the highlight scheme of the `light` theme is imported implicitly, you can define a highlight scheme in setting the highlight scheme on `assets/css/just-the-docs-foo.scss` with `highlight_color_scheme="bar"` (the highlighting scheme muts be in `_sass/highlight`).
+
+If you only want to define minor changes to the theme, you are better off overriding the variables that are listed in the [/_variables.scss](https://github.com/just-the-docs/just-the-docs/tree/main/_sass/support/_variables.scss) file.
+
+If you want to start overwriting your custom scheme from the `dark` scheme, you can add to start your file with the following line:
 
 ```scss
 @import "./color_schemes/dark";
 ```
-
-You can define custom schemes based on other custom schemes in the same way.
-
-Available variables are listed in the [\_variables.scss](https://github.com/just-the-docs/just-the-docs/tree/main/_sass/support/_variables.scss) file.
 
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
@@ -212,3 +218,10 @@ Chercher notre site
 {% endraw %}
 
 would make the placeholder text "Chercher notre site". [Liquid code](https://jekyllrb.com/docs/liquid/) (including [Jekyll variables](https://jekyllrb.com/docs/variables/)) is also supported.
+
+## Custom highlight schemes
+
+If you need to change the highlight scheme, you can do so in 2 ways:
+
+- overwrite the highlight scheme on `_sass/highlight/light.scss` and `_sass/highlight/dark.scss`
+- overwrite the color scheme on `assets/css/` by adding `highlight_color_scheme="foo"` after `color_scheme="bar"` (the highlighting scheme muts be in `_sass/highlight`)

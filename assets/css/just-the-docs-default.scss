@@ -1,8 +1,4 @@
 ---
 ---
-{% if site.color_scheme and site.color_scheme != "nil" %}
-  {% assign color_scheme = site.color_scheme %}
-{% else %}
-  {% assign color_scheme = "light" %}
-{% endif %}
+{% assign color_scheme = site.color_scheme | remove: "nil"  | default: 'light' %}
 {% include css/just-the-docs.scss.liquid color_scheme=color_scheme %}
