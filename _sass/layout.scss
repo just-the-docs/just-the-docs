@@ -7,11 +7,10 @@
   background-color: $sidebar-color;
 
   @include mq(md) {
-    flex-wrap: nowrap;
+    flex-flow: column nowrap;
     position: fixed;
     width: $nav-width-md;
     height: 100%;
-    flex-direction: column;
     border-right: $border $border-color;
     align-items: flex-end;
   }
