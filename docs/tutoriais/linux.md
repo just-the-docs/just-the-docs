@@ -8,6 +8,10 @@ nav_order: 6
 {:toc}
 ---
 
+Escrito por Yasmin
+
+![logo do linux](/assets/images/linux.jpg)
+
 # Isso é um título 1
 
 
