@@ -8,16 +8,26 @@ nav_order: 4
 {:toc}
 ---
 
+Escrito por Thiago
 
+![logo do drupal](/assets/images/drupal.png)
 
-## Instalação em ambiente básico
+# Isso é um título 1
 
-Pacotes mínimos em sistema operacional *Debian 11*
+## Isso é um título 2
 
-```bash
-apt-get install php php-intl php-cli php-gd php-curl php-xml php-mbstring php-zip mariadb-server php-mysql
+O *italíco* é assim
+
+O **negrito** é assim
+
+Exemplo de bloco de código:
+
+```
+php -S 0.0.0.0
 ```
 
-## Arquivos mínimos
+
+
+
 
 
