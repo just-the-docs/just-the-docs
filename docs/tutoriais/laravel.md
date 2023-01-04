@@ -19,5 +19,19 @@ apt-get install php php-intl php-cli php-gd php-curl php-xml php-mbstring php-zi
 ```
 
 ## Arquivos mínimos
+---
 
+Escrito por Isabela
 
+# Isso é um título 
+
+## Isso é um título 2
+
+O **negrito** é assim
+
+O *itálico* é assim
+
+Exemplo de bloco de código:
+``` 
+php -S 0.0.0.0
+```
