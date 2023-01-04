@@ -7,6 +7,8 @@ Instalação de pacotes:
 
 Subindo ambiente dev:
 
+    git clone git@github.com:VOCE/fflch.github.io.git
+    cd fflch.github.io
     bundle config set --local path 'vendor/bundle'
     bundle install
     bundle exec jekyll serve
