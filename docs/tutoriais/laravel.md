@@ -35,3 +35,5 @@ Exemplo de bloco de código:
 ``` 
 php -S 0.0.0.0
 ```
+
+![Logo do Laravel](/assets/images/laravel.png)
