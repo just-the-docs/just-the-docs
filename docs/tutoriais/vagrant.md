@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ansible
+title: Vagrant
 parent: Tutoriais
 nav_order: 6
 ---
@@ -9,8 +9,6 @@ nav_order: 6
 ---
 
 
-
-## Instalação em ambiente básico
 
 Pacotes mínimos em sistema operacional *Debian 11*
 

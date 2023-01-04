@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ansible
+title: Linux
 parent: Tutoriais
 nav_order: 6
 ---
@@ -8,11 +8,7 @@ nav_order: 6
 {:toc}
 ---
 
-
-
-## Instalação em ambiente básico
-
-Pacotes mínimos em sistema operacional *Debian 11*
+Entrega de drivers pelo samba
 
 ```bash
 apt-get install ????
