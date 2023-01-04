@@ -8,12 +8,17 @@ nav_order: 6
 {:toc}
 ---
 
-Entrega de drivers pelo samba
+# Isso é um título 1
 
-```bash
-apt-get install ????
+## isso é um título 2
+
+
+o **negrito** é assim
+
+o *italíco* é assim
+
+exemplo de bloco de código:
+
 ```
-
-## Arquivos mínimos
-
-
+PHP -s 0.0.0.0
+```
