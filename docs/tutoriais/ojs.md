@@ -10,14 +10,14 @@ nav_order: 5
 
 
 
-## Instalação em ambiente básico
+# O Titulo é assim
 
-Pacotes mínimos em sistema operacional *Debian 11*
+## O Sub-titulo (Titulo_2) é assim
 
-```bash
-apt-get install php php-intl php-cli php-gd php-curl php-xml php-mbstring php-zip mariadb-server php-mysql
+O **negrito** é assim 
+
+O *Italico* é assim
+
 ```
-
-## Arquivos mínimos
-
-
+print "Funciona assim"
+```
