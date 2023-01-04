@@ -1,19 +1,21 @@
 ---
-title: MIGRATION v0.3.3 … v0.4.x (DRAFT)
+title: Migration and Upgrading Guide
 layout: default
 ---
 
-# Just the Docs User Website Migration Guide v0.3.3 … v0.4.x
+# Migrating and Upgrading
 
 Summary
 :   A site that uses `just-the-docs` (as a theme or as a remote them) automatically
     switches to a new release, unless it is pinned to a previous version.
-    
+
     This migration guide draws attention to:
-    
+
     - changes that might break your site,
-    - features added in the latest release, and 
+    - features added in the latest release, and
     - features that have become deprecated (and are likely to be removed in a future release).
+
+This document contains instructions on how to migrate and upgrade Just the Docs sites from every minor or major version bump, starting from `v0.3.3` to `v0.4.0`.
 
 <details open markdown="block">
   <summary>
@@ -41,9 +43,11 @@ Summary
 
 [CHANGELOG]: {{ site.baseurl }}{% link CHANGELOG.md %}
 
-## REPOSITORY CHANGES
+## v0.3.3 … v0.4.x
 
-### Just the Docs
+### REPOSITORY CHANGES
+
+#### Just the Docs
 
 The theme repo is now at <https://github.com/just-the-docs/just-the-docs>.
 The name of its default branch is now `main`.
@@ -63,19 +67,19 @@ It also explains how to install the theme as a Ruby Gem, without creating a new 
 [README]: https://github.com/just-the-docs/just-the-docs/blob/main/README.md
 [home page]: https://just-the-docs.github.io/just-the-docs
 
-### Deploy previews
+#### Deploy previews
 
 When a PR builds successfully, Netlify provides a preview of how the theme docs website will look if the PR is merged.
 You can find links to the preview near the bottom of the Conversation tab of the PR.
 
-### Just the Docs Template
+#### Just the Docs Template
 
-The template at <https://github.com/just-the-docs/just-the-docs-template> 
+The template at <https://github.com/just-the-docs/just-the-docs-template>
 creates a repo with the minimal source files for a Just the Docs website.
 After configuring the relevant parameters, you can build and serve the website
 both locally and on GitHub Pages – using either Jekyll 3 or Jekyll 4!
 
-### Just the Docs Tests
+#### Just the Docs Tests
 
 The tests website at <https://just-the-docs.github.io/just-the-docs-tests>
 consists mainly of regression tests for bug fixes and new features.
@@ -88,7 +92,7 @@ For example, see how to add support for rendering TeX/LaTeX [math formulas] with
 
 [math formulas]: https://just-the-docs.github.io/just-the-docs-tests/components/math/index/
 
-## POTENTIALLY-BREAKING CHANGES in v0.4.0
+### POTENTIALLY-BREAKING CHANGES in v0.4.0
 
 If switching to a new release of the theme breaks your website,
 check that you don't have any files in the `_includes`, `_layouts`, and `_sass`
@@ -101,14 +105,14 @@ try removing it, or replace it by a fresh copy of the theme file.
 The following changes made in v0.4.0 *might* break or adversely affect your website
 when you next rebuild it, unless you have pinned it!
 
-### favicons
+#### favicons
 
 The file `_includes/favicon.html` is now ignored by the theme.
 If you're using it, your website's favicon is no longer displayed by browsers.
 
 To fix: Move the content of `_includes/favicon.html` to `_includes/head_custom.html`.
 
-### Custom callout colors
+#### Custom callout colors
 
 The file `_sass/custom/custom.scss` is now imported last: _after_ the configuration of callouts.
 If you've defined custom color variables for callouts in `_sass/custom/custom.scss`
@@ -117,21 +121,21 @@ you will not be able to rebuild your website.
 
 To fix: Move custom color variables for callouts in `_sass/custom/custom.scss` to `_sass/custom/variables.scss`.
 
-### Pages and collections
+#### Pages and collections
 
 Links to ordinary pages now appear in the navigation on sites that use collections.
 You might want the navigation of your site to consist entirely of collections.
 
 To fix: Add the front matter `nav_exclude: true` to pages that the navigation should not display.
 
-### Relative URLs
+#### Relative URLs
 
 All generated URLs are now relative.
 This is a bug fix, and unlikely to break any site.
 
 Relative links to pages within a website support deployment to different servers.
 
-### Navigation order
+#### Navigation order
 
 The order in which the navigation panel lists pages has been simplified.
 All pages with `nav_order` values now come before all pages that are ordered by `title`.
@@ -142,12 +146,12 @@ the former now come before the latter.
 
 To fix: Add numerical `nav_order` values to the pages with numerical `title` values.
 
-## DEPRECATIONS
+### DEPRECATIONS
 
 {: .warning }
 The following features are deprecated, and to be removed in a future release.
 
-### Jekyll 3
+#### Jekyll 3
 
 You can still use Jekyll 3 (3.8.5 or later) to build websites using v0.4.0 of the theme.
 However, future releases of the theme may require the use of Jekyll 4.
@@ -165,7 +169,7 @@ To start running Jekyll 4 to build an existing repo on GitHub Pages,
 you can create a new repo with the template, then copy its `.github/workflows` directory,
 and update your repo settings to use Actions.
 
-### Footer content configuration
+#### Footer content configuration
 
 Currently, if your configuration sets `footer_content` to some text,
 the theme displays that text at the bottom of the main section of each page.
@@ -179,7 +183,7 @@ You can replicate the current display of `TEXT` in the footer using the followin
 <p class="text-small text-grey-dk-100 mb-0">TEXT</p>
 ```
 
-## THEME WEBSITE CHANGES
+### THEME WEBSITE CHANGES
 
 The website now uses *callouts*[^callouts] to draw attention to important information.
 
@@ -209,13 +213,13 @@ When we release v0.5.0, we will remove all those labels, and add labels on featu
 The theme docs website is not itself versioned.
 It changes incrementally, independently of theme releases.
 
-### Home page
+#### Home page
 
 The theme home page now focuses on the simplest ways of using the theme.
 It also notes the different behaviour of `theme` and `remote_theme` in connection
 with interim versions of the theme, such as pre-releases.
 
-### CHANGELOG
+#### CHANGELOG
 
 The CHANGELOG page lists the changes made in all previous releases and pre-releases of new versions of the theme gem.
 
@@ -223,26 +227,26 @@ It also lists changes made to the `main` branch of the theme since the latest re
 
 For changes since v0.3.3, the log usually references the merged PR that made the change and its author.
 
-## NON-BREAKING CHANGES (OUTLINE ONLY)
+### NON-BREAKING CHANGES (OUTLINE ONLY)
 
 Brief descriptions of the following changes are to be added below.
 
-### Accessibility
+#### Accessibility
 
 - Skip to main content
 - Aria-labels
 
-### Configuration
+#### Configuration
 
 - Mermaid support
 
-### Customization
+#### Customization
 
 - all generated text
 - custom color variables
 - custom.scss imported last
 
-### Custom Includes
+#### Custom Includes
 
 - TOC heading
 - Footer
@@ -251,7 +255,7 @@ Brief descriptions of the following changes are to be added below.
 - Navigation panel footer
 - Search placeholder
 
-### Navigation
+#### Navigation
 
 - Collections: nav panel shows links to ordinary pages before collections
 - Collection folding
@@ -261,7 +265,7 @@ Brief descriptions of the following changes are to be added below.
 - Order when mixing different ways of specifying nav order
 - Generated links now relative
 
-### Styling
+#### Styling
 
 - Code highlighting: dark mode changed to ...
 - Block quote: shows vertical bar on left
