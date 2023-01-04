@@ -22,3 +22,4 @@ exemplo de bloco de código:
 ```
 PHP -s 0.0.0.0
 ```
+![logo do samba](/assets/images/samba.png)
