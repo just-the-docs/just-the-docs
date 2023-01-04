@@ -233,12 +233,13 @@ Brief descriptions of the following changes are to be added below.
 
 #### Accessibility
 
-- Skip to main content
-- Aria-labels
+- Skip to main content: the first keyboard-navigatable item is now a link to skip over the sidebar and header to the main content of the page. PR: [#949].
+- Aria-labels: improved `aria-label`s have been added to various site elements. PRs: [#950], ...
+- Other general improvements: gradual changes have improved tab focusability, contrast, and semantic elements. More work still to come. PRs: [#498], [#846]
 
 #### Configuration
 
-- Mermaid support
+- Mermaid support: first-class support for [Mermaid](https://mermaid.js.org/) - a JavaScript-based diagram and charting tool supported by GitHub - has been added to the theme. **This feature is opt-in.** See the new doc subsections in [Configuration]({% link docs/configuration.md %}#mermaid-diagrams) and [Code]({% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more.
 
 #### Customization
 
@@ -248,28 +249,126 @@ Brief descriptions of the following changes are to be added below.
 
 #### Custom Includes
 
-- TOC heading
-- Footer
-- Head and favicon
-- Header
-- Navigation panel footer
-- Search placeholder
+We've added several custom `_includes` to provide users with more customization options for different site elements. We've also added a section to [Configuration]({% link docs/customization.md %}#override-includes) to outline these.
+
+All of these are opt-in by default; however, **these may be breaking if you have existing `_includes` with the same name**.
+
+Each item is listed with the relevant file and PR.
+
+- TOC heading: `toc_heading_custom.html`, PR: [#980]
+- Navigation panel footer: `nav_footer_custom.html`, PR: [#474]
+- Search placeholder: `search_placeholder_custom.html`, PR: [#613]
+- TODO: minimal layouts
+
+In a future (version 1) release, we may rename the custom include files.
 
 #### Navigation
 
 - Collections: nav panel shows links to ordinary pages before collections
-- Collection folding
-- Scrolling to show link to selected page
-- External nav links
-- Child nav order
+- Collection folding; part of "Combination". PR: [#578]
+- Scrolling to show link to selected page. PR: [#639]
+- External nav links. PR: [#876]
+- Child nav order: sort navigation pages with `child_nav_order`. PR: [#726]
 - Order when mixing different ways of specifying nav order
 - Generated links now relative
 
 #### Styling
 
 - Code highlighting: dark mode changed to ...
-- Block quote: shows vertical bar on left
-- Links wrap
-- Callouts
+- Blockquote: shows vertical bar on left. PR: [#965]
+- Links wrap. PR: [#905]
+- Callouts: a new component similar to alerts or banners. See [UI Components - Callouts]({% link docs/ui-components/callouts.md %}). PR: [#466]
 
 ----
+
+[#856]: https://github.com/just-the-docs/just-the-docs/pull/856
+[#806]: https://github.com/just-the-docs/just-the-docs/pull/806
+[#555]: https://github.com/just-the-docs/just-the-docs/pull/555
+[#814]: https://github.com/just-the-docs/just-the-docs/pull/814
+[#778]: https://github.com/just-the-docs/just-the-docs/pull/778
+[#221]: https://github.com/just-the-docs/just-the-docs/pull/221
+[#782]: https://github.com/just-the-docs/just-the-docs/pull/782
+[#549]: https://github.com/just-the-docs/just-the-docs/pull/549
+[#554]: https://github.com/just-the-docs/just-the-docs/pull/554
+[#499]: https://github.com/just-the-docs/just-the-docs/pull/499
+[#473]: https://github.com/just-the-docs/just-the-docs/pull/473
+[#835]: https://github.com/just-the-docs/just-the-docs/pull/835
+[#891]: https://github.com/just-the-docs/just-the-docs/pull/891
+[#906]: https://github.com/just-the-docs/just-the-docs/pull/906
+
+[#578]: https://github.com/just-the-docs/just-the-docs/pull/578
+[#463]: https://github.com/just-the-docs/just-the-docs/pull/463
+[#448]: https://github.com/just-the-docs/just-the-docs/pull/448
+[#466]: https://github.com/just-the-docs/just-the-docs/pull/466
+[#477]: https://github.com/just-the-docs/just-the-docs/pull/477
+[#495]: https://github.com/just-the-docs/just-the-docs/pull/495
+[#496]: https://github.com/just-the-docs/just-the-docs/pull/496
+[#498]: https://github.com/just-the-docs/just-the-docs/pull/498
+[#494]: https://github.com/just-the-docs/just-the-docs/pull/494
+[#639]: https://github.com/just-the-docs/just-the-docs/pull/639
+[#544]: https://github.com/just-the-docs/just-the-docs/pull/544
+[#364]: https://github.com/just-the-docs/just-the-docs/pull/364
+[#498]: https://github.com/just-the-docs/just-the-docs/pull/498
+[#613]: https://github.com/just-the-docs/just-the-docs/pull/613
+[#726]: https://github.com/just-the-docs/just-the-docs/pull/726
+[#474]: https://github.com/just-the-docs/just-the-docs/pull/474
+[#829]: https://github.com/just-the-docs/just-the-docs/pull/829
+[#857]: https://github.com/just-the-docs/just-the-docs/pull/857
+[#876]: https://github.com/just-the-docs/just-the-docs/pull/876
+[#909]: https://github.com/just-the-docs/just-the-docs/pull/909
+[#519]: https://github.com/just-the-docs/just-the-docs/pull/519
+[#855]: https://github.com/just-the-docs/just-the-docs/pull/855
+[#686]: https://github.com/just-the-docs/just-the-docs/pull/686
+[#495]: https://github.com/just-the-docs/just-the-docs/pull/495
+[#846]: https://github.com/just-the-docs/just-the-docs/pull/846
+[#727]: https://github.com/just-the-docs/just-the-docs/pull/727
+[#889]: https://github.com/just-the-docs/just-the-docs/pull/889
+[#893]: https://github.com/just-the-docs/just-the-docs/pull/893
+[#905]: https://github.com/just-the-docs/just-the-docs/pull/905
+[#898]: https://github.com/just-the-docs/just-the-docs/pull/898
+
+[#950]: https://github.com/just-the-docs/just-the-docs/pull/950
+[#944]: https://github.com/just-the-docs/just-the-docs/pull/944
+[#939]: https://github.com/just-the-docs/just-the-docs/pull/939
+[#949]: https://github.com/just-the-docs/just-the-docs/pull/949
+[#941]: https://github.com/just-the-docs/just-the-docs/pull/941
+[#956]: https://github.com/just-the-docs/just-the-docs/pull/956
+[#935]: https://github.com/just-the-docs/just-the-docs/pull/935
+[#940]: https://github.com/just-the-docs/just-the-docs/pull/940
+[#951]: https://github.com/just-the-docs/just-the-docs/pull/951
+[#955]: https://github.com/just-the-docs/just-the-docs/pull/955
+[#937]: https://github.com/just-the-docs/just-the-docs/pull/937
+
+[#965]: https://github.com/just-the-docs/just-the-docs/pull/965
+[#960]: https://github.com/just-the-docs/just-the-docs/pull/960
+[#962]: https://github.com/just-the-docs/just-the-docs/pull/962
+[#964]: https://github.com/just-the-docs/just-the-docs/pull/964
+[#967]: https://github.com/just-the-docs/just-the-docs/pull/967
+[#974]: https://github.com/just-the-docs/just-the-docs/pull/974
+[#980]: https://github.com/just-the-docs/just-the-docs/pull/980
+[#985]: https://github.com/just-the-docs/just-the-docs/pull/985
+[#986]: https://github.com/just-the-docs/just-the-docs/pull/986
+[#992]: https://github.com/just-the-docs/just-the-docs/pull/992
+
+[#945]: https://github.com/just-the-docs/just-the-docs/pull/945
+[#999]: https://github.com/just-the-docs/just-the-docs/pull/999
+[#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
+[#1001]: https://github.com/just-the-docs/just-the-docs/pull/1001
+[#1010]: https://github.com/just-the-docs/just-the-docs/pull/1010
+[#1015]: https://github.com/just-the-docs/just-the-docs/pull/1015
+[#1018]: https://github.com/just-the-docs/just-the-docs/pull/1018
+[#1019]: https://github.com/just-the-docs/just-the-docs/pull/1019
+[#1021]: https://github.com/just-the-docs/just-the-docs/pull/1021
+[#1027]: https://github.com/just-the-docs/just-the-docs/pull/1027
+[#1029]: https://github.com/just-the-docs/just-the-docs/pull/1029
+[#1040]: https://github.com/just-the-docs/just-the-docs/pull/1040
+[#1061]: https://github.com/just-the-docs/just-the-docs/pull/1061
+[#1065]: https://github.com/just-the-docs/just-the-docs/pull/1065
+[#1071]: https://github.com/just-the-docs/just-the-docs/pull/1071
+[#1074]: https://github.com/just-the-docs/just-the-docs/pull/1074
+[#1076]: https://github.com/just-the-docs/just-the-docs/pull/1076
+[#1077]: https://github.com/just-the-docs/just-the-docs/pull/1077
+[#1090]: https://github.com/just-the-docs/just-the-docs/pull/1090
+[#1091]: https://github.com/just-the-docs/just-the-docs/pull/1091
+[#1092]: https://github.com/just-the-docs/just-the-docs/pull/1092
+[#1095]: https://github.com/just-the-docs/just-the-docs/pull/1095
