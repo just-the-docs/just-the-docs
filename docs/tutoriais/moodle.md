@@ -10,8 +10,17 @@ nav_order: 2
 
 
 
-## Instalação em ambiente básico
+## Isto é um Título 1
 
+## Isto é um título 2 
+
+## Isto é um Título 3 ###
+
+o "Ítalico" é assim 
+
+o **negrito** é assim
+
+Exemplo de bloco de código
 Pacotes mínimos em sistema operacional *Debian 11*
 
 ```bash
