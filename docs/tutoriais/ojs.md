@@ -21,3 +21,5 @@ O *Italico* é assim
 ```
 print "Funciona assim"
 ```
+
+![Logo do OJS](/assets/images/ojs.png)
