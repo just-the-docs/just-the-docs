@@ -38,6 +38,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: standardize SCSS with `declaration-block-no-redundant-longhand-properties` by [@simonebortolin] in [#1102]
 - Fixed: incorrect `padding` property value pair in `labels.scss` by [@SConaway] in [#1104]
 - Fixed: various bugs with copy code button by [@simonebortolin] in [#1096]
+- Fixed: Replace inline styling for `<svg>` icons by [@captn3m0] in [#1110]
 - Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang] in [#1071]
 - Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
@@ -67,11 +68,14 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1091]: https://github.com/just-the-docs/just-the-docs/pull/1091
 [#1092]: https://github.com/just-the-docs/just-the-docs/pull/1092
 [#1095]: https://github.com/just-the-docs/just-the-docs/pull/1095
+[#1096]: https://github.com/just-the-docs/just-the-docs/pull/1096
 [#1102]: https://github.com/just-the-docs/just-the-docs/pull/1102
 [#1104]: https://github.com/just-the-docs/just-the-docs/pull/1104
+[#1110]: https://github.com/just-the-docs/just-the-docs/pull/1110
 
-[@koppor]: https://github.com/koppor
+[@captn3m0]: https://github.com/captn3m0
 [@deseo]: https://github.com/deseo
+[@koppor]: https://github.com/koppor
 [@MichelleBlanchette]: https://github.com/MichelleBlanchette
 [@simonebortolin]: https://github.com/simonebortolin
 [@SConaway]: https://github.com/SConaway
