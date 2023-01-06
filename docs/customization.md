@@ -281,12 +281,14 @@ To briefly summarize each component:
 - `_includes/components/header.html` renders the navigation header, containing the search bar, custom header, and aux links
 - `_includes/components/breadcrumbs.html` renders the breadcrumbs feature
 - `vendor/anchor_headings.html` is a local copy of Vladimir Jimenez's [jekyll-anchor-headings](https://github.com/allejo/jekyll-anchor-headings) snippet
-- `_includes/components/children_nav.html` renders a children table of contents and nav for parent pages
+- `_includes/components/children_nav.html` renders a list of nav links to child pages on parent pages
 - `_includes/components/footer.html` renders the bottom-of-page footer
 - `_includes/components/search_footer.html` renders DOM elements that are necessary for the search bar to work
 - `_includes/components/mermaid.html` initializes mermaid if the feature is enabled
 
-Each of these components can be overrided individually using the same process described in the [Override includes](#override-includes) section. In particular, the granularity of components should allow users to replace certain components (such as the sidebar) without having to adjust the rest of the code.
+Each of these components can be overridden individually using the same process described in the [Override includes](#override-includes) section. In particular, the granularity of components should allow users to replace certain components (such as the sidebar) without having to adjust the rest of the code.
+
+Future versions may subdivide components further; we guarantee that we will only place them in the `components/` or `icons/` folders, to avoid namespace collisions.
 
 ### Alternative layouts and example (`minimal`)
 
@@ -352,7 +354,7 @@ Note that as of now, `minimal` and `default` have no inheritance relationship.
 
 ### Overridden default Jekyll layouts
 
-By default, Jekyll (and its default theme `minima`) provide the `about`, `home`, `page`, and `post` layouts. In Just the Docs, we override all of these themes with the `default` layout. Each of those layouts is simply:
+By default, Jekyll (and its default theme `minima`) provide the `about`, `home`, `page`, and `post` layouts. In Just the Docs, we override all of these layouts with the `default` layout. Each of those layouts is simply:
 
 {% raw %}
 
