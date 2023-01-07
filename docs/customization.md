@@ -288,7 +288,7 @@ To briefly summarize each component:
 
 Each of these components can be overridden individually using the same process described in the [Override includes](#override-includes) section. In particular, the granularity of components should allow users to replace certain components (such as the sidebar) without having to adjust the rest of the code.
 
-Future versions may subdivide components further; we guarantee that we will only place them in the `components/` or `icons/` folders, to avoid namespace collisions.
+Future versions may subdivide components further; we guarantee that we will only place them in folders (ex `components/`, `icons/`, or a new `js/`) to avoid top-level namespace collisions.
 
 ### Alternative layouts and example (`minimal`)
 
