@@ -9,7 +9,7 @@
     <br><br><br>
 </p>
 
-<img src="assets/images/just-the-docs-readme.gif" height="100%" alt="Gif showcasing features on Just The Docs web application">
+https://user-images.githubusercontent.com/85418632/211186159-7914f397-4b0b-4762-8a94-090bda4cf8ce.mp4
 
 ## Installation
 
