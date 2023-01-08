@@ -16,20 +16,73 @@ The project underwent a major maintenance shift in March 2022.
 This website is built from the `HEAD` of the `main` branch of the theme repository.
 
 {: .warning }
-This website includes docs for some new features that are not available in `v0.4.0.rc2` and `v0.3.3`!
+This website includes docs for some new features that are not available in `v0.4.0.rc4` and `v0.3.3`!
 
 Changes to `main` that are *not* in the latest pre-release:
+
+- n/a
+
+## Pre-release v0.4.0.rc4
+
+Happy new year! We're celebrating with another pre-release, with features that should help theme users better adapt to changes moving forward. **We aim to re-release this as `v0.4.0`, with only few changes**.
+
+Notable new additions include:
+
+- modular site components, which split up the site into smaller reusable components; advanced theme users can then remix layouts quickly without duplication
+- a "copy code" button to code blocks
+- fixing bugs in generated TOCs and navigation from previous prereleases
+- various cleanups of CSS and HTML markup
+
+The roadmap to `v0.4.0` is small. We are only looking to:
+
+- finish a migration guide, so users can easily upgrade from `v0.3.3` to `v0.4.0`
+- fix one last bug relating to callouts and custom colors
+- fix any new bugs introduced by this pre-release
+
+Have any questions, thoughts, or concerns? We'd love to hear from you! Please [open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) and let us know!
+
+### Trying out pre-release `v0.4.0.rc4`
+
+Simlar to the prior release, `v0.4.0.rc4` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc4`.
+
+To use this RC explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.4.0.rc4
+```
+
+To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```Ruby
+gem "just-the-docs", "0.4.0.rc4"
+```
+
+By default, **users will not be upgraded to `0.4.0.rc4`**. To enforce that explicitly, either:
+
+1. pin your gem version in your `Gemfile`, like so
+```Ruby
+gem "just-the-docs", "0.3.3"
+```
+2. freeze the `remote_theme`, like so
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.3.3
+```
+
+### New Features
 
 - Added: support multiple Google Analytics tracking IDs, document UA -> GA4 switch by [@MichelleBlanchette] in [#1029]
 - Added: copy code button to code snippets by [@simonebortolin] in [#945]
 - Added: restore simple configuration of `favicon.ico` via `site.static_files` by [@pdmosses] in [#1095]
 - Added: modularize site components by [@mattxwang] in [#1058]
+
+### Bugfixes and Maintenance
+
 - Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
 - Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
 - Fixed: top-level active link styling by [@pdmosses] in [#1015]
 - Fixed: external links for sites with no pages by [@pdmosses] in [#1021]
-- Fixed: duplicate `title` if `jekyll-seo-tag` not in users's plugins
+- Fixed: duplicate `title` if `jekyll-seo-tag` not in users's plugins by [@Tom-Brouwer] in [#1040]
 - Fixed: removes (duplicate) `favicon.html`, shifts content to `head_custom.html` by [@mattxwang] in [#1027]
 - Fixed: add `reversed`, deprecate `desc` for nav `child_nav_order` by [@jmertic] in [#1061]
 - Fixed: `child.child_nav_order` to `node.child_nav_order` by [@mattxwang] in [#1065]
@@ -39,13 +92,27 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: standardize SCSS with `declaration-block-no-redundant-longhand-properties` by [@simonebortolin] in [#1102]
 - Fixed: incorrect `padding` property value pair in `labels.scss` by [@SConaway] in [#1104]
 - Fixed: various bugs with copy code button by [@simonebortolin] in [#1096]
-- Fixed: Replace inline styling for `<svg>` icons by [@captn3m0] in [#1110]
+- Fixed: replace inline styling for `<svg>` icons by [@captn3m0] in [#1110]
 - Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang] in [#1071]
+
+### Docs
+
 - Docs: fix typo in changelog links [@koppor] in [#1000]
 - Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
 - Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
 - Docs: fix two bugs in "Customization" (custom favicon, new annotation) by [@mattxwang] in [#1090]
 - Docs: Add warning about mandatory `_`-prefix for collections by [@max06] in [#1091]
+
+### New Contributors
+
+- [@koppor] made their first contribution in [#1000]
+- [@deseo] made their first contribution in [#1010]
+- [@Tom-Brouwer] made their first contribution in [#1040]
+- [@simonebortolin] made their first contribution in [#945]
+- [@SConaway] made their first contribution in [#1104]
+- [@captn3m0] made their first contribution in [#1110]
+
+**Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.4.0.rc3...v0.4.0.rc4
 
 [#945]: https://github.com/just-the-docs/just-the-docs/pull/945
 [#999]: https://github.com/just-the-docs/just-the-docs/pull/999
@@ -81,6 +148,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [@MichelleBlanchette]: https://github.com/MichelleBlanchette
 [@simonebortolin]: https://github.com/simonebortolin
 [@SConaway]: https://github.com/SConaway
+[@Tom-Brouwer]: https://github.com/Tom-Brouwer
 
 ## Pre-release v0.4.0.rc3
 
