@@ -23,6 +23,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Added: support multiple Google Analytics tracking IDs, document UA -> GA4 switch by [@MichelleBlanchette] in [#1029]
 - Added: copy code button to code snippets by [@simonebortolin] in [#945]
 - Added: restore simple configuration of `favicon.ico` via `site.static_files` by [@pdmosses] in [#1095]
+- Added: modularize site components by [@mattxwang] in [#1058]
 - Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
 - Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
 - Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
@@ -58,6 +59,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1027]: https://github.com/just-the-docs/just-the-docs/pull/1027
 [#1029]: https://github.com/just-the-docs/just-the-docs/pull/1029
 [#1040]: https://github.com/just-the-docs/just-the-docs/pull/1040
+[#1058]: https://github.com/just-the-docs/just-the-docs/pull/1058
 [#1061]: https://github.com/just-the-docs/just-the-docs/pull/1061
 [#1065]: https://github.com/just-the-docs/just-the-docs/pull/1065
 [#1071]: https://github.com/just-the-docs/just-the-docs/pull/1071
