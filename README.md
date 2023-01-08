@@ -9,7 +9,7 @@
     <br><br><br>
 </p>
 
-https://user-images.githubusercontent.com/85418632/211186159-7914f397-4b0b-4762-8a94-090bda4cf8ce.mp4
+![a video walkthrough of various Just the Docs features](https://user-images.githubusercontent.com/85418632/211186159-7914f397-4b0b-4762-8a94-090bda4cf8ce.mp4)
 
 ## Installation
 
