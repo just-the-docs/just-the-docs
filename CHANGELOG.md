@@ -102,6 +102,7 @@ remote_theme: just-the-docs/just-the-docs@v0.3.3
 - Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
 - Docs: fix two bugs in "Customization" (custom favicon, new annotation) by [@mattxwang] in [#1090]
 - Docs: Add warning about mandatory `_`-prefix for collections by [@max06] in [#1091]
+- Docs: remove Google Analytics on main site by [@mattxwang] in [#1113]
 
 ### New Contributors
 
@@ -141,6 +142,7 @@ remote_theme: just-the-docs/just-the-docs@v0.3.3
 [#1102]: https://github.com/just-the-docs/just-the-docs/pull/1102
 [#1104]: https://github.com/just-the-docs/just-the-docs/pull/1104
 [#1110]: https://github.com/just-the-docs/just-the-docs/pull/1110
+[#1113]: https://github.com/just-the-docs/just-the-docs/pull/1113
 
 [@captn3m0]: https://github.com/captn3m0
 [@deseo]: https://github.com/deseo
