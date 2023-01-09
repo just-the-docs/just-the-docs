@@ -26,6 +26,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1097]: https://github.com/just-the-docs/just-the-docs/pull/1097
 [#1123]: https://github.com/just-the-docs/just-the-docs/pull/1123
 
+[@codewithfan]: https://github.com/codewithfan
 [@kevinlin1]: https://github.com/kevinlin1
 
 ## Pre-release v0.4.0.rc4
