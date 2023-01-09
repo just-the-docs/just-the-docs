@@ -125,3 +125,42 @@ $ bundle exec just-the-docs rake search:init
 
 This command creates the `assets/js/zzzz-search-data.json` file that Jekyll uses to create your search index.
 Alternatively, you can create the file manually with [this content]({{ site.github.repository_url }}/blob/main/assets/js/zzzz-search-data.json).
+
+## Custom content for search index
+
+The standard text that is indexed is the page (or post) `.content`, `.title`, and sometimes headers which are already in the `.content`. Other text (Front Matter, data files, etc.) is not indexed. When you want additional text to be indexed, you can customize Just the Docs.
+
+{: .warning }
+> Customizing search indices is an advanced feature that requires Javascript and Liquid knowledge.
+
+1. When your site used a previous version of Just the Docs, you must update the file
+   `assets/js/zzzz-search-data.json` using the [above methods](#generate-search-index-when-used-as-a-gem).
+2. Add a new file named `_includes/lunr/custom-data.json` to your site. Insert your custom Liquid
+   code that reads the page object at `include.page` then generates custom Javascript
+   fields that hold the custom text you want to index. You can verify the fields you output at
+   the generated `assets/js/search-data.json`.
+3. Add a new file named `_includes/lunr/custom-index.js` to your site. Insert your custom Javascript
+   code that reads your custom Javascript fields and inserts them into the search index.
+
+#### Example
+
+`_includes/lunr/custom-data.json` custom code reads the page's custom Front Matter `usage` and `examples`
+fields, normalizes the text, and writes the text to custom Javascript `myusage` and `myexamples` fields.
+
+{% raw %}
+```liquid
+{%- capture newline %}
+{% endcapture -%}
+"myusage": {{ include.page.usage | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip | jsonify }},
+"myexamples": {{ include.page.examples | markdownify | replace:newline,' ' | strip_html | normalize_whitespace | strip | jsonify }},
+```
+{% endraw %}
+
+`_includes/lunr/custom-index.js` custom code is within a Javascript loop. All custom
+Javascript fields are accessed as fields of `docs[i]` such as `docs[i].myusage`.
+Finally, append your custom fields on to the already existing `docs[i].content`.
+
+```javascript
+const content_to_merge = [docs[i].content, docs[i].myusage, docs[i].myexamples];
+docs[i].content = content_to_merge.join(' ');
+```
