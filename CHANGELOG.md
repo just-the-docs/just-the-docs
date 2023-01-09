@@ -20,7 +20,13 @@ This website includes docs for some new features that are not available in `v0.4
 
 Changes to `main` that are *not* in the latest pre-release:
 
-- n/a
+- Fixed: incorrect `padding` property value pair in `search.scss` by [@kevinlin1] in [#1123]
+- Docs: update `README` demo video by [@codewithfan] in [#1097]
+
+[#1097]: https://github.com/just-the-docs/just-the-docs/pull/1097
+[#1123]: https://github.com/just-the-docs/just-the-docs/pull/1123
+
+[@kevinlin1]: https://github.com/kevinlin1
 
 ## Pre-release v0.4.0.rc4
 
