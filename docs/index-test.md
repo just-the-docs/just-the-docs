@@ -215,6 +215,17 @@ red
 ***bold + italic***
 {: .label }
 
+### Footnotes
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.[^dark]
+
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.[^123]
+
+[^dark]:
+    Sed ut perspiciatis unde omnis iste natus error sit `voluptatem` accusantium doloremque laudantium, totam rem aperiam, `eaque ipsa` quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+
+[^123]: Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis 123.
+
 ### Definition lists can be used with HTML syntax.
 
 <dl>

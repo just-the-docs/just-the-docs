@@ -15,10 +15,13 @@ layout: table_wrappers
     <div id="main-content-wrap" class="main-content-wrap">
       {% include components/breadcrumbs.html %}
       <div id="main-content" class="main-content" role="main">
+        {% capture content_no_footnotes %}
+          {%- include components/kramdown_footnotes.html html=content method="delete" -%}
+        {% endcapture %}
         {% if site.heading_anchors != false %}
-          {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
+          {% include vendor/anchor_headings.html html=content_no_footnotes beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
         {% else %}
-          {{ content }}
+          {{ content_no_footnotes }}
         {% endif %}
 
         {% if page.has_children == true and page.has_toc != false %}

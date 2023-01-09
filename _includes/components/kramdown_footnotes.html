@@ -1,0 +1,22 @@
+{% comment %}
+# Extract or delete kramdown footnote div block
+
+# Brittle. It relies on exact kramdown footnote div structure
+# Alternative: create a gem to delete and extract element(s) by DOM
+# https://www.rubydoc.info/gems/jekyll-extract-element/0.0.7/JekyllExtractElement
+# https://stackoverflow.com/questions/13319407/remove-specific-html-elements-in-ruby
+{% endcomment -%}
+
+{%- if include.html && include.method -%}
+    {%- assign footnote_open = include.html | split: '<div class="footnotes" role="doc-endnotes">' -%}
+    {% comment %}
+    # split only on '</div>' forbids div's in footnotes which felt too restrictive
+    {% endcomment -%}
+    {%- assign footnote_end = footnote_open[1] | split: '</ol>
+</div>' -%}
+    {%- if include.method == "extract" -%}
+        <div class="footnotes" role="doc-endnotes">{{- footnote_end[0] -}}</ol></div>
+    {%- elsif include.method == "delete" -%}
+        {{- footnote_open[0] }}{{ footnote_end[1] -}}
+    {%- endif -%}
+{%- endif -%}
