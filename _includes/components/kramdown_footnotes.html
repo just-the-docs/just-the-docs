@@ -14,7 +14,7 @@
     {% endcomment -%}
     {%- assign footnote_end = footnote_open[1] | split: '</ol>
 </div>' -%}
-    {%- if include.method == "extract" -%}
+    {%- if include.method == "extract" and footnote_end[0] -%}
         <div class="footnotes" role="doc-endnotes">{{- footnote_end[0] -}}</ol></div>
     {%- elsif include.method == "delete" -%}
         {{- footnote_open[0] }}{{ footnote_end[1] -}}
