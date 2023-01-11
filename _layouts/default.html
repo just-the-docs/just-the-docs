@@ -8,161 +8,12 @@ layout: table_wrappers
 {% include head.html %}
 <body>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
-  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <symbol id="svg-link" viewBox="0 0 24 24">
-      <title>Link</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link">
-        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-      </svg>
-    </symbol>
-    <symbol id="svg-search" viewBox="0 0 24 24">
-      <title>Search</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
-        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-    </symbol>
-    <symbol id="svg-menu" viewBox="0 0 24 24">
-      <title>Menu</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
-        <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </symbol>
-    <symbol id="svg-arrow-right" viewBox="0 0 24 24">
-      <title>Expand</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-        <polyline points="9 18 15 12 9 6"></polyline>
-      </svg>
-    </symbol>
-    <symbol id="svg-doc" viewBox="0 0 24 24">
-      <title>Document</title>
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
-        <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline>
-      </svg>
-    </symbol>
-    {% include icons/external_link.html %}
-    {% include icons/code_copy.html %}
-  </svg>
-
-  <div class="side-bar">
-    <div class="site-header">
-      <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
-      <a href="#" id="menu-button" class="site-button">
-        <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
-      </a>
-    </div>
-    <nav aria-label="Main" id="site-nav" class="site-nav">
-      {% assign pages_top_size = site.html_pages
-          | where_exp:"item", "item.title != nil"
-          | where_exp:"item", "item.parent == nil"
-          | where_exp:"item", "item.nav_exclude != true"
-          | size %}
-      {% if pages_top_size > 0 %}
-        {% include nav.html pages=site.html_pages key=nil %}
-      {% endif %}
-      {%- if site.nav_external_links -%}
-        <ul class="nav-list">
-          {%- for node in site.nav_external_links -%}
-            <li class="nav-list-item external">
-              <a href="{{ node.url | absolute_url }}" class="nav-list-link external">
-                {{ node.title }}
-                {% unless node.hide_icon %}<svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>{% endunless %}
-              </a>
-            </li>
-          {%- endfor -%}
-        </ul>
-      {%- endif -%}
-      {% if site.just_the_docs.collections %}
-        {% assign collections_size = site.just_the_docs.collections | size %}
-        {% for collection_entry in site.just_the_docs.collections %}
-          {% assign collection_key = collection_entry[0] %}
-          {% assign collection_value = collection_entry[1] %}
-          {% assign collection = site[collection_key] %}
-          {% if collection_value.nav_exclude != true %}
-            {% if collections_size > 1 or pages_top_size > 0 %}
-              {% if collection_value.nav_fold == true %}
-                <ul class="nav-list nav-category-list">
-                  <li class="nav-list-item{% if page.collection == collection_key %} active{% endif %}">
-                    {%- if collection.size > 0 -%}
-                    <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
-                    {%- endif -%}
-                    <div class="nav-category">{{ collection_value.name }}</div>
-                    {% include nav.html pages=collection key=collection_key %}
-                  </li>
-                </ul>
-              {% else %}
-                <div class="nav-category">{{ collection_value.name }}</div>
-                {% include nav.html pages=collection key=collection_key %}
-              {% endif %}
-            {% else %}
-              {% include nav.html pages=collection key=collection_key %}
-            {% endif %}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-    </nav>
-
-    {% capture nav_footer_custom %}
-      {%- include nav_footer_custom.html -%}
-    {% endcapture %}
-    {% if nav_footer_custom != "" %}
-      {{ nav_footer_custom }}
-    {% else %}
-      <footer class="site-footer">
-        This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-      </footer>
-    {% endif %}
-  </div>
+  {% include icons/icons.html %}
+  {% include components/sidebar.html %}
   <div class="main" id="top">
-    <div id="main-header" class="main-header">
-      {% if site.search_enabled != false %}
-
-        {% capture search_placeholder %}{% include search_placeholder_custom.html %}{% endcapture %}
-
-        <div class="search">
-          <div class="search-input-wrap">
-            <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="{{ search_placeholder | strip_html | strip }}" aria-label="{{ search_placeholder | strip_html| strip }}" autocomplete="off">
-            <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label>
-          </div>
-          <div id="search-results" class="search-results"></div>
-        </div>
-      {% else %}
-        <div></div>
-      {% endif %}
-      {% include header_custom.html %}
-      {% if site.aux_links %}
-        <nav aria-label="Auxiliary" class="aux-nav">
-          <ul class="aux-nav-list">
-            {% for link in site.aux_links %}
-              <li class="aux-nav-list-item">
-                <a href="{{ link.last }}" class="site-button"
-                  {% if site.aux_links_new_tab %}
-                  target="_blank" rel="noopener noreferrer"
-                  {% endif %}
-                >
-                  {{ link.first }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
-      {% endif %}
-    </div>
+    {% include components/header.html %}
     <div id="main-content-wrap" class="main-content-wrap">
-      {% unless page.url == "/" %}
-        {% if page.parent %}
-          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
-            <ol class="breadcrumb-nav-list">
-              {% if page.grand_parent %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.grand_parent }}</a></li>
-                <li class="breadcrumb-nav-list-item"><a href="{{ second_level_url }}">{{ page.parent }}</a></li>
-              {% else %}
-                <li class="breadcrumb-nav-list-item"><a href="{{ first_level_url }}">{{ page.parent }}</a></li>
-              {% endif %}
-              <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
-            </ol>
-          </nav>
-        {% endif %}
-      {% endunless %}
+      {% include components/breadcrumbs.html %}
       <div id="main-content" class="main-content" role="main">
         {% if site.heading_anchors != false %}
           {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
@@ -171,72 +22,20 @@ layout: table_wrappers
         {% endif %}
 
         {% if page.has_children == true and page.has_toc != false %}
-          <hr>
-          {% include toc_heading_custom.html %}
-          <ul>
-            {% for child in toc_list %}
-              <li>
-                <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
-              </li>
-            {% endfor %}
-          </ul>
+          {% include components/children_nav.html toc_list=toc_list %}
         {% endif %}
 
-        {% capture footer_custom %}
-          {%- include footer_custom.html -%}
-        {% endcapture %}
-        {% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link %}
-          <hr>
-          <footer>
-            {% if site.back_to_top %}
-              <p><a href="#top" id="back-to-top">{{ site.back_to_top_text }}</a></p>
-            {% endif %}
-
-            {{ footer_custom }}
-
-            {% if site.last_edit_timestamp or site.gh_edit_link %}
-              <div class="d-flex mt-2">
-                {% if site.last_edit_timestamp and site.last_edit_time_format and page.last_modified_date %}
-                  <p class="text-small text-grey-dk-000 mb-0 mr-2">
-                    Page last modified: <span class="d-inline-block">{{ page.last_modified_date | date: site.last_edit_time_format }}</span>.
-                  </p>
-                {% endif %}
-                {% if
-                  site.gh_edit_link and
-                  site.gh_edit_link_text and
-                  site.gh_edit_repository and
-                  site.gh_edit_branch and
-                  site.gh_edit_view_mode
-                %}
-                  <p class="text-small text-grey-dk-000 mb-0">
-                    <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}{% if page.collection and site.collections_dir %}/{{ site.collections_dir }}{% endif %}/{{ page.path }}" id="edit-this-page">{{ site.gh_edit_link_text }}</a>
-                  </p>
-                {% endif %}
-              </div>
-            {% endif %}
-          </footer>
-        {% endif %}
+        {% include components/footer.html %}
 
       </div>
     </div>
-
     {% if site.search_enabled != false %}
-      {% if site.search.button %}
-        <a href="#" id="search-button" class="search-button">
-          <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-search"></use></svg>
-        </a>
-      {% endif %}
-
-      <div class="search-overlay"></div>
+      {% include components/search_footer.html %}
     {% endif %}
   </div>
 
   {% if site.mermaid %}
-  <script>
-    var config = {% include mermaid_config.js %};
-    mermaid.initialize(config);
-    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-  </script>
+    {% include components/mermaid.html %}
   {% endif %}
 </body>
 </html>

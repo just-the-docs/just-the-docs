@@ -58,7 +58,7 @@
 {%- endunless -%}
 
 {%- assign nav_order_pages = title_pages
-      | where_exp: "item", "item.nav_order != nil"  -%}
+      | where_exp: "item", "item.nav_order != nil" -%}
 {%- assign title_order_pages = title_pages
       | where_exp: "item", "item.nav_order == nil" -%}
 
@@ -174,7 +174,7 @@
           {%- if node.child_nav_order == 'desc' or node.child_nav_order == 'reversed' -%}
             {%- assign children_list = children_list | reverse -%}
           {%- endif -%}
-          <ul class="nav-list ">
+          <ul class="nav-list">
           {%- for child in children_list -%}
             {%- unless child.nav_exclude -%}
             <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">

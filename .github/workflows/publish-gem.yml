@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby 2.6
+    - uses: actions/checkout@v3
+    - name: Set up Ruby 3.1
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
+        ruby-version: 3.1
 
     - name: Publish to GPR
       run: |
