@@ -94,6 +94,11 @@ For example, `urls.py` should really only import from `views.py` (and `utils.py`
 
 ### Performance
 
+To enable SQL logging in Docker logs, edit the following line in `postgresql.conf` and restart your Docker container:
+```
+log_statement = 'all'                  # none, ddl, mod, all
+```
+
 The most common performance issue in Django is when we put queries inside of iteration. Queries should always happen OUTSIDE of for loops, for example.
 
 ```
@@ -108,6 +113,17 @@ for x in Modelname.objects.filter(...).select_related('foreign_key')
     print(x.foreign_key.foreign_key)
 ```
 
+`.select_related()` should be used for foreign keys, and `.prefetch_related()` should be used to many-to-many relationships or reverse foreign keys.
+
+Note: if you are using Django Rest Framework views and serializers, you may need to override functions such as `.list()` or `.retrieve()`, with the optimized query and manually pass it into the serializer; e.g.
+```
+def retrieve(self, request, *args, **kwargs):
+    form = self.request.clinic.diagnosticform_set.prefetch_related('diagnosticquestion_set', 'diagnosticquestion_set__answer_to_question', 'diagnosticquestion_set__workflow').get(id=self.kwargs['pk'])
+    serializer = DiagnosticFormDetailSerializer(form)
+    return Response(serializer.data)
+```
+
+Further reading: [DB Optimization in Django](https://docs.djangoproject.com/en/4.1/topics/db/optimization/)
 
 ### Templates
 
