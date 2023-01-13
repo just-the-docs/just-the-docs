@@ -53,10 +53,10 @@ These are lists of standardized slugs; clarify with your direct manager if you'r
     * Describe the work in a few words that indicate specific progress and outcomes you worked on for most of that day, in a language clients will understand. Between 3 and 20 words is the right level of detail. If you're entering the same phrase every day, you're not being specific enough.
     * Never combine line items between projects. If you worked on 2 different codes (project slugs) during the day, they must be separate line items.
     * Client pay us to do work and does not care about your environment setup, training, or who works with who. Just indicate what task/objective the client requires that you were working on, any progress or setbacks, and status. **Note:** this does not mean you should *not* log your setup time, just include it within the hours worked that you report for the related task.
-        * *Bad example:* "environment setup". Nobody cares about your environment in this context. It's an input not an output. Mention why you need to the environment and the larger task it will help you complete.
-        * *Bad example:* "worked with person X". nobody cares who on our team you worked with, and as you can see it can cause the client to dispute the invoice. Mention WHAT you were working on and specifically what you accomplished on that.
+        * *Bad example:* "attended meeting X". Nobody cares if you were at the meeting. Mention what you learned, contributed, or what was decided or accomplished in the meeting. This goes back to requiring different descriptons each day.
         * *Bad example:* "sprint meeting". Instead, mention a key decision at the meeting or topic that helped accomplish our assigned tasks and goals.
         * *Good example:* Completed Trello Task "Title copied here". Changed deployment parameters so that we could meet our goal of reducing downtime during deploys. Prepared report on test coverage, based on request from client.
+        * *Good example:* Finished voicemail, website and google maps setup for Customer X.
 *  **Trello or BitBucket ref:**
     * Also include at least one of: references to issues in Trello, Commit IDs. Link to trello cards can be found in "Share and more..." after opening a card.
     * If you are working on a given client all day, or two clients, you can bill 5 to 15 minutes for time administering time entry or OKRs. Do not record that you are doing in this in the notes, or anything else that we know you're doing every day.
