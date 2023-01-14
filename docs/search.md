@@ -136,7 +136,7 @@ Other data (ex front matter, files in `_data`, `assets`) is not indexed. To inde
 
 1. First, ensure that `assets/js/zzzz-search-data.json` is up-to-date; it can be regenerated with `rake` or manually (see:  ["Generate search index when used as a gem"](#generate-search-index-when-used-as-a-gem)).
 2. To add Liquid/Jekyll-based data: create a new include at the path `_includes/lunr/custom-data.json`. Insert custom Liquid code that reads various data (ex: `include.page`, `site.data`, `site.static_files`) that then generates valid [JSON](https://www.json.org/json-en.html) to add to the index.  Verify the fields in the generated `assets/js/search-data.json`.
-3. To add JavaScript (or external) data: create a new include at the path `_includes/lunr/custom-index.js` to your site. Add valid JavaScript that creates relevant fields to add to the index. You may want to inspect `assets/js/just-the-docs.js` to better understand the code structure.
+3. For all custom data (Liquid, JavaScript, or external): create a new include at the path `_includes/lunr/custom-index.js` to your site. Add valid JavaScript that creates relevant fields to add to the index. You may want to inspect `assets/js/just-the-docs.js` to better understand the code structure. **This is necessary to render any relevant custom index code.**
 
 #### Example
 
