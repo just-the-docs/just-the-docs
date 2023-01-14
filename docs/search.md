@@ -128,24 +128,19 @@ Alternatively, you can create the file manually with [this content]({{ site.gith
 
 ## Custom content for search index
 
-The standard text that is indexed is the page (or post) `.content`, `.title`, and sometimes headers which are already in the `.content`. Other text (Front Matter, data files, etc.) is not indexed. When you want additional text to be indexed, you can customize Just the Docs.
+By default, the search feature indexes a page's `.content`, `.title`, and *some* headers within the `.content`.
+Other data (ex front matter, files in `_data`, `assets`) is not indexed. To index additional data, users can customize what `lunr` indexes.
 
 {: .warning }
 > Customizing search indices is an advanced feature that requires Javascript and Liquid knowledge.
 
-1. When your site used a previous version of Just the Docs, you must update the file
-   `assets/js/zzzz-search-data.json` using the [above methods](#generate-search-index-when-used-as-a-gem).
-2. Add a new file named `_includes/lunr/custom-data.json` to your site. Insert your custom Liquid
-   code that reads the page object at `include.page` then generates custom Javascript
-   fields that hold the custom text you want to index. You can verify the fields you output at
-   the generated `assets/js/search-data.json`.
-3. Add a new file named `_includes/lunr/custom-index.js` to your site. Insert your custom Javascript
-   code that reads your custom Javascript fields and inserts them into the search index.
+1. First, ensure that `assets/js/zzzz-search-data.json` is up-to-date; it can be regenerated with `rake` or manually (see:  ["Generate search index when used as a gem"](#generate-search-index-when-used-as-a-gem)).
+2. To add Liquid/Jekyll-based data: create a new include at the path `_includes/lunr/custom-data.json`. Insert custom Liquid code that reads various data (ex: `include.page`, `site.data`, `site.static_files`) that then generates valid [JSON](https://www.json.org/json-en.html) to add to the index.  Verify the fields in the generated `assets/js/search-data.json`.
+3. To add JavaScript (or external) data: create a new include at the path `_includes/lunr/custom-index.js` to your site. Add valid JavaScript that creates relevant fields to add to the index. You may want to inspect `assets/js/just-the-docs.js` to better understand the code structure.
 
 #### Example
 
-`_includes/lunr/custom-data.json` custom code reads the page's custom Front Matter `usage` and `examples`
-fields, normalizes the text, and writes the text to custom Javascript `myusage` and `myexamples` fields.
+`_includes/lunr/custom-data.json`: this example adds each page's `usage` and `examples` front matter fields, normalizes the text, and writes the text to custom Javascript `myusage` and `myexamples` fields.
 
 {% raw %}
 ```liquid
