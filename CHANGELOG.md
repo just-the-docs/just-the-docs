@@ -20,12 +20,14 @@ This website includes docs for some new features that are not available in `v0.4
 
 Changes to `main` that are *not* in the latest pre-release:
 
+- Added: includes for custom `lunr` Liquid and JS code by [@diablodale] in [#1068]
 - Fixed: incorrect `padding` property value pair in `search.scss` by [@kevinlin1] in [#1123]
 - Fixed: minor spacing and comment nits by [@EricFromCanada] in [#1128]
 - Docs: update `README` demo video by [@codewithfan] in [#1097]
 - Docs: update "View Typography Utilities" link by [@agabrys] in [#1130]
 - Docs: fix broken relative page links by [@mattxwang] in [#1106]
 
+[#1068]: https://github.com/just-the-docs/just-the-docs/pull/1068
 [#1097]: https://github.com/just-the-docs/just-the-docs/pull/1097
 [#1106]: https://github.com/just-the-docs/just-the-docs/pull/1106
 [#1123]: https://github.com/just-the-docs/just-the-docs/pull/1123
@@ -34,6 +36,7 @@ Changes to `main` that are *not* in the latest pre-release:
 
 [@agabrys]: https://github.com/agabrys
 [@codewithfan]: https://github.com/codewithfan
+[@diablodale]: https://github.com/diablodale
 [@kevinlin1]: https://github.com/kevinlin1
 [@EricFromCanada]: https://github.com/EricFromCanada
 
