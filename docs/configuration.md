@@ -185,7 +185,7 @@ A paragraph...
 [^dark]:
     If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title.
 
-The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
+The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/setup.scss` file:
 
 ```scss
 $pink-000: #f77ef1;
