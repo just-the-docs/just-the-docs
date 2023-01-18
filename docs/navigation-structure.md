@@ -145,6 +145,10 @@ nav_order: 2
 The Buttons page appears as a child of UI Components and appears second in the UI Components section.
 
 ### Ordering child pages
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 You can optionally add the following to the YAML front matter to reverse the default sort order of child pages:
 
