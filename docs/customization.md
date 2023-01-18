@@ -111,9 +111,29 @@ This allows you to switch the scheme via the following javascript.
 jtd.setTheme("foo")
 ```
 
+## Override and define new variables
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
+
+To define new SCSS variables, functions, or override existing theme variables, place SCSS code in `_sass/custom/setup.scss`. This should *not* be used for defining custom styles (see the next section).
+
+This is most commonly-used to define [custom callout colors]({% link docs/configuration.md %}#callouts). For example,
+
+```scss
+// _sass/custom/setup.scss
+$pink-000: #f77ef1;
+$pink-100: #f967f1;
+$pink-200: #e94ee1;
+$pink-300: #dd2cd4;
+```
+
+In particular: this file is imported *after* the theme's variables and functions are defined, but *before* any CSS classes are emitted.
+
 ## Override and completely custom styles
 
-For styles that aren't defined as variables, you may want to modify specific CSS classes.
+For styles that aren't defined as SCSS variables, you may want to modify specific CSS classes.
 Additionally, you may want to add completely custom CSS specific to your content.
 To do this, put your styles in the file `_sass/custom/custom.scss`.
 This will allow for all overrides to be kept in a single file, and for any upstream changes to still be applied.
