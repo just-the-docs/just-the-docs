@@ -24,6 +24,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Added: new `_sass/custom/setup.scss` for variable definition by [@mattxwang] in [#1135]
 - Fixed: incorrect `padding` property value pair in `search.scss` by [@kevinlin1] in [#1123]
 - Fixed: minor spacing and comment nits by [@EricFromCanada] in [#1128]
+- Fixed: exclude images from being bundled with gem by [@m-r-mccormick] in [#1142]
 - Docs: update `README` demo video by [@codewithfan] in [#1097]
 - Docs: update "View Typography Utilities" link by [@agabrys] in [#1130]
 - Docs: fix broken relative page links by [@mattxwang] in [#1106]
@@ -35,12 +36,14 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1128]: https://github.com/just-the-docs/just-the-docs/pull/1128
 [#1130]: https://github.com/just-the-docs/just-the-docs/pull/1130
 [#1135]: https://github.com/just-the-docs/just-the-docs/pull/1135
+[#1142]: https://github.com/just-the-docs/just-the-docs/pull/1142
 
 [@agabrys]: https://github.com/agabrys
 [@codewithfan]: https://github.com/codewithfan
 [@diablodale]: https://github.com/diablodale
 [@kevinlin1]: https://github.com/kevinlin1
 [@EricFromCanada]: https://github.com/EricFromCanada
+[@m-r-mccormick]: https://github.com/m-r-mccormick
 
 ## Pre-release v0.4.0.rc4
 
