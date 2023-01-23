@@ -294,7 +294,6 @@ For more, see [Custom layouts and includes]({% link docs/customization.md %}#cus
 - External nav links are now supported. PR: [#876]
 - Child nav order: sort navigation pages with `child_nav_order`. PR: [#726]
 - Order when mixing different ways of specifying nav order
-- Generated links now relative
 
 #### Search
 
