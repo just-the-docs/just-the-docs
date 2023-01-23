@@ -1,5 +1,5 @@
 ---
-title: Migration and Upgrading Guide
+title: Migration and Upgrading
 layout: default
 ---
 
@@ -104,6 +104,23 @@ try removing it, or replace it by a fresh copy of the theme file.
 {: .warning }
 The following changes made in v0.4.0 *might* break or adversely affect your website
 when you next rebuild it, unless you have pinned it!
+
+#### New includes and SCSS
+
+Version 0.4.0 introduces many new `_includes` files. If you already have an existing include with the same name as a new addition, you will need to migrate or update that include. The new files are (relative to the `_includes` folder):
+
+- `mermaid_config.js`
+- `nav_footer_custom`
+- `search_placeholder_custom`
+- `toc_heading_custom`
+- the entire `components/` folder:
+  - `aux_nav`, `breadcrumbs`, `children_nav`, `footer`, `header`, `mermaid`, `search_footer`, `search_header`, `sidebar`
+- the entire `icons/` folder
+  - `code_copy`, `document`, `expand`, `external_link`, `icons`, `link`, `menu`, `search`
+- the entire `lunr/` folder
+  - `custom-data.json`, `custom-index.js`
+
+We have removed some code in `_sass/vendor` and added a new file at `_sass/custom/setup.scss`.
 
 #### favicons
 
@@ -240,12 +257,13 @@ Brief descriptions of the following changes are to be added below.
 #### Configuration
 
 - Mermaid support: first-class support for [Mermaid](https://mermaid.js.org/) - a JavaScript-based diagram and charting tool supported by GitHub - has been added to the theme. **This feature is opt-in.** See the new doc subsections in [Configuration]({% link docs/configuration.md %}#mermaid-diagrams) and [Code]({% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more.
+- Multiple Google Analytics tags are now supported. PR: [#1029]
 
 #### Customization
 
 - all generated text
 - custom color variables
-- custom.scss imported last
+- we've clarified the role of `custom.scss` to be imported last; to allow users to define override variables, we've added a new file `setup.scss`. PR: [#1135]
 
 #### Custom Includes
 
@@ -258,23 +276,35 @@ Each item is listed with the relevant file and PR.
 - TOC heading: `toc_heading_custom.html`, PR: [#980]
 - Navigation panel footer: `nav_footer_custom.html`, PR: [#474]
 - Search placeholder: `search_placeholder_custom.html`, PR: [#613]
-- TODO: minimal layouts
+- Modular site components: `components/` and `icons/`, PR: [#1058]
+- Custom search indices: `lunr/`, PR: [#1068]
 
 In a future (version 1) release, we may rename the custom include files.
+
+#### Modular Components
+
+We've broken up the default layout (`_layouts/default.html`) into multiple reusable components. This should have no impact on most users; however, it should make it easier to implement custom layouts.
+
+For more, see [Custom layouts and includes]({% link docs/customization.md %}#custom-layouts-and-includes). PR: [#1058].
 
 #### Navigation
 
 - Collections: nav panel shows links to ordinary pages before collections
 - Collection folding; part of "Combination". PR: [#578]
 - Scrolling to show link to selected page. PR: [#639]
-- External nav links. PR: [#876]
+- External nav links are now supported. PR: [#876]
 - Child nav order: sort navigation pages with `child_nav_order`. PR: [#726]
 - Order when mixing different ways of specifying nav order
 - Generated links now relative
 
+#### Search
+
+In addition to customizing the search placeholder, we've also added the ability to provide custom content to the search index. for more, see [Custom content for search index]({% link docs/search.md %}#custom-content-for-search-index). PR: [#1068].
+
 #### Styling
 
 - Code highlighting: dark mode changed to ...
+- Code copying: code blocks now allow users to easily copy their contents. PR: [#945]
 - Blockquote: shows vertical bar on left. PR: [#965]
 - Links wrap. PR: [#905]
 - Callouts: a new component similar to alerts or banners. See [UI Components - Callouts]({% link docs/ui-components/callouts.md %}). PR: [#466]
@@ -372,3 +402,6 @@ In a future (version 1) release, we may rename the custom include files.
 [#1091]: https://github.com/just-the-docs/just-the-docs/pull/1091
 [#1092]: https://github.com/just-the-docs/just-the-docs/pull/1092
 [#1095]: https://github.com/just-the-docs/just-the-docs/pull/1095
+
+[#1068]: https://github.com/just-the-docs/just-the-docs/pull/1068
+[#1135]: https://github.com/just-the-docs/just-the-docs/pull/1135
