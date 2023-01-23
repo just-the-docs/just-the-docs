@@ -7,14 +7,14 @@ nav_order: 7
 
 # Callouts
 
-Markdown does not include support for callouts. However, you can style text as a callout using a Markdown extension supported by kramdown: [*block IALs*](https://kramdown.gettalong.org/quickref.html#block-attributes). 
+Markdown does not include support for callouts. However, you can style text as a callout using a Markdown extension supported by kramdown: [*block IALs*](https://kramdown.gettalong.org/quickref.html#block-attributes).
 
 Common kinds of callouts include `highlight`, `important`, `new`, `note`, and `warning`.
 
 {: .warning }
 These callout names are *not* pre-defined by the theme: you need to define your own names.
 
-When you have [configured]({{ site.baseurl }}{% link docs/configuration.md %}#callouts) the  `color` and (optional) `title` for a callout, you can apply it to a paragraph, or to a block quote with several paragraphs, as illustrated below.[^postfix]
+When you have [configured]({% link docs/configuration.md %}#callouts) the  `color` and (optional) `title` for a callout, you can apply it to a paragraph, or to a block quote with several paragraphs, as illustrated below.[^postfix]
 
 [^postfix]:
     You can put the callout markup either before or after its content.

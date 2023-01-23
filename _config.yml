@@ -76,7 +76,7 @@ search:
 # For copy button on code
 enable_copy_code_button: true
 
-# To disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/),
+# To disable support for mermaid diagrams (https://mermaid.js.org),
 # comment out the `mermaid` and `version` keys below
 # By default, consuming the theme as a gem leaves mermaid disabled; it is opt-in
 mermaid:
