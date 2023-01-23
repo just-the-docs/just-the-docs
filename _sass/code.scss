@@ -208,13 +208,20 @@ code.language-mermaid {
 }
 
 // Override OneDarkJekyll Colors for Code Blocks
-.highlight, pre.highlight {
+.highlight,
+pre.highlight {
   background: $code-background-color; // Code Background
-  color: $body-text-color; // Line Numbers
+  // For Backwards Compatibility Before $code-linenumber-color was added
+  @if variable-exists(code-linenumber-color) {
+    color: $code-linenumber-color; // Code Line Numbers
+  } @else {
+    color: $body-text-color; // Code Line Numbers
+  }
 }
+
+// Override OneDarkJekyll Colors for Code Blocks
 .highlight pre {
   background: $code-background-color; // Code Background
 }
-
 
 // {% endraw %}
