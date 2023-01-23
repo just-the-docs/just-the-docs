@@ -261,9 +261,8 @@ Brief descriptions of the following changes are to be added below.
 
 #### Customization
 
-- all generated text
-- custom color variables
-- we've clarified the role of `custom.scss` to be imported last; to allow users to define override variables, we've added a new file `setup.scss`. PR: [#1135]
+- all user-facing text is now customizable; previously, several elements (ex search placeholder) were hardwired into the theme. Now, users can blend custom includes and layouts to internationalize their sites.
+- we've clarified the role of `custom.scss` to be imported last; to allow users to define custom or override variables, we've added a new file `setup.scss`. PR: [#1135]
 
 #### Custom Includes
 
@@ -303,7 +302,6 @@ In addition to customizing the search placeholder, we've also added the ability 
 
 #### Styling
 
-- Code highlighting: dark mode changed to ...
 - Code copying: code blocks now allow users to easily copy their contents. PR: [#945]
 - Blockquote: shows vertical bar on left. PR: [#965]
 - Links wrap. PR: [#905]
