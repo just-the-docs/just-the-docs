@@ -105,6 +105,8 @@ We are a Python shop, and so observance of
 
 We carry this convention to other languages when possible, but some will use a different number of spaces. **We never use the tab character.**
 
+HTML and JavaScript files should use 2 spaces for indentation, following popular convention.
+
 ### Docker
 
 Use [Docker](devops/DOCKER/) for any web application project (and other projects where applicable). 
