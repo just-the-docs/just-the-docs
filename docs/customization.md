@@ -16,10 +16,6 @@ nav_order: 6
 ---
 
 ## Color schemes
-{: .d-inline-block }
-
-New
-{: .label .label-green }
 
 Just the Docs supports two color schemes: light (default), and dark.
 

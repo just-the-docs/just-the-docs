@@ -173,6 +173,10 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 See [Customization]({% link docs/customization.md %}) for more information.
 
 ## Callouts
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 To use this feature, you need to configure a `color` and (optionally) `title` for each kind of callout you want to use, e.g.:
 
