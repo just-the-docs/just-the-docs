@@ -25,6 +25,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: incorrect `padding` property value pair in `search.scss` by [@kevinlin1] in [#1123]
 - Fixed: minor spacing and comment nits by [@EricFromCanada] in [#1128]
 - Fixed: exclude images from being bundled with gem by [@m-r-mccormick] in [#1142]
+- Fixed: dark theme code block background, line number colors by [@m-r-mccormick] in [#1124]
 - Docs: add a migration guide by [@pdmosses] in [#1059]
 - Docs: update `README` demo video by [@codewithfan] in [#1097]
 - Docs: update "View Typography Utilities" link by [@agabrys] in [#1130]
@@ -37,6 +38,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1097]: https://github.com/just-the-docs/just-the-docs/pull/1097
 [#1106]: https://github.com/just-the-docs/just-the-docs/pull/1106
 [#1123]: https://github.com/just-the-docs/just-the-docs/pull/1123
+[#1124]: https://github.com/just-the-docs/just-the-docs/pull/1124
 [#1128]: https://github.com/just-the-docs/just-the-docs/pull/1128
 [#1130]: https://github.com/just-the-docs/just-the-docs/pull/1130
 [#1135]: https://github.com/just-the-docs/just-the-docs/pull/1135
