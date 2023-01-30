@@ -69,6 +69,10 @@ search:
 ```
 
 ## Mermaid Diagrams
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 The minimum configuration requires the key for `version` ([from jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)) in `_config.yml`:
 
@@ -104,6 +108,10 @@ heading_anchors: true
 ```
 
 ## External navigation links
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 External links can be added to the navigation through the `nav_external_links` option.
 See [Navigation Structure]({% link docs/navigation-structure.md %}#external-navigation-links) for more details.
@@ -165,6 +173,10 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 See [Customization]({% link docs/customization.md %}) for more information.
 
 ## Callouts
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 To use this feature, you need to configure a `color` and (optionally) `title` for each kind of callout you want to use, e.g.:
 
@@ -231,6 +243,12 @@ ga_tracking: UA-2709176-10
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 ```
 
+### Multiple IDs
+{: .d-inline-block .no_toc }
+
+New (v0.4.0)
+{: .label .label-green }
+
 This theme supports multiple comma-separated tracking IDs. This helps seamlessly transition UA properties to GA4 properties by tracking both for a while.
 
 ```yaml
@@ -267,7 +285,7 @@ just_the_docs:
       # nav_exclude: true
       # Fold the collection in the navigation
       # Supports true or false (default)
-      # nav_fold: true
+      # nav_fold: true  # note: this option is new in v0.4
       # Exclude the collection from the search
       # Supports true or false (default)
       # search_exclude: true

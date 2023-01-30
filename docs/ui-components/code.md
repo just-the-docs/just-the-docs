@@ -90,6 +90,10 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 ---
 
 ## Mermaid diagram code blocks
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 [Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. **It is disabled by default**. However, you can turn on support for mermaid by adding a `mermaid` key to your `_config.yml`.
 
@@ -145,6 +149,10 @@ graph TD;
 *Note: for demonstration purposes, we've enabled mermaid on this site. It is still disabled by default, and users need to opt-in to use it.*
 
 ## Copy button
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 The copy button for code blocks can be enabled or disabled via the `enable_copy_code_button` key in `_config.yml`. By default, the value of this key is `false`; users need to opt-in.
 

@@ -127,6 +127,13 @@ This command creates the `assets/js/zzzz-search-data.json` file that Jekyll uses
 Alternatively, you can create the file manually with [this content]({{ site.github.repository_url }}/blob/main/assets/js/zzzz-search-data.json).
 
 ## Custom content for search index
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
+
+Advanced
+{: .label .label-yellow }
 
 By default, the search feature indexes a page's `.content`, `.title`, and *some* headers within the `.content`. Other data (e.g. front matter, files in `_data` and `assets`) is not indexed. Users can customize what is indexed.
 
