@@ -30,6 +30,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Docs: update "View Typography Utilities" link by [@agabrys] in [#1130]
 - Docs: fix broken relative page links by [@mattxwang] in [#1106]
 - Docs: clarify steps to add custom `lunr` index code by [@diablodale] in [#1139]
+- Docs: label new features introduced in `v0.4` by [@mattxwang] in [#1138]
 
 [#1059]: https://github.com/just-the-docs/just-the-docs/pull/1059
 [#1068]: https://github.com/just-the-docs/just-the-docs/pull/1068
@@ -39,6 +40,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1128]: https://github.com/just-the-docs/just-the-docs/pull/1128
 [#1130]: https://github.com/just-the-docs/just-the-docs/pull/1130
 [#1135]: https://github.com/just-the-docs/just-the-docs/pull/1135
+[#1138]: https://github.com/just-the-docs/just-the-docs/pull/1138
 [#1139]: https://github.com/just-the-docs/just-the-docs/pull/1139
 [#1142]: https://github.com/just-the-docs/just-the-docs/pull/1142
 
