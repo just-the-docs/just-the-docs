@@ -85,6 +85,8 @@ mermaid:
   version: "9.1.6"
   # Put any additional configuration, such as setting the theme, in _includes/mermaid_config.js
   # See also docs/ui-components/code
+  # To load mermaid from a local file use the `path` key to specify the location of the library instead; e.g.
+  # path: "/assets/js/mermaid.min.js"
 
 # Enable or disable heading anchors
 heading_anchors: true
