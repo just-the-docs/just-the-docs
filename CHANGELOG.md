@@ -16,24 +16,76 @@ The project underwent a major maintenance shift in March 2022.
 This website is built from the `HEAD` of the `main` branch of the theme repository.
 
 {: .warning }
-This website includes docs for some new features that are not available in `v0.4.0.rc4` and `v0.3.3`!
+This website includes docs for some new features that are not available in `v0.4.0.rc5` and `v0.3.3`!
 
 Changes to `main` that are *not* in the latest pre-release:
+
+- n/a
+
+## Pre-release v0.4.0.rc5
+
+Hi everyone, we're so excited to finally release `v0.4.0`! For posterity's sake, we're going to release `v0.4.0.rc5` and then immediately re-release it as `v0.4.0`; this should make it more clear what changes were introduced in the lead up to the minor release.
+
+This RC does not introduce any major user-facing features. It adds more customizability for custom SCSS variables (fixing a bug with callout introduction order), `lunr` indexing, and loading `mermaid` locally. In addition, it fixes bugs introduced in `.rc4`: incorrect CSS, inconsistencies with code block backgrounds in dark theme, and the copy code button. It also adds a migration guide for users coming from `v0.3.3`.
+
+### Trying out pre-release `v0.4.0.rc5`
+
+Simlar to the prior release, `v0.4.0.rc5` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` following immediately after. While we don't anticipate many users using this RC, it is still possible to opt-in.
+
+To use this RC explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.4.0.rc5
+```
+
+To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```Ruby
+gem "just-the-docs", "0.4.0.rc5"
+```
+
+By default, **users will not be upgraded to `0.4.0.rc5`**. To enforce that explicitly, either:
+
+1. pin your gem version in your `Gemfile`, like so
+```Ruby
+gem "just-the-docs", "0.3.3"
+```
+2. freeze the `remote_theme`, like so
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.3.3
+```
+
+### New Features
 
 - Added: includes for custom `lunr` Liquid and JS code by [@diablodale] in [#1068]
 - Added: new `_sass/custom/setup.scss` for variable definition by [@mattxwang] in [#1135]
 - Added: configuration key to load a local version of mermaid by [@fabrik42] in [#1153]
+
+### Bugfixes and Maintenance
+
 - Fixed: incorrect `padding` property value pair in `search.scss` by [@kevinlin1] in [#1123]
 - Fixed: minor spacing and comment nits by [@EricFromCanada] in [#1128]
 - Fixed: exclude images from being bundled with gem by [@m-r-mccormick] in [#1142]
 - Fixed: dark theme code block background, line number colors by [@m-r-mccormick] in [#1124]
 - Fixed: copy code button interaction with kramdown line numbers by [@mattxwang] in [#1143]
+
+### Docs
+
 - Docs: add a migration guide by [@pdmosses] in [#1059]
 - Docs: update `README` demo video by [@codewithfan] in [#1097]
 - Docs: update "View Typography Utilities" link by [@agabrys] in [#1130]
 - Docs: fix broken relative page links by [@mattxwang] in [#1106]
 - Docs: clarify steps to add custom `lunr` index code by [@diablodale] in [#1139]
 - Docs: label new features introduced in `v0.4` by [@mattxwang] in [#1138]
+
+### New Contributors
+
+- [@kevinlin1] made their first contribution in [#1123]
+- [@codewithfan] made their first contribution in [#1097]
+- [@agabrys] made their first contribution in [#1130]
+- [@diablodale] made their first contribution in [#1068]
+- [@m-r-mccormick] made their first contribution in [#1142]
+- [@fabrik42] made their first contribution in [#1153]
 
 [#1059]: https://github.com/just-the-docs/just-the-docs/pull/1059
 [#1068]: https://github.com/just-the-docs/just-the-docs/pull/1068
