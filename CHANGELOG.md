@@ -22,6 +22,7 @@ Changes to `main` that are *not* in the latest pre-release:
 
 - Added: includes for custom `lunr` Liquid and JS code by [@diablodale] in [#1068]
 - Added: new `_sass/custom/setup.scss` for variable definition by [@mattxwang] in [#1135]
+- Added: configuration key to load a local version of mermaid by [@fabrik42] in [#1153]
 - Fixed: incorrect `padding` property value pair in `search.scss` by [@kevinlin1] in [#1123]
 - Fixed: minor spacing and comment nits by [@EricFromCanada] in [#1128]
 - Fixed: exclude images from being bundled with gem by [@m-r-mccormick] in [#1142]
@@ -45,10 +46,12 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1138]: https://github.com/just-the-docs/just-the-docs/pull/1138
 [#1139]: https://github.com/just-the-docs/just-the-docs/pull/1139
 [#1142]: https://github.com/just-the-docs/just-the-docs/pull/1142
+[#1153]: https://github.com/just-the-docs/just-the-docs/pull/1153
 
 [@agabrys]: https://github.com/agabrys
 [@codewithfan]: https://github.com/codewithfan
 [@diablodale]: https://github.com/diablodale
+[@fabrik42]: https://github.com/fabrik42
 [@kevinlin1]: https://github.com/kevinlin1
 [@EricFromCanada]: https://github.com/EricFromCanada
 [@m-r-mccormick]: https://github.com/m-r-mccormick
