@@ -27,6 +27,7 @@ Changes to `main` that are *not* in the latest pre-release:
 - Fixed: minor spacing and comment nits by [@EricFromCanada] in [#1128]
 - Fixed: exclude images from being bundled with gem by [@m-r-mccormick] in [#1142]
 - Fixed: dark theme code block background, line number colors by [@m-r-mccormick] in [#1124]
+- Fixed: copy code button interaction with kramdown line numbers by [@mattxwang] in [#1143]
 - Docs: add a migration guide by [@pdmosses] in [#1059]
 - Docs: update `README` demo video by [@codewithfan] in [#1097]
 - Docs: update "View Typography Utilities" link by [@agabrys] in [#1130]
@@ -46,6 +47,7 @@ Changes to `main` that are *not* in the latest pre-release:
 [#1138]: https://github.com/just-the-docs/just-the-docs/pull/1138
 [#1139]: https://github.com/just-the-docs/just-the-docs/pull/1139
 [#1142]: https://github.com/just-the-docs/just-the-docs/pull/1142
+[#1143]: https://github.com/just-the-docs/just-the-docs/pull/1143
 [#1153]: https://github.com/just-the-docs/just-the-docs/pull/1153
 
 [@agabrys]: https://github.com/agabrys
