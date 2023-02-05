@@ -148,6 +148,16 @@ graph TD;
 
 *Note: for demonstration purposes, we've enabled mermaid on this site. It is still disabled by default, and users need to opt-in to use it.*
 
+### Using a local mermaid library
+
+In order to use a local version of the mermaid library instead of one provided by jsDelivr, you can specify a `path` key in the mermaid configuration instead of a `version` key.
+
+```yaml
+mermaid:
+  # To load mermaid from a local file use the `path` key to specify the location of the library instead; e.g.
+  path: "/assets/js/mermaid.min.js"
+```
+
 ## Copy button
 {: .d-inline-block }
 
