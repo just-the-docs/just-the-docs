@@ -246,8 +246,6 @@ For changes since v0.3.3, the log usually references the merged PR that made the
 
 ### NON-BREAKING CHANGES (OUTLINE ONLY)
 
-Brief descriptions of the following changes are to be added below.
-
 #### Accessibility
 
 - Skip to main content: the first keyboard-navigatable item is now a link to skip over the sidebar and header to the main content of the page. PR: [#949].

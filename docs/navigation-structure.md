@@ -254,6 +254,10 @@ aux_links:
 ---
 
 ## External Navigation Links
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 To add external links to the navigation, add them to the `nav_external_links` [configuration]({% link docs/configuration.md %}) option in your site's `_config.yml` file.
 External links will appear in the navigation after the links to ordinary pages, but before any collections.
