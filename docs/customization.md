@@ -16,10 +16,6 @@ nav_order: 6
 ---
 
 ## Color schemes
-{: .d-inline-block }
-
-New
-{: .label .label-green }
 
 Just the Docs supports two color schemes: light (default), and dark.
 
@@ -111,9 +107,29 @@ This allows you to switch the scheme via the following javascript.
 jtd.setTheme("foo")
 ```
 
+## Override and define new variables
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
+
+To define new SCSS variables, functions, or override existing theme variables, place SCSS code in `_sass/custom/setup.scss`. This should *not* be used for defining custom styles (see the next section).
+
+This is most commonly-used to define [custom callout colors]({% link docs/configuration.md %}#callouts). For example,
+
+```scss
+// _sass/custom/setup.scss
+$pink-000: #f77ef1;
+$pink-100: #f967f1;
+$pink-200: #e94ee1;
+$pink-300: #dd2cd4;
+```
+
+In particular: this file is imported *after* the theme's variables and functions are defined, but *before* any CSS classes are emitted.
+
 ## Override and completely custom styles
 
-For styles that aren't defined as variables, you may want to modify specific CSS classes.
+For styles that aren't defined as SCSS variables, you may want to modify specific CSS classes.
 Additionally, you may want to add completely custom CSS specific to your content.
 To do this, put your styles in the file `_sass/custom/custom.scss`.
 This will allow for all overrides to be kept in a single file, and for any upstream changes to still be applied.
@@ -146,10 +162,14 @@ To do this, create an `_includes` directory and make a copy of the specific file
 Just the Docs provides the following custom includes files:
 
 ### Custom TOC Heading
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 `_includes/toc_heading_custom.html`
 
-If the page has any child pages, and `has_toc` is not set to `false`, this content appears as a heading above the [auto-generating list of child pages]({{ site.baseurl }}{% link docs/navigation-structure.md %}#auto-generating-table-of-contents) after the page's content.
+If the page has any child pages, and `has_toc` is not set to `false`, this content appears as a heading above the [auto-generating list of child pages]({% link docs/navigation-structure.md %}#auto-generating-table-of-contents) after the page's content.
 
 #### Example
 {: .no_toc }
@@ -165,7 +185,7 @@ The (optional) `text-delta` class makes the heading appear as **Contents**{:.tex
 
 `_includes/footer_custom.html`
 
-This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content]({{ site.baseurl }}{% link docs/configuration.md %}#footer-content).
+This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content]({% link docs/configuration.md %}#footer-content).
 
 ### Custom Head
 
@@ -182,12 +202,20 @@ The `<head>` tag automatically includes a link to an existing favicon if you set
 Content added to this file appears at the top of every page's main content between the site search and auxiliary links if they are enabled. If `search_enabled` were set to false and `aux_links` were removed, the content of `header_custom.html` would occupy the space at the top of every page.
 
 ### Custom Nav Footer
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 `_includes/nav_footer_custom.html`
 
 Any content added to this file will appear at the bottom left of the page below the site's navigation. By default an attribution to Just the Docs is displayed which reads, `This site uses Just the Docs, a documentation theme for Jekyll.`.
 
 ### Custom Search Placeholder
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 `_includes/search_placeholder_custom.html`
 
@@ -212,3 +240,158 @@ Chercher notre site
 {% endraw %}
 
 would make the placeholder text "Chercher notre site". [Liquid code](https://jekyllrb.com/docs/liquid/) (including [Jekyll variables](https://jekyllrb.com/docs/variables/)) is also supported.
+
+## Custom layouts and includes
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
+
+Advanced
+{: .label .label-yellow }
+
+Just the Docs uses Jekyll's powerful [layouts](https://jekyllrb.com/docs/layouts/) and [includes](https://jekyllrb.com/docs/includes/) features to generate and compose various elements of the site. Jekyll users and developers can extend or replace existing layouts and includes to customize the entire site layout.
+
+### Default layout and includable components
+
+The `default` layout is inherited by most of the "out-of-the-box" pages provided by Just the Docs. It composes various re-usable components of the site, including the sidebar, navbar, footer, breadcrumbs, and various imports. Most users who create new pages or layouts will inherit from `default`.
+
+Here is a simplified code example of what it looks like:
+
+{% raw %}
+
+```liquid
+<!-- a simplified version of _layouts/default.html -->
+<html>
+{% include head.html %}
+<body>
+  {% include icons/icons.html %}
+  {% include components/sidebar.html %}
+  {% include components/header.html %}
+  {% include components/breadcrumbs.html %}
+
+  {% if site.heading_anchors != false %}
+    {% include vendor/anchor_headings.html html=content ... %}
+  {% else %}
+    {{ content }}
+  {% endif %}
+
+  {% if page.has_children == true and page.has_toc != false %}
+    {% include components/children_nav.html %}
+  {% endif %}
+
+  {% include components/footer.html %}
+
+  {% if site.search_enabled != false %}
+    {% include components/search_footer.html %}
+  {% endif %}
+
+  {% if site.mermaid %}
+    {% include components/mermaid.html %}
+  {% endif %}
+</body>
+</html>
+```
+
+{% endraw %}
+
+#### Component summary
+{: .no_toc }
+
+{: .warning }
+Defining a new `_includes` with the same name as any of these components will significantly change the existing layout. Please proceed with caution when adjusting them.
+
+To briefly summarize each component:
+
+- `_includes/head.html` is the entire `<head>` tag for the site; this imports stylesheets, various JavaScript files (ex: analytics, mermaid, search, and Just the Docs code), and SEO / meta information.
+- `_includes/icons/icons.html` imports all SVG icons that are used throughout the site. Some, such as those relating to search or code snippet copying, are only loaded when those features are enabled.
+- `_includes/components/sidebar.html` renders the sidebar, containing the site header, navigation links, external links, collections, and nav footer.
+- `_includes/components/header.html` renders the navigation header, containing the search bar, custom header, and aux links
+- `_includes/components/breadcrumbs.html` renders the breadcrumbs feature
+- `vendor/anchor_headings.html` is a local copy of Vladimir Jimenez's [jekyll-anchor-headings](https://github.com/allejo/jekyll-anchor-headings) snippet
+- `_includes/components/children_nav.html` renders a list of nav links to child pages on parent pages
+- `_includes/components/footer.html` renders the bottom-of-page footer
+- `_includes/components/search_footer.html` renders DOM elements that are necessary for the search bar to work
+- `_includes/components/mermaid.html` initializes mermaid if the feature is enabled
+
+Each of these components can be overridden individually using the same process described in the [Override includes](#override-includes) section. In particular, the granularity of components should allow users to replace certain components (such as the sidebar) without having to adjust the rest of the code.
+
+Future versions may subdivide components further; we guarantee that we will only place them in folders (ex `components/`, `icons/`, or a new `js/`) to avoid top-level namespace collisions.
+
+### Alternative layouts and example (`minimal`)
+
+Users can develop custom layouts that compose, omit, or add components differently. We provide one first-class example titled `minimal`, inspired by Kevin Lin's work in [just-the-class](https://github.com/kevinlin1/just-the-class). This `minimal` layout does not render the sidebar, header, or search. To see an example, visit the [minimal layout test]({{site.baseurl}}/docs/minimal-test/) page.
+
+Here is a simplified code example of what it looks like:
+
+{% raw %}
+
+```liquid
+<!-- a simplified version of _layouts/minimal.html -->
+<html>
+{% include head.html %}
+<body>
+  {% include icons/icons.html %}
+  {% comment %} Bandaid fix for breadcrumbs here! {% endcomment %}
+  {% include components/breadcrumbs.html %}
+
+  {% if site.heading_anchors != false %}
+    {% include vendor/anchor_headings.html html=content ... %}
+  {% else %}
+    {{ content }}
+  {% endif %}
+
+  {% if page.has_children == true and page.has_toc != false %}
+    {% include components/children_nav.html %}
+  {% endif %}
+
+  {% include components/footer.html %}
+
+  {% if site.mermaid %}
+    {% include components/mermaid.html %}
+  {% endif %}
+</body>
+</html>
+```
+
+{% endraw %}
+
+This layout is packaged in Just the Docs. Users can indicate this alternative layout in page front matter:
+
+{% raw %}
+
+```
+---
+layout: minimal
+title: Minimal layout test
+---
+```
+
+{% endraw %}
+
+Similarly, users and developers can create other alternative layouts using Just the Docs' reusable includable components.
+
+### Default layout and inheritance chain
+
+Under the hood,
+
+- `default` and `minimal` inherit from the `table_wrappers` layout, which wraps all HTML `<table>` tags with a `div .table-wrapper`
+- `table_wrappers` inherits from `vendor/compress`, which is a local copy of Anatol Broder's [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html) Jekyll plugin
+
+Note that as of now, `minimal` and `default` have no inheritance relationship.
+
+### Overridden default Jekyll layouts
+
+By default, Jekyll (and its default theme `minima`) provide the `about`, `home`, `page`, and `post` layouts. In Just the Docs, we override all of these layouts with the `default` layout. Each of those layouts is simply:
+
+{% raw %}
+
+```
+---
+layout: default
+---
+
+{{ content }}
+```
+
+{% endraw %}

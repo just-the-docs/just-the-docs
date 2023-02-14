@@ -23,13 +23,17 @@
   {% endif %}
 
   {% if site.mermaid %}
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js"></script>
+    {% if site.mermaid.path %}
+      <script src="{{ site.mermaid.path | relative_url }}"></script>
+    {% else %}
+      <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js"></script>
+    {% endif %}
   {% endif %}
 
   <script src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   {% for file in site.static_files %}
     {% if file.path == site.favicon_ico or file.path == '/favicon.ico' %}
       {% assign favicon = true %}

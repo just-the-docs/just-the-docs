@@ -1,0 +1,69 @@
+<div class="side-bar">
+  <div class="site-header">
+    <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
+    <a href="#" id="menu-button" class="site-button">
+      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    </a>
+  </div>
+  <nav aria-label="Main" id="site-nav" class="site-nav">
+    {% assign pages_top_size = site.html_pages
+          | where_exp:"item", "item.title != nil"
+          | where_exp:"item", "item.parent == nil"
+          | where_exp:"item", "item.nav_exclude != true"
+          | size %}
+    {% if pages_top_size > 0 %}
+      {% include nav.html pages=site.html_pages key=nil %}
+    {% endif %}
+    {%- if site.nav_external_links -%}
+      <ul class="nav-list">
+        {%- for node in site.nav_external_links -%}
+          <li class="nav-list-item external">
+            <a href="{{ node.url | absolute_url }}" class="nav-list-link external">
+              {{ node.title }}
+              {% unless node.hide_icon %}<svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>{% endunless %}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+    {% if site.just_the_docs.collections %}
+      {% assign collections_size = site.just_the_docs.collections | size %}
+      {% for collection_entry in site.just_the_docs.collections %}
+        {% assign collection_key = collection_entry[0] %}
+        {% assign collection_value = collection_entry[1] %}
+        {% assign collection = site[collection_key] %}
+        {% if collection_value.nav_exclude != true %}
+          {% if collections_size > 1 or pages_top_size > 0 %}
+            {% if collection_value.nav_fold == true %}
+              <ul class="nav-list nav-category-list">
+                <li class="nav-list-item{% if page.collection == collection_key %} active{% endif %}">
+                  {%- if collection.size > 0 -%}
+                  <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+                  {%- endif -%}
+                  <div class="nav-category">{{ collection_value.name }}</div>
+                  {% include nav.html pages=collection key=collection_key %}
+                </li>
+              </ul>
+            {% else %}
+              <div class="nav-category">{{ collection_value.name }}</div>
+              {% include nav.html pages=collection key=collection_key %}
+            {% endif %}
+          {% else %}
+            {% include nav.html pages=collection key=collection_key %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  </nav>
+
+  {% capture nav_footer_custom %}
+    {%- include nav_footer_custom.html -%}
+  {% endcapture %}
+  {% if nav_footer_custom != "" %}
+    {{ nav_footer_custom }}
+  {% else %}
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  {% endif %}
+</div>
