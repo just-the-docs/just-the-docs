@@ -10,7 +10,7 @@ name: CI
 
 jobs:
   jekyll-build:
-    name: Build Jekyll site
+    name: Build (jekyll gem)
     strategy:
       fail-fast: false
       matrix:
