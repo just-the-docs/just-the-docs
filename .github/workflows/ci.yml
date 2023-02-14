@@ -32,6 +32,21 @@ jobs:
     - name: Build Site
       run: bundle exec jekyll build
 
+  github-pages-build:
+    name: Build (github-pages gem)
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1' # Not needed with a .ruby-version file
+        bundler-cache: false
+    - name: Bundle Install
+      run: BUNDLE_GEMFILE=fixtures/Gemfile-github-pages bundle install
+    - name: Build Site
+      run: BUNDLE_GEMFILE=fixtures/Gemfile-github-pages bundle exec jekyll build
+
   assets:
     name: Test CSS and JS
     runs-on: ubuntu-latest
