@@ -1,208 +1,275 @@
-// Moved from _sass/code.scss
+.highlight,
+pre.highlight {
+  background: #f9f9f9;
+  color: #383942;
+}
+
+.highlight pre {
+  background: #f9f9f9;
+}
+
+.highlight .hll {
+  background: #f9f9f9;
+}
 
 .highlight .c {
-  color: #586e75;
-} // comment //
+  color: #9fa0a6;
+  font-style: italic;
+}
+
 .highlight .err {
-  color: #93a1a1;
-} // error //
-.highlight .g {
-  color: #93a1a1;
-} // generic //
+  color: #fff;
+  background-color: #e05151;
+}
+
 .highlight .k {
-  color: #859900;
-} // keyword //
+  color: #a625a4;
+}
+
 .highlight .l {
-  color: #93a1a1;
-} // literal //
+  color: #50a04f;
+}
+
 .highlight .n {
-  color: #93a1a1;
-} // name //
+  color: #383942;
+}
+
 .highlight .o {
-  color: #859900;
-} // operator //
-.highlight .x {
-  color: #cb4b16;
-} // other //
+  color: #383942;
+}
+
 .highlight .p {
-  color: #93a1a1;
-} // punctuation //
+  color: #383942;
+}
+
 .highlight .cm {
-  color: #586e75;
-} // comment.multiline //
+  color: #9fa0a6;
+  font-style: italic;
+}
+
 .highlight .cp {
-  color: #859900;
-} // comment.preproc //
+  color: #9fa0a6;
+  font-style: italic;
+}
+
 .highlight .c1 {
-  color: #586e75;
-} // comment.single //
+  color: #9fa0a6;
+  font-style: italic;
+}
+
 .highlight .cs {
-  color: #859900;
-} // comment.special //
-.highlight .gd {
-  color: #2aa198;
-} // generic.deleted //
+  color: #9fa0a6;
+  font-style: italic;
+}
+
 .highlight .ge {
   font-style: italic;
-  color: #93a1a1;
-} // generic.emph //
-.highlight .gr {
-  color: #dc322f;
-} // generic.error //
-.highlight .gh {
-  color: #cb4b16;
-} // generic.heading //
-.highlight .gi {
-  color: #859900;
-} // generic.inserted //
-.highlight .go {
-  color: #93a1a1;
-} // generic.output //
-.highlight .gp {
-  color: #93a1a1;
-} // generic.prompt //
+}
+
 .highlight .gs {
-  font-weight: bold;
-  color: #93a1a1;
-} // generic.strong //
-.highlight .gu {
-  color: #cb4b16;
-} // generic.subheading //
-.highlight .gt {
-  color: #93a1a1;
-} // generic.traceback //
+  font-weight: 700;
+}
+
 .highlight .kc {
-  color: #cb4b16;
-} // keyword.constant //
+  color: #a625a4;
+}
+
 .highlight .kd {
-  color: #268bd2;
-} // keyword.declaration //
+  color: #a625a4;
+}
+
 .highlight .kn {
-  color: #859900;
-} // keyword.namespace //
+  color: #a625a4;
+}
+
 .highlight .kp {
-  color: #859900;
-} // keyword.pseudo //
+  color: #a625a4;
+}
+
 .highlight .kr {
-  color: #268bd2;
-} // keyword.reserved //
+  color: #a625a4;
+}
+
 .highlight .kt {
-  color: #dc322f;
-} // keyword.type //
+  color: #a625a4;
+}
+
 .highlight .ld {
-  color: #93a1a1;
-} // literal.date //
+  color: #50a04f;
+}
+
 .highlight .m {
-  color: #2aa198;
-} // literal.number //
+  color: #986800;
+}
+
 .highlight .s {
-  color: #2aa198;
-} // literal.string //
+  color: #50a04f;
+}
+
 .highlight .na {
-  color: #555;
-} // name.attribute //
+  color: #986800;
+}
+
 .highlight .nb {
-  color: #b58900;
-} // name.builtin //
+  color: #c08400;
+}
+
 .highlight .nc {
-  color: #268bd2;
-} // name.class //
+  color: #c08400;
+}
+
 .highlight .no {
-  color: #cb4b16;
-} // name.constant //
+  color: #c08400;
+}
+
 .highlight .nd {
-  color: #268bd2;
-} // name.decorator //
+  color: #c08400;
+}
+
 .highlight .ni {
-  color: #cb4b16;
-} // name.entity //
+  color: #c08400;
+}
+
 .highlight .ne {
-  color: #cb4b16;
-} // name.exception //
+  color: #c08400;
+}
+
 .highlight .nf {
-  color: #268bd2;
-} // name.function //
+  color: #383942;
+}
+
 .highlight .nl {
-  color: #555;
-} // name.label //
+  color: #c08400;
+}
+
 .highlight .nn {
-  color: #93a1a1;
-} // name.namespace //
+  color: #383942;
+}
+
 .highlight .nx {
-  color: #555;
-} // name.other //
+  color: #383942;
+}
+
 .highlight .py {
-  color: #93a1a1;
-} // name.property //
+  color: #c08400;
+}
+
 .highlight .nt {
-  color: #268bd2;
-} // name.tag //
+  color: #e35549;
+}
+
 .highlight .nv {
-  color: #268bd2;
-} // name.variable //
+  color: #c08400;
+}
+
 .highlight .ow {
-  color: #859900;
-} // operator.word //
+  font-weight: 700;
+}
+
 .highlight .w {
-  color: #93a1a1;
-} // text.whitespace //
+  color: #f8f8f2;
+}
+
 .highlight .mf {
-  color: #2aa198;
-} // literal.number.float //
+  color: #986800;
+}
+
 .highlight .mh {
-  color: #2aa198;
-} // literal.number.hex //
+  color: #986800;
+}
+
 .highlight .mi {
-  color: #2aa198;
-} // literal.number.integer //
+  color: #986800;
+}
+
 .highlight .mo {
-  color: #2aa198;
-} // literal.number.oct //
+  color: #986800;
+}
+
 .highlight .sb {
-  color: #586e75;
-} // literal.string.backtick //
+  color: #50a04f;
+}
+
 .highlight .sc {
-  color: #2aa198;
-} // literal.string.char //
+  color: #50a04f;
+}
+
 .highlight .sd {
-  color: #93a1a1;
-} // literal.string.doc //
+  color: #50a04f;
+}
+
 .highlight .s2 {
-  color: #2aa198;
-} // literal.string.double //
+  color: #50a04f;
+}
+
 .highlight .se {
-  color: #cb4b16;
-} // literal.string.escape //
+  color: #50a04f;
+}
+
 .highlight .sh {
-  color: #93a1a1;
-} // literal.string.heredoc //
+  color: #50a04f;
+}
+
 .highlight .si {
-  color: #2aa198;
-} // literal.string.interpol //
+  color: #50a04f;
+}
+
 .highlight .sx {
-  color: #2aa198;
-} // literal.string.other //
+  color: #50a04f;
+}
+
 .highlight .sr {
-  color: #dc322f;
-} // literal.string.regex //
+  color: #0083bb;
+}
+
 .highlight .s1 {
-  color: #2aa198;
-} // literal.string.single //
+  color: #50a04f;
+}
+
 .highlight .ss {
-  color: #2aa198;
-} // literal.string.symbol //
+  color: #0083bb;
+}
+
 .highlight .bp {
-  color: #268bd2;
-} // name.builtin.pseudo //
+  color: #c08400;
+}
+
 .highlight .vc {
-  color: #268bd2;
-} // name.variable.class //
+  color: #c08400;
+}
+
 .highlight .vg {
-  color: #268bd2;
-} // name.variable.global //
+  color: #c08400;
+}
+
 .highlight .vi {
-  color: #268bd2;
-} // name.variable.instance //
+  color: #e35549;
+}
+
 .highlight .il {
-  color: #2aa198;
-} // literal.number.integer.long //
+  color: #986800;
+}
+
+.highlight .gu {
+  color: #75715e;
+}
+
+.highlight .gd {
+  color: #e05151;
+}
+
+.highlight .gi {
+  color: #43d089;
+}
+
+.highlight ::selection {
+  background-color: #fff;
+}
+
+.highlight .language-json .w + .s2 {
+  color: #e35549;
+}
+
+.highlight .language-json .kc {
+  color: #0083bb;
+}
