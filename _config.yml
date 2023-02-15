@@ -17,6 +17,7 @@ title: Just the Docs
 description: A Jekyll theme for documentation
 baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
 url: "https://just-the-docs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+repository: just-the-docs/just-the-docs # for github-metadata
 
 permalink: pretty
 
@@ -42,6 +43,8 @@ exclude:
    - package-lock.json
    - Rakefile
    - README.md
+ # theme test code
+   - fixtures/
 
 # Set a path/url to a logo that will be displayed instead of the title
 #logo: "/assets/images/just-the-docs.png"
@@ -76,7 +79,7 @@ search:
 # For copy button on code
 enable_copy_code_button: true
 
-# To disable support for mermaid diagrams (https://mermaid-js.github.io/mermaid/),
+# To disable support for mermaid diagrams (https://mermaid.js.org),
 # comment out the `mermaid` and `version` keys below
 # By default, consuming the theme as a gem leaves mermaid disabled; it is opt-in
 mermaid:
@@ -85,6 +88,8 @@ mermaid:
   version: "9.1.6"
   # Put any additional configuration, such as setting the theme, in _includes/mermaid_config.js
   # See also docs/ui-components/code
+  # To load mermaid from a local file use the `path` key to specify the location of the library instead; e.g.
+  # path: "/assets/js/mermaid.min.js"
 
 # Enable or disable heading anchors
 heading_anchors: true
@@ -151,11 +156,13 @@ callouts:
 
 # Google Analytics Tracking (optional)
 # Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
-ga_tracking: UA-2709176-10,G-5FG1HLH3XQ
-ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+# Note: the main Just the Docs site does *not* use Google Analytics.
+# ga_tracking: UA-2709176-10,G-5FG1HLH3XQ
+# ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-github-metadata
 
 kramdown:
   syntax_highlighter_opts:

@@ -145,6 +145,10 @@ nav_order: 2
 The Buttons page appears as a child of UI Components and appears second in the UI Components section.
 
 ### Ordering child pages
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 You can optionally add the following to the YAML front matter to reverse the default sort order of child pages:
 
@@ -235,7 +239,7 @@ Currently, the navigation structure is limited to 3 levels: grandchild pages can
 
 ## Auxiliary Links
 
-To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
+To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
 
 #### Example
 {: .no_toc }
@@ -250,8 +254,12 @@ aux_links:
 ---
 
 ## External Navigation Links
+{: .d-inline-block }
 
-To add external links to the navigation, add them to the `nav_external_links` [configuration]({{ site.baseurl }}{% link docs/configuration.md %}) option in your site's `_config.yml` file.
+New (v0.4.0)
+{: .label .label-green }
+
+To add external links to the navigation, add them to the `nav_external_links` [configuration]({% link docs/configuration.md %}) option in your site's `_config.yml` file.
 External links will appear in the navigation after the links to ordinary pages, but before any collections.
 
 #### Example
