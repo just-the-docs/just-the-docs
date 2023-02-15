@@ -16,10 +16,6 @@ nav_order: 6
 ---
 
 ## Color schemes
-{: .d-inline-block }
-
-New
-{: .label .label-green }
 
 Just the Docs supports two color schemes: light (default), and dark.
 
@@ -111,9 +107,29 @@ This allows you to switch the scheme via the following javascript.
 jtd.setTheme("foo")
 ```
 
+## Override and define new variables
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
+
+To define new SCSS variables, functions, or override existing theme variables, place SCSS code in `_sass/custom/setup.scss`. This should *not* be used for defining custom styles (see the next section).
+
+This is most commonly-used to define [custom callout colors]({% link docs/configuration.md %}#callouts). For example,
+
+```scss
+// _sass/custom/setup.scss
+$pink-000: #f77ef1;
+$pink-100: #f967f1;
+$pink-200: #e94ee1;
+$pink-300: #dd2cd4;
+```
+
+In particular: this file is imported *after* the theme's variables and functions are defined, but *before* any CSS classes are emitted.
+
 ## Override and completely custom styles
 
-For styles that aren't defined as variables, you may want to modify specific CSS classes.
+For styles that aren't defined as SCSS variables, you may want to modify specific CSS classes.
 Additionally, you may want to add completely custom CSS specific to your content.
 To do this, put your styles in the file `_sass/custom/custom.scss`.
 This will allow for all overrides to be kept in a single file, and for any upstream changes to still be applied.
@@ -146,10 +162,14 @@ To do this, create an `_includes` directory and make a copy of the specific file
 Just the Docs provides the following custom includes files:
 
 ### Custom TOC Heading
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 `_includes/toc_heading_custom.html`
 
-If the page has any child pages, and `has_toc` is not set to `false`, this content appears as a heading above the [auto-generating list of child pages]({{ site.baseurl }}{% link docs/navigation-structure.md %}#auto-generating-table-of-contents) after the page's content.
+If the page has any child pages, and `has_toc` is not set to `false`, this content appears as a heading above the [auto-generating list of child pages]({% link docs/navigation-structure.md %}#auto-generating-table-of-contents) after the page's content.
 
 #### Example
 {: .no_toc }
@@ -165,7 +185,7 @@ The (optional) `text-delta` class makes the heading appear as **Contents**{:.tex
 
 `_includes/footer_custom.html`
 
-This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content]({{ site.baseurl }}{% link docs/configuration.md %}#footer-content).
+This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content]({% link docs/configuration.md %}#footer-content).
 
 ### Custom Head
 
@@ -182,12 +202,20 @@ The `<head>` tag automatically includes a link to an existing favicon if you set
 Content added to this file appears at the top of every page's main content between the site search and auxiliary links if they are enabled. If `search_enabled` were set to false and `aux_links` were removed, the content of `header_custom.html` would occupy the space at the top of every page.
 
 ### Custom Nav Footer
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 `_includes/nav_footer_custom.html`
 
 Any content added to this file will appear at the bottom left of the page below the site's navigation. By default an attribution to Just the Docs is displayed which reads, `This site uses Just the Docs, a documentation theme for Jekyll.`.
 
 ### Custom Search Placeholder
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 `_includes/search_placeholder_custom.html`
 
