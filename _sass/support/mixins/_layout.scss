@@ -12,7 +12,7 @@
   // If the key exists in the map
   @if $value {
     // Prints a media query based on the value
-    @media (min-width: rem($value)) {
+    @media (min-width: $value) {
       @content;
     }
   } @else {
