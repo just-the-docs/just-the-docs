@@ -9,9 +9,7 @@
     "stylelint-config-standard-scss",
     "stylelint-config-prettier-scss"
   ],
-  "plugins": ["stylelint-prettier"],
   "rules": {
-    "prettier/prettier": true,
     "alpha-value-notation": null,
     "color-function-notation": null,
     "no-descending-specificity": null,
