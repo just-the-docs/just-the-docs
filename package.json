@@ -15,7 +15,7 @@
   },
   "scripts": {
     "test": "stylelint '**/*.scss'",
-    "snapshot": "bundle exec jekyll build && npx percy snapshot _site/ --base-url /just-the-docs",
+    "snapshot": "bundle exec jekyll build --baseurl '' && npx percy snapshot _site/",
     "format": "prettier --write '**/*.{scss,js,json}'",
     "stylelint-check": "stylelint-config-prettier-check"
   }

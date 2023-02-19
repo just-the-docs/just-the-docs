@@ -1,0 +1,42 @@
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+name: Percy
+
+jobs:
+  build-and-upload:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        jekyll-version: [4.3]
+        ruby-version: [3.1]
+        node-version: [18.x]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup Ruby ${{ matrix.ruby-version }}
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby-version }}
+        bundler-cache: false
+    - name: Bundle Install
+      run: bundle install
+    - name: Install Jekyll ${{ matrix.jekyll-version }}
+      run: gem install jekyll -v ${{ matrix.jekyll-version }}
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - name: Init Search
+      run: bundle exec rake search:init
+    - name: Run Snapshot
+      run: npm run snapshot
+      env:
+        PERCY_TOKEN: "${{secrets.PERCY_TOKEN}}"
