@@ -18,9 +18,22 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 {: .warning }
 This website includes docs for some new features that are not available in `v0.4.0`!
 
-Changes to `main` that are *not* in the latest release:
+Code changes to `main` that are *not* in the latest release:
 
-- n/a
+- Fixed: allow later versions of `bundler` by [@mattxwang] in [#1165]
+- Fixed: AsciiDoc code block styling by [@flyx] in [#1168]
+- Removed: unused `OneDarkJekyll` files by [@mattxwang] in [#1167]
+
+Docs changes in `main` that are *not* in the latest release:
+
+- Fixed: re-add `jekyll-github-metadata` to docs site by [@mattxwang] in [#1108]
+
+[#1108]: https://github.com/just-the-docs/just-the-docs/pull/1108
+[#1165]: https://github.com/just-the-docs/just-the-docs/pull/1165
+[#1167]: https://github.com/just-the-docs/just-the-docs/pull/1167
+[#1168]: https://github.com/just-the-docs/just-the-docs/pull/1168
+
+[@flyx]: https://github.com/flyx
 
 ## Release v0.4.0
 
