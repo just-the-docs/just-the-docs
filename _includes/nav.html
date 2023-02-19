@@ -127,7 +127,16 @@
       | where_exp: "item", "item.parent != nil"
       | where_exp: "item", "item.grand_parent == nil" -%}
 {%- assign third_level_pages = pages_list
-      | where_exp: "item", "item.grand_parent != nil" -%}
+      | where_exp: "item", "item.grand_parent != nil"
+      | where_exp: "item", "item.ggrand_parent == nil" -%}
+{%- assign fourth_level_pages = pages_list
+      | where_exp: "item", "item.ggrand_parent != nil"
+      | where_exp: "item", "item.gggrand_parent == nil" -%}
+{%- assign fifth_level_pages = pages_list
+      | where_exp: "item", "item.gggrand_parent != nil"
+      | where_exp: "item", "item.ggggrand_parent == nil" -%}
+{%- assign sixth_level_pages = pages_list
+      | where_exp: "item", "item.ggggrand_parent != nil" -%}
 
 {%- comment -%}
   The order of sibling pages in `pages_list` determines the order of display of
@@ -161,7 +170,14 @@
 <ul class="nav-list">
 {%- for node in first_level_pages -%}
     {%- unless node.nav_exclude -%}
-      <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil %} active{% endif %}">
+      <li class="nav-list-item{%
+         if page.collection == include.key and page.url == node.url or
+          page.ggggrand_parent == node.title or
+          page.gggrand_parent == node.title or
+          page.ggrand_parent == node.title or
+          page.grand_parent == node.title or
+          page.parent == node.title 
+         %} active{% endif %}">
         {%- if node.has_children -%}
           <a href="#" class="nav-list-expander" aria-label="toggle links in {{ node.title }} category">
             <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
@@ -177,7 +193,14 @@
           <ul class="nav-list">
           {%- for child in children_list -%}
             {%- unless child.nav_exclude -%}
-            <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
+            <li class="nav-list-item {%
+               if page.url == child.url or
+                page.ggggrand_parent == child.title or
+                page.gggrand_parent == child.title or
+                page.ggrand_parent == child.title or
+                page.grand_parent == child.title or
+                page.parent == child.title 
+              %} active{% endif %}">
               {%- if child.has_children -%}
                 <a href="#" class="nav-list-expander" aria-label="toggle links in {{ child.title }} category">
                   <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
@@ -194,8 +217,93 @@
                 <ul class="nav-list">
                 {%- for grand_child in grand_children_list -%}
                   {%- unless grand_child.nav_exclude -%}
-                  <li class="nav-list-item {% if page.url == grand_child.url %} active{% endif %}">
+                  <li class="nav-list-item {% 
+                    if page.url == grand_child.url 
+                      page.ggggrand_parent == grand_child.title or
+                      page.gggrand_parent == grand_child.title or
+                      page.ggrand_parent == grand_child.title or
+                      page.grand_parent == grand_child.title or
+                      page.parent == grand_child.title 
+                    %} active{% endif %}">
+                    {%- if grand_child.has_children -%}
+                      <a href="#" class="nav-list-expander" aria-label="toggle links in {{ grand_child.title }} category">
+                        <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+                      </a>
+                    {%- endif -%}
                     <a href="{{ grand_child.url | relative_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}</a>
+                    {%- if grand_child.has_children -%}
+                      {%- assign ggrand_children_list = fourth_level_pages
+                        | where: "parent", grand_child.title
+                        | where: "ggrand_parent", node.title -%}
+                      {%- if grand_child.child_nav_order == 'desc' or grand_child.child_nav_order == 'reversed' -%}
+                        {%- assign ggrand_children_list = grand_children_list | reverse -%}
+                      {%- endif -%}
+                      <ul class="nav-list">
+                        {%- for ggrand_child in ggrand_children_list -%}
+                          {%- unless ggrand_child.nav_exclude -%}
+                          <li class="nav-list-item {%
+                             if page.url == ggrand_child.url 
+                              page.ggggrand_parent == ggrand_child.title or
+                              page.gggrand_parent == ggrand_child.title or
+                              page.ggrand_parent == ggrand_child.title or
+                              page.grand_parent == ggrand_child.title or
+                              page.parent == ggrand_child.title
+                             %} active{% endif %}">
+                            {%- if ggrand_child.has_children -%}
+                              <a href="#" class="nav-list-expander" aria-label="toggle links in {{ ggrand_child.title }} category">
+                                <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+                              </a>
+                            {%- endif -%}
+                            <a href="{{ ggrand_child.url | relative_url }}" class="nav-list-link{% if page.url == ggrand_child.url %} active{% endif %}">{{ ggrand_child.title }}</a>
+                            {%- if ggrand_child.has_children -%}
+                              {%- assign gggrand_children_list = fifth_level_pages
+                                | where: "parent", ggrand_child.title
+                                | where: "gggrand_parent", node.title -%}
+                              {%- if ggrand_child.child_nav_order == 'desc' or ggrand_child.child_nav_order == 'reversed' -%}
+                                {%- assign gggrand_children_list = ggrand_children_list | reverse -%}
+                              {%- endif -%}
+                              <ul class="nav-list">
+                                {%- for gggrand_child in gggrand_children_list -%}
+                                 {%- unless gggrand_child.nav_exclude -%}
+                                 <li class="nav-list-item {% 
+                                  if page.url == gggrand_child.url 
+                                    page.ggggrand_parent == gggrand_child.title or
+                                    page.gggrand_parent == gggrand_child.title or
+                                    page.ggrand_parent == gggrand_child.title or
+                                    page.grand_parent == gggrand_child.title or
+                                    page.parent == gggrand_child.title
+                                  %} active{% endif %}">
+                                  {%- if gggrand_child.has_children -%}
+                                    <a href="#" class="nav-list-expander" aria-label="toggle links in {{ gggrand_child.title }} category">
+                                      <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+                                    </a>
+                                  {%- endif -%}
+                                  <a href="{{ gggrand_child.url | relative_url }}" class="nav-list-link{% if page.url == gggrand_child.url %} active{% endif %}">{{ gggrand_child.title }}</a>
+                                  {%- if gggrand_child.has_children -%}
+                                    {%- assign ggggrand_children_list = sixth_level_pages
+                                      | where: "parent", gggrand_child.title
+                                      | where: "ggggrand_parent", node.title -%}
+                                    {%- if gggrand_child.child_nav_order == 'desc' or gggrand_child.child_nav_order == 'reversed' -%}
+                                      {%- assign ggggrand_children_list = gggrand_children_list | reverse -%}
+                                    {%- endif -%}
+                                    <ul class="nav-list">
+                                      {%- for ggggrand_child in ggggrand_children_list -%}
+                                      <li class="nav-list-item {% if page.url == ggggrand_child.url %} active{% endif %}">
+                                        <a href="{{ ggggrand_child.url | relative_url }}" class="nav-list-link{% if page.url == ggggrand_child.url %} active{% endif %}">{{ ggggrand_child.title }}</a>
+                                      </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                  {%- endif -%}
+                                 </li>
+                                 {%- endunless -%}
+                                {%- endfor -%}
+                              </ul>
+                            {%- endif -%}
+                          </li>
+                          {%- endunless -%}
+                        {%- endfor -%}
+                      </ul>
+                    {%- endif -%}
                   </li>
                   {%- endunless -%}
                 {%- endfor -%}
@@ -226,15 +334,67 @@
 
 {%- if page.collection == include.key -%}
   {%- for node in first_level_pages -%}
-      {%- if page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil -%}
+      {%- if page.ggggrand_parent == node.title or
+          page.gggrand_parent == node.title or
+          page.ggrand_parent == node.title or
+          page.grand_parent == node.title or
+          page.parent == node.title
+      -%}
         {%- assign first_level_url = node.url | relative_url -%}
       {%- endif -%}
       {%- if node.has_children -%}
         {%- assign children_list = second_level_pages | where: "parent", node.title -%}
         {%- for child in children_list -%}
           {%- if child.has_children -%}
-            {%- if page.url == child.url or page.parent == child.title and page.grand_parent == child.parent -%}
+            {%- if page.url == child.url or
+                page.gggrand_parent == child.title or
+                page.ggrand_parent == child.title or
+                page.grand_parent == child.title or
+                page.parent == child.title
+            -%}
               {%- assign second_level_url = child.url | relative_url -%}
+            {%- endif -%}
+            {%- if child.has_children -%}
+              {%- assign gchildren_list = third_level_pages | where: "parent", child.title -%}
+              {%- for gchild in gchildren_list -%}
+                {%- if 
+                    page.url == gchild.url or 
+                    page.ggrand_parent == gchild.title or
+                    page.grand_parent == gchild.title or
+                    page.parent == gchild.title
+                -%}
+                  {%- assign third_level_url = gchild.url | relative_url -%}
+                {%- endif -%}
+                {%- if gchild.has_children -%}
+                  {%- assign ggchildren_list = fourth_level_pages | where: "parent", gchild.title -%}
+                  {%- for ggchild in ggchildren_list -%}
+                    {%- if page.url == ggchild.url or
+                      page.grand_parent == ggchild.title or
+                      page.parent == ggchild.title
+                    -%}
+                      {%- assign fourth_level_url = ggchild.url | relative_url -%}
+                    {%- endif -%}
+                    {%- if ggchild.has_children -%}
+                     {%- assign gggchildren_list = fifth_level_pages | where: "parent", ggchild.title -%}
+                     {%- for gggchild in gggchildren_list -%}
+                      {%- if page.url == gggchild.url or
+                          page.parent == gggchild.title
+                      -%}
+                        {%- assign fifth_level_url = gggchild.url | relative_url -%}
+                      {%- endif -%}
+                      {%- if gggchild.has_children -%}
+                        {%- assign ggggchildren_list = suxth_level_pages | where: "parent", gggchild.title -%}
+                        {%- for ggggchild in ggggchildren_list -%}
+                          {%- if page.url == ggggchild.url or page.parent == ggggchild.title and page.ggggrand_parent == ggggchild.parent -%}
+                            {%- assign sixth_level_url = ggggchild.url | relative_url -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+                      {%- endif -%}
+                     {%- endfor -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endif -%}
+              {%- endfor -%}
             {%- endif -%}
           {%- endif -%}
         {%- endfor -%}
