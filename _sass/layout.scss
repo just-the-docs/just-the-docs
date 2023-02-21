@@ -29,9 +29,10 @@
   }
 
   @include mq(lg) {
-    margin-left: Max(#{$nav-width}, calc(
-      (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
-    ));
+    margin-left: Max(
+      #{$nav-width},
+      calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
+    );
   }
 }
 
