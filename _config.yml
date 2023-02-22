@@ -16,7 +16,7 @@
 title: Just the Docs (v0.3.3)
 description: A Jekyll theme for documentation
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://v0-3.just-the-docs.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://v0-3-3-docs.just-the-docs.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"
