@@ -16,18 +16,55 @@ The project underwent a major maintenance shift in March 2022.
 This website is built from the `HEAD` of the `main` branch of the theme repository.
 
 {: .warning }
-This website includes docs for some new features that are not available in `v0.4.0`!
+This website includes docs for some new features that are not available in `v0.4.1`!
 
 Code changes to `main` that are *not* in the latest release:
+
+- N/A
+
+Docs changes in `main` that are *not* in the latest release:
+
+- N/A
+
+## Release v0.4.1
+
+Hello! We hope you've been enjoying the new `v0.4.0`; we appreciate all the feedback we've gotten already! As promised, future releases will be small with simple steps to upgrade. This is one of them! `v0.4.1` is a [semver patch](https://semver.org/): it only includes bugfixes, and is fully backwards-compatible.
+
+As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
+
+### Using Release `v0.4.1`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.4.1` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.4.1
+```
+
+To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.4.1"
+```
+
+To use and pin a previous version of the theme, replace the `0.4.1` with the desired release tag.
+
+### Bugfixes
 
 - Fixed: allow later versions of `bundler` by [@mattxwang] in [#1165]
 - Fixed: AsciiDoc code block styling by [@flyx] in [#1168]
 - Fixed: main content negative margin for viewports in `[$md, $nav-width + $content-width]` by [@Dima-369] in [#1177]
 - Removed: unused `OneDarkJekyll` files by [@mattxwang] in [#1167]
 
-Docs changes in `main` that are *not* in the latest release:
+### Documentation
 
 - Fixed: re-add `jekyll-github-metadata` to docs site by [@mattxwang] in [#1108]
+
+### New Contributors
+
+- [@flyx] made their first contribution in [#1168]
+- [@Dima-369] made their first contribution in [#1177]
 
 [#1108]: https://github.com/just-the-docs/just-the-docs/pull/1108
 [#1165]: https://github.com/just-the-docs/just-the-docs/pull/1165
@@ -37,6 +74,8 @@ Docs changes in `main` that are *not* in the latest release:
 
 [@flyx]: https://github.com/flyx
 [@Dima-369]: https://github.com/Dima-369
+
+**Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.0...v0.4.1](https://github.com/just-the-docs/just-the-docs/compare/v0.4.0...v0.4.1)
 
 ## Release v0.4.0
 
