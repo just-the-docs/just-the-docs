@@ -22,6 +22,7 @@ Code changes to `main` that are *not* in the latest release:
 
 - Fixed: allow later versions of `bundler` by [@mattxwang] in [#1165]
 - Fixed: AsciiDoc code block styling by [@flyx] in [#1168]
+- Fixed: main content negative margin for viewports in `[$md, $nav-width + $content-width]` by [@Dima-369] in [#1177]
 - Removed: unused `OneDarkJekyll` files by [@mattxwang] in [#1167]
 
 Docs changes in `main` that are *not* in the latest release:
@@ -32,8 +33,10 @@ Docs changes in `main` that are *not* in the latest release:
 [#1165]: https://github.com/just-the-docs/just-the-docs/pull/1165
 [#1167]: https://github.com/just-the-docs/just-the-docs/pull/1167
 [#1168]: https://github.com/just-the-docs/just-the-docs/pull/1168
+[#1177]: https://github.com/just-the-docs/just-the-docs/pull/1177
 
 [@flyx]: https://github.com/flyx
+[@Dima-369]: https://github.com/Dima-369
 
 ## Release v0.4.0
 
