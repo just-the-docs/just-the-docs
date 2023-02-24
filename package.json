@@ -10,7 +10,7 @@
     "stylelint": "^14.16.1",
     "stylelint-config-prettier-scss": "0.0.1",
     "stylelint-config-standard-scss": "^6.1.0",
-    "stylelint-prettier": "^2.0.0"
+    "stylelint-prettier": "^3.0.0"
   },
   "scripts": {
     "test": "stylelint '**/*.scss'",
