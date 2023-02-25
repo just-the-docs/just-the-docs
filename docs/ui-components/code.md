@@ -158,6 +158,28 @@ mermaid:
   path: "/assets/js/mermaid.min.js"
 ```
 
+### Using mermaid with AsciiDoc
+
+This section concerns people using AsciiDoc (e.g. via [jekyll-asciidoc](https://github.com/asciidoctor/jekyll-asciidoc)).
+
+If you want to use Just the Docs' mermaid support, you need to tell AsciiDoc how to generate output that is understood by mermaid. The simplest way to do this is to use a passthrough block:
+
+{% highlight asciidoc %}
+++++
+<pre class="language-mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</pre>
+++++
+{% endhighlight %}
+
+You can instead follow [this gist](https://gist.github.com/flyx/9fff080cf4edc95d495bc661a002232c) for a setup that removes the raw HTML noise.
+
+The [asciidoctor-diagram](https://docs.asciidoctor.org/diagram-extension/latest/) extension which also supports mermaid is not recommended for use with Just the Docs, since it requires separate configuration e.g. for theming, and is known to not be trivial to set up.
+
 ## Copy button
 {: .d-inline-block }
 
