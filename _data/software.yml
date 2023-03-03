@@ -137,6 +137,16 @@
   interface: gui
   type: app  
 
+- name: RevitCityJSONImporter
+  webpage: https://github.com/tudelft3d/cityjsonToRevit
+  description: A plugin for Revit to import and reproject CityJSON's geometries and attributes.
+  foss: true
+  category: 
+    - editor
+    - converter
+  interface: gui
+  type: app 
+  
 - name: RhinoCity
   webpage: https://rhinoterrain.com/en/rhinocity.html
   description: A plugin for Rhino to produce, edit, analyse, and texture 3D data. Reads and writes CityJSON.
