@@ -2,7 +2,7 @@
 layout: post
 title: Hello Revit
 categories: news
-date: 2022-22-02 14:00
+date: 2023-03-03 11:30
 ---
 
 We're glad to announce the release of [CityJSON importer](https://apps.autodesk.com/RVT/en/Detail/Index?id=7787623024858844510&appLang=en&os=Win64) a new plugin now available for [Autodesk® Revit®](https://www.autodesk.eu/products/revit/overview).
