@@ -26,7 +26,16 @@
     {% if site.mermaid.path %}
       <script src="{{ site.mermaid.path | relative_url }}"></script>
     {% else %}
-      <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js"></script>
+      {% comment %}
+        At this point, the user *must* set a version for mermaid.
+
+        This next if-else code exists because Mermaid has non-trivially changed their deployment API in v10.
+        We use a rough heuristic to get the major version. If the mermaid version is >= 10, we import it after the rest of the page loads.
+      {% endcomment %}
+      {% assign mermaid_major_version = site.mermaid.version | split: "." | first | plus: 0 %}
+      {% if mermaid_major_version < 10 %}
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js"></script>
+      {% endif %}
     {% endif %}
   {% endif %}
 

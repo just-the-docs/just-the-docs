@@ -1,5 +1,42 @@
+{% comment %}
+The complexity of this file comes from a breaking change in Mermaid v10; mermaid.init has been deprecated (and supposedly, didn't work earlier?).
+
+So, we use a rough compile-time heuristic to see if the user's Mermaid version is >= 10; if not, we fall back to the "old" init syntax.
+
+If a user is using a custom mermaid file, we default to the <= v10 behaviour. Users who want to use a custom version of mermaid should instead override this file.
+{% endcomment %}
+
+{% if site.mermaid.path %}
+
 <script>
   var config = {% include mermaid_config.js %};
   mermaid.initialize(config);
   window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
 </script>
+
+{% else %}
+
+{% assign mermaid_major_version = site.mermaid.version | split: "." | first | plus: 0 %}
+
+{% if mermaid_major_version < 10 %}
+
+<script>
+  var config = {% include mermaid_config.js %};
+  mermaid.initialize(config);
+  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>
+
+{% else %}
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.esm.min.mjs';
+  var config = {% include mermaid_config.js %};
+  mermaid.initialize(config);
+  mermaid.run({
+    querySelector: '.language-mermaid',
+  });
+</script>
+
+{% endif %}
+
+{% endif %}
