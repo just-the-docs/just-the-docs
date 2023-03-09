@@ -21,13 +21,19 @@ This website includes docs for some new features that are not available in `v0.4
 Code changes to `main` that are *not* in the latest release:
 
 - Fixed: light scheme code highlighting contrast issues; updated to use Atom's One Light colors, consolidate theme variables by [@mattxwang] in [#1166]
+- Fixed: duplicate import of `color_schemes` by [@mattxwang] in [#1173]
+- Fixed: import order for `setup.scss` by [@mattxwang] in [#1184]
+- Removed: unused dark syntax themes by [@mattxwang] in [#1192]
 
 Docs changes in `main` that are *not* in the latest release:
 
 - Added: docs for using mermaid with AsciiDoc by [@flyx] in [#1182]
 
 [#1166]: https://github.com/just-the-docs/just-the-docs/pull/1166
+[#1173]: https://github.com/just-the-docs/just-the-docs/pull/1173
 [#1182]: https://github.com/just-the-docs/just-the-docs/pull/1182
+[#1184]: https://github.com/just-the-docs/just-the-docs/pull/1184
+[#1192]: https://github.com/just-the-docs/just-the-docs/pull/1192
 
 ## Release v0.4.1
 
