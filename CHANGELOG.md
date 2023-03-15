@@ -20,11 +20,14 @@ This website includes docs for some new features that are not available in `v0.4
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Removed: unused images (`just-the-docs.png`, `search.svg`) by [@mattxwang] in [#1107]
 
 Docs changes in `main` that are *not* in the latest release:
 
-- N/A
+- Removed: `CODE_OF_CONDUCT`, `docker-compose`, and `Dockerfile` files from site by [@mattxwang] in [#1187]
+
+[#1107]: https://github.com/just-the-docs/just-the-docs/pull/1107
+[#1187]: https://github.com/just-the-docs/just-the-docs/pull/1187
 
 ## Release v0.4.2
 
