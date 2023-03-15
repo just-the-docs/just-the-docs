@@ -16,18 +16,54 @@ The project underwent a major maintenance shift in March 2022.
 This website is built from the `HEAD` of the `main` branch of the theme repository.
 
 {: .warning }
-This website includes docs for some new features that are not available in `v0.4.1`!
+This website includes docs for some new features that are not available in `v0.4.2`!
 
 Code changes to `main` that are *not* in the latest release:
+
+- N/A
+
+Docs changes in `main` that are *not* in the latest release:
+
+- N/A
+
+## Release v0.4.2
+
+Hello! We're back again with another small release. Like `v0.4.1`, this release is a [semver patch](https://semver.org/): it only includes bugfixes, and is fully backwards-compatible.
+
+The big highlight of this theme is fixing our light scheme code highlighting contrast issues; this was one of our most-requested features! This change is fully backwards-compatible; users can [opt-in to our old highlighting theme](https://just-the-docs.github.io/just-the-docs/docs/customization/#deprecated-legacy_light) by using `legacy_light` instead of `light`.
+
+As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
+
+### Using Release `v0.4.2`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.4.2` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.4.2
+```
+
+To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.4.2"
+```
+
+To use and pin a previous version of the theme, replace the `0.4.2` with the desired release tag.
+
+### Bugfixes
 
 - Fixed: light scheme code highlighting contrast issues; updated to use Atom's One Light colors, consolidate theme variables by [@mattxwang] in [#1166]
 - Fixed: duplicate import of `color_schemes` by [@mattxwang] in [#1173]
 - Fixed: import order for `setup.scss` by [@mattxwang] in [#1184]
 - Removed: unused dark syntax themes by [@mattxwang] in [#1192]
 
-Docs changes in `main` that are *not* in the latest release:
+### Documentation
 
 - Added: docs for using mermaid with AsciiDoc by [@flyx] in [#1182]
+
+**Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.1...v0.4.2](https://github.com/just-the-docs/just-the-docs/compare/v0.4.1...v0.4.2)
 
 [#1166]: https://github.com/just-the-docs/just-the-docs/pull/1166
 [#1173]: https://github.com/just-the-docs/just-the-docs/pull/1173
