@@ -7,7 +7,7 @@ nav_order: 2
 # Audio Levels
 {: .no_toc }
 
-FIRST's guidlines to audio levels at events
+FIRST's guidelines to audio levels at events
 {: .fs-6 .fw-300 }
 
 ---
