@@ -6,10 +6,10 @@ description: "FiM AV Documentation"
 permalink: /
 ---
 
-# FIRST in Michigan AV Voluenteer Documentation
+# FIRST in Michigan AV Volunteer Documentation
 {: .fs-9 }
 
-Documentation to aid the voluenteering experience as a FiM AV Voluenteer
+Documentation to aid the volunteering experience as a FiM AV Voluenteer
 {: .fs-6 .fw-300 }
 
 ---
