@@ -254,7 +254,7 @@ For changes since v0.3.3, the log usually references the merged PR that made the
 
 #### Configuration
 
-- Mermaid support: first-class support for [Mermaid](https://mermaid.js.org/) - a JavaScript-based diagram and charting tool supported by GitHub - has been added to the theme. **This feature is opt-in.** See the new doc subsections in [Configuration]({% link docs/configuration.md %}#mermaid-diagrams) and [Code]({% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more.
+- Mermaid support: first-class support for [Mermaid](https://mermaid.js.org/) - a JavaScript-based diagram and charting tool supported by GitHub - has been added to the theme. **This feature is opt-in.** See the new doc subsections in and [Code]({% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more.
 - Multiple Google Analytics tags are now supported. PR: [#1029]
 
 #### Customization
