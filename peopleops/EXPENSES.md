@@ -31,8 +31,6 @@ Covers equipment expenses, what else the company will cover, and how to claim ex
 
 ### Examples of Things The Company Will Pay For
 
-  - Grammarly Pro
-  - Adobe CS (if you work in a design capacity)
   - Professional Books
   - Other professional development costs (approval in advance is required)
   - Small equipment or other costs for the office
