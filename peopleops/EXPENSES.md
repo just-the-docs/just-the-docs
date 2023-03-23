@@ -37,7 +37,7 @@ Covers equipment expenses, what else the company will cover, and how to claim ex
   - Other professional development costs (approval in advance is required)
   - Small equipment or other costs for the office
   - Any meals you share with your team members or clients
-  - Some computer equipment
+  - Computer equipment which you need for work
   - Hotels/flights when travelling for business
 
 ### Claiming Expenses
