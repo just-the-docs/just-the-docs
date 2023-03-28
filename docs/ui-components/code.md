@@ -156,7 +156,10 @@ In order to use a local version of the mermaid library instead of one provided b
 mermaid:
   # To load mermaid from a local file use the `path` key to specify the location of the library instead; e.g.
   path: "/assets/js/mermaid.min.js"
+  # note: you must still specify a version! Behaviour is different for versions < 10 and >= 10
 ```
+
+This file is imported directly as a `<script>` tag, rather than an ESM module. This means for mermaid versions `>=10`, you should use the `mermaid.min.js` file, *not* the `mermaid.esm.min.mjs` file.
 
 ### Using mermaid with AsciiDoc
 
