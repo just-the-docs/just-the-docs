@@ -3,33 +3,28 @@ The complexity of this file comes from a breaking change in Mermaid v10; mermaid
 
 So, we use a rough compile-time heuristic to see if the user's Mermaid version is >= 10; if not, we fall back to the "old" init syntax.
 
-If a user is using a custom mermaid file, we default to the <= v10 behaviour. Users who want to use a custom version of mermaid should instead override this file.
+If a user is using a custom mermaid file and doesn't specify a version, we default to the < v10 behaviour. Users who use version v10 or above should specify this in the version key.
 {% endcomment %}
 
+{% if site.mermaid.version %}
+  {% assign mermaid_major_version = site.mermaid.version | split: "." | first | plus: 0 %}
+{% else %}
+  {% assign mermaid_major_version = 9 %}
+{% endif %}
+
 {% if site.mermaid.path %}
+  <script src="{{ site.mermaid.path | relative_url }}"></script>
+{% elsif mermaid_major_version < 10 %}
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js"></script>
+{% endif %}
 
-<script>
-  var config = {% include mermaid_config.js %};
-  mermaid.initialize(config);
-  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-</script>
-
-{% else %}
-
-{% assign mermaid_major_version = site.mermaid.version | split: "." | first | plus: 0 %}
-
-{% if mermaid_major_version < 10 %}
-
-<script>
-  var config = {% include mermaid_config.js %};
-  mermaid.initialize(config);
-  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-</script>
-
-{% else %}
+{% unless mermaid_major_version < 10 %}
 
 <script type="module">
+  {% unless site.mermaid.path %}
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.esm.min.mjs';
+  {% endunless %}
+
   var config = {% include mermaid_config.js %};
   mermaid.initialize(config);
   mermaid.run({
@@ -37,6 +32,12 @@ If a user is using a custom mermaid file, we default to the <= v10 behaviour. Us
   });
 </script>
 
-{% endif %}
+{% else %}
 
-{% endif %}
+<script>
+  var config = {% include mermaid_config.js %};
+  mermaid.initialize(config);
+  window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+</script>
+
+{% endunless %}
