@@ -159,7 +159,7 @@ mermaid:
   # note: you must still specify a version! Behaviour is different for versions < 10 and >= 10
 ```
 
-This file is imported directly as a `<script>` tag, rather than an ESM module. This means for mermaid versions `>=10`, you should use the `mermaid.min.js` file, *not* the `mermaid.esm.min.mjs` file. Mermaid has not provided minified `*.js` files for versions `10.0.0` - `10.0.2`, but have resumed support for `10.0.3-alpha.1` and onwards.
+For mermaid versions `>=10`, this file is imported directly as an ESM module (rather than as a `<script>` tag); users should use the `mermaid.esm.min.js` file. In contrast, for mermaid versions `<=10`, this file is loaded as a script tag; it should be a standalone CJS file (ex `mermaid.min.js`).
 
 ### Using mermaid with AsciiDoc
 

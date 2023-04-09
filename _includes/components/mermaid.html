@@ -12,18 +12,14 @@ If a user is using a custom mermaid file and doesn't specify a version, we defau
   {% assign mermaid_major_version = 9 %}
 {% endif %}
 
-{% if site.mermaid.path %}
-  <script src="{{ site.mermaid.path | relative_url }}"></script>
-{% elsif mermaid_major_version < 10 %}
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js"></script>
-{% endif %}
-
 {% unless mermaid_major_version < 10 %}
 
 <script type="module">
-  {% unless site.mermaid.path %}
+  {% if site.mermaid.path %}
+  import mermaid from '{{ site.mermaid.path | relative_url }}';
+  {% else %}
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.esm.min.mjs';
-  {% endunless %}
+  {% endif %}
 
   var config = {% include mermaid_config.js %};
   mermaid.initialize(config);
@@ -33,6 +29,12 @@ If a user is using a custom mermaid file and doesn't specify a version, we defau
 </script>
 
 {% else %}
+
+{% if site.mermaid.path %}
+  <script src="{{ site.mermaid.path | relative_url }}"></script>
+{% else %}
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js"></script>
+{% endif %}
 
 <script>
   var config = {% include mermaid_config.js %};
