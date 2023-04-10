@@ -150,16 +150,20 @@ graph TD;
 
 ### Using a local mermaid library
 
-In order to use a local version of the mermaid library instead of one provided by jsDelivr, you can specify a `path` key in the mermaid configuration instead of a `version` key.
+To load a local version of mermaid, also use the `path` key to specify the location of the library; e.g.
 
 ```yaml
 mermaid:
+  version: "10.1.0"
   # To load mermaid from a local file use the `path` key to specify the location of the library instead; e.g.
-  path: "/assets/js/mermaid.min.js"
-  # note: you must still specify a version! Behaviour is different for versions < 10 and >= 10
+  # for (v10+)
+  path: "/assets/js/mermaid.esm.min.js"
+  # for (<v10):
+  # path: "/assets/js/mermaid.min.js"
+  # Note: copy both `mermaid.esm.min.js` (v10+) or `mermaid.min.js` (<v10) and the associated `.map` file from the specified version of `mermaid/dist` to `/assets/js/`.
 ```
 
-For mermaid versions `>=10`, this file is imported directly as an ESM module (rather than as a `<script>` tag); users should use the `mermaid.esm.min.js` file. In contrast, for mermaid versions `<=10`, this file is loaded as a script tag; it should be a standalone CJS file (ex `mermaid.min.js`).
+For mermaid versions `>=10`, this file is imported directly as an ESM module (rather than as a `<script>` tag); users should use the `mermaid.esm.min.js` file. In contrast, for mermaid versions `<=10`, this file is loaded as a script tag; it should be a standalone CJS file (i.e. `mermaid.min.js`).
 
 ### Using mermaid with AsciiDoc
 
