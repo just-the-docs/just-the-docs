@@ -91,7 +91,7 @@ mermaid:
   version: "9.1.6"
   # Put any additional configuration, such as setting the theme, in _includes/mermaid_config.js
   # See also docs/ui-components/code
-  # To load mermaid from a local file use the `path` key to specify the location of the library instead; e.g.
+  # To load mermaid from a local library, also use the `path` key to specify the location of the library; e.g.
   # path: "/assets/js/mermaid.min.js"
   # note: you must still specify a version! Behaviour is different for versions < 10 and >= 10
 

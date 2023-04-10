@@ -1,7 +1,7 @@
 {% comment %}
 The complexity of this file comes from a breaking change in Mermaid v10; mermaid.init has been deprecated (and supposedly, didn't work earlier?).
 
-So, we use a rough compile-time heuristic to see if the user's Mermaid version is >= 10; if not, we fall back to the "old" init syntax.
+So, we check whether the user's Mermaid version is >= 10; if not, we fall back to the previous init syntax.
 
 If a user is using a custom mermaid file and doesn't specify a version, we default to the < v10 behaviour. Users who use version v10 or above should specify this in the version key.
 {% endcomment %}
