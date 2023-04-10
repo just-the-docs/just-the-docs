@@ -173,7 +173,7 @@ workflows = models.JSONField(default=get_default_json_list)  # correct
 
 **Concurrency safety**
 
-When saving a model, make sure you load a fresh copy of the object right before saving to avoid a race condition. This will avoid very difficult-to-track bugs that are caused when another function/person modifies the object before your function saves the (now stale) object and overwrites their changes.
+When saving a model, make sure you load a fresh copy of the object right before saving to avoid a race condition. This will avoid very difficult-to-track bugs that are caused when another function/person modifies the object before your function saves the (now stale) object and overwrites their changes. To be safer, load the clinic fresh, AND it's best to call save with the `update_fields` [parameter](https://docs.djangoproject.com/en/2.0/ref/models/instances/#specifying-which-fields-to-save).
 
 ```
 clinic.long_running_process_that_updates_data()
@@ -181,8 +181,10 @@ clinic.long_running_process_that_updates_data()
 # Clinic might be stale now.
 fresh_clinic = Clinic.objects.get(pk=clinic.id)
 fresh_clinic.some_attribute = "new value"
-fresh_clinic.save()
+fresh_clinic.save(update_fields=["some_attribute"])
 ```
+
+This greatly reduces the risk and is good enough for many cases, but if you require true concurrency safety you must implement a lock mechanism (pessimistic) or check the model's modified_date has not changed (optimistic).
 
 **Querying models in apps with multitenancy**
 
