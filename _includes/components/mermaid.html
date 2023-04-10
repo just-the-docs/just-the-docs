@@ -12,7 +12,7 @@ If a user is using a custom mermaid file and doesn't specify a version, we defau
   {% assign mermaid_major_version = 9 %}
 {% endif %}
 
-{% unless mermaid_major_version < 10 %}
+{% if mermaid_major_version > 9 %}
 
 <script type="module">
   {% if site.mermaid.path %}
@@ -42,4 +42,4 @@ If a user is using a custom mermaid file and doesn't specify a version, we defau
   window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
 </script>
 
-{% endunless %}
+{% endif %}
