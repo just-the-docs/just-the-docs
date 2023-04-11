@@ -2,11 +2,11 @@
 $logo: "{{ site.logo | relative_url }}";
 {% endif %}
 @import "./support/support";
+@import "./custom/setup";
 @import "./color_schemes/light";
 {% unless include.color_scheme == "light" %}
 @import "./color_schemes/{{ include.color_scheme }}";
 {% endunless %}
-@import "./custom/setup";
 @import "./modules";
 {% include css/callouts.scss.liquid color_scheme = include.color_scheme %}
 {% include css/custom.scss.liquid %}
