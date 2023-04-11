@@ -5,13 +5,6 @@
   box-sizing: border-box;
 }
 
-// intentionally does not override browser defaults for code blocks;
-// see: https://github.com/just-the-docs/just-the-docs/issues/1201
-*:not(code, code > span)::selection {
-  color: $white;
-  background: $link-color;
-}
-
 html {
   @include fs-4;
 
