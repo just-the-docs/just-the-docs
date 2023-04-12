@@ -16,20 +16,61 @@ The project underwent a major maintenance shift in March 2022.
 This website is built from the `HEAD` of the `main` branch of the theme repository.
 
 {: .warning }
-This website includes docs for some new features that are not available in `v0.4.2`!
+This website includes docs for some new features that are not available in `v0.5.0`!
 
 Code changes to `main` that are *not* in the latest release:
 
-- **Reverted**: "Fix import order for `setup.scss` (#1184)" by [@mattxwang] in [#1209]
-- Fixed: color contrast issues with `::selection` (reverting to browser defaults) [@mattxwang] in [#1208]
-- Removed: unused images (`just-the-docs.png`, `search.svg`) by [@mattxwang] in [#1107]
+- n/a
 
 Docs changes in `main` that are *not* in the latest release:
 
+- n/a
+
+## Release v0.5.0
+
+Hope your April is going well! This new release of Just the Docs is relatively minor. It has one **breaking change**: we've reverted the import order of `setup.scss` to be *before* color schemes. In addition, we include two requested fixes: color contrast issues with `::selection` and using Just the Docs with mermaid versions `>=10`.
+
+We've marked this as a minor version bump due to the breaking change. In the next section, we briefly outline what migration steps should be. Users who did not migrate to `v0.4.2` or who do not have a custom `setup.scss` are guaranteed no breaking changes.
+
+As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
+
+### Migrating to `v0.5.0`
+
+**Migration**: users with a custom `setup.scss` cannot rely on variables or functions defined in `color_scheme`. This reverts to the behaviour in `v0.4.1`. Users should instead move those variables or functions to the `color_scheme` files themselves.
+
+For more, refer to the [migration guide](https://just-the-docs.github.io/just-the-docs/MIGRATION/).
+
+### Using Release `v0.5.0`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.5.0` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.5.0
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.5.0"
+```
+
+To use and pin a previous version of the theme, replace the `0.5.0` with the desired release tag.
+
+### Bugfixes
+
+- **Reverted (breaking)**: "Fix import order for `setup.scss` (#1184)" by [@mattxwang] in [#1209]
+- Fixed: color contrast issues with `::selection` (reverting to browser defaults) [@mattxwang] in [#1208]
+- Fixed: mermaid `v10`, bundle all mermaid code in component by [@mattxwang] in [#1190]
+- Removed: unused images (`just-the-docs.png`, `search.svg`) by [@mattxwang] in [#1107]
 - Removed: `CODE_OF_CONDUCT`, `docker-compose`, and `Dockerfile` files from site by [@mattxwang] in [#1187]
+
+**Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.2...v0.5.0](https://github.com/just-the-docs/just-the-docs/compare/v0.4.2...v0.5.0)
 
 [#1107]: https://github.com/just-the-docs/just-the-docs/pull/1107
 [#1187]: https://github.com/just-the-docs/just-the-docs/pull/1187
+[#1190]: https://github.com/just-the-docs/just-the-docs/pull/1190
 [#1208]: https://github.com/just-the-docs/just-the-docs/pull/1208
 [#1209]: https://github.com/just-the-docs/just-the-docs/pull/1209
 
