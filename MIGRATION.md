@@ -6,7 +6,7 @@ layout: default
 # Migrating and Upgrading
 
 Summary
-:   A site that uses `just-the-docs` (as a theme or as a remote them) automatically
+:   A site that uses `just-the-docs` (as a theme or as a remote theme) automatically
     switches to a new release, unless it is pinned to a previous version.
 
     This migration guide draws attention to:
