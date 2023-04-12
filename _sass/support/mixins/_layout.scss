@@ -16,8 +16,7 @@
       @content;
     }
   } @else {
-    @warn "No value could be retrieved from `#{$media-query}`. "
-      + "Please make sure it is defined in `$media-queries` map.";
+    @warn "No value could be retrieved from `#{$media-query}`. Please make sure it is defined in `$media-queries` map.";
   }
 }
 

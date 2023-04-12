@@ -16,18 +16,118 @@ The project underwent a major maintenance shift in March 2022.
 This website is built from the `HEAD` of the `main` branch of the theme repository.
 
 {: .warning }
-This website includes docs for some new features that are not available in `v0.4.0`!
+This website includes docs for some new features that are not available in `v0.4.2`!
 
 Code changes to `main` that are *not* in the latest release:
 
-- Fixed: allow later versions of `bundler` by [@mattxwang] in [#1165]
+- **Reverted**: "Fix import order for `setup.scss` (#1184)" by [@mattxwang] in [#1209]
+- Fixed: color contrast issues with `::selection` (reverting to browser defaults) [@mattxwang] in [#1208]
+- Removed: unused images (`just-the-docs.png`, `search.svg`) by [@mattxwang] in [#1107]
 
 Docs changes in `main` that are *not* in the latest release:
 
+- Removed: `CODE_OF_CONDUCT`, `docker-compose`, and `Dockerfile` files from site by [@mattxwang] in [#1187]
+
+[#1107]: https://github.com/just-the-docs/just-the-docs/pull/1107
+[#1187]: https://github.com/just-the-docs/just-the-docs/pull/1187
+[#1208]: https://github.com/just-the-docs/just-the-docs/pull/1208
+[#1209]: https://github.com/just-the-docs/just-the-docs/pull/1209
+
+## Release v0.4.2
+
+Hello! We're back again with another small release. Like `v0.4.1`, this release is a [semver patch](https://semver.org/): it only includes bugfixes, and is fully backwards-compatible.
+
+The big highlight of this theme is fixing our light scheme code highlighting contrast issues; this was one of our most-requested features! This change is fully backwards-compatible; users can [opt-in to our old highlighting theme](https://just-the-docs.github.io/just-the-docs/docs/customization/#deprecated-legacy_light) by using `legacy_light` instead of `light`.
+
+As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
+
+### Using Release `v0.4.2`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.4.2` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.4.2
+```
+
+To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.4.2"
+```
+
+To use and pin a previous version of the theme, replace the `0.4.2` with the desired release tag.
+
+### Bugfixes
+
+- Fixed: light scheme code highlighting contrast issues; updated to use Atom's One Light colors, consolidate theme variables by [@mattxwang] in [#1166]
+- Fixed: duplicate import of `color_schemes` by [@mattxwang] in [#1173]
+- Fixed: import order for `setup.scss` by [@mattxwang] in [#1184]
+- Removed: unused dark syntax themes by [@mattxwang] in [#1192]
+
+### Documentation
+
+- Added: docs for using mermaid with AsciiDoc by [@flyx] in [#1182]
+
+**Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.1...v0.4.2](https://github.com/just-the-docs/just-the-docs/compare/v0.4.1...v0.4.2)
+
+[#1166]: https://github.com/just-the-docs/just-the-docs/pull/1166
+[#1173]: https://github.com/just-the-docs/just-the-docs/pull/1173
+[#1182]: https://github.com/just-the-docs/just-the-docs/pull/1182
+[#1184]: https://github.com/just-the-docs/just-the-docs/pull/1184
+[#1192]: https://github.com/just-the-docs/just-the-docs/pull/1192
+
+## Release v0.4.1
+
+Hello! We hope you've been enjoying the new `v0.4.0`; we appreciate all the feedback we've gotten already! As promised, future releases will be small with simple steps to upgrade. This is one of them! `v0.4.1` is a [semver patch](https://semver.org/): it only includes bugfixes, and is fully backwards-compatible.
+
+As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
+
+### Using Release `v0.4.1`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.4.1` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.4.1
+```
+
+To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.4.1"
+```
+
+To use and pin a previous version of the theme, replace the `0.4.1` with the desired release tag.
+
+### Bugfixes
+
+- Fixed: allow later versions of `bundler` by [@mattxwang] in [#1165]
+- Fixed: AsciiDoc code block styling by [@flyx] in [#1168]
+- Fixed: main content negative margin for viewports in `[$md, $nav-width + $content-width]` by [@Dima-369] in [#1177]
+- Removed: unused `OneDarkJekyll` files by [@mattxwang] in [#1167]
+
+### Documentation
+
 - Fixed: re-add `jekyll-github-metadata` to docs site by [@mattxwang] in [#1108]
+
+### New Contributors
+
+- [@flyx] made their first contribution in [#1168]
+- [@Dima-369] made their first contribution in [#1177]
 
 [#1108]: https://github.com/just-the-docs/just-the-docs/pull/1108
 [#1165]: https://github.com/just-the-docs/just-the-docs/pull/1165
+[#1167]: https://github.com/just-the-docs/just-the-docs/pull/1167
+[#1168]: https://github.com/just-the-docs/just-the-docs/pull/1168
+[#1177]: https://github.com/just-the-docs/just-the-docs/pull/1177
+
+[@flyx]: https://github.com/flyx
+[@Dima-369]: https://github.com/Dima-369
+
+**Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.0...v0.4.1](https://github.com/just-the-docs/just-the-docs/compare/v0.4.0...v0.4.1)
 
 ## Release v0.4.0
 

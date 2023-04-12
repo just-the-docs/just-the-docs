@@ -45,6 +45,15 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
+### deprecated: `legacy_light`
+{: .d-inline-block .no_toc }
+
+New (v0.4.2)
+{: .label .label-green }
+
+
+In Just the Docs version `0.4.2`, we changed the default syntax highlighting theme for the `light` color scheme to have higher contrast. Users who are want to use the old highlighting need to explicitly opt-in with the deprecated `legacy_light` color scheme. In a future major release of Just the Docs, we will remove this color scheme.
+
 ## Custom schemes
 
 ### Define a custom scheme
@@ -113,7 +122,7 @@ jtd.setTheme("foo")
 New (v0.4.0)
 {: .label .label-green }
 
-To define new SCSS variables, functions, or override existing theme variables, place SCSS code in `_sass/custom/setup.scss`. This should *not* be used for defining custom styles (see the next section).
+To define new SCSS variables or functions, place SCSS code in `_sass/custom/setup.scss`. This should *not* be used for defining custom styles (see the next section) or overriding color scheme variables (in this case, you should create a new color scheme).
 
 This is most commonly-used to define [custom callout colors]({% link docs/configuration.md %}#callouts). For example,
 
