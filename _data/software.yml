@@ -78,7 +78,7 @@
 
 - name: citygml-tools
   webpage: https://github.com/citygml4j/citygml-tools
-  description: CLI created with citygml4j, it allows us to convert CityJSON <-> CityGML in one-click. 
+  description: CLI created with citygml4j, it allows us to convert CityJSON <-> CityGML in one-click 
   foss: true
   category: 
     - converter
@@ -87,7 +87,7 @@
 
 - name: cjio
   webpage: https://github.com/cityjson/cjio
-  description: Python CLI to process and manipulate CityJSON files. Used as the 'official' validator for CityJSON files.
+  description: Python CLI to process and manipulate CityJSON files. Used as the 'official' validator for CityJSON files
   foss: true
   category: 
     - validator
@@ -98,7 +98,7 @@
 
 - name: cjval
   webpage: https://validator.cityjson.org
-  description: Used as the official validator for CityJSON files.
+  description: Used as the official validator for CityJSON files
   foss: true
   category: 
     - validator
@@ -107,7 +107,7 @@
 
 - name: FME
   webpage: https://www.safe.com/fme/
-  description: FME 2020+ has built-in capabilities to read/write CityJSON. And its viewer is the only one supporting textures (at this moment).
+  description: FME 2020+ has built-in capabilities to read/write CityJSON. And its viewer is the only one supporting textures (at this moment)
   foss: false
   category: 
     - viewer
@@ -128,7 +128,7 @@
 
 - name: ninja 
   webpage: https://ninja.cityjson.org/
-  description: Official CityJSON viewer. A viewer with support for holes and the ability to edit, all within the ease of your browser. The [repository](https://github.com/cityjson/ninja) has the latest code too.
+  description: Official CityJSON viewer, it supports holes and the ability to edit, all within the ease of your browser
   foss: true
   category: 
     - viewer
@@ -138,7 +138,7 @@
 
 - name: ParaView reader
   webpage: https://github.com/mdjong1/CityJSON-Reader-ParaView
-  description: A plugin that allows you to read CityJSON files directly into ParaView.
+  description: A plugin that allows you to read CityJSON files directly into ParaView
   foss: true
   category: 
     - viewer
@@ -148,7 +148,7 @@
 
 - name: RevitCityJSONImporter
   webpage: https://github.com/tudelft3d/cityjsonToRevit
-  description: A plugin for Revit to import and reproject CityJSON's geometries and attributes.
+  description: A plugin for Revit to import and reproject CityJSON's geometries and attributes
   foss: true
   category: 
     - editor
@@ -158,7 +158,7 @@
   
 - name: RhinoCity
   webpage: https://rhinoterrain.com/en/rhinocity.html
-  description: A plugin for Rhino to produce, edit, analyse, and texture 3D data. Reads and writes CityJSON.
+  description: A plugin for Rhino to produce, edit, analyse, and texture 3D data. Reads and writes CityJSON
   foss: false
   category: 
     - generator
@@ -169,7 +169,7 @@
 
 - name: RhinoCityJSONReader
   webpage: https://github.com/cityjson/RhinoCityJSON
-  description: A Rhino/Grasshopper plugin, semantics is supported.
+  description: A Rhino/Grasshopper plugin, semantics is supported
   foss: true
   category: 
     - editor
@@ -179,7 +179,7 @@
 
 - name: QGIS plugin
   webpage: https://github.com/tudelft3d/cityjson-qgis-plugin
-  description: A plugin that supports the loading of CityJSON datasets in QGIS3; these can be queried like any other layers in QGIS.
+  description: A plugin that supports the loading of CityJSON datasets in QGIS3; these can be queried like any other layers in QGIS
   foss: true
   category: 
     - viewer
@@ -197,7 +197,7 @@
 
 - name: Up3date
   webpage: https://github.com/cityjson/Blender-CityJSON-Plugin
-  description: Plugin to open/import directly CityJSON models in Blender, attributes and semantics are kept.
+  description: Plugin to open/import directly CityJSON models in Blender, attributes and semantics are kept
   foss: true
   category: 
     - viewer
