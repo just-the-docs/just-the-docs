@@ -163,7 +163,10 @@ mermaid:
   # Note: copy both `mermaid.esm.min.js` (v10+) or `mermaid.min.js` (<v10) and the associated `.map` file from the specified version of `mermaid/dist` to `/assets/js/`.
 ```
 
-For mermaid versions `>=10`, this file is imported directly as an ESM module (rather than as a `<script>` tag); users should use the `mermaid.esm.min.js` file. In contrast, for mermaid versions `<=10`, this file is loaded as a script tag; it should be a standalone CJS file (i.e. `mermaid.min.js`).
+For mermaid versions `>=10`, this file is imported directly as an ESM module (rather than as a plain `<script>` tag); users should use the `mermaid.esm.min.js` file. In contrast, for mermaid versions `<=10`, this file is loaded as a script tag; it should be a standalone CJS file (i.e. `mermaid.min.js`).
+
+{: .warning }
+Mermaid versions `10.0` - `10.1` (and possibly, future releases) still encode relative imports in `mermaid.esm.min.js`. Local users must copy *all* of the contents of the `dist` folder to the specified path (preserving the relative location of the files). Just the Docs is actively monitoring mermaid releases; an upstream fix is planned.
 
 ### Using mermaid with AsciiDoc
 
