@@ -21,6 +21,7 @@ This website includes docs for some new features that are not available in `v0.4
 Code changes to `main` that are *not* in the latest release:
 
 - **Reverted**: "Fix import order for `setup.scss` (#1184)" by [@mattxwang] in [#1209]
+- Fixed: color contrast issues with `::selection` (reverting to browser defaults) [@mattxwang] in [#1208]
 - Removed: unused images (`just-the-docs.png`, `search.svg`) by [@mattxwang] in [#1107]
 
 Docs changes in `main` that are *not* in the latest release:
@@ -29,6 +30,7 @@ Docs changes in `main` that are *not* in the latest release:
 
 [#1107]: https://github.com/just-the-docs/just-the-docs/pull/1107
 [#1187]: https://github.com/just-the-docs/just-the-docs/pull/1187
+[#1208]: https://github.com/just-the-docs/just-the-docs/pull/1208
 [#1209]: https://github.com/just-the-docs/just-the-docs/pull/1209
 
 ## Release v0.4.2
