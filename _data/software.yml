@@ -21,6 +21,15 @@
 
 # Don't forget to add software alphabetically!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+- name: cityjson2jsonfg
+  webpage: https://github.com/3DGI/cityjson2jsonfg
+  description: A command line tool for converting CityJSON files to [JSON-FG format](https://github.com/opengeospatial/ogc-feat-geo-json)
+  foss: true
+  category: 
+    - converter
+  interface: cli
+  type: app
+
 - name: 3D City DB
   webpage: http://www.3dcitydb.org
   description: Free geo-database to store, represent, and manage virtual 3D city models on top of a standard spatial relational database (PostGIS and Oracle)
