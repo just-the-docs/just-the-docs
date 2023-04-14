@@ -214,8 +214,9 @@ Make sure you leave enough time to submit: we recommend submitting 1 day in adva
 
 ### 7\. Learn
 
-The best way to measure proposal win-rate is "revenue won" / "revenue bid", because it reflects the proposal value.
+The best way to measure proposal win-rate is simply to measure the "revenue won" because it reflects the proposal value. Knowing your overall percentage is helpful too, in order to evaluate our ability to win a given new proposal.
 
-50% is a sweet spot to aim for, to balance risk-taking and revenue.
+Get a debriefing whenever possible - If you lose, always ask for a DEBRIEF with the evaluator and a breakdown of our score. This is one of the most valuable tools for winning the next proposal.
 
-Get a debriefing whenever possible.
+Balance risk-taking and revenue.
+
