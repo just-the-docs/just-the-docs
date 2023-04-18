@@ -23,7 +23,7 @@
 
 - name: tyler
   webpage: https://github.com/3DGI/tyler
-  description: creates [3D tiles](https://docs.ogc.org/cs/22-025r4/22-025r4.html) from CityJSON
+  description: Creates [3D tiles](https://docs.ogc.org/cs/22-025r4/22-025r4.html) from CityJSON
   foss: true
   category: 
     - converter
