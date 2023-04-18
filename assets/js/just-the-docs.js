@@ -488,36 +488,42 @@ jtd.onReady(function(){
 
 jtd.onReady(function(){
 
-  var codeBlocks = document.querySelectorAll('div.highlighter-rouge, div.listingblock > div.content, figure.highlight');
+  if (!window.isSecureContext) {
+    console.log('Window does not have a secure context, therefore code clipboard copy functionality will not be available. For more details see https://web.dev/async-clipboard/#security-and-permissions');
+    return;
+  } else {
 
-  // note: the SVG svg-copied and svg-copy is only loaded as a Jekyll include if site.enable_copy_code_button is true; see _includes/icons/icons.html
-  var svgCopied =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copied"></use></svg>';
-  var svgCopy =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copy"></use></svg>';
+    var codeBlocks = document.querySelectorAll('div.highlighter-rouge, div.listingblock > div.content, figure.highlight');
 
-  codeBlocks.forEach(codeBlock => {
-    var copyButton = document.createElement('button');
-    var timeout = null;
-    copyButton.type = 'button';
-    copyButton.ariaLabel = 'Copy code to clipboard';
-    copyButton.innerHTML = svgCopy;
-    codeBlock.append(copyButton);
+    // note: the SVG svg-copied and svg-copy is only loaded as a Jekyll include if site.enable_copy_code_button is true; see _includes/icons/icons.html
+    var svgCopied =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copied"></use></svg>';
+    var svgCopy =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copy"></use></svg>';
 
-    copyButton.addEventListener('click', function () {
-      if(timeout === null) {
-        var code = (codeBlock.querySelector('pre:not(.lineno, .highlight)') || codeBlock.querySelector('code')).innerText;
-        window.navigator.clipboard.writeText(code);
+    codeBlocks.forEach(codeBlock => {
+      var copyButton = document.createElement('button');
+      var timeout = null;
+      copyButton.type = 'button';
+      copyButton.ariaLabel = 'Copy code to clipboard';
+      copyButton.innerHTML = svgCopy;
+      codeBlock.append(copyButton);
 
-        copyButton.innerHTML = svgCopied;
+      copyButton.addEventListener('click', function () {
+        if(timeout === null) {
+          var code = (codeBlock.querySelector('pre:not(.lineno, .highlight)') || codeBlock.querySelector('code')).innerText;
+          window.navigator.clipboard.writeText(code);
 
-        var timeoutSetting = 4000;
+          copyButton.innerHTML = svgCopied;
 
-        timeout = setTimeout(function () {
-          copyButton.innerHTML = svgCopy;
-          timeout = null;
-        }, timeoutSetting);
-      }
+          var timeoutSetting = 4000;
+
+          timeout = setTimeout(function () {
+            copyButton.innerHTML = svgCopy;
+            timeout = null;
+          }, timeoutSetting);
+        }
+      });
     });
-  });
+  }
 
 });
 
