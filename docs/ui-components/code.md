@@ -202,4 +202,4 @@ The copy button for code blocks can be enabled or disabled via the `enable_copy_
 enable_copy_code_button: true
 ```
 
-Note that this feature requires JavaScript; if JavaScript is disabled in the browser, this feature will not work.
+Note that this feature requires JavaScript; if JavaScript is disabled in the browser, this feature will not work. In addition, the page must be viewed in a secure context (such as over HTTPS) otherwise the copy button [will not work](https://github.com/just-the-docs/just-the-docs/issues/1202). 
