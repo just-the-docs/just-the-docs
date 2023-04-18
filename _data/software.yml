@@ -21,6 +21,16 @@
 
 # Don't forget to add software alphabetically!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+- name: tyler
+  webpage: https://github.com/3DGI/tyler
+  description: creates [3D tiles](https://docs.ogc.org/cs/22-025r4/22-025r4.html) from CityJSON
+  foss: true
+  category: 
+    - converter
+    - viewer
+  interface: cli
+  type: app
+
 - name: cityjson2jsonfg
   webpage: https://github.com/3DGI/cityjson2jsonfg
   description: A command line tool for converting CityJSON files to [JSON-FG format](https://github.com/opengeospatial/ogc-feat-geo-json)
