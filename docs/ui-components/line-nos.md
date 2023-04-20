@@ -115,9 +115,7 @@ end
 {% include fix_linenos.html code=code %}
 {% assign code = nil %}
 
-❌ With the compression options used for the theme docs, the following example illustrates
-the **incorrect** formatting arising from the incompatibility of HTML compression
-and the non-conforming HTML produced by Jekyll for line numbers:
+❌ With the compression options used for the theme docs, the following example illustrates the **incorrect** formatting arising from the incompatibility of HTML compression and the non-conforming HTML produced by Jekyll for line numbers. An errant `>` appears, and the code highlighting extends into the footer:
 
 {% highlight ruby linenos %}
 def foo
