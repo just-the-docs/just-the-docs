@@ -33,7 +33,7 @@ This document contains instructions on how to migrate and upgrade Just the Docs 
 > website is built using the current `main` branch of the theme, which may include
 > changes made after the latest release; see the [CHANGELOG].
 >
-> If your configuration states `theme: just the docs` and your `Gemfile` specifies
+> If your configuration states `theme: just_the_docs` and your `Gemfile` specifies
 > `gem "just-the-docs"`, your website is always built using the latest release.
 
 {: .note }
