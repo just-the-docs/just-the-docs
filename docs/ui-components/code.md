@@ -150,13 +150,23 @@ graph TD;
 
 ### Using a local mermaid library
 
-In order to use a local version of the mermaid library instead of one provided by jsDelivr, you can specify a `path` key in the mermaid configuration instead of a `version` key.
+To load a local version of mermaid, also use the `path` key to specify the location of the library; e.g.
 
 ```yaml
 mermaid:
-  # To load mermaid from a local file use the `path` key to specify the location of the library instead; e.g.
-  path: "/assets/js/mermaid.min.js"
+  version: "10.1.0"
+  # for (v10+)
+  path: "/assets/js/mermaid.esm.min.mjs"
+  # for (<v10):
+  # path: "/assets/js/mermaid.min.js"
+  # Note: copy both `mermaid.esm.min.mjs` (v10+) or `mermaid.min.js` (<v10) and the associated
+  # `.map` file from the specified version of `mermaid/dist` to `/assets/js/`.
 ```
+
+For mermaid versions `>=10`, this file is imported directly as an ESM module (rather than as a plain `<script>` tag); users should use the `mermaid.esm.min.mjs` file. In contrast, for mermaid versions `<10`, this file is loaded as a script tag; it should be a standalone CJS file (i.e. `mermaid.min.js`).
+
+{: .warning }
+Mermaid versions `10.0` - `10.1` (and possibly, future releases) still encode relative imports in `mermaid.esm.min.mjs`. Local users must copy *all* of the contents of the `dist` folder to the specified path (preserving the relative location of the files). Just the Docs is actively monitoring mermaid releases; an upstream fix is planned.
 
 ### Using mermaid with AsciiDoc
 
@@ -192,4 +202,4 @@ The copy button for code blocks can be enabled or disabled via the `enable_copy_
 enable_copy_code_button: true
 ```
 
-Note that this feature requires JavaScript; if JavaScript is disabled in the browser, this feature will not work.
+Note that this feature requires JavaScript; if JavaScript is disabled in the browser, this feature will not work. In addition, this feature uses `navigator.clipboard`, which is only available in [secure contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts) (such as over HTTPS). If the site is viewed in an insecure context, the copy button will not work ([relevant issue: #1202](https://github.com/just-the-docs/just-the-docs/issues/1202)).

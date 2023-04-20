@@ -6,7 +6,7 @@ layout: default
 # Migrating and Upgrading
 
 Summary
-:   A site that uses `just-the-docs` (as a theme or as a remote them) automatically
+:   A site that uses `just-the-docs` (as a theme or as a remote theme) automatically
     switches to a new release, unless it is pinned to a previous version.
 
     This migration guide draws attention to:
@@ -33,7 +33,7 @@ This document contains instructions on how to migrate and upgrade Just the Docs 
 > website is built using the current `main` branch of the theme, which may include
 > changes made after the latest release; see the [CHANGELOG].
 >
-> If your configuration states `theme: just the docs` and your `Gemfile` specifies
+> If your configuration states `theme: just_the_docs` and your `Gemfile` specifies
 > `gem "just-the-docs"`, your website is always built using the latest release.
 
 {: .note }
@@ -43,6 +43,25 @@ This document contains instructions on how to migrate and upgrade Just the Docs 
 
 [CHANGELOG]: {{ site.baseurl }}{% link CHANGELOG.md %}
 
+## v0.4.x - v0.5.0
+
+### POTENTIALLY-BREAKING CHANGES in v0.5.0
+
+There is one potentially-breaking change for users migrating from `v0.4.2` to `v0.5.0` concering `setup.scss`. To provide context:
+
+1. `setup.scss` was introduced in `v0.4.0`
+2. in `v0.4.0` and `v0.4.1`, `setup.scss` was imported *before* color scheme SCSS code
+3. in `v0.4.2`, we adjusted the order to import `setup.scss` *after* color scheme SCSS code
+4. in `v0.5.0`, we have reverted the previous change: `setup.scss` is now again imported *before* color scheme SCSS code
+
+This does not affect most users. Users who did not migrate to `v0.4.2` or who do not have a custom `setup.scss` are guaranteed no breaking changes.
+
+Explicit migration steps are only needed if:
+
+1. a custom `setup.scss` has been defined,
+2. **and** the `setup.scss` depends on variables or functions defined in color scheme SCSS code; this change was only possible on `v0.4.2`
+
+For those users, we suggest moving those variables and functions to each relevant color scheme.
 ## v0.3.3 … v0.4.x
 
 ### REPOSITORY CHANGES
