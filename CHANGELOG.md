@@ -26,6 +26,8 @@ Docs changes in `main` that are *not* in the latest release:
 
 - n/a
 
+The theme docs website has a new canonical URL: <https://just-the-docs.com>. We've also retroactively published the theme docs website for version `v0.3.3` at <https://v0-3-3-docs.just-the-docs.com/>.
+
 ## Release v0.5.0
 
 Hope your April is going well! This new release of Just the Docs is relatively minor. It has one **breaking change**: we've reverted the import order of `setup.scss` to be *before* color schemes. In addition, we include two requested fixes: color contrast issues with `::selection` and using Just the Docs with mermaid versions `>=10`.
@@ -38,7 +40,7 @@ As always, we'd love your feedback. [Open an issue](https://github.com/just-the-
 
 **Migration**: users with a custom `setup.scss` cannot rely on variables or functions defined in `color_scheme`. This reverts to the behaviour in `v0.4.1`. Users should instead move those variables or functions to the `color_scheme` files themselves.
 
-For more, refer to the [migration guide](https://just-the-docs.github.io/just-the-docs/MIGRATION/).
+For more, refer to the [migration guide](https://just-the-docs.com/MIGRATION/).
 
 ### Using Release `v0.5.0`
 
