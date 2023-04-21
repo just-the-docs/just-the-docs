@@ -24,7 +24,17 @@ Code changes to `main` that are *not* in the latest release:
 
 Docs changes in `main` that are *not* in the latest release:
 
-- n/a
+- Document copy code button requiring secure context by [@rmoff] in [#1225]
+- Fix typo ("them" → "theme") in MIGRATION.md by [@waldyrious] in [#1219]
+- Fix `font-weight` typo (Utilities > Typography) by [@mattxwang] in [#1229]
+- Fix `just the docs` typo in migration guide by [@mattxwang] in [#1230]
+
+[#1219]: https://github.com/just-the-docs/just-the-docs/pull/1219
+[#1225]: https://github.com/just-the-docs/just-the-docs/pull/1225
+[#1229]: https://github.com/just-the-docs/just-the-docs/pull/1229
+[#1230]: https://github.com/just-the-docs/just-the-docs/pull/1230
+
+[@rmoff]: https://github.com/rmoff
 
 ## Release v0.5.0
 

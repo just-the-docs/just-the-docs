@@ -202,4 +202,4 @@ The copy button for code blocks can be enabled or disabled via the `enable_copy_
 enable_copy_code_button: true
 ```
 
-Note that this feature requires JavaScript; if JavaScript is disabled in the browser, this feature will not work.
+Note that this feature requires JavaScript; if JavaScript is disabled in the browser, this feature will not work. In addition, this feature uses `navigator.clipboard`, which is only available in [secure contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts) (such as over HTTPS). If the site is viewed in an insecure context, the copy button will not work ([relevant issue: #1202](https://github.com/just-the-docs/just-the-docs/issues/1202)).
