@@ -20,17 +20,18 @@ This website includes docs for some new features that are not available in `v0.5
 
 Code changes to `main` that are *not* in the latest release:
 
-- n/a
+- Fixed: disable copy code button in insecure contexts [@rmoff] in [#1226]
 
 Docs changes in `main` that are *not* in the latest release:
 
-- Document copy code button requiring secure context by [@rmoff] in [#1225]
-- Fix typo ("them" → "theme") in MIGRATION.md by [@waldyrious] in [#1219]
-- Fix `font-weight` typo (Utilities > Typography) by [@mattxwang] in [#1229]
-- Fix `just the docs` typo in migration guide by [@mattxwang] in [#1230]
+- Added: document copy code button requiring secure context by [@rmoff] in [#1225]
+- Fixed: typo ("them" → "theme") in MIGRATION.md by [@waldyrious] in [#1219]
+- Fixed: `font-weight` typo (Utilities > Typography) by [@mattxwang] in [#1229]
+- Fixed: `just the docs` typo in migration guide by [@mattxwang] in [#1230]
 
 [#1219]: https://github.com/just-the-docs/just-the-docs/pull/1219
 [#1225]: https://github.com/just-the-docs/just-the-docs/pull/1225
+[#1226]: https://github.com/just-the-docs/just-the-docs/pull/1226
 [#1229]: https://github.com/just-the-docs/just-the-docs/pull/1229
 [#1230]: https://github.com/just-the-docs/just-the-docs/pull/1230
 
