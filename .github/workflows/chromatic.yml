@@ -45,6 +45,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run build-storybook
-    - run: npx chromatic -d storybook-static
+    - name: Publish to Chromatic
+      uses: chromaui/action@v1
       env:
         CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
