@@ -32,6 +32,7 @@
       "alpha-value-notation": null,
       "at-rule-empty-line-before": null,
       "color-function-notation": null,
+      "media-feature-range-notation": "prefix",
       "no-descending-specificity": null,
       "scss/no-global-function-names": null
     }
