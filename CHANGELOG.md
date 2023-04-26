@@ -20,20 +20,58 @@ This website includes docs for some new features that are not available in `v0.5
 
 Code changes to `main` that are *not* in the latest release:
 
-- Fixed: disable copy code button in insecure contexts [@rmoff] in [#1226]
+- N/A
 
 Docs changes in `main` that are *not* in the latest release:
+
+- N/A
+
+## Release v0.5.1
+
+Hi all, this is a very small minor patch release that has two small behavioral bugfixes: fixing a regression introduced in `v0.5.0` on Safari versions `<16.4` (broken media query), and the copy code button providing incorrect feedback in insecure browser contexts. This should be a smooth upgrade with no breaking changes.
+
+As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
+
+### Using Release `v0.5.1`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.5.1` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.5.1
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.5.1"
+```
+
+To use and pin a previous version of the theme, replace the `0.5.1` with the desired release tag.
+
+### Bugfixes
+
+
+- Fixed: disable copy code button in insecure contexts [@rmoff] in [#1226]
+- Fixed: context-based media feature not supported by Safari `<16.4` by [@mattxwang] in [#1240]
+
+### Documentation
 
 - Added: document copy code button requiring secure context by [@rmoff] in [#1225]
 - Fixed: typo ("them" → "theme") in MIGRATION.md by [@waldyrious] in [#1219]
 - Fixed: `font-weight` typo (Utilities > Typography) by [@mattxwang] in [#1229]
 - Fixed: `just the docs` typo in migration guide by [@mattxwang] in [#1230]
 
+### New Contributors
+- [@rmoff] made their first contribution in [#1225]
+
 [#1219]: https://github.com/just-the-docs/just-the-docs/pull/1219
 [#1225]: https://github.com/just-the-docs/just-the-docs/pull/1225
 [#1226]: https://github.com/just-the-docs/just-the-docs/pull/1226
 [#1229]: https://github.com/just-the-docs/just-the-docs/pull/1229
 [#1230]: https://github.com/just-the-docs/just-the-docs/pull/1230
+[#1240]: https://github.com/just-the-docs/just-the-docs/pull/1240
 
 [@rmoff]: https://github.com/rmoff
 
