@@ -461,13 +461,43 @@ jtd.setTheme = function(theme) {
 
 // Scroll site-nav to ensure the link to the current page is visible
 
+// Note: pathname can have a trailing slash on a local jekyll server
+// and not have the slash on GitHub Pages
+
 function scrollNav() {
-  const href = document.location.pathname;
+  var href = document.location.pathname;
+  if (href.endsWith('/') && href != '/') {
+    href = href.slice(0, -1);
+  }
   const siteNav = document.getElementById('site-nav');
   const targetLink = siteNav.querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
-  if(targetLink){
+  if (targetLink) {
     const rect = targetLink.getBoundingClientRect();
     siteNav.scrollBy(0, rect.top - 3*rect.height);
+  }
+}
+
+// Find the nav-list-link that refers to the current page
+// then make it and make all enclosing nav-list-item elements active
+
+function activateNav() {
+  var href = document.location.pathname;
+  if (href.endsWith('/') && href != '/') {
+    href = href.slice(0, -1);
+  }
+  const siteNav = document.getElementById('site-nav');
+  var target = siteNav.querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
+  if (target) {
+    target.classList.toggle('active', true);
+  }
+  while (target) {
+    while (target && !(target.classList && target.classList.contains('nav-list-item'))) {
+      target = target.parentNode;
+    }
+    if (target) {
+      target.classList.toggle('active', true);
+      target = target.parentNode;
+    }
   }
 }
 
@@ -478,6 +508,7 @@ jtd.onReady(function(){
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
+  activateNav(); // uncomment to enable JavaScript for opening the nav panel 
   scrollNav();
 });
 
