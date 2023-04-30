@@ -2,17 +2,6 @@
 layout: table_wrappers
 ---
 
-<!DOCTYPE html>
-
-{% assign pages_top_size = site.html_pages
-      | where_exp:"item", "item.title != nil"
-      | where_exp:"item", "item.parent == nil"
-      | where_exp:"item", "item.nav_exclude != true"
-      | size %}
-{% if pages_top_size > 0 %}
-  {% include nav_init.html pages=site.html_pages key=nil %}
-{% endif %}
-
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
 <body>
@@ -31,7 +20,7 @@ layout: table_wrappers
         {% endif %}
 
         {% if page.has_children == true and page.has_toc != false %}
-          {% include components/children_nav.html toc_list=toc_list %}
+          {% include components/children_nav.html %}
         {% endif %}
 
         {% include components/footer.html %}

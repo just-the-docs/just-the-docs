@@ -12,10 +12,7 @@
           | where_exp:"item", "item.nav_exclude != true"
           | size %}
     {% if pages_top_size > 0 %}
-      {% include_cached nav.html
-          first_level_pages=first_level_pages
-          second_level_pages=second_level_pages
-          third_level_pages=third_level_pages %}
+      {% include_cached nav.html pages=site.html_pages key=nil %}
     {% endif %}
     {%- if site.nav_external_links -%}
       <ul class="nav-list">
