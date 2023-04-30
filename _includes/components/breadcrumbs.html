@@ -28,8 +28,6 @@
         | first -%}
   {%- endif -%}
 
-{%- endif -%}
-
 <nav aria-label="Breadcrumb" class="breadcrumb-nav">
   <ol class="breadcrumb-nav-list">
   {%- if page.parent -%}
@@ -41,3 +39,5 @@
     <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
   </ol>
 </nav>
+
+{%- endif -%}
