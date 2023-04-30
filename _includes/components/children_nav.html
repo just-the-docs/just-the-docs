@@ -23,12 +23,11 @@
 {%- endif -%}
 
 <hr>
-{%- include toc_heading_custom.html -%}
+{% include toc_heading_custom.html %}
 <ul>
-{%- for child in sorted_pages -%}
+{% for child in sorted_pages %}
   <li>
-    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
-    {%- if child.summary -%} - {{ child.summary }}{%- endif -%}
+    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
   </li>
-{%- endfor -%}
+{% endfor %}
 </ul>
