@@ -28,22 +28,16 @@
         | first -%}
   {%- endif -%}
 
-{%- endif -%}
-
 <nav aria-label="Breadcrumb" class="breadcrumb-nav">
   <ol class="breadcrumb-nav-list">
-  {%- if page.parent -%}
-  {%- if page.grand_parent -%}
-    <li class="breadcrumb-nav-list-item">
-      <a href="{{ grandparent_page.url | relative_url }}">{{ page.grand_parent }}</a>
-    </li>
-  {%- endif -%}
-    <li class="breadcrumb-nav-list-item">
-      <a href="{{ parent_page.url | relative_url }}">{{ page.parent }}</a>
-    </li>
-  {%- endif -%}
-    <li class="breadcrumb-nav-list-item">
-      <span>{{ page.title }}</span>
-    </li>
+  {% if page.parent -%}
+  {%- if page.grand_parent %}
+    <li class="breadcrumb-nav-list-item"><a href="{{ grandparent_page.url | relative_url }}">{{ page.grand_parent }}</a></li>
+  {%- endif %}
+    <li class="breadcrumb-nav-list-item"><a href="{{ parent_page.url | relative_url }}">{{ page.parent }}</a></li>
+  {% endif -%}
+    <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
   </ol>
 </nav>
+
+{%- endif -%}
