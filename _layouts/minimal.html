@@ -9,32 +9,6 @@ layout: table_wrappers
 <body>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   {% include icons/icons.html %}
-  {% comment %}
-    This is a bandaid fix to properly render breadcrumbs; as of now, there is some variable leakage between the sidebar component (which computes parents, grandparents) and the breadcrumbs component. We plan to remove this in a future release to deduplicate code.
-
-    For more context, see https://github.com/just-the-docs/just-the-docs/pull/1058#discussion_r1057014053
-  {% endcomment %}
-  {% capture nav %}
-    {% assign pages_top_size = site.html_pages
-          | where_exp:"item", "item.title != nil"
-          | where_exp:"item", "item.parent == nil"
-          | where_exp:"item", "item.nav_exclude != true"
-          | size %}
-    {% if pages_top_size > 0 %}
-      {% include nav.html pages=site.html_pages key=nil %}
-    {% endif %}
-    {% if site.just_the_docs.collections %}
-      {% assign collections_size = site.just_the_docs.collections | size %}
-      {% for collection_entry in site.just_the_docs.collections %}
-        {% assign collection_key = collection_entry[0] %}
-        {% assign collection_value = collection_entry[1] %}
-        {% assign collection = site[collection_key] %}
-        {% if collection_value.nav_exclude != true %}
-          {% include nav.html pages=collection key=collection_key %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endcapture %}
   <div id="main-content-wrap" class="main-content-wrap" id="top">
     {% include components/breadcrumbs.html %}
     <div id="main-content" class="main-content" role="main">
@@ -45,7 +19,7 @@ layout: table_wrappers
       {% endif %}
 
       {% if page.has_children == true and page.has_toc != false %}
-        {% include components/children_nav.html toc_list=toc_list %}
+        {% include components/children_nav.html %}
       {% endif %}
 
       {% include components/footer.html %}
