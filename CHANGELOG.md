@@ -20,11 +20,13 @@ This website includes docs for some new features that are not available in `v0.5
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Fixed: liquid variable leakage in navigation components by [@pdmosses] in [#1243]
 
 Docs changes in `main` that are *not* in the latest release:
 
 - N/A
+
+[#1243]: https://github.com/just-the-docs/just-the-docs/pull/1243
 
 ## Release v0.5.1
 
