@@ -22,7 +22,7 @@ layout: table_wrappers
         {% endif %}
 
         {% if page.has_children == true and page.has_toc != false %}
-          {% include components/children_nav.html toc_list=toc_list %}
+          {% include components/children_nav.html %}
         {% endif %}
 
         {% include components/footer.html %}
