@@ -28,6 +28,8 @@ Docs changes in `main` that are *not* in the latest release:
 
 [#1243]: https://github.com/just-the-docs/just-the-docs/pull/1243
 
+The theme docs website has a new canonical URL: <https://just-the-docs.com>. We've also retroactively published the theme docs website for version `v0.3.3` at <https://v0-3-3-docs.just-the-docs.com/>.
+
 ## Release v0.5.1
 
 Hi all, this is a very small minor patch release that has two small behavioral bugfixes: fixing a regression introduced in `v0.5.0` on Safari versions `<16.4` (broken media query), and the copy code button providing incorrect feedback in insecure browser contexts. This should be a smooth upgrade with no breaking changes.
@@ -76,8 +78,6 @@ To use and pin a previous version of the theme, replace the `0.5.1` with the des
 [#1240]: https://github.com/just-the-docs/just-the-docs/pull/1240
 
 [@rmoff]: https://github.com/rmoff
-
-The theme docs website has a new canonical URL: <https://just-the-docs.com>. We've also retroactively published the theme docs website for version `v0.3.3` at <https://v0-3-3-docs.just-the-docs.com/>.
 
 ## Release v0.5.0
 
