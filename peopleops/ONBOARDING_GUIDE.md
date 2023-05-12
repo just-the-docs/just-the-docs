@@ -84,7 +84,7 @@ PROCESS
 PROCESS
 {: .label .label-purple }
 
-  - Provide a void cheque (in Canada this includes your bank account number, routing/transit number and institution number) to our accounting staff via [this email address](mailto:accounting@countable.ca) -  you can also send any future inquiries about accounting matters there.
+  - Provide a void cheque (in Canada this includes your bank account number, routing/transit number and institution number) to our accounting staff via [this email address](mailto:accounting@countable.ca). Please also include your bank's name, address, and a photo of your government issued ID card.
 
 ### Environment
 
