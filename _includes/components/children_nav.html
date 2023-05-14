@@ -23,7 +23,11 @@
 {%- endif -%}
 
 <hr>
-{% include toc_heading_custom.html %}
+{%- if page.lang == 'fa' -%}
+  {% include fa-toc_heading_custom.html %}
+{%- else -%}
+  {% include toc_heading_custom.html %}
+{%- endif -%}
 <ul>
 {% for child in sorted_pages %}
   <li>
