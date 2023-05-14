@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Just the Docs
 description: A Jekyll theme for documentation
-baseurl: "/okbayat.github.io" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://okbayat.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 repository: just-the-docs/just-the-docs # for github-metadata
 
