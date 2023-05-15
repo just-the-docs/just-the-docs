@@ -46,11 +46,6 @@ p.{{ callout[0] }}, blockquote.{{ callout[0] }} {
     }
 }
 
-[dir=rtl] p.{{ callout[0] }}, blockquote.{{ callout[0] }} {
-  border-left: none;
-  border-right: $border-radius solid ${{ callout[1].color }}-{{ callout_color_hue }};
-}
-
 p.{{ callout[0] }}-title, blockquote.{{ callout[0] }}-title {
     background: rgba(${{ callout[1].color }}-{{ callout_background_hue }}, {{ callout_opacity }});
     border-left: $border-radius solid ${{ callout[1].color }}-{{ callout_color_hue }};
@@ -67,6 +62,11 @@ p.{{ callout[0] }}-title, blockquote.{{ callout[0] }}-title {
       font-size: .75em;
       padding-bottom: .125rem;
     }
+}
+
+[dir=rtl] p.{{ callout[0] }}-title, blockquote.{{ callout[0] }}-title {
+  border-left: none;
+  border-right: $border-radius solid ${{ callout[1].color }}-{{ callout_color_hue }};
 }
 
 blockquote.{{ callout[0] }} {
