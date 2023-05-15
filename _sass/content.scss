@@ -23,7 +23,7 @@
 
   ul,
   ol {
-    padding-left: 1.5em;
+    //padding-left: 1.5em;
   }
 
   li {
@@ -33,7 +33,7 @@
   }
 
   ol {
-    list-style-type: none;
+    //list-style-type: none;
     counter-reset: step-counter;
 
     > li {
