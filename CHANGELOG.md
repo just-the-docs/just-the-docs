@@ -28,6 +28,8 @@ Docs changes in `main` that are *not* in the latest release:
 
 [#1243]: https://github.com/just-the-docs/just-the-docs/pull/1243
 
+The theme docs website has a new canonical URL: <https://just-the-docs.com>. We've also retroactively published the theme docs website for version `v0.3.3` at <https://v0-3-3-docs.just-the-docs.com/>.
+
 ## Release v0.5.1
 
 Hi all, this is a very small minor patch release that has two small behavioral bugfixes: fixing a regression introduced in `v0.5.0` on Safari versions `<16.4` (broken media query), and the copy code button providing incorrect feedback in insecure browser contexts. This should be a smooth upgrade with no breaking changes.
@@ -89,7 +91,7 @@ As always, we'd love your feedback. [Open an issue](https://github.com/just-the-
 
 **Migration**: users with a custom `setup.scss` cannot rely on variables or functions defined in `color_scheme`. This reverts to the behaviour in `v0.4.1`. Users should instead move those variables or functions to the `color_scheme` files themselves.
 
-For more, refer to the [migration guide](https://just-the-docs.github.io/just-the-docs/MIGRATION/).
+For more, refer to the [migration guide](https://just-the-docs.com/MIGRATION/).
 
 ### Using Release `v0.5.0`
 
@@ -129,7 +131,7 @@ To use and pin a previous version of the theme, replace the `0.5.0` with the des
 
 Hello! We're back again with another small release. Like `v0.4.1`, this release is a [semver patch](https://semver.org/): it only includes bugfixes, and is fully backwards-compatible.
 
-The big highlight of this theme is fixing our light scheme code highlighting contrast issues; this was one of our most-requested features! This change is fully backwards-compatible; users can [opt-in to our old highlighting theme](https://just-the-docs.github.io/just-the-docs/docs/customization/#deprecated-legacy_light) by using `legacy_light` instead of `light`.
+The big highlight of this theme is fixing our light scheme code highlighting contrast issues; this was one of our most-requested features! This change is fully backwards-compatible; users can [opt-in to our old highlighting theme](https://just-the-docs.com/docs/customization/#deprecated-legacy_light) by using `legacy_light` instead of `light`.
 
 As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
 
@@ -230,16 +232,16 @@ We're so excited to release Just the Docs `v0.4.0`. This release has been almost
 `v0.4.0` contains many new features and bugfixes. We enumerate all of them in further sections in this changelog; however, we'd like to call out some of the most-requested changes:
 
 - better support for dark theme: dark highlighting, search input color
-- [callouts](https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/), a new design component to highlight content
-- [configuring mermaid.js](https://just-the-docs.github.io/just-the-docs/docs/ui-components/code/#mermaid-diagram-code-blocks), a markdown-native diagram visualization library
-- [copy code button](https://just-the-docs.github.io/just-the-docs/docs/ui-components/code/#copy-button) for code snippets
-- [external navigation links](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/#external-navigation-links)
+- [callouts](https://just-the-docs.com/docs/ui-components/callouts/), a new design component to highlight content
+- [configuring mermaid.js](https://just-the-docs.com/docs/ui-components/code/#mermaid-diagram-code-blocks), a markdown-native diagram visualization library
+- [copy code button](https://just-the-docs.com/docs/ui-components/code/#copy-button) for code snippets
+- [external navigation links](https://just-the-docs.com/docs/navigation-structure/#external-navigation-links)
 - major improvements to nav generation efficiency and robustness
 - minor improvements to built-in accessibility (SVG icons, nav titles, skip to main content)
-- [modularized site components](https://just-the-docs.github.io/just-the-docs/docs/customization/#custom-layouts-and-includes) (advanced feature)
-- [new custom includes](https://just-the-docs.github.io/just-the-docs/docs/customization/#override-includes): table of contents heading, navigation panel footer, search placeholder, lunr search indices
+- [modularized site components](https://just-the-docs.com/docs/customization/#custom-layouts-and-includes) (advanced feature)
+- [new custom includes](https://just-the-docs.com/docs/customization/#override-includes): table of contents heading, navigation panel footer, search placeholder, lunr search indices
 - bugfixes involving WEBrick and Ruby 3, Liquid processing in CSS comments, nested task lists, relative URLs, scroll navigation, corrupted search data from rake, breadcrumbs, and more!
-- more documentation for [custom includes](https://just-the-docs.github.io/just-the-docs/docs/customization/#override-includes), this changelog, and the [migration guide](https://just-the-docs.github.io/just-the-docs/MIGRATION/)
+- more documentation for [custom includes](https://just-the-docs.com/docs/customization/#override-includes), this changelog, and the [migration guide](https://just-the-docs.com/MIGRATION/)
 
 *After usage instructions and the roadmap, we enumerate all changes from `v0.3.3`.*
 
@@ -272,7 +274,7 @@ remote_theme: just-the-docs/just-the-docs@v0.3.3
 
 ### Migration Guide and Strategies
 
-We've developed a new [migration guide](https://just-the-docs.github.io/just-the-docs/MIGRATION/) for users to migrate from version `v0.3.3` to `v0.4.0`. It outlines major changes in project maintenance (e.g. new repository link, team) as well as breaking changes that may break your site (and potential solutions). We suggest that all users refer to the guide before manually upgrading their site.
+We've developed a new [migration guide](https://just-the-docs.com/MIGRATION/) for users to migrate from version `v0.3.3` to `v0.4.0`. It outlines major changes in project maintenance (e.g. new repository link, team) as well as breaking changes that may break your site (and potential solutions). We suggest that all users refer to the guide before manually upgrading their site.
 
 **For the vast majority of users, we do not anticipate that this will be a breaking change.** The major touch points are surrounding new includes, navigation (ordering, pages, and collections), the favicon, and a shift to relative URLs. However, users who heavily customize the theme (primarily by overriding includes) will likely have to make minor changes.
 
