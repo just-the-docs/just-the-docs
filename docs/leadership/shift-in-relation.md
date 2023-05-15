@@ -3,7 +3,7 @@ layout: default
 title: تغییر در روابط
 parent: راهبری
 nav_order: 2
-dir: rtl
+direction: rtl
 ---
 
 # تغییر در روابط انسانی: نگاهی به فضای امکان برای ارتقاء ارتباطات
