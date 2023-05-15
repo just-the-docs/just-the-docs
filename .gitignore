@@ -7,3 +7,9 @@ _site
 Gemfile.lock
 node_modules
 .DS_Store
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/modules.xml
+/.idea/OkBayat.github.io.iml
+/.idea/codeStyles/Project.xml
+/.idea/inspectionProfiles/Project_Default.xml
+/.idea/vcs.xml

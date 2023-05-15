@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Just the Docs
-description: A Jekyll theme for documentation
+title: @OkBayat
+description: OkBayat (Mohammad Bayat) Personal Website
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://okbayat.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 repository: just-the-docs/just-the-docs # for github-metadata
@@ -113,8 +113,14 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 
 # External navigation links
 nav_external_links:
-  - title: Just the Docs on GitHub
-    url: https://github.com/just-the-docs/just-the-docs
+  - title: @OkBayat on GitHub
+    url: https://github.com/OkBayat
+
+  - title: OkBayat on LinkedIn
+    url: https://www.linkedin.com/in/okbayat/
+
+  - title: OkBayat on Instagram
+    url: https://www.instagram.com/OkBayat
 
 # Footer content
 # appears at the bottom of every page's main content
