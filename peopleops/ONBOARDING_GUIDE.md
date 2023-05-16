@@ -42,7 +42,7 @@ PROCESS
       - In addition to the photo that Slack prompts you for, fill in the rest of your user profile with relevant information.
       - Use the team to answer your other questions.
 
-      ![Recommended Slack Settings](/assets/images/recommended-slack-setting.png)
+      ![Recommended Slack Settings](../../assets/images/recommended-slack-setting.png)
 
 ### Set your work availability and subscribe to group calendars
 
