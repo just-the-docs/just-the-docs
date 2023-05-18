@@ -18,7 +18,7 @@ Just the Docs gives your documentation a jumpstart with a responsive Jekyll them
 ---
 
 {: .warning }
-> This website documents the features of the current `main` branch of the Just the Docs theme. See [the CHANGELOG]({% link CHANGELOG.md %}) for a list of releases, new features, and bug fixes.
+> This website documents the features of the current `main` branch of the Just the Docs theme. See for a list of releases, new features, and bug fixes.
 
 Just the Docs is a theme for generating static websites with [Jekyll]. You can write source files for your web pages using [Markdown], the [Liquid] templating language, and HTML.[^1] Jekyll builds your site by converting all files that have [front matter] to HTML. Your [Jekyll configuration] file determines which theme to use, and sets general parameters for your site, such as the URL of its home page.
 
