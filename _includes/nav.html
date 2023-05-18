@@ -1,6 +1,6 @@
 {%- comment -%}
-  Include as: {%- include_cached nav.html pages=pages key=key -%}
-  Depends on: include.pages, include.key, site.
+  Include as: {%- include_cached nav.html pages=pages -%}
+  Depends on: include.pages.
   Results in: HTML for the navigation panel.
   Includes:
     sorted_pages.html
@@ -14,6 +14,10 @@
     | where_exp: "item", "item.nav_exclude != true" -%}
 
 {%- include sorted_pages.html pages = nav_pages -%}
+
+{%- comment -%}
+  It might be more efficient to sort the pages at each level separately.
+{%- endcomment -%}
 
 {%- assign first_level_pages = sorted_pages
     | where_exp: "item", "item.parent == nil" -%}

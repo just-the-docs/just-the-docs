@@ -7,6 +7,7 @@
   Overwrites: 
     pages_top_size, collections_size, collection_entry,
     collection_key, collection_value, collection, nav_footer_custom.
+  Should not be cached, because nav_footer_custom.html might depend on page.
 {%- endcomment -%}
 
 <div class="side-bar">
@@ -23,7 +24,7 @@
           | where_exp:"item", "item.nav_exclude != true"
           | size %}
     {% if pages_top_size > 0 %}
-      {% include_cached nav.html pages=site.html_pages key=nil %}
+      {% include_cached nav.html pages=site.html_pages %}
     {% endif %}
     {%- if site.nav_external_links -%}
       <ul class="nav-list">
@@ -52,15 +53,15 @@
                   <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
                   {%- endif -%}
                   <div class="nav-category">{{ collection_value.name }}</div>
-                  {% include_cached nav.html pages=collection key=collection_key %}
+                  {% include_cached nav.html pages=collection %}
                 </li>
               </ul>
             {% else %}
               <div class="nav-category">{{ collection_value.name }}</div>
-              {% include_cached nav.html pages=collection key=collection_key %}
+              {% include_cached nav.html pages=collection %}
             {% endif %}
           {% else %}
-            {% include_cached nav.html pages=collection key=collection_key %}
+            {% include_cached nav.html pages=collection %}
           {% endif %}
         {% endif %}
       {% endfor %}
