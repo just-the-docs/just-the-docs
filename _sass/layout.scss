@@ -188,6 +188,8 @@ body {
 .site-footer {
   @include container;
 
+  display: none;
+
   position: absolute;
   bottom: 0;
   left: 0;
@@ -197,8 +199,18 @@ body {
   @include fs-2;
 
   @include mq(md) {
-    // position: static;
+    display: block;
+    padding-top: $sp-4;
+    position: static;
     justify-self: end;
+  }
+}
+
+.site-footer-mobile {
+  padding-top: $sp-4;
+
+  @include mq(md) {
+    display: none;
   }
 }
 
