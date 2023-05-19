@@ -37,13 +37,13 @@ Everything that follows is for Staff Contractors, not outside consultants.
 
 We aim to communicate clearly and openly about our team, our norms, and our expectations. 
 
-Review our [Recruiting Strategy](./recruiting/RECRUITING_STRATEGY/) for more on this.
+Review our [Recruiting Strategy](https://countable-web.github.io/ops/peopleops/recruiting/RECRUITING_STRATEGY/#recruitment-strategy) for more on this.
 
 Another goal is to always try to screen people earlier. The first stages of the screening process are cheaper, so we want to avoid letting anyone into phase 2 if we can somehow tell they'll be rejected there in phase 1, etc.
 
 ### First response
 
-*If* if the candidate didn't correctly format their cover letter, there's no need to respond as it's likely a mass/automated application.
+If the candidate didn't correctly format their cover letter, there's no need to respond as it's likely a mass/automated application.
 
 Otherwise, when you receive an application:
 
@@ -51,7 +51,7 @@ Otherwise, when you receive an application:
 
 ### Initial Screening
 
-For candidates that passed the automated elements of initial screening, return to do a quick, quantitative evaluation of their initial outreachusing the following point system.
+For candidates that passed the automated elements of initial screening, return to do a quick, quantitative evaluation of their initial outreach using the following point system.
 
 #### Point System
 
@@ -61,7 +61,7 @@ screening is optimized to [avoid "type 2 errors" not "type 1 errors"](https://en
 Awarding half points is fine. Use your best judgement.
 
   - **1 point** for communication. No point awarded to candidates who miss the cover letter formatting requirement, or make other basic mistakes that waste the reviewer's time.
-  - **1 point** for for writing ability. Reject if you see poor English, grammar errors, spelling mistakes in the cover letter, or have trouble understanding the person.
+  - **1 point** for writing ability. Reject if you see poor English, grammar errors, spelling mistakes in the cover letter, or have trouble understanding the person.
   - **1 point** for having 2 or more years of technical experience in all requested domains/technologies. Or, 1 year and a relevant bachelor's degree or higher.
   - **1 point** for a well designed/formatted resume that is easy to read and highlights relevant information.
   - **1 point** for portfolio links. Candidate should have at least one link to good quality content they built, which looks professional, intuitive and has a good user experience. This can be on a platform like Dribbble, Behance, GitHub.
@@ -133,7 +133,7 @@ If someone is interviewed but not accepted, respond as follows (subject: `We've 
     We have an extremely selective process and less than 1% of candidates are selected so you've
     done well to make it to this point. We wish you great luck in future job applications.
 
-*If* the Candidate has made it to the *Technical Test* stage, the lead of the team they're applying for should also write a personal note with an explanation of scoring, how to do better next time, and if they have a 80% or better score, that we will consider them for future positions.
+If the Candidate has made it to the *Technical Test* stage, the lead of the team they're applying for should also write a personal note with an explanation of scoring, how to do better next time, and if they have a 80% or better score, that we will consider them for future positions.
 
 ### Internship
 
@@ -150,7 +150,7 @@ We should aim to accept 1 in 3 people in this step of the process overall to ens
 
 ### Onboarding
 
-  - After you've successfully completed the previous step and collected the candidate documents (save it at our [peopleops folder](https://drive.google.com/drive/folders/1HY7LPI_h5F5WxaTW5v-1_DMUXcJIjjh1) or send it to your supervisor)
+  - After you've successfully completed the previous step and collected the candidate documents, send it to your supervisor.
   - Our Ops coordinator proceeds to [onboard](ONBOARDING_GUIDE.md) the new person, with the help of their supervisor.
 
 ### Referrals
