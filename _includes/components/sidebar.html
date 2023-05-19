@@ -65,42 +65,46 @@
   {% else %}
     <footer class="site-footer">
       <div class="text-small text-grey-dk-300 mb-4">
-          {% if site.license_image_url != nil %}
-          <a href=" {{site.license_url}} ">
-              <img alt="{{ site.license_name }}" style="border-width:0" src="{{ site.license_image_url }}" /><br/>
-          </a>
-          {% endif %}
-          {% if site.license_name != nil %}
+        {% if site.license_image_url != nil %}
+        <a href=" {{site.license_url}} ">
+          <img alt="{{ site.license_name }}" style="border-width:0" src="{{ site.license_image_url }}" /><br/>
+        </a>
+        {% endif %}
+        {% if site.license_name != nil %}
           <p>This work is licensed under a
-              {% if site.license_url != nil %}
-              <a rel="license" target="_blank" href="{{ site.license_url }}">
-              {% endif %}
-              {{ site.license_name }}{% if site.license_url != nil %}</a>{% endif %}.</p>
-          {% endif %}
-
-          {% if site.nav_footer_logo_top != '' %}
-              {% if site.nav_footer_logo_top_href != '' %}
-                  <a href="{{ site.nav_footer_logo_top_href }}">
-                      <img width="170px" style="padding-bottom:15px;" align="middle" alt="Top Logo" src="{{ site.nav_footer_logo_top }}">
-                  </a>
-              {% else %}
-                  <img width="170px" style="padding-bottom:15px;" align="middle" alt="Top Logo" src="{{ site.nav_footer_logo_top }}">
-              {% endif %}
-          {% endif %}
-
-          {% if site.nav_footer_logo_bottom != '' %}
-              {% if site.nav_footer_logo_bottom_href != '' %}
-                  <a href="{{ site.nav_footer_logo_bottom_href }}">
-                      <img width="170px" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
-                  </a>
-              {% else %}
-                  <img width="170px" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
-              {% endif %}
+            {% if site.license_url != nil %}
+            <a rel="license" target="_blank" href="{{ site.license_url }}">
+            {% endif %}
+            {{ site.license_name }}{% if site.license_url != nil %}</a>{% endif %}.</p>
+        {% endif %}
+        {% if site.nav_footer_logo_top != '' %}
+          {% if site.nav_footer_logo_top_href == '' %}
+            <img width="170" style="padding-bottom:15px;" align="middle" alt="Top Logo" src="{{ site.nav_footer_logo_top }}">
           {% else %}
-              <a href="https://scds.ca">
-                  <img width="170px" href="https://google.com" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png">
-              </a>
+            <a href="{{ site.nav_footer_logo_top_href }}">
+              <img width="170" style="padding-bottom:15px;" align="middle" alt="Top Logo" src="{{ site.nav_footer_logo_top }}">
+            </a>
           {% endif %}
+        {% endif %}
+        {% if site.nav_footer_logo_bottom == '' %}
+          {% if site.nav_footer_logo_bottom_href == '' %}
+            <a href="https://scds.ca">
+              <img width="170" href="https://scds.ca" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png">
+            </a>      
+          {% else %}
+            <a href="{{ site.nav_footer_logo_bottom_href }}">
+              <img width="170" href="https://scds.ca" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png">
+            </a> 
+          {% endif %}
+        {% else %}
+            {% if site.nav_footer_logo_bottom_href == '' %}
+              <img width="170" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
+            {% else %}
+              <a href="{{ site.nav_footer_logo_bottom_href }}">
+                <img width="170x" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
+              </a>
+            {% endif %}
+        {% endif %}
       </div>
     </footer>
   {% endif %}
