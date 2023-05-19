@@ -161,7 +161,7 @@ callouts:
 
 
 # Web icon
-favicon_ico: "/assets/img/favicon.ico"
+favicon_ico: ""
 
 # Google Analytics Tracking (optional)
 # Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
