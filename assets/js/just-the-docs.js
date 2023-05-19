@@ -31,7 +31,9 @@ function initNav() {
     }
     if (target) {
       e.preventDefault();
-      target.parentNode.classList.toggle('active');
+      const active = target.parentNode.classList.toggle('active');
+      const passive = target.parentNode.classList.toggle('passive');
+      if (active && passive) target.parentNode.classList.toggle('passive');
     }
   });
 
@@ -478,7 +480,7 @@ function scrollNav() {
 }
 
 // Find the nav-list-link that refers to the current page
-// then make it and make all enclosing nav-list-item elements active
+// then make it and all enclosing nav-list-item elements active
 
 function activateNav() {
   var href = document.location.pathname;
@@ -508,7 +510,7 @@ jtd.onReady(function(){
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
-  activateNav(); // uncomment to enable JavaScript for opening the nav panel 
+  activateNav();
   scrollNav();
 });
 
