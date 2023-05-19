@@ -197,7 +197,7 @@ body {
   @include fs-2;
 
   @include mq(md) {
-    position: static;
+    // position: static;
     justify-self: end;
   }
 }
