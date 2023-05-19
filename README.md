@@ -7,9 +7,6 @@
 ## 404.html
 - Add 404.html to root folder. https://github.com/scds/scds-template/blob/master/404.html
 
-## favicon.ico
-- Add favicon.ico to assets/img/template. https://github.com/scds/scds-template/blob/master/assets/img/template/favicon.ico
-
 ## \_layouts/default.html
 - Insert the following piece of code between these two lines (approximately line 85.) This fixes the invisible copy/paste icon bug. [View blame here](https://github.com/scds/github-pages/blame/60bc37c5c0f4329f358b02e0640be4c30cbd233b/_layouts/default.html#:~:text=%7B%25%20include%20icons/icons.html%20%25%7D)
 
@@ -65,9 +62,6 @@ callouts:
   warning:
     title: Warning
     color: red
-    
-# Web icon
-favicon_ico: "/assets/img/template/favicon.ico"
 ```
 
 - [OPTIONAL] Comment out last_edit_timestamp and last_edit_time_format
@@ -79,7 +73,7 @@ github_repo_url: "https://scds.github.io/dmds-template/" # *** Enter workshop UR
 gh_edit_repository: "https://github.com/scds/dmds-template" # *** Enter the github URL for your repo
 ga_tracking: "" # *** This needs to be set up in Google Analytics once you know the website URL (ask Jay to do this). Then the tracking code needs to be taken from Google Analytics and pasted here.  
 
-subtitle: 'SCDS Do More with Digital Scholarship series' ## SCDS
+subtitle: 'SCDS Do More with Digital Scholarship series' ## DMDS
 #subtitle: 'A Data Analysis Support Hub Tutorial'        ## DASH
 
 #  _____       _   _   _          _      _                            
@@ -89,7 +83,7 @@ subtitle: 'SCDS Do More with Digital Scholarship series' ## SCDS
 # |_____|  \__,_| |_|  \__|   /_/   \_\ |_.__/   \___/    \_/    \___|
 ```
 
-SCDS:
+DMDS:
 - Change subtitle to 'SCDS Do More with Digital Scholarship series'
 
 DASH:
