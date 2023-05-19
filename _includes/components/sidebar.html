@@ -56,6 +56,7 @@
     {% endif %}
   </nav>
 
+  <!-- NAVIGATION FOOTER -->
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}
   {% endcapture %}
@@ -63,7 +64,44 @@
     {{ nav_footer_custom }}
   {% else %}
     <footer class="site-footer">
-      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+      <div class="text-small text-grey-dk-300 mb-4">
+          {% if site.license_image_url != nil %}
+          <a href=" {{site.license_url}} ">
+              <img alt="{{ site.license_name }}" style="border-width:0" src="{{ site.license_image_url }}" /><br/>
+          </a>
+          {% endif %}
+          {% if site.license_name != nil %}
+          <p>This work is licensed under a
+              {% if site.license_url != nil %}
+              <a rel="license" target="_blank" href="{{ site.license_url }}">
+              {% endif %}
+              {{ site.license_name }}{% if site.license_url != nil %}</a>{% endif %}.</p>
+          {% endif %}
+
+          {% if site.nav_footer_logo_top != '' %}
+              {% if site.nav_footer_logo_top_href != '' %}
+                  <a href="{{ site.nav_footer_logo_top_href }}">
+                      <img width="170px" style="padding-bottom:15px;" align="middle" alt="Top Logo" src="{{ site.nav_footer_logo_top }}">
+                  </a>
+              {% else %}
+                  <img width="170px" style="padding-bottom:15px;" align="middle" alt="Top Logo" src="{{ site.nav_footer_logo_top }}">
+              {% endif %}
+          {% endif %}
+
+          {% if site.nav_footer_logo_bottom != '' %}
+              {% if site.nav_footer_logo_bottom_href != '' %}
+                  <a href="{{ site.nav_footer_logo_bottom_href }}">
+                      <img width="170px" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
+                  </a>
+              {% else %}
+                  <img width="170px" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
+              {% endif %}
+          {% else %}
+              <a href="https://scds.ca">
+                  <img width="170px" href="https://google.com" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png">
+              </a>
+          {% endif %}
+      </div>
     </footer>
   {% endif %}
 </div>
