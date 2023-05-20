@@ -1,8 +1,10 @@
 // custom SCSS (or CSS) goes here
 
 // -------------------------------------------------- //
-[dir=rtl] {
-  .main-content {
+.main-content {
+  &[dir = "rtl"] {
+    text-align: justify;
+
     ol > li::before {
       right: -1.6em;
     }
