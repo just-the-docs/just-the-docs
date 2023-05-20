@@ -2,7 +2,7 @@
 
 // ---Custom Main Content style
 .main-content {
-  &[dir = "rtl"] {
+  &[dir="rtl"] {
     text-align: justify;
 
     ol {
