@@ -1,13 +1,16 @@
 // custom SCSS (or CSS) goes here
 
-// -------------------------------------------------- //
+// ---Custom Main Content style
 .main-content {
   &[dir = "rtl"] {
     text-align: justify;
 
-    ol > li::before {
-      right: -1.6em;
+    ol {
+      > li {
+        &::before {
+          right: -1.6em;
+        }
+      }
     }
   }
 }
-
