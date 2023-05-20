@@ -1,1 +1,11 @@
 // custom SCSS (or CSS) goes here
+
+// -------------------------------------------------- //
+[dir=rtl] {
+  .main-content {
+    ol > li::before {
+      right: -1.6em;
+    }
+  }
+}
+
