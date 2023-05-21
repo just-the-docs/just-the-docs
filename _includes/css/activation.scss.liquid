@@ -37,7 +37,7 @@
   {%- endif -%}
 {%- endfor -%}
 
-{% unless activation_first_level_index == nil %}
+{%- unless activation_first_level_index == nil -%}
 
 {%- if page.grand_parent -%}
   {%- assign activation_title = page.parent -%}
@@ -81,7 +81,7 @@
   {%- endfor -%}
 {%- endif -%}
 
-{% unless activation_second_level_index == nil and activation_third_level_index %}
+{%- unless activation_second_level_index == nil and activation_third_level_index -%}
 
 {%- if page.collection == nil -%}
 
