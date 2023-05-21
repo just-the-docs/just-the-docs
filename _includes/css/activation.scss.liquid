@@ -5,11 +5,10 @@
   Includes:
     sorted_pages.html.
   Overwrites: 
-    activation_pages, activation_page, activation_title,
+    activation_pages, activation_pages_top_size, activation_page, activation_title,
     activation_first_level, activation_second_level, activation_third_level,
-    activation_first_level_index, activation_second_level_index, activation_third_level_index,
-    activation_collection, activation_collection_index, activation_index,
-    activation_collection_prefix, activation_pages_top_size.
+    activation_first_level_reversed, activation_second_level_reversed,
+    activation_first_level_index, activation_second_level_index, activation_third_level_index.
   Should not be cached, because it depends on page.
 {%- endcomment -%}
 
@@ -23,6 +22,8 @@
 {%- assign activation_first_level_index = nil -%}
 {%- assign activation_second_level_index = nil -%}
 {%- assign activation_third_level_index = nil -%}
+{%- assign activation_first_level_reversed = nil -%}
+{%- assign activation_second_level_reversed = nil -%}
 
 {%- assign activation_title = page.grand_parent | default: page.parent | default: page.title -%}
 {%- assign activation_first_level = activation_pages
@@ -31,6 +32,7 @@
 {%- for activation_page in sorted_pages -%}
   {%- if activation_page.title == activation_title -%}
     {%- assign activation_first_level_index = forloop.index -%}
+    {%- assign activation_first_level_reversed = activation_page.child_nav_order -%}
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}
@@ -53,6 +55,10 @@
   {%- for activation_page in sorted_pages -%}
     {%- if activation_page.title == activation_title -%}
       {%- assign activation_second_level_index = forloop.index -%}
+      {%- assign activation_second_level_reversed = activation_page.child_nav_order -%}
+      {%- if activation_first_level_reversed -%}
+        {%- assign activation_second_level_index = sorted_pages | size | plus: 1 | minus: activation_second_level_index -%}
+      {%- endif -%}
       {%- break -%}
     {%- endif -%}
   {%- endfor -%}
@@ -67,6 +73,9 @@
   {%- for activation_page in sorted_pages -%}
     {%- if activation_page.title == page.title -%}
       {%- assign activation_third_level_index = forloop.index -%}
+      {%- if activation_second_level_reversed -%}
+        {%- assign activation_third_level_index = sorted_pages | size | plus: 1 | minus: activation_third_level_index -%}
+      {%- endif -%}
       {%- break -%}
     {%- endif -%}
   {%- endfor -%}
