@@ -7,7 +7,9 @@
   Overwrites: 
     activation_pages, activation_page, activation_title,
     activation_first_level, activation_second_level, activation_third_level,
-    activation_first_level_index, activation_second_level_index, activation_third_level_index.
+    activation_first_level_index, activation_second_level_index, activation_third_level_index,
+    activation_collection, activation_collection_index, activation_index,
+    activation_collection_prefix, activation_pages_top_size.
   Should not be cached, because it depends on page.
 {%- endcomment -%}
 
@@ -32,6 +34,8 @@
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}
+
+{% unless activation_first_level_index == nil %}
 
 {%- if page.grand_parent -%}
   {%- assign activation_title = page.parent -%}
@@ -68,9 +72,43 @@
   {%- endfor -%}
 {%- endif -%}
 
+{% unless activation_second_level_index == nil and activation_third_level_index %}
+
+{%- if page.collection == nil -%}
+
+  {%- capture activation_collection_prefix -%}
+  .site-nav > .nav-list:nth-child(1):not(.nav-category-list) 
+  {%- endcapture -%}
+
+{%- else -%}
+
+  {%- for activation_collection in site.just_the_docs.collections -%}
+    {%- if activation_collection[0] == page.collection -%}
+      {%- assign activation_collection_index = forloop.index -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign activation_index = activation_collection_index -%}
+  {%- assign activation_pages_top_size = site.html_pages
+          | where_exp:"item", "item.title != nil"
+          | where_exp:"item", "item.parent == nil"
+          | where_exp:"item", "item.nav_exclude != true"
+          | size -%}
+  {%- if activation_pages_top_size > 0  -%}
+    {%- assign activation_index = activation_index | plus: 1 -%}
+  {%- endif -%}
+  {%- if site.nav_external_links -%}
+    {%- assign activation_index = activation_index | plus: 1 -%}
+  {%- endif -%}
+  {%- capture activation_collection_prefix -%}
+  .site-nav > .nav-list:nth-of-type({{ activation_index }}){% if site.just_the_docs.collections[page.collection].nav_fold == true %} > .nav-list-item > .nav-list{% endif %}
+  {%- endcapture -%}
+  
+{%- endif -%}
+
 // Styling for the nav-list-link to the current page:
-.site-nav > .nav-list {
-  > .nav-list-item:nth-child({{ activation_first_level_index }}){%- if activation_second_level_index %} > .nav-list > .nav-list-item:nth-child({{ activation_second_level_index }}){%- if activation_third_level_index %} > .nav-list > .nav-list-item:nth-child({{ activation_third_level_index }}){% endif %}{% endif %} {
+{{ activation_collection_prefix }} {
+  > .nav-list-item:not(.external):nth-child({{ activation_first_level_index }}){%- if activation_second_level_index %} > .nav-list > .nav-list-item:nth-child({{ activation_second_level_index }}){%- if activation_third_level_index %} > .nav-list > .nav-list-item:nth-child({{ activation_third_level_index }}){% endif %}{% endif %} {
     > .nav-list-link {
       display: block;
       font-weight: 600;
@@ -87,7 +125,7 @@
 
 // Styling for nav-list-expanders at first and second levels,
 // suppressed when a click has deactivated the expander (making the nav-list-item .passive):
-.site-nav > .nav-list {
+{{ activation_collection_prefix }} {
   > .nav-list-item:not(.passive):nth-child({{ activation_first_level_index }}){%- if activation_second_level_index %},
   > .nav-list-item:not(.passive):nth-child({{ activation_first_level_index }}) > .nav-list > .nav-list-item:not(.passive):nth-child({{ activation_second_level_index }}){% endif %} {
     > .nav-list-expander svg {
@@ -104,4 +142,21 @@
   }
 }
 
+// Styling for nav-list-expander for categories:
+.site-nav > .nav-category-list > .nav-list-item:not(.passive) {
+  > .nav-list-expander svg {
+    @if $nav-list-expander-right {
+      transform: rotate(-90deg);
+    } @else {
+      transform: rotate(90deg);
+    }
+  }
+
+  > .nav-list {
+    display: block;
+  }
+}
+
+{%- endunless -%}
+{%- endunless -%}
 {%- endunless -%}

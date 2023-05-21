@@ -480,7 +480,8 @@ function scrollNav() {
 }
 
 // Find the nav-list-link that refers to the current page
-// then make it and all enclosing nav-list-item elements active
+// then make it and all enclosing nav-list-item elements active,
+// and make all other folded collections passive
 
 function activateNav() {
   var href = document.location.pathname;
@@ -499,6 +500,17 @@ function activateNav() {
     if (target) {
       target.classList.toggle('active', true);
       target = target.parentNode;
+    }
+  }
+  const elements = siteNav.getElementsByClassName("nav-category-list");
+  for (const element of elements) {
+    const item = element.children[0];
+    const active = item.classList.toggle('active');
+    if (active) {
+      item.classList.toggle('active', false);
+      item.classList.toggle('passive', true);
+    } else {
+      item.classList.toggle('active', true);
     }
   }
 }
