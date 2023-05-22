@@ -46,7 +46,7 @@ Another goal is to always try to screen people earlier. The first stages of the 
 The recruitment process consists of the following stages:
 1. First Response
 2. Initial Screening
-3. Pre-interview screening
+3. Pre-interview Screening
 4. Initial Interview
 5. Technical Test
 6. Final Interview
