@@ -71,7 +71,7 @@ For those users, we suggest moving those variables and functions to each relevan
 The theme repo is now at <https://github.com/just-the-docs/just-the-docs>.
 The name of its default branch is now `main`.
 
-The theme docs website is now published at <https://just-the-docs.github.io/just-the-docs>.
+The theme docs website is now published at <https://just-the-docs.github.io/just-the-docs>. We've also retroactively published the theme docs website for version `v0.3.3` at <https://v0-3-3-docs.just-the-docs.com/>.
 
 GitHub provides access to previous versions of the theme repo.
 You can browse [previous versions of the theme docs website] on the [Internet Archive].
@@ -84,7 +84,7 @@ formatted for browsing on GitHub.
 It also explains how to install the theme as a Ruby Gem, without creating a new site.
 
 [README]: https://github.com/just-the-docs/just-the-docs/blob/main/README.md
-[home page]: https://just-the-docs.github.io/just-the-docs
+[home page]: https://just-the-docs.com
 
 #### Deploy previews
 

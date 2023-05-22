@@ -89,7 +89,7 @@ Just the Docs is committed to fostering a welcoming community.
 [Jekyll configuration]: https://jekyllrb.com/docs/configuration/
 [source file for this page]: https://github.com/just-the-docs/just-the-docs/blob/main/index.md
 [Just the Docs Template]: https://just-the-docs.github.io/just-the-docs-template/
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
+[Just the Docs]: https://just-the-docs.com
 [Just the Docs repo]: https://github.com/just-the-docs/just-the-docs
 [Just the Docs README]: https://github.com/just-the-docs/just-the-docs/blob/main/README.md
 [GitHub Pages]: https://pages.github.com/
