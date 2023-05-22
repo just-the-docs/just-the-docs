@@ -27,11 +27,12 @@ Covers the hiring process all the way up to onboarding.
 
 Countable has two "tracks" for our team members: outside consultants and staff contractors. 
 
-This page is about hiring **staff contractors** who work a set number of hours per week. 
+This page is about hiring **staff contractors** who work a set number of hours, ideally 40 hours per week.
+We highly prioritize hiring full-time staff contractors who exemplify a strong sense of commitment and wholeheartedly dedicate themselves to their tasks.
 
 The former category are for more specialized professionals,  often with existing consulting businesses, and there's no process for working with them currently but they are typically hired based on a quote for a specific deliverable.
 
-Everything that follows is for Staff Contractors, not outside consultants.
+**Everything that follows is for Staff Contractors**, not outside consultants.
 
 ## Recruiting Process
 
@@ -40,6 +41,17 @@ We aim to communicate clearly and openly about our team, our norms, and our expe
 Review our [Recruiting Strategy](https://countable-web.github.io/ops/peopleops/recruiting/RECRUITING_STRATEGY/#recruitment-strategy) for more on this.
 
 Another goal is to always try to screen people earlier. The first stages of the screening process are cheaper, so we want to avoid letting anyone into phase 2 if we can somehow tell they'll be rejected there in phase 1, etc.
+
+### Recruitment Stages
+The recruitment process consists of the following stages:
+1. [First Response](https://countable-web.github.io/ops/peopleops/RECRUITING/#first-response)
+2. [Initial Screening](https://countable-web.github.io/ops/peopleops/RECRUITING/#initial-screening)
+3. [Pre-interview screening](https://countable-web.github.io/ops/peopleops/RECRUITING/#pre-interview-screening)
+4. [Initial Interview](https://countable-web.github.io/ops/peopleops/RECRUITING/#inviting-to-interview)
+5. [Technical Test](https://countable-web.github.io/ops/peopleops/RECRUITING/#technical-test)
+6. [Final Interview](https://countable-web.github.io/ops/peopleops/RECRUITING/#final-interview)
+7. [Contract Signing](https://countable-web.github.io/ops/peopleops/RECRUITING/#contract-signature)
+8. [Onboarding](https://countable-web.github.io/ops/peopleops/RECRUITING/#onboarding)
 
 ### First response
 
