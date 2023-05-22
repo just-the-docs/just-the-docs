@@ -44,14 +44,14 @@ Another goal is to always try to screen people earlier. The first stages of the 
 
 ### Recruitment Stages
 The recruitment process consists of the following stages:
-1. [First Response](https://countable-web.github.io/ops/peopleops/RECRUITING/#first-response)
-2. [Initial Screening](https://countable-web.github.io/ops/peopleops/RECRUITING/#initial-screening)
-3. [Pre-interview screening](https://countable-web.github.io/ops/peopleops/RECRUITING/#pre-interview-screening)
-4. [Initial Interview](https://countable-web.github.io/ops/peopleops/RECRUITING/#inviting-to-interview)
-5. [Technical Test](https://countable-web.github.io/ops/peopleops/RECRUITING/#technical-test)
-6. [Final Interview](https://countable-web.github.io/ops/peopleops/RECRUITING/#final-interview)
-7. [Contract Signing](https://countable-web.github.io/ops/peopleops/RECRUITING/#contract-signature)
-8. [Onboarding](https://countable-web.github.io/ops/peopleops/RECRUITING/#onboarding)
+1. First Response
+2. Initial Screening
+3. Pre-interview screening
+4. Initial Interview
+5. Technical Test
+6. Final Interview
+7. Contract Signing
+8. Onboarding
 
 ### First response
 
