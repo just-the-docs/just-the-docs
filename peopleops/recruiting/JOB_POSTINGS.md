@@ -40,6 +40,9 @@ transparent from the ground up: we've open-sourced our company's
 operations manual here if you want to learn more about our current
 thinking.
 
+*If the post is for a full-time [staff contractor](https://countable-web.github.io/ops/peopleops/RECRUITING/#recruiting-for-staff-contractors), add a note:* 
+This job post is for a full-time position only. Please ensure you are available and interested in committing to a full-time work schedule before applying.
+
 [Our Open Source Ops Manual](https://countable-web.github.io/ops/)
 
 `responsibilities and skills`
