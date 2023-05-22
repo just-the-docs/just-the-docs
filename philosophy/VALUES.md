@@ -41,7 +41,7 @@ We surveyed our team on what values they hold most highly, and the results are:
 
 We also tried keyvalues.com and this was our consensus selections together:
 
-![Key Values Exercise](/assets/images/keyvalues.org.png)
+![Key Values Exercise](https://github.com/countable-web/ops/blob/master/assets/images/keyvalues.org.png)
 
 ### Good Questions To Ask
 
