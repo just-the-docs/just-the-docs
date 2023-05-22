@@ -38,7 +38,7 @@ The former category are for more specialized professionals,  often with existing
 
 We aim to communicate clearly and openly about our team, our norms, and our expectations. 
 
-Review our [Recruiting Strategy](https://countable-web.github.io/ops/peopleops/recruiting/RECRUITING_STRATEGY/#recruitment-strategy) for more on this.
+Review our [Recruiting Strategy](https://countable-web.github.io/ops/peopleops/recruiting/RECRUITING_STRATEGY/) for more on this.
 
 Another goal is to always try to screen people earlier. The first stages of the screening process are cheaper, so we want to avoid letting anyone into phase 2 if we can somehow tell they'll be rejected there in phase 1, etc.
 
