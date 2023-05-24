@@ -7,45 +7,89 @@
 ## 404.html
 - Add 404.html to root folder. https://github.com/scds/scds-template/blob/master/404.html
 
-## \_layouts/default.html
-- Insert the following piece of code between these two lines (approximately line 85.) This fixes the invisible copy/paste icon bug. [View blame here](https://github.com/scds/github-pages/blame/60bc37c5c0f4329f358b02e0640be4c30cbd233b/_layouts/default.html#:~:text=%7B%25%20include%20icons/icons.html%20%25%7D)
+## \_layouts
+Remove \_layouts folder.
 
-```html
-  </footer>
-  </div>
-  {% include icons/icons.html %}         <!-- THIS IS THE LINE TO ADD -->
-  <div class="main" id="top">
-    <div id="main-header" class="main-header">
-```
-
-- Include the following piece of code before the ending body and HTML tags. [View blame here](https://github.com/scds/github-pages/blame/60bc37c5c0f4329f358b02e0640be4c30cbd233b/_layouts/default.html#:~:text=%7B%25%20if%20site.mermaid,%7B%25%20endif%20%25%7D)
-
-```html
-  {% if site.mermaid %}
-    {% include components/mermaid.html %}
-  {% endif %}
-</body>
-</html>
-```
-
-## \_includes/footer_custom.html 
-- Comment out existing code and include this piece of code.
-    - This adds the "Last Modified" date.
-```
-<p style="font-size:0.75em">
-    Brought to you by the <a href="https://library.mcmaster.ca">McMaster University Library</a> and the <a href="https://scds.ca">Lewis & Ruth Sherman Centre for Digital Scholarship</a>.
-    <br>
-    Site last modified: {{ site.time | date_to_long_string: "ordinal", "US" }}
-</p>
-```
+## \_includes
+Remove \includes folder.
 
 ## config.yml
 
-- Change color_scheme to "mcmaster"
-- Change remote_theme to scds/jtd-mcmaster
-- Add the following code to the bottom of config.yml
-```
-# Callout titles and colors
+- Update config.yml
+```yml
+title: Workshop Name # *** Enter workshop title here 
+github_repo_url: "https://scds.github.io/scds-template/" # *** Enter workshop URL (in github pages) here
+gh_edit_repository: "https://github.com/scds/scds-template" # *** Enter the github URL for your repo
+ga_tracking: "" # *** This needs to be set up in Google Analytics once you know the website URL (ask Jay to do this). Then the tracking code needs to be taken from Google Analytics and pasted here.  
+
+# DMDS Settings
+subtitle: "This workshop is part of the SCDS Do More with Digital Scholarship series."
+nav_footer_logo_bottom: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png"
+nav_footer_logo_bottom_href: "https://scds.ca/"
+nav_footer_logo_top: ""
+nav_footer_logo_top_href: ""
+
+# DASH settings
+# subtitle: 'This workshop is part of the Data Analysis Support Hub series.'
+# nav_footer_logo_bottom: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png"
+# nav_footer_logo_bottom_href: "https://scds.ca/"
+# nav_footer_logo_top: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/dash-logo.png"
+# nav_footer_logo_top_href: "https://library.mcmaster.ca/services/dash"
+
+# OTHER settings - Override series specific settings
+# subtitle: "This workshop is part of the __ series."
+# nav_footer_logo_bottom: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png"
+# nav_footer_logo_bottom_href: "https://scds.ca/"
+# nav_footer_logo_top: ""
+# nav_footer_logo_top_href: ""
+
+#  _____       _   _   _          _      _                            
+# | ____|   __| | (_) | |_       / \    | |__     ___   __   __   ___ 
+# |  _|    / _` | | | | __|     / _ \   | '_ \   / _ \  \ \ / /  / _ \
+# | |___  | (_| | | | | |_     / ___ \  | |_) | | (_) |  \ V /  |  __/
+# |_____|  \__,_| |_|  \__|   /_/   \_\ |_.__/   \___/    \_/    \___|
+
+
+# Override Default SCDS Web Icon
+favicon_ico: ""
+
+remote_theme: scds/jtd-mcmaster
+color_scheme: mcmaster
+# logo: "https://github.com/scds/intro-voyant/blob/main/assets/img/dmds-tableau.png?raw=true"
+
+# Heading anchor links appear on hover over h1-h6 tags in page content
+# allowing users to deep link to a particular heading on a page.
+#
+# Supports true (default) or false
+heading_anchors: true
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Removed by Richie - Requires manual updating. Automatic updating alternative is done in footer_custom.html.
+# Footer last edited timestamp
+# last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+# last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "View this content on GitHub"
+gh_edit_branch: "main" # the branch that your docs is served from
+# gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# Google Analytics Tracking
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
+license_url: "http://creativecommons.org/licenses/by/4.0/"
+license_name: "Creative Commons Attribution 4.0 International License"
+license_image_url: "https://i.creativecommons.org/l/by/4.0/88x31.png"
+
+# Callout titles an colors
 callouts_level: quiet # or loud
 callouts:
   highlight:
@@ -63,29 +107,3 @@ callouts:
     title: Warning
     color: red
 ```
-
-- [OPTIONAL] Comment out last_edit_timestamp and last_edit_time_format
-- [OPTIONAL] Move workshop-dependent fields to top
-
-```
-title: Workshop Name # *** Enter workshop title here 
-github_repo_url: "https://scds.github.io/dmds-template/" # *** Enter workshop URL (in github pages) here
-gh_edit_repository: "https://github.com/scds/dmds-template" # *** Enter the github URL for your repo
-ga_tracking: "" # *** This needs to be set up in Google Analytics once you know the website URL (ask Jay to do this). Then the tracking code needs to be taken from Google Analytics and pasted here.  
-
-subtitle: 'SCDS Do More with Digital Scholarship series' ## DMDS
-#subtitle: 'A Data Analysis Support Hub Tutorial'        ## DASH
-
-#  _____       _   _   _          _      _                            
-# | ____|   __| | (_) | |_       / \    | |__     ___   __   __   ___ 
-# |  _|    / _` | | | | __|     / _ \   | '_ \   / _ \  \ \ / /  / _ \
-# | |___  | (_| | | | | |_     / ___ \  | |_) | | (_) |  \ V /  |  __/
-# |_____|  \__,_| |_|  \__|   /_/   \_\ |_.__/   \___/    \_/    \___|
-```
-
-DMDS:
-- Change subtitle to 'SCDS Do More with Digital Scholarship series'
-
-DASH:
-- Change subtitle to 'A Data Analysis Support Hub Tutorial'
-
