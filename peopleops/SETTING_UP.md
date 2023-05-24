@@ -24,8 +24,7 @@ Currently just covers equipment requirements :/
 
 You'll need:
 
-  - Good quality headset with mic. **Countable will reimbuse up to $40 on this.** Cheap options we've verified to work well:
-      - [wired](https://www.amazon.com/Mpow-Microphone-Cancelling-Lightweight-Headphones/dp/B06XWG12QS/ref=sr_1_2?ie=UTF8&qid=1531614591&sr=8-2&keywords=headset+wired+-wireless#customerReviews)
+  - Good quality headset with mic. **Countable will reimbuse up to $40 on this.** Cheap option we've verified to work well:
       - [bluetooth](https://www.amazon.com/New-bee-Bluetooth-Cancelling-Headsetcase/dp/B07FMSJZ3R).
   - A computer. 
      - If you're a developer, it should have either Linux or MacOS (we don't use Windows for work).
