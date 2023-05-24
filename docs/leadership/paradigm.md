@@ -17,6 +17,7 @@ direction: rtl
 
 1. TOC
 {:toc}
+
 ---
 
 ## مفهوم پارادایم
