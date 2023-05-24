@@ -9,6 +9,7 @@
       > li {
         &::before {
           right: -1.6em;
+          z-index: -1;
         }
       }
     }
