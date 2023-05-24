@@ -64,7 +64,7 @@ Suggested reading in [References](../../philosophy/REFERENCES/) that has influen
 
 ## Performance Evaluation Policy
 
-See our dedicated [Evaluation](../../developers/EVALUATION/) processes.
+See our dedicated [Evaluation](https://countable-web.github.io/ops/peopleops/EVALUATION/) processes.
 
 ## Team Event Basics
 
