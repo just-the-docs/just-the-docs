@@ -22,7 +22,7 @@ Operations is the process of treating our own team members as "example users" in
 
 This document will give an initial overview of what operations is presumed to cover in this case and link out to more useful reference docs on our processes.
 
-Check out our [Methodology Toolkit](/ux/METHODOLOGY.md) at Countable.
+Check out our [Methodology Toolkit](https://countable-web.github.io/ops/ux/METHODOLOGY/) at Countable.
 
 ## Guidelines at Countable
 
@@ -77,7 +77,7 @@ PROCESS
 
 so we can minimize those.
 
-See [here](META.md) for more details on how to write ops manual pages.
+See [here](https://countable-web.github.io/ops/operations/PROCESSES/META/) for more details on how to write ops manual pages.
 
 ### Company Structure / Governance
 
