@@ -53,6 +53,10 @@ In the future, we plan to improve our coverage of medical costs but this is a st
 1.  Full time contractors (100h/mo or more) and employees receive 50% reimbursement for medical expenses, up to $1000 CAD per calendar year.
 2.  Part time contractors (50h/mo or more) receive 30% reimbursement for medical expenses, up to $1000 CAD per calendar year.
 
+### Subcontractors in the Philippines
+
+Recognizing that we have a significant number of team members based in the Philippines, we have enhanced our benefits package to provide better support to them.
+
 ## See Also
 
 [Expenses](EXPENSES.md) we cover for team members
