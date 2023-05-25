@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Benefits for Subcontractors in the Philippines
+title: Benefits for PH Team Members
 parent: People Ops
-nav_order: 19
+nav_order: 16
 ---
 
-# Benefits for Subcontractors in the Philippines
+# Benefits for PH Team Members
 
 **Purpose**
 
