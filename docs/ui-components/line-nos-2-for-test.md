@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Code with line numbers
+title: Code with line numbers 2
 parent: Code
 grand_parent: UI Components
-permalink: /docs/ui-components/code/line-numbers/
-nav_order: 1
+permalink: /docs/ui-components/code/line-numbers-2/
+nav_order: 2
 ---
 
 # Code snippets with line numbers
