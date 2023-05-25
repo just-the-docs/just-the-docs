@@ -1,23 +1,39 @@
+{%- assign previous_index = page.nav_order | minus: 1 -%}
+{%- assign next_index = page.nav_order | plus: 1 -%}
+
+{%- assign previous_page = first_level_pages
+    | where_exp: "item", "item.nav_order == previous_index"
+    | first -%}
+
+{%- assign next_page = first_level_pages
+    | where_exp: "item", "item.nav_order == next_index"
+    | first -%}
+
+<!-- first_level_pages, second_level_pages, third_level_pages, nav_pages -->
+
 <!-- Navigation buttons -->
 <div style="display: flex;">
 <div style="flex-grow: 1;">
 
-<a href="#">
-
-<button type="button" name="button" class="btn btn-outline" href="#">
-🡨 Preparation
-</button>
-</a>
+{% if previous_page %}
+    <a href="{{previous_page.url}}">
+    <button type="button" name="button" class="btn btn-outline">
+    🡨 {{ previous_page.url }}
+    </button>
+    </a>
+{% endif %}
 
 </div>
 
 <div>
 
-<a href="#">
-<button type="button" name="button" class="btn btn-outline" href="#">
-Lessons 🡪
-</button>
-</a>
+{% if next_page %}
+    <a href="{{next_page.url}}">
+    <button type="button" name="button" class="btn btn-outline">
+    {{ next_page.title }} 🡪
+    </button>
+    </a>
+{% endif %}
 
 </div>
 </div>
