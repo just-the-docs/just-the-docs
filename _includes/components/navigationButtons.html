@@ -1,0 +1,251 @@
+{%- assign previous_index = page.nav_order | minus: 1 -%}
+{%- assign next_index = page.nav_order | plus: 1 -%}
+<!-- first_level_pages, second_level_pages, third_level_pages, nav_pages -->
+
+<!-- Navigation buttons -->
+<div style="display: flex;">
+<div style="flex-grow: 1;">
+
+{% if page.grand_parent %}                                                                  <!-- If page is a grandchild -->
+    {%- assign previous_page = third_level_pages                                            <!-- Find previous index -->
+        | where_exp: "item", "item.nav_order == previous_index"                 
+        | where_exp: "item", "item.grand_parent == page.grand_parent"                       <!-- With same grandparent -->
+        | where_exp: "item", "item.parent == page.parent"                                   <!-- and same parent -->
+        | first -%}
+
+    {% if previous_page %}                                                                  <!-- If page exists, go there -->
+        <a href="{{previous_page.url}}">
+            <button type="button" name="button" class="btn btn-outline">
+                🡨 {{ previous_page.title }}
+            </button>
+        </a>
+    {% else %}
+        {%- assign previous_page = second_level_pages                                       <!-- Otherwise, go up a level -->                
+            | where_exp: "item", "item.title == page.parent"                                <!-- and link to their parent -->
+            | first -%}
+        {% if previous_page %}                                                              <!-- if it is found link to it -->
+            <a href="{{previous_page.url}}">
+                <button type="button" name="button" class="btn btn-outline">
+                    🡨 {{ previous_page.title }}
+                </button>
+            </a>
+        {% endif %}
+    {% endif %}
+{% elsif page.parent %}                                                                     <!-- else if page is a child -->
+    {%- assign previous_page = second_level_pages                                           <!-- Find previous index -->
+        | where_exp: "item", "item.nav_order == previous_index"                 
+        | where_exp: "item", "item.parent == page.parent"                                   <!-- With same parent -->
+        | where_exp: "item", "item.grand_parent == nil"                                     <!-- With no grand_parent (edge-case) -->
+        | first -%}
+
+    {% if previous_page %}                                                                  <!-- If page exists... -->
+        {% if previous_page.has_children %}                                                 <!-- and if previous_page has children -->
+            {%- assign previous_page_2 = third_level_pages                                  <!-- Find last child index -->                 
+                | where_exp: "item", "item.parent == previous_page.title"                   <!-- With same parent -->
+                | where_exp: "item", "item.grand_parent == page.parent"                     <!-- and same grand-parent parent -->
+                | sort: "nav_order"                                                         <!-- sort by the nav order -->
+                | last -%}                                                                  <!-- get last child and link there -->
+            {% if previous_page_2 %}                                                        <!-- only if it found -->
+                <a href="{{previous_page_2.url}}">
+                    <button type="button" name="button" class="btn btn-outline">
+                        🡨 {{ previous_page_2.title }}
+                    </button>
+                </a>
+            {% endif %}
+        {% else %}                                                                          <!-- otherwise, it has no kids, and page exists, so link there -->
+            <a href="{{previous_page.url}}">
+                <button type="button" name="button" class="btn btn-outline">
+                    🡨 {{ previous_page.title }}
+                </button>
+            </a>
+        {% endif %}
+    {% else %}
+        {%- assign previous_page = first_level_pages                                        <!-- Otherwise, this is the first child, so go up a level -->                
+            | where_exp: "item", "item.title == page.parent"                                <!-- and link to their parent -->
+            | first -%}
+
+        {% if previous_page %}                                                              <!-- If page is found link to it -->
+            <a href="{{previous_page.url}}">
+                <button type="button" name="button" class="btn btn-outline">
+                    🡨 {{ previous_page.title }}
+                </button>
+            </a>
+        {% endif %}
+    {% endif %}
+{% else %}                                                                                  <!-- else, page must be top-level -->
+    {%- assign previous_page = first_level_pages                                            <!-- Find previous index -->
+        | where_exp: "item", "item.nav_order == previous_index"                 
+        | first -%}
+
+    {% if previous_page %}                                                                  <!-- If page exists,  -->
+        {% if previous_page.has_children %}                                                 <!-- and that page has children -->
+            {%- assign previous_page_2 = second_level_pages                                 <!-- Find last child index -->                 
+                | where_exp: "item", "item.parent == previous_page.title"                   <!-- With same parent -->
+                | sort: "nav_order"                                                         <!-- sort by the nav order -->
+                | last -%}                                                                  <!-- get last child and link there -->
+            
+            {% if previous_page_2 %}
+                {% if previous_page_2.has_children %}
+                    {%- assign previous_page_3 = third_level_pages                          <!-- Find last grandchild index -->                 
+                        | where_exp: "item", "item.parent == previous_page_2.title"         <!-- With same parent -->
+                        | where_exp: "item", "item.grand_parent == previous_page.title"     <!-- and same grandaprent -->
+                        | sort: "nav_order"                                                 <!-- sort by the nav order -->
+                        | last -%}                                                          <!-- get last child and link there -->
+
+                    {% if previous_page_3 %}                                                <!-- if page exists, link there -->
+                        <a href="{{previous_page_3.url}}">
+                            <button type="button" name="button" class="btn btn-outline">
+                                🡨 {{ previous_page_3.title }}
+                            </button>
+                        </a>
+                    {% endif %}
+                {% else %}                                                                  <!-- else, no grandchildren, link to last child -->
+                    <a href="{{previous_page_2.url}}">
+                        <button type="button" name="button" class="btn btn-outline">
+                            🡨 {{ previous_page_2.title }}
+                        </button>
+                    </a>
+                {% endif %}
+            {% endif %}
+        {% else %}                                                                          <!-- else, no children, link to last child -->
+            <a href="{{previous_page.url}}">
+                <button type="button" name="button" class="btn btn-outline">
+                    🡨 {{ previous_page.title }}
+                </button>
+            </a>
+        {% endif %}
+    {% endif %}
+{% endif %}
+
+</div>
+
+<div>
+
+{% if page.grand_parent %}
+    {%- assign parent_of_page = second_level_pages 
+        | where_exp: "item", "item.has_children"
+        | where_exp: "item", "item.title == page.parent"
+        | where_exp: "item", "item.parent == page.grand_parent"
+        | first -%}
+    {%- assign grand_parent_of_page = first_level_pages 
+        | where_exp: "item", "item.has_children"
+        | where_exp: "item", "item.title == page.grand_parent"
+        | first -%}
+    {%- assign next_parent_index = parent_of_page.nav_order | plus: 1 -%}
+    {%- assign grand_parent_index = grand_parent_of_page.nav_order | plus: 1 -%}
+
+
+    {%- assign next_page = third_level_pages
+        | where_exp: "item", "item.nav_order == next_index"
+        | where_exp: "item", "item.parent == page.parent"
+        | where_exp: "item", "item.grand_parent == page.grand_parent"
+        | first -%}
+
+    {% if next_page %}
+        <a href="{{next_page.url}}">
+            <button type="button" name="button" class="btn btn-outline">
+                {{ next_page.title }} 🡪
+            </button>
+        </a>
+    {% else %}
+        {%- assign next_page_2 = second_level_pages
+            | where_exp: "item", "item.nav_order == next_parent_index"
+            | where_exp: "item", "item.parent == page.grand_parent"
+            | where_exp: "item", "item.grand_parent == nil"
+            | first -%}
+        {% if next_page_2 %}
+            <a href="{{next_page_2.url}}">
+                <button type="button" name="button" class="btn btn-outline">
+                    {{ next_page_2.title }} 🡪
+                </button>
+            </a>
+        {% else %}
+            {%- assign next_page_3 = first_level_pages
+                | where_exp: "item", "item.nav_order == grand_parent_index"
+                | where_exp: "item", "item.parent == nil"
+                | where_exp: "item", "item.grand_parent == nil"
+                | first -%}
+            {% if next_page_3 %}
+                <a href="{{next_page_3.url}}">
+                    <button type="button" name="button" class="btn btn-outline">
+                        {{ next_page_3.title }} 🡪
+                    </button>
+                </a>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% elsif page.parent %}
+    {%- assign parent_of_page = first_level_pages 
+        | where_exp: "item", "item.has_children"
+        | where_exp: "item", "item.title == page.parent"
+        | first -%}
+    {%- assign next_parent_index = parent_of_page.nav_order | plus: 1 -%}
+
+    {% if page.has_children %}
+        {%- assign next_page = third_level_pages
+            | where_exp: "item", "item.parent == page.title"
+            | where_exp: "item", "item.grand_parent == page.parent"
+            | sort: "nav_order"
+            | first -%}
+        {% if next_page %}
+            <a href="{{next_page.url}}">
+                <button type="button" name="button" class="btn btn-outline">
+                    {{ next_page.title }} 🡪
+                </button>
+            </a>
+        {% endif %}
+    {% else %}
+        {%- assign next_page = second_level_pages
+            | where_exp: "item", "item.nav_order == next_index"
+            | where_exp: "item", "item.parent == page.parent"
+            | where_exp: "item", "item.grand_parent == page.grand_parent"
+            | sort: "nav_order"
+            | first -%}
+        {% if next_page %}
+            <a href="{{next_page.url}}">
+                <button type="button" name="button" class="btn btn-outline">
+                    {{ next_page.title }} 🡪
+                </button>
+            </a>
+        {% else %}
+            {%- assign next_page_2 = first_level_pages
+                | where_exp: "item", "item.nav_order == next_parent_index"
+                | first -%}
+            {% if next_page_2 %}
+                <a href="{{next_page_2.url}}">
+                    <button type="button" name="button" class="btn btn-outline">
+                        {{ next_page_2.title }} 🡪
+                    </button>
+                </a>
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% else %}
+    {% if page.has_children %}
+        {%- assign next_page = second_level_pages
+            | where_exp: "item", "item.parent == page.title"
+            | sort: "nav_order"
+            | first -%}
+        {% if next_page %}
+            <a href="{{next_page.url}}">
+                <button type="button" name="button" class="btn btn-outline">
+                    {{ next_page.title }} 🡪
+                </button>
+            </a>
+        {% endif %}
+    {% else %}
+        {%- assign next_page = first_level_pages
+            | where_exp: "item", "item.nav_order == next_index"                 
+            | first -%}
+        {% if next_page %}
+            <a href="{{next_page.url}}">
+                <button type="button" name="button" class="btn btn-outline">
+                    {{ next_page.title }} 🡪
+                </button>
+            </a>
+        {% endif %}
+    {% endif %}
+{% endif %}
+
+</div>
+</div>

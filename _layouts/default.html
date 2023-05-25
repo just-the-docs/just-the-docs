@@ -25,6 +25,10 @@ layout: table_wrappers
           {% include components/children_nav.html %}
         {% endif %}
 
+        {% if site.navigation == true }
+          {% include components/navigationButtons.html %}
+        {% endif %}
+
         {% include components/footer.html %}
 
       </div>
