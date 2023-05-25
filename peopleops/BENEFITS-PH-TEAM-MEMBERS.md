@@ -32,6 +32,6 @@ Team members operating in the Philippines can reap the benefits outlined below.
 - Flexible Work Hours - We offer highly flexible scheduling options. You have the freedom to arrange your work hours to accommodate your personal needs. However, it is essential to maintain a 2-hour overlap with Pacific Standard Time.
 - Promotion - Advancement opportunities are available based on individual performance, allowing for potential promotions.
 - Pay Raise - We provide opportunities for pay raises, still based on individual performance, and if desired, these increases can also be received in the form of equity through stock options.
-- Other Benefits - [Here](https://countable-web.github.io/ops/peopleops/EXPENSES/#examples-of-things-the-company-will-pay-for) are additional benefits that company will pay for.  Additionally, for our team members based in the Philippines, we have included the following perks:
+- Other Benefits - [Here](https://countable-web.github.io/ops/peopleops/EXPENSES/#examples-of-things-the-company-will-pay-for) are additional benefits that the company will pay for.  Additionally, for our team members based in the Philippines, we have included the following perks:
   - Free Drink - You are eligible for reimbursement of up to $20 per month for any beverages you order while collaborating with teammates.
   - Team Activities - We provide a reimbursable budget specifically allocated for team activities and company outings, which is subject to review.
