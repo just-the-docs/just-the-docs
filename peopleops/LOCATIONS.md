@@ -9,7 +9,7 @@ nav_order: 11
 
 **Purpose**
 
-To make any location-specific information about our Vancouver and Davao teams easily accessible.
+To make any location-specific information about our Vancouver and Philippines teams easily accessible.
 
 **Scope**
 
@@ -20,11 +20,11 @@ TODO
 
 ## Vancouver
 
-Reach out to [Chelsea](mailto:chelsea@countable.ca) with any questions about Vancouver team norms or accessing the Vancouver office.
+Reach out to [Clark](mailto:clark@countable.ca) with any questions about Vancouver team norms or accessing the Vancouver office.
 
 ## Davao
 
-Reach out to [Justin](mailto:justin@countable.ca) with any questions about Davao team norms.
+Reach out to [Justin](mailto:justin@countable.ca) with any questions about Philippines team norms.
 
 ## COVID-19 Safety Plan
 
