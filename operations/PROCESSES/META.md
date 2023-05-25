@@ -25,7 +25,7 @@ You can link directly to a single file within the same folder by using `DEVOPS.m
 
 ## How to Add Colored Labels
 
-The jekyll template we use, [just-the-docs](https://pmarsceill.github.io/just-the-docs/), allows us to set some custom colored labels. Here are the tagging norms we've set:
+The jekyll template we use, [just-the-docs](https://github.com/just-the-docs/just-the-docs), allows us to set some custom colored labels. Here are the tagging norms we've set:
 
 TODO
 {: .label .label-yellow }
@@ -54,7 +54,10 @@ Something that is critical and we want to draw special attention to it. (Safety,
 
 ## Data Headers for New Pages
 
-When you create a new page in the ops manual, you will need to include a few lines of simple information at the very top of the page. (If there is a space or line before it, the header will not be parsed correctly.) This follows the convention of [YAML](https://yaml.org/) within the context of Jekyll static sites' ["Front Matter"](https://jekyllrb.com/docs/front-matter/).
+When you create a new page in the ops manual, you will need to include a few lines of simple information at the very top of the page.
+(If there is a space or line before it, the header will not be parsed correctly.) 
+This follows the convention of [YAML](https://yaml.org/) within the context of 
+Jekyll static sites' ["Front Matter"](https://jekyllrb.com/docs/front-matter/).
 
 There are two primary page scenarios for header templates:
 
@@ -106,4 +109,4 @@ documented here.
   - Documenting guidelines allows your team to improve together at their work. You can talk about how you do things, and how each person can do it better. It also sets you up for automation.
   - Reach out to your team and make sure they know about, and buy into, the guideline. The best way is to get their help developing the guideline.
   - Test the documented guideline with other people. They should tell you if it's clear, actionable and effective, and how to improve it.
-  - [More details](OPERATIONS.md)
+  - [More details](https://countable-web.github.io/ops/operations/OPERATIONS/)
