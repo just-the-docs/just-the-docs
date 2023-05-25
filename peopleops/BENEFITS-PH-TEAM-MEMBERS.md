@@ -6,13 +6,7 @@ nav_order: 16
 ---
 
 # Benefits for PH Team Members
-{: .no_toc }
 
-## Table of Contents
-{: .no_toc .text-delta }
-
-- TOC
-{:toc}
 
 **Purpose**
 
@@ -22,7 +16,7 @@ Over time, as we have established a significant presence of team members in the 
 
 This section details the benefits specifically designed for subcontractors residing in the Philippines. Our objective is to improve this in the future, but at the moment, this represents what we can provide.
 
-## BENEFITS
+## Benefits
 
 While [subcontractors](https://countable-web.github.io/ops/peopleops/SUBCONTRACTOR_AGREEMENT/#term) are not considered employees, they are not entitled to the same benefits as regular employees in the Philippines. However, we offer a competitive package tailored to subcontractors' needs.
 Team members operating in the Philippines can reap the benefits outlined below. 
