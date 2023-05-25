@@ -11,16 +11,6 @@
     {{ footer_custom }}
   {% endif %}
 
-  <p style="font-size:0.75em">
-      Brought to you by the <a href="https://scds.ca">Lewis & Ruth Sherman Centre for Digital Scholarship</a> and the <a href="https://library.mcmaster.ca">McMaster University Library</a>.
-      {% if site.subtitle %} 
-        <br>
-        {{ site.subtitle }}
-      {% endif %}
-      <br>
-      Site last modified: {{ site.time | date_to_long_string: "ordinal", "US" }}
-  </p>
-
   {% if
     site.gh_edit_link and
     site.gh_edit_link_text and
