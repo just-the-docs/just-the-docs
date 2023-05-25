@@ -55,7 +55,7 @@ In the future, we plan to improve our coverage of medical costs but this is a st
 
 ### Subcontractors in the Philippines
 
-Recognizing that we have a significant number of team members based in the Philippines, we have enhanced our benefits package to provide better support to them.
+Recognizing that we have a significant number of team members based in the Philippines, we have enhanced our benefits package to provide better support to them. Discover the [benefits](https://countable-web.github.io/ops/peopleops/BENEFITS-PH-TEAM-MEMBERS/) awaiting our team members in the Philippines.
 
 ## See Also
 
