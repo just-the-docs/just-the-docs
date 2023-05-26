@@ -17,6 +17,16 @@
     
     details {
       border: 0px;
+
+      summary {
+        padding: 0;
+      }
+    }
+
+    details[open] summary {
+      padding: 0;
+      border-bottom: 0px;
+      margin-bottom: 0px;
     }
   }
 
