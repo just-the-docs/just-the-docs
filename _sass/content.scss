@@ -255,4 +255,12 @@
   > .sect5:first-child > h6 {
     margin-top: $sp-2;
   }
+
+  .lesson-card {
+    width: 90%;
+
+    @include mq(md) {
+      width: 47%;
+    }
+  }
 }
