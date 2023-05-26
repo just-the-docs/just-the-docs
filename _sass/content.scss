@@ -225,11 +225,21 @@
 
   details[open] {
     padding: 0.5em 1em 0;
-  }
 
-  details[open] summary {
-    border-bottom: 1px solid $body-text-color;
-    margin-bottom: 0.5em;
+    summary {
+      border-bottom: 1px solid $body-text-color;
+      margin-bottom: 0.5em;
+    }
+
+    details summary {
+      border-bottom: 0px;
+      margin-bottom: 0em;
+    }
+
+    details[open] summary {
+      border-bottom: 1px solid $body-text-color;
+      margin-bottom: 0.5em;
+    }
   }
 
   h1,
@@ -275,6 +285,14 @@
 
     @include mq(md) {
       width: 47%;
+    }
+  }
+
+  .lesson-collection-card {
+    width: 90%;
+
+    @include mq(md) {
+      width: 97%;
     }
   }
 }
