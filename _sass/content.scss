@@ -195,8 +195,27 @@
     }
   }
 
+  details {
+    border: 1px solid $link-color;
+    border-radius: 6px;
+    padding: 0.5em 1em 0;
+    margin-bottom: 1em;
+  }
+
   summary {
     cursor: pointer;
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+  }
+
+  details[open] {
+    padding: 0.5em 1em 0;
+  }
+
+  details[open] summary {
+    border-bottom: 1px solid $body-text-color;
+    margin-bottom: 0.5em;
   }
 
   h1,
