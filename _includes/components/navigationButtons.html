@@ -16,7 +16,7 @@
     {% if previous_page %}                                                                  <!-- If page exists, go there -->
         <a href="{{previous_page.url}}">
             <button type="button" name="button" class="btn btn-outline">
-                &#129128; {{ previous_page.title }}
+                <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-left"></use></svg> {{ previous_page.title }}
             </button>
         </a>
     {% else %}
@@ -26,7 +26,7 @@
         {% if previous_page %}                                                              <!-- if it is found link to it -->
             <a href="{{previous_page.url}}">
                 <button type="button" name="button" class="btn btn-outline">
-                    &#129128; {{ previous_page.title }}
+                    <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-left"></use></svg> {{ previous_page.title }}
                 </button>
             </a>
         {% endif %}
@@ -48,14 +48,14 @@
             {% if previous_page_2 %}                                                        <!-- only if it found -->
                 <a href="{{previous_page_2.url}}">
                     <button type="button" name="button" class="btn btn-outline">
-                        &#129128; {{ previous_page_2.title }}
+                        <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-left"></use></svg> {{ previous_page_2.title }}
                     </button>
                 </a>
             {% endif %}
         {% else %}                                                                          <!-- otherwise, it has no kids, and page exists, so link there -->
             <a href="{{previous_page.url}}">
                 <button type="button" name="button" class="btn btn-outline">
-                    &#129128; {{ previous_page.title }}
+                    <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-left"></use></svg> {{ previous_page.title }}
                 </button>
             </a>
         {% endif %}
@@ -67,7 +67,7 @@
         {% if previous_page %}                                                              <!-- If page is found link to it -->
             <a href="{{previous_page.url}}">
                 <button type="button" name="button" class="btn btn-outline">
-                    &#129128; {{ previous_page.title }}
+                    <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-left"></use></svg> {{ previous_page.title }}
                 </button>
             </a>
         {% endif %}
@@ -95,14 +95,14 @@
                     {% if previous_page_3 %}                                                <!-- if page exists, link there -->
                         <a href="{{previous_page_3.url}}">
                             <button type="button" name="button" class="btn btn-outline">
-                                &#129128; {{ previous_page_3.title }}
+                                <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-left"></use></svg> {{ previous_page_3.title }}
                             </button>
                         </a>
                     {% endif %}
                 {% else %}                                                                  <!-- else, no grandchildren, link to last child -->
                     <a href="{{previous_page_2.url}}">
                         <button type="button" name="button" class="btn btn-outline">
-                            &#129128; {{ previous_page_2.title }}
+                            <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-left"></use></svg> {{ previous_page_2.title }}
                         </button>
                     </a>
                 {% endif %}
@@ -110,7 +110,7 @@
         {% else %}                                                                          <!-- else, no children, link to last child -->
             <a href="{{previous_page.url}}">
                 <button type="button" name="button" class="btn btn-outline">
-                    &#129128; {{ previous_page.title }}
+                    <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-left"></use></svg> {{ previous_page.title }}
                 </button>
             </a>
         {% endif %}
@@ -144,7 +144,7 @@
     {% if next_page %}
         <a href="{{next_page.url}}">
             <button type="button" name="button" class="btn btn-outline">
-                {{ next_page.title }} &#129130;
+                {{ next_page.title }} <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-right"></use></svg>
             </button>
         </a>
     {% else %}
@@ -156,7 +156,7 @@
         {% if next_page_2 %}
             <a href="{{next_page_2.url}}">
                 <button type="button" name="button" class="btn btn-outline">
-                    {{ next_page_2.title }} &#129130;
+                    {{ next_page_2.title }} <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-right"></use></svg>
                 </button>
             </a>
         {% else %}
@@ -168,7 +168,7 @@
             {% if next_page_3 %}
                 <a href="{{next_page_3.url}}">
                     <button type="button" name="button" class="btn btn-outline">
-                        {{ next_page_3.title }} &#129130;
+                        {{ next_page_3.title }} <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-right"></use></svg>
                     </button>
                 </a>
             {% endif %}
@@ -190,7 +190,7 @@
         {% if next_page %}
             <a href="{{next_page.url}}">
                 <button type="button" name="button" class="btn btn-outline">
-                    {{ next_page.title }} &#129130;
+                    {{ next_page.title }} <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-right"></use></svg>
                 </button>
             </a>
         {% endif %}
@@ -204,7 +204,7 @@
         {% if next_page %}
             <a href="{{next_page.url}}">
                 <button type="button" name="button" class="btn btn-outline">
-                    {{ next_page.title }} &#129130;
+                    {{ next_page.title }} <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-right"></use></svg>
                 </button>
             </a>
         {% else %}
@@ -214,7 +214,7 @@
             {% if next_page_2 %}
                 <a href="{{next_page_2.url}}">
                     <button type="button" name="button" class="btn btn-outline">
-                        {{ next_page_2.title }} &#129130;
+                        {{ next_page_2.title }} <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-right"></use></svg>
                     </button>
                 </a>
             {% endif %}
@@ -229,7 +229,7 @@
         {% if next_page %}
             <a href="{{next_page.url}}">
                 <button type="button" name="button" class="btn btn-outline">
-                    {{ next_page.title }} &#129130;
+                    {{ next_page.title }} <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-right"></use></svg>
                 </button>
             </a>
         {% endif %}
@@ -240,7 +240,7 @@
         {% if next_page %}
             <a href="{{next_page.url}}">
                 <button type="button" name="button" class="btn btn-outline">
-                    {{ next_page.title }} &#129130;
+                    {{ next_page.title }} <svg viewBox="0 0 24 24" class="nav-icon" aria-hidden="true"><use xlink:href="#svg-right"></use></svg>
                 </button>
             </a>
         {% endif %}
