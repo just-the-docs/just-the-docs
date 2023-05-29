@@ -5,5 +5,21 @@
     {{ site.subtitle }}
   {% endif %}
   <br>
-  Site last modified: {{ site.time | date_to_long_string: "ordinal", "US" }}
+
+  <!-- McMaster date guidelines, Page 25: https://equity.mcmaster.ca/app/uploads/2021/04/Words-matter-writing-guidlines.pdf -->
+  Site last modified:
+  {% assign month = site.time | date: "%B" %}
+
+  {% case month %}
+      {% when 'January' %} Jan.
+      {% when 'February' %} Feb.
+      {% when 'August' %} Aug.
+      {% when 'September' %} Sept.
+      {% when 'October' %} Oct.
+      {% when 'November' %} Nov.
+      {% when 'December' %} Dec.
+      {% else %}{{ month }}
+  {% endcase %}
+
+  {{ site.time | date: "%-d, %Y" }}
 </p>
