@@ -1,7 +1,7 @@
 <div class="side-bar">
   <div class="site-header" role="banner">
     <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
-    <button id="menu-button" class="site-button" aria-label="Open menu">
+    <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false">
       <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
     </a>
   </div>
@@ -38,7 +38,9 @@
               <ul class="nav-list nav-category-list">
                 <li class="nav-list-item{% if page.collection == collection_key %} active{% endif %}">
                   {%- if collection.size > 0 -%}
-                  <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
+                  <button class="nav-list-expander btn-reset" aria-label="Toggle collection {{ collection_value.name }}" aria-pressed="{% if page.collection == collection_key %}true{% else %}false{% endif %}">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+                  </button>
                   {%- endif -%}
                   <div class="nav-category">{{ collection_value.name }}</div>
                   {% include nav.html pages=collection key=collection_key %}

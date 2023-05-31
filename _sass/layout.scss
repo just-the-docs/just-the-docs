@@ -145,13 +145,6 @@
   height: 100%;
   padding: $gutter-spacing-sm;
   align-items: center;
-  background-color: transparent;
-  border: none;
-  margin: 0;
-  text-align: inherit;
-  font: inherit;
-  border-radius: 0;
-  appearance: none;
 }
 
 @include mq(md) {
