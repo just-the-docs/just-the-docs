@@ -90,9 +90,9 @@ PROCESS
 
   - Review our further documentation on [Doing Your Job](DOING_YOUR_JOB.md)
   - Set up a [physical space and equipment](SETTING_UP.md) to work.
-  - devs only - Read about our [DevOps](/ops/devops/DEVOPS/) and
-    [Coding Standards](/ops/developers/CODING_STANDARDS/)
-  - devs only - Complete the [Training](/ops/developers/TRAINING/) following these practices and get a team member to code review it using a feature branch and pull request.
+  - devs only - Read about our [DevOps](https://countable-web.github.io/ops/devops/DEVOPS/) and
+    [Coding Standards](https://countable-web.github.io/ops/developers/CODING_STANDARDS/)
+  - devs only - Complete the [Training](https://countable-web.github.io/ops/developers/TRAINING/) following these practices and get a team member to code review it using a feature branch and pull request.
   - Order a book that will help you learn your job, and bill the company for it.
 
 Fill [this onboarding form](https://docs.google.com/forms/d/e/1FAIpQLScYLUdoD5z1OhMNbhXC4G3GDLVbumoPH9X-mnNPDRaR2YQiwA/viewform?usp=sf_link). It contains information we need for you to start work at Countable.
@@ -105,7 +105,7 @@ Join these using your Google account:
 
 ### How to Do Work
 
-Skim this so you know the language and how we work: [Project Management](/ops/operations/PROJECT_MANAGEMENT/).
+Skim this so you know the language and how we work: [Project Management](https://countable-web.github.io/ops/operations/PROJECT_MANAGEMENT/).
 
 ### Confirm
 

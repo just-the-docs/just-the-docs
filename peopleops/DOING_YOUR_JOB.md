@@ -50,7 +50,7 @@ This workflow checklist covers mostly things we should already be doing. If it's
 ### Every Day You Work
 
   - Share something with the team every day. The simplest way to do this is to report what you did on Slack in your team's channel, and anything you're stuck on. 
-    - Shooting a quick [screen cap video](/operations/PM_TOOLS/SCREENCASTIFY.md) to share is a great idea to try out.
+    - Shooting a quick [screen cap video](https://countable-web.github.io/ops/operations/PROJECT_MANAGEMENT/SCREENCASTIFY/) to share is a great idea to try out.
   - Check Slack at least twice a day, and react/respond to some other team members' posts.
   - Commit your code and push it to bitbucket every day.
   - Enter your hours on [Eightmeters](EIGHTMETERS.md) (end of the day)
@@ -62,13 +62,13 @@ This workflow checklist covers mostly things we should already be doing. If it's
 
 ### Do Not
 
-  - Use private messages for things that don't need to be private. Share your experiences on your projects in your client channel, and if it's more widely applicable, (\#client-) in \#general. See also: [Transparency](/philosophy/TRANSPARENCY/)
+  - Use private messages for things that don't need to be private. Share your experiences on your projects in your client channel, and if it's more widely applicable, (\#client-) in \#general. See also: [Transparency](https://countable-web.github.io/ops/philosophy/TRANSPARENCY/)
 
 ## Time Off
 
 Countable's intention is allow a great deal of flexibility to everyone, while ensuring we work at predictable times and can depend on one another. 
 
-The important things are to make sure your team can rely on you being around when you say you will, and that you don't burn out. So, you can generally work when you want, but you should communicate when thatwill be.
+The important things are to make sure your team can rely on you being around when you say you will, and that you don't burn out. So, you can generally work when you want, but you should communicate when that will be.
 
   - Employees (not subcontractors) based in Canada are subject to labour laws and as such have vacation pay, stat holidays, over-time, etc.
   - Sub-contractors may take unpaid leave any time, and should take at least 2 weeks throughout the year.

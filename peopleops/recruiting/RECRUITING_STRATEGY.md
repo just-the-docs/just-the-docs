@@ -59,7 +59,7 @@ we need every advantage we can find in this way. Our strategy:
     Ideally we want a virtuous cycle where if we have a culture fit, we
     probably want to hire that person, and they'll be more likely to
     want to work here too. For this, we have to communicate our mission,
-    vision and values within our [philosophy documentation](../philosophy/PHILOSOPHY/).
+    vision and values within our [philosophy documentation](https://countable-web.github.io/ops/philosophy/PHILOSOPHY/).
   - In a perfect "oracle" screening process, our first stage would
     advance the exact people that will mostly quickly achieve our mission
     while adhering to our values, and we'd just hire those immediately.

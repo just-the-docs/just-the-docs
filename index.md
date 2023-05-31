@@ -34,7 +34,7 @@ This is the [Countable Web Productions Inc.](http://countable.ca)
 
 In some (rare) cases, we may document exact processes:
 
-PROCESSES
+PROCEDURE
 {: .label .label-purple } 
 
 which **must** be followed.
@@ -60,13 +60,9 @@ To promote our core shared value of [transparency](philosophy/TRANSPARENCY/).
 
 ## Scope
 
-This repo will contain:
+Unless specifically marked as a "Procedure", everything in this manual is a "Convention". We don't explicitly mark conventions since they are the default.
 
-CONVENTIONS
-{: .label .label-blue } 
-
-PROCESSES
-{: .label .label-purple } 
+What do we mean by convention?
 
   - Guidelines based on what worked well (or poorly) for us in the past.
   - Conventions in order to help us communicate and collaborate efficiently.
