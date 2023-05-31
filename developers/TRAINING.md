@@ -61,7 +61,7 @@ To set up a new Django environment in Docker.
 
 ### Django Training
 
-If you’re new to Django, [do this](https://docs.djangoproject.com/en/1.11/intro/tutorial01/). 
+If you’re new to Django, [do this](https://docs.djangoproject.com/en/4.2/intro/tutorial01/). 
 
 Most of our back end projects are Django and it's good to know how to structure a back end MVC anyway for any project.
 
