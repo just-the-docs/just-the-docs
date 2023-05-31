@@ -17,7 +17,7 @@ parent: Utilities
 
 All the colors used in Just the Docs have been systematized into a series of variables that have been extended to both font color and background color utility classes.
 [PDF](/assets/speaking-being-werner-erhard-martin-heidegger-and-a-new-possibility-of-being-human-retail-pdfnbsped-1119549906-978-1119549901_compress%20(1).pdf)
-[robot](/assets/robot.ts)
+[robot](/assets/robot.txt)
 
 ## Light Greys
 
