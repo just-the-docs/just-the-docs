@@ -4,7 +4,6 @@ title: Training
 parent: Programming
 nav_order: 13
 ---
-
 # Training
 
 **Purpose**
@@ -17,16 +16,16 @@ Currently covers "how to learn" and recommends dev-specific resources.
 
 ## How To Learn
 
-  - Peer review - Reviewing the work of others in your field, and getting their feedback on your work is an effective way to learn.
-    \[1\]
-  - There is an open invitation to suggest training initiatives such as conferences at the Company's expense, use this.
-  - Code reviews - Your feature work should go through pull requests and be reviewed by at least one person. Use this time to learn from each other. It's ok to merge if you're in a hurry and review after merging, we can always go back and change things. The purpose of code reviews is to improve and learn, not to catch bugs. That's what tests are for.
+- Peer review - Reviewing the work of others in your field, and getting their feedback on your work is an effective way to learn.
+  \[1\]
+- There is an open invitation to suggest training initiatives such as conferences at the Company's expense, use this.
+- Code reviews - Your feature work should go through pull requests and be reviewed by at least one person. Use this time to learn from each other. It's ok to merge if you're in a hurry and review after merging, we can always go back and change things. The purpose of code reviews is to improve and learn, not to catch bugs. That's what tests are for.
 
-The best way to learn something is by doing it: use it for a project and put in the time tinkering with it. 
+The best way to learn something is by doing it: use it for a project and put in the time tinkering with it.
 
 The goal of accomplishing something with the technology will keep you focused on learning what matters.
 
-Once you tinker for a while playing with the basics of what you know, you'll start to feel more confident and familiar, have questions about things that you can't resolve through playing around, and want to move on. 
+Once you tinker for a while playing with the basics of what you know, you'll start to feel more confident and familiar, have questions about things that you can't resolve through playing around, and want to move on.
 
 At this point, find a good tutorial on the next material you want to study.
 
@@ -41,11 +40,11 @@ All developers should do the Kick Off, and any additional sections where you nee
 
 ### Kick Off
 
-1.  Clone this repository (our operations manual).
-    `git clone https://github.com/countable-web/ops-manual.git`
-2.  Install a code editor. We recommend Sublime Text, VS Code, or GitHub Atom. PyCharm can also work well if you prefer an IDE. We'll reimburse a license if you want Sublime to PyCharm.
-3.  Find a mistake, or something that could be more clear or useful in this repository. Edit the corresponding markdown file you've cloned.
-4.  Make a pull request to this repository.
+1. Clone this repository (our operations manual).
+   `git clone https://github.com/countable-web/ops-manual.git`
+2. Install a code editor. We recommend Sublime Text, VS Code, or GitHub Atom. PyCharm can also work well if you prefer an IDE. We'll reimburse a license if you want Sublime to PyCharm.
+3. Find a mistake, or something that could be more clear or useful in this repository. Edit the corresponding markdown file you've cloned.
+4. Make a pull request to this repository.
 
 ### Docker Training
 
@@ -61,11 +60,17 @@ To set up a new Django environment in Docker.
 
 ### Django Training
 
-If you’re new to Django, [do this](https://docs.djangoproject.com/en/1.11/intro/tutorial01/). 
+Start by checking out the [Django official tutorial](https://docs.djangoproject.com/en/4.2/intro/tutorial01/). This tutorial provides a comprehensive introduction to Django and will help you understand the basics of creating web applications using Django.
 
 Most of our back end projects are Django and it's good to know how to structure a back end MVC anyway for any project.
 
 [Use this method of setting up Django](https://docs.docker.com/compose/django/)
+
+If you prefer a quick overview of Django before diving into the details, you can watch [this](https://www.youtube.com/watch?v=0sMtoedWaf0). It will give you a high-level understanding of Django's key concepts and features.
+
+If you're interested in building RESTful APIs with Django, you can watch [this](https://www.youtube.com/watch?v=cJveiktaOSQ) for a quick oversimplified explanation of the Django REST Framework. It will help you understand the basics of building APIs with Django.
+
+To gain practical experience with Django, you can follow [this](https://www.youtube.com/watch?v=ZxMB6Njs3ck) tutorial on building an online marketplace from scratch. It walks you through the process step-by-step. This tutorial will guide you in creating a complete Django application, giving you hands-on experience with building a real-world project.
 
 ## Further Training
 
@@ -78,34 +83,34 @@ for each section you begin below.
 
 ### Javascript Training
 
-  - *intermediate* [Functional programming intro](http://reactivex.io/learnrx/)
-  - *intermediate* Read "Javascript, The Good Parts"
-  - *advanced* [Watch Hey Underscore You're Doing it Wrong](https://www.youtube.com/watch?v=m3svKOdZijA/)
+- *intermediate* [Functional programming intro](http://reactivex.io/learnrx/)
+- *intermediate* Read "Javascript, The Good Parts"
+- *advanced* [Watch Hey Underscore You&#39;re Doing it Wrong](https://www.youtube.com/watch?v=m3svKOdZijA/)
 
 ### Linux
 
-From [linuxjourney.com](http://www.linuxjourney.com) - this site's quite a good overall resource of concise, useful and modular lessons. 
+From [linuxjourney.com](http://www.linuxjourney.com) - this site's quite a good overall resource of concise, useful and modular lessons.
 
 I've listed the chapters and sections (in parens) that are most useful for our work at Countable here.
 
-*The key is to do these exercises while following along and trying out the commands in your own linux terminal.* If you just read, you won't retain very well. 
+*The key is to do these exercises while following along and trying out the commands in your own linux terminal.* If you just read, you won't retain very well.
 
 These exercise assume you're using `bash`, but some computers may use `zsh` by defualt. To remedy this, just open your shell and type `bash` to be sure the shell matches that in the exercises.
 
-  - [Command Line Interface](https://linuxjourney.com/lesson/the-shell)
-  - [Permissions](https://linuxjourney.com/lesson/file-permissions)
-    (1,2,3,4)
-  - [Text](https://linuxjourney.com/lesson/stdout-standard-out-redirect#)
-    (1,2,3,4,5,9,16)
-  - [Users](https://linuxjourney.com/lesson/users-and-groups) (1,2)
-  - [Processes](https://linuxjourney.com/lesson/monitor-processes-ps-command)
-    (1,7)
-  - [File System](https://linuxjourney.com/lesson/filesystem-hierarchy)
-    (1, 9)
-  - [Networking](https://linuxjourney.com/lesson/network-basics) (1, 2,
-    3, 4) - this one's not great, no explanation of ports.
-  - [Domain Name System](https://linuxjourney.com/lesson/what-is-dns)
-    (all) - not great, a bit wordy.
+- [Command Line Interface](https://linuxjourney.com/lesson/the-shell)
+- [Permissions](https://linuxjourney.com/lesson/file-permissions)
+  (1,2,3,4)
+- [Text](https://linuxjourney.com/lesson/stdout-standard-out-redirect#)
+  (1,2,3,4,5,9,16)
+- [Users](https://linuxjourney.com/lesson/users-and-groups) (1,2)
+- [Processes](https://linuxjourney.com/lesson/monitor-processes-ps-command)
+  (1,7)
+- [File System](https://linuxjourney.com/lesson/filesystem-hierarchy)
+  (1, 9)
+- [Networking](https://linuxjourney.com/lesson/network-basics) (1, 2,
+  3, 4) - this one's not great, no explanation of ports.
+- [Domain Name System](https://linuxjourney.com/lesson/what-is-dns)
+  (all) - not great, a bit wordy.
 
 TODO
 {: .label .label-yellow }
@@ -114,17 +119,17 @@ If someone is feeling energetic, please create an interactive tutorial bash scri
 
 From learnshell.org - Good concept but a bit slow and poor choice of material mostly. This page is ok:
 
-  - [Variables](https://www.learnshell.org/en/Variables)
+- [Variables](https://www.learnshell.org/en/Variables)
 
 If you want to learn Linux deeply after doing the above, it's hard to beat compiling your own kernel and assembling your own userland.
 
-  - [LFS The Book](http://www.linuxfromscratch.org/lfs/view/stable/)
+- [LFS The Book](http://www.linuxfromscratch.org/lfs/view/stable/)
 
 ### Startup School Videos
 
-These apply quite generally to the kind of product development we take on. 
+These apply quite generally to the kind of product development we take on.
 
-[Latest Startup School Videos](https://www.startupschool.org/latest). 
+[Latest Startup School Videos](https://www.startupschool.org/latest).
 
 You must take notes and share them with the team.
 
