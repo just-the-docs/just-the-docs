@@ -1,8 +1,8 @@
 <div class="side-bar">
-  <div class="site-header">
+  <div class="site-header" role="banner">
     <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
-    <a href="#" id="menu-button" class="site-button">
-      <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg>
+    <button id="menu-button" class="site-button" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
     </a>
   </div>
   <nav aria-label="Main" id="site-nav" class="site-nav">
