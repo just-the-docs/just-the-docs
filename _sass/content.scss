@@ -231,9 +231,13 @@
       margin-bottom: 0.5em;
     }
 
-    details summary {
-      border-bottom: 0px;
-      margin-bottom: 0em;
+    details {
+      summary {
+        border-bottom: 0px;
+        margin-bottom: 0em;
+        font-size: small;
+        font-weight: bold;
+      }
     }
 
     details[open] summary {
@@ -289,6 +293,30 @@
   }
 
   .lesson-collection-card {
+
+    .lesson-grid {
+      display: grid; 
+      grid-template-columns: repeat(1, 2fr); 
+      margin: auto; 
+      grid-row-gap: 1em; 
+      padding-bottom: 1em;
+
+      @include mq(md) {
+        grid-template-columns: repeat(2, 2fr); 
+      }
+    }
+
+    .lesson-card {
+      width: 95%;
+      margin: auto;
+      margin-bottom: max(1em, auto, auto);
+      margin-top: 0em;
+
+      [open] {
+        margin-bottom: 1em;
+      }
+    }
+
     width: 90%;
 
     @include mq(md) {
