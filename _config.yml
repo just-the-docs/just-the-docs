@@ -64,6 +64,7 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
+  - jekyll-relative-links
 
 # Google Analytics Tracking
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
