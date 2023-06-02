@@ -21,12 +21,16 @@ This website includes docs for some new features that are not available in `v0.5
 Code changes to `main` that are *not* in the latest release:
 
 - Fixed: liquid variable leakage in navigation components by [@pdmosses] in [#1243]
+- Fixed: ARIA roles and labels to search, header, logo, mobile menu button, and main content by [@joelhawksley] in [#1259]
 
 Docs changes in `main` that are *not* in the latest release:
 
 - N/A
 
+[@joelhawksley]: https://github.com/joelhawksley
+
 [#1243]: https://github.com/just-the-docs/just-the-docs/pull/1243
+[#1259]: https://github.com/just-the-docs/just-the-docs/pull/1259
 
 The theme docs website has a new canonical URL: <https://just-the-docs.com>. We've also retroactively published the theme docs website for version `v0.3.3` at <https://v0-3-3-docs.just-the-docs.com/>.
 
