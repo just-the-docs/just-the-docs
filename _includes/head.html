@@ -29,10 +29,10 @@
       {%- include css/activation.scss.liquid -%}
     {%- endcapture -%}
     {%- comment -%}
-      Convert to CSS, then remove the duplicated color_scheme import rules, relying on
-      the CSS produced by css/activation.scss.liquid starting with ".site-nav":
+      Convert to CSS, then remove the color_scheme import rules to avoid duplication
+      (assuming that scssify of the color_scheme doesn't contain `.site-nav`):
     {%- endcomment %}
-    {{ scss | scssify | split: ".site-nav" | shift | join: ".site-nav" | prepend: ".site-nav" }}
+    {{ scss | scssify | replace_first: ".site-nav", "end-of-@imports.site-nav" | split: "-@imports" | slice: 1 }}
   </style>
 
   {% if site.ga_tracking != nil %}
