@@ -1,8 +1,9 @@
 ---
 title: A minimal layout page
-layout: minimal
+layout: default
 parent: Layout
 has_children: true
+blank: true
 ---
 
 # A minimal layout page

@@ -2,7 +2,7 @@
 layout: default
 title: Callouts
 parent: UI Components
-nav_order: 1
+nav_order: 1.5
 ---
 
 # Callouts

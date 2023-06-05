@@ -1,6 +1,7 @@
 ---
 title: Migration and Upgrading
 layout: default
+nav_order: 101
 ---
 
 # Migrating and Upgrading
