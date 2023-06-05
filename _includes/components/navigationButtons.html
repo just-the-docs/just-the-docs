@@ -368,8 +368,8 @@
         {% if next_page %}
             {% if next_page.blank == true and next_page.has_children %}
                 {%- assign next_page_2 = third_level_pages
-                    | where_exp: "item", "item.grand_parent == next_page_2.parent"
-                    | where_exp: "item", "item.parent == next_page_2.title"
+                    | where_exp: "item", "item.grand_parent == next_page.parent"
+                    | where_exp: "item", "item.parent == next_page.title"
                     | sort: "nav_order"
                     | first -%}
                 {% if next_page_2 %}
