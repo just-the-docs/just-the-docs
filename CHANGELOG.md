@@ -16,25 +16,55 @@ The project underwent a major maintenance shift in March 2022.
 This website is built from the `HEAD` of the `main` branch of the theme repository.
 
 {: .warning }
-This website includes docs for some new features that are not available in `v0.5.0`!
+This website includes docs for some new features that are not available in `v0.5.2`!
 
 Code changes to `main` that are *not* in the latest release:
+
+- N/A
+
+Docs changes in `main` that are *not* in the latest release:
+
+- N/A
+
+## Release v0.5.2
+
+Hi all, this is a minor patch release that mostly focuses on accessibility. Since we follow semantic versioning, this should be a smooth upgrade with no breaking changes.
+
+In addition, the theme docs website has a new canonical URL: <https://just-the-docs.com>. We've also retroactively published the theme docs website for version `v0.3.3` at <https://v0-3-3-docs.just-the-docs.com/>. Thank you to our GitHub sponsors for funding our domain name!
+
+### Using Release `v0.5.2`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.5.2` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.5.2
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.5.2"
+```
+
+To use and pin a previous version of the theme, replace the `0.5.2` with the desired release tag.
+
+### Bugfixes
 
 - Fixed: liquid variable leakage in navigation components by [@pdmosses] in [#1243]
 - Fixed: ARIA roles and labels for search, header, logo, mobile menu button, and main content by [@joelhawksley] in [#1259]
 - Fixed: ARIA labels for all anchors with `href="#"`; adds `aria-pressed` information for toggles by [@mattxwang] in [#1262]
 
-Docs changes in `main` that are *not* in the latest release:
+### New Contributors
 
-- N/A
+- [@joelhawksley] made their first contribution in [#1259]
 
 [@joelhawksley]: https://github.com/joelhawksley
 
 [#1243]: https://github.com/just-the-docs/just-the-docs/pull/1243
 [#1259]: https://github.com/just-the-docs/just-the-docs/pull/1259
 [#1262]: https://github.com/just-the-docs/just-the-docs/pull/1262
-
-The theme docs website has a new canonical URL: <https://just-the-docs.com>. We've also retroactively published the theme docs website for version `v0.3.3` at <https://v0-3-3-docs.just-the-docs.com/>.
 
 ## Release v0.5.1
 
