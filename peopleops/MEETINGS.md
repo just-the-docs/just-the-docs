@@ -110,18 +110,25 @@ People mentioning problems even once is a gift: We can't fix systemic problems i
 1.  This is your time to talk about whatever is on your mind. If you want to talk about what's going on with your life, hobbies, etc, that's fine. If you want to talk about work or issues at home or career progression, that's fine.
 2.  Give feedback about what went well last month, and what didn't. How can we do better from now on?
 3.  The discussion is confidential by default, unless there are suggestions or requests that come out of the discussion to relay to the team.
+4.  What initiatives would you be interested in working on? Why?
 
 ### As a Manager
 
 1.  Practice listening. Try to contain the impulse to give advice unless they specifically ask for it for at least the first 10 minutes of the meeting.
 2.  Raise anything you felt was a problem. Say how you feel about it, and let them lead.
 3.  If they don't bring it up on their own I'll ask questions about emotional state and emotional reactions to situations. E.g., "How did you feel about what happened at Countable last month?" (be specific), "Are you feeling sufficiently challenged?", "What would you like to learn?", "What do you enjoy working on most?"
-4.  TBD: Review job levels. Employees should check off each job level requirement, and self-promote when they reach completion of their current level. Give the employee a simple desription of what you think would really get them "to the next level". Make this as  actionable and objective as possible, and frame it as a mentor.
+4.  What work the employee is doing will have the biggest impact?
 
 ### The First One-on-one
 
 1.  On first one-on-one, ask "tell me about your life starting in kindergarten". Write down moments of change, decisions on direction and why they were made. 45 mins discussion.
 2.  What are the person's dreams? Ask "what would you like to do most after Countable, if anything was possible? Provide 3 possible visions". Make dreams columns and put rows for skills necessary for each vision. Ask questions about everything fits together. What skills can be developed in their role?
+
+### Evaluation Followup
+
+Every 6 months, the one-on-one will review the recently filled evaluation form.
+
+Employees should check off each job level requirement, and self-promote when they reach completion of their current level. Give the employee a simple desription of what you think would really get them "to the next level". Make this as  actionable and objective as possible, and frame it as a mentor.
 
 ### Themes
 
