@@ -4,7 +4,7 @@
   Results in: HTML for the navigation panel.
   Includes:
     sorted_pages.html
-  Overwrites: 
+  Overwrites:
     nav_pages, first_level_pages, second_level_pages, third_level_pages,
     node, children_list, child, grand_children_list, grand_child.
 {%- endcomment -%}
@@ -31,9 +31,9 @@
 {%- for node in first_level_pages -%}
   <li class="nav-list-item">
     {%- if node.has_children -%}
-    <a href="#" class="nav-list-expander" aria-label="toggle links in {{ node.title }} category">
-      <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-    </a>
+    <button class="nav-list-expander btn-reset" aria-label="toggle items in {{ node.title }} category" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+    </button>
     {%- endif -%}
     <a href="{{ node.url | relative_url }}" class="nav-list-link">{{ node.title }}</a>
     {%- if node.has_children -%}
@@ -46,9 +46,9 @@
       {%- for child in children_list -%}
         <li class="nav-list-item">
           {%- if child.has_children -%}
-          <a href="#" class="nav-list-expander" aria-label="toggle links in {{ child.title }} category">
-            <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-          </a>
+          <button class="nav-list-expander btn-reset" aria-label="toggle items in {{ child.title }} category" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+          </button>
           {%- endif -%}
           <a href="{{ child.url | relative_url }}" class="nav-list-link">{{ child.title }}</a>
           {%- if child.has_children -%}
