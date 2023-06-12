@@ -45,7 +45,7 @@ Best practices for handling errors/ unexpected cases
 
     # bad - lost information about the error
     try:
-       1/0
+       return 1/0
     except:
        print("I don't know what happened")
     
@@ -55,12 +55,18 @@ Best practices for handling errors/ unexpected cases
     except ZeroDivisionError:
        print("now I know the exception")
     
-    # when error is unexpected/unknown, do a catch-all and do a traceback
+    # avoid this when possible - catch-all and do a traceback with unexpected errors.
     try:
-       1/0
+       code_that_could_fail()
     except Exception:
        import traceback
        print(traceback.format_exec())
+    
+    # better - use a custom exception for each response.
+    try:
+       code_that_could_fail()
+    except CustomArithmeticError:
+       print("Some kind of math error happened."
     
     # bad - unnecessary lines in the try block
     try:
@@ -70,13 +76,27 @@ Best practices for handling errors/ unexpected cases
     exception ZeroDivisionError:
        print("One of these lines failed")
     
-    # better - isolate which lines you expect to fail 
+    # better - isolate which line you expect to fail 
     a = 1
     b = a-a
     try:
        a/b
     except ZeroDivisionError:
        print("Now we know which line failed")
+    
+    # bad - error does not report to the right places. team cannot easily fix. Params not sent.
+    try:
+       1/(a-b)
+    except ZeroDivisionError:
+       print("Divided by zero.")
+    
+    # better - code considers how error result is processed by humans, params sent.
+    try:
+       1/(a-b)
+    except ZeroDivisionError:
+       logging.error("Division by zero with params a={} b={b}, notifying the user of bad input.".format(a, b)) # Message for devs to observe if needed.
+       raise HttpResponseBadRequest("Your parameters {}-{}=0, which is not allowed because it results in division by zero. Sorry!") # Notify the user what they did wrong.
+     
 
 ### Line Length
 
