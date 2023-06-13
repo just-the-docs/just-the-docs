@@ -88,13 +88,11 @@ Awarding half points is fine. Use your best judgement.
 
 Candidates with less than 4 points are rejected outright. 
 
-Those with 4 points other than "communication ability" can be offered a chance to re-read the application and format it correctly, answering the hidden question. This is required for them to advance.
+In addition to the information provided above, we employ a customized scoring system for each unique open role, considering the specific skills and technologies required for each position. However, due to the ever-evolving nature of these requirements and technologies, we are unable to disclose the exact details of the scoring system.
 
 ### Pre-interview screening
 
-Send a form with key questions that can be answered offline to save time during the interview. 
-
-Share the resume with the team members this person would work with, if hired. Anyone can basically veto them, but must explain a good reason to do so.
+Send a form with key questions that can be answered offline to save time during the interview. The applicant screening form comprises questions related to the working environment, preference for full-time role, and communication skills both in writing and speaking. If a candidate scores a minimum of 4 points, they will be eligible to proceed to the initial interview.
 
 ### Inviting to Interview
 
@@ -111,14 +109,17 @@ Chat with the candidate and rate their communication ability.
 
 We are marking their ability to create clarity, and to give and respond to "belonging cues".
 
-  - **1 point** if the user maintains eye contact at least 50% of the time,  AND you feel they're constructively working to see if there's a fit.
+  - **1 point** if the candidate maintains eye contact at least 50% of the time,  AND you feel they're constructively working to see if there's a fit.
   - **1 point** if the English (written and spoken) is perfect or near perfect. Neither side should need to repeat themselves, and communication is very clear. You know what the person means when they speak.
   - **1 point** if the conversation flows fluidly with both sides speaking and the speaker switches frequently. The candidate asks questions on their own to facilitate this.
   - **1 point** if the candidate answers questions clearly and understands what's been asked.
+  - **1 point** if the candidate demonstrates alignment with the company's culture and values.
+  
+The candidate must have at least 5 points to be eligible to proceed to the technical test
 
 ### Technical Test
 
-Candidates with 4 stars may now take the technical screening. This consists of a simulation of the actual work we expect them to be able to do very effectively. 
+The technical screening consists of a simulation of the actual work we expect them to be able to do very effectively. 
 
 If any of these criteria are missed, reject the candidate.
 
@@ -147,16 +148,10 @@ If someone is interviewed but not accepted, respond as follows (subject: `We've 
 
 If the Candidate has made it to the *Technical Test* stage, the lead of the team they're applying for should also write a personal note with an explanation of scoring, how to do better next time, and if they have a 80% or better score, that we will consider them for future positions.
 
-### Internship
-
-If the candidate is accepted, they will be given an offer letter to work with us for 3 weeks and both sides can evaluate if they want to continue at the end. 
-
-We should aim to accept 1 in 3 people in this step of the process overall to ensure we're proactively evaluating.
-
 ### Contract signature
 
-  - Once selected a candidate, your supervisor should proceed with the contract signature by using a [HelloSign](https://hellosign.com) template, that provides legally binding electronic signatures.
-  - Once everything is prepared at HelloSign, send the document to the signature to your candidate's email.
+  - Once selected a candidate, your supervisor should proceed with the contract signature by using a [EverSign](https://eversign.com/) template, that provides legally binding electronic signatures.
+  - Once everything is prepared at EverSign, send the document to the signature to your candidate's email.
   - Once your contract is signed, ask your **candidate for a national ID document**.
   - Confirm if the provided document name matches with what was inserted into the contract.
 
