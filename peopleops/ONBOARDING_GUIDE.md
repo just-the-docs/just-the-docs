@@ -59,12 +59,12 @@ PROCESS
 ### Set up Whereby
 
   - We use Whereby for our online meetings.
-  - Using your Countable gmail, create a free account  in Whereby [https://whereby.com/]. Remember to setup your profile photo.
+  - Using your Countable gmail, create a free account  in [Whereby](https://whereby.com/). Remember to setup your profile photo.
   - Create a personal room and make sure to copy the link. You'll use it on your Calendly setup.
 
 ### Set up Calendly
 
-  - Create a free account in Calendly[https://calendly.com/] using your Countable gmail. Don't forget to setup your profile photo.
+  - Create a free account in [Calendly](https://calendly.com/) using your Countable gmail. Don't forget to setup your profile photo.
   - Create a New Event for your one-on-one booking page. Take into consideration your availability for meetings when you set it up. Paste your Whereby link on the Location field.
   - Once done, send the Calendly link to your supervisor and put it on your slack profile so your colleagues can easily book a meeting with you. 
 
