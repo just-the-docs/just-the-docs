@@ -26,6 +26,39 @@ Docs changes in `main` that are *not* in the latest release:
 
 - N/A
 
+## Release v0.5.3
+
+Hi all, this is a minor patch release that only includes one change: changing all text-based CSS properties to use `rem` instead of hard-coded `px` values. This has two effects:
+
+1. All deprecation warnings are now fixed on build; you should now get a clean build with `jekyll build`.
+2. We have **deprecated the `$root-font-size` SCSS variable**. We will remove it in an upcoming release of the theme.
+
+If you use the stock Just the Docs theme, this release should have no impact on your final built site. If you change the `$root-font-size` SCSS variable, you might experience light layout shifts.
+
+### Using Release `v0.5.3`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.5.3` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.5.3
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.5.3"
+```
+
+To use and pin a previous version of the theme, replace the `0.5.3` with the desired release tag.
+
+### Bugfixes
+
+- Fixed: font-size scaling for text-related CSS properties by using `rem` instead of fixed `px` values; deprecate `$root-font-size` by [@mattxwang] in [#1169]
+
+[#1169]: https://github.com/just-the-docs/just-the-docs/pull/1169
+
 ## Release v0.5.2
 
 Hi all, this is a minor patch release that mostly focuses on accessibility. Since we follow semantic versioning, this should be a smooth upgrade with no breaking changes.
