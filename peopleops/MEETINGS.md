@@ -140,7 +140,14 @@ Some ideas to pick from, not needed every month.
 
 ### Monthly Team Social
 
-We hold monthly staff-coordinated, funded team social events. Countable will pay for meals and up to 1 drink, if you go out with at least one team member in person, or attend a virtual event. Any event must be announced to all team members on #fun . 
+We hold monthly staff-coordinated, funded team social events. Countable will pay for meals and up to 1 drink for a limit of $20 per month, if you go out with at least one team member in person, or attend a virtual event such as Game Night. Any event must be announced to all team members on #fun or #general. 
+
+### Social Meeting with Customer or Team Members
+
+  - When conducting social meetings with team members or customers, whether virtually or in person, up to 30 minutes is billable. 
+  - In-person meals will be covered, with no specific limit, but we kindly ask that you exercise reasonable judgment. Any expense exceeding $50 per person requires manager approval.
+  - For remote meetings, we can reimburse up to 2 remote meals per month, with a maximum limit of $20 per meal.
+  - Please note that all expenses must be supported by receipts in order to be eligible for reimbursement.
 
 <!-- Commented out for now as this is not consistent with our current Evaluation processes, and as such represents a lot of extra, unclearly defined work! Chelsea will seek to incorporate these Q's into our existing evaluation processes 
 
