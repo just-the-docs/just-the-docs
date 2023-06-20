@@ -67,6 +67,7 @@ These are lists of standardized slugs; clarify with your direct manager if you'r
 * Just as with time entries, navigate based on team and project codes (for most expenses, this will be `countable` > `admin`)
 * Descriptions of expenses can be brief, but should be detailed enough that it is understandable to your manager and accounting. If expenses were not incurred in Canadian Dollars, please include the original currency amount in the description as well. 
 * Upload an image of the receipt using the "Choose Files" button before submitting
+* In order to be eligible for reimbursement, it is essential to submit a receipt for every expense. Failure to do so will result in the expense not being reimbursed.
 
 ## Describing Your Work In Eightmeters
 
