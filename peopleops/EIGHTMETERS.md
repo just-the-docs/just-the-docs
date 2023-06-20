@@ -95,7 +95,7 @@ However, while you should include the *time* from these, focus your work descrip
   * Any time spent rendering services (offered by the company) to clients or customers.
   * Any time administering your work, such as entering timesheets, doing OKRs, updating your work hours in your calendar, and time spent conversing with your team about work (ie, any time on Slack, your work email, Trello) is all billable.
   * Training is only billable if it's requested by the company that you complete specific materials, or you're learning something immediately required to solve a problem in your work.
-  * Lunch break is billable up to 30 minutes, **if attended with a client or colleague**.
+  * Virtual or In-person lunch break is billable up to 30 minutes, **if attended with a client or colleague**.
   * You are expected to continuously develop your judgement to approach problem solving. Researching, testing, prototyping, discussing and any other activity you believe important for having great results in your work, are all billable activities. This includes failed attempts, because those result in necessary learning. In general, if you are able to explain to the team how it's helping the company (as opposed to doing it for some other primary reason), then it should be billable.
   * If a client urgently asks for help when you are not already working, record a minimum 30 minutes of work to compensate for the disruption of your time off.
   * 2 daily breaks up to 15 minutes each, are billable.
