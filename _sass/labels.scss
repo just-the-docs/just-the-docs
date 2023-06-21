@@ -1,6 +1,10 @@
 // Labels (not the form kind)
 
-.label,
+// this :not() prevents a style clash with Mermaid.js's
+// diagram labels, which also use .label
+// for more, see https://github.com/just-the-docs/just-the-docs/issues/1272
+// and the accompanying PR
+.label:not(g),
 .label-blue {
   display: inline-block;
   padding: 0.16em 0.56em;
