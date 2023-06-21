@@ -39,7 +39,7 @@ Reach out to [operations@countable.ca](mailto:operations@countable.ca) or the Sl
 
 ### How to Enter Your Time
 
-First navigate to the affiliated team, then select the specific project or category you worked on for this time period. 
+First, navigate to the affiliated team, then select the specific project or category you worked on for this time period. 
 
 These are lists of standardized slugs; clarify with your direct manager if you're not sure what some of the slugs you see are for.
 
@@ -49,6 +49,8 @@ These are lists of standardized slugs; clarify with your direct manager if you'r
     * Select the date on which the work took place.
 *  **Hours Worked:**
     * Enter the time you spent on the project in this time period. Enter time in decimal format (1 hour and 30 mins should be entered as 1.5 hours). Please do your best to accurately record or estimate time worked. It need not be perfect, but if you are concerned about being accurate, please use Toggl or another tool to assist you.
+    * When recording your overtime hours, simply enter the actual number of overtime hours worked. There is no need to calculate the overtime rate, as our payroll will handle this.
+       * If you need to work overtime, it has to be approved first by your supervisor. Overtime should only be sought when there is a genuine necessity, such as urgent projects requiring immediate completion or critical bug fixes that must be resolved within the day. Please exercise your best judgment in evaluating the need for overtime. If the tasks can be accomplished during regular working hours, kindly do so. We place great emphasis on work-life balance, which includes proactive task planning and prioritization.
 *  **Work Description:**
     * Describe the work in a few words that indicate specific progress and outcomes you worked on for most of that day, in a language clients will understand. Between 3 and 20 words is the right level of detail. If you're entering the same phrase every day, you're not being specific enough.
     * Never combine line items between projects. If you worked on 2 different codes (project slugs) during the day, they must be separate line items.
