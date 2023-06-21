@@ -70,15 +70,24 @@ Countable's intention is allow a great deal of flexibility to everyone, while en
 
 The important things are to make sure your team can rely on you being around when you say you will, and that you don't burn out. So, you can generally work when you want, but you should communicate when that will be.
 
-  - Employees (not subcontractors) based in Canada are subject to labour laws and as such have vacation pay, stat holidays, over-time, etc.
-  - Sub-contractors may take unpaid leave any time, and should take at least 2 weeks throughout the year.
-  - By default, assume your team mates won't work on stat holidays noted on the Countable Meetings calendar or over weekends, so don't be surprised if you do not get a response to messages.
+  - Employees (not subcontractors) based in Canada are subject to labour laws and as such have vacation pay, stat holidays, overtime, etc.
+  - Team members based in the Philippines are given 10 paid sick leaves and 10 paid vacation leaves.  
+  - Other Sub-contractors may take unpaid leave any time, and should take at least 2 weeks throughout the year.
+  - By default, assume your teammates won't work on stat holidays noted on the Countable Meetings calendar or over weekends, so don't be surprised if you do not get a response to messages.
   - Everyone must plan and document their regular hours in Google Calendar's [Working Hours](https://support.google.com/calendar/answer/7638168?hl=en). These should comprise around half of the hours you work.
-  - If you are away during scheduled time, please let your team know in advance and help them plan. 
-    - If it's less than a day, same-day or one-day advance notice is fine. 
-    - If it's more than a day, notify your
-    team members a few days in advance and note your absence on the Countable Absences shared calendar.
-  - We expect remote team members outside of the America/Vancouver timezone to have a 50% overlap with the Vancouver timezone (work half their time in PST).
+  - If you are away during scheduled time, please let your team know in advance and help them plan. Note your absence on the Countable Absences shared calendar.
+    
+    | Days of Scheduled Time Off  | Advance Notice Period |
+    | ------------- | ------------- |
+    | Less than a day | same-day or 1-day notice and approval is fine |
+    | 1 day  | at least 1 day  |
+    | 2-3 days  | at least 1 week  |
+    | 4-5 days  | at least 2 weeks  |
+    | 6 days or more  | at least 1 month advance notice |
+
+  - If you need to take unexpected sick leave, it is understandable that you may need to notify us on the same day, and there is no requirement for prior approval in such cases. However, for health-related situations that can be anticipated, such as surgeries or therapy sessions, we encourage you to utilize sick leave or planned time off/vacation leave especially when you have to be off for more than a day.  It is highly recommended that you adhere to the lead time mentioned above.
+  - For PH members who are eligible for parental leave (120 days paid leave if you are working with Countable for at least a year), you may inform your supervisor as early as 3 months in advance.  This advance notice will enable us to make the necessary arrangements and ensure a smooth transition during your absence.
+  - We expect remote team members outside of the America/Vancouver timezone to have a 25% overlap with the Vancouver timezone (work at least 2 hours per day overlapping PST schedule).
   - Remove yourself from calendar events you won't attend.
 
 ## Remote Work Basics
