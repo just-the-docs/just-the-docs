@@ -1,3 +1,11 @@
+---
+layout: default
+title: cd (Change Directory)
+parent: The Shell
+grand_parent: Programming
+nav_order: 2
+---
+
 # cd (Change Directory)
 
 Now that you know where you are, let’s see if we can move around the filesystem a bit. Remember we’ll need to navigate our way using paths. There are two different ways to specify a path, with absolute and relative paths.
