@@ -1,3 +1,11 @@
+---
+layout: default
+title: history
+parent: The Shell
+grand_parent: Programming
+nav_order: 5
+---
+
 # history
 
 In your shell, there is a history of the commands that you previously entered, you can actually look through these commands. This is quite useful when you want to find and run a command you used previously without actually typing it again.
