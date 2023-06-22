@@ -1,3 +1,10 @@
+---
+layout: default
+title: cat
+parent: The Shell
+nav_order: 1
+---
+
 # cat
 
 We’re almost done navigating files, but first let’s learn how to read a file. A simple command to use is the cat command, short for concatenate, it not only displays file contents but it can combine multiple files and show you the output of them.
