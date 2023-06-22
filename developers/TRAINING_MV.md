@@ -1,3 +1,11 @@
+---
+layout: default
+title: mv (Move)
+parent: The Shell
+grand_parent: Programming
+nav_order: 9
+---
+
 # mv (Move)
 
 Used for moving files and also renaming them. Quite similar to the cp command in terms of flags and functionality.
