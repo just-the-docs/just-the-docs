@@ -1,3 +1,11 @@
+---
+layout: default
+title: rm (Remove)
+parent: The Shell
+grand_parent: Programming
+nav_order: 11
+---
+
 # rm (Remove)
 
 Now I think we have too many files, let’s remove some files. To remove files you can use the rm command. The rm (remove) command is used to delete files and directories.
