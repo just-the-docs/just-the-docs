@@ -1,3 +1,11 @@
+---
+layout: default
+title: ls (List Directories)
+parent: The Shell
+grand_parent: Programming
+nav_order: 7
+---
+
 # ls (List Directories)
 
 Now that we know how to move around the system, how do we figure out what is available to us? Right now it’s like we are moving around in the dark. Well, we can use the wonderful ls command to list directory contents. The ls command will list directories and files in the current directory by default, however you can specify which path you want to list the directories of.
