@@ -1,3 +1,10 @@
+---
+layout: default
+title: pwd (Print Working Directory)
+parent: The Shell
+grand_parent: Programming
+nav_order: 10
+---
 
 # pwd (Print Working Directory)
 
