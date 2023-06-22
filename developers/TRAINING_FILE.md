@@ -1,3 +1,11 @@
+---
+layout: default
+title: file
+parent: The Shell
+grand_parent: Programming
+nav_order: 4
+---
+
 # file
 
 In the previous lesson we learned about touch, let’s go back to that for a bit. Did you notice that the filename didn’t conform to standard naming like you’ve probably seen with other operating systems like Windows? Normally you would expect a file called banana.jpeg and expect a JPEG picture file.
