@@ -32,7 +32,6 @@ permalink: pretty
 exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock", "package.json", "package-lock.json",  "script/", "LICENSE.txt", "lib/", "bin/", "README.md", "Rakefile"]
 
 plugins:
-  - jekyll-redirect-from
   - jekyll-seo-tag
   
 # Enable or disable the site search
