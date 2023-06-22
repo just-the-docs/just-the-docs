@@ -1,3 +1,11 @@
+---
+layout: default
+title: cp (Copy)
+parent: The Shell
+grand_parent: Programming
+nav_order: 3
+---
+
 # cp (Copy)
 
 Let’s start making some copies of these files. Much like copy and pasting files in other operating systems, the shell gives us an even simpler way of doing that.
