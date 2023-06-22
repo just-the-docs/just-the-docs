@@ -1,3 +1,11 @@
+---
+layout: default
+title: less
+parent: The Shell
+grand_parent: Programming
+nav_order: 6
+---
+
 # less
 
 If you are viewing text files larger than a simple output, less is more. (There is actually a command called more that does something similar, so this is ironic.) The text is displayed in a paged manner, so you can navigate through a text file page by page.
