@@ -1,7 +1,8 @@
 ---
 layout: default
 title: The Shell
-nav_order: 8
+parent: Programming
+nav_order: 14
 has_children: true
 ---
 
