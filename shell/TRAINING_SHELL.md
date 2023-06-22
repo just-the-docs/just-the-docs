@@ -1,3 +1,9 @@
+---
+layout: default
+title: The Shell
+nav_order: 8
+has_children: true
+---
 
 # The Shell
 
