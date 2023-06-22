@@ -49,8 +49,9 @@ This workflow checklist covers mostly things we should already be doing. If it's
 
 ### Every Day You Work
 
-  - Share something with the team every day. The simplest way to do this is to report what you did on Slack in your team's channel, and anything you're stuck on. 
+  - Share something with the team every day. The simplest way to do this is to report what you did on Slack in your team's channel, and anything you're stuck on.
     - Shooting a quick [screen cap video](https://countable-web.github.io/ops/operations/PROJECT_MANAGEMENT/SCREENCASTIFY/) to share is a great idea to try out.
+    - Consistent submission of a daily work summary is mandatory and will be closely monitored. Failure to submit or delays exceeding one day will have adverse effects on both your team's productivity and your individual performance evaluation and compensation.
   - Check Slack at least twice a day, and react/respond to some other team members' posts.
   - Commit your code and push it to bitbucket every day.
   - Enter your hours on [Eightmeters](EIGHTMETERS.md) (end of the day)
