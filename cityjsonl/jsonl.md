@@ -1,9 +1,8 @@
 ---
 layout: page
-title: "CityJSONL: streaming with CityJSONFeature"
-parent: Help for developers
-nav_order: 6
-permalink: /dev/jsonl/
+title: "CityJSON Lines"
+nav_order: 5
+permalink: /cityjsonl/
 ---
 
 ## Table of contents
@@ -11,6 +10,10 @@ permalink: /dev/jsonl/
 
 1. TOC
 {:toc}
+
+
+CityJSON Lines---CityJSONL for short---is a format based on [JSON Text Sequences](https://datatracker.ietf.org/doc/html/rfc7464) and CityJSON.
+The idea is to decompose a CityJSON file into its features (eg each building, each bridge, each road, etc.), to create several JSON objects (of type `CityJSONFeature`), and store them in a JSON Text Sequence (for instance [JSON Lines](https://jsonlines.org/)).
 
 
 ## CityJSONFeature
