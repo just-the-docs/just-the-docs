@@ -58,8 +58,8 @@
       {% if node.blank == true and node.has_children == true %}
         <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil %} active{% endif %}">
           <a style="z-index:10; position:inherit; display:inline-block;pointer-events: none;" href="" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
-          <a style="width:100%" href="#" class="nav-list-expander" aria-label="toggle links in {{ node.title }} category">
-            <svg style="height:100%; float: right;" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+          <a style="width:100%; height:100%" href="#" class="nav-list-expander" aria-label="toggle links in {{ child.title }} category">
+            <svg style="height:1.25em; float: right;" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
           </a>
       {% else %}
         <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil %} active{% endif %}">
@@ -82,8 +82,8 @@
               {% if child.blank == true and child.has_children %}
                 <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
                   <a style="z-index:10; position:inherit; display:inline-block;pointer-events: none;" href="{{ child.url | relative_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
-                  <a style="width:100%" href="#" class="nav-list-expander" aria-label="toggle links in {{ child.title }} category">
-                    <svg style="height:100%; float: right;" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
+                  <a style="width:100%; height:100%" href="#" class="nav-list-expander" aria-label="toggle links in {{ child.title }} category">
+                    <svg style="height:1.25em; float: right;" viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
                   </a>
               {% else %}
                 <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
