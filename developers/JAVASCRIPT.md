@@ -47,7 +47,74 @@ These are the most preferred libraries, but if the project is heavily invested i
 
 ie) We should use Fetch if possible because it saves 50KB. This may not sound like much but makes a big difference in the long run. Most web apps take 5 seconds to load on an average connection becasue of devs making many small decisions to add size to the bundle which hits our load time both in terms of bundle transfer but in JS parsing, and this leads to a mediocre experience. When a busy (and perhaps, highly paid) person is in a hurry, it's excruciating to wait a few extra seconds. This is made far worse for browser extensions which have to load IN ADDITION to the base website and all the other extensions so they especially need to be lean. What is the rationale for using Axios? (edited) 
 
+# Vue and React
 
+  - Instead of returning functions that render a component, prefer to return functions that return the necessary information to render a component. In the first we are instructing what to do(render precisely this thing), while in the second we’re just returning some information (use this information to do something).
+  - Communicating between siblings, instead of through components. Try to only communicate with other components through props.
+  - Use pure functional components where possible. Because these components don’t have lifecycle methods, they require you to rely on a declarative, props-based approach.
+  - Use useQuery for async data loading
+
+# Error Handling
+Good error handling can save tremendous amounts of time for your team.
+ - Display useful diagnostic info on failures in the console and on the screen.
+ - Make errors specific to the operation being performed. You can have nexted try/catch blocks as needed to attain this.
+ - Consider that when your application fails, users will probably send you a screenshot. You want to make sure that screenshot contains the information to debug the issue.
+ - Your error message to the user should explain how it affects them and what steps to take if possible.
+ - Put context variables in your error string (no personal health info of course). `Failed to save user ID ${user.id}`
+ - Pass information from the server side error, to the client.
+```
+// Good example: display a user profile.
+try {
+  await fetch(URL), {...})
+  if (!response.ok) {
+     const errText=response.text()
+     setError(`Failed to load user details for ${user.id}. Status=${resposne.status} Message=${errText}`)
+  }
+} catch (e) {
+  setError('We failed to display your user. This may be a configuration issue, please email this message to help@organization.com');
+  console.trace() // Now we can debug much more easily if we get
+  console.error(e)
+}
+```
+
+### Good/Bad examples
+
+```
+// Not specific enough.
+setError(`operation failed`)
+
+// Not traceable back to a specific part of the code (could be raised anywhere).
+setError(e.message)
+
+// Better. Include info for debugging later. Let the user know what to do.
+setError(`Failed to load user ${user.id} with code ${rsp.status}: ${rsp.message}. Please report this to help@organization.com`)
+
+// Better, centralize error handling to keep it consistent for network and other cases.
+setHttpError(`Failed to load user ${user.id}`, rsp)
+const setHttpError = (msg, rsp) => {
+  setError(msg + `with code ${rsp.status}: ${rsp.message} . Please report this to help@organization.com`)
+}
+
+```
+
+## window.onerror
+```
+// This can be a good practice (setError displays this error message on the screen, visible but unobtrusively).
+// However, extensions can sometimes trigger this, so it's preferable to just try / catch at various levels in the application.
+window.onerror = function(message, url, linenumber) {
+	setError('Unexpected error: ' + message + ' on line ' + linenumber + ' for ' + url + '. Please send a screenshot to help@organization.com');
+}
+```
+
+# jQuery (Legacy)
+
+
+
+While we won't normally use jQuery for a new project at Countable, several older projects do use it. 
+
+jQuery has been unpopular for large software projects due to maintainability issues, and those concerns are founded. 
+
+However, taking some care in how you use the library helps keep jQuery projects maintainable.
 
 **When traversing the DOM many times, load one into memory first\!**
 
@@ -111,71 +178,7 @@ Event delegation means you'll never have bugs with event handlers being created 
     // Better to use event delegation, because it will work even if #confirm_popup_btn is created later.
     $('body').on('click', '#confirm_popup_btn', function () {...})
 
-# Vue and React
-
-  - Instead of returning functions that render a component, prefer to return functions that return the necessary information to render a component. In the first we are instructing what to do(render precisely this thing), while in the second we’re just returning some information (use this information to do something).
-  - Communicating between siblings, instead of through components. Try to only communicate with other components through props.
-  - Use pure functional components where possible. Because these components don’t have lifecycle methods, they require you to rely on a declarative, props-based approach.
-  - Use useQuery for async data loading
-
-# Error Handling
-Good error handling can save tremendous amounts of time for your team.
- - Display useful diagnostic info on failures in the console and on the screen.
- - Make errors specific to the operation being performed. You can have nexted try/catch blocks as needed to attain this.
- - Consider that when your application fails, users will probably send you a screenshot. You want to make sure that screenshot contains the information to debug the issue.
- - Your error message to the user should explain how it affects them and what steps to take if possible.
- - Put context variables in your error string (no personal health info of course). `Failed to save user ID ${user.id}`
-```
-// Good example: display a user profile.
-try {
-  await fetch(URL), {...})
-  if (!response.ok) {
-     const errText=response.text()
-     setError(`Failed to load user details for ${user.id}. Status=${resposne.status} Message=${errText}`)
-  }
-} catch (e) {
-  setError('We failed to display your user. This may be a configuration issue, please email this message to help@organization.com');
-  console.trace() // Now we can debug much more easily if we get
-  console.error(e)
-}
-```
-
-### Good/Bad examples
-
-```
-// Not specific enough.
-setError(`operation failed`)
-
-// Not traceable back to a specific part of the code (could be raised anywhere).
-setError(e.message)
-
-// Better. Include info for debugging later. Let the user know what to do.
-setError(`Failed to load user ${user.id} with code {rsp.status}. Please report this to help@organization.com`)
-
-// Better, centralize error handling to keep it consistent for network and other cases.
-setHttpError(`Failed to load user ${user.id}`, rsp)
-const setHttpError = (msg, rsp) => {
-  setError(msg + `with code {rsp.status}. Please report this to help@organization.com`)
-}
-
-```
-
-## window.onerror
-```
-// This can be a good practice (setError displays this error message on the screen, visible but unobtrusively).
-// However, extensions can sometimes trigger this, so it's preferable to just try / catch at various levels in the application.
-window.onerror = function(message, url, linenumber) {
-	setError('Unexpected error: ' + message + ' on line ' + linenumber + ' for ' + url + '. Please send a screenshot to help@organization.com');
-}
-```
-
-# jQuery
-
-While we won't normally use jQuery for a new project at Countable, several older projects do use it. 
-
-jQuery has been unpopular for large software projects due to maintainability issues, and those concerns are founded. 
-
-However, taking some care in how you use the library helps keep jQuery projects maintainable.
+## More jQuery Stuff
 
 Most of the problems maintaining jQuery apps come from [DOM Manipulation](https://api.jquery.com/category/manipulation/) which leads to needlessly complex state. To minimize this, here are some guidelines to use where possible.
 
