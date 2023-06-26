@@ -118,6 +118,51 @@ Event delegation means you'll never have bugs with event handlers being created 
   - Use pure functional components where possible. Because these components don’t have lifecycle methods, they require you to rely on a declarative, props-based approach.
   - Use useQuery for async data loading
 
+# Error Handling
+Good error handling can save tremendous amounts of time for your team.
+ - Display useful diagnostic info on failures in the console and on the screen.
+ - Make errors specific to the operation being performed. You can have nexted try/catch blocks as needed to attain this.
+ - Consider that when your application fails, users will probably send you a screenshot. You want to make sure that screenshot contains the information to debug the issue.
+ - Your error message to the user should explain how it affects them and what steps to take if possible.
+ - Put context variables in your error string (no personal health info of course). `Failed to save user ID ${user.id}`
+```
+// Good example: display a user profile.
+try {
+  await fetch(URL), {...})
+  if (!response.ok) {
+     const errText=response.text()
+     setError(`Failed to load user details for ${user.id}. Status=${resposne.status} Message=${errText}`)
+  }
+} catch (e) {
+  setError('We failed to display your user. This may be a configuration issue, please email this message to help@organization.com');
+  console.trace() // Now we can debug much more easily if we get
+  console.error(e)
+}
+```
+
+```
+// Not ideal.
+setError(`operation failed`)
+
+// Better. Include info for debugging later. Let the user know what to do.
+setError(`Failed to load user ${user.id} with code {rsp.status}. Please report this to help@organization.com`)
+
+// Better, centralize error handling to keep it consistent for network and other cases.
+setHttpError(`Failed to load user ${user.id}`, rsp)
+const setHttpError = (msg, rsp) => {
+  setError(msg + `with code {rsp.status}. Please report this to help@organization.com`)
+}
+
+```
+
+## window.onerror
+```
+// This can be a good practice (setError displays this error message on the screen, visible but unobtrusively).
+// However, extensions can sometimes trigger this, so it's preferable to just try / catch at various levels in the application.
+window.onerror = function(message, url, linenumber) {
+	setError('Unexpected error: ' + message + ' on line ' + linenumber + ' for ' + url + '. Please send a screenshot to help@organization.com');
+}
+```
 
 # jQuery
 
