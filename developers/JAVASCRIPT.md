@@ -140,9 +140,14 @@ try {
 }
 ```
 
+### Good/Bad examples
+
 ```
-// Not ideal.
+// Not specific enough.
 setError(`operation failed`)
+
+// Not traceable back to a specific part of the code (could be raised anywhere).
+setError(e.message)
 
 // Better. Include info for debugging later. Let the user know what to do.
 setError(`Failed to load user ${user.id} with code {rsp.status}. Please report this to help@organization.com`)
