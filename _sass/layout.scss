@@ -103,6 +103,7 @@
   display: flex;
   min-height: $header-height;
   align-items: center;
+  max-height: $header-height;
 
   @include mq(md) {
     height: $header-height;
@@ -112,20 +113,20 @@
 }
 
 .site-title {
-  @include container;
+  //@include container;
 
   flex-grow: 1;
   display: flex;
   height: 100%;
   align-items: center;
-  padding-top: $sp-3;
-  padding-bottom: $sp-3;
+  //padding-top: $sp-3;
+  //padding-bottom: $sp-3;
   color: $body-heading-color;
-  @include fs-6;
+  //@include fs-6;
 
   @include mq(md) {
-    padding-top: $sp-2;
-    padding-bottom: $sp-2;
+    //padding-top: $sp-2;
+    //padding-bottom: $sp-2;
   }
 }
 
