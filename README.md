@@ -49,6 +49,11 @@ nav_footer_logo_top_href: ""
 # | |___  | (_| | | | | |_     / ___ \  | |_) | | (_) |  \ V /  |  __/
 # |_____|  \__,_| |_|  \__|   /_/   \_\ |_.__/   \___/    \_/    \___|
 
+aux_links:
+  "SCDS Workshops":
+    - "https://scds.ca/online-learning/"
+
+navigation: true
 
 # Override Default SCDS Web Icon
 favicon_ico: ""
