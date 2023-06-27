@@ -16,9 +16,11 @@ Document policies for compensation at Countable.
 Covers the principles behind our compensation strategy, specific policies, as well as benefits and medical provided to our team.
 
 ## Compensation Schedule
-  * Staff must submit hours for a given month within 24h of end date (PST) of that month in order to be paid on time.
-  * All staff (with Canadian bank accounts) are paid within 8 days of the start of the month, for the prior period to allow for processing.
-  * If you are not paid within this period, please contact our current book keeper.
+  * All staff must complete their timesheets in [Eightmeters](https://countable-web.github.io/ops/peopleops/EIGHTMETERS/).
+  * Staff must submit hours for a given month within 24 hours of the end date (PST) of that month in order to be paid on time.
+  * Everyone is paid within 8 days of the start of the month, for the prior period to allow for processing.
+  * If you are not paid within this period, please contact our current bookkeeper.
+  * Countable's Compensation Schedule are saved [here](https://docs.google.com/document/d/1SECh050VYzoVj0y3zHYSWOLTiW9FjoaU5AZg-WjSKs8/edit?usp=sharing) and in Countable Calendar. 
 
 ## Compensation Strategy Principles
 
@@ -26,7 +28,7 @@ Covers our basic principles and approach to compensating our team.
 
 Not everyone will agree with this approach, so it's important we state it here so we don't have someone with different expectations join the team.
 
-1.  Our goal is to pay people enough to live in reasonable comfort and to generally be competitive with other opportunities, but we would rather start with lower rates and give generous raises compared to other companies. We believe this has a positive impact on our culture, because if we pay too high initially it will result in many staff joining because of the high pay, and not because they are a good fit with our values and methods.
+1.  Our goal is to pay people enough to live in reasonable comfort and to generally be competitive with other opportunities, but we would rather start with lower rates and give generous raises compared to other companies. We believe this has a positive impact on our culture because if we pay too high initially it will result in many staff joining because of the high pay, and not because they are a good fit with our values and methods.
 2.  Once an employee has completed some OKRs and demonstrated they can push the team towards our mission, they will get a substantial raise. 
     - At this point, we trust they've been vetted to be a cultural fit. 
     - The raise may be weighted towards stock so that those who contribute are co-owners of Countable Web Productions Inc.
@@ -34,7 +36,7 @@ Not everyone will agree with this approach, so it's important we state it here s
     - On the positive side, this allows us to afford to hire students who still have some basic knowledge to develop in order to be productive. 
     - I think this is great because it will attract people who propel us forward over time, and avoid accumulating people who coast, by encouraging them to either improve or leave. It's much
     more motivating working with the former people.
-4.  If you're assigned a change in compensation, that will take a effect starting in your next pay period, not immediately (current pay period), nor backdated to past hours.
+4.  If you're assigned a change in compensation, that will take effect starting in your next pay period, not immediately (current pay period), nor backdated to past hours.
 
 ## Benefits
 
@@ -51,8 +53,8 @@ Recognizing that we have a significant number of team members based in the Phili
 
 We don't currently have an extended medical group insurance plan for Canadians (partly as we don't yet have USA employees who tend to be more reliant on this), but we'd like to help out a little when our team has dental or other uninsured medical costs. Instead:
 
-1.  Full time contractors (100h/mo or more) and employees receive 50% reimbursement for medical expenses, up to $1000 CAD per calendar year.
-2.  Part time contractors (50h/mo or more) receive 30% reimbursement for medical expenses, up to $1000 CAD per calendar year.
+1.  Full-time contractors (100h/mo or more) and employees receive 50% reimbursement for medical expenses, up to $1000 CAD per calendar year.
+2.  Part-time contractors (50h/mo or more) receive 30% reimbursement for medical expenses, up to $1000 CAD per calendar year.
 
 ## See Also
 
