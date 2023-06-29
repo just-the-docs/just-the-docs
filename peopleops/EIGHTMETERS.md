@@ -49,7 +49,7 @@ These are lists of standardized slugs; clarify with your direct manager if you'r
     * Select the date on which the work took place.
 *  **Hours Worked:**
     * Enter the time you spent on the project in this time period. Enter time in decimal format (1 hour and 30 mins should be entered as 1.5 hours). Please do your best to accurately record or estimate time worked. It need not be perfect, but if you are concerned about being accurate, please use Toggl or another tool to assist you.
-    * When recording your overtime hours, simply enter the actual number of overtime hours worked. There is no need to calculate the overtime rate, as our payroll will handle this. Overtime policy can be found [here](https://github.com/countable-web/ops/edit/master/peopleops/COMPENSATION_STRATEGY.md#overtime). 
+    * When recording your overtime hours, simply enter the actual number of overtime hours worked. There is no need to calculate the overtime rate, as our payroll will handle this. Overtime policy can be found [here](https://countable-web.github.io/ops/peopleops/COMPENSATION_STRATEGY/#overtime). 
 *  **Work Description:**
     * Describe the work in a few words that indicate specific progress and outcomes you worked on for most of that day, in a language clients will understand. Between 3 and 20 words is the right level of detail. If you're entering the same phrase every day, you're not being specific enough.
     * Never combine line items between projects. If you worked on 2 different codes (project slugs) during the day, they must be separate line items.
