@@ -39,10 +39,13 @@ PROCESS
       - School
       - Hobbies
       - Two True things about you, and a Lie (let the team guess which).
-      - In addition to the photo that Slack prompts you for, fill in the rest of your user profile with relevant information.
-      - Use the team to answer your other questions.
-
-      ![Recommended Slack Settings](https://raw.githubusercontent.com/countable-web/ops/master/assets/images/recommended-slack-setting.png)
+  - In addition to the photo that Slack prompts you for, fill in the rest of your user profile with relevant information. Follow the recommended profile setup below. Provide your shift schedule under Pronunciation.
+   <img src="https://github.com/countable-web/ops/blob/master/assets/images/slack%20edit%20profile.JPG" alt="Slack Profile" width="400px">
+   
+  - Set the recommended slack setting by choosing below.
+   <img src="https://raw.githubusercontent.com/countable-web/ops/master/assets/images/recommended-slack-setting.png" alt="Recommended Slack Settings" width="400px">
+   
+  - Use the team to answer your other questions.
 
 ### Set your work availability and subscribe to group calendars
 
@@ -65,8 +68,10 @@ PROCESS
 ### Set up Calendly
 
   - Create a free account in [Calendly](https://calendly.com/) using your Countable gmail. Don't forget to setup your profile photo.
-  - Create a New Event for your one-on-one booking page. Take into consideration your availability for meetings when you set it up. Paste your Whereby link on the Location field.
-  - Once done, send the Calendly link to your supervisor and put it on your slack profile so your colleagues can easily book a meeting with you. 
+  - Create a New Event for your one-on-one booking page. Take into consideration your availability for meetings when you set it up. Paste your Whereby link in the Location field.
+  - Once done, send the Calendly link to your supervisor and put it on your slack profile so your colleagues can easily book a meeting with you.
+  - Set up your Slack to add your Calendly link and meeting availability.
+   <img src="https://github.com/countable-web/ops/blob/master/assets/images/slack%20calendly.JPG" alt="Calendly Setting on Slack" width="400px">
 
 ### Set your profile photo
 
