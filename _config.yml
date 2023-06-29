@@ -1,4 +1,4 @@
-title: How-To and Documentation # *** Enter workshop title here 
+title: Introduction to Python # *** Enter workshop title here 
 github_repo_url: "https://github.com/scds/jtd-mcmaster" # ***Enter workshop URL (in github pages) here
 gh_edit_repository: "https://github.com/scds/jtd-mcmaster" #*** ENTER the github URL for your repo
 ga_tracking: # *** This needs to be set up in Google Analytics once you know the website URL (ask Jay to do this). Then the tracking code needs to be taken from Google Analytics and pasted here.  
@@ -29,6 +29,11 @@ nav_footer_logo_top_href: ""
 # |  _|    / _` | | | | __|     / _ \   | '_ \   / _ \  \ \ / /  / _ \
 # | |___  | (_| | | | | |_     / ___ \  | |_) | | (_) |  \ V /  |  __/
 # |_____|  \__,_| |_|  \__|   /_/   \_\ |_.__/   \___/    \_/    \___|
+
+
+aux_links:
+  "SCDS Workshops":
+    - "https://scds.ca/online-learning/"
 
 navigation: true
 
