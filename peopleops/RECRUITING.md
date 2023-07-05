@@ -162,8 +162,20 @@ If the Candidate has made it to the *Technical Test* stage, the lead of the team
 
 ### Referrals
 
-For anyone who gives us a referral, ask "would you vouch that this person is a good fit and good performer?" 
+Our Employee Referral Program is open to all members of the company and it offers rewards to employees who successfully refer qualified candidates. 
 
-We need to make sure referrals are given on this basis, and not just trying to help a friend get a job. 
+- We will regularly post our job openings on Slack, ensuring the team is always up-to-date.
+- When making a referral, please send [Cat](mailto:catherine@countable.ca) the CV of the qualified candidate along with a brief note outlining your connection with them and explaining why you believe they are a suitable candidate for the position.
+- Referred candidates will go through the standard application and evaluation process, just like any other candidate.
+- The referring employee becomes eligible for the referral reward once the referred candidate is hired and successfully completes a specified period of employment (90 days).
+     - $120 - When the employee starts
+     - $120 - 90 days after Start Date
+- The referral reward will be disbursed on the next payout schedule.
+- There is no limit to the number of referrals an employee can make. Each successful referral will be considered for a separate reward.
 
-When making a referral, the referrer must consider it a great fit for both sides.
+Important things to consider:
+- For anyone who gives us a referral, ask "would you vouch that this person is a good fit and good performer?".
+- We need to make sure referrals are given on this basis, and not just trying to help a friend get a job.
+- When making a referral, the referrer must consider it a great fit for both sides.
+
+
