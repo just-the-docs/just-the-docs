@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Algorithmic Trading
-parent: k2-group
+parent: K2 Group
 nav_order: 1
 direction: rtl
 ---
