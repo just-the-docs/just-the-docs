@@ -26,6 +26,18 @@ Docs changes in `main` that are *not* in the latest release:
 
 - N/A
 
+## Release v0.5.4
+
+Hi all, this is a small patch release that only includes one change: fixing a style clash between Mermaid's labels and Just the Docs' labels.
+
+*Note: for subsequent patch releases, we will omit migration instructions (for brevity). In all cases, immediate migration should be backwards-compatible. Refer to previous major or minor update instructions for more information.*
+
+### Bugfixes
+
+- Fixed: Mermaid labels inheriting theme `.label` styling by [@mattxwang] in [#1278]
+
+[#1278]: https://github.com/just-the-docs/just-the-docs/pull/1278
+
 ## Release v0.5.3
 
 Hi all, this is a minor patch release that only includes one change: changing all text-based CSS properties to use `rem` instead of hard-coded `px` values. This has two effects:
