@@ -4,7 +4,7 @@
   Results in: HTML for the navigation panel.
   Includes:
     sorted_pages.html
-  Overwrites: 
+  Overwrites:
     nav_pages, first_level_pages, second_level_pages, third_level_pages,
     node, children_list, child, grand_children_list, grand_child.
 {%- endcomment -%}
@@ -26,29 +26,29 @@
 {%- comment -%}
   The order of sibling pages in `sorted_pages` determines the order of display of
   links to them in lists of navigation links.
-  
+
   Note that Liquid evaluates conditions from right to left (and it does not allow
   the use of parentheses). Some conditions are not so easy to express clearly...
-  
+
   For example, consider the following condition:
-  
-    C: page.collection = = include.key and 
-       page.url = = node.url or 
-       page.grand_parent = = node.title or 
-       page.parent = = node.title and 
+
+    C: page.collection = = include.key and
+       page.url = = node.url or
+       page.grand_parent = = node.title or
+       page.parent = = node.title and
        page.grand_parent = = nil
- 
+
   Here, `node` is a first-level page. The last part of the condition
   -- namely: `page.parent = = node.title and page.grand_parent = = nil` --
   is evaluated first; it holds if and only if `page` is a child of `node`.
-  
-  The condition `page.grand_parent = = node.title or ...` holds when 
+
+  The condition `page.grand_parent = = node.title or ...` holds when
   `page` is a grandchild of node, OR `...` holds.
-  
-  The condition `page.url = = node.url or ...` holds when 
+
+  The condition `page.url = = node.url or ...` holds when
   `page` is `node`, OR `...` holds.
-  
-  The condition C: `page.collection = = include.key and ...` holds when we are 
+
+  The condition C: `page.collection = = include.key and ...` holds when we are
   generating the nav links for a collection that includes `page`, AND `...` holds.
 {%- endcomment -%}
 
@@ -57,9 +57,9 @@
     {%- unless node.nav_exclude -%}
       <li class="nav-list-item{% if page.collection == include.key and page.url == node.url or page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil %} active{% endif %}">
         {%- if node.has_children -%}
-          <a href="#" class="nav-list-expander" aria-label="toggle links in {{ node.title }} category">
-            <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-          </a>
+        <button class="nav-list-expander btn-reset" aria-label="toggle items in {{ node.title }} category" aria-pressed="{% if page.collection == include.key and page.url == node.url or page.grand_parent == node.title or page.parent == node.title and page.grand_parent == nil %}true{% else %}false{% endif %}">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+        </button>
         {%- endif -%}
         <a href="{{ node.url | relative_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}</a>
         {%- if node.has_children -%}
@@ -73,9 +73,9 @@
             {%- unless child.nav_exclude -%}
             <li class="nav-list-item {% if page.url == child.url or page.parent == child.title %} active{% endif %}">
               {%- if child.has_children -%}
-                <a href="#" class="nav-list-expander" aria-label="toggle links in {{ child.title }} category">
-                  <svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg>
-                </a>
+                <button class="nav-list-expander btn-reset" aria-label="toggle items in {{ child.title }} category" aria-pressed="{% if page.url == child.url or page.parent == child.title %}true{% else %}false{% endif %}">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+                </button>
               {%- endif -%}
               <a href="{{ child.url | relative_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}</a>
               {%- if child.has_children -%}
