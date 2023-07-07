@@ -5,8 +5,8 @@
 <div style="margin-top: 2.5em;">
 
 <!-- Navigation buttons -->
-<div style="display: flex;">
-<div style="flex-grow: 1;">
+<div style="display: flex; justify-content: space-between; align-items: center;">
+<div style="max-width: 40%;">
 {% if page.grand_parent %}                                                                  <!-- If page is a grandchild -->
     {%- assign previous_page = third_level_pages                                            <!-- Find previous index -->
         | where_exp: "item", "item.grand_parent == page.grand_parent"                       <!-- With same grandparent -->
@@ -248,7 +248,7 @@
 
 
 
-<div>
+<div style="max-width: 40%;">
 {% if page.grand_parent %}
     {%- assign parent_of_page = second_level_pages 
         | where_exp: "item", "item.has_children"
