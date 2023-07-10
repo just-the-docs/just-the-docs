@@ -20,7 +20,7 @@ Four different points can be stored as follows, notice that the depth of the ``"
 ```javascript
 {
   "type": "MultiPoint",
-  "lod": 1,
+  "lod": "1.0",
   "boundaries": [2, 44, 0, 7]
 }
 ```
@@ -34,7 +34,7 @@ Two line strings can be stored as follows,  notice that the depth of the ``"boun
 ```javascript
 {
   "type": "MultiLineString",
-  "lod": 1,
+  "lod": "1.0",
   "boundaries": [
     [2, 3, 5], [77, 55, 212]
   ]  
@@ -52,7 +52,7 @@ The depth of the ``"boundaries"`` array is one more: 3.
 ```javascript
 {
   "type": "MultiSurface",
-  "lod": 2,
+  "lod": "2.0",
   "boundaries": [
     [[0, 3, 2, 1]], [[4, 5, 6, 7]], [[0, 1, 5, 4]]
   ]
@@ -66,7 +66,7 @@ Notice that a MultiSurface can contain one surface with interior boundaries, and
 ```javascript
 {
   "type": "MultiSurface",
-  "lod": 2,
+  "lod": "2.1",
   "boundaries": [
     [ [1, 2, 3, 4, 5], [6, 8, 7], [9, 12, 11, 10] ], [[14, 15, 16]]
   ]
@@ -84,7 +84,7 @@ The depth of the ``"boundaries"`` array is the same as that of the MultiSurface
 ```javascript
 {
   "type": "CompositeSurface",
-  "lod": 2,
+  "lod": "1.3",
   "boundaries": [
     [[0, 3, 2, 1]], [[4, 5, 6, 7]], [[0, 1, 5, 4]]
   ]
@@ -104,7 +104,7 @@ If the solid has interior boundaries (see the [ISO 19107 definition](http://geov
 ```javascript
 {
   "type": "Solid",
-  "lod": 2,
+  "lod": "2",
   "boundaries": [
     [ [[0, 3, 2, 1, 22]], [[4, 5, 6, 7]], [[0, 1, 5, 4]], [[1, 2, 6, 5]] ], 
     [ [[240, 243, 124]], [[244, 246, 724]], [[34, 414, 45]], [[111, 246, 5]] ] 
@@ -123,7 +123,7 @@ The depth of the ``"boundaries"`` array is one more: 5 (same as CompositeSolid).
 ```javascript
 {
   "type": "MultiSolid",
-  "lod": 3,
+  "lod": "3.0",
   "boundaries": [
     [ 
       [ [[0, 3, 2, 1, 22]], [[4, 5, 6, 7]], [[0, 1, 5, 4]], [[1, 2, 6, 5]] ],
@@ -148,7 +148,7 @@ The depth of the ``"boundaries"`` array is 5 (same as MultiSolid).
 ```javascript
 {
   "type": "CompositeSolid",
-  "lod": 3,
+  "lod": "2.1",
   "boundaries": [
     [ 
       [ [[0, 3, 2, 1, 22]], [[4, 5, 6, 7]], [[0, 1, 5, 4]], [[1, 2, 6, 5]] ],
