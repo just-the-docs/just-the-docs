@@ -15,7 +15,7 @@ direction: rtl
     فهرست مطالب
   </summary>
   {: .text-delta }
-- TOC
+1. TOC
 {:toc}
 </details>
 ---
