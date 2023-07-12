@@ -6,6 +6,7 @@ services:
       context: ./
     ports:
       - 4000:4000
+      - 35729:35729
     volumes:
       - .:/usr/src/app
     stdin_open: true
