@@ -1,1 +1,10 @@
 // custom SCSS (or CSS) goes here
+
+h4,
+.text-delta {
+  @include fs-4;
+
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
