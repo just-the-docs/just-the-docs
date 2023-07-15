@@ -41,7 +41,7 @@ Some of my key achievements include:
 Overall, I am passionate about building a company that is at the forefront of the algorithmic trading industry, and that delivers exceptional value to our clients through innovative and data-driven solutions.
 
 ***Skills:***
-
+{: .d-inline-block }
 C++
 {: .label }
 Java
@@ -69,7 +69,7 @@ Mar 2020 - Present
 - Listening actively, giving feedback, motivating, and hardworking attitude helped to become a more respectful role model team member.
 
 ***Skills:*** 
-
+{: .d-inline-block }
 Cypress
 {: .label }
 Test Automation
