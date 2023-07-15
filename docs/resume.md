@@ -15,7 +15,7 @@ nav_order: 7
 
 ---
 
-Full Stack Developer with 8+ years of experience working with high-tech startups. Enhanced performance of several web applications and sought to reduce development time by writing tests and development tools. Leadership coach with experience improving team productivity for over 2 years.
+Full Stack Developer with 8+ years of experience working with high-tech startups. Enhanced the performance of several web applications and sought to reduce development time by writing tests and development tools. Leadership coach with experience improving team productivity for over 2 years.
 
 
 ## Experience
@@ -33,15 +33,18 @@ As a team leader and entrepreneur, I am passionate about building innovative and
 As the founder and Software Developer of K2-Group, I have dedicated my career to developing cutting-edge algorithmic trading solutions. With over 13 years of experience in the industry, I have gained a deep understanding of capital market dynamics and have built a proven track record of delivering exceptional results for trading strategies.
 
 Some of my key achievements include:
-- Developing over 10,000 trading strategies, of which over 3,000 are currently in use in applications. These strategies leverage data analysis techniques to identify and execute high-probability trading opportunities in real-time.
+- Developing over 10,000 trading strategies, of which over 3,000 are currently in use in applications. These strategies leverage data analysis techniques to identify and execute high-probability trading opportunities in real time.
 - Analyzing application-specific requirements and making necessary software adaptations. I have a deep understanding of various programming languages and am proficient in both front-end and back-end development.
 - Managing the hardware and configuration of servers, ensuring that our systems are always running optimally and efficiently.
-- Developing a number of technical trading indicators based on mathematical principles that are used in trading strategies. These indicators leverage my expertise in data analysis and are highly effective in identifying trading opportunities.
+- Developing several technical trading indicators based on mathematical principles that are used in trading strategies. These indicators leverage my expertise in data analysis and are highly effective in identifying trading opportunities.
 
 Overall, I am passionate about building a company that is at the forefront of the algorithmic trading industry, and that delivers exceptional value to our clients through innovative and data-driven solutions.
 
 ***Skills:***
+
 C++
+{: .label }
+Java
 {: .label }
 Python
 {: .label }
@@ -66,6 +69,7 @@ Mar 2020 - Present
 - Listening actively, giving feedback, motivating, and hardworking attitude helped to become a more respectful role model team member.
 
 ***Skills:*** 
+
 Cypress
 {: .label }
 Test Automation
