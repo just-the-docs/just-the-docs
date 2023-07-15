@@ -80,3 +80,90 @@ Angular
 {: .label }
 TypeScript
 {: .label }
+
+---
+### Eghtesad Bidar Securities
+{: .d-inline-block }
+
+Oct 2018 - Mar 2020
+{: .label .label-green }
+
+#### Full-Stack Developer
+Develop an online trading platform for stock market traders and investors.
+
+- Contributed to increasing application performance, which led to a 200% increase in new users in one year.
+- Designed a JS library to handle thousands of web socket messages per second, which helped to decrease development time by 200%.
+- Developed several JS libraries for handling real-time data and displaying data as a stock market technical analysis chart.
+- Perform automated testing cases that covered more than 90% of the application's code, resulting in a 300% reduction in development time.
+- Involved in wireframing and prototyping the application, which led to a simple, user-friendly design.
+- Participated in Continuous Integration and Continuous Deployment CI/CD of the application using Microsoft Team Foundation Server (TFS).
+- Trained and mentored team members to apply OOP concepts to the project.
+- Cooperated with UX research and UI testing.
+
+***Skills:*** 
+{: .d-inline-block }
+MongoDB
+{: .label }
+Test Automation
+{: .label }
+NodeJs
+{: .label }
+Angular
+{: .label }
+TypeScript
+{: .label }
+
+---
+### Alibaba Travels Co.
+{: .d-inline-block }
+
+May 2017 - Oct 2018
+{: .label .label-green }
+
+#### Full-Stack Developer
+As a Front-End developer responsible for participating in the full lifecycle of a new SPA development project for online booking back-office, and for implementing and maintaining best practice procedures in all areas of work.
+
+- Responsible to develop NodeJS compiler to generate custom website templates based on the main site, which reduced development time from one week to less than an hour.
+- Experienced with backend programming languages such as C# and SQL Server.
+- Implemented reactive programming with RxJS, which eliminated HTTP request/response common errors.
+- Participated in developing and maintaining responsive web applications providing good user experiences on multiple platforms.
+- Hands-on experience in design using Object Oriented Programming Principles like Encapsulation, Inheritance, Polymorphism, Reusability, and SOLID principle.
+- Collaborated with teammates to solve problems, resolve errors, and optimize performance.
+
+***Skills:*** 
+{: .d-inline-block }
+Bootstrap
+{: .label }
+Wijmo5
+{: .label }
+NodeJs
+{: .label }
+Angular
+{: .label }
+TypeScript
+{: .label }
+
+---
+### Tadbir Pardaz IT Group Ltd.
+{: .d-inline-block }
+
+Feb 2016 - Apr 2018
+{: .label .label-green }
+
+#### Developer
+As a Front-End developer and UI/UX designer responsible for participating in the full lifecycle of a new SPA development project for stock markets, and for implementing and maintaining best practice procedures in all areas of work.
+
+---
+### Personal Project
+{: .d-inline-block }
+
+Apr 2012 - May 2017
+{: .label .label-green }
+
+#### Full-stack Developer
+I was working on a JavaScript library, which was used to develop a powerful platform for visualizing stock market diagrams. Some characteristic features were data visualization, drawing 8 kinds of charts, drawing shapes on charts and editing or removing them, adding several areas on them to drawing and modifying indicators, and so on.
+
+- I worked professionally with HTML SVG and Canvas.
+- I developed a JavaScript library to simplify HTML DOM tree (especially SVG) traversal and event handling.
+- I developed a JavaScript library to simplify working with HTML Canvas.
+- I developed a functional reactive library to handle complex events and manage complex data.
