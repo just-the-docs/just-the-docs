@@ -2,7 +2,6 @@
 layout: default
 title: The Teddy Stoddard Story
 parent: راهبری
-nav_order: 3
 ---
 
 # The Teddy Stoddard Story
