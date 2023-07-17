@@ -2,7 +2,6 @@
 layout: default
 title: تمایز بین فکر کردن و بودن
 parent: راهبری
-nav_order: 3
 direction: rtl
 ---
 
