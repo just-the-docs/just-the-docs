@@ -6,7 +6,7 @@
 
 <!-- Navigation buttons -->
 <div style="display: flex; justify-content: space-between; align-items: center;">
-<div style="max-width: 40%;">
+<div style="max-width: 44%;">
 {% if page.grand_parent %}                                                                  <!-- If page is a grandchild -->
     {%- assign previous_page = third_level_pages                                            <!-- Find previous index -->
         | where_exp: "item", "item.grand_parent == page.grand_parent"                       <!-- With same grandparent -->
