@@ -2,7 +2,8 @@
 layout: default
 title: تبدیل خطا به پیشرفت
 parent: راهبری
-nav_order: 1
+nav_order: 20
+direction: rtl
 ---
 
 # تبدیل خطا به پیشرفت: نگاهی عمیق به قدرت گشایش و شفافیت
