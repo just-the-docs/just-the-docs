@@ -2,7 +2,6 @@
 layout: default
 title: تبدیل خطا به پیشرفت
 parent: راهبری
-nav_order: 20
 direction: rtl
 ---
 
