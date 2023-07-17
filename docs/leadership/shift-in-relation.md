@@ -2,7 +2,6 @@
 layout: default
 title: تحول در روابط
 parent: راهبری
-nav_order: 21
 direction: rtl
 ---
 
