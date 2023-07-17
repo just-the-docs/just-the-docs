@@ -2,7 +2,6 @@
 layout: default
 title: تغییر الگوی رفتاری
 parent: راهبری
-nav_order: 2
 direction: rtl
 ---
 
