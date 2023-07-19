@@ -310,6 +310,21 @@ graph TD;
     C-->D;
 ```
 
+### Details Dropdown
+
+The following uses the `<details>` tag to create a dropdown element.
+
+<details markdown="block" style="background-color:#2383ff17; padding: 20px;border-radius:10px">
+<summary><strong>Shopping list dropdown</strong></summary>
+
+This is content inside a dropdown.
+
+- [ ] Apples
+- [ ] Oranges
+- [ ] Milk
+
+</details>
+
 
 ```
 The final element.
