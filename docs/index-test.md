@@ -310,22 +310,17 @@ graph TD;
     C-->D;
 ```
 
-### Details Dropdown
+### Collapsed Section
 
-The following uses the `<details>` tag to create a dropdown element.
+The following uses the [`<details>`](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections) tag to create a collapsed section.
 
-<details markdown="block" style="background-color:#2383ff17; padding: 20px;border-radius:10px">
-<summary><strong>Shopping list dropdown</strong></summary>
+<details markdown="block">
+<summary>Shopping list (click me!)</summary>
 
-This is content inside a dropdown.
+This is content inside a `<details>` dropdown.
 
 - [ ] Apples
 - [ ] Oranges
 - [ ] Milk
 
 </details>
-
-
-```
-The final element.
-```
