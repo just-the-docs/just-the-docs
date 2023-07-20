@@ -12,3 +12,6 @@ direction: rtl
 
 ## رهایی در بودن و عملکرد موثر
 [۰۱ - رهایی در بودن و عملکرد موثر](/assets/shift-camp/free-to-be-and-effective-action-01.pdf)
+
+## تمامیت
+[تمامیت](/assets/SSRN-id920625.pdf)
