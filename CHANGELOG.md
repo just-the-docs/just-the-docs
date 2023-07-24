@@ -20,11 +20,14 @@ This website includes docs for some new features that are not available in `v0.5
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Added: `$color-scheme` theme variable to specify `color-scheme` for `:root` by [@sigv] in [#1280]
 
 Docs changes in `main` that are *not* in the latest release:
 
 - N/A
+
+[@sigv]: https://github.com/sigv
+[#1280]: https://github.com/just-the-docs/just-the-docs/pull/1280
 
 ## Release v0.5.4
 
