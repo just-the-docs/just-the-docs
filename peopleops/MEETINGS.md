@@ -33,6 +33,7 @@ All the expectations below are required for meetings with 5 or more people, or t
   - Meetings start on time and stop on time. If someone is late, start without them. Anyone who is late or not attending should notify the team in advance.
   - When meeting with external stakeholders, book 50 minute meetings generally (or 25) so there are 5 minute gaps for our brains to context switch between meetings and to write minutes.
   - When meeting online, like in whereby, list the specific room link in the meeting invite.
+  - When arranging an online meeting, if it's a 1-on-1 meeting, please ensure to confirm the availability of the participant beforehand. For meetings with more than 2 attendees, proceed to send out the invites promptly. This way, the meeting will appear on their calendar, allowing them to easily join when they are available.
 
 ### Clarity of Purpose at Meetings
 
