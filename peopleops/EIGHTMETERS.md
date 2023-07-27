@@ -61,7 +61,11 @@ These are lists of standardized slugs; clarify with your direct manager if you'r
 *  **Trello or BitBucket ref:**
     * Also include at least one of: references to issues in Trello, Commit IDs. Link to trello cards can be found in "Share and more..." after opening a card.
     * If you are working on a given client all day, or two clients, you can bill 5 to 15 minutes for time administering time entry or OKRs. Do not record that you are doing in this in the notes, or anything else that we know you're doing every day.
-
+ 
+### How to Handle Timesheet Corrections
+* We understand that mistakes can occur, and it's perfectly acceptable to make corrections on submitted timesheets. However, it is essential for employees to take responsibility for reporting their time accurately. The Company, in turn, is committed to paying based on the approved timesheet at the time of submission.
+* Please note that changes to timesheets after submission will not be automatically approved, as the original approved submission serves as the official record. However, we do acknowledge that there may be exceptions in certain cases. If you ever need to correct your timesheets, please make sure to inform Clark first.
+* Furthermore, if the company makes an error, rest assured that it will be promptly corrected based on the approved timesheet at the time of submission. Our aim is to ensure fair and accurate compensation for everyone.
     
 ### How to Enter Your Expenses 
 
