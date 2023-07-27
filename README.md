@@ -30,7 +30,7 @@ nav_footer_logo_top: ""
 nav_footer_logo_top_href: ""
 
 # DASH settings
-# subtitle: 'This workshop is part of the Data Analysis Support Hub series.'
+# subtitle: 'This workshop is part of the Data Analysis Support Hub (DASH) series.'
 # nav_footer_logo_bottom: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png"
 # nav_footer_logo_bottom_href: "https://scds.ca/"
 # nav_footer_logo_top: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/dash-logo.png"
