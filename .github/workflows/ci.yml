@@ -74,10 +74,18 @@ jobs:
           bundler-cache: false
       - name: Bundle Install
         run: bundle install
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v2
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-htmlproofer
       - name: Build Site
         run: bundle exec jekyll build
       - name: Test with html-proofer
         run: bundle exec htmlproofer _site --ignore-urls "/github.com/"
+        env:
+          NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
   assets:
     name: Test CSS and JS
