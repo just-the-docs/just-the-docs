@@ -68,22 +68,22 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 
 <div class="code-example" markdown="1">
 
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 
 </div>
 ```markdown
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 ```
 
 </div>
 {% highlight markdown %}
 <div class="code-example" markdown="1">
 
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 
 </div>
 ```markdown
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 ```
 {% endhighlight %}
 
