@@ -57,6 +57,28 @@ jobs:
       env:
         BUNDLE_GEMFILE: fixtures/Gemfile-github-pages
 
+  validate:
+    name: Validate HTML
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby-version: [3.1]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Ruby ${{ matrix.ruby-version }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: false
+      - name: Bundle Install
+        run: bundle install
+      - name: Build Site
+        run: bundle exec jekyll build
+      - name: Test with html-proofer
+        run: bundle exec htmlproofer _site --ignore-urls "/github.com/"
+
   assets:
     name: Test CSS and JS
     runs-on: ubuntu-latest
