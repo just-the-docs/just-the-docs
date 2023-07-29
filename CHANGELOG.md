@@ -20,11 +20,28 @@ This website includes docs for some new features that are not available in `v0.5
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Added: `$color-scheme` theme variable to specify `color-scheme` for `:root` by [@sigv] in [#1280]
+- Fixed: missing closing `</button>` tag in `sidebar.html` by [@mattxwang] in [#1304]
 
 Docs changes in `main` that are *not* in the latest release:
 
 - N/A
+
+[@sigv]: https://github.com/sigv
+[#1280]: https://github.com/just-the-docs/just-the-docs/pull/1280
+[#1304]: https://github.com/just-the-docs/just-the-docs/pull/1304
+
+## Release v0.5.4
+
+Hi all, this is a small patch release that only includes one change: fixing a style clash between Mermaid's labels and Just the Docs' labels.
+
+*Note: for subsequent patch releases, we will omit migration instructions (for brevity). In all cases, immediate migration should be backwards-compatible. Refer to previous major or minor update instructions for more information.*
+
+### Bugfixes
+
+- Fixed: Mermaid labels inheriting theme `.label` styling by [@mattxwang] in [#1278]
+
+[#1278]: https://github.com/just-the-docs/just-the-docs/pull/1278
 
 ## Release v0.5.3
 
