@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    just-the-docs (0.5.3)
+    just-the-docs (0.5.4)
       jekyll (>= 3.8.5)
       jekyll-seo-tag (>= 2.0)
       rake (>= 12.3.1)
