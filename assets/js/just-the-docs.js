@@ -462,6 +462,19 @@ jtd.getTheme = function() {
 jtd.setTheme = function(theme) {
   var cssFile = document.querySelector('[rel="stylesheet"]');
   cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | relative_url }}' + theme + '.css');
+  removeNavBackgroundImages();
+}
+
+// With a fixed nav panel, a <style> in the <head> sets a background image to highlight
+// the nav list link to the current page. The image color depends on site.color_scheme.
+// Ideally, setTheme(theme) would change the image color to match the theme/scheme.
+// Here, for simplicity, we merely remove the image:
+
+function removeNavBackgroundImages() {
+  var elements = document.getElementsByClassName('nav-list-link')
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].style.backgroundImage = 'none';
+  }
 }
 
 // Scroll site-nav to ensure the link to the current page is visible
