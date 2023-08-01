@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Dismissal
+title: Disciplinary Action
 parent: People Ops
 nav_order: 19
 ---
