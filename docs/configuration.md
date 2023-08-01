@@ -295,6 +295,16 @@ just_the_docs:
 
 The navigation for all your normal pages (if any) is displayed before those in collections.
 
+<span>New (v0.4.0)</span>{: .label .label-green }
+`nav_fold: true` in `just_the-docs.collections.tests` *folds* the collection:
+an expander symbol appears next to the collection name,
+and clicking it displays/hides the links to the top-level pages of the collection.[^js-disabled]
+
+[^js-disabled]: <span>New (v0.6.0)</span>{: .label .label-green }
+    When JavaScript is disabled in the browser, all collections are automatically expanded,
+    since clicking expander symbols has no effect.
+    (In previous releases, navigation into folded collections required JavaScript to be enabled.)
+
 You can reference multiple collections.
 This creates categories in the navigation with the configured names.
 
