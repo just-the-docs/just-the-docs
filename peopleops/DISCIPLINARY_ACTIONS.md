@@ -31,11 +31,18 @@ The following are examples of misconduct and performance issues that may lead to
 ### Progressive Discipline
 
 We generally follow a progressive approach, as outlined below:
-1. **Verbal Warning**: For minor offenses or first-time occurrences, the immediate supervisor may issue a verbal warning. The purpose is to communicate the issue, provide feedback, and encourage improvement.
-2. **Written Warning**: If the misconduct or performance issues persist, a written warning will be given. The written warning will detail the problem, the expected improvement, and the timeframe for improvement.
-3. **Final Written Warning**: In cases of repeated offenses, or if the initial written warning does not lead to improvement, a final written warning may be issued. This warning will emphasize the seriousness of the situation and the potential for further disciplinary action, up to and including termination.
-4. **Suspension**: For severe or persistent misconduct or performance issues, a temporary suspension may be implemented. The duration of the suspension will depend on the specific circumstances and the severity of the offense.
-5. **Dismissal**: [Dismissal](https://countable-web.github.io/ops/peopleops/DISMISSAL/#dismissal) is a last resort, but it may be necessary if the employee fails to improve or engages in serious misconduct.
+1. **Initial Written Warning**:
+   - For minor offenses or first-time occurrences, the immediate supervisor may issue an initial written warning.
+   - The purpose is to communicate the issue, provide feedback, and encourage improvement. The written warning will detail the specific concerns, expectations for improvement, and a timeframe for reassessment.
+   - The employee will be provided with an opportunity to discuss the issues with their supervisor and seek clarification if needed.
+2. **Coaching and Performance Improvement Plan (PIP)**:
+   - If the performance or conduct issues persist after the initial written warning, the employee will be placed on a Coaching and Performance Improvement Plan (PIP).
+   - The PIP will be designed to address the specific areas of concern and will include clear goals, expectations, and a timeline for improvement.
+   - During the PIP period, the employee's supervisor or designated coach will provide guidance, feedback, and necessary support to help the employee achieve the desired level of performance or conduct.
+3. **Final Written Warning and Dismissal**:
+   - If the employee does not demonstrate significant improvement within the specified timeframe of the PIP or if there are serious performance or conduct issues, a final written warning will be issued.
+   - The final written warning will clearly state the consequences of further non-compliance or failure to improve.
+   - In exceptional cases where the employee fails to meet the required standards or the severity of the misconduct warrants it, the company may proceed with [dismissal](https://countable-web.github.io/ops/peopleops/DISMISSAL/#dismissal).
 
 ### Investigation Process
 
@@ -44,7 +51,7 @@ Before taking disciplinary action, Countable will conduct a fair and impartial i
 ### Employee Rights
 
 During the disciplinary process, employees have the right to:
-  - Be informed of the specific allegations against them.
+
   - Present their side of the story and provide any relevant evidence.
   - Have a representative present during meetings related to the disciplinary action.
 
