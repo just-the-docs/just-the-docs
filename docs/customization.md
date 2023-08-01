@@ -60,7 +60,9 @@ In Just the Docs version `0.4.2`, we changed the default syntax highlighting the
 
 You can add custom schemes.
 If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name)
-where you override theme variables to change colors, fonts, spacing, etc.
+where you override theme variables to change colors, fonts, spacing, etc.[^avoid-site-nav]
+
+[^avoid-site-nav]: For technical reasons, you should avoid using the class selector `.site-nav` in custom color schemes.
 
 {: .note }
 Since the default color scheme is `light`, your custom scheme is implicitly based on the variable settings used by the `light` scheme.
