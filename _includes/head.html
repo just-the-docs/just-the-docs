@@ -37,7 +37,7 @@
   {%- assign css = scss | scssify | split: ".site-nav" | shift | join: ".site-nav" -%}
   {%- unless css == "" %}
   <style type="text/css">
-    {{ css }}
+    {{ css | prepend: ".site-nav" }}
   </style>
   {%- endunless %}
 
