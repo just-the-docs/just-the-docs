@@ -131,12 +131,14 @@
 
 @if variable-exists(logo) {
   .site-logo {
-    width: 55px;
+    width: 43px;
     height: 100%;
     background-image: url($logo);
     background-repeat: no-repeat;
     background-position: left center;
     background-size: contain;
+    border-radius: 8px;
+    margin-right: 10px;
   }
 }
 
