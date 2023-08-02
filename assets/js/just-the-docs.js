@@ -462,7 +462,7 @@ jtd.getTheme = function() {
 jtd.setTheme = function(theme) {
   var cssFile = document.querySelector('[rel="stylesheet"]');
   cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | relative_url }}' + theme + '.css');
-  removeNavBackgroundImages();
+  removeNavBackgroundImage();
 }
 
 // With a fixed nav panel, a <style> in the <head> sets a background image to highlight
@@ -470,28 +470,31 @@ jtd.setTheme = function(theme) {
 // Ideally, setTheme(theme) would change the image color to match the theme/scheme.
 // Here, for simplicity, we merely remove the image:
 
-function removeNavBackgroundImages() {
-  var elements = document.getElementsByClassName('nav-list-link')
-  for (var i = 0; i < elements.length; i++) {
-    elements[i].style.backgroundImage = 'none';
+function removeNavBackgroundImage() {
+  const link = navLink();
+  if (link) {
+    link.style.backgroundImage = 'none';
   }
 }
-
-// Scroll site-nav to ensure the link to the current page is visible
 
 // Note: pathname can have a trailing slash on a local jekyll server
 // and not have the slash on GitHub Pages
 
-function scrollNav() {
+function navLink() {
   var href = document.location.pathname;
   if (href.endsWith('/') && href != '/') {
     href = href.slice(0, -1);
   }
-  const siteNav = document.getElementById('site-nav');
-  const targetLink = siteNav.querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
+  return document.getElementById('site-nav').querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
+}
+
+// Scroll site-nav to ensure the link to the current page is visible
+
+function scrollNav() {
+  const targetLink = navLink();
   if (targetLink) {
     const rect = targetLink.getBoundingClientRect();
-    siteNav.scrollBy(0, rect.top - 3*rect.height);
+    document.getElementById('site-nav').scrollBy(0, rect.top - 3*rect.height);
   }
 }
 
@@ -500,12 +503,7 @@ function scrollNav() {
 // and make all other folded collections passive
 
 function activateNav() {
-  var href = document.location.pathname;
-  if (href.endsWith('/') && href != '/') {
-    href = href.slice(0, -1);
-  }
-  const siteNav = document.getElementById('site-nav');
-  var target = siteNav.querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
+  var target = navLink();
   if (target) {
     target.classList.toggle('active', true);
   }
@@ -518,7 +516,7 @@ function activateNav() {
       target = target.parentNode;
     }
   }
-  const elements = siteNav.getElementsByClassName("nav-category-list");
+  const elements = document.getElementsByClassName("nav-category-list");
   for (const element of elements) {
     const item = element.children[0];
     const active = item.classList.toggle('active');
