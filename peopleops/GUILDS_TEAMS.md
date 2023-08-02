@@ -24,15 +24,26 @@ This document lists our existing Guilds and Teams.
 
 ## List of Guilds
 
-  - [DevOps](../../devops/DEVOPS/) - Their goal is to ensure our software is delivered to customers as quickly, reliably and automatically as possible.
   - [Developers](../../developers/DEVELOPERS/) - Their goal is to improve our code, solve problems for users, and demonstrate working software to our team every day.
-  - [UX](ux/UX/) - Their goal is to help everyone, from users to product owners and developers, enjoy and benefit from interacting with our software.
   - [Operations](../../operations/OPERATIONS/) - Their goal is maintaining clear and open communication with our clients, and maintaining the roadmap to sustainable growth for our firm.
   
 #### Monthly Guild Meetings
 
 Each month we hold a meeting for any technical specialty the team is interested in. Currently there's a developer's guild meet, a devops meet, an operations meet, and a design/ux guild meet.
 
+Dev Guild presentation guidelines:Good:
+
+ - use real code examples
+ - focus on how it relates to our team and company
+ - discuss a real problem our team faces or opportunity to improve
+ - other topics are ok too, but please propose your topic for review first to establish why you want to cover it
+ - interactive portions are great! (ie mob coding)
+
+Avoid:
+
+    "my favourite framework" talks
+    focusing entirely on performance and other public information
+    
 ## Cross-Functional Teams
 
 We have cross-functional teams organized by Objective. For example, we have a `bawkbox` team whose top level objective is to make it easy for any website to install any 3rd party widget.
