@@ -40,8 +40,8 @@ Dev Guild presentation guidelines:Good:
  - interactive portions are great! (ie mob coding)
 
 Avoid:
- - Too many "my favourite framework" talks
- - focusing entirely on performance and other public information
+ - Too many "my favourite framework" talks, unless you've used the tool yourself and want to present specific opportunities for our team.
+ - Focusing entirely on performance and other public information
     
 ## Cross-Functional Teams
 
