@@ -88,6 +88,7 @@ The important things are to make sure your team can rely on you being around whe
 
   - If you need to take unexpected sick leave, it is understandable that you may need to notify us on the same day, and there is no requirement for prior approval in such cases. However, for health-related situations that can be anticipated, such as surgeries or therapy sessions, we encourage you to utilize sick leave or planned time off/vacation leave especially when you have to be off for more than a day.  It is highly recommended that you adhere to the lead time mentioned above.
   - For PH members who are eligible for parental leave (120 days paid leave if you are working with Countable for at least a year), you may inform your supervisor as early as 3 months in advance.  This advance notice will enable us to make the necessary arrangements and ensure a smooth transition during your absence.
+  - Check [this](https://countable-web.github.io/ops/peopleops/EIGHTMETERS/#what-time-is-billable) to know how to file your leaves on Eightmeters. 
   - We expect remote team members outside of the America/Vancouver timezone to have a 25% overlap with the Vancouver timezone (work at least 2 hours per day overlapping PST schedule).
   - Remove yourself from calendar events you won't attend.
 
