@@ -103,6 +103,7 @@ However, while you should include the *time* from these, focus your work descrip
   * Virtual or In-person lunch break is billable up to 30 minutes, **if attended with a client or colleague**.
   * You are expected to continuously develop your judgement to approach problem solving. Researching, testing, prototyping, discussing and any other activity you believe important for having great results in your work, are all billable activities. This includes failed attempts, because those result in necessary learning. In general, if you are able to explain to the team how it's helping the company (as opposed to doing it for some other primary reason), then it should be billable.
   * If a client urgently asks for help when you are not already working, record a minimum 30 minutes of work to compensate for the disruption of your time off.
+  * If you have paid time off, use the "Leaves" project in our social timesheet to track the team's leave efficiently.
   * 2 daily breaks up to 15 minutes each, are billable.
   * Professional development directly related to what you're working on, creating systems to improve our performance, documenting items in the Ops Manual.
   * Professional development time, requested by the company.
