@@ -41,6 +41,8 @@ function initNav() {
   const siteNav = document.getElementById('site-nav');
   const mainHeader = document.getElementById('main-header');
   const menuButton = document.getElementById('menu-button');
+  
+  disableHeadStyleSheet();
 
   jtd.addEvent(menuButton, 'click', function(e){
     e.preventDefault();
@@ -67,6 +69,14 @@ function initNav() {
     searchInput.focus();
   });
   {%- endif %}
+}
+
+// The page-specific <style> in the <head> is needed only when JS is disabled.
+// Moreover, it incorrectly overrides dynamic stylesheets set by setTheme(theme). 
+// The page-specific stylesheet is assumed to have index 1 in the list of stylesheets.
+
+function disableHeadStyleSheet() {
+  document.styleSheets[1].disabled = true;
 }
 
 {%- if site.search_enabled != false %}
@@ -462,19 +472,6 @@ jtd.getTheme = function() {
 jtd.setTheme = function(theme) {
   var cssFile = document.querySelector('[rel="stylesheet"]');
   cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | relative_url }}' + theme + '.css');
-  removeNavBackgroundImage();
-}
-
-// With a fixed nav panel, a <style> in the <head> sets a background image to highlight
-// the nav list link to the current page. The image color depends on site.color_scheme.
-// Ideally, setTheme(theme) would change the image color to match the theme/scheme.
-// Here, for simplicity, we merely remove the image:
-
-function removeNavBackgroundImage() {
-  const link = navLink();
-  if (link) {
-    link.style.backgroundImage = 'none';
-  }
 }
 
 // Note: pathname can have a trailing slash on a local jekyll server
