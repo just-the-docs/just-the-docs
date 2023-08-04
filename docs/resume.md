@@ -15,7 +15,7 @@ nav_order: 7
 
 ---
 
-Full Stack Developer with 8+ years of experience working with high-tech startups. Enhanced the performance of several web applications and sought to reduce development time by writing tests and development tools. Leadership coach with experience improving team productivity for over 2 years.
+Full Stack Developer with 14+ years of experience working with high-tech startups. Enhanced the performance of several web applications and sought to reduce development time by writing tests and development tools. Leadership coach with experience improving team productivity for over 2 years.
 
 
 ## Experience
