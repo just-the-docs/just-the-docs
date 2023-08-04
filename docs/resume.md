@@ -54,6 +54,33 @@ Node.js
 {: .label }
 
 ---
+### Transformation and Personal Development
+{: .d-inline-block }
+
+Apr 2020 - PRESENT
+{: .label .label-green }
+
+#### Leadership Coach, Life Coach, Business Coach
+- I have conducted over 1,000 hours of direct coaching for employers and clients.
+- Served as a leadership coach for several prominent startups, aimed at increasing productivity and developing leadership skills organization-wide.
+- My primary skills include effective listening, appropriate feedback, asking powerful questions to guide individuals toward personal growth, and establishing strong and effective relationships with coaches and employees.
+- My coaching process involves continuous interaction, regular assessment, and real-time feedback for constant growth and development.
+- Ability to work with individuals across all levels of an organization, from senior managers to new employees.
+
+***Skills:***
+{: .d-inline-block }
+Effective Listening
+{: .label }
+Feedback
+{: .label }
+Powerful Questions
+{: .label }
+Relationship Building
+{: .label }
+Coaching
+{: .label }
+
+---
 ### Radin Bourse
 {: .d-inline-block }
 
