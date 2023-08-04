@@ -16,30 +16,7 @@
 
   <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
   
-  {% capture scss -%}
-    @import "./support/support";
-    @import "./custom/setup";
-    {% if site.color_scheme and site.color_scheme != "nil" -%}
-      {%- assign color_scheme = site.color_scheme -%}
-    {%- else -%}
-      {%- assign color_scheme = "light" -%}
-    {%- endif %}
-    @import "./color_schemes/light";
-    {% unless color_scheme == "light" %}
-    @import "./color_schemes/{{ color_scheme }}";
-    {% endunless %}
-    {% include css/activation.scss.liquid %}
-  {%- endcapture -%}
-  {%- comment -%}
-    Convert to CSS, then remove the color_scheme import rules to avoid duplication
-    (assuming that scssify of the color_scheme doesn't contain `.site-nav`):
-  {%- endcomment -%}
-  {%- assign css = scss | scssify | split: ".site-nav" | shift | join: ".site-nav" -%}
-  {%- unless css == "" %}
-  <style type="text/css">
-    {{ css | prepend: ".site-nav" }}
-  </style>
-  {%- endunless %}
+  {% include head_nav.html %}
 
   {% if site.ga_tracking != nil %}
     {% assign ga_tracking_ids = site.ga_tracking | split: "," %}
