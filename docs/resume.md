@@ -61,6 +61,8 @@ Apr 2020 - PRESENT
 {: .label .label-green }
 
 #### Leadership Coach, Life Coach, Business Coach
+With over 1000 hours in direct coaching, I have provided guidance to numerous clients and employers. I've facilitated leadership development in several startups, boosting productivity. My approach combines effective listening, powerful questioning, and timely feedback to inspire personal growth. Skilled in building relationships across all organizational levels, I foster environments for continuous development. Key skills: Effective Listening, Feedback Delivery, Powerful Questioning, Relationship Building, Coaching.
+
 - I have conducted over 1,000 hours of direct coaching for employers and clients.
 - Served as a leadership coach for several prominent startups, aimed at increasing productivity and developing leadership skills organization-wide.
 - My primary skills include effective listening, appropriate feedback, asking powerful questions to guide individuals toward personal growth, and establishing strong and effective relationships with coaches and employees.
