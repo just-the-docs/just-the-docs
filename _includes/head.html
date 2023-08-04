@@ -4,10 +4,10 @@
     site.search_enabled, site.static_files, site.favicon_ico.
   Results in: HTML for the head element.
   Includes:
-    css/activation.scss.liquid, head_custom.html.
+    head_nav.html, head_custom.html.
   Overwrites: 
-    scss, ga_tracking_ids, ga_property, file, favicon.
-  Should not be cached, because css/activation.scss.liquid depends on page.
+    ga_tracking_ids, ga_property, file, favicon.
+  Should not be cached, because included files depend on page.
 {%- endcomment -%}
 
 <head>
