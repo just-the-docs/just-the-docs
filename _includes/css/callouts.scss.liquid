@@ -19,7 +19,7 @@ div.opaque {
 
 {%- assign callout_opacity = callout[1].opacity | default: site.callouts_opacity | default: 0.2 -%}
 
-p.{{ callout[0] }}, blockquote.{{ callout[0] }} {
+p.{{ callout[0] }}, blockquote, blockquote.{{ callout[0] }} {
     background: rgba(${{ callout[1].color }}-{{ callout_background_hue }}, {{ callout_opacity }});
     border-style: solid;
     border-color: ${{ callout[1].color }}-{{ callout_color_hue }};
