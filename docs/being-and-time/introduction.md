@@ -12,12 +12,8 @@ direction: rtl
 {: .fs-6 .fw-300 }
 
 <details open markdown="block">
-  <summary>
-    فهرست مطالب
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
+  <summary>فهرست مطالب</summary>
+  1. TOC
 </details>
 ---
 ## ضرورت طرح مجدد صریح مسئله هستی
