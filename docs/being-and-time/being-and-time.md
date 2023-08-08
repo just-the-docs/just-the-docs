@@ -7,4 +7,4 @@ direction: rtl
 ---
 
 # هستی و زمان
-[کتاب هستی و زمان مارتین هایدیگر](/assets/being-and-time.pdf)\
+[کتاب هستی و زمان مارتین هایدیگر](/assets/being-and-time2.pdf)
