@@ -14,6 +14,7 @@ direction: rtl
 <details open markdown="block">
   <summary>فهرست مطالب</summary>
   1. TOC
+  {:toc}
 </details>
 ---
 
