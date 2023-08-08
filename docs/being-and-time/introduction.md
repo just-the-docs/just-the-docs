@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 1: معرفی
+title: 1- معرفی
 parent: هستی و زمان
 nav_order: 1
 direction: rtl
