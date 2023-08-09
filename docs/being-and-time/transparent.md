@@ -2,7 +2,7 @@
 layout: default
 title: شفاف
 parent: هستی و زمان
-nav_order: 100
+nav_order: 101
 direction: rtl
 ---
 
