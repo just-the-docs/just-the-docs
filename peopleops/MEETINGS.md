@@ -43,7 +43,7 @@ All the expectations below are required for meetings with 5 or more people, or t
   - If you are presenting in a meeting, send out the meeting goal, agenda and materials (such as slides) in advance so the attendees can get in the right headspace. Ask for feedback on your agenda, such as topics they group thinks will help with the goal.
   - In general, try to make meetings shorter and more specific. If possible, make the goal and agenda visible in the meeting.
 
-### Record of Meetings
+## Record of Meetings
 
   - Someone should 'chair' the meeting, which means they ensure we have a clear agenda and purpose (loosely, allowing for useful organic tangents as long as they don't dominate). This is the "Scrum Master" if it's a Sprint meeting.
   - Someone shold be the 'scribe'. They record any action-items and key information the team needs (the "output"), and make sure the minutes are sent to everyone present because that not only ensures the meeting content isn't forgotten, but further allows non-essential staff to skip knowing they can just review minutes.
@@ -63,7 +63,7 @@ All the expectations below are required for meetings with 5 or more people, or t
   - Send a follow-up email with these minutes if it includes any external stakeholders.
   - 3W rule: Meeting follow-up actions must contain the three Ws: **WHO** does **WHAT** by **WHEN**
 
-### General Meeting Guidelines
+## General Meeting Guidelines
 
   - Work to create an atmosphere of psychological safety. Detect concerns of individuals and shed light on them.
   - The maximum number of people at any meeting should be limited to 7 (except occasional company-wide meets).
@@ -85,7 +85,7 @@ All active projects should have a Sprint meeting every 1 to 4 weeks.
 
 The entire team meets once per month to plan work pipeline and roadmap at a high level, and practice new processes together.
 
-### Guild Meetings
+## Guild Meetings
 
 We currently have a UX, DevOps, Operations, and Developers Guild meetings, periodically. The purpose of this meeting is:
 
@@ -93,12 +93,16 @@ We currently have a UX, DevOps, Operations, and Developers Guild meetings, perio
   - Present and review each others' work and provide peer feedback.
   - Hold collaborative design activities such as "Mob" programming to create something together in the meeting.
 
-Discuss goals for each guild and roadmap for meeting them:
-
-  - UX - improve the end-user experience of all our work.
-  - DevOps - make our work delivery automatic, frequent and reliable.
-  - Developers - write better code, minimize technical debt.
-  - Operations - conduct business efficiently and maintain excellent client relations.
+Dev Guild presentation guidelines:
+Good:
+  - use real code examples
+  - focus on how it relates to our team and company
+  - discuss a real problem our team faces or opportunity to improve
+  - other topics are ok too, but please propose your topic for review first to establish why you want to cover it
+  - interactive portions are great! (ie mob coding)
+Avoid:
+  - "my favourite framework" talks
+  - focusing entirely on performance and other public information
 
 ## One-on-one Meetings
 
