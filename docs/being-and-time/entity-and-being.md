@@ -2,7 +2,7 @@
 layout: default
 title: هستی و هستنده
 parent: هستی و زمان
-nav_order: 1
+nav_order: 100
 direction: rtl
 ---
 
