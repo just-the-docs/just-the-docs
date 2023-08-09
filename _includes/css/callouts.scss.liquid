@@ -15,11 +15,7 @@ div.opaque {
   background-color: $body-background-color;
 }
 
-{%- for callout in site.callouts %}
-
-{%- assign callout_opacity = callout[1].opacity | default: site.callouts_opacity | default: 0.2 -%}
-
-blockquote:not(.{{ callout[0] }} ) {
+blockquote {
   background: rgba($yellow-{{ callout_background_hue }}, {{ callout_opacity }});
   border-style: solid;
   border-color: $yellow-{{ callout_color_hue }};
@@ -28,8 +24,23 @@ blockquote:not(.{{ callout[0] }} ) {
   border-radius: $border-radius;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
   padding: .8rem;
+
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 0.9rem;
+
+  > p:first-child {
+    margin-top: 0;
+  }
+
+  > p:last-child {
+    margin-bottom: 0;
+  }
 }
 
+{%- for callout in site.callouts %}
+
+{%- assign callout_opacity = callout[1].opacity | default: site.callouts_opacity | default: 0.2 -%}
 
 p.{{ callout[0] }}, blockquote.{{ callout[0] }} {
     background: rgba(${{ callout[1].color }}-{{ callout_background_hue }}, {{ callout_opacity }});
@@ -86,20 +97,6 @@ p.{{ callout[0] }}-title, blockquote.{{ callout[0] }}-title {
   p.{{ callout[0] }}-title, blockquote {
     border-left-width: 0;
     border-right-width: $border-radius;
-  }
-}
-
-blockquote {
-  margin-left: 0;
-  margin-right: 0;
-  font-size: 0.9rem;
-
-  > p:first-child {
-    margin-top: 0;
-  }
-
-  > p:last-child {
-    margin-bottom: 0;
   }
 }
 
