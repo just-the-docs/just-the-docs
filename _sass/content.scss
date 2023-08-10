@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'ArtifaktElement';
+    src: url('../assets/fonts/artifakt_element_regular-webfont.woff2') format('woff2'),
+         url('../assets/fonts/artifakt_element_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 //
 // Styles for rendered markdown in the .main-content container
@@ -111,4 +118,64 @@
     margin-left: 1em;
     font-weight: 500;
   }
+}
+
+banner {
+  font-family: 'ArtifaktElement', sans-serif;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: rgb(249, 180, 180);
+  background-color: rgb(255,212,212);
+}
+
+.icon {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  display: flex;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  flex-shrink: 0;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  margin: 0px;
+  background-color: rgb(221, 34, 34);
+}
+
+.icon-image {
+  fill: rgb(255, 255, 255);
+  width: 24px;
+  height: 24px;
+  overflow-clip-margin: content-box;
+  overflow: hidden;
+}
+
+text-box {
+  display: flex;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin: calc(15px) 0px 0px 1rem;
+  overflow: hidden;
+}
+
+message {
+  display: block;
+  min-width: 200px;
+  max-width: 1200px;
+  padding-bottom: calc(15px);
+  margin: 0px auto 0px 0px;
+  text-align: left;
 }
