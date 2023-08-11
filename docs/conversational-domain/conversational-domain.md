@@ -1,7 +1,7 @@
 ---
 layout: default
 title: قلمروی گفتگویی
-nav_order: 5
+nav_order: 6
 has_children: true
 direction: rtl
 ---
