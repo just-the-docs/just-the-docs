@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ناسازگاری شناختی
-parent: راهبری
+parent: Leadership
 nav_order: 3
 direction: rtl
 ---

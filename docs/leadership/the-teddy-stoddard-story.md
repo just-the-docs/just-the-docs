@@ -1,7 +1,7 @@
 ---
 layout: default
 title: The Teddy Stoddard Story
-parent: راهبری
+parent: Leadership
 ---
 
 # The Teddy Stoddard Story

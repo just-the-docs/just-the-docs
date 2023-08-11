@@ -1,7 +1,7 @@
 ---
 layout: default
 title: تمایز دادن
-parent: راهبری
+parent: Leadership
 nav_order: 5
 direction: rtl
 ---

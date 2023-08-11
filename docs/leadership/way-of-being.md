@@ -1,7 +1,7 @@
 ---
 layout: default
 title: شیوه‌ی بودن
-parent: راهبری
+parent: Leadership
 nav_order: 8
 direction: rtl
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: قلم رو گفتگویی
-parent: راهبری
+parent: Leadership
 nav_order: 2
 direction: rtl
 ---

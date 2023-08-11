@@ -1,7 +1,7 @@
 ---
 layout: default
 title: بدیهیات کرخت شده
-parent: راهبری
+parent: Leadership
 nav_order: 7
 direction: rtl
 ---

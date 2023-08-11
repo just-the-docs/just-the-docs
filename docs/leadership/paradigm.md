@@ -1,7 +1,7 @@
 ---
 layout: default
 title: پارادایم
-parent: راهبری
+parent: Leadership
 direction: rtl
 ---
 

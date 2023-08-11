@@ -1,7 +1,7 @@
 ---
 layout: default
 title: تبدیل خطا به پیشرفت
-parent: راهبری
+parent: Leadership
 direction: rtl
 ---
 

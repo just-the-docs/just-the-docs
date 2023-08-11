@@ -1,7 +1,7 @@
 ---
 layout: default
 title: کشف کردن
-parent: راهبری
+parent: Leadership
 nav_order: 6
 direction: rtl
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: تغییر الگوی رفتاری
-parent: راهبری
+parent: Leadership
 direction: rtl
 ---
 

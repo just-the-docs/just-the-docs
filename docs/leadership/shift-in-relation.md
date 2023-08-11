@@ -1,7 +1,7 @@
 ---
 layout: default
 title: تحول در روابط
-parent: راهبری
+parent: Leadership
 direction: rtl
 ---
 

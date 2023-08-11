@@ -1,7 +1,7 @@
 ---
 layout: default
 title: تمامیت
-parent: راهبری
+parent: Leadership
 nav_order: 4
 direction: rtl
 ---

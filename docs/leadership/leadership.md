@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Lidership
+title: Leadership
 nav_order: 4
 has_children: true
 direction: rtl

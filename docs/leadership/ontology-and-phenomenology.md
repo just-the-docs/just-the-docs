@@ -1,7 +1,7 @@
 ---
 layout: default
 title: هستی شناسی و پدیدار شناسی
-parent: راهبری
+parent: Leadership
 nav_order: 1
 direction: rtl
 ---

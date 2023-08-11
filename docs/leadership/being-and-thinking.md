@@ -1,7 +1,7 @@
 ---
 layout: default
 title: تمایز بین فکر کردن و بودن
-parent: راهبری
+parent: Leadership
 direction: rtl
 ---
 
