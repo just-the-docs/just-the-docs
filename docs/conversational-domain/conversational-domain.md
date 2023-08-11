@@ -1,7 +1,7 @@
 ---
 layout: default
-title: قلمروی گفتگویی
-nav_order: 6
+title: Conversational Domain
+nav_order: 5
 has_children: true
 direction: rtl
 ---
