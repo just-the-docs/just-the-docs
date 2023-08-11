@@ -1,7 +1,7 @@
 ---
 layout: default
-title: راهبری
-nav_order: 3
+title: Lidership
+nav_order: 4
 has_children: true
 direction: rtl
 ---
