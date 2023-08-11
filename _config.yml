@@ -19,9 +19,6 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://just-the-docs.com" # the base hostname & protocol for your site, e.g. http://example.com
 repository: just-the-docs/just-the-docs # for github-metadata
 
-plugins:
-  - jekyll-include-cache
-
 permalink: pretty
 
 exclude:
@@ -171,6 +168,7 @@ callouts:
 plugins:
   - jekyll-seo-tag
   - jekyll-github-metadata
+  - jekyll-include-cache
 
 kramdown:
   syntax_highlighter_opts:
