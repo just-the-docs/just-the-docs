@@ -1,7 +1,6 @@
 ---
 layout: default
 title: هستی و زمان
-nav_order: 5
 has_children: true
 direction: rtl
 ---
