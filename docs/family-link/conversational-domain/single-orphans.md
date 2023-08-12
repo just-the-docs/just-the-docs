@@ -2,7 +2,7 @@
 layout: default
 title: یک-طرف-یتیم
 parent: قلمروی گفتگویی
-nav_order: 1
+grand_parent: FamilyLink
 direction: rtl
 ---
 
