@@ -10,6 +10,8 @@
     activation_first_level_reversed, activation_second_level_reversed,
     activation_first_level_index, activation_second_level_index, activation_third_level_index.
   Should not be cached, because it depends on page.
+  (For a site with only top-level pages, the rendering of this file is always empty.
+  This property could be detected, and might halve the build time for such sites.)
 {%- endcomment -%}
 
 {%- unless page.title == nil or page.nav_exclude == true -%}
