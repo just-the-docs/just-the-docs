@@ -15,19 +15,21 @@ The project underwent a major maintenance shift in March 2022.
 {: .note }
 This website is built from the `HEAD` of the `main` branch of the theme repository.
 
-{: .warning }
-This website includes docs for some new features that are not available in `v0.5.2`!
-
 Code changes to `main` that are *not* in the latest release:
 
+- Fixed: build times for large sites by [@pdmosses] in [#1244]
 - Added: `$color-scheme` theme variable to specify `color-scheme` for `:root` by [@sigv] in [#1280]
 - Fixed: missing closing `</button>` tag in `sidebar.html` by [@mattxwang] in [#1304]
 
-Docs changes in `main` that are *not* in the latest release:
+{: .warning }
+The theme docs are unversioned, and already reflect the above changes.
 
-- N/A
+Docs changes:
+
+- A [footnote]({% link docs/configuration.md %}#fn:js-disabled) in the configuration docs explains how disabling JavaScript affects the display of navigation links when browsing folded collections.
 
 [@sigv]: https://github.com/sigv
+[#1244]: https://github.com/just-the-docs/just-the-docs/pull/1244
 [#1280]: https://github.com/just-the-docs/just-the-docs/pull/1280
 [#1304]: https://github.com/just-the-docs/just-the-docs/pull/1304
 
