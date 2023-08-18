@@ -168,6 +168,7 @@ callouts:
 plugins:
   - jekyll-seo-tag
   - jekyll-github-metadata
+  - jekyll-include-cache
 
 kramdown:
   syntax_highlighter_opts:
