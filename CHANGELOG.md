@@ -17,9 +17,49 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- Fixed: build times for large sites by [@pdmosses] in [#1244]
+- N/A
+
+## Release v0.6.0
+
+Hi all, this is a minor release that introduces performance improvements for build times on large sites, correctly sets the `color-scheme` property, and fixes invalid HTML. However, it introduces some potentially-breaking *internal* changes to undocumented features of the theme.
+
+### Migrating to `v0.6.0`
+
+**Migration**: users will need to migrate if:
+
+- they have an existing `_includes` file named `favicon.html`, `head_nav.html`, or `css/activation.scss.liquid`
+- they have code that refers to `#main-content-wrap`
+- they override the default `light` theme's code, or the theme-loading logic
+- they have different favicons for different pages
+
+For more, refer to the [migration guide](https://just-the-docs.com/MIGRATION/).
+
+### Using Release `v0.6.0`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.6.0` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.6.0
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.6.0"
+```
+
+To use and pin a previous version of the theme, replace the `0.6.0` with the desired release tag.
+
+### New Features and Bugfixes
+
 - Added: `$color-scheme` theme variable to specify `color-scheme` for `:root` by [@sigv] in [#1280]
+- Fixed: build times for large sites by [@pdmosses] in [#1244]
 - Fixed: missing closing `</button>` tag in `sidebar.html` by [@mattxwang] in [#1304]
+- Fixed: removed duplicate `#main-content-wrap` minimal and default layouts by [@mattxwang] in [#1305]
+
+### Documentation
 
 {: .warning }
 The theme docs are unversioned, and already reflect the above changes.
@@ -27,11 +67,17 @@ The theme docs are unversioned, and already reflect the above changes.
 Docs changes:
 
 - A [footnote]({% link docs/configuration.md %}#fn:js-disabled) in the configuration docs explains how disabling JavaScript affects the display of navigation links when browsing folded collections.
+- Invalid HTML has been removed from most documentation examples.
+
+### New Contributors
+
+- [@sigv] made their first contribution in [#1280]
 
 [@sigv]: https://github.com/sigv
 [#1244]: https://github.com/just-the-docs/just-the-docs/pull/1244
 [#1280]: https://github.com/just-the-docs/just-the-docs/pull/1280
 [#1304]: https://github.com/just-the-docs/just-the-docs/pull/1304
+[#1305]: https://github.com/just-the-docs/just-the-docs/pull/1305
 
 ## Release v0.5.4
 
