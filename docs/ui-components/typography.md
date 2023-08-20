@@ -97,12 +97,12 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 <div class="code-example" markdown="1">
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](another-page).
+[Link to another page]({{site.baseurl}}/).
 </div>
 ```markdown
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](another-page).
+[Link to another page]({{site.baseurl}}/).
 ```
 
 ---

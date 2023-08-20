@@ -57,6 +57,40 @@ jobs:
       env:
         BUNDLE_GEMFILE: fixtures/Gemfile-github-pages
 
+  validate:
+    name: Validate HTML
+    strategy:
+      fail-fast: false
+      matrix:
+        ruby-version: [3.1]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Ruby ${{ matrix.ruby-version }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          cache-version: 0 # Increment this number if you need to re-download cached gems
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v2
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-htmlproofer
+      - name: Build Site
+        run: bundle exec jekyll build
+      - name: Test with Nu Validator
+        uses: Cyb3r-Jak3/html5validator-action@c7bb77a0fe3b0458583de50fd0f4dd819569b8a9
+        with:
+          root: _site
+          blacklist: line-numbers
+      - name: Test with html-proofer
+        run: bundle exec htmlproofer _site --ignore-urls "/github.com/"
+        env:
+          NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+
   assets:
     name: Test CSS and JS
     runs-on: ubuntu-latest

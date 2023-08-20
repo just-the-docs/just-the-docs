@@ -22,7 +22,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](another-page).
+[Link to another page]({{site.baseurl}}/).
 
 There should be whitespace between paragraphs.
 
@@ -55,7 +55,7 @@ GitHubPages::Dependencies.gems.each do |gem, version|
 end
 ```
 
-#### [](#header-4)Header 4 `with code not transformed`
+#### [](#header-4-with-code-not-transformed)Header 4 `with code not transformed`
 
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
