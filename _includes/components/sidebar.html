@@ -1,3 +1,15 @@
+{%- comment -%}
+  Include as: {%- include components/sidebar.html -%}
+  Depends on: page(?), site.
+  Results in: HTML for the side bar.
+  Includes:
+    title.html, nav.html, nav_footer_custom.html
+  Overwrites: 
+    pages_top_size, collections_size, collection_entry,
+    collection_key, collection_value, collection, nav_footer_custom.
+  Should not be cached, because nav_footer_custom.html might depend on page.
+{%- endcomment -%}
+
 <div class="side-bar">
   <div class="site-header" role="banner">
     <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
@@ -12,7 +24,7 @@
           | where_exp:"item", "item.nav_exclude != true"
           | size %}
     {% if pages_top_size > 0 %}
-      {% include nav.html pages=site.html_pages key=nil %}
+      {% include_cached nav.html pages=site.html_pages %}
     {% endif %}
     {%- if site.nav_external_links -%}
       <ul class="nav-list">
@@ -43,15 +55,15 @@
                   </button>
                   {%- endif -%}
                   <div class="nav-category">{{ collection_value.name }}</div>
-                  {% include nav.html pages=collection key=collection_key %}
+                  {% include_cached nav.html pages=collection %}
                 </li>
               </ul>
             {% else %}
               <div class="nav-category">{{ collection_value.name }}</div>
-              {% include nav.html pages=collection key=collection_key %}
+              {% include_cached nav.html pages=collection %}
             {% endif %}
           {% else %}
-            {% include nav.html pages=collection key=collection_key %}
+            {% include_cached nav.html pages=collection %}
           {% endif %}
         {% endif %}
       {% endfor %}
