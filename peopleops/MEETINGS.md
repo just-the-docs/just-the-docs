@@ -121,8 +121,14 @@ People mentioning problems even once is a gift: We can't fix systemic problems i
 
 1.  Practice listening. Try to contain the impulse to give advice unless they specifically ask for it for at least the first 10 minutes of the meeting.
 2.  Raise anything you felt was a problem. Say how you feel about it, and let them lead.
-3.  If they don't bring it up on their own I'll ask questions about emotional state and emotional reactions to situations. E.g., "How did you feel about what happened at Countable last month?" (be specific), "Are you feeling sufficiently challenged?", "What would you like to learn?", "What do you enjoy working on most?"
-4.  What work the employee is doing will have the biggest impact?
+3.  If they don't bring it up on their own I'll ask questions about emotional state and emotional reactions to situations. E.g.,
+    - "How did you feel about what happened at Countable last month?" (be specific)
+    - "Are you feeling sufficiently challenged?"
+    - "What would you like to learn next?"
+    - "What do you enjoy working on most and what projects are you most proud of?"
+    - "Which tasks have proven to be the most challenging for you?"
+    - "When do you find yourself seeking assistance most frequently?"
+5.  What work the employee is doing will have the biggest impact?
 
 ### The First One-on-one
 
