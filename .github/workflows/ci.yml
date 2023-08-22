@@ -87,7 +87,7 @@ jobs:
           root: _site
           blacklist: line-numbers
       - name: Test with html-proofer
-        run: bundle exec htmlproofer _site --ignore-urls "/github.com/"
+        run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/"
         env:
           NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
