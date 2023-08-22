@@ -1,0 +1,48 @@
+{%- comment -%}
+  Include as: {%- include head_nav.html -%}
+  Depends on: site.color_scheme.
+  Results in: HTML for a page-specific style element.
+  Includes:
+    css/activation.scss.liquid.
+  Overwrites: 
+    activation, test_scss, scss, css, index, count.
+  Should not be cached, because css/activation.scss.liquid depends on page.
+{%- endcomment -%}
+
+{% capture activation %}
+  {% include css/activation.scss.liquid %}
+{%- endcapture -%}
+
+{% capture test_scss %}
+  @import "./support/support";
+  @import "./color_schemes/light";
+  {{ activation }}
+{%- endcapture -%}
+
+{%- capture scss -%}
+  @import "./support/support";
+  @import "./custom/setup";
+  {% if site.color_scheme and site.color_scheme != "nil" -%}
+    {%- assign color_scheme = site.color_scheme -%}
+  {%- else -%}
+    {%- assign color_scheme = "light" -%}
+  {%- endif %}
+  @import "./color_schemes/light";
+  {% unless color_scheme == "light" %}
+  @import "./color_schemes/{{ color_scheme }}";
+  {% endunless %}
+  {{ activation }}
+{%- endcapture -%}
+
+{%- comment -%}
+  Convert to CSS, then remove the color_scheme import rules to avoid duplication.
+  The value of count is page-dependent, but independent of custom color schemes.
+{%- endcomment -%}
+{%- assign count = test_scss  | scssify | split: ".site-nav" | size -%}
+{%- unless count == 1 %}
+{%- assign index = 1 | minus: count -%}
+{%- assign css = scss | scssify | split: ".site-nav" | slice: index, count | join: ".site-nav" -%}
+<style type="text/css">
+{{ css | prepend: ".site-nav" }}
+</style>
+{%- endunless %}

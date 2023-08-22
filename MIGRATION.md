@@ -43,6 +43,78 @@ This document contains instructions on how to migrate and upgrade Just the Docs 
 
 [CHANGELOG]: {{ site.baseurl }}{% link CHANGELOG.md %}
 
+## v0.5.x - v0.6.0
+
+### POTENTIALLY-BREAKING CHANGES in v0.6.0
+
+There are some *very minor* potentially-breaking changes for users in version `v0.6.0`. **They do not affect the vast majority of users**; however, this may affect users of (undocumented) internal theme structure. They concern:
+
+1. the addition of new `_includes/favicon.html`, `_includes/head_nav.html`, and `_includes/css/activation.scss.liquid`
+  - **explicit migration only necessary if users have defined a custom file with the same name**
+2. removing `id="main-content-wrap` from wrapper `div` elements in default layouts
+  - **explicit migration only necessary if users have written code that depends on `#main-content-wrap`**
+3. loading the new `$color-scheme` variable (from the light scheme by default)
+  - **explicit migration only necessary if users have overridden the base light theme**
+4. caching the favicon for the entire site
+  - **explicit migration only necessary if users have different favicons for different pages**
+
+#### New Includes
+
+Version `v0.6.0` introduces three new `_includes` files:
+
+- `_includes/favicon.html`, which now contains logic previously in `_includes/head.html`: loading `favicon.ico` if no favicon is specified
+- `_includes/head_nav.html`, which generates CSS used for the new efficient navigation implementation
+- `_includes/css/activation.scss.liquid`, which is used by `head_nav` for navigation implementation
+
+If users have existing `_includes` files with this name, they should be renamed (and imported with their new name) prior to upgrading to `0.6.0`. No other change is necessary.
+
+#### Removed `#main-content-wrap`
+
+In `_layouts/default.html` and `_layouts/minimal.html`, the `id="main-content-wrap"` has been removed from the wrapper div (in part due to a bug with multiple `id`s on one element). Internally, our theme *does not use* these `id`s; for most users, this does not require any action.
+
+However, code that relies on this `id` must be changed. Each of the related elements still has the unique class `.main-content-wrap`, and can be selected with this class. For example, in CSS:
+
+```css
+/* OLD */
+#main-content-wrap { /* ... */ }
+
+/* NEW */
+.main-content-wrap { /* ... */ }
+```
+
+Or in JS:
+
+```js
+// OLD
+document.getElementById("main-content-wrap");
+
+// NEW
+document.getElementsByClassName("main-content-wrap")[0];
+```
+
+#### New `$color-scheme` variable
+
+The theme now properly sets the `color-scheme` property. To do so, the new `$color-scheme` SCSS variable has been created. The variable has been added to the default `light` scheme, which is *always* loaded by Just the Docs.
+
+Migration is only needed if:
+
+- the packaged `light` scheme has been *overridden* (this is *not* the same as using a custom scheme)
+- or, the scheme logic to always load `light` has been changed
+
+(neither of these behaviours are recommended by Just the Docs)
+
+In either of these cases, users should add a `$color-scheme` SCSS variable to their active scheme with the appropriate value (see: [MDN docs on `color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme)).
+
+```scss
+$color-scheme: light !default;
+```
+
+#### Cached favicon
+
+Version `v0.6.0` adds a new `_include` that caches the favicon for the entire site. This significantly improves page build times for large sites.
+
+However, some users may load different favicons for each page (and/or dynamically change the first favicon load). In this case, they should override the logic in `_includes/favicon.html` by **replacing** it with an empty file (this is *different* from deleting it). No further migration is necessary.
+
 ## v0.4.x - v0.5.0
 
 ### POTENTIALLY-BREAKING CHANGES in v0.5.0
