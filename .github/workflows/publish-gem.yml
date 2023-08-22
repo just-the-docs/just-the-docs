@@ -13,7 +13,7 @@ jobs:
     - name: Set up Ruby 3.2
       uses: actions/setup-ruby@v1
       with:
-        ruby-version: 3.2
+        ruby-version: "3.2"
 
     - name: Publish to GPR
       run: |
