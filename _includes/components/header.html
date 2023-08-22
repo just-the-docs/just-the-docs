@@ -5,7 +5,7 @@
     <div></div>
   {% endif %}
   {% include header_custom.html %}
-  {% if site.aux_links %}
+  {% if site.aux_links or site.color_scheme_options and site.color_scheme_options.switch_options %}
     {% include components/aux_nav.html %}
   {% endif %}
 </div>

@@ -4,7 +4,7 @@
   Results in: HTML for a page-specific style element.
   Includes:
     css/activation.scss.liquid.
-  Overwrites: 
+  Overwrites:
     activation, test_scss, scss, css, index, count.
   Should not be cached, because css/activation.scss.liquid depends on page.
 {%- endcomment -%}
@@ -28,7 +28,7 @@
     {%- assign color_scheme = "light" -%}
   {%- endif %}
   @import "./color_schemes/light";
-  {% unless color_scheme == "light" %}
+  {% unless color_scheme == "light" or color_scheme == "auto" %}
   @import "./color_schemes/{{ color_scheme }}";
   {% endunless %}
   {{ activation }}

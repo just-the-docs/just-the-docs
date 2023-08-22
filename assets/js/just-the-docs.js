@@ -41,7 +41,7 @@ function initNav() {
   const siteNav = document.getElementById('site-nav');
   const mainHeader = document.getElementById('main-header');
   const menuButton = document.getElementById('menu-button');
-  
+
   disableHeadStyleSheet();
 
   jtd.addEvent(menuButton, 'click', function(e){
@@ -72,7 +72,7 @@ function initNav() {
 }
 
 // The page-specific <style> in the <head> is needed only when JS is disabled.
-// Moreover, it incorrectly overrides dynamic stylesheets set by setTheme(theme). 
+// Moreover, it incorrectly overrides dynamic stylesheets set by setTheme(theme).
 // The page-specific stylesheet is assumed to have index 1 in the list of stylesheets.
 
 function disableHeadStyleSheet() {
@@ -465,13 +465,56 @@ function searchLoaded(index, docs) {
 // Switch theme
 
 jtd.getTheme = function() {
-  var cssFileHref = document.querySelector('[rel="stylesheet"]').getAttribute('href');
+  var cssFile = document.querySelector('[rel="stylesheet"]');
+  if(cssFile.hasAttribute('media')) return 'auto';
+
+  var cssFileHref = cssFile.getAttribute('href');
   return cssFileHref.substring(cssFileHref.lastIndexOf('-') + 1, cssFileHref.length - 4);
 }
 
 jtd.setTheme = function(theme) {
-  var cssFile = document.querySelector('[rel="stylesheet"]');
-  cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | relative_url }}' + theme + '.css');
+  function createThemeStylesheet(theme, media) {
+    var link  = document.createElement('link');
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*",theme);
+    if(media) link.media = media;
+    return link;
+  }
+  var cssFiles = [...document.querySelectorAll('[rel="stylesheet"]')];
+  if(theme === "auto") {
+    cssFiles.at(-1).insertAdjacentElement('afterend', createThemeStylesheet('light', '(prefers-color-scheme: light)'));
+    cssFiles.at(-1).insertAdjacentElement('afterend', createThemeStylesheet('dark', '(prefers-color-scheme: dark)'));
+  } else {
+    cssFiles.at(-1).insertAdjacentElement('afterend', createThemeStylesheet(theme || "default"));
+  }
+  setTimeout(() => cssFiles.forEach(it => it.remove()), 100);
+}
+
+jtd.switchThemeButton = function(button, event) {
+  {% if site.color_scheme_options and site.color_scheme_options.switch_options %}
+  const themes = {{ site.color_scheme_options.switch_options | jsonify }};
+  {% else %}
+  const themes = ["auto", "light", "dark"];
+  {% endif %}
+  var currentTheme = jtd.getTheme();
+  var nextTheme = themes[(themes.indexOf(currentTheme)+1)%themes.length];
+  jtd.setTheme(nextTheme);
+  button.getElementsByTagName('svg')[0].getElementsByTagName('use')[0].setAttribute('href',`#svg-${nextTheme}`);
+  {% if site.color_scheme_options and site.color_scheme_options.enable_localstorage  %}
+  window.localStorage.setItem('theme', nextTheme);
+  {% endif %}
+}
+
+function initSwitchThemeButton() {
+  var buttons = [...document.getElementsByClassName("color-scheme-switch-theme-button")];
+  {% if site.color_scheme_options and site.color_scheme_options.enable_localstorage  != false %}
+  theme = window.localStorage.getItem('theme');
+  if(theme != null){
+    buttons.forEach(button => button.getElementsByTagName('svg')[0].getElementsByTagName('use')[0].setAttribute('href',`#svg-${theme}`));
+  }
+  {% endif %}
+  buttons.forEach(button => jtd.addEvent(button, 'click', event => jtd.switchThemeButton(button, event)));
 }
 
 // Note: pathname can have a trailing slash on a local jekyll server
@@ -532,6 +575,9 @@ jtd.onReady(function(){
   initNav();
   {%- if site.search_enabled != false %}
   initSearch();
+  {%- endif %}
+  {%- if site.enable_switch_color_scheme != false %}
+  initSwitchThemeButton();
   {%- endif %}
   activateNav();
   scrollNav();

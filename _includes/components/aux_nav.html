@@ -11,5 +11,12 @@
         </a>
       </li>
     {% endfor %}
+    {% if site.color_scheme_options and site.color_scheme_options.switch_options %}
+    <li class="aux-nav-list-item">
+      <button class="site-button color-scheme-switch-theme-button" aria-label="Switch color scheme">
+        <svg aria-hidden="true" class="site-button-icon"><use href="#svg-{{ site.color_scheme | default: 'light' }}"></use></svg>
+      </button>
+    </li>
+    {% endif %}
   </ul>
 </nav>
