@@ -1,0 +1,17 @@
+---
+---
+{%- if site.color_scheme and site.color_scheme != "nil" -%}
+  {%- assign color_scheme = site.color_scheme -%}
+{%- else -%}
+  {%- assign color_scheme = "light" -%}
+{%- endif -%}
+
+{%- capture newline %}
+{% endcapture -%}
+
+{%- capture scss -%}
+{% include css/just-the-docs.scss.liquid color_scheme=color_scheme %}
+@import "./head";
+{%- endcapture -%}
+
+{{ scss | scssify | split: newline | slice: -7, 7 | join: newline }}

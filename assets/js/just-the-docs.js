@@ -74,6 +74,7 @@ function initNav() {
 
 function disableHeadStyleSheet() {
   document.styleSheets[1].disabled = true;
+  document.styleSheets[2].disabled = true;
 }
 
 {%- if site.search_enabled != false %}
