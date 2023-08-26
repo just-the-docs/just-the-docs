@@ -19,6 +19,16 @@ Code changes to `main` that are *not* in the latest release:
 
 - N/A
 
+## Release v0.6.1
+
+Hi all, this is a small patch release that only includes one change: resolving a bug introduced in 0.6.0 that causes a JS error for pages excluded from navigation.
+
+### Bugfixes
+
+- Fixed: JS error for pages excluded from navigation by [@pdmosses] in [#1332]
+
+[#332]: https://github.com/just-the-docs/just-the-docs/pull/1332
+
 ## Release v0.6.0
 
 Hi all, this is a minor release that introduces performance improvements for build times on large sites, correctly sets the `color-scheme` property, and fixes invalid HTML. However, it introduces some potentially-breaking *internal* changes to undocumented features of the theme.
