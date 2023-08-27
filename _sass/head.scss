@@ -9,11 +9,3 @@
         rgba($feedback-color, 0) 100%
       );
 }
-
-.nav-list-item > .nav-list-expander svg {
-  @if $nav-list-expander-right {
-    transform: rotate(-90deg);
-  } @else {
-    transform: rotate(90deg);
-  }
-}
