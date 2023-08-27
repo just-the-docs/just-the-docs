@@ -17,7 +17,9 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Remove the `passive` toggle by [@pdmosses] in [#1335]
+
+[#1332]: https://github.com/just-the-docs/just-the-docs/pull/1335
 
 ## Release v0.6.1
 
