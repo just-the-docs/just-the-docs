@@ -1,7 +1,18 @@
-# _plugins/custom_converter.rb
+module Jekyll
+  module Convertible
+    def transform
+      # Call the original function
+      super
+      # Custom conversion
+      self.content = convert_custom_span_tag(content)
+    end
 
-Jekyll::Hooks.register :documents, :pre_render do |doc|
-  doc.content.gsub!(/\^([^\^]+)\^/) do
-    "<span class='test-class'>#{$1}</span>"
+    private
+
+    def convert_custom_span_tag(text)
+      text.gsub(/^\^([^\^]+)\^$/) { |match| "<span class=\"span-class\">#{$1}</span>" }
+    end
   end
 end
+
+
