@@ -174,15 +174,13 @@ callouts:
 plugins:
   - jekyll-seo-tag
   - jekyll-github-metadata
-  - jekyll-optional-front-matter
-
-# Enable safe mode
-safe: false
 
 kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: false
+
+markdown: MyCustomProcessor
 
 compress_html:
   clippings: all
