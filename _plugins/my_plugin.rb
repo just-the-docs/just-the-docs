@@ -1,6 +1,9 @@
 require 'kramdown'
 
 class Jekyll::Converters::Markdown::MyCustomProcessor
+    safe true
+    priority :low
+
   def initialize(config)
     @config = config
 
