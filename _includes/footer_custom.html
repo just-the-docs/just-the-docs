@@ -1,10 +1,16 @@
 <p style="font-size:0.75em">
   Brought to you by the <a href="https://scds.ca">Lewis & Ruth Sherman Centre for Digital Scholarship</a> and the <a href="https://library.mcmaster.ca">McMaster University Library</a>.
-  {% if site.subtitle != nil and site.subtitle != "" %} 
-    <br>
-    {{ site.subtitle }}
-  {% endif %}
   <br>
+
+  {% if site.credits != nil and site.credits != ""   %}
+    {{ site.credits }}
+    <br>
+  {% endif %}
+  
+  {% if site.subtitle != nil and site.subtitle != "" %} 
+    {{ site.subtitle }}
+    <br>
+  {% endif %}
 
   <!-- McMaster date guidelines, Page 25: https://equity.mcmaster.ca/app/uploads/2021/04/Words-matter-writing-guidlines.pdf -->
   Site last modified:
