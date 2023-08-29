@@ -175,6 +175,9 @@ plugins:
   - jekyll-seo-tag
   - jekyll-github-metadata
 
+# Enable safe mode
+safe: false
+
 kramdown:
   syntax_highlighter_opts:
     block:
