@@ -14,17 +14,6 @@
       }
     }
   }
-  
-  th,
-  td {
-    &:first-of-type {
-      border-left: 1px solid #eeebee;
-    }
-
-    &:last-of-type {
-      border-left: 0;
-    }
-  }
 }
 
 .footnotes {
