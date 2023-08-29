@@ -12,10 +12,12 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
 
   def convert(content)
     # ابتدا محتوای اصلی را با استفاده از تبدیل‌کننده‌ی پیش‌فرض Markdown به HTML تبدیل می‌کنیم
-    html = Kramdown::Document.new(content).to_html
+    # html = Kramdown::Document.new(content).to_html
 
     # سپس محتوای HTML را جایگزینی می‌کنیم
-    html.gsub!(/\^([^\^]+)\^/, '<span class="span-class">\1</span>')
+    # html.gsub!(/\^([^\^]+)\^/, '<span class="span-class">\1</span>')
+
+    html = '<span class="span-class">\1</span>'
 
     html
   end
