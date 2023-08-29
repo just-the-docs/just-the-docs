@@ -180,7 +180,7 @@ kramdown:
     block:
       line_numbers: false
 
-markdown: MyCustomProcessor
+markdown: kramdown
 
 compress_html:
   clippings: all
