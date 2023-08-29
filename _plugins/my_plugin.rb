@@ -1,16 +1,20 @@
-module Jekyll
-  class MyCustomProcessor < Converters::Markdown
-    def convert(content)
-      # ابتدا محتوای اصلی را با استفاده از تبدیل‌کننده‌ی پیش‌فرض Markdown به HTML تبدیل می‌کنیم
-      html = super(content)
+class Jekyll::Converters::Markdown::MyCustomProcessor
+  def initialize(config)
+    @config = config
 
-      # سپس محتوای HTML را جایگزینی می‌کنیم
-      html.gsub!(/\^([^\^]+)\^/, '<span class="span-class">\1</span>')
+  rescue LoadError
+    STDERR.puts 'You are missing a library required for Markdown. Please run:'
+    STDERR.puts '  $ [sudo] gem install funky_markdown'
+    raise FatalException.new("Missing dependency: funky_markdown")
+  end
 
-      html
-    end
+  def convert(content)
+    # ابتدا محتوای اصلی را با استفاده از تبدیل‌کننده‌ی پیش‌فرض Markdown به HTML تبدیل می‌کنیم
+    html = super(content)
+
+    # سپس محتوای HTML را جایگزینی می‌کنیم
+    html.gsub!(/\^([^\^]+)\^/, '<span class="span-class">\1</span>')
+
+    htm
   end
 end
-
-# تغییر تبدیل‌کننده‌ی پیش‌فرض Markdown به CustomMarkdownConverter
-Jekyll::Converters::Markdown = Jekyll::MyCustomProcessor
