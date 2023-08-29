@@ -14,12 +14,11 @@
       }
     }
   }
-
-
+  
   th,
   td {
     &:first-of-type {
-      border-left: $border $border-color;
+      border-left: 1px solid #eeebee;
     }
 
     &:last-of-type {
