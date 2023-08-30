@@ -182,6 +182,8 @@ kramdown:
 
 markdown: MyCustomProcessor
 
+safe: false
+
 compress_html:
   clippings: all
   comments: all
