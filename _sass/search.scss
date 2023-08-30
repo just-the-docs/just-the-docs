@@ -23,7 +23,9 @@
   height: $sp-8;
   overflow: hidden;
   border-radius: $border-radius;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    0 3px 10px rgba(0, 0, 0, 0.08);
   transition: height linear #{$transition-duration * 0.5};
 
   @include mq(md) {
@@ -42,7 +44,7 @@
   width: 100%;
   height: 100%;
   padding: $sp-2 $gutter-spacing-sm $sp-2 #{$gutter-spacing-sm + $sp-5};
-  font-size: 16px;
+  font-size: 1rem;
   color: $body-text-color;
   background-color: $search-background-color;
   border-top: 0;
@@ -53,7 +55,7 @@
 
   @include mq(md) {
     padding: $sp-2 $gutter-spacing-sm $sp-2 #{$gutter-spacing + $sp-5};
-    font-size: 14px;
+    font-size: 0.875rem;
     background-color: $body-background-color;
     transition: padding-left linear #{$transition-duration * 0.5};
   }
@@ -96,7 +98,9 @@
   background-color: $search-background-color;
   border-bottom-right-radius: $border-radius;
   border-bottom-left-radius: $border-radius;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    0 3px 10px rgba(0, 0, 0, 0.08);
 
   @include mq(md) {
     top: 100%;
@@ -230,7 +234,9 @@
   background-color: $search-background-color;
   border: 1px solid rgba($link-color, 0.3);
   border-radius: #{$sp-9 * 0.5};
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    0 3px 10px rgba(0, 0, 0, 0.08);
   align-items: center;
   justify-content: center;
 }
@@ -244,7 +250,9 @@
   height: 0;
   background-color: rgba(0, 0, 0, 0.3);
   opacity: 0;
-  transition: opacity ease $transition-duration, width 0s $transition-duration,
+  transition:
+    opacity ease $transition-duration,
+    width 0s $transition-duration,
     height 0s $transition-duration;
 }
 
@@ -264,7 +272,9 @@
 
     @include mq(md) {
       width: $search-results-width;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+      box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.12),
+        0 3px 10px rgba(0, 0, 0, 0.08);
     }
   }
 
@@ -290,7 +300,10 @@
     width: 100%;
     height: 100%;
     opacity: 1;
-    transition: opacity ease $transition-duration, width 0s, height 0s;
+    transition:
+      opacity ease $transition-duration,
+      width 0s,
+      height 0s;
   }
 
   @include mq(md) {

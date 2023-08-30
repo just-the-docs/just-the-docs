@@ -31,13 +31,18 @@ function initNav() {
     }
     if (target) {
       e.preventDefault();
-      target.parentNode.classList.toggle('active');
+      const active = target.parentNode.classList.toggle('active');
+      const passive = target.parentNode.classList.toggle('passive');
+      if (active && passive) target.parentNode.classList.toggle('passive');
+      target.ariaPressed = active;
     }
   });
 
   const siteNav = document.getElementById('site-nav');
   const mainHeader = document.getElementById('main-header');
   const menuButton = document.getElementById('menu-button');
+  
+  disableHeadStyleSheet();
 
   jtd.addEvent(menuButton, 'click', function(e){
     e.preventDefault();
@@ -45,9 +50,11 @@ function initNav() {
     if (menuButton.classList.toggle('nav-open')) {
       siteNav.classList.add('nav-open');
       mainHeader.classList.add('nav-open');
+      menuButton.ariaPressed = true;
     } else {
       siteNav.classList.remove('nav-open');
       mainHeader.classList.remove('nav-open');
+      menuButton.ariaPressed = false;
     }
   });
 
@@ -62,6 +69,16 @@ function initNav() {
     searchInput.focus();
   });
   {%- endif %}
+}
+
+// The page-specific <style> in the <head> is needed only when JS is disabled.
+// Moreover, it incorrectly overrides dynamic stylesheets set by setTheme(theme). 
+// The page-specific stylesheet is assumed to have index 1 in the list of stylesheets.
+
+function disableHeadStyleSheet() {
+  if (document.styleSheets[1]) {
+    document.styleSheets[1].disabled = true;
+  }
 }
 
 {%- if site.search_enabled != false %}
@@ -459,15 +476,55 @@ jtd.setTheme = function(theme) {
   cssFile.setAttribute('href', '{{ "assets/css/just-the-docs-" | relative_url }}' + theme + '.css');
 }
 
+// Note: pathname can have a trailing slash on a local jekyll server
+// and not have the slash on GitHub Pages
+
+function navLink() {
+  var href = document.location.pathname;
+  if (href.endsWith('/') && href != '/') {
+    href = href.slice(0, -1);
+  }
+  return document.getElementById('site-nav').querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
+}
+
 // Scroll site-nav to ensure the link to the current page is visible
 
 function scrollNav() {
-  const href = document.location.pathname;
-  const siteNav = document.getElementById('site-nav');
-  const targetLink = siteNav.querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
-  if(targetLink){
+  const targetLink = navLink();
+  if (targetLink) {
     const rect = targetLink.getBoundingClientRect();
-    siteNav.scrollBy(0, rect.top - 3*rect.height);
+    document.getElementById('site-nav').scrollBy(0, rect.top - 3*rect.height);
+  }
+}
+
+// Find the nav-list-link that refers to the current page
+// then make it and all enclosing nav-list-item elements active,
+// and make all other folded collections passive
+
+function activateNav() {
+  var target = navLink();
+  if (target) {
+    target.classList.toggle('active', true);
+  }
+  while (target) {
+    while (target && !(target.classList && target.classList.contains('nav-list-item'))) {
+      target = target.parentNode;
+    }
+    if (target) {
+      target.classList.toggle('active', true);
+      target = target.parentNode;
+    }
+  }
+  const elements = document.getElementsByClassName("nav-category-list");
+  for (const element of elements) {
+    const item = element.children[0];
+    const active = item.classList.toggle('active');
+    if (active) {
+      item.classList.toggle('active', false);
+      item.classList.toggle('passive', true);
+    } else {
+      item.classList.toggle('active', true);
+    }
   }
 }
 
@@ -478,6 +535,7 @@ jtd.onReady(function(){
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
+  activateNav();
   scrollNav();
 });
 
@@ -491,8 +549,8 @@ jtd.onReady(function(){
   if (!window.isSecureContext) {
     console.log('Window does not have a secure context, therefore code clipboard copy functionality will not be available. For more details see https://web.dev/async-clipboard/#security-and-permissions');
     return;
-  } 
-  
+  }
+
   var codeBlocks = document.querySelectorAll('div.highlighter-rouge, div.listingblock > div.content, figure.highlight');
 
   // note: the SVG svg-copied and svg-copy is only loaded as a Jekyll include if site.enable_copy_code_button is true; see _includes/icons/icons.html

@@ -15,25 +15,219 @@ The project underwent a major maintenance shift in March 2022.
 {: .note }
 This website is built from the `HEAD` of the `main` branch of the theme repository.
 
-{: .warning }
-This website includes docs for some new features that are not available in `v0.5.0`!
-
 Code changes to `main` that are *not* in the latest release:
 
-- Fixed: disable copy code button in insecure contexts [@rmoff] in [#1226]
+- Fixed: Windows emoji font fallback by [@flanakin] in [#1337]
 
-Docs changes in `main` that are *not* in the latest release:
+[#1337]: https://github.com/just-the-docs/just-the-docs/pull/1337
+
+### New Contributors
+
+- [@flanakin] made their first contribution in [#1337]
+
+[@flanakin]: https://github.com/flanakin
+
+## Release v0.6.1
+
+Hi all, this is a small patch release that only includes one change: resolving a bug introduced in 0.6.0 that causes a JS error for pages excluded from navigation.
+
+### Bugfixes
+
+- Fixed: JS error for pages excluded from navigation by [@pdmosses] in [#1332]
+
+[#1332]: https://github.com/just-the-docs/just-the-docs/pull/1332
+
+## Release v0.6.0
+
+Hi all, this is a minor release that introduces performance improvements for build times on large sites, correctly sets the `color-scheme` property, and fixes invalid HTML. However, it introduces some potentially-breaking *internal* changes to undocumented features of the theme.
+
+### Migrating to `v0.6.0`
+
+**Migration**: users will need to migrate if:
+
+- they have an existing `_includes` file named `favicon.html`, `head_nav.html`, or `css/activation.scss.liquid`
+- they have code that refers to `#main-content-wrap`
+- they override the default `light` theme's code, or the theme-loading logic
+- they have different favicons for different pages
+
+For more, refer to the [migration guide](https://just-the-docs.com/MIGRATION/).
+
+### Using Release `v0.6.0`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.6.0` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.6.0
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.6.0"
+```
+
+To use and pin a previous version of the theme, replace the `0.6.0` with the desired release tag.
+
+### New Features and Bugfixes
+
+- Added: `$color-scheme` theme variable to specify `color-scheme` for `:root` by [@sigv] in [#1280]
+- Fixed: build times for large sites by [@pdmosses] in [#1244]
+- Fixed: missing closing `</button>` tag in `sidebar.html` by [@mattxwang] in [#1304]
+- Fixed: removed duplicate `#main-content-wrap` minimal and default layouts by [@mattxwang] in [#1305]
+
+### Documentation
+
+{: .warning }
+The theme docs are unversioned, and already reflect the above changes.
+
+Docs changes:
+
+- A [footnote]({% link docs/configuration.md %}#fn:js-disabled) in the configuration docs explains how disabling JavaScript affects the display of navigation links when browsing folded collections.
+- Invalid HTML has been removed from most documentation examples.
+
+### New Contributors
+
+- [@sigv] made their first contribution in [#1280]
+
+[@sigv]: https://github.com/sigv
+[#1244]: https://github.com/just-the-docs/just-the-docs/pull/1244
+[#1280]: https://github.com/just-the-docs/just-the-docs/pull/1280
+[#1304]: https://github.com/just-the-docs/just-the-docs/pull/1304
+[#1305]: https://github.com/just-the-docs/just-the-docs/pull/1305
+
+## Release v0.5.4
+
+Hi all, this is a small patch release that only includes one change: fixing a style clash between Mermaid's labels and Just the Docs' labels.
+
+*Note: for subsequent patch releases, we will omit migration instructions (for brevity). In all cases, immediate migration should be backwards-compatible. Refer to previous major or minor update instructions for more information.*
+
+### Bugfixes
+
+- Fixed: Mermaid labels inheriting theme `.label` styling by [@mattxwang] in [#1278]
+
+[#1278]: https://github.com/just-the-docs/just-the-docs/pull/1278
+
+## Release v0.5.3
+
+Hi all, this is a minor patch release that only includes one change: changing all text-based CSS properties to use `rem` instead of hard-coded `px` values. This has two effects:
+
+1. All deprecation warnings are now fixed on build; you should now get a clean build with `jekyll build`.
+2. We have **deprecated the `$root-font-size` SCSS variable**. We will remove it in an upcoming release of the theme.
+
+If you use the stock Just the Docs theme, this release should have no impact on your final built site. If you change the `$root-font-size` SCSS variable, you might experience light layout shifts.
+
+### Using Release `v0.5.3`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.5.3` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.5.3
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.5.3"
+```
+
+To use and pin a previous version of the theme, replace the `0.5.3` with the desired release tag.
+
+### Bugfixes
+
+- Fixed: font-size scaling for text-related CSS properties by using `rem` instead of fixed `px` values; deprecate `$root-font-size` by [@mattxwang] in [#1169]
+
+[#1169]: https://github.com/just-the-docs/just-the-docs/pull/1169
+
+## Release v0.5.2
+
+Hi all, this is a minor patch release that mostly focuses on accessibility. Since we follow semantic versioning, this should be a smooth upgrade with no breaking changes.
+
+In addition, the theme docs website has a new canonical URL: <https://just-the-docs.com>. We've also retroactively published the theme docs website for version `v0.3.3` at <https://v0-3-3-docs.just-the-docs.com/>. Thank you to our GitHub sponsors for funding our domain name!
+
+### Using Release `v0.5.2`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.5.2` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.5.2
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.5.2"
+```
+
+To use and pin a previous version of the theme, replace the `0.5.2` with the desired release tag.
+
+### Bugfixes
+
+- Fixed: liquid variable leakage in navigation components by [@pdmosses] in [#1243]
+- Fixed: ARIA roles and labels for search, header, logo, mobile menu button, and main content by [@joelhawksley] in [#1259]
+- Fixed: ARIA labels for all anchors with `href="#"`; adds `aria-pressed` information for toggles by [@mattxwang] in [#1262]
+
+### New Contributors
+
+- [@joelhawksley] made their first contribution in [#1259]
+
+[@joelhawksley]: https://github.com/joelhawksley
+
+[#1243]: https://github.com/just-the-docs/just-the-docs/pull/1243
+[#1259]: https://github.com/just-the-docs/just-the-docs/pull/1259
+[#1262]: https://github.com/just-the-docs/just-the-docs/pull/1262
+
+## Release v0.5.1
+
+Hi all, this is a very small minor patch release that has two small behavioral bugfixes: fixing a regression introduced in `v0.5.0` on Safari versions `<16.4` (broken media query), and the copy code button providing incorrect feedback in insecure browser contexts. This should be a smooth upgrade with no breaking changes.
+
+As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
+
+### Using Release `v0.5.1`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.5.1` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.5.1
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.5.1"
+```
+
+To use and pin a previous version of the theme, replace the `0.5.1` with the desired release tag.
+
+### Bugfixes
+
+
+- Fixed: disable copy code button in insecure contexts [@rmoff] in [#1226]
+- Fixed: context-based media feature not supported by Safari `<16.4` by [@mattxwang] in [#1240]
+
+### Documentation
 
 - Added: document copy code button requiring secure context by [@rmoff] in [#1225]
 - Fixed: typo ("them" → "theme") in MIGRATION.md by [@waldyrious] in [#1219]
 - Fixed: `font-weight` typo (Utilities > Typography) by [@mattxwang] in [#1229]
 - Fixed: `just the docs` typo in migration guide by [@mattxwang] in [#1230]
 
+### New Contributors
+- [@rmoff] made their first contribution in [#1225]
+
 [#1219]: https://github.com/just-the-docs/just-the-docs/pull/1219
 [#1225]: https://github.com/just-the-docs/just-the-docs/pull/1225
 [#1226]: https://github.com/just-the-docs/just-the-docs/pull/1226
 [#1229]: https://github.com/just-the-docs/just-the-docs/pull/1229
 [#1230]: https://github.com/just-the-docs/just-the-docs/pull/1230
+[#1240]: https://github.com/just-the-docs/just-the-docs/pull/1240
 
 [@rmoff]: https://github.com/rmoff
 
@@ -49,7 +243,7 @@ As always, we'd love your feedback. [Open an issue](https://github.com/just-the-
 
 **Migration**: users with a custom `setup.scss` cannot rely on variables or functions defined in `color_scheme`. This reverts to the behaviour in `v0.4.1`. Users should instead move those variables or functions to the `color_scheme` files themselves.
 
-For more, refer to the [migration guide](https://just-the-docs.github.io/just-the-docs/MIGRATION/).
+For more, refer to the [migration guide](https://just-the-docs.com/MIGRATION/).
 
 ### Using Release `v0.5.0`
 
@@ -89,7 +283,7 @@ To use and pin a previous version of the theme, replace the `0.5.0` with the des
 
 Hello! We're back again with another small release. Like `v0.4.1`, this release is a [semver patch](https://semver.org/): it only includes bugfixes, and is fully backwards-compatible.
 
-The big highlight of this theme is fixing our light scheme code highlighting contrast issues; this was one of our most-requested features! This change is fully backwards-compatible; users can [opt-in to our old highlighting theme](https://just-the-docs.github.io/just-the-docs/docs/customization/#deprecated-legacy_light) by using `legacy_light` instead of `light`.
+The big highlight of this theme is fixing our light scheme code highlighting contrast issues; this was one of our most-requested features! This change is fully backwards-compatible; users can [opt-in to our old highlighting theme](https://just-the-docs.com/docs/customization/#deprecated-legacy_light) by using `legacy_light` instead of `light`.
 
 As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
 
@@ -190,16 +384,16 @@ We're so excited to release Just the Docs `v0.4.0`. This release has been almost
 `v0.4.0` contains many new features and bugfixes. We enumerate all of them in further sections in this changelog; however, we'd like to call out some of the most-requested changes:
 
 - better support for dark theme: dark highlighting, search input color
-- [callouts](https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/), a new design component to highlight content
-- [configuring mermaid.js](https://just-the-docs.github.io/just-the-docs/docs/ui-components/code/#mermaid-diagram-code-blocks), a markdown-native diagram visualization library
-- [copy code button](https://just-the-docs.github.io/just-the-docs/docs/ui-components/code/#copy-button) for code snippets
-- [external navigation links](https://just-the-docs.github.io/just-the-docs/docs/navigation-structure/#external-navigation-links)
+- [callouts](https://just-the-docs.com/docs/ui-components/callouts/), a new design component to highlight content
+- [configuring mermaid.js](https://just-the-docs.com/docs/ui-components/code/#mermaid-diagram-code-blocks), a markdown-native diagram visualization library
+- [copy code button](https://just-the-docs.com/docs/ui-components/code/#copy-button) for code snippets
+- [external navigation links](https://just-the-docs.com/docs/navigation-structure/#external-navigation-links)
 - major improvements to nav generation efficiency and robustness
 - minor improvements to built-in accessibility (SVG icons, nav titles, skip to main content)
-- [modularized site components](https://just-the-docs.github.io/just-the-docs/docs/customization/#custom-layouts-and-includes) (advanced feature)
-- [new custom includes](https://just-the-docs.github.io/just-the-docs/docs/customization/#override-includes): table of contents heading, navigation panel footer, search placeholder, lunr search indices
+- [modularized site components](https://just-the-docs.com/docs/customization/#custom-layouts-and-includes) (advanced feature)
+- [new custom includes](https://just-the-docs.com/docs/customization/#override-includes): table of contents heading, navigation panel footer, search placeholder, lunr search indices
 - bugfixes involving WEBrick and Ruby 3, Liquid processing in CSS comments, nested task lists, relative URLs, scroll navigation, corrupted search data from rake, breadcrumbs, and more!
-- more documentation for [custom includes](https://just-the-docs.github.io/just-the-docs/docs/customization/#override-includes), this changelog, and the [migration guide](https://just-the-docs.github.io/just-the-docs/MIGRATION/)
+- more documentation for [custom includes](https://just-the-docs.com/docs/customization/#override-includes), this changelog, and the [migration guide](https://just-the-docs.com/MIGRATION/)
 
 *After usage instructions and the roadmap, we enumerate all changes from `v0.3.3`.*
 
@@ -232,7 +426,7 @@ remote_theme: just-the-docs/just-the-docs@v0.3.3
 
 ### Migration Guide and Strategies
 
-We've developed a new [migration guide](https://just-the-docs.github.io/just-the-docs/MIGRATION/) for users to migrate from version `v0.3.3` to `v0.4.0`. It outlines major changes in project maintenance (e.g. new repository link, team) as well as breaking changes that may break your site (and potential solutions). We suggest that all users refer to the guide before manually upgrading their site.
+We've developed a new [migration guide](https://just-the-docs.com/MIGRATION/) for users to migrate from version `v0.3.3` to `v0.4.0`. It outlines major changes in project maintenance (e.g. new repository link, team) as well as breaking changes that may break your site (and potential solutions). We suggest that all users refer to the guide before manually upgrading their site.
 
 **For the vast majority of users, we do not anticipate that this will be a breaking change.** The major touch points are surrounding new includes, navigation (ordering, pages, and collections), the favicon, and a shift to relative URLs. However, users who heavily customize the theme (primarily by overriding includes) will likely have to make minor changes.
 

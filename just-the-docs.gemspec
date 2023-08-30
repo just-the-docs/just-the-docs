@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "just-the-docs"
-  spec.version       = "0.5.0"
+  spec.version       = "0.6.1"
   spec.authors       = ["Patrick Marsceill", "Matthew Wang"]
   spec.email         = ["patrick.marsceill@gmail.com", "matt@matthewwang.me"]
 
@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.metadata      = {
     "bug_tracker_uri"   => "https://github.com/just-the-docs/just-the-docs/issues",
     "changelog_uri"     => "https://github.com/just-the-docs/just-the-docs/blob/main/CHANGELOG.md",
-    "documentation_uri" => "https://just-the-docs.github.io/just-the-docs/",
+    "documentation_uri" => "https://just-the-docs.com/",
     "source_code_uri"   => "https://github.com/just-the-docs/just-the-docs",
   }
 
@@ -22,5 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", ">= 2.3.5"
   spec.add_runtime_dependency "jekyll", ">= 3.8.5"
   spec.add_runtime_dependency "jekyll-seo-tag", ">= 2.0"
+  spec.add_runtime_dependency "jekyll-include-cache"
   spec.add_runtime_dependency "rake", ">= 12.3.1"
 end
