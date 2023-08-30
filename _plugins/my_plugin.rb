@@ -13,9 +13,7 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
     # ابتدا محتوای اصلی را با استفاده از تبدیل‌کننده‌ی پیش‌فرض Markdown به HTML تبدیل می‌کنیم
     html = Kramdown::Document.new(content).to_html
 
-    # سپس محتوای HTML را جایگزینی می‌کنیم
-    html.gsub!(/\^([^\^]+)\^/, '<span class="span-class">\1</span>')
-
-    # html
+    # { bage bold new | Example text } to <span class="bage bold new">Example text</span>
+    html.gsub!(/\{\s*(.+?)\s*\|\s*(.+?)\s*\}/, '<span class="\1">\2</span>')
   end
 end
