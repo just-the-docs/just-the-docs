@@ -1,7 +1,6 @@
-require 'kramdown'
-
 class Jekyll::Converters::Markdown::MyCustomProcessor
   def initialize(config)
+    require 'kramdown'
     @config = config
 
   rescue LoadError
@@ -17,6 +16,6 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
     # سپس محتوای HTML را جایگزینی می‌کنیم
     html.gsub!(/\^([^\^]+)\^/, '<span class="span-class">\1</span>')
 
-    html
+    # html
   end
 end
