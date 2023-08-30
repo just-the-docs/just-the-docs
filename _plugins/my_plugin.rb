@@ -16,6 +16,6 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
     # سپس محتوای HTML را جایگزینی می‌کنیم
     html.gsub!(/\^([^\^]+)\^/, '<span class="span-class">\1</span>')
 
-    # html
+    # html #
   end
 end
