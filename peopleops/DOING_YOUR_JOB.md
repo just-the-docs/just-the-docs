@@ -76,7 +76,9 @@ The important things are to make sure your team can rely on you being around whe
   - Other Sub-contractors may take unpaid leave any time, and should take at least 2 weeks throughout the year.
   - By default, assume your teammates won't work on stat holidays noted on the Countable Meetings calendar or over weekends, so don't be surprised if you do not get a response to messages.
   - Everyone must plan and document their regular hours in Google Calendar's [Working Hours](https://support.google.com/calendar/answer/7638168?hl=en). These should comprise around half of the hours you work.
-  - If you are away during scheduled time, please let your team know in advance and help them plan. Note your absence on the Countable Absences shared calendar.
+  - If you are away during scheduled time, please let your team know in advance and help them plan. Ask for approval from your Lead. Once approved, notify the Operations Coordinator to update your leave credits. 
+  - Note your absence on the Countable Absences shared calendar and add an Out-of-Office notification to your calendar.
+
     
     | Days of Scheduled Time Off  | Advance Notice Period |
     | ------------- | ------------- |
@@ -86,7 +88,7 @@ The important things are to make sure your team can rely on you being around whe
     | 4-5 days  | at least 2 weeks  |
     | 6 days or more  | at least 1 month advance notice |
 
-  - If you need to take unexpected sick leave, it is understandable that you may need to notify us on the same day, and there is no requirement for prior approval in such cases. However, for health-related situations that can be anticipated, such as surgeries or therapy sessions, we encourage you to utilize sick leave or planned time off/vacation leave especially when you have to be off for more than a day.  It is highly recommended that you adhere to the lead time mentioned above.
+  - If you need to take unexpected sick leave, it is understandable that you may need to notify the on the same day, and there is no requirement for prior approval in such cases. Just make sure to notify your Operations Coordinator to update your leave credits. However, for health-related situations that can be anticipated, such as surgeries or therapy sessions, we encourage you to utilize sick leave or planned time off/vacation leave especially when you have to be off for more than a day.  It is highly recommended that you adhere to the lead time mentioned above.
   - For PH members who are eligible for parental leave (120 days paid leave if you are working with Countable for at least a year), you may inform your supervisor as early as 3 months in advance.  This advance notice will enable us to make the necessary arrangements and ensure a smooth transition during your absence.
   - Check [this](https://countable-web.github.io/ops/peopleops/EIGHTMETERS/#what-time-is-billable) to know how to file your leaves on Eightmeters. 
   - We expect remote team members outside of the America/Vancouver timezone to have a 25% overlap with the Vancouver timezone (work at least 2 hours per day overlapping PST schedule).
