@@ -21,7 +21,7 @@ nav_order: 1
 By default, Just the Docs uses a native system font stack for sans-serif fonts:
 
 ```scss
-system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Segoe UI Emoji"
 ```
 
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
