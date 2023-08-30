@@ -17,7 +17,15 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Fixed: Windows emoji font fallback by [@flanakin] in [#1337]
+
+[#1337]: https://github.com/just-the-docs/just-the-docs/pull/1337
+
+### New Contributors
+
+- [@flanakin] made their first contribution in [#1337]
+
+[@flanakin]: https://github.com/flanakin
 
 ## Release v0.6.1
 
