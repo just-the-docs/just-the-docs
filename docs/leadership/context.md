@@ -1,4 +1,4 @@
-![image](https://github.com/OkBayat/OkBayat.github.io/assets/24451494/18cc7b8c-2981-437b-9350-16da91515258)---
+---
 layout: default
 title: بافتمان
 parent: Leadership
