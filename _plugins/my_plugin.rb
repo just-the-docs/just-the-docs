@@ -17,7 +17,7 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
     html.gsub!(/\{\s*([^|]+?)\s*\\\s*(.+?)\s*\}/, '<span class="\1">\2</span>')
 
     # جایگزینی فهرست مطالب با نسخه wrapped درون تگ‌های <details> و <summary>
-    toc_placeholder_regex = /\\TOC/i
+    toc_placeholder_regex = /\\TOC/
     if html[toc_placeholder_regex]
       html.gsub!(toc_placeholder_regex, '')
       toc_html = '<details open markdown="block"><summary>فهرست مطالب</summary>'
