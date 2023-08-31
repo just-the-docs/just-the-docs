@@ -6,6 +6,11 @@
   &[dir="rtl"] {
     text-align: justify;
     font-family: IRANSans, $body-font-family;
+    font-weight: 300;
+
+    strong {
+      font-weight: 500;
+    }
 
     ol {
       > li {
