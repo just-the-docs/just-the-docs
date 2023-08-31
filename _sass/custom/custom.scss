@@ -15,16 +15,16 @@
         }
       }
     }
-  }
 
-  th,
-  td {
-    &:first-child {
-      border-left: 1px solid #eeebee;
-    }
+    th,
+    td {
+      &:first-child {
+        border-left: 1px solid #eeebee;
+      }
 
-    &:last-child {
-      border-left: 0;
+      &:last-child {
+        border-left: 0;
+      }
     }
   }
 }
