@@ -1,6 +1,6 @@
 ---
 layout: default
-title: اینجا بیرون
+title: اینجا و آنجا
 parent: Leadership
 direction: rtl
 ---
