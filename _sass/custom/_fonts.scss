@@ -14,9 +14,9 @@ $fonts-url: "fonts/";
     font-weight: $font-weight;
     font-display: block;
     src: url("#{$url}.eot");
-    src: url("#{$url}.eot?#iefix") format("embedded-opentype"), /* IE6-8 */
-    url("#{$url}.woff2") format("woff2"), /* FF39+,Chrome36+, Opera24+*/
-    url("#{$url}.woff") format("woff"), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    src: url("#{$url}.eot?#iefix") format("embedded-opentype"),
+    url("#{$url}.woff2") format("woff2"),
+    url("#{$url}.woff") format("woff"),
     url("#{$url}.ttf") format("truetype");
   }
 }
