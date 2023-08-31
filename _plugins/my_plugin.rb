@@ -16,14 +16,7 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
     # { bage bold new | Example text } to <span class="bage bold new">Example text</span>
     html.gsub!(/\{\s*([^|]+?)\s*\\\s*(.+?)\s*\}/, '<span class="\1">\2</span>')
 
-    html.gsub!(/\\tableOfContents/, `
-      <details open markdown="block">
-        <summary>فهرست مطالب</summary>
-        - TOC
-        {:toc}
-      </details>
-      <hr/>
-      `)
+    html.gsub!(/\\tableOfContents/, '<details open markdown="block"><summary>فهرست مطالب</summary>- TOC {:toc} </details><hr/>')
 
     html
   end
