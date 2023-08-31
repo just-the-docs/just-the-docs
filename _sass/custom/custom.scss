@@ -5,7 +5,7 @@
 .main-content {
   &[dir="rtl"] {
     text-align: justify;
-    font-family: IRANSans;
+    font-family: IRANSans, $body-font-family;
 
     ol {
       > li {
