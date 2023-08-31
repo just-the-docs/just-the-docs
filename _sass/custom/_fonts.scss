@@ -21,7 +21,7 @@ $fonts-url: "fonts/";
     }
 }
 
-@mixin add-font-face() {
+@mixin add-font-face {
     @include font-face(fa-fonts-url("Bold"), "bold");
     @include font-face(fa-fonts-url(""), "normal");
     @include font-face(fa-fonts-url("Black"), 900);
@@ -30,4 +30,4 @@ $fonts-url: "fonts/";
     @include font-face(fa-fonts-url("UltraLight"), 200);
 }
 
-@include add-font-face();
+@include add-font-face;
