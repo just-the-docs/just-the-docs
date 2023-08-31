@@ -1,4 +1,4 @@
-![image](https://github.com/OkBayat/OkBayat.github.io/assets/24451494/20b85f66-9f43-4808-9c10-3d7206fc8330)![image](https://github.com/OkBayat/OkBayat.github.io/assets/24451494/683f7360-97d2-4a8c-933f-11a39a21367a)![image](https://github.com/OkBayat/OkBayat.github.io/assets/24451494/a4022892-f2bf-4429-889b-8c5dc2765508)![image](https://github.com/OkBayat/OkBayat.github.io/assets/24451494/d2157ca6-4a11-4123-ae4e-63534ca4907f)---
+---
 layout: default
 title: اینجا بیرون
 parent: Leadership
