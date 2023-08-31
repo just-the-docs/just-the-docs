@@ -1,0 +1,34 @@
+$fonts-url: '~/assets/fonts/';
+$iran-sans-url: #{$fonts-url}IRANSansWeb;
+
+@function fa-fonts-url($name) {
+    @if $name != '' {
+        $name: '_' + $name;
+    }
+    @return $fonts-url + 'IRANSansWeb' + $name;
+}
+
+@mixin font-face($url, $font-weight) {
+    @font-face {
+        font-family: IRANSans;
+        font-style: normal;
+        font-weight: $font-weight;
+        font-display: block;
+        src: url($url + '.eot');
+        src: url($url + '.eot?#iefix') format('embedded-opentype'), /* IE6-8 */
+        url($url + '.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/
+        url($url + '.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+        url($url + '.ttf') format('truetype');
+    }
+}
+
+@mixin add-font-face() {
+    @include font-face(fa-fonts-url('Bold'), 'bold');
+    @include font-face(fa-fonts-url(''), 'normal');
+    @include font-face(fa-fonts-url('Black'), 900);
+    @include font-face(fa-fonts-url('Medium'), 500);
+    @include font-face(fa-fonts-url('Light'), 300);
+    @include font-face(fa-fonts-url('UltraLight'), 200);
+}
+
+@include add-font-face();

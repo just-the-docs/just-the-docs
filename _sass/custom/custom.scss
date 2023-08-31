@@ -1,9 +1,11 @@
 // custom SCSS (or CSS) goes here
+@import "./fonts";
 
 // ---Custom Main Content style
 .main-content {
   &[dir="rtl"] {
     text-align: justify;
+    font-family: IRANSans;
 
     ol {
       > li {
@@ -12,6 +14,17 @@
           z-index: -1;
         }
       }
+    }
+  }
+
+  th,
+  td {
+    &:first-child {
+      border-left: 1px solid #eeebee;
+    }
+
+    &:last-child {
+      border-left: 0;
     }
   }
 }
