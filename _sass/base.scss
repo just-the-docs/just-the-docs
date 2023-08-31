@@ -1,6 +1,10 @@
 // Base element style overrides
 // stylelint-disable selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
 
+:root {
+  color-scheme: $color-scheme;
+}
+
 * {
   box-sizing: border-box;
 }
