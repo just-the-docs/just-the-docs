@@ -24,7 +24,7 @@
     th,
     td {
       &:first-child {
-        border-left: 1px solid #eeebee;
+        border-left: $border $border-color;
       }
 
       &:last-child {
@@ -39,5 +39,5 @@
 }
 
 .mark {
-  background-color: rgba($yellow-200, 0.2)
+  background-color: rgba($yellow-200, 0.15)
 }
