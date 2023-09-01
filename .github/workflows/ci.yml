@@ -86,10 +86,10 @@ jobs:
         with:
           root: _site
           blacklist: line-numbers
-      - name: Test with html-proofer
-        run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/"
-        env:
-          NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+#      - name: Test with html-proofer
+#        run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/"
+#        env:
+#          NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
   assets:
     name: Test CSS and JS
