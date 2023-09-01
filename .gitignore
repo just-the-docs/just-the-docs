@@ -28,3 +28,5 @@ node_modules
 *.gem
 .bundle
 .ruby-version
+
+.idea
