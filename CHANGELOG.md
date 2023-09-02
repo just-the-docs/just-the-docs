@@ -19,7 +19,7 @@ Code changes to `main` that are *not* in the latest release:
 
 - Remove the `passive` toggle by [@pdmosses] in [#1335]
 
-[#1332]: https://github.com/just-the-docs/just-the-docs/pull/1335
+[#1335]: https://github.com/just-the-docs/just-the-docs/pull/1335
 
 ## Release v0.6.1
 
