@@ -134,11 +134,10 @@
   }
 }
 
-// Styling for nav-list-expanders at first and second levels,
-// suppressed when a click has deactivated the expander (making the nav-list-item .passive):
+// Styling for nav-list-expanders at first and second levels:
 {{ activation_collection_prefix }} {
-  > .nav-list-item:not(.passive):nth-child({{ activation_first_level_index }}){%- if activation_second_level_index %},
-  > .nav-list-item:not(.passive):nth-child({{ activation_first_level_index }}) > .nav-list > .nav-list-item:not(.passive):nth-child({{ activation_second_level_index }}){% endif %} {
+  > .nav-list-item:nth-child({{ activation_first_level_index }}){%- if activation_second_level_index %},
+  > .nav-list-item:nth-child({{ activation_first_level_index }}) > .nav-list > .nav-list-item:nth-child({{ activation_second_level_index }}){% endif %} {
     > .nav-list-expander svg {
       @if $nav-list-expander-right {
         transform: rotate(-90deg);
@@ -154,7 +153,7 @@
 }
 
 // Styling for nav-list-expander for categories:
-.site-nav > .nav-category-list > .nav-list-item:not(.passive) {
+.site-nav > .nav-category-list > .nav-list-item {
   > .nav-list-expander svg {
     @if $nav-list-expander-right {
       transform: rotate(-90deg);
