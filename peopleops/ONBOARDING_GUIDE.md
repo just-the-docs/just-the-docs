@@ -75,7 +75,7 @@ PROCESS
   - Once done, send the Calendly link to your supervisor and put it on your slack profile so your colleagues can easily book a meeting with you.
   - Set up your Slack to add your Calendly link and meeting availability. Depending on your access, you can do either of the following. On your profile's About Me, click Edit. 
    <img src="https://raw.githubusercontent.com/countable-web/ops/master/assets/images/slack-calendly.JPG" alt="Calendly Setting on Slack" width="400px">
-   <img src="https://raw.githubusercontent.com/countable-web/ops/master/assets/images/slack-about-me.JPG" alt="Calendly Setting on Slack" width="400px">
+   <img src="https://raw.githubusercontent.com/countable-web/ops/master/assets/images/slack-about-me.JPG" alt="About Me on Slack" width="400px">
 
 ### Set your profile photo
 
