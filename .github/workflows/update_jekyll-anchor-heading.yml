@@ -1,0 +1,43 @@
+name: Update Vendor plugin - jekyll-anchor-headings
+on:
+  # schedule:
+  #   # once per week
+  #   - cron: "0 15 * * 0"
+  workflow_dispatch:
+jobs:
+  update-deps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Get latest release information
+        id: latest-release
+        uses: pozetroninc/github-action-get-latest-release@master
+        with:
+          owner: allejo
+          repo: jekyll-anchor-headings
+          excludes: prerelease, draft
+
+      - name: Update jekyll-anchor-headings
+        id: update
+        uses: suisei-cn/actions-download-file@v1.3.0
+        with:
+          url: "https://github.com/allejo/jekyll-anchor-headings/releases/download/${{ steps.latest-release.outputs.release }}/anchor_headings.html"
+          target: _includes/vendor/
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "chore[dependency]: Update `jekyll-anchor-headings` to `${{ steps.latest-release.outputs.release }}`"
+          title: "auto: Update `jekyll-anchor-headings` to `${{ steps.latest-release.outputs.release }}`"
+          body: |
+            Update `jekyll-anchor-headings` to `${{ steps.latest-release.outputs.release }}`
+            This is an automated pull request.
+          branch: update/vendor/jekyll-anchor-headings
+          delete-branch: true
+          labels: |
+            kind/update
+            area/dependency
+          add-paths: |
+            _includes/vendor/anchor_headings.html
+          token: ${{ secrets.GITHUB_TOKEN }}

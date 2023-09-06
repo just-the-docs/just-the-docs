@@ -69,6 +69,10 @@ search:
 ```
 
 ## Mermaid Diagrams
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 The minimum configuration requires the key for `version` ([from jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)) in `_config.yml`:
 
@@ -79,7 +83,9 @@ mermaid:
   version: "9.1.3"
 ```
 
-See [the Code documentation]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more configuration options and information.
+Provide a `path` instead of a `version` key to load the mermaid library from a local file.
+
+See [the Code documentation]({% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more configuration options and information.
 
 ## Aux links
 
@@ -104,9 +110,13 @@ heading_anchors: true
 ```
 
 ## External navigation links
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 External links can be added to the navigation through the `nav_external_links` option.
-See [Navigation Structure]({{ site.baseurl }}{% link docs/navigation-structure.md %}#external-navigation-links) for more details.
+See [Navigation Structure]({% link docs/navigation-structure.md %}#external-navigation-links) for more details.
 
 ## Footer content
 
@@ -151,9 +161,13 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 - `enable_switch_color_scheme`: `true`, `false` or `"selected_pages"`. Show the switch color scheme button on the top navbar. 
 - `switch_color_scheme_available_scheme`: Set the available theme for the switch button, the default is `["auto", "light", "dark"]`. You can add a custom scheme or remove a scheme.
 
-See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
+See [Customization]({% link docs/customization.md %}) for more information.
 
 ## Callouts
+{: .d-inline-block }
+
+New (v0.4.0)
+{: .label .label-green }
 
 To use this feature, you need to configure a `color` and (optionally) `title` for each kind of callout you want to use, e.g.:
 
@@ -174,7 +188,7 @@ A paragraph...
 [^dark]:
     If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title.
 
-The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
+The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/setup.scss` file:
 
 ```scss
 $pink-000: #f77ef1;
@@ -204,7 +218,7 @@ The value of `callouts_level` is either `quiet` or `loud`;
 The default level is `quiet` when using the `light` or custom color schemes,
 and `loud` when using the `dark color scheme.`
 
-See [Callouts]({{ site.baseurl }}{% link docs/ui-components/callouts.md %}) for more information.
+See [Callouts]({% link docs/ui-components/callouts.md %}) for more information.
 
 ## Google Analytics
 
@@ -219,6 +233,12 @@ Universal Analytics (UA) and Google Analytics 4 (GA4) properties are supported.
 ga_tracking: UA-2709176-10
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 ```
+
+### Multiple IDs
+{: .d-inline-block .no_toc }
+
+New (v0.4.0)
+{: .label .label-green }
 
 This theme supports multiple comma-separated tracking IDs. This helps seamlessly transition UA properties to GA4 properties by tracking both for a while.
 
@@ -256,13 +276,23 @@ just_the_docs:
       # nav_exclude: true
       # Fold the collection in the navigation
       # Supports true or false (default)
-      # nav_fold: true
+      # nav_fold: true  # note: this option is new in v0.4
       # Exclude the collection from the search
       # Supports true or false (default)
       # search_exclude: true
 ```
 
 The navigation for all your normal pages (if any) is displayed before those in collections.
+
+<span>New (v0.4.0)</span>{: .label .label-green }
+Including `nav_fold: true` in a collection configuration *folds* that collection:
+an expander symbol appears next to the collection name,
+and clicking it displays/hides the links to the top-level pages of the collection.[^js-disabled]
+
+[^js-disabled]: <span>New (v0.6.0)</span>{: .label .label-green }
+    When JavaScript is disabled in the browser, all folded collections are automatically expanded,
+    since clicking expander symbols has no effect.
+    (In previous releases, navigation into folded collections required JavaScript to be enabled.)
 
 You can reference multiple collections.
 This creates categories in the navigation with the configured names.

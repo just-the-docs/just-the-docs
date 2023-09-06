@@ -22,7 +22,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](another-page).
+[Link to another page]({{site.baseurl}}/).
 
 There should be whitespace between paragraphs.
 
@@ -55,7 +55,7 @@ GitHubPages::Dependencies.gems.each do |gem, version|
 end
 ```
 
-#### [](#header-4)Header 4 `with code not transformed`
+#### [](#header-4-with-code-not-transformed)Header 4 `with code not transformed`
 
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
@@ -310,7 +310,17 @@ graph TD;
     C-->D;
 ```
 
+### Collapsed Section
 
-```
-The final element.
-```
+The following uses the [`<details>`](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections) tag to create a collapsed section.
+
+<details markdown="block">
+<summary>Shopping list (click me!)</summary>
+
+This is content inside a `<details>` dropdown.
+
+- [ ] Apples
+- [ ] Oranges
+- [ ] Milk
+
+</details>

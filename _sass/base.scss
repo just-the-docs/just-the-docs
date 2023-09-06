@@ -1,13 +1,12 @@
 // Base element style overrides
 // stylelint-disable selector-no-type, selector-max-type, selector-max-specificity, selector-max-id
 
-* {
-  box-sizing: border-box;
+:root {
+  color-scheme: $color-scheme;
 }
 
-::selection {
-  color: $white;
-  background: $link-color;
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -109,6 +108,6 @@ blockquote {
   // resets user-agent stylesheets for blockquotes
   margin-block-start: 0;
   margin-inline-start: 0;
-  padding-left: 15px;
+  padding-left: 1rem;
   border-left: 3px solid $border-color;
 }

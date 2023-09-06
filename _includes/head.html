@@ -1,8 +1,20 @@
+{%- comment -%}
+  Include as: {%- include head.html -%}
+  Depends on: site.ga_tracking, site.ga_tracking_anonymize_ip,
+    site.search_enabled, site.static_files, site.favicon_ico.
+  Results in: HTML for the head element.
+  Includes:
+    head_nav.html, head_custom.html.
+  Overwrites:
+    ga_tracking_ids, ga_property, file, favicon.
+  Should not be cached, because included files depend on page.
+{%- endcomment -%}
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
-  {% if site.enable_localstorage_color_scheme != false %}
+  {% if site.color_scheme_options and site.color_scheme_options.enable_localstorage %}
   <script>
     (function(){
       function createThemeStylesheet(theme, media) {
@@ -14,13 +26,18 @@
         return link;
       }
 
-      theme = window.localStorage.getItem('theme');
-      head = document.getElementsByTagName('head')[0];
+      var theme = window.localStorage.getItem('theme');
+      var head = document.getElementsByTagName('head')[0];
 
-      if(theme === null) {
+      if (theme === null) {
         theme = "{{ site.color_scheme }}";
       }
-      if(theme === "auto") {
+
+      if (theme === "nil") {
+        theme = "default";
+      }
+
+      if (theme === "auto") {
         head.appendChild(createThemeStylesheet('light', '(prefers-color-scheme: light)'));
         head.appendChild(createThemeStylesheet('dark', '(prefers-color-scheme: dark)'));
       } else {
@@ -29,17 +46,18 @@
     })();
   </script>
   {% else %}
-    {% assign color_scheme = site.color_scheme %}
-    {% case color_scheme %}
+    {% case site.color_scheme %}
     {% when "auto" %}
       <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | relative_url }}" type="text/css" media="(prefers-color-scheme: light)">
       <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}" type="text/css" media="(prefers-color-scheme: dark)">
     {% when nil %}
       <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}" type="text/css">
     {% else %}
-      <link rel="stylesheet" href="{{ color_scheme | prepend: '/assets/css/just-the-docs-' | append: '.css' | relative_url }}" type="text/css">  
+      <link rel="stylesheet" href="{{ site.color_scheme | prepend: '/assets/css/just-the-docs-' | append: '.css' | relative_url }}" type="text/css">
     {% endcase %}
   {% endif %}
+
+  {% include head_nav.html %}
 
   {% if site.ga_tracking != nil %}
     {% assign ga_tracking_ids = site.ga_tracking | split: "," %}
@@ -59,22 +77,11 @@
     <script src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
   {% endif %}
 
-  {% if site.mermaid %}
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid.version }}/dist/mermaid.min.js"></script>
-  {% endif %}
-
   <script src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  {% for file in site.static_files %}
-    {% if file.path == site.favicon_ico or file.path == '/favicon.ico' %}
-      {% assign favicon = true %}
-    {% endif %}
-  {% endfor %}
-  {% if favicon %}
-    <link rel="icon" href="{{ site.favicon_ico | default: '/favicon.ico' | relative_url }}" type="image/x-icon">
-  {% endif %}
+
+  {% include_cached favicon.html %}
 
   {% seo %}
 
