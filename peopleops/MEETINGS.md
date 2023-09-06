@@ -81,7 +81,7 @@ All active projects should have a Sprint meeting every 1 to 4 weeks.
   - Discuss how the current sprint will accomplish our "OKR" for the project.
   - See [Scrum](/operations/PM_TOOLS/SCRUM.md) for full instructions.
 
-### All-Hands Meetings
+## All-Hands Meetings
 
 The entire team meets once per month to plan work pipeline and roadmap at a high level, and practice new processes together.
 
@@ -103,6 +103,30 @@ Good:
 Avoid:
   - "my favourite framework" talks
   - focusing entirely on performance and other public information
+
+## Recurring or Overlapping Meetings 
+
+ * Goal - Minimize disruption by changing meeting times. People have busy schedules that rely on regularity. So, avoid moving meeting times when possible, especially if there are lots of attendees.
+ * If there are overlapping meetings, follow the below steps:
+    * Assess Importance - Determine which meeting is more critical or time-sensitive. Are there key stakeholders or decision-makers in one meeting that require your presence more urgently?
+    * Advance Notice - As a general rule, it's best to inform others in advance about scheduling conflicts. If you're an attendee, providing 1-2 days' notice for weekly meetings and at least a week's notice for monthly meetings is considerate. If you're the facilitator, please be even more mindful and aim to notify participants well in advance to get another person cover for you.
+    * Communicate Proactively
+   
+   ~~~
+   Hi [Organizer's Name], I've found a scheduling conflict between our meeting at [Time] and a prior commitment. 
+   I apologize for any inconvenience this may cause. Can we explore alternative solutions?
+   I'd like to avoid rescheduling to minimize disruptions to your schedule.
+   I can send my update in advance and review meeting minutes afterward, especially for action items.
+   As the facilitator, I'd like to request [Name] to step in, and I'll handle the next one. Thank you!
+   ~~~ 
+
+ * Calendar Management - Regularly review your calendar to catch potential conflicts in advance. To avoid conflict, you can check the schedule of other attendees. To do that, follow the steps below.
+
+<img src="https://github.com/countable-web/ops/blob/ea762dc9a22db6129822532264db45ce1277a7ab/assets/images/calendar%20management.png" alt="Calendar Management" width="400px">
+
+ * Missing members - If someone is on vacation they may wish to send notes in advance for their contribution to the meeting if possible. They should try to avoid blocking their team in their absence as always. For recurring team meetings, if the facilitator can attend but some members are missing, the meeting will proceed at the regularly scheduled time. If the facilitator is missing, a backup should take over. If this isn't possible, cancel the meeting. When cancelling meetings, make sure to inform the attendees thru Slack after cancelling the calendar invite so that they're aware of the change.
+ * In the event that a meeting must be canceled or you cannot attend but have critical and time-sensitive topics to address, slack the members to initiate discussions and gather inputs or consider scheduling a separate meeting with key stakeholders to address these important topics.
+ * Holidays - If a meeting falls on a Holiday, for Weekly meetings just cancel it and continue the next time. For Monthly meetings, change the scheduled time as early as possible. It can actually be beneficial to put monthly meetings on Tues-Thurs dates to avoid holiday collisions, when possible.
 
 ## One-on-one Meetings
 
