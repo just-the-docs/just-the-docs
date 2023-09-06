@@ -122,7 +122,7 @@ Avoid:
 
  * Calendar Management - Regularly review your calendar to catch potential conflicts in advance. To avoid conflict, you can check the schedule of other attendees. To do that, follow the steps below.
 
-<img src="https://github.com/countable-web/ops/blob/ea762dc9a22db6129822532264db45ce1277a7ab/assets/images/calendar%20management.png" alt="Calendar Management" width="400px">
+<img src="https://raw.githubusercontent.com/countable-web/ops/master/assets/images/calendar-management.png" alt="Calendar Management" width="500px">
 
  * Missing members - If someone is on vacation they may wish to send notes in advance for their contribution to the meeting if possible. They should try to avoid blocking their team in their absence as always. For recurring team meetings, if the facilitator can attend but some members are missing, the meeting will proceed at the regularly scheduled time. If the facilitator is missing, a backup should take over. If this isn't possible, cancel the meeting. When cancelling meetings, make sure to inform the attendees thru Slack after cancelling the calendar invite so that they're aware of the change.
  * In the event that a meeting must be canceled or you cannot attend but have critical and time-sensitive topics to address, slack the members to initiate discussions and gather inputs or consider scheduling a separate meeting with key stakeholders to address these important topics.
