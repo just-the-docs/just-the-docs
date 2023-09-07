@@ -42,8 +42,6 @@ function initNav() {
   const mainHeader = document.getElementById('main-header');
   const menuButton = document.getElementById('menu-button');
 
-  disableHeadStyleSheet();
-
   jtd.addEvent(menuButton, 'click', function(e){
     e.preventDefault();
 
@@ -69,14 +67,6 @@ function initNav() {
     searchInput.focus();
   });
   {%- endif %}
-}
-
-// The page-specific <style> in the <head> is needed only when JS is disabled.
-// Moreover, it incorrectly overrides dynamic stylesheets set by setTheme(theme).
-// The page-specific stylesheet is assumed to have index 1 in the list of stylesheets.
-
-function disableHeadStyleSheet() {
-  document.styleSheets[1].disabled = true;
 }
 
 {%- if site.search_enabled != false %}
@@ -476,7 +466,6 @@ jtd.setTheme = function(theme) {
   function createThemeStylesheet(theme, media) {
     var link  = document.createElement('link');
     link.rel  = 'stylesheet';
-    link.type = 'text/css';
     link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*",theme);
     if(media) link.media = media;
     return link;
@@ -538,37 +527,6 @@ function scrollNav() {
   }
 }
 
-// Find the nav-list-link that refers to the current page
-// then make it and all enclosing nav-list-item elements active,
-// and make all other folded collections passive
-
-function activateNav() {
-  var target = navLink();
-  if (target) {
-    target.classList.toggle('active', true);
-  }
-  while (target) {
-    while (target && !(target.classList && target.classList.contains('nav-list-item'))) {
-      target = target.parentNode;
-    }
-    if (target) {
-      target.classList.toggle('active', true);
-      target = target.parentNode;
-    }
-  }
-  const elements = document.getElementsByClassName("nav-category-list");
-  for (const element of elements) {
-    const item = element.children[0];
-    const active = item.classList.toggle('active');
-    if (active) {
-      item.classList.toggle('active', false);
-      item.classList.toggle('passive', true);
-    } else {
-      item.classList.toggle('active', true);
-    }
-  }
-}
-
 // Document ready
 
 jtd.onReady(function(){
@@ -579,7 +537,6 @@ jtd.onReady(function(){
   {%- if site.enable_switch_color_scheme != false %}
   initSwitchThemeButton();
   {%- endif %}
-  activateNav();
   scrollNav();
 });
 

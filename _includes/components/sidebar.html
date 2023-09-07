@@ -69,6 +69,44 @@
       {% endfor %}
     {% endif %}
   </nav>
+  <script>
+    (function(){
+      function navLink() {
+        var href = document.location.pathname;
+        if (href.endsWith('/') && href != '/') {
+          href = href.slice(0, -1);
+        }
+        return document.getElementById('site-nav').querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
+      };
+      function activateNav() {
+        var target = navLink();
+        if (target) {
+          target.classList.toggle('active', true);
+        }
+        while (target) {
+          while (target && !(target.classList && target.classList.contains('nav-list-item'))) {
+            target = target.parentNode;
+          }
+          if (target) {
+            target.classList.toggle('active', true);
+            target = target.parentNode;
+          }
+        }
+        const elements = document.getElementsByClassName("nav-category-list");
+        for (const element of elements) {
+          const item = element.children[0];
+          const active = item.classList.toggle('active');
+          if (active) {
+            item.classList.toggle('active', false);
+            item.classList.toggle('passive', true);
+          } else {
+            item.classList.toggle('active', true);
+          }
+        }
+      };
+      activateNav();
+    })();
+  </script>
 
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}

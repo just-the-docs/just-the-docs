@@ -42,7 +42,9 @@
 {%- unless count == 1 %}
 {%- assign index = 1 | minus: count -%}
 {%- assign css = scss | scssify | split: ".site-nav" | slice: index, count | join: ".site-nav" -%}
-<style type="text/css">
-{{ css | prepend: ".site-nav" }}
-</style>
+<noscript>
+  <style type="text/css">
+  {{ css | prepend: ".site-nav" }}
+  </style>
+</noscript>
 {%- endunless %}

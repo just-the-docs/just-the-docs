@@ -20,7 +20,6 @@
       function createThemeStylesheet(theme, media) {
         var link  = document.createElement('link');
         link.rel  = 'stylesheet';
-        link.type = 'text/css';
         link.href = "{{ '/assets/css/just-the-docs-*.css' | relative_url }}".replace("*",theme);
         if(media) link.media = media;
         return link;
@@ -45,6 +44,10 @@
       }
     })();
   </script>
+  <noscript>
+    <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | relative_url }}" type="text/css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}" type="text/css" media="(prefers-color-scheme: dark)">
+  </noscript>
   {% else %}
     {% case site.color_scheme %}
     {% when "auto" %}
