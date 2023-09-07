@@ -112,10 +112,10 @@ You are expected to continuously develop your judgement to approach problem solv
  
 ### What Time is Not Billable
  
-  * Anything provide to attend at your option is not. ie) Social events, professional development options, team trips.
-  * Attending events, conferences, etc, is not paid unless we require you to go for marketing or another purpose (but we'll often pay for your tickets in any case).
-  * Meal breaks, if taken alone.
-  * Commuting is not paid unless it's to a client's office. If we go to a workspace with no clients, transit time is not billable. When visiting clients, travel time is billable.
+  * Leisure activities or meals, in excess of half an hour, or done without a colleague/client.
+  * Some team events, conferences, etc, will be paid and for others we might just cover admission. This is case by case. Generally team building activities are paid. If you request to go to a specific conference yourself, it usually will not be paid time.
+  * Commuting is not paid unless it's to a client's office, travelling with colleagues or completing work during your commute.
   * Breaks from work over 15 minutes.
   * Checking your personal messaging channels such as your personal email.
+  * Reading or viewing anything not work related.
   * Formal professional development tuition or fees, requested by you, will (upon approval) be paid by the company, but not for your time.
