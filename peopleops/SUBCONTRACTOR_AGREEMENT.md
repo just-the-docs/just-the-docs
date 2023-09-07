@@ -28,6 +28,7 @@ This is the agreement template we hold with everyone who works at the firm.
 ## Compensation and Expenses
 
   - Compensation - You will be paid an hourly rate for hours worked and recorded, with payment for each calendar month sent to you within one week of the following calendar month. The expectation is you will work a predefined number of hours per week starting when this agreement commences or a specified start date.
+  - PH Team Benefits - We created a generous benefits package for our team members located in the Philippines. You can read the details [here](https://countable-web.github.io/ops/peopleops/BENEFITS-PH-TEAM-MEMBERS/).
   - Leave - There is no paid vacation time. However, unpaid leave may be taken as long as communicated 2 weeks in advance.
   - Benefits - The typical employment benefits do not apply between the subcontractor and firm. The rate negoatiated should be increased accordingly to account for this. Please note that if you purchase any of these services yourself (such as extended medical benefits), they may be deducted from your taxable income.
   - Claimed Expenses - Business expenses (travel, conferences) approved in advance by a Partner are paid along with your regular compensation.
