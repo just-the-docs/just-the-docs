@@ -31,10 +31,7 @@ function initNav() {
     }
     if (target) {
       e.preventDefault();
-      const active = target.parentNode.classList.toggle('active');
-      const passive = target.parentNode.classList.toggle('passive');
-      if (active && passive) target.parentNode.classList.toggle('passive');
-      target.ariaPressed = active;
+      target.ariaPressed = target.parentNode.classList.toggle('active');
     }
   });
 

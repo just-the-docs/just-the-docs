@@ -20,7 +20,7 @@ nav_order: 5
 
 ## Main navigation
 
-The main navigation for your Just the Docs site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
+The main navigation for your Just the Docs site is on the left side of the page on large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
 
 By default, all pages will appear as top level pages in the main nav unless a parent page is defined (see [Pages with Children](#pages-with-children)).
 
@@ -300,7 +300,7 @@ This example skips the page name heading (`#`) from the TOC, as well as the head
 
 ### Collapsible Table of Contents
 
-The Table of Contents can be made collapsible using the `<details>` and `<summary>` elements , as in the following example. The attribute `open` (expands the Table of Contents by default) and the styling with `{: .text-delta }` are optional.
+The Table of Contents can be made collapsible using the `<details>` and `<summary>` elements, as in the following example. The attribute `open` (expands the Table of Contents by default) and the styling with `{: .text-delta }` are optional.
 
 ```markdown
 <details open markdown="block">
