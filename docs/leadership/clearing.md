@@ -9,10 +9,20 @@ direction: rtl
 در فایل اصلی دوره‌ی راهبری، اصطلاح "Clearing" به چندین شکل مطرح شده است. در اینجا چند نقل قول از متن مربوط به این اصطلاح را آورده‌ام:
 
 <div dir="ltr" style="text-align: left">
-1. "Being for human beings (that is, the fundamental and essential nature of being for human beings) is **'being the clearing'** (the possibility, or something like, the emptiness or nothingness) in which life, living, and self **occur** or **show up** for us." - <sub>صفحه 96</sub>
-2. "You can confirm for yourself that being for you is being in the world, that you are so to speak a clearing for it all, in that when you are conscious, you are always conscious of something or conscious about something." - <sub>صفحه 97</sub>
-3. "Clearing you are: The space in which things occur for you." - <sub>صفحه 988-989</sub>
-4. "As you do this practice, it will become evident that who you are is the clearing in which life shows up." - <sub>صفحه 543</sub>
+  <ul>
+    <li>
+      "Being for human beings (that is, the fundamental and essential nature of being for human beings) is 'being the clearing' (the possibility, or something like, the emptiness or nothingness) in which life, living, and self occur or show up for us." - <sub>صفحه 96</sub>
+    </li>
+    <li>
+      "You can confirm for yourself that being for you is being in the world, that you are so to speak a clearing for it all, in that when you are conscious, you are always conscious of something or conscious about something." - <sub>صفحه 97</sub>
+    </li>
+    <li>
+      "Clearing you are: The space in which things occur for you." - <sub>صفحه 988-989</sub>
+    </li>
+    <li>
+      "As you do this practice, it will become evident that who you are is the clearing in which life shows up." - <sub>صفحه 543</sub>
+    </li>
+  </ul>
 </div>
 
 بر اساس این نقل‌قول‌ها، { mark \ عرصه‌ی روشنگاه و یا "Clearing" به معنای فضا یا زمینه‌ای است که در آن چیزها برای فرد ظهور پیدا می‌کنند. } این مفهوم به نوعی فضایی است که دنیا، دیگران، و شماد در آن ظهور می‌یابد. این فضا می‌تواند به معنای فضای ذهنی، احساسی یا روحی باشد که در آن فرد تجربیات، افکار، احساسات و واقعیت‌های خود را تجربه می‌کند.
