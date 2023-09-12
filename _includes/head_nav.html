@@ -4,7 +4,7 @@
   Results in: HTML for a page-specific style element.
   Includes:
     css/activation.scss.liquid.
-  Overwrites: 
+  Overwrites:
     activation, test_scss, scss, css, index, count.
   Should not be cached, because css/activation.scss.liquid depends on page.
 {%- endcomment -%}
@@ -42,7 +42,7 @@
 {%- unless count == 1 %}
 {%- assign index = 1 | minus: count -%}
 {%- assign css = scss | scssify | split: ".site-nav" | slice: index, count | join: ".site-nav" -%}
-<style type="text/css">
+<style type="text/css" id="jtd-theme-style-nav-activation">
 {{ css | prepend: ".site-nav" }}
 </style>
 {%- endunless %}

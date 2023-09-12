@@ -38,7 +38,7 @@ function initNav() {
   const siteNav = document.getElementById('site-nav');
   const mainHeader = document.getElementById('main-header');
   const menuButton = document.getElementById('menu-button');
-  
+
   disableHeadStyleSheet();
 
   jtd.addEvent(menuButton, 'click', function(e){
@@ -69,12 +69,12 @@ function initNav() {
 }
 
 // The page-specific <style> in the <head> is needed only when JS is disabled.
-// Moreover, it incorrectly overrides dynamic stylesheets set by setTheme(theme). 
-// The page-specific stylesheet is assumed to have index 1 in the list of stylesheets.
+// Moreover, it incorrectly overrides dynamic stylesheets set by setTheme(theme).
 
 function disableHeadStyleSheet() {
-  if (document.styleSheets[1]) {
-    document.styleSheets[1].disabled = true;
+  const activation = document.getElementById('jtd-theme-style-nav-activation');
+  if (activation) {
+    activation.disabled = true;
   }
 }
 
