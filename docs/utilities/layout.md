@@ -61,7 +61,7 @@ Use `mx-auto` to horizontally center elements.
 In Markdown, use the `{: }` wrapper to apply custom classes:
 
 ```markdown
-This paragraph will have a margin bottom of 1rem/16px at large screens.
+This paragraph will have a margin bottom of 1rem/16px on large screens.
 {: .mb-lg-4 }
 
 This paragraph will have 2rem/32px of padding on the right and left at all screen sizes.

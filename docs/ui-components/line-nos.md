@@ -115,6 +115,9 @@ end
 {% include fix_linenos.html code=code %}
 {% assign code = nil %}
 
+{: .warning }
+The following generates **incorrect** and **invalid** HTML. It should not be used as a positive example; the improper layout (with the broken HTML tags) is intentional.
+
 ❌ With the compression options used for the theme docs, the following example illustrates
 the **incorrect** formatting arising from the incompatibility of HTML compression
 and the non-conforming HTML produced by Jekyll for line numbers:

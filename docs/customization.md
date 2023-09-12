@@ -52,7 +52,7 @@ New (v0.4.2)
 {: .label .label-green }
 
 
-In Just the Docs version `0.4.2`, we changed the default syntax highlighting theme for the `light` color scheme to have higher contrast. Users who are want to use the old highlighting need to explicitly opt-in with the deprecated `legacy_light` color scheme. In a future major release of Just the Docs, we will remove this color scheme.
+In Just the Docs version `0.4.2`, we changed the default syntax highlighting theme for the `light` color scheme to have higher contrast. Users who want to use the old highlighting need to explicitly opt-in with the deprecated `legacy_light` color scheme. In a future major release of Just the Docs, we will remove this color scheme.
 
 ## Custom schemes
 
