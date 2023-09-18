@@ -78,7 +78,7 @@ function initNav() {
 
 function disableHeadStyleSheets() {
   document.styleSheets[1].disabled = true;
-  const activation = document.getElementById('theme-style-nav-activation');
+  const activation = document.getElementById('jtd-nav-activation');
   if (activation) {
     activation.disabled = true;
   }
