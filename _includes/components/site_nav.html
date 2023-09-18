@@ -1,9 +1,9 @@
 {%- comment -%}
-  Include as: {%- include_cached site_nav.html -%}
+  Include as: {%- include_cached components/site_nav.html -%}
   Depends on: site.
   Results in: HTML for the site-nav.
   Includes:
-    nav.html
+    components/nav.html
   Overwrites: 
     pages_top_size, collections_size, collection_entry,
     collection_key, collection_value, collection.
@@ -16,7 +16,7 @@
         | where_exp:"item", "item.nav_exclude != true"
         | size %}
   {% if pages_top_size > 0 %}
-    {% include nav.html pages=site.html_pages %}
+    {% include components/nav.html pages=site.html_pages %}
   {% endif %}
   {%- if site.nav_external_links -%}
     <ul class="nav-list">
@@ -47,15 +47,15 @@
                 </button>
                 {%- endif -%}
                 <div class="nav-category">{{ collection_value.name }}</div>
-                {% include nav.html pages=collection %}
+                {% include components/nav.html pages=collection %}
               </li>
             </ul>
           {% else %}
             <div class="nav-category">{{ collection_value.name }}</div>
-            {% include nav.html pages=collection %}
+            {% include components/nav.html pages=collection %}
           {% endif %}
         {% else %}
-          {% include nav.html pages=collection %}
+          {% include components/nav.html pages=collection %}
         {% endif %}
       {% endif %}
     {% endfor %}

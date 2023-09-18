@@ -3,7 +3,7 @@
   Depends on: page(?), site.
   Results in: HTML for the side bar.
   Includes:
-    title.html, site_nav.html, nav_footer_custom.html
+    title.html, components/site_nav.html, nav_footer_custom.html
   Overwrites: 
     nav_footer_custom.
   Should not be cached, because nav_footer_custom.html might depend on page.
@@ -17,7 +17,7 @@
     </button>
   </div>
   
-  {% include_cached site_nav.html %}
+  {% include_cached components/site_nav.html %}
   
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}
