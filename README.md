@@ -1,9 +1,5 @@
 # Porting/verifying old workshops from the forked just-the-docs to the new jtd-mcmaster
 
-## Lessons [OPTIONAL]
-- Move any lessons to a lessons folder.
-- Verify links within markdown still work.
-
 ## 404.html
 - Add 404.html to root folder. https://github.com/scds/scds-template/blob/master/404.html
 
@@ -19,11 +15,11 @@ Remove \includes folder.
 ```yml
 title: Workshop Name # *** Enter workshop title here 
 github_repo_url: "https://scds.github.io/scds-template/" # *** Enter workshop URL (in github pages) here
-gh_edit_repository: "https://github.com/scds/scds-template" # *** Enter the github URL for your repo
+gh_edit_repository: "https://github.com/scds/scds-template/" # *** Enter the github URL for your repo
 ga_tracking: "" # *** This needs to be set up in Google Analytics once you know the website URL (ask Jay to do this). Then the tracking code needs to be taken from Google Analytics and pasted here.  
 
 # DMDS Settings
-subtitle: "This workshop is part of the SCDS Do More with Digital Scholarship series."
+subtitle: "This workshop is part of the Do More with Digital Scholarship (DMDS) series."
 nav_footer_logo_bottom: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png"
 nav_footer_logo_bottom_href: "https://scds.ca/"
 nav_footer_logo_top: ""
@@ -35,6 +31,13 @@ nav_footer_logo_top_href: ""
 # nav_footer_logo_bottom_href: "https://scds.ca/"
 # nav_footer_logo_top: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/dash-logo.png"
 # nav_footer_logo_top_href: "https://library.mcmaster.ca/services/dash"
+
+# RDM settings
+# subtitle: 'This workshop is part of the <a href="https://rdm.mcmaster.ca/">Research Data Management (RDM)</a> series.'
+# nav_footer_logo_bottom: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png"
+# nav_footer_logo_bottom_href: "https://scds.ca/"
+# nav_footer_logo_top: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/rdm-logo.png"
+# nav_footer_logo_top_href: "https://rdm.mcmaster.ca/"
 
 # OTHER settings - Override series specific settings
 # subtitle: "This workshop is part of the __ series."
@@ -87,6 +90,7 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
+  - jekyll-relative-links
 
 # Google Analytics Tracking
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
