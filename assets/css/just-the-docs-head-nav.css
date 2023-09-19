@@ -14,4 +14,4 @@
 @import "./head";
 {%- endcapture -%}
 
-{{ scss | scssify | split: newline | slice: -7, 7 | join: newline }}
+{{ scss | scssify | split: newline | slice: -3, 3 | join: newline }}
