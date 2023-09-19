@@ -18,6 +18,12 @@ github_repo_url: "https://scds.github.io/scds-template/" # *** Enter workshop UR
 gh_edit_repository: "https://github.com/scds/scds-template/" # *** Enter the github URL for your repo
 ga_tracking: "" # *** This needs to be set up in Google Analytics once you know the website URL (ask Jay to do this). Then the tracking code needs to be taken from Google Analytics and pasted here.  
 
+# This line appears in the footer. Use it to credit the people who created the workshop content, and those who set up the online pages. 
+# If you know some HTML, you can use HTML tags.
+# To create a link: <a href="PUT URL HERE">the text you want to show up</a>
+# Template: 'Module content created by <a href="LINK HERE">NAME</a> and <a href="LINK HERE">NAME</a>; edited for online use and online pages created by <a href="LINK HERE">NAME</a>.'
+credits: ''
+
 # DMDS Settings
 subtitle: "This workshop is part of the Do More with Digital Scholarship (DMDS) series."
 nav_footer_logo_bottom: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png"
