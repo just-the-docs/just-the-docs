@@ -29,5 +29,6 @@ direction: rtl
 - [ترجمه تمامیت](/assets/integrity.pdf)
 - [تمامیت](/assets/SSRN-id920625.pdf)
 - [سه قانون عملکرد](/assets/The-Three-Laws-of-Performance.pdf)
+- [هدف - برایان تریسی](/assets/Goals-by-Brain-Tracy.pdf)
 
 
