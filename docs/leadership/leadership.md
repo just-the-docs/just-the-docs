@@ -25,11 +25,9 @@ direction: rtl
 - [ترجمه‌ی دوره‌ی راهبری - خرداد ۱۴۰۲](/assets/Leadership-majid-2023-05.pdf)
 - [ترجمه‌ی دوره‌ی راهبری - رهایی مرداد ۱۴۰۲](/assets/Free-to-Be-and-Effective-Action.pdf)
 - [کتاب نوع بودن](/assets/speaking-being-werner-erhard-martin-heidegger.pdf)
-
-## تمامیت
-
-[خلاصه تمامیت](/assets/SSRN-id1511274.pdf)\
-[ترجمه تمامیت](/assets/integrity.pdf)\
-[تمامیت](/assets/SSRN-id920625.pdf)
+- [خلاصه تمامیت](/assets/SSRN-id1511274.pdf)
+- [ترجمه تمامیت](/assets/integrity.pdf)
+- [تمامیت](/assets/SSRN-id920625.pdf)
+- [سه قانون عملکرد](/assets/The-Three-Laws-of-Performance.pdf)
 
 
