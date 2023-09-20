@@ -17,8 +17,16 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- Remove: unused `.passive` toggle in navigation by [@pdmosses] in [#1335]
+- N/A
+
+## Release v0.6.2
+
+Hi all, this is a small patch release that includes two changes: adding a missing Windows emoji font fallback, and removing some (now-unused) code introduced in 0.6.
+
+### Bugfixes
+
 - Fixed: Windows emoji font fallback by [@flanakin] in [#1337]
+- Removed: unused `.passive` toggle in navigation by [@pdmosses] in [#1335]
 
 [#1335]: https://github.com/just-the-docs/just-the-docs/pull/1335
 [#1337]: https://github.com/just-the-docs/just-the-docs/pull/1337
