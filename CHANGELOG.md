@@ -17,7 +17,9 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Fixed: JS stylesheet disables interfering with user-defined stylesheets by [@mattxwang] in [#1350]
+
+[#1350]: https://github.com/just-the-docs/just-the-docs/pull/1350
 
 ## Release v0.6.2
 
