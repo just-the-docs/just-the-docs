@@ -193,13 +193,12 @@
 .site-nav > .nav-category-list > .nav-list-item,
 {{ activation_collection_prefix }} > .nav-list-item:nth-child({{ activation_first_level_index }}){%- if activation_second_level_index %},
 {{ activation_collection_prefix }} > .nav-list-item:nth-child({{ activation_first_level_index }}) > .nav-list > .nav-list-item:nth-child({{ activation_second_level_index }}){% endif %} {
-    > .nav-list-expander svg {
-      transform: rotate(-90deg);
-    }
+  > .nav-list-expander svg {
+    transform: rotate(-90deg);
+  }
 
-    > .nav-list {
-      display: block;
-    }
+  > .nav-list {
+    display: block;
   }
 }
 
