@@ -1,11 +1,8 @@
-// Partially overridden by the CSS generated from _includes/css/activation.scss.liquid
-// Needs to be disabled when JS is active.
-
 .nav-list .nav-list-item .nav-list-link {
-      background-image: linear-gradient(
-        -90deg,
-        rgba($feedback-color, 1) 0%,
-        rgba($feedback-color, 0.8) 80%,
-        rgba($feedback-color, 0) 100%
-      );
+  background-image: linear-gradient(
+    -90deg,
+    rgba($feedback-color, 1) 0%,
+    rgba($feedback-color, 0.8) 80%,
+    rgba($feedback-color, 0) 100%
+  );
 }
