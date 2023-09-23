@@ -1,7 +1,7 @@
 {%- comment -%}
   Include as: {%- include css/activation.scss.liquid -%}
   Depends on: page, site.
-  Results in: page-dependent CSS rules for inclusion in a head style element,
+  Results in: page-dependent (non-nested) CSS rules for inclusion in a head style element,
     which needs to be suppressed when JS is enabled.
   Includes:
     sorted_pages.html.
@@ -140,44 +140,53 @@
   The following rule removes the image from the links to all parents, siblings,
   and children of the current page.
 {%- endcomment %}
-{{ activation_collection_prefix }} {
-  {% if activation_third_level_index -%}
-  > .nav-list-item:not(.external),
-  > .nav-list-item:not(.external) > .nav-list > .nav-list-item,
-  > .nav-list-item:not(.external) > .nav-list > .nav-list-item > .nav-list > .nav-list-item:not(:nth-child({{ activation_third_level_index }}))
-  {%- elsif activation_second_level_index -%}
-  > .nav-list-item:not(.external),
-  > .nav-list-item:not(.external) > .nav-list > .nav-list-item:not(:nth-child({{ activation_second_level_index }})),
-  > .nav-list-item:not(.external) > .nav-list > .nav-list-item > .nav-list > .nav-list-item
-  {%- else -%}
-  > .nav-list-item:not(.external):not(:nth-child({{ activation_first_level_index }})),
-  > .nav-list-item:not(.external) > .nav-list > .nav-list-item,
-  > .nav-list-item:not(.external) > .nav-list > .nav-list-item > .nav-list > .nav-list-item
-  {%- endif %} {
-     > .nav-list-link {
-        background-image: none;
-     }
-  }
+
+{% if activation_third_level_index -%}
+
+{{ activation_collection_prefix }} > .nav-list-item:not(.external) > .nav-list-link,
+{{ activation_collection_prefix }} > .nav-list-item:not(.external) > .nav-list > .nav-list-item > .nav-list-link,
+{{ activation_collection_prefix }} > .nav-list-item:not(.external) > .nav-list > .nav-list-item > .nav-list > .nav-list-item:not(:nth-child({{ activation_third_level_index }})) > .nav-list-link {
+  background-image: none;
 }
+
+{%- elsif activation_second_level_index -%}
+
+{{ activation_collection_prefix }} > .nav-list-item:not(.external) > .nav-list-link,
+{{ activation_collection_prefix }} > .nav-list-item:not(.external) > .nav-list > .nav-list-item:not(:nth-child({{ activation_second_level_index }})) > .nav-list-link,
+{{ activation_collection_prefix }} > .nav-list-item:not(.external) > .nav-list > .nav-list-item > .nav-list > .nav-list-item > .nav-list-link {
+  background-image: none;
+}
+
+{%- else -%}
+
+{{ activation_collection_prefix }} > .nav-list-item:not(.external):not(:nth-child({{ activation_first_level_index }})) > .nav-list-link,
+{{ activation_collection_prefix }} > .nav-list-item:not(.external) > .nav-list > .nav-list-item > .nav-list-link,
+{{ activation_collection_prefix }} > .nav-list-item:not(.external) > .nav-list > .nav-list-item > .nav-list > .nav-list-item > .nav-list-link {
+  background-image: none;
+}
+
+{%- endif %}
 
 {%- comment -%}
   The following rule removes the image from the links to pages in other collections.
 {%- endcomment %}
+
 {{ activation_other_collection_prefix }} .nav-list-link,
 .site-nav .nav-list-link.external {
-   background-image: none;
+  background-image: none;
 }
 
 {%- comment -%}
   The following rule styles the link to the current page.
 {%- endcomment %}
-{{ activation_collection_prefix }} {
-  > .nav-list-item:not(.external):nth-child({{ activation_first_level_index }}){%- if activation_second_level_index %} > .nav-list > .nav-list-item:nth-child({{ activation_second_level_index }}){%- if activation_third_level_index %} > .nav-list > .nav-list-item:nth-child({{ activation_third_level_index }}){% endif %}{% endif %} {
-    > .nav-list-link {
-      font-weight: 600;
-      text-decoration: none;
-    }
-  }
+
+{{ activation_collection_prefix }} > .nav-list-item:not(.external):nth-child({{ activation_first_level_index }})
+{%- if activation_second_level_index %} > .nav-list > .nav-list-item:nth-child({{ activation_second_level_index }})
+{%- if activation_third_level_index %} > .nav-list > .nav-list-item:nth-child({{ activation_third_level_index }})
+{%- endif -%}
+{%- endif %} > .nav-list-link {
+  font-weight: 600;
+  text-decoration: none;
 }
 
 {%- comment -%}
@@ -190,16 +199,21 @@
   between the appearance of active expander icons when JS is enabled/disabled and
   nav-list-expander-right is false, which seems unavoidable.
 {%- endcomment %}
-.site-nav > .nav-category-list > .nav-list-item,
-{{ activation_collection_prefix }} > .nav-list-item:nth-child({{ activation_first_level_index }}){%- if activation_second_level_index %},
-{{ activation_collection_prefix }} > .nav-list-item:nth-child({{ activation_first_level_index }}) > .nav-list > .nav-list-item:nth-child({{ activation_second_level_index }}){% endif %} {
-  > .nav-list-expander svg {
-    transform: rotate(-90deg);
-  }
 
-  > .nav-list {
-    display: block;
-  }
+.site-nav > .nav-category-list > .nav-list-item > .nav-list-expander svg,
+{{ activation_collection_prefix }} > .nav-list-item:nth-child({{ activation_first_level_index }}) > .nav-list-expander svg
+{%- if activation_second_level_index -%},
+{{ activation_collection_prefix }} > .nav-list-item:nth-child({{ activation_first_level_index }}) > .nav-list > .nav-list-item:nth-child({{ activation_second_level_index }}) > .nav-list-expander svg
+{%- endif %} {
+  transform: rotate(-90deg);
+}
+
+.site-nav > .nav-category-list > .nav-list-item > .nav-list,
+{{ activation_collection_prefix }} > .nav-list-item:nth-child({{ activation_first_level_index }}) > .nav-list
+{%- if activation_second_level_index %},
+{{ activation_collection_prefix }} > .nav-list-item:nth-child({{ activation_first_level_index }}) > .nav-list > .nav-list-item:nth-child({{ activation_second_level_index }}) > .nav-list
+{%- endif %} {
+  display: block;
 }
 
 {%- endunless -%}

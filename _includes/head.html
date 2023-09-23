@@ -18,12 +18,8 @@
   
   <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-head-nav.css' | relative_url }}">
   
-  {%- capture nested_css -%}
-  {% include css/activation.scss.liquid %}
-  {%- endcapture %}
-  
   <style id="jtd-nav-activation">
-  {{ nested_css | scssify }}
+  {% include css/activation.scss.liquid %}
   </style>
 
   {% if site.ga_tracking != nil %}
