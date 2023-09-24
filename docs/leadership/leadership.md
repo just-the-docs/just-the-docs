@@ -20,7 +20,8 @@ direction: rtl
 
 لینک‌های زیر شامل فایل اصلی "دوره‌ی راهبری" و ترجمه‌های مختلفی است که من آن‌ها را مطالعه کرده‌ام:
 
-- [دوره‌ی راهبری - فایل اصلی](/assets/SSRN-id1263835.pdf)
+- [دوره‌ی راهبری - 2022](/assets/SSRN-id1263835.pdf)
+- [دوره‌ی راهبری - 2021](/assets/UCLA2021CumulativeSlideDeck.pdf)
 - [ترجمه‌ی دوره‌ی راهبری - قدیمی](/assets/SSRN-id3081564.pdf)
 - [ترجمه‌ی دوره‌ی راهبری - خرداد ۱۴۰۲](/assets/Leadership-majid-2023-05.pdf)
 - [ترجمه‌ی دوره‌ی راهبری - رهایی مرداد ۱۴۰۲](/assets/Free-to-Be-and-Effective-Action.pdf)
