@@ -30,7 +30,7 @@ All the expectations below are required for meetings with 5 or more people, or t
 
   - Meetings should, where possible, be booked during the business hours of the attendees, because we want to encourage work-life balance on the team (and any formal expectation to regularly meet outside business hours is damaging to that)
   - Our calendar is the source of truth regarding meeting times, attendees and cancellation status. All updates to meeting times go directly in the calendar.
-  - Meetings start on time and stop on time. If someone is late, start without them. Anyone who is late or not attending should notify the team in advance.
+  - Meetings start on time and stop on time. If someone is late, start without them. Anyone who is late or not attending should notify the team in advance. If it's a meeting with 2 attendees, if neither of them joins within a 10-minute timeframe, the meeting will be deemed canceled. Non-participation without notice will be treated seriously and may lead to disciplinary consequences.
   - When meeting with external stakeholders, book 50 minute meetings generally (or 25) so there are 5 minute gaps for our brains to context switch between meetings and to write minutes.
   - When meeting online, like in whereby, list the specific room link in the meeting invite.
   - When arranging an online meeting, if it's a 1-on-1 meeting, please ensure to confirm the availability of the participant beforehand. For meetings with more than 2 attendees, proceed to send out the invites promptly. This way, the meeting will appear on their calendar, allowing them to easily join when they are available.
@@ -83,7 +83,7 @@ All active projects should have a Sprint meeting every 1 to 4 weeks.
 
 ## All-Hands Meetings
 
-The entire team meets once per month to plan work pipeline and roadmap at a high level, and practice new processes together.
+The entire team meets once per month to plan work pipeline and roadmap at a high level, and practice new processes together. Attendance at this meeting is mandatory.
 
 ## Guild Meetings
 
@@ -188,8 +188,7 @@ We hold monthly staff-coordinated, funded team social events. Countable will pay
 
 ### Performance Reviews
 
-Twice a year, the one-on-one should include the performance review self-assessment. These questions are answered by the employee in
-advance.
+Twice a year, the one-on-one should include the performance review self-assessment. These questions are answered by the employee in advance.
 
 1.  Is the purpose of your job clear to you? What is it?
 2.  Write a paragraph describing what it would be like if you did
