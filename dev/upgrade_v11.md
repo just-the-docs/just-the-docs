@@ -133,4 +133,4 @@ City Objects do not have to have a `"geometry"` property anymore (in v1.0 an emp
 
 This is relevant in the context of streaming datasets on the web, eg for the [OGC API - Features](https://github.com/opengeospatial/ogcapi-features).
 
-See [the specifications for more details](https://cityjson.org/specs/1.1.0/#text-sequences-and-streaming-with-cityjsonfeature).
+See [the specifications for more details](https://cityjson.org/specs/1.1.3/#text-sequences-and-streaming-with-cityjsonfeature).

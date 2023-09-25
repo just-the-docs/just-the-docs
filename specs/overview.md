@@ -1,12 +1,15 @@
 ---
-layout: page
+layout: default
 title: Specifications
 nav_order: 5
 permalink: /specs/overview/
 ---
 
 
-- [version 1.1.3 (latest)]({{ '../1.1.3/' }})
+# Specifications 
+
+- [version 2.0.0 (latest)]({{ '../2.0.0/' }})
+- [version 1.1.3]({{ '../1.1.3/' }})
 - [version 1.1.2]({{ '../1.1.2/' }})
 - [version 1.1.1]({{ '../1.1.1/' }})
 - [version 1.1.0]({{ '../1.1.0/' }})

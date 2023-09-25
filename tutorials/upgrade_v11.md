@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Upgrading to v1.1
+title: Upgrading a file from v1.0 to v1.1
 parent: Tutorials
 nav_order: 5
 permalink: /tutorials/upgrade11/
@@ -76,5 +76,5 @@ You can put them on a repository in GitHub and link to the file directly, eg:
 
 ## Validation of your Extension
 
-The new validator of CityJSON is [cjval](https://validator.cityjson.org), and it validates files with Extensions, see the tutorial.
+The new validator of CityJSON is [cjval](https://validator.cityjson.org), and it validates files with Extensions, see the [tutorial]({{ '/tutorials/validation/' | prepend: site.baseurl }}).
 

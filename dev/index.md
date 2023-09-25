@@ -1,12 +1,14 @@
 ---
-layout: page
+layout: default
 title: Help for developers
 nav_order: 10
 has_children: true
 permalink: /dev/
 ---
 
+# Help for developers
 {: .no_toc }
+
 
 - - -
 

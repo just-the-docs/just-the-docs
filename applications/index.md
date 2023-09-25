@@ -13,6 +13,7 @@ permalink: /applications/
 
 The following article gives a complete overview of the state of the art of the application of 3D city models (it is open access):
 
+{: .highlight }
 Biljecki F, Stoter J, Ledoux H, Zlatanova S, and Çöltekin A (2015). Applications of 3D City Models: State of the Art Review. *ISPRS International Journal of Geo-Information*, 4(4): 2842-2889. [<i class="fas fa-bookmark"></i>](http://doi.org/10.3390/ijgi4042842) [<i class="fas fa-file-pdf"></i>](http://www.mdpi.com/2220-9964/4/4/2842/pdf)
 
 In summary, 29 use cases, in which 3D city models provide added value, were found.
