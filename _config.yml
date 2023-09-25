@@ -21,6 +21,8 @@ plugins:
 # Enable or disable the site search
 search_enabled: true
 
+enable_copy_code_button: true
+
 # Aux links for the upper right navigation
 # aux_links:
   # "GitHub repository":
