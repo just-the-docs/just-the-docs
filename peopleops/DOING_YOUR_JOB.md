@@ -20,8 +20,13 @@ Describes the processes and norms of getting our jobs done at Countable. Make su
 
 **Scope**
 
-Covers our team management platform Eightmeters, workflow checklists, remote work basics, professional conduct, setting up your desk,
-expenses, and a subcontractor's guide.
+Covers our team management platform Eightmeters, work schedule, workflow checklists, remote work basics, professional conduct, setting up your desk, expenses, and a subcontractor's guide.
+
+## Work Shifts
+  - All full-time employees and contractors are required to work 8 hours per day. Part-time employees may have shorter work periods.
+  - For individuals in the CA timezone, the standard working hours are typically from 8 AM to 5 PM PST or 9 AM to 6 PM PST.
+  - Individuals in the PH Timezone have more flexibility in choosing their work shifts, as long as they complete 8 hours of work daily. However, they are expected to work during either the 3-5 PM PST slot or the 9-11 AM PST slot on any given day, but not both. In cases where there are morning meetings scheduled from 9-11 AM PST, it is acceptable to skip team meetings (e.g., standup and sprint) on the same day. Please remember to inform your team and provide your updates on Slack in such instances.
+  - We strongly encourage consistent attendance at the all-hands meeting whenever possible.
 
 ## Using Eightmeters
 
