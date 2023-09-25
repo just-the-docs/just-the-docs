@@ -38,4 +38,5 @@ We may measure some of these principles, making them into "committed OKRs".
   - *Diversity* - We MUST encourage diversity of thought, treat everyone with respect, and work to avoid non-meritocratic bias.
   - *Usability* - We create software with an enjoyable, engaging user experience. Don't make the user think, wait, or do a task unnecessarily.
   - *Asynchrony* - We prevent people needing to ask us for things, by putting all information and assets in a place our team can predict.
+  - *Work-Life Balance* - We encourage you to prioritize your well-being, which includes taking breaks and selecting a work schedule that allows you to optimize your productivity while also ensuring personal time. We value your peak performance, and that includes having you well-rested.
 
