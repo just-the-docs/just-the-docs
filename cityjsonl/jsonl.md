@@ -62,7 +62,7 @@ Since we want to have access to some properties, eg `"transform"` and the CRS, t
 We can add one line to a JSON Lines text stream (eg the first line) with those properties in a `"CityJSON"` object, as shown below.
 
 ```json
-{"type":"CityJSON","version":"1.1","transform":{...},"CityObjects":{},"metadata":{...},"vertices":[]}
+{"type":"CityJSON","version":"2.0","transform":{...},"CityObjects":{},"metadata":{...},"vertices":[]}
 {"type":"CityJSONFeature","id":"a","CityObjects":{...},"vertices":[...]} 
 {"type":"CityJSONFeature","id":"b","CityObjects":{...},"vertices":[...]} 
 {"type":"CityJSONFeature","id":"c","CityObjects":{...},"vertices":[...]} 
