@@ -9,7 +9,7 @@ permalink: /dev/upgrade20/
 {: .warning }
 This is the manual to upgrade from v1.1, if you have v1.0 first check our [v1.0 -> v1.1 guide]({{ '/dev/upgrade11/' | prepend: site.baseurl }}).
 
-The following 2 changes need to be considered:
+The following 3 changes need to be considered:
 
 1. TOC
 {:toc}
@@ -24,7 +24,7 @@ The following 2 changes need to be considered:
 
 ## 2. `"GenericCityObject"` is now an allowed City Object
 
-This means no longer needed to use an Extension and `"+GenericCityObject"`, but you can keep using it, it'll work fine.
+It is no longer needed to use an Extension and `"+GenericCityObject"` for generic objects.
 
 To switch to `"GenericCityObject"`, remove the `"+"` from the name, and remove the entry in the `"extensions"`:
 
@@ -39,3 +39,22 @@ To switch to `"GenericCityObject"`, remove the `"+"` from the name, and remove t
 }
 ```
 
+
+## 3. If an Extension is used, update its `"versionCityJSON"` and add `"extraSemanticSurfaces"`
+
+The `"versionCityJSON"` should be `"2.0"` and it is now possible to define new Semantic Surfaces, [see the specs](https://cityjson.org/specs/#case-3-defining-a-new-semantic-object):
+
+```json
+{
+  "type": "CityJSONExtension",
+  "name": "Demo",
+  "uri": "https://www.someurl.org/demo.ext.json",
+  "version": "1.0",
+  "versionCityJSON": "2.0",
+  "description": "Extension to handle massive potatoes in our cities",
+  "extraRootProperties": {},     
+  "extraAttributes": {},
+  "extraCityObjects": {},
+  "extraSemanticSurfaces": {}
+}
+```
