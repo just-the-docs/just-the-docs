@@ -19,7 +19,7 @@ nav_order: 1
 The goal of this guide is to help new members of Countable get connected with the team, efficiently set up accounts, and learn key things to help
 you get started contributing\! 
 
-If you find a way to improve this document, send a [Pull Request](https://github.com/countable-web/ops/pull/new/master)\! If anything is unclear, let's fix it so it's clear for the next person.
+If you find a way to improve this document, send a [Pull Request](https://github.com/countable-web/ops/compare/master...countable-web:ops:master)\! If anything is unclear, let's fix it so it's clear for the next person.
 
 **Scope**
 
@@ -30,7 +30,7 @@ Covers all the onboarding steps for a new Countable Team Member.
 PROCESS
 {: .label .label-purple }
 
-  - Get a countable.ca email address (ask your manager to create it), and [set up your signature](https://youtu.be/hA5cRIDg0Ko)
+  - Get a countable.ca email address (ask your manager to create it), and [set up your signature](https://countable.ca/email)
   - Use your email address to [sign up on our slack](https://join.slack.com/t/countable-web/signup).
   - Use our slack to say hi to the team. Share your:
       - New Title
@@ -39,7 +39,7 @@ PROCESS
       - School
       - Hobbies
       - Two True things about you, and a Lie (let the team guess which).
-  - In addition to the photo that Slack prompts you for, fill in the rest of your user profile with relevant information. Follow the recommended profile setup below. Provide your shift schedule under Pronunciation. Please consult this [guide](https://github.com/countable-web/ops/edit/master/peopleops/DOING_YOUR_JOB.md#work-hours-and-shift-schedule) when deciding on your work hours and shift schedule.
+  - In addition to the photo that Slack prompts you for, fill in the rest of your user profile with relevant information. Follow the recommended profile setup below. Provide your shift schedule under Pronunciation. Please consult this [guide](https://countable-web.github.io/ops/peopleops/DOING_YOUR_JOB/#work-hours-and-shift-schedule) when deciding on your work hours and shift schedule.
     
     <img src="https://raw.githubusercontent.com/countable-web/ops/master/assets/images/slack-edit-profile.JPG" alt="Slack Profile" width="400px">
   - Another way to show your shift is to update your status. Go to your profile > Set a status > Choose an emoji > Provide your shift schedule > and click Save 
@@ -55,7 +55,7 @@ PROCESS
 PROCESS
 {: .label .label-purple }
 
-  - Please consult this [guide](https://github.com/countable-web/ops/edit/master/peopleops/DOING_YOUR_JOB.md#work-hours-and-shift-schedule) when deciding on your work hours and shift schedule.
+  - Please consult this [guide](https://countable-web.github.io/ops/peopleops/DOING_YOUR_JOB/#work-hours-and-shift-schedule) when deciding on your work hours and shift schedule.
   - Add your work availability to your calendar [using Google's Work Hours](https://support.google.com/calendar/answer/7638168?hl=en). 
       - These should account for at least half of your planned working time, but doesn't have to be 40+ hours- leave yourself some time for deep and uninterrupted work! 
       - Think of your availability as when you are prepared to be booked into meetings with others and respond synchronously in Slack.
