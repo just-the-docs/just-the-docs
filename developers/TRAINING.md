@@ -41,7 +41,7 @@ All developers should do the Kick Off, and any additional sections where you nee
 ### Kick Off
 
 1. Clone this repository (our operations manual).
-   `git clone https://github.com/countable-web/ops-manual.git`
+   `git clone https://github.com/countable-web/ops.git`
 2. Install a code editor. We recommend Sublime Text, VS Code, or GitHub Atom. PyCharm can also work well if you prefer an IDE. We'll reimburse a license if you want Sublime to PyCharm.
 3. Find a mistake, or something that could be more clear or useful in this repository. Edit the corresponding markdown file you've cloned.
 4. Make a pull request to this repository.
