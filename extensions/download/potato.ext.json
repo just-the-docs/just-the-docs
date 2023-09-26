@@ -1,22 +1,22 @@
 {
   "type": "CityJSONExtension",
-  "name": "Generic",
-  "uri": "https://www.cityjson.org/extensions/download/generic.ext.json",
-  "version": "1.0.1",
+  "name": "Potato",
+  "uri": "https://www.cityjson.org/extensions/download/potato.ext.json",
+  "version": "1.0",
   "versionCityJSON": "2.0",
-  "description": "Extension to handle GenericCityObject; meant as a template to learn how to construct an Extension",
+  "description": "Extension to handle massive potatoes in our cities",
   
   "extraRootProperties": {},     
   
   "extraAttributes": {},
 
   "extraCityObjects": {
-    "+GenericCityObject": {
+    "+Potato": {
       "allOf": [
         { "$ref": "cityobjects.schema.json#/_AbstractCityObject" },
         {
           "properties": {
-            "type": { "enum": [ "+GenericCityObject" ] },
+            "type": { "enum": [ "+Potato" ] },
             "attributes": {
               "type": "object",
               "properties": {
@@ -27,14 +27,9 @@
               "type": "array",
               "items": {
                 "oneOf": [
-                  { "$ref": "geomprimitives.schema.json#/MultiPoint" },
-                  { "$ref": "geomprimitives.schema.json#/MultiLineString" },
                   { "$ref": "geomprimitives.schema.json#/MultiSurface" },
                   { "$ref": "geomprimitives.schema.json#/CompositeSurface" },
-                  { "$ref": "geomprimitives.schema.json#/Solid" },
-                  { "$ref": "geomprimitives.schema.json#/MultiSolid" },
-                  { "$ref": "geomprimitives.schema.json#/CompositeSolid" },
-                  { "$ref": "geomprimitives.schema.json#/GeometryInstance" }
+                  { "$ref": "geomprimitives.schema.json#/Solid" }
                 ]
               }
             }
