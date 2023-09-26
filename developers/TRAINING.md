@@ -50,7 +50,7 @@ All developers should do the Kick Off, and any additional sections where you nee
 
 If you're new to Docker, do this. We use Docker for everything so you should get familiar with the basic concepts of running containers from images, and docker-compose which runs multiple containers at once.
 
-[Watch this 12 minute video](https://hackr.io/tutorial/learn-docker-in-12-minutes).
+[Watch this 12 minute video](https://www.youtube.com/watch?v=YFl2mCHdv24).
 
 [Do this tutorial](https://docs.docker.com/compose/django/).
 
