@@ -29,11 +29,6 @@ Go to the [CityJSON official online viewer](https://viewer.cityjson.org) (called
 
 ![](../files/gs-viewer.png)
 
-You can also use more powerful viewers (where the semantics and attributes of the buildings are shown for instance), we offer a [list of viewers]({{ '/software/#viewers' | prepend: site.baseurl }}) and of other software.
-One of them is [azul](https://itunes.apple.com/nl/app/azul/id1173239678?mt=12), a macOS-only viewer:
-
-![](../files/gs-azul.png)
-
 
 ## Manipulate and edit it with cjio
 
@@ -61,28 +56,11 @@ cjio twobuildings.city.json info
 ```
 
 and you should get this output:
-```
-Parsing twobuildings.city.json
-{
-  "cityjson_version": "1.1",
-  "epsg": null,
-  "bbox": [
-    300578.235,
-    5041258.061,
-    13.688,
-    300618.138,
-    5041289.394,
-    29.45
-  ],
-  "cityobjects_1stlevel": 2,
-  "cityobjects_present": {
-    "Building": 2
-  },
-  "materials": false,
-  "textures": false
-}
-```
-Observe that the `"epsg"` is null.
+
+![](../files/gs-cjioinfo.png)
+
+
+Observe that the `EPSG` is None.
 To assign an [EPSG](https://epsg.io/) to the file (26918 is the value, that dataset is part of the [Montréal open 3D dataset](http://donnees.ville.montreal.qc.ca/dataset/maquette-numerique-batiments-citygml-lod2-avec-textures)), you can type:
 ```
 cjio twobuildings.city.json crs_assign 26918 save twobuildings_reprojected.city.json
