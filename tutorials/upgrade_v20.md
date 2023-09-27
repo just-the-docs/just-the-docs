@@ -9,6 +9,7 @@ permalink: /tutorials/upgrade20/
 
 {: .warning }
 This is the manual to upgrade a file from v1.1, if you have v1.0 first check our [v1.0 -> v1.1 guide]({{ '/dev/upgrade11/' | prepend: site.baseurl }}).
+The latest `cjio upgrade` will however update a v1.0 file directly to v2.0. 
 
 
 ## Table of contents
