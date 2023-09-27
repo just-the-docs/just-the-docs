@@ -271,10 +271,13 @@ nav_external_links:
   - title: Just the Docs on GitHub
     url: https://github.com/just-the-docs/just-the-docs
     hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
 ```
 
 The external links are decorated by an icon, which distinguishes them from internal links.
 You can suppress the icon by setting `hide_icon: true`.
+
+You can set default global values for opening external links in new tabs by setting `nav_external_links_new_tab` to either `true` or `false`(default) in your site's `_config.yml` file. Setting the individual `opens_in_new_tab` on a link will override this value.
 
 ---
 
