@@ -6,6 +6,10 @@ nav_order: 4
 permalink: /tutorials/extension/
 ---
 
+{: .warning }
+This is the manual for CityGML v2.0 ADEs because v3.0 is not really having many examples. 
+This will be updated at some point.
+
 ## Table of contents
 {: .no_toc .text-delta }
 
@@ -175,7 +179,7 @@ The steps to follow are thus:
 
 ## Validation of the CityJSONExtension file
 
-First use [this simple JSON schema](https://github.com/cityjson/specs/blob/main/extensions/extension.schema.json) to ensure that your `CityJSONExtension` is syntactically valid.
+First use [this simple JSON schema](https://github.com/cityjson/specs/blob/main/extensions/20/extension.schema.json) to ensure that your `CityJSONExtension` is syntactically valid.
 You can use an [online JSON Schema validator](https://jsonschemalint.com/#!/version/draft-07/markup/json):
 
 <img src="../files/noise-jsonschema.png">
