@@ -140,11 +140,32 @@
   }
 }
 
+button.site-button {
+  background: none;
+  border: none;
+}
+
 .site-button {
   display: flex;
   height: 100%;
   padding: $gutter-spacing-sm;
   align-items: center;
+
+  .site-button-icon {
+    width: #{$sp-4 * 1.2};
+    height: #{$sp-4 * 1.2};
+    align-self: center;
+    color: $grey-dk-000;
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    .site-button-icon {
+      color: $link-color;
+    }
+  }
 }
 
 @include mq(md) {
