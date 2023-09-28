@@ -9,7 +9,7 @@ permalink: /dev/upgrade20/
 {: .warning }
 This is the manual to upgrade from v1.1, if you have v1.0 first check our [v1.0 -> v1.1 guide]({{ '/dev/upgrade11/' | prepend: site.baseurl }}).
 
-The following 3 changes need to be considered:
+The following 4 changes need to be considered:
 
 1. TOC
 {:toc}
@@ -40,7 +40,28 @@ To switch to `"GenericCityObject"`, remove the `"+"` from the name, and remove t
 ```
 
 
-## 3. If an Extension is used, update its `"versionCityJSON"` and add `"extraSemanticSurfaces"`
+## 3. `"metadata/pointOfContact/address"` is now a JSON object, not a string
+
+To harmonise with other addresses in the standards (for Buildings and Bridges for example).
+
+```json
+"pointOfContact": {
+  "contactName": "Justin Trudeau",
+  "emailAddress": "justin.trudeau@parl.gc.ca",
+  "phone": "+1-613-992-4211",
+  "address": {
+    "thoroughfareNumber": "24",
+    "thoroughfareName": "Sussez Drive",
+    "postcode": "H0H 0H0",
+    "locality": "Ottawa",
+    "country": "Canada"
+  },    
+  "contactType": "individual",
+  "role": "pointOfContact"
+}
+```
+
+## 4. If an Extension is used, update its `"versionCityJSON"` and add `"extraSemanticSurfaces"`
 
 The `"versionCityJSON"` should be `"2.0"` and it is now possible to define new Semantic Surfaces, [see the specs](https://cityjson.org/specs/#case-3-defining-a-new-semantic-object):
 
