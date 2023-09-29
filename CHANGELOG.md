@@ -19,7 +19,7 @@ Code changes to `main` that are *not* in the latest release:
 
 ### Bugfixes
 
-- Fixed: Remove href from the navigation link to the current page by [@pdmosses] in [#1356]
+- Fixed: remove href from the navigation link to the current page by [@pdmosses] in [#1356]
 
 [#1356]: https://github.com/just-the-docs/just-the-docs/pull/1356
 
