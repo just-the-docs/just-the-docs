@@ -501,6 +501,7 @@ function activateNav() {
   var target = navLink();
   if (target) {
     target.classList.toggle('active', true);
+    target.removeAttribute('href');
   }
   while (target) {
     while (target && !(target.classList && target.classList.contains('nav-list-item'))) {
