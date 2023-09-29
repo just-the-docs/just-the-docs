@@ -10,6 +10,8 @@ The open-source software [citygml-tools](https://github.com/citygml4j/citygml-to
 
 Download its [latest release](https://github.com/citygml4j/citygml-tools/releases) (v2.1.0 at the time of writing this), and unzip its content.
 
+You need to have [Java 11 or higher](https://github.com/citygml4j/citygml-tools?tab=readme-ov-file#system-requirements) installed.
+
 ![](../files/c-download.png)
 
 Open a console/terminal (also called "Command Prompt" in Windows)
@@ -20,22 +22,21 @@ The executable is at the root of the folder, type `./citygml-tools`:
 
 
 
-
 ## Conversion CityGML -> CityJSON
 
 
-Download this [CityGML file of The Hague](https://3d.bk.tudelft.nl/opendata/cityjson/3dcities/citygml/DenHaag_01.xml) (or any CityGML files; these can have textures too), and place it in a given folder (say `/home/elvis/temp/data/`)
+Download this [CityGML file of The Hague](https://3d.bk.tudelft.nl/opendata/cityjson/3dcities/citygml/DenHaag_01.xml) (or any CityGML files; these can have textures too), and place it in a given folder (say `/home/elvis/data/`)
 To convert it to CityJSON:
 
 ```
-./citygml-tools to-cityjson /home/elvis/temp/data/DenHaag_01.xml
+./citygml-tools to-cityjson /home/elvis/data/DenHaag_01.xml
 ```
 
 ![](../files/c-tocityjson.png)
 
-Voilà, this creates a new CityJSON v1.1 file: `/home/elvis/hugo/temp/data/DenHaag_01.json`
+Voilà, this creates a new CityJSON v1.1 file: `/home/elvis/data/DenHaag_01.json`
 
-To upgrade the file to CityJSON v2.0: `cjio DenHaag_01.json upgrade save DenHaag_01.city.json`
+To upgrade the file to CityJSON v2.0: `cjio /home/elvis/data/DenHaag_01.json upgrade save /home/elvis/data/DenHaag_01_v20.city.json`
 
 If you drag that file into the viewer [ninja](https://ninja.cityjson.org/), you can view it:
 
@@ -44,7 +45,7 @@ If you drag that file into the viewer [ninja](https://ninja.cityjson.org/), you 
 
 ## Conversion CityJSON -> CityGML
 
-From the CityJSON file, a new GML file can be created with that command `from-cityjson`
+From the CityJSON file, a new GML file can be created with that command `from-cityjson`.
 
 
 
