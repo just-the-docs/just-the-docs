@@ -14,6 +14,7 @@ A JSON-based encoding for 3D city models
 {: .fs-6 .fw-300 }
 
 [Specs latest version: v{{ site.lastversion}}]({{ '/specs/' | append: site.lastversion | prepend: site.baseurl }}){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2 } 
+[Upgrading to v2.0 🚀]({{ '/tutorials/upgrade20/' | prepend: site.baseurl }}){: .btn .btn-purple .fs-5 .mb-4 .mb-md-0 .mr-2 }
 
 [Getting started]({{ '/tutorials/getting-started/' | prepend: site.baseurl }}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 } 
 [Web-viewer](https://ninja.cityjson.org/){: .btn  .fs-5 .mb-4 .mb-md-0 .mr-2}
