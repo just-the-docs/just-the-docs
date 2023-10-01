@@ -4,7 +4,7 @@
     site.search_enabled, site.static_files, site.favicon_ico.
   Results in: HTML for the head element.
   Includes:
-    head_nav.html, head_custom.html.
+    css/activation.scss.liquid, head_custom.html.
   Overwrites: 
     ga_tracking_ids, ga_property, file, favicon.
   Should not be cached, because included files depend on page.
@@ -16,7 +16,11 @@
 
   <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
   
-  {% include head_nav.html %}
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-head-nav.css' | relative_url }}">
+  
+  <style id="jtd-nav-activation">
+  {% include css/activation.scss.liquid %}
+  </style>
 
   {% if site.ga_tracking != nil %}
     {% assign ga_tracking_ids = site.ga_tracking | split: "," %}

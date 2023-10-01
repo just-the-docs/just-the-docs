@@ -84,8 +84,7 @@ jobs:
       - name: Test with Nu Validator
         uses: Cyb3r-Jak3/html5validator-action@2a593a9f2c10593cbac84791a6fc4c47e9a106c8
         with:
-          root: _site
-          blacklist: line-numbers
+          config: fixtures/html5validator-config.yml
       - name: Test with html-proofer
         run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/"
         env:

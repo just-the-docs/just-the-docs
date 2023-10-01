@@ -20,8 +20,14 @@ Code changes to `main` that are *not* in the latest release:
 ### Bugfixes
 
 - Fixed: remove href from the navigation link to the current page by [@pdmosses] in [#1356]
+- Fixed: improve build time by [@pdmosses] in [#1358]
+
+{: .warning }
+[#1358] moved `_includes/nav.html` to the `_includes/components` directory,
+Users who were overriding that file will need to adjust their sites accordingly.
 
 [#1356]: https://github.com/just-the-docs/just-the-docs/pull/1356
+[#1358]: https://github.com/just-the-docs/just-the-docs/pull/1358
 
 ## Release v0.6.2
 

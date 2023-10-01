@@ -39,7 +39,7 @@ function initNav() {
   const mainHeader = document.getElementById('main-header');
   const menuButton = document.getElementById('menu-button');
   
-  disableHeadStyleSheet();
+  disableHeadStyleSheets();
 
   jtd.addEvent(menuButton, 'click', function(e){
     e.preventDefault();
@@ -68,13 +68,19 @@ function initNav() {
   {%- endif %}
 }
 
-// The page-specific <style> in the <head> is needed only when JS is disabled.
-// Moreover, it incorrectly overrides dynamic stylesheets set by setTheme(theme). 
-// The page-specific stylesheet is assumed to have index 1 in the list of stylesheets.
+// The <head> element is assumed to include the following stylesheets:
+// 0. a <link> to /assets/css/just-the-docs-default.css
+// 1. a <link> to /assets/css/just-the-docs-head-nav.css
+// 2. a <style> containing the result of _includes/css/activation.scss.liquid.
+// It also includes any styles provided by users in _includes/head_custom.html.
+// Stylesheet 2 may be missing (compression can remove empty <style> elements)
+// so disableHeadStyleSheet() needs to access it by its id.
 
-function disableHeadStyleSheet() {
-  if (document.styleSheets[1]) {
-    document.styleSheets[1].disabled = true;
+function disableHeadStyleSheets() {
+  document.styleSheets[1].disabled = true;
+  const activation = document.getElementById('jtd-nav-activation');
+  if (activation) {
+    activation.disabled = true;
   }
 }
 
