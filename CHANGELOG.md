@@ -17,8 +17,37 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- Remove: unused `.passive` toggle in navigation by [@pdmosses] in [#1335]
+### New Features
+
+- Added: configuration options for opening external links in new tab by [@CarbonNeuron] in [#1360]
+
+### Bugfixes
+
+- Fixed: remove href from the navigation link to the current page by [@pdmosses] in [#1356]
+- Fixed: improve build time by [@pdmosses] in [#1358]
+
+{: .warning }
+[#1358] moved `_includes/nav.html` to the `_includes/components` directory,
+Users who were overriding that file will need to adjust their sites accordingly.
+
+### New Contributors
+
+- [@CarbonNeuron] made their first contribution in [#1360]
+
+[@CarbonNeuron]: https://github.com/CarbonNeuron
+
+[#1356]: https://github.com/just-the-docs/just-the-docs/pull/1356
+[#1358]: https://github.com/just-the-docs/just-the-docs/pull/1358
+[#1360]: https://github.com/just-the-docs/just-the-docs/pull/1360
+
+## Release v0.6.2
+
+Hi all, this is a small patch release that includes two changes: adding a missing Windows emoji font fallback, and removing some (now-unused) code introduced in 0.6.
+
+### Bugfixes
+
 - Fixed: Windows emoji font fallback by [@flanakin] in [#1337]
+- Removed: unused `.passive` toggle in navigation by [@pdmosses] in [#1335]
 
 [#1335]: https://github.com/just-the-docs/just-the-docs/pull/1335
 [#1337]: https://github.com/just-the-docs/just-the-docs/pull/1337
