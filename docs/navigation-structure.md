@@ -277,7 +277,12 @@ nav_external_links:
 The external links are decorated by an icon, which distinguishes them from internal links.
 You can suppress the icon by setting `hide_icon: true`.
 
-You can set default global values for opening external links in new tabs by setting `nav_external_links_new_tab` to either `true` or `false`(default) in your site's `_config.yml` file. Setting the individual `opens_in_new_tab` on a link will override this value.
+By default, external links are not opened in a new tab. However, this can be enabled by:
+
+1. setting `opens_in_new_tab: true` in the link's configuration object
+2. setting the configuration option `nav_external_links_new_tab: true` in `_config.yml`
+
+When they conflict, `opens_in_new_tab` takes precedence.
 
 ---
 
