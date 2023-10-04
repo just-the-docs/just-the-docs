@@ -4,7 +4,7 @@
   Results in: HTML for the side bar.
   Includes:
     title.html, components/site_nav.html, nav_footer_custom.html
-  Overwrites: 
+  Overwrites:
     nav_footer_custom.
   Should not be cached, because nav_footer_custom.html might depend on page.
 {%- endcomment -%}
@@ -16,9 +16,9 @@
       <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
     </button>
   </div>
-  
+
   {% include_cached components/site_nav.html %}
-  
+
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}
   {% endcapture %}

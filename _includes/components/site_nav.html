@@ -4,7 +4,7 @@
   Results in: HTML for the site-nav.
   Includes:
     components/nav.html
-  Overwrites: 
+  Overwrites:
     pages_top_size, collections_size, collection_entry,
     collection_key, collection_value, collection.
 {%- endcomment -%}
@@ -22,7 +22,11 @@
     <ul class="nav-list">
       {%- for node in site.nav_external_links -%}
         <li class="nav-list-item external">
-          <a href="{{ node.url | absolute_url }}" class="nav-list-link external">
+          <a href="{{ node.url | absolute_url }}" class="nav-list-link external"
+            {% if node.opens_in_new_tab or (node.opens_in_new_tab == nil and site.nav_external_links_new_tab) %}
+              target="_blank" rel="noopener noreferrer"
+            {% endif %}
+          >
             {{ node.title }}
             {% unless node.hide_icon %}<svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>{% endunless %}
           </a>

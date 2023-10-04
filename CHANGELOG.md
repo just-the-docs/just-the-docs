@@ -17,6 +17,10 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
+### New Features
+
+- Added: configuration options for opening external links in new tab by [@CarbonNeuron] in [#1360]
+
 ### Bugfixes
 
 - Fixed: remove href from the navigation link to the current page by [@pdmosses] in [#1356]
@@ -26,8 +30,15 @@ Code changes to `main` that are *not* in the latest release:
 [#1358] moved `_includes/nav.html` to the `_includes/components` directory,
 Users who were overriding that file will need to adjust their sites accordingly.
 
+### New Contributors
+
+- [@CarbonNeuron] made their first contribution in [#1360]
+
+[@CarbonNeuron]: https://github.com/CarbonNeuron
+
 [#1356]: https://github.com/just-the-docs/just-the-docs/pull/1356
 [#1358]: https://github.com/just-the-docs/just-the-docs/pull/1358
+[#1360]: https://github.com/just-the-docs/just-the-docs/pull/1360
 
 ## Release v0.6.2
 
