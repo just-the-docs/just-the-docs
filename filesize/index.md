@@ -49,7 +49,7 @@ permalink: /filesize/
 
 <i class="fas fa-exclamation-circle"></i> Observe that the file size doesn't take into account the size of the textures files (PNG, JPG, etc) since CityJSON refers to the same ones.
 
-<i class="fas fa-exclamation-circle"></i> CityGML-XML files have all the carriage returns, tabs and spaces removed with this script, for a fair estimation of the compression factor. 
+<i class="fas fa-exclamation-circle"></i> CityGML-XML files have all the carriage returns, tabs and spaces removed ([with this script](https://github.com/cityjson/misc-example-code/blob/master/misc/remove-cr.py)), for a fair estimation of the compression factor. 
 
 <i class="fas fa-exclamation-circle"></i> CityJSON files do not contain CR or spaces or any formatting.
 
