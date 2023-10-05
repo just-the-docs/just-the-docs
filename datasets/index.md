@@ -100,7 +100,7 @@ Each building is available in 3 [levels-of-details](https://3d.bk.tudelft.nl/lod
 
 Every building (in LoD1.2), every canals, every road, every bridge, in 3D. In CityJSON.
 
-<a href="https://brt.kadaster.nl/basisvoorziening-3d/"><i class="fas fa-external-link-alt"></i> PDOK 3D Topografie</a>
+<a href="https://www.pdok.nl/3d-basisvoorziening"><i class="fas fa-external-link-alt"></i> PDOK 3D Topografie</a>
 
 <i class="fas fa-exclamation-circle"></i> Please be aware that the tiles are very big, and they will most likely bring [ninja](https://ninja.cityjson.org) or QGIS to their knees... The solution for the time being is to use a computer with 16GB+ of RAM, and use [cjio]({{ '/tutorials/getting-started/#manipulate-and-edit-it-with-cjio' | relative_url }}) to extract only the buildings for instance. 
 
