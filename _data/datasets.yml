@@ -5,6 +5,7 @@
   json-size: 7.0
   gml: 9-284-556.gml
   gml-size: 57
+  gml-size-wo: 40
   # textures: none
   validity: 98% buildings valid
   details: "Buildings in LoD 0, 1.2, 1.3, 2.2; multiple attributes"
@@ -15,6 +16,7 @@
   json-size: 293
   gml: Zurich_Building_LoD2_V10.gml
   gml-size: 2990
+  gml-size-wo: 2100
   # textures: none
   validity: 76% buildings valid
   details: "Buildings in LoD2"
@@ -26,6 +28,7 @@
   json-size: 2.7
   gml:  DenHaag_01.xml
   gml-size: 30
+  gml-size-wo: 19
   # textures: none
   validity: 62% features valid
   details: "'Tile 01', Buildings (in LoD2) and Terrain are merged"
@@ -37,6 +40,7 @@
   json-size: 5.6
   gml:  VM05_2009.gml
   gml-size: 75
+  gml-size-wo: 53
   # textures: none
   validity: 86% buildings valid
   details: Tile 'VM05'. Buildings in LoD2
@@ -48,6 +52,7 @@
   json-size: 110
   gml:  DA13_3D_Buildings_Merged.gml
   gml-size: 980
+  gml-size-wo: 682
   # textures: none
   validity: 99.9% buildings are valid (only 21 are invalid)
   details: Tile 'DA13'. Buildings in LoD2
@@ -59,6 +64,7 @@
   json-size: 2.7
   gml:  3-20-DELFSHAVEN.xml
   gml-size: 25
+  gml-size-wo: 18
   textures: 3-20-DELFSHAVEN.zip
   validity: 76% buildings valid
   details: Neighbourhood 'Delfshaven'. Buildings in LoD2
@@ -70,6 +76,7 @@
   json-size: 4.5
   gml:  LoD3_Railway.gml
   gml-size: 50
+  gml-size-wo: 39
   textures: LoD3_Railway.zip
   validity: 74% features valid
   details: CityGML demo. Buildings, Railway, Terrain, Vegetation (with Geometry Templates), Water, Tunnels
@@ -81,6 +88,7 @@
   json-size: 5.6
   gml:  Vienna_102081.gml
   gml-size: 58
-  # textures: none
+  gml-size-wo: 40
+  textures: none
   validity: 98.5% buildings valid
   details: Buildings in LoD2  

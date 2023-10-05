@@ -54,7 +54,7 @@ Please be aware that we simply converted the datasets, some datasets contain (ge
 <table >
   <tr>
     <th>dataset</th>
-    <th>CityGML file (size)</th>
+    <th>CityGML-XML file (size)</th>
     <th>CityJSON file (size)</th>
     <th>textures</th>
     <th><a href="https://github.com/tudelft3d/val3dity">geometric validity</a></th>
@@ -78,7 +78,7 @@ Please be aware that we simply converted the datasets, some datasets contain (ge
   {% endfor %}
 </table>
 
-<i class="fas fa-exclamation-circle"></i> It should be observed that on average CityJSON compresses ~6X a CityGML, and that without any loss of information ([see details](https://github.com/cityjson/specs/wiki/Compression-factor-for-a-few-open-CityGML-datasets)).
+<i class="fas fa-exclamation-circle"></i> On average CityJSON compresses ~7X a CityGML-XML file, and that without any loss of information ([see more details]({{ '/filesize/' | prepend: site.baseurl }})).
 
 <i class="fas fa-exclamation-circle"></i> We performed the geometric validation with [val3dity](https://github.com/tudelft3d/val3dity) and report the overall result in the column 'validity'. To understand the errors, we suggest validating the files ([how to do this]({{ '/tutorials/validation/' | relative_url }})) yourself.
 

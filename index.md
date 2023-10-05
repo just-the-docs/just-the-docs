@@ -43,9 +43,9 @@ It was designed with programmers in mind, so that tools and APIs supporting it c
 We believe that you should use CityJSON because: 
 
   1. its simplicity means adding CityJSON support to your software is easy, [many software already support it]({{ "/software/" | prepend: site.baseurl }}) 
-  2. you can in one-click convert CityGML files to CityJSON files, and vice versa, with the open-source tool [citygml-tools](https://github.com/citygml4j/citygml-tools); we even have a [tutorial]({{ "/tutorials/conversion/" | prepend: site.baseurl }})
-  3. files are on average [6X more compact](https://github.com/cityjson/specs/wiki/Compression-factor-for-a-few-open-CityGML-datasets) than their CityGML equivalent
-  4. you can automatically convert to/from CityGML v3.0 XML files with the excellent [citygml-tools](https://github.com/citygml4j/citygml-tools) 
+  2. you can in one-click convert CityGML-XML files to CityJSON files, and vice versa, with the open-source tool [citygml-tools](https://github.com/citygml4j/citygml-tools); we even have a [tutorial]({{ "/tutorials/conversion/" | prepend: site.baseurl }})
+  3. files are on average [7X more compact]({{ '/filesize/' | prepend: site.baseurl }}) than their CityGML-XML equivalent
+  4. you can automatically convert to/from CityGML-XML v3.0 files with the excellent [citygml-tools](https://github.com/citygml4j/citygml-tools) 
   5. there is a [web-viewer](https://viewer.cityjson.org) where you can drag-and-drop a file
   6. you can easily manipulate files with [cjio](https://github.com/cityjson/cjio), you can for instance merge files, remove/filter objects, change the CRS, manage the textures, etc.
   7. you can *easily* define [Extensions]({{ "/extensions/" | prepend: site.baseurl }}) to the core model 
