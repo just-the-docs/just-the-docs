@@ -32,6 +32,9 @@ callouts:
   warning:
     title: Warning
     color: red
+  info:
+    title: Information
+    color: grey-dk    
 
 # heading_anchors: true
 

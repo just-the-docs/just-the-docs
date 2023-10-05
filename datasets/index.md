@@ -42,10 +42,12 @@ Here are 2 files with [Geometry templates](https://www.cityjson.org/specs/#geome
   - [noise_data.city.json](../tutorials/files/noise_data.city.json) is a demo file with the Noise extension (schema [noise.ext.json](../tutorials/files/noise.ext.json)), more details in [this tutorial]({{ '/tutorials/extension/' | prepend: site.baseurl }})
 
 
+## Some randomly selected cities
 
+{: .info }
+Those files are openly available ([see a more exhaustive list](https://3d.bk.tudelft.nl/opendata/opencities/)) and they were converted to CityJSON v2.0 with [citygml-tools](https://github.com/citygml4j/citygml-tools) (if original encoding was CityGML-XML), and/or upgraded with `cjio upgrade`.
+Please be aware that we simply converted the datasets, some datasets contain (geometrical) errors.
 
-
-## Cities converted from CityGML
 
 {% assign ds = site.data.datasets | sort: 'name' %}
 
@@ -79,8 +81,6 @@ Here are 2 files with [Geometry templates](https://www.cityjson.org/specs/#geome
 <i class="fas fa-exclamation-circle"></i> It should be observed that on average CityJSON compresses ~6X a CityGML, and that without any loss of information ([see details](https://github.com/cityjson/specs/wiki/Compression-factor-for-a-few-open-CityGML-datasets)).
 
 <i class="fas fa-exclamation-circle"></i> We performed the geometric validation with [val3dity](https://github.com/tudelft3d/val3dity) and report the overall result in the column 'validity'. To understand the errors, we suggest validating the files ([how to do this]({{ '/tutorials/validation/' | relative_url }})) yourself.
-
-<i class="fas fa-exclamation-circle"></i> Please be aware that we simply converted the datasets as they are (with [citygml-tools](https://github.com/citygml4j/citygml-tools)). Datasets contain errors.
 
 
 ## Generating automatically your own CityJSON dataset
