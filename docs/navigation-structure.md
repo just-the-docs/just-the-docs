@@ -30,7 +30,7 @@ By default, all pages will appear as top level pages in the main nav unless a pa
 
 To specify a page order, you can use the `nav_order` parameter in your pages' YAML front matter.
 
-#### Example
+### Example (ordering pages)
 {: .no_toc }
 
 ```yaml
@@ -55,7 +55,7 @@ By default, all Capital letters come before all lowercase letters; you can add `
 
 For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
 
-#### Example
+### Example (excluding pages)
 {: .no_toc }
 
 ```yaml
@@ -108,7 +108,7 @@ On the parent pages, add this YAML front matter parameter:
 
 - `has_children: true` (tells us that this is a parent page)
 
-#### Example
+### Example (parent pages)
 {: .no_toc }
 
 ```yaml
@@ -129,7 +129,7 @@ Here we're setting up the UI Components landing page that is available at `/docs
 
 On child pages, simply set the `parent:` YAML front matter to whatever the parent's page title is and set a nav order (this number is now scoped within the section).
 
-#### Example
+#### Example (child pages)
 {: .no_toc }
 
 ```yaml
@@ -154,7 +154,7 @@ You can optionally add the following to the YAML front matter to reverse the def
 
 - `child_nav_order: reversed`
 
-#### Example
+#### Example (ordering child pages)
 {: .no_toc }
 ```yaml
 ---
@@ -168,7 +168,7 @@ child_nav_order: reversed
 
 By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set `has_toc: false` in the parent page's YAML front matter.
 
-#### Example
+#### Example (auto-generating Table of Contents)
 {: .no_toc }
 
 ```yaml
@@ -191,7 +191,7 @@ Child pages can also have children (grandchildren). This is achieved by using a 
 1. Add the `has_children` attribute to the child
 1. Add the `parent` and `grand_parent` attribute to the grandchild
 
-#### Example
+##### Example (children within children)
 {: .no_toc }
 
 ```yaml
@@ -241,7 +241,7 @@ Currently, the navigation structure is limited to 3 levels: grandchild pages can
 
 To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
 
-#### Example
+### Example (auxiliary links)
 {: .no_toc }
 
 ```yaml
@@ -262,7 +262,7 @@ New (v0.4.0)
 To add external links to the navigation, add them to the `nav_external_links` [configuration]({% link docs/configuration.md %}) option in your site's `_config.yml` file.
 External links will appear in the navigation after the links to ordinary pages, but before any collections.
 
-#### Example
+### Example (external navigation links)
 {: .no_toc }
 
 ```yaml
@@ -273,6 +273,12 @@ nav_external_links:
     hide_icon: false # set to true to hide the external link icon - defaults to false
     opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
 ```
+
+### Opening external links in a new tab
+{: .d-inline-block }
+
+New (unreleased)
+{: .label .label-green }
 
 The external links are decorated by an icon, which distinguishes them from internal links.
 You can suppress the icon by setting `hide_icon: true`.
@@ -290,7 +296,7 @@ When they conflict, `opens_in_new_tab` takes precedence.
 
 To generate a Table of Contents on your docs pages, you can use the `{:toc}` method from Kramdown, immediately after an `<ol>` in Markdown. This will automatically generate an ordered list of anchor links to various sections of the page based on headings and heading levels. There may be occasions where you're using a heading and you don't want it to show up in the TOC, so to skip a particular heading use the `{: .no_toc }` CSS class.
 
-#### Example
+### Example (in-page navigation with Table of Contents)
 {: .no_toc }
 
 ```markdown
