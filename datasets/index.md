@@ -105,8 +105,8 @@ Every building (in LoD1.2), every canals, every road, every bridge, in 3D. In Ci
 <i class="fas fa-exclamation-circle"></i> Please be aware that the tiles are very big, and they will most likely bring [ninja](https://ninja.cityjson.org) or QGIS to their knees... The solution for the time being is to use a computer with 16GB+ of RAM, and use [cjio]({{ '/tutorials/getting-started/#manipulate-and-edit-it-with-cjio' | relative_url }}) to extract only the buildings for instance. 
 
 
-## Paid datasets <span class="label label-purple">$$$</span>
+<!-- ## Paid datasets <span class="label label-purple">$$$</span>
 
   - [3dcityloader.com](https://3dcityloader.com/) offers an online service where you can download custom areas for a few cities. Areas up to 0.3km² are free of charge.
-
+ -->
 
