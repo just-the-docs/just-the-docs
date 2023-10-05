@@ -65,10 +65,10 @@ Yes, CityJSON is an official standard of the [Open Geospatial Consortium (OGC)](
 
 ## What's its relationship to CityGML?
 
-CityJSON is an encoding for a subset of the [OGC CityGML](http://www.opengeospatial.org/standards/citygml) data model (version 3.0.0), which is an open standardised data model and exchange format (in [GML](http://www.opengeospatial.org/standards/gml)) to store digital 3D models of cities and landscapes. 
+CityJSON is an encoding for a subset of the [OGC CityGML data model (version 3.0.0)](http://www.opengeospatial.org/standards/citygml), which is an open standardised data model and exchange format (in [GML](http://www.opengeospatial.org/standards/gml)) to store digital 3D models of cities and landscapes. 
 The few features that are not currently supported are either because they are seldom used, or because they would overcomplicate the JSON encoding; see the [CityGML v3.0 implementation page]({{ "/citygml/v30/" | prepend: site.baseurl }}).
 
-And because we offer [bidirectional conversion]({{ "/tutorials/conversion/" | prepend: site.baseurl }}) between CityJSON and CityGML, using CityJSON means that you are using the CityGML data model.
+And because we offer [bidirectional conversion]({{ "/tutorials/conversion/" | prepend: site.baseurl }}) between CityJSON and CityGML-XML, using CityJSON means that you are using the CityGML data model.
 
 ---
 
@@ -80,6 +80,7 @@ We invite anyone to contribute to the development and improvement of CityJSON, a
 
 ## If you use CityJSON in an academic context, please cite this article
 
+{: .highlight }
 Ledoux H, Arroyo Ohori K, Kumar K, Dukai B, Labetski A, Vitalis S (2019). CityJSON: A compact and easy-to-use encoding of the CityGML data model. **Open Geospatial Data, Software and Standards**, 4:4 [<i class="fas fa-bookmark"></i>](http://dx.doi.org/10.1186/s40965-019-0064-0) [<i class="fas fa-file-pdf"></i>](https://opengeospatialdata.springeropen.com/counter/pdf/10.1186/s40965-019-0064-0.pdf)
 
 

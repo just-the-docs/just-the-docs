@@ -34,7 +34,7 @@ A CityJSON file describes both the geometry and the semantics of the city featur
 The aim of CityJSON is to offer an alternative to the GML encoding of CityGML, which can be verbose and complex (and thus rather frustrating to work with). 
 CityJSON aims at being easy-to-use, both for reading datasets, and for creating them.
 It was designed with programmers in mind, so that tools and APIs supporting it can be quickly built.
-It was also designed to be compact (it typically [compresses publicly available CityGML files by 6x](https://github.com/cityjson/specs/wiki/Compression-factor-for-a-few-open-CityGML-datasets)), and to be friendly for web and mobile development.
+It was also designed to be compact (it typically [compresses publicly available CityGML files by 7x]({{ '/filesize/' | prepend: site.baseurl }})), and to be friendly for web and mobile development.
 
 A CityJSON object, representing a city, is as 'flat' as possible, ie the hierarchy of CityGML has been flattened out and only the city objects which are 'leaves' of this hierarchy are implemented.
 This considerably simplifies the storage of a city model, and furthermore does not mean that information is lost.
@@ -82,8 +82,9 @@ The structure of a CityJSON file is a fairly simple to understand and can be eas
 ```js
 {
   "type": "CityJSON",
-  "version": "1.1",
+  "version": "2.0",
   "extensions": {...},
+  "transform": {...},
   "metadata": { "referenceSystem": "https://www.opengis.net/def/crs/EPSG/0/7415" },
   "CityObjects": {
     "id-1": {
@@ -98,8 +99,8 @@ The structure of a CityJSON file is a fairly simple to understand and can be eas
     "id-56": {...}
   },
   "vertices": [
-    [23.1, 2321.2, 11.0],
-    [14.0, 2299.5, 14.0],
+    [231, 2321, 11],
+    [140, 2299, 14],
     ...
   ],
   "appearance": {
@@ -112,7 +113,7 @@ The structure of a CityJSON file is a fairly simple to understand and can be eas
 
 ## Which features of CityGML are supported?
 
-Most of them, see the [CityGML v3 conformance page]({{ site.baseurl }}/conformance/v30/). 
+Most of them, see the [CityGML v3 conformance page]({{ site.baseurl }}/citygml/v30/). 
 
 
 ## A JSON encoding of GML, huh?!?
