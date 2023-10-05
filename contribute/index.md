@@ -19,13 +19,7 @@ While this website is made and maintained by the [3D Geoinformation group at the
 
 ## Errors in this website?
 
-[<i class="fas fa-external-link-alt"></i> https://github.com/cityjson/website](https://github.com/cityjson/website)
+Just click on the link `(edit this page on GitHub)` at the bottom of any page, fix what needs to be fixed, and [make a pull request](https://help.github.com/articles/about-pull-requests/). 
 
 
-## How to contribute?
-
-You can either:
-
-  - add an issue
-  - fix the error yourself and open a [pull request](https://help.github.com/articles/about-pull-requests/).
-
+The code of this website is open: [<i class="fas fa-external-link-alt"></i> https://github.com/cityjson/website](https://github.com/cityjson/website)
