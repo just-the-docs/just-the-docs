@@ -9,7 +9,7 @@
 - name: Generic
   url:  https://cityjson.org/extensions/download/generic.ext.json
   description: "Extension to handle GenericCityObject in v1.1"
-  status: 1.1
+  status: 2.0
   organisation: "CityJSON core team"
   # details: http://dx.doi.org/10.5194/isprs-archives-XLIII-B4-2021-301-2021
 

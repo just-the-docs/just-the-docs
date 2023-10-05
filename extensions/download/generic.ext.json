@@ -34,7 +34,7 @@
                   { "$ref": "geomprimitives.schema.json#/Solid" },
                   { "$ref": "geomprimitives.schema.json#/MultiSolid" },
                   { "$ref": "geomprimitives.schema.json#/CompositeSolid" },
-                  { "$ref": "geomprimitives.schema.json#/GeometryInstance" }
+                  { "$ref": "geomtemplates.schema.json#/GeometryInstance" }
                 ]
               }
             }
