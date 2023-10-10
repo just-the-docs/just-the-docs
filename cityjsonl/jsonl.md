@@ -107,4 +107,20 @@ l.5 ✅
 l.6 ✅
 ```
 
+## viewcjl: a small viewer for CityJSONL files
 
+
+![](https://raw.githubusercontent.com/cityjson/viewcjl/main/demo.png)
+
+The [viewcjl GitHub repository](https://github.com/cityjson/viewcjl/) has more details.
+
+
+It reads a [CityJSONL file](https://cityjson.org/cityjsonl) from stdin.
+
+```bash
+cat ./data/b2.city.jsonl | python ./src/viewcjl.py
+```
+
+```bash
+cjio --suppress_msg Vienna_102081.city.json subset --random 5 export jsonl stdout | python ./src/viewcjl.py
+```
