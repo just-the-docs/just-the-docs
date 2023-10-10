@@ -72,13 +72,14 @@ We can add one line to a JSON Lines text stream (eg the first line) with those p
 
 Starting from v0.8, cjio allows us to read/write from stdin/stdout (standard input/output streams), and it can use [CityJSONL (text sequences with CityJSONFeatures)](https://www.cityjson.org/specs/#text-sequences-and-streaming-with-cityjsonfeature).
 
-One can create a CityJSONL stream (with the first line containing the metadata):
+We can create a CityJSONL stream (with the first line containing the metadata) this way:
 
 ```
 cjio --suppress_msg myfile.city.json export jsonl stdout
 ```
 
-Observe that the different operators of cjio output messages/information, and those will get in the stdout stream, to avoid this add the flag `--suppress_msg` when reading the file
+Observe that the different operators of cjio output messages/information, and those will get in the stdout stream. 
+To avoid this, add the flag `--suppress_msg` when reading the file.
 
 That stream can be saved to a file:
 
@@ -86,7 +87,7 @@ That stream can be saved to a file:
 cjio --suppress_msg myfile.city.json export jsonl mystream.city.jsonl
 ```
 
-And a CityJSONL can be compiled back to a CityJSON file by reading it from `stdin`:
+And a CityJSONL stream/file can be compiled to a CityJSON file by reading it from `stdin`:
 
 ```
 cat mystream.city.jsonl | cjio stdin info save myfile_2.city.json
@@ -106,6 +107,7 @@ l.4 🟡 Vertex (0, 1000, 0) duplicated | Vertex #8 is unused |
 l.5 ✅
 l.6 ✅
 ```
+
 
 ## viewcjl: a small viewer for CityJSONL files
 
