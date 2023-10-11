@@ -26,6 +26,7 @@ Code changes to `main` that are *not* in the latest release:
 - Fixed: remove href from the navigation link to the current page by [@pdmosses] in [#1356]
 - Fixed: improve build time by [@pdmosses] in [#1358]
 - Fixed: erroneous parentheses in `site_nav` conditional by [@mattxwang] in [#1366]
+- Fixed: navigation scroll to active link regression by [@pdmosses] in [#1367]
 
 {: .warning }
 [#1358] moved `_includes/nav.html` to the `_includes/components` directory,
@@ -41,6 +42,7 @@ Users who were overriding that file will need to adjust their sites accordingly.
 [#1358]: https://github.com/just-the-docs/just-the-docs/pull/1358
 [#1360]: https://github.com/just-the-docs/just-the-docs/pull/1360
 [#1366]: https://github.com/just-the-docs/just-the-docs/pull/1366
+[#1367]: https://github.com/just-the-docs/just-the-docs/pull/1367
 
 ## Release v0.6.2
 
