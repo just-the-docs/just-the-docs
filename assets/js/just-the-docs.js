@@ -38,7 +38,7 @@ function initNav() {
   const siteNav = document.getElementById('site-nav');
   const mainHeader = document.getElementById('main-header');
   const menuButton = document.getElementById('menu-button');
-  
+
   disableHeadStyleSheets();
 
   jtd.addEvent(menuButton, 'click', function(e){
@@ -70,14 +70,19 @@ function initNav() {
 
 // The <head> element is assumed to include the following stylesheets:
 // 0. a <link> to /assets/css/just-the-docs-default.css
-// 1. a <link> to /assets/css/just-the-docs-head-nav.css
+// 1. a <link> to /assets/css/just-the-docs-head-nav.css,
+//             with id 'jtd-head-nav-stylesheet'
 // 2. a <style> containing the result of _includes/css/activation.scss.liquid.
 // It also includes any styles provided by users in _includes/head_custom.html.
 // Stylesheet 2 may be missing (compression can remove empty <style> elements)
 // so disableHeadStyleSheet() needs to access it by its id.
 
 function disableHeadStyleSheets() {
-  document.styleSheets[1].disabled = true;
+  const head_nav = document.getElementById('jtd-head-nav-stylesheet');
+  if (head_nav) {
+    head_nav.disabled = true;
+  }
+
   const activation = document.getElementById('jtd-nav-activation');
   if (activation) {
     activation.disabled = true;
