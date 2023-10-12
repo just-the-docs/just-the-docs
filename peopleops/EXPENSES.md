@@ -17,6 +17,8 @@ Covers equipment expenses, what else the company will cover, and how to claim ex
 
 ## Equipment Expenses
 
+  - Expenses at or below $100 are not approved in advance but are reviewed instead for reimbursement (you can ask if you're not sure, but if you can solve any real problem for $100 or less, ask for forgiveness rather than permission.) See the next section for guidelines.
+  - In general, items with a cost of less than $100 can be authorized by the manager as standard expenses if they are deemed reasonable. If the manager perceives that these expenses are being excessively utilized, they will involve Clark in the decision-making process.
   - Any expense over $100 must be approved in advance of the purchase in order to be reimbursed.
   - Countable will provide a (loaner) linux laptop if you use that as your primary work machine. 
     - We subsidize Linux because it helps the team learn about our servers, Docker and other critical components of our business that use Linux. We want a bias to moving as much infrastructure in that direction as possible but recognize not everything works there yet (Adobe, I'm looking at you).
@@ -27,7 +29,6 @@ Covers equipment expenses, what else the company will cover, and how to claim ex
     - To be eligible for reimbursement, Windows laptops must also have Linux installed on a partition (bootable, not a VM).
   - Special expenses may be approved if required for your job. These must be reviewed on a case-by-case basis prior to purchase. 
     - e.g. Countable may pay for co-working space if you need one.
-  - Expenses at or below $100 are not approved in advance but are reviewed instead for reimbursement (you can ask if you're not sure, but if you can solve any real problem for $100 or less, ask for forgiveness rather than permission.) See the next section for guidelines.
 
 ### Examples of Things The Company Will Pay For
 
