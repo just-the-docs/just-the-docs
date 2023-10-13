@@ -129,20 +129,20 @@ l.6 ✅
 ```
 
 
-## viewcjf: a small viewer for CityJSONL files
+## cjfview: a small viewer for CityJSONL files
 
 
 ![](https://raw.githubusercontent.com/cityjson/viewcjl/main/demo.png)
 
-The [viewcjl GitHub repository](https://github.com/cityjson/viewcjl/) has more details.
+The [cjfview GitHub repository](https://github.com/cityjson/cjfview/) has more details.
 
 
 It reads a [CityJSONL file](https://cityjson.org/cityjsonl) from stdin.
 
 ```bash
-cat ./data/b2.city.jsonl | python ./src/viewcjl.py
+cat ./data/b2.city.jsonl | python ./src/cjfview.py
 ```
 
 ```bash
-cjio --suppress_msg Vienna_102081.city.json subset --random 5 export jsonl stdout | python ./src/viewcjl.py
+cjio --suppress_msg Vienna_102081.city.json subset --random 5 export jsonl stdout | python ./src/cjfview.py
 ```
