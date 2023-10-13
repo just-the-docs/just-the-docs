@@ -94,6 +94,13 @@ A CityJSONL stream/file can be compiled to a CityJSON file by reading it from `s
 cat mystream.city.jsonl | cjio stdin info save myfile_2.city.json
 ```
 
+## CityJSONL examples
+
+| dataset | CityJSONL file | description |  
+| ------- | -------------- | ----------- |
+| 3DBAG   | [3dbag_b2.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonl/3dbag_b2.city.jsonl) | 2 buildings randomly selected from the 3DBAG, LoD2.2 only |
+| Montréal   | [montréal_b4.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonl/montréal_b4.city.jsonl) | 4 buildings randomly selected from the Montréal dataset | 
+
 
 ## Validating a stream 
 
