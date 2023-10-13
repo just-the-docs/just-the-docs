@@ -83,6 +83,18 @@ Please be aware that we simply converted the datasets, some datasets contain (ge
 <i class="fas fa-exclamation-circle"></i> We performed the geometric validation with [val3dity](https://github.com/tudelft3d/val3dity) and report the overall result in the column 'validity'. To understand the errors, we suggest validating the files ([how to do this]({{ '/tutorials/validation/' | relative_url }})) yourself.
 
 
+## CityJSONL (CityJSON Lines) examples
+
+CityJSON Lines---CityJSONL for short---is a format based on [JSON Text Sequences](https://datatracker.ietf.org/doc/html/rfc7464) and CityJSON.
+It involves decomposing a dataset into each of its features (which becomes a [`CityJSONFeature`](https://www.cityjson.org/specs/#text-sequences-and-streaming-with-cityjsonfeature)) and storing them in a text file: one per line.
+
+The following 2 subsets of datasets were generated using cjio ([see details](https://www.cityjson.org/cityjsonl/#reading-and-writing-cityjsonl-with-cjio)).
+
+| dataset | CityJSONL file | description |  
+| ------- | -------------- | ----------- |
+| 3DBAG   | [3dbag_b2.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonl/3dbag_b2.city.jsonl) | 2 buildings randomly selected from the 3DBAG, LoD2.2 only |
+| Montréal   | [montréal_b4.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonl/montréal_b4.city.jsonl) | 4 buildings randomly selected from the Montréal dataset | 
+
 ## Generating automatically your own CityJSON dataset
 
 It is possible to generate automatically a 3D city model in CityJSON with [3dfier](https://github.com/tudelft3d/3dfier), just follow that simple [tutorial](https://tudelft3d.github.io/3dfier/generate_lod1.html).

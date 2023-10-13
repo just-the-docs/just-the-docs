@@ -18,11 +18,11 @@ The idea is to decompose a CityJSON file into its features (eg each building, ea
 
 ## CityJSONFeature
 
-A `CityJSONFeature` object represents **one** feature in a CityJSON object, for instance a `"Building"` with eventually its children `"BuildingPart"` and/or `"BuildingInstallation"`.
-The idea is to decompose a large file into each of its features, and each feature is a `CityJSONFeature`.
+A `CityJSONFeature` object represents **one** feature in a CityJSON object, for instance a `"Building"` (with eventually its children `"BuildingPart"` and/or `"BuildingInstallation"`).
+The idea is to decompose a large area into each of its features, and each feature is a stored as a `CityJSONFeature`.
 Each feature is independent, and has its own list of vertices (which is thus local).
 
-See [full specifications for a CityJSONFeature](https://www.cityjson.org/specs/#text-sequences-and-streaming-with-cityjsonfeature).
+See the [full specifications for a CityJSONFeature](https://www.cityjson.org/specs/#text-sequences-and-streaming-with-cityjsonfeature).
 
 ```json
 {
@@ -54,7 +54,7 @@ See [full specifications for a CityJSONFeature](https://www.cityjson.org/specs/#
 ```
 
 
-## Streaming with CityJSONL
+## Streaming 3D cities with CityJSONL
 
 Each CityJSON feature can become one line in a [JSON Lines text](https://jsonlines.org).
 Since we want to have access to some properties, eg `"transform"` and the CRS, those need to be known by the client/software parsing the stream.
@@ -68,9 +68,10 @@ We can add one line to a JSON Lines text stream (eg the first line) with those p
 {"type":"CityJSONFeature","id":"c","CityObjects":{...},"vertices":[...]} 
 ```
 
-## cjio can read and write CityJSONL
 
-Starting from v0.8, cjio allows us to read/write from stdin/stdout (standard input/output streams), and it can use [CityJSONL (text sequences with CityJSONFeatures)](https://www.cityjson.org/specs/#text-sequences-and-streaming-with-cityjsonfeature).
+## Reading and writing CityJSONL with cjio
+
+The software [cjio](https://github.com/cityjson/cjio) allows us to read and write CityJSONL from stdin/stdout (standard input/output streams).
 
 We can create a CityJSONL stream (with the first line containing the metadata) this way:
 
@@ -87,15 +88,27 @@ That stream can be saved to a file:
 cjio --suppress_msg myfile.city.json export jsonl mystream.city.jsonl
 ```
 
-And a CityJSONL stream/file can be compiled to a CityJSON file by reading it from `stdin`:
+A CityJSONL stream/file can be compiled to a CityJSON file by reading it from `stdin`:
 
 ```
 cat mystream.city.jsonl | cjio stdin info save myfile_2.city.json
 ```
 
-## cjval can validate a stream 
 
-The official [schema-validator of CityJSON (called cjval)](https://github.com/cityjson/cjval) can also validate CityJSONL streams with its binary `cjfval`.
+## Validating a stream 
+
+### With the online validator
+
+The [official schema-validator of CityJSON](https://validator.cityjson.org) accepts CityJSONL files, if they are structure with the first line as "metadata" (as shown above, [3dbag_b2.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonl/3dbag_b2.city.jsonl) and [montréal_b4.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonl/montréal_b4.city.jsonl) are two examples).
+
+You can just drop those files and the validator will indicate, *per line*, if the `CityJSONFeature` are valid, or not.
+
+[![](validator.png)](https://validator.cityjson.org)
+
+
+### Locally with cjfval
+
+The official [schema-validator of CityJSON (called cjval)](https://github.com/cityjson/cjval) can validate CityJSONL streams with its binary `cjfval`.
 Each line is individually validated and errors reported:
 
 ```bash
@@ -109,7 +122,7 @@ l.6 ✅
 ```
 
 
-## viewcjl: a small viewer for CityJSONL files
+## viewcjf: a small viewer for CityJSONL files
 
 
 ![](https://raw.githubusercontent.com/cityjson/viewcjl/main/demo.png)
