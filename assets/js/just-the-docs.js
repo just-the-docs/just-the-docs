@@ -69,18 +69,17 @@ function initNav() {
 }
 
 // The <head> element is assumed to include the following stylesheets:
-// 0. a <link> to /assets/css/just-the-docs-default.css
-// 1. a <link> to /assets/css/just-the-docs-head-nav.css,
+// - a <link> to /assets/css/just-the-docs-head-nav.css,
 //             with id 'jtd-head-nav-stylesheet'
-// 2. a <style> containing the result of _includes/css/activation.scss.liquid.
-// It also includes any styles provided by users in _includes/head_custom.html.
-// Stylesheet 2 may be missing (compression can remove empty <style> elements)
-// so disableHeadStyleSheet() needs to access it by its id.
+// - a <style> containing the result of _includes/css/activation.scss.liquid.
+// To avoid relying on the order of stylesheets (which can change with HTML
+// compression, user-added JavaScript, and other side effects), stylesheets
+// are only interacted with via ID
 
 function disableHeadStyleSheets() {
-  const head_nav = document.getElementById('jtd-head-nav-stylesheet');
-  if (head_nav) {
-    head_nav.disabled = true;
+  const headNav = document.getElementById('jtd-head-nav-stylesheet');
+  if (headNav) {
+    headNav.disabled = true;
   }
 
   const activation = document.getElementById('jtd-nav-activation');
