@@ -1,5 +1,5 @@
 
-- name: "3DBAG-TUDelft"
+- name: "3DBAG"
   url:  https://data.3dbag.nl/cityjson/v20230809/tiles/9/284/556/9-284-556.city.json
   json: 9-284-556.city.json
   json-size: 7.0
