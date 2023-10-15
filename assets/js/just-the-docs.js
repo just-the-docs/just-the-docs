@@ -487,7 +487,10 @@ function navLink() {
   if (href.endsWith('/') && href != '/') {
     href = href.slice(0, -1);
   }
-  return document.getElementById('site-nav').querySelector('a[href="' + href + '"], a[href="' + href + '/"]');
+  else if (href.endsWith('.html')) {
+    href = href.slice(0, -5);
+  }
+  return document.getElementById('site-nav').querySelector('a[href="' + href + '"], a[href="' + href + '/"], a[href="' + href + '.html"], a[href="' + href + '/index.html"]');
 }
 
 // Scroll site-nav to ensure the link to the current page is visible
