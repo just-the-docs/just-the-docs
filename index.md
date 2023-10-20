@@ -57,9 +57,9 @@ We believe that you should use CityJSON because:
 
 <img src="{{ '/assets/images/OGC-1.svg' | prepend: site.baseurl }}" width="200">
 
-Yes, CityJSON is an official standard of the [Open Geospatial Consortium (OGC)](https://www.ogc.org/). 
+Yes, CityJSON v2.0 is an official standard of the [Open Geospatial Consortium (OGC)](https://www.ogc.org/). 
 
-[<i class="fas fa-external-link-alt"></i> document 20-072r2](https://docs.ogc.org/cs/20-072r2/20-072r2.html)
+[<i class="fas fa-external-link-alt"></i> document 20-072r5](https://docs.ogc.org/cs/20-072r2/20-072r5.html)
 
 ---
 
