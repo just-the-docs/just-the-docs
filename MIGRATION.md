@@ -119,7 +119,7 @@ However, some users may load different favicons for each page (and/or dynamicall
 
 ### POTENTIALLY-BREAKING CHANGES in v0.5.0
 
-There is one potentially-breaking change for users migrating from `v0.4.2` to `v0.5.0` concering `setup.scss`. To provide context:
+There is one potentially-breaking change for users migrating from `v0.4.2` to `v0.5.0` concerning `setup.scss`. To provide context:
 
 1. `setup.scss` was introduced in `v0.4.0`
 2. in `v0.4.0` and `v0.4.1`, `setup.scss` was imported *before* color scheme SCSS code

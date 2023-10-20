@@ -669,7 +669,7 @@ This RC does not introduce any major user-facing features. It adds more customiz
 
 ### Trying out pre-release `v0.4.0.rc5`
 
-Simlar to the prior release, `v0.4.0.rc5` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` following immediately after. While we don't anticipate many users using this RC, it is still possible to opt-in.
+Similar to the prior release, `v0.4.0.rc5` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` following immediately after. While we don't anticipate many users using this RC, it is still possible to opt-in.
 
 To use this RC explicitly as a remote theme:
 
@@ -770,7 +770,7 @@ Have any questions, thoughts, or concerns? We'd love to hear from you! Please [o
 
 ### Trying out pre-release `v0.4.0.rc4`
 
-Simlar to the prior release, `v0.4.0.rc4` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc4`.
+Similar to the prior release, `v0.4.0.rc4` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc4`.
 
 To use this RC explicitly as a remote theme:
 
@@ -891,7 +891,7 @@ As soon as we get stable test results from major downstream users, we'll push ou
 
 ### Trying out pre-release `v0.4.0.rc3`
 
-Simlar to the prior release, `v0.4.0.rc3` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc3`.
+Similar to the prior release, `v0.4.0.rc3` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc3`.
 
 To use this RC explicitly as a remote theme:
 
@@ -967,7 +967,7 @@ The intention of this release candidate is to gather even more feedback on a pot
 
 ### Trying out pre-release `v0.4.0.rc2`
 
-Simlar to the prior release, `v0.4.0.rc2` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc2`.
+Similar to the prior release, `v0.4.0.rc2` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc2`.
 
 To use this RC explicitly as a remote theme:
 
@@ -1055,7 +1055,7 @@ We want your feedback! Are these changes helpful? Are our docs easy to understan
 
 ### Trying out pre-release `v0.4.0.rc1`
 
-Due to the massive scope of these changes, we're making `v0.4.0.rc1` avaialble as a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc1`.
+Due to the massive scope of these changes, we're making `v0.4.0.rc1` available as a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc1`.
 
 To use this RC explicitly as a remote theme:
 
@@ -1567,7 +1567,7 @@ fixes #291 #256 #293 #177
 
 ## v0.2.1
 
-This update fixes security vulnerablities in the lodash sub-dependency and bumps other dev dependencies to their latest version.
+This update fixes security vulnerabilities in the lodash sub-dependency and bumps other dev dependencies to their latest version.
 
 ## v0.2.0
 
