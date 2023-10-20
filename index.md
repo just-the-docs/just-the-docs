@@ -59,7 +59,7 @@ We believe that you should use CityJSON because:
 
 Yes, CityJSON v2.0 is an official standard of the [Open Geospatial Consortium (OGC)](https://www.ogc.org/). 
 
-[<i class="fas fa-external-link-alt"></i> document 20-072r5](https://docs.ogc.org/cs/20-072r2/20-072r5.html)
+[<i class="fas fa-external-link-alt"></i> document 20-072r5](https://docs.ogc.org/cs/20-072r5/20-072r5.html)
 
 ---
 
