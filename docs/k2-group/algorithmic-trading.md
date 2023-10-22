@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Algorithmic Trading
+title: K2-Trader
 parent: K2 Group
 direction: rtl
 ---
 
-# Algorithmic Trading
+# K2-Trader (Algorithmic Trading)
 {: .no_toc }
 
 یکی از پروژه‌های برجسته‌ی ما در K2-Group، رباتی الگوریتم تریدینگ برای بازار کریپتوکارنسی است. این ربات با دقت و حساسیت بالا به کار می‌رود و ویژگی‌های اصلی آن عبارتند از:
