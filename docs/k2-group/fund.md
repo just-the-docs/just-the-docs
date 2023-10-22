@@ -1,6 +1,6 @@
 ---
 layout: default
-title: K2-OMS
+title: K2-Fund
 parent: K2 Group
 direction: rtl
 ---
