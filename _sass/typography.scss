@@ -21,9 +21,10 @@ h3,
 
 h4,
 .text-delta {
-  @include fs-3;
+  @include fs-4;
 
   font-weight: 400;
+  font-style: italic;
   text-transform: uppercase;
 }
 
