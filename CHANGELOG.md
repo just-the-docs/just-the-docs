@@ -28,6 +28,7 @@ Code changes to `main` that are *not* in the latest release:
 - Fixed: erroneous parentheses in `site_nav` conditional by [@mattxwang] in [#1366]
 - Fixed: navigation scroll to active link regression by [@pdmosses] in [#1367]
 - Fixed: invalid CSS rules in head elements by [@pdmosses] in [#1368]
+- Fixed: accidental disabling of forward-declared stylesheets by [@mattxwang] in [#1373]
 
 {: .warning }
 [#1358] moved `_includes/nav.html` to the `_includes/components` directory,
@@ -51,6 +52,7 @@ Users who were overriding that file will need to adjust their sites accordingly.
 [#1366]: https://github.com/just-the-docs/just-the-docs/pull/1366
 [#1367]: https://github.com/just-the-docs/just-the-docs/pull/1367
 [#1368]: https://github.com/just-the-docs/just-the-docs/pull/1368
+[#1373]: https://github.com/just-the-docs/just-the-docs/pull/1373
 [#1377]: https://github.com/just-the-docs/just-the-docs/pull/1377
 
 ## Release v0.6.2
