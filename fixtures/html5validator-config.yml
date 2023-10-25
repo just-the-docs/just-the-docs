@@ -1,6 +1,3 @@
 root: _site
 blacklist:
   - "line-numbers"
-ignore:
-  - "1.810-1.823: error: CSS: Parse Error."
-  - "1.811-1.824: error: CSS: Parse Error."

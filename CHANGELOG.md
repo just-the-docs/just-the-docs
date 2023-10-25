@@ -27,24 +27,33 @@ Code changes to `main` that are *not* in the latest release:
 - Fixed: improve build time by [@pdmosses] in [#1358]
 - Fixed: erroneous parentheses in `site_nav` conditional by [@mattxwang] in [#1366]
 - Fixed: navigation scroll to active link regression by [@pdmosses] in [#1367]
+- Fixed: invalid CSS rules in head elements by [@pdmosses] in [#1368]
 - Fixed: accidental disabling of forward-declared stylesheets by [@mattxwang] in [#1373]
 
 {: .warning }
 [#1358] moved `_includes/nav.html` to the `_includes/components` directory,
 Users who were overriding that file will need to adjust their sites accordingly.
 
+### Documentation:
+
+- Docs: fix typos in `CHANGELOG` and `MIGRATION` by [@thapasusheel] in [#1377]
+
 ### New Contributors
 
 - [@CarbonNeuron] made their first contribution in [#1360]
+- [@thapasusheel] made their first contribution in [#1377]
 
 [@CarbonNeuron]: https://github.com/CarbonNeuron
+[@thapasusheel]: https://github.com/thapasusheel
 
 [#1356]: https://github.com/just-the-docs/just-the-docs/pull/1356
 [#1358]: https://github.com/just-the-docs/just-the-docs/pull/1358
 [#1360]: https://github.com/just-the-docs/just-the-docs/pull/1360
 [#1366]: https://github.com/just-the-docs/just-the-docs/pull/1366
 [#1367]: https://github.com/just-the-docs/just-the-docs/pull/1367
+[#1368]: https://github.com/just-the-docs/just-the-docs/pull/1368
 [#1373]: https://github.com/just-the-docs/just-the-docs/pull/1373
+[#1377]: https://github.com/just-the-docs/just-the-docs/pull/1377
 
 ## Release v0.6.2
 
@@ -671,7 +680,7 @@ This RC does not introduce any major user-facing features. It adds more customiz
 
 ### Trying out pre-release `v0.4.0.rc5`
 
-Simlar to the prior release, `v0.4.0.rc5` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` following immediately after. While we don't anticipate many users using this RC, it is still possible to opt-in.
+Similar to the prior release, `v0.4.0.rc5` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` following immediately after. While we don't anticipate many users using this RC, it is still possible to opt-in.
 
 To use this RC explicitly as a remote theme:
 
@@ -772,7 +781,7 @@ Have any questions, thoughts, or concerns? We'd love to hear from you! Please [o
 
 ### Trying out pre-release `v0.4.0.rc4`
 
-Simlar to the prior release, `v0.4.0.rc4` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc4`.
+Similar to the prior release, `v0.4.0.rc4` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc4`.
 
 To use this RC explicitly as a remote theme:
 
@@ -893,7 +902,7 @@ As soon as we get stable test results from major downstream users, we'll push ou
 
 ### Trying out pre-release `v0.4.0.rc3`
 
-Simlar to the prior release, `v0.4.0.rc3` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc3`.
+Similar to the prior release, `v0.4.0.rc3` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc3`.
 
 To use this RC explicitly as a remote theme:
 
@@ -969,7 +978,7 @@ The intention of this release candidate is to gather even more feedback on a pot
 
 ### Trying out pre-release `v0.4.0.rc2`
 
-Simlar to the prior release, `v0.4.0.rc2` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc2`.
+Similar to the prior release, `v0.4.0.rc2` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc2`.
 
 To use this RC explicitly as a remote theme:
 
@@ -1057,7 +1066,7 @@ We want your feedback! Are these changes helpful? Are our docs easy to understan
 
 ### Trying out pre-release `v0.4.0.rc1`
 
-Due to the massive scope of these changes, we're making `v0.4.0.rc1` avaialble as a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc1`.
+Due to the massive scope of these changes, we're making `v0.4.0.rc1` available as a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc1`.
 
 To use this RC explicitly as a remote theme:
 
@@ -1569,7 +1578,7 @@ fixes #291 #256 #293 #177
 
 ## v0.2.1
 
-This update fixes security vulnerablities in the lodash sub-dependency and bumps other dev dependencies to their latest version.
+This update fixes security vulnerabilities in the lodash sub-dependency and bumps other dev dependencies to their latest version.
 
 ## v0.2.0
 
