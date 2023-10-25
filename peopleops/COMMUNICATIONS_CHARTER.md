@@ -28,7 +28,7 @@ Define how we designate our availability to the team, use different communicatio
   - We assume most people will not work on weekends or stat holidays, but you are welcome to. Try to work on your own on holidays so you don't pull someone in who was planning the day off.
   - While there are occasional emergencies that may require it, we try to minimize the pressure on people to work beyond 8 hours a day.
   - Indicate what hours you will work using [Google's Work Hours](https://support.google.com/calendar/answer/7638168?hl=en) in your Countable Calendar. This isn't written in stone but allows your team members to plan when to work with you. If you change it one day, just let your team know in advance.
-  - If your time zone or responsibilities make it difficult to put the "complete picture" here, make sure there are at least two major slots of 4+ hours booked for Vancouver business hours (9-5, M-F Pacific time).
+  - If your time zone or responsibilities make it difficult to put the "complete picture" here, make sure there are at least two major slots of 2+ hours booked for Vancouver business hours (9-5, M-F Pacific time).
 
 ## Guidelines for All Communication
 
@@ -117,6 +117,49 @@ Use the following notification setting. You should only be notified when people 
     1.  When you're blocked by something, make noise to the team  channel.
     2. Create clarity around objectives and user stories. State your understanding in your own words, so teammates can confirm we're on
     the same page.
+
+## End of the Day (EOD) report 
+
+An EOD report is a concise end-of-day summary highlighting daily achievements, work progress, and key updates for team communication and accountability. It helps team members stay informed and aligned on daily activities.
+  - Unique Accomplishments: Describe any unique or significant tasks completed during the day.
+  - Work in Progress: Highlight ongoing projects or tasks, especially if there are notable updates.
+  - Blockers: Report any obstacles or challenges hindering progress.
+
+The goal is to create EOD reports that are concise, focused on the most useful information, and highlight the uniqueness of each day's work. While it's not a strict rule, we encourage minimizing repetitive information, ensuring that the notes are beneficial for colleagues, managers, and other teams seeking your work status. There may be instances where you need to include recurring tasks for external reporting, but the emphasis is on making your notes as valuable as possible.
+
+Here's a simple format we can follow for the EOD report.
+```  EOD Report Format
+DATE: mm-dd-yyyy tz
+DONE:
+1. Task 1
+2. Task 2
+3. Task 3
+
+IN PROGRESS:
+1. Task 4
+2. Task 5
+
+BLOCKERS:
+1. Blocker for task 6
+2. Blocker for task 7 
+```
+
+### What to put and How to write it
+  - Describe the work in a few words that indicate specific progress and outcomes you worked on for most of that day, in a language clients will understand. Between 3 and 20 words is the right level of detail. If you're entering the same phrase every day, you're not being specific enough.
+  - Never combine line items between projects. If you worked on 2 different codes (project slugs) during the day, they must be separate line items.
+  - Be sure to distinguish between completed tasks, which should be placed in the "DONE" category, and the tasks you are currently working on, which should be categorized as "In Progress."
+```
+  - Bad example: "attended meeting X". Nobody cares if you were at the meeting. Mention what you learned, contributed, or what was decided or accomplished in the meeting. This goes back to requiring different descriptions each day.
+  - Bad example: "sprint meeting". Instead, mention a key decision at the meeting or topic that helped accomplish our assigned tasks and goals.
+  - Good example:* Completed Trello Task "Title copied here". Changed deployment parameters so that we could meet our goal of reducing downtime during deploys. Prepared report on test coverage, based on request from client.
+  - Good example:* Finished voicemail, website and google maps setup for Customer X.
+```
+
+### What to exclude
+  - Exclude routine activities like standup meetings, email communications, Slack messages, routine Trello checks, and daily tasks from the EOD report
+
+### Blockers
+  - In your End of Day (EOD) report, if you require assistance in resolving a work blocker, it's advisable to tag relevant individuals. When tagging, provide a clear rationale, your understanding of the issue, your actions taken, what didn't yield results, the specific assistance needed, and if applicable, any urgency regarding when it's required.
 
 ## Presentations
 
