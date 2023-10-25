@@ -21,22 +21,22 @@ nav_order: 2
 ### Links that look like buttons
 
 <div class="code-example" markdown="1">
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 
-[Link button](http://example.com/){: .btn .btn-purple }
-[Link button](http://example.com/){: .btn .btn-blue }
-[Link button](http://example.com/){: .btn .btn-green }
+[Link button](https://just-the-docs.com){: .btn .btn-purple }
+[Link button](https://just-the-docs.com){: .btn .btn-blue }
+[Link button](https://just-the-docs.com){: .btn .btn-green }
 
-[Link button](http://example.com/){: .btn .btn-outline }
+[Link button](https://just-the-docs.com){: .btn .btn-outline }
 </div>
 ```markdown
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 
-[Link button](http://example.com/){: .btn .btn-purple }
-[Link button](http://example.com/){: .btn .btn-blue }
-[Link button](http://example.com/){: .btn .btn-green }
+[Link button](https://just-the-docs.com){: .btn .btn-purple }
+[Link button](https://just-the-docs.com){: .btn .btn-blue }
+[Link button](https://just-the-docs.com){: .btn .btn-green }
 
-[Link button](http://example.com/){: .btn .btn-outline }
+[Link button](https://just-the-docs.com){: .btn .btn-outline }
 ```
 
 ### Button element
@@ -60,20 +60,20 @@ Wrap the button in a container that uses the [font-size utility classes]({% link
 
 <div class="code-example" markdown="1">
 <span class="fs-6">
-[Big ass button](http://example.com/){: .btn }
+[Big ass button](https://just-the-docs.com){: .btn }
 </span>
 
 <span class="fs-3">
-[Tiny ass button](http://example.com/){: .btn }
+[Tiny ass button](https://just-the-docs.com){: .btn }
 </span>
 </div>
 ```markdown
 <span class="fs-8">
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 </span>
 
 <span class="fs-3">
-[Tiny ass button](http://example.com/){: .btn }
+[Tiny ass button](https://just-the-docs.com){: .btn }
 </span>
 ```
 
@@ -82,16 +82,16 @@ Wrap the button in a container that uses the [font-size utility classes]({% link
 Use the [margin utility classes]({% link docs/utilities/layout.md %}#spacing) to add spacing between two buttons in the same block.
 
 <div class="code-example" markdown="1">
-[Button with space](http://example.com/){: .btn .btn-purple .mr-2 }
-[Button](http://example.com/){: .btn .btn-blue }
+[Button with space](https://just-the-docs.com){: .btn .btn-purple .mr-2 }
+[Button](https://just-the-docs.com){: .btn .btn-blue }
 
-[Button with more space](http://example.com/){: .btn .btn-green .mr-4 }
-[Button](http://example.com/){: .btn .btn-blue }
+[Button with more space](https://just-the-docs.com){: .btn .btn-green .mr-4 }
+[Button](https://just-the-docs.com){: .btn .btn-blue }
 </div>
 ```markdown
-[Button with space](http://example.com/){: .btn .btn-purple .mr-2 }
-[Button](http://example.com/){: .btn .btn-blue }
+[Button with space](https://just-the-docs.com){: .btn .btn-purple .mr-2 }
+[Button](https://just-the-docs.com){: .btn .btn-blue }
 
-[Button with more space](http://example.com/){: .btn .btn-green .mr-4 }
-[Button](http://example.com/){: .btn .btn-blue }
+[Button with more space](https://just-the-docs.com){: .btn .btn-green .mr-4 }
+[Button](https://just-the-docs.com){: .btn .btn-blue }
 ```

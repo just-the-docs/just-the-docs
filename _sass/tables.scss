@@ -8,7 +8,9 @@
   margin-bottom: $sp-5;
   overflow-x: auto;
   border-radius: $border-radius;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
 table {
@@ -21,7 +23,7 @@ th,
 td {
   @include fs-3;
 
-  min-width: 120px;
+  min-width: 7.5rem;
   padding: $sp-2 $sp-3;
   background-color: $table-background-color;
   border-bottom: $border rgba($border-color, 0.5);

@@ -1,0 +1,75 @@
+{%- comment -%}
+  Include as: {%- include components/nav.html pages=pages -%}
+  Depends on: include.pages.
+  Results in: HTML for the navigation panel.
+  Includes:
+    sorted_pages.html
+  Overwrites:
+    nav_pages, first_level_pages, second_level_pages, third_level_pages,
+    node, children_list, child, grand_children_list, grand_child.
+{%- endcomment -%}
+
+{%- assign nav_pages = include.pages
+    | where_exp: "item", "item.title != nil"
+    | where_exp: "item", "item.nav_exclude != true" -%}
+
+{%- include sorted_pages.html pages = nav_pages -%}
+
+{%- comment -%}
+  It might be more efficient to sort the pages at each level separately.
+{%- endcomment -%}
+
+{%- assign first_level_pages = sorted_pages
+    | where_exp: "item", "item.parent == nil" -%}
+{%- assign second_level_pages = sorted_pages
+    | where_exp: "item", "item.parent != nil"
+    | where_exp: "item", "item.grand_parent == nil" -%}
+{%- assign third_level_pages = sorted_pages
+    | where_exp: "item", "item.grand_parent != nil" -%}
+
+<ul class="nav-list">
+{%- for node in first_level_pages -%}
+  <li class="nav-list-item">
+    {%- if node.has_children -%}
+    <button class="nav-list-expander btn-reset" aria-label="toggle items in {{ node.title }} category" aria-pressed="false">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+    </button>
+    {%- endif -%}
+    <a href="{{ node.url | relative_url }}" class="nav-list-link">{{ node.title }}</a>
+    {%- if node.has_children -%}
+      {%- assign children_list = second_level_pages
+            | where: "parent", node.title -%}
+      {%- if node.child_nav_order == 'desc' or node.child_nav_order == 'reversed' -%}
+        {%- assign children_list = children_list | reverse -%}
+      {%- endif -%}
+      <ul class="nav-list">
+      {%- for child in children_list -%}
+        <li class="nav-list-item">
+          {%- if child.has_children -%}
+          <button class="nav-list-expander btn-reset" aria-label="toggle items in {{ child.title }} category" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+          </button>
+          {%- endif -%}
+          <a href="{{ child.url | relative_url }}" class="nav-list-link">{{ child.title }}</a>
+          {%- if child.has_children -%}
+            {%- assign grand_children_list = third_level_pages
+                  | where: "parent", child.title
+                  | where: "grand_parent", node.title -%}
+            {%- if child.child_nav_order == 'desc' or child.child_nav_order == 'reversed' -%}
+              {%- assign grand_children_list = grand_children_list | reverse -%}
+            {%- endif -%}
+            <ul class="nav-list">
+            {%- for grand_child in grand_children_list -%}
+              <li class="nav-list-item">
+                <a href="{{ grand_child.url | relative_url }}" class="nav-list-link">{{ grand_child.title }}</a>
+              </li>
+            {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </li>
+{%- endfor -%}
+</ul>
