@@ -17,6 +17,39 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
+- N/A
+
+## Release v0.7.0
+
+Hi folks! This is a minor release that adds a new configuration option for opening external links in a new tab and provides many bugfixes (in both correctness and performance) for Just the Docs users with large sites. We anticipate that for most users, this is a straightforward upgrade. However, it introduces some potentially-breaking *internal* changes to undocumented features of the theme.
+
+### Migrating to `v0.7.0`
+
+**Migration**: users will need to migrate if:
+
+- they overrode `_includes/nav.html`, which has moved to `_includes/components/nav.html`
+- they have an element with the IDs `jtd-nav-activation` or `jtd-head-nav-stylesheet`
+
+For more, refer to the [migration guide](https://just-the-docs.com/MIGRATION/).
+
+### Using Release `v0.7.0`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.7.0` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.7.0
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.7.0"
+```
+
+To use and pin a previous version of the theme, replace the `0.7.0` with the desired release tag.
+
 ### New Features
 
 - Added: configuration options for opening external links in new tab by [@CarbonNeuron] in [#1360]

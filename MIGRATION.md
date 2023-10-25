@@ -43,6 +43,34 @@ This document contains instructions on how to migrate and upgrade Just the Docs 
 
 [CHANGELOG]: {{ site.baseurl }}{% link CHANGELOG.md %}
 
+## v0.6.x - v0.7.0
+
+### POTENTIALLY-BREAKING CHANGES in v0.7.0
+
+There are some *very minor* potentially-breaking changes for users in version `v0.7.0`. **They do not affect the vast majority of users**; however, this may affect users of (undocumented) internal theme structure. They concern:
+
+1. the movement of `_includes/nav.html`, which has moved to `_includes/components/nav.html`
+  - **explicit migration only necessary if users have overridden `_includes/nav.html`**
+2. the addition of `<script>` tags with `id`s `jtd-nav-activation` and `jtd-head-nav-stylesheet`
+  - **explicit migration only necessary if users have existing elements with those IDs**
+
+#### Moved Include
+
+Version `v0.7.0` has moved (and changed the contents of) `_includes/nav.html`; it is now in `_includes/components/nav.html`. This means that user overrides for the component will *no longer be loaded*, reverting to the Just the Docs default.
+
+Users who have overridden this `_includes` should:
+
+1. copy in the new upstream `_includes/components/nav.html` into their site
+2. port over any changes from their custom `_includes/nav.html`
+
+No other changes are necessary.
+
+#### New Script IDs
+
+Version `v0.7.0` adds the `id`s `jtd-nav-activation` and `jtd-head-nav-stylesheet` to some existing script tags. This will cause errors for users that have their own custom components with those IDs.
+
+Users who have elements with those `id`s should rename their elements to avoid a collision.
+
 ## v0.5.x - v0.6.0
 
 ### POTENTIALLY-BREAKING CHANGES in v0.6.0
