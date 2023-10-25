@@ -128,7 +128,10 @@ An EOD report is a concise end-of-day summary highlighting daily achievements, w
 The goal is to create EOD reports that are concise, focused on the most useful information, and highlight the uniqueness of each day's work. While it's not a strict rule, we encourage minimizing repetitive information, ensuring that the notes are beneficial for colleagues, managers, and other teams seeking your work status. There may be instances where you need to include recurring tasks for external reporting, but the emphasis is on making your notes as valuable as possible.
 
 Here's a simple format we can follow for the EOD report.
-```  EOD Report Format
+
+```
+
+EOD Report Format
 DATE: mm-dd-yyyy tz
 DONE:
 1. Task 1
@@ -142,18 +145,22 @@ IN PROGRESS:
 BLOCKERS:
 1. Blocker for task 6
 2. Blocker for task 7 
-```
+
+``` 
 
 ### What to put and How to write it
   - Describe the work in a few words that indicate specific progress and outcomes you worked on for most of that day, in a language clients will understand. Between 3 and 20 words is the right level of detail. If you're entering the same phrase every day, you're not being specific enough.
   - Never combine line items between projects. If you worked on 2 different codes (project slugs) during the day, they must be separate line items.
   - Be sure to distinguish between completed tasks, which should be placed in the "DONE" category, and the tasks you are currently working on, which should be categorized as "In Progress."
+
 ```
+
   - Bad example: "attended meeting X". Nobody cares if you were at the meeting. Mention what you learned, contributed, or what was decided or accomplished in the meeting. This goes back to requiring different descriptions each day.
   - Bad example: "sprint meeting". Instead, mention a key decision at the meeting or topic that helped accomplish our assigned tasks and goals.
   - Good example:* Completed Trello Task "Title copied here". Changed deployment parameters so that we could meet our goal of reducing downtime during deploys. Prepared report on test coverage, based on request from client.
   - Good example:* Finished voicemail, website and google maps setup for Customer X.
-```
+
+``` 
 
 ### What to exclude
   - Exclude routine activities like standup meetings, email communications, Slack messages, routine Trello checks, and daily tasks from the EOD report
