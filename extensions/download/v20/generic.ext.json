@@ -3,12 +3,14 @@
   "name": "Generic",
   "uri": "https://www.cityjson.org/extensions/download/generic.ext.json",
   "version": "1.0.1",
-  "versionCityJSON": "1.1",
+  "versionCityJSON": "2.0",
   "description": "Extension to handle GenericCityObject; meant as a template to learn how to construct an Extension",
   
   "extraRootProperties": {},     
   
   "extraAttributes": {},
+
+  "extraSemanticSurfaces": {},
 
   "extraCityObjects": {
     "+GenericCityObject": {

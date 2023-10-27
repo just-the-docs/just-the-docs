@@ -38,7 +38,6 @@ Here are 2 files with [Geometry templates](https://www.cityjson.org/specs/#geome
 
 ## With Extensions
 
-  - [cube.city.json](https://3d.bk.tudelft.nl/opendata/cityjson/simplegeom/v2.0/cube.city.json) -- a unit cube of type `"+GenericCityObject"`, which is defined in the Generic Extension ([see its schema](https://www.cityjson.org/extensions/download/generic.ext.json))
   - [noise_data.city.json](../tutorials/files/noise_data.city.json) is a demo file with the Noise extension (schema [noise.ext.json](../tutorials/files/noise.ext.json)), more details in [this tutorial]({{ '/tutorials/extension/' | prepend: site.baseurl }})
 
 
