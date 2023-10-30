@@ -41,3 +41,18 @@
 .mark {
   background-color: rgba($yellow-200, 0.15)
 }
+
+.site-nav {
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #898989;
+    border-radius: 2px;
+  }
+}
