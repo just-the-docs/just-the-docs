@@ -9,6 +9,8 @@ name: Deploy Jekyll site to Pages
 on:
   push:
     branches: ["main"]
+  schedule:
+    - cron: '0 0 1 1 *'  # Run at 12:00 AM 01/01 every year to update copyright date
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
