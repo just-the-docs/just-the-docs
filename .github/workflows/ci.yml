@@ -5,6 +5,8 @@ on:
   pull_request:
     branches:
       - main
+  schedule:
+    - cron: '0 0 1 1 *'  # Run at 12:00 AM 01/01 every year to update copyright date
 
 name: CI
 
