@@ -27,15 +27,15 @@ credits: ''
 # subtitle: 'This workshop is part of the <a href="https://rdm.mcmaster.ca/">Research Data Management (RDM)</a> series.'
 # nav_footer_logo_bottom: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png"
 # nav_footer_logo_bottom_href: "https://scds.ca/"
-# nav_footer_logo_top: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/rdm-logo.png"
-# nav_footer_logo_top_href: "https://rdm.mcmaster.ca/"
+nav_footer_logo_top: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/rdm-logo.png"
+nav_footer_logo_top_href: "https://rdm.mcmaster.ca/"
 
 # OTHER settings - Override series specific settings
 subtitle: ""
 nav_footer_logo_bottom: "https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png"
 nav_footer_logo_bottom_href: "https://scds.ca/"
-nav_footer_logo_top: ""
-nav_footer_logo_top_href: ""
+# nav_footer_logo_top: ""
+# nav_footer_logo_top_href: ""
 
 #  _____       _   _   _          _      _                            
 # | ____|   __| | (_) | |_       / \    | |__     ___   __   __   ___ 

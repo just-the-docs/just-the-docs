@@ -14,10 +14,14 @@ More specific common elements seen in lessons can be found [here](common_element
 
 Remember to delete this page before publishing.
 
-## Table of contents
-{: .no_toc .text-delta }
-1. TOC
+<details markdown="block">
+  <summary>
+    Table of Contents
+  </summary>
+  {: .text-delta }
+- TOC
 {:toc}
+</details>
 
 # Headers and Paragraphs
 <div class="code-example" markdown="1">
