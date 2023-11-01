@@ -20,8 +20,8 @@
     .nav-list-link {
       display: block;
       min-height: $nav-list-item-height-sm;
-      padding-top: $sp-1;
-      padding-bottom: $sp-1;
+      padding-top: 0.4rem;
+      padding-bottom: 0.4rem;
       line-height: 1.35rem;//#{$nav-list-item-height-sm - 2 * $sp-1};
       @if $nav-list-expander-right {
         padding-right: $nav-list-item-height-sm;
