@@ -89,18 +89,18 @@
         {% endif %}
         {% if site.nav_footer_logo_bottom == '' %}
           {% if site.nav_footer_logo_bottom_href == '' %}
-            <img width="75%" href="https://scds.ca" align="middle" alt="Bottom Logo" src="https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png">    
+            <img width="75%" style="padding-bottom:15px; padding-top:10px;" href="https://scds.ca" align="middle" alt="Bottom Logo" src="https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png">    
           {% else %}
             <a href="{{ site.nav_footer_logo_bottom_href }}" style="width:75%; text-align:center;">
-              <img width="100%" href="https://scds.ca" align="middle" alt="Bottom Logo" src="https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png">
+              <img width="100%" style="padding-bottom:15px; padding-top:10px;" href="https://scds.ca" align="middle" alt="Bottom Logo" src="https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/scds-logo.png">
             </a> 
           {% endif %}
         {% else %}
             {% if site.nav_footer_logo_bottom_href == '' %}
-              <img width="75%" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
+              <img width="75%" style="padding-bottom:15px; padding-top:10px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
             {% else %}
               <a href="{{ site.nav_footer_logo_bottom_href }}" style="width:75%; text-align:center;">
-                <img width="100%" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
+                <img width="100%" style="padding-bottom:15px; padding-top:10px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
               </a>
             {% endif %}
         {% endif %}
