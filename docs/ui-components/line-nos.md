@@ -10,10 +10,10 @@ permalink: /docs/ui-components/code/line-numbers/
 
 {: .warning }
 
-In prior versions of the docs, we provided "workarounds" to issues arising from code snippets with line numbers. While these resolved visual layout issues, they did not resolve core issues with generating invalid HTML. See [the detailed explanation](#detailed-error-explanation) for more information.
+In prior versions of the docs, we provided "workarounds" to rendering issues arising from code snippets with line numbers. While these seemed to resolve visual layout issues, they did not resolve core issues with Jekyll generating invalid HTML. See [the detailed explanation](#detailed-error-explanation) for more information.
 
 The default settings for HTML compression are incompatible with the HTML
-produced by Jekyll (4.1.1 or earlier) for line numbers from highlighted code
+produced by Jekyll for line numbers from highlighted code
 -- both when using Kramdown code fences and when using Liquid highlight tags.
 
 To avoid non-conforming HTML and unsatisfactory layout, HTML compression
@@ -56,7 +56,7 @@ end
 {% endhighlight %}{% endraw %}
 ```
 
-If this is directly placed within a file processed by Jekyll (via Just the Docs), the following markup will be generated:
+If this is directly placed within a file processed by Jekyll (via Just the Docs, with HTML compression enabled), the following markup will be generated:
 
 ```html
 <figure class="highlight">><code class="language-ruby" data-lang="ruby"><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
@@ -70,7 +70,7 @@ If this is directly placed within a file processed by Jekyll (via Just the Docs)
 
 This HTML is invalid; in particular, there are two issues:
 
-1. there are many missing closing tags, which produces visually garbled output
+1. there are many missing closing tags, and a superfluous `>`, which produce visually garbled output
 2. a `<table>` is placed within a `<code>` element, which is syntactically invalid HTML (but is often allowed by browsers)
 
 To emphasize this first difference, here is the same markup output, indented by tag:
@@ -102,4 +102,4 @@ To emphasize this first difference, here is the same markup output, indented by 
 
 In order, there are missing `</td>`, `</td>`, `</tr>`, `</tbody>`, `</table>`, `</div>`, and `</code>` tags. As a result, the following elements of the page - including the site footer - become visually garbled as browsers attempt to recover gracefully.
 
-Prior workarounds we suggested (such as [Dmitry Hrabrov's in `jekyll-compress-html`#71](https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901)) resolve the missing tag problem. However, they still place a `<table>` within a `<code>` element. The HTML spec normatively outlines that `<code>` elements should only contain "[phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content-2)", of which `<table>` is not a part of ([spec ref](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element)). Thus, we no longer officially recommend these workarounds.
+Prior workarounds we suggested (such as [Dmitry Hrabrov's in `jekyll-compress-html`#71](https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901)) resolve the missing tag problem. However, they still place a `<table>` within a `<code>` element. The HTML spec normatively states that `<code>` elements should only contain "[phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content-2)", which does not include `<table>` ([spec ref](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element)). To avoid Invalid HTML, the previously-suggested workaround using the current version of `_includes/fix_linenos.html` should _not_ be used! 
