@@ -12,6 +12,15 @@
     <br>
   {% endif %}
 
+  {% if site.license_name != nil %}
+    This work is licensed under a
+    {% if site.license_url != nil %}
+      <a rel="license" target="_blank" href="{{ site.license_url }}">
+    {% endif %}
+    {{ site.license_name }}{% if site.license_url != nil %}</a>{% endif %}.
+    <br>
+  {% endif %}
+
   <!-- McMaster date guidelines, Page 25: https://equity.mcmaster.ca/app/uploads/2021/04/Words-matter-writing-guidlines.pdf -->
   Site last modified:
   {% assign month = site.time | date: "%B" %}
