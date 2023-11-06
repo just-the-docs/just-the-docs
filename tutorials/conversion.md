@@ -6,11 +6,20 @@ nav_order: 2
 permalink: /tutorials/conversion/
 ---
 
-The open-source software [citygml-tools](https://github.com/citygml4j/citygml-tools) allows us to automatically convert between CityGML XML files v3.0/v2.0/v1.0 and CityJSON v1.1/v1.0 (v2.0 coming really soon), and vice-versa. 
+## Table of contents
+{: .no_toc .text-delta }
 
-Download its [latest release](https://github.com/citygml4j/citygml-tools/releases) (v2.1.0 at the time of writing this), and unzip its content.
+1. TOC
+{:toc}
 
-You need to have [Java 11 or higher](https://github.com/citygml4j/citygml-tools?tab=readme-ov-file#system-requirements) installed.
+
+
+
+
+The open-source software [citygml-tools](https://github.com/citygml4j/citygml-tools) allows us to automatically convert between CityGML-XML files v3.0/v2.0/v1.0 and CityJSON v2.0/v1.1/v1.0, and vice-versa. 
+
+Download its [latest release](https://github.com/citygml4j/citygml-tools/releases) (v2.2.0 at the time of writing this), and unzip its content.
+Notice that you need to have [Java 11 or higher](https://github.com/citygml4j/citygml-tools?tab=readme-ov-file#system-requirements) installed.
 
 ![](../files/c-download.png)
 
@@ -34,11 +43,10 @@ To convert it to CityJSON:
 
 ![](../files/c-tocityjson.png)
 
-Voilà, this creates a new CityJSON v1.1 file: `/home/elvis/data/DenHaag_01.json`
+Voilà, you're done, this creates a new CityJSON v2.0 file: `/home/elvis/data/DenHaag_01.json`
 
-To upgrade the file to CityJSON v2.0: `cjio /home/elvis/data/DenHaag_01.json upgrade save /home/elvis/data/DenHaag_01_v20.city.json`
 
-If you drag that file into the viewer [ninja](https://ninja.cityjson.org/), you can view it:
+And now, if you drag that file into the viewer [ninja](https://ninja.cityjson.org/), you can view it:
 
 ![](../files/c-ninja.png)
 
