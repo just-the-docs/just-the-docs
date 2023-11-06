@@ -1,16 +1,27 @@
 {
   "type": "CityJSONExtension",
   "name": "Generic",
-  "uri": "https://www.cityjson.org/extensions/download/generic.ext.json",
-  "version": "1.0.1",
+  "uri": "https://www.cityjson.org/extensions/download/v20/generic.ext.json",
+  "version": "1.1.0",
   "versionCityJSON": "2.0",
-  "description": "Extension to handle GenericCityObject; meant as a template to learn how to construct an Extension",
+  "description": "Example of an Extension for a generic city object; meant as a template to learn how to construct an Extension",
   
   "extraRootProperties": {},     
   
   "extraAttributes": {},
 
-  "extraSemanticSurfaces": {},
+  "extraSemanticSurfaces": {
+    "+GenericSemanticSurface": {
+      "type": "object",
+      "properties": {
+        "type": { "enum": [ "+GenericSemanticSurface" ] },
+        "attribute_1": {"type": "number"},
+        "attribute_2": {"type": "string"}
+      },
+      "required": [ "type" ],
+      "additionalProperties": false
+    } 
+  },
 
   "extraCityObjects": {
     "+GenericCityObject": {
