@@ -22,7 +22,7 @@ A CityJSON *Extension* is a JSON file that allows us to document how the core da
 This is conceptually akin to the *Application Domain Extensions* (ADEs) in CityGML; see Section 10.13 of the [official CityGML documentation](https://portal.opengeospatial.org/files/?artifact_id=47842).
 
 
-[<i class="fas fa-external-link-alt"></i> CitySON v2.0 Extension specifications](https://www.cityjson.org/specs/#text-sequences-and-streaming-with-cityjsonfeature)
+[<i class="fas fa-external-link-alt"></i> CitySON v2.0 Extension specifications](https://www.cityjson.org/specs/#extensions)
 
 
 ## How to create an extension?
@@ -30,6 +30,8 @@ This is conceptually akin to the *Application Domain Extensions* (ADEs) in CityG
 See the [Extensions specifications for v{{site.lastversion}}]({{ site.url }}{{ site.baseurl }}/specs/#extensions) for an overview of how the file should be structured.
 
 This [tutorial to create a noise extension]({{ '/tutorials/extension/' | prepend: site.baseurl }}) guides you through the process, and explains how to validate the extension itself and datasets that uses the extension.
+
+As a template/example, you can have a look at an [Extension for CityJSON v2.0 having `+GenericCityObect` with a new semantic surface]({{ '/extensions/download/v20/generic.ext.json' | prepend: site.baseurl }}).
 
 
 
