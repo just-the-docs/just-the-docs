@@ -34,7 +34,9 @@ callouts:
     color: red
   info:
     title: Information
-    color: grey-dk    
+    color: grey-dk  
+  highlight:
+    color: yellow 
 
 # heading_anchors: true
 
