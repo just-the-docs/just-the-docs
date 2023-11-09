@@ -237,6 +237,42 @@ Currently, the navigation structure is limited to 3 levels: grandchild pages can
 
 ---
 
+## Top-Level Grouping for Pages in Sidebar Nav
+
+By default, when using Parent and Children pages, the Parent page will show in the sidebar nav folded, hiding the Child pages from users of your site. Additionally, the Parent page will exist as a page on it's own, which isn't always desired. To have Parent-style group headings for organizing pages better, you can use the [Document Collections]({% link docs/configuration.md %}#document-collections) feature.
+
+Creating collections instead of parent pages, and setting `nav_fold` and `nav_exclude` to false in your `_config.yml` will show the Parent page's name but it will not be a blank page with Child pages, just a sidebar heading.
+
+### Example Setup:
+{: .no_toc }
+
+```yaml
+_config.yml:
+  collections:
+    collection-one:
+      permalink: "/:collection/:path/"
+      output: true
+    collection-two:
+      permalink: "/:collection/:path/"
+      output: true
+  just_the_docs:
+    collections:
+      collection-one:
+        name: Collection One
+        nav_fold: false
+        nav_exclude: false
+      collection-two:
+        name: Collection Two
+        nav_fold: false
+        nav_exclude: false
+
+In your site directory:
+  _collection-one/PAGES-GO-HERE
+  _collection-two/PAGES-GO-HERE
+```
+
+---
+
 ## Auxiliary Links
 
 To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
