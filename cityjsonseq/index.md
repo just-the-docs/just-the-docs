@@ -19,6 +19,20 @@ CityJSON Sequences---*CityJSONSeg* for short, or "*CityJSON Lines*"---is a forma
 The idea is to decompose a (often large) CityJSON file into its features (eg each building, each bridge, each road, etc.), to create several JSON objects (of type `CityJSONFeature`), and stream/store them in a JSON Text Sequence (for instance [ndjson -- newline delimited JSON](https://github.com/ndjson/ndjson-spec/)).
 
 
+## CityJSONSeq specifications
+
+We follow the specifications of *[ndjson -- newline delimited JSON](https://github.com/ndjson/ndjson-spec/)* and we add 2 constraints for handling CityJSON:
+
+  1. each JSON Object must conform to the [JSON Data Interchange Format specifications](https://datatracker.ietf.org/doc/html/rfc8259) and be written as a UTF-8 string;
+  2. each JSON Object must be followed by a new-line (LF: `'\n'`) character, and it may be preceded by a carriage-return (CR: `'\r'`);
+  3. a JSON Object must not contain the new-line or carriage-return characters;
+  4. the first JSON Object must be of type `'CityJSON'` (see below for details);
+  5. the following JSON Objects are of type `'CityJSONFeature'`;
+
+{: .highlight }
+ **Suggested convention**: we recommend using the extension `.city.jsonl` when saving the JSON Objects to a file.
+
+
 ## CityJSONFeature
 
 A `CityJSONFeature` object represents **one** feature in a CityJSON object, for instance a `"Building"` (with eventually its children `"BuildingPart"` and/or `"BuildingInstallation"`).
@@ -55,19 +69,6 @@ See the [full specifications for a CityJSONFeature](https://www.cityjson.org/spe
   "vertices": [...]
 }
 ```
-
-## Specifications for CityJSONSeq
-
-We follow the specifications of *[ndjson -- newline delimited JSON](https://github.com/ndjson/ndjson-spec/)* and we add 2 constraints for handling CityJSON:
-
-  1. each JSON Object must conform to the [JSON Data Interchange Format specifications](https://datatracker.ietf.org/doc/html/rfc8259) and be written as a UTF-8 string;
-  2. each JSON Object must be followed by a new-line (LF: `'\n'`) character, and it may be preceded by a carriage-return (CR: `'\r'`);
-  3. a JSON Object must not contain the new-line or carriage-return characters;
-  4. the first JSON Object must be of type `'CityJSON'` (see below for details);
-  5. the following JSON Objects are of type `'CityJSONFeature'`;
-
-{: .highlight }
- **Suggested convention**: we recommend using the extension `.city.jsonl` when saving the JSON Objects to a file.
 
 
 ## Streaming 3D cities with CityJSONSeq
