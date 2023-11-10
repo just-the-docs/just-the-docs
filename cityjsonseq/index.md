@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "CityJSON Sequences"
+title: "CityJSON Sequence"
 nav_order: 5
 permalink: /cityjsonseq/
 ---
 
-# CityJSONSeq (CityJSON Sequences)
+# CityJSONSeq (CityJSON Sequence)
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -15,7 +15,7 @@ permalink: /cityjsonseq/
 
 - - - 
 
-CityJSON Sequences---*CityJSONSeg* for short, or "*CityJSON Lines*"---is a format based on [JSON Text Sequences](https://datatracker.ietf.org/doc/html/rfc7464) and CityJSON.
+CityJSON Sequence---*CityJSONSeq* for short, or *CityJSON Lines*---is a format based on [JSON Text Sequences](https://datatracker.ietf.org/doc/html/rfc7464) and CityJSON.
 The idea is to decompose a (often large) CityJSON file into its features (eg each building, each bridge, each road, etc.), to create several JSON objects (of type `CityJSONFeature`), and stream/store them in a JSON Text Sequence (for instance [ndjson -- newline delimited JSON](https://github.com/ndjson/ndjson-spec/)).
 
 
@@ -79,13 +79,13 @@ The first JSON Object should therefore be of type `"CityJSON"` and contain the n
 Notice that the properties `"CityObjects"` and `"vertices"` are mandatory (for the [JSON Object to be valid](https://www.cityjson.org/specs/#cityjson-object)) but should be respectively an empty JSON object and an empty array.
 One example would be:
 ```json
-{"type":"CityJSON","version":"2.0","transform":{...},"CityObjects":{},"metadata":{...},"vertices":[]}
+{"type":"CityJSON","version":"2.0","transform": {"scale":[1.0,1.0,1.0],"translate": [0.0, 0.0, 0.0]},"metadata":{"referenceSystem":"https://www.opengis.net/def/crs/EPSG/0/7415"},"CityObjects":{},"vertices":[]}
 ```
 
-The subsequent JSON Object are all of type `"CityJSONFeature"`, which means a CityJSONSeq could look like this one:
+The subsequent JSON Objects must all be of type `"CityJSONFeature"`, which means a CityJSONSeq with 3 features could look like this one:
 
 ```json
-{"type":"CityJSON","version":"2.0","transform":{...},"CityObjects":{},"metadata":{...},"vertices":[]}
+{"type":"CityJSON","version":"2.0","transform": {"scale":[1.0,1.0,1.0],"translate": [0.0, 0.0, 0.0]},"metadata":{"referenceSystem":"https://www.opengis.net/def/crs/EPSG/0/7415"},"CityObjects":{},"vertices":[]}
 {"type":"CityJSONFeature","id":"a","CityObjects":{...},"vertices":[...]} 
 {"type":"CityJSONFeature","id":"b","CityObjects":{...},"vertices":[...]} 
 {"type":"CityJSONFeature","id":"c","CityObjects":{...},"vertices":[...]} 
