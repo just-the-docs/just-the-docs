@@ -1,29 +1,37 @@
 {%- comment -%}
-This file can be used to fix the HTML produced by Jekyll for highlighted
-code with line numbers.
+This file was previously used to "fix" the HTML produced by Jekyll for
+highlighted code with line numbers. While it often resolves layout issues
+from the missing HTML tags, it still generates invalid HTML (by placing
+a `<table>` element within a `<code>` block). As such, we no longer
+recommend using this workaround. For more information, see the
+"Code snippets with line numbers" docs page:
+https://just-the-docs.com/docs/ui-components/code/line-numbers/
+(or, docs/ui-components/line-nos.md/)
 
-It works with `{% highlight some_language linenos %}...{% endhighlight %}`
-and with the Kramdown option to add line numbers to fenced code.
+The next portion of this file, including the comments and the workaround,
+are preserved for backwards comptability.
 
-The implementation was derived from the workaround provided by 
+ACKNOWLEDGEMENTS
+
+The implementation was derived from the workaround provided by
 Dmitry Hrabrov (DeXP) at
 https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
 
-EXPLANATION
+EXPLANATION (OLD)
 
-The HTML produced by Rouge highlighting with lie numbers is of the form
-`code table`. Jekyll (<= 4.1.1) always wraps the highlighted HTML
+The HTML produced by Rouge highlighting with line numbers is of the form
+`code table`. Jekyll always wraps the highlighted HTML
 with `pre`. This wrapping is not only unnecessary, but also transforms
 the conforming HTML produced by Rouge to non-conforming HTML, which
-results in HTML validation error reports. 
+results in HTML validation error reports.
 
 The fix removes the outer `pre` tags whenever they contain the pattern
 `<table class="rouge-table">`.
-  
+
 Apart from avoiding HTML validation errors, the fix allows the use of
 the [Jekyll layout for compressing HTML](http://jch.penibelst.de),
 which relies on `pre` tags not being nested, according to
-https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-172069842 
+https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-172069842
 
 USAGE
 
@@ -48,7 +56,7 @@ Some code
 
 CAVEATS
 
-The above does not work when `Some code` happens to contain the matched string 
+The above does not work when `Some code` happens to contain the matched string
 `<table class="rouge-table">`.
 
 The use of this file overwrites the variable `fix_linenos_code` with `nil`.
