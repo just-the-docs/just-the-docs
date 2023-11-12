@@ -488,22 +488,17 @@ jtd.setTheme = function(theme) {
 
 function navLink() {
   var pathname = document.location.pathname;
-  console.log(pathname);
   
   var navLink = document.getElementById('site-nav').querySelector('a[href="' + pathname + '"]');
   if (navLink) {
-    console.log(navLink);
     return navLink;
   }
 
   // The `permalink` setting may produce navigation links whose `href` ends with `/` or `.html`.
-  // To find these links when such endings are omitted from or added to pathname:
+  // To find these links when `/` is omitted from or added to pathname, or `.html` is omitted:
 
   if (pathname.endsWith('/') && pathname != '/') {
     pathname = pathname.slice(0, -1);
-  }
-  else if (pathname.endsWith('.html')) {
-    pathname = pathname.slice(0, -5);
   }
 
   if (pathname != '/') {
