@@ -487,14 +487,33 @@ jtd.setTheme = function(theme) {
 // and not have the slash on GitHub Pages
 
 function navLink() {
-  var href = document.location.pathname;
-  if (href.endsWith('/') && href != '/') {
-    href = href.slice(0, -1);
+  var pathname = document.location.pathname;
+  console.log(pathname);
+  
+  var navLink = document.getElementById('site-nav').querySelector('a[href="' + pathname + '"]');
+  if (navLink) {
+    console.log(navLink);
+    return navLink;
   }
-  else if (href.endsWith('.html')) {
-    href = href.slice(0, -5);
+
+  // The `permalink` setting may produce navigation links whose `href` ends with `/` or `.html`.
+  // To find these links when such endings are omitted from or added to pathname:
+
+  if (pathname.endsWith('/') && pathname != '/') {
+    pathname = pathname.slice(0, -1);
   }
-  return document.getElementById('site-nav').querySelector('a[href="' + href + '"], a[href="' + href + '/"], a[href="' + href + '.html"], a[href="' + href + '/index.html"]');
+  else if (pathname.endsWith('.html')) {
+    pathname = pathname.slice(0, -5);
+  }
+
+  if (pathname != '/') {
+    navLink = document.getElementById('site-nav').querySelector('a[href="' + pathname + '"], a[href="' + pathname + '/"], a[href="' + pathname + '.html"]');
+    if (navLink) {
+      return navLink;
+    }
+  }
+
+  return null; // avoids `undefined`
 }
 
 // Scroll site-nav to ensure the link to the current page is visible
