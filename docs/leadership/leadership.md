@@ -31,5 +31,6 @@ direction: rtl
 - [تمامیت](/assets/SSRN-id920625.pdf)
 - [سه قانون عملکرد](/assets/The-Three-Laws-of-Performance.pdf)
 - [هدف - برایان تریسی](/assets/Goals-by-Brain-Tracy.pdf)
+- - [هدف - برایان تریسی۲](/assets/Process for production of Cement, Cock and Pelletizing-15 (1).pdf)
 
 
