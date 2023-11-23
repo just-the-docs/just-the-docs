@@ -45,26 +45,25 @@ Any extra steps that interrupt development flow should be automated. For example
 
 ## Project Structure
 
-We use the monorepo pattern, meaning all files required to run the project (other than secrets and private data) go in a single GIT repository, structured as:
+We use the [monorepo](https://dl.acm.org/doi/pdf/10.1145/2854146) pattern, meaning all files required to run the project (other than secrets and private data) go in a single GIT repository, structured as:
 
     project-slug/
-      web/
-        Dockerfile
-        app1/
-        app2/
-        app3/
-        manage.py
-      frontend/
-        Dockerfile
-        package.json
-        src/
+      project1/ ...
+      project2/ ...
+        web/
+          Dockerfile
+          app1/
+          app2/
+          app3/
+          manage.py
+        frontend/
+          Dockerfile
+          package.json
+          src/
       nginx/
         Dockerfile
         nginx.conf
-      static/
       docker-compose.yml
-
-[Example here](https://github.com/countable-web/countable-modern-django)
 
 The front-end Dockerfile should run a development server, but for production should just build static files, into the /static folder which is served by nginx.
 
