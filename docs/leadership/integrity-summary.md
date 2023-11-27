@@ -2,7 +2,6 @@
 layout: default
 title: تمامیت - خلاصه
 parent: Leadership
-nav_order: 4
 direction: rtl
 ---
 
