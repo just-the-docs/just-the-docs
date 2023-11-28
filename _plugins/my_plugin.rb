@@ -14,8 +14,9 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
     html = Kramdown::Document.new(content).to_html
 
     # { bage bold new | Example text } to <span class="bage bold new">Example text</span>
+    html.gsub!(/\{\s*(.+?)\s*\|\s*sub\s*\}/, '<sub>\1</sub>')
+    html.gsub!(/\{\s*(.+?)\s*\|\s*([^|]+?)\s*\}/, '<span class="\2">\1</span>')
     html.gsub!(/\{\s*([^|]+?)\s*\\\s*(.+?)\s*\}/, '<span class="\1">\2</span>')
-    html.gsub!(/#(.+?)#/, '<sub>\1</sub>')
 
     html
   end
