@@ -15,7 +15,7 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
 
     # { bage bold new | Example text } to <span class="bage bold new">Example text</span>
     html.gsub!(/\{\s*([^|]+?)\s*\\\s*(.+?)\s*\}/, '<span class="\1">\2</span>')
-    html.gsub!(/--(.+?)--/, '<sub>\1</sub>')
+    html.gsub!(/#(.+?)#/, '<sub>\1</sub>')
 
     html
   end
