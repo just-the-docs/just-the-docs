@@ -6,7 +6,8 @@ has_children: true
 direction: rtl
 ---
 
-![image](https://github.com/OkBayat/OkBayat.github.io/assets/24451494/5b31aad3-d61b-4040-a723-edd8fed46299)
+![k2-groups-logo](https://github.com/OkBayat/OkBayat.github.io/assets/24451494/247912e3-275c-439a-9f15-2f0e012eba6b)
+
 
 # K2 Group
 
