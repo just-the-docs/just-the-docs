@@ -11,6 +11,7 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
 
   def convert(content)
 
+    # تبدیل به یک رشته قابل تغییر با استفاده از `dup`
     non_frozen_string = content.dup
 
     # { bage bold new | Example text } to <span class="bage bold new">Example text</span>
