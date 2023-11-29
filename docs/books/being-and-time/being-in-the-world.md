@@ -2,7 +2,7 @@
 layout: default
 title: هستی-در-دنیا و وجود-در-آن‌جا
 parent: هستی و زمان
-nav_order: 102
+grand_parent: Books
 direction: rtl
 ---
 

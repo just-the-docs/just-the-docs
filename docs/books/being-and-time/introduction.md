@@ -2,6 +2,7 @@
 layout: default
 title: فصل اول - معرفی
 parent: هستی و زمان
+grand_parent: Books
 nav_order: 1
 direction: rtl
 ---
