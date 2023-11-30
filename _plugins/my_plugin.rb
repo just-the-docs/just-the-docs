@@ -16,7 +16,7 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
 
     # { bage bold new | Example text } to <span class="bage bold new">Example text</span>
     non_frozen_string.gsub!(/\{\s*(.+?)\s*\|\s*sub\s*\}/, '<sub>\1</sub>')
-    non_frozen_string.gsub!(/\{\s*([\s\S]+?)\s*\|\s*([^|]+?)\s*\}/, '<span class="\2">\1</span>')
+    non_frozen_string.gsub!(/\{\s*([^\}]+?)\s*\|\s*([^|]+?)\s*\}/, '<span class="\2">\1</span>')
     non_frozen_string.gsub!(/\{\s*([^|]+?)\s*\\\s*(.+?)\s*\}/, '<span class="\1">\2</span>')
 
     # ابتدا محتوای اصلی را با استفاده از تبدیل‌کننده‌ی پیش‌فرض Markdown به HTML تبدیل می‌کنیم
