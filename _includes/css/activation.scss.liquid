@@ -2,18 +2,16 @@
   Include as: {%- include css/activation.scss.liquid -%}
   Depends on: page, site.
   Results in: page-dependent (non-nested) CSS rules for inclusion in a head style element,
-    which needs to be suppressed when JS is enabled.
+    which needs to be disabled when JS is enabled.
   Includes:
     sorted_pages.html.
   Overwrites: 
-    activation_no_nav_link, activation_pages, activation_pages_top_size, activation_page, activation_title,
-    activation_first_level, activation_second_level, activation_third_level,
-    activation_first_level_reversed, activation_second_level_reversed,
-    activation_first_level_index, activation_second_level_index, activation_third_level_index,
-    activation_index, activation_collection_prefix, activation_other_collection_prefix.
+    activation_no_nav_link,
+    nav_list, nav_list_item, nav_list_link, nav_category_list,
+    site_nav, nav_list_link_prefix, nav_list_item_separateds, 
+    nav_index0, nav_index1, nav_index2, nav_index3,
+    activation_collection_prefix, activation_other_collection_prefix.
   Should not be cached, because it depends on page.
-  (For a site with only top-level pages, the rendering of this file is always empty.
-  This property could be detected, and used to reduce the build time for such sites.)
 {%- endcomment -%}
 
 {%- comment -%}
@@ -43,83 +41,99 @@
 
 {%- else -%}
 
-{%- assign activation_pages = site[page.collection]
-      | default: site.html_pages
-      | where_exp: "item", "item.title != nil"
-      | where_exp: "item", "item.nav_exclude != true" -%}
+{%- capture nav_list -%}
+<ul class="nav-list">
+{%- endcapture -%}
 
-{%- assign activation_first_level_index = nil -%}
-{%- assign activation_second_level_index = nil -%}
-{%- assign activation_third_level_index = nil -%}
-{%- assign activation_first_level_reversed = nil -%}
-{%- assign activation_second_level_reversed = nil -%}
+{%- capture nav_list_item -%}
+<li class="nav-list-item
+{%- endcapture -%}
+
+{%- capture nav_list_link -%}
+<a href="{{ page.url | relative_url }}" class="nav-list-link">
+{%- endcapture -%}
+
+{%- capture nav_category_list -%}
+<ul class="nav-list nav-category-list">
+{%- endcapture -%}
+
+{%- capture site_nav -%}
+{%- include_cached components/site_nav.html -%}
+{%- endcapture -%}
+
+{%- assign nav_list_link_prefix =
+      site_nav | split: nav_list_link | first | append: nav_list_link -%}
+
+{%- assign nav_list_item_separateds =
+      nav_list_link_prefix | split: nav_list_item | pop -%}
+
+{%- comment -%}
+  The string before the first nav-list-item must contain a ul.nav-list tag.
+  It could be for a list of ordinary pages, for external links, or for a collection.
+  
+  The string after a nav-list-item is non-empty, and may contain:
+  - a ul.nav-list tag (when the item is the first in a list) and/or
+    one or more closing ul tags (when the item is preceded by a list)
+  - a div.nav-category tag and a ul.nav-list tag (when the item is the first in
+    a foldable collection)
+  - neither of the above (when it is not the first item in a list).
+{%- endcomment %}
+
+{%- assign nav_level = 0 -%}
+{%- assign nav_index0 = 1 -%}
+{%- assign nav_index1 = nil -%}
+{%- assign nav_index2 = nil -%}
+{%- assign nav_index3 = nil -%}
+
+{%- for separated in nav_list_item_separateds -%}
+  {%- unless separated contains nav_category_list and false -%}
+
+    {%- if separated contains "</ul>" -%}
+      {%- assign endless = separated | remove: "</ul>" -%}
+      {%- assign differs = separated.size | minus: endless.size | divided_by: 5 -%}
+      {% for index in (1..differs) %}
+        {% case nav_level %}
+          {% when 1 %}
+            {%- assign nav_index1 = nil -%}
+          {% when 2 %}
+            {%- assign nav_index2 = nil -%}
+          {% when 3 %}
+            {%- assign nav_index3 = nil -%}
+        {% endcase %}
+        {%- assign nav_level = nav_level | minus: 1 -%}
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- if separated contains nav_list -%}
+      {%- assign nav_level = nav_level | plus: 1 -%}
+    {%- endif -%}
+
+    {% case nav_level %}
+      {% when 0 %}
+        {%- assign nav_index0 = nav_index0 | plus: 1 -%}
+      {% when 1 %}
+        {%- assign nav_index1 = nav_index1 | plus: 1 -%}
+      {% when 2 %}
+        {%- assign nav_index2 = nav_index2 | plus: 1 -%}
+      {% when 3 %}
+        {%- assign nav_index3 = nav_index3 | plus: 1 -%}
+    {% endcase %}
+
+  {%- endunless -%}
+{%- endfor -%}
 
 {%- comment -%}
   The generated CSS depends on the position of the current page in each level in
   the navigation.
 {%- endcomment -%}
 
-{%- assign activation_title = page.grand_parent | default: page.parent | default: page.title -%}
-{%- assign activation_first_level = activation_pages
-      | where_exp: "item", "item.parent == nil" -%}
-{%- include sorted_pages.html pages = activation_first_level -%}
-{%- for activation_page in sorted_pages -%}
-  {%- if activation_page.title == activation_title -%}
-    {%- assign activation_first_level_index = forloop.index -%}
-    {%- assign activation_first_level_reversed = activation_page.child_nav_order -%}
-    {%- break -%}
-  {%- endif -%}
-{%- endfor -%}
-
-{%- if activation_first_level_index == nil -%}
+{%- if nav_index1 == nil -%}
 
 {{ activation_no_nav_link }}
 
 {%- else -%}
 
-{%- if page.grand_parent -%}
-  {%- assign activation_title = page.parent -%}
-  {%- assign activation_second_level = activation_pages
-        | where_exp: "item", "item.grand_parent == nil"
-        | where_exp: "item", "item.parent == page.grand_parent" -%}
-{%- elsif page.parent -%}
-  {%- assign activation_title = page.title -%}
-  {%- assign activation_second_level = activation_pages
-        | where_exp: "item", "item.grand_parent == nil"
-        | where_exp: "item", "item.parent == page.parent" -%}
-{%- endif -%}
-{%- if page.parent -%}
-  {%- include sorted_pages.html pages = activation_second_level -%}
-  {%- for activation_page in sorted_pages -%}
-    {%- if activation_page.title == activation_title -%}
-      {%- assign activation_second_level_index = forloop.index -%}
-      {%- assign activation_second_level_reversed = activation_page.child_nav_order -%}
-      {%- if activation_first_level_reversed -%}
-        {%- assign activation_second_level_index = sorted_pages | size | plus: 1 | minus: activation_second_level_index -%}
-      {%- endif -%}
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
-{%- endif -%}
-
-{%- if page.grand_parent -%}
-  {%- assign activation_third_level = activation_pages
-        | where_exp: "item", "item.parent == page.parent"
-        | where_exp: "item", "item.grand_parent == page.grand_parent" -%}
-  {%- include sorted_pages.html pages = activation_third_level -%}
-  {%- assign activation_third_level = sorted_pages -%}
-  {%- for activation_page in sorted_pages -%}
-    {%- if activation_page.title == page.title -%}
-      {%- assign activation_third_level_index = forloop.index -%}
-      {%- if activation_second_level_reversed -%}
-        {%- assign activation_third_level_index = sorted_pages | size | plus: 1 | minus: activation_third_level_index -%}
-      {%- endif -%}
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
-{%- endif -%}
-
-{%- if activation_second_level_index == nil and activation_third_level_index -%}
+{%- if nav_index2 == nil and nav_index3 -%}
 
 {{ activation_no_nav_link }}
 
@@ -158,34 +172,14 @@
 
 {%- else -%}
 
-  {%- for activation_collection in site.just_the_docs.collections -%}
-    {%- if activation_collection[0] == page.collection -%}
-      {%- assign activation_index = forloop.index -%}
-      {%- break -%}
-    {%- endif -%}
-  {%- endfor -%}
-
-  {%- assign activation_pages_top_size = site.html_pages
-          | where_exp:"item", "item.title != nil"
-          | where_exp:"item", "item.parent == nil"
-          | where_exp:"item", "item.nav_exclude != true"
-          | size -%}
-  {%- if activation_pages_top_size > 0 -%}
-    {%- assign activation_index = activation_index | plus: 1 -%}
-  {%- endif -%}
-
-  {%- if site.nav_external_links -%}
-    {%- assign activation_index = activation_index | plus: 1 -%}
-  {%- endif -%}
-
   {%- capture activation_collection_prefix -%}
-  .site-nav > ul:nth-of-type({{ activation_index }})
+  .site-nav > ul:nth-of-type({{ nav_index0 }})
   {%- if site.just_the_docs.collections[page.collection].nav_fold %} > li > ul
   {%- endif -%}
   {%- endcapture -%}
 
   {%- capture activation_other_collection_prefix -%}
-  .site-nav > ul:not(:nth-of-type({{ activation_index }}))
+  .site-nav > ul:not(:nth-of-type({{ nav_index0 }}))
   {%- endcapture -%}
 
 {%- endif -%}
@@ -197,25 +191,25 @@
   and children of the current page.
 {%- endcomment %}
 
-{% if activation_third_level_index -%}
+{% if nav_index3 -%}
 
 {{ activation_collection_prefix }} > li > a,
 {{ activation_collection_prefix }} > li > ul > li > a,
-{{ activation_collection_prefix }} > li > ul > li > ul > li:not(:nth-child({{ activation_third_level_index }})) > a {
+{{ activation_collection_prefix }} > li > ul > li > ul > li:not(:nth-child({{ nav_index3 }})) > a {
   background-image: none;
 }
 
-{%- elsif activation_second_level_index -%}
+{%- elsif nav_index2 -%}
 
 {{ activation_collection_prefix }} > li > a,
-{{ activation_collection_prefix }} > li > ul > li:not(:nth-child({{ activation_second_level_index }})) > a,
+{{ activation_collection_prefix }} > li > ul > li:not(:nth-child({{ nav_index2 }})) > a,
 {{ activation_collection_prefix }} > li > ul > li > ul > li > a {
   background-image: none;
 }
 
 {%- else -%}
 
-{{ activation_collection_prefix }} > li:not(:nth-child({{ activation_first_level_index }})) > a,
+{{ activation_collection_prefix }} > li:not(:nth-child({{ nav_index1 }})) > a,
 {{ activation_collection_prefix }} > li > ul > li > a,
 {{ activation_collection_prefix }} > li > ul > li > ul > li > a {
   background-image: none;
@@ -236,9 +230,9 @@
   The following rule styles the link to the current page.
 {%- endcomment %}
 
-{{ activation_collection_prefix }} > li:nth-child({{ activation_first_level_index }})
-{%- if activation_second_level_index %} > ul > li:nth-child({{ activation_second_level_index }})
-{%- if activation_third_level_index %} > ul > li:nth-child({{ activation_third_level_index }})
+{{ activation_collection_prefix }} > li:nth-child({{ nav_index1 }})
+{%- if nav_index2 %} > ul > li:nth-child({{ nav_index2 }})
+{%- if nav_index3 %} > ul > li:nth-child({{ nav_index3 }})
 {%- endif -%}
 {%- endif %} > a {
   font-weight: 600;
@@ -259,9 +253,9 @@
 {%- if site.just_the_docs.collections %}
 .site-nav > ul.nav-category-list > li > button svg,
 {% endif -%}
-{{ activation_collection_prefix }} > li:nth-child({{ activation_first_level_index }}) > button svg
-{%- if activation_second_level_index -%},
-{{ activation_collection_prefix }} > li:nth-child({{ activation_first_level_index }}) > ul > li:nth-child({{ activation_second_level_index }}) > button svg
+{{ activation_collection_prefix }} > li:nth-child({{ nav_index1 }}) > button svg
+{%- if nav_index2 -%},
+{{ activation_collection_prefix }} > li:nth-child({{ nav_index1 }}) > ul > li:nth-child({{ nav_index2 }}) > button svg
 {%- endif %} {
   transform: rotate(-90deg);
 }
@@ -269,9 +263,9 @@
 {%- if site.just_the_docs.collections %}
 .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list,
 {% endif -%}
-{{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ activation_first_level_index }}) > ul.nav-list
-{%- if activation_second_level_index %},
-{{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ activation_first_level_index }}) > ul.nav-list > li.nav-list-item:nth-child({{ activation_second_level_index }}) > ul.nav-list
+{{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ nav_index1 }}) > ul.nav-list
+{%- if nav_index2 %},
+{{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ nav_index1 }}) > ul.nav-list > li.nav-list-item:nth-child({{ nav_index2 }}) > ul.nav-list
 {%- endif %} {
   display: block;
 }
