@@ -8,8 +8,7 @@
   Overwrites: 
     activation_no_nav_link,
     nav_list, nav_list_item, nav_list_link, nav_category_list,
-    site_nav, nav_list_link_prefix, nav_list_item_separateds, 
-    nav_index0, nav_index1, nav_index2, nav_index3,
+    site_nav, nav_list_link_prefix, nav_splits, nav_split, nav_levels,
     activation_collection_prefix, activation_other_collection_prefix.
   Should not be cached, because it depends on page.
 {%- endcomment -%}
@@ -64,7 +63,7 @@
 {%- assign nav_list_link_prefix =
       site_nav | split: nav_list_link | first | append: nav_list_link -%}
 
-{%- assign nav_list_item_separateds =
+{%- assign nav_splits =
       nav_list_link_prefix | split: nav_list_item | pop -%}
 
 {%- comment -%}
@@ -79,45 +78,25 @@
   - neither of the above (when it is not the first item in a list).
 {%- endcomment %}
 
-{%- assign nav_level = 0 -%}
-{%- assign nav_index0 = 1 -%}
-{%- assign nav_index1 = nil -%}
-{%- assign nav_index2 = nil -%}
-{%- assign nav_index3 = nil -%}
+{%- assign nav_levels = "" | split: "" | push: 1 -%}
 
-{%- for separated in nav_list_item_separateds -%}
-  {%- unless separated contains nav_category_list and false -%}
+{%- for nav_split in nav_splits -%}
+  {%- unless nav_split contains nav_category_list and false -%}
 
-    {%- if separated contains "</ul>" -%}
-      {%- assign endless = separated | remove: "</ul>" -%}
-      {%- assign differs = separated.size | minus: endless.size | divided_by: 5 -%}
+    {%- if nav_split contains "</ul>" -%}
+      {%- assign endless = nav_split | remove: "</ul>" -%}
+      {%- assign differs = nav_split.size | minus: endless.size | divided_by: 5 -%}
       {% for index in (1..differs) %}
-        {% case nav_level %}
-          {% when 1 %}
-            {%- assign nav_index1 = nil -%}
-          {% when 2 %}
-            {%- assign nav_index2 = nil -%}
-          {% when 3 %}
-            {%- assign nav_index3 = nil -%}
-        {% endcase %}
-        {%- assign nav_level = nav_level | minus: 1 -%}
+        {%- assign nav_levels = nav_levels | pop -%}
       {%- endfor -%}
     {%- endif -%}
 
-    {%- if separated contains nav_list -%}
-      {%- assign nav_level = nav_level | plus: 1 -%}
+    {%- if nav_split contains nav_list -%}
+      {%- assign nav_levels = nav_levels | push: 0 -%}
     {%- endif -%}
 
-    {% case nav_level %}
-      {% when 0 %}
-        {%- assign nav_index0 = nav_index0 | plus: 1 -%}
-      {% when 1 %}
-        {%- assign nav_index1 = nav_index1 | plus: 1 -%}
-      {% when 2 %}
-        {%- assign nav_index2 = nav_index2 | plus: 1 -%}
-      {% when 3 %}
-        {%- assign nav_index3 = nav_index3 | plus: 1 -%}
-    {% endcase %}
+    {%- assign nav_index = nav_levels[-1] | plus: 1 -%}
+    {%- assign nav_levels = nav_levels | pop | push: nav_index -%}
 
   {%- endunless -%}
 {%- endfor -%}
@@ -127,13 +106,13 @@
   the navigation.
 {%- endcomment -%}
 
-{%- if nav_index1 == nil -%}
+{%- if nav_levels[1] == nil -%}
 
 {{ activation_no_nav_link }}
 
 {%- else -%}
 
-{%- if nav_index2 == nil and nav_index3 -%}
+{%- if nav_levels[2] == nil and nav_levels[3] -%}
 
 {{ activation_no_nav_link }}
 
@@ -173,13 +152,13 @@
 {%- else -%}
 
   {%- capture activation_collection_prefix -%}
-  .site-nav > ul:nth-of-type({{ nav_index0 }})
+  .site-nav > ul:nth-of-type({{ nav_levels[0] }})
   {%- if site.just_the_docs.collections[page.collection].nav_fold %} > li > ul
   {%- endif -%}
   {%- endcapture -%}
 
   {%- capture activation_other_collection_prefix -%}
-  .site-nav > ul:not(:nth-of-type({{ nav_index0 }}))
+  .site-nav > ul:not(:nth-of-type({{ nav_levels[0] }}))
   {%- endcapture -%}
 
 {%- endif -%}
@@ -191,25 +170,25 @@
   and children of the current page.
 {%- endcomment %}
 
-{% if nav_index3 -%}
+{% if nav_levels[3] -%}
 
 {{ activation_collection_prefix }} > li > a,
 {{ activation_collection_prefix }} > li > ul > li > a,
-{{ activation_collection_prefix }} > li > ul > li > ul > li:not(:nth-child({{ nav_index3 }})) > a {
+{{ activation_collection_prefix }} > li > ul > li > ul > li:not(:nth-child({{ nav_levels[3] }})) > a {
   background-image: none;
 }
 
-{%- elsif nav_index2 -%}
+{%- elsif nav_levels[2] -%}
 
 {{ activation_collection_prefix }} > li > a,
-{{ activation_collection_prefix }} > li > ul > li:not(:nth-child({{ nav_index2 }})) > a,
+{{ activation_collection_prefix }} > li > ul > li:not(:nth-child({{ nav_levels[2] }})) > a,
 {{ activation_collection_prefix }} > li > ul > li > ul > li > a {
   background-image: none;
 }
 
 {%- else -%}
 
-{{ activation_collection_prefix }} > li:not(:nth-child({{ nav_index1 }})) > a,
+{{ activation_collection_prefix }} > li:not(:nth-child({{ nav_levels[1] }})) > a,
 {{ activation_collection_prefix }} > li > ul > li > a,
 {{ activation_collection_prefix }} > li > ul > li > ul > li > a {
   background-image: none;
@@ -230,9 +209,9 @@
   The following rule styles the link to the current page.
 {%- endcomment %}
 
-{{ activation_collection_prefix }} > li:nth-child({{ nav_index1 }})
-{%- if nav_index2 %} > ul > li:nth-child({{ nav_index2 }})
-{%- if nav_index3 %} > ul > li:nth-child({{ nav_index3 }})
+{{ activation_collection_prefix }} > li:nth-child({{ nav_levels[1] }})
+{%- if nav_levels[2] %} > ul > li:nth-child({{ nav_levels[2] }})
+{%- if nav_levels[3] %} > ul > li:nth-child({{ nav_levels[3] }})
 {%- endif -%}
 {%- endif %} > a {
   font-weight: 600;
@@ -253,9 +232,9 @@
 {%- if site.just_the_docs.collections %}
 .site-nav > ul.nav-category-list > li > button svg,
 {% endif -%}
-{{ activation_collection_prefix }} > li:nth-child({{ nav_index1 }}) > button svg
-{%- if nav_index2 -%},
-{{ activation_collection_prefix }} > li:nth-child({{ nav_index1 }}) > ul > li:nth-child({{ nav_index2 }}) > button svg
+{{ activation_collection_prefix }} > li:nth-child({{ nav_levels[1] }}) > button svg
+{%- if nav_levels[2] -%},
+{{ activation_collection_prefix }} > li:nth-child({{ nav_levels[1] }}) > ul > li:nth-child({{ nav_levels[2] }}) > button svg
 {%- endif %} {
   transform: rotate(-90deg);
 }
@@ -263,9 +242,9 @@
 {%- if site.just_the_docs.collections %}
 .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list,
 {% endif -%}
-{{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ nav_index1 }}) > ul.nav-list
-{%- if nav_index2 %},
-{{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ nav_index1 }}) > ul.nav-list > li.nav-list-item:nth-child({{ nav_index2 }}) > ul.nav-list
+{{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ nav_levels[1] }}) > ul.nav-list
+{%- if nav_levels[2] %},
+{{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ nav_levels[1] }}) > ul.nav-list > li.nav-list-item:nth-child({{ nav_levels[2] }}) > ul.nav-list
 {%- endif %} {
   display: block;
 }
