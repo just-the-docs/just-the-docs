@@ -20,7 +20,7 @@ class Jekyll::Converters::Markdown::MyCustomProcessor
     non_frozen_string.gsub!(/\{\s*([^|]+?)\s*\\\s*(.+?)\s*\}/, '<span class="\1">\2</span>')
 
     # ابتدا محتوای اصلی را با استفاده از تبدیل‌کننده‌ی پیش‌فرض Markdown به HTML تبدیل می‌کنیم
-    html = Kramdown::Document.new(non_frozen_string).to_html
+    html = Kramdown::Document.new(non_frozen_string.freeze).to_html
 
     html
   end
