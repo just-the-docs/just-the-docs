@@ -1,14 +1,14 @@
 {%- comment -%}
   Include as: {%- include css/activation.scss.liquid -%}
-  Depends on: page, site.
-  Results in: page-dependent (non-nested) CSS rules for inclusion in a head style element,
+  Depends on: page.
+  Results in: page-dependent CSS rules for inclusion in a style element,
     which needs to be disabled when JS is enabled.
-  Includes:
-    sorted_pages.html.
+  Includes: components/site_nav.html.
   Overwrites: 
     activation_no_nav_link,
     nav_list, nav_list_item, nav_list_link, nav_category_list,
-    site_nav, nav_list_link_prefix, nav_splits, nav_split, nav_levels,
+    site_nav, nav_list_link_prefix, nav_splits, nav_split,
+    nav_levels, nav_endless, nav_ends, nav_end_index, nav_index,
     activation_collection_prefix, activation_other_collection_prefix.
   Should not be cached, because it depends on page.
 {%- endcomment -%}
@@ -41,7 +41,7 @@
 {%- else -%}
 
 {%- capture nav_list -%}
-<ul class="nav-list">
+<ul class="nav-list
 {%- endcapture -%}
 
 {%- capture nav_list_item -%}
@@ -68,7 +68,7 @@
 
 {%- comment -%}
   The string before the first nav-list-item must contain a ul.nav-list tag.
-  It could be for a list of ordinary pages, for external links, or for a collection.
+  It could be for a list of ordinary pages, of external links, or a collection.
   
   The string after a nav-list-item is non-empty, and may contain:
   - a ul.nav-list tag (when the item is the first in a list) and/or
@@ -76,30 +76,41 @@
   - a div.nav-category tag and a ul.nav-list tag (when the item is the first in
     a foldable collection)
   - neither of the above (when it is not the first item in a list).
+  
+  The extra list level due to foldable collections results in a superflous zero
+  item in nav_levels, which needs to be discarded.
 {%- endcomment %}
 
-{%- assign nav_levels = "" | split: "" | push: 1 -%}
+{%- assign nav_levels = "" | split: "" | push: 0 -%}
 
 {%- for nav_split in nav_splits -%}
-  {%- unless nav_split contains nav_category_list and false -%}
 
     {%- if nav_split contains "</ul>" -%}
-      {%- assign endless = nav_split | remove: "</ul>" -%}
-      {%- assign differs = nav_split.size | minus: endless.size | divided_by: 5 -%}
-      {% for index in (1..differs) %}
+      {%- assign nav_endless = nav_split | remove: "</ul>" -%}
+      {%- assign nav_ends = nav_split.size | minus: nav_endless.size | divided_by: 5 -%}
+      {% for nav_end_index in (1..nav_ends) %}
         {%- assign nav_levels = nav_levels | pop -%}
       {%- endfor -%}
     {%- endif -%}
 
     {%- if nav_split contains nav_list -%}
-      {%- assign nav_levels = nav_levels | push: 0 -%}
+      {%- if nav_levels.size == 1 -%}
+        {%- assign nav_index = nav_levels[0] | plus: 1 -%}
+        {%- assign nav_levels = nav_levels | pop | push: nav_index -%}
+      {%- endif -%}
+      {%- if nav_split contains nav_category_list -%}
+        {%- assign nav_levels = nav_levels | push: -1 -%}
+      {%- else -%}
+        {%- assign nav_levels = nav_levels | push: 0 -%}
+      {%- endif -%}
     {%- endif -%}
 
     {%- assign nav_index = nav_levels[-1] | plus: 1 -%}
     {%- assign nav_levels = nav_levels | pop | push: nav_index -%}
 
-  {%- endunless -%}
 {%- endfor -%}
+
+{%- assign nav_levels = nav_levels | where_exp: "item", "item >= 1" -%}
 
 {%- comment -%}
   The generated CSS depends on the position of the current page in each level in
