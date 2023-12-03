@@ -54,6 +54,7 @@ Node.js
 {: .label }
 
 ---
+
 ### Transformation and Personal Development
 {: .d-inline-block }
 
@@ -111,6 +112,7 @@ TypeScript
 {: .label }
 
 ---
+
 ### Eghtesad Bidar Securities
 {: .d-inline-block }
 
