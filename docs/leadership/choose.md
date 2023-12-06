@@ -107,6 +107,7 @@ direction: rtl
 { انجام دادن تعهد، در یک معنای بسیار واقعی، **انتخاب کردن** است. | mark } تعهد کردن، انتخاب کردن است. این انتخاب کردن برای متعهد بودن به آن چیزی است که ما به آن متعهد هستیم.
 
 ## منابع
+- [No Choice Choice](http://www.laurenceplatt.com/wernererhard/nochoice.html)
 - [Werner At The Speed Of Choice](http://www.laurenceplatt.com/wernererhard/wernerat.html)
 - [Choosing Like Breathing](http://www.laurenceplatt.com/wernererhard/choosing.html)
 - [Victory Like A Choice](http://www.laurenceplatt.com/wernererhard/victoryl.html)
