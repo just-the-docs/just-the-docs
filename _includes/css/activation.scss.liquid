@@ -34,11 +34,15 @@
 {%- endif %}
 {% endcapture -%}
 
-{%- if page.title == nil or page.nav_exclude == true -%}
+{%- capture nav_list_link -%}
+<a href="{{ page.url | relative_url }}" class="nav-list-link">
+{%- endcapture -%}
 
-{{ activation_no_nav_link }}
+{%- capture site_nav -%}
+{%- include_cached components/site_nav.html -%}
+{%- endcapture -%}
 
-{%- else -%}
+{%- if site_nav contains nav_list_link -%}
 
 {%- capture nav_list -%}
 <ul class="nav-list
@@ -48,16 +52,8 @@
 <li class="nav-list-item
 {%- endcapture -%}
 
-{%- capture nav_list_link -%}
-<a href="{{ page.url | relative_url }}" class="nav-list-link">
-{%- endcapture -%}
-
 {%- capture nav_category_list -%}
 <ul class="nav-list nav-category-list">
-{%- endcapture -%}
-
-{%- capture site_nav -%}
-{%- include_cached components/site_nav.html -%}
 {%- endcapture -%}
 
 {%- assign nav_list_link_prefix =
@@ -68,7 +64,7 @@
 
 {%- comment -%}
   The string before the first nav-list-item must contain a ul.nav-list tag.
-  It could be for a list of ordinary pages, of external links, or a collection.
+  It could start a list of ordinary pages or external links, or a collection.
   
   The string after a nav-list-item is non-empty, and may contain:
   - a ul.nav-list tag (when the item is the first in a list) and/or
@@ -79,15 +75,29 @@
   
   The extra list level due to foldable collections results in a superflous zero
   item in nav_levels, which needs to be discarded.
+  
+  An empty collection does not contain nav-list-items. The nav_split containing
+  the navigation for N empty collections has corresponding occurrences of
+  nav_list with matching "</ul>"s, requiring addition of N to nav_levels[0].
 {%- endcomment %}
 
 {%- assign nav_levels = "" | split: "" | push: 0 -%}
 
 {%- for nav_split in nav_splits -%}
 
+    {%- assign nav_listless = nav_split | remove: nav_list -%}
+    {%- assign nav_lists = nav_split.size | minus: nav_listless.size | divided_by: nav_list.size -%}
+    {%- assign nav_endless = nav_split | remove: "</ul>" -%}
+    {%- assign nav_ends = nav_split.size | minus: nav_endless.size | divided_by: 5 -%}
+    
+    {%- if nav_lists >= 2 or nav_lists >= 1 and forloop.first or forloop.last -%}
+      {%- assign nav_index = nav_levels[0] | plus: nav_lists | minus: 1 -%}
+      {%- assign nav_levels = nav_levels | shift | unshift: nav_index -%}
+      {%- assign nav_ends = nav_ends | minus: nav_lists | plus: 1 -%}
+      {%- assign nav_lists = 1 -%}
+    {%- endif -%}
+
     {%- if nav_split contains "</ul>" -%}
-      {%- assign nav_endless = nav_split | remove: "</ul>" -%}
-      {%- assign nav_ends = nav_split.size | minus: nav_endless.size | divided_by: 5 -%}
       {% for nav_end_index in (1..nav_ends) %}
         {%- assign nav_levels = nav_levels | pop -%}
       {%- endfor -%}
@@ -111,6 +121,8 @@
 {%- endfor -%}
 
 {%- assign nav_levels = nav_levels | where_exp: "item", "item >= 1" -%}
+
+{%- endif -%}
 
 {%- comment -%}
   The generated CSS depends on the position of the current page in each level in
@@ -260,6 +272,5 @@
   display: block;
 }
 
-{%- endif -%}
 {%- endif -%}
 {%- endif -%}
