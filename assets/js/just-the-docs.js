@@ -589,3 +589,10 @@ jtd.onReady(function(){
 })(window.jtd = window.jtd || {});
 
 {% include js/custom.js %}
+
+document.querySelector('iframe').onload = function (event) {
+  event.target.querySelectorAll('dd').forEach(elm => {
+    elm.style.display = 'none';
+    debugger
+  })
+}
