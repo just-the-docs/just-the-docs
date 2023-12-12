@@ -56,3 +56,17 @@
     border-radius: 2px;
   }
 }
+
+iframe.calendar {
+  width: 100%;
+  height: 600px;
+  border: none;
+  overflow: auto;
+
+  dd,
+  .te-s,
+  .te-rev-s,
+  .event-title {
+    display: none;
+  }
+}
