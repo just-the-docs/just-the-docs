@@ -6,7 +6,7 @@ direction: rtl
 ---
 
 ## به برنامه‌ی زمان‌بندی من خوش آمدید!
-سلام، من محمد هستم و اینجا من برنامه‌ی خودم رو با شما به اشتراک گذاشته‌ام. اگر می‌خواهید با من جلسه‌ای یا قراری تنظیم کنید، شما این این امکان و فرصت را دارید که جاهای خالی در برنامه‌ام را بررسی کنید و زمان مناسبی را انتخاب کنید.
+سلام، اینجا من برنامه‌ی خودم رو با شما به اشتراک گذاشته‌ام. اگر می‌خواهید با من جلسه‌ای یا قراری تنظیم کنید، اینجا شما این امکان را دارید که جاهای خالی برنامه‌ام را بررسی کنید و زمان مناسبی را انتخاب کنید.
 
 ### نحوه کار کردن با برنامه‌ریز من
 
@@ -19,8 +19,6 @@ direction: rtl
 - جلسات بر اساس اولویت و زمان‌های خالی من ست می‌شوند.
 - اگر جلسه‌ای تایید شود، تاییدیه و جزئیات بیشتر را برای شما ایمیل خواهم کرد.
 
-با استفاده از این برنامه‌ریز، شما نه تنها می‌توانید به راحتی جلسه‌ای با من تنظیم کنید، بلکه به شما این اطمینان را می‌دهم که هر جلسه‌ای با دقت و توجه کامل به شما اختصاص خواهد یافت.
-
 **منتظر دیدار با شما هستم!**
 
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=7&bgcolor=%23ffffff&ctz=Asia%2FTehran&showTitle=1&mode=WEEK&showCalendars=0&title=Mohammad%20Bayat%20Calendar&showTabs=1&showPrint=1&showDate=1&showNav=1&src=b2suYmF5YXRAZ21haWwuY29t&color=%23039BE5" class="calendar" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=7&bgcolor=%23ffffff&ctz=Asia%2FTehran&showTitle=1&mode=WEEK&showCalendars=0&title=Mohammad%20Bayat%20Calendar&showTabs=1&showPrint=1&showDate=1&showNav=1&src=b2suYmF5YXRAZ21haWwuY29t&color=%23039BE5" class="calendar"></iframe>
