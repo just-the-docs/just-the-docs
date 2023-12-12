@@ -62,11 +62,11 @@ iframe.calendar {
   height: 600px;
   border: none;
   overflow: auto;
+}
 
-  dd,
-  .te-s,
-  .te-rev-s,
-  .event-title {
-    display: none;
-  }
+dd,
+.te-s,
+.te-rev-s,
+.event-title {
+  display: none;
 }
