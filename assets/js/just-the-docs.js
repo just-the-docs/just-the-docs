@@ -589,35 +589,3 @@ jtd.onReady(function(){
 })(window.jtd = window.jtd || {});
 
 {% include js/custom.js %}
-
-window.onload = function () {
-  // انتخاب iframe و اعمال تابع بعد از بارگذاری
-  var iframe = document.querySelector('iframe.calendar');
-  if (iframe)
-    onIframeLoaded(iframe, addStyleToIframe);
-}
-
-
-// تابعی برای اضافه کردن استایل به iframe
-function addStyleToIframe(iframe) {
-  var css = `dd, .te-s, .te-rev-s, .event-title { display: none!important; }`;
-  var head = iframe.contentWindow.document.head;
-  var style = document.createElement('style');
-
-  style.type = 'text/css';
-  style.appendChild(document.createTextNode(css));
-  head.appendChild(style);
-}
-
-// تابعی برای چک کردن بارگذاری iframe
-function onIframeLoaded(iframe, callback) {
-  iframe.onload = function() {
-    callback(iframe);
-  };
-  
-  try {
-    callback(iframe);
-  } catch (e) {
-    
-  }
-}
