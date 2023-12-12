@@ -590,7 +590,7 @@ jtd.onReady(function(){
 
 {% include js/custom.js %}
 
-document.body.onload = function () {
+window.onload = function () {
   // انتخاب iframe و اعمال تابع بعد از بارگذاری
   var iframe = document.querySelector('iframe.calendar');
   if (iframe)
