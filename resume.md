@@ -54,6 +54,7 @@ Node.js
 {: .label }
 
 ---
+
 ### Transformation and Personal Development
 {: .d-inline-block }
 
@@ -83,6 +84,7 @@ Coaching
 {: .label }
 
 ---
+
 ### Radin Bourse
 {: .d-inline-block }
 
@@ -111,6 +113,7 @@ TypeScript
 {: .label }
 
 ---
+
 ### Eghtesad Bidar Securities
 {: .d-inline-block }
 
@@ -143,6 +146,7 @@ TypeScript
 {: .label }
 
 ---
+
 ### Alibaba Travels Co.
 {: .d-inline-block }
 
@@ -173,6 +177,7 @@ TypeScript
 {: .label }
 
 ---
+
 ### Tadbir Pardaz IT Group Ltd.
 {: .d-inline-block }
 
@@ -183,6 +188,7 @@ Feb 2016 - Apr 2018
 As a Front-End developer and UI/UX designer responsible for participating in the full lifecycle of a new SPA development project for stock markets, and for implementing and maintaining best practice procedures in all areas of work.
 
 ---
+
 ### Personal Project
 {: .d-inline-block }
 
