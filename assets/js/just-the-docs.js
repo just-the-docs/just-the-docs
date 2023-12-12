@@ -590,12 +590,12 @@ jtd.onReady(function(){
 
 {% include js/custom.js %}
 
-// window.onload = function () {
+window.onload = function () {
   // انتخاب iframe و اعمال تابع بعد از بارگذاری
   var iframe = document.querySelector('iframe.calendar');
   if (iframe)
     onIframeLoaded(iframe, addStyleToIframe);
-// }
+}
 
 
 // تابعی برای اضافه کردن استایل به iframe
@@ -614,4 +614,10 @@ function onIframeLoaded(iframe, callback) {
   iframe.onload = function() {
     callback(iframe);
   };
+  
+  try {
+    callback(iframe);
+  } catch (e) {
+    
+  }
 }
