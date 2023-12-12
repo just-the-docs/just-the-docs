@@ -590,9 +590,11 @@ jtd.onReady(function(){
 
 {% include js/custom.js %}
 
-document.querySelector('iframe').onload = function (event) {
-  event.target.querySelectorAll('dd').forEach(elm => {
-    elm.style.display = 'none';
-    debugger
-  })
+document.onload = function () {
+  document.querySelector('iframe').onload = function (event) {
+    event.target.querySelectorAll('dd').forEach(elm => {
+      elm.style.display = 'none';
+      debugger
+    })
+  }
 }
