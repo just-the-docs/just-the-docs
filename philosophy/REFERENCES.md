@@ -76,4 +76,8 @@ materials you will usually be approved, but ask first.
   - The E-Myth, Seth Godin
   - The Great CEO Within, Matt Mochary
 
+### Other Company Functions
+  - Building a StoryBrand: Clarify Your Message So Customers Will Listen, Donald Miller
+  - Laws of UX: Using Psychology to Design Better Products & Services, Jon Yablonski
+
 ![golden knowledge](https://i.imgur.com/gb9SZdp.png)
