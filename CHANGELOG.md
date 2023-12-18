@@ -19,6 +19,18 @@ Code changes to `main` that are *not* in the latest release:
 
 - N/A
 
+Docs changes made since the latest release:
+
+- Add documentation to "Navigation Structure" on grouping pages with collections by [@mitchnemirov] in [#1390]
+
+### New Contributors
+
+- [@mitchnemirov] made their first contribution in [#1390]
+
+[@mitchnemirov]: https://github.com/mitchnemirov
+
+[#1390]: https://github.com/just-the-docs/just-the-docs/pull/1390
+
 ## Release v0.7.0
 
 Hi folks! This is a minor release that adds a new configuration option for opening external links in a new tab and provides many bugfixes (in both correctness and performance) for Just the Docs users with large sites. We anticipate that for most users, this is a straightforward upgrade. However, it introduces some potentially-breaking *internal* changes to undocumented features of the theme.
