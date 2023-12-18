@@ -237,14 +237,19 @@ Currently, the navigation structure is limited to 3 levels: grandchild pages can
 
 ---
 
-## Top-Level Grouping for Pages in Sidebar Nav
+## Grouping pages with collections
 
-By default, when using Parent and Children pages, the Parent page will show in the sidebar nav folded, hiding the Child pages from users of your site. Additionally, the Parent page will exist as a page on it's own, which isn't always desired. To have Parent-style group headings for organizing pages better, you can use the [Document Collections]({% link docs/configuration.md %}#document-collections) feature.
+Pages can also be grouped together by using Jekyll's and Just the Docs's [collections]({% link docs/configuration.md %}#document-collections) feature. In contrast to using [pages with children](#pages-with-children), pages grouped by collection are grouped by a shared header (the name of the collection) instead of a page.
 
-Creating collections instead of parent pages, and setting `nav_fold` and `nav_exclude` to false in your `_config.yml` will show the Parent page's name but it will not be a blank page with Child pages, just a sidebar heading.
+The `nav_fold` configuration option works for collection-grouped pages. For more information, please refer to the [collections documentation]({% link docs/configuration.md %}#document-collections).
 
-### Example Setup:
+### Example (grouping by collection)
 {: .no_toc }
+
+The following example sets up two collections, `collection-one` and `collection-two`:
+
+- any document placed within `_collection-1/` will be grouped under the `Collection One` header by default. Since `nav_fold` is set to `true`, the pages will be folded by default.
+- any document placed within `_collection-2/` will be grouped under the `Collection Two` header by default. Since `nav_fold` is set to `false`, the pages will be expanded by default.
 
 ```yaml
 _config.yml:
@@ -259,18 +264,11 @@ _config.yml:
     collections:
       collection-one:
         name: Collection One
-        nav_fold: false
-        nav_exclude: false
+        nav_fold: true
       collection-two:
         name: Collection Two
         nav_fold: false
-        nav_exclude: false
-
-In your site directory:
-  _collection-one/PAGES-GO-HERE
-  _collection-two/PAGES-GO-HERE
 ```
-
 ---
 
 ## Auxiliary Links
