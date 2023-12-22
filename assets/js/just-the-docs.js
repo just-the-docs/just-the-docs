@@ -31,18 +31,15 @@ function initNav() {
     }
     if (target) {
       e.preventDefault();
-      const active = target.parentNode.classList.toggle('active');
-      const passive = target.parentNode.classList.toggle('passive');
-      if (active && passive) target.parentNode.classList.toggle('passive');
-      target.ariaPressed = active;
+      target.ariaPressed = target.parentNode.classList.toggle('active');
     }
   });
 
   const siteNav = document.getElementById('site-nav');
   const mainHeader = document.getElementById('main-header');
   const menuButton = document.getElementById('menu-button');
-  
-  disableHeadStyleSheet();
+
+  disableHeadStyleSheets();
 
   jtd.addEvent(menuButton, 'click', function(e){
     e.preventDefault();
@@ -71,13 +68,23 @@ function initNav() {
   {%- endif %}
 }
 
-// The page-specific <style> in the <head> is needed only when JS is disabled.
-// Moreover, it incorrectly overrides dynamic stylesheets set by setTheme(theme). 
-// The page-specific stylesheet is assumed to have index 1 in the list of stylesheets.
+// The <head> element is assumed to include the following stylesheets:
+// - a <link> to /assets/css/just-the-docs-head-nav.css,
+//             with id 'jtd-head-nav-stylesheet'
+// - a <style> containing the result of _includes/css/activation.scss.liquid.
+// To avoid relying on the order of stylesheets (which can change with HTML
+// compression, user-added JavaScript, and other side effects), stylesheets
+// are only interacted with via ID
 
-function disableHeadStyleSheet() {
-  if (document.styleSheets[1]) {
-    document.styleSheets[1].disabled = true;
+function disableHeadStyleSheets() {
+  const headNav = document.getElementById('jtd-head-nav-stylesheet');
+  if (headNav) {
+    headNav.disabled = true;
+  }
+
+  const activation = document.getElementById('jtd-nav-activation');
+  if (activation) {
+    activation.disabled = true;
   }
 }
 
@@ -494,12 +501,12 @@ function scrollNav() {
   if (targetLink) {
     const rect = targetLink.getBoundingClientRect();
     document.getElementById('site-nav').scrollBy(0, rect.top - 3*rect.height);
+    targetLink.removeAttribute('href');
   }
 }
 
 // Find the nav-list-link that refers to the current page
-// then make it and all enclosing nav-list-item elements active,
-// and make all other folded collections passive
+// then make it and all enclosing nav-list-item elements active.
 
 function activateNav() {
   var target = navLink();
@@ -513,17 +520,6 @@ function activateNav() {
     if (target) {
       target.classList.toggle('active', true);
       target = target.parentNode;
-    }
-  }
-  const elements = document.getElementsByClassName("nav-category-list");
-  for (const element of elements) {
-    const item = element.children[0];
-    const active = item.classList.toggle('active');
-    if (active) {
-      item.classList.toggle('active', false);
-      item.classList.toggle('passive', true);
-    } else {
-      item.classList.toggle('active', true);
     }
   }
 }
