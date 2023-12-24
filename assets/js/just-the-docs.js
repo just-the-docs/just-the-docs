@@ -499,7 +499,7 @@ function navLink() {
 function scrollNav() {
   const targetLink = navLink();
   if (targetLink) {
-    targetLink.scrollIntoView();
+    targetLink.scrollIntoView({ block: "center" });
     targetLink.removeAttribute('href');
   }
 }
