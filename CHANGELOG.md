@@ -17,7 +17,7 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Fixed: incorrect positioning of clickable area for navigation links on Safari by [@mattxwang] in [#1403]
 
 Docs changes made since the latest release:
 
@@ -30,6 +30,7 @@ Docs changes made since the latest release:
 [@mitchnemirov]: https://github.com/mitchnemirov
 
 [#1390]: https://github.com/just-the-docs/just-the-docs/pull/1390
+[#1403]: https://github.com/just-the-docs/just-the-docs/pull/1403
 
 ## Release v0.7.0
 
