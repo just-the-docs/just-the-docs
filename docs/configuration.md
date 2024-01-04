@@ -66,6 +66,8 @@ search:
   # Enable or disable the search button that appears in the bottom right corner of every page
   # Supports true or false (default)
   button: false
+  # Focus the search input by pressing `ctrl + k` (or `cmd + k` on macOS)
+  focus_with_shortcut: false
 ```
 
 ## Mermaid Diagrams
