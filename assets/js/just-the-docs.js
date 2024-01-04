@@ -146,12 +146,14 @@ function searchLoaded(index, docs) {
   var currentSearchIndex = 0;
 
   // add event listener on ctrl + k for showing the search input
+  {%- if site.search.focus_with_shortcut != false %}
   jtd.addEvent(document, 'keydown', function(e){
     if (e.ctrlKey && e.key === 'k') {
       e.preventDefault();
       searchInput.focus();
     }
   });
+  {%- endif %}
 
   function showSearch() {
     document.documentElement.classList.add('search-active');
