@@ -150,6 +150,8 @@ function searchLoaded(index, docs) {
   jtd.addEvent(document, 'keydown', function(e){
     if (e.ctrlKey && e.key === 'k') {
       e.preventDefault();
+
+      mainHeader.classList.add('nav-open');
       searchInput.focus();
     }
   });
