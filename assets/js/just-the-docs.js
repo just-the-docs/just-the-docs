@@ -145,6 +145,14 @@ function searchLoaded(index, docs) {
   var currentInput;
   var currentSearchIndex = 0;
 
+  // add event listener on ctrl + k for showing the search input
+  jtd.addEvent(document, 'keydown', function(e){
+    if (e.ctrlKey && e.key === 'k') {
+      e.preventDefault();
+      searchInput.focus();
+    }
+  });
+
   function showSearch() {
     document.documentElement.classList.add('search-active');
   }
