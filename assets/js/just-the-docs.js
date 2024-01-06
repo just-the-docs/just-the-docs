@@ -499,8 +499,7 @@ function navLink() {
 function scrollNav() {
   const targetLink = navLink();
   if (targetLink) {
-    const rect = targetLink.getBoundingClientRect();
-    document.getElementById('site-nav').scrollBy(0, rect.top - 3*rect.height);
+    targetLink.scrollIntoView({ block: "center" });
     targetLink.removeAttribute('href');
   }
 }
