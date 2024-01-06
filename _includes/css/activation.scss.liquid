@@ -48,6 +48,8 @@
 <ul class="nav-list
 {%- endcapture -%}
 
+{%- assign nav_list_end = "</ul>" -%}
+
 {%- capture nav_list_item -%}
 <li class="nav-list-item
 {%- endcapture -%}
@@ -62,61 +64,115 @@
 {%- assign nav_splits =
       nav_list_link_prefix | split: nav_list_item | pop -%}
 
-{%- comment -%}
-  The string before the first nav-list-item must contain a ul.nav-list tag.
-  It could start a list of ordinary pages or external links, or a collection.
-  
-  The string after a nav-list-item is non-empty, and may contain:
-  - a ul.nav-list tag (when the item is the first in a list) and/or
-    one or more closing ul tags (when the item is preceded by a list)
-  - a div.nav-category tag and a ul.nav-list tag (when the item is the first in
-    a foldable collection)
-  - neither of the above (when it is not the first item in a list).
-  
-  The extra list level due to foldable collections results in a superflous zero
-  item in nav_levels, which needs to be discarded.
-  
-  An empty collection does not contain nav-list-items. The nav_split containing
-  the navigation for N empty collections has corresponding occurrences of
-  nav_list with matching "</ul>"s, requiring addition of N to nav_levels[0].
-{%- endcomment %}
+{%- assign nav_levels = "" | split: "" | push: 1 -%}
+{%- assign nav_debug = "" | split: "" -%}
 
-{%- assign nav_levels = "" | split: "" | push: 0 -%}
+{%- comment -%}
+  The pattern of occurrences of list and list-item tags in the site_nav string
+  is included in the language defined by the following context-free grammar:
+  
+    site_nav = PAGES? EXTERNALS? COLLECTION*
+
+    PAGES = nav_list (nav_list_item PAGES?)+ nav_list_end
+
+    EXTERNALS = nav_list nav_list_item+ nav_list_end
+
+    COLLECTION = nav_list (nav_list_item PAGES?)* nav_list_end
+               | nav_category_list 
+                   nav_list_item nav_list (nav_list_item PAGES?)* nav_list_end
+                 nav_list_end
+  
+  To determine the path in the site_nav to the nav_list_link for the current page,
+  the prefix of nav_list_link in site_nav is split at each nav_list_item to give
+  an array of nav_splits.
+  
+  In site_nav, occurrences of nav_list must be separated by at least one
+  nav_list_item or nav_list_end. Moreover, when a nav_list_end is followed by a
+  nav_list without an intervening nav_list_item, that nav_list must start either
+  a list of external links or a collection. And when a nav_list is followed by a
+  nav_list_end without an intervening nav_list_item, they form an empty collection.
+  
+  nav_levels is the path determined by the previously inspected nav_splits.
+  How many times nav_list and nav_list_end occur in the current nav_split 
+  determines how to update the path.
+  
+  A nav_split can contain any number of empty non-foldable collections.
+  The path element produced by the outer nav_list of a foldable collection is
+  irrelevant; it is set to zero and subsequently removed.
+    
+  The number of occurrences of a string in a nav_split is computed by removing
+  them all, then dividing the resulting size difference by the length of the string.
+  
+  Case analysis on (nav_list_count, nav_list_end_count):
+  
+  - when (0, 0), the nav_split was between two nav_list_items at the same level;
+  
+  - when (0, N+1), all the nav_list_ends in the nav_split are in PAGES or in one
+    COLLECTION;
+    
+  - when (M+1, 0), M must be 0 (because two nav_lists in the same nav_split must
+    be separated by at least one nav_list_end);
+    
+  - when (M+1, N+1), the nav_split must contain either:
+    - the end of PAGES followed by the start of EXTERNALS, or
+    - the end of PAGES followed by the start of a COLLECTION, or
+    - the end of EXTERNALS followed by the start of a COLLECTION, or
+    - the end of one COLLECTION followed by the start of another, or
+    - (in the first nav_split) one or more empty non-foldable COLLECTIONS
+      followed by the start of a COLLECTION.
+    In general, nav_levels[0] here needs to be incremented by nav_list_count.
+    However, a nav_split that contains the end of an empty foldable collection
+    followed by the just the start of a collection has two occurrences of nav_list,
+    and the increment needs to be one less; similarly when the first nav_split
+    starts with an empty non-foldable collection.
+{%- endcomment %}
 
 {%- for nav_split in nav_splits -%}
 
-    {%- assign nav_listless = nav_split | remove: nav_list -%}
-    {%- assign nav_lists = nav_split.size | minus: nav_listless.size | divided_by: nav_list.size -%}
-    {%- assign nav_endless = nav_split | remove: "</ul>" -%}
-    {%- assign nav_ends = nav_split.size | minus: nav_endless.size | divided_by: 5 -%}
-    
-    {%- if nav_lists >= 2 or nav_lists >= 1 and forloop.first or forloop.last -%}
-      {%- assign nav_index = nav_levels[0] | plus: nav_lists | minus: 1 -%}
-      {%- assign nav_levels = nav_levels | shift | unshift: nav_index -%}
-      {%- assign nav_ends = nav_ends | minus: nav_lists | plus: 1 -%}
-      {%- assign nav_lists = 1 -%}
-    {%- endif -%}
+  {%- assign nav_list_less = nav_split | remove: nav_list -%}
+  {%- assign nav_list_count =
+        nav_split.size | minus: nav_list_less.size | 
+        divided_by: nav_list.size -%}
 
-    {%- if nav_split contains "</ul>" -%}
-      {% for nav_end_index in (1..nav_ends) %}
-        {%- assign nav_levels = nav_levels | pop -%}
-      {%- endfor -%}
-    {%- endif -%}
+  {%- assign nav_list_end_less = nav_split | remove: nav_list_end -%}
+  {%- assign nav_list_end_count =
+        nav_split.size | minus: nav_list_end_less.size | 
+        divided_by: nav_list_end.size -%}
 
-    {%- if nav_split contains nav_list -%}
-      {%- if nav_levels.size == 1 -%}
-        {%- assign nav_index = nav_levels[0] | plus: 1 -%}
-        {%- assign nav_levels = nav_levels | pop | push: nav_index -%}
-      {%- endif -%}
-      {%- if nav_split contains nav_category_list -%}
-        {%- assign nav_levels = nav_levels | push: -1 -%}
-      {%- else -%}
-        {%- assign nav_levels = nav_levels | push: 0 -%}
-      {%- endif -%}
-    {%- endif -%}
+  {%- if nav_list_count == 0 and nav_list_end_count == 0 -%}
 
     {%- assign nav_index = nav_levels[-1] | plus: 1 -%}
     {%- assign nav_levels = nav_levels | pop | push: nav_index -%}
+
+  {%- elsif nav_list_count == 0 and nav_list_end_count >= 1 -%}
+
+    {%- assign nav_slice_size = nav_levels.size | minus: nav_list_end_count -%}
+    {%- assign nav_levels = nav_levels | slice: 0, nav_slice_size -%}
+    {%- assign nav_index = nav_levels[-1] | plus: 1 -%}
+    {%- assign nav_levels = nav_levels | pop | push: nav_index -%}
+
+  {%- elsif nav_list_count == 1 and nav_list_end_count == 0 -%}
+
+    {%- if nav_split contains nav_category_list -%}
+      {%- assign nav_levels = nav_levels | push: 0 -%}
+    {%- else -%}
+      {%- assign nav_levels = nav_levels | push: 1 -%}
+    {%- endif -%}
+
+  {%- elsif nav_list_count >= 1 and nav_list_end_count >= 1 -%}
+
+    {%- assign nav_index = nav_levels[0] | plus: nav_list_count -%}
+    {%- if nav_levels[-1] == 0 or forloop.first -%}
+      {%- assign nav_index = nav_index | minus: 1 -%}
+    {%- endif -%}
+    {%- assign nav_levels = nav_levels | slice: 0, 0 | push: nav_index -%}
+    {%- if nav_split contains nav_category_list -%}
+      {%- assign nav_levels = nav_levels | push: 0 -%}
+    {%- else -%}
+      {%- assign nav_levels = nav_levels | push: 1 -%}
+    {%- endif -%}
+
+  {%- endif -%}
 
 {%- endfor -%}
 
