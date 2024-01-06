@@ -5,10 +5,11 @@
     which needs to be disabled when JS is enabled.
   Includes: components/site_nav.html.
   Overwrites: 
-    activation_no_nav_link,
-    nav_list, nav_list_item, nav_list_link, nav_category_list,
-    site_nav, nav_list_link_prefix, nav_splits, nav_split,
-    nav_levels, nav_endless, nav_ends, nav_end_index, nav_index,
+    activation_no_nav_link, nav_list_link, site_nav,
+    nav_list, nav_list_end, nav_list_item, nav_category_list,
+    nav_list_link_prefix, nav_splits, nav_split, nav_levels,
+    nav_list_less, nav_list_count, nav_end_less, nav_end_count,
+    nav_index, nav_slice_size,
     activation_collection_prefix, activation_other_collection_prefix.
   Should not be cached, because it depends on page.
 {%- endcomment -%}
@@ -65,7 +66,6 @@
       nav_list_link_prefix | split: nav_list_item | pop -%}
 
 {%- assign nav_levels = "" | split: "" | push: 1 -%}
-{%- assign nav_debug = "" | split: "" -%}
 
 {%- comment -%}
   The pattern of occurrences of list and list-item tags in the site_nav string
