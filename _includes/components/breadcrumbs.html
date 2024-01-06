@@ -46,6 +46,9 @@
     The array nav_breadcrumbs is the stack of current potential ancestors of the
     current page. A split that contains one or more "</ul>"s requires that number
     of potential ancestors to be popped from the stack.
+    
+    The number of occurrences of a string in nav_split_next is computed by removing
+    them all, then dividing the resulting size difference by the length of the string.
   {%- endcomment %}
 
   {%- assign nav_breadcrumbs = "" | split: "" -%}
@@ -65,10 +68,10 @@
   {%- endif -%}
 
   {%- if nav_split_next contains "</ul>" -%}
-    {%- assign nav_endless = nav_split_next | remove: "</ul>" -%}
-    {%- assign nav_ends =
-          nav_split_next.size | minus: nav_endless.size | divided_by: 5 -%}
-    {% for nav_end_index in (1..nav_ends) %}
+    {%- assign nav_list_end_less = nav_split_next | remove: "</ul>" -%}
+    {%- assign nav_list_end_count =
+          nav_split_next.size | minus: nav_list_end_less.size | divided_by: 5 -%}
+    {% for nav_end_index in (1..nav_list_end_count) %}
       {%- assign nav_breadcrumbs = nav_breadcrumbs | pop -%}
     {%- endfor -%}
   {%- endif -%}
