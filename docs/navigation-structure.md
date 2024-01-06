@@ -237,6 +237,40 @@ Currently, the navigation structure is limited to 3 levels: grandchild pages can
 
 ---
 
+## Grouping pages with collections
+
+Pages can also be grouped together by using Jekyll's and Just the Docs's [collections]({% link docs/configuration.md %}#document-collections) feature. In contrast to using [pages with children](#pages-with-children), pages grouped by collection are grouped by a shared header (the name of the collection) instead of a page.
+
+The `nav_fold` configuration option works for collection-grouped pages. For more information, please refer to the [collections documentation]({% link docs/configuration.md %}#document-collections).
+
+### Example (grouping by collection)
+{: .no_toc }
+
+The following example sets up two collections, `collection-one` and `collection-two`:
+
+- any document placed within `_collection-1/` will be grouped under the `Collection One` header by default. Since `nav_fold` is set to `true`, the pages will be folded by default.
+- any document placed within `_collection-2/` will be grouped under the `Collection Two` header by default. Since `nav_fold` is set to `false`, the pages will be expanded by default.
+
+```yaml
+_config.yml:
+  collections:
+    collection-one:
+      permalink: "/:collection/:path/"
+      output: true
+    collection-two:
+      permalink: "/:collection/:path/"
+      output: true
+  just_the_docs:
+    collections:
+      collection-one:
+        name: Collection One
+        nav_fold: true
+      collection-two:
+        name: Collection Two
+        nav_fold: false
+```
+---
+
 ## Auxiliary Links
 
 To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
