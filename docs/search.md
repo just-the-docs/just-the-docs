@@ -96,11 +96,12 @@ search.button: true
 
 ### Focus search bar with ctrl + k
 
-The search input can be focused by pressing `ctrl + k` (or `cmd + k` on macOS).
+The search input can be focused by pressing `ctrl + <provided_key>` (or `cmd + <provided_key>` on macOS).
+In case you want to disable this feature, set the following option to `false`.
 
 ```yaml
-# Focus the search input by pressing `ctrl + k` (or `cmd + k` on macOS)
-focus_with_shortcut: false
+# Focus the search input by pressing `ctrl + <provided_key>` (or `cmd + <provided_key>` on macOS)
+focus_shortcut_key: 'k'
 ```
 
 ## Hiding pages from search

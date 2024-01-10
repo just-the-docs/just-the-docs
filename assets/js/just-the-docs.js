@@ -145,10 +145,10 @@ function searchLoaded(index, docs) {
   var currentInput;
   var currentSearchIndex = 0;
 
+  {%- if site.search.focus_shortcut_key != false %}
   // add event listener on ctrl + k for showing the search input
-  {%- if site.search.focus_with_shortcut != false %}
-  jtd.addEvent(document, 'keydown', function(e){
-    if (e.ctrlKey && e.key === 'k') {
+  jtd.addEvent(document, 'keydown', function (e) {
+    if (e.ctrlKey && e.key === '{{ site.search.focus_shortcut_key }}') {
       e.preventDefault();
 
       mainHeader.classList.add('nav-open');
