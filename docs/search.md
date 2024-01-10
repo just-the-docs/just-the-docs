@@ -94,7 +94,7 @@ The search button displays in the bottom right corner of the screen and triggers
 search.button: true
 ```
 
-### Focus search bar with ctrl + k
+### Focus search bar with ctrl + <focus_shortcut_key>
 
 The search input can be focused by pressing `ctrl + <provided_key>` (or `cmd + <provided_key>` on macOS).
 In case you want to disable this feature, set the following option to `false`.
