@@ -17,8 +17,8 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- Fixed: incorrect positioning of clickable area for navigation links on Safari by [@mattxwang] in [#1403]
 - Fixed: incorrect navigation when `.html` omitted from URL by [@pdmosses] in [#1374]
+- Fixed: incorrect positioning of clickable area for navigation links on Safari by [@mattxwang] in [#1403]
 
 Docs changes made since the latest release:
 
