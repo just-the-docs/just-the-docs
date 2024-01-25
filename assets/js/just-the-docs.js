@@ -145,7 +145,7 @@ function searchLoaded(index, docs) {
   var currentInput;
   var currentSearchIndex = 0;
 
-  {%- if site.search.focus_shortcut_key != false %}
+  {%- if site.search.focus_shortcut_key %}
   // add event listener on ctrl + <focus_shortcut_key> for showing the search input
   jtd.addEvent(document, 'keydown', function (e) {
     if (e.ctrlKey && e.key === '{{ site.search.focus_shortcut_key }}') {
