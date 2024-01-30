@@ -163,11 +163,11 @@ Author: ...
 Date: ...
 ```
 
+If you run `git revert 1712b5b93cd029685f68555c1c3819369a6c25ba -m 1`, you will go back to the tree in commit `5bc589318`, and if you do `-m 2`, you will go back to the tree in `398800a71`. `-m 1` refers to the (previous) latest commit of the branch that was the merge destination, and `-m 2` refers to the latest commit of the branch that got merged in.
+
+Read more here: https://stackoverflow.com/a/66707438/1989186
+
 ## Inside Git
 Here is a lovely image from WizardZines showing how git stores information
 
 ![image](./inside-git.png)
-
-If you run `git revert 1712b5b93cd029685f68555c1c3819369a6c25ba -m 1`, you will go back to the tree in commit `5bc589318`, and if you do `-m 2`, you will go back to the tree in `398800a71`. `-m 1` refers to the (previous) latest commit of the branch that was the merge destination, and `-m 2` refers to the latest commit of the branch that got merged in.
-
-Read more here: https://stackoverflow.com/a/66707438/1989186
