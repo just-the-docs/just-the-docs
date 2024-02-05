@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "CityJSON Sequence"
+title: "CityJSON Sequences"
 nav_order: 5
 permalink: /cityjsonseq/
 ---
 
-# CityJSONSeq (CityJSON Sequence)
+# CityJSONSeq (CityJSON Text Sequences)
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -15,8 +15,8 @@ permalink: /cityjsonseq/
 
 - - - 
 
-CityJSON Sequence---*CityJSONSeq* for short, or *CityJSON Lines*---is a format based on [JSON Text Sequences](https://datatracker.ietf.org/doc/html/rfc7464) and CityJSON.
-The idea is to decompose a (often large) CityJSON file into its features (eg each building, each bridge, each road, etc.), to create several JSON objects (of type `CityJSONFeature`), and stream/store them in a JSON Text Sequence (for instance [ndjson -- newline delimited JSON](https://github.com/ndjson/ndjson-spec/)).
+The CityJSON Text Sequence---*CityJSONSeq* for short---is a format based on [JSON Text Sequences](https://datatracker.ietf.org/doc/html/rfc7464) and CityJSON, inspired by [GeoJSON Text Sequences](https://datatracker.ietf.org/doc/html/rfc8142).
+The idea is to decompose a (often large) CityJSON file into its features (eg each building, each bridge, each road, etc.), to create several JSON objects (of type [`CityJSONFeature`](https://www.cityjson.org/specs/#text-sequences-and-streaming-with-cityjsonfeature)), and stream/store them in a JSON Text Sequence (for instance [ndjson -- newline delimited JSON](https://github.com/ndjson/ndjson-spec/)).
 
 
 ## CityJSONSeq specifications
