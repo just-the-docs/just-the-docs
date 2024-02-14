@@ -148,14 +148,14 @@ function searchLoaded(index, docs) {
   {%- if site.search.focus_shortcut_key %}
   // add event listener on ctrl + <focus_shortcut_key> for showing the search input
   jtd.addEvent(document, 'keydown', function (e) {
-    if (e.ctrlKey && e.key === '{{ site.search.focus_shortcut_key }}') {
+    if ((e.ctrlKey || e.metaKey) && e.key === '{{ site.search.focus_shortcut_key }}') {
       e.preventDefault();
 
       mainHeader.classList.add('nav-open');
       searchInput.focus();
     }
   });
-  {%- endif %}
+{%- endif %}
 
   function showSearch() {
     document.documentElement.classList.add('search-active');
