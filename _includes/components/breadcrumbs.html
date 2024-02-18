@@ -1,0 +1,51 @@
+{%- comment -%}
+  Include as: {%- include components/breadcrumbs.html -%}
+  Depends on: page, site.
+  Results in: HTML for the breadcrumbs component.
+  Overwrites:
+    node, pages_list, parent_page, grandparent_page.
+{%- endcomment -%}
+
+{%- if page.url != "/" and page.parent -%}
+
+  {%- assign pages_list = site[page.collection] | default: site.html_pages -%}
+
+  {%- assign parent_page = nil -%}
+  {%- assign grandparent_page = nil -%}
+
+  {%- for node in pages_list -%}
+  
+    {%- if node.has_children and page.grand_parent -%}
+
+      {%- if node.title == page.parent and node.parent == page.grand_parent -%}
+        {%- assign parent_page = node -%}
+      {%- endif -%}
+      {%- if node.title ==  page.grand_parent -%}
+        {%- assign grandparent_page = node -%}
+      {%- endif -%}
+      {%- if parent_page and grandparent_page -%}
+        {%- break -%}
+      {%- endif -%}
+
+    {%- elsif node.has_children and node.title == page.parent and node.parent == nil -%}
+
+      {%- assign parent_page = node -%}
+      {%- break -%}
+
+    {%- endif -%}
+
+  {%- endfor -%}
+
+<nav aria-label="Breadcrumb" class="breadcrumb-nav">
+  <ol class="breadcrumb-nav-list">
+  {% if page.parent -%}
+  {%- if page.grand_parent %}
+    <li class="breadcrumb-nav-list-item"><a href="{{ grandparent_page.url | relative_url }}">{{ page.grand_parent }}</a></li>
+  {%- endif %}
+    <li class="breadcrumb-nav-list-item"><a href="{{ parent_page.url | relative_url }}">{{ page.parent }}</a></li>
+  {% endif -%}
+    <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
+  </ol>
+</nav>
+
+{%- endif -%}

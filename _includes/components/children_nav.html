@@ -1,0 +1,33 @@
+{%- comment -%}
+  Include as: {%- include components/children_nav.html -%}
+  Depends on: page, site.
+  Results in: HTML for the children-navigation component.
+  Includes:
+    sorted_pages.html
+    toc_heading_custom.html
+  Overwrites:
+    child_pages.
+{%- endcomment -%}
+
+{%- if page.has_children == true and page.has_toc != false -%}
+  {%- assign child_pages = site[page.collection]
+        | default: site.html_pages
+        | where: "parent", page.title
+        | where: "grand_parent", page.parent -%}
+
+  {%- include sorted_pages.html pages = child_pages -%}
+
+  {%- if page.child_nav_order == 'desc' or page.child_nav_order == 'reversed' -%}
+    {%- assign sorted_pages = sorted_pages | reverse -%}
+  {%- endif -%}
+{%- endif -%}
+
+<hr>
+{% include toc_heading_custom.html %}
+<ul>
+{% for child in sorted_pages %}
+  <li>
+    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+  </li>
+{% endfor %}
+</ul>

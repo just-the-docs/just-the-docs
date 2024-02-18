@@ -1,0 +1,67 @@
+{%- comment -%}
+  Include as: {%- include_cached components/site_nav.html -%}
+  Depends on: site.
+  Results in: HTML for the site-nav.
+  Includes:
+    components/nav.html
+  Overwrites:
+    pages_top_size, collections_size, collection_entry,
+    collection_key, collection_value, collection.
+{%- endcomment -%}
+
+<nav aria-label="Main" id="site-nav" class="site-nav">
+  {% assign pages_top_size = site.html_pages
+        | where_exp:"item", "item.title != nil"
+        | where_exp:"item", "item.parent == nil"
+        | where_exp:"item", "item.nav_exclude != true"
+        | size %}
+  {% if pages_top_size > 0 %}
+    {% include components/nav.html pages=site.html_pages %}
+  {% endif %}
+  {%- if site.nav_external_links -%}
+    <ul class="nav-list">
+      {%- for node in site.nav_external_links -%}
+        <li class="nav-list-item external">
+          <a href="{{ node.url | absolute_url }}" class="nav-list-link external"
+            {% if node.opens_in_new_tab or node.opens_in_new_tab == nil and site.nav_external_links_new_tab %}
+              target="_blank" rel="noopener noreferrer"
+            {% endif %}
+          >
+            {{ node.title }}
+            {% unless node.hide_icon %}<svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg>{% endunless %}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+  {% if site.just_the_docs.collections %}
+    {% assign collections_size = site.just_the_docs.collections | size %}
+    {% for collection_entry in site.just_the_docs.collections %}
+      {% assign collection_key = collection_entry[0] %}
+      {% assign collection_value = collection_entry[1] %}
+      {% assign collection = site[collection_key] %}
+      {% if collection_value.nav_exclude != true %}
+        {% if collections_size > 1 or pages_top_size > 0 %}
+          {% if collection_value.nav_fold == true %}
+            <ul class="nav-list nav-category-list">
+              <li class="nav-list-item">
+                {%- if collection.size > 0 -%}
+                <button class="nav-list-expander btn-reset" aria-label="Toggle collection {{ collection_value.name }}" aria-pressed="false">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+                </button>
+                {%- endif -%}
+                <div class="nav-category">{{ collection_value.name }}</div>
+                {% include components/nav.html pages=collection %}
+              </li>
+            </ul>
+          {% else %}
+            <div class="nav-category">{{ collection_value.name }}</div>
+            {% include components/nav.html pages=collection %}
+          {% endif %}
+        {% else %}
+          {% include components/nav.html pages=collection %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</nav>

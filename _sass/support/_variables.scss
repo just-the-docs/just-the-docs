@@ -1,9 +1,10 @@
 // Typography
 
+// prettier-ignore
 $body-font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
-  roboto, "Helvetica Neue", arial, sans-serif !default;
+  roboto, "Helvetica Neue", arial, sans-serif, "Segoe UI Emoji" !default;
 $mono-font-family: "SFMono-Regular", menlo, consolas, monospace !default;
-$root-font-size: 16px !default; // Base font-size for rems
+$root-font-size: 16px !default; // DEPRECATED: previously base font-size for rems
 $body-line-height: 1.4 !default;
 $content-line-height: 1.6 !default;
 $body-heading-line-height: 1.25 !default;
@@ -11,18 +12,18 @@ $body-heading-line-height: 1.25 !default;
 // Font size
 // `-sm` suffix is the size at the small (and above) media query
 
-$font-size-1: 9px !default;
-$font-size-1-sm: 10px !default;
-$font-size-2: 11px !default; // h4 - uppercased!, h6 not uppercased, text-small
-$font-size-3: 12px !default; // h5
-$font-size-4: 14px !default;
-$font-size-5: 16px !default; // h3
-$font-size-6: 18px !default; // h2
-$font-size-7: 24px !default;
-$font-size-8: 32px !default; // h1
-$font-size-9: 36px !default;
-$font-size-10: 42px !default;
-$font-size-10-sm: 48px !default;
+$font-size-1: 0.5625rem !default;
+$font-size-1-sm: 0.625rem !default;
+$font-size-2: 0.6875rem !default; // h4 - uppercased!, h6 not uppercased, text-small
+$font-size-3: 0.75rem !default; // h5
+$font-size-4: 0.875rem !default;
+$font-size-5: 1rem !default; // h3
+$font-size-6: 1.125rem !default; // h2
+$font-size-7: 1.5rem !default;
+$font-size-8: 2rem !default; // h1
+$font-size-9: 2.25rem !default;
+$font-size-10: 2.625rem !default;
+$font-size-10-sm: 3rem !default;
 
 // Colors
 
@@ -56,19 +57,6 @@ $red-000: #f77e7e !default;
 $red-100: #f96e65 !default;
 $red-200: #e94c4c !default;
 $red-300: #dd2e2e !default;
-$body-background-color: $white !default;
-$sidebar-color: $grey-lt-000 !default;
-$search-background-color: $white !default;
-$table-background-color: $white !default;
-$code-background-color: $grey-lt-000 !default;
-$feedback-color: darken($sidebar-color, 3%) !default;
-$body-text-color: $grey-dk-100 !default;
-$body-heading-color: $grey-dk-300 !default;
-$search-result-preview-color: $grey-dk-000 !default;
-$nav-child-link-color: $grey-dk-100 !default;
-$link-color: $purple-000 !default;
-$btn-primary-color: $purple-100 !default;
-$base-button-color: #f7f7f7 !default;
 
 // Spacing
 
@@ -108,22 +96,22 @@ $border-color: $grey-lt-100 !default;
 
 $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
-$nav-width: 264px !default;
-$nav-width-md: 248px !default;
+$nav-width: 16.5rem !default;
+$nav-width-md: 15.5rem !default;
 $nav-list-item-height: $sp-6 !default;
 $nav-list-item-height-sm: $sp-8 !default;
 $nav-list-expander-right: true;
-$content-width: 800px !default;
-$header-height: 60px !default;
+$content-width: 50rem !default;
+$header-height: 3.75rem !default;
 $search-results-width: $content-width - $nav-width !default;
 $transition-duration: 400ms;
 
 // Media queries in pixels
 
 $media-queries: (
-  xs: 320px,
-  sm: 500px,
+  xs: 20rem,
+  sm: 31.25rem,
   md: $content-width,
   lg: $content-width + $nav-width,
-  xl: 1400px,
+  xl: 87.5rem,
 ) !default;

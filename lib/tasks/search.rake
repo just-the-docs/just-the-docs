@@ -61,6 +61,7 @@ permalink: /assets/js/search-data.json
     "title": {{ title | jsonify }},
     "content": {{ content | replace: \'</h\', \' . </h\' | replace: \'<hr\', \' . <hr\' | replace: \'</p\', \' . </p\' | replace: \'<ul\', \' . <ul\' | replace: \'</ul\', \' . </ul\' | replace: \'<ol\', \' . <ol\' | replace: \'</ol\', \' . </ol\' | replace: \'</tr\', \' . </tr\' | replace: \'<li\', \' | <li\' | replace: \'</li\', \' | </li\' | replace: \'</td\', \' | </td\' | replace: \'<td\', \' | <td\' | replace: \'</th\', \' | </th\' | replace: \'<th\', \' | <th\' | strip_html | remove: \'Table of contents\' | normalize_whitespace | replace: \'. . .\', \'.\' | replace: \'. .\', \'.\' | replace: \'| |\', \'|\' | append: \' \' | jsonify }},
     "url": "{{ url | relative_url }}",
+    {% include lunr/custom-data.json page=page %}
     "relUrl": "{{ url }}"
   }
         {%- assign i = i | plus: 1 -%}
@@ -72,6 +73,7 @@ permalink: /assets/js/search-data.json
     "title": {{ page.title | jsonify }},
     "content": {{ parts[0] | replace: \'</h\', \' . </h\' | replace: \'<hr\', \' . <hr\' | replace: \'</p\', \' . </p\' | replace: \'<ul\', \' . <ul\' | replace: \'</ul\', \' . </ul\' | replace: \'<ol\', \' . <ol\' | replace: \'</ol\', \' . </ol\' | replace: \'</tr\', \' . </tr\' | replace: \'<li\', \' | <li\' | replace: \'</li\', \' | </li\' | replace: \'</td\', \' | </td\' | replace: \'<td\', \' | <td\' | replace: \'</th\', \' | </th\' | replace: \'<th\', \' | <th\' | strip_html | remove: \'Table of contents\' | normalize_whitespace | replace: \'. . .\', \'.\' | replace: \'. .\', \'.\' | replace: \'| |\', \'|\' | append: \' \' | jsonify }},
     "url": "{{ page.url | relative_url }}",
+    {% include lunr/custom-data.json page=page %}
     "relUrl": "{{ page.url }}"
   }
         {%- assign i = i | plus: 1 -%}

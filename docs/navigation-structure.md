@@ -20,7 +20,7 @@ nav_order: 5
 
 ## Main navigation
 
-The main navigation for your Just the Docs site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
+The main navigation for your Just the Docs site is on the left side of the page on large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
 
 By default, all pages will appear as top level pages in the main nav unless a parent page is defined (see [Pages with Children](#pages-with-children)).
 
@@ -30,7 +30,7 @@ By default, all pages will appear as top level pages in the main nav unless a pa
 
 To specify a page order, you can use the `nav_order` parameter in your pages' YAML front matter.
 
-#### Example
+### Example (ordering pages)
 {: .no_toc }
 
 ```yaml
@@ -55,7 +55,7 @@ By default, all Capital letters come before all lowercase letters; you can add `
 
 For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
 
-#### Example
+### Example (excluding pages)
 {: .no_toc }
 
 ```yaml
@@ -108,7 +108,7 @@ On the parent pages, add this YAML front matter parameter:
 
 - `has_children: true` (tells us that this is a parent page)
 
-#### Example
+### Example (parent pages)
 {: .no_toc }
 
 ```yaml
@@ -129,7 +129,7 @@ Here we're setting up the UI Components landing page that is available at `/docs
 
 On child pages, simply set the `parent:` YAML front matter to whatever the parent's page title is and set a nav order (this number is now scoped within the section).
 
-#### Example
+#### Example (child pages)
 {: .no_toc }
 
 ```yaml
@@ -145,18 +145,22 @@ nav_order: 2
 The Buttons page appears as a child of UI Components and appears second in the UI Components section.
 
 ### Ordering child pages
+{: .d-inline-block }
 
-You can optionally add the following to the YAML front matter to change the default sort order of child pages from ascending to descending order:
+New (v0.4.0)
+{: .label .label-green }
 
-- `child_nav_order: desc`
+You can optionally add the following to the YAML front matter to reverse the default sort order of child pages:
 
-#### Example
+- `child_nav_order: reversed`
+
+#### Example (ordering child pages)
 {: .no_toc }
 ```yaml
 ---
 layout: default
-title: Descending Child Pages
-child_nav_order: desc
+title: Reversed Child Pages
+child_nav_order: reversed
 ---
 ```
 
@@ -164,7 +168,7 @@ child_nav_order: desc
 
 By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set `has_toc: false` in the parent page's YAML front matter.
 
-#### Example
+#### Example (auto-generating Table of Contents)
 {: .no_toc }
 
 ```yaml
@@ -187,7 +191,7 @@ Child pages can also have children (grandchildren). This is achieved by using a 
 1. Add the `has_children` attribute to the child
 1. Add the `parent` and `grand_parent` attribute to the grandchild
 
-#### Example
+##### Example (children within children)
 {: .no_toc }
 
 ```yaml
@@ -233,11 +237,45 @@ Currently, the navigation structure is limited to 3 levels: grandchild pages can
 
 ---
 
+## Grouping pages with collections
+
+Pages can also be grouped together by using Jekyll's and Just the Docs's [collections]({% link docs/configuration.md %}#document-collections) feature. In contrast to using [pages with children](#pages-with-children), pages grouped by collection are grouped by a shared header (the name of the collection) instead of a page.
+
+The `nav_fold` configuration option works for collection-grouped pages. For more information, please refer to the [collections documentation]({% link docs/configuration.md %}#document-collections).
+
+### Example (grouping by collection)
+{: .no_toc }
+
+The following example sets up two collections, `collection-one` and `collection-two`:
+
+- any document placed within `_collection-1/` will be grouped under the `Collection One` header by default. Since `nav_fold` is set to `true`, the pages will be folded by default.
+- any document placed within `_collection-2/` will be grouped under the `Collection Two` header by default. Since `nav_fold` is set to `false`, the pages will be expanded by default.
+
+```yaml
+_config.yml:
+  collections:
+    collection-one:
+      permalink: "/:collection/:path/"
+      output: true
+    collection-two:
+      permalink: "/:collection/:path/"
+      output: true
+  just_the_docs:
+    collections:
+      collection-one:
+        name: Collection One
+        nav_fold: true
+      collection-two:
+        name: Collection Two
+        nav_fold: false
+```
+---
+
 ## Auxiliary Links
 
-To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
+To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
 
-#### Example
+### Example (auxiliary links)
 {: .no_toc }
 
 ```yaml
@@ -250,11 +288,15 @@ aux_links:
 ---
 
 ## External Navigation Links
+{: .d-inline-block }
 
-To add external links to the navigation, add them to the `nav_external_links` [configuration]({{ site.baseurl }}{% link docs/configuration.md %}) option in your site's `_config.yml` file.
+New (v0.4.0)
+{: .label .label-green }
+
+To add external links to the navigation, add them to the `nav_external_links` [configuration]({% link docs/configuration.md %}) option in your site's `_config.yml` file.
 External links will appear in the navigation after the links to ordinary pages, but before any collections.
 
-#### Example
+### Example (external navigation links)
 {: .no_toc }
 
 ```yaml
@@ -263,10 +305,24 @@ nav_external_links:
   - title: Just the Docs on GitHub
     url: https://github.com/just-the-docs/just-the-docs
     hide_icon: false # set to true to hide the external link icon - defaults to false
+    opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
 ```
+
+### Opening external links in a new tab
+{: .d-inline-block }
+
+New (unreleased)
+{: .label .label-green }
 
 The external links are decorated by an icon, which distinguishes them from internal links.
 You can suppress the icon by setting `hide_icon: true`.
+
+By default, external links are not opened in a new tab. However, this can be enabled by:
+
+1. setting `opens_in_new_tab: true` in the link's configuration object
+2. setting the configuration option `nav_external_links_new_tab: true` in `_config.yml`
+
+When they conflict, `opens_in_new_tab` takes precedence.
 
 ---
 
@@ -274,7 +330,7 @@ You can suppress the icon by setting `hide_icon: true`.
 
 To generate a Table of Contents on your docs pages, you can use the `{:toc}` method from Kramdown, immediately after an `<ol>` in Markdown. This will automatically generate an ordered list of anchor links to various sections of the page based on headings and heading levels. There may be occasions where you're using a heading and you don't want it to show up in the TOC, so to skip a particular heading use the `{: .no_toc }` CSS class.
 
-#### Example
+### Example (in-page navigation with Table of Contents)
 {: .no_toc }
 
 ```markdown
@@ -292,7 +348,7 @@ This example skips the page name heading (`#`) from the TOC, as well as the head
 
 ### Collapsible Table of Contents
 
-The Table of Contents can be made collapsible using the `<details>` and `<summary>` elements , as in the following example. The attribute `open` (expands the Table of Contents by default) and the styling with `{: .text-delta }` are optional.
+The Table of Contents can be made collapsible using the `<details>` and `<summary>` elements, as in the following example. The attribute `open` (expands the Table of Contents by default) and the styling with `{: .text-delta }` are optional.
 
 ```markdown
 <details open markdown="block">

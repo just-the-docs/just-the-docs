@@ -21,7 +21,7 @@ nav_order: 1
 By default, Just the Docs uses a native system font stack for sans-serif fonts:
 
 ```scss
-system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Segoe UI Emoji"
 ```
 
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -97,12 +97,12 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 <div class="code-example" markdown="1">
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](another-page).
+[Link to another page]({{site.baseurl}}/).
 </div>
 ```markdown
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
-[Link to another page](another-page).
+[Link to another page]({{site.baseurl}}/).
 ```
 
 ---
@@ -111,4 +111,4 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 
 There are a number of specific typographic CSS classes that allow you to override default styling for font size, font weight, line height, and capitalization.
 
-[View typography utilities]({{ site.baseurl }}{% link docs/utilities/utilities.md %}#typography){: .btn .btn-outline }
+[View typography utilities]({% link docs/utilities/typography.md %}){: .btn .btn-outline }

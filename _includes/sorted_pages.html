@@ -1,0 +1,109 @@
+{%- comment -%}
+  Include as: {%- include sorted_pages.html pages=array_of_pages -%}
+  Depends on: include.pages.
+  Assigns to: sorted_pages.
+  Overwrites: 
+    nav_order_pages, title_order_pages, double_quote, empty_array,
+    nav_number_pages, nav_string_pages, nav_order_groups, group,
+    title_number_pages, title_string_pages, title_order_groups.
+{%- endcomment -%}
+
+{%- comment -%}
+  The `nav_order` values of pages affect the order in which they are shown in
+  the navigation panel and in the automatically generated tables of contents.
+  Sibling pages with the same `nav_order` value may be shown in any order.
+  Sibling pages with no `nav_order` value are shown after all pages that have
+  explicit `nav_order` values, ordered by their `title` values.
+  
+  The `nav_order` and `title` values can be numbers or strings. To avoid build
+  failures, we sort numbers and strings separately. We sort numbers by their
+  values, and strings lexicographically. The case-sensitivity of string sorting
+  is determined by the configuration setting of `nav_sort`. Pages with no `title`
+  value are excluded from the navigation.
+
+  Note: Numbers used as `title` or `nav_order` values should not be in quotes,
+  unless you intend them to be lexicographically ordered. Numbers are written
+  without spaces or thousands-separators. Negative numbers are preceded by `-`.
+  Floats are written with the integral and fractional parts separated by `.`.
+  (Bounds on the magnitude and precision are presumably the same as in Liquid.)
+{%- endcomment -%}
+
+{%- assign nav_order_pages = include.pages
+      | where_exp: "item", "item.nav_order != nil" -%}
+{%- assign title_order_pages = include.pages
+      | where_exp: "item", "item.nav_order == nil" -%}
+
+{%- comment -%}
+  First, filter `nav_order_pages` and `title_order_pages` according to the type
+  of value to be used for sorting.
+  
+  The first character of the result of filtering with `jsonify` is `"` only for
+  strings. Removing `"` from its `slice : 0` has size 0 for strings and 1 for
+  numbers, so grouping the pages gives at most two groups.
+{%- endcomment -%}
+
+{%- assign double_quote = '"' -%}
+{%- assign empty_array = "" | split: "" -%}
+
+{%- assign nav_string_pages = empty_array -%}
+{%- assign nav_number_pages = empty_array -%}
+{%- unless nav_order_pages == empty -%}
+  {%- assign nav_order_groups = nav_order_pages
+        | group_by_exp: "item",
+            "item.nav_order | jsonify | slice: 0 | remove: double_quote | size" -%}
+  {%- for group in nav_order_groups -%}
+    {%- if group.name == 0 -%}
+      {%- assign nav_string_pages = group.items -%}
+    {%- elsif group.name == 1 -%}
+      {%- assign nav_number_pages = group.items -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endunless -%}
+
+{%- assign title_string_pages = empty_array -%}
+{%- assign title_number_pages = empty_array -%}
+{%- unless title_order_pages == empty -%}
+  {%- assign title_order_groups = title_order_pages
+        | group_by_exp: "item",
+            "item.title | jsonify | slice: 0 | remove: double_quote | size" -%}
+  {%- for group in title_order_groups -%}
+    {%- if group.name == 0 -%}
+      {%- assign title_string_pages = group.items -%}
+    {%- elsif group.name == 1 -%}
+      {%- assign title_number_pages = group.items -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endunless -%}
+
+{%- comment -%}
+  Now sort each array of pages separately, then concatenate the sorted arrays.
+{%- endcomment -%}
+
+{%- unless nav_number_pages == empty -%}
+  {%- assign nav_number_pages = nav_number_pages | sort: "nav_order" -%}
+{%- endunless -%}
+
+{%- unless nav_string_pages == empty -%}
+  {%- if site.nav_sort == 'case_insensitive' -%}
+    {%- assign nav_string_pages = nav_string_pages | sort_natural: "nav_order" -%}
+  {%- else -%}
+    {%- assign nav_string_pages = nav_string_pages | sort: "nav_order" -%}
+  {%- endif -%}
+{%- endunless -%}
+
+{%- unless title_number_pages == empty -%}
+  {%- assign title_number_pages = title_number_pages | sort: "title" -%}
+{%- endunless -%}
+
+{%- unless title_string_pages == empty -%}
+  {%- if site.nav_sort == 'case_insensitive' -%}
+    {%- assign title_string_pages = title_string_pages | sort_natural: "title" -%}
+  {%- else -%}
+    {%- assign title_string_pages = title_string_pages | sort: "title" -%}
+  {%- endif -%}
+{%- endunless -%}
+
+{%- assign sorted_pages = nav_number_pages
+      | concat: nav_string_pages
+      | concat: title_number_pages
+      | concat: title_string_pages -%}

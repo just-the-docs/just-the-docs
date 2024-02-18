@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+  {% include icons/link.html %}
+  {% include icons/menu.html %}
+  {% include icons/expand.html %}
+  {% include icons/external_link.html %}
+  {% if site.search_enabled != false %}
+    {% include icons/document.html %}
+    {% include icons/search.html %}
+  {% endif %}
+  {% if site.enable_copy_code_button != false %}
+    {% include icons/code_copy.html %}
+  {% endif %}
+</svg>

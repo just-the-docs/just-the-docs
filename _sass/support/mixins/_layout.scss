@@ -12,12 +12,11 @@
   // If the key exists in the map
   @if $value {
     // Prints a media query based on the value
-    @media (min-width: rem($value)) {
+    @media (min-width: $value) {
       @content;
     }
   } @else {
-    @warn "No value could be retrieved from `#{$media-query}`. "
-      + "Please make sure it is defined in `$media-queries` map.";
+    @warn "No value could be retrieved from `#{$media-query}`. Please make sure it is defined in `$media-queries` map.";
   }
 }
 

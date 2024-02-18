@@ -1,0 +1,281 @@
+{%- comment -%}
+  Include as: {%- include css/activation.scss.liquid -%}
+  Depends on: page, site.
+  Results in: page-dependent (non-nested) CSS rules for inclusion in a head style element,
+    which needs to be suppressed when JS is enabled.
+  Includes:
+    sorted_pages.html.
+  Overwrites: 
+    activation_no_nav_link, activation_pages, activation_pages_top_size, activation_page, activation_title,
+    activation_first_level, activation_second_level, activation_third_level,
+    activation_first_level_reversed, activation_second_level_reversed,
+    activation_first_level_index, activation_second_level_index, activation_third_level_index,
+    activation_index, activation_collection_prefix, activation_other_collection_prefix.
+  Should not be cached, because it depends on page.
+  (For a site with only top-level pages, the rendering of this file is always empty.
+  This property could be detected, and used to reduce the build time for such sites.)
+{%- endcomment -%}
+
+{%- comment -%}
+  The CSS rules in activation_no_nav_link are for use on pages excluded from the main navigation.
+  - The first rule ensures that no nav-link has a background image.
+  - The other two rules ensure that all folding collections are expanded.
+{%- endcomment -%}
+
+{%- capture activation_no_nav_link %}
+.site-nav ul li a {
+  background-image: none;
+}
+
+{%- if site.just_the_docs.collections %}
+.site-nav > ul.nav-category-list > li > button svg {
+  transform: rotate(-90deg);
+}
+.site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list {
+  display: block;
+}
+{%- endif %}
+{% endcapture -%}
+
+{%- if page.title == nil or page.nav_exclude == true -%}
+
+{{ activation_no_nav_link }}
+
+{%- else -%}
+
+{%- assign activation_pages = site[page.collection]
+      | default: site.html_pages
+      | where_exp: "item", "item.title != nil"
+      | where_exp: "item", "item.nav_exclude != true" -%}
+
+{%- assign activation_first_level_index = nil -%}
+{%- assign activation_second_level_index = nil -%}
+{%- assign activation_third_level_index = nil -%}
+{%- assign activation_first_level_reversed = nil -%}
+{%- assign activation_second_level_reversed = nil -%}
+
+{%- comment -%}
+  The generated CSS depends on the position of the current page in each level in
+  the navigation.
+{%- endcomment -%}
+
+{%- assign activation_title = page.grand_parent | default: page.parent | default: page.title -%}
+{%- assign activation_first_level = activation_pages
+      | where_exp: "item", "item.parent == nil" -%}
+{%- include sorted_pages.html pages = activation_first_level -%}
+{%- for activation_page in sorted_pages -%}
+  {%- if activation_page.title == activation_title -%}
+    {%- assign activation_first_level_index = forloop.index -%}
+    {%- assign activation_first_level_reversed = activation_page.child_nav_order -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if activation_first_level_index == nil -%}
+
+{{ activation_no_nav_link }}
+
+{%- else -%}
+
+{%- if page.grand_parent -%}
+  {%- assign activation_title = page.parent -%}
+  {%- assign activation_second_level = activation_pages
+        | where_exp: "item", "item.grand_parent == nil"
+        | where_exp: "item", "item.parent == page.grand_parent" -%}
+{%- elsif page.parent -%}
+  {%- assign activation_title = page.title -%}
+  {%- assign activation_second_level = activation_pages
+        | where_exp: "item", "item.grand_parent == nil"
+        | where_exp: "item", "item.parent == page.parent" -%}
+{%- endif -%}
+{%- if page.parent -%}
+  {%- include sorted_pages.html pages = activation_second_level -%}
+  {%- for activation_page in sorted_pages -%}
+    {%- if activation_page.title == activation_title -%}
+      {%- assign activation_second_level_index = forloop.index -%}
+      {%- assign activation_second_level_reversed = activation_page.child_nav_order -%}
+      {%- if activation_first_level_reversed -%}
+        {%- assign activation_second_level_index = sorted_pages | size | plus: 1 | minus: activation_second_level_index -%}
+      {%- endif -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if page.grand_parent -%}
+  {%- assign activation_third_level = activation_pages
+        | where_exp: "item", "item.parent == page.parent"
+        | where_exp: "item", "item.grand_parent == page.grand_parent" -%}
+  {%- include sorted_pages.html pages = activation_third_level -%}
+  {%- assign activation_third_level = sorted_pages -%}
+  {%- for activation_page in sorted_pages -%}
+    {%- if activation_page.title == page.title -%}
+      {%- assign activation_third_level_index = forloop.index -%}
+      {%- if activation_second_level_reversed -%}
+        {%- assign activation_third_level_index = sorted_pages | size | plus: 1 | minus: activation_third_level_index -%}
+      {%- endif -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- if activation_second_level_index == nil and activation_third_level_index -%}
+
+{{ activation_no_nav_link }}
+
+{%- else -%}
+
+{%- comment -%}
+  The site-nav is:
+  - an optional ul.nav-list with li.nav-list-items for non-collection top-level pages
+  - an optional ul.nav-list with li.nav-list-item.externals
+  - any number of just-the-docs.collections
+  
+  A non-foldable collection is:
+  - a div.nav-category with the collection name, followed by:
+  - a ul.nav-list with li.nav-list-items for its top-level pages
+  
+  A foldable collection is:
+  - a ul.nav-list.nav-category-list with a single li.nav-list-item containing:
+    - an optional button with the expander svg
+    - a div.nav-category with the collection name
+    - a ul.nav-list with li.nav-list-items for its top-level pages
+  
+  The generated CSS uses:
+  - activation_collection_prefix, to select the site-nav > ul.nav-list for the page
+  - activation_other_collection_prefix, to select all the other site-nav > ul.nav-lists
+{%- endcomment -%}
+
+{%- if page.collection == nil -%}
+
+  {%- capture activation_collection_prefix -%}
+  .site-nav > ul.nav-list:first-child
+  {%- endcapture -%}
+
+  {%- capture activation_other_collection_prefix -%}
+  .site-nav > ul.nav-list:not(:first-child)
+  {%- endcapture -%}
+
+{%- else -%}
+
+  {%- for activation_collection in site.just_the_docs.collections -%}
+    {%- if activation_collection[0] == page.collection -%}
+      {%- assign activation_index = forloop.index -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- assign activation_pages_top_size = site.html_pages
+          | where_exp:"item", "item.title != nil"
+          | where_exp:"item", "item.parent == nil"
+          | where_exp:"item", "item.nav_exclude != true"
+          | size -%}
+  {%- if activation_pages_top_size > 0 -%}
+    {%- assign activation_index = activation_index | plus: 1 -%}
+  {%- endif -%}
+
+  {%- if site.nav_external_links -%}
+    {%- assign activation_index = activation_index | plus: 1 -%}
+  {%- endif -%}
+
+  {%- capture activation_collection_prefix -%}
+  .site-nav > ul:nth-of-type({{ activation_index }})
+  {%- if site.just_the_docs.collections[page.collection].nav_fold %} > li > ul
+  {%- endif -%}
+  {%- endcapture -%}
+
+  {%- capture activation_other_collection_prefix -%}
+  .site-nav > ul:not(:nth-of-type({{ activation_index }}))
+  {%- endcapture -%}
+
+{%- endif -%}
+
+{%- comment -%}
+  The required background image of the link to the current page may involve SCSS.
+  To avoid page-dependent SCSS, all nav links initially have that background image.
+  The following rule removes the image from the links to all parents, siblings,
+  and children of the current page.
+{%- endcomment %}
+
+{% if activation_third_level_index -%}
+
+{{ activation_collection_prefix }} > li > a,
+{{ activation_collection_prefix }} > li > ul > li > a,
+{{ activation_collection_prefix }} > li > ul > li > ul > li:not(:nth-child({{ activation_third_level_index }})) > a {
+  background-image: none;
+}
+
+{%- elsif activation_second_level_index -%}
+
+{{ activation_collection_prefix }} > li > a,
+{{ activation_collection_prefix }} > li > ul > li:not(:nth-child({{ activation_second_level_index }})) > a,
+{{ activation_collection_prefix }} > li > ul > li > ul > li > a {
+  background-image: none;
+}
+
+{%- else -%}
+
+{{ activation_collection_prefix }} > li:not(:nth-child({{ activation_first_level_index }})) > a,
+{{ activation_collection_prefix }} > li > ul > li > a,
+{{ activation_collection_prefix }} > li > ul > li > ul > li > a {
+  background-image: none;
+}
+
+{%- endif %}
+
+{%- comment -%}
+  The following rule removes the image from the links to pages in other collections.
+{%- endcomment %}
+
+{{ activation_other_collection_prefix }} a,
+.site-nav li.external a {
+  background-image: none;
+}
+
+{%- comment -%}
+  The following rule styles the link to the current page.
+{%- endcomment %}
+
+{{ activation_collection_prefix }} > li:nth-child({{ activation_first_level_index }})
+{%- if activation_second_level_index %} > ul > li:nth-child({{ activation_second_level_index }})
+{%- if activation_third_level_index %} > ul > li:nth-child({{ activation_third_level_index }})
+{%- endif -%}
+{%- endif %} > a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+{%- comment -%}
+  The following rules unfold all collections, and display the links to any children
+  of the current page.
+  
+  To avoid dependence on the SCSS variable nav-list-expander-right, the direction
+  of the rotation of the expander icon is fixed, and corresponds to the appearance
+  when nav-list-expander-right is true. This results in a minor visual difference
+  between the appearance of active expander icons when JS is enabled/disabled and
+  nav-list-expander-right is false, which seems unavoidable.
+{%- endcomment %}
+
+{%- if site.just_the_docs.collections %}
+.site-nav > ul.nav-category-list > li > button svg,
+{% endif -%}
+{{ activation_collection_prefix }} > li:nth-child({{ activation_first_level_index }}) > button svg
+{%- if activation_second_level_index -%},
+{{ activation_collection_prefix }} > li:nth-child({{ activation_first_level_index }}) > ul > li:nth-child({{ activation_second_level_index }}) > button svg
+{%- endif %} {
+  transform: rotate(-90deg);
+}
+
+{%- if site.just_the_docs.collections %}
+.site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list,
+{% endif -%}
+{{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ activation_first_level_index }}) > ul.nav-list
+{%- if activation_second_level_index %},
+{{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ activation_first_level_index }}) > ul.nav-list > li.nav-list-item:nth-child({{ activation_second_level_index }}) > ul.nav-list
+{%- endif %} {
+  display: block;
+}
+
+{%- endif -%}
+{%- endif -%}
+{%- endif -%}
