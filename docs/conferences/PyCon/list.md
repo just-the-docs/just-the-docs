@@ -1,11 +1,12 @@
 ---
 layout: default
-title: Guitar
-nav_order: 5
+title: PyCon
+nav_order: 1
 has_children: true
+parent: Conferences
 ---
 
-# Guitar
+# Pycon
 {: .no_toc }
 
 ## Table of contents

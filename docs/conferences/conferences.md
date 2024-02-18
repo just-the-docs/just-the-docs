@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Guitar
-nav_order: 5
+title: Conferences
+nav_order: 2
 has_children: true
 ---
 
-# Guitar
+# Conferences
 {: .no_toc }
 
 ## Table of contents

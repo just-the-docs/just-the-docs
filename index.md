@@ -15,7 +15,7 @@ Blogs by Harsh Mittal is a collection of all the blogs written by me on various 
 [Portfolio][Portfolio_Website]{: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 }
 [About Me](#about-me){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 
-<button class="btn js-toggle-dark-mode">Switch to dark mode</button>
+<button class="btn js-toggle-dark-mode">Switch to light mode</button>
 
 <script>
 const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
