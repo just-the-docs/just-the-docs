@@ -94,6 +94,21 @@ The search button displays in the bottom right corner of the screen and triggers
 search.button: true
 ```
 
+### Focus search bar with a keyboard shortcut
+
+Just the Docs supports focusing the search bar input with a keyboard shortcut. After setting the `search.focus_shortcut_key` config item key, users who press <kbd>Ctrl</kbd> + `search.focus_shortcut_key` (or on macOS, <kbd>Command</kbd> + `search.focus_shortcut_key`) will focus the search bar.
+
+Note that this feature is **disabled by default**. `search.focus_shortcut_key` should be a [valid value from `KeyboardEvent.key`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key); this involves all ASCII alphanumeric values, as well as modifier keys.
+
+For example,
+
+```yaml
+search:
+    focus_shortcut_key: 'k'
+```
+
+Will make <kbd>Ctrl</kbd> + <kbd>K</kbd> focus the search bar for Windows users (and <kbd>Command</kbd> + <kbd>K</kbd> on macOS).
+
 ## Hiding pages from search
 
 Sometimes you might have a page that you don't want to be indexed for the search nor to show up in search results, e.g., a 404 page.
