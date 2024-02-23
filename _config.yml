@@ -13,11 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Just the Docs
-description: A Jekyll theme for documentation
+title: AllForLiberty
+description: 공부용 블로그
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://just-the-docs.com" # the base hostname & protocol for your site, e.g. http://example.com
-repository: just-the-docs/just-the-docs # for github-metadata
+url: https://jyk2367.github.io
 
 permalink: pretty
 
@@ -64,10 +63,10 @@ search:
   previews: 2
   # Maximum amount of words to display before a matched word in the preview
   # Default: 5
-  preview_words_before: 3
+  preview_words_before: 5
   # Maximum amount of words to display after a matched word in the preview
   # Default: 10
-  preview_words_after: 3
+  preview_words_after: 10
   # Set the search token separator
   # Default: /[\s\-/]+/
   # Example: enable support for hyphenated search words
@@ -103,8 +102,8 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
-    - "https://github.com/just-the-docs/just-the-docs"
+  Template Repository:
+    - "https://github.com/jyk2367/jyk2367.github.io"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -136,7 +135,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
-gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
+gh_edit_repository: "https://github.com/jyk2367/jyk2367.github.io" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
