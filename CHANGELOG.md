@@ -19,6 +19,7 @@ Code changes to `main` that are *not* in the latest release:
 
 - Added: configurable keyboard shortcut to focus search input by [@kcromanpl-bajra] in [#1411]
 - Fixed: incorrect navigation when `.html` omitted from URL by [@pdmosses] in [#1374]
+- Fixed: quicker build by [@pdmosses] in [#1397]
 - Fixed: incorrect positioning of clickable area for navigation links on Safari by [@mattxwang] in [#1403]
 
 Docs changes made since the latest release:
@@ -34,6 +35,7 @@ Docs changes made since the latest release:
 
 [#1374]: https://github.com/just-the-docs/just-the-docs/pull/1374
 [#1390]: https://github.com/just-the-docs/just-the-docs/pull/1390
+[#1397]: https://github.com/just-the-docs/just-the-docs/pull/1397
 [#1403]: https://github.com/just-the-docs/just-the-docs/pull/1403
 [#1411]: https://github.com/just-the-docs/just-the-docs/pull/1411
 
