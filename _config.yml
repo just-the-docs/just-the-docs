@@ -32,6 +32,7 @@ exclude:
    - vendor/cache/
    - vendor/gems/
    - vendor/ruby/
+   - .github/workflows/ci.yml
  # specific to the theme website:
    - bin/
    - lib/
