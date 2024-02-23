@@ -102,7 +102,7 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  Template Repository:
+  "JYK'S GITHUB":
     - "https://github.com/jyk2367/jyk2367.github.io"
 
 # Makes Aux links open in a new tab. Default is false
