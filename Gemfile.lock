@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    just-the-docs (0.7.0)
+    just-the-docs (0.8.0)
       jekyll (>= 3.8.5)
       jekyll-include-cache
       jekyll-seo-tag (>= 2.0)
