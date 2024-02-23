@@ -17,18 +17,52 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- Added: configurable keyboard shortcut to focus search input by [@kcromanpl-bajra] in [#1411]
-- Fixed: incorrect navigation when `.html` omitted from URL by [@pdmosses] in [#1374]
-- Fixed: quicker build by [@pdmosses] in [#1397]
-- Fixed: incorrect positioning of clickable area for navigation links on Safari by [@mattxwang] in [#1403]
+- N/A
 
 Docs changes made since the latest release:
+
+- N/A
+
+## Release v0.8.0
+
+Hi folks! This first minor release of 2024 has a short number of changes: a large improvement of build times for large sites, a new keyboard shortcut to focus the search bar, and sidebar navigation bugfixes for "pretty" URLs (with `.html` omitted) and the clickable area on Safari. This release has no explicit breaking changes and should be a straightforward upgrade for most (if not all) users.
+
+### Using Release `v0.8.0`
+
+Users who have not pinned the theme version will be **automatically upgraded to `v0.8.0` the next time they build their site**.
+
+To use this release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.8.0
+```
+
+To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.8.0"
+```
+
+To use and pin a previous version of the theme, replace the `0.8.0` with the desired release tag.
+
+### New Features
+
+- Added: configurable keyboard shortcut to focus search input by [@kcromanpl-bajra] in [#1411]
+
+### Bugfixes
+
+- Fixed: quicker build by [@pdmosses] in [#1397]
+- Fixed: incorrect navigation when `.html` omitted from URL by [@pdmosses] in [#1374]
+- Fixed: incorrect positioning of clickable area for navigation links on Safari by [@mattxwang] in [#1403]
+
+### Documentation
 
 - Add documentation to "Navigation Structure" on grouping pages with collections by [@mitchnemirov] in [#1390]
 
 ### New Contributors
 
 - [@mitchnemirov] made their first contribution in [#1390]
+- [@kcromanpl-bajra] made their first contribution in [#1411]
 
 [@mitchnemirov]: https://github.com/mitchnemirov
 [@kcromanpl-bajra]: https://github.com/kcromanpl-bajra
