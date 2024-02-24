@@ -1,0 +1,29 @@
+{%- comment -%}
+  Include as:   {%- include components/nav/children.html node=node ancestors=title_array -%}
+  Depends on: include.node, include.ancestors.
+  Assigns to: nav_children.
+  Overwrites:
+    nav_candidates, nav_child, nav_child_ok.
+{%- endcomment -%}
+
+{%- assign nav_candidates = nav_parenthood
+      | where: "name", include.node.title | map: "items" | first -%}
+{%- assign nav_children = "" | split: "" -%}
+
+{%- for nav_child in nav_candidates -%}
+  {%- assign nav_child_ok = true -%}
+
+  {%- if nav_child.grand_parent and nav_child.grand_parent != include.node.parent -%}
+    {%- assign nav_child_ok = false -%}
+  {%- endif -%}
+
+  {%- if nav_child.ancestor and nav_child.ancestor != include.node.title -%}
+    {%- unless include.ancestors contains nav_child.ancestor -%}
+      {%- assign nav_child_ok = false -%}
+    {%- endunless -%}
+  {%- endif -%}
+
+  {%- if nav_child_ok -%}
+    {%- assign nav_children = nav_children | push: nav_child -%}
+  {%- endif -%}
+{%- endfor -%}

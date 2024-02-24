@@ -18,9 +18,9 @@ You can use [Jekyll's front matter defaults] to specify the same layout for many
 
 ## The `default` layout
 
-This page uses the default layout.
+This page uses the default layout. This site also uses the `jekyll-default-layout` plugin, which allows the omission of `layout: default` in the front matter of ordinary (non-collection) pages.
 
-It is a *responsive* layout: on medium and larger width displays, it displays a sidebar, including a navigation panel; on smaller width displays, the sidebar is automatically hidden under a button.
+The default layout of Just the Docs is a *responsive* layout: on medium and larger width displays, it displays a sidebar, including a navigation panel; on smaller width displays, the sidebar is automatically hidden under a button.
 
 Each child (and grandchild) page of a top-level page has so-called *breadcrumbs*: links to its parent (and grandparent) pages. It shows the breadcrumbs above the main content of the page.
 

@@ -2,11 +2,14 @@
   Include as: {%- include components/children_nav.html -%}
   Depends on: page, site.
   Results in: HTML for the children-navigation component.
+  Issues:
+    For sites with more than 3 levels of navigation links, or which use
+    `ancestor` fields, the resulting child links are currently incorrect.
   Includes:
-    sorted_pages.html
+    components/nav/sorted.html
     toc_heading_custom.html
   Overwrites:
-    child_pages.
+    child_pages, child.
 {%- endcomment -%}
 
 {%- if page.has_children == true and page.has_toc != false -%}
@@ -15,7 +18,7 @@
         | where: "parent", page.title
         | where: "grand_parent", page.parent -%}
 
-  {%- include sorted_pages.html pages = child_pages -%}
+  {%- include components/nav/sorted.html pages = child_pages -%}
 
   {%- if page.child_nav_order == 'desc' or page.child_nav_order == 'reversed' -%}
     {%- assign sorted_pages = sorted_pages | reverse -%}
@@ -25,9 +28,9 @@
 <hr>
 {% include toc_heading_custom.html %}
 <ul>
-{% for child in sorted_pages %}
+  {% for child in sorted_pages %}
   <li>
     <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
   </li>
-{% endfor %}
+  {% endfor %}
 </ul>

@@ -3,7 +3,7 @@
   Depends on: site.
   Results in: HTML for the site-nav.
   Includes:
-    components/nav.html
+    components/nav/pages.html
   Overwrites:
     pages_top_size, collections_size, collection_entry,
     collection_key, collection_value, collection.
@@ -16,7 +16,7 @@
         | where_exp:"item", "item.nav_exclude != true"
         | size %}
   {% if pages_top_size > 0 %}
-    {% include components/nav.html pages=site.html_pages %}
+    {% include components/nav/pages.html pages=site.html_pages %}
   {% endif %}
   {%- if site.nav_external_links -%}
     <ul class="nav-list">
@@ -51,15 +51,15 @@
                 </button>
                 {%- endif -%}
                 <div class="nav-category">{{ collection_value.name }}</div>
-                {% include components/nav.html pages=collection %}
+                {% include components/nav/pages.html pages=collection %}
               </li>
             </ul>
           {% else %}
             <div class="nav-category">{{ collection_value.name }}</div>
-            {% include components/nav.html pages=collection %}
+            {% include components/nav/pages.html pages=collection %}
           {% endif %}
         {% else %}
-          {% include components/nav.html pages=collection %}
+          {% include components/nav/pages.html pages=collection %}
         {% endif %}
       {% endif %}
     {% endfor %}

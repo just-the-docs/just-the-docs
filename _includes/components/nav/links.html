@@ -1,0 +1,37 @@
+{%- comment -%}
+  Include as: {%- include components/nav/links.html pages=page_array ancestors=title_array -%}
+  Depends on: include.pages, include.ancestors.
+  Results in: navigation links for all pages in include.pages and their descendants.
+  Includes: components/nav/sorted.html, components/nav/children.html, components/nav/links.html.
+  Overwrites:
+    node, nav_children, nav_ancestors.
+{%- endcomment -%}
+
+{%- include components/nav/sorted.html pages=include.pages -%}
+  
+<ul class="nav-list">
+{%- for node in nav_sorted -%}
+  
+  {%- unless node.nav_exclude == true -%}
+
+    {%- include components/nav/children.html node=node ancestors=include.ancestors -%}
+
+    <li class="nav-list-item">
+      {%- if nav_children.size >= 1 -%}
+      <button class="nav-list-expander btn-reset" aria-label="toggle items in {{ node.title }} category" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+      </button>
+      {%- endif -%}
+      <a href="{{ node.url | relative_url }}" class="nav-list-link">{{ node.title }}</a>
+      {%- if nav_children.size >= 1 -%}
+        {%- if node.child_nav_order == 'desc' or node.child_nav_order == 'reversed' -%}
+          {%- assign nav_children = nav_children | reverse -%}
+        {%- endif -%}
+        {%- assign nav_ancestors = include.ancestors | push: node.title -%}
+        {%- include components/nav/links.html pages=nav_children ancestors=nav_ancestors -%}
+      {%- endif -%}
+    </li>
+
+  {%- endunless -%}
+{%- endfor -%}
+</ul>

@@ -1,0 +1,18 @@
+{%- comment -%}
+  Include as: {%- include components/nav/pages.html pages=page_array -%}
+  Depends on: include.pages.
+  Results in: navigation links for all pages in include.pages and their descendants.
+  Includes: components/nav/links.html
+  Overwrites:
+    nav_parenthood, nav_top_nodes, nav_ancestors.
+{%- endcomment -%}
+
+{%- assign nav_parenthood = include.pages
+      | where_exp: "item", "item.title != nil" | group_by: "parent" -%}
+
+{%- assign nav_top_nodes = nav_parenthood
+      | where_exp: "item", "item.name == ''" | map: "items" | first -%}
+
+{%- assign nav_ancestors = "" | split: "" -%}
+
+{%- include components/nav/links.html pages=nav_top_nodes ancestors=nav_ancestors -%}

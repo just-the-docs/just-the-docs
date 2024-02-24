@@ -2,7 +2,14 @@
   Include as: {%- include components/breadcrumbs.html -%}
   Depends on: page, site.
   Results in: HTML for the breadcrumbs component.
+  Issues:
+    For pages that are excluded from the main navigation, the resulting
+    breadcrumbs are limited to the specified parent and grandparent pages,
+    and they require `has_children: true`.
   Overwrites:
+    nav_list_link, site_nav, nav_list_simple, nav_list_link_class, nav_category,
+    nav_anchor_splits, nav_breadcrumbs, nav_split, nav_split_next, nav_split_test,
+    nav_breadcrumb_link, nav_list_end_less, nav_list_end_count, nav_breadcrumb,
     node, pages_list, parent_page, grandparent_page.
 {%- endcomment -%}
 
@@ -79,9 +86,14 @@
   {%- endunless -%}
   {%- endfor -%}
 
-  {%- assign nav_parent_link = nav_breadcrumbs[-1] -%}
-  {%- assign nav_grandparent_link = nav_breadcrumbs[-2] -%}
-
+  <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+    <ol class="breadcrumb-nav-list">
+      {%- for nav_breadcrumb in nav_breadcrumbs -%}
+      <li class="breadcrumb-nav-list-item">{{ nav_breadcrumb }}</li>
+      {%- endfor %}
+      <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
+    </ol>
+  </nav>
 {%- else -%}
 
   {%- comment -%}
@@ -119,26 +131,22 @@
 
   {%- endfor -%}
   
-  {%- capture nav_parent_link -%}
-    <a href="{{ parent_page.url | relative_url }}">{{ page.parent }}</a>
-  {%- endcapture -%}
-
-  {%- if page.grand_parent %}
-    {%- capture nav_grandparent_link -%}
-      <a href="{{ grandparent_page.url | relative_url }}">{{ page.grand_parent }}</a>
-    {%- endcapture -%}
-  {%- endif -%}
-
+  <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+    <ol class="breadcrumb-nav-list">
+      {%- if page.grandparent %}
+      <li class="breadcrumb-nav-list-item">
+        <a href="{{ grandparent_page.url | relative_url }}">{{ page.grand_parent }}</a>
+      </li>
+      {%- endif %}
+      <li class="breadcrumb-nav-list-item">
+        <a href="{{ parent_page.url | relative_url }}">{{ page.parent }}</a>
+      </li>
+      <li class="breadcrumb-nav-list-item">
+        <span>{{ page.title }}</span>
+      </li>
+    </ol>
+  </nav>
+    
 {%- endif -%}
-
-<nav aria-label="Breadcrumb" class="breadcrumb-nav">
-  <ol class="breadcrumb-nav-list">
-  {%- if nav_grandparent_link %}
-    <li class="breadcrumb-nav-list-item">{{ nav_grandparent_link }}</li>
-  {%- endif %}
-    <li class="breadcrumb-nav-list-item">{{ nav_parent_link }}</li>
-    <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
-  </ol>
-</nav>
 
 {%- endif -%}
