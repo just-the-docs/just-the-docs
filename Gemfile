@@ -4,6 +4,6 @@ gemspec
 gem "jekyll-github-metadata", ">= 2.15"
 
 gem "jekyll-include-cache", group: :jekyll_plugins
-gem "jekyll-default-layout", group: :jekyll_plugins
+gem "jekyll-default-layout"
 
 gem "html-proofer", "~> 5.0", :group => :development
