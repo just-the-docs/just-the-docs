@@ -3,6 +3,7 @@ PATH
   specs:
     just-the-docs (0.8.0)
       jekyll (>= 3.8.5)
+      jekyll-default-layout
       jekyll-include-cache
       jekyll-seo-tag (>= 2.0)
       rake (>= 12.3.1)
