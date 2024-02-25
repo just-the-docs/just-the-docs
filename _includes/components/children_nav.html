@@ -12,25 +12,26 @@
     child_pages, child.
 {%- endcomment -%}
 
-{%- if page.has_children == true and page.has_toc != false -%}
-  {%- assign child_pages = site[page.collection]
-        | default: site.html_pages
-        | where: "parent", page.title
-        | where: "grand_parent", page.parent -%}
+{%- assign child_pages = site[page.collection]
+      | default: site.html_pages
+      | where: "parent", page.title -%}
 
-  {%- include components/nav/sorted.html pages = child_pages -%}
+{%- if child_pages.size > 0 -%}
 
-  {%- if page.child_nav_order == 'desc' or page.child_nav_order == 'reversed' -%}
-    {%- assign sorted_pages = sorted_pages | reverse -%}
-  {%- endif -%}
+{%- include components/nav/sorted.html pages = child_pages -%}
+
+{%- if page.child_nav_order == 'desc' or page.child_nav_order == 'reversed' -%}
+  {%- assign nav_sorted = nav_sorted | reverse -%}
 {%- endif -%}
 
 <hr>
 {% include toc_heading_custom.html %}
 <ul>
-  {% for child in sorted_pages %}
+  {% for child in nav_sorted %}
   <li>
     <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
   </li>
   {% endfor %}
 </ul>
+
+{%- endif -%}
