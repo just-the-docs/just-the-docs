@@ -6,7 +6,7 @@ description: "메인 페이지"
 permalink: /
 ---
 
-## 🎉무슨 생각을 해...그냥 하는 거지
+## 🎉Welcome!! EOD
 ![무슨 생각을 해.. 그냥 하는 거지](/docs_images/yuna_just_do_it.gif)  
 
 ##### 📼[AS WAS....](https://blog.naver.com/jyk2367/)
@@ -17,6 +17,19 @@ permalink: /
 |------|-----|-------|
 |2016.03 - 2022.12|대학|컴퓨터공학과|
 |2023.01 - |삼xSDx|클라우드MES개발팀 제어솔루션그룹|
+
+##### 🧩 Skill
+C++  
+Java(Spring Framework)
+
+
+## 📜Certificate
+- 컴활 2급
+- 교육부 주관 2020년 제 2회 교내오픈소스SW개발경진대회 알고리즘 부분 동상
+- 교육부 주관 2021년 제 3회 교내오픈소스SW개발경진대회 알고리즘 부분 동상 
+- 삼성SDS SW검정 (Professional)
+- OPIC IM2
+- AWS Certified Solutions Architect(SAA-C03)
 
 ### Contact 👋
 <a href="mailto:jyk2367@naver.com"><img src="https://img.shields.io/badge/jyk2367@naver.com-81ecec?style=flat-square&logo=Gmail&logoColor=black"/></a>
@@ -29,11 +42,3 @@ permalink: /
 ## 🌱 Baekjoon
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=jyk2367)](https://solved.ac/jyk2367)
 
-
-## 📜Certificate
-- 컴활 2급
-- 교육부 주관 2020년 제 2회 교내오픈소스SW개발경진대회 알고리즘 부분 동상
-- 교육부 주관 2021년 제 3회 교내오픈소스SW개발경진대회 알고리즘 부분 동상 
-- 삼성SDS SW검정 (Professional)
-- OPIC IM2
-- AWS Certified Solutions Architect(SAA-C03)
