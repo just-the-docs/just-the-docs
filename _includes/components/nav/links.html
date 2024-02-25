@@ -11,9 +11,16 @@
   
 <ul class="nav-list">
 {%- for node in nav_sorted -%}
-  
   {%- unless node.nav_exclude == true -%}
 
+  {%- if include.ancestors contains node.title -%}
+  
+    <li class="nav-list-item">
+      <a href="{{ node.url | relative_url }}" class="nav-list-link"> ∞ </a>
+    </li>
+
+  {%- else -%}
+  
     {%- include components/nav/children.html node=node ancestors=include.ancestors -%}
 
     <li class="nav-list-item">
@@ -31,7 +38,9 @@
         {%- include components/nav/links.html pages=nav_children ancestors=nav_ancestors -%}
       {%- endif -%}
     </li>
-
+  
+  {%- endif -%}
+  
   {%- endunless -%}
 {%- endfor -%}
 </ul>
