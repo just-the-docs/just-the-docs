@@ -5,7 +5,7 @@ nav_order: 1
 description: "메인 페이지"
 permalink: /
 ---
-
+ㅇ
 ## 🎉Welcome!! EOD
 ![무슨 생각을 해.. 그냥 하는 거지](/docs_images/yuna_just_do_it.gif)  
 
@@ -16,16 +16,17 @@ permalink: /
 
 ---
 
-### 🎞 Carrier
+## 🎞 Carrier
 
-|Period            |Title  |Subject                       |
-|------------------|-------|------------------------------|
-|2016.03 - 2022.12 |대학   |컴퓨터공학과                   |
-|2023.01 -         |삼xSDx |클라우드MES개발팀 제어솔루션그룹|
+| Period          | Title  | Subject                        |
+|-----------------|--------|--------------------------------|
+| 2016.03 - 2022.12 | 대학 | 컴퓨터공학과 |
+| 2023.01 - | 삼xSDx | 클라우드MES개발팀 제어솔루션그룹 |
+
 
 ---
 
-##### 🧩 Skill
+## 🧩 Skill
 C++  
 Java(Spring Framework)
 
@@ -41,7 +42,7 @@ Java(Spring Framework)
   
 ---
 
-### 👋 Contact 👋
+## 👋 Contact 👋
 <a href="mailto:jyk2367@naver.com"><img src="https://img.shields.io/badge/jyk2367@naver.com-81ecec?style=flat-square&logo=Gmail&logoColor=black"/></a>
 
 ---
