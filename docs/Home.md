@@ -12,11 +12,12 @@ permalink: /
 ---
 
 ##### 📼[AS WAS....](https://blog.naver.com/jyk2367/)
-##### ✨[New Blog](https://jyk2367.github.io/)
+##### ✨[This Blog](https://jyk2367.github.io/)
 
 ---
 
 ### 🎞 Carrier
+
 |Period            |Title  |Subject                       |
 |------------------|-------|------------------------------|
 |2016.03 - 2022.12 |대학   |컴퓨터공학과                   |
