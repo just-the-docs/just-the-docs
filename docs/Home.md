@@ -21,7 +21,7 @@ permalink: /
 | Period          | Title  | Subject                        |
 |-----------------|--------|--------------------------------|
 | 2016.03 - 2022.12 | 대학 | 컴퓨터공학과 |
-| 2023.01 - | 삼xSDx | 클라우드MES개발팀 제어솔루션그룹 |
+| 2023.01 - | 삼xSDx | 클xx드Mxx개발팀 제xxx션그룹 |
 
 
 ---
@@ -36,7 +36,7 @@ Java(Spring Framework)
 - 컴활 2급
 - 교육부 주관 2020년 제 2회 교내오픈소스SW개발경진대회 알고리즘 부분 동상
 - 교육부 주관 2021년 제 3회 교내오픈소스SW개발경진대회 알고리즘 부분 동상 
-- 삼성SDS SW검정 (Professional)
+- 삼xSDx SW검정 (Professional)
 - OPIC IM2
 - AWS Certified Solutions Architect(SAA-C03)
   
