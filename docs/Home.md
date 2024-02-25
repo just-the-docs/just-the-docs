@@ -5,7 +5,7 @@ nav_order: 1
 description: "메인 페이지"
 permalink: /
 ---
-ㅇ
+
 ## 🎉Welcome!! EOD
 ![무슨 생각을 해.. 그냥 하는 거지](/docs_images/yuna_just_do_it.gif)  
 
