@@ -22,14 +22,15 @@
 
 {%- assign nav_child_candidates = site[page.collection]
       | default: site.html_pages
-      | where: "parent", page.title
-      | where_exp: "item", "item.grand_parent == nil or item.grand_parent == page.parent" -%}
+      | where: "parent", page.title -%}
 
 {%- assign nav_child_pages = "" | split: "" -%}
 {%- for nav_child in nav_child_candidates -%}
-  {%- capture nav_child_ancestor -%} >{{ nav_child.ancestor }}</a> {%- endcapture -%}
-  {%- if nav_child.ancestor == nil or nav_ancestor_links contains nav_child_ancestor -%}
-    {%- assign nav_child_pages = nav_child_pages | push: nav_child -%}
+  {%- if nav_child.grand_parent == nil or nav_child.grand_parent == page.parent -%}
+    {%- capture nav_child_ancestor -%} >{{ nav_child.ancestor }}</a> {%- endcapture -%}
+    {%- if nav_child.ancestor == nil or nav_ancestor_links contains nav_child_ancestor -%}
+      {%- assign nav_child_pages = nav_child_pages | push: nav_child -%}
+    {%- endif -%}
   {%- endif -%}
 {%- endfor -%}
 
