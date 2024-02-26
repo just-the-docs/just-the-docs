@@ -1,6 +1,6 @@
 {%- comment -%}
   Include as: {%- include components/children_nav.html -%}
-  Depends on: page, site.
+  Depends on: page, site, nav_breadcrumbs.
   Results in: HTML for the children-navigation component.
   Issues:
     For sites with more than 3 levels of navigation links, or which use
@@ -9,16 +9,33 @@
     components/nav/sorted.html
     toc_heading_custom.html
   Overwrites:
-    child_pages, child.
+    nav_ancestor_links, nav_child_candidates, nav_child_pages, nav_child,
+    nav_child_ancestor, nav_sorted.
 {%- endcomment -%}
 
-{%- assign child_pages = site[page.collection]
+{%- comment -%}
+  The layout is assumed to include components/breadcrumbs.html before this file,
+  otherwise it needs to be included here.
+{%- endcomment -%}
+
+{%- assign nav_ancestor_links = nav_breadcrumbs | join -%}
+
+{%- assign nav_child_candidates = site[page.collection]
       | default: site.html_pages
-      | where: "parent", page.title -%}
+      | where: "parent", page.title
+      | where_exp: "item", "item.grand_parent == nil or item.grand_parent == page.parent" -%}
 
-{%- if child_pages.size > 0 -%}
+{%- assign nav_child_pages = "" | split: "" -%}
+{%- for nav_child in nav_child_candidates -%}
+  {%- capture nav_child_ancestor -%} >{{ nav_child.ancestor }}</a> {%- endcapture -%}
+  {%- if nav_child.ancestor == nil or nav_ancestor_links contains nav_child_ancestor -%}
+    {%- assign nav_child_pages = nav_child_pages | push: nav_child -%}
+  {%- endif -%}
+{%- endfor -%}
 
-{%- include components/nav/sorted.html pages = child_pages -%}
+{%- if nav_child_pages.size >= 1 -%}
+
+{%- include components/nav/sorted.html pages=nav_child_pages -%}
 
 {%- if page.child_nav_order == 'desc' or page.child_nav_order == 'reversed' -%}
   {%- assign nav_sorted = nav_sorted | reverse -%}
@@ -27,9 +44,9 @@
 <hr>
 {% include toc_heading_custom.html %}
 <ul>
-  {% for child in nav_sorted %}
+  {% for nav_child in nav_sorted %}
   <li>
-    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+    <a href="{{ nav_child.url | relative_url }}">{{ nav_child.title }}</a>{% if nav_child.summary %} - {{ nav_child.summary }}{% endif %}
   </li>
   {% endfor %}
 </ul>
