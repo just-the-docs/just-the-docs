@@ -88,12 +88,13 @@
 
   <nav aria-label="Breadcrumb" class="breadcrumb-nav">
     <ol class="breadcrumb-nav-list">
-      {%- for nav_breadcrumb in nav_breadcrumbs -%}
+      {%- for nav_breadcrumb in nav_breadcrumbs %}
       <li class="breadcrumb-nav-list-item">{{ nav_breadcrumb }}</li>
       {%- endfor %}
       <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
     </ol>
   </nav>
+
 {%- else -%}
 
   {%- comment -%}
@@ -131,19 +132,23 @@
 
   {%- endfor -%}
   
+  {%- capture nav_parent_link -%}
+    <a href="{{ parent_page.url | relative_url }}">{{ page.parent }}</a>
+  {%- endcapture -%}
+
+  {%- if page.grand_parent %}
+    {%- capture nav_grandparent_link -%}
+      <a href="{{ grandparent_page.url | relative_url }}">{{ page.grand_parent }}</a>
+    {%- endcapture -%}
+  {%- endif -%}
+
   <nav aria-label="Breadcrumb" class="breadcrumb-nav">
     <ol class="breadcrumb-nav-list">
-      {%- if page.grandparent %}
-      <li class="breadcrumb-nav-list-item">
-        <a href="{{ grandparent_page.url | relative_url }}">{{ page.grand_parent }}</a>
-      </li>
-      {%- endif %}
-      <li class="breadcrumb-nav-list-item">
-        <a href="{{ parent_page.url | relative_url }}">{{ page.parent }}</a>
-      </li>
-      <li class="breadcrumb-nav-list-item">
-        <span>{{ page.title }}</span>
-      </li>
+    {%- if nav_grandparent_link %}
+      <li class="breadcrumb-nav-list-item">{{ nav_grandparent_link }}</li>
+    {%- endif %}
+      <li class="breadcrumb-nav-list-item">{{ nav_parent_link }}</li>
+      <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
     </ol>
   </nav>
     
