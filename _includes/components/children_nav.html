@@ -9,8 +9,8 @@
     components/nav/sorted.html
     toc_heading_custom.html
   Overwrites:
-    nav_ancestor_links, nav_child_candidates, nav_child_pages, nav_child,
-    nav_child_ancestor, nav_sorted.
+    nav_ancestor_links, nav_top_node_titles, nav_child_candidates, nav_children,
+    nav_child, nav_child_ok, nav_child_ancestor, nav_sorted.
 {%- endcomment -%}
 
 {%- comment -%}
@@ -20,23 +20,48 @@
 
 {%- assign nav_ancestor_links = nav_breadcrumbs | join -%}
 
+{% assign nav_top_node_titles = site[page.collection] | default: site.html_pages
+  | where_exp:"item", "item.title != nil"
+  | where_exp:"item", "item.parent == nil"
+  | map: "title" %}
+
 {%- assign nav_child_candidates = site[page.collection]
       | default: site.html_pages
       | where: "parent", page.title -%}
 
-{%- assign nav_child_pages = "" | split: "" -%}
+{%- assign nav_children = "" | split: "" -%}
 {%- for nav_child in nav_child_candidates -%}
-  {%- if nav_child.grand_parent == nil or nav_child.grand_parent == page.parent -%}
+  {%- assign nav_child_ok = true -%}
+
+  {%- if nav_child.grand_parent and nav_child.grand_parent != page.parent -%}
+    {%- assign nav_child_ok = false -%}
+  {%- endif -%}
+
+  {%- if nav_child.ancestor and nav_child.ancestor != page.title -%}
     {%- capture nav_child_ancestor -%} >{{ nav_child.ancestor }}</a> {%- endcapture -%}
-    {%- if nav_child.ancestor == nil or nav_ancestor_links contains nav_child_ancestor -%}
-      {%- assign nav_child_pages = nav_child_pages | push: nav_child -%}
-    {%- endif -%}
+    {%- unless nav_ancestor_links contains nav_child_ancestor -%}
+      {%- assign nav_child_ok = false -%}
+    {%- endunless -%}
+  {%- endif -%}
+
+  {%- comment -%}
+    The following check rejects nav_child as 3rd-level when page is 2nd-level
+    and nav_child can also be 2nd-level. This is for backwards compatibility with
+    existing 3-level sites.
+  {%- endcomment -%}
+  {%- if nav_child.grand_parent == nil and nav_child.ancestor == nil and 
+         nav_top_node_titles contains nav_child.parent and nav_breadcrumbs.size >= 1 -%}
+    {%- assign nav_child_ok = false -%}
+  {%- endif -%}
+
+  {%- if nav_child_ok -%}
+    {%- assign nav_children = nav_children | push: nav_child -%}
   {%- endif -%}
 {%- endfor -%}
 
-{%- if nav_child_pages.size >= 1 -%}
+{%- if nav_children.size >= 1 -%}
 
-{%- include components/nav/sorted.html pages=nav_child_pages -%}
+{%- include components/nav/sorted.html pages=nav_children -%}
 
 {%- if page.child_nav_order == 'desc' or page.child_nav_order == 'reversed' -%}
   {%- assign nav_sorted = nav_sorted | reverse -%}
