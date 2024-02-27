@@ -13,6 +13,10 @@
 {%- assign nav_top_nodes = nav_parenthood
       | where_exp: "item", "item.name == ''" | map: "items" | first -%}
 
+{%- include components/nav/sorted.html pages=nav_top_nodes -%}
+
+{% assign nav_top_node_titles = nav_top_nodes | map: "title" -%}
+
 {%- assign nav_ancestors = "" | split: "" -%}
 
-{%- include components/nav/links.html pages=nav_top_nodes ancestors=nav_ancestors -%}
+{%- include components/nav/links.html pages=nav_sorted ancestors=nav_ancestors -%}

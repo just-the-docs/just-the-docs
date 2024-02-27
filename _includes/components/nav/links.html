@@ -7,10 +7,8 @@
     node, nav_children, nav_ancestors.
 {%- endcomment -%}
 
-{%- include components/nav/sorted.html pages=include.pages -%}
-  
 <ul class="nav-list">
-{%- for node in nav_sorted -%}
+{%- for node in include.pages -%}
   {%- unless node.nav_exclude == true -%}
 
   {%- if include.ancestors contains node.title -%}
@@ -44,3 +42,4 @@
   {%- endunless -%}
 {%- endfor -%}
 </ul>
+{%- comment -%}{%- endcomment -%}
