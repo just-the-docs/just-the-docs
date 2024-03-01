@@ -13,7 +13,7 @@ permalink: /
 
 ##### 📼[AS WAS....](https://blog.naver.com/jyk2367/)
 ##### ✨[This Blog](https://jyk2367.github.io/)
-
+<!-- 
 ---
 
 ## 🎞 Carrier
@@ -56,4 +56,4 @@ Java(Spring Framework)
 ## 🌱 Baekjoon
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=jyk2367)](https://solved.ac/jyk2367)
 
----
+--- -->
