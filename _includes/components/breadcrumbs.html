@@ -56,7 +56,7 @@
   {%- for nav_split in nav_anchor_splits -%}
   {%- unless forloop.last -%}
 
-  {%- assign nav_split_next = nav_anchor_splits[forloop.index] | trim -%}
+  {%- assign nav_split_next = nav_anchor_splits[forloop.index] | strip -%}
 
   {%- assign nav_split_test =
         nav_split_next | remove_first: nav_list_simple | prepend: nav_list_simple -%}
