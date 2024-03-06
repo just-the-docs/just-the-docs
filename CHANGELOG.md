@@ -17,9 +17,21 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- Fixed: Liquid filter typo in breadcrumb component (`strip` instead of `trim`) by [@Zarthus] in [#1434]
+- N/A
 
 Docs changes made since the latest release:
+
+- N/A
+
+## Release v0.8.1
+
+Hi folks! This patch release fixes a bug introduced in `0.8.0` that affects users who build their sites in strict mode. It is a straightforward upgrade that should require no manual migration changes. Thank you to [@Zarthus] for quickly catching and fixing this bug!
+
+### Bugfixes
+
+- Fixed: Liquid filter typo in breadcrumb component (`strip` instead of `trim`) by [@Zarthus] in [#1434]
+
+### Documentation
 
 - Build docs site using strict mode and `strict_filters` by [@Zarthus] in [#1435]
 
