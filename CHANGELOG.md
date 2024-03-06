@@ -17,11 +17,19 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Fixed: Liquid filter typo in breadcrumb component (`strip` instead of `trim`) by [@Zarthus] in [#1434]
 
 Docs changes made since the latest release:
 
 - N/A
+
+### New Contributors
+
+- [@Zarthus] made their first contribution in [#1434]
+
+[@Zarthus]: https://github.com/Zarthus
+
+[#1434]: https://github.com/just-the-docs/just-the-docs/pull/1434
 
 ## Release v0.8.0
 
