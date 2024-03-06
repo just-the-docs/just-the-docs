@@ -118,6 +118,10 @@ nav_external_links:
   - title: Just the Docs on GitHub
     url: https://github.com/just-the-docs/just-the-docs
 
+liquid:
+   error_mode: strict
+   strict_filters: true
+   
 # Footer content
 # appears at the bottom of every page's main content
 

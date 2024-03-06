@@ -21,7 +21,7 @@ Code changes to `main` that are *not* in the latest release:
 
 Docs changes made since the latest release:
 
-- N/A
+- Build docs site using strict mode and `strict_filters` by [@Zarthus] in [#1435]
 
 ### New Contributors
 
@@ -30,6 +30,7 @@ Docs changes made since the latest release:
 [@Zarthus]: https://github.com/Zarthus
 
 [#1434]: https://github.com/just-the-docs/just-the-docs/pull/1434
+[#1435]: https://github.com/just-the-docs/just-the-docs/pull/1435
 
 ## Release v0.8.0
 
