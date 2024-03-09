@@ -1,29 +1,46 @@
 {%- comment -%}
-  Include as: {%- include components/nav/ancestry.html node=page -%}
-  Depends on: include.node, pages_list.
+  Include as: {%- include components/nav/ancestry.html pages=page_array ancestors=title_array -%}
+  Depends on: page, include.pages, include.ancestors.
   Includes: components/nav/ancestry.html, components/nav/children.html.
   Assigns to: nav_ancestry.
-  Overwrites:
-    nav_parent_candidates, node, nav_ancestors, nav_children_urls, 
+  Overwrites: node, nav_error_report, nav_ancestors.
 {%- endcomment -%}
 
-{%- if include.node.parent == nil -%}
-  {%- assign nav_ancestry = "" | split: "" -%}
-{%- else -%}
+{%- for node in include.pages -%}
 
-  {%- assign nav_parent_candidates = pages_list | where: "title", include.node.parent -%}
+  {%- if include.ancestors contains node.title -%}
+  
+    {%- assign nav_ancestry = "" | split: "" -%}
+    {%- capture nav_error_report -%}
+      <blockquote class="warning">
+        A page has the same title as its parent page or one of its ancestral pages!<br>
+        This causes incorrect breadcrumbs.<br>
+        Page title: <code>{{ node.title }}</code>, location: <code>{{ node.path }}</code>.
+      </blockquote>
+    {%- endcapture -%}
+    {%- break -%}
 
-  {%- for node in nav_parent_candidates -%}
+  {%- elsif node.url == page.url -%}
 
-    {%- include components/nav/ancestry.html node=node -%}
-    {%- assign nav_ancestors = nav_ancestry | map: "title" -%}
-    {%- include components/nav/children.html node=node ancestors=nav_ancestors -%}
-    {%- assign nav_children_urls = nav_children | map: "url" -%}
-    {%- if nav_children_urls contains include.node.url -%}
-      {%- assign nav_ancestry = nav_ancestry | push: node -%}
-      {%- break -%}
-    {%- endif -%}
+    {%- assign nav_ancestry = "" | split: "" -%}
+    {%- break -%}
 
-  {%- endfor -%}
+  {%- else -%}
 
-{%- endif -%}
+    {%- include components/nav/children.html node=node ancestors=include.ancestors -%}
+
+      {%- if nav_children.size >= 1 -%}
+
+        {%- assign nav_ancestors = include.ancestors | push: node.title -%}
+        {%- include components/nav/ancestry.html pages=nav_children ancestors=nav_ancestors -%}
+
+        {%- if nav_ancestry -%}
+          {%- assign nav_ancestry = nav_ancestry | unshift: node -%}
+          {%- break -%}    
+        {%- endif -%}
+
+      {%- endif -%}
+  
+  {%- endif -%}
+  
+{%- endfor -%}

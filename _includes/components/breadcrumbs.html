@@ -104,12 +104,14 @@
 
   {% assign nav_top_node_titles = nav_top_nodes | map: "title" -%}
 
-  {%- include components/nav/ancestry.html node=page -%}
+  {%- assign nav_ancestors = "" | split: "" -%}
+  {%- assign nav_ancestry = nil -%}
+  {%- include components/nav/ancestry.html pages=nav_top_nodes ancestors=nav_ancestors -%}
 
   {%- assign nav_breadcrumbs = "" | split: "" -%}
   {%- for nav_breadcrumb_page in nav_ancestry %}
     {%- capture nav_breadcrumb -%}
-      <a href="{{ nav_breadcrumb_page.url }}">{{ nav_breadcrumb_page.title }}</a>
+      <a href="{{ nav_breadcrumb_page.url | relative_url }}">{{ nav_breadcrumb_page.title }}</a>
     {%- endcapture -%}
     {%- assign nav_breadcrumbs = nav_breadcrumbs | push: nav_breadcrumb -%}
   {%- endfor %}
@@ -124,5 +126,9 @@
     <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
   </ol>
 </nav>
+
+{% if site.nav_error_report %}
+{{ nav_error_report }}
+{% endif %}
 
 {%- endif -%}
