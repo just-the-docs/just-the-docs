@@ -65,3 +65,7 @@
     {% endfor %}
   {% endif %}
 </nav>
+
+{% if site.nav_error_report %}
+{{ nav_error_report }}
+{% endif %}
