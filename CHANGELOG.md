@@ -23,6 +23,27 @@ Docs changes made since the latest release:
 
 - N/A
 
+## Release v0.8.1
+
+Hi folks! This patch release fixes a bug introduced in `0.8.0` that affects users who build their sites in strict mode. It is a straightforward upgrade that should require no manual migration changes. Thank you to [@Zarthus] for quickly catching and fixing this bug!
+
+### Bugfixes
+
+- Fixed: Liquid filter typo in breadcrumb component (`strip` instead of `trim`) by [@Zarthus] in [#1434]
+
+### Documentation
+
+- Build docs site using strict mode and `strict_filters` by [@Zarthus] in [#1435]
+
+### New Contributors
+
+- [@Zarthus] made their first contribution in [#1434]
+
+[@Zarthus]: https://github.com/Zarthus
+
+[#1434]: https://github.com/just-the-docs/just-the-docs/pull/1434
+[#1435]: https://github.com/just-the-docs/just-the-docs/pull/1435
+
 ## Release v0.8.0
 
 Hi folks! This first minor release of 2024 has a short number of changes: a large improvement of build times for large sites, a new keyboard shortcut to focus the search bar, and sidebar navigation bugfixes for "pretty" URLs (with `.html` omitted) and the clickable area on Safari. This release has no explicit breaking changes and should be a straightforward upgrade for most (if not all) users.
