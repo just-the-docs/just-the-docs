@@ -1,46 +1,43 @@
 {%- comment -%}
-  Include as: {%- include components/nav/ancestry.html pages=page_array ancestors=title_array -%}
-  Depends on: page, include.pages, include.ancestors.
+  Include as: {%- include components/nav/ancestry.html node=page history=title_array -%}
+  Depends on: include.node, include.history, pages_list.
   Includes: components/nav/ancestry.html, components/nav/children.html.
   Assigns to: nav_ancestry.
-  Overwrites: node, nav_error_report, nav_ancestors.
+  Overwrites:
+    nav_error_report, nav_parent_candidates, node, nav_history, nav_ancestors, nav_children_urls. 
 {%- endcomment -%}
 
-{%- for node in include.pages -%}
-
-  {%- if include.ancestors contains node.title -%}
+{%- if include.history contains include.node.title -%}
   
-    {%- assign nav_ancestry = "" | split: "" -%}
-    {%- capture nav_error_report -%}
-      <blockquote class="warning">
-        A page has the same title as its parent page or one of its ancestral pages!<br>
-        This causes incorrect breadcrumbs.<br>
-        Page title: <code>{{ node.title }}</code>, location: <code>{{ node.path }}</code>.
-      </blockquote>
-    {%- endcapture -%}
-    {%- break -%}
+  {%- assign nav_ancestry = "" | split: "" -%}
+  {%- capture nav_error_report -%}
+    <blockquote class="warning">
+      A page has the same title as its parent page or one of its ancestral pages!<br>
+      This causes incorrect breadcrumbs.<br>
+      Page title: <code>{{ include.node.title }}</code>, location: <code>{{ include.node.path }}</code>.
+    </blockquote>
+  {%- endcapture -%}
 
-  {%- elsif node.url == page.url -%}
+{%- elsif include.node.parent == nil -%}
 
-    {%- assign nav_ancestry = "" | split: "" -%}
-    {%- break -%}
+  {%- assign nav_ancestry = "" | split: "" | push: include.node -%}
 
-  {%- else -%}
+{%- else -%}
 
-    {%- include components/nav/children.html node=node ancestors=include.ancestors -%}
+  {%- assign nav_parent_candidates = pages_list | where: "title", include.node.parent -%}
 
-      {%- if nav_children.size >= 1 -%}
+  {%- for node in nav_parent_candidates -%}
 
-        {%- assign nav_ancestors = include.ancestors | push: node.title -%}
-        {%- include components/nav/ancestry.html pages=nav_children ancestors=nav_ancestors -%}
+    {%- assign nav_history = include.history | push: include.node.title -%}
+    {%- include components/nav/ancestry.html node=node history=nav_history -%}
+    {%- assign nav_ancestors = nav_ancestry | map: "title" -%}
+    {%- include components/nav/children.html node=node ancestors=nav_ancestors -%}
+    {%- assign nav_children_urls = nav_children | map: "url" -%}
+    {%- if nav_children_urls contains include.node.url -%}
+      {%- assign nav_ancestry = nav_ancestry | push: node -%}
+      {%- break -%}
+    {%- endif -%}
 
-        {%- if nav_ancestry -%}
-          {%- assign nav_ancestry = nav_ancestry | unshift: node -%}
-          {%- break -%}    
-        {%- endif -%}
+  {%- endfor -%}
 
-      {%- endif -%}
-  
-  {%- endif -%}
-  
-{%- endfor -%}
+{%- endif -%}

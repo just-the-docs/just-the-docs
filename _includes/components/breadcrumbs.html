@@ -8,7 +8,7 @@
     nav_anchor_splits, nav_breadcrumbs, nav_split, nav_split_next, nav_split_test,
     nav_breadcrumb_link, nav_list_end_less, nav_list_end_count, nav_end_index,
     pages_list, nav_parenthood, nav_top_nodes, nav_top_node_titles,
-    nav_breadcrumb_page, nav_breadcrumb.
+    nav_breadcrumb_page, nav_history, nav_breadcrumb.
 {%- endcomment -%}
 
 {%- if page.url != "/" and page.parent -%}
@@ -104,9 +104,8 @@
 
   {% assign nav_top_node_titles = nav_top_nodes | map: "title" -%}
 
-  {%- assign nav_ancestors = "" | split: "" -%}
-  {%- assign nav_ancestry = nil -%}
-  {%- include components/nav/ancestry.html pages=nav_top_nodes ancestors=nav_ancestors -%}
+  {%- assign nav_history = "" | split: "" -%}
+  {%- include components/nav/ancestry.html node=page history=nav_history -%}
 
   {%- assign nav_breadcrumbs = "" | split: "" -%}
   {%- for nav_breadcrumb_page in nav_ancestry %}
