@@ -38,8 +38,8 @@
         <img alt="{{ site.license_name }}" style="border-width:0" src="{{ site.license_image_url }}" /><br/>
       </a>
       {% endif %}
-      {% if site.nav_footer_logo_top != '' %}
-        {% if site.nav_footer_logo_top_href != '' %}
+      {% if site.nav_footer_logo_top != '' and site.nav_footer_logo_top != nil %}
+        {% if site.nav_footer_logo_top_href != ''and site.nav_footer_logo_top_href != nil  %}
           <a href="{{ site.nav_footer_logo_top_href }}">
             <img width="170" style="padding-bottom:15px;" align="middle" alt="Top Logo" src="{{ site.nav_footer_logo_top }}">
           </a>
@@ -49,8 +49,8 @@
           <br>
         {% endif %}
       {% endif %}
-      {% if site.nav_footer_logo_bottom != '' %}
-        {% if site.nav_footer_logo_bottom_href != '' %}
+      {% if site.nav_footer_logo_bottom != '' and site.nav_footer_logo_bottom != nil %}
+        {% if site.nav_footer_logo_bottom_href != '' and site.nav_footer_logo_bottom_href != nil %}
           <a href="{{ site.nav_footer_logo_bottom_href }}">
             <img width="170" style="padding-bottom:15px;" align="middle" alt="Bottom Logo" src="{{ site.nav_footer_logo_bottom }}">
           </a>
