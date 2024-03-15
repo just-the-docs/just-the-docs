@@ -1,7 +1,8 @@
 {%- comment -%}
-  Include as: {%- include components/nav/pages.html pages=page_array -%}
+  Include as: {%- include components/nav/pages.html pages=page_array all=bool -%}
   Depends on: include.pages.
-  Results in: navigation links for all pages in include.pages and their descendants.
+  Results in: HTML for the main navigation when all is nil or false;
+    adds links to pages excluded from the main navigation when all is true.
   Includes: components/nav/links.html
   Overwrites:
     nav_parenthood, nav_top_nodes, nav_ancestors.
@@ -19,4 +20,4 @@
 
 {%- assign nav_ancestors = "" | split: "" -%}
 
-{%- include components/nav/links.html pages=nav_sorted ancestors=nav_ancestors -%}
+{%- include components/nav/links.html pages=nav_sorted ancestors=nav_ancestors all=include.all -%}

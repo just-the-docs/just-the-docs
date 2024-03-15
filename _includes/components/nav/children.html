@@ -1,6 +1,7 @@
 {%- comment -%}
-  Include as:   {%- include components/nav/children.html node=node ancestors=title_array -%}
-  Depends on: include.node, include.ancestors, nav_parenthood, nav_top_node_titles.
+  Include as:   {%- include components/nav/children.html node=node ancestors=title_array all=bool -%}
+  Depends on: include.node, include.ancestors, include.all, nav_parenthood, nav_top_node_titles.
+  Includes: components/nav/children.html, components/nav/sorted.html.
   Assigns to: nav_children.
   Overwrites:
     nav_candidates, nav_child, nav_child_ok.
@@ -8,7 +9,7 @@
 
 {%- assign nav_children = "" | split: "" -%}
 
-{%- unless include.node.has_children == false -%}
+{%- if include.all == true or include.node.has_children != false -%}
 
   {%- assign nav_candidates = nav_parenthood
         | where: "name", include.node.title | map: "items" | first -%}
@@ -41,7 +42,7 @@
     {%- endif -%}
   {%- endfor -%}
 
-{%- endunless -%}
+{%- endif -%}
 
 {%- include components/nav/sorted.html pages=nav_children -%}
 {%- assign nav_children = nav_sorted -%}
