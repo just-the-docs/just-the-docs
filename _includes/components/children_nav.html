@@ -57,60 +57,34 @@
     otherwise it needs to be included here.
   {%- endcomment -%}
 
-  {%- assign nav_ancestor_links = nav_breadcrumbs | join -%}
-
-  {%- assign nav_top_node_titles = site[page.collection] | default: site.html_pages
-        | where_exp:"item", "item.title != nil"
-        | where_exp:"item", "item.parent == nil"
-        | map: "title" -%}
-
-  {%- assign nav_child_candidates = site[page.collection] | default: site.html_pages
-        | where: "parent", page.title -%}
-
-  {%- assign nav_children = "" | split: "" -%}
-  {%- for nav_child in nav_child_candidates -%}
-    {%- assign nav_child_ok = true -%}
-
-    {%- if nav_child.grand_parent and nav_child.grand_parent != page.parent -%}
-      {%- assign nav_child_ok = false -%}
-    {%- endif -%}
-
-    {%- if nav_child.ancestor and nav_child.ancestor != page.title -%}
-      {%- capture nav_child_ancestor -%} >{{ nav_child.ancestor }}</a> {%- endcapture -%}
-      {%- unless nav_ancestor_links contains nav_child_ancestor -%}
-        {%- assign nav_child_ok = false -%}
-      {%- endunless -%}
-    {%- endif -%}
-
-    {%- comment -%}
-      The following check rejects nav_child as 3rd-level when page is 2nd-level
-      and nav_child can also be 2nd-level. This is for backwards compatibility with
-      existing 3-level sites.
-    {%- endcomment -%}
-    {%- if nav_child.grand_parent == nil and nav_child.ancestor == nil and 
-          nav_top_node_titles contains nav_child.parent and nav_breadcrumbs.size >= 1 -%}
-      {%- assign nav_child_ok = false -%}
-    {%- endif -%}
-
-    {%- if nav_child_ok -%}
-      {%- assign nav_children = nav_children | push: nav_child -%}
-    {%- endif -%}
+  {%- assign nav_ancestors = "" | split: "" -%}
+  {%- for nav_link in nav_breadcrumbs -%}
+    {%- assign nav_title = nav_link | split: ">" | slice: 1 | first | append: ">" | remove: "</a>" -%}
+    {%- assign nav_ancestors = nav_ancestors | push: nav_title -%}
   {%- endfor -%}
+
+  {%- assign nav_parenthood = site[page.collection] | default: site.html_pages
+    | where_exp: "item", "item.title != nil" | group_by: "parent" -%}
+
+  {%- assign nav_top_nodes = nav_parenthood
+      | where_exp: "item", "item.name == ''" | map: "items" | first -%}
+
+  {% assign nav_top_node_titles = nav_top_nodes | map: "title" -%}
+
+  {%- include components/nav/children.html node=page ancestors=nav_ancestors all=true -%}
 
 {%- endunless -%}
 
 {%- if nav_children.size >= 1 -%}
 
-  {%- include components/nav/sorted.html pages=nav_children -%}
-
   {%- if page.child_nav_order == 'desc' or page.child_nav_order == 'reversed' -%}
-    {%- assign nav_sorted = nav_sorted | reverse -%}
+    {%- assign nav_children = nav_children | reverse -%}
   {%- endif -%}
 
 <hr>
 {% include toc_heading_custom.html %}
 <ul>
-  {% for nav_child in nav_sorted %}
+  {% for nav_child in nav_children %}
   <li>
     <a href="{{ nav_child.url | relative_url }}">{{ nav_child.title }}</a>{% if nav_child.summary %} - {{ nav_child.summary }}{% endif %}
   </li>
