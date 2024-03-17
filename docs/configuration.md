@@ -1,4 +1,5 @@
 ---
+layout: default
 title: Configuration
 nav_order: 2
 ---
@@ -117,7 +118,7 @@ New (v0.4.0)
 {: .label .label-green }
 
 External links can be added to the navigation through the `nav_external_links` option.
-See [Navigation Structure]({% link docs/navigation-structure/index.md %}#external-navigation-links) for more details.
+See [Navigation Structure]({% link docs/navigation-structure.md %}#external-navigation-links) for more details.
 
 ## Footer content
 
