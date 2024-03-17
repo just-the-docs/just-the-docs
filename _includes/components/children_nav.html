@@ -2,20 +2,15 @@
   Include as: {%- include components/children_nav.html -%}
   Depends on: page, site, nav_breadcrumbs.
   Results in: HTML for the children-navigation component.
-  Issues:
-    For sites with more than 3 levels of navigation links, or which use
-    `ancestor` fields, the resulting child links are currently incorrect.
-  Includes:
-    components/nav/sorted.html
-    toc_heading_custom.html
+  Includes: components/nav/sorted.html, toc_heading_custom.html.
   Overwrites:
     nav_ancestor_links, nav_top_node_titles, nav_child_candidates, nav_children,
     nav_child, nav_child_ok, nav_child_ancestor, nav_sorted.
 {%- endcomment -%}
 
 {%- comment -%}
-  Whether a page has any children can be checked efficiently by inspecting
-  the site_nav. If the page has no children, nav_children is set to an empty array;
+  Whether a page has any children is checked efficiently by inspecting the cached
+  site_nav. If the page has no children, nav_children is set to an empty array;
   otherwise nav_children is left unset.
 {%- endcomment -%}
 

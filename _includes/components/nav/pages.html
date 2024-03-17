@@ -4,8 +4,8 @@
   Results in: HTML for the main navigation when all is nil or false;
     adds links to pages excluded from the main navigation when all is true.
   Includes: components/nav/links.html
-  Overwrites:
-    nav_parenthood, nav_top_nodes, nav_ancestors.
+  Assigns to:
+    nav_parenthood, nav_top_nodes, nav_top_node_titles, nav_ancestors.
 {%- endcomment -%}
 
 {%- assign nav_parenthood = include.pages

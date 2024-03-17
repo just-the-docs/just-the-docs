@@ -2,7 +2,7 @@
   Include as: {%- include components/nav/links.html pages=page_array ancestors=title_array all=bool -%}
   Depends on: include.pages, include.ancestors, include.all.
   Results in: HTML for the main navigation when all is nil or false;
-    adds links to pages excluded from the main navigation when all is true.
+    includes links to pages excluded from the main navigation when all is true.
   Includes: components/nav/sorted.html, components/nav/children.html, components/nav/links.html.
   Overwrites:
     node, nav_children, nav_ancestors.
