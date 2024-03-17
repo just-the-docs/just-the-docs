@@ -1,7 +1,7 @@
 {%- comment -%}
-  Include as: {%- include sorted_pages.html pages=array_of_pages -%}
+  Include as: {%- include components/nav/sorted.html pages=page_array -%}
   Depends on: include.pages.
-  Assigns to: sorted_pages.
+  Assigns to: nav_sorted.
   Overwrites: 
     nav_order_pages, title_order_pages, double_quote, empty_array,
     nav_number_pages, nav_string_pages, nav_order_groups, group,
@@ -103,7 +103,7 @@
   {%- endif -%}
 {%- endunless -%}
 
-{%- assign sorted_pages = nav_number_pages
+{%- assign nav_sorted = nav_number_pages
       | concat: nav_string_pages
       | concat: title_number_pages
       | concat: title_string_pages -%}
