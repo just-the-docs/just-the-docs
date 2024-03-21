@@ -6,7 +6,7 @@ nav_order: 5
 
 # Collections
 
-Pages can also be grouped together by using Jekyll's and Just the Docs's [collections]({% link docs/configuration.md %}#document-collections) feature. In contrast to using [pages with children], pages grouped by collection are grouped by a shared header (the name of the collection) instead of a page.
+Pages can also be grouped together by using Jekyll's and Just the Docs's [collections]({% link docs/configuration.md %}#document-collections) feature. In contrast to using [pages with children]({% link docs/navigation/main/levels.md %}), pages grouped by collection are grouped by a shared header (the name of the collection) instead of a page.
 
 The `nav_fold` configuration option works for collection-grouped pages. For more information, please refer to the [collections documentation]({% link docs/configuration.md %}#document-collections).
 

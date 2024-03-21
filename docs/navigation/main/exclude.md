@@ -18,6 +18,6 @@ nav_exclude: true
 ---
 ```
 
-The `nav_exclude` parameter does not affect the [breadcrumbs], nor the [auto-generating list of child pages], which you can use to access pages excluded from the main navigation. 
+The `nav_exclude` parameter does not affect the [breadcrumbs]({% link docs/navigation/parents.md %}), nor the [auto-generating list of child pages]({% link docs/navigation/children.md %}), which you can use to access pages excluded from the main navigation. 
 
 Pages with no `title` are automatically excluded from the navigation, except when they are in collections.
