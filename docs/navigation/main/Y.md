@@ -1,10 +1,10 @@
 ---
 title: Y
-parent: Recursion
+parent: Ancestry
 ---
 # Y
 
 ```yaml
 title: Y
-parent: Recursion
+parent: Ancestry
 ```
