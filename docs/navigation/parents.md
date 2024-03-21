@@ -6,3 +6,6 @@ nav_order: 3
 
 # Parent Navigation
 
+When using the default layout, all pages except top-level pages will automatically have a list of 'breadcrumbs' at the top, linking to the parent page and to any higher-level ancestors.
+
+The default layout does not provide an option to suppress the list of breadcrumbs. To do that, you would need to define a new layout, or override `_includes/components/breadcrumbs.html`.
