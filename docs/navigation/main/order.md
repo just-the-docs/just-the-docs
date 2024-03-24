@@ -23,7 +23,7 @@ The parameter values can be numbers (integers, floats) and/or strings. When you 
 
 By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case.[^case-insensitive]
 
-Enclosing strings in quotation marks in front matter is optional, unless they contain "[", "]", "{", "}", ",", ":", or "#". Boolean, integer, and float values are treated as strings only when enclosed in quotation marks.
+Enclosing strings in quotation marks in front matter is optional, unless they contain "`[`", "`]`", "`{`", "`}`", "`,`", "`: `", or "` #`". Boolean, integer, and float values are treated as strings when enclosed in quotation marks.
 
 ----
 

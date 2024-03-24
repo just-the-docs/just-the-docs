@@ -12,6 +12,6 @@ You can add a list of auxiliary links to your site, shown at the top right on al
 
 ```yaml
 aux_links:
-  "Just the Docs on GitHub":
-    - "https://github.com/just-the-docs/just-the-docs"
+  Just the Docs on GitHub:
+    - https://github.com/just-the-docs/just-the-docs
 ```

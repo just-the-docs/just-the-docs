@@ -6,32 +6,58 @@ nav_order: 5
 
 # Collections
 
-Pages can also be grouped together by using Jekyll's and Just the Docs's [collections]({% link docs/configuration.md %}#document-collections) feature. In contrast to using [pages with children]({% link docs/navigation/main/levels.md %}), pages grouped by collection are grouped by a shared header (the name of the collection) instead of a page.
+By default, the navigation includes only [normal pages](https://jekyllrb.com/docs/pages/).
+However, you can configure Just the Docs to include also pages from [Jekyll collections](https://jekyllrb.com/docs/collections/).
 
-The `nav_fold` configuration option works for collection-grouped pages. For more information, please refer to the [collections documentation]({% link docs/configuration.md %}#document-collections).
+{: .note }
+> You store collection pages in directories that start with an underscore (`_`), e.g., `_tests`. You won't see your `tests` collection pages in the navigation if you store them in a `tests` directory![^1]
+
+[^1]: You can optionally specify a directory to store all your collections. For example, if you specify `collections_dir: my_collections` in `_config.yml`, you should then store the pages of the `tests` collection in the `my_collections/_tests` directory.
 
 #### Example
 
-The following example sets up two collections, `collection-one` and `collection-two`:
-
-- Any document placed within `_collection-1/` will be grouped under the `Collection One` header by default. Since `nav_fold` is set to `true`, the pages will be folded by default.
-- Any document placed within `_collection-2/` will be grouped under the `Collection Two` header by default. Since `nav_fold` is set to `false`, the pages will be expanded by default.
+To define a Jekyll `tests` collection named `Tests` in your main navigation, store its pages in the `_tests` directory, and add the following to `_config.yml`:
 
 ```yaml
-_config.yml:
+collections:
+  tests:
+    output: true
+
+just_the_docs:
   collections:
-    collection-one:
-      permalink: "/:collection/:path/"
-      output: true
-    collection-two:
-      permalink: "/:collection/:path/"
-      output: true
-  just_the_docs:
-    collections:
-      collection-one:
-        name: Collection One
-        nav_fold: true
-      collection-two:
-        name: Collection Two
-        nav_fold: false
+    tests:
+      name: Tests
 ```
+
+Together with the `name` to be used for a collection in the navigation, you can configure the following options:
+
+* `nav_exclude: true` to exclude the entire collection from the main navigation
+* `nav_fold: true` to fold the collection, instead of showing links to all its top-level pages[^2]
+* `search_exclude: true` to exclude all the collection pages from search results
+
+[^2]:
+    When JavaScript is disabled in the browser, all folded collections are automatically expanded,
+    since clicking expander symbols has no effect.
+
+The main navigation for all your normal pages (if any) is displayed before those in collections. When *all* your pages are in a single collection, its name is not displayed.
+
+You can configure multiple collections. This creates categories in the main navigation with the configured names.
+
+#### Example
+
+```yaml
+collections:
+  tests:
+    output: true
+  tutorials:
+    output: true
+
+just_the_docs:
+  collections:
+    tests:
+      name: Tests
+    tutorials:
+      name: Tutorials
+```
+
+The navigation for each collection is a separate name space for page titles: a page in one collection cannot be the `parent` of a page in a different collection, nor of a normal page.
