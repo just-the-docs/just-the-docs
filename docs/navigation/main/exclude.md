@@ -15,9 +15,10 @@ For specific pages that you do not wish to include in the main navigation (e.g.,
 layout: default
 title: 404
 nav_exclude: true
+permalink: /404
 ---
 ```
 
-The `nav_exclude` parameter does not affect the [breadcrumbs]({% link docs/navigation/parents.md %}), nor the [auto-generating list of child pages]({% link docs/navigation/children.md %}), which you can use to access pages excluded from the main navigation. 
+The `nav_exclude` parameter does not affect the [breadcrumbs]({% link docs/navigation/parents.md %}), nor the [lists of child pages]({% link docs/navigation/children.md %}), which you can use to access pages excluded from the main navigation. 
 
 Pages with no `title` are automatically excluded from the navigation, except when they are in collections.

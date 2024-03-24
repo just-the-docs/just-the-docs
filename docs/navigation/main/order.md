@@ -6,7 +6,7 @@ nav_order: 1
 
 # Ordering Pages
 
-To specify a page order, you can use the `nav_order` parameter in your pages' YAML front matter.
+To specify a page order, you can use the `nav_order` parameter in the front matter of the pages.
 
 #### Example
 
@@ -21,7 +21,9 @@ The parameter values determine the order of the top-level pages, and of child pa
 
 The parameter values can be numbers (integers, floats) and/or strings. When you omit `nav_order` parameters, they default to the titles of the pages, which are ordered alphabetically. Pages with numerical `nav_order` parameters always come before those with strings or default `nav_order` parameters. If you want to make the page order independent of the page titles, you can set explicit `nav_order` parameters on all pages.
 
-By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case.[^case-insensitive] Enclosing strings in quotation marks is optional.
+By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case.[^case-insensitive]
+
+Enclosing strings in quotation marks in front matter is optional, unless they contain "[", "]", "{", "}", ",", ":", or "#". Boolean, integer, and float values are treated as strings only when enclosed in quotation marks.
 
 ----
 

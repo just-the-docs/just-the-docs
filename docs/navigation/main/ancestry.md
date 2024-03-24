@@ -21,11 +21,9 @@ nav_order: 1
 ---
 ```
 
-The `ancestor` field of a page is similar to `grand_parent`: it refers to a page that can be reached by a succession of `parent` titles.
+The `ancestor` field of a page generalizes `grand_parent` to more lev.
 
-The following pages illustrate `parent` disambiguation using `grand_parent` and `ancestor` titles. 
-
-Some descendants of both [Page X](X/) and [Page Y](Y/) have the same title, so references to those descendants as `parent` always require disambiguation.
+The following pages illustrate `parent` disambiguation using `grand_parent` and `ancestor` titles. Some descendants of both [Page X](X/) and [Page Y](Y/) have the same title, so references to those descendants as `parent` always require disambiguation.
 
 - [X](X/) is a parent page
 - [S](XS/) is the only child of [X](X/). The `parent` reference to [X](X/) is unambiguous.

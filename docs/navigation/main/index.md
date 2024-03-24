@@ -8,7 +8,7 @@ nav_order: 1
 
 The main navigation for your Just the Docs site is at the left side of the page on large screens, and at the top (behind a tap) on small screens. 
 
-You need to specify the `title` of each page in its front matter. Page titles are independent of file names and directory structure. The navigation uses the title of the page as an anchor for links to the page. 
+You need to specify the `title` of each page in its front matter. Page titles are independent of file names and directory structure. The navigation uses the title of the page as an anchor for links to the page.
 
 By default, links to all pages appear in the main navigation at the top level, ordered alphabetically by their titles. By adding further fields to the front matter of individual pages, you can [change their order]({% link docs/navigation/main/order.md %}), [exclude pages]({% link docs/navigation/main/exclude.md %}), and change their [parent pages]({% link docs/navigation/main/levels.md %}).
 
@@ -29,7 +29,7 @@ For the construction of the navigation display to work (and to avoid potential c
 >
 > If all the pages of your site have different titles, you only need to specify the `title` of each page, and the `parent` title of each lower-level page.[^1]
 
-[^1]: Previous versions of Just the Docs restricted the navigation to three levels. Moreover, you needed to specify `has_children: true` on all parent pages, and a `grand_parent` title on all grandchild pages.
+[^1]: Previous versions of Just the Docs restricted the navigation to three levels. You also needed to specify `has_children: true` on all parent pages, and a `grand_parent` title on all grandchild pages.
 
 If your site has pages with the same title, you need to avoid confusion when you reference that title as `parent` on other pages. When two potential parents have the same title, but different grandparents, you can identify the intended parent using the `grand_parent` title. 
 
