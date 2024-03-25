@@ -18,7 +18,7 @@ You can use [Jekyll's front matter defaults] to specify the same layout for many
 
 ## The `default` layout
 
-This page uses the default layout. This site configures `layout: default` as a [front matter default] (https://jekyllrb.com/docs/configuration/front-matter-defaults/) value for all pages in the `docs` directory.
+This page uses the default layout. This site configures `layout: default` as a [front matter default](https://jekyllrb.com/docs/configuration/front-matter-defaults/) value for all pages in the `docs` directory.
 
 The default layout of Just the Docs is a *responsive* layout: on medium and larger width displays, it displays a sidebar, including a navigation panel; on smaller width displays, the sidebar is automatically hidden under a button.
 
