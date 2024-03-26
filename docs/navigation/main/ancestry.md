@@ -32,11 +32,20 @@ The `ancestor` field of a page generalizes `grand_parent` to higher levels.
 
 The following pages illustrate `parent` disambiguation using `grand_parent` and `ancestor` titles. Some descendants of both [Page X](X/) and [Page Y](Y/) have the same title, so references to those descendants as `parent` always require disambiguation.
 
-- [X](X/) is a parent page
-- [S](XS/) is the only child of [X](X/). The `parent` reference to [X](X/) is unambiguous.
-- [T](XT/) is the only child of [S](XS/). Its `parent` is disambiguated by its `grand_parent`.
-- [U](XU/) is the only child of [T](XT/). Its `parent` is disambiguated by its `ancestor`.
-- [Y](Y/) is a sibling of [X](X/).
-- [S](YS/) is the only child of [Y](Y/). The `parent` reference to [Y](Y/) is unambiguous.
-- [T](YT/) is the only child of [S](YS/). Its `parent` is disambiguated by its `ancestor`
-- [U](YU/) is the only child of [T](YT/). Its `parent` is disambiguated by its `ancestor`.
+- [X][X] is a parent page
+- [S][XS] is the only child of [X][X]. The `parent` reference to [X][X] is unambiguous.
+- [T][XT] is the only child of [S][XS]. Its `parent` is disambiguated by its `grand_parent`.
+- [U][XU] is the only child of [T][XT]. Its `parent` is disambiguated by its `ancestor`.
+- [Y][Y] is a sibling of [X][X].
+- [S][YS] is the only child of [Y][Y]. The `parent` reference to [Y][Y] is unambiguous.
+- [T][YT] is the only child of [S][YS]. Its `parent` is disambiguated by its `ancestor`
+- [U][YU] is the only child of [T][YT]. Its `parent` is disambiguated by its `ancestor`.
+
+[X]: {% link docs/navigation/main/X.md %}
+[XS]: {% link docs/navigation/main/XS.md %}
+[XT]: {% link docs/navigation/main/XT.md %}
+[XU]: {% link docs/navigation/main/XU.md %}
+[Y]: {% link docs/navigation/main/Y.md %}
+[YS]: {% link docs/navigation/main/YS.md %}
+[YT]: {% link docs/navigation/main/YT.md %}
+[YU]: {% link docs/navigation/main/YU.md %}
