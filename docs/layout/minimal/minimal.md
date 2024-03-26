@@ -2,7 +2,6 @@
 title: A minimal layout page
 layout: minimal
 parent: Layout
-has_children: true
 ---
 
 # A minimal layout page
