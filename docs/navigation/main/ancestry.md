@@ -14,14 +14,21 @@ If two parents have the same `title`, but different grandparents, you can set th
 
 ```yaml
 ---
-title: Buttons Child Page
-parent: Buttons
-grand_parent: UI Components
-nav_order: 1
+title: T
+parent: S
+grand_parent: X
 ---
 ```
 
-The `ancestor` field of a page generalizes `grand_parent` to more lev.
+```yaml
+---
+title: T
+parent: S
+grand_parent: Y
+---
+```
+
+The `ancestor` field of a page generalizes `grand_parent` to higher levels.
 
 The following pages illustrate `parent` disambiguation using `grand_parent` and `ancestor` titles. Some descendants of both [Page X](X/) and [Page Y](Y/) have the same title, so references to those descendants as `parent` always require disambiguation.
 

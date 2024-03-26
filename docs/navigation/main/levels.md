@@ -8,32 +8,27 @@ nav_order: 3
 
 Sometimes you will want to create a page with many children. First, it is recommended that you store related pages together in a directory. For example, in these docs, we keep all of the written documentation pages in the `./docs` directory, and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like this:
 
+{: .lh-0 }
 ```
-+-- ..
-|-- (Jekyll files)
-|
-|-- docs
-|   |-- ui-components
-|   |   |-- index.md (parent page)
-|   |   |-- buttons.md
-|   |   |-- code.md
-|   |   |-- labels.md
-|   |   |-- tables.md
-|   |   +-- typography.md
-|   |
-|   |-- utilities
-|   |   |-- index.md (parent page)
-|   |   |-- color.md
-|   |   |-- layout.md
-|   |   |-- responsive-modifiers.md
-|   |   +-- typography.md
-|   |
-|   |-- (other md files, pages with no children)
-|   +-- ..
-|
-|-- index.md (home page)
-|-- (Jekyll files)
-+-- ..
+┌─ ...
+├─ (Jekyll files)
+├─ docs
+    ├─ configuration.md
+    ├─ ui-components
+        ├─ index.md (parent page)
+        ├─ buttons.md
+        ├─ callouts.md
+        ├─ code
+            ├─ index.md (parent page)
+            └─ line-nos.md
+        ├─ labels.md
+        ├─ tables.md
+        └─ typography.md
+    ├─ ...
+    └─ MIGRATION.md
+├─ index.md (home page)
+├─ (Jekyll files)
+└─ ...
 ```
 
 #### Example
@@ -41,7 +36,7 @@ Sometimes you will want to create a page with many children. First, it is recomm
 ```yaml
 ---
 title: UI Components
-nav_order: 2
+nav_order: 3
 ---
 ```
 
@@ -78,32 +73,51 @@ Child pages can themselves have children, to any number of levels.
 
 ```yaml
 ---
-title: Buttons
-parent: UI Components
-nav_order: 2
+title: Main Navigation
+parent: Navigation
+nav_order: 1
 ---
 ```
 
 ```yaml
 ---
-title: Buttons Child Page
-parent: Buttons
-nav_order: 1
+title: Ancestry
+parent: Main Navigation
+nav_order: 4
 ---
 ```
 
-This would create the following navigation structure:
-
+```yaml
+---
+title: X
+parent: Ancestry
+---
 ```
-+-- ..
-|
-|-- UI Components
-|   |-- ..
-|   |
-|   |-- Buttons
-|   |   |-- Button Child Page
-|   |
-|   |-- ..
-|
-+-- ..
+
+```yaml
+---
+title: Y
+parent: Ancestry
+---
+```
+
+This creates the following navigation structure:
+
+{: .lh-0 }
+```
+┌─ ...
+├─ ...
+├─ Navigation
+    ├─ ...
+    ├─ Main Navigation
+        ├─ ...
+        ├─ Ancestry
+            ├─ X
+            └─ Y
+        ├─ ...
+        └─ ...
+    ├─ ...
+    └─ ...
+├─ ...
+└─ ...
 ```

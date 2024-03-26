@@ -56,8 +56,12 @@ just_the_docs:
   collections:
     tests:
       name: Tests
+      search_exclude: true
     tutorials:
       name: Tutorials
+      nav_fold: true
 ```
 
 The navigation for each collection is a separate name space for page titles: a page in one collection cannot be the `parent` of a page in a different collection, nor of a normal page.
+
+----
