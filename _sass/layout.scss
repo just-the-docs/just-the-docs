@@ -20,7 +20,7 @@
     min-width: $nav-width;
   }
 
-  &+.main {
+  & + .main {
     @include mq(md) {
       margin-left: $nav-width-md;
     }
