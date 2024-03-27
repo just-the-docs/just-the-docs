@@ -23,6 +23,7 @@ jtd.onReady = function(ready) {
 
 // Show/hide mobile menu
 
+{%- if site.nav_enabled != false %}
 function initNav() {
   jtd.addEvent(document, 'click', function(e){
     var target = e.target;
@@ -67,6 +68,7 @@ function initNav() {
   });
   {%- endif %}
 }
+{%- endif %}
 
 // The <head> element is assumed to include the following stylesheets:
 // - a <link> to /assets/css/just-the-docs-head-nav.css,
@@ -498,6 +500,7 @@ jtd.setTheme = function(theme) {
 // Note: pathname can have a trailing slash on a local jekyll server
 // and not have the slash on GitHub Pages
 
+{%- if site.nav_enabled != false %}
 function navLink() {
   var pathname = document.location.pathname;
 
@@ -551,16 +554,21 @@ function activateNav() {
     }
   }
 }
+{%- endif %}
 
 // Document ready
 
 jtd.onReady(function(){
-  initNav();
+  {%- if site.nav_enabled != false %}
+  if (document.getElementById('site-nav')) {
+    initNav();
+    activateNav();
+    scrollNav();
+  }
+  {%- endif %}
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
-  activateNav();
-  scrollNav();
 });
 
 // Copy button on code

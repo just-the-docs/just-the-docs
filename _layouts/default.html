@@ -9,7 +9,9 @@ layout: table_wrappers
 <body>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   {% include icons/icons.html %}
-  {% include components/sidebar.html %}
+  {% if site.nav_enabled != false and layout.nav_enabled != false and page.nav_enabled != false %}
+    {% include components/sidebar.html %}
+  {% endif %}
   <div class="main" id="top">
     {% include components/header.html %}
     <div class="main-content-wrap">
