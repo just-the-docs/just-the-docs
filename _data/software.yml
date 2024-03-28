@@ -21,6 +21,16 @@
 
 # Don't forget to add software alphabetically!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+- name: NSGI CRS API
+  webpage: https://api.transformation.nsgi.nl/v2/openapi
+  description: "Performs coordinate transformations on GeoJSON and CityJSON files using the official RDNAPTRANS™ transformation procedure and other transformations defined or recommended by [NSGI](https://www.nsgi.nl)"
+  foss: true
+  category: 
+    - converter
+  interface: cli
+  type: lib
+
+
 - name: tyler
   webpage: https://github.com/3DGI/tyler
   description: Creates [3D tiles](https://docs.ogc.org/cs/22-025r4/22-025r4.html) from CityJSON
