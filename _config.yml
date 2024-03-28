@@ -109,6 +109,10 @@ aux_links:
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
 
+# Enable or disable the side/mobile menu globally
+# Nav menu can also be selectively enabled or disabled using page variables or the minimal layout
+nav_enabled: true
+
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: case_sensitive # Capital letters sorted before lowercase
@@ -121,7 +125,7 @@ nav_external_links:
 liquid:
    error_mode: strict
    strict_filters: true
-   
+
 # Footer content
 # appears at the bottom of every page's main content
 
