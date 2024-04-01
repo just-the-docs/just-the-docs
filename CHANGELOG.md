@@ -17,11 +17,19 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- Fixed: Protect theme JS file from front matter default for layout by [@pdmosses] in [#1447]
+- N/A
 
 Docs changes made since the latest release:
 
 - N/A
+
+## Release v0.8.2
+
+Hi everyone! This patch release fixes a bug where a default layout with unrestricted `scope` (`path: ""`) breaks JavaScript functionality. Users who do not use a default layout with unrestricted `scope` should not be affected. This should be a straightforward upgrade for all users. Thank you to [@pdmosses] for triaging and fixing the bug!
+
+### Bugfixes
+
+- Fixed: Protect theme JS file from front matter default for layout by [@pdmosses] in [#1447]
 
 [#1447]: https://github.com/just-the-docs/just-the-docs/pull/1447
 
