@@ -17,11 +17,13 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Fixed: Protect theme JS file from front matter default for layout by [@pdmosses] in [#1447]
 
 Docs changes made since the latest release:
 
 - N/A
+
+[#1447]: https://github.com/just-the-docs/just-the-docs/pull/1447
 
 ## Release v0.8.1
 
