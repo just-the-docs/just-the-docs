@@ -40,6 +40,7 @@ GEM
     fiber-annotation (0.2.0)
     fiber-local (1.0.0)
     forwardable-extended (2.6.0)
+    google-protobuf (3.25.1-aarch64-linux)
     google-protobuf (3.25.1-arm64-darwin)
     google-protobuf (3.25.1-x86_64-linux)
     hashery (2.1.2)
@@ -92,6 +93,8 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    nokogiri (1.16.2-aarch64-linux)
+      racc (~> 1.4)
     nokogiri (1.16.2-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.16.2-x86_64-linux)
@@ -119,6 +122,8 @@ GEM
     ruby-rc4 (0.1.5)
     ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
+    sass-embedded (1.69.6-aarch64-linux-gnu)
+      google-protobuf (~> 3.25)
     sass-embedded (1.69.6-arm64-darwin)
       google-protobuf (~> 3.25)
     sass-embedded (1.69.6-x86_64-linux-gnu)
@@ -138,6 +143,7 @@ GEM
     zeitwerk (2.6.11)
 
 PLATFORMS
+  aarch64-linux
   arm64-darwin
   x86_64-linux
 
