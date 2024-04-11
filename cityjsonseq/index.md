@@ -92,30 +92,22 @@ The subsequent JSON Objects must all be of type `"CityJSONFeature"`, which means
 ```
 
 
-## Reading and writing CityJSONSeq with cjio
+## Reading and writing CityJSONSeq with cjseq
 
-The software [cjio](https://github.com/cityjson/cjio) allows us to read and write CityJSONSeq from stdin/stdout (standard input/output streams).
+The software [cjseq](https://github.com/cityjson/cjseq) allows us to convert between CityJSON and CityJSONSeq (both directions).
 
 We can create a CityJSONSeq stream (with the first line containing the metadata) this way:
 
 ```
-cjio --suppress_msg myfile.city.json export jsonl stdout
+cjseq cat -f myfile.city.json > myfile.city.jsonl
 ```
 
-Observe that the different operators of cjio output messages/information, and those will get in the stdout stream. 
-To avoid this, add the flag `--suppress_msg` when reading the file.
-
-That stream can be saved to a file:
-
+And conversely convert a stream to a CityJSON file:
 ```
-cjio --suppress_msg myfile.city.json export jsonl mystream.city.jsonl
+cat myfile.city.jsonl | cjseq collect > myfile_2.city.json
 ```
 
-A CityJSONSeq stream/file can be compiled to a CityJSON file by reading it from `stdin`:
-
-```
-cat mystream.city.jsonl | cjio stdin info save myfile_2.city.json
-```
+cjseq has thus 2 commands: (1) cat; (2) collect.
 
 ## CityJSONSeq examples
 
@@ -136,13 +128,13 @@ You can just drop those files and the validator will indicate, *per line*, if th
 [![](validator.png)](https://validator.cityjson.org)
 
 
-### Locally with cjfval
+### Locally with cjseqval
 
-The official [schema-validator of CityJSON (called cjval)](https://github.com/cityjson/cjval) can validate CityJSONSeq streams with its binary `cjfval`.
+The official [schema-validator of CityJSON (called cjval)](https://github.com/cityjson/cjval) can validate CityJSONSeq streams with its binary `cjseqval`.
 Each line is individually validated and errors reported:
 
 ```bash
-cjio --suppress_msg myfile.city.json export jsonl stdout | cjfval --verbose
+cjseq cat -f myfile.city.json | cjseqval --verbose
 l.1 ✅
 l.2 ❌ {"attributes":{"function":"something"},"geometry":[{"boundaries":[[[[0,1,2,3]],[[4,5,0,3]],[[5,6,1,0]],[[6,7,2,1]],[[3,2,7,4]],[[7,6,5,4]]]],"lod":"1","type":"Solid"}],"type":"+99999GnericCityObject"} is not valid under any of the given schemas [path:/CityObjects/id-1] |
 l.3 ✅
