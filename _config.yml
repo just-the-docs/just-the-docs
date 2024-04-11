@@ -7,7 +7,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.cityjson.org" # the base hostname & protocol for your site, e.g. http://example.com
 # url: https://just-the-docs.github.io
 
-lastversion: "2.0.0"
+lastversion: "2.0.1"
 
 
 future:    true
