@@ -8,7 +8,7 @@ permalink: /
 ---
 
 <!-- <img src="{{ '/assets/images/cityjson_logo.svg' | prepend: site.baseurl }}" width="200"> -->
-<img src="{{ '/assets/images/cityjson_logo_v2.svg' | prepend: site.baseurl }}" width="600">
+<img src="{{ '/assets/images/cityjson_logo.svg' | prepend: site.baseurl }}" width="600">
 
 A JSON-based encoding for 3D city models
 {: .fs-6 .fw-300 }
