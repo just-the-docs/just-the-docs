@@ -21,6 +21,25 @@
 
 # Don't forget to add software alphabetically!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
+- name: cjseq
+  webpage: https://github.com/cityjson/cjseq
+  description: Conversion CityJSON <=> CityJSONSeq
+  foss: true
+  category: 
+    - converter
+  interface: cli
+  type: app
+
+- name: cjdb
+  webpage: https://github.com/cityjson/cjdb
+  description: cjdb is a tool enabling CityJSON integration with a PostgreSQL database
+  foss: true
+  category: 
+    - storage
+  interface: cli
+  type: app  
+
 - name: NSGI CRS API
   webpage: https://api.transformation.nsgi.nl/v2/openapi
   description: "Performs coordinate transformations on GeoJSON and CityJSON files using the official RDNAPTRANS™ transformation procedure and other transformations defined or recommended by [NSGI](https://www.nsgi.nl)"
@@ -29,7 +48,6 @@
     - converter
   interface: cli
   type: lib
-
 
 - name: tyler
   webpage: https://github.com/3DGI/tyler
