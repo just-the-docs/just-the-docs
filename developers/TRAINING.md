@@ -89,7 +89,7 @@ for each section you begin below.
 
 ### Linux
 
-From [linuxjourney.com](http://www.linuxjourney.com) - this site's quite a good overall resource of concise, useful and modular lessons.
+From [linuxjourney.com](http://linuxjourney.com) - this site's quite a good overall resource of concise, useful and modular lessons.
 
 I've listed the chapters and sections (in parens) that are most useful for our work at Countable here.
 
