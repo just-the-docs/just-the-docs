@@ -1,4 +1,16 @@
 
+
+- name: "Ingolstadt"
+  url:  https://github.com/savenow/lod3-road-space-models
+  json: Ingolstadt.city.json
+  json-size: 4.8
+  gml: Ingolstadt.gml
+  gml-size: 28
+  gml-size-wo: 40
+  # textures: none
+  validity: 70% buildings valid
+  details: "Buildings in LoD3; multiple attributes"
+
 - name: "3DBAG"
   url:  https://data.3dbag.nl/cityjson/v20230809/tiles/9/284/556/9-284-556.city.json
   json: 9-284-556.city.json
