@@ -73,7 +73,7 @@ See the [full specifications for a CityJSONFeature](https://www.cityjson.org/spe
 
 ## Streaming 3D cities with CityJSONSeq
 
-Since we want to have access to some properties, eg [`"transform"`](https://www.cityjson.org/specs/#transform-object) and the [CRS](https://www.cityjson.org/specs/#referencesystem-crs), those need to be known by the client/software parsing the stream.
+Since we want to have access to some properties, eg [`"transform"`](https://www.cityjson.org/specs/#transform-object), the [CRS](https://www.cityjson.org/specs/#referencesystem-crs) or [`"geometry-templates"`](https://www.cityjson.org/specs/#geometry-templates), those need to be known by the client/software parsing the stream.
 
 The first JSON Object should therefore be of type `"CityJSON"` and contain the necessary information.
 Notice that the properties `"CityObjects"` and `"vertices"` are mandatory (for the [JSON Object to be valid](https://www.cityjson.org/specs/#cityjson-object)) but should be respectively an empty JSON object and an empty array.
@@ -95,6 +95,10 @@ The subsequent JSON Objects must all be of type `"CityJSONFeature"`, which means
 ## Reading and writing CityJSONSeq with cjseq
 
 The software [cjseq](https://github.com/cityjson/cjseq) allows us to convert between CityJSON and CityJSONSeq (both directions).
+cjseq has thus 2 commands: 
+ 
+  1. cat: CityJSON ==> CityJSONSeq
+  2. collect: CityJSONSeq ==> CityJSON
 
 We can create a CityJSONSeq stream (with the first line containing the metadata) this way:
 
@@ -107,7 +111,6 @@ And conversely convert a stream to a CityJSON file:
 cat myfile.city.jsonl | cjseq collect > myfile_2.city.json
 ```
 
-cjseq has thus 2 commands: (1) cat; (2) collect.
 
 ## CityJSONSeq examples
 
@@ -144,15 +147,15 @@ l.6 ✅
 ```
 
 
-## cjfview: a small viewer for CityJSONSeq files
+## cjseqview: a small viewer for CityJSONSeq 
 
 
 ![](https://raw.githubusercontent.com/cityjson/viewcjl/main/demo.png)
 
-The [cjfview GitHub repository](https://github.com/cityjson/cjfview/) has more details.
+The [cjseqview GitHub repository](https://github.com/cityjson/cjseqview/) has more details.
 
 
-It reads a [CityJSONSeq file](https://cityjson.org/cityjsonl) from stdin.
+It reads a [CityJSONSeq](https://cityjson.org/cityjsonseq) from stdin.
 
 ```bash
 cat ./data/b2.city.jsonl | python ./src/cjfview.py
