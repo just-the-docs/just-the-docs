@@ -329,43 +329,9 @@ Future versions may subdivide components further; we guarantee that we will only
 
 ### Alternative layouts and example (`minimal`)
 
-Users can develop custom layouts that compose, omit, or add components differently. We provide one first-class example titled `minimal`, inspired by Kevin Lin's work in [just-the-class](https://github.com/kevinlin1/just-the-class). This `minimal` layout does not render the sidebar, header, or search. To see an example, visit the [minimal layout test]({{site.baseurl}}/docs/minimal-test/) page.
+Users can develop custom layouts that compose, omit, or add components differently. We provide one first-class example titled `minimal`, which disables the navigation sidebar. To see an example, visit the [minimal layout test]({{site.baseurl}}/docs/minimal-test/) page.
 
-Here is a simplified code example of what it looks like:
-
-{% raw %}
-
-```liquid
-<!-- a simplified version of _layouts/minimal.html -->
-<html>
-{% include head.html %}
-<body>
-  {% include icons/icons.html %}
-  {% comment %} Bandaid fix for breadcrumbs here! {% endcomment %}
-  {% include components/breadcrumbs.html %}
-
-  {% if site.heading_anchors != false %}
-    {% include vendor/anchor_headings.html html=content ... %}
-  {% else %}
-    {{ content }}
-  {% endif %}
-
-  {% if page.has_children == true and page.has_toc != false %}
-    {% include components/children_nav.html %}
-  {% endif %}
-
-  {% include components/footer.html %}
-
-  {% if site.mermaid %}
-    {% include components/mermaid.html %}
-  {% endif %}
-</body>
-</html>
-```
-
-{% endraw %}
-
-This layout is packaged in Just the Docs. Users can indicate this alternative layout in page front matter:
+Users can indicate this alternative layout in page front matter:
 
 {% raw %}
 
@@ -384,10 +350,10 @@ Similarly, users and developers can create other alternative layouts using Just 
 
 Under the hood,
 
-- `default` and `minimal` inherit from the `table_wrappers` layout, which wraps all HTML `<table>` tags with a `div .table-wrapper`
+- `default` inherit from the `table_wrappers` layout, which wraps all HTML `<table>` tags with a `div .table-wrapper`
 - `table_wrappers` inherits from `vendor/compress`, which is a local copy of Anatol Broder's [jekyll-compress-html](https://github.com/penibelst/jekyll-compress-html) Jekyll plugin
 
-Note that as of now, `minimal` and `default` have no inheritance relationship.
+The `minimal` layout inherits from the `default` but assigns `nav_enabled: false` to disable the navigation sidebar.
 
 ### Overridden default Jekyll layouts
 
