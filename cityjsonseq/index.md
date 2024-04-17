@@ -158,9 +158,9 @@ The [cjseqview GitHub repository](https://github.com/cityjson/cjseqview/) has mo
 It reads a [CityJSONSeq](https://cityjson.org/cityjsonseq) from stdin.
 
 ```bash
-cat ./data/b2.city.jsonl | python ./src/cjfview.py
+cat ./data/b2.city.jsonl | python ./src/cjseqview.py
 ```
 
 ```bash
-cjio --suppress_msg Vienna_102081.city.json subset --random 5 export jsonl stdout | python ./src/cjfview.py
+cjio --suppress_msg Vienna_102081.city.json subset --random 5 export jsonl stdout | python ./src/cjseqview.py
 ```
