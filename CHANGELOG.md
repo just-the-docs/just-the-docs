@@ -23,6 +23,16 @@ Docs changes made since the latest release:
 
 - Docs: Explained the `nav_enabled` variables as an alternative to using the minimal layout [@kevinlin1] in [#1441].
 
+## Release v0.8.2
+
+Hi everyone! This patch release fixes a bug where a default layout with unrestricted `scope` (`path: ""`) breaks JavaScript functionality. Users who do not use a default layout with unrestricted `scope` should not be affected. This should be a straightforward upgrade for all users. Thank you to [@pdmosses] for triaging and fixing the bug!
+
+### Bugfixes
+
+- Fixed: Protect theme JS file from front matter default for layout by [@pdmosses] in [#1447]
+
+[#1447]: https://github.com/just-the-docs/just-the-docs/pull/1447
+
 ## Release v0.8.1
 
 Hi folks! This patch release fixes a bug introduced in `0.8.0` that affects users who build their sites in strict mode. It is a straightforward upgrade that should require no manual migration changes. Thank you to [@Zarthus] for quickly catching and fixing this bug!
