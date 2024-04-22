@@ -17,11 +17,21 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Added: `nav_enabled` site, layout, and page-level variable to selectively show or hide the side/mobile menu by [@kevinlin1] in [#1441]. The minimal layout was reimplemented using this feature, and now has support for the site-wide search bar and auxiliary links.
 
 Docs changes made since the latest release:
 
-- N/A
+- Docs: Explained the `nav_enabled` variables as an alternative to using the minimal layout [@kevinlin1] in [#1441].
+
+## Release v0.8.2
+
+Hi everyone! This patch release fixes a bug where a default layout with unrestricted `scope` (`path: ""`) breaks JavaScript functionality. Users who do not use a default layout with unrestricted `scope` should not be affected. This should be a straightforward upgrade for all users. Thank you to [@pdmosses] for triaging and fixing the bug!
+
+### Bugfixes
+
+- Fixed: Protect theme JS file from front matter default for layout by [@pdmosses] in [#1447]
+
+[#1447]: https://github.com/just-the-docs/just-the-docs/pull/1447
 
 ## Release v0.8.1
 

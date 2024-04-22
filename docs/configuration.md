@@ -101,6 +101,14 @@ aux_links:
 aux_links_new_tab: false
 ```
 
+## Navigation sidebar
+
+```yaml
+# Enable or disable the side/mobile menu globally
+# Nav menu can also be selectively enabled or disabled using page variables or the minimal layout
+nav_enabled: true
+```
+
 ## Heading anchor links
 
 ```yaml
