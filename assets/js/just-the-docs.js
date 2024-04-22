@@ -556,12 +556,14 @@ function activateNav() {
 // Document ready
 
 jtd.onReady(function(){
-  initNav();
+  if (document.getElementById('site-nav')) {
+    initNav();
+    activateNav();
+    scrollNav();
+  }
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
-  activateNav();
-  scrollNav();
 });
 
 // Copy button on code

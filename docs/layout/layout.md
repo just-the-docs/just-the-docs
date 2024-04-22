@@ -28,7 +28,20 @@ Each page that has child pages generally has a list of links to those pages (you
 
 ## The `minimal` layout
 
-A child and grandchild page of this page use the minimal layout. This differs from the default layout by omitting the sidebar -- and thereby also the navigation panel. To navigate between pages with the minimal layout, you can use the breadcrumbs and the tables of contents.
+A child and grandchild page of this page use the minimal layout. This differs from the default layout by omitting the sidebar---and thereby also the navigation panel. To navigate between pages with the minimal layout, you can use the breadcrumbs and the tables of contents.
+
+## Selectively hiding or showing the sidebar
+
+[Jekyll's front matter defaults] can be used to apply the `minimal` layout for many pages. But there are also other variables that can control the page layout. In `_config.yml`, you can set `nav_enabled: false` to disable the sidebar navigation panel across the entire site. This can then be selectively enabled on a page-by-page basis by assigning the `nav_enabled: true` page [front matter] variable. For instance, this could be used to enable sidebar navigation on a home page while all other pages have sidebar navigation disabled.
+
+```yaml
+---
+layout: default
+title: Home
+nav_enabled: true
+---
+
+```
 
 ## Other layouts
 

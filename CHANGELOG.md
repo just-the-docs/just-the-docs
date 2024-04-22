@@ -17,11 +17,11 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Added: `nav_enabled` site, layout, and page-level variable to selectively show or hide the side/mobile menu by [@kevinlin1] in [#1441]. The minimal layout was reimplemented using this feature, and now has support for the site-wide search bar and auxiliary links.
 
 Docs changes made since the latest release:
 
-- N/A
+- Docs: Explained the `nav_enabled` variables as an alternative to using the minimal layout [@kevinlin1] in [#1441].
 
 ## Release v0.8.2
 
