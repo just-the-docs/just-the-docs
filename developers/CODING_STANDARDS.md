@@ -24,7 +24,7 @@ These things should go without saying, but we'll say them here just in case :)
 
 ## Principles
 
-  - Spend about 10% of your time on writing tests and refactoring to reduce complexity.
+  - Spend AT LEAST 10% of your time on writing tests and refactoring to reduce complexity.
   - Every module, file, function, class and other component should have a clear "job" or clear set of related jobs. Someone who does not know the codebase should be able to deduce what a function is responsible fo.
   - Follow conventions. For projects that do not currently follow our standards (open source, or new projects shared with other dev teams) but follows a different one, stick with that project's conventions unless we make a conscious decision to refactor the whole thing. Don't mix conventions.
   - Make life easier for your team mates and future self by being consistent and thoughtful of what someone unfamiliar would think. The goal is your code should be obvious and easy to understand for a new programmer. Stick to conventions, and use comments to explain the story of your code, and why things are done a particular way.
