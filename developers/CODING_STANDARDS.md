@@ -32,13 +32,14 @@ These things should go without saying, but we'll say them here just in case :)
 
 ## Literature
 
-We are influenced by the following writing.
+We are observe teh following literature.
 
-  - [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design)
-  - [12 factor App Methodology](https://12factor.net/)
-  - [Trunk based development](https://trunkbaseddevelopment.com/)
-  - [Agile Manifesto](https://agilemanifesto.org/)
-  - [Clean Code](https://www.oreilly.com/library/view/clean-code/9780136083238/)
+  - [Domain Driven Design](https://en.wikipedia.org/wiki/Domain-driven_design) - We use Domain Modelling in our work
+  - [12 factor App Methodology](https://12factor.net/) - We use Container based deployments
+  - [Trunk based development](https://trunkbaseddevelopment.com/) - We use Trunk Based development
+  - [Agile Manifesto](https://agilemanifesto.org/) - We use Scrum
+  - [Clean Code](https://www.oreilly.com/library/view/clean-code/9780136083238/) - We write readable code
+  - [A Philisophy of Software Design](https://www.amazon.ca/Philosophy-Software-Design-John-Ousterhout/dp/1732102201) - We build for the long term
 
 ## Names
 
@@ -60,6 +61,7 @@ this topic and on writing short functions.
   - Filenames should be lowercase with dashes (NOT SPACES) to separate words *except* for Python, which uses underscores in place of dashes.
   - The purpose, and contents of any file should be as obvious as possible by its filename and location. **Throw in an example**
   - Avoid repeated or unnecessary code, except where doing so is much more clear. Keep in mind less code is actually easier to understand, all other things being equal. So, it bears repeating, use the minimum amount of code in declarative domain language. Using the wrong abstraction can be worse than repeated code.
+  - Consider organizing by [colocation](https://povio.com/blog/maintainability-with-colocation/)
 
 ## Locality
 
