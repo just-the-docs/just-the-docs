@@ -17,18 +17,102 @@ Covers principles of our coding standards, then branches out to specific languag
 
 [Philosophy of Sofware Design](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201) is highly recommended reading. It's the book which will make you a better programming in the ways that matter most.
 
-## Basics
+## Fundamentals
 
-These things should go without saying, but we'll say them here just in case :)
-  - Don't keep dead (unused) code. For example, if you copy code, never leave the old copy in GIT. For example, a file like `index.html.old` that isn't used.
+  ### Aim to understand
+  Any code that you write, you should understand. If you wrote 10 lines to fix a bug, you should understand all 10 lines. Any code that is written without understanding, means you also don't understand what kind of bugs you may cause.
+  - Don't copy and paste from stackoverflow/ChatGPT without first understanding it.
+  - If you're on React, you're likely going to use `useEffect` hook often. Understand it => https://react.dev/reference/react/useEffect
+  - Read relevant documentation on third party libraries before using it.
 
-## Principles
+  ### Be Explicit
+  
+    Deterministic Is Good, Polymorphic is bad
+  Be explicit with your code. Name your variables clearly. Name your functions clearly. Name your classes carefully. Take your time to think of good names. If you can't, ask the team. Every module, file, function, class and other component should have a clear "job" or clear set of related jobs. Someone who does not know the codebase should be able to deduce what a function is responsible fo.
+
+  - Find the best abstraction. ie) Functional Programming for dealing with collections (advanced primitives). Inheritance for dealing with the relationships of real world objects.
+
+  If your writing classes - following the SOLID principle helps you achieve this => https://www.freecodecamp.org/news/solid-principles-for-better-software-design/#:~:text=The%20SOLID%20acronym%20stands%20for,Interface%20Segregation%20Principle%20(ISP)
+
+  If you're writing functions - some of the functional programming fundamentals help you achieve this => https://www.freecodecamp.org/news/functional-programming-in-javascript/
+
+
+### Do not repeat yourself
+Do not repeat yourself.
+  - Use less code. Avoid repetition.
+  - Reuse functions.
+
+### Code for when things go wrong
+Your features usually consist of a successful scenario, and a failure scenario and perhaps even more states in between. **The feature isn't done if you only cover the successful scenarios.** Wrap your code in a try catch, handle network errors from fetch, handle edge cases. **A feature is only complete if all scenarios are covered.**
+
+
+### Test Your Code
+If you can’t write unit tests for it, then test it manually. Test your code against different scenarios, parameters **manually** if you can’t write unit tests for it. **If you don’t even want to test your own code, who will?** And if you don’t want to test your own code, what are the chances that it’s poorly written? 
+
+If you don’t test, guess who’s testing? Customers/Clients. Customers/Clients are not QA. They may have a play in testing ideas, but accuracy of the code isn’t something they shouldn’t have to be testing for you.
+
+### Examples
+
+```
+fetch("https://myapi.com")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log("Hello World", data)
+  }).catch((err) => {
+    console.error(err)
+  })
+```
+
+Let use this as one of the examples. First of all fetch this code will not throw an error and go to the catch block if it returns a 401. Far as fetch is concerned, that's still valid. How do you know this? **Before you use fetch, you look at the documentation and aim to understand https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Basic_concepts**. Once we have an understanding, we can write code to improve it.
+```
+fetch("https://myapi.com")
+  .then((res) => {
+      !res.ok && throw new Error("Failed tob fetch")
+      return res.json()
+    })
+  .then((data) => {
+    console.log("Hello World", data)
+  }).catch((err) => {
+    console.error(err)
+  })
+```
+This is much better, but that's alot of boilerplate for something rather simple. You can use `async await` in javascript and surround this in a try catch instead or... we can get a bit more creative. Applying the "Be Explicit" principle above, we can improve this. You can refactor this by extracting frequently used functions. These 4 utility function can live in fetch utils file as an example.
+```
+const isResOk = (res) => {
+    !res.ok && throw new Error("Failed tob fetch")
+    return res  
+}
+const resToJSON = (res) => {
+  return res.json()
+}
+const logError = (err) => {
+  console.error(err)
+}
+const log => (data) => {
+  console.log(data)
+}
+```
+Then we can import these in our code and use it such as
+```
+fetch("https://myapi.com)
+  .then(isResOk)
+  .then(resToJSON)
+  .then(log)
+  .catch(logError)
+```
+You can see this almost reads like English. I don't even need to look at the individual functions to understand what it does.
+
+This quick example takes you through most of the fundamentals listed above. First, we aimed for understanding to understand fetch behaviour. Then we coded for when things go wrong. Then we improved its explicitness by extracting possible frequently used functions. Now, testing is easy and it's almost like it came for free. We can test individual functions easily, as well as the entire fetch operations if we wanted to.
+
+
+
+## Coding Standards
 
   - Spend AT LEAST 10% of your time on writing tests and refactoring to reduce complexity.
-  - Every module, file, function, class and other component should have a clear "job" or clear set of related jobs. Someone who does not know the codebase should be able to deduce what a function is responsible fo.
   - Follow conventions. For projects that do not currently follow our standards (open source, or new projects shared with other dev teams) but follows a different one, stick with that project's conventions unless we make a conscious decision to refactor the whole thing. Don't mix conventions.
   - Make life easier for your team mates and future self by being consistent and thoughtful of what someone unfamiliar would think. The goal is your code should be obvious and easy to understand for a new programmer. Stick to conventions, and use comments to explain the story of your code, and why things are done a particular way.
   - Humans should not spend time thinking about whitespace formatting. We use auto-formatters in place of coding standards in every case possible.
+  - Don't keep dead (unused) code. For example, if you copy code, never leave the old copy in GIT. For example, a file like `index.html.old` that isn't used.
 
 ## Literature
 
@@ -73,7 +157,7 @@ this topic and on writing short functions.
 
 ## Error Handling
 
-  - Error messags must be uniquly identifiable so the root cause in code can be traced. They should contain unique text.
+  - Error messages must be uniquly identifiable so the root cause in code can be traced. They should contain unique text.
 
   - The developer must differentiate between failures of our system and failures of other systems, because they are handled very differently.
 
@@ -94,11 +178,6 @@ this topic and on writing short functions.
   - Do not leave actual code commented out unless you have a good reason. If you do have one, document that reason as a comment as well.
   - See [this excellent guide from Stack Overflow's team](https://stackoverflow.blog/2021/07/05/best-practices-for-writing-code-comments/).
 
-## Minimize Code
-
-  - Use less code. Avoid repetition.
-  - Reuse functions.
-  - Find the best abstraction. ie) Functional Programming for dealing with collections (advanced primitives). Inheritance for dealing with the relationships of real world objects.
 
 ## No tabs
 
