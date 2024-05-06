@@ -135,7 +135,8 @@
   padding-top: $sp-3;
   padding-bottom: $sp-3;
   color: $body-heading-color;
-  @include fs-6;
+  @include fs-5; /* changed from 6 to 5 to to fit on single line */
+
 
   @include mq(md) {
     padding-top: $sp-2;
