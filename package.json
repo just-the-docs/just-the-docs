@@ -1,11 +1,12 @@
 {
-  "name": "just-the-docs",
+  "name": "Isalos Analytics Documentation",
   "version": "0.3.3",
-  "description": "A modern Jekyll theme for documentation",
-  "repository": "just-the-docs/just-the-docs",
+  "description": "The documentation of the Isalos Analytics Platfom",
+  "repository": "NovaMdev/Isalos-Documentation.github.io",
   "license": "MIT",
-  "bugs": "https://github.com/just-the-docs/just-the-docs/issues",
+  "bugs": "",
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.2.5",
     "stylelint": "^15.11.0",
