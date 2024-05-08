@@ -14,17 +14,17 @@ GEM
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     afm (0.2.2)
-    async (2.10.2)
-      console (~> 1.10)
+    async (2.11.0)
+      console (~> 1.25, >= 1.25.2)
       fiber-annotation
       io-event (~> 1.5, >= 1.5.1)
       timers (~> 4.1)
-    bigdecimal (3.1.7)
+    bigdecimal (3.1.8)
     colorator (1.1.0)
     concurrent-ruby (1.2.3)
-    console (1.23.6)
+    console (1.25.2)
       fiber-annotation
-      fiber-local
+      fiber-local (~> 1.1)
       json
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -38,14 +38,16 @@ GEM
       net-http
     ffi (1.16.3)
     fiber-annotation (0.2.0)
-    fiber-local (1.0.0)
+    fiber-local (1.1.0)
+      fiber-storage
+    fiber-storage (0.1.0)
     forwardable-extended (2.6.0)
     google-protobuf (4.26.1-arm64-darwin)
       rake (>= 13)
     google-protobuf (4.26.1-x86_64-linux)
       rake (>= 13)
     hashery (2.1.2)
-    html-proofer (5.0.8)
+    html-proofer (5.0.9)
       addressable (~> 2.3)
       async (~> 2.1)
       nokogiri (~> 1.13)
