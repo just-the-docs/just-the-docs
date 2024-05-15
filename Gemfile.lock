@@ -99,9 +99,9 @@ GEM
     mercenary (0.4.0)
     net-http (0.4.1)
       uri
-    nokogiri (1.16.4-arm64-darwin)
+    nokogiri (1.16.5-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.4-x86_64-linux)
+    nokogiri (1.16.5-x86_64-linux)
       racc (~> 1.4)
     octokit (6.1.1)
       faraday (>= 1, < 3)
