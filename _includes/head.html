@@ -35,9 +35,9 @@
   {% assign file = site.static_files | where: "path", png_path | first %}
   <!-- If social.png exists, use that as the social media preview image. Otherwise, use titleSlide.png.   -->
   {% if file %}
-    <meta property="og:image" content="{{ '/assets/img/social.png' | relative_url }}">
+    <meta property="og:image" content="{{ '/assets/img/social.png' | relative_url }}"/>
   {% else %}
-    <meta property="og:image" content="{{ '/assets/img/titleSlide.png' | relative_url }}">
+    <meta property="og:image" content="{{ '/assets/img/titleSlide.png' | relative_url }}"/>
   {% endif %}
   
   <!-- Default favicon is SCDS. If favicon_ico is defined, set it to that. -->
