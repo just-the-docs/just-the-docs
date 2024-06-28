@@ -7,6 +7,8 @@ permalink: /cityjsonseq/
 
 # CityJSONSeq (CityJSON Text Sequences)
 
+![](conveyor.svg)
+
 ## Table of contents
 {: .no_toc .text-delta }
 
