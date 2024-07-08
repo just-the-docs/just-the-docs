@@ -81,6 +81,7 @@ Thus those need to be known by the client/software parsing the stream.
 The first JSON Object should therefore be of type `"CityJSON"` and contain the necessary information.
 Notice that the properties `"CityObjects"` and `"vertices"` are mandatory (for the [JSON Object to be valid](https://www.cityjson.org/specs/#cityjson-object)) but should be respectively an empty JSON object and an empty array.
 Here's one example:
+
 ```json
 {"type":"CityJSON","version":"2.0","transform": {"scale":[1.0,1.0,1.0],"translate": [0.0, 0.0, 0.0]},"metadata":{"referenceSystem":"https://www.opengis.net/def/crs/EPSG/0/7415"},"CityObjects":{},"vertices":[]}
 ```
@@ -94,12 +95,20 @@ The subsequent JSON Objects must all be of type `"CityJSONFeature"`, which means
 {"type":"CityJSONFeature","id":"c","CityObjects":{...},"vertices":[...]} 
 ```
 
+## CityJSONSeq examples
 
-## Reading and writing CityJSONSeq with cjseq
+| dataset | CityJSONSeq file | description |  
+| ------- | ---------------- | ----------- |
+| 3DBAG   | [3dbag_b2.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonseq/3dbag_b2.city.jsonl) | 2 buildings randomly selected from the 3DBAG, LoD2.2 only |
+| Montréal   | [montréal_b4.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonseq/montréal_b4.city.jsonl) | 4 buildings randomly selected from the Montréal dataset |
 
-The software [cjseq](https://github.com/cityjson/cjseq) allows us to convert between CityJSON and CityJSONSeq, and vice-versa
-.
-cjseq has at the moment 3 commands: 
+
+## Software to process CityJSONSeq
+
+### cjseq: CityJSON <=> CityJSONSeq
+
+The software [cjseq](https://github.com/cityjson/cjseq) allows us to convert between CityJSON and CityJSONSeq, and vice-versa.
+cjseq has at the moment 3 commands:
 
   1. cat: CityJSON ==> CityJSONSeq
   2. collect: CityJSONSeq ==> CityJSON
@@ -117,18 +126,9 @@ And conversely convert a stream to a CityJSON file:
 cat myfile.city.jsonl | cjseq collect > myfile.city.json
 ```
 
+### Validating a CityJSONSeq
 
-## CityJSONSeq examples
-
-| dataset | CityJSONSeq file | description |  
-| ------- | ---------------- | ----------- |
-| 3DBAG   | [3dbag_b2.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonseq/3dbag_b2.city.jsonl) | 2 buildings randomly selected from the 3DBAG, LoD2.2 only |
-| Montréal   | [montréal_b4.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonseq/montréal_b4.city.jsonl) | 4 buildings randomly selected from the Montréal dataset |
-
-
-## Validating a stream
-
-### With the online validator
+#### With the online validator
 
 The [official schema-validator of CityJSON](https://validator.cityjson.org) accepts CityJSONSeq files, if they are structured as above ([3dbag_b2.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonl/3dbag_b2.city.jsonl) and [montréal_b4.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonl/montréal_b4.city.jsonl) are two examples).
 
@@ -137,7 +137,7 @@ You can just drop those files and the validator will indicate, *per line*, if th
 [![](validator.png)](https://validator.cityjson.org)
 
 
-### Locally with cjval
+#### Locally with cjval
 
 The official [schema-validator of CityJSON (called cjval)](https://github.com/cityjson/cjval) can validate CityJSONSeq streams.
 Each line is individually validated and errors reported:
@@ -154,7 +154,7 @@ cjseq cat -f myfile.city.json | cjval --verbose
 ```
 
 
-## cjseqview: a small viewer for CityJSONSeq
+### cjseqview: a small viewer for CityJSONSeq
 
 ![](https://raw.githubusercontent.com/cityjson/viewcjl/main/demo.png)
 
@@ -170,3 +170,8 @@ cat ./data/b2.city.jsonl | python ./src/cjseqview.py
 ```sh
 cat NYC.city.jsonl | cjseq filter --random 10 | python ./src/cjseqview.py`
 ```
+
+## Scientific article about CityJSONSeq
+
+{: .highlight }
+Ledoux H,  Stavropoulou G, and Dukai B (2024). Streaming CityJSON datasets. **Proceedings 3D GeoInfo 2024, (ISPRS volume XLVIII-4/W11-2024)**, pp. 57–63, Vigo (Spain) [<i class="fas fa-bookmark"></i>](https://doi.org/10.5194/isprs-archives-XLVIII-4-W11-2024-57-2024) [<i class="fas fa-file-pdf"></i>](https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/57/2024/isprs-archives-XLVIII-4-W11-2024-57-2024.pdf)
