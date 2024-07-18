@@ -1,4 +1,11 @@
 
+- name: Human perception of urban buildings
+  url:  https://github.com/binyulei/3D_building_perception/blob/main/perception.ext.json
+  description: "Integration of the visual perception of buildings as extra attributes"
+  status: 0.5
+  organisation: "[NUS urban analytics lab](https://ual.sg)"
+  details: https://doi.org/10.5194/isprs-annals-X-4-W5-2024-211-2024
+
 - name: Energy Extension
   url:  https://github.com/ozgetufan/cjenergy/blob/master/schemas/extensions/energy.ext.json
   description: "Energy Extension for Space Heating Demand Calculation (basically a conversion from the KIT Energy ADE)"
