@@ -1,0 +1,23 @@
+{%- comment -%}
+  Include as: {%- include components/nav/pages.html pages=page_array all=bool -%}
+  Depends on: include.pages.
+  Results in: HTML for the main navigation when all is nil or false;
+    adds links to pages excluded from the main navigation when all is true.
+  Includes: components/nav/links.html
+  Assigns to:
+    nav_parenthood, nav_top_nodes, nav_top_node_titles, nav_ancestors.
+{%- endcomment -%}
+
+{%- assign nav_parenthood = include.pages
+      | where_exp: "item", "item.title != nil" | group_by: "parent" -%}
+
+{%- assign nav_top_nodes = nav_parenthood
+      | where_exp: "item", "item.name == ''" | map: "items" | first -%}
+
+{%- include components/nav/sorted.html pages=nav_top_nodes -%}
+
+{% assign nav_top_node_titles = nav_top_nodes | map: "title" -%}
+
+{%- assign nav_ancestors = "" | split: "" -%}
+
+{%- include components/nav/links.html pages=nav_sorted ancestors=nav_ancestors all=include.all -%}
