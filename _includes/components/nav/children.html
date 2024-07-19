@@ -1,0 +1,48 @@
+{%- comment -%}
+  Include as: {%- include components/nav/children.html node=node ancestors=title_array all=bool -%}
+  Depends on: include.node, include.ancestors, include.all, nav_parenthood, nav_top_node_titles.
+  Includes: components/nav/sorted.html.
+  Assigns to: nav_children.
+  Overwrites:
+    nav_candidates, nav_child, nav_child_ok.
+{%- endcomment -%}
+
+{%- assign nav_children = "" | split: "" -%}
+
+{%- if include.all == true or include.node.has_children != false -%}
+
+  {%- assign nav_candidates = nav_parenthood
+        | where: "name", include.node.title | map: "items" | first -%}
+
+  {%- for nav_child in nav_candidates -%}
+    {%- assign nav_child_ok = true -%}
+
+    {%- if nav_child.grand_parent and nav_child.grand_parent != include.node.parent -%}
+      {%- assign nav_child_ok = false -%}
+    {%- endif -%}
+
+    {%- if nav_child.ancestor and nav_child.ancestor != include.node.title -%}
+      {%- unless include.ancestors contains nav_child.ancestor -%}
+        {%- assign nav_child_ok = false -%}
+      {%- endunless -%}
+    {%- endif -%}
+
+    {%- comment -%}
+      The following check rejects nav_child as 3rd-level when include.node is 2nd-level
+      and nav_child can also be 2nd-level. This is for backwards compatibility with
+      existing 3-level sites.
+    {%- endcomment -%}
+    {%- if nav_child.grand_parent == nil and nav_child.ancestor == nil and 
+          nav_top_node_titles contains nav_child.parent and include.ancestors.size >= 1 -%}
+      {%- assign nav_child_ok = false -%}
+    {%- endif -%}
+
+    {%- if nav_child_ok -%}
+      {%- assign nav_children = nav_children | push: nav_child -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+{%- endif -%}
+
+{%- include components/nav/sorted.html pages=nav_children -%}
+{%- assign nav_children = nav_sorted -%}

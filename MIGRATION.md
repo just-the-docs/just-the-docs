@@ -41,7 +41,7 @@ This document contains instructions on how to migrate and upgrade Just the Docs 
 > and pull the changes of a new release to your clone,
 > you may need to resolve merge conflicts.
 
-[CHANGELOG]: {{ site.baseurl }}{% link CHANGELOG.md %}
+[CHANGELOG]: {% link CHANGELOG.md %}
 
 ## v0.6.x - v0.7.0
 
@@ -373,7 +373,7 @@ For changes since v0.3.3, the log usually references the merged PR that made the
 
 #### Configuration
 
-- Mermaid support: first-class support for [Mermaid](https://mermaid.js.org/) - a JavaScript-based diagram and charting tool supported by GitHub - has been added to the theme. **This feature is opt-in.** See the new doc subsections in [Configuration]({% link docs/configuration.md %}#mermaid-diagrams) and [Code]({% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more.
+- Mermaid support: first-class support for [Mermaid](https://mermaid.js.org/) - a JavaScript-based diagram and charting tool supported by GitHub - has been added to the theme. **This feature is opt-in.** See the new doc subsections in [Configuration]({% link docs/configuration.md %}#mermaid-diagrams) and [Code]({% link docs/ui-components/code/index.md %}#mermaid-diagram-code-blocks) for more.
 - Multiple Google Analytics tags are now supported. PR: [#1029]
 
 #### Customization
