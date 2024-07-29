@@ -139,3 +139,21 @@ Contributions by the following individuals:
 
 All content is made available under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 ```
+
+## Credits
+
+This work is based on [Just the Docs](https://github.com/just-the-docs/just-the-docs). License is attached below.
+
+The MIT License (MIT)
+
+Copyright (c) 2016 Patrick Marsceill
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
