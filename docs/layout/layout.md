@@ -1,16 +1,16 @@
 ---
-title: Layout
+title: 排版
 layout: default
 nav_order: 4.5
 has_children: true
 ---
 
-# Layout
+# 排版
 
 You specify the layout for a page in its [front matter]. Just the Docs has a `default` layout with a sidebar, used for almost all pages in the theme docs, and a `minimal` layout that omits the sidebar.
 {: .fs-6 .fw-300 }
 
-## The layout concept
+## 排版概念
 
 See the [Jekyll docs page about layouts] for an explanation of the general idea of layouts and how to specify them.
 
