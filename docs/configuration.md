@@ -35,9 +35,21 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 
 {: .warning }
-> 我是一个警告
+> 警告
+>
 > 我是一个警告
 
 {: .new}
+> 更新
+>
 > 我是一个更新
-> 我是一个更新
+
+{: .note}
+> 笔记
+>
+> 我是一个笔记
+
+{: .important}
+> 重点
+>
+> 我是一个重点
