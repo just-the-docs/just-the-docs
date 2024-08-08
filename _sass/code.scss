@@ -142,10 +142,10 @@ div.highlighter-rouge {
 
 // for AsciiDoc. we also need to fix the margins for its parent container.
 div.listingblock {
-  @include scroll-and-spacing("div.content", "div.content > pre");
-
   margin-top: 0;
   margin-bottom: $sp-3;
+
+  @include scroll-and-spacing("div.content", "div.content > pre");
 }
 
 // {% highlight LANG %}...{% endhighlight %},
@@ -176,12 +176,12 @@ figure.highlight {
 
   td,
   pre {
-    @include fs-2;
-
     min-width: 0;
     padding: 0;
     background-color: $code-background-color;
     border: 0;
+
+    @include fs-2;
   }
 
   td.gl {
