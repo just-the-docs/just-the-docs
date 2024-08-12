@@ -22,8 +22,7 @@
     "ignoreFiles": [
       "assets/css/just-the-docs-default.scss",
       "assets/css/just-the-docs-light.scss",
-      "assets/css/just-the-docs-dark.scss",
-      "_sass/vendor/**/*.scss"
+      "assets/css/just-the-docs-dark.scss"
     ],
     "extends": [
       "stylelint-config-standard-scss"

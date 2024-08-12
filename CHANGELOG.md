@@ -20,6 +20,7 @@ Code changes to `main` that are *not* in the latest release:
 - Added: `nav_enabled` site, layout, and page-level variable to selectively show or hide the side/mobile menu by [@kevinlin1] in [#1441]. The minimal layout was reimplemented using this feature, and now has support for the site-wide search bar and auxiliary links.
 - Fixed: protect `search-data.json` file from front matter default for layout by [@mattxwang] in [#1468]
 - Fixed: Sass mixed declarations by [@bobvandevijver] in [#1495]
+- Fixed: redundant `monospace` in `pre`, `code`, `kbd`, `samp` reset by [@mattxwang] in [#1508]
 
 Docs changes made since the latest release:
 
@@ -29,6 +30,7 @@ Docs changes made since the latest release:
 
 [#1468]: https://github.com/just-the-docs/just-the-docs/pull/1468
 [#1495]: https://github.com/just-the-docs/just-the-docs/pull/1495
+[#1508]: https://github.com/just-the-docs/just-the-docs/pull/1508
 
 ## Release v0.8.2
 
