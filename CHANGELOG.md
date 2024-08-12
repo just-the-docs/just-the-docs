@@ -31,7 +31,7 @@ This release should be a straightforward upgrade for all users of Just the Docs.
 
 ### Using Release `v0.9.0`
 
-Users who have not pinned the theme version will be **automatically upgraded to `v0.8.0` the next time they build their site**.
+Users who have not pinned the theme version will be **automatically upgraded to `v0.9.0` the next time they build their site**.
 
 To use this release explicitly as a remote theme:
 
