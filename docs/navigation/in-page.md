@@ -62,7 +62,7 @@ The attribute `open` (which expands the Table of Contents by default) and the st
 {: .note }
 `{:toc}` can be used only once on each page.
 
-## Back to Top
+## Back to Top {#back-to-top-doc}
 
 You can add a link from the bottom of each page to its top. You do this by including the `back_to_top` configuration option in your site's `_config.yml` file, together with `back_to_top_text` for the anchor link.
 
