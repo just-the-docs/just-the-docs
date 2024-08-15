@@ -1,0 +1,34 @@
+name: Run all page tests
+
+# Run when a PR is opened, any branch is pushed
+# Also allow manually triggering workflows, and running if a release is created.
+on:
+  - pull_request
+  - push
+  - workflow_dispatch
+  - deployment
+  - release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          # The Ruby version is determined by either a `.ruby-version` or a `.tool-versions` file in root of the repo.
+          bundler-cache: true
+      - name: Run a11y tests
+        run: |
+          bundle exec rspec
+      - name: summary
+        if: failure()
+        run: ruby spec/support/spec_summary.rb
+      - name: Keep screenshots from failed tests
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: screenshots
+          path: ${{ github.workspace }}/tmp/capybara
+          if-no-files-found: ignore
+          retention-days: 7
