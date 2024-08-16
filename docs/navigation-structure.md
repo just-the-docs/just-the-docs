@@ -182,6 +182,13 @@ has_toc: false
 
 ```
 
+#### Table of Contents (with images)
+If you'd like your table of contents for child documents to be displayed with image links, use the following [Font Matter](https://jekyllrb.com/docs/front-matter/) to define the image path.
+
+```yaml
+image: ../../assets/images/<your-image.jpg>
+```
+
 ### Children with children
 
 {: .text-gamma }

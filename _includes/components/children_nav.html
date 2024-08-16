@@ -28,6 +28,7 @@
 {% for child in sorted_pages %}
   <li>
     <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+        {% if child.image %}<br><a href="{{ child.url | relative_url }}"><img src="{{ child.image }}" width="200"></a>{% endif %}
   </li>
 {% endfor %}
 </ul>
