@@ -21,8 +21,10 @@ Code changes to `main` that are *not* in the latest release:
 
 Docs changes made since the latest release:
 
-- N/A
+- Added: Allow unlimited multi-level navigation by [@pdmosses] in [#1440]
 
+[#1440]: https://github.com/just-the-docs/just-the-docs/pull/1440
+ 
 ## Release v0.9.0
 
 Hi folks! This minor release adds a `nav_enabled` set of variables to enable/disable the navigation at a site, layout, and page level --- and uses that to add search and auxilary links to the `minimal` layout. In addition, it fixes `search-data.json` corruption with default layouts and some minor CSS/SCSS issues.
