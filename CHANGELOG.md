@@ -606,7 +606,7 @@ We're so excited to release Just the Docs `v0.4.0`. This release has been almost
 - [callouts](https://just-the-docs.com/docs/ui-components/callouts/), a new design component to highlight content
 - [configuring mermaid.js](https://just-the-docs.com/docs/ui-components/code/#mermaid-diagram-code-blocks), a markdown-native diagram visualization library
 - [copy code button](https://just-the-docs.com/docs/ui-components/code/#copy-button) for code snippets
-- [external navigation links](https://just-the-docs.com/docs/navigation-structure/#external-navigation-links)
+- external navigation links
 - major improvements to nav generation efficiency and robustness
 - minor improvements to built-in accessibility (SVG icons, nav titles, skip to main content)
 - [modularized site components](https://just-the-docs.com/docs/customization/#custom-layouts-and-includes) (advanced feature)
