@@ -20,7 +20,7 @@ Sometimes you will want to create a page with many children. First, it is recomm
         ├─ callouts.md
         ├─ code
             ├─ index.md (parent page)
-            └─ line-nos.md
+            └─ line-numbers.md
         ├─ labels.md
         ├─ tables.md
         └─ typography.md
