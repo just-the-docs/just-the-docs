@@ -1,9 +1,10 @@
 {%- comment -%}
-  Include as: {%- include_cached components/site_nav.html -%}
+  Include as: {%- include_cached components/site_nav.html all=bool -%}
   Depends on: site.
-  Results in: HTML for the site-nav.
+  Results in: cached HTML for the main navigation when `all` is nil or false;
+    includes links to pages excluded from the main navigation when `all` is true.
   Includes:
-    components/nav.html
+    components/nav/pages.html
   Overwrites:
     pages_top_size, collections_size, collection_entry,
     collection_key, collection_value, collection.
@@ -16,7 +17,7 @@
         | where_exp:"item", "item.nav_exclude != true"
         | size %}
   {% if pages_top_size > 0 %}
-    {% include components/nav.html pages=site.html_pages %}
+    {% include components/nav/pages.html pages=site.html_pages all=include.all %}
   {% endif %}
   {%- if site.nav_external_links -%}
     <ul class="nav-list">
@@ -51,17 +52,21 @@
                 </button>
                 {%- endif -%}
                 <div class="nav-category">{{ collection_value.name }}</div>
-                {% include components/nav.html pages=collection %}
+                {% include components/nav/pages.html pages=collection all=include.all %}
               </li>
             </ul>
           {% else %}
             <div class="nav-category">{{ collection_value.name }}</div>
-            {% include components/nav.html pages=collection %}
+            {% include components/nav/pages.html pages=collection all=include.all %}
           {% endif %}
         {% else %}
-          {% include components/nav.html pages=collection %}
+          {% include components/nav/pages.html pages=collection all=include.all %}
         {% endif %}
       {% endif %}
     {% endfor %}
   {% endif %}
 </nav>
+
+{% if site.nav_error_report %}
+{{ nav_error_report }}
+{%- endif %}

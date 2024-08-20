@@ -17,11 +17,15 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+### New Features
+
+- Added: Allow unlimited multi-level navigation by [@pdmosses] in [#1431]
 
 Docs changes made since the latest release:
 
 - N/A
+
+[#1431]: https://github.com/just-the-docs/just-the-docs/pull/1431
 
 ## Release v0.9.0
 

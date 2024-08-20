@@ -122,6 +122,9 @@ nav_external_links:
   - title: Just the Docs on GitHub
     url: https://github.com/just-the-docs/just-the-docs
 
+# Show navigation error report
+nav_error_report: true # default is false/nil.
+
 liquid:
    error_mode: strict
    strict_filters: true
