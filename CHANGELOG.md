@@ -23,9 +23,10 @@ Code changes to `main` that are *not* in the latest release:
 
 Docs changes made since the latest release:
 
-- N/A
+- Added: Allow unlimited multi-level navigation by [@pdmosses] in [#1440]
 
 [#1431]: https://github.com/just-the-docs/just-the-docs/pull/1431
+[#1440]: https://github.com/just-the-docs/just-the-docs/pull/1440
 
 ## Release v0.9.0
 
