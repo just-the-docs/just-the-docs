@@ -48,6 +48,9 @@ exclude:
    - Dockerfile
  # theme test code
    - fixtures/
+   - spec/
+   - tmp
+   - .rspec
 
 # Set a path/url to a logo that will be displayed instead of the title
 #logo: "/assets/images/just-the-docs.png"
@@ -179,6 +182,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-github-metadata
   - jekyll-include-cache
+  - jekyll-sitemap
 
 kramdown:
   syntax_highlighter_opts:
