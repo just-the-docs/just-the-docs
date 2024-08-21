@@ -17,11 +17,16 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+### New Features
+
+- Added: Allow unlimited multi-level navigation by [@pdmosses] in [#1431]
 
 Docs changes made since the latest release:
 
-- N/A
+- Added: Allow unlimited multi-level navigation by [@pdmosses] in [#1440]
+
+[#1431]: https://github.com/just-the-docs/just-the-docs/pull/1431
+[#1440]: https://github.com/just-the-docs/just-the-docs/pull/1440
 
 ## Release v0.9.0
 
@@ -601,7 +606,7 @@ We're so excited to release Just the Docs `v0.4.0`. This release has been almost
 - [callouts](https://just-the-docs.com/docs/ui-components/callouts/), a new design component to highlight content
 - [configuring mermaid.js](https://just-the-docs.com/docs/ui-components/code/#mermaid-diagram-code-blocks), a markdown-native diagram visualization library
 - [copy code button](https://just-the-docs.com/docs/ui-components/code/#copy-button) for code snippets
-- [external navigation links](https://just-the-docs.com/docs/navigation-structure/#external-navigation-links)
+- external navigation links
 - major improvements to nav generation efficiency and robustness
 - minor improvements to built-in accessibility (SVG icons, nav titles, skip to main content)
 - [modularized site components](https://just-the-docs.com/docs/customization/#custom-layouts-and-includes) (advanced feature)

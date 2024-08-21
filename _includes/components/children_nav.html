@@ -1,33 +1,89 @@
 {%- comment -%}
   Include as: {%- include components/children_nav.html -%}
-  Depends on: page, site.
+  Depends on: page, site, nav_breadcrumbs.
   Results in: HTML for the children-navigation component.
-  Includes:
-    sorted_pages.html
-    toc_heading_custom.html
+  Includes: components/nav/sorted.html, toc_heading_custom.html.
   Overwrites:
-    child_pages.
+    nav_ancestor_links, nav_top_node_titles, nav_child_candidates, nav_children,
+    nav_child, nav_child_ok, nav_child_ancestor, nav_sorted.
 {%- endcomment -%}
 
-{%- if page.has_children == true and page.has_toc != false -%}
-  {%- assign child_pages = site[page.collection]
-        | default: site.html_pages
-        | where: "parent", page.title
-        | where: "grand_parent", page.parent -%}
+{%- comment -%}
+  Whether a page has any children is checked efficiently by inspecting the cached
+  site_nav. If the page has no children, nav_children is set to an empty array;
+  otherwise nav_children is left unset.
+{%- endcomment -%}
 
-  {%- include sorted_pages.html pages = child_pages -%}
+{%- if page.has_children == false -%}
+  {%- assign nav_children = "" | split: "" -%}
+{%- else -%}
+
+  {%- assign nav_children = nil -%}
+
+  {%- capture nav_list_link -%}
+  <a href="{{ page.url | relative_url }}" class="nav-list-link">
+  {%- endcapture -%}
+
+  {%- capture site_nav -%}
+  {%- include_cached components/site_nav.html all=true -%}
+  {%- endcapture -%}
+
+  {%- capture nav_list_simple -%}
+  <ul class="nav-list">
+  {%- endcapture -%}
+
+  {%- assign nav_child_start = site_nav
+        | split: nav_list_link | last
+        | split: "</a>" | slice: 1 | first -%}
+
+  {%- assign nav_child_test = nav_child_start 
+        | remove_first: nav_list_simple | prepend: nav_list_simple -%}
+    
+  {%- if nav_child_start != nav_child_test -%}
+    {%- assign nav_children = "" | split: "" -%}
+  {%- endif -%}
+
+{%- endif -%}
+
+{%- unless nav_children -%}
+
+  {%- comment -%}
+    The layout is assumed to include components/breadcrumbs.html before this file,
+    otherwise it needs to be included here.
+  {%- endcomment -%}
+
+  {%- assign nav_ancestors = "" | split: "" -%}
+  {%- for nav_link in nav_breadcrumbs -%}
+    {%- assign nav_title = nav_link | split: ">" | slice: 1 | first | append: ">" | remove: "</a>" -%}
+    {%- assign nav_ancestors = nav_ancestors | push: nav_title -%}
+  {%- endfor -%}
+
+  {%- assign nav_parenthood = site[page.collection] | default: site.html_pages
+    | where_exp: "item", "item.title != nil" | group_by: "parent" -%}
+
+  {%- assign nav_top_nodes = nav_parenthood
+      | where_exp: "item", "item.name == ''" | map: "items" | first -%}
+
+  {% assign nav_top_node_titles = nav_top_nodes | map: "title" -%}
+
+  {%- include components/nav/children.html node=page ancestors=nav_ancestors all=true -%}
+
+{%- endunless -%}
+
+{%- if nav_children.size >= 1 -%}
 
   {%- if page.child_nav_order == 'desc' or page.child_nav_order == 'reversed' -%}
-    {%- assign sorted_pages = sorted_pages | reverse -%}
+    {%- assign nav_children = nav_children | reverse -%}
   {%- endif -%}
-{%- endif -%}
 
 <hr>
 {% include toc_heading_custom.html %}
 <ul>
-{% for child in sorted_pages %}
+  {% for nav_child in nav_children %}
   <li>
-    <a href="{{ child.url | relative_url }}">{{ child.title }}</a>{% if child.summary %} - {{ child.summary }}{% endif %}
+    <a href="{{ nav_child.url | relative_url }}">{{ nav_child.title }}</a>{% if nav_child.summary %} - {{ nav_child.summary }}{% endif %}
   </li>
-{% endfor %}
+  {% endfor %}
 </ul>
+
+{%- endif -%}
