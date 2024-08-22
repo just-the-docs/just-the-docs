@@ -121,7 +121,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rexml (3.3.3)
+    rexml (3.3.6)
       strscan
     rouge (4.2.1)
     ruby-rc4 (0.1.5)
