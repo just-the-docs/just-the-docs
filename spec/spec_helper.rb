@@ -35,7 +35,6 @@ require_relative 'support/jekyll'
 # Update this if you move this file.
 DESTINATION = 'tmp/_site_specs/'
 FILE_SERVER_ROOT = File.expand_path("../#{DESTINATION}", __dir__)
-puts FILE_SERVER_ROOT
 
 Capybara.register_driver :chrome_headless do |app|
   options = Selenium::WebDriver::Chrome::Options.new
@@ -63,12 +62,11 @@ Capybara::Screenshot.register_filename_prefix_formatter(:rspec) do |example|
   page = example.example_group.top_level_description.gsub(' is accessible', '')
   mode = example.example_group.description # i.e. light mode / dark mode
   standard = example.description.split.last # i.e "meets WCAG 2.1"
-  test_case = "#{page}_#{mode}_#{standard}"
-  test_case = test_case.gsub(%r{^/}, '').gsub(%r{[/\s+]}, '-')
-
-  "tmp/capybara/screenshot_#{test_case}"
+  test_case = "#{page}_#{mode}_#{standard}".gsub(%r{^/}, '').gsub(%r{[/\s+]}, '-')
+  "screenshot_#{test_case}"
 end
 
+Capybara.save_path = 'tmp/capybara/'
 Capybara::Screenshot.autosave_on_failure = true
 Capybara::Screenshot.append_timestamp = false
 Capybara::Screenshot.prune_strategy = :keep_last_run
