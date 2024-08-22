@@ -6,6 +6,7 @@
 # spec_helper ensures the webiste is built and can be served locally
 require 'spec_helper'
 
+
 # Axe-core test standards groups
 # See https://github.com/dequelabs/axe-core/blob/develop/doc/API.md#axe-core-tags
 # Tests are segmented in 2.0, 2.1 and 2.2+
@@ -24,6 +25,22 @@ excluded_elements = [
   '[data-a11y-errors="true"]'
 ]
 
+RSpec.shared_examples 'a11y tests' do
+  it 'meets WCAG 2.1' do
+    expect(page).to be_axe_clean
+      .according_to(*required_a11y_standards)
+      .skipping(*skipped_rules)
+      .excluding(*excluded_elements)
+  end
+
+  it 'meets WCAG 2.2' do
+    expect(page).to be_axe_clean
+      .according_to(*complete_a11y_standards)
+      .skipping(*skipped_rules)
+      .excluding(*excluded_elements)
+  end
+end
+
 # We must call this to ensure the build it up-to-date.
 build_jekyll_site!
 ALL_PAGES = load_sitemap
@@ -36,18 +53,22 @@ ALL_PAGES.each do |path|
       visit(path)
     end
 
-    it 'meets WCAG 2.1' do
-      expect(page).to be_axe_clean
-        .according_to(*required_a11y_standards)
-        .skipping(*skipped_rules)
-        .excluding(*excluded_elements)
+    context 'when light mode' do
+      before do
+        visit(path)
+        page.execute_script('jtd.setTheme("light")')
+      end
+
+      include_context 'a11y tests'
     end
 
-    it 'meets WCAG 2.2' do
-      expect(page).to be_axe_clean
-        .according_to(*complete_a11y_standards)
-        .skipping(*skipped_rules)
-        .excluding(*excluded_elements)
+    context 'when dark mode' do
+      before do
+        visit(path)
+        page.execute_script('jtd.setTheme("dark")')
+      end
+
+      include_context 'a11y tests'
     end
   end
 end
