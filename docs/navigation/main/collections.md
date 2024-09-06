@@ -14,7 +14,8 @@ However, you can configure Just the Docs to include also pages from [Jekyll coll
 
 [^1]: You can optionally specify a directory to store all your collections. For example, if you specify `collections_dir: my_collections` in `_config.yml`, you should then store the pages of the `tests` collection in the `my_collections/_tests` directory.
 
-#### Example
+## Example: defining custom collections
+{: .text-delta }
 
 To define a Jekyll `tests` collection named `Tests` in your main navigation, store its pages in the `_tests` directory, and add the following to `_config.yml`:
 
@@ -41,9 +42,10 @@ Together with the `name` to be used for a collection in the navigation, you can 
 
 The main navigation for all your normal pages (if any) is displayed before those in collections. When *all* your pages are in a single collection, its name is not displayed.
 
-You can configure multiple collections. This creates categories in the main navigation with the configured names.
+## Example: multiple collections
+{: .text-delta }
 
-#### Example
+You can configure multiple collections. This creates categories in the main navigation with the configured names.
 
 ```yaml
 collections:

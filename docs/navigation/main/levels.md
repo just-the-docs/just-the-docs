@@ -31,7 +31,8 @@ Sometimes you will want to create a page with many children. First, it is recomm
 └─ ...
 ```
 
-#### Example
+## Example: page with no parents
+{: .text-delta }
 
 ```yaml
 ---
@@ -42,13 +43,14 @@ nav_order: 3
 
 Here we're setting up the UI Components landing page that is available at URL `/docs/ui-components`, which is ordered second in the main navigation.
 
-The navigation links for all pages with children come with an expander. When you click the expander, the display of the children is toggled, so you can expand or collapse all the children displays, regardless of which page is currently active. 
+The navigation links for all pages with children come with an expander. When you click the expander, the display of the children is toggled, so you can expand or collapse all the children displays, regardless of which page is currently active.
 
 ## Child Pages
 
 On child pages, simply set the `parent` front matter to the parent page's `title`, and set a navigation order (relative to pages having the same parent).
 
-#### Example
+### Example: creating a child page
+{: .text-delta }
 
 ```yaml
 ---
@@ -67,9 +69,10 @@ The Buttons page appears as a child of UI Components and appears second in the U
 
 ## Multi-level Child Pages
 
-Child pages can themselves have children, to any number of levels. 
+Child pages can themselves have children, to any number of levels.
 
-#### Example
+### Example: pages with (recursive) children
+{: .text-delta }
 
 ```yaml
 ---
