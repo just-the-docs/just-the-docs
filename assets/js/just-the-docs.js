@@ -564,11 +564,6 @@ jtd.onReady(function(){
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
-
-  // Temporary Accessibility Changes
-
-  // https://dequeuniversity.com/rules/axe/4.9/scrollable-region-focusable?application=axeAPI
-  document.querySelectorAll("div.highlight").forEach(codeBlock => codeBlock.setAttribute("tabindex", "0"));
 });
 
 // Copy button on code
