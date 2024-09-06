@@ -21,7 +21,7 @@ Just the Docs supports two color schemes: light (default), and dark.
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
 
 ### Example: preview dark color scheme
-{: .no_toc }
+{: .no_toc .text-delta }
 
 ```yaml
 # Color scheme supports "light" (default) and "dark"
@@ -77,7 +77,7 @@ Available variables are listed in the [\_variables.scss](https://github.com/just
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
 #### Example: custom link color
-{: .no_toc }
+{: .no_toc .text-delta }
 
 ```scss
 $link-color: $blue-000;
@@ -143,7 +143,7 @@ To do this, put your styles in the file `_sass/custom/custom.scss`.
 This will allow for all overrides to be kept in a single file, and for any upstream changes to still be applied.
 
 ### Example: custom print styles
-{: .no_toc }
+{: .no_toc .text-delta }
 
 For example, if you'd like to add your own styles for printing a page, you could add the following styles.
 
