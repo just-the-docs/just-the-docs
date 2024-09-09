@@ -113,8 +113,6 @@ Will make <kbd>Ctrl</kbd> + <kbd>K</kbd> focus the search bar for Windows users 
 Sometimes you might have a page that you don't want to be indexed for the search nor to show up in search results, e.g., a 404 page.
 To exclude a page from search, add the `search_exclude: true` parameter to the page's YAML front matter:
 
-#### Example
-
 {: .no_toc }
 
 ```yaml
@@ -158,7 +156,8 @@ By default, the search feature indexes a page's `.content`, `.title`, and *some*
 2. Add a new file named `_includes/lunr/custom-data.json`. Insert custom Liquid code that reads your data (e.g. the page object at `include.page`) then generates custom Javascript fields that hold the custom data you want to index. Verify these fields in the generated `assets/js/search-data.json`.
 3. Add a new file named `_includes/lunr/custom-index.js`. Insert custom Javascript code that reads your custom Javascript fields and inserts them into the search index. You may want to inspect `assets/js/just-the-docs.js` to better understand the code.
 
-#### Example
+### Example: adding custom `usage` and `examples` fields
+{: .text-delta }
 
 This example adds front matter `usage` and `examples` fields to the search index.
 

@@ -15,14 +15,13 @@ nav_order: 5
 
 To support in-page navigation, you can generate a *Table of Contents* (TOC) with links to headings, like the one shown above, as well as a link to the top of the page.
 
-## Table of Contents
+## Generating Table of Contents
 
 To generate a *Table of Contents* in a page, you use Kramdown's `{:toc}` method, immediately after the start of a list. This will automatically generate a list of anchor links to various sections of the page, based on headings and heading levels.
 
-If you want to omit a particular heading from the TOC, follow it immediately by `{: .no_toc }` (possibly together with other CSS class names).
+## Omitting Heading from Table of Contents
 
-#### Example 
-{: .no_toc }
+If you want to omit a particular heading from the TOC, follow it immediately by `{: .no_toc }` (possibly together with other CSS class names).
 
 ```markdown
 # In-Page Navigation
@@ -39,12 +38,9 @@ This example omits the top-level heading (`In-Page Navigation`) from the TOC, as
 
 To get an unordered list, replace `1. TOC` by `- TOC` in the above example.
 
-## Collapsible Table of Contents
+## Collapsible Table of Contents (with `<details>` and `<summary>`)
 
 You can make the Table of Contents collapsible using the `<details>` and `<summary>` elements, as in the following example.
-
-#### Example
-{: .no_toc }
 
 ```markdown
 <details open markdown="block">

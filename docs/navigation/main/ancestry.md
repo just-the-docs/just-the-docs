@@ -10,7 +10,8 @@ If no two pages on your website have the same `title`, you only need to set the 
 
 If two parents have the same `title`, but different grandparents, you can set their `grand_parent` titles to distinguish between their parents. The `grand_parent` title needs to be the same as the `parent` of the `parent`.
 
-#### Example
+## Example: distinguishing parents with `grand_parent`
+{: .text-delta }
 
 ```yaml
 ---

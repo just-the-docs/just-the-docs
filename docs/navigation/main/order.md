@@ -8,7 +8,8 @@ nav_order: 1
 
 To specify a page order, you can use the `nav_order` parameter in the front matter of the pages.
 
-#### Example
+## Example: using `nav_order`
+{: .text-delta }
 
 ```yaml
 ---
@@ -30,6 +31,6 @@ Enclosing strings in quotation marks in front matter is optional, unless they co
 
 ----
 
-[^floats]: Jekyll treats each integer *N* as equal to the corresponding float *N.0*. 
+[^floats]: Jekyll treats each integer *N* as equal to the corresponding float *N.0*.
 
-[^case-insensitive]: *Note for users of previous versions of Just the Docs:* The option `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated. 
+[^case-insensitive]: *Note for users of previous versions of Just the Docs:* The option `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated.
