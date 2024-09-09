@@ -43,6 +43,18 @@ This document contains instructions on how to migrate and upgrade Just the Docs 
 
 [CHANGELOG]: {% link CHANGELOG.md %}
 
+## v0.9.x - v0.10.0
+
+There are no potentially-breaking changes in v0.10.0.
+
+## v0.8.x - v0.9.0
+
+There are no potentially-breaking changes in v0.9.0.
+
+## v0.7.x - v0.8.0
+
+There are no potentially-breaking changes in v0.8.0.
+
 ## v0.6.x - v0.7.0
 
 ### POTENTIALLY-BREAKING CHANGES in v0.7.0
