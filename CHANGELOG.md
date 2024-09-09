@@ -25,6 +25,7 @@ Docs changes made since the latest release:
 - Docs: added unlimited multi-level navigation documentation by [@pdmosses](https://github.com/pdmosses) in [#1440](https://github.com/just-the-docs/just-the-docs/pull/1440)
 - Docs: added sitemap (via `jekyll-sitemap` plugin) by [@mattxwang](https://github.com/mattxwang) in [#1530](https://github.com/just-the-docs/just-the-docs/pull/1530)
 - Docs: fixed (non-systemic) accessibility issues flagged by aXe by [@mattxwang](https://github.com/mattxwang) in [#1531](https://github.com/just-the-docs/just-the-docs/pull/1531)
+- Docs: removed non-essential CHANGELOG information by [@mattxwang](https://github.com/mattxwang) in [#1534](https://github.com/just-the-docs/just-the-docs/pull/1534)
 
 ## v0.9.0
 
