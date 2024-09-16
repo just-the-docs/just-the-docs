@@ -103,6 +103,13 @@ The subsequent JSON Objects must all be of type `"CityJSONFeature"`, which means
 | Montréal   | [montréal_b4.city.jsonl](https://3d.bk.tudelft.nl/opendata/cityjson/cityjsonseq/montréal_b4.city.jsonl) | 4 buildings randomly selected from the Montréal dataset |
 
 
+## Scientific article about CityJSONSeq
+
+{: .highlight }
+Ledoux H,  Stavropoulou G, and Dukai B (2024). Streaming CityJSON datasets. **Proceedings 3D GeoInfo 2024, (ISPRS volume XLVIII-4/W11-2024)**, pp. 57–63, Vigo (Spain) [<i class="fas fa-bookmark"></i>](https://doi.org/10.5194/isprs-archives-XLVIII-4-W11-2024-57-2024) [<i class="fas fa-file-pdf"></i>](https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/57/2024/isprs-archives-XLVIII-4-W11-2024-57-2024.pdf) [<i class="fas fa-file-powerpoint"></i>](https://speakerdeck.com/hugoledoux/streaming-cityjson-datasets)
+
+
+
 ## Software to process CityJSONSeq
 
 ### cjseq: CityJSON <=> CityJSONSeq
@@ -171,7 +178,4 @@ cat ./data/b2.city.jsonl | python ./src/cjseqview.py
 cat NYC.city.jsonl | cjseq filter --random 10 | python ./src/cjseqview.py`
 ```
 
-## Scientific article about CityJSONSeq
 
-{: .highlight }
-Ledoux H,  Stavropoulou G, and Dukai B (2024). Streaming CityJSON datasets. **Proceedings 3D GeoInfo 2024, (ISPRS volume XLVIII-4/W11-2024)**, pp. 57–63, Vigo (Spain) [<i class="fas fa-bookmark"></i>](https://doi.org/10.5194/isprs-archives-XLVIII-4-W11-2024-57-2024) [<i class="fas fa-file-pdf"></i>](https://isprs-archives.copernicus.org/articles/XLVIII-4-W11-2024/57/2024/isprs-archives-XLVIII-4-W11-2024-57-2024.pdf)
