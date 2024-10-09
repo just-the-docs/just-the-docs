@@ -15,54 +15,54 @@ jobs:
       fail-fast: false
       matrix:
         jekyll-version: [3.9, 4.3]
-        os: [ ubuntu-latest, macos-latest, windows-latest ]
+        os: [ubuntu-latest, macos-latest, windows-latest]
         ruby-version: ["3.1", "3.2", "3.3"]
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup Ruby ${{ matrix.ruby-version }}
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: ${{ matrix.ruby-version }}
-        bundler-cache: false
-    - name: Bundle Install (Jekyll ${{ matrix.jekyll-version }})
-      run: bundle install
-      env:
-        BUNDLE_GEMFILE: fixtures/Gemfile-jekyll-${{ matrix.jekyll-version }}
-    - name: Init Search
-      run: bundle exec rake search:init
-      env:
-        BUNDLE_GEMFILE: fixtures/Gemfile-jekyll-${{ matrix.jekyll-version }}
-    - name: Build Site
-      run: bundle exec jekyll build
-      env:
-        BUNDLE_GEMFILE: fixtures/Gemfile-jekyll-${{ matrix.jekyll-version }}
+      - uses: actions/checkout@v4
+      - name: Setup Ruby ${{ matrix.ruby-version }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby-version }}
+          bundler-cache: false
+      - name: Bundle Install (Jekyll ${{ matrix.jekyll-version }})
+        run: bundle install
+        env:
+          BUNDLE_GEMFILE: fixtures/Gemfile-jekyll-${{ matrix.jekyll-version }}
+      - name: Init Search
+        run: bundle exec rake search:init
+        env:
+          BUNDLE_GEMFILE: fixtures/Gemfile-jekyll-${{ matrix.jekyll-version }}
+      - name: Build Site
+        run: bundle exec jekyll build
+        env:
+          BUNDLE_GEMFILE: fixtures/Gemfile-jekyll-${{ matrix.jekyll-version }}
 
   github-pages-build:
     name: Build (github-pages gem)
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: "3.2"
-        bundler-cache: false
-    - name: Bundle Install
-      run: bundle install
-      env:
-        BUNDLE_GEMFILE: fixtures/Gemfile-github-pages
-    - name: Build Site
-      run: bundle exec jekyll build
-      env:
-        BUNDLE_GEMFILE: fixtures/Gemfile-github-pages
+      - uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: false
+      - name: Bundle Install
+        run: bundle install
+        env:
+          BUNDLE_GEMFILE: fixtures/Gemfile-github-pages
+      - name: Build Site
+        run: bundle exec jekyll build
+        env:
+          BUNDLE_GEMFILE: fixtures/Gemfile-github-pages
 
   validate:
     name: Validate HTML
     strategy:
       fail-fast: false
       matrix:
-        ruby-version: ["3.2"]
+        ruby-version: ["3.3"]
     runs-on: ubuntu-latest
 
     steps:
@@ -96,13 +96,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [20.x]
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm test
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm test
