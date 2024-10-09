@@ -146,7 +146,7 @@ GEM
       ethon (>= 0.9.0)
     unicode-display_width (2.6.0)
     uri (0.13.0)
-    webrick (1.8.1)
+    webrick (1.8.2)
     yell (2.2.2)
     zeitwerk (2.6.13)
 
