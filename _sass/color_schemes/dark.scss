@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $color-scheme: dark;
 $body-background-color: $grey-dk-300;
 $body-heading-color: $grey-lt-000;
@@ -9,7 +11,7 @@ $base-button-color: $grey-dk-250;
 $btn-primary-color: $blue-200;
 $code-background-color: #31343f; // OneDarkJekyll default for syntax-one-dark-vivid
 $code-linenumber-color: #dee2f7; // OneDarkJekyll .nf for syntax-one-dark-vivid
-$feedback-color: darken($sidebar-color, 3%);
+$feedback-color: color.adjust($sidebar-color, $lightness: -3%);
 $table-background-color: $grey-dk-250;
 $search-background-color: $grey-dk-250;
 $search-result-preview-color: $grey-dk-000;
