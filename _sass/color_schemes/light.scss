@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $color-scheme: light !default;
 $body-background-color: $white !default;
 $body-heading-color: $grey-dk-300 !default;
@@ -8,7 +10,7 @@ $sidebar-color: $grey-lt-000 !default;
 $base-button-color: #f7f7f7 !default;
 $btn-primary-color: $purple-100 !default;
 $code-background-color: $grey-lt-000 !default;
-$feedback-color: darken($sidebar-color, 3%) !default;
+$feedback-color: color.adjust($sidebar-color, $lightness: -3%) !default;
 $table-background-color: $white !default;
 $search-background-color: $white !default;
 $search-result-preview-color: $grey-dk-000 !default;
