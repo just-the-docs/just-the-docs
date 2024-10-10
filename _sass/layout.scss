@@ -20,19 +20,27 @@
     min-width: $nav-width;
   }
 
-  & + .main {
+  @include mq(xl) {
+    width: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
+  }
+
+  & ~ .main {
     @include mq(md) {
-      margin-left: $nav-width-md;
+      left: $nav-width-md;
     }
 
     @include mq(lg) {
       // stylelint-disable function-name-case
       // disable for Max(), we want to use the CSS max() function
-      margin-left: Max(
+      left: Max(
         #{$nav-width},
         calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
       );
       // stylelint-enable function-name-case
+    }
+
+    @include mq(xl) {
+      left: calc(-#{$toc-width} + (100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
     }
 
     .main-header {
@@ -57,6 +65,8 @@
 
 .main {
   margin: auto;
+  display: inline-block;
+  max-width: 100%;
 
   @include mq(md) {
     position: relative;
@@ -222,4 +232,54 @@ body {
   width: $sp-5;
   height: $sp-5;
   color: $link-color;
+}
+
+/* float: left works fine on Chromium-based browsers, but there's a bug from Firefox 59 where opening and
+closing DevTools will cause the main content to be pushed down as if ToC is a block (abandoned to this day!).
+ref: Bug 1448995
+As a temporary fix, set both the main content and ToC to be inline with each other, adjust .main's
+margin-left to accompany the ToC that goes before it */
+nav.toc {
+  display: none;
+  visibility: hidden;
+
+  @include mq(xl) {
+    display: inline-block;
+    visibility: visible;
+    position: sticky;
+    top: $sp-4;
+    left: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width + $content-width} + $sp-4);
+    vertical-align: top;
+    margin-top: #{$header-height + $sp-8};
+    width: $toc-width;
+    max-height: calc(100vh - #{$sp-4} * 2);
+    overflow-y: auto;
+  }
+
+  @include fs-3;
+}
+
+.main-content details {
+  display: block;
+  visibility: visible;
+
+  @include mq(xl) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+// Because toc-width is usually small => hide the list bullet points and minimize left padding
+// TODO: utilize jekyll-toc's item_class and submenu_class
+nav.toc ul {
+  list-style-type: none;
+  padding-left: $sp-3;
+}
+
+nav.toc > ul {
+  padding-left: 0;
+}
+
+nav.toc li {
+  padding-top: $sp-1;
 }

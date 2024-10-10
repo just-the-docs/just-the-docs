@@ -16,11 +16,27 @@ layout: table_wrappers
   {% elsif site.nav_enabled != false and layout.nav_enabled == nil and page.nav_enabled == nil %}
     {% include components/sidebar.html %}
   {% endif %}
+
+  {% if page.toc_enabled == true %}
+    {% include components/toc.html %}
+  {% elsif layout.toc_enabled == true and page.toc_enabled == nil %}
+    {% include components/toc.html %}
+  {% elsif site.toc_enabled != false and layout.toc_enabled == nil and page.toc_enabled == nil %}
+    {% include components/toc.html %}
+  {% endif %}
+
   <div class="main" id="top">
     {% include components/header.html %}
     <div class="main-content-wrap">
       {% include components/breadcrumbs.html %}
       <div id="main-content" class="main-content">
+        {% if page.toc_enabled == true %}
+          {% include components/inpage_toc.html %}
+        {% elsif layout.toc_enabled == true and page.toc_enabled == nil %}
+          {% include components/inpage_toc.html %}
+        {% elsif site.toc_enabled != false and layout.toc_enabled == nil and page.toc_enabled == nil %}
+          {% include components/inpage_toc.html %}
+        {% endif %}
         <main>
           {% if site.heading_anchors != false %}
             {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
