@@ -266,6 +266,15 @@ This theme supports multiple comma-separated tracking IDs. This helps seamlessly
 ga_tracking: "UA-1234567-89,G-1AB234CDE5"
 ```
 
+## Microsoft Clarity
+
+Microsoft Clarity is supported.
+
+```yaml
+# Microsoft Clarity Tracking (optional)
+clarity_tracking: oivg0vzhe3 #Project ID
+```
+
 ## Document collections
 
 By default, the navigation and search include normal [pages](https://jekyllrb.com/docs/pages/).
