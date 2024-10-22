@@ -91,6 +91,24 @@ search:
 # For copy button on code
 enable_copy_code_button: true
 
+# Table of Contents
+# Enable or disable the Table of Contents globally
+# Supports true (default) or false
+toc_enabled: true
+toc:
+  # Minimum header level to include in ToC
+  # Default: 1
+  min_level: 1
+  # Maximum header level to include in ToC
+  # Default: 6
+  max_level: 6
+  # Display the ToC as ordered list instead of an unordered list
+  # Supports true (default) or false
+  ordered: true
+  # Whether ToC will be a single level list
+  # Supports true or false (default)
+  flat_toc: false
+
 # By default, consuming the theme as a gem leaves mermaid disabled; it is opt-in
 mermaid:
   # Version of mermaid library
