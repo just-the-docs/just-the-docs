@@ -134,8 +134,8 @@ See [Navigation Structure]({% link docs/navigation/main/external.md %}) for more
 # Footer content
 # appears at the bottom of every page's main content
 # Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust
-markup / liquid-based content.
-footer_content: "footer content"
+# markup / liquid-based content.
+# footer_content: "footer content"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
