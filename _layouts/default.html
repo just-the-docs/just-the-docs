@@ -60,15 +60,28 @@
 
   <script>
     // Function to open the side panel with content from a Markdown file
-    function openPanel(htmlFile) {
+    function openPanel(fileName) {
+      // Define the base path for the popups directory
+      const basePath = "{{ site.baseurl }}/docs/popups/";
+
+      // Construct the full path to the file
+      const fullPath = `${basePath}${fileName}/`;
+
+      // Open the side panel and fetch the HTML content
       document.getElementById("sidePanel").classList.add("active");
-      fetch(htmlFile) // Load the pre-rendered HTML
+      fetch(fullPath)
         .then(response => response.text())
         .then(data => {
           document.getElementById("sideContent").innerHTML = data;
+        })
+        .catch(error => {
+          console.error("Error loading the popup file:", error);
         });
+
+      // Shift the main content to make room for the side panel
       document.querySelector(".main").classList.add("content-shift");
     }
+
 
     // Function to close the side panel
     function closePanel() {
