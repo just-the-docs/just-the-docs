@@ -1,6 +1,6 @@
 ---
 title: Labels
-parent: UI Components
+parent: Artificial Intelligence
 nav_order: 3
 ---
 

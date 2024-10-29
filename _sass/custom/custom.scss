@@ -1,1 +1,6 @@
 // custom SCSS (or CSS) goes here
+.container {
+  max-width: 100%; // Ensure container spans the full screen width
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

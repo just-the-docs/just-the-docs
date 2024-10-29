@@ -15,7 +15,7 @@ To disable this automatic list, set `has_toc: false` in the parent page's front 
 
 ```yaml
 ---
-title: UI Components
+title: Artificial Intelligence
 nav_order: 3
 has_toc: false
 ---

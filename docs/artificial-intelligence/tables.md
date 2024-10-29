@@ -1,6 +1,6 @@
 ---
 title: Tables
-parent: UI Components
+parent: Artificial Intelligence
 nav_order: 4
 ---
 

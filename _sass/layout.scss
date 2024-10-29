@@ -1,5 +1,4 @@
-// The basic two column layout
-
+// Sidebar with compact layout
 .side-bar {
   z-index: 0;
   display: flex;
@@ -9,30 +8,25 @@
   @include mq(md) {
     flex-flow: column nowrap;
     position: fixed;
-    width: $nav-width-md;
+    width: 12px; // Compact sidebar
+    min-width: 12px;
     height: 100%;
     border-right: $border $border-color;
     align-items: flex-end;
   }
 
   @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
-    min-width: $nav-width;
+    width: 20%;
+    min-width: 20%;
   }
 
   & + .main {
     @include mq(md) {
-      margin-left: $nav-width-md;
+      margin-left: 12px;
     }
 
     @include mq(lg) {
-      // stylelint-disable function-name-case
-      // disable for Max(), we want to use the CSS max() function
-      margin-left: Max(
-        #{$nav-width},
-        calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
-      );
-      // stylelint-enable function-name-case
+      margin-left: 20%;
     }
 
     .main-header {
@@ -46,24 +40,71 @@
 
       &.nav-open {
         display: block;
-
-        @include mq(md) {
-          display: flex;
-        }
       }
     }
   }
 }
 
-.main {
-  margin: auto;
+// Container for both main content and side panel, adjusted to avoid the navbar
+.content-container {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  margin-left: 20%; // Ensure the main content container respects navbar width
 
-  @include mq(md) {
+  .main-content-area {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
     position: relative;
-    max-width: $content-width;
+
+    .main {
+      flex: 1;
+      overflow-y: auto;
+      transition: width 0.3s ease;
+
+      &.content-shift {
+        width: 70vw; // Width reduced when side panel is open
+        max-width: 70vw;
+      }
+    }
   }
 }
 
+// // Shifted content when sidebar is active
+// .main.content-shift {
+//   margin-right: 40vw; // Matches side-panel width
+// }
+
+// Side panel styling
+.side-panel {
+  position: relative;
+  width: 0;
+  height: auto;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  padding: 0px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  &.active {
+    width: 40vw; // Expands to half the screen when active
+  }
+}
+
+// Button styling for side panel close button
+.side-panel button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+// Content adjustments for side panel and main content area
 .main-content-wrap {
   padding-top: $gutter-spacing-sm;
   padding-bottom: $gutter-spacing-sm;
@@ -93,7 +134,7 @@
   width: 100%;
 
   @include mq(lg) {
-    width: $nav-width;
+    width: 100%;
   }
 }
 

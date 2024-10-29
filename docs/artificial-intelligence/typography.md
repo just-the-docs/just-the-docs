@@ -1,7 +1,7 @@
 ---
 title: Typography
-parent: UI Components
-nav_order: 1
+parent: Artificial Intelligence
+nav_order: 2
 ---
 
 # Typography

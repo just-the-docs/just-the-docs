@@ -86,7 +86,7 @@ mermaid:
 
 Provide a `path` instead of a `version` key to load the mermaid library from a local file.
 
-See [the Code documentation]({% link docs/ui-components/code/index.md %}#mermaid-diagram-code-blocks) for more configuration options and information.
+See [the Code documentation]({% link docs/artificial-intelligence/code/index.md %}#mermaid-diagram-code-blocks) for more configuration options and information.
 
 ## Aux links
 
@@ -134,14 +134,14 @@ See [Navigation Structure]({% link docs/navigation/main/external.md %}) for more
 # appears at the bottom of every page's main content
 # Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust
 markup / liquid-based content.
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt\">MIT license.</a>"
+footer_content: "footer content"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
 # Footer "Edit this page on GitHub" link text
-gh_edit_link: true # show or hide edit this page link
+gh_edit_link: false # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
@@ -238,7 +238,7 @@ The value of `callouts_level` is either `quiet` or `loud`;
 The default level is `quiet` when using the `light` or custom color schemes,
 and `loud` when using the `dark color scheme.`
 
-See [Callouts]({% link docs/ui-components/callouts.md %}) for more information.
+See [Callouts]({% link docs/artificial-intelligence/callouts.md %}) for more information.
 
 ## Google Analytics
 

@@ -1,6 +1,6 @@
 ---
 title: Callouts
-parent: UI Components
+parent: Artificial Intelligence
 nav_order: 7
 ---
 

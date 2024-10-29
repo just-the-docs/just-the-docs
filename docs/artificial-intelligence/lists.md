@@ -1,6 +1,6 @@
 ---
 title: Lists
-parent: UI Components
+parent: Artificial Intelligence
 nav_order: 5
 ---
 

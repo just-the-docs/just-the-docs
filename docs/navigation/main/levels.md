@@ -6,7 +6,7 @@ nav_order: 3
 
 # Page Levels
 
-Sometimes you will want to create a page with many children. First, it is recommended that you store related pages together in a directory. For example, in these docs, we keep all of the written documentation pages in the `./docs` directory, and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like this:
+Sometimes you will want to create a page with many children. First, it is recommended that you store related pages together in a directory. For example, in these docs, we keep all of the written documentation pages in the `./docs` directory, and each of the sections in subdirectories like `./docs/artificial-intelligence` and `./docs/utilities`. This gives us an organization like this:
 
 {: .lh-0 }
 ```
@@ -14,7 +14,7 @@ Sometimes you will want to create a page with many children. First, it is recomm
 ├─ (Jekyll files)
 ├─ docs
     ├─ configuration.md
-    ├─ ui-components
+    ├─ artificial-intelligence
         ├─ index.md (parent page)
         ├─ buttons.md
         ├─ callouts.md
@@ -36,12 +36,12 @@ Sometimes you will want to create a page with many children. First, it is recomm
 
 ```yaml
 ---
-title: UI Components
+title: Artificial Intelligence
 nav_order: 3
 ---
 ```
 
-Here we're setting up the UI Components landing page that is available at URL `/docs/ui-components`, which is ordered second in the main navigation.
+Here we're setting up the Artificial Intelligence landing page that is available at URL `/docs/artificial-intelligence`, which is ordered second in the main navigation.
 
 The navigation links for all pages with children come with an expander. When you click the expander, the display of the children is toggled, so you can expand or collapse all the children displays, regardless of which page is currently active.
 
@@ -54,13 +54,13 @@ On child pages, simply set the `parent` front matter to the parent page's `title
 
 ```yaml
 ---
-title: Buttons
-parent: UI Components
+title: Fairness & Justice
+parent: Artificial Intelligence
 nav_order: 2
 ---
 ```
 
-The Buttons page appears as a child of UI Components and appears second in the UI Components pages.
+The Buttons page appears as a child of Artificial Intelligence and appears second in the Artificial Intelligence pages.
 
 {: .new-title }
 > New (v0.10.0)

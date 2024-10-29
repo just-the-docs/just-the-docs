@@ -1,6 +1,6 @@
 ---
 title: Code
-parent: UI Components
+parent: Artificial Intelligence
 nav_order: 6
 ---
 
@@ -56,7 +56,7 @@ var fun = function lang(l) {
 ```
 {% endhighlight %}
 
-Syntax highlighting, line numbers, and HTML compression do not work together; **the combination of these features generates invalid HTML that renders incorrectly**. To learn more, see ["Code with line numbers"]({% link docs/ui-components/code/line-numbers.md %}).
+Syntax highlighting, line numbers, and HTML compression do not work together; **the combination of these features generates invalid HTML that renders incorrectly**. To learn more, see ["Code with line numbers"]({% link docs/artificial-intelligence/code/line-numbers.md %}).
 
 ---
 
