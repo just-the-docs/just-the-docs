@@ -4,3 +4,14 @@
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+.side-panel.active {
+  background-color: #f5f2ff;
+  color: #16006f;
+  padding: 3%;
+
+  h1 {
+    font-size: small;
+    color: black;
+  }
+}

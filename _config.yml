@@ -188,6 +188,7 @@ plugins:
   - jekyll-github-metadata
   - jekyll-include-cache
   - jekyll-sitemap
+  - privacy
 
 kramdown:
   syntax_highlighter_opts:
