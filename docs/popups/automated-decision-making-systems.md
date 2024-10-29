@@ -1,6 +1,7 @@
 ---
 layout: sidepanel
 title: "Harms"
+nav_exclude: true
 ---
 
 ## Automated decision-making systems for high-impact applications

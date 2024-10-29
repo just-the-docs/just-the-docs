@@ -1,6 +1,7 @@
 ---
 layout: sidepanel
 title: "Harms"
+nav_exclude: true
 ---
 
 ## AI-related harms are documented in databases such as:

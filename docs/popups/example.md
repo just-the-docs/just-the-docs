@@ -1,6 +1,7 @@
 ---
 layout: sidepanel
 title: "Example Content"
+nav_exclude: true
 ---
 
 # Example Markdown File

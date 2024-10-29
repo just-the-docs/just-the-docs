@@ -15,6 +15,6 @@ This website has an auxiliary link: "Just the Docs on GitHub". It is rendered wi
 
 ```yaml
 aux_links:
-  Just the Docs on GitHub:
-    - https://github.com/just-the-docs/just-the-docs
+  # Just the Docs on GitHub:
+  #   - https://github.com/just-the-docs/just-the-docs
 ```

@@ -1,6 +1,7 @@
 ---
 layout: sidepanel
-title: "Harms"
+title: "High-impact applications"
+nav_exclude: true
 ---
 
 ## High-impact applications

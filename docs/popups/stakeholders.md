@@ -1,6 +1,7 @@
 ---
 layout: sidepanel
 title: "Stakeholders"
+nav_exclude: true
 ---
 
 ## Examples of stakeholders
