@@ -179,3 +179,8 @@ cat NYC.city.jsonl | cjseq filter --random 10 | python ./src/cjseqview.py`
 ```
 
 
+## Media type for CityJSONSeq
+
+It should be noticed that CityJSONSeq has its own media type: `application/city+json-seq`, [see the official page](https://www.iana.org/assignments/media-types/application/city+json-seq).
+
+There is also a different [media type for CityJSON](https://www.iana.org/assignments/media-types/application/city+json).
