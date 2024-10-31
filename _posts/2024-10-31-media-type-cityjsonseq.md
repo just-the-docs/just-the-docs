@@ -9,6 +9,6 @@ CityJSONSeq now has [its own media type](https://www.iana.org/assignments/media-
 
 A media type indicates the content and format of a document, and is widely used on the web.
 
-CityJSONSeq has the following type: `application/city+json-seq`.
+CityJSONSeq has the following type: [`application/city+json-seq`](https://www.iana.org/assignments/media-types/application/city+json-seq).
 
 CityJSON files also have their own media type: [`application/city+json`](https://www.iana.org/assignments/media-types/application/city+json).
