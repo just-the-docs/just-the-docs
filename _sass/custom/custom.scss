@@ -9,9 +9,18 @@
   background-color: #f5f2ff;
   color: #16006f;
   padding: 3%;
+  position: fixed;
+  right: 0;
+
+  top: $header-height;
+  height: 100%;
 
   h1 {
     font-size: small;
     color: black;
   }
+}
+
+.main-content-wrap.active {
+  width: calc(100% - 30vw);
 }

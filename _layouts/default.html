@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
+
 <body>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   {% include icons/icons.html %}
@@ -8,54 +9,56 @@
   <!-- Left Navigation Sidebar -->
   <div class="nav-sidebar">
     {% if page.nav_enabled == true %}
-      {% include components/sidebar.html %}
+    {% include components/sidebar.html %}
     {% elsif layout.nav_enabled == true and page.nav_enabled == nil %}
-      {% include components/sidebar.html %}
+    {% include components/sidebar.html %}
     {% elsif site.nav_enabled != false and layout.nav_enabled == nil and page.nav_enabled == nil %}
-      {% include components/sidebar.html %}
+    {% include components/sidebar.html %}
     {% endif %}
   </div>
 
- <div class="content-container">
-  <!-- Main content area -->
-  <div class="main-content-area">
-    <div class="main" id="top">
-      {% include components/header.html %}
-      <div class="main-content-wrap">
-        {% include components/breadcrumbs.html %}
-        <div id="main-content" class="main-content">
-          <main>
-            {% if site.heading_anchors != false %}
-              {% include vendor/anchor_headings.html 
-                html=content 
-                beforeHeading="true" 
-                anchorBody='<svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg>' 
-                anchorClass="anchor-heading" 
-                anchorAttrs="aria-labelledby='%html_id%'" %}
-            {% else %}
+  <div class="content-container">
+    <!-- Main content area -->
+    <div class="main-content-area">
+      <div class="main" id="top">
+        {% include components/header.html %}
+        <div class="main-content-wrap" id="mainContentWrap">
+          {% include components/breadcrumbs.html %}
+          <div id="main-content" class="main-content">
+            <main>
+              {% if site.heading_anchors != false %}
+              {% include vendor/anchor_headings.html
+              html=content
+              beforeHeading="true"
+              anchorBody='<svg viewBox="0 0 16 16" aria-hidden="true">
+                <use xlink:href="#svg-link"></use>
+              </svg>'
+              anchorClass="anchor-heading"
+              anchorAttrs="aria-labelledby='%html_id%'" %}
+              {% else %}
               {{ content }}
-            {% endif %}
-            {% if page.has_toc != false %}
+              {% endif %}
+              {% if page.has_toc != false %}
               {% include components/children_nav.html %}
-            {% endif %}
-          </main>
-          {% include components/footer.html %}
+              {% endif %}
+            </main>
+            {% include components/footer.html %}
+          </div>
         </div>
-      </div>
-      {% if site.search_enabled != false %}
+        {% if site.search_enabled != false %}
         {% include components/search_footer.html %}
-      {% endif %}
-    </div>
+        {% endif %}
+      </div>
 
-    <!-- Side Panel for Dynamic Markdown Content, positioned alongside main content -->
-    <div id="sidePanel" class="side-panel">
-      <button onclick="closePanel()">×</button>
-      <div id="sideContent">
-        <!-- Dynamic content will be loaded here based on link click -->
+      <!-- Side Panel for Dynamic Markdown Content, positioned alongside main content -->
+      <div id="sidePanel" class="side-panel">
+        <button onclick="closePanel()">×</button>
+        <div id="sideContent">
+          <!-- Dynamic content will be loaded here based on link click -->
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
   <script>
@@ -68,6 +71,7 @@
       const fullPath = `${basePath}${fileName}/`;
 
       // Open the side panel and fetch the HTML content
+      document.getElementById("mainContentWrap").classList.add("active");
       document.getElementById("sidePanel").classList.add("active");
       fetch(fullPath)
         .then(response => response.text())
@@ -85,6 +89,7 @@
 
     // Function to close the side panel
     function closePanel() {
+      document.getElementById("mainContentWrap").classList.remove("active");
       document.getElementById("sidePanel").classList.remove("active");
       document.querySelector(".main").classList.remove("content-shift");
       document.getElementById("sideContent").innerHTML = ""; // Clear content
@@ -92,8 +97,9 @@
   </script>
 
   {% if site.mermaid %}
-    {% include components/mermaid.html %}
+  {% include components/mermaid.html %}
   {% endif %}
 
 </body>
+
 </html>
