@@ -17,14 +17,18 @@ https://src-handbook-infrastructure-team.github.io/srch/docs/artificial-intellig
 In the docs folder, you'll find the markdown files of each page in the handbook. Within each markdown file, you can configure the order in which each page shows up in the left nav.
 To add a new page to the site, simply add a markdown file. After adding a page, if you are running this project locally, make sure to run `jekyll build` so that it turns the markdown into html. 
 
-## docs/popups
-Here, you can add any side panel popups needed within any page. They are formatted as markdown files.
-To add a popup within a page, use the following format:
+## Side Panels
+Side panels can be added by creating a folder for the main page and then putting the side panels inside as a markdown file.
+For example, within a page's folder, if you have a markdown called 'example', you can simply use this command to open up the side panel.
 ```
 [Side Panel](javascript:openPanel('example'))
 ```
-where the text in brackets are highlighted, and the text in 'example' is the name of markdown file within docs/popups:
-<img width="1469" alt="Screenshot 2024-10-29 at 1 22 21 AM" src="https://github.com/user-attachments/assets/6eaaf719-5326-423c-9555-38558f2e2212">
+You can also link to a particular side panel with its URL. For example, you can link to a harms side panel in the Fairness and justice page using this link:
+```
+[Link to Harms Panel](/srch/docs/artificial-intelligence/fairness-justice/?panel=harms-panel/)
+```
+where `harms-panel` is the name of the side panel we are going to. This will take you to exactly the fairness and justice page with the side panel open.
+
 
 ## default.html
 This defines the basic structure of the site. This was what I tweaked to adjust the navigation sidebar and tweak the structure to include a side panel.
