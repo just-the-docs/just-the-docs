@@ -62,13 +62,38 @@
 
 
   <script>
-    // Function to open the side panel with content from a Markdown file
-    function openPanel(fileName) {
-      // Define the base path for the popups directory
-      const basePath = "{{ site.baseurl }}/docs/popups/";
+    document.addEventListener("DOMContentLoaded", checkForSidePanel);
 
+    function checkForSidePanel() {
+      // Retrieve the panel path from the URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const panelPath = urlParams.get("panel");
+      console.log("HERE")
+
+      // If a panel path is present, open the panel
+      if (panelPath) {
+        console.log("bye")
+        openPanel(panelPath);
+      } else {
+        // Otherwise, check the path after "/docs/"
+         console.log("REACHED HERE")
+        const basePath = "{{ site.baseurl }}/docs/";
+        const path = window.location.pathname.replace(basePath, "");
+
+        // Check if the path contains "panel"
+        if (path.includes("panel")) {
+          openPanel(path);
+        }
+       
+      }
+    } 
+
+    // Function to open the side panel with content from a Markdown file
+    function openPanel(panelName) {
       // Construct the full path to the file
-      const fullPath = `${basePath}${fileName}/`;
+      const fullPath = `${window.location.pathname}${panelName}/`;
+      const newURL = `${window.location.pathname}?panel=${panelName}`;
+      window.history.replaceState({ path: newURL }, '', newURL);
 
       // Open the side panel and fetch the HTML content
       document.getElementById("mainContentWrap").classList.add("active");
