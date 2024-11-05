@@ -4,6 +4,8 @@ parent: Artificial Intelligence
 nav_order: 4
 ---
 
+[Link to Harms Panel](/srch/docs/artificial-intelligence/fairness-justice/?panel=harms-panel/)
+
 # Tables
 
 Tables are responsive by default, allowing wide tables to have a horizontal scroll to access columns outside of the normal viewport.

@@ -15,3 +15,5 @@ This wide and rapid integration of technology into all sectors of society also s
 Here's another side panel about [harms](javascript:openPanel('harms-scroll')) that is longer and scrollable
 
 Shorter [Side-panel 1](javascript:openPanel('example'))
+
+[Link to Harms Panel](/srch/docs/artificial-intelligence/fairness-justice/?panel=harms-panel/)
