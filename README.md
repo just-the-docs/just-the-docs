@@ -28,6 +28,7 @@ You can also link to a particular side panel with its URL. For example, you can 
 [Link to Harms Panel](/srch/docs/artificial-intelligence/fairness-justice/?panel=harms-panel/)
 ```
 where `harms-panel` is the name of the side panel we are going to. This will take you to exactly the fairness and justice page with the side panel open.
+<img width="1469" alt="Screenshot 2024-11-05 at 3 00 17 AM" src="https://github.com/user-attachments/assets/1063d026-78e3-49d7-816e-7253a480af6d">
 
 
 ## default.html
