@@ -1,5 +1,6 @@
 ---
 layout: sidepanel
+sidepanel: true
 title: "Stakeholders"
 nav_exclude: true
 ---

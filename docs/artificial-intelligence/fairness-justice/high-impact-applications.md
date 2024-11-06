@@ -1,5 +1,6 @@
 ---
 layout: sidepanel
+sidepanel: true
 title: "High-impact applications"
 nav_exclude: true
 ---

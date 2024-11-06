@@ -1,5 +1,6 @@
 ---
 layout: sidepanel
+sidepanel: true
 title: "Harms"
 nav_exclude: true
 ---

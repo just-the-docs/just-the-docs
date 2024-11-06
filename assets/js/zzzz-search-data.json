@@ -51,7 +51,17 @@ permalink: /assets/js/search-data.json
     "doc": {{ page.title | jsonify }},
     "title": {{ title | jsonify }},
     "content": {{ content | replace: '</h', ' . </h' | replace: '<hr', ' . <hr' | replace: '</p', ' . </p' | replace: '<ul', ' . <ul' | replace: '</ul', ' . </ul' | replace: '<ol', ' . <ol' | replace: '</ol', ' . </ol' | replace: '</tr', ' . </tr' | replace: '<li', ' | <li' | replace: '</li', ' | </li' | replace: '</td', ' | </td' | replace: '<td', ' | <td' | replace: '</th', ' | </th' | replace: '<th', ' | <th' | strip_html | remove: 'Table of contents' | normalize_whitespace | replace: '. . .', '.' | replace: '. .', '.' | replace: '| |', '|' | append: ' ' | jsonify }},
-    "url": "{{ url | relative_url }}",
+    {%- capture final_url -%}
+    {%- if page.sidepanel -%}
+        {%- assign url_parts = page.url | split: '/' -%}
+        {%- assign url_parts_trimmed = url_parts | slice: 0, url_parts.size -%}
+        {%- assign url_parts_trimmed_size = url_parts.size | minus : 1 -%}
+        {{ url_parts_trimmed | slice: 0, url_parts_trimmed_size | join: '/' }}/?panel={{ url_parts | last }}
+    {%- else -%}
+        {{ url }}
+    {%- endif -%}
+    {%- endcapture -%}
+    "url": "{{ final_url | relative_url }}",
     {% include lunr/custom-data.json page=page %}
     "relUrl": "{{ url }}"
   }

@@ -1,5 +1,6 @@
 ---
 layout: sidepanel
+sidepanel: true
 title: "Example Content"
 nav_exclude: true
 ---

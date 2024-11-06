@@ -1,5 +1,6 @@
 ---
 layout: sidepanel
+sidepanel: true
 title: "Harms Scrollable"
 nav_exclude: true
 ---
