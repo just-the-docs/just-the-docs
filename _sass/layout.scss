@@ -71,25 +71,29 @@
   }
 }
 
-// // Shifted content when sidebar is active
-// .main.content-shift {
-//   margin-right: 40vw; // Matches side-panel width
-// }
-
 // Side panel styling
 .side-panel {
-  position: relative;
   width: 0;
-  height: auto;
-  background-color: #f4f4f4;
   overflow-y: auto;
   transition: width 0.3s ease;
   padding: 0px;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  position: fixed;
+  right: 0;
+  top: $header-height;
+  height: 100%;
+  background-color: #f5f2ff;
 
   &.active {
+    color: #16006f;
+    padding: 3%;
     width: 40vw; // Expands to half the screen when active
+  
+    h1 {
+      font-size: small;
+      color: black;
+    }
   }
 }
 
