@@ -1,7 +1,7 @@
 ---
 layout: sidepanel
 sidepanel: true
-title: "Harms"
+title: "Systems of Oppression"
 nav_exclude: true
 ---
 

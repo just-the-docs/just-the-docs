@@ -1,7 +1,7 @@
 ---
 layout: sidepanel
 sidepanel: true
-title: "Example Content"
+title: "Group Fairness"
 nav_exclude: true
 ---
 
