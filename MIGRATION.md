@@ -386,7 +386,7 @@ For changes since v0.3.3, the log usually references the merged PR that made the
 
 #### Configuration
 
-- Mermaid support: first-class support for [Mermaid](https://mermaid.js.org/) - a JavaScript-based diagram and charting tool supported by GitHub - has been added to the theme. **This feature is opt-in.** See the new doc subsections in [Configuration]({% link docs/configuration.md %}#mermaid-diagrams) and [Code]({% link docs/artificial-intelligence/code/index.md %}#mermaid-diagram-code-blocks) for more.
+- Mermaid support: first-class support for [Mermaid](https://mermaid.js.org/) - a JavaScript-based diagram and charting tool supported by GitHub - has been added to the theme. **This feature is opt-in.
 - Multiple Google Analytics tags are now supported. PR: [#1029]
 
 #### Customization
@@ -434,7 +434,6 @@ In addition to customizing the search placeholder, we've also added the ability 
 - Code copying: code blocks now allow users to easily copy their contents. PR: [#945]
 - Blockquote: shows vertical bar on left. PR: [#965]
 - Links wrap. PR: [#905]
-- Callouts: a new component similar to alerts or banners. See [Artificial Intelligence - Callouts]({% link docs/artificial-intelligence/callouts.md %}). PR: [#466]
 
 ----
 
