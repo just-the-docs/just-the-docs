@@ -1,5 +1,5 @@
 ---
-title: Artificial Intelligence
+title: Fairness and Justice in Automated Decision Making
 nav_order: 3
 ---
 
