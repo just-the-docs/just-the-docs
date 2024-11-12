@@ -14,6 +14,6 @@ There are also protections based on certain characteristics in certain contexts
 
 <a href="https://link.springer.com/article/10.1007/s11098-023-02084-5#Sec2" target="_blank" style="text-decoration: underline;">Why Is Oppression Wrong? | Philosophical Studies</a>
 
-<a href="https://college.brown.edu/design-your-education/explore-open-curriculum/course-selection/curricular-programs/examining-race" >Brown’s Race, Power, and Privilege courses</a> dive deeper into examining “structural inequality, racial formations and/or disparities and systems of power within a complex, pluralistic world”
+<a href="https://college.brown.edu/design-your-education/explore-open-curriculum/course-selection/curricular-programs/examining-race" target="_blank" style="text-decoration: underline;">Brown’s Race, Power, and Privilege courses</a> dive deeper into examining “structural inequality, racial formations and/or disparities and systems of power within a complex, pluralistic world”
 
 
