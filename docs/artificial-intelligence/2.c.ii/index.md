@@ -9,9 +9,7 @@ nav_order: 2
 
 * * *
 
-Section 2.c.i showed that are many definitions of algorithmic fairness: 
-
-![Definitions of Algorithmic Fairness](../../../assets/images/definitions-of-algorithmic-fairness.png)
+Section 2.c.i showed that are many definitions of algorithmic fairness.
 
 At any level, it is impossible to achieve all the definitions simultaneously. Deciding between which fairness definition to satisfy requires normative decision-making, moving from pursuing algorithmic fairness into a more holistic idea of algorithmic justice.
 

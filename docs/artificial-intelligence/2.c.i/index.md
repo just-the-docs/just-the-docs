@@ -1,13 +1,15 @@
 ---
-title: 2.c.i - Fairness & Justice
+title: 2.c.i - Algorithmic Fairness
 parent: Artificial Intelligence
 layout: page
 nav_order: 1
 ---
 
-# 2.c.i - Fairness & Justice
+# 2.c.i - Algorithmic Fairness
 
 * * *
+
+![Definitions of Algorithmic Fairness](../../../assets/images/definitions-of-algorithmic-fairness.png)
 
 When machines replace humans in [**making decisions with such great impact**](javascript:openPanel('high-impact-applications')), it is important for their outcomes to remain fair and just. But what is algorithmic fairness?
 
