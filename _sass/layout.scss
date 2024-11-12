@@ -64,7 +64,8 @@
       transition: width 0.3s ease;
 
       &.content-shift {
-        
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
         width: 70vw; // Width reduced when side panel is open
         max-width: 70vw;
       }
