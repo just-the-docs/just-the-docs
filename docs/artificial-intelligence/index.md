@@ -1,9 +1,9 @@
 ---
-title: Fairness and Justice in Automated Decision Making
+title: Artificial Intelligence
 nav_order: 3
 ---
 
-# Artificial Intelligence
+# Fairness and Justice in Automated Decision-Making
 {: .fs-9 }
 
 Last updated on
