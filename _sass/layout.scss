@@ -60,10 +60,11 @@
 
     .main {
       flex: 1;
-      overflow-y: auto;
+      overflow-y: scroll;
       transition: width 0.3s ease;
 
       &.content-shift {
+        
         width: 70vw; // Width reduced when side panel is open
         max-width: 70vw;
       }
@@ -79,9 +80,9 @@
   padding: 0px;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  position: fixed;
+  position: absolute;
   right: 0;
-  top: $header-height;
+  // top: $header-height;
   height: 100%;
   background-color: #D2E3FC;
 

@@ -7,7 +7,7 @@ permalink: /
 ---
 
 # SRC Handbook
-{: .fs-9 }
+<!-- {: .fs-9 }
 
 The SRC Handbook provides a starting point for your research when creating assignemnts.
 {: .fs-6 .fw-300 }
@@ -31,4 +31,4 @@ The SRC Handbook provides many links and case studies. Please click at highlight
 
 
 
-[Just the Docs repo]: https://github.com/just-the-docs/just-the-docs
+[Just the Docs repo]: https://github.com/just-the-docs/just-the-docs -->
