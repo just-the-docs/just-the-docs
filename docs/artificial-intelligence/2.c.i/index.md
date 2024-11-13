@@ -11,7 +11,7 @@ nav_order: 1
 
 ![Definitions of Algorithmic Fairness](../../../assets/images/definitions-of-algorithmic-fairness.png)
 
-When machines replace humans in [**making decisions with such great impact**](javascript:openPanel('high-impact-applications')), it is important for their outcomes to remain fair and just. But what is algorithmic fairness?
+When machines replace humans in [**making decisions with such great impact**](javascript:openPanel('high-impact-applications')), it is important for their outcomes to remain fair. But what is algorithmic fairness?
 
 ### <u> Procedural Equality vs. Equity </u>
 One common criteria for fairness within the technical community is procedural equality.
