@@ -17,5 +17,5 @@ These terms do not have universally agreed upon definitions. Stakeholder groups 
 
 For further exploration of definitions:
 - NIST “The Language of Trustworthy AI: An In-Depth Glossary of Terms” https://airc.nist.gov/AI_RMF_Knowledge_Base/Glossary  
-- AAAS Artificial Intelligence and the Courts: MATERIALS FOR JUDGES, Artificial Intelligence – <a href="https://www.aaas.org/sites/default/files/2022-09/Paper%201_AI%20Foundational%20Issues_NIST_FINAL.pdf?adobe_mc=MCMID%3D28184402771370035972070700203311801975%7CMCORGID%3D242B6472541199F70A4C98A6%2540AdobeOrg%7CTS%3D1665504690" target="_blank" style="text-decoration: underline;">Foundational Issues and Glossary</a>
-- <a href="https://windowsontheory.org/2023/04/12/thoughts-on-ai-safety/ " target="_blank" style="text-decoration: underline;">Windows on Theory: Thoughts on AI safety</a>
+- AAAS Artificial Intelligence and the Courts: MATERIALS FOR JUDGES, Artificial Intelligence – [Foundational Issues and Glossary](https://www.aaas.org/sites/default/files/2022-09/Paper%201_AI%20Foundational%20Issues_NIST_FINAL.pdf?adobe_mc=MCMID%3D28184402771370035972070700203311801975%7CMCORGID%3D242B6472541199F70A4C98A6%2540AdobeOrg%7CTS%3D1665504690)
+- [Windows on Theory: Thoughts on AI safety](https://windowsontheory.org/2023/04/12/thoughts-on-ai-safety/)

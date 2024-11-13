@@ -8,3 +8,26 @@
 .main-content-wrap.active {
   width: calc(100% - 30vw);
 }
+
+/* Style all external links */
+a[href^="http"] {
+    text-decoration: underline;
+    color: #1a0dab; /* Custom color for external links */
+    cursor: pointer;
+}
+
+/* Open all external links in a new tab */
+a[href^="http"]::after {
+    content: " ↗"; /* Optional: Add an icon or symbol to indicate external link */
+}
+
+/* Hover effect for links */
+a:hover {
+    text-decoration: none; /* Remove underline on hover if preferred */
+    color: #4d90fe; /* Hover color */
+}
+
+/* Optional: Differentiate visited external links */
+a[href^="http"]:visited {
+    color: #6600cc; /* Custom color for visited links */
+}

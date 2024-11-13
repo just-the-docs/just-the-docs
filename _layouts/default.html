@@ -126,6 +126,14 @@
   {% include components/mermaid.html %}
   {% endif %}
 
+  document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll('a');
+      links.forEach(link => {
+          link.setAttribute("target", "_blank");
+          link.setAttribute("rel", "noopener noreferrer");
+      });
+  });
+
 </body>
 
 </html>
