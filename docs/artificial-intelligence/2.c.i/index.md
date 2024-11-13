@@ -35,7 +35,7 @@ Within equity, there is a technical distinction between individual and group fai
 - **Group fairness**: Groups should be viewed as similar and be treated similarly, acknowledging that historically groups might have been treated differently and thus have different opportunities. 
 Here are [**three criteria for group fairness**](javascript:openPanel('group-fairness')):
 
-    - Independence: A person’s group membership should not affect their outcome. 
+    - **Independence**: A person’s group membership should not affect their outcome. 
 
     - **Separation**: An individual’s group should not impact their outcomes depending on the “true outcome.”  That is, if we split the people into two parts – those screened in and those screened out –  then in each part the independence condition above should apply. This implies the probability of an error (false positive or false negative) should be the same for different groups. 
 
