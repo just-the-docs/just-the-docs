@@ -15,5 +15,5 @@ nav_exclude: true
 - credit scoring
 - clinical care
 - child welfare
-- [pretrial risk assessment](https://www.upturn.org/work/civil-rights-and-pretrial-risk-assessment-instruments/)
+- [pretrial risk assessment](https://www.upturn.org/work/civil-rights-and-pretrial-risk-assessment-instruments/){:target="_blank"}
 - educational performance

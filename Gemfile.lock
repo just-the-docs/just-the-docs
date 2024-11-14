@@ -36,8 +36,6 @@ GEM
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
       net-http
-    faraday-retry (2.2.1)
-      faraday (~> 2.0)
     ffi (1.17.0-arm64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
     fiber-annotation (0.2.0)
@@ -92,9 +90,6 @@ GEM
       jekyll (>= 3.8, < 5.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-target-blank (2.0.2)
-      jekyll (>= 3.0, < 5.0)
-      nokogiri (~> 1.10)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     json (2.7.2)
@@ -161,12 +156,10 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (>= 2.3.5)
-  faraday-retry
   html-proofer (~> 5.0)
   jekyll-github-metadata (>= 2.15)
   jekyll-include-cache
   jekyll-sitemap
-  jekyll-target-blank
   just-the-docs!
 
 BUNDLED WITH

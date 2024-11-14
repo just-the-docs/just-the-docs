@@ -22,12 +22,7 @@ a[href^="http"]::after {
 }
 
 /* Hover effect for links */
-a:hover {
+a[href^="http"]:hover {
     text-decoration: none; /* Remove underline on hover if preferred */
     color: #4d90fe; /* Hover color */
-}
-
-/* Optional: Differentiate visited external links */
-a[href^="http"]:visited {
-    color: #6600cc; /* Custom color for visited links */
 }
