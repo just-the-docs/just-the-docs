@@ -19,6 +19,6 @@ This wide and rapid integration of technology into all sectors of society also s
 
 The emerging space of research and discussion around AI has many [**names**](javascript:openPanel('names')), most commonly “Responsible AI”, “AI Governance”, “Trustworthy AI”, and “AI Safety.”
 
-[**Disclaimers**](javascript:openPanel('subtopics'))
+[**Disclaimers**](javascript:openPanel('disclaimers'))
 
 {: .fs-6 .fw-300 }

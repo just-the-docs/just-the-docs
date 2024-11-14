@@ -5,7 +5,9 @@ title: "Stakeholders"
 nav_exclude: true
 ---
 
-## Examples of stakeholders
+## Stakeholder groups
+
+### Examples of stakeholders
 - Researchers and academic communities: researchers and organizations within academia who study these issues
   - Stanford HAI
   - CNTR

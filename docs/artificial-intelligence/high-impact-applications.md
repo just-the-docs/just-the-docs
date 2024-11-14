@@ -5,9 +5,9 @@ title: "High-impact Applications"
 nav_exclude: true
 ---
 
-# High-impact applications
+## High-impact applications
 
-## Examples of high-impact applications:
+### Examples of high-impact applications:
 - resume screening
 - performance assessment
 - tenant screening

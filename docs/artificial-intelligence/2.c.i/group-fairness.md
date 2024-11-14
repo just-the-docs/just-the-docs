@@ -5,14 +5,16 @@ title: "Group Fairness"
 nav_exclude: true
 ---
 
-## Examples of Group Fairness Criteria
-Independence: An individual’s gender should not affect their likelihood of being screened in for hiring. 
+## Three Criteria for Group Fairness
 
-Separation: Applicants who are capable of succeeding in a job should be equally likely to be screened out (resulting in a false negative outcome) in the hiring process irrespective of their gender.
+### Examples of Group Fairness Criteria
+- **Independence**: An individual’s gender should not affect their likelihood of being screened in for hiring. 
 
-Sufficiency: A female applicant receiving a “7” should be equally capable of succeeding in a job as a male candidate with the same score.
+- **Separation**: Applicants who are capable of succeeding in a job should be equally likely to be screened out (resulting in a false negative outcome) in the hiring process irrespective of their gender.
 
-## Mathematical Definitions of Group Fairness
+- **Sufficiency**: A female applicant receiving a “7” should be equally capable of succeeding in a job as a male candidate with the same score.
+
+### Mathematical Definitions of Group Fairness
 
 Let G be a variable denoting the group, Y a variable denoting the label for the training data (“true outcome”), and R being the output of the procedure. Then, 
 - **Independence**: R and G are independent

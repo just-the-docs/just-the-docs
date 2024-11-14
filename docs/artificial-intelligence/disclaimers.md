@@ -1,7 +1,7 @@
 ---
 layout: sidepanel
 sidepanel: true
-title: "Subtopics"
+title: "Disclaimers"
 nav_exclude: true
 ---
 ## Disclaimers:
