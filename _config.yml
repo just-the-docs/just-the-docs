@@ -140,8 +140,8 @@ liquid:
 # appears at the bottom of every page's main content
 
 # Back to top link
-back_to_top: true
-back_to_top_text: "Back to top"
+# back_to_top: true
+# back_to_top_text: "Back to top"
 
 # footer_content: 'footer content'
 
