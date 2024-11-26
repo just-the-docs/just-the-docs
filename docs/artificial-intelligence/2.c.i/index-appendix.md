@@ -5,7 +5,7 @@ parent: "2.c.i - Algorithmic Fairness"
 appendix: true
 ---
 
-# Appendix for learning objective 2.c.i - Algorithmic Fairness
+# Appendix for Learning Objective 2.c.i - Algorithmic Fairness
 These are all the external links mentioned in the body of the text and in the side panels, categorized by type.
 ### Definitions
 - [Minow: Equality vs. Equity](https://direct.mit.edu/ajle/article/doi/10.1162/ajle_a_00019/107229/EQUALITY-VS-EQUITY){:target="_blank"}<!-- tag:definition -->

@@ -5,7 +5,7 @@ parent: "2.c.ii - Algorithmic Justice"
 appendix: true
 ---
 
-# Appendix for learning objective 2.c.ii - Algorithmic Justice
+# Appendix for Learning Objective 2.c.ii - Algorithmic Justice
 These are all the external links mentioned in the body of the text and in the side panels, categorized by type.
 ### Case Studies
 - [Report: Challenging the Use of Algorithm-driven Decision-making in Benefits Determinations Affecting People with Disabilities - Center for Democracy and Technology](https://cdt.org/insights/report-challenging-the-use-of-algorithm-driven-decision-making-in-benefits-determinations-affecting-people-with-disabilities/){:target="_blank"}<!-- tag:case-study -->
