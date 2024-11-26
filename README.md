@@ -48,7 +48,7 @@ To caregorize links, add a tag comment of the form `<!-- tag:tagName -->` after 
 ```
 [United States Federal AI Use Case Inventory](https://ai.gov/ai-use-cases/){:target="_blank"}<!-- tag:database -->
 ```
-Currently supported tags are `tag:database`, `tag:definition`, and `tag:caseStudy`. Modifying `generate-appendix.js` to add tag categories should be straighforward.
+Currently supported tags are `tag:database`, `tag:definition`, and `tag:case-study`. Modifying `generate-appendix.js` to add tag categories should be straighforward.
 
 Untagges links appear under the "Uncategorized Links" heading.
 

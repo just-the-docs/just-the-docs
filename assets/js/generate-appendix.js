@@ -60,18 +60,17 @@ function extractLinks(filePaths) {
             // Match Markdown links in the format [Title](URL){:target="_blank"}<!-- tag:tagName -->
             const regex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)(\{:target="_blank"\})?(<!--.*?-->)?/g;
             const matches = content.match(regex);
-            console.log(`Found matches:`, matches); // Debugging: Log matches
+            // console.log(`Found matches:`, matches); // Debugging: Log matches
 
             // Add {:target="_blank"} to each match and push to the result array
             if (matches) {
                 matches.forEach(link => {
                     let category = 'other';  // Default to "other"
-                    if (link.includes('tag:definition')) category = 'definitions'
-                    if (link.includes('tag:case-study')) category = 'caseStudies'
+                    if (link.includes('tag:definition')) category = 'definitions';
+                    if (link.includes('tag:case-study')) category = 'caseStudies';
                     if (link.includes('tag:database')) category = 'databases';
-                    console.log(`Link: ${link}, Assigned Category: ${category}`);
-                    if (!link.includes('target=')) link = '${link}{:target="_blank"}' // make it open in a new tab
-                    allLinks[category].push(link)
+                    if (!link.includes('target=')) link = '${link}{:target="_blank"}'; // make it open in a new tab
+                    allLinks[category].push(link);
                 });
             } else {
                 console.log(`No links found in ${filePath}`);
@@ -97,6 +96,8 @@ function extractLinks(filePaths) {
 
 // Function to process a group of files and save the consolidated links to a new .md file
 function processGroup(fileGroup) {
+    // http://localhost:4000/srch/docs/artificial-intelligence/2.c.i/?panel=equity-equality#:~:text=Minow%3A%20Equality%20vs.%20Equity
+    // http://localhost:4000/srch/docs/artificial-intelligence/2.c.i/?panel=equity-equality#:~:text=Minow%3A%20Equality%20vs.%20Equity
     if (fileGroup.length) {
         const allLinks = extractLinks(fileGroup);
 
