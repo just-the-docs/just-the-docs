@@ -1,4 +1,5 @@
 const { match } = require('assert');
+const { log } = require('console');
 const fs = require('fs');
 const path = require('path');
 
@@ -41,6 +42,16 @@ function getReferencedPaths(filePath) {
     return referencedPaths;
 }
 
+function isPanel(filePath) {
+    try {
+        const content = fs.readFileSync(filePath, 'utf8');
+        return content.includes('sidepanel: true');
+    } catch (error) {
+        console.error(`Error determining if sidepanel. File ${filePath}:`, error.message);
+        return false
+    }
+}
+
 // Function to extract links and their titles from multiple files
 function extractLinks(filePaths) {
     // const allLinks = [];
@@ -50,6 +61,7 @@ function extractLinks(filePaths) {
         databases: [],
         other: []
     };
+    const regex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)(\{:target="_blank"\})?(<!--.*?-->)?/g;
 
     filePaths.forEach((filePath) => {
         try {
@@ -58,20 +70,36 @@ function extractLinks(filePaths) {
             // console.log(`File content:\n${content}\n`); // Debugging: Log file content
 
             // Match Markdown links in the format [Title](URL){:target="_blank"}<!-- tag:tagName -->
-            const regex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)(\{:target="_blank"\})?(<!--.*?-->)?/g;
+            // the {:target="_blank"} and <!-- tag:tagName --> parts are optional
             const matches = content.match(regex);
-            // console.log(`Found matches:`, matches); // Debugging: Log matches
-
-            // Add {:target="_blank"} to each match and push to the result array
+            const ispanel = isPanel(filePath)
             if (matches) {
                 matches.forEach(link => {
+                    ///// get the category
                     let category = 'other';  // Default to "other"
                     if (link.includes('tag:definition')) category = 'definitions';
                     if (link.includes('tag:case-study')) category = 'caseStudies';
                     if (link.includes('tag:database')) category = 'databases';
-                    if (!link.includes('target=')) link = '${link}{:target="_blank"}'; // make it open in a new tab
+                    if (!link.includes('target=')) link = `${link}{:target="_blank"}`; // make it open in a new tab
+                    // TODO: the last line would mess up links that have a tag but no target="_blank"
 
-                    const backlink = "https://src-handbook-infrastructure-team.github.io/srch/docs/artificial-intelligence/"
+                    ///// construct the backlink
+                    const backlinkTextArr = link.match(/\[([^\]]+)\]/);
+                    const encodedText = encodeURIComponent(backlinkTextArr[1])
+                    const baseUrl = "https://src-handbook-infrastructure-team.github.io/"; // base URL
+                    let panelText = ''
+                    // get the rest of the URL using the filepath
+                    let parts = filePath.split("/");
+                    parts = parts.slice(2); // takes off "something/workspaces" from start of path
+                    if (parts[parts.length - 1] === "index.md") {
+                        parts.pop();
+                    } else if (ispanel) {
+                        const panelFileName = parts.pop().replace(/\.md$/, "");
+                        panelText = `?panel=${panelFileName}`
+                    }
+                    const updatedFilePath = parts.join("/");
+                    const url = path.join(baseUrl, updatedFilePath, panelText)
+                    const backlink = `${url}#:~:text=${encodedText}`;
 
                     allLinks[category].push([link, backlink]);
                 });
@@ -90,7 +118,7 @@ function extractLinks(filePaths) {
             };
 
         } catch (error) {
-            console.error(`ExtractLinks: Error processing file ${filePath}:`, error.message);
+            console.error(`ExtractLinks: Error processing file ${filePath}:`, error);
         }
     });
 
@@ -99,8 +127,6 @@ function extractLinks(filePaths) {
 
 // Function to process a group of files and save the consolidated links to a new .md file
 function processGroup(fileGroup) {
-    // http://localhost:4000/srch/docs/artificial-intelligence/2.c.i/?panel=equity-equality#:~:text=Minow%3A%20Equality%20vs.%20Equity
-    // http://localhost:4000/srch/docs/artificial-intelligence/2.c.i/?panel=equity-equality#:~:text=Minow%3A%20Equality%20vs.%20Equity
     if (fileGroup.length) {
         const allLinks = extractLinks(fileGroup);
 
@@ -169,7 +195,6 @@ const fileGroups = [
     // you can generate links from multiple pages. Parent page will be the parent of the first file.
     [path.join(BASE_DIR, 'artificial-intelligence/2.c.i/index.md')], // this generates one appendix file for one page
     [path.join(BASE_DIR, 'artificial-intelligence/2.c.ii/index.md')],
-    []
 ];
 
 processFiles(fileGroups);
