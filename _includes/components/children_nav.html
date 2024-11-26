@@ -70,20 +70,30 @@
 
 {%- endunless -%}
 
-{%- if nav_children.size >= 1 -%}
+
+{%- for nav_child in nav_children -%}
+    {%- if nav_child.appendix != true -%}
+      {%- assign nav_children_present = true -%}
+    {%- endif -%}
+{%- endfor -%}
+
+{%- if nav_children.size >= 1 and nav_children_present == true -%}
 
   {%- if page.child_nav_order == 'desc' or page.child_nav_order == 'reversed' -%}
     {%- assign nav_children = nav_children | reverse -%}
   {%- endif -%}
 
 <hr>
-{% include toc_heading_custom.html %}
-<ul>
-  {% for nav_child in nav_children %}
-  <li>
-    <a href="{{ nav_child.url | relative_url }}">{{ nav_child.title }}</a>{% if nav_child.summary %} - {{ nav_child.summary }}{% endif %}
-  </li>
-  {% endfor %}
-</ul>
-
+  {%- if nav_children_present == true -%}
+  {% include toc_heading_custom.html %}
+  <ul>
+    {% for nav_child in nav_children %}
+      {%- if nav_child.appendix != true -%}
+      <li>
+        <a href="{{ nav_child.url | relative_url }}">{{ nav_child.title }}</a>{% if nav_child.summary %} - {{ nav_child.summary }}{% endif %}
+      </li>
+      {%- endif -%}
+    {% endfor %}
+  </ul>
+  {%- endif -%}
 {%- endif -%}

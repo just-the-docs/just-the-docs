@@ -36,6 +36,7 @@ GEM
       faraday-net_http (>= 2.0, < 3.2)
     faraday-net_http (3.1.0)
       net-http
+    ffi (1.17.0-aarch64-linux-gnu)
     ffi (1.17.0-arm64-darwin)
     ffi (1.17.0-x86_64-linux-gnu)
     fiber-annotation (0.2.0)
@@ -43,6 +44,9 @@ GEM
       fiber-storage
     fiber-storage (0.1.0)
     forwardable-extended (2.6.0)
+    google-protobuf (4.28.2-aarch64-linux)
+      bigdecimal
+      rake (>= 13)
     google-protobuf (4.28.2-arm64-darwin)
       bigdecimal
       rake (>= 13)
@@ -104,6 +108,8 @@ GEM
     mercenary (0.4.0)
     net-http (0.4.1)
       uri
+    nokogiri (1.16.5-aarch64-linux)
+      racc (~> 1.4)
     nokogiri (1.16.5-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.16.5-x86_64-linux)
@@ -130,6 +136,8 @@ GEM
     rouge (4.4.0)
     ruby-rc4 (0.1.5)
     safe_yaml (1.0.5)
+    sass-embedded (1.78.0-aarch64-linux-gnu)
+      google-protobuf (~> 4.27)
     sass-embedded (1.78.0-arm64-darwin)
       google-protobuf (~> 4.27)
     sass-embedded (1.78.0-x86_64-linux-gnu)
@@ -151,6 +159,7 @@ GEM
     zeitwerk (2.6.13)
 
 PLATFORMS
+  aarch64-linux
   arm64-darwin
   x86_64-linux-gnu
 
