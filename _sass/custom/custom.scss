@@ -11,18 +11,32 @@
 
 /* Style all external links */
 a[href^="http"] {
-    text-decoration: underline;
-    color: #1a0dab; /* Custom color for external links */
-    cursor: pointer;
+  color: #1a0dab; /* Custom color for external links */
+  cursor: pointer;
+}
+
+/* Internal links have a different icon */
+a[href^="https://src-handbook-infrastructure-team"]::after {
+  content: " 🔗";
+  text-decoration: none; /* TODO: this isnt going away */
 }
 
 /* Open all external links in a new tab */
-a[href^="http"]::after {
-    content: " ↗"; /* Optional: Add an icon or symbol to indicate external link */
+a[href^="http"]:not([href^="https://src-handbook-infrastructure-team"])::after {
+  content: " ↗"; /* Optional: Add an icon or symbol to indicate external link */
+  text-decoration: underline;
 }
-
 /* Hover effect for links */
 a[href^="http"]:hover {
     text-decoration: none; /* Remove underline on hover if preferred */
     color: #4d90fe; /* Hover color */
+}
+
+.backlink {
+  content: "🔗"; /* Icon for backlink */
+  text-decoration: none;
+  font-size: 0.7em; /* Smaller size for the icon */
+  margin-left: 0.3em; /* Space between text and icon */
+  vertical-align: middle; /* Align the icon with the text */
+  color: inherit; /* Match the text color */
 }

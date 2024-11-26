@@ -71,7 +71,7 @@ function extractLinks(filePaths) {
                     if (link.includes('tag:database')) category = 'databases';
                     if (!link.includes('target=')) link = '${link}{:target="_blank"}'; // make it open in a new tab
 
-                    const backlink = "https://www.google.com/"
+                    const backlink = "https://src-handbook-infrastructure-team.github.io/srch/docs/artificial-intelligence/"
 
                     allLinks[category].push([link, backlink]);
                 });
@@ -136,7 +136,7 @@ These are all the external links mentioned in the body of the text and in the si
                 linksContent += `### ${categoryToHeading[category]}\n`; // Add heading with category name
                 items.forEach(item => {
                     // [View it on GitHub][Just the Docs repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
-                    itemWithBacklink = `${item[0]} [backlink](${item[1]}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }`
+                    itemWithBacklink = `${item[0]} [view in context](${item[1]}){: .backlink }`
                     linksContent += `- ${itemWithBacklink}\n`; // Add each item as a list
                 });
                 linksContent += '\n'; // Add a blank line after each category
