@@ -7,13 +7,7 @@ appendix: true
 
 # Links for learning objective 2.c.ii - Algorithmic Justice
 These are all the links mentioned in the body of the text and in the side panels in order of appearance.
-## Definitions
-
-## CaseStudies
-
-## Databases
-
-## Other
+### Uncategorized Links
 - [Escaping the Impossibility of Fairness: From Formal to Substantive Algorithmic Fairness](https://link.springer.com/article/10.1007/s13347-022-00584-6){:target="_blank"}{:target="_blank"}
 - [Anna Lauren Hoffmann: Where fairness fails: data, algorithms, and the limits of antidiscrimination discourse](https://www.tandfonline.com/doi/full/10.1080/1369118X.2019.1573912){:target="_blank"}{:target="_blank"}
 - [Gender bias and stereotypes in Large Language Models](https://dl.acm.org/doi/fullHtml/10.1145/3582269.3615599){:target="_blank"}{:target="_blank"}

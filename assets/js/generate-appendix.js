@@ -115,19 +115,29 @@ parent: "${parentTitle}"
 appendix: true
 ---
 
-# Links for learning objective ${parentTitle}
-These are all the links mentioned in the body of the text and in the side panels in order of appearance.
+# Appendix for learning objective ${parentTitle}
+These are all the external links mentioned in the body of the text and in the side panels, categorized by type.
 `;
-
+        const categoryToHeading = {
+            'other': 'Uncategorized Links',
+            'definitions': 'Definitions',
+            'caseStudies': 'Case Studies',
+            'databases': 'Databases',
+        };
         // Format the links as a Markdown list
         var linksContent = ''
         for (const [category, items] of Object.entries(allLinks)) {
-            linksContent += `## ${category.charAt(0).toUpperCase() + category.slice(1)}\n`; // Add heading with category name
-            items.forEach(item => {
-                linksContent += `- ${item}\n`; // Add each item as a list
-            });
-            linksContent += '\n'; // Add a blank line after each category
+            if (items.length > 0) {
+                linksContent += `### ${categoryToHeading[category]}\n`; // Add heading with category name
+                items.forEach(item => {
+                    linksContent += `- ${item}\n`; // Add each item as a list
+                });
+                linksContent += '\n'; // Add a blank line after each category
+            }
         }
+
+        // TODO: if there is only one category, remove the heading? Or if all links are uncategorized, remove the heading.
+
         console.log(`All extracted links:\n${linksContent}`); // Debugging: Log extracted links
 
         // Combine the front matter and links content

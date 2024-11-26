@@ -36,11 +36,21 @@ Each learning objective should have an appendix containing all the links in the 
 **After adding or removing links, or adding a new learning objective, you should regenerate the appendix file** by adding the filepath to the list at the bottom of assets/js/generate-appendix.js and running the script.
 
 To run the script, run the following command.
-```node /workspaces/srch/assets/js/generate-appendix.js```
+```
+node /workspaces/srch/assets/js/generate-appendix.js
+```
 
 You can generate one appendix for multiple files if desired. For example, if the learning objective has sub-pages.
 
 Note that the appendix files are overwritten every time the command is run. To make custom edits to specific appendicies, you need to modify the script.
+
+To caregorize links, add a tag comment of the form `<!-- tag:tagName -->` after the link. For example:
+```
+[United States Federal AI Use Case Inventory](https://ai.gov/ai-use-cases/){:target="_blank"}<!-- tag:database -->
+```
+Currently supported tags are `tag:database`, `tag:definition`, and `tag:caseStudy`. Modifying `generate-appendix.js` to add tag categories should be straighforward.
+
+Untagges links appear under the "Uncategorized Links" heading.
 
 ## default.html
 This defines the basic structure of the site. This was what I tweaked to adjust the navigation sidebar and tweak the structure to include a side panel.
