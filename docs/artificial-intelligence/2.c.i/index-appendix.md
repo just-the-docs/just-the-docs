@@ -5,10 +5,9 @@ parent: "2.c.i - Algorithmic Fairness"
 appendix: true
 ---
 
-
-
-# Links for learing objective 2.c.i - Algorithmic Fairness
-These are all the links mentioned in the body of the text and in the sidepanels.
+# Links for learning objective 2.c.i - Algorithmic Fairness
+These are all the links mentioned in the body of the text and in the side panels in order of appearance.
+- [docs](https://docs.new){:target="_blank"}
 - [Social Identities and Systems of Oppression \| National Museum of African American History and Culture](https://nmaahc.si.edu/learn/talking-about-race/topics/social-identities-and-systems-oppression){:target="_blank"}
 - [Why Is Oppression Wrong? \| Philosophical Studies](https://link.springer.com/article/10.1007/s11098-023-02084-5#Sec2){:target="_blank"}
 - [Brown’s Race, Power, and Privilege courses](https://college.brown.edu/design-your-education/explore-open-curriculum/course-selection/curricular-programs/examining-race){:target="_blank"}

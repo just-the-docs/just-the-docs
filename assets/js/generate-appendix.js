@@ -1,4 +1,3 @@
-const { log } = require('console');
 const fs = require('fs');
 const path = require('path');
 
@@ -41,73 +40,92 @@ function getReferencedPaths(filePath) {
     return referencedPaths;
 }
 
-// Function to extract links and their titles from a file
-function extractLinks(filePath) {
-    try {
-        const content = fs.readFileSync(filePath, 'utf8');
-
-        // Match Markdown links in the format [Title](URL){:target="_blank"}
-        const matches = content.match(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g);
-        // Add {:target="_blank"} to each match
-        return matches ? matches.map(link => `${link}{:target="_blank"}`) : [];
-    } catch (error) {
-        console.error(`Error processing file ${filePath}:`, error.message);
-        return [];
-    }
-}
-
-// Main function to process a file and all its referenced files
-function processFile(fileToProcess) {
-    const referencedPaths = getReferencedPaths(fileToProcess);
+// Function to extract links and their titles from multiple files
+function extractLinks(filePaths) {
     const allLinks = [];
 
-    referencedPaths.forEach((refFilePath) => {
-        const links = extractLinks(refFilePath);
-        allLinks.push(...links);
+    filePaths.forEach((filePath) => {
+        try {
+            const content = fs.readFileSync(filePath, 'utf8');
+            console.log(`Processing file: ${filePath}`); // Debugging: Log file being processed
+            // console.log(`File content:\n${content}\n`); // Debugging: Log file content
+
+            // Match Markdown links in the format [Title](URL)
+            const matches = content.match(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g);
+            console.log(`Found matches:`, matches); // Debugging: Log matches
+
+            // Add {:target="_blank"} to each match and push to the result array
+            if (matches) {
+                matches.forEach(link => {
+                    allLinks.push(`${link}{:target="_blank"}`);
+                });
+            }
+
+            // get links from sidepanels
+            const referencedPaths = getReferencedPaths(filePath);
+            const links = extractLinks(referencedPaths)
+            allLinks.push(...links);
+
+        } catch (error) {
+            console.error(`Error processing file ${filePath}:`, error.message);
+        }
     });
 
     return allLinks;
 }
 
-// Function to process a list of files and save the results to individual .md files
-function processFiles(fileList) {
-    fileList.forEach((filePath) => {
-        const links = processFile(filePath);
+// Function to process a group of files and save the consolidated links to a new .md file
+function processGroup(fileGroup) {
+    if (fileGroup.length) {
+        const allLinks = extractLinks(fileGroup);
 
-        // Extract the title field of the original file
-        const parentTitle = extractTitle(filePath);
-
-        // Create the output .md file with the same name as the input file
-        const outputFilePath = filePath.replace('.md', '-appendix.md');
+        // Extract the title field of the first file in the group as the parent title
+        const parentTitle = extractTitle(fileGroup[0]);
+        const outputFileName = `index-appendix.md`;
+        const parts = fileGroup[0].split('/');
+        parts.pop();
+        const base = parts.join('/');
+        const outputFilePath = path.join(base, outputFileName);
 
         // Front matter to add at the top of the generated file
-        const frontMatter = `---
+const frontMatter = `---
 layout: page
 title: "Appendix"
 parent: "${parentTitle}"
 appendix: true
----\n\n
+---
 
-# Links for learing objective ${parentTitle}
-These are all the links mentioned in the body of the text and in the sidepanels.
+# Links for learning objective ${parentTitle}
+These are all the links mentioned in the body of the text and in the side panels in order of appearance.
 `;
 
         // Format the links as a Markdown list
-        const linksContent = links.map(link => `- ${link}`).join('\n');
+        const linksContent = allLinks.map(link => `- ${link}`).join('\n');
+        console.log(`All extracted links:\n${linksContent}`); // Debugging: Log extracted links
 
         // Combine the front matter and links content
         const fullContent = frontMatter + linksContent;
 
         // Write the combined content to the output file
         fs.writeFileSync(outputFilePath, fullContent, 'utf8');
-        console.log(`Links for ${filePath} have been saved to ${outputFilePath}`);
+        console.log(`Links for group written to ${outputFilePath}`);
+    }
+}
+
+// Function to process a list of file groups
+function processFiles(fileGroups) {
+    fileGroups.forEach((fileGroup) => {
+        processGroup(fileGroup);
     });
 }
 
 const BASE_DIR = '/workspaces/srch/docs';
-const fileList = [
+const fileGroups = [
     // ADD TO THIS LIST TO GENERATE AN APPENDIX FOR A NEW LEARNING OBJECTIVE
-    path.join(BASE_DIR, 'artificial-intelligence/2.c.i/index.md'),
-    path.join(BASE_DIR, 'artificial-intelligence/2.c.ii/index.md'),
+    // you can generate links from multiple pages. Parent page will be the parent of the first file.
+    [path.join(BASE_DIR, 'artificial-intelligence/2.c.i/index.md')], // this generates one appendix file for one page
+    [path.join(BASE_DIR, 'artificial-intelligence/2.c.ii/index.md')],
+    []
 ];
-processFiles(fileList);
+
+processFiles(fileGroups);

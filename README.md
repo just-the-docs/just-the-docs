@@ -3,7 +3,7 @@ https://src-handbook-infrastructure-team.github.io/srch/docs/artificial-intellig
 
 # Just the Docs documentation
 
-[View the documentation][Just the Docs] for usage information.
+[View the documentation](https://just-the-docs.com/) for usage information.
 
 
 # Run the site locally
@@ -30,6 +30,17 @@ You can also link to a particular side panel with its URL. For example, you can 
 where `harms-panel` is the name of the side panel we are going to. This will take you to exactly the fairness and justice page with the side panel open.
 <img width="1469" alt="Screenshot 2024-11-05 at 3 00 17 AM" src="https://github.com/user-attachments/assets/1063d026-78e3-49d7-816e-7253a480af6d">
 
+## Appendices
+Each learning objective should have an appendix containing all the links in the body of the text and the sidepanels.
+
+**After adding or removing links, or adding a new learning objective, you should regenerate the appendix file** by adding the filepath to the list at the bottom of assets/js/generate-appendix.js and running the script.
+
+To run the script, run the following command.
+```node /workspaces/srch/assets/js/generate-appendix.js```
+
+You can generate one appendix for multiple files if desired. For example, if the learning objective has sub-pages.
+
+Note that the appendix files are overwritten every time the command is run. To make custom edits to specific appendicies, you need to modify the script.
 
 ## default.html
 This defines the basic structure of the site. This was what I tweaked to adjust the navigation sidebar and tweak the structure to include a side panel.
