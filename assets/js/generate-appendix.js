@@ -117,7 +117,7 @@ parent: "${parentTitle}"
 appendix: true
 ---
 
-# Appendix for learning objective ${parentTitle}
+# Appendix for Learning Objective ${parentTitle}
 These are all the external links mentioned in the body of the text and in the side panels, categorized by type.
 `;
         const categoryToHeading = {
