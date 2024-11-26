@@ -1,3 +1,4 @@
+const { match } = require('assert');
 const fs = require('fs');
 const path = require('path');
 
@@ -42,7 +43,13 @@ function getReferencedPaths(filePath) {
 
 // Function to extract links and their titles from multiple files
 function extractLinks(filePaths) {
-    const allLinks = [];
+    // const allLinks = [];
+    var allLinks = {
+        definitions: [],
+        caseStudies: [],
+        databases: [],
+        other: []
+    };
 
     filePaths.forEach((filePath) => {
         try {
@@ -50,24 +57,37 @@ function extractLinks(filePaths) {
             console.log(`Processing file: ${filePath}`); // Debugging: Log file being processed
             // console.log(`File content:\n${content}\n`); // Debugging: Log file content
 
-            // Match Markdown links in the format [Title](URL)
-            const matches = content.match(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g);
+            // Match Markdown links in the format [Title](URL){:target="_blank"}<!-- tag:tagName -->
+            const regex = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)(\{:target="_blank"\})?(<!--.*?-->)?/g;
+            const matches = content.match(regex);
             console.log(`Found matches:`, matches); // Debugging: Log matches
 
             // Add {:target="_blank"} to each match and push to the result array
             if (matches) {
                 matches.forEach(link => {
-                    allLinks.push(`${link}{:target="_blank"}`);
+                    let category = 'other';  // Default to "other"
+                    if (link.includes('tag:definition')) category = 'definitions'
+                    if (link.includes('tag:case-study')) category = 'caseStudies'
+                    if (link.includes('tag:database')) category = 'databases';
+                    console.log(`Link: ${link}, Assigned Category: ${category}`);
+                    allLinks[category].push(`${link}{:target="_blank"}`)
                 });
+            } else {
+                console.log(`No links found in ${filePath}`);
             }
 
             // get links from sidepanels
             const referencedPaths = getReferencedPaths(filePath);
-            const links = extractLinks(referencedPaths)
-            allLinks.push(...links);
+            const sidePanelLinks = extractLinks(referencedPaths) // recursive but shouldnt go deeper than 1 level
+            allLinks = {
+                definitions: [...allLinks.definitions, ...sidePanelLinks.definitions],
+                caseStudies: [...allLinks.caseStudies, ...sidePanelLinks.caseStudies],
+                databases: [...allLinks.databases, ...sidePanelLinks.databases],
+                other: [...allLinks.other, ...sidePanelLinks.other]
+            };
 
         } catch (error) {
-            console.error(`Error processing file ${filePath}:`, error.message);
+            console.error(`ExtractLinks: Error processing file ${filePath}:`, error.message);
         }
     });
 
@@ -88,7 +108,7 @@ function processGroup(fileGroup) {
         const outputFilePath = path.join(base, outputFileName);
 
         // Front matter to add at the top of the generated file
-const frontMatter = `---
+        const frontMatter = `---
 layout: page
 title: "Appendix"
 parent: "${parentTitle}"
@@ -100,7 +120,14 @@ These are all the links mentioned in the body of the text and in the side panels
 `;
 
         // Format the links as a Markdown list
-        const linksContent = allLinks.map(link => `- ${link}`).join('\n');
+        var linksContent = ''
+        for (const [category, items] of Object.entries(allLinks)) {
+            linksContent += `## ${category.charAt(0).toUpperCase() + category.slice(1)}\n`; // Add heading with category name
+            items.forEach(item => {
+                linksContent += `- ${item}\n`; // Add each item as a list
+            });
+            linksContent += '\n'; // Add a blank line after each category
+        }
         console.log(`All extracted links:\n${linksContent}`); // Debugging: Log extracted links
 
         // Combine the front matter and links content

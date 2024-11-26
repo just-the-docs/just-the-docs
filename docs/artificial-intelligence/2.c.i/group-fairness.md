@@ -21,4 +21,4 @@ Let G be a variable denoting the group, Y a variable denoting the label for the 
 - **Separation**: R and G are independent, conditioned on Y
 - **Sufficiency**: Y and G are independent, conditioned on R
 
-To learn more about technical definitions of fairness, see [Fairness and Machine Learning](https://fairmlbook.org/){:target="_blank"}
+To learn more about technical definitions of fairness, see [Fairness and Machine Learning](https://fairmlbook.org/){:target="_blank"}<!-- tag:definition -->

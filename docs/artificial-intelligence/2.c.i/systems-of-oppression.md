@@ -10,7 +10,7 @@ Examples of systems of oppression include: racism, sexism, classism, ableism, ag
 
 There are also protections based on certain characteristics in certain contexts
 
-[Social Identities and Systems of Oppression \| National Museum of African American History and Culture](https://nmaahc.si.edu/learn/talking-about-race/topics/social-identities-and-systems-oppression){:target="_blank"}
+[Social Identities and Systems of Oppression \| National Museum of African American History and Culture](https://nmaahc.si.edu/learn/talking-about-race/topics/social-identities-and-systems-oppression){:target="_blank"}<!-- tag:case-study -->
 
 [Why Is Oppression Wrong? \| Philosophical Studies](https://link.springer.com/article/10.1007/s11098-023-02084-5#Sec2){:target="_blank"}
 
