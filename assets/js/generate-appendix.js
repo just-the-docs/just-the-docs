@@ -70,7 +70,10 @@ function extractLinks(filePaths) {
                     if (link.includes('tag:case-study')) category = 'caseStudies';
                     if (link.includes('tag:database')) category = 'databases';
                     if (!link.includes('target=')) link = '${link}{:target="_blank"}'; // make it open in a new tab
-                    allLinks[category].push(link);
+
+                    const backlink = "https://www.google.com/"
+
+                    allLinks[category].push([link, backlink]);
                 });
             } else {
                 console.log(`No links found in ${filePath}`);
@@ -132,7 +135,9 @@ These are all the external links mentioned in the body of the text and in the si
             if (items.length > 0) {
                 linksContent += `### ${categoryToHeading[category]}\n`; // Add heading with category name
                 items.forEach(item => {
-                    linksContent += `- ${item}\n`; // Add each item as a list
+                    // [View it on GitHub][Just the Docs repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
+                    itemWithBacklink = `${item[0]} [backlink](${item[1]}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }`
+                    linksContent += `- ${itemWithBacklink}\n`; // Add each item as a list
                 });
                 linksContent += '\n'; // Add a blank line after each category
             }
