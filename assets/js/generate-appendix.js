@@ -70,7 +70,8 @@ function extractLinks(filePaths) {
                     if (link.includes('tag:case-study')) category = 'caseStudies'
                     if (link.includes('tag:database')) category = 'databases';
                     console.log(`Link: ${link}, Assigned Category: ${category}`);
-                    allLinks[category].push(`${link}{:target="_blank"}`)
+                    if (!link.includes('target=')) link = '${link}{:target="_blank"}' // make it open in a new tab
+                    allLinks[category].push(link)
                 });
             } else {
                 console.log(`No links found in ${filePath}`);
