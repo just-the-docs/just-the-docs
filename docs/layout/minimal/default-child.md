@@ -1,6 +1,6 @@
 ---
 title: Default layout child page
-layout: default
+layout: minimal
 parent: A minimal layout page
 grand_parent: Layout
 ---
