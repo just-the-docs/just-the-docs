@@ -18,7 +18,7 @@ permalink: /
 
 Mi nombre es **Miguel**, también conocido como **nervi0zz0** (nno me conocen ni en mi casa). En este momento, estoy mucho más cojo de lo habitual, debido a una lesión reciente en la pierna que me ha dejado con un dolor insoportable y una receta interminable de opiáceos. La medicina manda ahora, porque, siendo sincero, lo único que alivia el sufrimiento físico es andar por la vida como un zombi.
 
-Pero claro, no todo en la vida es dolor y drogas... al menos no de forma literal! Este parón forzoso me dio tiempo para pensar. Y como no podía pasar el día mirando el techo sin hacer nada, decidí hacer algo útil: escribir un blog. ¿Por qué no? Si ya estoy de baja, con tiempo para reflexionar sobre mi vida, mis fracasos y cómo seguir aprendiendo algo, ¿por qué no compartir esas inquietudes? Total, si nadie lo lee, al menos me habré desahogado. Esto me sale gratis!
+Pero claro, no todo en la vida es dolor opiáceos... al menos no de forma literal! Este parón forzoso me dio tiempo para pensar. Y como no podía pasar el día mirando el techo sin hacer nada, decidí hacer algo "útil": escribir un blog. ¿Por qué no? Si ya estoy de baja, con tiempo para reflexionar sobre mi vida, mis fracasos y cómo seguir aprendiendo algo, ¿por qué no compartir esas inquietudes? Total, si nadie lo lee, al menos me habré desahogado. Esto me sale gratis!
 
 Ahora paso los días entre sesiones de cama, sofá y reposo forzado, haciendo cosas que nunca había tenido tiempo de hacer antes. Sí, como resolver **CTFs**, y seguir aprendiendo sobre **capturar banderitas**. Si no estás al día, ya sabes... "camarón que se duerme, se lo lleva la corriente".
 
@@ -31,14 +31,13 @@ Ahora paso los días entre sesiones de cama, sofá y reposo forzado, haciendo co
 
 ### Antes de continuar debes saber que
 
-{: .important }
-> Ten en cuenta que no me responsabilizo de lo escrito aquí. ¿Los opiáceos cuentan como atenuante?
+
 
 ---
 
 {: .opaque }
 > {: .warning }
-> ¡Atención! Algunos de los temas tratados en este blog son solo para audiencias experimentadas en el mundo de la ciberseguridad. No intente esto en casa sin supervisión...
+> ¡Atención! Algunos de los temas tratados en este blog son solo para expertos en ciberseguridad. No intentes esto en casa sin supervisión... ¡Que no, tonto! Pasa, anda, no ves que este blog lo escribo yo.
 
 ---
 

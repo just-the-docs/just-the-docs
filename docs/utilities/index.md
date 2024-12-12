@@ -1,5 +1,5 @@
 ---
-title: Diario de un Cojo, Reflexiones que Nadie Pidió
+title: Diario de un Cojo
 layout: home
 nav_order: 4
 description: "Un espacio donde la genialidad y el sarcasmo conviven en una especie de caos organizado."
