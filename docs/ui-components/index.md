@@ -1,122 +1,73 @@
 ---
-title: Plataformas de aprendizaje
-nav_order: 3
-theme: dark
+title: TryHackMe
+nav_order: 1
 ---
 <hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
 
-<div style="background: linear-gradient(to right, #2c3e50, #8e44ad); border-radius: 15px; padding: 20px; text-align: center;">
-  <h2 style="font-size: 2rem; font-weight: 700; color: white;">🛡️ Plataformas de Ciberseguridad para Practicar</h2>
-</div>
+![thm](/assets/img/THMlogo.png)
 
+# TryHackMe: El lugar donde la ciberseguridad te pone en tu sitio
 
-El aprendizaje de la ciberseguridad va mucho más allá de memorizar conceptos. La verdadera habilidad se forja enfrentando situaciones prácticas. Por ello, he recopilado algunas de las plataformas más destacadas que te permiten sumergirte en escenarios realistas, donde podrás mejorar tus competencias en defensa, ataques simulados y forense digital, todo a tu propio ritmo, sin riesgos.
-
-Si prefieres aprender haciendo, estas plataformas están diseñadas para ti. ¡Descubramos lo que tienen para ofrecer!
-
-**Importante**: Todas estas plataformas cuentan con opciones gratuitas que te permiten comenzar sin compromisos. Sin embargo, los planes de pago ofrecen características adicionales que pueden ser interesantes si deseas profundizar más en el contenido o acceder a recursos exclusivos.
+¿Siempre quisiste hackear, pero no sabías por dónde empezar? **TryHackMe** es como un parque temático para novatos (y no tan novatos), donde puedes aprender de tus fracasos (y de mis *epic fails*) mientras te enfrentas a retos que suenan geniales en teoría, pero en la práctica son una auténtica tortura divertida.
 
 ---
 
-## **1. Let'sDefend** 🖥️  
-{: .fs-3 .fw-500 }
+## ¿Por qué TryHackMe?
 
-<div style="text-align:center;">
-  <img src="/assets/images/plataformas/letsdefend1.png" alt="Let'sDefend" class="img-fluid mb-3" width="250" style="border: 3px solid #000; border-radius: 8px;">
-</div>
+Lo mejor de todo: **¡tienes recursos gratuitos!** Porque, seamos honestos, ¿quién necesita gastar dinero mientras te frustras aprendiendo algo nuevo? Aun así, si decides apostar más en serio por la ciberseguridad, la suscripción mensual merece la pena: te da acceso a rutas avanzadas, desafíos exclusivos y un soporte que hace que gritarle a la pantalla sea opcional.
 
-**Nota: ⭐️⭐️⭐️⭐️ / 5**  
-{: .label .label-green }  
-
-[**Let'sDefend**](https://letsdefend.io/) es una plataforma enfocada en la defensa de redes y sistemas, que ofrece simulaciones de ciberseguridad diseñadas para reflejar escenarios reales. Con sus ejercicios prácticos, podrás mejorar tus habilidades en la protección contra ataques cibernéticos mientras gestionas incidentes en un entorno controlado.
-
-### **Lo Mejor de Let'sDefend**  
-{: .fs-4 .fw-400 }
-- 🔐 **Simulaciones Realistas**: Enfréntate a incidentes cibernéticos de la vida real para poner a prueba tus habilidades.
-- 💻 **Desafíos del Mundo Real**: Gestiona ataques y protege infraestructuras tal como lo harías en un entorno profesional.
-- 🎓 **Certificación**: Completa los módulos y recibe una certificación que valida tus conocimientos y habilidades.
-
-<div style="text-align:center;">
-  <a href="https://letsdefend.io/" target="_blank">
-    <button type="button" name="button" class="btn btn-outline" style="border-radius: 8px;">Explorar Let'sDefend</button>
-  </a>
-  <a href="https://letsdefend.io/dashboard" target="_blank">
-    <button type="button" name="button" class="btn btn-outline" style="border-radius: 8px;">Mi perfil en Let'sDefend</button>
-  </a>
-</div>
+TryHackMe te permite aprender al ritmo que prefieras, ya sea desbloqueando niveles básicos de hacking, como descifrar contraseñas obvias, hasta rutas avanzadas que te dejarán *"con cara de gili..."*. **Aquí tienes la oportunidad de practicar sin miedo a derribar la red de tu casa por accidente**.
 
 ---
 
-## **2. Blue Team Labs Online** 🛡️  
-{: .fs-3 .fw-500 }
+## Rutas de Aprendizaje Recomendadas 🎯
 
-<div style="text-align:center;">
-  <img src="/assets/images/plataformas/btl.jpg" alt="Blue Team Labs" class="img-fluid mb-3" width="250" style="border: 3px solid #000; border-radius: 8px;">
-</div>
+Si te interesa comenzar en este apasionante (y a veces frustrante) mundo, aquí van algunas rutas ideales:
 
-**Nota: ⭐️⭐️⭐️⭐️½ / 5**  
-{: .label .label-green }  
+### **SOC Level 1 Analyst**  
+- Perfecta para aquellos que quieren proteger redes y responder ante incidentes.  
+- Aprenderás a manejar logs, analizar tráfico, y detectar vulnerabilidades como un verdadero analista de SOC.  
+- **Destacado**: Simula escenarios reales para que vivas el caos de un SOC sin perder tu empleo.
 
-[**Blue Team Labs Online**](https://blueteamlabs.online/) es ideal para quienes desean fortalecer sus capacidades en respuesta a incidentes y en la investigación forense. A través de ejercicios prácticos, te enfrentarás a ataques y aprenderás a defender infraestructuras críticas, todo mientras desarrollas habilidades para gestionar amenazas en tiempo real.
+### **Cyber Defense Path**  
+- Diseñada para quienes quieren dominar los fundamentos de la ciberseguridad.  
+- Cubre temas esenciales como reconocimiento, explotación básica y análisis de vulnerabilidades.  
+- Ideal para entender cómo los atacantes piensan (para luego detenerlos).
 
-### **Lo Mejor de Blue Team Labs**  
-{: .fs-4 .fw-400 }
-- 🔍 **Desafíos Forenses**: Realiza investigaciones digitales para descubrir vulnerabilidades y rastrear ataques.
-- ⚡ **Simulacros de Respuesta a Incidentes**: Mejora tu capacidad para actuar ante ciberataques y mitigar sus efectos.
-- 🏆 **Certificación**: Obtén una certificación que valida tus competencias en protección de redes y sistemas.
+### **Principiante Absoluto**  
+- Ruta perfecta si no sabes ni por dónde empezar.  
+- Incluye lecciones interactivas que explican conceptos básicos como IPs, redes, y Linux.  
+- **Tip**: No te preocupes si al principio todo parece escrito en klingon; mejora con práctica.
 
-<div style="text-align:center;">
-  <a href="https://blueteamlabs.online/" target="_blank">
-    <button type="button" name="button" class="btn btn-outline" style="border-radius: 8px;">Explorar Blue Team Labs</button>
-  </a>
-  <a href="https://blueteamlabs.online/profile" target="_blank">
-    <button type="button" name="button" class="btn btn-outline" style="border-radius: 8px;">Mi perfil en Blue Team Labs</button>
-  </a>
-</div>
+### **Red Teaming Basics**  
+- Aprende cómo los hackers piensan y actúan.  
+- Te sumergirás en ejercicios de pentesting, pero con un enfoque para novatos.  
+- **Advertencia**: Los comandos *rm* y *sudo* no son tan amigables como parecen. 😅
 
 ---
 
-## **3. TryHackMe** 👾  
-{: .fs-3 .fw-500 }
+## Mi Experiencia Personal  
 
-<div style="text-align:center;">
-  <img src="/assets/images/plataformas/thm.png" alt="TryHackMe" class="img-fluid mb-3" width="250" style="border: 3px solid #000; border-radius: 8px;">
-</div>
+### [Perfil de nervi en TryHackMe](https://tryhackme.com/r/p/nervi)  
+Resolviendo retos, fallando gloriosamente y aprendiendo en el proceso.
 
-**Nota: ⭐️⭐️⭐️⭐️⭐️ / 5**  
-{: .label .label-green }  
+![Tu imagen de insignia](https://tryhackme-badges.s3.amazonaws.com/nervi.png)
 
-[**TryHackMe**](https://tryhackme.com/) se ha consolidado como una de las plataformas de referencia para aprender hacking ético de una manera práctica y accesible. Desde lo más básico hasta desafíos avanzados, los laboratorios interactivos te permiten poner a prueba tus habilidades en un entorno seguro y educativo.
+Mi travesía en TryHackMe comenzó como cualquier viaje en ciberseguridad: **con una mezcla de curiosidad, frustración y satisfacción**. Desde rutas básicas hasta la de **SOC Level 1 Analyst**, cada desafío me ha permitido crecer. Aunque, admito, algunos días siento que retrocedo más de lo que avanzo. Pero así es la curva de aprendizaje, ¿verdad?
 
-### **Lo Mejor de TryHackMe**  
-{: .fs-4 .fw-400 }
-- 💻 **Labs Interactivos**: Participa en simulaciones de hacking ético, defendiendo sistemas y resolviendo retos de ciberseguridad en un entorno virtual.
-- 🔓 **Ciberseguridad para Todos**: Comienza desde los conceptos más simples y avanza hacia retos más complejos, con guías detalladas para cada paso.
-- 🏅 **Badges y Certificados**: Completa retos y gana badges que acreditan tu experiencia y logros en el campo de la ciberseguridad.
+### Algunos logros, muchos fallos... así aprendo  
 
-<div style="text-align:center;">
-  <a href="https://tryhackme.com/" target="_blank">
-    <button type="button" name="button" class="btn btn-outline" style="border-radius: 8px;">Explorar TryHackMe</button>
-  </a>
-  <a href="https://tryhackme.com/p/nervi" target="_blank">
-    <button type="button" name="button" class="btn btn-outline" style="border-radius: 8px;">Mi perfil en TryHackMe</button>
-  </a>
-</div>
+Mis habilidades están en constante evolución (con un par de saltos y varios tropezones). Si estás buscando inspiración o quieres ver cómo "no hackear", visita mi perfil. Porque, en este mundo, **fallar es parte del éxito.**
 
 ---
 
-<div style="text-align:center;">
-  <img src="https://tryhackme-badges.s3.amazonaws.com/nervi.png" alt="TryHackMe Badge" class="mb-3" style="border-radius: 8px;">
-</div>
+## ¿Por qué Recomiendo TryHackMe?
 
----
+Si buscas una plataforma que mezcle teoría, práctica, y un toque de frustración saludable, TryHackMe es ideal. Sus rutas de aprendizaje son excelentes tanto para quienes comienzan desde cero como para aquellos que buscan avanzar en su carrera profesional.
 
-## **En Resumen: Mejora tus Habilidades en Ciberseguridad**  
-{: .text-center .fs-4 }
+Además, sus recursos gratuitos hacen que sea accesible para todos, y con promociones como las de **Black Friday**, no hay excusa para no probar el contenido premium. **Empieza con las rutas básicas y experimenta el caos organizado que es la ciberseguridad**.
 
-La mejor manera de aprender ciberseguridad es sumergirse directamente en la práctica. Las plataformas **Let'sDefend**, **Blue Team Labs Online** y **TryHackMe** son el lugar perfecto para empezar o mejorar tus habilidades. Aquí puedes realizar simulaciones de ataques, defender infraestructuras y experimentar con incidentes en tiempo real.
-
-**Todos estos servicios ofrecen planes gratuitos**, lo que te permite comenzar sin compromiso. Si decides invertir en un plan de pago, cada plataforma tiene características exclusivas que podrían valer la pena dependiendo de tus necesidades y metas.
+Nos vemos en los retos, intentando hackear sistemas sin perder la cordura. 😉
 Firma
 
 <hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
