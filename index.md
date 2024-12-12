@@ -1,99 +1,81 @@
 ---
-title: Home
+title: ¿Quién soy?
 layout: home
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "El blog que nadie pidió, pero todos necesitan (o no)."
 permalink: /
 ---
 
-# Focus on writing good documentation
-{: .fs-9 }
+<div style="text-align: center; margin: 40px 0;">
+  <img src="/assets/images/NERVI0ZZ0.png" alt="Portada" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+</div>
 
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
-{: .fs-6 .fw-300 }
-
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View it on GitHub][Just the Docs repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
+<div style="text-align: center; margin: 30px 0;">
+<h1 style="font-size: 36px; font-weight: 700; color: #2D3748; text-shadow: 1px 1px 6px rgba(0,0,0,0.3); margin: 0; font-family: 'Arial', sans-serif; letter-spacing: 1px;">
+  Esto es <span style="color: #2B6CB0; font-style: italic;">"Diario de un Cojo"</span>
+</h1>
+<p style="font-size: 18px; color: #4A5568; font-family: 'Arial', sans-serif; font-style: italic; margin-top: 10px;">
+  El blog que nadie pidió, pero todos necesitan (o no).
+</p>
+</div>
 
 ---
 
-{: .warning }
-> This website documents the features of the current `main` branch of the Just the Docs theme. See [the CHANGELOG]({% link CHANGELOG.md %}) for a list of releases, new features, and bug fixes.
+<h2 align="center">¿Y quién soy yo?</h2>
+<div style="text-align: center; margin-top: 20px;">
+  <img src="/assets/images/txemita.jpg" alt="Soy el que no lleva gorro... Obvio." style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0px 0px 15px rgba(0,0,0,0.2); margin-bottom: 20px;">
+  <p style="font-size: 18px; color: #555;">Soy el que no lleva gorro... Obvio.</p>
+</div>
 
-Just the Docs is a theme for generating static websites with [Jekyll]. You can write source files for your web pages using [Markdown], the [Liquid] templating language, and HTML.[^1] Jekyll builds your site by converting all files that have [front matter] to HTML. Your [Jekyll configuration] file determines which theme to use, and sets general parameters for your site, such as the URL of its home page.
+---
 
-Jekyll builds this Just the Docs theme docs website using the theme itself. These web pages show how your web pages will look *by default* when you use this theme. But you can easily *[customize]* the theme to make them look completely different!
+<h2 align="center">Un poco sobre mí, o cómo la vida me empujó a hacer esto…</h2>
 
-Browse the docs to learn more about how to use this theme.
+Mi nombre es **Miguel**, también conocido como **nervi0zz0** (nno me conocen ni en mi casa). En este momento, estoy mucho más cojo de lo habitual, debido a una lesión reciente en la pierna que me ha dejado con un dolor insoportable y una receta interminable de opiáceos. La medicina manda ahora, porque, siendo sincero, lo único que alivia el sufrimiento físico es andar por la vida como un zombi.
 
-## Getting started
+Pero claro, no todo en la vida es dolor y drogas... al menos no de forma literal! Este parón forzoso me dio tiempo para pensar. Y como no podía pasar el día mirando el techo sin hacer nada, decidí hacer algo útil: escribir un blog. ¿Por qué no? Si ya estoy de baja, con tiempo para reflexionar sobre mi vida, mis fracasos y cómo seguir aprendiendo algo, ¿por qué no compartir esas inquietudes? Total, si nadie lo lee, al menos me habré desahogado. Esto me sale gratis!
 
-The [Just the Docs Template] provides the simplest, quickest, and easiest way to create a new website that uses the Just the Docs theme. To get started with creating a site, just click "[use the template]"!
+Ahora paso los días entre sesiones de cama, sofá y reposo forzado, haciendo cosas que nunca había tenido tiempo de hacer antes. Sí, como resolver **CTFs**, y seguir aprendiendo sobre **capturar banderitas**. Si no estás al día, ya sabes... "camarón que se duerme, se lo lleva la corriente".
 
-{: .note }
-To use the theme, you do ***not*** need to clone or fork the [Just the Docs repo]! You should do that only if you intend to browse the theme docs locally, contribute to the development of the theme, or develop a new theme based on Just the Docs.
+¿Por qué escribir un blog sobre todo esto? La respuesta es simple: esta pierna jodida me da tiempo para pensar y compartir mis reflexiones sobre lo absurdo de la vida. Y si puedo mezclar un poco de mala hostia con ciberseguridad en el camino, ¿por qué no?
 
-You can easily set the site created by the template to be published on [GitHub Pages] – the [template README] file explains how to do that, along with other details.
+**Bienvenidos a mi espacio: Diario de un Cojo.**
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^2] And you will be able to deploy your local build to a different platform than GitHub Pages.
+---
 
-More specifically, the created site:
+## ¿Qué puedes esperar aquí?
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
+Lo más probable es que encuentres:
 
-Other than that, you're free to customize sites that you create with the template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+- 🧠 **Mis pensamientos**: Siento que ahora soy mucho más filosófico de lo que jamás imaginé. Las medicinas y las largas horas de descanso tienen ese efecto en mí.
+- 💻 **Reflexiones sobre mi vida laboral y la ciberseguridad**: Un mundo lleno de amenazas, frustraciones y usuarios que, francamente, se merecen su propio blog. ¿Quién lo iba a decir? Yo que pensaba que mi trabajo era aburrido!
+- 📚 **Recursos y rutas de estudio**: Porque, aunque no me pueda mover mucho, mi cerebro sigue funcionando (o al menos eso me gusta creer), así que seguiré compartiendo lo que aprenda durante este parón forzoso.
 
-{: .note }
-See the theme [README][Just the Docs README] for how to use the theme as a gem without creating a new site.
+---
 
-## About the project
+## Disfruta de esta estancia
 
-Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](https://patrickmarsceill.com).
+Si decides quedarte, **¡bienvenido!** Y si no, al menos me habré reído un poco. ¡Gracias, pierna, por darme tanto tiempo para hacer cosas tan útiles!
 
-### License
+---
 
-Just the Docs is distributed by an [MIT license](https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt).
+### Antes de continuar debes saber que
 
-### Contributing
+{: .important }
+> Ten en cuenta que no me responsabilizo de lo escrito aquí. ¿Los opiáceos cuentan como atenuante?
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/just-the-docs/just-the-docs#contributing).
+---
 
-#### Thank you to the contributors of Just the Docs!
+{: .opaque }
+> {: .warning }
+> ¡Atención! Algunos de los temas tratados en este blog son solo para audiencias experimentadas en el mundo de la ciberseguridad. No intente esto en casa sin supervisión...
 
-<ul class="list-style-none">
-{% for contributor in site.github.contributors %}
-  <li class="d-inline-block mr-1">
-     <a href="{{ contributor.html_url }}"><img src="{{ contributor.avatar_url }}" width="32" height="32" alt="{{ contributor.login }}"></a>
-  </li>
-{% endfor %}
-</ul>
+---
 
-### Code of Conduct
+<div style="text-align: center; margin-top: 40px;">
+  <span style="font-size: 20px; color: #444; font-weight: bold;">Si decides quedarte, ¡bienvenido! 😎</span>
+</div>
 
-Just the Docs is committed to fostering a welcoming community.
-
-[View our Code of Conduct](https://github.com/just-the-docs/just-the-docs/tree/main/CODE_OF_CONDUCT.md) on our GitHub repository.
-
-----
-
-[^1]: The [source file for this page] uses all three markup languages.
-
-[^2]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Jekyll]: https://jekyllrb.com
-[Markdown]: https://daringfireball.net/projects/markdown/
-[Liquid]: https://github.com/Shopify/liquid/wiki
-[Front matter]: https://jekyllrb.com/docs/front-matter/
-[Jekyll configuration]: https://jekyllrb.com/docs/configuration/
-[source file for this page]: https://github.com/just-the-docs/just-the-docs/blob/main/index.md
-[Just the Docs Template]: https://just-the-docs.github.io/just-the-docs-template/
-[Just the Docs]: https://just-the-docs.com
-[Just the Docs repo]: https://github.com/just-the-docs/just-the-docs
-[Just the Docs README]: https://github.com/just-the-docs/just-the-docs/blob/main/README.md
-[GitHub Pages]: https://pages.github.com/
-[Template README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[customize]: {% link docs/customization.md %}
-[use the template]: https://github.com/just-the-docs/just-the-docs-template/generate
+<div style="text-align: center; margin-top: 40px;">
+  <img src="/assets/images/gif/14Vb.gif" alt="corazones" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);">
+</div>
