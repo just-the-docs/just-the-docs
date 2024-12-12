@@ -1,5 +1,5 @@
 ---
-title: TryHackMe
+title: 
 nav_order: 5
 ---
 

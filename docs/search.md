@@ -1,6 +1,7 @@
 ---
 title: Search
-nav_order: 7
+parent: TryHackMe
+nav_order: 1
 ---
 
 # Search
