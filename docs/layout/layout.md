@@ -1,52 +1,71 @@
 ---
-title: Layout
+title: LetsDefend
 layout: default
-nav_order: 4.5
+nav_order: 4
 ---
 
-# Layout
+[perfil](/assets/img/letsdefend1.png)
 
-You specify the layout for a page in its [front matter]. Just the Docs has a `default` layout with a sidebar, used for almost all pages in the theme docs, and a `minimal` layout that omits the sidebar.
-{: .fs-6 .fw-300 }
 
-## The layout concept
+## ¿Qué es LetsDefend?
 
-See the [Jekyll docs page about layouts] for an explanation of the general idea of layouts and how to specify them.
+[LetsDefend](https://letsdefend.io/) es una plataforma educativa enfocada exclusivamente en la capacitación práctica para roles en equipos **Blue Team** y **Purple Team**. Con una combinación de contenido gratuito y opciones premium, LetsDefend es ideal tanto para principiantes como para profesionales que buscan mejorar sus habilidades en respuesta a incidentes, análisis de amenazas y más.
 
-You can use [Jekyll's front matter defaults] to specify the same layout for many pages.
+Esta plataforma no es solo otra colección de videos o lecturas teóricas; LetsDefend te permite **asumir el rol de un Analista de SOC (Security Operations Center)** a través de simulaciones en tiempo real. Aquí no solo aprendes, sino que pones en práctica tus conocimientos enfrentándote a incidentes de seguridad como si estuvieras en un SOC real.
 
-## The `default` layout
-
-This page uses the default layout. This site configures `layout: default` as a [front matter default](https://jekyllrb.com/docs/configuration/front-matter-defaults/) value for all pages in the `docs` directory.
-
-The default layout of Just the Docs is a *responsive* layout: on medium and larger width displays, it displays a sidebar, including a navigation panel; on smaller width displays, the sidebar is automatically hidden under a button.
-
-All pages except top-level pages automatically have a list of  so-called *breadcrumbs*: links to their parent pages and any higher-level ancestors. They show the breadcrumbs above the main content of the page.
-
-Each page that has child pages generally has a list of links to those pages (you can suppress it by `has_toc: false` in the front matter). It shows the list as a *table of contents* below the main content.
-
-## The `minimal` layout
-
-A child and grandchild page of this page use the minimal layout. This differs from the default layout by omitting the sidebar---and thereby also the navigation panel. To navigate between pages with the minimal layout, you can use the breadcrumbs and the tables of contents.
-
-## Selectively hiding or showing the sidebar
-
-[Jekyll's front matter defaults] can be used to apply the `minimal` layout for many pages. But there are also other variables that can control the page layout. In `_config.yml`, you can set `nav_enabled: false` to disable the sidebar navigation panel across the entire site. This can then be selectively enabled on a page-by-page basis by assigning the `nav_enabled: true` page [front matter] variable. For instance, this could be used to enable sidebar navigation on a home page while all other pages have sidebar navigation disabled.
-
-```yaml
----
-layout: default
-title: Home
-nav_enabled: true
 ---
 
-```
+## Rutas de Estudio 🎯
 
-## Other layouts
+LetsDefend ofrece rutas de estudio estructuradas para diferentes roles en ciberseguridad, cada una diseñada para guiarte desde lo básico hasta habilidades avanzadas. Algunas de las rutas más populares incluyen:
 
-Just the Docs has further layouts: `about`, `home`, `page`, and `post`. Currently, they are all based on the `default` layout. See the [Jekyll docs about inheritance] for how to customize them.
+### **Analista de SOC**  
+- Perfecta para principiantes o quienes buscan especializarse en operaciones de seguridad.
+- Incluye simulaciones de detección de amenazas, análisis de logs y manejo de incidentes.
+- **Destacado**: Aprenderás herramientas como **Wireshark**, análisis de eventos en SIEM, y manejo de alertas.
 
-[front matter]: https://jekyllrb.com/docs/front-matter/ "Jekyll docs about front matter"
-[Jekyll docs page about layouts]: https://jekyllrb.com/docs/layouts/ "Jekyll docs about layouts"
-[Jekyll's front matter defaults]: https://jekyllrb.com/docs/configuration/front-matter-defaults/ "Jekyll docs about front matter defaults"
-[Jekyll docs about inheritance]: https://jekyllrb.com/docs/layouts/#inheritance "Jekyll docs about inheritance"
+### **Threat Hunter**  
+- Diseñada para quienes quieren explorar amenazas avanzadas.
+- Te enfocas en detectar y analizar técnicas de ataque mediante herramientas como MITRE ATT&CK.
+- Desarrollarás un ojo crítico para investigar patrones sospechosos y posibles compromisos.
+
+### **Incident Responder**  
+- Enfocada en la gestión de incidentes desde la detección inicial hasta la mitigación.
+- Aprende cómo gestionar respuestas a ransomware, phishing y otros ataques complejos.
+
+
+
+---
+
+## Funciones Destacadas ⚙️
+
+1. **Simulaciones Prácticas**: A diferencia de otros cursos, LetsDefend simula un entorno real donde recibes alertas, analizas datos, y tomas decisiones que afectan directamente la seguridad de un sistema.
+   
+2. **Recursos Gratuitos**: La plataforma ofrece ejercicios gratuitos que te permiten aprender habilidades fundamentales sin gastar un centavo.
+
+3. **Desafíos Mensuales**: Mantente activo con tareas y casos prácticos que imitan problemas reales en ciberseguridad, puedes asigarte 16 alertas mensuales simulando a las de un SOC
+
+4. **Integración SIEM**: Aprende a gestionar herramientas críticas como SIEMs para identificar y responder a incidentes.
+
+5. **Contenido Premium**: Durante eventos especiales como Black Friday, puedes aprovechar **ofertas exclusivas** para acceder al contenido premium, que incluye más rutas, desafíos avanzados y herramientas profesionales.
+
+---
+
+## Experiencia Personal en LetsDefend
+
+### [LetsDefend](https://app.letsdefend.io/user/nerviozz)  
+**Resolviendo incidentes, fallando, aprendiendo. Básicamente mi día a día.**
+
+Mi experiencia con LetsDefend ha sido inmersiva y desafiante. He seguido la ruta de **Analista de SOC**, donde cada simulación se siente como un problema real. Desde analizar eventos sospechosos en un SIEM hasta responder a alertas críticas, he aprendido que cada error es una lección invaluable.
+
+Además, la comunidad de LetsDefend es increíblemente activa. Siempre hay debates y soluciones compartidas que enriquecen la experiencia de aprendizaje. ¿La mejor parte? Las ofertas especiales como las de Black Friday te permiten aprovechar todo el contenido premium a un precio accesible.
+
+---
+
+## ¿Por qué Recomendaría LetsDefend?
+
+Si buscas una plataforma que no solo enseñe, sino que te permita practicar y aprender haciendo, LetsDefend es una elección sólida. Tanto si estás comenzando tu viaje en ciberseguridad como si buscas mejorar tus habilidades como profesional, esta plataforma tiene algo para ti.
+
+Además, los recursos gratuitos te permiten probarla sin compromiso, y las simulaciones prácticas son lo más cercano que encontrarás a trabajar en un SOC real sin salir de tu habitación.
+
+---
