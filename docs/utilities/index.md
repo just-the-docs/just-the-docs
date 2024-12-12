@@ -1,28 +1,50 @@
 ---
-title: Reflexiones desde el sofá
+title: Sobre un Bastón, Historias y Reflexiones
 layout: home
 nav_order: 4
 description: "Un espacio donde la genialidad y el sarcasmo conviven en una especie de caos organizado."
 permalink: /mi-blog/
 ---
 
+---
+title: Mi Blog
+layout: home
+nav_order: 2
+description: "Reflexiones, quejas y algo de ciberseguridad. Todo mezclado con mala leche."
+permalink: /mi-blog/
+---
+
 <hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0;">
 
-## ¿De qué va este blog?  
+## ¿De qué va este blog?
 
-Bienvenido al *Diario de un Cojo*, el blog que nadie pidió, pero que existe de todas formas. Aquí mezclo ciberseguridad, reflexiones personales,  y cómo no, la inevitable queja existencial. 
+Pues va de mí. ¿De qué más iba a ir? Esto no es un consultorio sentimental ni un tutorial para cambiar el mundo. Este es mi espacio, mi pequeño rincón de Internet donde vengo a despotricar, reflexionar y, de vez en cuando, soltar alguna que otra anécdota sobre ciberseguridad y la vida profesional. Es como un diario, pero más público, porque claro, ¿para qué sufrir solo si puedo compartirlo con desconocidos y ahorrar dinero en terapias?
 
-### ¿Qué puedes esperar?  
+---
 
-- **Ciberseguridad para mortales**: Explicaciones que nadie solicitó sobre cómo protegerse en Internet y evitar que tu vecino te robe el WiFi.  
-- **Reflexiones que no cambiarán tu vida**: Pensamientos que me vienen entre episodios de dolor en la pierna y alguna que otra "pastilla milagrosa".   
-- **Guías de aprendizaje**: Desde resolver CTFs hasta todo los apuntes que voy guardando.  
+### ¿Qué encontrarás aquí?
 
-### ¿Por qué quedarte?  
+A ver, no esperes poesía ni palabras inspiradoras que te cambien la vida. Lo que sí puedes encontrar es:
 
-No lo sé, ¿por qué no? Hay millones de blogs en el mundo, pero este tiene una pierna coja y toneladas de mala hostia. Quizás encuentres algo útil o, al menos, algo que te saque unas risas.
+- **Historias del SOC**  
+  Ah, el maravilloso mundo del Security Operations Center. Un lugar donde cada día es una montaña rusa de notificaciones absurdas, crisis que no deberían ser crisis y gente que insiste en abrir correos con títulos como *"Felicidades, has ganado un millón de euros"*. Si buscas glamour, no mires aquí.
 
-Y si no te gusta, recuerda: la puerta está abierta y cerrar la pestaña no cuesta nada. Pero… ¿y si te quedas? Puede que encuentres algo que te haga pensar, o al menos te distraiga del eterno dilema de si pedir pizza con piña o sin ella.
+- **Conferencias de hacking**  
+  Esos eventos donde intentas parecer inteligente mientras rezas para que nadie te haga una pregunta técnica. Aquí compartiré relatos de momentos brillantes (de otros, claro) y mis intentos de sobrevivir sin acabar humillado.
+
+- **Certificaciones: un viaje al infierno**  
+  ¿Te gustan los exámenes? A mí tampoco, pero aquí estoy, partiéndome el alma (y los nervios) para sacarlas. Te contaré cómo es pasar semanas encerrado, luchando contra tus propias dudas y un temario interminable. Spoiler: no es divertido, pero al menos da para historias.
+
+- **Reflexiones**  
+  Entre medicamento y medicamento, mi cerebro encuentra tiempo para pensar en lo absurdo de la vida, y aquí lo escribo. Si algo te parece demasiado sarcástico, tranquilo: es porque lo es.
+
+---
+
+### ¿Por qué leer esto?
+
+No tengo ni idea, ¿por qué sigues leyendo? Supongo que, si llegaste hasta aquí, es porque algo de lo que digo te suena familiar o, al menos, te entretiene. En ese caso, quédate. Ríete conmigo, llora conmigo, o simplemente disfruta viendo cómo intento darle sentido a esta locura de vida.
+
+Si no te gusta, no pasa nada. Hay una "X" en la esquina de tu navegador. Pero si decides quedarte, prometo que no faltarán historietas, experiencias reales y, quién sabe, tal vez incluso aprendas algo útil. Aunque eso último es poco probable, no te voy a mentir.
 
 ---
 
@@ -33,4 +55,9 @@ Y si no te gusta, recuerda: la puerta está abierta y cerrar la pestaña no cues
 
 ---
 
-**¡Bienvenido a mi pequeño y retorcido rincón de Internet!**  
+**Bienvenido a este rincón lleno de caos  y una buena dosis de mala leche.**
+<hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
+
+<div style="text-align: center; margin: 40px 0;">
+  <img src="/assets/images/cojo.png" alt="Firma" style="max-width: 30%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);">
+</div>
