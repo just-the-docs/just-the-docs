@@ -29,7 +29,7 @@ Y si no te gusta, recuerda: la puerta está abierta y cerrar la pestaña no cues
 ### Advertencia
 
 {: .important }
-> El autor no se responsabiliza de las cosas absurdas que escriba bajo los efectos de medicamentos recetados. Si algo te parece una tontería, probablemente lo sea.
+> El autor no se responsabiliza de las cosas absurdas que escriba bajo los efectos de medicamentos recetados. Si algo te parece una gilipollez, probablemente lo sea.
 
 ---
 
