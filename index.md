@@ -5,7 +5,7 @@ nav_order: 1
 description: "El blog que nadie pidió, pero todos necesitan (o no)."
 permalink: /
 ---
-<hr style="border: none; border-top: 2px solid #000; margin: 40px 0; width: 100%;">
+<hr style="border: none; border-top: 4px solid #7e57c2; margin: 40px 0; width: 100%;">
 <div style="text-align: center; margin: 40px 0;">
   <img src="/assets/images/NERVI0ZZ0.png" alt="Portada" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
 </div>
