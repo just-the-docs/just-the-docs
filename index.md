@@ -5,7 +5,7 @@ nav_order: 1
 description: "El blog que nadie pidió, pero todos necesitan (o no)."
 permalink: /
 ---
-
+<hr style="border: none; border-top: 2px solid #000; margin: 40px 0; width: 100%;">
 <div style="text-align: center; margin: 40px 0;">
   <img src="/assets/images/NERVI0ZZ0.png" alt="Portada" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
 </div>
@@ -78,4 +78,10 @@ Si decides quedarte, **¡bienvenido!** Y si no, al menos me habré reído un poc
 
 <div style="text-align: center; margin-top: 40px;">
   <img src="/assets/images/gif/14Vb.gif" alt="corazones" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);">
+</div>
+
+<hr style="border: none; border-top: 2px solid #000; margin: 40px 0; width: 100%;">
+
+<div style="text-align: center; margin: 40px 0;">
+  <img src="/assets/images/cojo.png" alt="Firma" style="max-width: 30%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);">
 </div>
