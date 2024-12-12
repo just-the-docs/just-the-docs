@@ -143,3 +143,8 @@ Soy **Analista de Ciberseguridad** con experiencia en **CSOC**, especializado en
 ---
 
 **Certificado de Discapacidad**: Superior al 33%, con acceso a programas de inclusión laboral.
+
+
+<div style="text-align: center; margin: 40px 0;">
+  <img src="/assets/images/cojo.png" alt="Portada" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+</div>
