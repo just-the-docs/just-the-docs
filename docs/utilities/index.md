@@ -1,18 +1,23 @@
 ---
-title: Sobre un Bastón, Historias y Reflexiones
+title: Diario de un Cojo, Reflexiones que Nadie Pidió
 layout: home
 nav_order: 4
 description: "Un espacio donde la genialidad y el sarcasmo conviven en una especie de caos organizado."
 permalink: /mi-blog/
 ---
+<hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
+<div style="text-align: center; margin: 40px 0;">
+  <img src="/assets/images/NERVI0ZZ0.png" alt="Portada" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+</div>
 
----
-title: Mi Blog
-layout: home
-nav_order: 2
-description: "Reflexiones, quejas y algo de ciberseguridad. Todo mezclado con mala leche."
-permalink: /mi-blog/
----
+<div style="text-align: center; margin: 30px 0;">
+<h1 style="font-size: 36px; font-weight: 700; color: #2D3748; text-shadow: 1px 1px 6px rgba(0,0,0,0.3); margin: 0; font-family: 'Arial', sans-serif; letter-spacing: 1px;">
+  Esto es <span style="color:rgb(66, 37, 100); font-style: italic;">"Diario de un Cojo"</span>
+</h1>
+<p style="font-size: 18px; color:rgb(125, 86, 152); font-family: 'Arial', sans-serif; font-style: italic; margin-top: 10px;">
+  El blog que nadie pidió, pero todos necesitan (o no).
+</p>
+</div>
 
 <hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0;">
 

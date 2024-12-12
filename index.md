@@ -5,21 +5,6 @@ nav_order: 1
 description: "El blog que nadie pidió, pero todos necesitan (o no)."
 permalink: /
 ---
-<hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
-<div style="text-align: center; margin: 40px 0;">
-  <img src="/assets/images/NERVI0ZZ0.png" alt="Portada" style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-</div>
-
-<div style="text-align: center; margin: 30px 0;">
-<h1 style="font-size: 36px; font-weight: 700; color: #2D3748; text-shadow: 1px 1px 6px rgba(0,0,0,0.3); margin: 0; font-family: 'Arial', sans-serif; letter-spacing: 1px;">
-  Esto es <span style="color: #2B6CB0; font-style: italic;">"Diario de un Cojo"</span>
-</h1>
-<p style="font-size: 18px; color: #4A5568; font-family: 'Arial', sans-serif; font-style: italic; margin-top: 10px;">
-  El blog que nadie pidió, pero todos necesitan (o no).
-</p>
-</div>
-
----
 
 <h2 align="center">¿Y quién soy yo?</h2>
 <div style="text-align: center; margin-top: 20px;">
@@ -43,21 +28,6 @@ Ahora paso los días entre sesiones de cama, sofá y reposo forzado, haciendo co
 
 ---
 
-## ¿Qué puedes esperar aquí?
-
-Lo más probable es que encuentres:
-
-- 🧠 **Mis pensamientos**: Siento que ahora soy mucho más filosófico de lo que jamás imaginé. Las medicinas y las largas horas de descanso tienen ese efecto en mí.
-- 💻 **Reflexiones sobre mi vida laboral y la ciberseguridad**: Un mundo lleno de amenazas, frustraciones y usuarios que, francamente, se merecen su propio blog. ¿Quién lo iba a decir? Yo que pensaba que mi trabajo era aburrido!
-- 📚 **Recursos y rutas de estudio**: Porque, aunque no me pueda mover mucho, mi cerebro sigue funcionando (o al menos eso me gusta creer), así que seguiré compartiendo lo que aprenda durante este parón forzoso.
-
----
-
-## Disfruta de esta estancia
-
-Si decides quedarte, **¡bienvenido!** Y si no, al menos me habré reído un poco. ¡Gracias, pierna, por darme tanto tiempo para hacer cosas tan útiles!
-
----
 
 ### Antes de continuar debes saber que
 
