@@ -10,7 +10,7 @@ nav_order: 3
 </div>
 
 <div style="text-align: center; font-family: 'Arial Black', sans-serif; font-size: 2.5rem; color:rgb(7, 7, 7); text-shadow: 2px 2px 5px rgba(0,0,0,0.5); margin-bottom: 16px;">
-    **¡La Razón habla de mí!** 🌟
+    ¡La Razón habla de mí! 🗞️
 </div>
 
 **Quién lo diría:** de llevar bandejas a luchar contra hackers en un SOC. ¿Te suena a película de domingo por la tarde? Pues no, esto es mi vida. *La Razón* decidió que mi historia valía un artículo y aquí estoy, con el ego un poco más inflado (y los pies igual de jodidos).  
