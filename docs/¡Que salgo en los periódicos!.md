@@ -9,7 +9,7 @@ nav_order: 3
     <img src="/assets/images/La_Razon/9rXb.gif" alt="GIF Jimmy" style="width: 60%; border-radius: 15px;">
 </div>
 
-<div style="text-align: center; font-family: 'Arial Black', sans-serif; font-size: 2.5rem; color: #E63946; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); margin-bottom: 20px;">
+<div style="text-align: center; font-family: 'Arial Black', sans-serif; font-size: 2.5rem; color:rgb(7, 7, 7); text-shadow: 2px 2px 5px rgba(0,0,0,0.5); margin-bottom: 16px;">
     **¡La Razón habla de mí!** 🌟
 </div>
 
