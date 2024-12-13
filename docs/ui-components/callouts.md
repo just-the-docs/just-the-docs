@@ -1,6 +1,6 @@
 ---
 title: 🛡️ Microsoft Sentinel
-dparent: Supervivencia Sin Esfuerzo
+parent: Supervivencia Sin Esfuerzo
 priority: 4
 ---
 <hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
