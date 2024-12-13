@@ -10,21 +10,6 @@ description: Una selección exhaustiva de herramientas y plataformas para operac
 
 ---
 
-<p style="font-family: 'Arial', sans-serif; font-size: 18px; text-align:center; color:#fff; padding: 10px; background-color: rgba(0, 0, 0, 0.6); border-radius: 10px;">
-    Bienvenido a esta guía que reúne <strong>herramientas esenciales y avanzadas</strong> centradas en la defensa de redes, análisis forense y detección de amenazas.
-</p>
-
----
-
-
----
-
-<p style="font-family: 'Arial', sans-serif; font-size: 18px; text-align:center; color:#C0C0C0;">
-    Bienvenido a esta guía que reúne <strong>herramientas esenciales y avanzadas</strong> centradas en la defensa de redes, análisis forense y detección de amenazas.
-</p>
-
----
-
 ## **🔍 Análisis de Amenazas**  
 
 ### **🛡️ Análisis de Archivos, URLs e IoCs**  
