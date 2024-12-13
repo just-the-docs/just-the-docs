@@ -4,16 +4,16 @@ title: ♿ Mi vida como analista de SOC
 parent: Diario de un Cojo
 nav_order: 1
 ---
+
 ![Mi Imagen](/assets/img/Designer.jpeg)
 
 # Mi día a día como analista en un SOC: sobreviviendo entre alertas, caos y usuarios que piensan que un 'clic' no hace daño
 
 La ciberseguridad no es solo un trabajo; **es un estilo de vida**. Y si estás leyendo esto, ya sabes que ser analista de ciberseguridad es como ser ese hombre que se sienta al final de la barra de un bar mugroso, con la mirada perdida, un cigarro en la mano y un vaso de whisky barato que te hace cuestionar tus decisiones de vida. Solo que, en lugar de humo de tabaco y caras olvidadas, estamos rodeados de bytes, alertas y logs que se apilan como botellas vacías en una noche de resaca.
 
-
 ---
 
-## **Un inicio lleno de dudas**
+## Un inicio lleno de dudas
 
 Mi historia comenzó como la de cualquier otro “héroe” en este mundo: sin saber ni qué significaban *threat intelligence*, *SIEM* o *firewall*. No era más que un "chaval" con una afición por la informática y una cuenta en los chats de Terra. Después de unos años probando suerte como "el tipo que arregla tu PC cuando se cuelga" y ejerciendo de friki en las cenas familiares, decidí embarcarme en la gloriosa y extremadamente glamorosa carrera de la ciberseguridad. 
 
@@ -21,15 +21,15 @@ Claro, porque, ¿quién no querría vivir el sueño americano... pero en modo pe
 
 ---
 
-## **La vida en un SOC**
+## La vida en un SOC
 
-Empecé, como no, en un SOC (Security Operations Center). Este lugar es básicamente la cueva de Batman, pero en lugar de enfrentarte a los malos con capas y poderes raros, te enfrentas a alertas de seguridad generadas por los temidos usuarios. Es todo lo que hace falta para salvar el mundo. 
+Empecé, como no, en un SOC (Security Operations Center). Este lugar es básicamente la cueva de Batman, pero en lugar de enfrentarte a los malos con capas y poderes raros, te enfrentas a alertas de seguridad generadas por los temidos usuarios. Es todo lo que hace falta para salvar el mundo.
 
 En ese momento, te das cuenta de que tu vida no será nada como los anuncios de películas de acción. En lugar de saltar de edificios, cortar el cable rojo o perseguir hackers con gafas de sol, tu día a día consiste en mirar pantallas con registros de eventos como si estuvieras esperando que llegara el fin del mundo… pero sin saber exactamente cuándo ni cómo.
 
 ---
 
-## **Los primeros días: caos y preguntas sin respuesta**
+## Los primeros días: caos y preguntas sin respuesta
 
 Al principio, todo es confusión: 
 
@@ -41,7 +41,7 @@ Es una montaña rusa emocional, con altibajos que van desde el *“estoy salvand
 
 ---
 
-## **Los usuarios: el verdadero reto**
+## Los usuarios: el verdadero reto
 
 Y como si todo eso no fuera suficiente, están **los usuarios**. Ah, los usuarios. 
 
@@ -52,11 +52,11 @@ Pero, claro, en lugar de culpar a la persona, terminas preguntándote:
 - **¿Debería haberles enviado los correos en papel?**  
 - **¿Quizá disfrazados de algo que realmente los haga prestar atención?**
 
-
 ![Mi Imagen](/assets/img/deadpool.jpeg)
+
 ---
 
-## **Dos años después: reflexiones**
+## Dos años después: reflexiones
 
 Después de unos dos años de andar por este mundillo y pasar demasiadas horas frente a pantallas que parpadean con constantes alertas, te das cuenta de algo curioso: 
 
@@ -64,7 +64,7 @@ En este campo, el verdadero trabajo no es luchar contra los hackers ni encontrar
 
 ---
 
-## **No eres un héroe, pero tienes buenas historias**
+## No eres un héroe, pero tienes buenas historias
 
 Al final, en este mundo de ciberseguridad, descubres una verdad profunda: 
 
@@ -78,5 +78,6 @@ Y aunque todos los días te preguntas si todo esto vale la pena, si de verdad na
 
 Siempre tendrás una buena historia que contar… o al menos, una excusa para reunirte con tus compañeros analistas a echarte unas risas por el Teams como si te pagaran por ello.
 
+---
 
 ![Mi Imagen](/assets/img/naT.gif)
