@@ -1,7 +1,8 @@
 ---
-title: Hacks para Vagos
+title: Supervivencia Sin Esfuerzo
 nav_order: 7
 ---
+
 <hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
 
 <div style="background: linear-gradient(135deg, #FF6347, #FF4500); padding:20px; border-radius:15px; text-align:center; color:#fff; font-family: 'Arial', sans-serif; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
