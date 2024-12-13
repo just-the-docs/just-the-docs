@@ -1,7 +1,7 @@
 ---
 title: Pickle Rick | Walkthrough
 parent: TryHackMe
-nav_order: 1
+nav_order: 2
 ---
 <hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
 
