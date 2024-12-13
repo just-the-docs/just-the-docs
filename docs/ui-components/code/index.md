@@ -1,211 +1,100 @@
 ---
-title: Code
-parent: UI Components
-nav_order: 6
+title: 🛡️ Métodos de Solicitud HTTP 
+parent: Supervivencia Sin Esfuerzo
+priority: 4
 ---
+<hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
 
-# Code
-{: .no_toc }
+# Métodos de Solicitud HTTP
 
-## Table of contents
-{: .no_toc .text-delta }
+En este artículo se cubren los **9 principales métodos de solicitud HTTP** utilizados en las aplicaciones web. Cada método tiene un propósito específico dentro de la comunicación entre cliente y servidor. Esta guía te ayudará a comprender el uso correcto de cada método y cuándo aplicarlos.
 
-1. TOC
-{:toc}
+![ImagendeBytebyteGo](/assets/img/http.gif)
 
----
+## 1. GET
 
-## Inline code
-
-Code can be rendered inline by wrapping it in single back ticks.
-
-<div class="code-example" markdown="1">
-Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-## Heading with `<inline code snippet>` in it.
-{: .no_toc }
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> El método `GET` se utiliza para recuperar información de un servidor. Generalmente, no tiene efectos secundarios y no modifica el estado del recurso.  
+<strong>Uso:</strong> Ideal para obtener datos como recursos estáticos (páginas HTML, imágenes, etc.) o consultar el estado de un recurso.  
+<strong>Ejemplo:</strong> `GET /v1/products/iphone`
 </div>
-```markdown
-Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-## Heading with `<inline code snippet>` in it.
-```
+## 2. POST
 
----
-
-## Syntax highlighted code blocks
-
-Use Jekyll's built-in syntax highlighting with Rouge for code blocks by using three backticks, followed by the language name:
-
-<div class="code-example" markdown="1">
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> `POST` envía datos al servidor, usualmente para crear un nuevo recurso.  
+<strong>Uso:</strong> Utilizado para crear elementos, enviar formularios, o cargar archivos. Los datos suelen ir en el cuerpo de la solicitud.  
+<strong>Ejemplo:</strong> `POST /v1/users`
 </div>
-{% highlight markdown %}
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-{% endhighlight %}
 
-Syntax highlighting, line numbers, and HTML compression do not work together; **the combination of these features generates invalid HTML that renders incorrectly**. To learn more, see ["Code with line numbers"]({% link docs/ui-components/code/line-numbers.md %}).
+## 3. PUT
 
----
-
-## Code blocks with rendered examples
-
-To demonstrate front end code, sometimes it's useful to show a rendered example of that code. After including the styles from your project that you'll need to show the rendering, you can use a `<div>` with the `code-example` class, followed by the code block syntax. If you want to render your output with Markdown instead of HTML, use the `markdown="1"` attribute to tell Jekyll that the code you are rendering will be in Markdown format... This is about to get meta...
-
-<div class="code-example" markdown="1">
-
-<div class="code-example" markdown="1">
-
-[Link button](https://just-the-docs.com){: .btn }
-
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> El método `PUT` actualiza o reemplaza un recurso existente en el servidor.  
+<strong>Uso:</strong> Utilizado para actualizar un recurso existente, especificando el recurso completo en el cuerpo de la solicitud.  
+<strong>Ejemplo:</strong> `PUT /v1/users/123`
 </div>
-```markdown
-[Link button](https://just-the-docs.com){: .btn }
-```
 
+## 4. DELETE
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> `DELETE` elimina un recurso en el servidor.  
+<strong>Uso:</strong> Utilizado para eliminar recursos existentes.  
+<strong>Ejemplo:</strong> `DELETE /v1/users/123`
 </div>
-{% highlight markdown %}
-<div class="code-example" markdown="1">
 
-[Link button](https://just-the-docs.com){: .btn }
+## 5. PATCH
 
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> `PATCH` modifica parcialmente un recurso existente.  
+<strong>Uso:</strong> Utilizado para realizar cambios parciales o actualizaciones incrementales en un recurso.  
+<strong>Ejemplo:</strong> `PATCH /v1/users/123`
 </div>
-```markdown
-[Link button](https://just-the-docs.com){: .btn }
-```
-{% endhighlight %}
+
+## 6. HEAD
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> `HEAD` es similar a `GET`, pero solo devuelve los encabezados de la respuesta sin el cuerpo.  
+<strong>Uso:</strong> Se utiliza para verificar la existencia de un recurso o consultar los metadatos sin descargar todo el contenido.  
+<strong>Ejemplo:</strong> `HEAD /v1/products/iphone`
+</div>
+
+## 7. OPTIONS
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> `OPTIONS` devuelve los métodos HTTP soportados por el servidor para un recurso específico.  
+<strong>Uso:</strong> Utilizado para verificar qué métodos son aceptados por el servidor antes de enviar una solicitud.  
+<strong>Ejemplo:</strong> `OPTIONS /v1/users`
+</div>
+
+## 8. CONNECT
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> `CONNECT` establece una conexión de túnel bidireccional con el servidor, frecuentemente utilizado para establecer una conexión segura (SSL/TLS).  
+<strong>Uso:</strong> Ideal para conexiones a través de un proxy, como conexiones HTTPS.  
+<strong>Ejemplo:</strong> `CONNECT xxx.com:80`
+</div>
+
+## 9. TRACE
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> `TRACE` realiza un seguimiento del camino recorrido por la solicitud en la red. Devuelve la solicitud original recibida por el servidor.  
+<strong>Uso:</strong> Utilizado principalmente para pruebas y depuración, permitiendo diagnosticar problemas de red.  
+<strong>Ejemplo:</strong> `TRACE /index.html`
+</div>
 
 ---
 
-## Mermaid diagram code blocks
-{: .d-inline-block }
+Estos métodos son la base para la comunicación entre cliente y servidor en aplicaciones web modernas. Es importante conocer cuándo utilizarlos para optimizar el rendimiento, seguridad y eficiencia de la interacción con los servidores.
 
-New (v0.4.0)
-{: .label .label-green }
+### Recursos Adicionales
 
-[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. **It is disabled by default**. However, you can turn on support for mermaid by adding a `mermaid` key to your `_config.yml`.
+- [Documentación oficial de HTTP](https://developer.mozilla.org/es/docs/Web/HTTP/Methods)
+- [Curso sobre Métodos HTTP en TryHackMe](https://tryhackme.com)
+- [Ejercicios de Métodos HTTP en Hack The Box](https://hackthebox.com)
 
-The minimum configuration requires a `version` key (matching a version in [jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)):
+<hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
 
-```yaml
-mermaid:
-  # Version of mermaid library
-  # Pick an available version from https://cdn.jsdelivr.net/npm/mermaid/
-  version: "9.1.3"
-```
-
-Additional configuration options are loaded through `_includes/mermaid_config.js`. By default, the contents of the file are the empty object:
-
-```js
-// _includes/mermaid_config.js
-{}
-```
-
-This loads the default settings.
-
-The contents of this object should follow [mermaid's configuration API](https://mermaid.js.org/config/configuration.html). For example, to override the theme, change `_includes/mermaid_config.js` to:
-
-```js
-// _includes/mermaid_config.js
-{
-  theme: "forest"
-}
-```
-
-Once mermaid is installed, it can be used in markdown files. The markdown for a simple flowchart example might look like the following:
-
-{% highlight markdown %}
-```mermaid
-graph TD;
-    accTitle: the diamond pattern
-    accDescr: a graph with four nodes: A points to B and C, while B and C both point to D
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-{% endhighlight %}
-
-which renders:
-
-```mermaid
-graph TD;
-    accTitle: the diamond pattern
-    accDescr: a graph with four nodes: A points to B and C, while B and C both point to D
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-*Note: for demonstration purposes, we've enabled mermaid on this site. It is still disabled by default, and users need to opt-in to use it.*
-
-### Using a local mermaid library
-
-To load a local version of mermaid, also use the `path` key to specify the location of the library; e.g.
-
-```yaml
-mermaid:
-  version: "10.1.0"
-  # for (v10+)
-  path: "/assets/js/mermaid.esm.min.mjs"
-  # for (<v10):
-  # path: "/assets/js/mermaid.min.js"
-  # Note: copy both `mermaid.esm.min.mjs` (v10+) or `mermaid.min.js` (<v10) and the associated
-  # `.map` file from the specified version of `mermaid/dist` to `/assets/js/`.
-```
-
-For mermaid versions `>=10`, this file is imported directly as an ESM module (rather than as a plain `<script>` tag); users should use the `mermaid.esm.min.mjs` file. In contrast, for mermaid versions `<10`, this file is loaded as a script tag; it should be a standalone CJS file (i.e. `mermaid.min.js`).
-
-{: .warning }
-Mermaid versions `10.0` - `10.1` (and possibly, future releases) still encode relative imports in `mermaid.esm.min.mjs`. Local users must copy *all* of the contents of the `dist` folder to the specified path (preserving the relative location of the files). Just the Docs is actively monitoring mermaid releases; an upstream fix is planned.
-
-### Using mermaid with AsciiDoc
-
-Users of [AsciiDoc](https://asciidoc.org/) (e.g. via [jekyll-asciidoc](https://github.com/asciidoctor/jekyll-asciidoc)) may need additional configuration to use mermaid.
-
-By default, AsciiDoc generates HTML markup that mermaid cannot properly parse. The simplest way to resolve this is to use a [passthrough block](https://docs.asciidoctor.org/asciidoc/latest/pass/pass-block/):
-{% highlight asciidoc %}
-++++
-<pre class="language-mermaid">
-graph TD;
-    accTitle: the diamond pattern
-    accDescr: a graph with four nodes: A points to B and C, while B and C both point to D
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-</pre>
-++++
-{% endhighlight %}
-
-Alternatively, community member [@flyx](https://github.com/flyx) has contributed a Ruby extension that does not require extra markup. The extension is available [as a GitHub Gist](https://gist.github.com/flyx/9fff080cf4edc95d495bc661a002232c). Thank you to [@flyx](https://github.com/flyx)!
-
-The [asciidoctor-diagram](https://docs.asciidoctor.org/diagram-extension/latest/) extension which also supports mermaid is not recommended for use with Just the Docs, since it requires separate configuration e.g. for theming, and is known to not be trivial to set up.
-
-## Copy button
-{: .d-inline-block }
-
-New (v0.4.0)
-{: .label .label-green }
-
-The copy button for code blocks can be enabled or disabled via the `enable_copy_code_button` key in `_config.yml`. By default, the value of this key is `false`; users need to opt-in.
-
-```yaml
-# For copy button on code
-enable_copy_code_button: true
-```
-
-Note that this feature requires JavaScript; if JavaScript is disabled in the browser, this feature will not work. In addition, this feature uses `navigator.clipboard`, which is only available in [secure contexts](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts) (such as over HTTPS). If the site is viewed in an insecure context, the copy button will not work ([relevant issue: #1202](https://github.com/just-the-docs/just-the-docs/issues/1202)).
+<div style="text-align: center; margin: 40px 0;">
+  <img src="/assets/images/cojo.png" alt="Firma" style="max-width: 30%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);">
+</div>
