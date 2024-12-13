@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Cuando el Conectado se Desvanece
-parent: 💠 Diario de un Cojo
+title: 💠Cuando el Conectado se Desvanece
+parent: Diario de un Cojo
 ---
 
 ![MCCE]( /assets/img/teams.jpg)
