@@ -12,14 +12,6 @@ nav_order: 7
 
 ---
 
-<p style="font-family: 'Arial', sans-serif; font-size: 20px; text-align: center; color: #fff; padding: 25px 40px; background-color: rgba(0, 0, 0, 0.6); border-radius: 18px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); margin-top: 40px;">
-    ¡Bienvenidos, futuros expertos en ciberseguridad! Aquí tienes **mis apuntes** y **cheat sheets** que, con suerte, te ayudarán a sobrevivir en este amplio mundo de hacks, firewalls y contraseñas olvidadas. 🙄<br>
-    No prometo milagros, pero probablemente te ahorrarán horas de búsqueda en Google, si es que tienes suerte. 😉<br>
-    Prepárate para defenderte de amenazas, descubrir cositas y aprender **todo lo que nunca quisiste saber** sobre ciber.
-</p>
-
----
-
 <hr style="border: none; border-top: 1px solid #7e57c2; margin: 50px 0; width: 100%;">
 
 <div style="text-align: center; margin: 40px 0;">
