@@ -5,7 +5,7 @@ parent: Diario de un Cojo
 nav_order: 1
 ---
 
-![Mi Imagen](/assets/img/Designer.jpeg)
+![depre](/assets/images/Mi vida como analista de SOC/fumando.jpeg)
 
 # Mi día a día como analista en un SOC: sobreviviendo entre alertas, caos y usuarios que piensan que un 'clic' no hace daño
 
@@ -52,7 +52,7 @@ Pero, claro, en lugar de culpar a la persona, terminas preguntándote:
 - **¿Debería haberles enviado los correos en papel?**  
 - **¿Quizá disfrazados de algo que realmente los haga prestar atención?**
 
-![Mi Imagen](/assets/img/deadpool.jpeg)
+![Mi Imagen](/assets/images/Mi vida como analista de SOC/deadpool.jpeg)
 
 ---
 
