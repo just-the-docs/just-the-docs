@@ -1,21 +1,26 @@
 ---
 layout: post
-title: ♿Mi experiencia con la certificación Blue Team Level 1 (BTL1)
+title: ♿ Mi experiencia con la certificación Blue Team Level 1 (BTL1)
+nav_order: 1
 parent: Diario de un Cojo
 ---
-![Re](/assets/img/BTLLOC.jpg)
 
+![Re](/assets/img/BTLLOC.jpg)
 
 # (BTL1): ¿un paso en la dirección correcta o simplemente masoquismo profesional?
 
+---
 
 Certificarte en ciberseguridad puede parecer un objetivo noble, pero déjame decirte algo: hacer el BTL1 es un pequeño marrón y no solo una publicación bonita para subir en LinkedIn. BTL1 es un curso que te enseñará, literalmente, a sobrevivir mientras luchas contra las fuerzas del caos… también conocidas como usuari@s.
+
+---
 
 ### Primer contacto con el material: un buffet de herramientas y temas
 
 La introducción al curso es amable: 300 lecciones, vídeos, exámenes y actividades prácticas. Te prometen que en 30 horas estarás listo para enfrentarte al mundo como un defensor técnico, armado con nombres rimbombantes como CyberChef, KAPE, Volatility y, por supuesto, el viejo y confiable Wireshark. ¡Vaya arsenal! Pero claro, no te dicen que esas 30 horas son solo el tiempo estimado. Spoiler alert: si eres un humano normal, multiplícalo por tres porque vas a invertir más horas intentando entender por qué algo no funciona como en los videos.
 
 ![Re](/assets/img/8xs6.gif)
+
 ---
 
 ### Los temas estrella: Phishing, SIEM y Forense Digital
@@ -44,6 +49,10 @@ El examen es un desafío de 24 horas, lo que suena como mucho tiempo, pero no te
 
 Mi experiencia con el examen fue toda una montaña rusa. Primero, obtuve un 80% en la corrección automática, lo cual ya era suficiente para aprobar. Pero algo en mí no me dejó tranquilo, así que pedí una revisión manual. Después de un mes de espera, me llegó una sorpresa increíble: ¡mi nota había subido a un 90%! 🎉 ¿El resultado? No solo aprobé, sino que gané mi Gold Coin, ese codiciado trofeo digital que ahora presumo con orgullo en cualquier ocasión.
 
+![Resul](/assets/img/COIN.jpg)
+
+![Resul](/assets/img/90.png)
+
 ---
 
 ### ¿Vale la pena el esfuerzo?
@@ -61,11 +70,4 @@ Si me preguntas si volvería a hacerlo, mi respuesta sería: “Con gusto, pero 
 
 ---
 
-![Resul](/assets/img/COIN.jpg)
-
-![Resul](/assets/img/90.png)
-
 Para más información sobre la certificación, visita [Security Blue Team - eLearning](https://elearning.securityblue.team/)
-
-
-
