@@ -23,7 +23,7 @@ permalink: /mi-blog/
 
 ## ¿De qué va este blog?
 
-Pues va de mí. ¿De qué más iba a ir? Esto no es un consultorio sentimental ni un tutorial para cambiar el mundo. Este es mi espacio, mi pequeño rincón de Internet donde vengo a despotricar, reflexionar y, de vez en cuando, soltar alguna que otra anécdota sobre ciberseguridad y la vida profesional. Es como un diario, pero más público, porque claro, ¿para qué sufrir solo si puedo compartirlo con desconocidos y ahorrar dinero en terapias?
+Pues va de mí. ¿De qué más iba a ir? Esto no es un consultorio sentimental ni un tutorial para cambiar el mundo. Este es mi espacio, mi pequeño rincón de Internet donde vengo a despotricar, reflexionar y, de vez en cuando, soltar alguna que otra anécdota sobre ciberseguridad y la vida profesional. Es como un diario, pero más público, porque claro, ¿para qué sufrir solo si puedo compartirlo con desconocidos?
 
 ---
 
