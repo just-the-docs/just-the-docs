@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ▪️Mi vida como analista de SOC
+title:♿ Mi vida como analista de SOC
 parent: Diario de un Cojo
 ---
 ![Mi Imagen](/assets/img/Designer.jpeg)
