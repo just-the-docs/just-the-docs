@@ -1,5 +1,5 @@
 ---
-title: Consejos BTL-1
+title: Examen BTL-1
 parent: Security Blue Team
 nav_order: 2
 ---
