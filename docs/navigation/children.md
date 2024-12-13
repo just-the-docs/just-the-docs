@@ -6,7 +6,7 @@ parent: Diario de un Cojo
 ---
 
 <div style="text-align: center; margin-top: 20px; margin-bottom: 55px;">
-    <img src="/assets/images/Mi experiencia con la certificación Blue Team Level 1/BTLLOCO (1).jpg" alt="BTL1 Logo" style="width: 60%; border-radius: 15px;">
+    <img src="/assets/images/Mi experiencia con la certificación Blue Team Level 1/BTLLOCO (1).jpg" alt="BTL1 Logo" style="width: 40%; border-radius: 15px;">
 </div>
 
 <div style="text-align: center; font-family: 'Arial Black', sans-serif; font-size: 2.5rem; color:rgb(60, 2, 56); text-shadow: 2px 2px 5px rgba(0,0,0,0.5); margin-bottom: 20px;">
