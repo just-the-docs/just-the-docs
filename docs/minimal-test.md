@@ -2,7 +2,7 @@
 layout: post
 title:♿ Mi vida como analista de SOC
 parent: Diario de un Cojo
-nav_order: 1
+nav_order: 2
 ---
 ![Mi Imagen](/assets/img/Designer.jpeg)
 
