@@ -4,8 +4,11 @@ title: ♿ Mi vida como analista de SOC
 parent: Diario de un Cojo
 nav_order: 1
 ---
+<hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
 
-![depre](/assets/images/Mi vida como analista de SOC/fumando.jpeg)
+<div style="text-align: center;">
+    <img src="/assets/images/Mi vida como analista de SOC/fumando.jpeg" alt="depre" style="border-radius: 15px; max-width: 80%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+</div>
 
 # Mi día a día como analista en un SOC: sobreviviendo entre alertas, caos y usuarios que piensan que un 'clic' no hace daño
 
@@ -52,7 +55,9 @@ Pero, claro, en lugar de culpar a la persona, terminas preguntándote:
 - **¿Debería haberles enviado los correos en papel?**  
 - **¿Quizá disfrazados de algo que realmente los haga prestar atención?**
 
-![Mi Imagen](/assets/images/Mi vida como analista de SOC/deadpool.jpeg)
+<div style="text-align: center;">
+    <img src="/assets/images/Mi vida como analista de SOC/deadpool.jpeg" alt="Mi Imagen" style="border-radius: 15px; max-width: 80%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px;">
+</div>
 
 ---
 
@@ -79,5 +84,8 @@ Y aunque todos los días te preguntas si todo esto vale la pena, si de verdad na
 Siempre tendrás una buena historia que contar… o al menos, una excusa para reunirte con tus compañeros analistas a echarte unas risas por el Teams como si te pagaran por ello.
 
 ---
+<hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
 
-![Mi Imagen](/assets/img/naT.gif)
+<div style="text-align: center; margin: 40px 0;">
+  <img src="/assets/images/cojo.png" alt="Firma" style="max-width: 30%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);">
+</div>
