@@ -10,7 +10,7 @@ parent: Diario de un Cojo
 </div>
 
 <div style="text-align: center; font-family: 'Arial Black', sans-serif; font-size: 2.5rem; color:rgb(187, 73, 65); text-shadow: 2px 2px 5px rgba(0,0,0,0.5); margin-bottom: 20px;">
-    💻 (BTL1): ¿Un paso en la dirección correcta o simplemente masoquismo profesional? 🌟
+    💻 (BTL1): ¿Un paso en la dirección correcta o simplemente masoquismo profesional? :💀
 </div>
 
 ---
