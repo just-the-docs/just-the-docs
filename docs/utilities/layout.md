@@ -1,126 +1,67 @@
 ---
-title: Layout
-parent: Utilities
+title: TryHackMe
+nav_order: 5
 ---
 
-# Layout Utilities
-{: .no_toc }
+<hr style="border: none; border-top: 2px solid #7e57c2; margin: 40px 0; width: 100%;">
 
-## Table of contents
-{: .no_toc .text-delta }
+![thm](/assets/img/THMlogo.png)
 
-1. TOC
-{:toc}
+# TryHackMe: El lugar donde la ciberseguridad te pone en tu sitio
+
+¿Siempre quisiste hackear, pero no sabías por dónde empezar? **TryHackMe** es como un parque temático para novatos (y no tan novatos), donde puedes aprender de tus fracasos (y de mis *epic fails*) mientras te enfrentas a retos que suenan geniales en teoría, pero en la práctica son una auténtica tortura divertida.
 
 ---
 
-## Spacing
+## **¿Por qué TryHackMe?**
 
-These spacers are available to use for margins and padding with responsive utility classes. Combine these prefixes with a screen size and spacing scale to use them responsively.
+<div style="background-color: #f3e5f5; padding: 15px; border-left: 5px solid #7e57c2; margin: 20px 0; border-radius: 5px;">
+Lo mejor de todo: **¡tienes recursos gratuitos!** Porque, seamos honestos, ¿quién necesita gastar dinero mientras te frustras aprendiendo algo nuevo? Si decides apostar más en serio por la ciberseguridad, la suscripción mensual merece la pena: te da acceso a rutas avanzadas, desafíos exclusivos y un soporte que hace que gritarle a la pantalla sea opcional.
+</div>
 
-| Classname prefix | Related CSS Property          |
-|:-----------------|:------------------------------|
-| `.m-`            | `margin`                      |
-| `.mx-`           | `margin-left`, `margin-right` |
-| `.my-`           | `margin top`, `margin bottom` |
-| `.mt-`           | `margin-top`                  |
-| `.mr-`           | `margin-right`                |
-| `.mb-`           | `margin-bottom`               |
-| `.ml-`           | `margin-left`                 |
+**TryHackMe** te permite aprender al ritmo que prefieras, desde desbloquear niveles básicos de hacking, como descifrar contraseñas obvias, hasta rutas avanzadas que te dejarán *"con cara de gili..."*.  
+**Aquí tienes la oportunidad de practicar sin miedo a derribar la red de tu casa por accidente.**
 
-| Classname prefix | Related CSS Property            |
-|:-----------------|:--------------------------------|
-| `.p-`            | `padding`                       |
-| `.px-`           | `padding-left`, `padding-right` |
-| `.py-`           | `padding top`, `padding bottom` |
-| `.pt-`           | `padding-top`                   |
-| `.pr-`           | `padding-right`                 |
-| `.pb-`           | `padding-bottom`                |
-| `.pl-`           | `padding-left`                  |
+---
 
-Spacing values are based on a `1rem = 16px` spacing scale, broken down into these units:
+## **Rutas de Aprendizaje Recomendadas** 🎯
 
-| Spacer/suffix  | Size in rems  | Rem converted to px |
-|:---------------|:--------------|:--------------------|
-| `1`            | 0.25rem       | 4px                 |
-| `2`            | 0.5rem        | 8px                 |
-| `3`            | 0.75rem       | 12px                |
-| `4`            | 1rem          | 16px                |
-| `5`            | 1.5rem        | 24px                |
-| `6`            | 2rem          | 32px                |
-| `7`            | 2.5rem        | 40px                |
-| `8`            | 3rem          | 48px                |
-| `auto`         | auto          | auto                |
+| Ruta                 | Descripción                                                                                        | Nivel         |
+|----------------------|----------------------------------------------------------------------------------------------------|--------------|
+| **SOC Level 1 Analyst** | Aprende a manejar logs, analizar tráfico y detectar vulnerabilidades con escenarios reales.       | Intermedio   |
+| **Cyber Defense Path**  | Domina los fundamentos de la ciberseguridad, como reconocimiento, explotación y análisis básico. | Principiante |
+| **Principiante Absoluto** | Explora conceptos básicos como IPs, redes y Linux con lecciones interactivas.                    | Principiante |
+| **Red Teaming Basics**   | Introducción a pentesting y mentalidad hacker. ¡Cuida tus comandos!                             | Avanzado     |
 
-Use `mx-auto` to horizontally center elements.
+---
 
-### Applying Spacing Utilities with `{: }`
-{: .no_toc .text-delta }
+## **Mi Experiencia Personal**
 
-In Markdown, use the `{: }` wrapper to apply custom classes:
+### [Perfil de nervi en TryHackMe](https://tryhackme.com/r/p/nervi)
 
-```markdown
-This paragraph will have a margin bottom of 1rem/16px on large screens.
-{: .mb-lg-4 }
+<div style="text-align: center; margin: 20px 0;">
+  <img src="https://tryhackme-badges.s3.amazonaws.com/nervi.png" alt="Insignia de TryHackMe" style="max-width: 40%; height: auto; border: 2px solid #7e57c2; border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+</div>
 
-This paragraph will have 2rem/32px of padding on the right and left at all screen sizes.
-{: .px-6 }
-```
+Mi travesía en TryHackMe comenzó como cualquier viaje en ciberseguridad: **con una mezcla de curiosidad, frustración y satisfacción**. Desde rutas básicas hasta la de **SOC Level 1 Analyst**, cada desafío me ha permitido crecer. Aunque, admito, algunos días siento que retrocedo más de lo que avanzo. Pero así es la curva de aprendizaje, ¿verdad?
 
-## Horizontal Alignment
+### **Algunos logros, muchos fallos... así aprendo**  
 
-| CSS Class               | Applied CSS Declaration          |
-|:------------------------|:---------------------------------|
-| `.float-left`           | `float: left`                    |
-| `.float-right`          | `float: right`                   |
-| `.flex-justify-start`   | `justify-content: flex-start`    |
-| `.flex-justify-end`     | `justify-content: flex-end`      |
-| `.flex-justify-between` | `justify-content: space-between` |
-| `.flex-justify-around`  | `justify-content: space-around`  |
+Mis habilidades están en constante evolución (con un par de saltos y varios tropezones).  
+Si estás buscando inspiración o quieres ver cómo "no hackear", visita mi perfil. Porque, en este mundo, **fallar es parte del éxito**.
 
-_Note: any of the `flex-` classes must be used on a parent element that has `d-flex` applied to it._
+---
 
-## Vertical Alignment
+## **¿Por qué Recomiendo TryHackMe?**
 
-| CSS Class              | Applied CSS Declaration         |
-|:-----------------------|:--------------------------------|
-| `.v-align-baseline`    | `vertical-align: baseline`      |
-| `.v-align-bottom`      | `vertical-align: bottom`        |
-| `.v-align-middle`      | `vertical-align: middle`        |
-| `.v-align-text-bottom` | `vertical-align: text-bottom`   |
-| `.v-align-text-top`    | `vertical-align: text-top`      |
-| `.v-align-top`         | `vertical-align: top`           |
+<div style="background-color: #e3f2fd; padding: 15px; border-left: 5px solid #1976d2; margin: 20px 0; border-radius: 5px;">
+Si buscas una plataforma que mezcle teoría, práctica y un toque de frustración saludable, **TryHackMe** es ideal. Sus rutas de aprendizaje son excelentes tanto para quienes comienzan desde cero como para quienes buscan avanzar en su carrera profesional.
+</div>
 
-## Display
+Sus recursos gratuitos hacen que sea accesible para todos, y con promociones como las de **Black Friday**, no hay excusa para no probar el contenido premium. **Empieza con las rutas básicas y experimenta el caos organizado que es la ciberseguridad.**
 
-Display classes aid in adapting the layout of the elements on a page:
+---
 
-| CSS Class         | Applied CSS Declaration |
-|:------------------|:------------------------|
-| `.d-block`        | `display: block`        |
-| `.d-flex`         | `display: flex`         |
-| `.d-inline`       | `display: inline`       |
-| `.d-inline-block` | `display: inline-block` |
-| `.d-none`         | `display: none`         |
-
-Use these classes in conjunction with the responsive modifiers.
-
-### Applying Display Utilities with `{: }`
-{: .no_toc .text-delta }
-
-In Markdown, use the `{: }` wrapper to apply custom classes:
-
-```markdown
-This button will be hidden until medium screen sizes:
-
-[ A button ](#url)
-{: .d-none .d-md-inline-block }
-
-These headings will be `inline-block`:
-
-### heading 3
-{: .d-inline-block }
-
-### heading 3
-{: .d-inline-block }
-```
+<div style="text-align: center; margin: 40px 0;">
+  <img src="/assets/images/cojo.png" alt="Firma" style="max-width: 30%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);">
+</div>

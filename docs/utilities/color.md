@@ -1,81 +1,126 @@
 ---
-title: Color
-parent: Utilities
+layout: page
+title: Mis Links
+nav_order: 8
+description: Una selección exhaustiva de herramientas y plataformas para operaciones Blue Team, organizadas por categorías técnicas.
 ---
 
-# Color Utilities
-{: .no_toc }
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
+# **🌐 Recopilación de Herramientas para Blue Team**  
+Bienvenido a esta guía que reúne **herramientas esenciales y avanzadas** centradas en la defensa de redes, análisis forense y detección de amenazas. 
 
 ---
 
-All the colors used in Just the Docs have been systematized into a series of variables that have been extended to both font color and background color utility classes.
+## **🔍 Análisis de Amenazas**  
 
-## Light Greys
+### **🛡️ Análisis de Archivos, URLs e IoCs**  
+Herramientas para inspeccionar archivos, direcciones IP y URLs sospechosas:  
 
-| Color value    | Font color utility   | Background color utility |
-|:---------------|:---------------------|:-------------------------|
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-lt-000"></span> `grey-lt-000` | `.text-grey-lt-000` | `.bg-grey-lt-000` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-lt-100"></span> `grey-lt-100` | `.text-grey-lt-100` | `.bg-grey-lt-100` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-lt-200"></span> `grey-lt-200` | `.text-grey-lt-200` | `.bg-grey-lt-200` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-lt-300"></span> `grey-lt-300` | `.text-grey-lt-300` | `.bg-grey-lt-300` |
+- **[VirusTotal](https://www.virustotal.com)**: Analiza muestras con múltiples motores antivirus y APIs para automatización.  
+- **[Hybrid Analysis](https://www.hybrid-analysis.com)**: Reportes detallados de comportamientos sospechosos en archivos y URLs.  
+- **[ANY.RUN](https://any.run)**: Sandbox interactivo para observar comportamientos de malware en tiempo real.  
+- **[MalwareBazaar](https://malwarebazaar.org)**: Descarga y comparte muestras de malware con análisis de comportamiento.  
+- **[InQuest Labs](https://labs.inquest.net)**: Detecta amenazas en correos y documentos ofimáticos.  
+- **[URLHaus](https://urlhaus.abuse.ch)**: Base de datos de URLs maliciosas recopiladas por la comunidad.  
 
-## Dark Greys
+---
 
-| Color value    | Font color utility   | Background color utility |
-|:---------------|:---------------------|:-------------------------|
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-dk-000"></span> `grey-dk-000` | `.text-grey-dk-000` | `.bg-grey-dk-000` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-dk-100"></span> `grey-dk-100` | `.text-grey-dk-100` | `.bg-grey-dk-100` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-dk-200"></span> `grey-dk-200` | `.text-grey-dk-200` | `.bg-grey-dk-200` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-dk-250"></span> `grey-dk-250` | `.text-grey-dk-250` | `.bg-grey-dk-250` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-grey-dk-300"></span> `grey-dk-300` | `.text-grey-dk-300` | `.bg-grey-dk-300` |
+### **🌍 Reputación e Inteligencia de Amenazas**  
+Servicios para recopilar y cruzar datos sobre amenazas globales:  
 
-## Purples
+- **[Cisco Talos Intelligence](https://www.talosintelligence.com)**: Información de amenazas en tiempo real.  
+- **[ThreatCrowd](https://www.threatcrowd.org)**: Relaciona dominios, IPs y hashes para descubrir patrones.  
+- **[AbuseIPDB](https://www.abuseipdb.com)**: Base de datos colaborativa para identificar direcciones IP maliciosas.  
+- **[AlienVault OTX](https://otx.alienvault.com)**: Comunidad abierta para compartir IoCs.  
+- **[URLScan.io](https://urlscan.io)**: Reportes visuales sobre URLs sospechosas y conexiones.  
+- **[Cymon](https://www.cymon.io)**: Motor de búsqueda para datos de amenazas (IP, dominios, hashes).  
+- **[GreyNoise](https://www.greynoise.io)**: Filtra ruido en Internet para identificar tráfico legítimo de amenazas.  
 
-| Color value    | Font color utility   | Background color utility |
-|:---------------|:---------------------|:-------------------------|
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-purple-000"></span> `purple-000` | `.text-purple-000` | `.bg-purple-000` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-purple-100"></span> `purple-100` | `.text-purple-100` | `.bg-purple-100` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-purple-200"></span> `purple-200` | `.text-purple-200` | `.bg-purple-200` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-purple-300"></span> `purple-300` | `.text-purple-300` | `.bg-purple-300` |
+---
 
-## Blues
+## **🐾 Análisis de Malware**  
 
-| Color value    | Font color utility   | Background color utility |
-|:---------------|:---------------------|:-------------------------|
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-blue-000"></span> `blue-000` | `.text-blue-000` | `.bg-blue-000` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-blue-100"></span> `blue-100` | `.text-blue-100` | `.bg-blue-100` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-blue-200"></span> `blue-200` | `.text-blue-200` | `.bg-blue-200` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-blue-300"></span> `blue-300` | `.text-blue-300` | `.bg-blue-300` |
+### **🚀 Análisis Dinámico (Sandboxes)**  
+Plataformas para la ejecución segura de muestras de malware:  
 
-## Greens
+- **[Cuckoo Sandbox](https://cuckoosandbox.org)**: Framework de código abierto para análisis dinámico.  
+- **[Joe Sandbox](https://www.joesecurity.org)**: Análisis detallados para múltiples plataformas.  
+- **[ANY.RUN](https://any.run)**: Sandbox interactivo en tiempo real.  
+- **[VxStream Sandbox](https://www.vmray.com)**: Solución avanzada para análisis de malware.  
 
-| Color value    | Font color utility   | Background color utility |
-|:---------------|:---------------------|:-------------------------|
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-green-000"></span> `green-000` | `.text-green-000` | `.bg-green-000` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-green-100"></span> `green-100` | `.text-green-100` | `.bg-green-100` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-green-200"></span> `green-200` | `.text-green-200` | `.bg-green-200` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-green-300"></span> `green-300` | `.text-green-300` | `.bg-green-300` |
+---
 
-## Yellows
+### **🔬 Análisis Estático de Malware**  
+Herramientas de ingeniería inversa y desensambladores:  
 
-| Color value    | Font color utility   | Background color utility |
-|:---------------|:---------------------|:-------------------------|
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-yellow-000"></span> `yellow-000` | `.text-yellow-000` | `.bg-yellow-000` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-yellow-100"></span> `yellow-100` | `.text-yellow-100` | `.bg-yellow-100` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-yellow-200"></span> `yellow-200` | `.text-yellow-200` | `.bg-yellow-200` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-yellow-300"></span> `yellow-300` | `.text-yellow-300` | `.bg-yellow-300` |
+- **[Ghidra](https://ghidra-sre.org)**: Framework avanzado de análisis binario.  
+- **[IDA Free](https://www.hex-rays.com/products/ida/support/download_freeware/)**: Versión gratuita de IDA Pro.  
+- **[Radare2](https://rada.re/n/)**: Análisis binario modular y scriptable.  
+- **[Hopper Disassembler](https://www.hopperapp.com)**: Desensamblador multiplataforma.  
 
-## Reds
+---
 
-| Color value    | Font color utility   | Background color utility |
-|:---------------|:---------------------|:-------------------------|
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-red-000"></span> `red-000` | `.text-red-000` | `.bg-red-000` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-red-100"></span> `red-100` | `.text-red-100` | `.bg-red-100` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-red-200"></span> `red-200` | `.text-red-200` | `.bg-red-200` |
-| <span class="d-inline-block p-2 mr-1 v-align-middle bg-red-300"></span> `red-300` | `.text-red-300` | `.bg-red-300` |
+### **🔐 Identificación de Empaquetadores y Cifrados**  
+
+- **[PEStudio](https://www.winitor.com)**: Análisis de ejecutables Windows sin ejecutarlos.  
+- **[Detect It Easy (DIE)](https://github.com/horsicq/Detect-It-Easy)**: Identifica empaquetadores y cifrados.  
+- **[UPX](https://upx.github.io)**: Comprime y descomprime ejecutables.  
+
+---
+
+## **📧 Análisis de Phishing**  
+
+### **🖥️ Análisis de URLs y Correos Electrónicos**  
+
+- **[PhishTank](https://www.phishtank.com)**: Base de datos colaborativa para validar URLs sospechosas.  
+- **[CheckPhish](https://www.checkphish.ai)**: Detecta campañas de phishing con IA.  
+- **[MXToolbox](https://mxtoolbox.com)**: Verifica configuraciones DNS y SPF/DKIM/DMARC.  
+- **[Spamhaus](https://www.spamhaus.org)**: Lista negra de IPs y dominios utilizados en spam y phishing.  
+- **[URLScan.io](https://urlscan.io)**: Genera visualizaciones de tráfico de red.  
+- **[EmailRep](https://emailrep.io)**: Valida la reputación de direcciones de correo electrónico.  
+
+---
+
+## **🛡️ Defensa contra Ransomware**  
+
+### **🔍 Identificación y Respuesta**  
+
+- **[ID Ransomware](https://www.id-ransomware.malwarehunterteam.com)**: Identifica variantes de ransomware.  
+- **[NoMoreRansom](https://www.nomoreransom.org)**: Herramientas de descifrado para familias conocidas de ransomware.  
+- **[Ransomware Tracker](https://ransomwaretracker.abuse.ch)**: Base de datos de dominios y URLs asociadas a ransomware.  
+
+---
+
+## **🔎 Forense Digital**  
+
+### **🧩 Adquisición y Análisis**  
+
+- **[FTK Imager](https://accessdata.com/product-download)**: Genera imágenes forenses de discos.  
+- **[Autopsy](https://www.sleuthkit.org/autopsy/)**: Plataforma forense para análisis de discos duros.  
+- **[Volatility](https://www.volatilityfoundation.org)**: Framework para análisis de memoria volátil.  
+- **[X-Ways Forensics](https://www.x-ways.net/forensics/)**: Herramienta avanzada para investigaciones forenses.  
+
+---
+
+## **📊 Gestión de Logs y SIEM**  
+
+### **⚙️ Plataformas de Análisis Centralizado**  
+
+- **[Elastic Stack (ELK)](https://www.elastic.co/elk-stack)**: Gestión y visualización de eventos de seguridad.  
+- **[Graylog](https://www.graylog.org)**: Análisis centralizado de logs.  
+- **[Splunk](https://www.splunk.com)**: Análisis de datos en tiempo real.  
+- **[Humio](https://www.humio.com)**: Plataforma de logs para análisis a gran escala.  
+
+---
+
+## **📚 Capacitación para Blue Team**  
+
+### **💡 Plataformas Educativas**  
+
+- **[TryHackMe](https://www.tryhackme.com)**: Laboratorios prácticos para competencias defensivas.  
+- **[Hack The Box](https://www.hackthebox.eu)**: Simulaciones avanzadas de escenarios reales.  
+- **[LetsDefend](https://www.letsdefend.io)**: Entrenamiento en detección y respuesta.  
+- **[Blue Team Labs Online](https://www.btl.io)**: Escenarios específicos para incidentes.  
+- **[RangeForce](https://www.rangeforce.com)**: Entrenamientos modulares en detección y respuesta.  
+
+---
+
