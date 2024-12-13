@@ -2,7 +2,7 @@
 layout: page
 title: 🛡️ Filtros en Wireshark
 description: Consejos y recursos
-dropdown: Notas de un Cojo
+parent: Supervivencia Sin Esfuerzo
 priority: 4
 ---
 
