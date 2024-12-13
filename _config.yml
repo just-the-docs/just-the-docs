@@ -114,7 +114,7 @@ aux_links:
     - "https://github.com/just-the-docs/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
+aux_links_new_tab: true
 
 # Enable or disable the side/mobile menu globally
 # Nav menu can also be selectively enabled or disabled using page variables or the minimal layout

@@ -1,155 +1,38 @@
 ---
-title: Typography
-parent: Utilities
+layout: post
+title: Cuando el Conectado se Desvanece
+parent: Diario de un Cojo
 ---
 
-# Typography Utilities
-{: .no_toc }
+![MCCE]( /assets/img/teams.jpg)
 
-## Table of contents
-{: .no_toc .text-delta }
+# El Dolor Insoportable de Ver el Circulito Deshabilitado en Teams
 
-1. TOC
-{:toc}
+Hoy eL sol brilla como siempre, las alertas siguen entrando, los tickets siguen llegando, pero algo ha cambiado en mi vida de analista SOC: el maldito círculo verde de mi compañero ya no está. Y es que, amigos, en este mundo virtual, donde los humanos se convierten en íconos de Teams, nada duele más que ver ese bendito circulito deshabilitado.
 
----
+## Cuando el Conectado se Desvanece…
 
-## Font size
+Y ahora, todo se ha desvanecido. ¿Qué significa esto? Pues, básicamente, que esa persona *ya no está*. Y no, no se fue a descansar a casa tras un largo día de trabajo… se fue de la empresa! Desapareció, cual mito, cual leyenda, se marcha a buscar una vida mejor fuera de este SOC.
 
-Use the `.fs-1` - `.fs-10` to set an explicit `font-size`.
+## El chat se vuelve... más vacío.
 
-| Class   | Small screen size `font-size`  | Large screen size `font-size` |
-|:--------|:-------------------------------|:------------------------------|
-| `.fs-1` | 9px                            | 10px                          |
-| `.fs-2` | 11px                           | 12px                          |
-| `.fs-3` | 12px                           | 14px                          |
-| `.fs-4` | 14px                           | 16px                          |
-| `.fs-5` | 16px                           | 18px                          |
-| `.fs-6` | 18px                           | 24px                          |
-| `.fs-7` | 24px                           | 32px                          |
-| `.fs-8` | 32px                           | 38px                          |
-| `.fs-9` | 38px                           | 42px                          |
-| `.fs-10`| 42px                           | 48px                          |
+Nada de lo que intentes, ni lo que digas, va a devolver ese estado de "conectado" a su lugar. Es como ver a alguien irse de tu vida, pero en lugar de hacerlo en persona, es a través de un icono. La gran tragedia del siglo XXI, amigos.
 
-<div class="code-example" markdown="1">
-Font size 1
-{: .fs-1 }
-Font size 2
-{: .fs-2 }
-Font size 3
-{: .fs-3 }
-Font size 4
-{: .fs-4 }
-Font size 5
-{: .fs-5 }
-Font size 6
-{: .fs-6 }
-Font size 7
-{: .fs-7 }
-Font size 8
-{: .fs-8 }
-Font size 9
-{: .fs-9 }
-Font size 10
-{: .fs-10 }
-</div>
-```markdown
-In Markdown, use the `{: }` wrapper to apply custom classes:
+En el mundo analista de SOC, perder a un compañero es casi como perder una pieza del rompecabezas. Es como ese momento incómodo cuando te das cuenta de que la conversación grupal ya no tiene el mismo ritmo, el chat se vuelve un lugar más silencioso.
 
-Font size 1
-{: .fs-1 }
-Font size 2
-{: .fs-2 }
-Font size 3
-{: .fs-3 }
-Font size 4
-{: .fs-4 }
-Font size 5
-{: .fs-5 }
-Font size 6
-{: .fs-6 }
-Font size 7
-{: .fs-7 }
-Font size 8
-{: .fs-8 }
-Font size 9
-{: .fs-9 }
-Font size 10
-{: .fs-10 }
-```
 
-## Font weight
+## La "Avenida" de la Despedida en Teams
 
-Use the `.fw-300` - `.fw-700` to set an explicit `font-weight`.
+¿Qué pasa después? ¡Oh, la maravilla de este mundo moderno! Después de ver ese círculo gris, lo siguiente es ir a su perfil, de una forma casi obsesiva, como quien revisa el teléfono de su ex: **"¿Serás tú?"** Pero no. Ya no eres tú. Ya no hay mensajes, ni “¡Estamos en la misma!”; solo un vacío. Solo el sonido de las alertas de los bots de teams (cuando funcionan xD) rompen el silencio.
 
-<div class="code-example" markdown="1">
-Font weight 300
-{: .fw-300 }
-Font weight 400
-{: .fw-400 }
-Font weight 500
-{: .fw-500 }
-Font weight 700
-{: .fw-700 }
-</div>
-```markdown
-In Markdown, use the `{: }` wrapper to apply custom classes:
+## ¿Y Ahora Qué?
 
-Font weight 300
-{: .fw-300 }
-Font weight 400
-{: .fw-400 }
-Font weight 500
-{: .fw-500 }
-Font weight 700
-{: .fw-700 }
-```
+Bueno, queridos amigos, el show debe continuar. Las alertas siguen llegando, los tickets de incidentes no se resuelven solos, y tú sigues ahí, tocando el teclado con una mano mientras sostienes tu corazón roto con la otra. El equipo sigue trabajando, claro, pero ya no es lo mismo. Porque si algo aprendemos en esta vida, y más en un SOC, es que la verdadera familia está en ese chat de Teams, y ese pequeño "conectado" era la prueba de ello.
 
-## Line height
+Así que, ¿qué más nos queda? Solo esperar a que algún nuevo héroe se atreva a ocupar el vacío dejado por el compañero perdido. Aún cuando el "desconectado" ya se haya vuelto parte del paisaje. Y si no, pues, qué les vamos a hacer? El SOC sigue, y el show debe continuar.
 
-Use the `lh-` classes to explicitly apply line height to text.
+## *Hasta Luego, Conectado...*
 
-| Class         | `line-height` value  | Notes                         |
-|:--------------|:---------------------|:------------------------------|
-| `.lh-0`       | 0                    |                               |
-| `.lh-tight`   | 1.1                  | Default for headings          |
-| `.lh-default` | 1.4                  | Default for body (paragraphs) |
+Nos vemos en la próxima marcha de compañeros. Mientras tanto, te dejo con mi circulito verde… o bueno, ya sabes, con mi circulito gris. 🥲
 
-<div class="code-example" markdown="1">
-No Line height
-No Line height
-{: .lh-0 }
-
-Tight line height
-Tight line height
-{: .lh-tight }
-
-Default line height
-Default line height
-{: .fh-default }
-</div>
-```markdown
-In Markdown, use the `{: }` wrapper to apply custom classes:
-
-No Line height
-No Line height
-{: .lh-0 }
-
-Tight line height
-Tight line height
-{: .lh-tight }
-
-Default line height
-Default line height
-{: .fh-default }
-```
-
-## Text justification
-
-By default text is justified left. Use these `text-` classes to override settings:
-
-| Class          | What it does         |
-|:---------------|:---------------------|
-| `.text-left`   | `text-align: left`   |
-| `.text-right`  | `text-align: right`  |
-| `.text-center` | `text-align: center` |
+Siempre nos quedará Discord o LinkedIn, un brindis por los compañeros perdidos.
