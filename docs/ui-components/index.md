@@ -7,7 +7,7 @@ nav_order: 7
 
 
 <div style="background: linear-gradient(135deg,rgb(228, 203, 198),rgb(163, 133, 121)); padding: 40px 30px; border-radius: 25px; text-align: center; color: #fff; font-family: 'Arial', sans-serif; box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);">
-    <h1 style="font-size: 42px; font-weight: bold; margin: 0; letter-spacing: 1.5px;">🕵️‍♂️ **Apuntes y Cheat Sheets de Ciber** 🔓</h1>
+    <h1 style="font-size: 42px; font-weight: bold; margin: 0; letter-spacing: 1.5px;">🕵️‍♂️ Apuntes y Cheat Sheets de Ciber 🔓</h1>
 </div>
 
 ---
