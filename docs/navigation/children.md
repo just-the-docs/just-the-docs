@@ -49,7 +49,7 @@ El examen es un desafío de 24 horas, lo que suena como mucho tiempo, pero no te
 
 Mi experiencia con el examen fue toda una montaña rusa. Primero, obtuve un 80% en la corrección automática, lo cual ya era suficiente para aprobar. Pero algo en mí no me dejó tranquilo, así que pedí una revisión manual. Después de un mes de espera, me llegó una sorpresa increíble: ¡mi nota había subido a un 90%! 🎉 ¿El resultado? No solo aprobé, sino que gané mi Gold Coin, ese codiciado trofeo digital que ahora presumo con orgullo en cualquier ocasión.
 
-![Resul](/assets/img/COIN.jpg)
+![Resul](/assets/images/Mi experiencia con la certificación Blue Team Level 1/COIN.jpg)
 
 ![Resul](/assets/img/90.png)
 
