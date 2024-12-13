@@ -9,7 +9,7 @@ parent: Diario de un Cojo
     <img src="/assets/images/Mi experiencia con la certificación Blue Team Level 1/BTLLOCO (1).jpg" alt="BTL1 Logo" style="width: 60%; border-radius: 15px;">
 </div>
 
-<div style="text-align: center; font-family: 'Arial Black', sans-serif; font-size: 2.5rem; color: #1A73E8; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); margin-bottom: 20px;">
+<div style="text-align: center; font-family: 'Arial Black', sans-serif; font-size: 2.5rem; color:rgb(187, 73, 65); text-shadow: 2px 2px 5px rgba(0,0,0,0.5); margin-bottom: 20px;">
     💻 (BTL1): ¿Un paso en la dirección correcta o simplemente masoquismo profesional? 🌟
 </div>
 
