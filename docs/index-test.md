@@ -1,327 +1,52 @@
 ---
-title: Markdown kitchen sink
-nav_order: 99
+layout: post
+title: ¡Que salgo en los periódicos!
+parent: Diario de un Cojo
 ---
 
-<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
+![Jimmy](/assets/img/9rXb.gif)
 
-<script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+# **¡La Razón habla de mí!**
 
-jtd.addEvent(toggleDarkMode, 'click', function(){
-  if (jtd.getTheme() === 'dark') {
-    jtd.setTheme('light');
-    toggleDarkMode.textContent = 'Preview dark color scheme';
-  } else {
-    jtd.setTheme('dark');
-    toggleDarkMode.textContent = 'Return to the light side';
-  }
-});
-</script>
+**Quién lo diría:** de llevar bandejas a luchar contra hackers en un SOC. ¿Te suena a película de domingo por la tarde? Pues no, esto es mi vida. *La Razón* decidió que mi historia valía un artículo y aquí estoy, con el ego un poco más inflado (y los pies igual de jodidos).  
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+---
 
-[Link to another page]({{site.baseurl}}/).
+## **El titular que nunca pensé leer:**
 
-There should be whitespace between paragraphs.
+> **"La discapacidad que convirtió al hostelero Juanmi en guardián de la ciberseguridad."**
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+**Traducción:** "Este tío dejó de llevar cafés y ahora juega a luchar contra los malos en un SOC". No es del todo mentira.  
 
-# Header 1
+![Juan Miguel, en la sede de la Fundación GoodJob](/assets/img/58.webp)
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+---
 
-## Header 2
+## **De la barra al firewall: mi historia**  
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+Imagíname en un restaurante, sirviendo mesas, sonriendo mientras por dentro gritaba. Estuve ahí durante años. Cocina, barra, jefe de sala... Hasta que en 2015, mis pies dijeron: *"Hasta aquí, chaval"* y una enfermedad degenerativa decidió arruinarme los planes. Operaciones, incapacidad laboral, y la certeza de que mi próximo curro sería algo tan emocionante como teleoperador.  
 
-### Header 3
+**¿El giro inesperado?** Una llamada de la Fundación GoodJob. Su programa *Include* me abrió las puertas al mundo de la ciberseguridad. O sea, de no saber ni qué era un *phishing* pasé a ser el que detecta estos intentos de estafa. Con esfuerzo y algunos profesores que sabían lo que hacían (saludos, Román Ramírez), conseguí reinventarme.  
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+**Resultado:** hoy soy analista de ciberseguridad en **Wise Security Global**. Sí, paso los días luchando contra hackers, spam y usuarios con contraseñas como *12345*.  
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+---
 
-#### Header 4 `with code not transformed`
+![Juan Miguel habla con Isabel, su preparadora laboral](/assets/img/isabel.webp)
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+## **Un sector lleno de sorpresas (y sustos)**  
 
-##### Header 5
+Descubrí que la ciberseguridad no es solo lo que ves en las películas: sobrevivo a base de cafes, alertas y luchar contra cosas con nombres raros como *ransomware* o "estafa del CEO". Pero, hey, alguien tiene que hacerlo.  
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+Gracias a *Include* no solo me reinventé, sino que descubrí una pasión inesperada por proteger a empresas de cosas que suenan a ciencia ficción. Bueno, y también aprendí que los errores humanos son el 99% de las veces la puerta al desastre.  
 
-###### Header 6
 
-[This is a very long link which wraps and therefore doesn't overflow
-even when it comes at the beginning](.) of the line.
+---
 
-- [This is a very long link which wraps and therefore doesn't overflow the line
-  when used first in an item ](.) in a list.
+## **¿Y ahora qué?**  
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+Hoy miro atrás y pienso: *"Menos mal que respondí a esa llamada"*. Lo que parecía el final de todo resultó ser el inicio de algo mejor. Así que, si estás en un momento oscuro, solo diré esto: reinventarse es posible (aunque requiera esfuerzo y muchas dosis de sarcasmo para no volverte loco).  
 
-### There's a horizontal rule below this.
+📖 **Lee el artículo completo aquí:**  
+[Entrevista en La Razón](https://www.larazon.es/sociedad/20230122/l33me6qeq5feljn5njg5grxhou.html)  
 
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And an ordered list, continued:
-
-1.  Item one
-1.  Item two
-
-Some text
-
-{:style="counter-reset:none"}
-1.  Item three
-1.  Item four
-
-### And an ordered list starting from 42:
-
-{:style="counter-reset:step-counter 41"}
-1.  Item 42
-1.  Item 43
-1.  Item 44
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Nesting an ol in ul in an ol
-
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-  1. level 2 item (ol)
-  1. level 2 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-  1. level 4 item (ol)
-  1. level 4 item (ol)
-    - level 3 item (ul)
-    - level 3 item (ul)
-- level 1 item (ul)
-
-### And a task list
-
-- [ ] Hello, this is a TODO item
-- [ ] Hello, this is another TODO item
-- [x] Goodbye, this item is done
-
-### Nesting task lists
-
-- [ ] level 1 item (task)
-   - [ ] level 2 item (task)
-   - [ ] level 2 item (task)
-- [ ] level 1 item (task)
-- [ ] level 1 item (task)
-
-### Nesting a ul in a task list
-
-- [ ] level 1 item (task)
-   - level 2 item (ul)
-   - level 2 item (ul)
-- [ ] level 1 item (task)
-- [ ] level 1 item (task)
-
-### Nesting a task list in a ul
-
-- level 1 item (ul)
-   - [ ] level 2 item (task)
-   - [ ] level 2 item (task)
-- level 1 item (ul)
-- level 1 item (ul)
-
-### Small image
-
-![](../../assets/images/small-image.jpg)
-
-### Large image
-
-![](../../assets/images/large-image.jpg)
-
-"[Wroclaw University Library digitizing rare archival texts](https://www.flickr.com/photos/97810305@N08/9401451269)" by [j_cadmus](https://www.flickr.com/photos/97810305@N08) is marked with [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=openverse).
-
-### Labels
-
-I'm a label
-{: .label }
-
-blue
-{: .label .label-blue }
-green
-{: .label .label-green }
-purple
-{: .label .label-purple }
-yellow
-{: .label .label-yellow }
-red
-{: .label .label-red }
-
-**bold**
-{: .label }
-*italic*
-{: .label }
-***bold + italic***
-{: .label }
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-#### Multiple description terms and values
-
-Term
-: Brief description of Term
-
-Longer Term
-: Longer description of Term,
-  possibly more than one line
-
-Term
-: First description of Term,
-  possibly more than one line
-
-: Second description of Term,
-  possibly more than one line
-
-Term1
-Term2
-: Single description of Term1 and Term2,
-  possibly more than one line
-
-Term1
-Term2
-: First description of Term1 and Term2,
-  possibly more than one line
-
-: Second description of Term1 and Term2,
-  possibly more than one line
-
-### More code
-
-```python{% raw %}
-def dump_args(func):
-    "This decorator dumps out the arguments passed to a function before calling it"
-    argnames = func.func_code.co_varnames[:func.func_code.co_argcount]
-    fname = func.func_name
-    def echo_func(*args,**kwargs):
-        print fname, ":", ', '.join(
-            '%s=%r' % entry
-            for entry in zip(argnames,args) + kwargs.items())
-        return func(*args, **kwargs)
-    return echo_func
-
-@dump_args
-def f1(a,b,c):
-    print a + b + c
-
-f1(1, 2, 3)
-
-def precondition(precondition, use_conditions=DEFAULT_ON):
-    return conditions(precondition, None, use_conditions)
-
-def postcondition(postcondition, use_conditions=DEFAULT_ON):
-    return conditions(None, postcondition, use_conditions)
-
-class conditions(object):
-    __slots__ = ('__precondition', '__postcondition')
-
-    def __init__(self, pre, post, use_conditions=DEFAULT_ON):
-        if not use_conditions:
-            pre, post = None, None
-
-        self.__precondition  = pre
-        self.__postcondition = post
-{% endraw %}```
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-### Mermaid Diagrams
-
-The following code is displayed as a diagram only when a `mermaid` key supplied in `_config.yml`.
-
-```mermaid
-graph TD;
-    accTitle: the diamond pattern
-    accDescr: a graph with four nodes: A points to B and C, while B and C both point to D
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
-### Collapsed Section
-
-The following uses the [`<details>`](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections) tag to create a collapsed section.
-
-<details markdown="block">
-<summary>Shopping list (click me!)</summary>
-
-This is content inside a `<details>` dropdown.
-
-- [ ] Apples
-- [ ] Oranges
-- [ ] Milk
-
-</details>
