@@ -109,7 +109,7 @@ mermaid:
 heading_anchors: true
 
 # Aux links for the upper right navigation
-#aux_links:
+aux_links:
   "Just the Docs on GitHub":
     - "https://github.com/just-the-docs/just-the-docs"
 
