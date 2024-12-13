@@ -5,12 +5,13 @@ nav_order: 1
 parent: Diario de un Cojo
 ---
 
-<div style="text-align: center;">
-    <img src="/assets/images/Mi experiencia con la certificación Blue Team Level 1/BTLLOCO (1).jpg" alt="BTL1 Logo">
+<div style="text-align: center; margin-top: 20px; margin-bottom: 40px;">
+    <img src="/assets/images/Mi experiencia con la certificación Blue Team Level 1/BTLLOCO (1).jpg" alt="BTL1 Logo" style="width: 60%; border-radius: 15px;">
 </div>
-<hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
 
-# (BTL1): ¿un paso en la dirección correcta o simplemente masoquismo profesional?
+<div style="text-align: center; font-family: 'Arial Black', sans-serif; font-size: 2.5rem; color: #1A73E8; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); margin-bottom: 20px;">
+    💻 (BTL1): ¿Un paso en la dirección correcta o simplemente masoquismo profesional? 🌟
+</div>
 
 ---
 
@@ -22,7 +23,7 @@ Certificarte en ciberseguridad puede parecer un objetivo noble, pero déjame dec
 
 La introducción al curso es amable: 300 lecciones, vídeos, exámenes y actividades prácticas. Te prometen que en 30 horas estarás listo para enfrentarte al mundo como un defensor técnico, armado con nombres rimbombantes como CyberChef, KAPE, Volatility y, por supuesto, el viejo y confiable Wireshark. ¡Vaya arsenal! Pero claro, no te dicen que esas 30 horas son solo el tiempo estimado. Spoiler alert: si eres un humano normal, multiplícalo por tres porque vas a invertir más horas intentando entender por qué algo no funciona como en los videos.
 
-<div style="text-align: center;">
+<div style="text-align: center; margin: 20px 0;">
     <img src="/assets/images/Mi experiencia con la certificación Blue Team Level 1/8xs6.gif" alt="GIF divertido">
 </div>
 
@@ -54,12 +55,12 @@ El examen es un desafío de 24 horas, lo que suena como mucho tiempo, pero no te
 
 Mi experiencia con el examen fue toda una montaña rusa. Primero, obtuve un 80% en la corrección automática, lo cual ya era suficiente para aprobar. Pero algo en mí no me dejó tranquilo, así que pedí una revisión manual. Después de un mes de espera, me llegó una sorpresa increíble: ¡mi nota había subido a un 90%! 🎉 ¿El resultado? No solo aprobé, sino que gané mi Gold Coin, ese codiciado trofeo digital que ahora presumo con orgullo en cualquier ocasión.
 
-<div style="text-align: center;">
-    <img src="/assets/images/Mi experiencia con la certificación Blue Team Level 1/COIN.jpg" alt="Gold Coin" style="width: 50%;">
+<div style="text-align: center; margin: 20px 0;">
+    <img src="/assets/images/Mi experiencia con la certificación Blue Team Level 1/COIN.jpg" alt="Gold Coin" style="width: 50%; border-radius: 15px;">
 </div>
 
-<div style="text-align: center;">
-    <img src="/assets/images/Mi experiencia con la certificación Blue Team Level 1/90.png" alt="90% Nota">
+<div style="text-align: center; margin: 20px 0;">
+    <img src="/assets/images/Mi experiencia con la certificación Blue Team Level 1/90.png" alt="90% Nota" style="border-radius: 15px;">
 </div>
 
 ---
@@ -80,9 +81,3 @@ Si me preguntas si volvería a hacerlo, mi respuesta sería: “Con gusto, pero 
 ---
 
 Para más información sobre la certificación, visita [Security Blue Team - eLearning](https://elearning.securityblue.team/)
-
-<hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
-
-<div style="text-align: center; margin: 40px 0;">
-  <img src="/assets/images/cojo.png" alt="Firma" style="max-width: 30%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);">
-</div>
