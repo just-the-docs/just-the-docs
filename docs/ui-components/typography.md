@@ -7,7 +7,10 @@ priority: 5
 ---
 <hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
 
-# SPLUNK
+<div style="background-color:rgb(83, 177, 146); padding: 30px; text-align: center; border-radius: 8px; color: white; font-size: 24px; font-weight: bold;">
+  SPLUNK
+</div>
+
 
 ## Visión General
 
