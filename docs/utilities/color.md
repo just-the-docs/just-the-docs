@@ -4,9 +4,17 @@ title: Mis Links
 nav_order: 8
 description: Una selección exhaustiva de herramientas y plataformas para operaciones Blue Team, organizadas por categorías técnicas.
 ---
+<hr style="border: none; border-top: 1px solid #7e57c2; margin: 40px 0; width: 100%;">
 
-# **🌐 Recopilación de Herramientas para Blue Team**  
-Bienvenido a esta guía que reúne **herramientas esenciales y avanzadas** centradas en la defensa de redes, análisis forense y detección de amenazas. 
+<div style="background-color:#2A2A2A; padding:20px; border-radius:10px; text-align:center; color:#C0C0C0;">
+    <h1 style="font-family: 'Arial', sans-serif; font-size: 36px;">🌐 Recopilación de Herramientas para Blue Team</h1>
+</div>
+
+---
+
+<p style="font-family: 'Arial', sans-serif; font-size: 18px; text-align:center; color:#C0C0C0;">
+    Bienvenido a esta guía que reúne <strong>herramientas esenciales y avanzadas</strong> centradas en la defensa de redes, análisis forense y detección de amenazas.
+</p>
 
 ---
 
@@ -124,3 +132,6 @@ Herramientas de ingeniería inversa y desensambladores:
 
 ---
 
+<div style="text-align: center; margin: 40px 0;">
+  <img src="/assets/images/cojo.png" alt="Firma" style="max-width: 30%; height: auto; border-radius: 20px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);">
+</div>
