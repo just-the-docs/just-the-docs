@@ -1,101 +1,149 @@
 ---
-title: Line Numbers
-parent: Code
+title: 🛡️ Vectores de Ataque 
+parent: Supervivencia Sin Esfuerzo
+priority: 4
 ---
 
-# Code Snippets with Line Numbers
+# Vectores de Ataque 
 
-{: .warning }
-In prior versions of the docs, we provided "workarounds" to rendering issues arising from code snippets with line numbers. While these seemed to resolve visual layout issues, they did not resolve core issues with Jekyll generating invalid HTML. See [the detailed explanation](#detailed-error-explanation) for more information.
+Los **vectores de ataque ** son los caminos o métodos utilizados por los atacantes para acceder a las redes, sistemas o datos de una organización. A continuación, se describen los principales vectores de ataque, sus objetivos y las técnicas de identificación más utilizadas.
 
-The default settings for HTML compression are incompatible with the HTML
-produced by Jekyll for line numbers from highlighted code
--- both when using Kramdown code fences and when using Liquid highlight tags.
+![Vectores de Ataque ](/assets/img/vectores.jpg)
 
-To avoid non-conforming HTML and unsatisfactory layout, HTML compression
-can be turned off by using the following configuration option:
+## 1. Malware
 
-{% highlight yaml %}
-compress_html:
-  ignore:
-    envs: all
-{% endhighlight %}
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> El malware incluye software malicioso como virus, gusanos, troyanos y spyware.  
+<strong>Objetivo:</strong> Robar datos, comprometer sistemas o redes, o dañar archivos.  
+<strong>Identificación:</strong> Herramientas de antivirus, sistemas de detección de intrusiones (IDS).  
+</div>
 
-When using Kramdown code fences, line numbers are turned on globally by the
-following configuration option:
+## 2. Phishing
 
-{% highlight yaml %}
-kramdown:
-  syntax_highlighter_opts:
-    block:
-      line_numbers: true
-{% endhighlight %}
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> Ataques que engañan a los usuarios para que revelen información confidencial, generalmente a través de correos electrónicos falsos.  
+<strong>Objetivo:</strong> Acceder a sistemas o robar datos sensibles.  
+<strong>Identificación:</strong> Soluciones de seguridad de correo electrónico (SEG), capacitación de usuarios.  
+</div>
 
-Line numbers can then be suppressed locally using Liquid tags (_without_ the
-`linenos` option) instead of fences:
+## 3. Ransomware
 
-{% highlight yaml %}
-{% raw %}{% highlight some_language %}
-Some code
-{% endhighlight %}{% endraw %}
-{% endhighlight %}
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> Software que cifra los datos de una víctima hasta que se pague un rescate.  
+<strong>Objetivo:</strong> Extorsionar a las víctimas por acceso a sus propios datos.  
+<strong>Identificación:</strong> Detección de actividad inusual en la red, monitoreo de eventos.  
+</div>
 
-## Detailed Error Explanation
+## 4. Ataques DDoS
 
-Consider this following code snippet, intended to highlight a simple Ruby program:
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> Denegación de Servicio Distribuida (DDoS) sobrecarga un sistema con tráfico, dejándolo inutilizable.  
+<strong>Objetivo:</strong> Interrumpir el acceso a un servicio o sitio web.  
+<strong>Identificación:</strong> Monitoreo de tráfico de red, soluciones anti-DDoS.  
+</div>
 
-```
-{% raw %}{% highlight ruby linenos %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}{% endraw %}
-```
+## 5. Credenciales Comprometidas
 
-If this is directly placed within a file processed by Jekyll (via Just the Docs, with HTML compression enabled), the following markup will be generated:
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> Robo de contraseñas u otras credenciales de acceso mediante ataques de fuerza bruta o técnicas de ingeniería social.  
+<strong>Objetivo:</strong> Acceder a redes o servicios restringidos.  
+<strong>Identificación:</strong> Monitoreo de accesos no autorizados, autenticación multifactor (MFA).  
+</div>
 
-```html
-<figure class="highlight">><code class="language-ruby" data-lang="ruby"><div class="table-wrapper"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-</pre><td class="code"><pre><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">'foo'</span>
-<span class="k">end</span>
-</pre></figure>
-```
+## 6. Insiders Maliciosos
 
-This HTML is invalid; in particular, there are two issues:
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> Empleados o personas con acceso legítimo que filtran o abusan de la información de la organización.  
+<strong>Objetivo:</strong> Robo de propiedad intelectual, sabotaje interno.  
+<strong>Identificación:</strong> Monitoreo de actividades inusuales, sistemas de gestión de identidades (IAM).  
+</div>
 
-1. there are many missing closing tags, and a superfluous `>`, which produce visually garbled output
-2. a `<table>` is placed within a `<code>` element, which is syntactically invalid HTML (but is often allowed by browsers)
+## 7. Proveedores de Terceros o Cuarto Nivel
 
-To emphasize this first difference, here is the same markup output, indented by tag:
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> Las organizaciones que dependen de proveedores externos para la gestión de sus sistemas o redes a menudo enfrentan riesgos relacionados con la falta de seguridad en dichos proveedores.  
+<strong>Prevención y Detección:</strong>  
+- Realizar auditorías de seguridad a terceros.  
+- Implementar contratos que incluyan acuerdos estrictos de seguridad y cumplimiento de normativas.  
+- Monitorizar las conexiones externas y asegurar que los proveedores cumplan con los estándares de seguridad.  
+</div>
 
-```html
-<figure class="highlight">
-  >
-  <code class="language-ruby" data-lang="ruby">
-    <div class="table-wrapper">
-      <table class="rouge-table">
-        <tbody>
-          <tr>
-            <td class="gutter gl">
-              <pre class="lineno">
-1
-2
-3
-              </pre>
-              <td class="code">
-                <pre>
-<span class="k">def</span>
-<span class="nf">foo</span>
-<span class="nb">puts</span>
-<span class="s1">'foo'</span>
-<span class="k">end</span>
-                </pre>
-</figure>
-```
+## 8. Cifrado Ausente o Deficiente
 
-In order, there are missing `</td>`, `</td>`, `</tr>`, `</tbody>`, `</table>`, `</div>`, and `</code>` tags. As a result, the following elements of the page - including the site footer - become visually garbled as browsers attempt to recover gracefully.
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> El cifrado es esencial para proteger los datos tanto en tránsito como en reposo. La falta de cifrado adecuado puede permitir a los atacantes acceder a información sensible fácilmente.  
+<strong>Prevención y Detección:</strong>  
+- Implementar cifrado fuerte (AES-256, TLS) en todas las comunicaciones y almacenamiento de datos.  
+- Realizar auditorías regulares de los sistemas de cifrado.  
+</div>
 
-Prior workarounds we suggested (such as [Dmitry Hrabrov's in `jekyll-compress-html`#71](https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901)) resolve the missing tag problem. However, they still place a `<table>` within a `<code>` element. The HTML spec normatively states that `<code>` elements should only contain "[phrasing content](https://html.spec.whatwg.org/multipage/dom.html#phrasing-content-2)", which does not include `<table>` ([spec ref](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-code-element)). To avoid incorrectly rendered HTML, the previously-suggested workaround using the current version of `_includes/fix_linenos.html` should _not_ be used!
+## 9. Mala Configuración de Dispositivos
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> Una mala configuración en dispositivos de red, servidores o dispositivos móviles puede exponer la red a ataques. Esto incluye configuraciones por defecto inseguras o permisos excesivos.  
+<strong>Prevención y Detección:</strong>  
+- Implementar revisiones de seguridad periódicas.  
+- Automatizar auditorías de configuración para asegurar que los dispositivos cumplen con los estándares de seguridad.  
+</div>
+
+## 10. Vulnerabilidades No Parcheadas
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> Las vulnerabilidades no parcheadas en servidores, dispositivos de red o equipos móviles permiten a los atacantes explotar fallos conocidos para acceder a los sistemas o datos.  
+<strong>Prevención y Detección:</strong>  
+- Utilizar soluciones de gestión de parches automatizadas.  
+- Realizar análisis de vulnerabilidades con regularidad y mantener actualizado el software.  
+</div>
+
+## 11. Inyecciones SQL
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> Este ataque manipula bases de datos al inyectar código malicioso en los campos de entrada, permitiendo a los atacantes acceder a información no autorizada o incluso borrar datos.  
+<strong>Prevención y Detección:</strong>  
+- Utilizar consultas preparadas (prepared statements) para prevenir inyecciones SQL.  
+- Implementar firewalls de aplicaciones web (WAF) y herramientas de escaneo de vulnerabilidades.  
+</div>
+
+## 12. Cross-Site Scripting (XSS)
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> El XSS permite a los atacantes inyectar scripts maliciosos en sitios web confiables, lo que puede robar datos de los usuarios o realizar otras acciones maliciosas.  
+<strong>Prevención y Detección:</strong>  
+- Realizar validación de entradas del lado del servidor y del cliente.  
+- Utilizar mecanismos de protección como Content Security Policy (CSP) y WAF.  
+</div>
+
+## 13. Secuestro de Sesión
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> El secuestro de sesión ocurre cuando un atacante intercepta las cookies de sesión de un usuario para acceder a su cuenta sin credenciales.  
+<strong>Prevención y Detección:</strong>  
+- Usar cookies seguras y habilitar HTTPs en todas las comunicaciones.  
+- Implementar tiempos de expiración para las sesiones y monitorizar las actividades sospechosas de inicio de sesión.  
+</div>
+
+## 14. Man-in-the-Middle (MitM)
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> En un ataque MitM, el atacante intercepta la comunicación entre dos partes sin que ninguna de ellas lo sepa. Esto puede llevar a la exposición de datos sensibles.  
+<strong>Prevención y Detección:</strong>  
+- Utilizar cifrado fuerte (TLS) y VPNs para proteger las comunicaciones.  
+- Implementar soluciones IPS para detectar actividades sospechosas en la red.  
+</div>
+
+## 15. Fuerza Bruta
+
+<div style="border: 1px solid #ccc; padding: 10px; margin-bottom: 15px;">
+<strong>Descripción:</strong> Los ataques de fuerza bruta implican probar múltiples combinaciones de credenciales hasta encontrar la correcta, lo que da acceso a sistemas o redes.  
+<strong>Prevención y Detección:</strong>  
+- Implementar límites en los intentos de inicio de sesión y bloqueos temporales.  
+- Utilizar autenticación multifactor (MFA) para asegurar las cuentas de usuario.  
+</div>
+---
+
+### Recursos Adicionales
+
+- [Vectores de Ataque: MITRE ATT&CK Framework](https://attack.mitre.org/)
+- [Guía de Seguridad NIST](https://www.nist.gov/cyberframework)
+- [Curso de Ciberseguridad en TryHackMe](https://tryhackme.com)
+- [Vectores de Ataque en LetsDefend](https://www.letsdefend.io)
