@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ¡Que salgo en los periódicos!
+title: ▪️¡Que salgo en los periódicos!
 parent: Diario de un Cojo
 ---
 

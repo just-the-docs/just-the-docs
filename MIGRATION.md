@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Las Jornadas STIC, El Desfile de la Ciberseguridad
+title: ▪️Las Jornadas STIC, El Desfile de la Ciberseguridad
 parent: Diario de un Cojo
 ---
 ![Mi Imagen](/assets/img/stic.jpeg)
