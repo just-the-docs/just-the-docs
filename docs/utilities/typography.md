@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 💠Cuando el Conectado se Desvanece
+title: ▪️Cuando el Conectado se Desvanece
 parent: Diario de un Cojo
 ---
 
