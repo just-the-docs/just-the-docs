@@ -7,6 +7,10 @@
   margin-bottom: 0;
   list-style: none;
 
+  .nav-list-item.nav-exclude {
+    display: none;
+  }
+  
   .nav-list-item {
     position: relative;
     margin: 0;
