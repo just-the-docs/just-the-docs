@@ -1,0 +1,20 @@
+// Import the default dark scheme as base
+@import "./color_schemes/dark";
+
+// Sidebar navigation links
+$nav-child-link-color: $grey-lt-000;    // Making sidebar links lighter
+$link-color: $grey-lt-000;              // Making general links lighter
+
+// Callout colors - Adjusting for better contrast in dark mode
+$blue-000: #80b3ff;    // Lighter blue for better visibility
+$green-000: #98e6a1;   // Lighter green
+$yellow-000: #ffe380;  // Lighter yellow
+$red-000: #ff9e9e;     // Lighter red
+$purple-000: #d8b3ff;  // Lighter purple
+
+// Callout backgrounds - Making them darker but still distinguishable
+$blue-300: #1a365d;    // Darker blue background
+$green-300: #1a4731;   // Darker green background
+$yellow-300: #644c04;  // Darker yellow background
+$red-300: #dd2e2e;     // Darker red background
+$purple-300: #432160;  // Darker purple background

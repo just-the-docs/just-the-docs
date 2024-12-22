@@ -1,1 +1,57 @@
 // custom SCSS (or CSS) goes here
+
+// Basic callout styles
+
+p.josh,
+p.warren {
+  position: relative;
+  padding-top: 2rem;  // Space for the title above
+  padding-left: 0.5rem;  // Add some padding on the left for the content
+
+  &::before {
+    // This creates the colored bar on the left
+    content: " ";
+    height: 100%;
+    width: 4px;
+    position: absolute;
+    left: -1.2rem;
+    top: 0;
+  }
+}
+
+// Josh callout
+p.josh::after {
+  content: "Sidebar - Josh";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;  // Move title from the left edge
+  font-weight: bold;
+  color: #98e6a1;
+  display: block;
+  text-transform: uppercase;
+  font-size: .75em;
+  background-image: url("../../assets/images/josh-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px 20px; 
+  padding-right: 30px;
+}
+
+// Warren callout
+p.warren::after {
+  content: "Sidebar - Warren";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;  // Move title from the left edge
+  font-weight: bold;
+  color: #80b3ff;
+  display: block;
+  text-transform: uppercase;
+  font-size: .75em;
+  background-image: url("../../assets/images/warren-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 30px 30px;  
+  padding-right: 30px;  
+}
+

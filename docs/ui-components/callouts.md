@@ -38,11 +38,11 @@ A paragraph
 {: .no_toc .text-delta }
 
 ```markdown
-{: .note }
+{: .josh }
 A paragraph
 ```
 
-{: .note }
+{: .josh }
 A paragraph
 
 ```markdown
@@ -52,7 +52,30 @@ A paragraph
 > A paragraph with a custom title callout
 ```
 
-{: .note-title }
+{: .josh-title }
+> My note title
+>
+> A paragraph with a custom title callout
+
+## A single paragraph callout
+{: .no_toc .text-delta }
+
+```markdown
+{: .warren }
+A paragraph
+```
+
+{: .warren }
+A paragraph
+
+```markdown
+{: .warren-title }
+> My note title
+>
+> A paragraph with a custom title callout
+```
+
+{: .warren-title }
 > My note title
 >
 > A paragraph with a custom title callout
@@ -111,7 +134,7 @@ A paragraph
 {: .no_toc .text-delta }
 
 ```markdown
-> {: .new }
+> {: .josh }
 > > A paragraph
 > >
 > > Another paragraph
@@ -132,12 +155,12 @@ A paragraph
 
 ```markdown
 {: .important }
-> {: .warning }
+> {: .highlight }
 > A paragraph
 ```
 
 {: .important }
-> {: .warning }
+> {: .highlight }
 > A paragraph
 
 ## Opaque background
@@ -147,7 +170,7 @@ A paragraph
 {: .important }
 > {: .opaque }
 > <div markdown="block">
-> {: .warning }
+> {: .highlight }
 > A paragraph
 > </div>
 ```
@@ -155,6 +178,6 @@ A paragraph
 {: .important }
 > {: .opaque }
 > <div markdown="block">
-> {: .warning }
+> {: .highlight }
 > A paragraph
 > </div>
