@@ -1,8 +1,13 @@
 {%- comment -%}
-  Include as: {%- include components/children_nav.html -%}
-  Depends on: page, site, nav_breadcrumbs.
-  Results in: HTML for the children-navigation component.
-  Includes: components/nav/sorted.html, toc_heading_custom.html.
+  Include as:
+    {%- include components/children_nav.html -%}
+  Depends on:
+    page, site, nav_breadcrumbs.
+  Results in:
+    HTML for the children-navigation component.
+  Includes:
+    components/site_nav.html, components/nav/url_levels.html,
+    components/nav/children.html, toc_heading_custom.html.
   Overwrites:
     nav_ancestor_links, nav_top_node_titles, nav_child_candidates, nav_children,
     nav_child, nav_child_ok, nav_child_ancestor, nav_sorted.
@@ -58,15 +63,35 @@
     {%- assign nav_ancestors = nav_ancestors | push: nav_title -%}
   {%- endfor -%}
 
-  {%- assign nav_parenthood = site[page.collection] | default: site.html_pages
-    | where_exp: "item", "item.title != nil" | group_by: "parent" -%}
+  {%- assign nav_level = nav_breadcrumbs.size | plus: 1 -%}
 
-  {%- assign nav_top_nodes = nav_parenthood
-      | where_exp: "item", "item.name == ''" | map: "items" | first -%}
+  {%- if site.nav_urls -%}
+
+    {%- assign nav_pages = site[page.collection] | default: site.html_pages -%}
+
+    {%- include components/nav/url_levels.html pages=nav_pages -%}
+
+    {%- assign nav_top_nodes = nav_url_levels[0].items -%}
+
+  {%- else -%}
+
+    {%- assign nav_parenthood = site[page.collection] | default: site.html_pages
+          | where_exp: "item", "item.title != nil" | group_by: "parent" -%}
+
+    {%- assign nav_top_nodes = nav_parenthood
+          | where_exp: "item", "item.name == ''" | map: "items" | first -%}
+
+  {%- endif -%}
 
   {% assign nav_top_node_titles = nav_top_nodes | map: "title" -%}
 
-  {%- include components/nav/children.html node=page ancestors=nav_ancestors all=true -%}
+  {%- include components/nav/children.html node=page ancestors=nav_ancestors all=true level=nav_level -%}
+
+  {%- comment -%}
+  {{ page.title }}: {{ page.url }}
+  <br>
+  nav_url_levels[{{ nav_level }}]: {{ nav_url_levels[nav_level].items | map: "url" | inspect }}
+  {%- endcomment -%}
 
 {%- endunless -%}
 
