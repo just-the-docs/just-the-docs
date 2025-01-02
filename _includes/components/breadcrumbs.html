@@ -1,15 +1,19 @@
 {%- comment -%}
-  Include as: {%- include components/breadcrumbs.html -%}
-  Depends on: page, site.
-  Includes: components/site_nav.html.
-  Results in: HTML for the breadcrumbs component.
+  Include as:
+    {%- include components/breadcrumbs.html -%}
+  Depends on:
+    page, site.
+  Includes:
+    components/site_nav.html.
+  Results in:
+    HTML for the breadcrumbs component.
   Overwrites:
     nav_list_link, site_nav, nav_list_simple, nav_list_link_class, nav_category,
     nav_anchor_splits, nav_breadcrumbs, nav_split, nav_split_next, nav_split_test,
     nav_breadcrumb_link, nav_list_end_less, nav_list_end_count, nav_end_index, nav_breadcrumb.
 {%- endcomment -%}
 
-{%- if page.url != "/" and page.parent and page.title -%}
+{%- if page.url != "/" and page.title and page.parent or site.nav_urls -%}
 
 {%- capture nav_list_link -%}
 <a href="{{ page.url | relative_url }}" class="nav-list-link">

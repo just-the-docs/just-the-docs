@@ -1,22 +1,31 @@
 {%- comment -%}
-  Include as: {%- include_cached components/site_nav.html all=bool -%}
-  Depends on: site.
-  Results in: cached HTML for the main navigation when `all` is nil or false;
+  Include as:
+    {%- include_cached components/site_nav.html all=bool -%}
+  Depends on:
+    include.all, site.nav_urls, site.html_pages, site.nav_external_links,
+    site.just_the_docs.collections, site.nav_error_report.
+  Results in:
+    cached HTML for the main navigation when `all` is nil or false;
     includes links to pages excluded from the main navigation when `all` is true.
   Includes:
-    components/nav/pages.html
+    components/nav/url_levels.html, components/nav/pages.html.
   Overwrites:
-    pages_top_size, collections_size, collection_entry,
+    nav_url_levels, pages_top_size, collections_size, collection_entry,
     collection_key, collection_value, collection.
 {%- endcomment -%}
 
 <nav aria-label="Main" id="site-nav" class="site-nav">
-  {% assign pages_top_size = site.html_pages
+  {% if site.nav_urls -%}
+    {%- include components/nav/url_levels.html pages=site.html_pages -%}
+    {%- assign pages_top_size = nav_url_levels[0].items.size -%}
+  {%- else -%}
+    {%- assign pages_top_size = site.html_pages
         | where_exp:"item", "item.title != nil"
         | where_exp:"item", "item.parent == nil"
         | where_exp:"item", "item.nav_exclude != true"
-        | size %}
-  {% if pages_top_size > 0 %}
+        | size -%}
+  {%- endif -%}
+  {%- if pages_top_size > 0 %}
     {% include components/nav/pages.html pages=site.html_pages all=include.all %}
   {% endif %}
   {%- if site.nav_external_links -%}
