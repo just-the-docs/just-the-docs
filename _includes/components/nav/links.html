@@ -1,21 +1,30 @@
 {%- comment -%}
   Include as: {%- include components/nav/links.html pages=page_array ancestors=title_array all=bool -%}
   Depends on: include.pages, include.ancestors, include.all.
-  Results in: HTML for the main navigation when all is nil or false;
-    includes links to pages excluded from the main navigation when all is true.
+  Results in: HTML for the pages not excluded pages from main navigation when all is nil or false;
+    includes links also to pages excluded from the main navigation when all is true.
   Includes: components/nav/sorted.html, components/nav/children.html, components/nav/links.html.
   Overwrites:
-    node, nav_children, nav_ancestors.
+    node, nav_list_item_class, nav_list_link_class, nav_children, nav_ancestors.
 {%- endcomment -%}
 
 <ul class="nav-list">
   {%- for node in include.pages -%}
+
+  {%- if node.nav_exclude != true -%}
+    {%- assign nav_list_item_class = "nav-list-item" -%}
+    {%- assign nav_list_link_class = "nav-list-link" -%}
+  {%- else -%}
+    {%- assign nav_list_item_class = "nav-list-item nav-exclude" -%}
+    {%- assign nav_list_link_class = "nav-list-link nav-exclude" -%}
+  {%- endif -%}
+
   {%- if include.all == true or node.nav_exclude != true -%}
 
   {%- if include.ancestors contains node.title -%}
   
-    <li class="nav-list-item">
-      <a href="{{ node.url | relative_url }}" class="nav-list-link"> ∞ </a>
+    <li class="{{ nav_list_item_class }}">
+      <a href="{{ node.url | relative_url }}" class="{{ nav_list_link_class }}"> ∞ </a>
     </li>
     {%- capture nav_error_report -%}
       <blockquote class="warning">
@@ -29,13 +38,13 @@
   
     {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all -%}
 
-    <li class="nav-list-item">
+    <li class="{{ nav_list_item_class }}">
       {%- if nav_children.size >= 1 -%}
       <button class="nav-list-expander btn-reset" aria-label="toggle items in {{ node.title }} category" aria-pressed="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
       </button>
       {%- endif -%}
-      <a href="{{ node.url | relative_url }}" class="nav-list-link">{{ node.title }}</a>
+      <a href="{{ node.url | relative_url }}" class="{{ nav_list_link_class }}">{{ node.title }}</a>
       {%- if nav_children.size >= 1 -%}
         {%- if node.child_nav_order == 'desc' or node.child_nav_order == 'reversed' -%}
           {%- assign nav_children = nav_children | reverse -%}
