@@ -20,6 +20,10 @@
   - The other two rules ensure that all folding collections are expanded.
 {%- endcomment -%}
 
+{%- capture site_nav -%}
+{%- include_cached components/site_nav.html -%}
+{%- endcapture -%}
+
 {%- capture activation_no_nav_link %}
     .site-nav ul li a {
       background-image: none;
@@ -37,10 +41,6 @@
 
 {%- capture nav_list_link -%}
 <a href="{{ page.url | relative_url }}" class="nav-list-link">
-{%- endcapture -%}
-
-{%- capture site_nav -%}
-{%- include_cached components/site_nav.html -%}
 {%- endcapture -%}
 
 {%- if site_nav contains nav_list_link -%}
