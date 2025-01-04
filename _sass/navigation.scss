@@ -6,10 +6,6 @@
   margin-top: 0;
   margin-bottom: 0;
   list-style: none;
-
-  .nav-list-item.nav-exclude {
-    display: none;
-  }
   
   .nav-list-item {
     position: relative;
@@ -21,6 +17,10 @@
       @include fs-3;
     }
 
+    .nav-exclude {
+      display: none;
+    }
+  
     .nav-list-link {
       display: block;
       min-height: $nav-list-item-height-sm;
