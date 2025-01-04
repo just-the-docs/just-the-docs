@@ -17,11 +17,13 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Fixed: auto-generated child navigation (TOC) by [@pdmosses] in [#1590]
 
 Docs changes made since the latest release:
 
 - N/A
+
+[#1590]: https://github.com/just-the-docs/just-the-docs/pull/1590
 
 ## Release v0.10.0
 
