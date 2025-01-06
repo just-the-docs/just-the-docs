@@ -11,21 +11,22 @@
 {%- comment -%}
   Whether a page has any children is checked efficiently by inspecting the cached
   site_nav. If the page has no children, nav_children is set to an empty array;
-  otherwise nav_children is left unset.
+  otherwise nav_children is left unset. (The site_nav is rendered the first time
+  it is included, and that may overwrite various variables.)
 {%- endcomment -%}
 
 {%- if page.has_children == false -%}
   {%- assign nav_children = "" | split: "" -%}
 {%- else -%}
 
+  {%- capture site_nav -%}
+  {%- include_cached components/site_nav.html all=true -%}
+  {%- endcapture -%}
+
   {%- assign nav_children = nil -%}
 
   {%- capture nav_list_link -%}
   <a href="{{ page.url | relative_url }}" class="nav-list-link">
-  {%- endcapture -%}
-
-  {%- capture site_nav -%}
-  {%- include_cached components/site_nav.html all=true -%}
   {%- endcapture -%}
 
   {%- capture nav_list_simple -%}
