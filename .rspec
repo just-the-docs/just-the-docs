@@ -1,0 +1,1 @@
+-f documentation -f documentation --out tmp/rspec_output.txt -f json --out tmp/rspec_output.json -f html --out tmp/rspec_output.html
