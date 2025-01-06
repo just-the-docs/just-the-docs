@@ -63,7 +63,7 @@ nav_order: 2
 The Buttons page appears as a child of UI Components and appears second in the UI Components pages.
 
 {: .new-title }
-> New (Multi-level)
+> New (v0.10.0)
 >
 > The `has_children` field is now redundant (and ignored, except when significant for backwards compatibility).
 
