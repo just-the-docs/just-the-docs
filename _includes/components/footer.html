@@ -1,7 +1,7 @@
 {% capture footer_custom %}
   {%- include footer_custom.html -%}
 {% endcapture %}
-{% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link %}
+{% if footer_custom != "" or site.last_edit_timestamp or site.gh_edit_link or site.back_to_top %}
   <hr>
   <footer>
     {% if site.back_to_top %}
