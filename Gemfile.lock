@@ -126,7 +126,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.11.1)
       ffi (~> 1.0)
-    rexml (3.3.7)
+    rexml (3.3.9)
     rouge (4.4.0)
     ruby-rc4 (0.1.5)
     safe_yaml (1.0.5)
@@ -146,7 +146,7 @@ GEM
       ethon (>= 0.9.0)
     unicode-display_width (2.6.0)
     uri (0.13.0)
-    webrick (1.8.1)
+    webrick (1.8.2)
     yell (2.2.2)
     zeitwerk (2.6.13)
 
