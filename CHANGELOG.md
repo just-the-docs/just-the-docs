@@ -22,9 +22,12 @@ Code changes to `main` that are *not* in the latest release:
 
 Docs changes made since the latest release:
 
-- N/A
+- Fixed: incorrect docs for example with minimal layout parent, default layout child by [@janbrasna] in [#1540]
+
+[@janbrasna]: https://github.com/janbrasna
 
 [#1461]: https://github.com/just-the-docs/just-the-docs/pull/1461
+[#1540]: https://github.com/just-the-docs/just-the-docs/pull/1540
 [#1590]: https://github.com/just-the-docs/just-the-docs/pull/1590
 
 ## Release v0.10.0
