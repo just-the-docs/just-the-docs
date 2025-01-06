@@ -23,11 +23,14 @@ Code changes to `main` that are *not* in the latest release:
 Docs changes made since the latest release:
 
 - Fixed: incorrect docs for example with minimal layout parent, default layout child by [@janbrasna] in [#1540]
+- Fixed: unclear docs on using in-page table of contents by [@sebjameswml] in [#1551]
 
 [@janbrasna]: https://github.com/janbrasna
+[@sebjameswml]: https://github.com/sebjameswml
 
 [#1461]: https://github.com/just-the-docs/just-the-docs/pull/1461
 [#1540]: https://github.com/just-the-docs/just-the-docs/pull/1540
+[#1551]: https://github.com/just-the-docs/just-the-docs/pull/1551
 [#1590]: https://github.com/just-the-docs/just-the-docs/pull/1590
 
 ## Release v0.10.0
