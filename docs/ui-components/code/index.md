@@ -1,8 +1,6 @@
 ---
-layout: default
 title: Code
 parent: UI Components
-has_children: true
 nav_order: 6
 ---
 
@@ -57,6 +55,8 @@ var fun = function lang(l) {
 }
 ```
 {% endhighlight %}
+
+Syntax highlighting, line numbers, and HTML compression do not work together; **the combination of these features generates invalid HTML that renders incorrectly**. To learn more, see ["Code with line numbers"]({% link docs/ui-components/code/line-numbers.md %}).
 
 ---
 
@@ -129,6 +129,8 @@ Once mermaid is installed, it can be used in markdown files. The markdown for a 
 {% highlight markdown %}
 ```mermaid
 graph TD;
+    accTitle: the diamond pattern
+    accDescr: a graph with four nodes: A points to B and C, while B and C both point to D
     A-->B;
     A-->C;
     B-->D;
@@ -140,6 +142,8 @@ which renders:
 
 ```mermaid
 graph TD;
+    accTitle: the diamond pattern
+    accDescr: a graph with four nodes: A points to B and C, while B and C both point to D
     A-->B;
     A-->C;
     B-->D;
@@ -177,6 +181,8 @@ By default, AsciiDoc generates HTML markup that mermaid cannot properly parse. T
 ++++
 <pre class="language-mermaid">
 graph TD;
+    accTitle: the diamond pattern
+    accDescr: a graph with four nodes: A points to B and C, while B and C both point to D
     A-->B;
     A-->C;
     B-->D;

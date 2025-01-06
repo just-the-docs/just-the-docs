@@ -41,7 +41,47 @@ This document contains instructions on how to migrate and upgrade Just the Docs 
 > and pull the changes of a new release to your clone,
 > you may need to resolve merge conflicts.
 
-[CHANGELOG]: {{ site.baseurl }}{% link CHANGELOG.md %}
+[CHANGELOG]: {% link CHANGELOG.md %}
+
+## v0.9.x - v0.10.0
+
+There are no potentially-breaking changes in v0.10.0.
+
+## v0.8.x - v0.9.0
+
+There are no potentially-breaking changes in v0.9.0.
+
+## v0.7.x - v0.8.0
+
+There are no potentially-breaking changes in v0.8.0.
+
+## v0.6.x - v0.7.0
+
+### POTENTIALLY-BREAKING CHANGES in v0.7.0
+
+There are some *very minor* potentially-breaking changes for users in version `v0.7.0`. **They do not affect the vast majority of users**; however, this may affect users of (undocumented) internal theme structure. They concern:
+
+1. the movement of `_includes/nav.html`, which has moved to `_includes/components/nav.html`
+  - **explicit migration only necessary if users have overridden `_includes/nav.html`**
+2. the addition of `<script>` tags with `id`s `jtd-nav-activation` and `jtd-head-nav-stylesheet`
+  - **explicit migration only necessary if users have existing elements with those IDs**
+
+#### Moved Include
+
+Version `v0.7.0` has moved (and changed the contents of) `_includes/nav.html`; it is now in `_includes/components/nav.html`. This means that user overrides for the component will *no longer be loaded*, reverting to the Just the Docs default.
+
+Users who have overridden this `_includes` should:
+
+1. copy in the new upstream `_includes/components/nav.html` into their site
+2. port over any changes from their custom `_includes/nav.html`
+
+No other changes are necessary.
+
+#### New Script IDs
+
+Version `v0.7.0` adds the `id`s `jtd-nav-activation` and `jtd-head-nav-stylesheet` to some existing script tags. This will cause errors for users that have their own custom components with those IDs.
+
+Users who have elements with those `id`s should rename their elements to avoid a collision.
 
 ## v0.5.x - v0.6.0
 
@@ -119,7 +159,7 @@ However, some users may load different favicons for each page (and/or dynamicall
 
 ### POTENTIALLY-BREAKING CHANGES in v0.5.0
 
-There is one potentially-breaking change for users migrating from `v0.4.2` to `v0.5.0` concering `setup.scss`. To provide context:
+There is one potentially-breaking change for users migrating from `v0.4.2` to `v0.5.0` concerning `setup.scss`. To provide context:
 
 1. `setup.scss` was introduced in `v0.4.0`
 2. in `v0.4.0` and `v0.4.1`, `setup.scss` was imported *before* color scheme SCSS code
@@ -345,7 +385,7 @@ For changes since v0.3.3, the log usually references the merged PR that made the
 
 #### Configuration
 
-- Mermaid support: first-class support for [Mermaid](https://mermaid.js.org/) - a JavaScript-based diagram and charting tool supported by GitHub - has been added to the theme. **This feature is opt-in.** See the new doc subsections in [Configuration]({% link docs/configuration.md %}#mermaid-diagrams) and [Code]({% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more.
+- Mermaid support: first-class support for [Mermaid](https://mermaid.js.org/) - a JavaScript-based diagram and charting tool supported by GitHub - has been added to the theme. **This feature is opt-in.** See the new doc subsections in [Configuration]({% link docs/configuration.md %}#mermaid-diagrams) and [Code]({% link docs/ui-components/code/index.md %}#mermaid-diagram-code-blocks) for more.
 - Multiple Google Analytics tags are now supported. PR: [#1029]
 
 #### Customization
