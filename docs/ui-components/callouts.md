@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Callouts
 parent: UI Components
 nav_order: 7
@@ -23,8 +22,8 @@ When you have [configured]({% link docs/configuration.md %}#callouts) the  `colo
 [^postfix]:
     You can put the callout markup either before or after its content.
 
-#### An untitled callout
-{: .no_toc }
+## An untitled callout
+{: .no_toc .text-delta }
 
 ```markdown
 {: .highlight }
@@ -35,8 +34,8 @@ A paragraph
 A paragraph
 
 
-#### A single paragraph callout
-{: .no_toc }
+## A single paragraph callout
+{: .no_toc .text-delta }
 
 ```markdown
 {: .note }
@@ -58,8 +57,8 @@ A paragraph
 >
 > A paragraph with a custom title callout
 
-#### A multi-paragraph callout
-{: .no_toc }
+## A multi-paragraph callout
+{: .no_toc .text-delta }
 
 ```markdown
 {: .important }
@@ -97,8 +96,8 @@ A paragraph
 >
 > The last paragraph
 
-#### An indented callout
-{: .no_toc }
+## An indented callout
+{: .no_toc .text-delta }
 
 ```markdown
 > {: .highlight }
@@ -108,8 +107,8 @@ A paragraph
 > {: .highlight }
   A paragraph
 
-#### Indented multi-paragraph callouts
-{: .no_toc }
+## Indented multi-paragraph callouts
+{: .no_toc .text-delta }
 
 ```markdown
 > {: .new }
@@ -128,8 +127,8 @@ A paragraph
 > > The last paragraph
 
 
-#### Nested callouts
-{: .no_toc }
+## Nested callouts
+{: .no_toc .text-delta }
 
 ```markdown
 {: .important }
@@ -141,8 +140,8 @@ A paragraph
 > {: .warning }
 > A paragraph
 
-#### Opaque background
-{: .no_toc }
+## Opaque background
+{: .no_toc .text-delta }
 
 ```markdown
 {: .important }

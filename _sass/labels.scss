@@ -14,9 +14,9 @@
   text-transform: uppercase;
   vertical-align: middle;
   background-color: $blue-100;
-  @include fs-2;
-
   border-radius: 12px;
+
+  @include fs-2;
 }
 
 .label-green:not(g) {

@@ -8,10 +8,10 @@
   list-style: none;
 
   .nav-list-item {
-    @include fs-4;
-
     position: relative;
     margin: 0;
+
+    @include fs-4;
 
     @include mq(md) {
       @include fs-3;

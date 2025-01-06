@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Customization
 nav_order: 6
 ---
@@ -21,8 +20,8 @@ Just the Docs supports two color schemes: light (default), and dark.
 
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
 
-#### Example
-{: .no_toc }
+### Example: preview dark color scheme
+{: .no_toc .text-delta }
 
 ```yaml
 # Color scheme supports "light" (default) and "dark"
@@ -77,8 +76,8 @@ Available variables are listed in the [\_variables.scss](https://github.com/just
 
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
-#### Example
-{: .no_toc }
+#### Example: custom link color
+{: .no_toc .text-delta }
 
 ```scss
 $link-color: $blue-000;
@@ -143,10 +142,10 @@ Additionally, you may want to add completely custom CSS specific to your content
 To do this, put your styles in the file `_sass/custom/custom.scss`.
 This will allow for all overrides to be kept in a single file, and for any upstream changes to still be applied.
 
-For example, if you'd like to add your own styles for printing a page, you could add the following styles.
+### Example: custom print styles
+{: .no_toc .text-delta }
 
-#### Example
-{: .no_toc }
+For example, if you'd like to add your own styles for printing a page, you could add the following styles.
 
 ```scss
 // Print-only styles.
@@ -178,9 +177,9 @@ New (v0.4.0)
 
 `_includes/toc_heading_custom.html`
 
-If the page has any child pages, and `has_toc` is not set to `false`, this content appears as a heading above the [auto-generating list of child pages]({% link docs/navigation-structure.md %}#auto-generating-table-of-contents) after the page's content.
+If the page has any child pages, and `has_toc` is not set to `false`, this content appears as a heading above the [auto-generating list of child pages]({% link docs/navigation/children.md %}) after the page's content.
 
-#### Example
+#### Example: changing TOC heading
 {: .no_toc }
 
 To change the default TOC heading to "Contents", create `_includes/toc_heading_custom.html` and add:

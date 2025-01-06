@@ -1,15 +1,11 @@
 ---
-layout: default
-title: Code with line numbers
+title: Line Numbers
 parent: Code
-grand_parent: UI Components
-permalink: /docs/ui-components/code/line-numbers/
 ---
 
-# Code snippets with line numbers
+# Code Snippets with Line Numbers
 
 {: .warning }
-
 In prior versions of the docs, we provided "workarounds" to rendering issues arising from code snippets with line numbers. While these seemed to resolve visual layout issues, they did not resolve core issues with Jekyll generating invalid HTML. See [the detailed explanation](#detailed-error-explanation) for more information.
 
 The default settings for HTML compression are incompatible with the HTML
