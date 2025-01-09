@@ -15,12 +15,12 @@
 
 {%- if page.url != "/" and page.title and page.parent or site.nav_urls -%}
 
-{%- capture nav_list_link -%}
-<a href="{{ page.url | relative_url }}" class="nav-list-link">
-{%- endcapture -%}
-
 {%- capture site_nav -%}
 {%- include_cached components/site_nav.html all=true -%}
+{%- endcapture -%}
+
+{%- capture nav_list_link -%}
+<a href="{{ page.url | relative_url }}" class="nav-list-link">
 {%- endcapture -%}
 
 {%- capture nav_list_simple -%}

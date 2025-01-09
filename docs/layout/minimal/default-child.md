@@ -5,6 +5,6 @@ parent: A minimal layout page
 grand_parent: Layout
 ---
 
-# A minimal layout page
+# Default layout child page
 
-This is a child page that uses the same minimal layout as its parent page.
+This is a child page that uses the `default` layout as compared to its parent page (which uses the `minimal` layout).

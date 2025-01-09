@@ -23,6 +23,35 @@ Docs changes made since the latest release:
 
 - N/A
 
+## Release v0.10.1
+
+Hi folks! This patch fixes two bugs related to generated navigation elements and improves our docs.
+
+This release should be a straightforward upgrade for all users of Just the Docs. Thank you for your continued support!
+
+### Bugfixes
+
+- Fixed: `back_to_top` not displaying when no other footer variables are set by [@mattxwang] in [#1461]
+- Fixed: auto-generated child navigation (TOC) by [@pdmosses] in [#1590]
+
+### Documentation
+
+- Fixed: incorrect docs for example with minimal layout parent, default layout child by [@janbrasna] in [#1540]
+- Fixed: unclear docs on using in-page table of contents by [@sebjameswml] in [#1551]
+
+### New Contributors
+
+- [@janbrasna] made their first contribution in [#1540]
+- [@sebjameswml] made their first contribution in [#1551]
+
+[@janbrasna]: https://github.com/janbrasna
+[@sebjameswml]: https://github.com/sebjameswml
+
+[#1461]: https://github.com/just-the-docs/just-the-docs/pull/1461
+[#1540]: https://github.com/just-the-docs/just-the-docs/pull/1540
+[#1551]: https://github.com/just-the-docs/just-the-docs/pull/1551
+[#1590]: https://github.com/just-the-docs/just-the-docs/pull/1590
+
 ## Release v0.10.0
 
 Hi folks! This minor release adds one of our most-requested features: unlimited multi-level navigation (also known as recursive navigation). Huge thanks to [@pdmosses] for his wonderful work in implementing this feature!
