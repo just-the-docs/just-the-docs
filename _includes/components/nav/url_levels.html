@@ -1,0 +1,21 @@
+{%- comment -%}
+  Include as:
+    {%- include components/nav/url_levels.html pages=page_array -%}
+  Depends on:
+    include.pages, nav_parenthood, nav_top_node_titles.
+  Assigns to:
+    nav_url_levels.
+  Assumes:
+    page urls contain no spaces and no "//"s;
+    the only page url extension is "html";
+    page urls do not end with "/index.html"
+    the home page has no children.
+{%- endcomment -%}
+
+{%- assign nav_url_levels = include.pages
+      | group_by_exp: "p",
+          "p.url | remove: '/index.html'
+            | append: ' ' | replace: '/index/ ', '/' | remove: ' '
+            | prepend: '/' | append: '/' | replace: '///', '//.//'
+            | replace: '//', '/' | split: '/' | size"
+      | sort: "name" -%}

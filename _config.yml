@@ -120,6 +120,9 @@ aux_links_new_tab: false
 # Nav menu can also be selectively enabled or disabled using page variables or the minimal layout
 nav_enabled: true
 
+# Base the navigation hierarchy on the directory hierarchy, ignoring front matter fields such as `parent`
+nav_urls: true # default is false/nil
+
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: case_sensitive # Capital letters sorted before lowercase

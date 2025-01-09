@@ -1,9 +1,13 @@
 {%- comment -%}
-  Include as: {%- include components/nav/links.html pages=page_array ancestors=title_array all=bool -%}
-  Depends on: include.pages, include.ancestors, include.all.
-  Results in: HTML for the main navigation when all is nil or false;
+  Include as:
+    {%- include components/nav/links.html pages=page_array ancestors=title_array all=bool level=int -%}
+  Depends on:
+    include.pages, include.ancestors, include.all, include.level.
+  Results in:
+    HTML for the main navigation when all is nil or false;
     includes links to pages excluded from the main navigation when all is true.
-  Includes: components/nav/sorted.html, components/nav/children.html, components/nav/links.html.
+  Includes:
+    components/nav/sorted.html, components/nav/children.html, components/nav/links.html.
   Overwrites:
     node, nav_children, nav_ancestors.
 {%- endcomment -%}
@@ -12,14 +16,14 @@
   {%- for node in include.pages -%}
   {%- if include.all == true or node.nav_exclude != true -%}
 
-  {%- if include.ancestors contains node.title -%}
+  {%- if include.ancestors contains node.title and site.nav_urls != true -%}
   
     <li class="nav-list-item">
       <a href="{{ node.url | relative_url }}" class="nav-list-link"> ∞ </a>
     </li>
     {%- capture nav_error_report -%}
       <blockquote class="warning">
-        A page has the same title as its parent page or one of its ancestral pages!<br>
+        A page has the same title as a higher-level page!<br>
         This causes an incorrect link in the main navigation panel.<br>
         Page title: <code>{{ node.title }}</code>, location: <code>{{ node.path }}</code>.
       </blockquote>
@@ -27,9 +31,10 @@
 
   {%- else -%}
   
-    {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all -%}
+    {%- assign nav_children_level = include.level | plus: 1 -%}
+    {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all level=nav_children_level -%}
 
-    <li class="nav-list-item">
+    <li class="nav-list-item {%- if node.nav_fold == false %} active{%- endif -%}">
       {%- if nav_children.size >= 1 -%}
       <button class="nav-list-expander btn-reset" aria-label="toggle items in {{ node.title }} category" aria-pressed="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
@@ -41,7 +46,7 @@
           {%- assign nav_children = nav_children | reverse -%}
         {%- endif -%}
         {%- assign nav_ancestors = include.ancestors | push: node.title -%}
-        {%- include components/nav/links.html pages=nav_children ancestors=nav_ancestors all=include.all -%}
+        {%- include components/nav/links.html pages=nav_children ancestors=nav_ancestors all=include.all level=nav_children_level -%}
       {%- endif -%}
     </li>
   
