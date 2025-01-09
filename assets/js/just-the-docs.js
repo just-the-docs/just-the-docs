@@ -524,13 +524,21 @@ function navLink() {
   return null; // avoids `undefined`
 }
 
-// Scroll site-nav to ensure the link to the current page is visible
+// Scroll site-nav to ensure the link to the current page is visible.
+// For excluded pages, use the link to the closest non-excluded ancestor of the page.
 
 function scrollNav() {
-  const targetLink = navLink();
-  if (targetLink) {
-    targetLink.scrollIntoView({ block: "center" });
-    targetLink.removeAttribute('href');
+  var target = navLink();
+  if (target && !(target.classList && target.classList.contains('nav-exclude'))) {
+    target.scrollIntoView({ block: "center" });
+    target.removeAttribute('href');
+  } else {
+    while (target && !(target.classList && target.classList.contains('nav-list-item')
+                                        && !target.classList.contains('nav-exclude')
+                                        && !target.classList.contains('nav-category-list'))) {
+      target = target.parentNode;
+    }
+    target.scrollIntoView({ block: "center" });
   }
 }
 
