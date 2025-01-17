@@ -48,6 +48,12 @@
     <link rel="icon" href="https://raw.githubusercontent.com/scds/jtd-mcmaster/main/assets/images/favicon.ico" type="image/x-icon">
   {% endif %}
 
+  {% if page.bioschemas %}
+  <script type="application/ld+json">
+      {{ page.bioschemas | jsonify }}
+  </script>
+  {% endif %}
+  
   {% seo %}
 
   {% include head_custom.html %}
