@@ -1,0 +1,26 @@
+// Alerts
+
+// default color-scheme == light
+
+$note-color: $blue-100;
+$tip-color: $green-100;
+$important-color: $purple-200;
+$warning-color: $yellow-300;
+$caution-color: $red-300;
+$alert-color: $grey-dk-000;
+
+@if $color-scheme == dark {
+  $note-color: $blue-000;
+  $tip-color: $green-000;
+  $important-color: $purple-000;
+  $warning-color: $yellow-300;
+  $caution-color: $red-200;
+  $alert-color: $grey-dk-000;
+}
+
+@include alert(NOTE, $note-color, "(i) " "Note");
+@include alert(TIP, $tip-color, "\$ " "Tip");
+@include alert(IMPORTANT, $important-color, "!! " "Important");
+@include alert(WARNING, $warning-color, "/!\\ " "Warning");
+@include alert(CAUTION, $caution-color, "{!} " "Caution");
+@include alert(ALERT, $alert-color);
