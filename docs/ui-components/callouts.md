@@ -1,7 +1,7 @@
 ---
 title: Callouts
 parent: UI Components
-nav_order: 7
+nav_order: 8
 ---
 
 # Callouts
@@ -17,10 +17,30 @@ Common kinds of callouts include `highlight`, `important`, `new`, `note`, and `w
 {: .warning }
 These callout names are *not* pre-defined by the theme: you need to define your own names.
 
-When you have [configured]({% link docs/configuration.md %}#callouts) the  `color` and (optional) `title` for a callout, you can apply it to a paragraph, or to a block quote with several paragraphs, as illustrated below.[^postfix]
+When you have [configured]({% link docs/configuration.md %}#callouts) the `color` and (optional) `title` for a callout, you can apply it to a paragraph, or to a block quote with several paragraphs, as illustrated below.[^postfix]
+(There is no blank line between the callout markup and its content, but the markup needs to be separated from other paragraphs by blank lines.)
 
 [^postfix]:
     You can put the callout markup either before or after its content.
+
+You can use the following button to see how the callout colors used on this page appear with the `dark` color scheme.
+The colors used for the predefined alerts generally have better contrast than the callout colors.
+
+<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
+
+<script>
+const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+
+jtd.addEvent(toggleDarkMode, 'click', function(){
+  if (jtd.getTheme() === 'dark') {
+    jtd.setTheme('light');
+    toggleDarkMode.textContent = 'Preview dark color scheme';
+  } else {
+    jtd.setTheme('dark');
+    toggleDarkMode.textContent = 'Return to the light side';
+  }
+});
+</script>
 
 ## An untitled callout
 {: .no_toc .text-delta }
