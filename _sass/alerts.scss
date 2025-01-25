@@ -18,9 +18,9 @@ $alert-color: $grey-dk-000;
   $alert-color: $grey-dk-000;
 }
 
-@include alert(NOTE,      $note-color,      "(i) " "Note");
-@include alert(TIP,       $tip-color,       "\$ " "Tip");
+@include alert(NOTE, $note-color, "(i) " "Note");
+@include alert(TIP, $tip-color, "\$ " "Tip");
 @include alert(IMPORTANT, $important-color, "!! " "Important");
-@include alert(WARNING,   $warning-color,   "/!\\ " "Warning");
-@include alert(CAUTION,   $caution-color,   "{!} " "Caution");
-@include alert(ALERT,     $alert-color);
+@include alert(WARNING, $warning-color, "/!\\ " "Warning");
+@include alert(CAUTION, $caution-color, "{!} " "Caution");
+@include alert(ALERT, $alert-color);
