@@ -8,52 +8,53 @@
 
 @mixin alert($name, $color, $title: null) {
   blockquote.#{$name} {
-    border-left: .25rem solid $color;
-    padding-left: .8rem;
+    border-left: 0.25rem solid $color;
+    padding-left: 0.8rem;
     margin-left: 0;
     margin-right: 0;
-    
+
     > p:first-child {
       margin-top: 0;
     }
-      
+
     > p:last-child {
       margin-bottom: 0;
     }
 
     @if $title {
+      &::before {
+        color: $color;
+        content: $title;
+        display: block;
+        font-weight: bold;
+        padding-bottom: 0.125rem;
+      }
+    } @else {
+      > p:first-child {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: $color;
+        display: block;
+        font-weight: bold;
+        padding-bottom: 0.125rem;
+      }
+
+      > p:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  p.#{$name} {
+    border-left: 0.25rem solid $color;
+    padding-left: 0.8rem;
+
     &::before {
       color: $color;
       content: $title;
       display: block;
       font-weight: bold;
-      padding-bottom: .125rem;
-    }
-    } @else {
-    > p:first-child {
-      margin-top: 0;
-      margin-bottom: 0;
-      color: $color;
-      display: block;
-      font-weight: bold;
-      padding-bottom: .125rem;
-    }
-    > p:nth-child(2) {
-      margin-top: 0;
-    }
-    }
-  }
-
-  p.#{$name} {
-    border-left: .25rem solid $color;
-    padding-left: .8rem;
-
-     &::before {
-      color: $color;
-      content: $title;
-      display: block;
-      font-weight: bold;
-      padding-bottom: .125rem;
+      padding-bottom: 0.125rem;
     }
   }
 }
