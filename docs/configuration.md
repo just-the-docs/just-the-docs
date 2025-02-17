@@ -1,6 +1,8 @@
 ---
 title: Configuration
 nav_order: 2
+nav_exclude: true
+
 ---
 
 # Configuration
@@ -92,9 +94,9 @@ See [the Code documentation]({% link docs/ui-components/code/index.md %}#mermaid
 
 ```yaml
 # Aux links for the upper right navigation
-aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/just-the-docs/just-the-docs"
+#aux_links:
+#  "Just the Docs on GitHub.":
+#    - "//github.com/just-the-docs/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false

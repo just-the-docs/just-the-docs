@@ -2,6 +2,7 @@
 title: Auxiliary Links
 parent: Navigation
 nav_order: 2
+nav_exclude: true
 ---
 
 # Auxiliary Links
@@ -14,7 +15,7 @@ You can add a list of auxiliary links to your site, shown at the top right on al
 This website has an auxiliary link: "Just the Docs on GitHub". It is rendered with the following code:
 
 ```yaml
-aux_links:
-  Just the Docs on GitHub:
-    - https://github.com/just-the-docs/just-the-docs
+#aux_links:
+#  Just the Docs on GitHub.:
+#    - https://github.com/just-the-docs/just-the-docs
 ```

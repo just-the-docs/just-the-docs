@@ -2,6 +2,7 @@
 title: External Links
 parent: Main Navigation
 nav_order: 6
+nav_exclude: true
 ---
 
 # External Links
@@ -14,11 +15,11 @@ External links will appear in the navigation after the links to ordinary pages, 
 
 ```yaml
 # External navigation links
-nav_external_links:
-  - title: Just the Docs on GitHub
-    url: https://github.com/just-the-docs/just-the-docs
-    hide_icon: false # set to true to hide the external link icon - defaults to false
-    opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
+# nav_external_links:
+#   - title: Just the Docs on GitHub.
+#     url: https://github.com/just-the-docs/just-the-docs
+#     hide_icon: false # set to true to hide the external link icon - defaults to false
+#     opens_in_new_tab: false # set to true to open this link in a new tab - defaults to false
 ```
 
 ## Opening external links in a new tab
