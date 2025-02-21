@@ -1,5 +1,5 @@
 ---
-title: CHANGELOG
+# title: CHANGELOG
 layout: default
 ---
 

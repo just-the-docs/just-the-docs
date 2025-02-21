@@ -35,7 +35,6 @@ def create_build_report(build_job, con):
     failures_count = count_consecutive_failures(build_job, con)
 
     with open(REPORT_FILE, 'a') as f:
-        f.write(f"---\nlayout: post\ntitle: 'Nightly Build Report'\ndate: { CURR_DATE }\n---\n\n")
         if failures_count == 0:
             f.write(f"\n\n")            
             f.write(f"\n## { build_job.get_build_job_name() }\n")            
@@ -103,7 +102,6 @@ def create_build_report(build_job, con):
         # add extensions
         inputs = "inputs.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
-            print("🥵")
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
             print(tested_binaries)

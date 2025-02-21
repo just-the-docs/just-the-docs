@@ -206,6 +206,9 @@ jobs:
           
           git config pull.rebase false
           git pull origin gh-pages --allow-unrelated-histories
+
+          
+
           mv ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md _posts
           ls -lah _posts
 
