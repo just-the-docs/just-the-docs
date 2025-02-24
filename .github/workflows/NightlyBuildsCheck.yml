@@ -206,30 +206,13 @@ jobs:
           
           git config pull.rebase false
           git pull origin main
-          # git pull origin gh-pages --allow-unrelated-histories
 
-          mkdir -p reports
-          # keep a report for the next run
-          echo "---\nlayout: post\ntitle: "${{ needs.get-run-info.outputs.CURR_DATE }} - Report"\nparent: "Previous reports"\n---\n" > reports/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md 
+          # add header for jekyll to apply post layout to a report
+          echo -e "---\nlayout: post\ntitle: "${{ needs.get-run-info.outputs.CURR_DATE }} - Report"\nparent: "Reports"\n---\n" > reports/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md 
           cat ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md >> reports/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md 
 
-          # copy old report from homepage to previous reports
-          # yesterday=$(date -v-1d +"%Y-%m-%d")
-          echo "---\nlayout: post\ntitle: "${{ needs.get-run-info.outputs.CURR_DATE }} - Report"\nparent: "Previous reports"\n---\n" > docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md 
-          cat ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md >> docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md 
-
-          # # put current report into a homepage
-          # echo "---\nlayout: home\ntitle: "${{ needs.get-run-info.outputs.CURR_DATE }} - Report"\permalink: "/"\n---\n" > docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md 
-          # cat ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md >> docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md
-
-
-          # mv ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md docs
           ls -lah docs
 
           git add docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md
-          git add reports/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md
-
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin main
-
-          # git push origin main:gh-pages
