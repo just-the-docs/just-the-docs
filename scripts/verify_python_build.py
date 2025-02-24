@@ -103,7 +103,7 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
                                         with open(file_name, "w") as f:
                                             f.write("nightly_build,architecture,runs_on,version,extension,statement,result\n")
                                     with open(file_name, "a") as f:
-                                        f.write(f"{ nightly_build },{ architecture },{ runs_on },,{ ext },{ action },{ actual_result }\n")
+                                        f.write(f"{ nightly_build },{ architecture },{ runs_on },,{ extension },{ action },{ actual_result }\n")
                             else:
                                 if not sha_mismatch_written:
                                     sha_mismatch_written = True
