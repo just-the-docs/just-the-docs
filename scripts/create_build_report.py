@@ -86,13 +86,7 @@ def create_build_report(build_job, con):
                 ORDER BY createdAt DESC
                 LIMIT { failures_count }
             """).df()
-            markdown_table = failure_details.to_markdown(index=False)
-            lines = markdown_table.splitlines()
-            lines[1] = '-' * len(lines[1])
-            cleaned_markdown_table = '\n'.join(lines)
-
-            f.write(cleaned_markdown_table + "\n")
-            # f.write(failure_details.to_markdown(index=False) + "\n")
+            f.write(failure_details.to_markdown(index=False) + "\n")
             
         f.write(f"\n#### Workflow Artifacts\n\n")
         artifacts_per_job = con.execute(f"""
