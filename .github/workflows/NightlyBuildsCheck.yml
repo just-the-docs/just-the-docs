@@ -205,7 +205,8 @@ jobs:
           git config --global user.email "zuleykha.pavlichenkova@gmail.com"
           
           git config pull.rebase false
-          git pull origin gh-pages --allow-unrelated-histories
+          git pull origin main
+          # git pull origin gh-pages --allow-unrelated-histories
 
           mkdir -p reports
           # keep a report for the next run
