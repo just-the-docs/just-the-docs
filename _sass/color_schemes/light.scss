@@ -1,16 +1,16 @@
 $color-scheme: light !default;
 $body-background-color: $white !default;
-$body-heading-color: $grey-dk-300 !default;
-$body-text-color: $grey-dk-100 !default;
-$link-color: $grey-dk-200 !default;
-$nav-child-link-color: $grey-dk-100 !default;
-$sidebar-color: $grey-lt-000 !default;
-$base-button-color: #f7f7f7 !default;
-$btn-primary-color: $grey-dk-100 !default;
-$code-background-color: $grey-lt-000 !default;
+$body-heading-color: $duckdb-gray !default;
+$body-text-color: $duckdb-gray !default;
+$link-color: $duckdb-gray !default;
+$nav-child-link-color: $duckdb-gray !default;
+$sidebar-color: $duckdb-haze !default;
+$base-button-color: $duckdb-haze !default;
+$btn-primary-color: $duckdb-gray !default;
+$code-background-color: $duckdb-gray !default;
 $feedback-color: darken($sidebar-color, 3%) !default;
 $table-background-color: $white !default;
 $search-background-color: $white !default;
-$search-result-preview-color: $grey-dk-000 !default;
+$search-result-preview-color: $duckdb-gray !default;
 
 @import "./vendor/OneLightJekyll/syntax";
