@@ -208,7 +208,7 @@ jobs:
           git pull origin main
 
           # add header for jekyll to apply post layout to a report
-          echo -e "---\nlayout: post\ntitle: "${{ needs.get-run-info.outputs.CURR_DATE }} - Report"\nparent: "Reports"\n---\n" > docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md 
+          echo -e "---\nlayout: post\ntitle: "${{ needs.get-run-info.outputs.CURR_DATE }}"\nparent: "Reports"\n---\n" > docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md 
           cat ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md >> docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md 
 
           ls -lah docs
