@@ -10,20 +10,21 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    Ascii85 (1.1.0)
+    Ascii85 (2.0.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     afm (0.2.2)
-    async (2.11.0)
-      console (~> 1.25, >= 1.25.2)
+    async (2.23.0)
+      console (~> 1.29)
       fiber-annotation
-      io-event (~> 1.5, >= 1.5.1)
-      timers (~> 4.1)
+      io-event (~> 1.9)
+      metrics (~> 0.12)
+      traces (~> 0.15)
     base64 (0.2.0)
     bigdecimal (3.1.9)
     colorator (1.1.0)
     concurrent-ruby (1.3.5)
-    console (1.25.2)
+    console (1.29.3)
       fiber-annotation
       fiber-local (~> 1.1)
       json
@@ -43,7 +44,7 @@ GEM
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
       fiber-storage
-    fiber-storage (0.1.0)
+    fiber-storage (1.0.0)
     forwardable-extended (2.6.0)
     google-protobuf (4.29.3-arm64-darwin)
       bigdecimal
@@ -52,7 +53,7 @@ GEM
       bigdecimal
       rake (>= 13)
     hashery (2.1.2)
-    html-proofer (5.0.9)
+    html-proofer (5.0.10)
       addressable (~> 2.3)
       async (~> 2.1)
       nokogiri (~> 1.13)
@@ -64,7 +65,7 @@ GEM
     http_parser.rb (0.8.0)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
-    io-event (1.5.1)
+    io-event (1.9.0)
     jekyll (4.4.1)
       addressable (~> 2.4)
       base64 (~> 0.2)
@@ -97,7 +98,7 @@ GEM
       jekyll (>= 3.7, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    json (2.9.1)
+    json (2.10.1)
     kramdown (2.5.1)
       rexml (>= 3.3.9)
     kramdown-parser-gfm (1.1.0)
@@ -107,6 +108,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
+    metrics (0.12.1)
     net-http (0.4.1)
       uri
     nokogiri (1.18.3-arm64-darwin)
@@ -118,8 +120,8 @@ GEM
       sawyer (~> 0.9)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
-    pdf-reader (2.12.0)
-      Ascii85 (~> 1.0)
+    pdf-reader (2.14.1)
+      Ascii85 (>= 1.0, < 3.0, != 2.0.0)
       afm (~> 0.2.1)
       hashery (~> 2.0)
       ruby-rc4
@@ -144,7 +146,7 @@ GEM
       faraday (>= 0.17.3, < 3)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
-    timers (4.3.5)
+    traces (0.15.2)
     ttfunk (1.8.0)
       bigdecimal (~> 3.1)
     typhoeus (1.4.1)
@@ -153,7 +155,7 @@ GEM
     uri (0.13.0)
     webrick (1.9.1)
     yell (2.2.2)
-    zeitwerk (2.6.13)
+    zeitwerk (2.7.2)
 
 PLATFORMS
   arm64-darwin
