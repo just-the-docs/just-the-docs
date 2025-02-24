@@ -60,6 +60,7 @@ def create_build_report(build_job, con):
 
             if failures_count == total_count:
                 f.write(f"### { build_job.get_build_job_name() } nightly-build has not succeeded more than **{ failures_count }** times.\n")
+                failures_count = 7
             else:
                 f.write(f"### { build_job.get_build_job_name() } nightly-build has not succeeded the previous **{ failures_count }** times.\n")
             if failures_count < total_count:
@@ -83,7 +84,7 @@ def create_build_report(build_job, con):
                 FROM '{ build_job.get_run_list_table_name() }'
                 WHERE conclusion != 'success'
                 ORDER BY createdAt DESC
-                LIMIT 7
+                LIMIT { failures_count }
             """).df()
             markdown_table = failure_details.to_markdown(index=False)
             lines = markdown_table.splitlines()
