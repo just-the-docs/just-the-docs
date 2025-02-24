@@ -99,7 +99,7 @@
   {%- if site.nav_sort == 'case_insensitive' -%}
     {%- assign title_string_pages = title_string_pages | sort_natural: "title" -%}
   {%- else -%}
-    {%- assign title_string_pages = title_string_pages | sort: "title" -%}
+    {%- assign title_string_pages = title_string_pages | reverse -%}
   {%- endif -%}
 {%- endunless -%}
 
