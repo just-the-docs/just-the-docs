@@ -3,6 +3,7 @@ import duckdb
 import datetime
 import glob
 import os
+import re
 
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 CURR_DATE = os.environ.get('CURR_DATE', datetime.datetime.now().strftime('%Y-%m-%d'))
