@@ -152,6 +152,29 @@ def create_tables_for_report(build_job, con):
                 );
             """)
 
+def create_failed_jobs_table(build_job, con):
+    con.execute(f"""
+        CREATE OR REPLACE TABLE '{ build_job.get_failed_jobs_table_name() }' AS (
+        SELECT
+            job_name,
+            steps.name as steps, 
+            steps.conclusion as conclusion,
+            steps.startedAt as startedAt
+        FROM (
+            SELECT
+                unnest(steps) steps,
+                job_name 
+            FROM (
+                SELECT
+                    unnest(jobs)['steps'] steps,
+                    unnest(jobs)['name'] job_name 
+                FROM { build_job.get_steps_table_name() }
+                )
+            )
+        WHERE conclusion == 'failure'
+        )
+    """)
+
 def get_runner(platform, architecture):
     match platform:
         case 'osx':
@@ -231,7 +254,8 @@ def main():
     build_job_run_id = get_value_for_key("databaseId", build_job)
     save_run_data_to_json_files(build_job, con, build_job_run_id)
     create_tables_for_report(build_job, con)
-
+    create_failed_jobs_table(build_job, con)
+    
     matrix_data = create_inputs(build_job, con, build_job_run_id)
     print("#####", matrix_data)
     with open("inputs.json", "w") as f:

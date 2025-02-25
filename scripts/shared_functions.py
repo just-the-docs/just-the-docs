@@ -30,6 +30,10 @@ class BuildJob:
         print(f"{ self.build_job_name }__artifacts_per_jobs_table")
         return f"{ self.build_job_name }_artifacts_per_jobs"
 
+    def get_failed_jobs_table_name(self):
+        print(f"{ self.build_job_name }_failed_jobs_table")
+        return f"{ self.build_job_name }_failed_jobs"
+
     def get_run_list_table_name(self):
         print(f"{ self.build_job_name }_gh_run_list_table")
         return f"{ self.build_job_name }_gh_run_list"

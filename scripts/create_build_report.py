@@ -78,14 +78,24 @@ def create_build_report(build_job, con):
             f.write(f"\n#### Failure Details\n\n")
             failure_details = con.execute(f"""
                 SELECT
+                    job_name as 'Failed Jobs',
+                    steps as 'Steps',
+                    startedAt as 'Started At'
+                FROM '{ build_job.get_failed_jobs_table_name() }'
+            """).df()
+            f.write(failure_details.to_markdown(index=False) + "\n")
+
+            f.write(f"\n#### Previously Failed\n\n")
+            previously_failed = con.execute(f"""
+                SELECT
                     conclusion as "Conclusion",
                     '[' || createdAt || '](' || url || ')' as "Created at"
                 FROM '{ build_job.get_run_list_table_name() }'
                 WHERE conclusion != 'success'
                 ORDER BY createdAt DESC
-                LIMIT 7
+                LIMIT { failures_count }
             """).df()
-            f.write(failure_details.to_markdown(index=False) + "\n")
+            f.write(previously_failed.to_markdown(index=False) + "\n")
             
         f.write(f"\n#### Workflow Artifacts\n\n")
         artifacts_per_job = con.execute(f"""
@@ -118,12 +128,14 @@ def create_build_report(build_job, con):
                         )
                     """).fetchall()
                     passed_extentions = [p[0] for p in passed]
-                    f.write(f"The following extensions could be loaded and installed successfully:\n##### { passed_extentions }\n")
+                    if passed_extentions > 0:
+                        f.write(f"The following extensions could be loaded and installed successfully:\n##### { passed_extentions }\n")
                     
                     failed_extensions = con.execute(f"""
                         SELECT * FROM read_csv('{ file_name_pattern }')
                         WHERE result = 'failed'
                     """).df()
+                    print(failed_extensions, )
                     if failed_extensions.empty:
                         f.write(f"None of extensions had failed to be installed or loaded.\n")
                     else:
