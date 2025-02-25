@@ -32,15 +32,13 @@ def create_build_report(build_job, con):
     failures_count = count_consecutive_failures(build_job, con)
 
     with open(REPORT_FILE, 'a') as f:
-        if failures_count == 0:
-            f.write(f"\n\n")            
-            f.write(f"\n## { build_job.get_build_job_name() }\n")            
-            f.write(f"\n\n### { build_job.get_build_job_name() } nightly-build has succeeded.\n")            
+        if failures_count == 0:       
+            f.write(f"\n\n## { build_job.get_build_job_name() } nightly-build has succeeded.\n")            
             temp_data = con.execute(f"""
                 SELECT createdAt, url FROM '{ build_job.get_run_list_table_name() }' LIMIT 1
                 """).fetchone()
             date, url = tmp_data[0], tmp_data[1] if tmp_data else ''
-            f.write(f"Latest run: [ { date } ]({ url })\n")
+            f.write(f"#### Latest run: [ { date } ]({ url })\n")
         else:
             # failures_count = -1 means all runs in the json file have conclusion = 'failure' 
             # so we need to update its value.
@@ -60,10 +58,10 @@ def create_build_report(build_job, con):
             """).fetchone()[0]
 
             if failures_count == total_count:
-                f.write(f"### { build_job.get_build_job_name() } nightly-build has not succeeded more than **{ failures_count }** times.\n")
+                f.write(f"## { build_job.get_build_job_name() } nightly-build has not succeeded more than **{ failures_count }** times.\n")
                 failures_count = 7
             else:
-                f.write(f"### { build_job.get_build_job_name() } nightly-build has not succeeded the previous **{ failures_count }** times.\n")
+                f.write(f"## { build_job.get_build_job_name() } nightly-build has not succeeded the previous **{ failures_count }** times.\n")
             if failures_count < total_count:
                 tmp_data = con.execute(f"""
                     SELECT
@@ -73,9 +71,9 @@ def create_build_report(build_job, con):
                     ORDER BY createdAt DESC
                 """).fetchone()
                 latest_success_date, latest_success_url = tmp_data[0], tmp_data[1] if tmp_data else ''
-                f.write(f"Latest successfull run: [ { latest_success_date } ]({ latest_success_url })\n")
+                f.write(f"#### Latest successfull run: [ { latest_success_date } ]({ latest_success_url })\n")
 
-            f.write(f"\n#### Failure Details\n\n")
+            f.write(f"\n### Failure Details\n\n")
             failure_details = con.execute(f"""
                 SELECT
                     job_name as 'Failed Jobs',
@@ -85,7 +83,7 @@ def create_build_report(build_job, con):
             """).df()
             f.write(failure_details.to_markdown(index=False) + "\n")
 
-            f.write(f"\n#### Previously Failed\n\n")
+            f.write(f"\n### Previously Failed\n\n")
             previously_failed = con.execute(f"""
                 SELECT
                     conclusion as "Conclusion",
@@ -97,7 +95,7 @@ def create_build_report(build_job, con):
             """).df()
             f.write(previously_failed.to_markdown(index=False) + "\n")
             
-        f.write(f"\n#### Workflow Artifacts\n\n")
+        f.write(f"\n### Workflow Artifacts\n\n")
         artifacts_per_job = con.execute(f"""
             SELECT * FROM '{ build_job.get_artifacts_per_jobs_table_name() }' ORDER BY "Build (Architecture)" ASC;
             """).df()
@@ -139,7 +137,7 @@ def create_build_report(build_job, con):
                     if failed_extensions.empty:
                         f.write(f"None of extensions had failed to be installed or loaded.\n")
                     else:
-                        f.write("#### List of failed extensions:\n\n")
+                        f.write("### List of failed extensions:\n\n")
                         f.write(failed_extensions.to_markdown(index=False) + "\n")
                 else:
                     file_name_pattern = f"failed_ext/ext_{ tested_binary }*/non_matching_sha_{ tested_binary }*.txt"
@@ -149,7 +147,7 @@ def create_build_report(build_job, con):
                         for file in matching_files:
                             with open(file, 'r') as src:
                                 content = src.read()
-                            f.write(f"#### { file }:")
+                            f.write(f"### { file }:")
                             f.write(content)
     
 def main():
