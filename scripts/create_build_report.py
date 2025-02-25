@@ -105,10 +105,7 @@ def create_build_report(build_job, con):
         # add extensions
         inputs = "inputs.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
-            with open("failed_ext/ext/extensions.txt", "r") as file:
-                content = file.read()
-            print(content, "🐠")
-            f.write(f"\n#### Tested extensions:\n { content }")
+            f.write(f"\n#### Tested extensions:\n { str(list_extensions()) }")
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
             print(tested_binaries)

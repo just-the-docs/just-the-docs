@@ -139,7 +139,6 @@ jobs:
           path: |
             list_failed_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
             non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.txt
-            extensions.txt
           if-no-files-found: ignore
     
   report:

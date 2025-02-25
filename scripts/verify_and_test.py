@@ -109,8 +109,6 @@ def main():
     file_name = "list_failed_ext_{}_{}.csv".format(nightly_build, architecture.replace("/", "-"))
     full_sha = get_full_sha(run_id)
     extensions = list_extensions()
-    with open("extensions.txt", "w") as f:
-        f.write(str(extensions))
     if nightly_build in SHOULD_BE_TESTED:
         if nightly_build == 'python':
             verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha)
