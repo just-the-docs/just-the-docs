@@ -129,8 +129,10 @@ def create_build_report(build_job, con):
                     if len(passed_extentions) > 0:
                         f.write(f"The following extensions could be loaded and installed successfully:\n##### { passed_extentions }\n")
                     
+                    select_list = "*" if tested_binary.startswith('python') else "nightly_build, architecture, runs_on, extension, statement"
+
                     failed_extensions = con.execute(f"""
-                        SELECT * FROM read_csv('{ file_name_pattern }')
+                        SELECT { select_list } FROM read_csv('{ file_name_pattern }')
                         WHERE result = 'failed'
                     """).df()
                     print(failed_extensions, "🦑")
