@@ -138,7 +138,7 @@ def create_build_report(build_job, con):
                         passed_extentions_string = str(passed_extentions).strip("[]")
                         f.write(f"#### The following extensions could be loaded and installed successfully:\n> { passed_extentions_string }\n")
                     if failed_extensions.empty:
-                        f.write(f"\n#### All extensions had been successfully installed and loaded.\n")
+                        f.write(f"\n All extensions had been successfully installed and loaded.\n")
                     else:
                         f.write("\n### List of failed extensions:\n\n")
                         f.write(failed_extensions.to_markdown(index=False) + "\n")
