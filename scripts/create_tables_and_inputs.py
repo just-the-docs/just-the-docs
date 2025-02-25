@@ -153,20 +153,24 @@ def create_tables_for_report(build_job, con):
             """)
 
 def create_failed_jobs_table(build_job, con):
+    url = get_value_for_key("url", build_job)
+    base_url = f"{ url }/job/"
     con.execute(f"""
         CREATE OR REPLACE TABLE '{ build_job.get_failed_jobs_table_name() }' AS (
         SELECT
-            job_name,
+            '[' || job_name || '](' || '{base_url}' || databaseId || ')' as job_name,
             steps.name as steps, 
             steps.conclusion as conclusion,
             steps.startedAt as startedAt
         FROM (
             SELECT
                 unnest(steps) steps,
+                databaseId,
                 job_name 
             FROM (
                 SELECT
                     unnest(jobs)['steps'] steps,
+                    unnest(jobs)['databaseId'] databaseId,
                     unnest(jobs)['name'] job_name 
                 FROM { build_job.get_steps_table_name() }
                 )
