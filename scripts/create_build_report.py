@@ -106,7 +106,7 @@ def create_build_report(build_job, con):
         inputs = "inputs.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
             tested_extensions = list_extensions()
-            f.write(f"\n#### Tested extensions:\n {test_extensions }")
+            f.write(f"\n#### Tested extensions:\n {tested_extensions }")
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
             print(tested_binaries)
