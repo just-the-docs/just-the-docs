@@ -173,7 +173,7 @@ jobs:
       - name: Download extensions artifacts
         uses: actions/download-artifact@v4
         with:
-          pattern: ext_*
+          pattern: ext*
           path: failed_ext
 
       - name: Download duckdb file
