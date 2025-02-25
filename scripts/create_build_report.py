@@ -105,7 +105,8 @@ def create_build_report(build_job, con):
         # add extensions
         inputs = "inputs.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
-            f.write(f"\n#### Tested extensions:\n { str(list_extensions()) }")
+            tested_extensions = str(list_extensions()).strip('[]')
+            f.write(f"\n#### Tested extensions:\n> { tested_extensions }")
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
             print(tested_binaries)
@@ -115,7 +116,6 @@ def create_build_report(build_job, con):
                 matching_files = glob.glob(file_name_pattern)
                 if matching_files:
                     f.write(f"\n## { tested_binary }\n")
-                    f.write("\n#### Tested extensions\n")
                     passed = con.execute(f"""
                         SELECT extension
                         FROM read_csv('{ file_name_pattern }')
@@ -129,7 +129,7 @@ def create_build_report(build_job, con):
                     """).fetchall()
                     passed_extentions = [p[0] for p in passed]
                     if len(passed_extentions) > 0 and not tested_binary.startswith('python'):
-                        f.write(f"The following extensions could be loaded and installed successfully:\n##### { passed_extentions }")
+                        f.write(f"#### The following extensions could be loaded and installed successfully:\n> { passed_extentions }")
                     
                     select_list = "*" if tested_binary.startswith('python') else "nightly_build, architecture, runs_on, extension, statement"
                     failed_extensions = con.execute(f"""
@@ -139,7 +139,7 @@ def create_build_report(build_job, con):
                     if failed_extensions.empty:
                         f.write(f"\n#### All extensions had been successfully installed and loaded.\n")
                     else:
-                        f.write("### List of failed extensions:\n\n")
+                        f.write("\n### List of failed extensions:\n\n")
                         f.write(failed_extensions.to_markdown(index=False) + "\n")
                 else:
                     file_name_pattern = f"failed_ext/ext_{ tested_binary }*/non_matching_sha_{ tested_binary }*.txt"
