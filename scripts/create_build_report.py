@@ -107,6 +107,7 @@ def create_build_report(build_job, con):
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
             with open("failed_ext/ext/extensions.txt", "r") as file:
                 content = file.read()
+            print(content, "🐠")
             f.write(f"\n#### Tested extensions:\n { content }")
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
