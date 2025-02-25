@@ -105,8 +105,9 @@ def create_build_report(build_job, con):
         # add extensions
         inputs = "inputs.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
-            tested_extensions = list_extensions()
-            f.write(f"\n#### Tested extensions:\n {tested_extensions }")
+            with open("failed_ext/ext/extensions.txt", "r") as file:
+                content = file.read()
+            f.write(f"\n#### Tested extensions:\n { content }")
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
             print(tested_binaries)
@@ -130,16 +131,15 @@ def create_build_report(build_job, con):
                     """).fetchall()
                     passed_extentions = [p[0] for p in passed]
                     if len(passed_extentions) > 0 and not tested_binary.startswith('python'):
-                        f.write(f"The following extensions could be loaded and installed successfully:\n##### { passed_extentions }\n")
+                        f.write(f"The following extensions could be loaded and installed successfully:\n##### { passed_extentions }")
                     
                     select_list = "*" if tested_binary.startswith('python') else "nightly_build, architecture, runs_on, extension, statement"
                     failed_extensions = con.execute(f"""
                         SELECT { select_list } FROM read_csv('{ file_name_pattern }')
                         WHERE result = 'failed'
                     """).df()
-                    print(failed_extensions, "🦑")
                     if failed_extensions.empty:
-                        f.write(f"\nAll extensions had been successfully installed and loaded.\n")
+                        f.write(f"\n#### All extensions had been successfully installed and loaded.\n")
                     else:
                         f.write("### List of failed extensions:\n\n")
                         f.write(failed_extensions.to_markdown(index=False) + "\n")
