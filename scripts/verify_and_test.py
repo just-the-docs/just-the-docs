@@ -45,14 +45,6 @@ architecture = args.architecture
 run_id = args.run_id
 runs_on = args.runs_on # linux-latest
 
-def get_extensions_from(config) :
-    with open(config, "r") as file:
-        content = file.read()
-    # matching each word after `load(`
-    pattern = r"duckdb_extension_load\((\w+)"
-    matches = re.findall(pattern, content)
-    return matches
-
 def get_full_sha(run_id):
     gh_headSha_command = [
         "gh", "run", "view",

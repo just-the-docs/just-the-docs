@@ -73,6 +73,14 @@ def list_all_runs(con, build_job):
     # result = duckdb.sql(f"SELECT name FROM read_json('{ build_job.get_run_list_file_name() }')").fetchall()
     # return result
 
+def get_extensions_from(config) :
+    with open(config, "r") as file:
+        content = file.read()
+    # matching each word after `load(`
+    pattern = r"duckdb_extension_load\((\w+)"
+    matches = re.findall(pattern, content)
+    return matches
+
 def list_extensions():
     extensions = []
     matches = glob.glob(EXT_PATH_PATTERN)
