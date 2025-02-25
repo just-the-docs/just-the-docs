@@ -126,16 +126,16 @@ def create_build_report(build_job, con):
                         )
                     """).fetchall()
                     passed_extentions = [p[0] for p in passed]
-                    if passed_extentions > 0:
+                    if len(passed_extentions) > 0:
                         f.write(f"The following extensions could be loaded and installed successfully:\n##### { passed_extentions }\n")
                     
                     failed_extensions = con.execute(f"""
                         SELECT * FROM read_csv('{ file_name_pattern }')
                         WHERE result = 'failed'
                     """).df()
-                    print(failed_extensions, )
+                    print(failed_extensions, "🦑")
                     if failed_extensions.empty:
-                        f.write(f"None of extensions had failed to be installed or loaded.\n")
+                        f.write(f"All extensions had been successfully installed and loaded.\n")
                     else:
                         f.write("### List of failed extensions:\n\n")
                         f.write(failed_extensions.to_markdown(index=False) + "\n")
