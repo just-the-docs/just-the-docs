@@ -135,7 +135,7 @@ def create_build_report(build_job, con):
                     """).df()
                     print(failed_extensions, "🦑")
                     if failed_extensions.empty:
-                        f.write(f"All extensions had been successfully installed and loaded.\n")
+                        f.write(f"\nAll extensions had been successfully installed and loaded.\n")
                     else:
                         f.write("### List of failed extensions:\n\n")
                         f.write(failed_extensions.to_markdown(index=False) + "\n")
