@@ -1,6 +1,7 @@
 import subprocess
 import duckdb
 import datetime
+import glob
 import os
 
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
