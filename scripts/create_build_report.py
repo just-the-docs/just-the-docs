@@ -129,7 +129,7 @@ def create_build_report(build_job, con):
                     """).fetchall()
                     passed_extentions = [p[0] for p in passed]
                     if len(passed_extentions) > 0 and not tested_binary.startswith('python'):
-                        f.write(f"#### The following extensions could be loaded and installed successfully:\n> { passed_extentions }")
+                        f.write(f"#### The following extensions could be loaded and installed successfully:\n> { passed_extentions }\n")
                     
                     select_list = "*" if tested_binary.startswith('python') else "nightly_build, architecture, runs_on, extension, statement"
                     failed_extensions = con.execute(f"""
