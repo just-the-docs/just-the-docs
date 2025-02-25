@@ -21,6 +21,7 @@ import re
 from collections import defaultdict
 from shared_functions import fetch_data
 from shared_functions import list_all_runs
+from shared_functions import list_extensions
 from shared_functions import count_consecutive_failures
 from shared_functions import BuildJob
 
@@ -104,6 +105,8 @@ def create_build_report(build_job, con):
         # add extensions
         inputs = "inputs.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
+            tested_extensions = list_extensions()
+            f.write(f"\n#### Tested extensions:\n {test_extensions }")
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
             print(tested_binaries)
@@ -126,11 +129,10 @@ def create_build_report(build_job, con):
                         )
                     """).fetchall()
                     passed_extentions = [p[0] for p in passed]
-                    if len(passed_extentions) > 0:
+                    if len(passed_extentions) > 0 and not tested_binary.startswith('python'):
                         f.write(f"The following extensions could be loaded and installed successfully:\n##### { passed_extentions }\n")
                     
                     select_list = "*" if tested_binary.startswith('python') else "nightly_build, architecture, runs_on, extension, statement"
-
                     failed_extensions = con.execute(f"""
                         SELECT { select_list } FROM read_csv('{ file_name_pattern }')
                         WHERE result = 'failed'

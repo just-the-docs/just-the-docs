@@ -24,13 +24,13 @@ import subprocess
 import textwrap
 from shared_functions import fetch_data
 from shared_functions import sha_matching
+from shared_functions import list_extensions
 from verify_python_build import verify_and_test_python_linux
 
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 ACTIONS = ["INSTALL", "LOAD"]
 EXT_WHICH_DOESNT_EXIST = "EXT_WHICH_DOESNT_EXIST"
 SHOULD_BE_TESTED = ('python', 'osx', 'linux', 'windows')
-EXT_PATH_PATTERN = "ext/.github/config/*tree_extensions.cmake"
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--nightly_build")
@@ -52,15 +52,6 @@ def get_extensions_from(config) :
     pattern = r"duckdb_extension_load\((\w+)"
     matches = re.findall(pattern, content)
     return matches
-
-def list_extensions():
-    extensions = []
-    matches = glob.glob(EXT_PATH_PATTERN)
-    if matches:
-        for match in matches:
-            extensions += get_extensions_from(match)
-    extensions = list(set(extensions))
-    return extensions
 
 def get_full_sha(run_id):
     gh_headSha_command = [

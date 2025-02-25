@@ -5,6 +5,7 @@ import os
 
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 CURR_DATE = os.environ.get('CURR_DATE', datetime.datetime.now().strftime('%Y-%m-%d'))
+EXT_PATH_PATTERN = "ext/.github/config/*tree_extensions.cmake"
 
 class BuildJob:
     def __init__(self, build_job_name):
@@ -70,6 +71,15 @@ def list_all_runs(con, build_job):
     fetch_data(gh_run_list_command, gh_run_list_file)
     # result = duckdb.sql(f"SELECT name FROM read_json('{ build_job.get_run_list_file_name() }')").fetchall()
     # return result
+
+def list_extensions():
+    extensions = []
+    matches = glob.glob(EXT_PATH_PATTERN)
+    if matches:
+        for match in matches:
+            extensions += get_extensions_from(match)
+    extensions = list(set(extensions))
+    return extensions
 
 # return a number of consecutive failures
 def count_consecutive_failures(build_job, con):
