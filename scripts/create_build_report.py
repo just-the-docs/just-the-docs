@@ -135,7 +135,8 @@ def create_build_report(build_job, con):
                         tested_extensions = str(set(passed_extentions).union(set(failed_extensions))).strip("{}")
                         f.write(f"#### Tested extensions:\n> { tested_extensions }\n")
                     if len(passed_extentions) > 0 and not tested_binary.startswith('python'):
-                        f.write(f"#### The following extensions could be loaded and installed successfully:\n> { passed_extentions }\n")
+                        passed_extentions_string = str(passed_extentions).strip("[]")
+                        f.write(f"#### The following extensions could be loaded and installed successfully:\n> { passed_extentions_string }\n")
                     if failed_extensions.empty:
                         f.write(f"\n#### All extensions had been successfully installed and loaded.\n")
                     else:
