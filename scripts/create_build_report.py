@@ -29,9 +29,6 @@ CURR_DATE = os.environ.get('CURR_DATE', datetime.datetime.now().strftime('%Y-%m-
 REPORT_FILE = f"{ CURR_DATE }-report.md"
 
 def create_build_report(build_job, con):
-    url = con.execute(f"""
-        SELECT url FROM '{ build_job.get_run_list_table_name() }' LIMIT 1
-        """).fetchone()[0]
     failures_count = count_consecutive_failures(build_job, con)
 
     with open(REPORT_FILE, 'a') as f:
@@ -39,7 +36,11 @@ def create_build_report(build_job, con):
             f.write(f"\n\n")            
             f.write(f"\n## { build_job.get_build_job_name() }\n")            
             f.write(f"\n\n### { build_job.get_build_job_name() } nightly-build has succeeded.\n")            
-            f.write(f"Latest run: [ Run Link ]({ url })\n")
+            temp_data = con.execute(f"""
+                SELECT createdAt, url FROM '{ build_job.get_run_list_table_name() }' LIMIT 1
+                """).fetchone()
+            date, url = tmp_data[0], tmp_data[1] if tmp_data else ''
+            f.write(f"Latest run: [ { date } ]({ url })\n")
         else:
             # failures_count = -1 means all runs in the json file have conclusion = 'failure' 
             # so we need to update its value.
@@ -64,27 +65,25 @@ def create_build_report(build_job, con):
             else:
                 f.write(f"### { build_job.get_build_job_name() } nightly-build has not succeeded the previous **{ failures_count }** times.\n")
             if failures_count < total_count:
-                tmp_url = con.execute(f"""
+                tmp_data = con.execute(f"""
                     SELECT
-                        url
+                        createdAt, url
                     FROM '{ build_job.get_run_list_table_name() }'
                     WHERE conclusion = 'success'
                     ORDER BY createdAt DESC
-                    LIMIT 1
                 """).fetchone()
-                latest_success_url = tmp_url[0] if tmp_url else ''
-                f.write(f"Latest successfull run: [ Run Link ]({ latest_success_url })\n")
+                latest_success_date, latest_success_url = tmp_data[0], tmp_data[1] if tmp_data else ''
+                f.write(f"Latest successfull run: [ { latest_success_date } ]({ latest_success_url })\n")
 
             f.write(f"\n#### Failure Details\n\n")
             failure_details = con.execute(f"""
                 SELECT
                     conclusion as "Conclusion",
-                    createdAt as "Created at",
-                    url as "URL"
+                    '[' || createdAt || '](' || url || ')' as "Created at"
                 FROM '{ build_job.get_run_list_table_name() }'
                 WHERE conclusion != 'success'
                 ORDER BY createdAt DESC
-                LIMIT { failures_count }
+                LIMIT 7
             """).df()
             f.write(failure_details.to_markdown(index=False) + "\n")
             
