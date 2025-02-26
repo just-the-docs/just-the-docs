@@ -138,7 +138,7 @@ jobs:
           name: ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}
           path: |
             list_failed_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
-            non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.txt
+            non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
           if-no-files-found: ignore
     
   report:

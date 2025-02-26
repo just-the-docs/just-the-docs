@@ -254,7 +254,8 @@ def main():
     if os.path.isfile(DUCKDB_FILE):
         os.remove(DUCKDB_FILE)
     con = duckdb.connect(DUCKDB_FILE)
-    list_all_runs(con, build_job)
+    # "v1.2-histrionicus", "workflow_dispatch"
+    list_all_runs(con, build_job, "main", "repository_dispatch")
     build_job_run_id = get_value_for_key("databaseId", build_job)
     save_run_data_to_json_files(build_job, con, build_job_run_id)
     create_tables_for_report(build_job, con)

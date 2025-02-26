@@ -62,11 +62,13 @@ def fetch_data(command, f_output):
         print(f"Command failed with error: {e.stderr}")
 
 # create a json file with the list all nightly-build runs for current date
-def list_all_runs(con, build_job):
+def list_all_runs(con, build_job, branch, event):
     gh_run_list_command = [
         "gh", "run", "list",
         "--repo", GH_REPO,
         "--workflow", build_job.get_build_job_name(),
+        "-b", branch,
+        "--event", event,
         "--json", "status,conclusion,url,name,createdAt,databaseId,headSha"
     ]
     gh_run_list_file = build_job.get_build_job_file_name()
@@ -111,13 +113,13 @@ def sha_matching(short_sha, full_sha, tested_binary, architecture, sha_mismatch_
         - Downloaded build version: { short_sha }
         """)
         if not sha_mismatch_written:
-            non_matching_sha_file_name = "non_matching_sha_{}_{}.txt".format(tested_binary, architecture.replace("/", "-"))
-            with open(non_matching_sha_file_name, 'w') as f:
-                f.write(f"""
-                Version of { tested_binary } { architecture } tested binary doesn't match to the version that triggered the build.
-                - Version triggered the build: { full_sha }
-                - Downloaded build version: { short_sha }
-                """)
+            # non_matching_sha_file_name = "non_matching_sha_{}_{}.txt".format(tested_binary, architecture.replace("/", "-"))
+            # with open(non_matching_sha_file_name, 'w') as f:
+            #     f.write(f"""
+            #     Version of { tested_binary } { architecture } tested binary doesn't match to the version that triggered the build.
+            #     - Version triggered the build: { full_sha }
+            #     - Downloaded build version: { short_sha }
+            #     """)
             return False
     print(f"""
     Versions of { tested_binary } build match:
