@@ -60,7 +60,6 @@ def create_build_report(build_job, con):
 
             if failures_count == total_count:
                 f.write(f"## { build_job.get_build_job_name() } nightly-build has not succeeded more than **{ failures_count }** times.\n")
-                failures_count = 7
             else:
                 f.write(f"## { build_job.get_build_job_name() } nightly-build has not succeeded the previous **{ failures_count }** times.\n")
             if failures_count < total_count:
@@ -86,6 +85,7 @@ def create_build_report(build_job, con):
             f.write(failure_details.to_markdown(index=False) + "\n")
 
             f.write(f"\n### Previously Failed\n\n")
+            failures_count = 7 if failures_count > 7 else failures_count
             previously_failed = con.execute(f"""
                 SELECT
                     conclusion as "Conclusion",
