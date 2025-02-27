@@ -110,6 +110,7 @@ def create_build_report(build_job, con):
             print(tested_binaries)
             for tested_binary in tested_binaries:
                 tested_binary = tested_binary + "_" + architecture if tested_binary == 'osx' else tested_binary.replace("-", "_")
+                # add failed extensions
                 file_name_pattern = f"failed_ext/ext_{ tested_binary }*/list_failed_ext_{ tested_binary }*.csv"
                 matching_files = glob.glob(file_name_pattern)
                 if matching_files:
@@ -142,16 +143,17 @@ def create_build_report(build_job, con):
                     else:
                         f.write("\n### List of failed extensions:\n\n")
                         f.write(failed_extensions.to_markdown(index=False) + "\n")
-                else:
-                    file_name_pattern = f"failed_ext/ext_{ tested_binary }*/non_matching_sha_{ tested_binary }*.txt"
-                    matching_files = glob.glob(file_name_pattern)
-                    if matching_files:
-                        f.write(f"\n## { tested_binary }\n")
-                        for file in matching_files:
-                            with open(file, 'r') as src:
-                                content = src.read()
-                            f.write(f"### { file }:")
-                            f.write(content)
+                # add unmatching sha
+                file_name_pattern = f"failed_ext/ext_{ tested_binary }*/non_matching_sha_{ tested_binary }*.csv"
+                matching_files = glob.glob(file_name_pattern)
+                if matching_files:
+                    print("FOUND MATCH")
+                    unmatched = con.execute(f"""
+                        SELECT * 
+                        FROM read_csv('{ file_name_pattern }' )
+                    """).df()
+                    f.write(f"#### Found unmatching binaries:\n")
+                    f.write(unmatched.to_markdown(index=False) + "\n")
     
 def main():
     build_job = BuildJob('InvokeCI')

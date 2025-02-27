@@ -55,63 +55,59 @@ def list_builds_for_python_versions(run_id):
 def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha):
     python_versions = list_builds_for_python_versions(run_id)
     if runs_on.startswith("ubuntu"):
-        sha_mismatch_written = False
-        if not sha_mismatch_written:
-            for version in python_versions:
-                client = docker.from_env() # to use docker installed on GH Actions machine by the workflow
-                arch = f"linux/{ architecture }"
-                docker_image = f"python:{ version }"
-                container_name = f"python-test-{ runs_on }-{ architecture }-python-{ version.replace('.', '-') }"
-                container = create_container(client, container_name, docker_image, architecture, None)
-                print(f"VERIFYING BUILD SHA FOR python{ version }")
-                try:
-                    container.exec_run("pip install -v duckdb --pre --upgrade", stdout=True, stderr=True)
-                    subprocess_result = container.exec_run(
-                        "python -c \"import duckdb; print(duckdb.sql('SELECT source_id FROM pragma_version()').fetchone()[0])\"",
-                        stdout=True, stderr=True
-                    )
-                    print(f"Result: { subprocess_result.output.decode() }")
-                    short_sha = subprocess_result.output.decode().strip()
-                    if sha_matching(short_sha, full_sha, nightly_build, architecture, sha_mismatch_written) is True:
-                        print(f"TESTING EXTENSIONS ON python{ version }")
-                        # select_extensions = container.exec_run("""
-                        #     python -c "import duckdb; res = duckdb.sql('SELECT extension_name FROM duckdb_extensions() WHERE NOT loaded').fetchall(); result =[row[0] for row in res]; print(result)"
-                        # """, stdout=True, stderr=True)
-                        # extensions = select_extensions.output.decode()
-                        # print(extensions)
-                        version = version.replace(".", "-")
-                        for extension in extensions:
-                            installed = container.exec_run(f"""
-                                python -c "import duckdb; res = duckdb.sql('SELECT installed FROM duckdb_extensions() WHERE extension_name=\\'{ extension }\\'').fetchone(); print(res[0] if res else None)"
-                                """, stdout=True, stderr=True)
-                            print( f"Is { extension } already installed: { installed.output.decode() }")
-                            if installed.output.decode().strip() == "False":
-                                for action in ACTIONS:
-                                    print(f"{ action } { extension }...")
-                                    action_result_ouput = container.exec_run(f"""
-                                        python -c "import duckdb; print(duckdb.sql('{ action } \\'{ extension }\\''))"
-                                    """,
-                                    stdout=True, stderr=True).output.decode().strip()
-                                    print(f"STDOUT: {action_result_ouput}")
-                                    installed = container.exec_run(f"""
-                                        python -c "import duckdb; res = duckdb.sql('SELECT installed FROM duckdb_extensions() WHERE extension_name=\\'{ extension }\\'').fetchone(); print(res[0] if res else None)"
-                                        """, stdout=True, stderr=True)
-                                    print( f"Is { extension } { action }ed: { installed.output.decode() }")
-                                    if installed == 'False':
-                                        actual_result = 'failed'
-                                    else:
-                                        actual_result = 'passed'
-                                    if not os.path.exists(file_name) or os.path.getsize(file_name) == 0:
-                                        with open(file_name, "w") as f:
-                                            f.write("nightly_build,architecture,runs_on,version,extension,statement,result\n")
-                                    with open(file_name, "a") as f:
-                                        f.write(f"{ nightly_build },{ architecture },{ runs_on },{ version },{ extension },{ action },{ actual_result }\n")
-                            else:
-                                if not sha_mismatch_written:
-                                    sha_mismatch_written = True
-                                    non_matching_sha_file_name = "non_matching_sha_{}_{}.csv".format(nightly_build, architecture.replace("/", "-"))
-                                    with open(non_matching_sha_file_name, 'a') as f:
-                                        f.write(f"{ nightly_build },{ architecture },{ runs_on },{ version },{ extension },{ action },{ actual_result }\n")
+        for version in python_versions:
+            client = docker.from_env() # to use docker installed on GH Actions machine by the workflow
+            arch = f"linux/{ architecture }"
+            docker_image = f"python:{ version }"
+            container_name = f"python-test-{ runs_on }-{ architecture }-python-{ version.replace('.', '-') }"
+            container = create_container(client, container_name, docker_image, architecture, None)
+            print(f"VERIFYING BUILD SHA FOR python{ version }")
+            try:
+                container.exec_run("pip install -v duckdb --pre --upgrade", stdout=True, stderr=True)
+                subprocess_result = container.exec_run(
+                    "python -c \"import duckdb; print(duckdb.sql('SELECT source_id FROM pragma_version()').fetchone()[0])\"",
+                    stdout=True, stderr=True
+                )
+                print(f"Result: { subprocess_result.output.decode() }")
+                short_sha = subprocess_result.output.decode().strip()
+                version = version.replace(".", "-")
+                if sha_matching(short_sha, full_sha, nightly_build, architecture) is True:
+                    print(f"TESTING EXTENSIONS ON python{ version }")
+                    # select_extensions = container.exec_run("""
+                    #     python -c "import duckdb; res = duckdb.sql('SELECT extension_name FROM duckdb_extensions() WHERE NOT loaded').fetchall(); result =[row[0] for row in res]; print(result)"
+                    # """, stdout=True, stderr=True)
+                    # extensions = select_extensions.output.decode()
+                    # print(extensions)
+                    for extension in extensions:
+                        installed = container.exec_run(f"""
+                            python -c "import duckdb; res = duckdb.sql('SELECT installed FROM duckdb_extensions() WHERE extension_name=\\'{ extension }\\'').fetchone(); print(res[0] if res else None)"
+                            """, stdout=True, stderr=True)
+                        print( f"Is { extension } already installed: { installed.output.decode() }")
+                        if installed.output.decode().strip() == "False":
+                            for action in ACTIONS:
+                                print(f"{ action } { extension }...")
+                                action_result_ouput = container.exec_run(f"""
+                                    python -c "import duckdb; print(duckdb.sql('{ action } \\'{ extension }\\''))"
+                                """,
+                                stdout=True, stderr=True).output.decode().strip()
+                                print(f"STDOUT: {action_result_ouput}")
+                                installed = container.exec_run(f"""
+                                    python -c "import duckdb; res = duckdb.sql('SELECT installed FROM duckdb_extensions() WHERE extension_name=\\'{ extension }\\'').fetchone(); print(res[0] if res else None)"
+                                    """, stdout=True, stderr=True)
+                                print( f"Is { extension } { action }ed: { installed.output.decode() }")
+                                if installed == 'False':
+                                    actual_result = 'failed'
+                                else:
+                                    actual_result = 'passed'
+                                if not os.path.exists(file_name) or os.path.getsize(file_name) == 0:
+                                    with open(file_name, "w") as f:
+                                        f.write("nightly_build,architecture,runs_on,version,extension,statement,result\n")
+                                with open(file_name, "a") as f:
+                                    f.write(f"{ nightly_build },{ architecture },{ runs_on },{ version },{ extension },{ action },{ actual_result }\n")
+                else:
+                    non_matching_sha_file_name = "non_matching_sha_{}_{}.csv".format(nightly_build, architecture.replace("/", "-"))
+                    with open(non_matching_sha_file_name, 'a') as f:
+                        f.write(f"{ nightly_build }{ version },{ architecture }\n")
 
                 finally:
                     stop_container(container, container_name)

@@ -14,43 +14,33 @@ class BuildJob:
         self.build_job_name = build_job_name
     
     def get_build_job_name(self):
-        print(f"🪸 { self.build_job_name } 🪸")
         return self.build_job_name
 
     def get_build_job_file_name(self):
-        print(f"{ self.build_job_name }.json")
         return f"{ self.build_job_name }.json"
 
     def get_artifact_table_name(self):
-        print(f"{ self.build_job_name }__artifacts_table")
         return f"{ self.build_job_name }_artifacts"
 
     def get_steps_table_name(self):
-        print(f"{ self.build_job_name }_steps_table")
         return f"{ self.build_job_name }_steps"
 
     def get_artifacts_per_jobs_table_name(self):
-        print(f"{ self.build_job_name }__artifacts_per_jobs_table")
         return f"{ self.build_job_name }_artifacts_per_jobs"
 
     def get_failed_jobs_table_name(self):
-        print(f"{ self.build_job_name }_failed_jobs_table")
         return f"{ self.build_job_name }_failed_jobs"
 
     def get_run_list_table_name(self):
-        print(f"{ self.build_job_name }_gh_run_list_table")
         return f"{ self.build_job_name }_gh_run_list"
 
     def get_run_list_file_name(self):
-        print(f"{ self.build_job_name }_gh_run_list.json")
         return f"{ self.build_job_name }_gh_run_list.json"
 
     def get_artifacts_file_name(self):
-        print(f"{ self.build_job_name }_artifacts.json")
         return f"{ self.build_job_name }_artifacts.json"
 
     def get_jobs_file_name(self):
-        print(f"{ self.build_job_name }_jobs.json")
         return f"{ self.build_job_name }_jobs.json"
 
 # save command execution results into an f_output file
@@ -105,14 +95,13 @@ def count_consecutive_failures(build_job, con):
     return consecutive_failures
 
 
-def sha_matching(short_sha, full_sha, tested_binary, architecture, sha_mismatch_written = False):
+def sha_matching(short_sha, full_sha, tested_binary, architecture):
     if not full_sha.startswith(short_sha):
         print(f"""
         Version of { tested_binary } tested binary doesn't match to the version that triggered the build.
         - Version triggered the build: { full_sha }
         - Downloaded build version: { short_sha }
         """)
-        if not sha_mismatch_written:
             # non_matching_sha_file_name = "non_matching_sha_{}_{}.txt".format(tested_binary, architecture.replace("/", "-"))
             # with open(non_matching_sha_file_name, 'w') as f:
             #     f.write(f"""
@@ -120,10 +109,11 @@ def sha_matching(short_sha, full_sha, tested_binary, architecture, sha_mismatch_
             #     - Version triggered the build: { full_sha }
             #     - Downloaded build version: { short_sha }
             #     """)
-            return False
-    print(f"""
-    Versions of { tested_binary } build match:
-    - Version triggered the build: { full_sha }
-    - Downloaded build version: { short_sha }
-    """)
-    return True
+        return False
+    else:
+        print(f"""
+        Versions of { tested_binary } build match:
+        - Version triggered the build: { full_sha }
+        - Downloaded build version: { short_sha }
+        """)
+        return True
