@@ -79,6 +79,7 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
                         # """, stdout=True, stderr=True)
                         # extensions = select_extensions.output.decode()
                         # print(extensions)
+                        version = version.replace(".", "-")
                         for extension in extensions:
                             installed = container.exec_run(f"""
                                 python -c "import duckdb; res = duckdb.sql('SELECT installed FROM duckdb_extensions() WHERE extension_name=\\'{ extension }\\'').fetchone(); print(res[0] if res else None)"
@@ -104,12 +105,11 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
                                         with open(file_name, "w") as f:
                                             f.write("nightly_build,architecture,runs_on,version,extension,statement,result\n")
                                     with open(file_name, "a") as f:
-                                        f.write(f"{ nightly_build },{ architecture },{ runs_on },{ version.replace(".", "-") },{ extension },{ action },{ actual_result }\n")
+                                        f.write(f"{ nightly_build },{ architecture },{ runs_on },{ version },{ extension },{ action },{ actual_result }\n")
                             else:
                                 if not sha_mismatch_written:
                                     sha_mismatch_written = True
                                     non_matching_sha_file_name = "non_matching_sha_{}_{}.csv".format(nightly_build, architecture.replace("/", "-"))
-                                    version = version.replace(".", "-") 
                                     with open(non_matching_sha_file_name, 'a') as f:
                                         f.write(f"{ nightly_build },{ architecture },{ runs_on },{ version },{ extension },{ action },{ actual_result }\n")
 
