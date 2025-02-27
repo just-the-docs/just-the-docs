@@ -207,8 +207,7 @@ jobs:
           git config pull.rebase false
           git pull origin main
 
-          # add header for jekyll to apply post layout to a report
-          cat ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md >> docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md 
+          cp ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md >> docs/
 
           ls -lah docs
 
