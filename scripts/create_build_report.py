@@ -71,7 +71,8 @@ def create_build_report(build_job, con):
                     WHERE conclusion = 'success'
                     ORDER BY createdAt DESC
                 """).fetchone()
-                latest_success_date, latest_success_url = tmp_data[0], tmp_data[1] if tmp_data else ''
+                latest_success_date = tmp_data[0] if tmp_data else ''
+                latest_success_url = tmp_data[1] if tmp_data else ''
                 f.write(f"#### Latest successfull run: [ { latest_success_date } ]({ latest_success_url })\n")
 
             f.write(f"\n### Failure Details\n\n")
@@ -147,12 +148,11 @@ def create_build_report(build_job, con):
                 file_name_pattern = f"failed_ext/ext_{ tested_binary }*/non_matching_sha_{ tested_binary }*.csv"
                 matching_files = glob.glob(file_name_pattern)
                 if matching_files:
-                    print("FOUND MATCH")
                     unmatched = con.execute(f"""
                         SELECT * 
                         FROM read_csv('{ file_name_pattern }' )
                     """).df()
-                    f.write(f"#### Found unmatching binaries:\n")
+                    f.write(f"#### Found unmatching versions:\n\n")
                     f.write(unmatched.to_markdown(index=False) + "\n")
     
 def main():
