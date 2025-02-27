@@ -207,7 +207,7 @@ jobs:
           git config pull.rebase false
           git pull origin main
 
-          cp ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md >> docs/
+          cp ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md docs/
 
           ls -lah docs
 
