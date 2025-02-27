@@ -109,7 +109,7 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
                                 if not sha_mismatch_written:
                                     sha_mismatch_written = True
                                     non_matching_sha_file_name = "non_matching_sha_{}_{}.csv".format(nightly_build, architecture.replace("/", "-"))
-                                    version = version.replace(".", "-")
+                                    version = version.replace(".", "-") 
                                     with open(non_matching_sha_file_name, 'a') as f:
                                         f.write(f"{ nightly_build },{ architecture },{ runs_on },{ version },{ extension },{ action },{ actual_result }\n")
 
