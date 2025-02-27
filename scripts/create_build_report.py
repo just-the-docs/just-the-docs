@@ -31,15 +31,14 @@ REPORT_FILE = f"{ CURR_DATE }-report.md"
 
 def create_build_report(build_job, con):
     failures_count = count_consecutive_failures(build_job, con)
+    select_data = con.execute(f"SELECT headSha, url, createdAt FROM '{ build_job.get_run_list_table_name() }' ORDER BY createdAt DESC").fetchone()
+    run_sha, run_url, run_date = select_data[0][:7], select_data[1], select_data[2] if select_data else 'No runs were found'
 
     with open(REPORT_FILE, 'a') as f:
+        f.write(f"---\nlayout: post\ntitle: { CURR_DATE } - { run_sha }\nparent: Reports\n---\n")
         if failures_count == 0:       
-            f.write(f"\n\n## { build_job.get_build_job_name() } nightly-build has succeeded.\n")            
-            temp_data = con.execute(f"""
-                SELECT createdAt, url FROM '{ build_job.get_run_list_table_name() }' LIMIT 1
-                """).fetchone()
-            date, url = tmp_data[0], tmp_data[1] if tmp_data else ''
-            f.write(f"#### Latest run: [ { date } ]({ url })\n")
+            f.write(f"\n\n## { build_job.get_build_job_name() } [{ run_sha }]({ run_url }) has succeeded.\n")            
+            f.write(f"#### Latest run: [ { run_date } ]({ run_url })\n")
         else:
             # failures_count = -1 means all runs in the json file have conclusion = 'failure' 
             # so we need to update its value.
@@ -59,9 +58,9 @@ def create_build_report(build_job, con):
             """).fetchone()[0]
 
             if failures_count == total_count:
-                f.write(f"## { build_job.get_build_job_name() } nightly-build has not succeeded more than **{ failures_count }** times.\n")
+                f.write(f"## { build_job.get_build_job_name() } [{ run_sha }]({ run_url }) has not succeeded more than **{ failures_count }** times.\n")
             else:
-                f.write(f"## { build_job.get_build_job_name() } nightly-build has not succeeded the previous **{ failures_count }** times.\n")
+                f.write(f"## { build_job.get_build_job_name() } [{ run_sha }]({ run_url }) has not succeeded the previous **{ failures_count }** times.\n")
             if failures_count < total_count:
                 tmp_data = con.execute(f"""
                     SELECT
@@ -72,7 +71,8 @@ def create_build_report(build_job, con):
                 """).fetchone()
                 latest_success_date = tmp_data[0] if tmp_data else ''
                 latest_success_url = tmp_data[1] if tmp_data else ''
-                f.write(f"#### Latest successfull run: [ { latest_success_date } ]({ latest_success_url })\n")
+                if latest_success_date:
+                    f.write(f"#### Latest successfull run: [ { latest_success_date } ]({ latest_success_url })\n")
 
             f.write(f"\n### Failure Details\n\n")
             failure_details = con.execute(f"""
@@ -108,14 +108,12 @@ def create_build_report(build_job, con):
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
-            print(tested_binaries, "🧡")
             # add ext per binary
             file_name_pattern = f"failed_ext/ext*/list_failed_ext*.csv"
             matching_files = glob.glob(file_name_pattern)
             if matching_files:
                 join_list = ""
                 for binary in tested_binaries:
-                    print("💚", binary)
                     if not binary.startswith('python'):
                         binary = binary.replace("-", "_")
                         join_list += f'i."{ binary }".concat(l."{ binary }") as "{ binary }", '
@@ -152,7 +150,6 @@ def create_build_report(build_job, con):
                             )
                         WHERE "statement" = 'INSTALL');
                     """)
-                    print("💜💜💜", join_list)
                     ext_results_table = con.execute(f"""
                         SELECT i."extension",
                             { join_list }
@@ -175,7 +172,6 @@ def create_build_report(build_job, con):
                             py_join_list += f'i."python_{ version }".concat(l."python_{ version }") AS "python_{ version }",'
 
             if len(py_join_list) > 0:
-                print("💜💜💜", py_join_list)
                 con.execute(f"""
                     CREATE OR REPLACE TABLE py_ext_results AS (
                         SELECT * FROM read_csv('{ file_name_pattern }'));
