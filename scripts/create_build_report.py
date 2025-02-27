@@ -31,13 +31,14 @@ REPORT_FILE = f"{ CURR_DATE }-report.md"
 
 def create_build_report(build_job, con):
     failures_count = count_consecutive_failures(build_job, con)
-    select_data = con.execute(f"SELECT headSha, url, createdAt FROM '{ build_job.get_run_list_table_name() }' ORDER BY createdAt DESC").fetchone()
-    run_sha, run_url, run_date = select_data[0][:7], select_data[1], select_data[2] if select_data else 'No runs were found'
+    select_data = con.execute(f"SELECT headSha, url, createdAt, displayTitle, number FROM '{ build_job.get_run_list_table_name() }' ORDER BY createdAt DESC").fetchone()
+    run_sha, run_url, run_date, run_name, run_number = select_data[0][:7], select_data[1], select_data[2], select_data[3], select_data[4] if select_data else 'No runs were found'
+    report_title = f"\n\n## { build_job.get_build_job_name() }: { run_name } #{ run_number } - Commit [{ run_sha }]({ run_url }) ({ run_date })\n"
 
     with open(REPORT_FILE, 'a') as f:
         f.write(f"---\nlayout: post\ntitle: { CURR_DATE } - { run_sha }\nparent: Reports\n---\n")
         if failures_count == 0:       
-            f.write(f"\n\n## { build_job.get_build_job_name() } [{ run_sha }]({ run_url })\n Run succeeded\n{{: .label .label-green}}\n")            
+            f.write(f"{ report_title } Run succeeded\n{{: .label .label-green}}\n")            
             f.write(f"#### Latest run: [ { run_date } ]({ run_url })\n")
         else:
             # failures_count = -1 means all runs in the json file have conclusion = 'failure' 
@@ -58,10 +59,10 @@ def create_build_report(build_job, con):
             """).fetchone()[0]
 
             if failures_count == total_count:
-                f.write(f"## { build_job.get_build_job_name() } [{ run_sha }]({ run_url }) \n Run failed\n{{: .label .label-red}}\n")
+                f.write(f"{ report_title } Run failed\n{{: .label .label-red}}\n")
                 f.write(f"{ build_job.get_build_job_name() } has not succeeded more than **{ failures_count }** times.\n")
             else:
-                f.write(f"## { build_job.get_build_job_name() } [{ run_sha }]({ run_url }) \n Run failed\n{{: .label .label-red}}\n")
+                f.write(f"{ report_title } Run failed\n{{: .label .label-red}}\n")
                 f.write(f"{ build_job.get_build_job_name() } has not succeeded the previous **{ failures_count }** times.\n")
             if failures_count < total_count:
                 tmp_data = con.execute(f"""
@@ -86,18 +87,18 @@ def create_build_report(build_job, con):
             """).df()
             f.write(failure_details.to_markdown(index=False) + "\n")
 
-            f.write(f"\n### Previously Failed\n\n")
+            f.write(f"\n### Previously Failed (max 7 shown)\n\n")
             failures_count = 7 if failures_count > 7 else failures_count
             previously_failed = con.execute(f"""
                 SELECT
-                    conclusion as "Conclusion",
-                    '[' || createdAt || '](' || url || ')' as "Created at"
+                    headSha.concat(' - [' || createdAt || '](' || url || ')')
                 FROM '{ build_job.get_run_list_table_name() }'
                 WHERE conclusion != 'success'
                 ORDER BY createdAt DESC
                 LIMIT { failures_count }
-            """).df()
-            f.write(previously_failed.to_markdown(index=False) + "\n")
+            """).fetchall()
+            pr_f = ['- ' + pf[0] for pf in previously_failed]
+            f.write('\n'.join(pr_f) + '\n')
             
         f.write(f"\n### Workflow Artifacts\n\n")
         artifacts_per_job = con.execute(f"""

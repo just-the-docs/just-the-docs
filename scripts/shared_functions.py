@@ -59,7 +59,7 @@ def list_all_runs(con, build_job, branch, event):
         "--workflow", build_job.get_build_job_name(),
         "-b", branch,
         "--event", event,
-        "--json", "status,conclusion,url,name,createdAt,databaseId,headSha"
+        "--json", "status,conclusion,url,name,createdAt,databaseId,headSha,number,displayTitle"
     ]
     gh_run_list_file = build_job.get_build_job_file_name()
     fetch_data(gh_run_list_command, gh_run_list_file)
