@@ -108,42 +108,155 @@ def create_build_report(build_job, con):
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
-            print(tested_binaries)
+            print(tested_binaries, "🧡")
+            # add ext per binary
+            file_name_pattern = f"failed_ext/ext*/list_failed_ext*.csv"
+            matching_files = glob.glob(file_name_pattern)
+            if matching_files:
+                join_list = ""
+                for binary in tested_binaries:
+                    print("💚", binary)
+                    if not binary.startswith('python'):
+                        binary = binary.replace("-", "_")
+                        join_list += f'i."{ binary }".concat(l."{ binary }") as "{ binary }", '
+                if len(join_list) > 0:
+                    con.execute(f"""
+                        CREATE OR REPLACE TABLE ext_results AS (
+                            SELECT * FROM read_csv('{ file_name_pattern }'));
+                        """)
+                    con.execute(f"""CREATE OR REPLACE TABLE results AS (
+                            SELECT *, CASE 
+                                WHEN result = 'passed' 
+                                THEN ': ✅ ' 
+                                ELSE ': ❌ ' END AS res 
+                            FROM ext_results 
+                            WHERE nightly_build != 'python');
+                        """)
+                    con.execute(f"""CREATE OR REPLACE TABLE loads AS (
+                            SELECT * FROM (
+                                PIVOT results 
+                                ON nightly_build, architecture 
+                                USING min(statement.concat(res)) 
+                            GROUP BY "extension", "statement"
+                            ORDER BY "extension"
+                            )
+                        WHERE "statement" = 'LOAD');
+                        """)
+                    con.execute(f"""CREATE OR REPLACE TABLE installs AS (
+                            SELECT * FROM (
+                                PIVOT results
+                                ON nightly_build, architecture
+                                USING min(statement.concat(res))
+                            GROUP BY "extension", "statement"
+                            ORDER BY "extension"
+                            )
+                        WHERE "statement" = 'INSTALL');
+                    """)
+                    print("💜💜💜", join_list)
+                    ext_results_table = con.execute(f"""
+                        SELECT i."extension",
+                            { join_list }
+                        FROM installs AS i
+                        JOIN loads AS l
+                        ON i."extension"=l."extension";
+                    """).df()
+                    f.write(f"\n### Extensions Checking Results:\n\n")
+                    f.write(ext_results_table.to_markdown(index=False) + '\n')
+
+            py_file_name_pattern = f"failed_ext/ext_python*/list_failed_ext_python*.csv"
+            matching_files = glob.glob(py_file_name_pattern)
+            if matching_files:
+                select_py_versions = duckdb.sql(f"SELECT DISTINCT version, architecture FROM '{ py_file_name_pattern }'").fetchall()
+                tested_py_versions = [row[0] + "_" + row[1] for row in select_py_versions]
+                print(tested_py_versions)
+                py_join_list = ""
+                if tested_py_versions:
+                    for version in tested_py_versions:
+                            py_join_list += f'i."python_{ version }".concat(l."python_{ version }") AS "python_{ version }",'
+
+            if len(py_join_list) > 0:
+                print("💜💜💜", py_join_list)
+                con.execute(f"""
+                    CREATE OR REPLACE TABLE py_ext_results AS (
+                        SELECT * FROM read_csv('{ file_name_pattern }'));
+                    """)
+                con.execute(f"""
+                    CREATE OR REPLACE TABLE py_results AS (
+                        SELECT *, CASE 
+                            WHEN result = 'passed' 
+                            THEN ': ✅ ' 
+                            ELSE ': ❌ ' END AS res 
+                        FROM py_ext_results
+                        WHERE nightly_build = 'python');
+                    """)
+                con.execute(f"""
+                        CREATE OR REPLACE TABLE py_loads AS (
+                            SELECT * FROM (
+                                PIVOT py_results 
+                                ON nightly_build, version, architecture
+                                USING min(statement.concat(res)) 
+                            GROUP BY "extension", "statement"
+                            ORDER BY "extension"
+                            )
+                        WHERE "statement" = 'LOAD');
+                """)
+                con.execute(f"""
+                    CREATE OR REPLACE TABLE py_installs AS (
+                        SELECT * FROM (
+                            PIVOT py_results
+                            ON nightly_build, version, architecture
+                            USING min(statement.concat(res)
+                            )
+                            GROUP BY "extension", "statement"
+                            ORDER BY "extension"
+                        )
+                        WHERE "statement" = 'INSTALL');
+                """)
+                py_ext_results_table = con.execute(f"""
+                    SELECT i."extension",
+                        { py_join_list }
+                    FROM py_installs AS i
+                    JOIN py_loads AS l
+                    ON i."extension"=l."extension";
+                """).df()
+                f.write(f"\n### Extensions Checking Results for Python builds:\n\n")
+                f.write(py_ext_results_table.to_markdown(index=False) + '\n')
+
             for tested_binary in tested_binaries:
                 tested_binary = tested_binary + "_" + architecture if tested_binary == 'osx' else tested_binary.replace("-", "_")
-                # add failed extensions
-                file_name_pattern = f"failed_ext/ext_{ tested_binary }*/list_failed_ext_{ tested_binary }*.csv"
-                matching_files = glob.glob(file_name_pattern)
-                if matching_files:
-                    f.write(f"\n## { tested_binary }\n")
-                    passed = con.execute(f"""
-                        SELECT extension
-                        FROM read_csv('{ file_name_pattern }')
-                        WHERE result = 'passed' AND statement = 'INSTALL'
-                        INTERSECT(
-                            SELECT extension
-                            FROM read_csv('{ file_name_pattern }')
-                            WHERE result = 'passed' AND statement = 'LOAD'
-                            ORDER BY extension ASC
-                        )
-                    """).fetchall()
-                    passed_extentions = [p[0] for p in passed]
-                    select_list = "*" if tested_binary.startswith('python') else "nightly_build, architecture, runs_on, extension, statement"
-                    failed_extensions = con.execute(f"""
-                        SELECT { select_list } FROM read_csv('{ file_name_pattern }')
-                        WHERE result = 'failed'
-                    """).df()
-                    if tested_binary.startswith('python'):
-                        tested_extensions = str(set(passed_extentions).union(set(failed_extensions))).strip("{}")
-                        f.write(f"#### Tested extensions:\n> { tested_extensions }\n")
-                    if len(passed_extentions) > 0 and not tested_binary.startswith('python'):
-                        passed_extentions_string = str(passed_extentions).strip("[]")
-                        f.write(f"#### The following extensions could be loaded and installed successfully:\n> { passed_extentions_string }\n")
-                    if failed_extensions.empty:
-                        f.write(f"\n All extensions had been successfully installed and loaded.\n")
-                    else:
-                        f.write("\n### List of failed extensions:\n\n")
-                        f.write(failed_extensions.to_markdown(index=False) + "\n")
+            #     # add failed extensions
+            #     file_name_pattern = f"failed_ext/ext_{ tested_binary }*/list_failed_ext_{ tested_binary }*.csv"
+            #     matching_files = glob.glob(file_name_pattern)
+            #     if matching_files:
+            #         f.write(f"\n## { tested_binary }\n")
+            #         passed = con.execute(f"""
+            #             SELECT extension
+            #             FROM read_csv('{ file_name_pattern }')
+            #             WHERE result = 'passed' AND statement = 'INSTALL'
+            #             INTERSECT(
+            #                 SELECT extension
+            #                 FROM read_csv('{ file_name_pattern }')
+            #                 WHERE result = 'passed' AND statement = 'LOAD'
+            #                 ORDER BY extension ASC
+            #             )
+            #         """).fetchall()
+            #         passed_extentions = [p[0] for p in passed]
+            #         select_list = "*" if tested_binary.startswith('python') else "nightly_build, architecture, runs_on, extension, statement"
+            #         failed_extensions = con.execute(f"""
+            #             SELECT { select_list } FROM read_csv('{ file_name_pattern }')
+            #             WHERE result = 'failed'
+            #         """).df()
+            #         if tested_binary.startswith('python'):
+            #             tested_extensions = str(set(passed_extentions).union(set(failed_extensions))).strip("{}")
+            #             f.write(f"#### Tested extensions:\n> { tested_extensions }\n")
+            #         if len(passed_extentions) > 0 and not tested_binary.startswith('python'):
+            #             passed_extentions_string = str(passed_extentions).strip("[]")
+            #             f.write(f"#### The following extensions could be loaded and installed successfully:\n> { passed_extentions_string }\n")
+            #         if failed_extensions.empty:
+            #             f.write(f"\n All extensions had been successfully installed and loaded.\n")
+            #         else:
+            #             f.write("\n### List of failed extensions:\n\n")
+            #             f.write(failed_extensions.to_markdown(index=False) + "\n")
                 # add unmatching sha
                 file_name_pattern = f"failed_ext/ext_{ tested_binary }*/non_matching_sha_{ tested_binary }*.csv"
                 matching_files = glob.glob(file_name_pattern)
@@ -152,7 +265,7 @@ def create_build_report(build_job, con):
                         SELECT * 
                         FROM read_csv('{ file_name_pattern }' )
                     """).df()
-                    f.write(f"#### Found unmatching versions:\n\n")
+                    f.write(f"\n#### Found unmatching versions:\n\n")
                     f.write(unmatched.to_markdown(index=False) + "\n")
     
 def main():
