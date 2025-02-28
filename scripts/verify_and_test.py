@@ -111,7 +111,7 @@ def main():
     extensions = list_extensions()
     if nightly_build in SHOULD_BE_TESTED:
         if nightly_build == 'python':
-            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha)
+            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file)
         else:
             path_pattern = os.path.join("duckdb_path", "duckdb*")
             matches = glob.glob(path_pattern)
@@ -121,6 +121,11 @@ def main():
             else:
                 raise FileNotFoundError(f"No binary matching { path_pattern } found in duckdb_path dir.")
             if verify_version(tested_binary, full_sha):
+                # write tested platform
+                subprocess_result = subprocess.run([ tested_binary, "-c", f"duckdb.sql('PRAGMA platform')"], text=True, capture_output=True)
+                tested_platform = subprocess_result.stdout.strip()
+                with open(tested_platforms_file, "a") as f:
+                    f.write(f"{ nightly_build }_{ architecture },{ tested_platform }\n")
                 test_extensions(tested_binary, file_name, extensions)
 
 if __name__ == "__main__":

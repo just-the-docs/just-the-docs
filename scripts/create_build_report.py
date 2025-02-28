@@ -87,31 +87,31 @@ def create_build_report(build_job, con):
             """).df()
             f.write(failure_details.to_markdown(index=False) + "\n")
 
-            f.write(f"\n### Previously Failed (max 7 shown)\n\n")
-            failures_count = 7 if failures_count > 7 else failures_count
-            previously_failed = con.execute(f"""
-                SELECT
-                    headSha.concat(' - [' || createdAt || '](' || url || ')')
-                FROM '{ build_job.get_run_list_table_name() }'
-                WHERE conclusion != 'success'
-                ORDER BY createdAt DESC
-                LIMIT { failures_count }
-            """).fetchall()
-            pr_f = ['- ' + pf[0] for pf in previously_failed]
-            f.write('\n'.join(pr_f) + '\n')
+        #     f.write(f"\n### Previously Failed (max 7 shown)\n\n")
+        #     failures_count = 7 if failures_count > 7 else failures_count
+        #     previously_failed = con.execute(f"""
+        #         SELECT
+        #             headSha.concat(' - [' || createdAt || '](' || url || ')')
+        #         FROM '{ build_job.get_run_list_table_name() }'
+        #         WHERE conclusion != 'success'
+        #         ORDER BY createdAt DESC
+        #         LIMIT { failures_count }
+        #     """).fetchall()
+        #     pr_f = ['- ' + pf[0] for pf in previously_failed]
+        #     f.write('\n'.join(pr_f) + '\n')
             
-        f.write(f"\n### Workflow Artifacts\n\n")
-        artifacts_per_job = con.execute(f"""
-            SELECT * FROM '{ build_job.get_artifacts_per_jobs_table_name() }' ORDER BY "Build (Architecture)" ASC;
-            """).df()
-        f.write(artifacts_per_job.to_markdown(index=False) + "\n")
+        # f.write(f"\n### Workflow Artifacts\n\n")
+        # artifacts_per_job = con.execute(f"""
+        #     SELECT * FROM '{ build_job.get_artifacts_per_jobs_table_name() }' ORDER BY "Build (Architecture)" ASC;
+        #     """).df()
+        # f.write(artifacts_per_job.to_markdown(index=False) + "\n")
         
         # add extensions
         inputs = "inputs.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
-            # add ext per binary
+            # add summary for extensions installing and loading chiecks
             file_name_pattern = f"failed_ext/ext*/list_failed_ext*.csv"
             matching_files = glob.glob(file_name_pattern)
             if matching_files:
@@ -266,7 +266,28 @@ def create_build_report(build_job, con):
                     """).df()
                     f.write(f"\n#### Found unmatching versions:\n\n")
                     f.write(unmatched.to_markdown(index=False) + "\n")
-    
+        
+        if failures_count > 0:            
+            f.write(f"\n### Previously Failed (max 7 shown)\n\n")
+            failures_count = 7 if failures_count > 7 else failures_count
+            previously_failed = con.execute(f"""
+                SELECT
+                    headSha.concat(' - [' || createdAt || '](' || url || ')')
+                FROM '{ build_job.get_run_list_table_name() }'
+                WHERE conclusion != 'success'
+                ORDER BY createdAt DESC
+                LIMIT { failures_count }
+            """).fetchall()
+            pr_f = ['- ' + pf[0] for pf in previously_failed]
+            f.write('\n'.join(pr_f) + '\n')
+            
+        f.write(f"\n### Workflow Artifacts\n\n")
+        artifacts_per_job = con.execute(f"""
+            SELECT * FROM '{ build_job.get_artifacts_per_jobs_table_name() }' ORDER BY "Build (Architecture)" ASC;
+            """).df()
+        f.write(artifacts_per_job.to_markdown(index=False) + "\n")
+
+
 def main():
     build_job = BuildJob('InvokeCI')
     db_name = 'tables/run_info_tables.duckdb'
