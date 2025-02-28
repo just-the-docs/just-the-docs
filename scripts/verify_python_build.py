@@ -52,7 +52,7 @@ def list_builds_for_python_versions(run_id):
         result = [word[0] + '.' + word[1:] if len(word) > 1 else word + '.' for word in matches]
         return result
 
-def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, TESTED_PLATFORMS_FILE):
+def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file_name):
     python_versions = list_builds_for_python_versions(run_id)
     if runs_on.startswith("ubuntu"):
         for version in python_versions:
@@ -83,7 +83,7 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
                     tested_platform = container.exec_run(f"""
                             python -c "import duckdb; res = duckdb.sql('PRAGMA platform').fetchone(); print(res[0] if res else None)"
                             """, stdout=True, stderr=True)
-                    with open(TESTED_PLATFORMS_FILE, "a") as f:
+                    with open(tested_platforms_file_name, "a") as f:
                         f.write(f"{ docker_image }_{ arch },{ tested_platform.output.decode() }\n")
 
                     for extension in extensions:

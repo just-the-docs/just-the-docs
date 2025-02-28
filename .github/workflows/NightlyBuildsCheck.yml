@@ -31,9 +31,7 @@ jobs:
     outputs:
       matrix: ${{ steps.set-outputs.outputs.matrix }}
       CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
-    # strategy:
-    #   matrix: 
-    #     config: [{ "branch": "main", "extensions": "config"}, {"branch": "v1.2-histrionicus", "extensions": "aws"}]
+    # strat g: [{ "branch": "main", "extensions": "config"}, {"branch": "v1.2-histrionicus", "extensions": "aws"}]
     steps:
       - id: curr-date
         run: echo "CURR_DATE=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
@@ -116,8 +114,6 @@ jobs:
           CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
         run: |
             uname -m
-            echo "name, actual_platform\n" > "tested_platforms.csv"
-            
             if [[ ${{ matrix.inputs.nightly_build }} != 'python' ]]; then
               echo "Downloading duckdb-binaries-${{ matrix.inputs.duckdb_binary }} artifact..."
               if gh run download ${{ matrix.inputs.run_id }} --repo ${{ env.GH_REPO }} -n duckdb-binaries-${{ matrix.inputs.duckdb_binary }}; then
@@ -144,7 +140,7 @@ jobs:
           path: |
             list_failed_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
             non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
-            tested_platforms.csv
+            tested_platforms_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
           if-no-files-found: ignore
     
   report:
