@@ -31,6 +31,7 @@ GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 ACTIONS = ["INSTALL", "LOAD"]
 EXT_WHICH_DOESNT_EXIST = "EXT_WHICH_DOESNT_EXIST"
 SHOULD_BE_TESTED = ('python', 'osx', 'linux', 'windows')
+TESTED_PLATFORMS_FILE = "tested_platforms.csv"
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--nightly_build")
@@ -111,7 +112,7 @@ def main():
     extensions = list_extensions()
     if nightly_build in SHOULD_BE_TESTED:
         if nightly_build == 'python':
-            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file)
+            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, TESTED_PLATFORMS_FILE)
         else:
             path_pattern = os.path.join("duckdb_path", "duckdb*")
             matches = glob.glob(path_pattern)
@@ -124,7 +125,7 @@ def main():
                 # write tested platform
                 subprocess_result = subprocess.run([ tested_binary, "-c", f"duckdb.sql('PRAGMA platform')"], text=True, capture_output=True)
                 tested_platform = subprocess_result.stdout.strip()
-                with open(tested_platforms_file, "a") as f:
+                with open(TESTED_PLATFORMS_FILE, "a") as f:
                     f.write(f"{ nightly_build }_{ architecture },{ tested_platform }\n")
                 test_extensions(tested_binary, file_name, extensions)
 
