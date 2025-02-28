@@ -160,7 +160,7 @@ def create_build_report(build_job, con):
                         JOIN loads AS l
                         ON i."extension"=l."extension";
                     """).df()
-                    f.write(f"\n### Extensions Checking Results:\n\n")
+                    f.write(f"\n### Extensions Summary:\n\n")
                     f.write(ext_results_table.to_markdown(index=False) + '\n')
 
             py_file_name_pattern = f"failed_ext/ext_python*/list_failed_ext_python*.csv"
