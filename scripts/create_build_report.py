@@ -165,11 +165,11 @@ def create_build_report(build_job, con):
 
             py_file_name_pattern = f"failed_ext/ext_python*/list_failed_ext_python*.csv"
             matching_files = glob.glob(py_file_name_pattern)
+            py_join_list = ""
             if matching_files:
                 select_py_versions = duckdb.sql(f"SELECT DISTINCT version, architecture FROM '{ py_file_name_pattern }'").fetchall()
                 tested_py_versions = [row[0] + "_" + row[1] for row in select_py_versions]
                 print(tested_py_versions)
-                py_join_list = ""
                 if tested_py_versions:
                     for version in tested_py_versions:
                             py_join_list += f'i."python_{ version }".concat(l."python_{ version }") AS "python_{ version }",'
