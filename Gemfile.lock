@@ -152,7 +152,7 @@ GEM
     typhoeus (1.4.1)
       ethon (>= 0.9.0)
     unicode-display_width (2.6.0)
-    uri (0.13.0)
+    uri (0.13.2)
     webrick (1.9.1)
     yell (2.2.2)
     zeitwerk (2.7.2)
