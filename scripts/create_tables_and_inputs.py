@@ -47,7 +47,6 @@ from shared_functions import BuildJob
 
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 DUCKDB_FILE = 'run_info_tables.duckdb'
-SHOULD_BE_TESTED = ('python', 'osx', 'linux', 'windows')
 
 def get_value_for_key(key, build_job):
     value = duckdb.sql(f"""
@@ -76,6 +75,11 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id):
             f"repos/{ GH_REPO }/actions/runs/{ build_job_run_id }/artifacts"
         ]
     fetch_data(artifacts_command, build_job.get_artifacts_file_name())
+    expected_artifacts_command = [
+            "gh", "api",
+            f"repos/{ GH_REPO }/actions/runs/13153471611/artifacts"
+        ]
+    fetch_data(expected_artifacts_command, build_job.get_expected_artifacts_file_name())
 
 def create_tables_for_report(build_job, con):
     '''
@@ -96,10 +100,15 @@ def create_tables_for_report(build_job, con):
         )
     """)
     con.execute(f"""
-            CREATE OR REPLACE TABLE '{ build_job.get_artifact_table_name() }' AS (
-                SELECT * FROM read_json('{ build_job.get_artifacts_file_name() }')
-            );
-        """)
+        CREATE OR REPLACE TABLE '{ build_job.get_artifact_table_name() }' AS (
+            SELECT * FROM read_json('{ build_job.get_artifacts_file_name() }')
+        );
+    """)
+    con.execute(f"""
+        CREATE OR REPLACE TABLE '{ build_job.get_expected_artifact_table_name() }' AS (
+            SELECT * FROM read_json('{ build_job.get_expected_artifacts_file_name() }')
+        );
+    """)
     # check if the artifatcs table is not empty
     artifacts_count = con.execute(f"SELECT list_count(artifacts) FROM '{ build_job.get_artifact_table_name() }';").fetchone()[0]
     if artifacts_count > 0:
@@ -151,7 +160,7 @@ def create_tables_for_report(build_job, con):
                     ) as t2
                 );
             """)
-
+    
 def create_failed_jobs_table(build_job, con):
     url = get_value_for_key("url", build_job)
     base_url = f"{ url }/job/"

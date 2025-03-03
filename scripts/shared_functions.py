@@ -22,6 +22,9 @@ class BuildJob:
     def get_artifact_table_name(self):
         return f"{ self.build_job_name }_artifacts"
 
+    def get_expected_artifact_table_name(self):
+        return f"{ self.build_job_name }_expected_artifacts"
+
     def get_steps_table_name(self):
         return f"{ self.build_job_name }_steps"
 
@@ -39,6 +42,9 @@ class BuildJob:
 
     def get_artifacts_file_name(self):
         return f"{ self.build_job_name }_artifacts.json"
+
+    def get_expected_artifacts_file_name(self):
+        return f"{ self.build_job_name }_expected_artifacts.json"
 
     def get_jobs_file_name(self):
         return f"{ self.build_job_name }_jobs.json"

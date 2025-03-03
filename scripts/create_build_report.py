@@ -218,7 +218,7 @@ def create_build_report(build_job, con):
                     JOIN py_loads AS l
                     ON i."extension"=l."extension";
                 """).df()
-                f.write(f"\n### Extensions Checking Results for Python builds:\n\n")
+                f.write(f"\n### Extensions Summary:\n\n")
                 f.write(py_ext_results_table.to_markdown(index=False) + '\n')
 
             for tested_binary in tested_binaries:

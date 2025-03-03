@@ -103,7 +103,8 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
                                     python -c "import duckdb; res = duckdb.sql('SELECT installed FROM duckdb_extensions() WHERE extension_name=\\'{ extension }\\'').fetchone(); print(res[0] if res else None)"
                                     """, stdout=True, stderr=True)
                                 print( f"Is { extension } { action }ed: { installed.output.decode() }")
-                                if installed == 'False':
+                                # if installed == 'False':
+                                if installed.output.decode().strip() == "False":
                                     actual_result = 'failed'
                                 else:
                                     actual_result = 'passed'
