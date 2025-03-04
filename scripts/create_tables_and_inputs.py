@@ -32,13 +32,13 @@ Currently we're checking only three nightly-build names: OSX, LinuxRelease, Wind
 Can be tested locally running 'python scripts/create_tables_and_inputs.py'.
 '''
 
+import argparse
 import duckdb
 import datetime
-import argparse
-import subprocess
 import json
 import os
 import re
+import subprocess
 from collections import defaultdict
 from shared_functions import fetch_data
 from shared_functions import list_all_runs
@@ -47,6 +47,15 @@ from shared_functions import BuildJob
 
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 DUCKDB_FILE = 'run_info_tables.duckdb'
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--branch")
+parser.add_argument("--event")
+args = parser.parse_args()
+
+branch = args.branch
+event = args.event
+DUCKDB_FILE = f'{branch}_{DUCKDB_FILE}'
 
 def get_value_for_key(key, build_job):
     value = duckdb.sql(f"""
@@ -298,8 +307,7 @@ def main():
     if os.path.isfile(DUCKDB_FILE):
         os.remove(DUCKDB_FILE)
     con = duckdb.connect(DUCKDB_FILE)
-    # "v1.2-histrionicus", "workflow_dispatch"
-    list_all_runs(con, build_job, "main", "repository_dispatch")
+    list_all_runs(con, build_job, branch, event)
     build_job_run_id = get_value_for_key("databaseId", build_job)
     save_run_data_to_json_files(build_job, con, build_job_run_id)
     create_tables_for_report(build_job, con)
@@ -307,7 +315,7 @@ def main():
 
     matrix_data = create_inputs(build_job, con, build_job_run_id)
     # print("#####", matrix_data)
-    with open("inputs.json", "w") as f:
+    with open(f"{ branch }_inputs.json", "w") as f:
         json.dump(matrix_data, f, indent=4)
     con.close()
     

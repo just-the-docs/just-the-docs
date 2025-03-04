@@ -113,7 +113,7 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
                                 with open(file_name, "a") as f:
                                     f.write(f"{ nightly_build },{ architecture },{ runs_on },{ version },{ extension },{ action },{ actual_result }\n")
                 else:
-                    non_matching_sha_file_name = "non_matching_sha_{}_{}.csv".format(nightly_build, architecture.replace("/", "-"))
+                    non_matching_sha_file_name = f"{ branch }_non_matching_sha_{ nightly_build }_{ architecture.replace("/", "-") }.csv"
                     with open(non_matching_sha_file_name, 'a') as f:
                         f.write(f"{ nightly_build }{ version },{ architecture }\n")
 

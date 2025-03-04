@@ -33,7 +33,7 @@ jobs:
       CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
     strategy:
       matrix:
-        config: [{ "branch": "main", "extensions": "config", "event": "repository_dispatch"}, {"branch": "v1.2-histrionicus", "extensions": "aws", "event": "workflow_dispatch"}]
+        config: [{ "branch": "main", "event": "repository_dispatch"}, {"branch": "v1.2-histrionicus", "event": "workflow_dispatch"}]
     steps:
       - id: curr-date
         run: echo "CURR_DATE=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
@@ -57,7 +57,7 @@ jobs:
         env:
           CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
         run: |
-          python scripts/create_tables_and_inputs.py
+          python scripts/create_tables_and_inputs.py --branch "${{ matrix.config.branch }}" --event "${{ matrix.config.event }}"
 
       - name: Upload DuckDB file
         uses: actions/upload-artifact@v4
@@ -68,25 +68,26 @@ jobs:
       - name: Read JSON and create matrix
         id: set-outputs
         run: |
-          matrix=$(cat inputs.json | jq -c '.')
+          matrix=$(cat ${{ matrix.config.branch }}_inputs.json | jq -c '.')
           echo "matrix=$matrix" >> $GITHUB_OUTPUT
           echo "***"
-          cat inputs.json
+          cat ${{ matrix.config.branch }}_inputs.json
       
-      - name: Upload inputs.json
+      - name: Upload ${{ matrix.config.branch }}_inputs.json
         uses: actions/upload-artifact@v4
         with:
-          name: inputs.json
-          path: inputs.json
+          name: ${{ matrix.config.branch }}_inputs.json
+          path: ${{ matrix.config.branch }}_inputs.json
           if-no-files-found: ignore
 
   run-tests:
-    name: ${{ matrix.inputs.nightly_build }} - ${{ matrix.inputs.duckdb_arch }} (${{ matrix.inputs.runs_on }})
+    name: ${{ matrix.branch }} -${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.duckdb_arch }} (${{ matrix.inputs.runs_on }})
     needs: get-run-info
     if: ${{ needs.get-run-info.outputs.matrix != '[]' }}
     strategy:
       matrix:
         inputs: ${{ fromJson(needs.get-run-info.outputs.matrix) }}
+        branch: ["main", "v1.2-histrionicus"]
     continue-on-error: true
     runs-on: ${{ matrix.inputs.runs_on }}
     steps:
@@ -133,6 +134,7 @@ jobs:
                 --architecture ${{ matrix.inputs.duckdb_arch }} \
                 --run_id ${{ matrix.inputs.run_id }} \
                 --runs_on ${{ matrix.inputs.runs_on }}
+                --branch ${{ matrix.branch }}
 
       - name: Upload actions for extensions
         if: always()
@@ -140,9 +142,9 @@ jobs:
         with:
           name: ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}
           path: |
-            list_failed_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
-            non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
-            tested_platforms_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
+            ${{ matrix.branch }}_list_failed_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
+            ${{ matrix.branch }}_non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
+            ${{ matrix.branch }}_tested_platforms_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
           if-no-files-found: ignore
     
   report:
@@ -152,6 +154,9 @@ jobs:
     needs:
       - get-run-info 
       - run-tests
+    strategy:
+      matrix:
+        branch: ["main", "v1.2-histrionicus"]
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -167,7 +172,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install duckdb pandas tabulate requests
 
-      - name: Download inputs.json
+      - name: Download ${{ matrix.config.branch }}_inputs.json
         uses: actions/download-artifact@v4
         with:
           name: inputs.json
@@ -182,7 +187,7 @@ jobs:
       - name: Download duckdb file
         uses: actions/download-artifact@v4
         with:
-          name: run_info_tables.duckdb
+          name: ${{ matrix }}_run_info_tables.duckdb
           path: tables
       
       - name: Generate report
