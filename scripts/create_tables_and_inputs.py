@@ -160,7 +160,17 @@ def create_tables_for_report(build_job, con):
                     ) as t2
                 );
             """)
-    
+    con.execute(f"""
+        CREATE OR REPLACE TABLE expected_extensions AS (
+            SELECT * FROM (
+                SELECT unnest(artifacts)['name'] AS expected 
+                FROM { build_job.get_expected_artifact_table_name() }) AS e 
+                FULL JOIN (
+                    SELECT unnest(artifacts)['name'] AS actual
+                    FROM { build_job.get_artifact_table_name() }) AS a
+                ON expected = actual);
+    """)
+
 def create_failed_jobs_table(build_job, con):
     url = get_value_for_key("url", build_job)
     base_url = f"{ url }/job/"

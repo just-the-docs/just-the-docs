@@ -13,7 +13,6 @@ from shared_functions import list_extensions
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 ACTIONS = ["INSTALL", "LOAD"]
 EXT_WHICH_DOESNT_EXIST = "EXT_WHICH_DOESNT_EXIST"
-SHOULD_BE_TESTED = ('python', 'osx', 'linux', 'windows')
 
 def create_container(client, container_name, image, architecture, tested_binary_path):
     container = client.containers.run(
