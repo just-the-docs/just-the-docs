@@ -294,7 +294,7 @@ def create_build_report(build_job, con):
         artifacts_per_job = con.execute(f"""
             SELECT * FROM '{ build_job.get_artifacts_per_jobs_table_name() }' ORDER BY "Build (Architecture)" ASC;
             """).df()
-        f.write(artifacts_per_job.to_markdown() + "\n")
+        f.write(artifacts_per_job.to_markdown(index=False) + "\n")
 
 
 def main():
