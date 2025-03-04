@@ -1,5 +1,5 @@
 ---
-title: main
+title: MAIN
 layout: home
 nav_order: 1
 description: "Nightly Builds Status Reports"

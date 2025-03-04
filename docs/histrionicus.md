@@ -1,5 +1,5 @@
 ---
-title: v1.2-histrionicus
+title: V1.2-HISTRIONICUS
 nav_order: 2
 ---
 
