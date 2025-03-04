@@ -92,29 +92,11 @@ def create_build_report(build_job, con):
                 FROM '{ build_job.get_failed_jobs_table_name() }'
             """).df()
             f.write(failure_details.to_markdown(index=False) + "\n")
-
-        #     f.write(f"\n### Previously Failed (max 7 shown)\n\n")
-        #     failures_count = 7 if failures_count > 7 else failures_count
-        #     previously_failed = con.execute(f"""
-        #         SELECT
-        #             headSha.concat(' - [' || createdAt || '](' || url || ')')
-        #         FROM '{ build_job.get_run_list_table_name() }'
-        #         WHERE conclusion != 'success'
-        #         ORDER BY createdAt DESC
-        #         LIMIT { failures_count }
-        #     """).fetchall()
-        #     pr_f = ['- ' + pf[0] for pf in previously_failed]
-        #     f.write('\n'.join(pr_f) + '\n')
-            
-        # f.write(f"\n### Workflow Artifacts\n\n")
-        # artifacts_per_job = con.execute(f"""
-        #     SELECT * FROM '{ build_job.get_artifacts_per_jobs_table_name() }' ORDER BY "Build (Architecture)" ASC;
-        #     """).df()
-        # f.write(artifacts_per_job.to_markdown(index=False) + "\n")
         
         # add extensions
         inputs = f"{ branch }_inputs.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
+            print("HERE")
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
             # add summary for extensions installing and loading chiecks
@@ -229,39 +211,6 @@ def create_build_report(build_job, con):
 
             for tested_binary in tested_binaries:
                 tested_binary = tested_binary + "_" + architecture if tested_binary == 'osx' else tested_binary.replace("-", "_")
-            #     # add failed extensions
-            #     file_name_pattern = f"failed_ext/ext_{ tested_binary }*/list_failed_ext_{ tested_binary }*.csv"
-            #     matching_files = glob.glob(file_name_pattern)
-            #     if matching_files:
-            #         f.write(f"\n## { tested_binary }\n")
-            #         passed = con.execute(f"""
-            #             SELECT extension
-            #             FROM read_csv('{ file_name_pattern }')
-            #             WHERE result = 'passed' AND statement = 'INSTALL'
-            #             INTERSECT(
-            #                 SELECT extension
-            #                 FROM read_csv('{ file_name_pattern }')
-            #                 WHERE result = 'passed' AND statement = 'LOAD'
-            #                 ORDER BY extension ASC
-            #             )
-            #         """).fetchall()
-            #         passed_extentions = [p[0] for p in passed]
-            #         select_list = "*" if tested_binary.startswith('python') else "nightly_build, architecture, runs_on, extension, statement"
-            #         failed_extensions = con.execute(f"""
-            #             SELECT { select_list } FROM read_csv('{ file_name_pattern }')
-            #             WHERE result = 'failed'
-            #         """).df()
-            #         if tested_binary.startswith('python'):
-            #             tested_extensions = str(set(passed_extentions).union(set(failed_extensions))).strip("{}")
-            #             f.write(f"#### Tested extensions:\n> { tested_extensions }\n")
-            #         if len(passed_extentions) > 0 and not tested_binary.startswith('python'):
-            #             passed_extentions_string = str(passed_extentions).strip("[]")
-            #             f.write(f"#### The following extensions could be loaded and installed successfully:\n> { passed_extentions_string }\n")
-            #         if failed_extensions.empty:
-            #             f.write(f"\n All extensions had been successfully installed and loaded.\n")
-            #         else:
-            #             f.write("\n### List of failed extensions:\n\n")
-            #             f.write(failed_extensions.to_markdown(index=False) + "\n")
                 # add unmatching sha
                 file_name_pattern = f"failed_ext/ext_{ tested_binary }*/non_matching_sha_{ tested_binary }*.csv"
                 matching_files = glob.glob(file_name_pattern)
