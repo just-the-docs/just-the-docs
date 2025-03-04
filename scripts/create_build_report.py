@@ -88,7 +88,7 @@ def create_build_report(build_job, con):
             f.write(failure_details.to_markdown(index=False) + "\n")
 
             f.write(f"\n### Expected and Actully Uploaded Extensions\n\n")
-            failure_details = con.execute(f"FROM extensions_list ORDER BY ALL;").df()
+            failure_details = con.execute(f"FROM extensions_lists ORDER BY ALL;").df()
             f.write(failure_details.to_markdown(index=False) + "\n")
         #     f.write(f"\n### Previously Failed (max 7 shown)\n\n")
         #     failures_count = 7 if failures_count > 7 else failures_count
