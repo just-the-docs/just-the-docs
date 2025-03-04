@@ -37,6 +37,7 @@ parser.add_argument("--nightly_build")
 parser.add_argument("--architecture")
 parser.add_argument("--run_id")
 parser.add_argument("--runs_on")
+parser.add_argument("--branch")
 
 args = parser.parse_args()
 
@@ -44,6 +45,7 @@ nightly_build = args.nightly_build
 architecture = args.architecture
 run_id = args.run_id
 runs_on = args.runs_on # linux-latest
+branch = args.branch
 
 def get_full_sha(run_id):
     gh_headSha_command = [
@@ -106,14 +108,15 @@ def test_extensions(tested_binary, file_name, extensions):
         f.write(f"Unexpected extension with name { EXT_WHICH_DOESNT_EXIST } had been installed.")
 
 def main():
-    file_name = "list_failed_ext_{}_{}.csv".format(nightly_build, architecture.replace("/", "-"))
-    tested_platforms_file_name = "tested_platforms.csv".format(nightly_build, architecture.replace("/", "-"))
+    arch = architecture.replace("/", "-")
+    file_name = f"{ branch }_list_failed_ext_{ nightly_build }_{ arch }.csv"
+    tested_platforms_file_name = f"{ branch }_tested_platforms{ nightly_build }_{ arch }.csv"
 
     full_sha = get_full_sha(run_id)
     extensions = list_extensions()
     if nightly_build in SHOULD_BE_TESTED:
         if nightly_build == 'python':
-            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file_name)
+            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file_name, branch)
         else:
             path_pattern = os.path.join("duckdb_path", "duckdb*")
             matches = glob.glob(path_pattern)
@@ -128,7 +131,13 @@ def main():
                 tested_platform = subprocess_result.stdout.strip()
                 with open(tested_platforms_file_name, "a") as f:
                     f.write(f"{ nightly_build }_{ architecture },{ tested_platform }\n")
+                    print("HERE")
                 test_extensions(tested_binary, file_name, extensions)
+                print("AFTER TEST EXT")
+            else:
+                non_matching_sha_file_name = f"{ branch }_non_matching_sha_{ nightly_build }_{ arch }.csv"
+                with open(non_matching_sha_file_name, 'a') as f:
+                    f.write(f"{ nightly_build }{ version },{ architecture }\n")
 
 if __name__ == "__main__":
     main()

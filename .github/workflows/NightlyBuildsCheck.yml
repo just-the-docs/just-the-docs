@@ -31,7 +31,9 @@ jobs:
     outputs:
       matrix: ${{ steps.set-outputs.outputs.matrix }}
       CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
-    # strat g: [{ "branch": "main", "extensions": "config"}, {"branch": "v1.2-histrionicus", "extensions": "aws"}]
+    strategy:
+      matrix:
+        config: [{ "branch": "main", "event": "repository_dispatch"}, {"branch": "v1.2-histrionicus", "event": "workflow_dispatch"}]
     steps:
       - id: curr-date
         run: echo "CURR_DATE=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
@@ -55,36 +57,37 @@ jobs:
         env:
           CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
         run: |
-          python scripts/create_tables_and_inputs.py
+          python scripts/create_tables_and_inputs.py --branch "${{ matrix.config.branch }}" --event "${{ matrix.config.event }}"
 
       - name: Upload DuckDB file
         uses: actions/upload-artifact@v4
         with:
-          name: run_info_tables.duckdb
-          path: run_info_tables.duckdb
+          name: ${{ matrix.config.branch }}_run_info_tables.duckdb
+          path: ${{ matrix.config.branch }}_run_info_tables.duckdb
       
       - name: Read JSON and create matrix
         id: set-outputs
         run: |
-          matrix=$(cat inputs.json | jq -c '.')
+          matrix=$(cat ${{ matrix.config.branch }}_inputs.json | jq -c '.')
           echo "matrix=$matrix" >> $GITHUB_OUTPUT
           echo "***"
-          cat inputs.json
+          cat ${{ matrix.config.branch }}_inputs.json
       
-      - name: Upload inputs.json
+      - name: Upload ${{ matrix.config.branch }}_inputs.json
         uses: actions/upload-artifact@v4
         with:
-          name: inputs.json
-          path: inputs.json
+          name: ${{ matrix.config.branch }}_inputs.json
+          path: ${{ matrix.config.branch }}_inputs.json
           if-no-files-found: ignore
 
   run-tests:
-    name: ${{ matrix.inputs.nightly_build }} - ${{ matrix.inputs.duckdb_arch }} (${{ matrix.inputs.runs_on }})
+    name: ${{ matrix.branch }} - ${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.duckdb_arch }} (${{ matrix.inputs.runs_on }})
     needs: get-run-info
     if: ${{ needs.get-run-info.outputs.matrix != '[]' }}
     strategy:
       matrix:
         inputs: ${{ fromJson(needs.get-run-info.outputs.matrix) }}
+        branch: ["main", "v1.2-histrionicus"]
     continue-on-error: true
     runs-on: ${{ matrix.inputs.runs_on }}
     steps:
@@ -130,17 +133,18 @@ jobs:
                 --nightly_build ${{ matrix.inputs.nightly_build }} \
                 --architecture ${{ matrix.inputs.duckdb_arch }} \
                 --run_id ${{ matrix.inputs.run_id }} \
-                --runs_on ${{ matrix.inputs.runs_on }}
+                --runs_on ${{ matrix.inputs.runs_on }} \
+                --branch ${{ matrix.branch }}
 
       - name: Upload actions for extensions
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}
+          name: ${{ matrix.branch }}_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}
           path: |
-            list_failed_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
-            non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
-            tested_platforms_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
+            ${{ matrix.branch }}_list_failed_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
+            ${{ matrix.branch }}_non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
+            ${{ matrix.branch }}_tested_platforms_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
           if-no-files-found: ignore
     
   report:
@@ -150,6 +154,9 @@ jobs:
     needs:
       - get-run-info 
       - run-tests
+    strategy:
+      matrix:
+        branch: ["main", "v1.2-histrionicus"]
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -165,41 +172,41 @@ jobs:
           python -m pip install --upgrade pip
           pip install duckdb pandas tabulate requests
 
-      - name: Download inputs.json
+      - name: Download ${{ matrix.branch }}_inputs.json
         uses: actions/download-artifact@v4
         with:
-          name: inputs.json
+          name: ${{ matrix.branch }}_inputs.json
           path: .
 
       - name: Download extensions artifacts
         uses: actions/download-artifact@v4
         with:
-          pattern: ext*
-          path: failed_ext
+          pattern: ${{ matrix.branch }}_ext*
+          path: ${{ matrix.branch }}_failed_ext
 
       - name: Download duckdb file
         uses: actions/download-artifact@v4
         with:
-          name: run_info_tables.duckdb
-          path: tables
+          name: ${{ matrix.branch }}_run_info_tables.duckdb
+          path: ${{ matrix.branch }}_tables
       
       - name: Generate report
         shell: bash
         env:
           CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
         run: |
-          python scripts/create_build_report.py
+          python scripts/create_build_report.py --branch ${{ matrix.branch }}
 
       - name: Upload REPORT
         uses: actions/upload-artifact@v4
         with:
           name: REPORT
-          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md
+          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
       
       - name: Upload REPORT to the docs directory
         shell: bash
         env:
-          CI_COMMIT_MESSAGE: "Add ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md"
+          CI_COMMIT_MESSAGE: "Add ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md"
           CI_COMMIT_AUTHOR: "hmeriann"
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -209,10 +216,10 @@ jobs:
           git config pull.rebase false
           git pull origin main
 
-          cp ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md docs/
+          cp ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md docs/
 
           ls -lah docs
 
-          git add docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md
+          git add docs/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin main

@@ -9,15 +9,16 @@ Can be tested locally running 'python scripts/create_tables_and_inputs.py' with 
     2. mkdir tables && mv run_info_tables.duckdb tables
 '''
 
+import argparse
 import duckdb
 import datetime
-import pandas as pd
-import tabulate
-import subprocess
+import glob
 import json
 import os
-import glob
+import pandas as pd
 import re
+import subprocess
+import tabulate
 from collections import defaultdict
 from shared_functions import fetch_data
 from shared_functions import list_all_runs
@@ -27,7 +28,12 @@ from shared_functions import BuildJob
 
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 CURR_DATE = os.environ.get('CURR_DATE', datetime.datetime.now().strftime('%Y-%m-%d'))
-REPORT_FILE = f"{ CURR_DATE }-report.md"
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--branch")
+args = parser.parse_args()
+branch = args.branch
+REPORT_FILE = f"{ CURR_DATE }-{ branch }.md"
 
 def create_build_report(build_job, con):
     failures_count = count_consecutive_failures(build_job, con)
@@ -36,7 +42,7 @@ def create_build_report(build_job, con):
     report_title = f"\n\n## { build_job.get_build_job_name() }: { run_name } #{ run_number } - Commit [{ run_sha }]({ run_url }) ({ run_date })\n"
 
     with open(REPORT_FILE, 'a') as f:
-        f.write(f"---\nlayout: post\ntitle: { CURR_DATE } - { run_sha }\nparent: Reports\n---\n")
+        f.write(f"---\nlayout: post\ntitle: { CURR_DATE } - { run_sha }\nparent: { branch.upper() }\n---\n")
         if failures_count == 0:       
             f.write(f"{ report_title } Run succeeded\n{{: .label .label-green}}\n")            
             f.write(f"#### Latest run: [ { run_date } ]({ run_url })\n")
@@ -87,7 +93,7 @@ def create_build_report(build_job, con):
             """).df()
             f.write(failure_details.to_markdown(index=False) + "\n")
 
-            f.write(f"\n### Expected and Actully Uploaded Extensions\n\n")
+            f.write(f"\n### Expected and Actully Uploaded Extension (only different)\nExpected list is from the release.\nMatching extensions are hidden.\n\n")
             failure_details = con.execute(f"FROM extensions_lists ORDER BY ALL;").df()
             f.write(failure_details.to_markdown(index=False) + "\n")
         #     f.write(f"\n### Previously Failed (max 7 shown)\n\n")
@@ -110,12 +116,12 @@ def create_build_report(build_job, con):
         # f.write(artifacts_per_job.to_markdown(index=False) + "\n")
         
         # add extensions
-        inputs = "inputs.json"
+        inputs = f"{ branch }_inputs.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
             # add summary for extensions installing and loading chiecks
-            file_name_pattern = f"failed_ext/ext*/list_failed_ext*.csv"
+            file_name_pattern = f"{ branch }_failed_ext/ext*/list_failed_ext*.csv"
             matching_files = glob.glob(file_name_pattern)
             if matching_files:
                 join_list = ""
@@ -293,7 +299,7 @@ def create_build_report(build_job, con):
 
 def main():
     build_job = BuildJob('InvokeCI')
-    db_name = 'tables/run_info_tables.duckdb'
+    db_name = f'{ branch }_tables/{ branch }_run_info_tables.duckdb'
     con = duckdb.connect(db_name)
     create_build_report(build_job, con)
     con.close()
