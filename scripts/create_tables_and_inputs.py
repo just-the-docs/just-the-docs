@@ -88,6 +88,7 @@ def create_tables_for_report(build_job, con):
     Using 'steps' and 'artifacts' tables creates '{ build_job }_artifacts_per_jobs' table 
         for the final report.
     '''
+
     con.execute(f"""
         CREATE OR REPLACE TABLE '{ build_job.get_run_list_table_name() }' AS (
             SELECT *
@@ -109,6 +110,7 @@ def create_tables_for_report(build_job, con):
             SELECT * FROM read_json('{ build_job.get_expected_artifacts_file_name() }')
         );
     """)
+    
     # check if the artifatcs table is not empty
     artifacts_count = con.execute(f"SELECT list_count(artifacts) FROM '{ build_job.get_artifact_table_name() }';").fetchone()[0]
     if artifacts_count > 0:
@@ -160,16 +162,39 @@ def create_tables_for_report(build_job, con):
                     ) as t2
                 );
             """)
+    # con.execute(f"""
+    #     CREATE OR REPLACE TABLE expected_extensions AS (
+    #         SELECT * FROM (
+    #             SELECT unnest(artifacts)['name'] AS expected 
+    #             FROM { build_job.get_expected_artifact_table_name() }) AS e 
+    #             FULL JOIN (
+    #                 SELECT unnest(artifacts)['name'] AS actual
+    #                 FROM { build_job.get_artifact_table_name() }) AS a
+    #             ON expected = actual);
+    # """)
     con.execute(f"""
-        CREATE OR REPLACE TABLE expected_extensions AS (
-            SELECT * FROM (
-                SELECT unnest(artifacts)['name'] AS expected 
-                FROM { build_job.get_expected_artifact_table_name() }) AS e 
-                FULL JOIN (
+        CREATE OR REPLACE TABLE extensions_lists AS (
+            WITH 
+                exp AS (
+                    SELECT unnest(artifacts)['name'] AS expected
+                    FROM { build_job.get_expected_artifact_table_name() }),
+                act AS (
                     SELECT unnest(artifacts)['name'] AS actual
-                    FROM { build_job.get_artifact_table_name() }) AS a
-                ON expected = actual);
+                    FROM { build_job.get_artifact_table_name() }),
+                expected_extensions AS (
+                    SELECT * FROM exp 
+                    WHERE expected NOT IN (
+                        SELECT * FROM act)), 
+                actual_extensions AS (
+                    SELECT * FROM act 
+                    WHERE actual NOT IN (
+                        SELECT * FROM exp))
+            SELECT * FROM expected_extensions 
+            POSITIONAL JOIN (
+                SELECT * FROM actual_extensions)
+            );
     """)
+
 
 def create_failed_jobs_table(build_job, con):
     url = get_value_for_key("url", build_job)
@@ -279,9 +304,9 @@ def main():
     save_run_data_to_json_files(build_job, con, build_job_run_id)
     create_tables_for_report(build_job, con)
     create_failed_jobs_table(build_job, con)
-    
+
     matrix_data = create_inputs(build_job, con, build_job_run_id)
-    print("#####", matrix_data)
+    # print("#####", matrix_data)
     with open("inputs.json", "w") as f:
         json.dump(matrix_data, f, indent=4)
     con.close()
