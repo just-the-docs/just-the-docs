@@ -62,8 +62,8 @@ jobs:
       - name: Upload DuckDB file
         uses: actions/upload-artifact@v4
         with:
-          name: run_info_tables.duckdb
-          path: run_info_tables.duckdb
+          name: ${{ matrix.config.branch }}_run_info_tables.duckdb
+          path: ${{ matrix.config.branch }}_run_info_tables.duckdb
       
       - name: Read JSON and create matrix
         id: set-outputs
@@ -81,7 +81,7 @@ jobs:
           if-no-files-found: ignore
 
   run-tests:
-    name: ${{ matrix.branch }} -${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.duckdb_arch }} (${{ matrix.inputs.runs_on }})
+    name: ${{ matrix.branch }} - ${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.duckdb_arch }} (${{ matrix.inputs.runs_on }})
     needs: get-run-info
     if: ${{ needs.get-run-info.outputs.matrix != '[]' }}
     strategy:
@@ -133,7 +133,7 @@ jobs:
                 --nightly_build ${{ matrix.inputs.nightly_build }} \
                 --architecture ${{ matrix.inputs.duckdb_arch }} \
                 --run_id ${{ matrix.inputs.run_id }} \
-                --runs_on ${{ matrix.inputs.runs_on }}
+                --runs_on ${{ matrix.inputs.runs_on }} \
                 --branch ${{ matrix.branch }}
 
       - name: Upload actions for extensions
