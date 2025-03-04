@@ -116,7 +116,7 @@ def main():
     extensions = list_extensions()
     if nightly_build in SHOULD_BE_TESTED:
         if nightly_build == 'python':
-            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file_name)
+            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file_name, branch)
         else:
             path_pattern = os.path.join("duckdb_path", "duckdb*")
             matches = glob.glob(path_pattern)
@@ -131,7 +131,9 @@ def main():
                 tested_platform = subprocess_result.stdout.strip()
                 with open(tested_platforms_file_name, "a") as f:
                     f.write(f"{ nightly_build }_{ architecture },{ tested_platform }\n")
+                    print("HERE")
                 test_extensions(tested_binary, file_name, extensions)
+                print("AFTER TEST EXT")
             else:
                 non_matching_sha_file_name = f"{ branch }_non_matching_sha_{ nightly_build }_{ arch }.csv"
                 with open(non_matching_sha_file_name, 'a') as f:
