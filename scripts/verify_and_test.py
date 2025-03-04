@@ -133,7 +133,6 @@ def main():
                     f.write(f"{ nightly_build }_{ architecture },{ tested_platform }\n")
                     print("HERE")
                 test_extensions(tested_binary, file_name, extensions)
-                print("AFTER TEST EXT")
             else:
                 non_matching_sha_file_name = f"{ branch }_non_matching_sha_{ nightly_build }_{ arch }.csv"
                 with open(non_matching_sha_file_name, 'a') as f:
