@@ -200,7 +200,7 @@ jobs:
       - name: Upload REPORT
         uses: actions/upload-artifact@v4
         with:
-          name: REPORT
+          name: ${{ matrix.branch }}-REPORT
           path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
       
       - name: Upload REPORT to the docs directory
