@@ -140,7 +140,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}
+          name: ${{ matrix.branch }}_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}
           path: |
             ${{ matrix.branch }}_list_failed_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
             ${{ matrix.branch }}_non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
@@ -172,41 +172,41 @@ jobs:
           python -m pip install --upgrade pip
           pip install duckdb pandas tabulate requests
 
-      - name: Download ${{ matrix.config.branch }}_inputs.json
+      - name: Download ${{ matrix.branch }}_inputs.json
         uses: actions/download-artifact@v4
         with:
-          name: inputs.json
+          name: ${{ matrix.branch }}_inputs.json
           path: .
 
       - name: Download extensions artifacts
         uses: actions/download-artifact@v4
         with:
-          pattern: ext*
-          path: failed_ext
+          pattern: ${{ matrix.branch }}_ext*
+          path: ${{ matrix.branch }}_failed_ext
 
       - name: Download duckdb file
         uses: actions/download-artifact@v4
         with:
-          name: ${{ matrix }}_run_info_tables.duckdb
-          path: tables
+          name: ${{ matrix.branch }}_run_info_tables.duckdb
+          path: ${{ matrix.branch }}_tables
       
       - name: Generate report
         shell: bash
         env:
           CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
         run: |
-          python scripts/create_build_report.py
+          python scripts/create_build_report.py --branch ${{ matrix.branch }}
 
       - name: Upload REPORT
         uses: actions/upload-artifact@v4
         with:
           name: REPORT
-          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md
+          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
       
       - name: Upload REPORT to the docs directory
         shell: bash
         env:
-          CI_COMMIT_MESSAGE: "Add ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md"
+          CI_COMMIT_MESSAGE: "Add ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md"
           CI_COMMIT_AUTHOR: "hmeriann"
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -216,10 +216,10 @@ jobs:
           git config pull.rebase false
           git pull origin main
 
-          cp ${{ needs.get-run-info.outputs.CURR_DATE }}-report.md docs/
+          cp ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md docs/
 
           ls -lah docs
 
-          git add docs/${{ needs.get-run-info.outputs.CURR_DATE }}-report.md
+          git add docs/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin main
