@@ -201,7 +201,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.branch }}-REPORT
-          path: docs/${{ matrix.branch }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
+          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
       
       - name: Upload REPORT to the docs directory
         shell: bash
@@ -216,6 +216,9 @@ jobs:
           git config pull.rebase false
           git pull origin main
 
+          mkdir -p docs/
+          mkdir -p docs/${{ matrix.branch }}/
+          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md docs/${{ matrix.branch }}/
           ls -lah docs/${{ matrix.branch }}
 
           git add docs/${{ matrix.branch }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
