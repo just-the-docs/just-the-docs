@@ -93,9 +93,6 @@ def create_build_report(build_job, con):
             """).df()
             f.write(failure_details.to_markdown(index=False) + "\n")
 
-            f.write(f"\n### Expected and Actully Uploaded Extension (only different)\nExpected list is from the release.\nMatching extensions are hidden.\n\n")
-            extensions_lists = con.execute(f"FROM extensions_lists ORDER BY ALL;").df()
-            f.write(extensions_lists.to_markdown(index=False) + "\n")
         #     f.write(f"\n### Previously Failed (max 7 shown)\n\n")
         #     failures_count = 7 if failures_count > 7 else failures_count
         #     previously_failed = con.execute(f"""
@@ -289,7 +286,10 @@ def create_build_report(build_job, con):
             """).fetchall()
             pr_f = ['- ' + pf[0] for pf in previously_failed]
             f.write('\n'.join(pr_f) + '\n')
-            
+        
+        f.write(f"\n### Expected and Actully Uploaded Artifacts (only different)\nExpected list is from the release.\nMatching atrifact names are hidden.\n\n")
+        extensions_lists = con.execute(f"FROM extensions_lists ORDER BY ALL;").df()
+        f.write(extensions_lists.to_markdown(index=False) + "\n")
         f.write(f"\n### Workflow Artifacts\n\n")
         artifacts_per_job = con.execute(f"""
             SELECT * FROM '{ build_job.get_artifacts_per_jobs_table_name() }' ORDER BY "Build (Architecture)" ASC;
