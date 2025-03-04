@@ -216,9 +216,9 @@ jobs:
           git config pull.rebase false
           git pull origin main
 
-          cp ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md docs/${{ matrix.branch }}
+          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md docs/${{ matrix.branch }}
 
-          ls -lah docs
+          ls -lah docs/${{ matrix.branch }}
 
           git add docs/${{ matrix.branch }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
