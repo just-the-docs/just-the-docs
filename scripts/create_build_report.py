@@ -121,7 +121,7 @@ def create_build_report(build_job, con):
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
             # add summary for extensions installing and loading chiecks
-            file_name_pattern = f"{ branch }_failed_ext/ext*/list_failed_ext*.csv"
+            file_name_pattern = f"{ branch }_failed_ext/{ branch }_ext*/list_failed_ext*.csv"
             matching_files = glob.glob(file_name_pattern)
             if matching_files:
                 join_list = ""
@@ -172,7 +172,7 @@ def create_build_report(build_job, con):
                     f.write(f"\n### Extensions Summary:\n\n")
                     f.write(ext_results_table.to_markdown(index=False) + '\n')
 
-            py_file_name_pattern = f"failed_ext/ext_python*/list_failed_ext_python*.csv"
+            py_file_name_pattern = f"failed_ext/{ branch }_ext_python*/list_failed_ext_python*.csv"
             matching_files = glob.glob(py_file_name_pattern)
             py_join_list = ""
             if matching_files:
