@@ -216,10 +216,10 @@ jobs:
           git config pull.rebase false
           git pull origin main
 
-          cp ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md docs/
+          cp ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md docs/${{ matrix.branch }}
 
           ls -lah docs
 
-          git add docs/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
+          git add docs/${{ matrix.branch }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin main
