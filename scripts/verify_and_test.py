@@ -108,8 +108,9 @@ def test_extensions(tested_binary, file_name, extensions):
         f.write(f"Unexpected extension with name { EXT_WHICH_DOESNT_EXIST } had been installed.")
 
 def main():
-    file_name = f"{ branch }_list_failed_ext_{ nightly_build }_{ architecture.replace("/", "-") }.csv"
-    tested_platforms_file_name = f"{ branch }_tested_platforms{ nightly_build }_{ architecture.replace("/", "-") }.csv"
+    arch = architecture.replace("/", "-")
+    file_name = f"{ branch }_list_failed_ext_{ nightly_build }_{ arch }.csv"
+    tested_platforms_file_name = f"{ branch }_tested_platforms{ nightly_build }_{ arch }.csv"
 
     full_sha = get_full_sha(run_id)
     extensions = list_extensions()
@@ -132,7 +133,7 @@ def main():
                     f.write(f"{ nightly_build }_{ architecture },{ tested_platform }\n")
                 test_extensions(tested_binary, file_name, extensions)
             else:
-                non_matching_sha_file_name = f"{ branch }_non_matching_sha_{ nightly_build }_{ architecture.replace("/", "-") }.csv"
+                non_matching_sha_file_name = f"{ branch }_non_matching_sha_{ nightly_build }_{ arch }.csv"
                 with open(non_matching_sha_file_name, 'a') as f:
                     f.write(f"{ nightly_build }{ version },{ architecture }\n")
 
