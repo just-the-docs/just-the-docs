@@ -113,7 +113,11 @@ def main():
     tested_platforms_file_name = f"{ branch }_tested_platforms{ nightly_build }_{ arch }.csv"
 
     full_sha = get_full_sha(run_id)
-    extensions = list_extensions()
+    if branch is 'main':
+        extensions = list_extensions()
+    else:
+        extensions=('arrow' 'autocomplete' 'aws' 'azure' 'delta' 'excel' 'fts' 'httpfs' 'iceberg' 'icu' 'inet' 'jemalloc' 'json' 'motherduck' 'mysql_scanner' 'parquet' 'postgres_scanner' 'shell' 'spatial' 'sqlite_scanner' 'sqlsmith' 'substrait' 'tpcds' 'tpch' 'vss')
+
     if nightly_build in SHOULD_BE_TESTED:
         if nightly_build == 'python':
             verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file_name, branch)
