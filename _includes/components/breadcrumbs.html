@@ -1,43 +1,96 @@
 {%- comment -%}
   Include as: {%- include components/breadcrumbs.html -%}
   Depends on: page, site.
+  Includes: components/site_nav.html.
   Results in: HTML for the breadcrumbs component.
   Overwrites:
-    pages_list, parent_page, grandparent_page.
+    nav_list_link, site_nav, nav_list_simple, nav_list_link_class, nav_category,
+    nav_anchor_splits, nav_breadcrumbs, nav_split, nav_split_next, nav_split_test,
+    nav_breadcrumb_link, nav_list_end_less, nav_list_end_count, nav_end_index, nav_breadcrumb.
 {%- endcomment -%}
 
-{%- if page.url != "/" and page.parent -%}
+{%- if page.url != "/" and page.parent and page.title -%}
 
-  {%- assign pages_list = site[page.collection]
-      | default: site.html_pages
-      | where_exp: "item", "item.title != nil"
-      | where_exp: "item", "item.has_children != nil" -%}
+{%- capture site_nav -%}
+{%- include_cached components/site_nav.html all=true -%}
+{%- endcapture -%}
 
-  {%- if page.grand_parent -%}
-    {%- assign parent_page = pages_list
-        | where: "title", page.parent
-        | where: "parent", page.grand_parent
-        | first -%}
-    {%- assign grandparent_page = pages_list
-        | where: "title", page.grand_parent
-        | first -%}
-  {%- else -%}
-    {%- assign parent_page = pages_list
-        | where: "title", page.parent
-        | where_exp: "item", "item.parent == nil"
-        | first -%}
-  {%- endif -%}
+{%- capture nav_list_link -%}
+<a href="{{ page.url | relative_url }}" class="nav-list-link">
+{%- endcapture -%}
+
+{%- capture nav_list_simple -%}
+<ul class="nav-list">
+{%- endcapture -%}
+
+{%- capture nav_list_link_class %} class="nav-list-link">
+{%- endcapture -%}
+
+{%- capture nav_category -%}
+<div class="nav-category">
+{%- endcapture -%}
+
+{%- assign nav_anchor_splits =
+      site_nav | split: nav_list_link |
+      first | split: nav_category |
+      last | split: "</a>" -%}
+
+{%- comment -%}
+  The ordinary pages (if any) and the collections pages (if any) are separated by
+  occurrences of nav_category.
+  
+  Any ancestor nav-links of the page are contained in the last group of pages,
+  immediately preceding nav-lists. After splitting at "</a>", the anchor that
+  was split is a potential ancestor link when the following split starts with
+  a nav-list. 
+  
+  The array nav_breadcrumbs is the stack of current potential ancestors of the
+  current page. A split that contains one or more "</ul>"s requires that number
+  of potential ancestors to be popped from the stack.
+  
+  The number of occurrences of a string in nav_split_next is computed by removing
+  them all, then dividing the resulting size difference by the length of the string.
+{%- endcomment %}
+
+{%- assign nav_breadcrumbs = "" | split: "" -%}
+
+{%- for nav_split in nav_anchor_splits -%}
+{%- unless forloop.last -%}
+
+{%- assign nav_split_next = nav_anchor_splits[forloop.index] | strip -%}
+
+{%- assign nav_split_test =
+      nav_split_next | remove_first: nav_list_simple | prepend: nav_list_simple -%}
+{%- if nav_split_test == nav_split_next -%}
+  {%- assign nav_breadcrumb_link =
+        nav_split | split: "<a " | last | prepend: "<a " |
+        replace: nav_list_link_class, ">" | append: "</a>" -%}
+  {%- assign nav_breadcrumbs = nav_breadcrumbs | push: nav_breadcrumb_link -%}
+{%- endif -%}
+
+{%- if nav_split_next contains "</ul>" -%}
+  {%- assign nav_list_end_less = nav_split_next | remove: "</ul>" -%}
+  {%- assign nav_list_end_count =
+        nav_split_next.size | minus: nav_list_end_less.size | divided_by: 5 -%}
+  {% for nav_end_index in (1..nav_list_end_count) %}
+    {%- assign nav_breadcrumbs = nav_breadcrumbs | pop -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- endunless -%}
+{%- endfor -%}
 
 <nav aria-label="Breadcrumb" class="breadcrumb-nav">
   <ol class="breadcrumb-nav-list">
-  {% if page.parent -%}
-  {%- if page.grand_parent %}
-    <li class="breadcrumb-nav-list-item"><a href="{{ grandparent_page.url | relative_url }}">{{ page.grand_parent }}</a></li>
-  {%- endif %}
-    <li class="breadcrumb-nav-list-item"><a href="{{ parent_page.url | relative_url }}">{{ page.parent }}</a></li>
-  {% endif -%}
+    {%- for nav_breadcrumb in nav_breadcrumbs %}
+    <li class="breadcrumb-nav-list-item">{{ nav_breadcrumb }}</li>
+    {%- endfor %}
     <li class="breadcrumb-nav-list-item"><span>{{ page.title }}</span></li>
   </ol>
 </nav>
+
+{% if site.nav_error_report %}
+{{ nav_error_report }}
+{% endif %}
 
 {%- endif -%}

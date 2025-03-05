@@ -9,6 +9,7 @@ namespace :search do
 
     File.open('assets/js/zzzz-search-data.json', 'w') do |f|
       f.puts '---
+layout: null
 permalink: /assets/js/search-data.json
 ---
 {

@@ -1,0 +1,325 @@
+{%- comment -%}
+  Include as: {%- include css/activation.scss.liquid -%}
+  Depends on: page.
+  Results in: page-dependent CSS rules for inclusion in a style element,
+    which needs to be disabled when JS is enabled.
+  Includes: components/site_nav.html.
+  Overwrites: 
+    activation_no_nav_link, nav_list_link, site_nav,
+    nav_list, nav_list_end, nav_list_item, nav_category_list,
+    nav_list_link_prefix, nav_splits, nav_split, nav_levels,
+    nav_list_less, nav_list_count, nav_end_less, nav_end_count,
+    nav_index, nav_slice_size,
+    activation_collection_prefix, activation_other_collection_prefix.
+  Should not be cached, because it depends on page.
+{%- endcomment -%}
+
+{%- comment -%}
+  The CSS rules in activation_no_nav_link are for use on pages excluded from the main navigation.
+  - The first rule ensures that no nav-link has a background image.
+  - The other two rules ensure that all folding collections are expanded.
+{%- endcomment -%}
+
+{%- capture site_nav -%}
+{%- include_cached components/site_nav.html -%}
+{%- endcapture -%}
+
+{%- capture activation_no_nav_link %}
+    .site-nav ul li a {
+      background-image: none;
+    }
+
+    {%- if site.just_the_docs.collections %}
+    .site-nav > ul.nav-category-list > li > button svg {
+      transform: rotate(-90deg);
+    }
+    .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list {
+      display: block;
+    }
+    {%- endif %}
+{% endcapture -%}
+
+{%- capture nav_list_link -%}
+<a href="{{ page.url | relative_url }}" class="nav-list-link">
+{%- endcapture -%}
+
+{%- if site_nav contains nav_list_link -%}
+
+  {%- capture nav_list -%}
+  <ul class="nav-list
+  {%- endcapture -%}
+
+  {%- assign nav_list_end = "</ul>" -%}
+
+  {%- capture nav_list_item -%}
+  <li class="nav-list-item
+  {%- endcapture -%}
+
+  {%- capture nav_category_list -%}
+  <ul class="nav-list nav-category-list">
+  {%- endcapture -%}
+
+  {%- assign nav_list_link_prefix =
+        site_nav | split: nav_list_link | first | append: nav_list_link -%}
+
+  {%- assign nav_splits =
+        nav_list_link_prefix | split: nav_list_item | pop -%}
+
+  {%- assign nav_levels = "" | split: "" | push: 1 -%}
+
+  {%- comment -%}
+    The pattern of occurrences of list and list-item tags in the site_nav string
+    is included in the language defined by the following context-free grammar:
+    
+      site_nav = PAGES? EXTERNALS? COLLECTION*
+
+      PAGES = nav_list (nav_list_item PAGES?)+ nav_list_end
+
+      EXTERNALS = nav_list nav_list_item+ nav_list_end
+
+      COLLECTION = nav_list (nav_list_item PAGES?)* nav_list_end
+                 | nav_category_list 
+                     nav_list_item nav_list (nav_list_item PAGES?)* nav_list_end
+                   nav_list_end
+    
+    To determine the path in the site_nav to the nav_list_link for the current page,
+    the prefix of nav_list_link in site_nav is split at each nav_list_item to give
+    an array of nav_splits.
+    
+    In site_nav, occurrences of nav_list must be separated by at least one
+    nav_list_item or nav_list_end. Moreover, when a nav_list_end is followed by a
+    nav_list without an intervening nav_list_item, that nav_list must start either
+    a list of external links or a collection. And when a nav_list is followed by a
+    nav_list_end without an intervening nav_list_item, they form an empty collection.
+    
+    nav_levels is the path determined by the previously inspected nav_splits.
+    How many times nav_list and nav_list_end occur in the current nav_split 
+    determines how to update the path.
+    
+    A nav_split can contain any number of empty non-foldable collections.
+    The path element produced by the outer nav_list of a foldable collection is
+    irrelevant; it is set to zero and subsequently removed.
+      
+    The number of occurrences of a string in a nav_split is computed by removing
+    them all, then dividing the resulting size difference by the length of the string.
+    
+    Case analysis on (nav_list_count, nav_list_end_count):
+    
+    - when (0, 0), the nav_split was between two nav_list_items at the same level;
+    
+    - when (0, N+1), all the nav_list_ends in the nav_split are in PAGES or in one
+      COLLECTION;
+      
+    - when (M+1, 0), M must be 0 (because two nav_lists in the same nav_split must
+      be separated by at least one nav_list_end);
+      
+    - when (M+1, N+1), the nav_split must contain either:
+      - the end of PAGES followed by the start of EXTERNALS, or
+      - the end of PAGES followed by the start of a COLLECTION, or
+      - the end of EXTERNALS followed by the start of a COLLECTION, or
+      - the end of one COLLECTION followed by the start of another, or
+      - (in the first nav_split) one or more empty non-foldable COLLECTIONS
+        followed by the start of a COLLECTION.
+      In general, nav_levels[0] here needs to be incremented by nav_list_count.
+      However, a nav_split that contains the end of an empty foldable collection
+      followed by the just the start of a collection has two occurrences of nav_list,
+      and the increment needs to be one less; similarly when the first nav_split
+      starts with an empty non-foldable collection.
+  {%- endcomment %}
+
+  {%- for nav_split in nav_splits -%}
+
+    {%- assign nav_list_less = nav_split | remove: nav_list -%}
+    {%- assign nav_list_count =
+          nav_split.size | minus: nav_list_less.size | 
+          divided_by: nav_list.size -%}
+
+    {%- assign nav_list_end_less = nav_split | remove: nav_list_end -%}
+    {%- assign nav_list_end_count =
+          nav_split.size | minus: nav_list_end_less.size | 
+          divided_by: nav_list_end.size -%}
+
+    {%- if nav_list_count == 0 and nav_list_end_count == 0 -%}
+
+      {%- assign nav_index = nav_levels[-1] | plus: 1 -%}
+      {%- assign nav_levels = nav_levels | pop | push: nav_index -%}
+
+    {%- elsif nav_list_count == 0 and nav_list_end_count >= 1 -%}
+
+      {%- assign nav_slice_size = nav_levels.size | minus: nav_list_end_count -%}
+      {%- assign nav_levels = nav_levels | slice: 0, nav_slice_size -%}
+      {%- assign nav_index = nav_levels[-1] | plus: 1 -%}
+      {%- assign nav_levels = nav_levels | pop | push: nav_index -%}
+
+    {%- elsif nav_list_count == 1 and nav_list_end_count == 0 -%}
+
+      {%- if nav_split contains nav_category_list -%}
+        {%- assign nav_levels = nav_levels | push: 0 -%}
+      {%- else -%}
+        {%- assign nav_levels = nav_levels | push: 1 -%}
+      {%- endif -%}
+
+    {%- elsif nav_list_count >= 1 and nav_list_end_count >= 1 -%}
+
+      {%- assign nav_index = nav_levels[0] | plus: nav_list_count -%}
+      {%- if nav_levels[-1] == 0 or forloop.first -%}
+        {%- assign nav_index = nav_index | minus: 1 -%}
+      {%- endif -%}
+      {%- assign nav_levels = nav_levels | slice: 0, 0 | push: nav_index -%}
+      {%- if nav_split contains nav_category_list -%}
+        {%- assign nav_levels = nav_levels | push: 0 -%}
+      {%- else -%}
+        {%- assign nav_levels = nav_levels | push: 1 -%}
+      {%- endif -%}
+
+    {%- endif -%}
+
+  {%- endfor -%}
+
+  {%- assign nav_levels = nav_levels | where_exp: "item", "item >= 1" -%}
+
+  {%- comment -%}
+    The generated CSS depends on the position of the current page in each level in
+    the navigation.
+
+    nav_page_level is the depth of the navigation hierarchy (ignoring collections).
+    In existing 3-level sites, nav_page_level <= 3.
+    In multi-level sites, nav_page_level is unbounded.
+  {%- endcomment -%}
+
+  {%- assign nav_page_level = nav_levels.size | minus: 1 -%}
+  {%- assign nav_page_parent_level = nav_page_level | minus: 1 -%}
+  {%- assign nav_page_grandparent_level = nav_page_level | minus: 2 -%}
+
+  {%- comment -%}
+    The site-nav is:
+    - an optional ul.nav-list with li.nav-list-items for non-collection top-level pages
+    - an optional ul.nav-list with li.nav-list-item.externals
+    - any number of just-the-docs.collections
+    
+    A non-foldable collection is:
+    - a div.nav-category with the collection name, followed by:
+    - a ul.nav-list with li.nav-list-items for its top-level pages
+    
+    A foldable collection is:
+    - a ul.nav-list.nav-category-list with a single li.nav-list-item containing:
+      - an optional button with the expander svg
+      - a div.nav-category with the collection name
+      - a ul.nav-list with li.nav-list-items for its top-level pages
+    
+    The generated CSS uses:
+    - activation_collection_prefix, to select the site-nav > ul.nav-list for the page
+    - activation_other_collection_prefix, to select all the other site-nav > ul.nav-lists
+  {%- endcomment -%}
+
+  {%- if page.collection == nil -%}
+
+    {%- capture activation_collection_prefix -%}
+    .site-nav > ul.nav-list:first-child
+    {%- endcapture -%}
+
+    {%- capture activation_other_collection_prefix -%}
+    .site-nav > ul.nav-list:not(:first-child)
+    {%- endcapture -%}
+
+  {%- else -%}
+
+    {%- capture activation_collection_prefix -%}
+    .site-nav > ul:nth-of-type({{ nav_levels[0] }})
+    {%- if site.just_the_docs.collections[page.collection].nav_fold %} > li > ul
+    {%- endif -%}
+    {%- endcapture -%}
+
+    {%- capture activation_other_collection_prefix -%}
+    .site-nav > ul:not(:nth-of-type({{ nav_levels[0] }}))
+    {%- endcapture -%}
+
+  {%- endif -%}
+
+  {%- comment -%}
+    The required background image of the link to the current page may involve SCSS.
+    To avoid page-dependent SCSS, all nav links initially have that background image.
+    The following rule removes the image from the links to all parents, siblings,
+    and children of the current page.
+  {%- endcomment %}
+
+    {% if nav_page_level >= 2 -%}
+    {%- for i in (1..nav_page_parent_level) -%}
+    {{ activation_collection_prefix }} >
+    {%- for j in (2..i) %} li > ul >
+    {%- endfor %} li > a,
+    {% endfor -%}
+    {%- endif %}
+    {{ activation_collection_prefix }} >
+    {%- for i in (1..nav_page_parent_level) %} li > ul >
+    {%- endfor %} li:not(:nth-child({{ nav_levels[nav_page_level] }})) > a,
+    {{ activation_collection_prefix }} >
+    {%- for i in (1..nav_page_level) %} li > ul >
+    {%- endfor %} li a {
+      background-image: none;
+    }
+
+  {%- comment -%}
+    The following rule removes the image from the links to pages in other collections.
+  {%- endcomment %}
+
+    {{ activation_other_collection_prefix }} a,
+    .site-nav li.external a {
+      background-image: none;
+    }
+
+  {%- comment -%}
+    The following rule styles the link to the current page.
+  {%- endcomment %}
+
+    {{ activation_collection_prefix }} > li:nth-child({{ nav_levels[1] }})
+    {%- for i in (2..nav_page_level) %} > ul > li:nth-child({{ nav_levels[i] }})
+    {%- endfor %} > a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+  {%- comment -%}
+    The following rules unfold all collections, and display the links to any children
+    of the current page.
+    
+    To avoid dependence on the SCSS variable nav-list-expander-right, the direction
+    of the rotation of the expander icon is fixed, and corresponds to the appearance
+    when nav-list-expander-right is true. This results in a minor visual difference
+    between the appearance of active expander icons when JS is enabled/disabled and
+    nav-list-expander-right is false, which seems unavoidable.
+  {%- endcomment %}
+
+    {%- if site.just_the_docs.collections %}
+    .site-nav > ul.nav-category-list > li > button svg,
+    {% endif -%}
+    {{ activation_collection_prefix }} > li:nth-child({{ nav_levels[1] }}) > button svg
+    {%- for i in (2..nav_page_level) %},
+    {{ activation_collection_prefix }} > li:nth-child({{ nav_levels[1] }}) > 
+    {%- for j in (2..i) %} ul > li:nth-child({{ nav_levels[j] }}) >
+    {%- endfor %} button svg
+    {%- endfor %} {
+      transform: rotate(-90deg);
+    }
+
+    {%- if site.just_the_docs.collections %}
+    .site-nav > ul.nav-category-list > li.nav-list-item > ul.nav-list,
+    {% endif -%}
+    {{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ nav_levels[1] }}) > ul.nav-list
+    {%- for i in (2..nav_page_level) %},
+    {{ activation_collection_prefix }} > li.nav-list-item:nth-child({{ nav_levels[1] }}) >
+    {%- for j in (2..i) %} ul.nav-list > li.nav-list-item:nth-child({{ nav_levels[j] }}) >
+    {%- endfor %} ul.nav-list
+    {%- endfor %} {
+      display: block;
+    }
+
+{%- else -%}
+
+  {%- comment -%}
+    not site_nav contains nav_list_link
+  {%- endcomment -%}
+
+    {{ activation_no_nav_link }}
+
+{%- endif -%}

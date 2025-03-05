@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Layout
 parent: Utilities
 ---
@@ -19,7 +18,7 @@ parent: Utilities
 
 These spacers are available to use for margins and padding with responsive utility classes. Combine these prefixes with a screen size and spacing scale to use them responsively.
 
-| Classname prefix | What it does                  |
+| Classname prefix | Related CSS Property          |
 |:-----------------|:------------------------------|
 | `.m-`            | `margin`                      |
 | `.mx-`           | `margin-left`, `margin-right` |
@@ -29,7 +28,7 @@ These spacers are available to use for margins and padding with responsive utili
 | `.mb-`           | `margin-bottom`               |
 | `.ml-`           | `margin-left`                 |
 
-| Classname prefix | What it does                    |
+| Classname prefix | Related CSS Property            |
 |:-----------------|:--------------------------------|
 | `.p-`            | `padding`                       |
 | `.px-`           | `padding-left`, `padding-right` |
@@ -55,13 +54,13 @@ Spacing values are based on a `1rem = 16px` spacing scale, broken down into thes
 
 Use `mx-auto` to horizontally center elements.
 
-#### Examples
-{: .no_toc }
+### Applying Spacing Utilities with `{: }`
+{: .no_toc .text-delta }
 
 In Markdown, use the `{: }` wrapper to apply custom classes:
 
 ```markdown
-This paragraph will have a margin bottom of 1rem/16px at large screens.
+This paragraph will have a margin bottom of 1rem/16px on large screens.
 {: .mb-lg-4 }
 
 This paragraph will have 2rem/32px of padding on the right and left at all screen sizes.
@@ -70,7 +69,7 @@ This paragraph will have 2rem/32px of padding on the right and left at all scree
 
 ## Horizontal Alignment
 
-| Classname               | What it does                     |
+| CSS Class               | Applied CSS Declaration          |
 |:------------------------|:---------------------------------|
 | `.float-left`           | `float: left`                    |
 | `.float-right`          | `float: right`                   |
@@ -83,7 +82,7 @@ _Note: any of the `flex-` classes must be used on a parent element that has `d-f
 
 ## Vertical Alignment
 
-| Classname              | What it does                    |
+| CSS Class              | Applied CSS Declaration         |
 |:-----------------------|:--------------------------------|
 | `.v-align-baseline`    | `vertical-align: baseline`      |
 | `.v-align-bottom`      | `vertical-align: bottom`        |
@@ -96,7 +95,7 @@ _Note: any of the `flex-` classes must be used on a parent element that has `d-f
 
 Display classes aid in adapting the layout of the elements on a page:
 
-| Class             |                         |
+| CSS Class         | Applied CSS Declaration |
 |:------------------|:------------------------|
 | `.d-block`        | `display: block`        |
 | `.d-flex`         | `display: flex`         |
@@ -106,8 +105,8 @@ Display classes aid in adapting the layout of the elements on a page:
 
 Use these classes in conjunction with the responsive modifiers.
 
-#### Examples
-{: .no_toc }
+### Applying Display Utilities with `{: }`
+{: .no_toc .text-delta }
 
 In Markdown, use the `{: }` wrapper to apply custom classes:
 

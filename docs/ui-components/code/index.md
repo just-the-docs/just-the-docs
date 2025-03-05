@@ -1,8 +1,6 @@
 ---
-layout: default
 title: Code
 parent: UI Components
-has_children: true
 nav_order: 6
 ---
 
@@ -58,6 +56,8 @@ var fun = function lang(l) {
 ```
 {% endhighlight %}
 
+Syntax highlighting, line numbers, and HTML compression do not work together; **the combination of these features generates invalid HTML that renders incorrectly**. To learn more, see ["Code with line numbers"]({% link docs/ui-components/code/line-numbers.md %}).
+
 ---
 
 ## Code blocks with rendered examples
@@ -68,22 +68,22 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 
 <div class="code-example" markdown="1">
 
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 
 </div>
 ```markdown
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 ```
 
 </div>
 {% highlight markdown %}
 <div class="code-example" markdown="1">
 
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 
 </div>
 ```markdown
-[Link button](http://example.com/){: .btn }
+[Link button](https://just-the-docs.com){: .btn }
 ```
 {% endhighlight %}
 
@@ -115,7 +115,7 @@ Additional configuration options are loaded through `_includes/mermaid_config.js
 
 This loads the default settings.
 
-The contents of this object should follow [mermaid's configuration API](https://mermaid-js.github.io/mermaid/#/./Setup?id=configuration). For example, to override the theme, change `_includes/mermaid_config.js` to:
+The contents of this object should follow [mermaid's configuration API](https://mermaid.js.org/config/configuration.html). For example, to override the theme, change `_includes/mermaid_config.js` to:
 
 ```js
 // _includes/mermaid_config.js
@@ -129,6 +129,8 @@ Once mermaid is installed, it can be used in markdown files. The markdown for a 
 {% highlight markdown %}
 ```mermaid
 graph TD;
+    accTitle: the diamond pattern
+    accDescr: a graph with four nodes: A points to B and C, while B and C both point to D
     A-->B;
     A-->C;
     B-->D;
@@ -140,6 +142,8 @@ which renders:
 
 ```mermaid
 graph TD;
+    accTitle: the diamond pattern
+    accDescr: a graph with four nodes: A points to B and C, while B and C both point to D
     A-->B;
     A-->C;
     B-->D;
@@ -177,6 +181,8 @@ By default, AsciiDoc generates HTML markup that mermaid cannot properly parse. T
 ++++
 <pre class="language-mermaid">
 graph TD;
+    accTitle: the diamond pattern
+    accDescr: a graph with four nodes: A points to B and C, while B and C both point to D
     A-->B;
     A-->C;
     B-->D;
@@ -185,7 +191,7 @@ graph TD;
 ++++
 {% endhighlight %}
 
-Alternatively, community member [@flyx](https://.github.com/flyx) has contributed a Ruby extension that does not require extra markup. The extension is available [as a GitHub Gist](https://gist.github.com/flyx/9fff080cf4edc95d495bc661a002232c). Thank you to [@flyx](https://.github.com/flyx)!
+Alternatively, community member [@flyx](https://github.com/flyx) has contributed a Ruby extension that does not require extra markup. The extension is available [as a GitHub Gist](https://gist.github.com/flyx/9fff080cf4edc95d495bc661a002232c). Thank you to [@flyx](https://github.com/flyx)!
 
 The [asciidoctor-diagram](https://docs.asciidoctor.org/diagram-extension/latest/) extension which also supports mermaid is not recommended for use with Just the Docs, since it requires separate configuration e.g. for theming, and is known to not be trivial to set up.
 

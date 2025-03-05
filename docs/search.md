@@ -1,5 +1,4 @@
 ---
-layout: default
 title: Search
 nav_order: 7
 ---
@@ -15,7 +14,7 @@ nav_order: 7
 
 ---
 
-Just the Docs uses [lunr.js](http://lunrjs.com) to add a client-side search interface powered by a JSON index that Jekyll generates.
+Just the Docs uses [lunr.js](https://lunrjs.com) to add a client-side search interface powered by a JSON index that Jekyll generates.
 All search results are shown in an auto-complete style interface (there is no search results page).
 By default, all generated HTML pages are indexed using the following data points:
 
@@ -94,12 +93,25 @@ The search button displays in the bottom right corner of the screen and triggers
 search.button: true
 ```
 
+### Focus search bar with a keyboard shortcut
+
+Just the Docs supports focusing the search bar input with a keyboard shortcut. After setting the `search.focus_shortcut_key` config item key, users who press <kbd>Ctrl</kbd> + `search.focus_shortcut_key` (or on macOS, <kbd>Command</kbd> + `search.focus_shortcut_key`) will focus the search bar.
+
+Note that this feature is **disabled by default**. `search.focus_shortcut_key` should be a [valid value from `KeyboardEvent.key`](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key); this involves all ASCII alphanumeric values, as well as modifier keys.
+
+For example,
+
+```yaml
+search:
+    focus_shortcut_key: 'k'
+```
+
+Will make <kbd>Ctrl</kbd> + <kbd>K</kbd> focus the search bar for Windows users (and <kbd>Command</kbd> + <kbd>K</kbd> on macOS).
+
 ## Hiding pages from search
 
 Sometimes you might have a page that you don't want to be indexed for the search nor to show up in search results, e.g., a 404 page.
 To exclude a page from search, add the `search_exclude: true` parameter to the page's YAML front matter:
-
-#### Example
 
 {: .no_toc }
 
@@ -144,7 +156,8 @@ By default, the search feature indexes a page's `.content`, `.title`, and *some*
 2. Add a new file named `_includes/lunr/custom-data.json`. Insert custom Liquid code that reads your data (e.g. the page object at `include.page`) then generates custom Javascript fields that hold the custom data you want to index. Verify these fields in the generated `assets/js/search-data.json`.
 3. Add a new file named `_includes/lunr/custom-index.js`. Insert custom Javascript code that reads your custom Javascript fields and inserts them into the search index. You may want to inspect `assets/js/just-the-docs.js` to better understand the code.
 
-#### Example
+### Example: adding custom `usage` and `examples` fields
+{: .text-delta }
 
 This example adds front matter `usage` and `examples` fields to the search index.
 
