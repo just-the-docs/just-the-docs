@@ -113,7 +113,7 @@ def main():
     tested_platforms_file_name = f"{ branch }_tested_platforms{ nightly_build }_{ arch }.csv"
 
     full_sha = get_full_sha(run_id)
-    if branch is 'main':
+    if branch == 'main':
         extensions = list_extensions()
     else:
         extensions=('arrow' 'autocomplete' 'aws' 'azure' 'delta' 'excel' 'fts' 'httpfs' 'iceberg' 'icu' 'inet' 'jemalloc' 'json' 'motherduck' 'mysql_scanner' 'parquet' 'postgres_scanner' 'shell' 'spatial' 'sqlite_scanner' 'sqlsmith' 'substrait' 'tpcds' 'tpch' 'vss')
