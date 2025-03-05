@@ -212,7 +212,7 @@ def create_build_report(build_job, con):
             for tested_binary in tested_binaries:
                 tested_binary = tested_binary + "_" + architecture if tested_binary == 'osx' else tested_binary.replace("-", "_")
                 # add unmatching sha
-                file_name_pattern = f"{ branch }_failed_ext/{ branch }_ext_{ tested_binary }*/non_matching_sha_{ tested_binary }*.csv"
+                file_name_pattern = f"{ branch }_failed_ext/{ branch }_ext_{ tested_binary }*/{ branch }_non_matching_sha_{ tested_binary }*.csv"
                 matching_files = glob.glob(file_name_pattern)
                 if matching_files:
                     unmatched = con.execute(f"""
