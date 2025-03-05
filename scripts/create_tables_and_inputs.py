@@ -302,7 +302,7 @@ def create_inputs(build_job, con, build_job_run_id):
                         }
                         matrix_data.append(new_data)
     else:
-            matrix_data.append({
+        matrix_data.append({
             "nightly_build": "linux",
             "duckdb_arch": "aarch64",
             "runs_on": "ubuntu-22.04-arm",
