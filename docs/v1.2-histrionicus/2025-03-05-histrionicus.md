@@ -12,33 +12,55 @@ parent: V1.2-HISTRIONICUS
 
 ### Extensions Summary:
 
-| extension        | osx_amd64          | osx_arm64          |
-|:-----------------|:-------------------|:-------------------|
-| arrow            | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| aws              | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| azure            | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| delta            | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| excel            | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| fts              | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| httpfs           | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| iceberg          | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| inet             | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| mysql_scanner    | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| postgres_scanner | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| spatial          | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| sqlite_scanner   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| tpcds            | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| tpch             | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
-| vss              | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| extension        | linux_aarch64      | linux_amd64        | osx_amd64          | osx_arm64          |
+|:-----------------|:-------------------|:-------------------|:-------------------|:-------------------|
+| arrow            | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| aws              | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| azure            | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| delta            | INSTALL: ❌ LOAD: ❌ | INSTALL: ❌ LOAD: ❌ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| excel            | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| fts              | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| httpfs           | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| iceberg          | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| inet             | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| mysql_scanner    | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| postgres_scanner | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| spatial          | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| sqlite_scanner   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| tpcds            | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| tpch             | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
+| vss              | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅ |
 
-### Expected and Actully Uploaded Artifacts (only different)
-Expected list is from the release.
-Matching atrifact names are hidden.
+### Extensions Checking Results for Python builds:
 
-| expected                      | actual   |
-|:------------------------------|:---------|
-| duckdb-binaries-windows       |          |
-| duckdb-binaries-windows-arm64 |          |
+| extension        | python_3-10_aarch64   | python_3-13_aarch64   | python_3-12_amd64   | python_3-11_aarch64   | python_3-8_aarch64   | python_3-9_amd64   | python_3-9_aarch64   | python_3-11_amd64   | python_3-8_amd64   | python_3-12_aarch64   | python_3-10_amd64   | python_3-13_amd64   |
+|:-----------------|:----------------------|:----------------------|:--------------------|:----------------------|:---------------------|:-------------------|:---------------------|:--------------------|:-------------------|:----------------------|:--------------------|:--------------------|
+| arrow            | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| autocomplete     | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| aws              | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| azure            | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| delta            | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| excel            | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| fts              | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| httpfs           | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| iceberg          | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| inet             | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| mysql_scanner    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| postgres_scanner | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| spatial          | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| sqlite_scanner   | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| tpcds            | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+| vss              | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅   | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅ | INSTALL: ✅ LOAD: ✅    | INSTALL: ✅ LOAD: ✅  | INSTALL: ✅ LOAD: ✅  |
+
+#### Found unmatching versions:
+
+| python3-7   | aarch64   |
+|-------------|-----------|
+
+#### Found unmatching versions:
+
+| python3-7   | amd64   |
+|-------------|---------|
 
 ### Workflow Artifacts
 
