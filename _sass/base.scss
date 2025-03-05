@@ -90,7 +90,10 @@ li {
 
 img {
   max-width: 100%;
-  height: auto;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 hr {
