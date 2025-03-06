@@ -255,10 +255,11 @@ jobs:
           git pull origin main
 
           mkdir -p docs/
+          mkdir -p docs/main
+          mkdir -p docs/v1.2-histrionicus
+
           ls -lah
-          ls -lah docs
-          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-main.md docs/main/
-          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-v1.2-histrionicus.md docs/v1.2-histrionicus/
+          ls -lah docs/REPORT*
 
           mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-main.md docs/main/
           mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-v1.2-histrionicus.md docs/v1.2-histrionicus/
