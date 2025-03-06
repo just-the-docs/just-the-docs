@@ -127,7 +127,7 @@ jobs:
                 .github/config
             path: ext
             
-      - name: Verify ${{ matrix.inputs.nightly_build }} build version and Test extensions
+      - name: Verify ${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.duckdb_arch }} build version and Test extensions
         id: verify-build
         shell: bash
         env:

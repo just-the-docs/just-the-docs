@@ -239,7 +239,7 @@ def get_runner(platform, architecture):
         case 'windows':
             return "windows-2019"
         case _:
-            return "ubuntu-22.04-arm" if architecture == 'arm64' else "ubuntu-latest"
+            return "ubuntu-24.04-arm" if architecture == 'arm64' else "ubuntu-latest"
 
 def get_artifacts_list(con, build_job, artifatc_type):
     artifacts = con.execute(f"""
@@ -311,7 +311,7 @@ def create_inputs(build_job, con, build_job_run_id):
             "event": event,
             "nightly_build": "linux",
             "duckdb_arch": "aarch64",
-            "runs_on": "ubuntu-22.04-arm",
+            "runs_on": "ubuntu-24.04-arm",
             "run_id": build_job_run_id,
             "duckdb_binary": "linux-aarch64"
         })
@@ -329,7 +329,7 @@ def create_inputs(build_job, con, build_job_run_id):
             "event": event,
             "nightly_build": "python",
             "duckdb_arch": "aarch64",
-            "runs_on": "ubuntu-22.04-arm",
+            "runs_on": "ubuntu-24.04-arm",
             "run_id": build_job_run_id,
             "duckdb_binary": ""
         })
@@ -365,7 +365,7 @@ def create_inputs(build_job, con, build_job_run_id):
             "event": event,
             "nightly_build": "windows",
             "duckdb_arch": "amd64",
-            "runs_on": "windows-2019",
+            "runs_on": "windows-latest",
             "run_id": build_job_run_id,
             "duckdb_binary": "windows-amd64"
         })
