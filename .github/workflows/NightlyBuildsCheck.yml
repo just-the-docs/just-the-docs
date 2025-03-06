@@ -29,7 +29,8 @@ jobs:
     name: Generate nightly build artifact json file
     runs-on: ubuntu-latest
     outputs:
-      matrix: ${{ steps.set-outputs.outputs.matrix }}
+      matrix_main: ${{ steps.set-outputs.outputs.matrix_main }}
+      matrix_release: ${{ steps.set-outputs.outputs.matrix_release }}
       CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
     strategy:
       matrix:
@@ -69,7 +70,11 @@ jobs:
         id: set-outputs
         run: |
           matrix=$(cat ${{ matrix.config.branch }}_inputs.json | jq -c '.')
-          echo "matrix=$matrix" >> $GITHUB_OUTPUT
+          if [[ ${{ matrix.config.branch }} == 'main' ]]; then
+            echo "matrix_main=$matrix" >> $GITHUB_OUTPUT
+          else
+            echo "matrix_release=$matrix" >> $GITHUB_OUTPUT
+          fi
           echo "***"
           cat ${{ matrix.config.branch }}_inputs.json
       
@@ -83,11 +88,16 @@ jobs:
   run-tests:
     name: ${{ matrix.branch }} - ${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.duckdb_arch }} (${{ matrix.inputs.runs_on }})
     needs: get-run-info
-    if: ${{ needs.get-run-info.outputs.matrix != '[]' }}
+    if: ${{ needs.get-run-info.outputs.matrix_main != '[]' }}
     strategy:
       matrix:
-        inputs: ${{ fromJson(needs.get-run-info.outputs.matrix) }}
         branch: ["main", "v1.2-histrionicus"]
+        include:
+          - branch: "main"
+            inputs: ${{ fromJson(needs.get-run-info.outputs.matrix_main) }}
+          - branch: "v1.2-histrionicus"
+            inputs: ${{ fromJson(needs.get-run-info.outputs.matrix_release) }}
+
     continue-on-error: true
     runs-on: ${{ matrix.inputs.runs_on }}
     steps:
