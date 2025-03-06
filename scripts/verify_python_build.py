@@ -51,7 +51,7 @@ def list_builds_for_python_versions(run_id):
         result = [word[0] + '.' + word[1:] if len(word) > 1 else word + '.' for word in matches]
         return result
 
-def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platform, tested_platforms_file_name, branch):
+def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file_name, branch):
     python_versions = list_builds_for_python_versions(run_id)
     if runs_on.startswith("ubuntu"):
         for version in python_versions:

@@ -120,7 +120,7 @@ def main():
 
     if nightly_build in SHOULD_BE_TESTED:
         if nightly_build == 'python':
-            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platform, tested_platforms_file_name, branch)
+            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file_name, branch)
         else:
             path_pattern = os.path.join("duckdb_path", "duckdb*")
             matches = glob.glob(path_pattern)
