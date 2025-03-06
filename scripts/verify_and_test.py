@@ -59,7 +59,6 @@ def get_full_sha(run_id):
     return full_sha
 
 def verify_version(tested_binary, full_sha):
-    os.chmod(duckdb_binary_path, 0o755)
     pragma_version = [ tested_binary, "--version" ]
     short_sha = subprocess.run(pragma_version, text=True, capture_output=True).stdout.strip().split()[-1]
     return sha_matching(short_sha, full_sha, tested_binary, architecture)
@@ -127,6 +126,7 @@ def main():
             matches = glob.glob(path_pattern)
             if matches:
                 tested_binary = os.path.abspath(matches[0])
+                os.chmod(tested_binary, 0o755)
                 print(f"Found binary: { tested_binary }")
             else:
                 raise FileNotFoundError(f"No binary matching { path_pattern } found in duckdb_path dir.")
