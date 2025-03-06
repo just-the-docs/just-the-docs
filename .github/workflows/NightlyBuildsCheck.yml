@@ -103,9 +103,8 @@ jobs:
     strategy:
       matrix:
         inputs: ${{ fromJson(needs.merge-input-files.outputs.matrix) }}
-
     continue-on-error: true
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.inputs.runs_on }}
     steps:
       - run: echo ${{ matrix.inputs.branch }} ${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.runs_on }} ${{ matrix.inputs.duckdb_arch }} 
       - name: Set up Python
