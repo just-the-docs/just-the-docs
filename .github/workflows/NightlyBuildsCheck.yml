@@ -259,10 +259,12 @@ jobs:
           mkdir -p docs/v1.2-histrionicus
 
           ls -lah
-          ls -lah docs/REPORT*
-
+          
           mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-main.md docs/main/
           mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-v1.2-histrionicus.md docs/v1.2-histrionicus/
+
+          ls -lah docs/main
+          ls -lah docs/v1.2-histrionicus
 
           git add docs/main/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git add docs/v1.2-histrionicus/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
