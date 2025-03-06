@@ -145,7 +145,7 @@ jobs:
                   fi
                 else
                   if [[ ${{ matrix.inputs.branch }} != 'main' && ${{ matrix.inputs.nightly_build }} == 'linux' ]]; then
-                    unzip duckdb_cli-${{ matrix.inputs.duckdb_binary }}-${{ matrix.inputs.duckdb_arch }}.zip -d duckdb_path
+                    unzip duckdb_cli-${{ matrix.inputs.duckdb_arch }}.zip -d duckdb_path
                   fi
                   unzip duckdb_cli-${{ matrix.inputs.duckdb_binary }}.zip -d duckdb_path
                 fi
