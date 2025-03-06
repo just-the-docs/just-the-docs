@@ -29,8 +29,6 @@ jobs:
     name: Generate nightly build artifact json file
     runs-on: ubuntu-latest
     outputs:
-      matrix_main: ${{ steps.set-outputs.outputs.matrix_main }}
-      matrix_release: ${{ steps.set-outputs.outputs.matrix_release }}
       CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
     strategy:
       matrix:
@@ -66,18 +64,6 @@ jobs:
           name: ${{ matrix.config.branch }}_run_info_tables.duckdb
           path: ${{ matrix.config.branch }}_run_info_tables.duckdb
       
-      - name: Read JSON and create matrix
-        id: set-outputs
-        run: |
-          matrix=$(cat ${{ matrix.config.branch }}_inputs.json | jq -c '.')
-          if [[ ${{ matrix.config.branch }} == 'main' ]]; then
-            echo "matrix_main=$matrix" >> $GITHUB_OUTPUT
-          else
-            echo "matrix_release=$matrix" >> $GITHUB_OUTPUT
-          fi
-          echo "***"
-          cat ${{ matrix.config.branch }}_inputs.json
-      
       - name: Upload ${{ matrix.config.branch }}_inputs.json
         uses: actions/upload-artifact@v4
         with:
@@ -85,29 +71,36 @@ jobs:
           path: ${{ matrix.config.branch }}_inputs.json
           if-no-files-found: ignore
 
+  merge-input-files:
+    name: Create Complete inputs.json
+    runs-on: ubuntu-latest
+    needs: get-run-info
+    outputs:
+      matrix: ${{ steps.set-outputs.outputs.inputs }}
+    steps:
+      - name: Download All inputs.json
+        uses: actions/download-artifact@v4
+        with:
+          name: *_inputs.json
+          path: .
+
+      - name: Read JSON and create matrix
+        id: set-outputs
+        run: |
+          jq -s '[.[][]]' file1.json file2.json > complete_inputs.json
+          matrix=$(cat complete_inputs.json | jq -c '.')
+          echo "matrix=$matrix" >> $GITHUB_OUTPUT
+          echo "***"
+          cat complete_inputs.json
+
   run-tests:
     name: ${{ matrix.branch }} - ${{ matrix.nightly_build }} ${{ matrix.duckdb_arch }} (${{ matrix.runs_on }})
-    needs: get-run-info
-    if: ${{ needs.get-run-info.outputs.matrix_main != '[]' }}
+    needs: merge-input-files
+    if: ${{ needs.merge-input-files.outputs.matrix_main != '[]' }}
     strategy:
       matrix:
         branch: ["main", "v1.2-histrionicus"]
-        include:
-          - branch: "main"
-            inputs: ${{ fromJson(needs.get-run-info.outputs.matrix_main) }}
-            # nightly_build: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[0].nightly_build }}
-            # duckdb_arch: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[0].duckdb_arch }}
-            # runs_on: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[0].runs_on }}
-            # run_id: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[0].run_id }}
-            # duckdb_binary: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[0].duckdb_binary }}
-
-          - branch: "v1.2-histrionicus"
-            inputs: ${{ fromJson(needs.get-run-info.outputs.matrix_release) }}
-            # nightly_build: ${{ fromJson(needs.get-run-info.outputs.matrix_release)[1].nightly_build }}
-            # duckdb_arch: ${{ fromJson(needs.get-run-info.outputs.matrix_release)[1].duckdb_arch }}
-            # runs_on: ${{ fromJson(needs.get-run-info.outputs.matrix_release)[1].runs_on }}
-            # run_id: ${{ fromJson(needs.get-run-info.outputs.matrix_release)[1].run_id }}
-            # duckdb_binary: ${{ fromJson(needs.get-run-info.outputs.matrix_release)[1].duckdb_binary }}
+        inputs: ${{ fromJson(needs.get-run-info.outputs.inputs) }}
 
     continue-on-error: true
     runs-on: ubuntu-latest

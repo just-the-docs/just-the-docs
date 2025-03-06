@@ -284,6 +284,8 @@ def create_inputs(build_job, con, build_job_run_id):
                 if duckdb_arch in tested_binaries:
                     tested_binaries.remove(duckdb_arch)
                     new_data = {
+                        "branch": branch,
+                        "event": event,
                         "nightly_build": platform,
                         "duckdb_arch": architecture,
                         "runs_on": get_runner(platform, architecture),
@@ -294,6 +296,8 @@ def create_inputs(build_job, con, build_job_run_id):
                     # also add python extensions for linux, ignore windows and ubuntu for now
                     if platform.startswith('linux'):
                         new_data = {
+                            "branch": branch,
+                            "event": event,
                             "nightly_build": "python",
                             "duckdb_arch": architecture,
                             "runs_on": get_runner(platform, architecture),
@@ -303,6 +307,8 @@ def create_inputs(build_job, con, build_job_run_id):
                         matrix_data.append(new_data)
     else:
         matrix_data.append({
+            "branch": branch,
+            "event": event,
             "nightly_build": "linux",
             "duckdb_arch": "aarch64",
             "runs_on": "ubuntu-22.04-arm",
@@ -310,6 +316,8 @@ def create_inputs(build_job, con, build_job_run_id):
             "duckdb_binary": "linux-aarch64"
         })
         matrix_data.append({
+            "branch": branch,
+            "event": event,
             "nightly_build": "linux",
             "duckdb_arch": "amd64",
             "runs_on": "ubuntu-latest",
@@ -317,6 +325,8 @@ def create_inputs(build_job, con, build_job_run_id):
             "duckdb_binary": "linux"
         })
         matrix_data.append({
+            "branch": branch,
+            "event": event,
             "nightly_build": "python",
             "duckdb_arch": "aarch64",
             "runs_on": "ubuntu-22.04-arm",
@@ -324,6 +334,8 @@ def create_inputs(build_job, con, build_job_run_id):
             "duckdb_binary": ""
         })
         matrix_data.append({
+            "branch": branch,
+            "event": event,
             "nightly_build": "python",
             "duckdb_arch": "amd64",
             "runs_on": "ubuntu-latest",
@@ -331,6 +343,8 @@ def create_inputs(build_job, con, build_job_run_id):
             "duckdb_binary": ""
         })
         matrix_data.append({
+            "branch": branch,
+            "event": event,
             "nightly_build": "osx",
             "duckdb_arch": "amd64",
             "runs_on": "macos-13",
@@ -338,6 +352,8 @@ def create_inputs(build_job, con, build_job_run_id):
             "duckdb_binary": "osx"
         })
         matrix_data.append({
+            "branch": branch,
+            "event": event,
             "nightly_build": "osx",
             "duckdb_arch": "arm64",
             "runs_on": "macos-latest",
@@ -345,6 +361,8 @@ def create_inputs(build_job, con, build_job_run_id):
             "duckdb_binary": "osx"
         })
         matrix_data.append({
+            "branch": branch,
+            "event": event,
             "nightly_build": "windows",
             "duckdb_arch": "amd64",
             "runs_on": "windows-2019",
