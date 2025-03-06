@@ -94,7 +94,7 @@ def create_build_report(build_job, con):
             f.write(failure_details.to_markdown(index=False) + "\n")
         
         # add extensions
-        inputs = f"{ branch }_inputs.json"
+        inputs = f"inputs_{ branch }.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
             tested_binaries = [row[0] + "-" + row[1] for row in result]
@@ -109,6 +109,7 @@ def create_build_report(build_job, con):
                         binary = binary.replace("-", "_")
                         join_list += f'i."{ binary }".concat(l."{ binary }") as "{ binary }", '
                 if len(join_list) > 0:
+                    print(join_list)
                     con.execute(f"""
                         CREATE OR REPLACE TABLE ext_results AS (
                             SELECT * FROM read_csv('{ file_name_pattern }'));
@@ -163,6 +164,7 @@ def create_build_report(build_job, con):
                             py_join_list += f'i."python_{ version }".concat(l."python_{ version }") AS "python_{ version }",'
 
             if len(py_join_list) > 0:
+                print(py_join_list)
                 con.execute(f"""
                     CREATE OR REPLACE TABLE py_ext_results AS (
                         SELECT * FROM read_csv('{ file_name_pattern }'));
@@ -236,7 +238,7 @@ def create_build_report(build_job, con):
             pr_f = ['- ' + pf[0] for pf in previously_failed]
             f.write('\n'.join(pr_f) + '\n')
         
-        f.write(f"\n### Expected and Actully Uploaded Artifacts (only different)\nExpected list is from the release.\nMatched atrifact names are hidden.\n\n")
+        f.write(f"\n### Expected and Actully Uploaded Artifacts Diff\nExpected list is from the release.\nMatched atrifact names are hidden.\n\n")
         extensions_lists = con.execute(f"FROM extensions_lists ORDER BY ALL;").df()
         f.write(extensions_lists.to_markdown(index=False) + "\n")
         f.write(f"\n### Workflow Artifacts\n\n")
