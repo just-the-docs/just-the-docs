@@ -59,6 +59,7 @@ def get_full_sha(run_id):
     return full_sha
 
 def verify_version(tested_binary, full_sha):
+    os.chmod(duckdb_binary_path, 0o755)
     pragma_version = [ tested_binary, "--version" ]
     short_sha = subprocess.run(pragma_version, text=True, capture_output=True).stdout.strip().split()[-1]
     return sha_matching(short_sha, full_sha, tested_binary, architecture)
