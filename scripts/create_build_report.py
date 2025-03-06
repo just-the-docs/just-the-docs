@@ -163,7 +163,7 @@ def create_build_report(build_job, con):
                 print(tested_py_versions)
                 if tested_py_versions:
                     for version in tested_py_versions:
-                            py_join_list += f'i."python_{ version }".concat(l."python_{ version }") AS "python_{ version }",'
+                        py_join_list += f'i."python_{ version }".concat(l."python_{ version }") AS "python_{ version }",'
 
             if len(py_join_list) > 0:
                 print(py_join_list)
