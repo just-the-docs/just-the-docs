@@ -133,15 +133,15 @@ jobs:
         env:
           CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
         run: |
-            uname -m
+            uname -a
             if [[ ${{ matrix.inputs.nightly_build }} != 'python' ]]; then
               echo "Downloading duckdb-binaries-${{ matrix.inputs.duckdb_binary }} artifact..."
               if gh run download ${{ matrix.inputs.run_id }} --repo ${{ env.GH_REPO }} -n duckdb-binaries-${{ matrix.inputs.duckdb_binary }}; then
                   echo "Artifact duckdb-binaries-${{ matrix.inputs.duckdb_binary }} is successfuly downloaded."
                   if [[ ${{ matrix.inputs.nightly_build }} == 'osx' ]]; then
                     unzip duckdb_cli-*.zip -d duckdb_path
-                  else
-                    unzip duckdb_cli-${{ matrix.inputs.duckdb_binary }}.zip -d duckdb_path
+                  # else
+                    # unzip duckdb_cli-${{ matrix.inputs.duckdb_binary }}.zip -d duckdb_path
                   fi
               fi
             fi
@@ -219,11 +219,19 @@ jobs:
         with:
           name: ${{ matrix.branch }}-REPORT
           path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
-      
+  
+  upload:
+    name: Upload Reports
+    runs-on: ubuntu-latest
+    needs: 
+      - get-run-info
+      - report
+    if: always()
+    steps:
       - name: Upload REPORT to the docs directory
         shell: bash
         env:
-          CI_COMMIT_MESSAGE: "Add ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md"
+          CI_COMMIT_MESSAGE: "Add ${{ needs.get-run-info.outputs.CURR_DATE }} Reports"
           CI_COMMIT_AUTHOR: "hmeriann"
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -234,10 +242,10 @@ jobs:
           git pull origin main
 
           mkdir -p docs/
-          mkdir -p docs/${{ matrix.branch }}/
-          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md docs/${{ matrix.branch }}/
-          ls -lah docs/${{ matrix.branch }}
+          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-main.md docs/main/
+          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-v1.2-histrionicus.md docs/v1.2-histrionicus/
 
-          git add docs/${{ matrix.branch }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
+          git add docs/main/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
+          git add docs/v1.2-histrionicus/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin main
