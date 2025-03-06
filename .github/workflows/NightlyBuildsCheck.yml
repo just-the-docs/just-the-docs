@@ -94,14 +94,23 @@ jobs:
         branch: ["main", "v1.2-histrionicus"]
         include:
           - branch: "main"
-            inputs: ${{ fromJson(needs.get-run-info.outputs.matrix_main) }}
+            nightly_build: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[0].nightly_build }}
+            duckdb_arch: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[0].duckdb_arch }}
+            runs_on: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[0].runs_on }}
+            run_id: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[0].run_id }}
+            duckdb_binary: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[0].duckdb_binary }}
+
           - branch: "v1.2-histrionicus"
-            inputs: ${{ fromJson(needs.get-run-info.outputs.matrix_release) }}
+            nightly_build: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[1].nightly_build }}
+            duckdb_arch: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[1].duckdb_arch }}
+            runs_on: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[1].runs_on }}
+            run_id: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[1].run_id }}
+            duckdb_binary: ${{ fromJson(needs.get-run-info.outputs.matrix_main)[1].duckdb_binary }}
 
     continue-on-error: true
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ matrix.branch }} ${{ matrix.inputs }}
+      - run: echo ${{ matrix.branch }} ${{ matrix.nightly_build }} ${{ matrix.runs_on }} ${{ matrix.duckdb_arch }} 
   #     - name: Set up Python
   #       uses: actions/setup-python@v5
   #       with:
