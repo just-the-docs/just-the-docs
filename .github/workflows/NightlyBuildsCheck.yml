@@ -235,6 +235,12 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      - name: Download Reports
+        uses: actions/download-artifact@v4
+        with:
+          pattern: ${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
+          path: .
+          
       - name: Upload REPORT to the docs directory
         shell: bash
         env:
