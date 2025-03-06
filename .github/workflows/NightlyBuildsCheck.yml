@@ -140,7 +140,7 @@ jobs:
                 if [[ ${{ matrix.inputs.nightly_build }} == 'osx' ]]; then
                   unzip duckdb_cli-*.zip -d duckdb_path
                 else
-                  if [ ${{ matrix.inputs.branch }} != 'main' && ${{ matrix.inputs.nightly_build }} == 'linux' ]; then
+                  if [[ ${{ matrix.inputs.branch }} != 'main' && ${{ matrix.inputs.nightly_build }} == 'linux' ]]; then
                       unzip duckdb_cli-${{ matrix.inputs.nightly_build }}-${{ matrix.inputs.duckdb_arch }}.zip -d duckdb_path
                   else
                     unzip duckdb_cli-${{ matrix.inputs.duckdb_binary }}.zip -d duckdb_path
@@ -255,8 +255,13 @@ jobs:
           git pull origin main
 
           mkdir -p docs/
+          ls -lah
+          ls -lah docs
           mv ${{ needs.get-run-info.outputs.CURR_DATE }}-main.md docs/main/
           mv ${{ needs.get-run-info.outputs.CURR_DATE }}-v1.2-histrionicus.md docs/v1.2-histrionicus/
+
+          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-main*/${{ needs.get-run-info.outputs.CURR_DATE }}-main.md docs/main/
+          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-v1*/${{ needs.get-run-info.outputs.CURR_DATE }}-v1.2-histrionicus.md docs/v1.2-histrionicus/
 
           git add docs/main/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git add docs/v1.2-histrionicus/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
