@@ -117,7 +117,7 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
                     arch = architecture.replace("/", "-")
                     non_matching_sha_file_name = f"{ branch }_non_matching_sha_{ nightly_build }_{ arch }.csv"
                     with open(non_matching_sha_file_name, 'a') as f:
-                        f.write(f"{ nightly_build }{ version },{ tested_platform }\n")
+                        f.write(f"{ nightly_build }{ version },{ arch }\n")
 
             finally:
                 stop_container(container, container_name)

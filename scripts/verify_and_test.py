@@ -142,7 +142,7 @@ def main():
             else:
                 non_matching_sha_file_name = f"{ branch }_non_matching_sha_{ nightly_build }_{ arch }.csv"
                 with open(non_matching_sha_file_name, 'a') as f:
-                    f.write(f"{ nightly_build }{ version },{ tested_platform }\n")
+                    f.write(f"{ nightly_build }{ version },{ architecture }\n")
 
 if __name__ == "__main__":
     main()
