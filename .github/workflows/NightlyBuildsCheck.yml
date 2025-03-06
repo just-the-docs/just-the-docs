@@ -64,11 +64,11 @@ jobs:
           name: ${{ matrix.config.branch }}_run_info_tables.duckdb
           path: ${{ matrix.config.branch }}_run_info_tables.duckdb
       
-      - name: Upload ${{ matrix.config.branch }}_inputs.json
+      - name: Upload inputs_${{ matrix.config.branch }}.json
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.config.branch }}_inputs.json
-          path: ${{ matrix.config.branch }}_inputs.json
+          name: inputs_${{ matrix.config.branch }}.json
+          path: inputs_${{ matrix.config.branch }}.json
           if-no-files-found: ignore
 
   merge-input-files:
@@ -81,15 +81,13 @@ jobs:
       - name: Download All inputs.json
         uses: actions/download-artifact@v4
         with:
-          pattern: |
-            main_inputs.json
-            v*_inputs.json
+          pattern: inputs_*.json
           path: .
 
       - name: Read JSON and create matrix
         id: set-outputs
         run: |
-          jq -s '[.[][]]' main_inputs.json v*.json > complete_inputs.json
+          jq -s '[.[][]]' inputs_*.json > complete_inputs.json
           matrix=$(cat complete_inputs.json | jq -c '.')
           echo "matrix=$matrix" >> $GITHUB_OUTPUT
           echo "***"
@@ -189,10 +187,10 @@ jobs:
   #         python -m pip install --upgrade pip
   #         pip install duckdb pandas tabulate requests
 
-  #     - name: Download ${{ matrix.branch }}_inputs.json
+  #     - name: Download inputs_${{ matrix.branch }}.json
   #       uses: actions/download-artifact@v4
   #       with:
-  #         name: ${{ matrix.branch }}_inputs.json
+  #         name: inputs_${{ matrix.branch }}.json
   #         path: .
 
   #     - name: Download extensions artifacts

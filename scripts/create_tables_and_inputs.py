@@ -384,7 +384,7 @@ def main():
 
     matrix_data = create_inputs(build_job, con, build_job_run_id)
     # print("#####", matrix_data)
-    with open(f"{ branch }_inputs.json", "w") as f:
+    with open(f"inputs_{ branch }.json", "w") as f:
         json.dump(matrix_data, f, indent=4)
     con.close()
     
