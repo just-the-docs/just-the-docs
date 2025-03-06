@@ -76,7 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: get-run-info
     outputs:
-      matrix: ${{ steps.set-outputs.outputs.inputs }}
+      matrix: ${{ steps.set-outputs.outputs.matrix }}
     steps:
       - name: Download All inputs.json
         uses: actions/download-artifact@v4
