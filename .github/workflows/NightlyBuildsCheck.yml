@@ -135,13 +135,14 @@ jobs:
         run: |
             uname -a
             if [[ ${{ matrix.inputs.nightly_build }} != 'python' ]]; then
-              echo "Downloading duckdb-binaries-${{ matrix.inputs.duckdb_binary }} artifact..."
+              echo "Downloading duckdb-binaries-${{ matrix.inputs.duckdb_binary }} artifact from ${{ matrix.inputs.run_id }}..."
               if gh run download ${{ matrix.inputs.run_id }} --repo ${{ env.GH_REPO }} -n duckdb-binaries-${{ matrix.inputs.duckdb_binary }}; then
                   echo "Artifact duckdb-binaries-${{ matrix.inputs.duckdb_binary }} is successfuly downloaded."
+                  ls -lah
                   if [[ ${{ matrix.inputs.nightly_build }} == 'osx' ]]; then
                     unzip duckdb_cli-*.zip -d duckdb_path
-                  # else
-                    # unzip duckdb_cli-${{ matrix.inputs.duckdb_binary }}.zip -d duckdb_path
+                  else
+                    unzip duckdb_cli-${{ matrix.inputs.duckdb_binary }}.zip -d duckdb_path
                   fi
               fi
             fi
