@@ -101,7 +101,7 @@ jobs:
     continue-on-error: true
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ matrix.branch }} ${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.runs_on }} ${{ matrix.inputs.duckdb_arch }}
+      - run: echo ${{ matrix.branch }} ${{ matrix.inputs }}
   #     - name: Set up Python
   #       uses: actions/setup-python@v5
   #       with:
