@@ -89,7 +89,7 @@ jobs:
       - name: Read JSON and create matrix
         id: set-outputs
         run: |
-          jq -s '[.[][]]' file1.json file2.json > complete_inputs.json
+          jq -s '[.[][]]' main_inputs.json v*.json > complete_inputs.json
           matrix=$(cat complete_inputs.json | jq -c '.')
           echo "matrix=$matrix" >> $GITHUB_OUTPUT
           echo "***"
@@ -98,7 +98,7 @@ jobs:
   run-tests:
     name: ${{ matrix.branch }} - ${{ matrix.nightly_build }} ${{ matrix.duckdb_arch }} (${{ matrix.runs_on }})
     needs: merge-input-files
-    if: ${{ needs.merge-input-files.outputs.matrix_main != '[]' }}
+    # if: ${{ needs.merge-input-files.outputs.matrix_main != '[]' }}
     strategy:
       matrix:
         branch: ["main", "v1.2-histrionicus"]
