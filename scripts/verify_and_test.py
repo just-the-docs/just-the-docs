@@ -63,7 +63,7 @@ def verify_version(tested_binary, full_sha):
     short_sha = subprocess.run(pragma_version, text=True, capture_output=True).stdout.strip().split()[-1]
     return sha_matching(short_sha, full_sha, tested_binary, architecture)
 
-def test_extensions(tested_binary, file_name, extensions):
+def test_extensions(tested_binary, file_name, extensions, tested_platform):
     for ext in extensions:
         select_installed = [
             tested_binary,
@@ -94,7 +94,7 @@ def test_extensions(tested_binary, file_name, extensions):
                         with open(file_name, "w") as f:
                             f.write("nightly_build,architecture,runs_on,version,extension,statement,result\n")
                     with open(file_name, "a") as f:
-                        f.write(f"{ nightly_build },{ architecture },{ runs_on },,{ ext },{ action },{ actual_result }\n")
+                        f.write(f"{ nightly_build },{ tested_platform },{ runs_on },,{ ext },{ action },{ actual_result }\n")
 
                 except subprocess.CalledProcessError as e:
                     print(f"Error running command for extesion { ext }: { e }")
@@ -120,7 +120,7 @@ def main():
 
     if nightly_build in SHOULD_BE_TESTED:
         if nightly_build == 'python':
-            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file_name, branch)
+            verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platform, tested_platforms_file_name, branch)
         else:
             path_pattern = os.path.join("duckdb_path", "duckdb*")
             matches = glob.glob(path_pattern)
@@ -138,11 +138,11 @@ def main():
                 with open(tested_platforms_file_name, "a") as f:
                     f.write(f"{ nightly_build }_{ architecture },{ tested_platform }\n")
                     print("HERE")
-                test_extensions(tested_binary, file_name, extensions)
+                test_extensions(tested_binary, file_name, extensions, tested_platform)
             else:
                 non_matching_sha_file_name = f"{ branch }_non_matching_sha_{ nightly_build }_{ arch }.csv"
                 with open(non_matching_sha_file_name, 'a') as f:
-                    f.write(f"{ nightly_build }{ version },{ architecture }\n")
+                    f.write(f"{ nightly_build }{ version },{ tested_platform }\n")
 
 if __name__ == "__main__":
     main()

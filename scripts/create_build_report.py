@@ -238,7 +238,7 @@ def create_build_report(build_job, con):
             pr_f = ['- ' + pf[0] for pf in previously_failed]
             f.write('\n'.join(pr_f) + '\n')
         
-        f.write(f"\n### Expected and Actully Uploaded Artifacts Diff\nExpected list is from the release.\nMatched atrifact names are hidden.\n\n")
+        f.write(f"\n### Expected and Actually Uploaded Artifacts Diff\nExpected list is from the release.\nMatched atrifact names are hidden.\n\n")
         extensions_lists = con.execute(f"FROM extensions_lists ORDER BY ALL;").df()
         f.write(extensions_lists.to_markdown(index=False) + "\n")
         f.write(f"\n### Workflow Artifacts\n\n")

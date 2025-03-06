@@ -51,7 +51,7 @@ def list_builds_for_python_versions(run_id):
         result = [word[0] + '.' + word[1:] if len(word) > 1 else word + '.' for word in matches]
         return result
 
-def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platforms_file_name, branch):
+def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, architecture, runs_on, full_sha, tested_platform, tested_platforms_file_name, branch):
     python_versions = list_builds_for_python_versions(run_id)
     if runs_on.startswith("ubuntu"):
         for version in python_versions:
@@ -112,12 +112,12 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
                                     with open(file_name, "w") as f:
                                         f.write("nightly_build,architecture,runs_on,version,extension,statement,result\n")
                                 with open(file_name, "a") as f:
-                                    f.write(f"{ nightly_build },{ architecture },{ runs_on },{ version },{ extension },{ action },{ actual_result }\n")
+                                    f.write(f"{ nightly_build },{ tested_platform },{ runs_on },{ version },{ extension },{ action },{ actual_result }\n")
                 else:
                     arch = architecture.replace("/", "-")
                     non_matching_sha_file_name = f"{ branch }_non_matching_sha_{ nightly_build }_{ arch }.csv"
                     with open(non_matching_sha_file_name, 'a') as f:
-                        f.write(f"{ nightly_build }{ version },{ architecture }\n")
+                        f.write(f"{ nightly_build }{ version },{ tested_platform }\n")
 
             finally:
                 stop_container(container, container_name)
