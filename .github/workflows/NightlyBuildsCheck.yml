@@ -235,6 +235,9 @@ jobs:
       - report
     if: always()
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
       - name: Upload REPORT to the docs directory
         shell: bash
         env:
