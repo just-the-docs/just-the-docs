@@ -97,7 +97,7 @@ def create_build_report(build_job, con):
         inputs = f"inputs_{ branch }.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
             result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
-            tested_binaries = [row[0] + "-" + row[1] for row in result]
+            tested_binaries = [row[0] + "-" + row[1] for row in result if row[0] != 'linux' else row[0] + "-" + row[1] + "_gcc4"]
             # add summary for extensions installing and loading chiecks
             file_name_pattern = f"{ branch }_failed_ext/{ branch }_ext*/{ branch }_list_failed_ext*.csv"
             print("HERE")
@@ -107,8 +107,8 @@ def create_build_report(build_job, con):
                 for binary in tested_binaries:
                     if not binary.startswith('python'):
                         binary = binary.replace("-", "_")
-                        if binary.startswith('linux'):
-                            binary += '_gcc4'
+                        # if binary.startswith('linux'):
+                        #     binary += '_gcc4'
                         join_list += f'i."{ binary }".concat(l."{ binary }") as "{ binary }", '
                 if len(join_list) > 0:
                     print(join_list)
@@ -127,7 +127,7 @@ def create_build_report(build_job, con):
                     con.execute(f"""CREATE OR REPLACE TABLE loads AS (
                             SELECT * FROM (
                                 PIVOT results 
-                                ON nightly_build, architecture 
+                                ON nightly_build, tested_platform 
                                 USING min(statement.concat(res)) 
                             GROUP BY "extension", "statement"
                             ORDER BY "extension"
@@ -137,7 +137,7 @@ def create_build_report(build_job, con):
                     con.execute(f"""CREATE OR REPLACE TABLE installs AS (
                             SELECT * FROM (
                                 PIVOT results
-                                ON nightly_build, architecture
+                                ON nightly_build, tested_platform
                                 USING min(statement.concat(res))
                             GROUP BY "extension", "statement"
                             ORDER BY "extension"
