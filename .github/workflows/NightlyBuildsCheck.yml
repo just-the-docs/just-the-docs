@@ -87,6 +87,7 @@ jobs:
       - name: Read JSON and create matrix
         id: set-outputs
         run: |
+          ls -lah
           jq -s '[.[][]]' inputs_*.json > complete_inputs.json
           matrix=$(cat complete_inputs.json | jq -c '.')
           echo "matrix=$matrix" >> $GITHUB_OUTPUT
