@@ -133,6 +133,7 @@ def main():
                 # write tested platform
                 subprocess_result = subprocess.run([ tested_binary, "--csv", "--noheader", "-c", "PRAGMA platform"], text=True, capture_output=True)
                 tested_platform = subprocess_result.stdout.strip()
+                print("✅", tested_platform)
                 with open(tested_platforms_file_name, "a") as f:
                     f.write(f"{ nightly_build }_{ architecture },{ tested_platform }\n")
                     print("HERE")
