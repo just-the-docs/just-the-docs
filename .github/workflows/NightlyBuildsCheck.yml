@@ -238,7 +238,7 @@ jobs:
       - name: Download Reports
         uses: actions/download-artifact@v4
         with:
-          pattern: REPORT*.md
+          pattern: REPORT*
           path: .
           
       - name: Upload REPORT to the docs directory
@@ -260,8 +260,8 @@ jobs:
           mv ${{ needs.get-run-info.outputs.CURR_DATE }}-main.md docs/main/
           mv ${{ needs.get-run-info.outputs.CURR_DATE }}-v1.2-histrionicus.md docs/v1.2-histrionicus/
 
-          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-main*/${{ needs.get-run-info.outputs.CURR_DATE }}-main.md docs/main/
-          mv ${{ needs.get-run-info.outputs.CURR_DATE }}-v1*/${{ needs.get-run-info.outputs.CURR_DATE }}-v1.2-histrionicus.md docs/v1.2-histrionicus/
+          mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-main.md docs/main/
+          mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-v1.2-histrionicus.md docs/v1.2-histrionicus/
 
           git add docs/main/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git add docs/v1.2-histrionicus/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
