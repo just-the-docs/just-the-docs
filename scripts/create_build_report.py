@@ -107,6 +107,8 @@ def create_build_report(build_job, con):
                 for binary in tested_binaries:
                     if not binary.startswith('python'):
                         binary = binary.replace("-", "_")
+                        if binary.startswith('linux'):
+                            binary += '_gcc4'
                         join_list += f'i."{ binary }".concat(l."{ binary }") as "{ binary }", '
                 if len(join_list) > 0:
                     print(join_list)
