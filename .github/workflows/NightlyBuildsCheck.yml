@@ -81,7 +81,9 @@ jobs:
       - name: Download All inputs.json
         uses: actions/download-artifact@v4
         with:
-          pattern: *_inputs.json
+          pattern: |
+            main_inputs.json
+            v*_inputs.json
           path: .
 
       - name: Read JSON and create matrix
