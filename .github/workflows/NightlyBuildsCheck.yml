@@ -221,7 +221,7 @@ jobs:
       - name: Upload REPORT
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.branch }}-REPORT
+          name: REPORT-${{ matrix.branch }}
           path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
   
   upload:
@@ -238,7 +238,7 @@ jobs:
       - name: Download Reports
         uses: actions/download-artifact@v4
         with:
-          pattern: ${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
+          pattern: REPORT*.md
           path: .
           
       - name: Upload REPORT to the docs directory
