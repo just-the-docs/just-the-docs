@@ -96,7 +96,9 @@ jobs:
 
   run-tests:
     name: ${{ matrix.inputs.branch }} - ${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.duckdb_arch }} (${{ matrix.inputs.runs_on }})
-    needs: merge-input-files
+    needs: 
+      - get-run-info
+      - merge-input-files
     if: ${{ needs.merge-input-files.outputs.matrix != '[]' }}
     strategy:
       matrix:
@@ -125,41 +127,41 @@ jobs:
                 .github/config
             path: ext
             
-      - name: Verify ${{ matrix.nightly_build }} build version and Test extensions
+      - name: Verify ${{ matrix.inputs.nightly_build }} build version and Test extensions
         id: verify-build
         shell: bash
         env:
           CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
         run: |
             uname -m
-            if [[ ${{ matrix.nightly_build }} != 'python' ]]; then
-              echo "Downloading duckdb-binaries-${{ matrix.duckdb_binary }} artifact..."
-              if gh run download ${{ matrix.run_id }} --repo ${{ env.GH_REPO }} -n duckdb-binaries-${{ matrix.duckdb_binary }}; then
-                  echo "Artifact duckdb-binaries-${{ matrix.duckdb_binary }} is successfuly downloaded."
-                  if [[ ${{ matrix.nightly_build }} == 'osx' ]]; then
+            if [[ ${{ matrix.inputs.nightly_build }} != 'python' ]]; then
+              echo "Downloading duckdb-binaries-${{ matrix.inputs.duckdb_binary }} artifact..."
+              if gh run download ${{ matrix.inputs.run_id }} --repo ${{ env.GH_REPO }} -n duckdb-binaries-${{ matrix.inputs.duckdb_binary }}; then
+                  echo "Artifact duckdb-binaries-${{ matrix.inputs.duckdb_binary }} is successfuly downloaded."
+                  if [[ ${{ matrix.inputs.nightly_build }} == 'osx' ]]; then
                     unzip duckdb_cli-*.zip -d duckdb_path
                   else
-                    unzip duckdb_cli-${{ matrix.duckdb_binary }}.zip -d duckdb_path
+                    unzip duckdb_cli-${{ matrix.inputs.duckdb_binary }}.zip -d duckdb_path
                   fi
               fi
             fi
             echo "Verifying version and testing extensions..."
             python scripts/verify_and_test.py \
-                --nightly_build ${{ matrix.nightly_build }} \
-                --architecture ${{ matrix.duckdb_arch }} \
-                --run_id ${{ matrix.run_id }} \
-                --runs_on ${{ matrix.runs_on }} \
-                --branch ${{ matrix.branch }}
+                --nightly_build ${{ matrix.inputs.nightly_build }} \
+                --architecture ${{ matrix.inputs.duckdb_arch }} \
+                --run_id ${{ matrix.inputs.run_id }} \
+                --runs_on ${{ matrix.inputs.runs_on }} \
+                --branch ${{ matrix.inputs.branch }}
 
       - name: Upload actions for extensions
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.branch }}_ext_${{ matrix.nightly_build }}_${{ matrix.duckdb_arch }}
+          name: ${{ matrix.inputs.branch }}_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}
           path: |
-            ${{ matrix.branch }}_list_failed_ext_${{ matrix.nightly_build }}_${{ matrix.duckdb_arch }}.csv
-            ${{ matrix.branch }}_non_matching_sha_${{ matrix.nightly_build }}_${{ matrix.duckdb_arch }}.csv
-            ${{ matrix.branch }}_tested_platforms_${{ matrix.nightly_build }}_${{ matrix.duckdb_arch }}.csv
+            ${{ matrix.inputs.branch }}_list_failed_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
+            ${{ matrix.inputs.branch }}_non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
+            ${{ matrix.inputs.branch }}_tested_platforms_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
           if-no-files-found: ignore
     
   report:
