@@ -216,7 +216,6 @@ jobs:
         env:
           CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
         run: |
-          cat "${{ matrix.branch }}_failed_ext/main_ext_*/${{ matrix.branch }}_tested_platforms_*.csv" > ${{ matrix.branch }}_platforms.csv
           python scripts/create_build_report.py --branch ${{ matrix.branch }}
 
       - name: Upload REPORT
