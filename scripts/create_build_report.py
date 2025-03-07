@@ -96,13 +96,22 @@ def create_build_report(build_job, con):
         # add extensions
         inputs = f"inputs_{ branch }.json"
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
-            result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
-            tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row[0] == 'linux' else row[0] + "-" + row[1] for row in result]
             # add summary for extensions installing and loading chiecks
             file_name_pattern = f"{ branch }_failed_ext/{ branch }_ext*/{ branch }_list_failed_ext*.csv"
             print("HERE")
             matching_files = glob.glob(file_name_pattern)
             if matching_files:
+                ext_results = "extensions_checking_results"
+                con.execute(f"""
+                    CREATE OR REPLACE TABLE { ext_results } AS (
+                        SELECT * FROM read_csv('{ file_name_pattern }'));
+                    """)
+                if failures_count > 0:
+                    result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
+                    tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row[0] == 'linux' else row[0] + "-" + row[1] for row in result]
+                else:
+                    result = con.execute(f"SELECT DISTINCT tested_platform FROM '{ ext_results }'").fetchall()
+                    tested_binaries = [row[0] for row in result]
                 join_list = ""
                 for binary in tested_binaries:
                     if not binary.startswith('python'):
@@ -112,10 +121,6 @@ def create_build_report(build_job, con):
                         join_list += f'i."{ binary }".concat(l."{ binary }") as "{ binary }", '
                 if len(join_list) > 0:
                     print(join_list)
-                    con.execute(f"""
-                        CREATE OR REPLACE TABLE ext_results AS (
-                            SELECT * FROM read_csv('{ file_name_pattern }'));
-                        """)
                     con.execute(f"""CREATE OR REPLACE TABLE results AS (
                             SELECT *, CASE 
                                 WHEN result = 'passed' 
@@ -158,6 +163,7 @@ def create_build_report(build_job, con):
             matching_files = glob.glob(py_file_name_pattern)
             py_join_list = ""
             if matching_files:
+                print("PYTHON!!!!")
                 select_py_versions = duckdb.sql(f"SELECT DISTINCT version, architecture FROM '{ py_file_name_pattern }'").fetchall()
                 tested_py_versions = [row[0] + "_" + row[1] for row in select_py_versions]
                 print(tested_py_versions)
@@ -225,6 +231,17 @@ def create_build_report(build_job, con):
                     """).df()
                     f.write(f"\n#### Found unmatching versions:\n\n")
                     f.write(unmatched.to_markdown(index=False) + "\n")
+            # can be also in { branch }_failed_ext/
+            
+            file_name_pattern = f"{ branch }_failed_ext/{ branch }_non_matching_sha_*.csv"
+            matching_files = glob.glob(file_name_pattern)
+            if matching_files:
+                unmatched = con.execute(f"""
+                    SELECT * 
+                    FROM read_csv('{file_name_pattern}', DELIM = ',', HEADER=False)
+                """).df()
+                f.write(f"\n#### Found unmatching versions:\n\n")
+                f.write(unmatched.to_markdown(index=False) + "\n")
         
         if failures_count > 0:            
             f.write(f"\n### Previously Failed (max 7 shown)\n\n")
