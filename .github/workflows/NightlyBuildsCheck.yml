@@ -2,7 +2,7 @@ name: Check Nightly Build Status
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 8 * * 1-5' # runs at 9am CET (summer) on working days
+    - cron:  '0 8 * * *' # runs at 9am CET (summer) (replace the las * with 1-5 to trigger only on working days)
 
 permissions:
   contents: write
