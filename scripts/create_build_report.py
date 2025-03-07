@@ -126,7 +126,7 @@ def create_build_report(build_job, con):
                                 WHEN result = 'passed' 
                                 THEN ': ✅ ' 
                                 ELSE ': ❌ ' END AS res 
-                            FROM ext_results 
+                            FROM { ext_results } 
                             WHERE nightly_build != 'python');
                         """)
                     con.execute(f"""CREATE OR REPLACE TABLE loads AS (
