@@ -126,7 +126,7 @@ def create_build_report(build_job, con):
                         """)
                     con.execute(f"""CREATE OR REPLACE TABLE loads AS (
                             SELECT * FROM (
-                                PIVOT results 
+                                PIVOT results
                                 ON nightly_build, tested_platform 
                                 USING min(statement.concat(res)) 
                             GROUP BY "extension", "statement"
