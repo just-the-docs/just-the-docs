@@ -178,6 +178,7 @@ jobs:
     strategy:
       matrix:
         branch: ["main", "v1.2-histrionicus"]
+      fail-fast: false
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
