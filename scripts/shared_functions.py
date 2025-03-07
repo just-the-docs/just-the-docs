@@ -92,10 +92,9 @@ def list_extensions():
 # return a number of consecutive failures
 def count_consecutive_failures(build_job, con):
     latest_success_rowid = con.execute(f"""
-        SELECT rowid
+        SELECT min(rowid)
         FROM '{ build_job.get_run_list_table_name() }'
         WHERE conclusion = 'success'
-        ORDER BY createdAt DESC
     """).fetchone()
     consecutive_failures = latest_success_rowid[0] if latest_success_rowid else -1 # when -1 then all runs in the json file have conclusion 'failure'
     return consecutive_failures
