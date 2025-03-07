@@ -44,7 +44,7 @@ def create_build_report(build_job, con):
     with open(REPORT_FILE, 'a') as f:
         f.write(f"---\nlayout: post\ntitle: { CURR_DATE } - { run_sha }\nparent: { branch.upper() }\n---\n")
         if failures_count == 0:       
-            f.write(f"{ report_title } Run succeeded\n{{: .label .label-green}}\n{ branch }\n{{: .label .label-yellow}}\n")            
+            f.write(f"{ report_title } Run succeeded\n{{: .label .label-green}}\n\n{ branch }\n\n{{: .label .label-yellow}}\n\n")
             f.write(f"#### Latest run: [ { run_date } ]({ run_url })\n")
         else:
             # failures_count = -1 means all runs in the json file have conclusion = 'failure' 
@@ -113,6 +113,7 @@ def create_build_report(build_job, con):
                     result = con.execute(f"SELECT DISTINCT tested_platform FROM '{ ext_results }'").fetchall()
                     tested_binaries = [row[0] for row in result]
                 join_list = ""
+                print(tested_binaries)
                 for binary in tested_binaries:
                     if not binary.startswith('python'):
                         binary = binary.replace("-", "_")
