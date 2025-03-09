@@ -70,6 +70,7 @@ def create_build_report(build_job, con):
             else:
                 f.write(f"{ report_title } Run failed\n{{: .label .label-red}}\n")
                 f.write(f"{ build_job.get_build_job_name() } has not succeeded the previous **{ failures_count }** times.\n")
+            print("failures_count: ", failures_count, "total_count: ", total_count)
             if failures_count < total_count:
                 tmp_data = con.execute(f"""
                     SELECT
