@@ -110,14 +110,22 @@ def create_build_report(build_job, con):
                 if failures_count > 0:
                     result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
                     if branch == 'main':
-                        tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row[0] == 'linux' else row[0] + "-" + row[1] for row in result]
-                    else:
                         tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row == 'linux_amd64' else row[0] + "-" + row[1] for row in result]
+                    else:
+                        tested_binaries = []
+                        print("~~~~>",result)
+                        for row in result:
+                            print("~~~~>",row)
+                            if row.count('linux'):
+                                tested_binary = row[0] + "-" + row[1] + "_gcc4" if row[1] == 'amd64' else row[0] + "-arm64" 
+                            else:
+                                tested_binary = row[0] + "-" + row[1]
+                            tested_binaries.append(tested_binary)
+                        print(tested_binaries)
                 else:
                     result = con.execute(f"SELECT DISTINCT tested_platform FROM '{ ext_results }'").fetchall()
                     tested_binaries = [row[0] for row in result]
                 join_list = ""
-                print(tested_binaries)
                 for binary in tested_binaries:
                     if not binary.startswith('python'):
                         binary = binary.replace("-", "_")
