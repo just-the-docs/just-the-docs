@@ -99,7 +99,6 @@ def create_build_report(build_job, con):
         if os.path.exists(inputs) and os.path.getsize(inputs) > 0:
             # add summary for extensions installing and loading chiecks
             file_name_pattern = f"{ branch }_failed_ext/{ branch }_ext*/{ branch }_list_failed_ext*.csv"
-            print("HERE")
             matching_files = glob.glob(file_name_pattern)
             if matching_files:
                 ext_results = "extensions_checking_results"
@@ -110,7 +109,7 @@ def create_build_report(build_job, con):
                 if failures_count > 0:
                     result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
                     if branch == 'main':
-                        tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row == 'linux' else row[0] + "-" + row[1] for row in result]
+                        tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row[0] == 'linux' else row[0] + "-" + row[1] for row in result]
                     else:
                         tested_binaries = []
                         print("~~~~>",result)
