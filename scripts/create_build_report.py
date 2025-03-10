@@ -110,7 +110,7 @@ def create_build_report(build_job, con):
                 if failures_count > 0:
                     result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
                     if branch == 'main':
-                        tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row == 'linux_amd64' else row[0] + "-" + row[1] for row in result]
+                        tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row == 'linux' else row[0] + "-" + row[1] for row in result]
                     else:
                         tested_binaries = []
                         print("~~~~>",result)
