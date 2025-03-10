@@ -7,8 +7,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "::error::Filename MY_FILE.TXT doesn't match possible files"
-          echo "::group::My title"
-          echo "Inside the group 🍀"
-          echo "::endgroup::"
-          echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "Wrong row count in query! (test/sql/aggregate/aggregates/histogram_table_function.test:94)!
+            Expected 10 rows, but got 1 rows
+            ================================================================================
+            SELECT COUNT(*), AVG(count) FROM histogram_values(integers, i::VARCHAR, technique := 'equi-height');
+            ================================================================================
+            Expected result:
+            ================================================================================
+            109     13
+            120     13
+            19      13
+            30      13
+            42      14
+            53      12
+            65      13
+            77      13
+            88      13
+            99999999        13
+            ================================================================================
+            Actual result:
+            ================================================================================
+            count_star()    avg(count)
+            BIGINT  DOUBLE
+            [ Rows: 1]
+            10      13.0" > FILE.txt
+
+          cat FILE.txt >> $GITHUB_STEP_SUMMARY
