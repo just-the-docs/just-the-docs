@@ -32,4 +32,4 @@ jobs:
             [ Rows: 1]
             10      13.0" > FILE.txt
 
-          echo "error:: Process completed with exit code 1." >> $GITHUB_STEP_SUMMARY
+          echo ":exclamation: Process completed with exit code 1." >> $GITHUB_STEP_SUMMARY
