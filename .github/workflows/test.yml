@@ -1,0 +1,9 @@
+name: Test
+on:
+  workflow_dispatch:
+
+jobs:
+  test-error-message:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "::error::Filename MY_FILE.TXT doesn't match possible files"
