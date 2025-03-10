@@ -319,7 +319,7 @@ def create_inputs(build_job, con, build_job_run_id):
                 "duckdb_arch": architecture,
                 "runs_on": get_runner(platform, architecture),
                 "run_id": build_job_run_id,
-                "duckdb_binary": platform if (platform, architecture) in (('osx', 'arm64'), ('osx', 'amd64'), ('linux', 'amd64')) else row
+                "duckdb_binary": platform if (platform, architecture) in (('osx', 'arm64'), ('osx', 'amd64'), ('linux', 'amd64')) else row.replace("_", "-")
             }
             matrix_data.append(new_data)
             # also add python extensions for linux, ignore windows and osx for now
