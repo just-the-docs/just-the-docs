@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo "::group::My title"
-        echo "Inside the group 🍀"
-        echo "::endgroup::"
-        echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "::error::Filename MY_FILE.TXT doesn't match possible files"
+          echo "::group::My title"
+          echo "Inside the group 🍀"
+          echo "::endgroup::"
+          echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
