@@ -237,9 +237,9 @@ def get_runner(platform, architecture):
         case 'osx':
             return "macos-latest" if architecture == 'arm64' else "macos-13"
         case 'windows':
-            return "windows-2019"
+            return "windows-latest"
         case _:
-            return "ubuntu-24.04-arm" if architecture == 'arm64' else "ubuntu-latest"
+            return "ubuntu-24.04-arm" if architecture in ('arm64', 'aarch64') else "ubuntu-latest"
 
 def get_artifacts_list(con, build_job, artifatc_type):
     artifacts = con.execute(f"""
@@ -266,11 +266,14 @@ def get_tested_binaries_set(con, build_job):
             elif build_platform == 'osx':
                 tested_binaries.add(build_platform + "_arm64")
                 tested_binaries.add(build_platform + "_amd64")
+            elif build_platform == 'linux':
+                tested_binaries.add(build_platform + "_amd64") # for duckdb-binaries-linux on v1.2
     return tested_binaries
 
 def create_inputs(build_job, con, build_job_run_id):
     matrix_data = []
     tested_binaries = get_tested_binaries_set(con, build_job)
+    print(tested_binaries)
     extensions_artifacts = get_artifacts_list(con, build_job, "extensions")
     tested_builds_dict = {}
     if branch == 'main':
@@ -293,7 +296,7 @@ def create_inputs(build_job, con, build_job_run_id):
                         "duckdb_binary": platform if platform == 'osx' else platform + "-" + architecture
                     }
                     matrix_data.append(new_data)
-                    # also add python extensions for linux, ignore windows and ubuntu for now
+                    # also add python extensions for linux, ignore windows and osx for now
                     if platform.startswith('linux'):
                         new_data = {
                             "branch": branch,
@@ -306,69 +309,31 @@ def create_inputs(build_job, con, build_job_run_id):
                         }
                         matrix_data.append(new_data)
     else:
-        matrix_data.append({
-            "branch": branch,
-            "event": event,
-            "nightly_build": "linux",
-            "duckdb_arch": "aarch64",
-            "runs_on": "ubuntu-24.04-arm",
-            "run_id": build_job_run_id,
-            "duckdb_binary": "linux-aarch64"
-        })
-        matrix_data.append({
-            "branch": branch,
-            "event": event,
-            "nightly_build": "linux",
-            "duckdb_arch": "amd64",
-            "runs_on": "ubuntu-latest",
-            "run_id": build_job_run_id,
-            "duckdb_binary": "linux"
-        })
-        matrix_data.append({
-            "branch": branch,
-            "event": event,
-            "nightly_build": "python",
-            "duckdb_arch": "aarch64",
-            "runs_on": "ubuntu-24.04-arm",
-            "run_id": build_job_run_id,
-            "duckdb_binary": ""
-        })
-        matrix_data.append({
-            "branch": branch,
-            "event": event,
-            "nightly_build": "python",
-            "duckdb_arch": "amd64",
-            "runs_on": "ubuntu-latest",
-            "run_id": build_job_run_id,
-            "duckdb_binary": ""
-        })
-        matrix_data.append({
-            "branch": branch,
-            "event": event,
-            "nightly_build": "osx",
-            "duckdb_arch": "amd64",
-            "runs_on": "macos-13",
-            "run_id": build_job_run_id,
-            "duckdb_binary": "osx"
-        })
-        matrix_data.append({
-            "branch": branch,
-            "event": event,
-            "nightly_build": "osx",
-            "duckdb_arch": "arm64",
-            "runs_on": "macos-latest",
-            "run_id": build_job_run_id,
-            "duckdb_binary": "osx"
-        })
-        matrix_data.append({
-            "branch": branch,
-            "event": event,
-            "nightly_build": "windows",
-            "duckdb_arch": "amd64",
-            "runs_on": "windows-latest",
-            "run_id": build_job_run_id,
-            "duckdb_binary": "windows-amd64"
-        })
+        for row in tested_binaries:
+            platform = row.split("_")[0] if len(row.split("_")) > 1 else row
+            architecture = row.split("_")[1] if len(row.split("_")) > 1 else None
+            new_data = {
+                "branch": branch,
+                "event": event,
+                "nightly_build": platform,
+                "duckdb_arch": architecture,
+                "runs_on": get_runner(platform, architecture),
+                "run_id": build_job_run_id,
+                "duckdb_binary": platform if (platform, architecture) in (('osx', 'arm64'), ('osx', 'amd64'), ('linux', 'amd64')) else row
+            }
+            matrix_data.append(new_data)
+            # also add python extensions for linux, ignore windows and osx for now
+            if platform.startswith('linux'):
+                new_data = {
+                    "branch": branch,
+                    "event": event,
+                    "nightly_build": "python",
+                    "duckdb_arch": architecture,
+                    "runs_on": get_runner(platform, architecture),
+                    "run_id": build_job_run_id,
+                    "duckdb_binary": platform + "-" + architecture
+                }
+                matrix_data.append(new_data)
     return matrix_data
 
 def main():
