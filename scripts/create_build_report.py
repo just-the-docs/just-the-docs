@@ -269,12 +269,18 @@ def create_build_report(build_job, con):
             pr_f = ['- ' + pf[0] for pf in previously_failed]
             f.write('\n'.join(pr_f) + '\n')
         
-        f.write(f"\n### Expected and Actually Uploaded Artifacts Diff\nExpected list is from the release.\nMatched atrifact names are hidden.\n\n")
-        extensions_lists = con.execute(f"FROM extensions_lists ORDER BY ALL;").df()
+        f.write(f"\n### Diff of Uploaded Artifacts\nMatched atrifact names are hidden.\n\n")
+        extensions_lists = con.execute(f"""
+            SELECT 
+                expected AS 'Missing or Renamed Artifacts in Release CI',
+                actual AS 'New or Renamed Artifacts in the Current CI Run'
+            FROM extensions_lists ORDER BY ALL;
+        """).df()
         f.write(extensions_lists.to_markdown(index=False) + "\n")
         f.write(f"\n### Workflow Artifacts\n\n")
         artifacts_per_job = con.execute(f"""
-            SELECT * FROM '{ build_job.get_artifacts_per_jobs_table_name() }' ORDER BY "Build (Architecture)" ASC;
+            SELECT * FROM '{ build_job.get_artifacts_per_jobs_table_name() }'
+            ORDER BY "Build (Architecture)" ASC;
             """).df()
         f.write(artifacts_per_job.to_markdown(index=False) + "\n")
 
