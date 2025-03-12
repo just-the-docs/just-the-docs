@@ -312,16 +312,17 @@ def create_inputs(build_job, con, build_job_run_id):
         for row in tested_binaries:
             platform = row.split("_")[0] if len(row.split("_")) > 1 else row
             architecture = row.split("_")[1] if len(row.split("_")) > 1 else None
-            new_data = {
-                "branch": branch,
-                "event": event,
-                "nightly_build": platform,
-                "duckdb_arch": architecture,
-                "runs_on": get_runner(platform, architecture),
-                "run_id": build_job_run_id,
-                "duckdb_binary": platform if (platform, architecture) in (('osx', 'arm64'), ('osx', 'amd64'), ('linux', 'amd64')) else row.replace("_", "-")
-            }
-            matrix_data.append(new_data)
+            if row != 'windows_arm64':
+                new_data = {
+                    "branch": branch,
+                    "event": event,
+                    "nightly_build": platform,
+                    "duckdb_arch": architecture,
+                    "runs_on": get_runner(platform, architecture),
+                    "run_id": build_job_run_id,
+                    "duckdb_binary": platform if (platform, architecture) in (('osx', 'arm64'), ('osx', 'amd64'), ('linux', 'amd64')) else row.replace("_", "-")
+                }
+                matrix_data.append(new_data)
             # also add python extensions for linux, ignore windows and osx for now
             if platform.startswith('linux'):
                 new_data = {
