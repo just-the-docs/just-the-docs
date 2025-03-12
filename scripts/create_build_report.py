@@ -44,7 +44,7 @@ def create_build_report(build_job, con):
     with open(REPORT_FILE, 'a') as f:
         f.write(f"---\nlayout: post\ntitle: { CURR_DATE } - { run_sha }\nparent: { branch.upper() }\n---\n")
         if failures_count == 0:       
-            f.write(f"{ report_title } Run succeeded\n{{: .label .label-green}}\n\n{ branch }\n\n{{: .label .label-yellow}}\n\n")
+            f.write(f"{ report_title } Run succeeded\n{{: .label .label-green}}\n\n{ branch }\n{{: .label .label-yellow}}\n\n")
             f.write(f"#### Latest run: [ { run_date } ]({ run_url })\n")
         else:
             # failures_count = -1 means all runs in the json file have conclusion = 'failure' 
@@ -65,10 +65,10 @@ def create_build_report(build_job, con):
             """).fetchone()[0]
 
             if failures_count == total_count:
-                f.write(f"{ report_title } Run failed\n{{: .label .label-red}}\n\n{ branch }\n\n{{: .label .label-yellow}}\n\n")
+                f.write(f"{ report_title } Run failed\n{{: .label .label-red}}\n\n{ branch }\n{{: .label .label-yellow}}\n\n")
                 f.write(f"{ build_job.get_build_job_name() } has not succeeded more than **{ failures_count }** times.\n")
             else:
-                f.write(f"{ report_title } Run failed\n{{: .label .label-red}}\n\n{ branch }\n\n{{: .label .label-yellow}}\n\n")
+                f.write(f"{ report_title } Run failed\n{{: .label .label-red}}\n\n{ branch }\n{{: .label .label-yellow}}\n\n")
                 f.write(f"{ build_job.get_build_job_name() } has not succeeded the previous **{ failures_count }** times.\n")
             print("failures_count: ", failures_count, "total_count: ", total_count)
             if failures_count < total_count:
