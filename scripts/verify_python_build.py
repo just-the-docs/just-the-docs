@@ -73,11 +73,6 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
                 version = version.replace(".", "-")
                 if sha_matching(short_sha, full_sha, nightly_build, architecture) is True:
                     print(f"TESTING EXTENSIONS ON python{ version }")
-                    # select_extensions = container.exec_run("""
-                    #     python -c "import duckdb; res = duckdb.sql('SELECT extension_name FROM duckdb_extensions() WHERE NOT loaded').fetchall(); result =[row[0] for row in res]; print(result)"
-                    # """, stdout=True, stderr=True)
-                    # extensions = select_extensions.output.decode()
-                    # print(extensions)
                     
                     # write tested platform
                     tested_platform = container.exec_run(f"""

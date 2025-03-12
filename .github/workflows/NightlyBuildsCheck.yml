@@ -14,17 +14,6 @@ env:
   GH_ISSUE_REPO: ${{ github.repository }}
 
 jobs:
-  # check-wget:
-  #   name: Check in advance
-  #   runs-on: macos-13
-  #   steps:
-  #     - name: Checkout repo with the scripts
-  #       uses: actions/checkout@v4
-  #     - shell: bash
-  #       run: chmod +x scripts/check_ext.sh && ./scripts/check_ext.sh
-  #     - uses: actions/upload-artifact@v4
-  #       with:
-  #         path: log.csv
   get-run-info:
     name: Generate nightly build artifact json file
     runs-on: ubuntu-latest

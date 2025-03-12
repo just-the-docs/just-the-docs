@@ -69,8 +69,6 @@ def list_all_runs(con, build_job, branch, event):
     ]
     gh_run_list_file = build_job.get_build_job_file_name()
     fetch_data(gh_run_list_command, gh_run_list_file)
-    # result = duckdb.sql(f"SELECT name FROM read_json('{ build_job.get_run_list_file_name() }')").fetchall()
-    # return result
 
 def get_extensions_from(config) :
     with open(config, "r") as file:
@@ -107,13 +105,6 @@ def sha_matching(short_sha, full_sha, tested_binary, architecture):
         - Version triggered the build: { full_sha }
         - Downloaded build version: { short_sha }
         """)
-            # non_matching_sha_file_name = "non_matching_sha_{}_{}.txt".format(tested_binary, architecture.replace("/", "-"))
-            # with open(non_matching_sha_file_name, 'w') as f:
-            #     f.write(f"""
-            #     Version of { tested_binary } { architecture } tested binary doesn't match to the version that triggered the build.
-            #     - Version triggered the build: { full_sha }
-            #     - Downloaded build version: { short_sha }
-            #     """)
         return False
     else:
         print(f"""
