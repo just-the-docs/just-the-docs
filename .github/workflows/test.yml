@@ -1,4 +1,4 @@
-name: Check Nightly Build Status
+name: TEST
 on:
   workflow_dispatch:
   schedule:
