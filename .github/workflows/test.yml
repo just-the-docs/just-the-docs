@@ -1,0 +1,15 @@
+name: Check Nightly Build Status
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 9 * * *' # runs at 11am CEST (replace the las * with 1-5 to trigger only on working days)
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  run-test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.workflow }}-${{ github.ref_name }}
