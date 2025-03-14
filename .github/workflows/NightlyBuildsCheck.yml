@@ -8,6 +8,10 @@ permissions:
   contents: write
   issues: write
 
+concurrency:
+  group: status-${{ github.workflow }}-${{ github.ref_name }}
+  cancel-in-progress: true
+
 env:
   GH_TOKEN: ${{ github.token }}
   GH_REPO: duckdb/duckdb
