@@ -177,6 +177,18 @@ callouts:
     title: Warning
     color: red
 
+# Table of Contents sidebar/top bar
+toc_enabled: true # or false
+toc:
+  # Minimum heading level to include in the ToC. Default: 1
+  min_heading_level: 2
+  # Maximum heading level to include in the ToC. Default: 6
+  max_heading_level: 6
+  # Display the ToC as an ordered list (true) or unordered list (false)
+  ordered: false
+  # Display the ToC as a single level list
+  flat_toc: false # or true
+
 # Google Analytics Tracking (optional)
 # Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")
 # Note: the main Just the Docs site does *not* use Google Analytics.
