@@ -122,8 +122,8 @@ def create_build_report(build_job, con):
                             tested_binaries.append(tested_binary)
                         print(tested_binaries)
                 else:
-                    result = con.execute(f"SELECT DISTINCT tested_platform FROM '{ ext_results }'").fetchall()
-                    tested_binaries = [row[0] for row in result]
+                    result = con.execute(f"SELECT DISTINCT nightly_build, tested_platform FROM '{ ext_results }'").fetchall()
+                    tested_binaries = [second_value for first_value, second_value in result if first_value != 'python']
                 join_list = ""
                 for binary in tested_binaries:
                     if not binary.startswith('python'):
@@ -173,7 +173,6 @@ def create_build_report(build_job, con):
             matching_files = glob.glob(py_file_name_pattern)
             py_join_list = ""
             if matching_files:
-                print("PYTHON!!!!")
                 select_py_versions = duckdb.sql(f"SELECT DISTINCT version, architecture FROM '{ py_file_name_pattern }'").fetchall()
                 tested_py_versions = [row[0] + "_" + row[1] for row in select_py_versions]
                 print(tested_py_versions)
