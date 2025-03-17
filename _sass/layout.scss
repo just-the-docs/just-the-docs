@@ -20,10 +20,6 @@
     min-width: $nav-width;
   }
 
-  @include mq(xl) {
-    width: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
-  }
-
   & ~ .main {
     @include mq(md) {
       margin-left: $nav-width-md;
@@ -37,14 +33,6 @@
         calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
       );
       // stylelint-enable function-name-case
-    }
-
-    @include mq(xl) {
-      margin-left: calc(-#{$toc-width} + (100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
-
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        margin-left: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
-      }
     }
 
     .main-header {
@@ -71,7 +59,6 @@
   margin: auto;
 
   @include mq(md) {
-    display: inline-block;
     position: relative;
     max-width: $content-width;
   }
@@ -85,7 +72,6 @@
 
   @include mq(md) {
     padding-top: $gutter-spacing;
-    padding-bottom: $gutter-spacing;
   }
 }
 
@@ -236,57 +222,72 @@ body {
   color: $link-color;
 }
 
-/* float: left works fine on Chromium-based browsers, but there's a bug from Firefox 59 where opening and
-closing DevTools will cause the main content to be pushed down as if ToC is a block (abandoned to this day!).
-ref: Bug 1448995
-As a temporary fix, set both the main content and ToC to be inline with each other, adjust .main's
-margin-left to accompany the ToC that goes before it */
+// Three column layout: nav + content + toc
+@include mq(xl) {
+  .toc .side-bar {
+    width: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
+
+    & ~ .main {
+      margin-left: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
+      max-width: #{$content-width + $toc-width};
+    }
+  }
+  .main-content-wrap {
+    width: $content-width;
+  }
+}
+
 nav.toc {
-  display: none;
-  visibility: hidden;
   padding: $sp-4;
   line-height: 1.5;
   overflow-y: auto;
 
   @include fs-4;
 
+  &.closed {
+    right: -#{$toc-width + $sp-6};
+  }
+
   @include mq(md) {
     display: block;
     visibility: visible;
     position: fixed;
-    right: 0;
+    padding-top: 5rem;
+    top: 0;
     z-index: 1;
     width: #{$toc-width + $sp-6};
-    height: 100vh;
-    background-color: $white;
-    box-shadow: 0 0 10px $grey-dk-300;
+    transition: right 0.4s ease-in-out;
 
     @include fs-3;
   }
 
+  @media (min-width: #{$content-width}) and (max-width: #{$content-width + $nav-width + $toc-width}) {
+    right: 0;
+    height: 100vh;
+    background-color: $white;
+    box-shadow: 0 0 10px $grey-dk-300;
+  }
+
   @include mq(xl) {
-    display: inline-block;
-    visibility: visible;
     position: sticky;
-    top: $sp-4;
-    left: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width + $content-width} + $sp-4);
-    vertical-align: top;
-    margin-top: #{$header-height + $sp-8};
+    top: 1rem;
+    margin-top: $sp-8;
+    float: right;
     width: $toc-width;
-    max-height: calc(100vh - #{$sp-4} * 2);
-    padding: initial;
-    height: initial;
-    background-color: initial;
-    box-shadow: initial;
+    max-height: calc(100vh - #{$sp-6});
+    padding: 0;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       position: fixed;
+      right: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2);
+      top: $header-height;
       max-height: calc(100vh - #{$header-height + $sp-10});
     }
-  }
 
-  & > h2 {
-    margin-top: $sp-4;
+    #toggleToc {
+      display: none;
+      visibility: hidden;
+    }
   }
 
   // Because toc-width is usually small => hide the list bullet points and minimize left padding
@@ -297,6 +298,10 @@ nav.toc {
 
   & > ul {
     padding-left: 0;
+  }
+
+  & li {
+    margin: $sp-2 0;
   }
 
   & ol {
@@ -319,9 +324,5 @@ nav.toc {
       content: counter(sub-counter, lower-alpha);
       counter-increment: sub-counter;
     }
-  }
-
-  & li {
-    margin: $sp-2 0;
   }
 }

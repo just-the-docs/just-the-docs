@@ -195,12 +195,6 @@
   @include mq(md) {
     padding-right: $gutter-spacing-sm;
   }
-
-  .toggle-toc {
-    @include mq(xl) {
-      display: none;
-    }
-  }
 }
 
 // Breadcrumb nav

@@ -114,5 +114,5 @@ $media-queries: (
   sm: 31.25rem,
   md: $content-width,
   lg: $content-width + $nav-width,
-  xl: 87.5rem,
+  xl: $content-width + $nav-width + $toc-width,
 ) !default;

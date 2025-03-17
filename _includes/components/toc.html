@@ -6,12 +6,13 @@
     {%- include toc_custom.html -%}
 {% endcapture %}
 
-<nav class="toc" aria-label="Table of Contents">
+<nav class="toc closed" aria-label="Table of Contents">
     {% if toc_custom != "" %}
     	{{ toc_custom }}
 	{% else %}
+        <a id="toggleToc">Close</a>
 		{% if site.back_to_top %}
-            <a href="#top" class="back-to-top">{{ site.back_to_top_text }}</a>
+            <p><a href="#top" class="back-to-top">{{ site.back_to_top_text }}</a></p>
         {% endif %}
         {% include toc_heading_custom.html %}
         {% include vendor/toc.html

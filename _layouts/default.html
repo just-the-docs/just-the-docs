@@ -6,7 +6,7 @@ layout: table_wrappers
 
 <html lang="{{ site.lang | default: 'en-US' }}">
 {% include head.html %}
-<body>
+<body class="{% if site.toc_enabled != false %}toc{% endif %}">
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   {% include icons/icons.html %}
   {% if page.nav_enabled == true %}
@@ -17,16 +17,17 @@ layout: table_wrappers
     {% include components/sidebar.html %}
   {% endif %}
 
-  {% if page.toc_enabled == true %}
-    {% include components/toc.html %}
-  {% elsif layout.toc_enabled == true and page.toc_enabled == nil %}
-    {% include components/toc.html %}
-  {% elsif site.toc_enabled != false and layout.toc_enabled == nil and page.toc_enabled == nil %}
-    {% include components/toc.html %}
-  {% endif %}
-
   <div class="main" id="top">
     {% include components/header.html %}
+
+    {% if page.toc_enabled == true %}
+      {% include components/toc.html %}
+    {% elsif layout.toc_enabled == true and page.toc_enabled == nil %}
+      {% include components/toc.html %}
+    {% elsif site.toc_enabled != false and layout.toc_enabled == nil and page.toc_enabled == nil %}
+      {% include components/toc.html %}
+    {% endif %}
+
     <div class="main-content-wrap">
       {% include components/breadcrumbs.html %}
       <div id="main-content" class="main-content">
