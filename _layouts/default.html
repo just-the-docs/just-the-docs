@@ -20,11 +20,7 @@ layout: table_wrappers
   <div class="main" id="top">
     {% include components/header.html %}
 
-    {% if page.toc_enabled == true %}
-      {% include components/toc.html %}
-    {% elsif layout.toc_enabled == true and page.toc_enabled == nil %}
-      {% include components/toc.html %}
-    {% elsif site.toc_enabled != false and layout.toc_enabled == nil and page.toc_enabled == nil %}
+    {% if site.toc_enabled != false and layout.toc_enabled != false and page.toc_enabled != false %}
       {% include components/toc.html %}
     {% endif %}
 

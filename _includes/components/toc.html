@@ -1,17 +1,34 @@
 {%- comment -%}
 	Include as: {% include components/toc.html %}
+	Depends on: site, content.
+	Includes: toc_custom.html, toc_heading_custom.html, vendor/toc.html.
+	Overwrites: toc_custom.
+
+	Add a Table of Contents sidebar to the right of main content. When enabled, the layout will be shifted left to
+	accommodate the new sidebar (unless on smaller screens where ToC will display as a side/top panel).
+
+	Switches when the screen width is larger than `$nav-width + $content-width + $toc-width` (set as `mq(xl)`).
+
+	Note that ToC sidebar is strictly opt-out. Once enabled in _config.yml, this feature will be enabled site-wide and
+	you'll need to set the flag on a page or layout if you wish to disable the ToC sidebar for that page or layout.
+	Likewise, if you wish to use the ToC sidebar for just one page, you have to enable the feature site-wide.
+
+	Again, because the _default_ layout is set to shift regardless, and navigating pages => layout shifts => surprises.
+
+	Disabling ToC sidebar per page will leave a large blank space, to which I chose not to do anything because the other
+	options are to break `$content-width`, or center the content inside `.main-content-wrap` which causes layout shift.
 {%- endcomment -%}
 
 {% capture toc_custom %}
     {%- include toc_custom.html -%}
 {% endcapture %}
 
-<nav class="toc closed" aria-label="Table of Contents">
+<nav class="toc" aria-label="Table of Contents">
     {% if toc_custom != "" %}
-    	{{ toc_custom }}
-	{% else %}
-        <a id="toggleToc">Close</a>
-		{% if site.back_to_top %}
+        {{ toc_custom }}
+    {% else %}
+        <p id="closeToC"><a>Close</a></p>
+        {% if site.back_to_top %}
             <p><a href="#top" class="back-to-top">{{ site.back_to_top_text }}</a></p>
         {% endif %}
         {% include toc_heading_custom.html %}
@@ -22,5 +39,5 @@
                 ordered=site.toc.ordered
                 flat_toc=site.toc.flat_toc
         %}
-	{% endif %}
+    {% endif %}
 </nav>

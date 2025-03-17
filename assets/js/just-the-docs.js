@@ -69,6 +69,16 @@ function initNav() {
   {%- endif %}
 }
 
+function initToC() {
+  const toc = document.querySelector("nav.toc");
+
+  toc.querySelectorAll('a').forEach((element) => {
+    jtd.addEvent(element, 'click', (e) => {
+      toc.classList.remove('open');
+    })
+  })
+}
+
 // The <head> element is assumed to include the following stylesheets:
 // - a <link> to /assets/css/just-the-docs-head-nav.css,
 //             with id 'jtd-head-nav-stylesheet'
@@ -560,6 +570,9 @@ jtd.onReady(function(){
     initNav();
     activateNav();
     scrollNav();
+  }
+  if (document.querySelector('nav.toc')) {
+    initToC();
   }
   {%- if site.search_enabled != false %}
   initSearch();
