@@ -222,7 +222,7 @@ body {
   color: $link-color;
 }
 
-// Three column layout: nav + content + toc
+// ToC is added to .main-content-wrap => shift the sidebar and main div position to the left and widen the main div
 @include mq(xl) {
   .toc .side-bar {
     width: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
@@ -239,73 +239,83 @@ body {
 }
 
 nav.toc {
-  display: none;
-  visibility: hidden;
-  padding: 0 $sp-4;
-  line-height: 1.5;
+  // ToC is hidden by default on xs -> lg views, unless an action attaches the .open class to nav.toc
   overflow-y: auto;
-
+  line-height: 1.5;
   @include fs-3;
 
-  &.open {
-    display: block;
-    visibility: visible;
+  @media (max-width: map-get($media-queries, md)) { // xs + sm
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
     z-index: 3;
+    @include fs-5;
 
-    & ~ .search-overlay {
+    &.closed {
+      display: none;
+      visibility: hidden;
+    }
+
+    &:not(.closed) ~ .search-overlay {
       width: 100%;
       height: 100%;
       opacity: 1;
       z-index: 2;
     }
 
-    @include mq(xs) {
-      position: sticky;
-      top: 0;
-      background-color: $white;
-
-      @include fs-5;
-
-      & li {
-        margin: $sp-4 0;
-      }
-
-      & #closeToC {
-        text-align: right;
-      }
+    & > div {
+      padding: 0 $sp-4;
+      max-height: 100vh;
+      overflow-y: auto;
     }
 
-    @include mq(md) {
-      position: fixed;
-      padding-top: $sp-10;
-      padding-right: calc((100% - #{$nav-width + $content-width}) / 2);
-      width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$toc-width} + #{$sp-4});
-      right: 0;
-      height: 100vh;
-      box-shadow: 0 0 10px $grey-dk-300;
+    & li {
+      margin: $sp-4 0;
+    }
 
-      @include fs-3;
+    & #closeToC {
+      text-align: right;
+    }
+  }
 
-      & li {
-        margin: $sp-2 0;
-      }
+  @media (min-width: map-get($media-queries, md)) and (max-width: map-get($media-queries, xl)) { // lg + xl
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: $sp-10 Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4) 0 $sp-4;
+    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$toc-width} + #{$sp-4});
+    min-width: #{$toc-width + $sp-6};
+    height: 100vh;
+    background-color: $white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+    z-index: 3;
 
-      & #closeToC {
-        text-align: left;
-      }
+    &.closed {
+      display: none;
+      visibility: hidden;
+    }
+
+    &:not(.closed) ~ .search-overlay {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      z-index: 2;
+    }
+
+    & li {
+      margin: $sp-2 0;
     }
   }
 
   @include mq(xl) {
-    display: block;
-    visibility: visible;
     position: sticky;
     top: 1rem;
     margin-top: $sp-8;
     float: right;
     width: $toc-width;
     max-height: calc(100vh - #{$sp-6});
-    padding: 0;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       position: fixed;
@@ -314,22 +324,22 @@ nav.toc {
       max-height: calc(100vh - #{$header-height + $sp-10});
     }
 
+    & li {
+      margin: $sp-2 0;
+    }
+
     #closeToC {
       display: none;
       visibility: hidden;
     }
-
-    & li {
-      margin: $sp-2 0;
-    }
   }
 
-  & > p:nth-of-type(2) {
+  & div > p:nth-of-type(2) {
     margin-top: $sp-1;
   }
 
   // Because toc-width is usually small => hide the list bullet points and minimize left padding
-  & > ul {
+  & div > ul {
     padding-left: 0;
     list-style-type: none;
 
@@ -338,6 +348,10 @@ nav.toc {
       list-style-type: none;
       border-left: 1px solid $grey-lt-300;
     }
+  }
+
+  & a.toc-item-link.active {
+    font-weight: bold;
   }
 
   & ol {

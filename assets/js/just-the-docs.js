@@ -12,6 +12,10 @@ jtd.removeEvent = function(el, type, handler) {
   if (el.detachEvent) el.detachEvent('on'+type, handler); else el.removeEventListener(type, handler);
 }
 jtd.onReady = function(ready) {
+  // Add forEach support for IE9 and later
+  if (typeof NodeList.prototype.forEach !== 'function')  {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
   // in case the document is already rendered
   if (document.readyState!='loading') ready();
   // modern browsers
@@ -69,13 +73,57 @@ function initNav() {
   {%- endif %}
 }
 
+function isOutOfViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+      rect.bottom < 0 || // Element is above the viewport
+      rect.top > window.innerHeight || // Element is below the viewport
+      rect.right < 0 || // Element is left of the viewport
+      rect.left > window.innerWidth // Element is right of the viewport
+  );
+}
+
 function initToC() {
   const toc = document.querySelector("nav.toc");
+  const toggleTocButton = document.querySelectorAll('a.js-toggle-toc');
 
-  toc.querySelectorAll('a').forEach((element) => {
-    jtd.addEvent(element, 'click', (e) => {
-      toc.classList.remove('open');
-    })
+  try {
+    toc.querySelectorAll('a').forEach((element) => {
+      jtd.addEvent(element, 'click', (e) => {
+        toc.classList.add('closed');
+      });
+    });
+    toggleTocButton.forEach((element) => {
+      jtd.addEvent(element, 'click', (e) => {
+        e.preventDefault();
+        toc.classList.remove('closed');
+      });
+    });
+  } catch (e) {
+    console.log("An error occurred when attempting to attach click events for Table of Contents sidebar: " + e);
+  }
+
+  // Kudos to JohnD/Tyler2P - https://stackoverflow.com/a/75346369
+  const anchors = document.querySelectorAll('#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6');
+  const tocLinks = toc.querySelectorAll('a.toc-item-link');
+
+  jtd.addEvent(window, 'scroll', () => {
+    if (typeof(anchors) != 'undefined' && anchors != null && typeof(tocLinks) != 'undefined' && tocLinks != null) {
+      // highlight the last scrolled-to: set everything inactive first
+      tocLinks.forEach((link, index) => {
+        link.classList.remove("active");
+      });
+
+      for (var anchor of anchors) {
+        if (!isOutOfViewport(anchor)) {
+          for (var link of tocLinks) {
+            if (link.getAttribute('href') === anchor.querySelector('a.anchor-heading').getAttribute('href')) {
+              link.classList.add('active');
+            }
+          }
+        }
+      }
+    }
   })
 }
 

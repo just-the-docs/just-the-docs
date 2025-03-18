@@ -23,21 +23,24 @@
     {%- include toc_custom.html -%}
 {% endcapture %}
 
-<nav class="toc" aria-label="Table of Contents">
+<nav class="toc closed" aria-label="Table of Contents">
     {% if toc_custom != "" %}
         {{ toc_custom }}
     {% else %}
-        <p id="closeToC"><a>Close</a></p>
-        {% if site.back_to_top %}
-            <p><a href="#top" class="back-to-top">{{ site.back_to_top_text }}</a></p>
-        {% endif %}
-        {% include toc_heading_custom.html %}
-        {% include vendor/toc.html
-                html=content
-                h_min=site.toc.min_heading_level
-                h_max=site.toc.max_heading_level
-                ordered=site.toc.ordered
-                flat_toc=site.toc.flat_toc
-        %}
+        <div>
+            <p id="closeToC"><a>Close</a></p>
+            {% if site.back_to_top %}
+                <p><a href="#top" class="back-to-top">{{ site.back_to_top_text }}</a></p>
+            {% endif %}
+            {% include toc_heading_custom.html %}
+            {% include vendor/toc.html
+                    html=content
+                    h_min=site.toc.min_heading_level
+                    h_max=site.toc.max_heading_level
+                    ordered=site.toc.ordered
+                    anchor_class='toc-item-link'
+                    flat_toc=site.toc.flat_toc
+            %}
+        </div>
     {% endif %}
 </nav>
