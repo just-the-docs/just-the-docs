@@ -76,7 +76,7 @@ function initNav() {
 function isOutOfViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
-      rect.bottom < 0 || // Element is above the viewport
+      // rect.bottom < 0 || // Element is above the viewport
       rect.top > window.innerHeight || // Element is below the viewport
       rect.right < 0 || // Element is left of the viewport
       rect.left > window.innerWidth // Element is right of the viewport
@@ -85,14 +85,16 @@ function isOutOfViewport(el) {
 
 function initToC() {
   const toc = document.querySelector("nav.toc");
-  const toggleTocButton = document.querySelectorAll('a.js-toggle-toc');
+  const toggleTocButton = document.querySelectorAll('.js-toggle-toc');
 
   try {
+    // Buttons to close the ToC sidebar/top panel
     toc.querySelectorAll('a').forEach((element) => {
       jtd.addEvent(element, 'click', (e) => {
         toc.classList.add('closed');
       });
     });
+    // Buttons to open the ToC sidebar/top panel
     toggleTocButton.forEach((element) => {
       jtd.addEvent(element, 'click', (e) => {
         e.preventDefault();
@@ -106,25 +108,38 @@ function initToC() {
   // Kudos to JohnD/Tyler2P - https://stackoverflow.com/a/75346369
   const anchors = document.querySelectorAll('#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6');
   const tocLinks = toc.querySelectorAll('a.toc-item-link');
+  var tocAnchors = [];
+
+  // Map all heading anchors which have links in the ToC
+  tocLinks.forEach((link) => {
+    anchors.forEach((anchor) => {
+      if (link.getAttribute('href') === anchor.querySelector('a.anchor-heading').getAttribute('href')) {
+        tocAnchors.push(anchor);
+      }
+    });
+  });
 
   jtd.addEvent(window, 'scroll', () => {
-    if (typeof(anchors) != 'undefined' && anchors != null && typeof(tocLinks) != 'undefined' && tocLinks != null) {
-      // highlight the last scrolled-to: set everything inactive first
-      tocLinks.forEach((link, index) => {
-        link.classList.remove("active");
-      });
-
-      for (var anchor of anchors) {
-        if (!isOutOfViewport(anchor)) {
-          for (var link of tocLinks) {
-            if (link.getAttribute('href') === anchor.querySelector('a.anchor-heading').getAttribute('href')) {
-              link.classList.add('active');
-            }
+    if (typeof(tocAnchors) != 'undefined' && tocAnchors != null && typeof(tocLinks) != 'undefined' && tocLinks != null) {
+      for (var i = 0; i < tocAnchors.length; i++) {
+        // Once a heading anchor passes the top of the viewport, remove the .active class from the ToC links of all previous anchors above.
+        // Making sure that if there's still a portion of the last section on screen, the ToC item for that remains highlighted.
+        if (window.scrollY > tocAnchors[i].offsetTop - 10) { // Offset for checking the heading against top of viewport is 10px
+          for (var k = 0; k < i; k++) {
+            tocLinks[k].classList.remove('active');
+          }
+        }
+        // Highlight the current ToC item and subsequent items in the viewport, if any
+        for (var a = i; a < tocAnchors.length; a++) {
+          if (!isOutOfViewport(tocAnchors[a])) {
+            tocLinks[a].classList.add('active');
+          } else {
+            tocLinks[a].classList.remove('active');
           }
         }
       }
     }
-  })
+  });
 }
 
 // The <head> element is assumed to include the following stylesheets:

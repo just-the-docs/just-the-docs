@@ -188,6 +188,9 @@ toc:
   ordered: false
   # Display the ToC as a single level list
   flat_toc: false # or true
+  # Highlight the current sections in view in the ToC (requires JS)
+  highlight_active: true # or false
+  # For complicated extra settings, see _includes/components/toc.html
 
 # Google Analytics Tracking (optional)
 # Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")

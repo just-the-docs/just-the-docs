@@ -23,6 +23,20 @@
     {%- include toc_custom.html -%}
 {% endcapture %}
 
+{% if site.toc.highlight_active != false %}
+    {% assign anchor_class = 'toc-item-link' %}
+{% else %}
+    {% assign anchor_class = site.toc.anchor_class | default: '' %}
+{% endif %}
+
+{% assign sanitize = site.toc.sanitize | default: false %}
+{% assign class = site.toc.class | default: '' %}
+{% assign id = site.toc.id | default: '' %}
+{% assign item_class = site.toc.item_class | default: '' %}
+{% assign submenu_class = site.toc.submenu_class | default: '' %}
+{% assign base_url = site.toc.base_url | default: '' %}
+{% assign skip_no_ids = site.toc.skip_no_ids | default: false %}
+
 <nav class="toc closed" aria-label="Table of Contents">
     {% if toc_custom != "" %}
         {{ toc_custom }}
@@ -34,12 +48,19 @@
             {% endif %}
             {% include toc_heading_custom.html %}
             {% include vendor/toc.html
-                    html=content
-                    h_min=site.toc.min_heading_level
-                    h_max=site.toc.max_heading_level
-                    ordered=site.toc.ordered
-                    anchor_class='toc-item-link'
-                    flat_toc=site.toc.flat_toc
+                html=content
+                sanitize=sanitize
+                class=class
+                id=id
+                h_min=site.toc.min_heading_level
+                h_max=site.toc.max_heading_level
+                ordered=site.toc.ordered
+                item_class=item_class
+                submenu_class=submenu_class
+                base_url=base_url
+                anchor_class=anchor_class
+                skip_no_ids=skip_no_ids
+                flat_toc=site.toc.flat_toc
             %}
         </div>
     {% endif %}
