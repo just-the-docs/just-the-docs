@@ -1,0 +1,218 @@
+nav.toc {
+	// ToC is hidden by default on xs -> lg views, unless an action attaches the .open class to nav.toc
+	overflow-y: auto;
+	line-height: 1.5;
+	@include fs-3;
+
+	@media (max-width: map-get($media-queries, md)) { // xs + sm
+		position: sticky;
+		top: 0;
+		width: 100%;
+		z-index: 3;
+		@include fs-4;
+
+		& > div {
+			padding: 0 $sp-4;
+			max-height: 100vh;
+			overflow-y: auto;
+			overscroll-behavior: contain;
+			-ms-scroll-chaining: none;
+			background-color: $sidebar-color;
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+
+			& p.js-toggle-toc {
+				position: sticky;
+				top: 1rem;
+				text-align: right;
+			}
+
+			& li {
+				margin: $sp-4 0;
+			}
+		}
+
+		& > a.current-heading-banner {
+			display: block;
+			margin-top: 0;
+			padding: $sp-3 $sp-4;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			background-color: $sidebar-color;
+			transition: margin-top 0.4s;
+
+			&.hidden {
+				margin-top: -48px;
+			}
+		}
+
+		&.closed > div,
+		&:not(.closed) a.current-heading-banner,
+		& a.btn.js-toggle-toc {
+			display: none;
+			visibility: hidden;
+		}
+
+		&:not(.closed) ~ .search-overlay {
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+			z-index: 2;
+		}
+	}
+
+	@media (min-width: map-get($media-queries, md)) and (max-width: map-get($media-queries, xl)) { // md + lg
+		&:not(.panel) {
+			position: sticky;
+			top: $sp-4;
+			margin: $sp-8 $sp-4 -#{$sp-8} auto; // Align the ToC board to the right + move down without also moving the content
+			width: $toc-width;
+			height: 0;
+			overflow: visible;
+			z-index: 1;
+
+			& > div {
+				padding: 0 $sp-4;
+				max-height: calc(100vh - 40px - 2rem);
+				overflow-y: auto;
+				background-color: $sidebar-color;
+				border-radius: $sp-1;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+			}
+
+			& > a.js-toggle-toc {
+				display: block;
+				margin-left: auto;
+				padding: .6em;
+				opacity: 0.3;
+				width: 40px;
+				height: 40px;
+
+				&:hover, &:active, &:target {
+					opacity: 1;
+				}
+			}
+
+			&.closed > div,
+			& p.js-toggle-toc,
+			& a.current-heading-banner {
+				display: none;
+				visibility: hidden;
+			}
+		}
+
+		&.panel {
+			position: fixed;
+			top: 0;
+			right: 0;
+			padding: $sp-10 Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4) 0 $sp-4;
+			width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$toc-width} + #{$sp-4});
+			min-width: #{$toc-width + $sp-6};
+			height: 100vh;
+			background-color: $sidebar-color;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+			z-index: 3;
+
+			&:not(.closed) a.js-toggle-toc {
+				display: none;
+				visibility: hidden;
+			}
+
+			&.closed {
+				visibility: hidden;
+
+				& > a.btn.js-toggle-toc {
+					visibility: visible;
+					position: fixed;
+					top: $header-height + $sp-8;
+					right: Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4);
+					padding: .6em;
+					width: 40px;
+					height: 40px;
+					opacity: 0.3;
+
+					&:hover, &:active, &:target {
+						opacity: 1;
+					}
+				}
+			}
+
+			&:not(.closed) ~ .search-overlay {
+				width: 100%;
+				height: 100%;
+				opacity: 1;
+				z-index: 2;
+			}
+		}
+
+		& li {
+			margin: $sp-2 0;
+		}
+	}
+
+	@include mq(xl) {
+		position: sticky;
+		top: $sp-4;
+		margin-top: $sp-8;
+		float: right;
+		width: $toc-width;
+		max-height: calc(100vh - #{$sp-6});
+
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			position: fixed;
+			right: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2);
+			top: $header-height;
+			max-height: calc(100vh - #{$header-height + $sp-10});
+		}
+
+		& li {
+			margin: $sp-2 0;
+		}
+
+		& .js-toggle-toc {
+			display: none;
+			visibility: hidden;
+		}
+
+		& div > p:nth-of-type(2) {
+			margin-top: $sp-1;
+		}
+	}
+
+	// Because toc-width is usually small => hide the list bullet points and minimize left padding
+	& div > ul {
+		padding-left: 0;
+		list-style-type: none;
+
+		& ul {
+			padding-left: $sp-4;
+			list-style-type: none;
+			border-left: 1px solid $grey-lt-300;
+		}
+	}
+
+	& a.toc-item-link.active {
+		font-weight: bold;
+	}
+
+	& ol {
+		padding-left: $sp-5;
+		list-style-type: none;
+		counter-reset: step-counter;
+
+		& > li::before {
+			position: absolute;
+			margin-left: -#{$sp-5};
+			content: counter(step-counter);
+			counter-increment: step-counter;
+		}
+
+		& > li ol {
+			counter-reset: sub-counter;
+		}
+
+		& > li ol > li::before {
+			content: counter(sub-counter, lower-alpha);
+			counter-increment: sub-counter;
+		}
+	}
+}

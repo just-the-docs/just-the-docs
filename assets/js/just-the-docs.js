@@ -87,6 +87,8 @@ function initToC() {
   const toc = document.querySelector("nav.toc");
   const toggleTocButton = document.querySelectorAll('.js-toggle-toc');
   const toggleTocButton2 = document.querySelector('a.btn.js-toggle-toc');
+  const toggleTocBanner = document.querySelector('a.js-toggle-toc.current-heading-banner');
+  let previousScrollY = 0, tocItemClicked = false;
 
   try {
     // If user clicks outside the ToC sidebar (does not affect xl and up)
@@ -95,11 +97,13 @@ function initToC() {
         toc.classList.add('closed');
       }
     });
-    // On xs and sm, pressing any links should auto-hide the ToC panel
-    if (window.getComputedStyle(toc).getPropertyValue('width') === '100%') {
+    if (window.innerWidth <= 800) {
       toc.querySelectorAll('a').forEach((element) => {
         jtd.addEvent(element, 'click', (e) => {
           toc.classList.add('closed');
+          toggleTocBanner.classList.add('hidden');
+          tocItemClicked = true;
+          setTimeout(() => { tocItemClicked = false; }, 500);
         });
       });
     }
@@ -122,7 +126,7 @@ function initToC() {
   const tocLinks = toc.querySelectorAll('a.toc-item-link');
 
   // Map all heading anchors which have links in the ToC
-  var tocAnchors = [];
+  let tocAnchors = [];
   for (var link of tocLinks) {
     for (var anchor of anchors) {
       if (link.getAttribute('href') === anchor.querySelector('a.anchor-heading').getAttribute('href')) {
@@ -133,11 +137,12 @@ function initToC() {
   }
 
   jtd.addEvent(window, 'scroll', () => {
-    if (typeof(tocAnchors) != 'undefined' && tocAnchors != null && typeof(tocLinks) != 'undefined' && tocLinks != null) {
+    if (typeof (tocAnchors) != 'undefined' && tocAnchors != null && typeof (tocLinks) != 'undefined' && tocLinks != null) {
       for (var i = 0; i < tocAnchors.length; i++) {
         // Once a heading anchor passes the top of the viewport, remove the .active class from the ToC links of all previous anchors above.
         // Making sure that if there's still a portion of the last section on screen, the ToC item for that remains highlighted.
         if (window.scrollY > tocAnchors[i].offsetTop - 10) { // Offset for checking the heading against top of viewport is 10px
+          if (window.innerWidth <= 800) toggleTocBanner.innerText = tocAnchors[i].innerText;
           for (var k = 0; k < i; k++) {
             tocLinks[k].classList.remove('active');
           }
@@ -151,6 +156,20 @@ function initToC() {
           }
         }
       }
+    }
+
+    if (window.innerWidth <= 800) {
+      if (tocAnchors && tocAnchors.length) {
+        if (window.scrollY < tocAnchors[0].offsetTop) {
+          toggleTocBanner.innerText = "Open Table of Contents";
+        }
+      }
+      if (window.scrollY - previousScrollY > 25) {
+        toggleTocBanner.classList.add('hidden');
+      } else if (previousScrollY - window.scrollY > 25 && !tocItemClicked) {
+        toggleTocBanner.classList.remove('hidden');
+      }
+      previousScrollY = window.scrollY;
     }
   });
 }
