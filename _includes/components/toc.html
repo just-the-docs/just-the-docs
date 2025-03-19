@@ -37,12 +37,15 @@
 {% assign base_url = site.toc.base_url | default: '' %}
 {% assign skip_no_ids = site.toc.skip_no_ids | default: false %}
 
-<nav class="toc closed" aria-label="Table of Contents">
+<nav class="toc closed{% if site.toc.md_side_panel %} panel{% endif %}" aria-label="Table of Contents">
     {% if toc_custom != "" %}
         {{ toc_custom }}
     {% else %}
+        <a class="btn js-toggle-toc" role="button" title="Toggle Table of Contents sidebar" aria-label="Open Table of Contents sidebar">
+            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+        </a>
         <div>
-            <p id="closeToC"><a>Close</a></p>
+            <p class="js-toggle-toc"><a>Close</a></p>
             {% if site.back_to_top %}
                 <p><a href="#top" class="back-to-top">{{ site.back_to_top_text }}</a></p>
             {% endif %}

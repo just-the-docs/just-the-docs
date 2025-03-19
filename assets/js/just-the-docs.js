@@ -86,38 +86,51 @@ function isOutOfViewport(el) {
 function initToC() {
   const toc = document.querySelector("nav.toc");
   const toggleTocButton = document.querySelectorAll('.js-toggle-toc');
+  const toggleTocButton2 = document.querySelector('a.btn.js-toggle-toc');
 
   try {
-    // Buttons to close the ToC sidebar/top panel
-    toc.querySelectorAll('a').forEach((element) => {
-      jtd.addEvent(element, 'click', (e) => {
+    // If user clicks outside the ToC sidebar (does not affect xl and up)
+    jtd.addEvent(document, 'click', function(e) {
+      if (!toc.contains(e.target) && !e.target.classList.contains('js-toggle-toc')) {
         toc.classList.add('closed');
-      });
+      }
     });
+    // On xs and sm, pressing any links should auto-hide the ToC panel
+    if (window.getComputedStyle(toc).getPropertyValue('width') === '100%') {
+      toc.querySelectorAll('a').forEach((element) => {
+        jtd.addEvent(element, 'click', (e) => {
+          toc.classList.add('closed');
+        });
+      });
+    }
     // Buttons to open the ToC sidebar/top panel
     toggleTocButton.forEach((element) => {
       jtd.addEvent(element, 'click', (e) => {
-        e.preventDefault();
-        toc.classList.remove('closed');
+        toc.classList.toggle('closed');
       });
+    });
+    // Double-clicking the button to scroll back to top
+    jtd.addEvent(toggleTocButton2, 'dblclick', () => {
+      window.scrollTo({top: 0, behavior: 'smooth'});
     });
   } catch (e) {
     console.log("An error occurred when attempting to attach click events for Table of Contents sidebar: " + e);
   }
 
-  // Kudos to JohnD/Tyler2P - https://stackoverflow.com/a/75346369
+  // Highlight ToC items in view. Kudos to JohnD/Tyler2P - https://stackoverflow.com/a/75346369
   const anchors = document.querySelectorAll('#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6');
   const tocLinks = toc.querySelectorAll('a.toc-item-link');
-  var tocAnchors = [];
 
   // Map all heading anchors which have links in the ToC
-  tocLinks.forEach((link) => {
-    anchors.forEach((anchor) => {
+  var tocAnchors = [];
+  for (var link of tocLinks) {
+    for (var anchor of anchors) {
       if (link.getAttribute('href') === anchor.querySelector('a.anchor-heading').getAttribute('href')) {
         tocAnchors.push(anchor);
+        break;
       }
-    });
-  });
+    }
+  }
 
   jtd.addEvent(window, 'scroll', () => {
     if (typeof(tocAnchors) != 'undefined' && tocAnchors != null && typeof(tocLinks) != 'undefined' && tocLinks != null) {

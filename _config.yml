@@ -190,7 +190,10 @@ toc:
   flat_toc: false # or true
   # Highlight the current sections in view in the ToC (requires JS)
   highlight_active: true # or false
-  # For complicated extra settings, see _includes/components/toc.html
+  # Display the ToC sidebar as a floating panel (default: false) or as a clipped side panel on small desktops
+  # note: enabling this also disables the "double click to scroll up" feature of the sidebar opener button
+  md_side_panel: false # or true
+  # Feel free to add extra jekyll-toc settings, see _includes/vendor/toc.html
 
 # Google Analytics Tracking (optional)
 # Supports a CSV of tracking ID strings (eg. "UA-1234567-89,G-1AB234CDE5")

@@ -223,6 +223,12 @@ body {
 }
 
 // ToC is added to .main-content-wrap => shift the sidebar and main div position to the left and widen the main div
+@media (max-width: map-get($media-queries, md)) {
+  .toc .main-content-wrap {
+    padding-top: 0;
+  }
+}
+
 @include mq(xl) {
   .toc .side-bar {
     width: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
@@ -232,7 +238,6 @@ body {
       max-width: #{$content-width + $toc-width};
     }
   }
-
   .main-content-wrap {
     width: $content-width;
   }
@@ -245,54 +250,34 @@ nav.toc {
   @include fs-3;
 
   @media (max-width: map-get($media-queries, md)) { // xs + sm
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
-    background-color: $white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
     z-index: 3;
     @include fs-4;
-
-    &.closed {
-      display: none;
-      visibility: hidden;
-    }
-
-    &:not(.closed) ~ .search-overlay {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-      z-index: 2;
-    }
 
     & > div {
       padding: 0 $sp-4;
       max-height: 100vh;
       overflow-y: auto;
+      overscroll-behavior: contain;
+      -ms-scroll-chaining: none;
+      background-color: $white;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+
+      & p.js-toggle-toc {
+        position: sticky;
+        top: 1rem;
+        text-align: right;
+      }
+
+      & li {
+        margin: $sp-4 0;
+      }
     }
 
-    & li {
-      margin: $sp-4 0;
-    }
-
-    & #closeToC {
-      text-align: right;
-    }
-  }
-
-  @media (min-width: map-get($media-queries, md)) and (max-width: map-get($media-queries, xl)) { // lg + xl
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: $sp-10 Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4) 0 $sp-4;
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$toc-width} + #{$sp-4});
-    min-width: #{$toc-width + $sp-6};
-    height: 100vh;
-    background-color: $white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
-    z-index: 3;
-
-    &.closed {
+    &.closed > div,
+    & a.btn.js-toggle-toc {
       display: none;
       visibility: hidden;
     }
@@ -302,6 +287,89 @@ nav.toc {
       height: 100%;
       opacity: 1;
       z-index: 2;
+    }
+  }
+
+  @media (min-width: map-get($media-queries, md)) and (max-width: map-get($media-queries, xl)) { // md + lg
+    &:not(.panel) {
+      position: sticky;
+      top: $sp-4;
+      margin: $sp-8 $sp-4 -#{$sp-8} auto; // Align the ToC board to the right + move down without also moving the content
+      width: $toc-width;
+      height: 0;
+      overflow: visible;
+      z-index: 1;
+
+      & > div {
+        padding: 0 $sp-4;
+        max-height: calc(100vh - 40px - 2rem);
+        overflow-y: auto;
+        background-color: $white;
+        border-radius: $sp-1;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      & > a.js-toggle-toc {
+        display: block;
+        margin-left: auto;
+        padding: .6em;
+        opacity: 0.3;
+        width: 40px;
+        height: 40px;
+
+        &:hover, &:active, &:target {
+          opacity: 1;
+        }
+      }
+
+      &.closed > div, & p.js-toggle-toc {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+    &.panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: $sp-10 Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4) 0 $sp-4;
+      width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$toc-width} + #{$sp-4});
+      min-width: #{$toc-width + $sp-6};
+      height: 100vh;
+      background-color: $white;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+      z-index: 3;
+      
+      &:not(.closed) a.js-toggle-toc {
+        display: none;
+        visibility: hidden;
+      }
+
+      &.closed {
+        visibility: hidden;
+
+        & > a.btn.js-toggle-toc {
+          visibility: visible;
+          position: fixed;
+          top: $header-height + $sp-8;
+          right: Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4);
+          padding: .6em;
+          width: 40px;
+          height: 40px;
+          opacity: 0.3;
+
+          &:hover, &:active, &:target {
+            opacity: 1;
+          }
+        }
+      }
+
+      &:not(.closed) ~ .search-overlay {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        z-index: 2;
+      }
     }
 
     & li {
@@ -311,7 +379,7 @@ nav.toc {
 
   @include mq(xl) {
     position: sticky;
-    top: 1rem;
+    top: $sp-4;
     margin-top: $sp-8;
     float: right;
     width: $toc-width;
@@ -328,14 +396,14 @@ nav.toc {
       margin: $sp-2 0;
     }
 
-    #closeToC {
+    & .js-toggle-toc {
       display: none;
       visibility: hidden;
     }
-  }
 
-  & div > p:nth-of-type(2) {
-    margin-top: $sp-1;
+    & div > p:nth-of-type(2) {
+      margin-top: $sp-1;
+    }
   }
 
   // Because toc-width is usually small => hide the list bullet points and minimize left padding
