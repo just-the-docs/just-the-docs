@@ -73,6 +73,11 @@ function initNav() {
   {%- endif %}
 }
 
+jtd.openToC = function() {
+  const toc = document.querySelector("nav.toc");
+  toc?.classList.toggle('closed');
+}
+
 function isOutOfViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
@@ -85,20 +90,20 @@ function isOutOfViewport(el) {
 
 function initToC() {
   const toc = document.querySelector("nav.toc");
-  const toggleTocButton = document.querySelectorAll('.js-toggle-toc');
-  const toggleTocButton2 = document.querySelector('a.btn.js-toggle-toc');
-  const toggleTocBanner = document.querySelector('a.js-toggle-toc.current-heading-banner');
+  const toggleTocBanner = document.querySelector('a.current-heading-banner');
   let previousScrollY = 0, tocItemClicked = false;
 
   try {
-    // If user clicks outside the ToC sidebar (does not affect xl and up)
+    // Close the ToC panel if user clicks outside the ToC sidebar (xs -> lg)
     jtd.addEvent(document, 'click', function(e) {
       if (!toc.contains(e.target) && !e.target.classList.contains('js-toggle-toc')) {
         toc.classList.add('closed');
       }
     });
+    // On xs and sm screens, as the ToC panel occupies the entire screen real estate, close the panel if user clicks on a ToC item
+    // Do not display the heading banner for a short time after a ToC item is clicked
     if (window.innerWidth <= 800) {
-      toc.querySelectorAll('a').forEach((element) => {
+      toc.querySelectorAll('a.toc-item-link, a.back-to-top').forEach((element) => {
         jtd.addEvent(element, 'click', (e) => {
           toc.classList.add('closed');
           toggleTocBanner.classList.add('hidden');
@@ -108,13 +113,13 @@ function initToC() {
       });
     }
     // Buttons to open the ToC sidebar/top panel
-    toggleTocButton.forEach((element) => {
+    document.querySelectorAll('.js-toggle-toc').forEach((element) => {
       jtd.addEvent(element, 'click', (e) => {
         toc.classList.toggle('closed');
       });
     });
-    // Double-clicking the button to scroll back to top
-    jtd.addEvent(toggleTocButton2, 'dblclick', () => {
+    // Double-clicking the ToC opener button to scroll back to top (md and lg)
+    jtd.addEvent(document.querySelector('.btn.js-toggle-toc'), 'dblclick', () => {
       window.scrollTo({top: 0, behavior: 'smooth'});
     });
   } catch (e) {
@@ -124,6 +129,9 @@ function initToC() {
   // Highlight ToC items in view. Kudos to JohnD/Tyler2P - https://stackoverflow.com/a/75346369
   const anchors = document.querySelectorAll('#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6');
   const tocLinks = toc.querySelectorAll('a.toc-item-link');
+  if (!tocLinks.length) {
+    toggleTocBanner.remove();
+  }
 
   // Map all heading anchors which have links in the ToC
   let tocAnchors = [];
@@ -142,7 +150,9 @@ function initToC() {
         // Once a heading anchor passes the top of the viewport, remove the .active class from the ToC links of all previous anchors above.
         // Making sure that if there's still a portion of the last section on screen, the ToC item for that remains highlighted.
         if (window.scrollY > tocAnchors[i].offsetTop - 10) { // Offset for checking the heading against top of viewport is 10px
-          if (window.innerWidth <= 800) toggleTocBanner.innerText = tocAnchors[i].innerText;
+          if (window.innerWidth <= 800) {
+            toggleTocBanner.innerHTML = `${tocAnchors[i].innerText}`;
+          }
           for (var k = 0; k < i; k++) {
             tocLinks[k].classList.remove('active');
           }
@@ -161,13 +171,16 @@ function initToC() {
     if (window.innerWidth <= 800) {
       if (tocAnchors && tocAnchors.length) {
         if (window.scrollY < tocAnchors[0].offsetTop) {
-          toggleTocBanner.innerText = "Open Table of Contents";
+          toggleTocBanner.innerText = "";
         }
       }
-      if (window.scrollY - previousScrollY > 25) {
-        toggleTocBanner.classList.add('hidden');
-      } else if (previousScrollY - window.scrollY > 25 && !tocItemClicked) {
-        toggleTocBanner.classList.remove('hidden');
+      // Hide the heading banner when scrolling down and show when scrolling up
+      if (!tocItemClicked) {
+        if (window.scrollY - previousScrollY > 15) {
+          toggleTocBanner.classList.add('hidden');
+        } else if (previousScrollY - window.scrollY > 15) {
+          toggleTocBanner.classList.remove('hidden');
+        }
       }
       previousScrollY = window.scrollY;
     }

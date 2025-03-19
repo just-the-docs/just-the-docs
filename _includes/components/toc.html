@@ -44,9 +44,9 @@
         <a class="btn js-toggle-toc" role="button" title="Toggle Table of Contents sidebar" aria-label="Open Table of Contents sidebar">
             <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
         </a>
-        <a class="js-toggle-toc current-heading-banner">Open Table of Contents</a>
+        <a class="js-toggle-toc current-heading-banner"></a>
         <div>
-            <p class="js-toggle-toc"><a>Close</a></p>
+            <a class="js-toggle-toc">Close</a>
             {% if site.back_to_top %}
                 <p><a href="#top" class="back-to-top">{{ site.back_to_top_text }}</a></p>
             {% endif %}

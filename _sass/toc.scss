@@ -20,12 +20,14 @@ nav.toc {
 			background-color: $sidebar-color;
 			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 
-			& p.js-toggle-toc {
+			// Button to close the ToC panel
+			& a.js-toggle-toc {
 				position: sticky;
 				top: 1rem;
 				text-align: right;
 			}
 
+			// Padding between ToC items (applies to xs and sm screens)
 			& li {
 				margin: $sp-4 0;
 			}
@@ -35,16 +37,37 @@ nav.toc {
 			display: block;
 			margin-top: 0;
 			padding: $sp-3 $sp-4;
+			white-space: nowrap;
+			width: 100%;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			background-color: $sidebar-color;
+			background-color: $white;
 			transition: margin-top 0.4s;
 
+			&::before {
+				content: 'Table of Contents';
+				padding-right: $sp-2;
+				text-transform: uppercase;
+				font-weight: bold;
+				@include fs-2;
+			}
+
+			&::after {
+				content: '\2193';
+				position: absolute;
+				right: $sp-4;
+				padding-left: $sp-2;
+				background-color: $white;
+			}
+
+			// for the transition
 			&.hidden {
 				margin-top: -48px;
 			}
 		}
 
+		// Hide the inner div when the top panel is closed (leaving the container and .current-heading-banner visible),
+		// hide .current-heading-banner when ToC is open, and hide the ToC opener button from md + lg views
 		&.closed > div,
 		&:not(.closed) a.current-heading-banner,
 		& a.btn.js-toggle-toc {
@@ -52,6 +75,7 @@ nav.toc {
 			visibility: hidden;
 		}
 
+		// Steal the background overlay for search results to use when ToC is open
 		&:not(.closed) ~ .search-overlay {
 			width: 100%;
 			height: 100%;
@@ -79,7 +103,8 @@ nav.toc {
 				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 			}
 
-			& > a.js-toggle-toc {
+			// Button to open/close the floating ToC panel
+			& > a.btn.js-toggle-toc {
 				display: block;
 				margin-left: auto;
 				padding: .6em;
@@ -92,8 +117,10 @@ nav.toc {
 				}
 			}
 
+			// Hide the inner div when the floating panel is closed (leaving the container and the opener button visible),
+			// hide the close button from side ToC panel view, and hide .current-heading-banner from xs + sm views
 			&.closed > div,
-			& p.js-toggle-toc,
+			& a.js-toggle-toc:not(.btn),
 			& a.current-heading-banner {
 				display: none;
 				visibility: hidden;
@@ -112,20 +139,24 @@ nav.toc {
 			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 			z-index: 3;
 
-			&:not(.closed) a.js-toggle-toc {
+			// Hide the ToC opener button when the panel is open, and .current-heading-banner from xs + sm views
+			&:not(.closed) a.btn.js-toggle-toc,
+			& a.current-heading-banner {
 				display: none;
 				visibility: hidden;
 			}
 
+			// Hide the side ToC panel visually
 			&.closed {
 				visibility: hidden;
 
+				// Button to re-open the side ToC panel. Partially displays over the content so make it translucent
 				& > a.btn.js-toggle-toc {
 					visibility: visible;
 					position: fixed;
 					top: $header-height + $sp-8;
 					right: Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4);
-					padding: .6em;
+					padding: .6em; // Align the SVG icon to the center of the button
 					width: 40px;
 					height: 40px;
 					opacity: 0.3;
@@ -136,6 +167,7 @@ nav.toc {
 				}
 			}
 
+			// Steal the background overlay for search results to use when side ToC panel is open
 			&:not(.closed) ~ .search-overlay {
 				width: 100%;
 				height: 100%;
@@ -144,6 +176,7 @@ nav.toc {
 			}
 		}
 
+		// Padding between ToC items (applies to md and bigger screens)
 		& li {
 			margin: $sp-2 0;
 		}
@@ -157,6 +190,7 @@ nav.toc {
 		width: $toc-width;
 		max-height: calc(100vh - #{$sp-6});
 
+		// IE fixes as position: sticky isn't exist
 		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 			position: fixed;
 			right: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2);
@@ -164,15 +198,19 @@ nav.toc {
 			max-height: calc(100vh - #{$header-height + $sp-10});
 		}
 
+		// Paddings between ToC items (applies to md and bigger screens)
 		& li {
 			margin: $sp-2 0;
 		}
 
+		// Hide all buttons which toggle the ToC sidebar (include a.current-heading-banner, a.btn.js-toggle-toc and Close button)
+		// ToC sidebar isn't supposed to be closed on large screens
 		& .js-toggle-toc {
 			display: none;
 			visibility: hidden;
 		}
 
+		// Smaller top margin for the Back to top button now that the Close button no longer shows
 		& div > p:nth-of-type(2) {
 			margin-top: $sp-1;
 		}
