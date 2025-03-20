@@ -12,10 +12,6 @@ jtd.removeEvent = function(el, type, handler) {
   if (el.detachEvent) el.detachEvent('on'+type, handler); else el.removeEventListener(type, handler);
 }
 jtd.onReady = function(ready) {
-  // Add forEach support for IE9 and later
-  if (typeof NodeList.prototype.forEach !== 'function')  {
-    NodeList.prototype.forEach = Array.prototype.forEach;
-  }
   // in case the document is already rendered
   if (document.readyState!='loading') ready();
   // modern browsers
@@ -103,21 +99,21 @@ function initToC() {
     // On xs and sm screens, as the ToC panel occupies the entire screen real estate, close the panel if user clicks on a ToC item
     // Do not display the heading banner for a short time after a ToC item is clicked
     if (window.innerWidth <= 800) {
-      toc.querySelectorAll('a.toc-item-link, a.back-to-top').forEach((element) => {
+      for (var element of toc.querySelectorAll('a.toc-item-link, a.back-to-top')) {
         jtd.addEvent(element, 'click', (e) => {
           toc.classList.add('closed');
           toggleTocBanner.classList.add('hidden');
           tocItemClicked = true;
           setTimeout(() => { tocItemClicked = false; }, 500);
         });
-      });
+      }
     }
     // Buttons to open the ToC sidebar/top panel
-    document.querySelectorAll('.js-toggle-toc').forEach((element) => {
+    for (var element of document.querySelectorAll('.js-toggle-toc')) {
       jtd.addEvent(element, 'click', (e) => {
         toc.classList.toggle('closed');
       });
-    });
+    }
     // Double-clicking the ToC opener button to scroll back to top (md and lg)
     jtd.addEvent(document.querySelector('.btn.js-toggle-toc'), 'dblclick', () => {
       window.scrollTo({top: 0, behavior: 'smooth'});
