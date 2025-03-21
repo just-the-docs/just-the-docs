@@ -29,4 +29,10 @@
       This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
     </footer>
   {% endif %}
+
+  {% if site.enable_color_scheme_toggle == 'true' %}
+    <div class="site-footer m-1">
+      {% include toggle-color-scheme.html %}
+    </div>
+  {% endif %}
 </div>
