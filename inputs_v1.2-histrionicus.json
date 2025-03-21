@@ -1,0 +1,65 @@
+[
+    {
+        "branch": "v1.2-histrionicus",
+        "event": "workflow_dispatch",
+        "nightly_build": "windows",
+        "duckdb_arch": "amd64",
+        "runs_on": "windows-latest",
+        "run_id": 13889063558,
+        "duckdb_binary": "windows-amd64"
+    },
+    {
+        "branch": "v1.2-histrionicus",
+        "event": "workflow_dispatch",
+        "nightly_build": "linux",
+        "duckdb_arch": "aarch64",
+        "runs_on": "ubuntu-24.04-arm",
+        "run_id": 13889063558,
+        "duckdb_binary": "linux-aarch64"
+    },
+    {
+        "branch": "v1.2-histrionicus",
+        "event": "workflow_dispatch",
+        "nightly_build": "python",
+        "duckdb_arch": "aarch64",
+        "runs_on": "ubuntu-24.04-arm",
+        "run_id": 13889063558,
+        "duckdb_binary": "linux-aarch64"
+    },
+    {
+        "branch": "v1.2-histrionicus",
+        "event": "workflow_dispatch",
+        "nightly_build": "osx",
+        "duckdb_arch": "amd64",
+        "runs_on": "macos-13",
+        "run_id": 13889063558,
+        "duckdb_binary": "osx"
+    },
+    {
+        "branch": "v1.2-histrionicus",
+        "event": "workflow_dispatch",
+        "nightly_build": "linux",
+        "duckdb_arch": "amd64",
+        "runs_on": "ubuntu-latest",
+        "run_id": 13889063558,
+        "duckdb_binary": "linux"
+    },
+    {
+        "branch": "v1.2-histrionicus",
+        "event": "workflow_dispatch",
+        "nightly_build": "python",
+        "duckdb_arch": "amd64",
+        "runs_on": "ubuntu-latest",
+        "run_id": 13889063558,
+        "duckdb_binary": "linux-amd64"
+    },
+    {
+        "branch": "v1.2-histrionicus",
+        "event": "workflow_dispatch",
+        "nightly_build": "osx",
+        "duckdb_arch": "arm64",
+        "runs_on": "macos-latest",
+        "run_id": 13889063558,
+        "duckdb_binary": "osx"
+    }
+]

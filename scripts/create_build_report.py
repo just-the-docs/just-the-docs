@@ -112,9 +112,7 @@ def create_build_report(build_job, con):
                         tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row[0] == 'linux' else row[0] + "-" + row[1] for row in result]
                     else:
                         tested_binaries = []
-                        print("~~~~>",result)
                         for row in result:
-                            print("~~~~>",row)
                             if row.count('linux'):
                                 tested_binary = row[0] + "-" + row[1] + "_gcc4" if row[1] == 'amd64' else row[0] + "-arm64" 
                             else:
