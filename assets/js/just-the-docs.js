@@ -69,6 +69,120 @@ function initNav() {
   {%- endif %}
 }
 
+jtd.openToC = function() {
+  const toc = document.querySelector("nav.toc");
+  toc?.classList.toggle('closed');
+}
+
+function isOutOfViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+      // rect.bottom < 0 || // Element is above the viewport
+      rect.top > window.innerHeight || // Element is below the viewport
+      rect.right < 0 || // Element is left of the viewport
+      rect.left > window.innerWidth // Element is right of the viewport
+  );
+}
+
+function initToC() {
+  const toc = document.querySelector("nav.toc");
+  const toggleTocBanner = document.querySelector('a.current-heading-banner');
+  let previousScrollY = 0, tocItemClicked = false;
+
+  try {
+    // Close the ToC panel if user clicks outside the ToC sidebar (xs -> lg)
+    jtd.addEvent(document, 'click', function(e) {
+      if (!toc.contains(e.target) && !e.target.classList.contains('js-toggle-toc')) {
+        toc.classList.add('closed');
+      }
+    });
+    // On xs and sm screens, as the ToC panel occupies the entire screen real estate, close the panel if user clicks on a ToC item
+    // Do not display the heading banner for a short time after a ToC item is clicked
+    if (window.innerWidth <= 800) {
+      for (var element of toc.querySelectorAll('a.toc-item-link, a.back-to-top')) {
+        jtd.addEvent(element, 'click', (e) => {
+          toc.classList.add('closed');
+          toggleTocBanner.classList.add('hidden');
+          tocItemClicked = true;
+          setTimeout(() => { tocItemClicked = false; }, 500);
+        });
+      }
+    }
+    // Buttons to open the ToC sidebar/top panel
+    for (var element of document.querySelectorAll('.js-toggle-toc')) {
+      jtd.addEvent(element, 'click', (e) => {
+        toc.classList.toggle('closed');
+      });
+    }
+    // Double-clicking the ToC opener button to scroll back to top (md and lg)
+    jtd.addEvent(document.querySelector('.btn.js-toggle-toc'), 'dblclick', () => {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  } catch (e) {
+    console.log("An error occurred when attempting to attach click events for Table of Contents sidebar: " + e);
+  }
+
+  // Highlight ToC items in view. Kudos to JohnD/Tyler2P - https://stackoverflow.com/a/75346369
+  const anchors = document.querySelectorAll('#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6');
+  const tocLinks = toc.querySelectorAll('a.toc-item-link');
+  if (!tocLinks.length) {
+    toggleTocBanner.remove();
+  }
+
+  // Map all heading anchors which have links in the ToC
+  let tocAnchors = [];
+  for (var link of tocLinks) {
+    for (var anchor of anchors) {
+      if (link.getAttribute('href') === anchor.querySelector('a.anchor-heading').getAttribute('href')) {
+        tocAnchors.push(anchor);
+        break;
+      }
+    }
+  }
+
+  jtd.addEvent(window, 'scroll', () => {
+    if (typeof (tocAnchors) != 'undefined' && tocAnchors != null && typeof (tocLinks) != 'undefined' && tocLinks != null) {
+      for (var i = 0; i < tocAnchors.length; i++) {
+        // Once a heading anchor passes the top of the viewport, remove the .active class from the ToC links of all previous anchors above.
+        // Making sure that if there's still a portion of the last section on screen, the ToC item for that remains highlighted.
+        if (window.scrollY > tocAnchors[i].offsetTop - 10) { // Offset for checking the heading against top of viewport is 10px
+          if (window.innerWidth <= 800) {
+            toggleTocBanner.innerHTML = `${tocAnchors[i].innerText}`;
+          }
+          for (var k = 0; k < i; k++) {
+            tocLinks[k].classList.remove('active');
+          }
+        }
+        // Highlight the current ToC item and subsequent items in the viewport, if any
+        for (var a = i; a < tocAnchors.length; a++) {
+          if (!isOutOfViewport(tocAnchors[a])) {
+            tocLinks[a].classList.add('active');
+          } else {
+            tocLinks[a].classList.remove('active');
+          }
+        }
+      }
+    }
+
+    if (window.innerWidth <= 800) {
+      if (tocAnchors && tocAnchors.length) {
+        if (window.scrollY < tocAnchors[0].offsetTop) {
+          toggleTocBanner.innerText = "";
+        }
+      }
+      // Hide the heading banner when scrolling down and show when scrolling up
+      if (!tocItemClicked) {
+        if (window.scrollY - previousScrollY > 15) {
+          toggleTocBanner.classList.add('hidden');
+        } else if (previousScrollY - window.scrollY > 15) {
+          toggleTocBanner.classList.remove('hidden');
+        }
+      }
+      previousScrollY = window.scrollY;
+    }
+  });
+}
+
 // The <head> element is assumed to include the following stylesheets:
 // - a <link> to /assets/css/just-the-docs-head-nav.css,
 //             with id 'jtd-head-nav-stylesheet'
@@ -560,6 +674,9 @@ jtd.onReady(function(){
     initNav();
     activateNav();
     scrollNav();
+  }
+  if (document.querySelector('nav.toc')) {
+    initToC();
   }
   {%- if site.search_enabled != false %}
   initSearch();
