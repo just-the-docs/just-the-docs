@@ -31,7 +31,6 @@
 
 {% assign sanitize = site.toc.sanitize | default: false %}
 {% assign class = site.toc.class | default: '' %}
-{% assign id = site.toc.id | default: '' %}
 {% assign item_class = site.toc.item_class | default: '' %}
 {% assign submenu_class = site.toc.submenu_class | default: '' %}
 {% assign base_url = site.toc.base_url | default: '' %}
@@ -55,7 +54,6 @@
                 html=content
                 sanitize=sanitize
                 class=class
-                id=id
                 h_min=site.toc.min_heading_level
                 h_max=site.toc.max_heading_level
                 ordered=site.toc.ordered
