@@ -69,11 +69,6 @@ function initNav() {
   {%- endif %}
 }
 
-jtd.openToC = function() {
-  const toc = document.querySelector("nav.toc");
-  toc?.classList.toggle('closed');
-}
-
 function isOutOfViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
@@ -85,14 +80,19 @@ function isOutOfViewport(el) {
 }
 
 function initToC() {
-  const toc = document.querySelector("nav.toc");
-  const toggleTocBanner = document.querySelector('a.current-heading-banner');
+  const toc = document.querySelector("aside.toc");
+  const toggleTocBanner = document.querySelector('a.toc-banner');
   let previousScrollY = 0, tocItemClicked = false;
 
   try {
     // Close the ToC panel if user clicks outside the ToC sidebar (xs -> lg)
     jtd.addEvent(document, 'click', function(e) {
       if (!toc.contains(e.target) && !e.target.classList.contains('js-toggle-toc')) {
+        toc.classList.add('closed');
+      }
+    });
+    jtd.addEvent(toc, 'focusout', function(e) {
+      if (!toc.contains(e.relatedTarget)) {
         toc.classList.add('closed');
       }
     });
@@ -109,9 +109,11 @@ function initToC() {
       }
     }
     // Buttons to open the ToC sidebar/top panel
-    for (var element of document.querySelectorAll('.js-toggle-toc')) {
+    for (const element of document.querySelectorAll('.js-toggle-toc')) {
       jtd.addEvent(element, 'click', (e) => {
         toc.classList.toggle('closed');
+        e.currentTarget.setAttribute("aria-expanded",
+          e.currentTarget.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
       });
     }
     // Double-clicking the ToC opener button to scroll back to top (md and lg)
@@ -174,7 +176,7 @@ function initToC() {
       if (!tocItemClicked) {
         if (window.scrollY - previousScrollY > 15) {
           toggleTocBanner.classList.add('hidden');
-        } else if (previousScrollY - window.scrollY > 15) {
+        } else if (previousScrollY - window.scrollY > 15 || window.scrollY < 108) {
           toggleTocBanner.classList.remove('hidden');
         }
       }
@@ -675,7 +677,7 @@ jtd.onReady(function(){
     activateNav();
     scrollNav();
   }
-  if (document.querySelector('nav.toc')) {
+  if (document.querySelector('aside.toc')) {
     initToC();
   }
   {%- if site.search_enabled != false %}

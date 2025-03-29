@@ -1,4 +1,4 @@
-nav.toc {
+aside {
 	// ToC is hidden by default on xs -> lg views, unless an action attaches the .open class to nav.toc
 	overflow-y: auto;
 	line-height: 1.5;
@@ -7,12 +7,12 @@ nav.toc {
 	@media (max-width: map-get($media-queries, md)) { // xs + sm
 		position: sticky;
 		top: 0;
-		width: 100%;
 		z-index: 3;
 		@include fs-4;
 
-		& > div {
+		& > #inner-toc {
 			padding: 0 $sp-4;
+			width: 100%;
 			max-height: 100vh;
 			overflow-y: auto;
 			overscroll-behavior: contain;
@@ -25,6 +25,7 @@ nav.toc {
 				position: sticky;
 				top: 1rem;
 				text-align: right;
+				display: block;
 			}
 
 			// Padding between ToC items (applies to xs and sm screens)
@@ -33,7 +34,8 @@ nav.toc {
 			}
 		}
 
-		& > a.current-heading-banner {
+		// Banner to open ToC panel at the top of the page/when scrolling down
+		& > a.toc-banner {
 			display: block;
 			margin-top: 0;
 			padding: $sp-3 $sp-4;
@@ -45,7 +47,7 @@ nav.toc {
 			transition: margin-top 0.4s;
 
 			&::before {
-				content: 'Table of Contents';
+				content: $toc-sm-label;
 				padding-right: $sp-2;
 				text-transform: uppercase;
 				font-weight: bold;
@@ -68,15 +70,15 @@ nav.toc {
 
 		// Hide the inner div when the top panel is closed (leaving the container and .current-heading-banner visible),
 		// hide .current-heading-banner when ToC is open, and hide the ToC opener button from md + lg views
-		&.closed > div,
-		&:not(.closed) a.current-heading-banner,
-		& a.btn.js-toggle-toc {
+		&.closed > #inner-toc,
+		&:not(.closed) a.toc-banner,
+		& .btn.js-toggle-toc {
 			display: none;
 			visibility: hidden;
 		}
 
 		// Steal the background overlay for search results to use when ToC is open
-		&:not(.closed) ~ .search-overlay {
+		&.toc:not(.closed) ~ .search-overlay {
 			width: 100%;
 			height: 100%;
 			opacity: 1;
@@ -85,6 +87,12 @@ nav.toc {
 	}
 
 	@media (min-width: map-get($media-queries, md)) and (max-width: map-get($media-queries, xl)) { // md + lg
+		// Padding between sidebar items (applies to md and bigger screens)
+		& li {
+			margin: $sp-2 0;
+		}
+
+		// Pop-up style
 		&:not(.panel) {
 			position: sticky;
 			top: $sp-4;
@@ -94,7 +102,7 @@ nav.toc {
 			overflow: visible;
 			z-index: 1;
 
-			& > div {
+			& > #inner-toc {
 				padding: 0 $sp-4;
 				max-height: calc(100vh - 40px - 2rem);
 				overflow-y: auto;
@@ -104,7 +112,7 @@ nav.toc {
 			}
 
 			// Button to open/close the floating ToC panel
-			& > a.btn.js-toggle-toc {
+			& > .btn.js-toggle-toc {
 				display: block;
 				margin-left: auto;
 				padding: .6em;
@@ -118,15 +126,16 @@ nav.toc {
 			}
 
 			// Hide the inner div when the floating panel is closed (leaving the container and the opener button visible),
-			// hide the close button from side ToC panel view, and hide .current-heading-banner from xs + sm views
-			&.closed > div,
-			& a.js-toggle-toc:not(.btn),
-			& a.current-heading-banner {
+			// hide the close button from side ToC panel view, and hide .toc-banner from xs + sm views
+			&.closed > #inner-toc,
+			& a.js-toggle-toc,
+			& a.toc-banner {
 				display: none;
 				visibility: hidden;
 			}
 		}
 
+		// Fixed side panel style
 		&.panel {
 			position: fixed;
 			top: 0;
@@ -139,9 +148,9 @@ nav.toc {
 			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
 			z-index: 3;
 
-			// Hide the ToC opener button when the panel is open, and .current-heading-banner from xs + sm views
-			&:not(.closed) a.btn.js-toggle-toc,
-			& a.current-heading-banner {
+			// Hide the ToC opener button when the panel is open, and .toc-banner from xs + sm views
+			&:not(.closed) .btn.js-toggle-toc,
+			& a.toc-banner {
 				display: none;
 				visibility: hidden;
 			}
@@ -151,7 +160,7 @@ nav.toc {
 				visibility: hidden;
 
 				// Button to re-open the side ToC panel. Partially displays over the content so make it translucent
-				& > a.btn.js-toggle-toc {
+				& > .btn.js-toggle-toc {
 					visibility: visible;
 					position: fixed;
 					top: $header-height + $sp-8;
@@ -168,21 +177,16 @@ nav.toc {
 			}
 
 			// Steal the background overlay for search results to use when side ToC panel is open
-			&:not(.closed) ~ .search-overlay {
+			&.toc:not(.closed) ~ .search-overlay {
 				width: 100%;
 				height: 100%;
 				opacity: 1;
 				z-index: 2;
 			}
 		}
-
-		// Padding between ToC items (applies to md and bigger screens)
-		& li {
-			margin: $sp-2 0;
-		}
 	}
 
-	@include mq(xl) {
+	@include mq(xl) { // xl
 		position: sticky;
 		top: $sp-4;
 		margin-top: $sp-8;
@@ -198,7 +202,7 @@ nav.toc {
 			max-height: calc(100vh - #{$header-height + $sp-10});
 		}
 
-		// Paddings between ToC items (applies to md and bigger screens)
+		// Paddings between sidebar items (applies to md and bigger screens)
 		& li {
 			margin: $sp-2 0;
 		}
@@ -211,13 +215,13 @@ nav.toc {
 		}
 
 		// Smaller top margin for the Back to top button now that the Close button no longer shows
-		& div > p:nth-of-type(2) {
+		& #inner-toc > p:nth-of-type(2) {
 			margin-top: $sp-1;
 		}
 	}
 
 	// Because toc-width is usually small => hide the list bullet points and minimize left padding
-	& div > ul {
+	& #inner-toc > ul {
 		padding-left: 0;
 		list-style-type: none;
 
@@ -228,11 +232,8 @@ nav.toc {
 		}
 	}
 
-	& a.toc-item-link.active {
-		font-weight: bold;
-	}
-
-	& ol {
+	// Style the counter to match with current in-page ToC implementation and reset native CSS counter of nested ol
+	& #inner-toc ol {
 		padding-left: $sp-5;
 		list-style-type: none;
 		counter-reset: step-counter;
@@ -252,5 +253,10 @@ nav.toc {
 			content: counter(sub-counter, lower-alpha);
 			counter-increment: sub-counter;
 		}
+	}
+
+	// Mark ToC items that are currently showing in view
+	& #inner-toc a.toc-item-link.active {
+		font-weight: bold;
 	}
 }
