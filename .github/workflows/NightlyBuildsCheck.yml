@@ -26,8 +26,7 @@ jobs:
       CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
     strategy:
       matrix:
-        config: [{"branch": "v1.2-histrionicus", "event": "workflow_dispatch"}]
-        # config: [{ "branch": "main", "event": "repository_dispatch"}, {"branch": "v1.2-histrionicus", "event": "workflow_dispatch"}]
+        config: [{ "branch": "main", "event": "repository_dispatch"}, {"branch": "v1.2-histrionicus", "event": "workflow_dispatch"}]
     steps:
       - id: curr-date
         run: echo "CURR_DATE=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
