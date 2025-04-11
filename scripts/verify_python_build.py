@@ -62,7 +62,8 @@ def verify_and_test_python_linux(file_name, extensions, nightly_build, run_id, a
             container = create_container(client, container_name, docker_image, architecture, None)
             print(f"VERIFYING BUILD SHA FOR python{ version }")
             try:
-                duckdb = "duckdb" if branch == 'main' else "duckdb==1.2,<1.3"
+                # latest version tag should be hardcoded for histrionicus for now
+                duckdb = "duckdb" if branch == 'main' else "duckdb==1.2.2,<1.3"
                 container.exec_run(f"pip install -v { duckdb } --pre --upgrade", stdout=True, stderr=True)
                 subprocess_result = container.exec_run(
                     "python -c \"import duckdb; print(duckdb.sql('SELECT source_id FROM pragma_version()').fetchone()[0])\"",
