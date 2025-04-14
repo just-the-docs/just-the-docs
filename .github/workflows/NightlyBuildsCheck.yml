@@ -132,7 +132,7 @@ jobs:
                   unzip duckdb_cli-*.zip -d duckdb_path
                 else
                   if [[ ${{ matrix.config.branch }} != 'main' && ${{ matrix.config.nightly_build }} == 'linux' ]]; then
-                      unzip duckdb_cli-${{ matrix.config.nightly_build }}-${{ matrix.config.duckdb_arch }}.zip -d duckdb_path
+                    unzip duckdb_cli-${{ matrix.config.nightly_build }}-${{ matrix.config.duckdb_arch }}.zip -d duckdb_path
                   else
                     unzip duckdb_cli-${{ matrix.config.duckdb_binary }}.zip -d duckdb_path
                   fi
