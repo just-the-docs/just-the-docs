@@ -244,7 +244,7 @@ jobs:
           git config --global user.email ${{ env.CI_COMMIT_EMAIL }}
           
           git config pull.rebase false
-          git pull origin main
+          git pull origin main --allow-unrelated-histories
 
           mkdir -p docs/
           mkdir -p docs/${{ inputs.branch }}
