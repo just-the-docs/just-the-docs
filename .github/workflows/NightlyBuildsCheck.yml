@@ -1,9 +1,21 @@
 name: Check Nightly Build Status
 on:
-  push:
+  workflow_call:
+    inputs:
+      branch:
+        type: string
+      event:
+        type: string
+      should_publish:
+        type: string
   workflow_dispatch:
-  schedule:
-    - cron:  '0 8 * * *' # runs at 9am CET (summer) (replace the las * with 1-5 to trigger only on working days)
+    inputs:
+      branch:
+        type: string
+      event:
+        type: string
+      should_publish:
+        type: string
 
 permissions:
   contents: write
@@ -11,7 +23,7 @@ permissions:
 
 concurrency:
   group: status-${{ github.workflow }}-${{ github.ref_name }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   GH_TOKEN: ${{ github.token }}
@@ -24,15 +36,15 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
-    strategy:
-      matrix:
-        config: [{ "branch": "main", "event": "repository_dispatch"}, {"branch": "v1.2-histrionicus", "event": "workflow_dispatch"}]
+      matrix: ${{ steps.set-outputs.outputs.matrix }}
     steps:
       - id: curr-date
         run: echo "CURR_DATE=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
 
       - name: Checkout repo with the script
         uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/duckdb-build-status
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -50,57 +62,41 @@ jobs:
         env:
           CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
         run: |
-          python scripts/create_tables_and_inputs.py --branch "${{ matrix.config.branch }}" --event "${{ matrix.config.event }}"
+          python scripts/create_tables_and_inputs.py --branch "${{ inputs.branch }}" --event "${{ inputs.event }}"
 
       - name: Upload DuckDB file
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.config.branch }}_run_info_tables.duckdb
-          path: ${{ matrix.config.branch }}_run_info_tables.duckdb
+          name: ${{ inputs.branch }}_run_info_tables.duckdb
+          path: ${{ inputs.branch }}_run_info_tables.duckdb
       
-      - name: Upload inputs_${{ matrix.config.branch }}.json
+      - name: Upload inputs_${{ inputs.branch }}.json
         uses: actions/upload-artifact@v4
         with:
-          name: inputs_${{ matrix.config.branch }}.json
-          path: inputs_${{ matrix.config.branch }}.json
+          name: inputs_${{ inputs.branch }}.json
+          path: inputs_${{ inputs.branch }}.json
           if-no-files-found: ignore
-
-  merge-input-files:
-    name: Create Complete inputs.json
-    runs-on: ubuntu-latest
-    needs: get-run-info
-    outputs:
-      matrix: ${{ steps.set-outputs.outputs.matrix }}
-    steps:
-      - name: Download All inputs.json
-        uses: actions/download-artifact@v4
-        with:
-          pattern: inputs_*.json
-          path: .
 
       - name: Read JSON and create matrix
         id: set-outputs
         run: |
-          ls -lah
-          jq -s '[.[][]]' inputs_*/inputs_*.json > complete_inputs.json
-          matrix=$(cat complete_inputs.json | jq -c '.')
+          matrix=$(cat inputs_${{ inputs.branch }}.json | jq -c '.')
           echo "matrix=$matrix" >> $GITHUB_OUTPUT
           echo "***"
-          cat complete_inputs.json
+          cat inputs_${{ inputs.branch }}.json
 
   run-tests:
-    name: ${{ matrix.inputs.branch }} - ${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.duckdb_arch }} (${{ matrix.inputs.runs_on }})
+    name: ${{ matrix.config.branch }} - ${{ matrix.config.nightly_build }} ${{ matrix.config.duckdb_arch }} (${{ matrix.config.runs_on }})
     needs: 
       - get-run-info
-      - merge-input-files
-    if: ${{ needs.merge-input-files.outputs.matrix != '[]' }}
+    if: ${{ needs.get-run-info.outputs.matrix != '[]' }}
     strategy:
       matrix:
-        inputs: ${{ fromJson(needs.merge-input-files.outputs.matrix) }}
+        config: ${{ fromJson(needs.get-run-info.outputs.matrix) }}
     continue-on-error: true
-    runs-on: ${{ matrix.inputs.runs_on }}
+    runs-on: ${{ matrix.config.runs_on }}
     steps:
-      - run: echo ${{ matrix.inputs.branch }} ${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.runs_on }} ${{ matrix.inputs.duckdb_arch }} 
+      - run: echo ${{ matrix.config.branch }} ${{ matrix.config.nightly_build }} ${{ matrix.config.runs_on }} ${{ matrix.config.duckdb_arch }} 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -111,55 +107,55 @@ jobs:
             
       - name: Checkout repo with the scripts
         uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/duckdb-build-status
 
       - name: Checkout repo with extensions config file
         uses: actions/checkout@v4
         with:
-            repository: ${{ env.GH_REPO }}
             sparse-checkout: |
                 .github/config
             path: ext
+            repository: ${{ env.GH_REPO }}
             
-      - name: Verify ${{ matrix.inputs.nightly_build }} ${{ matrix.inputs.duckdb_arch }} build version and Test extensions
+      - name: Verify ${{ matrix.config.nightly_build }} ${{ matrix.config.duckdb_arch }} build version and Test extensions
         id: verify-build
         shell: bash
         env:
           CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
         run: |
-            uname -a
-            if [[ ${{ matrix.inputs.nightly_build }} != 'python' ]]; then
-              echo "Downloading duckdb-binaries-${{ matrix.inputs.duckdb_binary }} artifact from ${{ matrix.inputs.run_id }}..."
-              if gh run download ${{ matrix.inputs.run_id }} --repo ${{ env.GH_REPO }} -n duckdb-binaries-${{ matrix.inputs.duckdb_binary }}; then
-                # echo "Artifact duckdb-binaries-${{ matrix.inputs.duckdb_binary }} is successfuly downloaded."
-                if [[ ${{ matrix.inputs.nightly_build }} == 'osx' ]]; then
+            if [[ ${{ matrix.config.nightly_build }} != 'python' ]]; then
+              echo "Downloading duckdb-binaries-${{ matrix.config.duckdb_binary }} artifact from ${{ matrix.config.run_id }}..."
+              if gh run download ${{ matrix.config.run_id }} --repo ${{ env.GH_REPO }} -n duckdb-binaries-${{ matrix.config.duckdb_binary }}; then
+                # echo "Artifact duckdb-binaries-${{ matrix.config.duckdb_binary }} is successfuly downloaded."
+                if [[ ${{ matrix.config.nightly_build }} == 'osx' ]]; then
                   unzip duckdb_cli-*.zip -d duckdb_path
                 else
-                  if [[ ${{ matrix.inputs.branch }} != 'main' && ${{ matrix.inputs.nightly_build }} == 'linux' ]]; then
-                      unzip duckdb_cli-${{ matrix.inputs.nightly_build }}-${{ matrix.inputs.duckdb_arch }}.zip -d duckdb_path
+                  if [[ ${{ matrix.config.branch }} != 'main' && ${{ matrix.config.nightly_build }} == 'linux' ]]; then
+                      unzip duckdb_cli-${{ matrix.config.nightly_build }}-${{ matrix.config.duckdb_arch }}.zip -d duckdb_path
                   else
-                    unzip duckdb_cli-${{ matrix.inputs.duckdb_binary }}.zip -d duckdb_path
+                    unzip duckdb_cli-${{ matrix.config.duckdb_binary }}.zip -d duckdb_path
                   fi
                 fi
               fi
             fi
-            ls -lah
             echo "Verifying version and testing extensions..."
             python scripts/verify_and_test.py \
-                --nightly_build ${{ matrix.inputs.nightly_build }} \
-                --architecture ${{ matrix.inputs.duckdb_arch }} \
-                --run_id ${{ matrix.inputs.run_id }} \
-                --runs_on ${{ matrix.inputs.runs_on }} \
-                --branch ${{ matrix.inputs.branch }}
+                --nightly_build ${{ matrix.config.nightly_build }} \
+                --architecture ${{ matrix.config.duckdb_arch }} \
+                --run_id ${{ matrix.config.run_id }} \
+                --runs_on ${{ matrix.config.runs_on }} \
+                --branch ${{ matrix.config.branch }}
 
       - name: Upload actions for extensions
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.inputs.branch }}_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}
+          name: ${{ matrix.config.branch }}_ext_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}
           path: |
-            ${{ matrix.inputs.branch }}_list_failed_ext_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
-            ${{ matrix.inputs.branch }}_non_matching_sha_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
-            ${{ matrix.inputs.branch }}_tested_platforms_${{ matrix.inputs.nightly_build }}_${{ matrix.inputs.duckdb_arch }}.csv
+            ${{ matrix.config.branch }}_list_failed_ext_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}.csv
+            ${{ matrix.config.branch }}_non_matching_sha_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}.csv
+            ${{ matrix.config.branch }}_tested_platforms_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}.csv
           if-no-files-found: ignore
     
   report:
@@ -169,13 +165,11 @@ jobs:
     needs:
       - get-run-info 
       - run-tests
-    strategy:
-      matrix:
-        branch: ["main", "v1.2-histrionicus"]
-      fail-fast: false
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/duckdb-build-status
       
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -188,80 +182,79 @@ jobs:
           python -m pip install --upgrade pip
           pip install duckdb pandas tabulate requests
 
-      - name: Download inputs_${{ matrix.branch }}.json
+      - name: Download inputs_${{ inputs.branch }}.json
         uses: actions/download-artifact@v4
         with:
-          name: inputs_${{ matrix.branch }}.json
+          name: inputs_${{ inputs.branch }}.json
           path: .
 
       - name: Download extensions artifacts
         uses: actions/download-artifact@v4
         with:
-          pattern: ${{ matrix.branch }}_ext*
-          path: ${{ matrix.branch }}_failed_ext
+          pattern: ${{ inputs.branch }}_ext*
+          path: ${{ inputs.branch }}_failed_ext
 
       - name: Download duckdb file
         uses: actions/download-artifact@v4
         with:
-          name: ${{ matrix.branch }}_run_info_tables.duckdb
-          path: ${{ matrix.branch }}_tables
+          name: ${{ inputs.branch }}_run_info_tables.duckdb
+          path: ${{ inputs.branch }}_tables
       
       - name: Generate report
         shell: bash
         env:
           CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
         run: |
-          python scripts/create_build_report.py --branch ${{ matrix.branch }}
+          python scripts/create_build_report.py --branch ${{ inputs.branch }}
 
       - name: Upload REPORT
         uses: actions/upload-artifact@v4
         with:
-          name: REPORT-${{ matrix.branch }}
-          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ matrix.branch }}.md
+          name: REPORT-${{ inputs.branch }}
+          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ inputs.branch }}.md
   
-  upload:
-    name: Upload Reports
+  push-reports:
+    name: Push Reports
+    if: ${{ inputs.should_publish == 'true' }}
     runs-on: ubuntu-latest
     needs: 
       - get-run-info
       - report
-    if: always()
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/duckdb-build-status
 
       - name: Download Reports
         uses: actions/download-artifact@v4
         with:
           pattern: REPORT*
           path: .
-          
+
       - name: Upload REPORT to the docs directory
         shell: bash
         env:
           CI_COMMIT_MESSAGE: "Add ${{ needs.get-run-info.outputs.CURR_DATE }} Reports"
           CI_COMMIT_AUTHOR: "hmeriann"
+          CI_COMMIT_EMAIL: "zuleykha.pavlichenkova@gmail.com"
           GH_TOKEN: ${{ github.token }}
         run: |
           git config --global user.name ${{ env.CI_COMMIT_AUTHOR }}
-          git config --global user.email "zuleykha.pavlichenkova@gmail.com"
+          git config --global user.email ${{ env.CI_COMMIT_EMAIL }}
           
           git config pull.rebase false
           git pull origin main
 
           mkdir -p docs/
-          mkdir -p docs/main
-          mkdir -p docs/v1.2-histrionicus
-
-          ls -lah
+          mkdir -p docs/${{ inputs.branch }}
           
-          mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-main.md docs/main/
-          mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-v1.2-histrionicus.md docs/v1.2-histrionicus/
+          mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ inputs.branch }}.md docs/${{ inputs.branch }}/
 
-          ls -lah docs/main
-          ls -lah docs/v1.2-histrionicus
+          ls -lah docs/${{ inputs.branch }}
 
           git add docs/main/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git add docs/v1.2-histrionicus/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin main
+  
