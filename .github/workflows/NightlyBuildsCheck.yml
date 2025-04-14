@@ -236,8 +236,8 @@ jobs:
         shell: bash
         env:
           CI_COMMIT_MESSAGE: "Add ${{ needs.get-run-info.outputs.CURR_DATE }} Reports"
-          CI_COMMIT_AUTHOR: "DuckDB Labs GitHub Bot"
-          CI_COMMIT_EMAIL: "github_bot@duckdblabs.com"
+          CI_COMMIT_AUTHOR: "hmeriann"
+          CI_COMMIT_EMAIL: "zuleykha.pavlichenkova@gmail.com"
           GH_TOKEN: ${{ github.token }}
         run: |
           git config --global user.name ${{ env.CI_COMMIT_AUTHOR }}
