@@ -253,8 +253,7 @@ jobs:
 
           ls -lah docs/${{ inputs.branch }}
 
-          git add docs/main/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
-          git add docs/v1.2-histrionicus/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
+          git add docs/${{ inputs.branch }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin main
   
