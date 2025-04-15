@@ -28,7 +28,7 @@ GEM
       fiber-annotation
       fiber-local (~> 1.1)
       json
-    csv (3.3.3)
+    csv (3.3.4)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
