@@ -75,7 +75,7 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Cache HTMLProofer
         id: cache-htmlproofer
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-htmlproofer
@@ -101,7 +101,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
