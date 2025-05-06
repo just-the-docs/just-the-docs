@@ -270,7 +270,7 @@ def create_build_report(build_job, con):
             pr_f = ['- ' + pf[0] for pf in previously_failed]
             f.write('\n'.join(pr_f) + '\n')
         
-        f.write(f"\n### Diff of Uploaded Artifacts\nMatched atrifact names are hidden.\n\n")
+        f.write(f"\n### Difference Between Latest Release Assets and Staged Assets from Current Run\nMatched assets names are hidden.\n\n")
         extensions_lists = con.execute(f"""
             SELECT 
                 expected AS 'Diff of Release Assets (from the Latest Release Notes)',
