@@ -128,7 +128,7 @@ def create_build_report(build_job, con):
                         binary = binary.replace("-", "_")
                         join_list += f'i."{ binary }".concat(l."{ binary }") as "{ binary }", '
                 if len(join_list) > 0:
-                    print(join_list)
+                    print("join_list:", join_list)
                     con.execute(f"""CREATE OR REPLACE TABLE results AS (
                             SELECT *, CASE 
                                 WHEN result = 'passed' 
@@ -225,7 +225,7 @@ def create_build_report(build_job, con):
                 """).df()
                 f.write(f"\n### Extensions Summary:\n\n")
                 f.write(py_ext_results_table.to_markdown(index=False) + '\n')
-
+            
             for tested_binary in tested_binaries:
                 tested_binary = tested_binary + "_" + architecture if tested_binary == 'osx' else tested_binary.replace("-", "_")
                 # add unmatching sha
