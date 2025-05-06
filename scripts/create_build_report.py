@@ -45,7 +45,8 @@ def is_gcc4(build_job, con):
         WHERE artifacts['name'] 
         LIKE '%_gcc4%'
     """).fetchall()
-    gcc_artifacts = [row[0] for row in result]
+    gcc_artifacts = [tuple(res.split('_')[:2]) for res in result]
+    print("GCC4 artifacts found in count of ", len(gcc_artifacts))
     return gcc_artifacts
 
 def create_build_report(build_job, con):
@@ -121,21 +122,9 @@ def create_build_report(build_job, con):
                         SELECT * FROM read_csv('{ file_name_pattern }'));
                     """)
                 if failures_count > 0:
-                    result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
                     is_gcc4_artifacts = is_gcc4(build_job, con)
-                    print("is_gcc4_artifacts: ", is_gcc4_artifacts)
-                    tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row[0] + "_" + row[1] in is_gcc4_artifacts else row[0] + "-" + row[1] for row in result]
-                    # if branch == 'main':
-                    #     tested_binaries = [row[0] + "-" + row[1] for row in result]
-                    #     # tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row[0] == 'linux' else row[0] + "-" + row[1] for row in result]
-                    # else:
-                    #     tested_binaries = []
-                    #     for row in result:
-                    #         if row.count('linux'):
-                    #             tested_binary = row[0] + "-" + row[1] + "_gcc4" if row[1] == 'amd64' else row[0] + "-arm64" 
-                    #         else:
-                    #             tested_binary = row[0] + "-" + row[1]
-                    #         tested_binaries.append(tested_binary)
+                    result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
+                    tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row in is_gcc4_artifacts else row[0] + "-" + row[1] for row in result]
                     print("tested_binaries:", tested_binaries)
                 else:
                     result = con.execute(f"SELECT DISTINCT nightly_build, tested_platform FROM '{ ext_results }'").fetchall()
