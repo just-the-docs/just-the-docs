@@ -73,6 +73,7 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id):
     As result "{build_job}.json", "{ build_job }_jobs.json" and "{ build_job }_artifacts.json"
     files are created. They will be used by create_tables_for_report()
     '''
+    # get all jobs
     jobs_command = [
             "gh", "run", "view",
             "--repo", GH_REPO,
@@ -80,16 +81,19 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id):
             "--json", "jobs"
         ]
     fetch_data(jobs_command, build_job.get_jobs_file_name())
+    # get all workflow artifacts
     artifacts_command = [
         "gh", "api",
             f"repos/{ GH_REPO }/actions/runs/{build_job_run_id}/artifacts"
         ]
     fetch_data(artifacts_command, build_job.get_artifacts_file_name())
+    # get staged assets for run commit
     commit_sha = get_full_sha(build_job_run_id)[:10]
     staging_command = [
             "aws", "s3", "ls", "--recursive", f"s3://duckdb-staging/{commit_sha}"
         ]
     fetch_data(staging_command, 'staging.csv')
+    # get assets list from latest release
     expected_artifacts_command = [
             "gh", "release", "view", "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
         ]
@@ -149,9 +153,8 @@ def create_tables_for_report(build_job, con):
             CREATE OR REPLACE TABLE '{ build_job.get_artifacts_per_jobs_table_name() }' AS (
                 SELECT
                     t1.job_name AS "Build (Architecture)",
-                    t1.conclusion AS "Conclusion",
                     '[' || t2.name || '](' || '{ base_url }' || t2.artifact_id || ')' AS "Artifact",
-                    t2.updated_at AS "Uploaded at"
+                    t2.digest AS "Digest"
                 FROM (
                     SELECT
                         job_name,
@@ -179,7 +182,8 @@ def create_tables_for_report(build_job, con):
                         artifacts.name,
                         artifacts.expires_at expires_at,
                         artifacts.updated_at updated_at,
-                        artifacts.id artifact_id
+                        artifacts.id artifact_id,
+                        artifacts.digest digest
                     FROM (
                         SELECT
                             unnest(artifacts) artifacts
