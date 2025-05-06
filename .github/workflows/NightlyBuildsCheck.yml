@@ -33,6 +33,10 @@ jobs:
   get-run-info:
     name: Generate nightly build artifact json file
     runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.S3_DUCKDB_STAGING_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_DUCKDB_STAGING_KEY }}
+      AWS_DEFAULT_REGION: us-east-2
     outputs:
       CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
       matrix: ${{ steps.set-outputs.outputs.matrix }}
