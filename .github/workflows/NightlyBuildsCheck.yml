@@ -12,6 +12,9 @@ on:
         type: string
       should_publish:
         type: string
+      branch: 
+        type: string
+
 
 permissions:
   contents: write
