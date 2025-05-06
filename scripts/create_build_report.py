@@ -39,11 +39,10 @@ def is_gcc4(build_job, con):
     result = con.execute(f"""
         SELECT artifacts['name']
         FROM (
-            SELECT unnest(artifacts) AS artifacts 
+            SELECT expected 
             FROM '{ build_job.get_expected_artifact_table_name() }'
             ) 
-        WHERE artifacts['name'] 
-        LIKE '%_gcc4%'
+        WHERE artifacts['name'] LIKE '%_gcc4%'
     """).fetchall()
     gcc_artifacts = [tuple(res.split('_')[:2]) for res in result]
     print("GCC4 artifacts found in count of ", len(gcc_artifacts))
