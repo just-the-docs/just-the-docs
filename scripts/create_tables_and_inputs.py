@@ -41,6 +41,7 @@ import re
 import subprocess
 from collections import defaultdict
 from shared_functions import fetch_data
+from shared_functions import get_full_sha
 from shared_functions import list_all_runs
 from shared_functions import count_consecutive_failures
 from shared_functions import BuildJob
@@ -80,13 +81,18 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id):
         ]
     fetch_data(jobs_command, build_job.get_jobs_file_name())
     artifacts_command = [
-            "gh", "api",
-            f"repos/{ GH_REPO }/actions/runs/{ build_job_run_id }/artifacts"
+        "gh", "api",
+            f"repos/{ GH_REPO }/actions/runs/{build_job_run_id}/artifacts"
         ]
     fetch_data(artifacts_command, build_job.get_artifacts_file_name())
+    commit_sha = get_full_sha(build_job_run_id)[:10]
+    print("🦑", commit_sha)
+    staging_command = [
+            "aws", "s3", "ls", "--recursive", f"s3://duckdb-staging/{commit_sha}"
+        ]
+    fetch_data(staging_command, 'staging.csv')
     expected_artifacts_command = [
-            "gh", "api",
-            f"repos/{ GH_REPO }/actions/runs/13153471611/artifacts"
+            "gh", "release", "view", "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
         ]
     fetch_data(expected_artifacts_command, build_job.get_expected_artifacts_file_name())
 
@@ -116,7 +122,20 @@ def create_tables_for_report(build_job, con):
     """)
     con.execute(f"""
         CREATE OR REPLACE TABLE '{ build_job.get_expected_artifact_table_name() }' AS (
-            SELECT * FROM read_json('{ build_job.get_expected_artifacts_file_name() }')
+            SELECT * FROM read_csv('{ build_job.get_expected_artifacts_file_name() }', columns = {{'expected': 'VARCHAR'}})
+        );
+    """)
+    con.execute(f"""
+        CREATE OR REPLACE TABLE 'ACTUAL' AS (
+            SELECT * FROM read_csv(
+                'staging.csv',
+                delim = '/',
+                columns = {{
+                    'date_time': 'VARCHAR',
+                    'owner': 'VARCHAR',
+                    'repo': 'VARCHAR',
+                    'type': 'VARCHAR',
+                    'actual': 'VARCHAR' }})
         );
     """)
     
@@ -175,11 +194,11 @@ def create_tables_for_report(build_job, con):
         CREATE OR REPLACE TABLE extensions_lists AS (
             WITH 
                 exp AS (
-                    SELECT unnest(artifacts)['name'] AS expected
+                    SELECT expected
                     FROM { build_job.get_expected_artifact_table_name() }),
                 act AS (
-                    SELECT unnest(artifacts)['name'] AS actual
-                    FROM { build_job.get_artifact_table_name() }),
+                    SELECT actual
+                    FROM 'ACTUAL'),
                 expected_extensions AS (
                     SELECT * FROM exp 
                     WHERE expected NOT IN (

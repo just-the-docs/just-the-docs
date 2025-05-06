@@ -44,7 +44,7 @@ class BuildJob:
         return f"{ self.build_job_name }_artifacts.json"
 
     def get_expected_artifacts_file_name(self):
-        return f"{ self.build_job_name }_expected_artifacts.json"
+        return f"{ self.build_job_name }_expected_artifacts.csv"
 
     def get_jobs_file_name(self):
         return f"{ self.build_job_name }_jobs.json"
@@ -56,6 +56,18 @@ def fetch_data(command, f_output):
         subprocess.run(command, stdout=data, stderr=True, check=True)
     except subprocess.CalledProcessError as e:
         print(f"Command failed with error: {e.stderr}")
+
+# get full commit SHA of the commit that triggered a run by run_id
+def get_full_sha(run_id):
+    gh_headSha_command = [
+        "gh", "run", "view",
+        str(run_id),
+        "--repo", GH_REPO,
+        "--json", "headSha",
+        "-q", ".headSha"
+    ]
+    full_sha = subprocess.run(gh_headSha_command, check=True, text=True, capture_output=True).stdout.strip()
+    return full_sha
 
 # create a json file with the list all nightly-build runs for current date
 def list_all_runs(con, build_job, branch, event):
