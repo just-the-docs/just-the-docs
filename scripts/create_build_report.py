@@ -37,13 +37,9 @@ REPORT_FILE = f"{ CURR_DATE }-{ branch }.md"
 
 def is_gcc4(build_job, con):
     result = con.execute(f"""
-        SELECT artifacts['name']
-        FROM (
-            SELECT unnest(artifacts) AS artifacts 
-            FROM '{ build_job.get_expected_artifact_table_name() }'
-            ) 
-        WHERE artifacts['name'] 
-        LIKE '%_gcc4%'
+        SELECT expected 
+        FROM '{ build_job.get_expected_artifact_table_name() }'
+        WHERE expected LIKE '%_gcc4%'
     """).fetchall()
     gcc_artifacts = [tuple(res.split('_')[:2]) for res in result]
     print("GCC4 artifacts found in count of ", len(gcc_artifacts))
@@ -277,8 +273,8 @@ def create_build_report(build_job, con):
         f.write(f"\n### Diff of Uploaded Artifacts\nMatched atrifact names are hidden.\n\n")
         extensions_lists = con.execute(f"""
             SELECT 
-                expected AS 'Missing or Renamed Artifacts in Release CI',
-                actual AS 'New or Renamed Artifacts in the Current CI Run'
+                expected AS 'Diff of Release Assets (from the Latest Release Notes)',
+                actual AS 'Diff of Assets from `duckdb-staging` for Current Commit'
             FROM extensions_lists ORDER BY ALL;
         """).df()
         f.write(extensions_lists.to_markdown(index=False) + "\n")
