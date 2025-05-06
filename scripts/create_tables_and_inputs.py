@@ -86,7 +86,6 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id):
         ]
     fetch_data(artifacts_command, build_job.get_artifacts_file_name())
     commit_sha = get_full_sha(build_job_run_id)[:10]
-    print("🦑", commit_sha)
     staging_command = [
             "aws", "s3", "ls", "--recursive", f"s3://duckdb-staging/{commit_sha}"
         ]
