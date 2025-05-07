@@ -35,6 +35,16 @@ args = parser.parse_args()
 branch = args.branch
 REPORT_FILE = f"{ CURR_DATE }-{ branch }.md"
 
+def is_gcc4(build_job, con):
+    result = con.execute(f"""
+        SELECT actual 
+        FROM 'ACTUAL'
+        WHERE actual LIKE '%_gcc4%'
+    """).fetchall()
+    gcc_artifacts = [tuple(res.split('_')[:2]) for res in result]
+    print("Count of GCC4 artifacts found in current CI run artifacts ", len(gcc_artifacts))
+    return gcc_artifacts
+
 def create_build_report(build_job, con):
     failures_count = count_consecutive_failures(build_job, con)
     select_data = con.execute(f"SELECT headSha, url, createdAt, displayTitle, number FROM '{ build_job.get_run_list_table_name() }' ORDER BY createdAt DESC").fetchone()
@@ -100,6 +110,7 @@ def create_build_report(build_job, con):
             # add summary for extensions installing and loading chiecks
             file_name_pattern = f"{ branch }_failed_ext/{ branch }_ext*/{ branch }_list_failed_ext*.csv"
             matching_files = glob.glob(file_name_pattern)
+            tested_binaries = []
             if matching_files:
                 ext_results = "extensions_checking_results"
                 con.execute(f"""
@@ -107,18 +118,10 @@ def create_build_report(build_job, con):
                         SELECT * FROM read_csv('{ file_name_pattern }'));
                     """)
                 if failures_count > 0:
+                    is_gcc4_artifacts = is_gcc4(build_job, con)
                     result = con.execute(f"SELECT nightly_build, duckdb_arch FROM '{ inputs }'").fetchall()
-                    if branch == 'main':
-                        tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row[0] == 'linux' else row[0] + "-" + row[1] for row in result]
-                    else:
-                        tested_binaries = []
-                        for row in result:
-                            if row.count('linux'):
-                                tested_binary = row[0] + "-" + row[1] + "_gcc4" if row[1] == 'amd64' else row[0] + "-arm64" 
-                            else:
-                                tested_binary = row[0] + "-" + row[1]
-                            tested_binaries.append(tested_binary)
-                        print(tested_binaries)
+                    tested_binaries = [row[0] + "-" + row[1] + "_gcc4" if row in is_gcc4_artifacts else row[0] + "-" + row[1] for row in result]
+                    print("tested_binaries:", tested_binaries)
                 else:
                     result = con.execute(f"SELECT DISTINCT nightly_build, tested_platform FROM '{ ext_results }'").fetchall()
                     tested_binaries = [second_value for first_value, second_value in result if first_value != 'python']
@@ -128,7 +131,7 @@ def create_build_report(build_job, con):
                         binary = binary.replace("-", "_")
                         join_list += f'i."{ binary }".concat(l."{ binary }") as "{ binary }", '
                 if len(join_list) > 0:
-                    print(join_list)
+                    print("join_list:", join_list)
                     con.execute(f"""CREATE OR REPLACE TABLE results AS (
                             SELECT *, CASE 
                                 WHEN result = 'passed' 
@@ -225,30 +228,33 @@ def create_build_report(build_job, con):
                 """).df()
                 f.write(f"\n### Extensions Summary:\n\n")
                 f.write(py_ext_results_table.to_markdown(index=False) + '\n')
-
-            for tested_binary in tested_binaries:
-                tested_binary = tested_binary + "_" + architecture if tested_binary == 'osx' else tested_binary.replace("-", "_")
-                # add unmatching sha
-                file_name_pattern = f"{ branch }_failed_ext/{ branch }_ext_{ tested_binary }*/{ branch }_non_matching_sha_{ tested_binary }*.csv"
+            
+            if len(tested_binaries) > 0:
+                for tested_binary in tested_binaries:
+                    tested_binary = tested_binary + "_" + architecture if tested_binary == 'osx' else tested_binary.replace("-", "_")
+                    # add unmatching sha
+                    file_name_pattern = f"{ branch }_failed_ext/{ branch }_ext_{ tested_binary }*/{ branch }_non_matching_sha_{ tested_binary }*.csv"
+                    matching_files = glob.glob(file_name_pattern)
+                    if matching_files:
+                        unmatched = con.execute(f"""
+                            SELECT * 
+                            FROM read_csv('{ file_name_pattern }' )
+                        """).df()
+                        f.write(f"\n#### Found unmatching versions:\n\n")
+                        f.write(unmatched.to_markdown(index=False) + "\n")
+                # can be also in { branch }_failed_ext/
+                
+                file_name_pattern = f"{ branch }_failed_ext/{ branch }_non_matching_sha_*.csv"
                 matching_files = glob.glob(file_name_pattern)
                 if matching_files:
                     unmatched = con.execute(f"""
                         SELECT * 
-                        FROM read_csv('{ file_name_pattern }' )
+                        FROM read_csv('{file_name_pattern}', DELIM = ',', HEADER=False)
                     """).df()
                     f.write(f"\n#### Found unmatching versions:\n\n")
                     f.write(unmatched.to_markdown(index=False) + "\n")
-            # can be also in { branch }_failed_ext/
-            
-            file_name_pattern = f"{ branch }_failed_ext/{ branch }_non_matching_sha_*.csv"
-            matching_files = glob.glob(file_name_pattern)
-            if matching_files:
-                unmatched = con.execute(f"""
-                    SELECT * 
-                    FROM read_csv('{file_name_pattern}', DELIM = ',', HEADER=False)
-                """).df()
-                f.write(f"\n#### Found unmatching versions:\n\n")
-                f.write(unmatched.to_markdown(index=False) + "\n")
+            else:
+                f.write(f"\n#### No binaries got checked.\n\n")
         
         if failures_count > 0:            
             f.write(f"\n### Previously Failed (max 7 shown)\n\n")
@@ -264,11 +270,11 @@ def create_build_report(build_job, con):
             pr_f = ['- ' + pf[0] for pf in previously_failed]
             f.write('\n'.join(pr_f) + '\n')
         
-        f.write(f"\n### Diff of Uploaded Artifacts\nMatched atrifact names are hidden.\n\n")
+        f.write(f"\n### Difference Between Latest Release Assets and Staged Assets from Current Run\nMatched assets names are hidden.\n\n")
         extensions_lists = con.execute(f"""
             SELECT 
-                expected AS 'Missing or Renamed Artifacts in Release CI',
-                actual AS 'New or Renamed Artifacts in the Current CI Run'
+                expected AS 'Diff of Release Assets (from the Latest Release Notes)',
+                actual AS 'Diff of Assets from `duckdb-staging` for Current Commit'
             FROM extensions_lists ORDER BY ALL;
         """).df()
         f.write(extensions_lists.to_markdown(index=False) + "\n")

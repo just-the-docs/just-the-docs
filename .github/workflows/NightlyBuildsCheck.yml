@@ -12,13 +12,16 @@ on:
         type: string
       should_publish:
         type: string
+      branch: 
+        type: string
+
 
 permissions:
   contents: write
   issues: write
 
 concurrency:
-  group: status-${{ github.workflow }}-${{ github.ref_name }}
+  group: status-${{ github.workflow }}-${{ inputs.branch }}
   cancel-in-progress: false
 
 env:
@@ -30,6 +33,10 @@ jobs:
   get-run-info:
     name: Generate nightly build artifact json file
     runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.S3_DUCKDB_STAGING_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_DUCKDB_STAGING_KEY }}
+      AWS_DEFAULT_REGION: us-east-2
     outputs:
       CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
       matrix: ${{ steps.set-outputs.outputs.matrix }}
@@ -58,34 +65,34 @@ jobs:
         env:
           CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
         run: |
-          python scripts/create_tables_and_inputs.py --branch "${{ github.ref_name }}" --event "${{ inputs.event }}"
+          python scripts/create_tables_and_inputs.py --branch "${{ inputs.branch }}" --event "${{ inputs.event }}"
 
       - name: Upload DuckDB file
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ github.ref_name }}_run_info_tables.duckdb
-          path: ${{ github.ref_name }}_run_info_tables.duckdb
+          name: ${{ inputs.branch }}_run_info_tables.duckdb
+          path: ${{ inputs.branch }}_run_info_tables.duckdb
       
-      - name: Upload inputs_${{ github.ref_name }}.json
+      - name: Upload inputs_${{ inputs.branch }}.json
         uses: actions/upload-artifact@v4
         with:
-          name: inputs_${{ github.ref_name }}.json
-          path: inputs_${{ github.ref_name }}.json
+          name: inputs_${{ inputs.branch }}.json
+          path: inputs_${{ inputs.branch }}.json
           if-no-files-found: ignore
 
       - name: Read JSON and create matrix
         id: set-outputs
         run: |
-          matrix=$(cat inputs_${{ github.ref_name }}.json | jq -c '.')
+          matrix=$(cat inputs_${{ inputs.branch }}.json | jq -c '.')
           echo "matrix=$matrix" >> $GITHUB_OUTPUT
           echo "***"
-          cat inputs_${{ github.ref_name }}.json
+          cat inputs_${{ inputs.branch }}.json
 
   run-tests:
     name: ${{ matrix.config.branch }} - ${{ matrix.config.nightly_build }} ${{ matrix.config.duckdb_arch }} (${{ matrix.config.runs_on }})
     needs: 
       - get-run-info
-    if: ${{ needs.get-run-info.outputs.matrix != '[]' }}
+    if: ${{ fromJson(needs.get-run-info.outputs.matrix) != '[]' }}
     strategy:
       matrix:
         config: ${{ fromJson(needs.get-run-info.outputs.matrix) }}
@@ -178,40 +185,40 @@ jobs:
           python -m pip install --upgrade pip
           pip install duckdb pandas tabulate requests
 
-      - name: Download inputs_${{ github.ref_name }}.json
+      - name: Download inputs_${{ inputs.branch }}.json
         uses: actions/download-artifact@v4
         with:
-          name: inputs_${{ github.ref_name }}.json
+          name: inputs_${{ inputs.branch }}.json
           path: .
 
       - name: Download extensions artifacts
         uses: actions/download-artifact@v4
         with:
-          pattern: ${{ github.ref_name }}_ext*
-          path: ${{ github.ref_name }}_failed_ext
+          pattern: ${{ inputs.branch }}_ext*
+          path: ${{ inputs.branch }}_failed_ext
 
       - name: Download duckdb file
         uses: actions/download-artifact@v4
         with:
-          name: ${{ github.ref_name }}_run_info_tables.duckdb
-          path: ${{ github.ref_name }}_tables
+          name: ${{ inputs.branch }}_run_info_tables.duckdb
+          path: ${{ inputs.branch }}_tables
       
       - name: Generate report
         shell: bash
         env:
           CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
         run: |
-          python scripts/create_build_report.py --branch ${{ github.ref_name }}
+          python scripts/create_build_report.py --branch ${{ inputs.branch }}
 
       - name: Upload REPORT
         uses: actions/upload-artifact@v4
         with:
-          name: REPORT-${{ github.ref_name }}
-          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
+          name: REPORT-${{ inputs.branch }}
+          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ inputs.branch }}.md
   
   push-reports:
     name: Push Reports
-    if: ${{ inputs.should_publish }}
+    if: ${{ inputs.should_publish == 'true' }}
     runs-on: ubuntu-latest
     needs: 
       - get-run-info
@@ -243,13 +250,13 @@ jobs:
           git pull origin main --allow-unrelated-histories
 
           mkdir -p docs/
-          mkdir -p docs/${{ github.ref_name }}
+          mkdir -p docs/${{ inputs.branch }}
           
-          mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md docs/${{ github.ref_name }}/
+          mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ inputs.branch }}.md docs/${{ inputs.branch }}/
 
-          ls -lah docs/${{ github.ref_name }}
+          ls -lah docs/${{ inputs.branch }}
 
-          git add docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
+          git add docs/${{ inputs.branch }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin main
   

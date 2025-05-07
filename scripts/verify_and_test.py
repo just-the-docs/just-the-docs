@@ -25,6 +25,7 @@ import textwrap
 from shared_functions import fetch_data
 from shared_functions import sha_matching
 from shared_functions import list_extensions
+from shared_functions import get_full_sha
 from verify_python_build import verify_and_test_python_linux
 
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
