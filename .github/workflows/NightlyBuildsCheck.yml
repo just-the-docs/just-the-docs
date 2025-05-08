@@ -9,10 +9,10 @@ on:
   workflow_dispatch:
     inputs:
       event:
-        description: event triggered the run
+        description: event triggered the run (repository_dispatch - for `main`)
         type: string
       should_publish:
-        description: should or not report be published on https://duckdb.github.io/duckdb-build-status/
+        description: true - to publish the report
         type: string
 
 permissions:
