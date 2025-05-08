@@ -9,12 +9,11 @@ on:
   workflow_dispatch:
     inputs:
       event:
+        description: event triggered the run (repository_dispatch - for `main`)
         type: string
       should_publish:
+        description: true - to publish the report
         type: string
-      branch: 
-        type: string
-
 
 permissions:
   contents: write

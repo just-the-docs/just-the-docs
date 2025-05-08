@@ -42,7 +42,7 @@ def is_gcc4(build_job, con):
         WHERE expected LIKE '%_gcc4%'
     """).fetchall()
     gcc_artifacts = [tuple(res.split('_')[:2]) for res in result]
-    print("GCC4 artifacts found in count of ", len(gcc_artifacts))
+    print("Count of GCC4 artifacts found in current CI run artifacts ", len(gcc_artifacts))
     return gcc_artifacts
 
 def create_build_report(build_job, con):
