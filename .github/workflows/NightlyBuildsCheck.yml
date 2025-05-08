@@ -9,19 +9,18 @@ on:
   workflow_dispatch:
     inputs:
       event:
+        description: event triggered the run
         type: string
       should_publish:
+        description: should or not report be published on https://duckdb.github.io/duckdb-build-status/
         type: string
-      branch: 
-        type: string
-
 
 permissions:
   contents: write
   issues: write
 
 concurrency:
-  group: status-${{ github.workflow }}-${{ inputs.branch }}
+  group: status-${{ github.workflow }}-${{ github.ref_name }}
   cancel-in-progress: false
 
 env:
@@ -65,28 +64,28 @@ jobs:
         env:
           CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
         run: |
-          python scripts/create_tables_and_inputs.py --branch "${{ inputs.branch }}" --event "${{ inputs.event }}"
+          python scripts/create_tables_and_inputs.py --branch "${{ github.ref_name }}" --event "${{ inputs.event }}"
 
       - name: Upload DuckDB file
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ inputs.branch }}_run_info_tables.duckdb
-          path: ${{ inputs.branch }}_run_info_tables.duckdb
+          name: ${{ github.ref_name }}_run_info_tables.duckdb
+          path: ${{ github.ref_name }}_run_info_tables.duckdb
       
-      - name: Upload inputs_${{ inputs.branch }}.json
+      - name: Upload inputs_${{ github.ref_name }}.json
         uses: actions/upload-artifact@v4
         with:
-          name: inputs_${{ inputs.branch }}.json
-          path: inputs_${{ inputs.branch }}.json
+          name: inputs_${{ github.ref_name }}.json
+          path: inputs_${{ github.ref_name }}.json
           if-no-files-found: ignore
 
       - name: Read JSON and create matrix
         id: set-outputs
         run: |
-          matrix=$(cat inputs_${{ inputs.branch }}.json | jq -c '.')
+          matrix=$(cat inputs_${{ github.ref_name }}.json | jq -c '.')
           echo "matrix=$matrix" >> $GITHUB_OUTPUT
           echo "***"
-          cat inputs_${{ inputs.branch }}.json
+          cat inputs_${{ github.ref_name }}.json
 
   run-tests:
     name: ${{ matrix.config.branch }} - ${{ matrix.config.nightly_build }} ${{ matrix.config.duckdb_arch }} (${{ matrix.config.runs_on }})
@@ -185,36 +184,36 @@ jobs:
           python -m pip install --upgrade pip
           pip install duckdb pandas tabulate requests
 
-      - name: Download inputs_${{ inputs.branch }}.json
+      - name: Download inputs_${{ github.ref_name }}.json
         uses: actions/download-artifact@v4
         with:
-          name: inputs_${{ inputs.branch }}.json
+          name: inputs_${{ github.ref_name }}.json
           path: .
 
       - name: Download extensions artifacts
         uses: actions/download-artifact@v4
         with:
-          pattern: ${{ inputs.branch }}_ext*
-          path: ${{ inputs.branch }}_failed_ext
+          pattern: ${{ github.ref_name }}_ext*
+          path: ${{ github.ref_name }}_failed_ext
 
       - name: Download duckdb file
         uses: actions/download-artifact@v4
         with:
-          name: ${{ inputs.branch }}_run_info_tables.duckdb
-          path: ${{ inputs.branch }}_tables
+          name: ${{ github.ref_name }}_run_info_tables.duckdb
+          path: ${{ github.ref_name }}_tables
       
       - name: Generate report
         shell: bash
         env:
           CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
         run: |
-          python scripts/create_build_report.py --branch ${{ inputs.branch }}
+          python scripts/create_build_report.py --branch ${{ github.ref_name }}
 
       - name: Upload REPORT
         uses: actions/upload-artifact@v4
         with:
-          name: REPORT-${{ inputs.branch }}
-          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ inputs.branch }}.md
+          name: REPORT-${{ github.ref_name }}
+          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
   
   push-reports:
     name: Push Reports
@@ -250,13 +249,13 @@ jobs:
           git pull origin main --allow-unrelated-histories
 
           mkdir -p docs/
-          mkdir -p docs/${{ inputs.branch }}
+          mkdir -p docs/${{ github.ref_name }}
           
-          mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ inputs.branch }}.md docs/${{ inputs.branch }}/
+          mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md docs/${{ github.ref_name }}/
 
-          ls -lah docs/${{ inputs.branch }}
+          ls -lah docs/${{ github.ref_name }}
 
-          git add docs/${{ inputs.branch }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
+          git add docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin main
   
