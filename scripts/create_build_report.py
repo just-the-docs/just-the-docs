@@ -37,9 +37,9 @@ REPORT_FILE = f"{ CURR_DATE }-{ branch }.md"
 
 def is_gcc4(build_job, con):
     result = con.execute(f"""
-        SELECT actual 
-        FROM 'ACTUAL'
-        WHERE actual LIKE '%_gcc4%'
+        SELECT expected 
+        FROM '{ build_job.get_expected_artifact_table_name() }'
+        WHERE expected LIKE '%_gcc4%'
     """).fetchall()
     gcc_artifacts = [tuple(res.split('_')[:2]) for res in result]
     print("Count of GCC4 artifacts found in current CI run artifacts ", len(gcc_artifacts))
