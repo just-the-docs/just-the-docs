@@ -90,7 +90,7 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id):
     # get staged assets for run commit
     commit_sha = get_full_sha(build_job_run_id)[:10]
     staging_command = [
-            "aws", "s3", "ls", "--recursive", f"s3://duckdb-staging/{commit_sha}"
+            "aws", "s3", "ls", "--recursive", f"s3://duckdb-staging/{commit_sha}/{GH_REPO}/github_release"
         ]
     fetch_data(staging_command, 'staging.csv')
     # get assets list from latest release
