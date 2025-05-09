@@ -96,35 +96,68 @@ function initSearch() {
   var request = new XMLHttpRequest();
   request.open('GET', '{{ "assets/js/search-data.json" | relative_url }}', true);
 
+  function buildSearchIndex(docs) {
+    lunr.tokenizer.separator = {{ site.search.tokenizer_separator | default: site.search_tokenizer_separator | default: "/[\s\-/]+/" }}
+
+    var index = lunr(function(){
+      this.ref('id');
+      this.field('title', { boost: 200 });
+      this.field('content', { boost: 2 });
+      {%- if site.search.rel_url != false %}
+      this.field('relUrl');
+      {%- endif %}
+      this.metadataWhitelist = ['position']
+
+      for (var i in docs) {
+        {% include lunr/custom-index.js %}
+        this.add({
+          id: i,
+          title: docs[i].title,
+          content: docs[i].content,
+          {%- if site.search.rel_url != false %}
+          relUrl: docs[i].relUrl
+          {%- endif %}
+        });
+      }
+    });
+    return index;
+  }
+
   request.onload = function(){
     if (request.status >= 200 && request.status < 400) {
       var docs = JSON.parse(request.responseText);
+      if (typeof(Worker) !== "undefined") {
+        const lunrUrl = new URL('{{ "assets/js/vendor/lunr.min.js" | relative_url }}', document.baseURI).href;
+        const workerBlob = new Blob(
+          [
+            `
+            self.importScripts('${lunrUrl}');
+            ${buildSearchIndex.toString()}
+            self.onmessage = function (event) {
+              const { docs } = event.data;
+              index = buildSearchIndex(docs);
+              // Send the index back to the main thread
+              self.postMessage({
+                index: JSON.stringify(index),
+              });
+            };
+            `
+          ],
+          { type: 'application/javascript' }
+        );
+        const worker = new Worker(URL.createObjectURL(workerBlob));
+        worker.postMessage({ docs });
 
-      lunr.tokenizer.separator = {{ site.search.tokenizer_separator | default: site.search_tokenizer_separator | default: "/[\s\-/]+/" }}
-
-      var index = lunr(function(){
-        this.ref('id');
-        this.field('title', { boost: 200 });
-        this.field('content', { boost: 2 });
-        {%- if site.search.rel_url != false %}
-        this.field('relUrl');
-        {%- endif %}
-        this.metadataWhitelist = ['position']
-
-        for (var i in docs) {
-          {% include lunr/custom-index.js %}
-          this.add({
-            id: i,
-            title: docs[i].title,
-            content: docs[i].content,
-            {%- if site.search.rel_url != false %}
-            relUrl: docs[i].relUrl
-            {%- endif %}
-          });
-        }
-      });
-
-      searchLoaded(index, docs);
+        worker.onmessage = function (event) {
+          const { index } = event.data;
+          searchLoaded(lunr.Index.load(JSON.parse(index)), docs);
+        };
+      }
+      else {
+        // no web worker support
+        var index = buildSearchIndex(docs);
+        searchLoaded(index, docs);
+      }
     } else {
       console.log('Error loading ajax request. Request status:' + request.status);
     }
@@ -135,6 +168,9 @@ function initSearch() {
   };
 
   request.send();
+}
+
+function buildSearchIndex(docs) {
 }
 
 function searchLoaded(index, docs) {
