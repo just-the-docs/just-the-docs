@@ -274,7 +274,7 @@ def create_build_report(build_job, con):
         extensions_lists = con.execute(f"""
             SELECT 
                 expected AS 'Diff of Release Assets (from the Latest Release Notes)',
-                actual AS 'Diff of Assets from `duckdb-staging` for Current Commit'
+                actual AS 'Diff of Assets from 'duckdb-staging' for Current Commit'
             FROM extensions_lists ORDER BY ALL;
         """).df()
         f.write(extensions_lists.to_markdown(index=False) + "\n")
