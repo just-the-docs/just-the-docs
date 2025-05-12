@@ -1,10 +1,10 @@
 ---
-title: V1.2-HISTRIONICUS
-nav_order: 3
+title: V1.3-OSSIVALIS
+nav_order: 2
 ---
 
 # Nightly Builds Status Reports
-v1.2-histrionicus
+v1.3-ossivalis
 {: .label .label-purple}
 
 {:toc}
