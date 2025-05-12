@@ -1,8 +1,18 @@
-<p align="center">
-    <h2 align="center">Duckdb Build Status </h2>
-    <p align="center"><a href="https://duckdb.github.io/duckdb-build-status/">Deployed on GH Pages</a></p>
-    <br><br><br>
-</p>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="./assets/images/DuckDB_Logo-horizontal.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/images/DuckDB_Logo-horizontal-dark-mode.svg">
+    <img alt="DuckDB logo" src="./images/logo-dl/DuckDB_Logo-horizontal.svg" height="100">
+  </picture>
+</div>
+<br>
 
+# Duckdb Build Status
 
-<p align="left"><h6><a href="https://just-the-docs.com/">Powered by Just the docs</a> theme for Jekyll</h6></p>
+This reporitory hosts the source code for the [Duckdb Nightly Build Status Pages](https://duckdb.github.io/duckdb-build-status/).
+
+The DuckDB codebase is hosted in the [DuckDB repository](https://github.com/duckdb/duckdb).
+
+# 
+
+##### Powered by [Just the docs](https://just-the-docs.com/) theme for Jekyll.
