@@ -117,10 +117,11 @@ def main():
     if branch == 'main':
         extensions = list_extensions()
         # remove extension which is not distributed for nigthly builds
-        if 'delta' in executions:
+        if 'delta' in extensions:
             extensions.remove('delta')
     else:
-        extensions=['arrow', 'autocomplete', 'aws', 'azure', 'delta', 'excel', 'fts', 'httpfs', 'iceberg', 'icu', 'inet', 'jemalloc', 'json', 'motherduck', 'mysql_scanner', 'parquet', 'postgres_scanner', 'shell', 'spatial', 'sqlite_scanner', 'sqlsmith', 'substrait', 'tpcds', 'tpch', 'vss']
+        result=duckdb.sql('SELECT extension_name FROM duckdb_extensions();').fetchall()
+        extensions = [row[0] for row in result]
 
     if nightly_build in SHOULD_BE_TESTED:
         if nightly_build == 'python':
