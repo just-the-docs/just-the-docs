@@ -52,7 +52,8 @@ def create_build_report(build_job, con):
     report_title = f"\n\n## { build_job.get_build_job_name() }: { run_name } #{ run_number } - Commit [{ run_sha }]({ run_url }) ({ run_date })\n"
 
     with open(REPORT_FILE, 'a') as f:
-        f.write(f"---\nlayout: post\ntitle: { CURR_DATE } - { run_sha }\nparent: { branch.upper() }\n---\n")
+        run_conclusion = "✅" if failures_count == 0 else "❌"
+        f.write(f"---\nlayout: post\ntitle: { CURR_DATE } - { run_sha } { run_conclusion }\nparent: { branch.upper() }\n---\n")
         if failures_count == 0:       
             f.write(f"{ report_title } Run succeeded\n{{: .label .label-green}}\n\n{ branch }\n{{: .label .label-yellow}}\n\n")
             f.write(f"#### Latest run: [ { run_date } ]({ run_url })\n")
