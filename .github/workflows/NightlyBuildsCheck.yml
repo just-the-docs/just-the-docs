@@ -272,5 +272,5 @@ jobs:
       - name: Push new report to main
         shell: bash
         run: |
-          git pull origin ${{ github.ref_name }} -- docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
+          git checkout ${{ github.ref_name }} -- docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git push origin main
