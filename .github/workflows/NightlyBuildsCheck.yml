@@ -270,5 +270,6 @@ jobs:
         if: ${{ github.ref_name != 'main'}}
         shell: bash
         run: |
+          git fetch origin ${{ github.ref_name }}
           git checkout ${{ github.ref_name }} -- docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git push origin main
