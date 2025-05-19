@@ -271,14 +271,14 @@ def get_tested_binaries_set(con, build_job):
         pattern = r'\[duckdb-binaries-([a-zA-Z]+)(?:-([a-zA-Z0-9]+))?\]'
         match = re.search(pattern, row[0])
         if match:
-            build_platform = match.group(1)
-            build_architecture = match.group(2) if match.group(2) else ''
+            build_platform = match.group(1) # windows | linux | osx
+            build_architecture = match.group(2) if match.group(2) else '' # arm64 | amd64 | ""
             if build_architecture:
                 tested_binaries.add(build_platform + "_" + build_architecture)
             elif build_platform == 'osx':
-                tested_binaries.add(build_platform + "_arm64")
+                tested_binaries.add(build_platform + "_arm64") # we have one universal binary, but want to test on both blatforms
                 tested_binaries.add(build_platform + "_amd64")
-            elif build_platform == 'linux':
+            elif build_platform == 'linux' and branch == 'v1.2-histrionicus':
                 tested_binaries.add(build_platform + "_amd64") # for duckdb-binaries-linux on v1.2
     return tested_binaries
 
@@ -288,7 +288,7 @@ def create_inputs(build_job, con, build_job_run_id):
     print(tested_binaries)
     extensions_artifacts = get_artifacts_list(con, build_job, "extensions")
     tested_builds_dict = {}
-    if branch == 'main':
+    if branch != 'v1.2-histrionicus':
         for row in extensions_artifacts:
             pattern =  r'\[duckdb-extensions-([a-zA-Z]+)_(amd64|arm64)'
             match = re.search(pattern, row[0])
