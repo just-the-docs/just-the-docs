@@ -261,5 +261,10 @@ jobs:
 
           git add docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
-          git push origin main
-  
+          git push origin ${{ github.ref_name }}
+
+      - name: Push new report to main
+        shell: bash
+        run: |
+          git checkout main
+          git pull origin ${{ github.ref_name }} -- docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
