@@ -288,7 +288,7 @@ def create_inputs(build_job, con, build_job_run_id):
     print(tested_binaries)
     extensions_artifacts = get_artifacts_list(con, build_job, "extensions")
     tested_builds_dict = {}
-    if branch == 'main':
+    if branch != 'v1.2-histrionicus':
         for row in extensions_artifacts:
             pattern =  r'\[duckdb-extensions-([a-zA-Z]+)_(amd64|arm64)'
             match = re.search(pattern, row[0])
