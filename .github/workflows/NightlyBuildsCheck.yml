@@ -245,8 +245,8 @@ jobs:
           git config --global user.name ${{ env.CI_COMMIT_AUTHOR }}
           git config --global user.email ${{ env.CI_COMMIT_EMAIL }}
           
-          git config pull.rebase false
-          git pull origin main --allow-unrelated-histories
+          # git config pull.rebase false
+          # git pull origin main --allow-unrelated-histories
 
           # checkout the file to main because we deploy from main branch
           git checkout main -- ${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
