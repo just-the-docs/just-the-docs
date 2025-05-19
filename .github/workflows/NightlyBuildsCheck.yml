@@ -248,9 +248,6 @@ jobs:
           # git config pull.rebase false
           # git pull origin main --allow-unrelated-histories
 
-          # checkout the file to main because we deploy from main branch
-          git checkout main -- ${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
-
           mkdir -p docs/
           mkdir -p docs/${{ github.ref_name }}
           
@@ -260,5 +257,18 @@ jobs:
 
           git add docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
+          git push origin ${{ github.ref_name }}
+
+      - name: Checkout main
+        if: ${{ github.ref_name != 'main'}}
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/duckdb-build-status
+          ref: main
+          
+      - name: Push new report to main
+        if: ${{ github.ref_name != 'main'}}
+        shell: bash
+        run: |
+          git checkout ${{ github.ref_name }} -- docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
           git push origin main
-  
