@@ -285,7 +285,7 @@ def get_tested_binaries_set(con, build_job):
 def create_inputs(build_job, con, build_job_run_id):
     matrix_data = []
     tested_binaries = get_tested_binaries_set(con, build_job)
-    print(tested_binaries)
+    # print(tested_binaries)
     extensions_artifacts = get_artifacts_list(con, build_job, "extensions")
     tested_builds_dict = {}
     if branch != 'v1.2-histrionicus':
@@ -364,6 +364,7 @@ def main():
     with open(f"inputs_{ branch }.json", "w") as f:
         json.dump(matrix_data, f, indent=4)
     con.close()
+    print(build_job_run_id)
     
 if __name__ == "__main__":
     main()

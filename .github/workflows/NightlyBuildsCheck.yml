@@ -39,6 +39,7 @@ jobs:
     outputs:
       CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
       matrix: ${{ steps.set-outputs.outputs.matrix }}
+      run_id: ${{ steps.get_run_id.outputs.run_id }}
     steps:
       - id: curr-date
         run: echo "CURR_DATE=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
@@ -61,10 +62,12 @@ jobs:
       
       - name: Create Tables and Generate inputs.json
         shell: bash
+        id: get_run_id
         env:
           CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
         run: |
-          python scripts/create_tables_and_inputs.py --branch "${{ github.ref_name }}" --event "${{ inputs.event }}"
+          python scripts/create_tables_and_inputs.py --branch "${{ github.ref_name }}" --event "${{ inputs.event }}" > run_id
+          echo "run_id=$run_id" >> $GITHUB_OUTPUT
 
       - name: Upload DuckDB file
         uses: actions/upload-artifact@v4
@@ -209,6 +212,26 @@ jobs:
         run: |
           python scripts/create_build_report.py --branch ${{ github.ref_name }}
 
+      - name: Generate digests
+        shell: bash
+        run: |
+          # get a run_id
+          run_id=${{ needs.get-run-info.outputs.run_id }}
+          # download all nightly release files from GH
+          gh run download $run_id --repo ${{ env.GH_REPO }} --dir release_assets
+          # generate digests
+          for file in release-assets/*/*; do
+            sha256sum "$file" >> ${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt
+          done
+          # add a link to the file to the REPORT
+          echo "\n\nNightly builds assets digest 256sha info can be found in the [checksum file](https://duckdb.github.io/duckdb-build-status/docs/v1.3-ossivalis/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt)" >> ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
+
+      - name: Upload checksum file
+        uses: actions/upload-artifact@v4
+        with:
+          name: CHECKSUM_${{ github.ref_name }}
+          path: ${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt
+
       - name: Upload REPORT
         uses: actions/upload-artifact@v4
         with:
@@ -234,6 +257,12 @@ jobs:
           pattern: REPORT*
           path: .
 
+      - name: Download checksum file
+        uses: actions/download-artifact@v4
+        with:
+          pattern: CHECKSUM*
+          path: .
+
       - name: Upload REPORT to the docs directory
         shell: bash
         env:
@@ -250,12 +279,15 @@ jobs:
 
           mkdir -p docs/
           mkdir -p docs/${{ github.ref_name }}
+          mkdir -p docs/${{ github.ref_name }}/checksum
           
           mv REPORT*/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md docs/${{ github.ref_name }}/
+          mv CHECKSUM*/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt docs/${{ github.ref_name }}/checksum
 
           ls -lah docs/${{ github.ref_name }}
 
           git add docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
+          git add docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}-*.txt
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin ${{ github.ref_name }}
 
@@ -270,6 +302,11 @@ jobs:
         if: ${{ github.ref_name != 'main'}}
         shell: bash
         run: |
+          report_file="docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md"
+          checksum_file="docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}-*.txt"
           git fetch origin ${{ github.ref_name }}:${{ github.ref_name }}
-          git checkout ${{ github.ref_name }} -- docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
+          git checkout ${{ github.ref_name }} -- $report_file
+          git checkout ${{ github.ref_name }} -- $checksum_file
+          git add $report_file $checksum_file
+          git commit -m "Adding $report_file and $checksum_file to main"
           git push origin main
