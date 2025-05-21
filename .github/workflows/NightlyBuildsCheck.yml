@@ -212,16 +212,24 @@ jobs:
         run: |
           python scripts/create_build_report.py --branch ${{ github.ref_name }}
 
+      - name: Upload REPORT
+        uses: actions/upload-artifact@v4
+        with:
+          name: REPORT-${{ github.ref_name }}
+          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
+          
       - name: Generate digests
         shell: bash
         run: |
+          # get list of artifacts
+          duckdb -list -noheader -c "select unnest(artifacts)['name'] from 'InvokeCI_artifacts.json';" > release_assets.txt
           # get a run_id
           run_id=${{ needs.get-run-info.outputs.run_id }}
-          # download all nightly release files from GH
-          gh run download $run_id --repo ${{ env.GH_REPO }} --dir release_assets
-          # generate digests
-          for file in release-assets/*/*; do
+          # download nightly release files from GH and generate digests
+          for file in $(cat release-assets.txt); do
+            gh run download $run_id --repo ${{ env.GH_REPO }} -n $file
             sha256sum "$file" >> ${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt
+            rm -f $file
           done
           # add a link to the file to the REPORT
           echo "\n\nNightly builds assets digest 256sha info can be found in the [checksum file](https://duckdb.github.io/duckdb-build-status/docs/v1.3-ossivalis/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt)" >> ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
@@ -232,18 +240,13 @@ jobs:
           name: CHECKSUM_${{ github.ref_name }}
           path: ${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt
 
-      - name: Upload REPORT
-        uses: actions/upload-artifact@v4
-        with:
-          name: REPORT-${{ github.ref_name }}
-          path: ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
-  
   push-reports:
     name: Push Reports
     if: ${{ inputs.should_publish == 'true' }}
     runs-on: ubuntu-latest
     needs: 
       - get-run-info
+      - generate-checksums
       - report
     steps:
       - name: Checkout repo
