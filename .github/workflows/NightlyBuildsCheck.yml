@@ -221,7 +221,7 @@ jobs:
       - name: Generate digests
         shell: bash
         run: |
-          python scripts/get_artifacts_list.py
+          python scripts/get_artifacts_list.py --file ${{ github.ref_name }}_tables/${{ github.ref_name }}_run_info_tables.duckdb
           # get a run_id
           run_id=${{ needs.get-run-info.outputs.run_id }}
           # download nightly release files from GH and generate digests
