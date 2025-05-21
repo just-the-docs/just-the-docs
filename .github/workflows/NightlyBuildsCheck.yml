@@ -302,7 +302,11 @@ jobs:
         if: ${{ github.ref_name != 'main'}}
         shell: bash
         run: |
+          report_file="docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md"
+          checksum_file="docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}-*.txt"
           git fetch origin ${{ github.ref_name }}:${{ github.ref_name }}
-          git checkout ${{ github.ref_name }} -- docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
-          git checkout ${{ github.ref_name }} -- docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}-*.txt
+          git checkout ${{ github.ref_name }} -- $report_file
+          git checkout ${{ github.ref_name }} -- $checksum_file
+          git add $report_file $checksum_file
+          git commit -m "Adding $report_file and $checksum_file to main"
           git push origin main
