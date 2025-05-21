@@ -153,8 +153,9 @@ def create_tables_for_report(build_job, con):
             CREATE OR REPLACE TABLE '{ build_job.get_artifacts_per_jobs_table_name() }' AS (
                 SELECT
                     t1.job_name AS "Build (Architecture)",
+                    t1.conclusion AS "Conclusion",
                     '[' || t2.name || '](' || '{ base_url }' || t2.artifact_id || ')' AS "Artifact",
-                    t2.digest AS "Digest"
+                    t2.updated_at AS "Uploaded at"
                 FROM (
                     SELECT
                         job_name,
@@ -182,8 +183,7 @@ def create_tables_for_report(build_job, con):
                         artifacts.name,
                         artifacts.expires_at expires_at,
                         artifacts.updated_at updated_at,
-                        artifacts.id artifact_id,
-                        artifacts.digest digest
+                        artifacts.id artifact_id
                     FROM (
                         SELECT
                             unnest(artifacts) artifacts
