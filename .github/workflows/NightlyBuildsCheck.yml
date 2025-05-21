@@ -221,9 +221,14 @@ jobs:
       - name: Generate digests
         shell: bash
         run: |
-          curl https://install.duckdb.org | sh
+          wget https://github.com/duckdb/duckdb/releases/latest/download/duckdb_cli-linux-amd64.zip
+          unzip duckdb_cli-linux-amd64.zip
+          sudo mv duckdb /usr/local/bin/
+
+          # Make it executable (usually already is)
+          chmod +x /usr/local/bin/duckdb
           # get list of artifacts
-          /root/.duckdb/cli/latest/duckdb -list -noheader -c "select unnest(artifacts)['name'] from 'InvokeCI_artifacts.json';" > release_assets.txt
+          duckdb -list -noheader -c "select unnest(artifacts)['name'] from 'InvokeCI_artifacts.json';" > release_assets.txt
           # get a run_id
           run_id=${{ needs.get-run-info.outputs.run_id }}
           # download nightly release files from GH and generate digests
