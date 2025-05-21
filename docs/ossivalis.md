@@ -5,6 +5,6 @@ nav_order: 2
 
 # Nightly Builds Status Reports
 v1.3-ossivalis
-{: .label .label-purple}
+{: .label .label-blue}
 
 {:toc}
