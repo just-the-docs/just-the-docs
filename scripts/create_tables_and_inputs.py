@@ -68,6 +68,15 @@ def get_value_for_key(key, build_job):
         """).fetchone()[0]
     return value
 
+def run_aws_ls(staging_command):
+    result = subprocess.run(staging_command, capture_output=True, text=True)
+    return result
+
+def process_staged_files(output):
+    lines = output.strip().split('\n')
+    staged_files = [line.split()[-1] for line in lines if line.strip()]
+    return staged_files
+
 def save_run_data_to_json_files(build_job, con, build_job_run_id, on_tag):
     '''
     Fetches GH Actions data related to specified nightly-build and saves it into json files.
@@ -90,16 +99,28 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id, on_tag):
     fetch_data(artifacts_command, build_job.get_artifacts_file_name())
     # get staged assets for run commit
     commit_sha = get_full_sha(build_job_run_id)[:10]
+    # duckdb-staging path for the release files has a release tag in it, so on release first command fails and we run is again with the path in it
     staging_command = [
             "aws", "s3", "ls", "--recursive", f"s3://duckdb-staging/{commit_sha}/{GH_REPO}/github_release"
         ]
-    fetch_data(staging_command, STAGING_FILE, shell=True)
-    if os.path.getsize(STAGING_FILE) == 0:
-        on_tag=True
-        staging_command = [
-            f"aws s3 ls --recursive s3://duckdb-staging/{commit_sha}/v1.3.0/{GH_REPO}/github_release | awk '{{print $4}}'"
+    staging_command_on_tag = [
+            "aws", "s3", "ls", "--recursive", f"s3://duckdb-staging/{commit_sha}/v1.3.0/{GH_REPO}/github_release"
         ]
-        fetch_data(staging_command, STAGING_FILE, shell=True)
+    staging_result = run_aws_ls(staging_command)
+    if staging_result.returncode != 0 or not staging_result.stdout.strip():
+        on_tag = True
+        staging_result = run_aws_ls(staging_command_on_tag)
+    if staging_result.returncode == 0:
+        files = process_staged_files(staging_result.stdout)
+        if files:
+            with open(STAGING_FILE, 'w') as f:
+                f.write('\n'.join(files))
+        else:
+            print(f"No files found for provided {commit_sha}")
+    else:
+        print(staging_result.stderr)
+        
+    if on_tag:
         # get assets list from previous release
         expected_artifacts_command = [
                 "gh", "release", "view", "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
@@ -145,30 +166,34 @@ def create_tables_for_report(build_job, con, on_tag):
     if on_tag:
         con.execute(f"""
             CREATE OR REPLACE TABLE 'ACTUAL' AS (
-                SELECT * FROM read_csv(
-                    {STAGING_FILE},
-                    delim = '/',
-                    columns = {{
-                        'date_time': 'VARCHAR',
-                        'tag': 'VARCHAR',
-                        'owner': 'VARCHAR',
-                        'repo': 'VARCHAR',
-                        'type': 'VARCHAR',
-                        'actual': 'VARCHAR' }})
+                SELECT actual FROM (
+                    SELECT * FROM read_csv(
+                        {STAGING_FILE},
+                        delim = '/',
+                        columns = {{
+                            'date_time': 'VARCHAR',
+                            'tag': 'VARCHAR',
+                            'owner': 'VARCHAR',
+                            'repo': 'VARCHAR',
+                            'type': 'VARCHAR',
+                            'actual': 'VARCHAR' }})
+                            )
             );
         """)
     else:
             con.execute(f"""
             CREATE OR REPLACE TABLE 'ACTUAL' AS (
-                SELECT * FROM read_csv(
-                    {STAGING_FILE},
-                    delim = '/',
-                    columns = {{
-                        'date_time': 'VARCHAR',
-                        'owner': 'VARCHAR',
-                        'repo': 'VARCHAR',
-                        'type': 'VARCHAR',
-                        'actual': 'VARCHAR' }})
+                SELECT actual FROM (
+                    SELECT * FROM read_csv(
+                        {STAGING_FILE},
+                        delim = '/',
+                        columns = {{
+                            'date_time': 'VARCHAR',
+                            'owner': 'VARCHAR',
+                            'repo': 'VARCHAR',
+                            'type': 'VARCHAR',
+                            'actual': 'VARCHAR' }})
+                        )
             );
         """)
     

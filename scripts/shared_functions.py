@@ -50,10 +50,10 @@ class BuildJob:
         return f"{ self.build_job_name }_jobs.json"
 
 # save command execution results into an f_output file
-def fetch_data(command, f_output, shell=False): 
+def fetch_data(command, f_output): 
     data = open(f_output, "w")
     try:
-        subprocess.run(command, stdout=data, stderr=subprocess.PIPE, check=True, shell=shell)
+        subprocess.run(command, stdout=data, stderr=subprocess.PIPE, check=True)
     except subprocess.CalledProcessError as e:
         print(f"Command failed with error: {e.stderr.decode()}")
 
