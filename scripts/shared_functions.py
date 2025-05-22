@@ -53,9 +53,9 @@ class BuildJob:
 def fetch_data(command, f_output): 
     data = open(f_output, "w")
     try:
-        subprocess.run(command, stdout=data, stderr=True, check=True)
+        subprocess.run(command, stdout=data, stderr=subprocess.PIPE, check=True)
     except subprocess.CalledProcessError as e:
-        print(f"Command failed with error: {e.stderr}")
+        print(f"Command failed with error: {e.stderr.decode()}")
 
 # get full commit SHA of the commit that triggered a run by run_id
 def get_full_sha(run_id):

@@ -28,9 +28,11 @@ def main():
     for res in result:
         artifacts += res[0] + '\n'
     # artifacts = [res[0] for res in result]
-    with open(f"release_assets.txt", "w") as f:
+    with open(f"release-assets.txt", "w") as f:
         f.write(artifacts)
     con.close()
     
 if __name__ == "__main__":
     main()
+
+    

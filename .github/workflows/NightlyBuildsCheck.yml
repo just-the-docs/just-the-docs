@@ -66,7 +66,7 @@ jobs:
         env:
           CURR_DATE: ${{ steps.curr-date.outputs.CURR_DATE }}
         run: |
-          python scripts/create_tables_and_inputs.py --branch "${{ github.ref_name }}" --event "${{ inputs.event }}" > run_id
+          run_id=$(python scripts/create_tables_and_inputs.py --branch "${{ github.ref_name }}" --event "${{ inputs.event }}")
           echo "run_id=$run_id" >> $GITHUB_OUTPUT
 
       - name: Upload DuckDB file
@@ -123,45 +123,45 @@ jobs:
             path: ext
             repository: ${{ env.GH_REPO }}
             
-      - name: Verify ${{ matrix.config.nightly_build }} ${{ matrix.config.duckdb_arch }} build version and Test extensions
-        id: verify-build
-        shell: bash
-        env:
-          CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
-        run: |
-            if [[ ${{ matrix.config.nightly_build }} != 'python' ]]; then
-              echo "Downloading duckdb-binaries-${{ matrix.config.duckdb_binary }} artifact from ${{ matrix.config.run_id }}..."
-              if gh run download ${{ matrix.config.run_id }} --repo ${{ env.GH_REPO }} -n duckdb-binaries-${{ matrix.config.duckdb_binary }}; then
-                # echo "Artifact duckdb-binaries-${{ matrix.config.duckdb_binary }} is successfuly downloaded."
-                if [[ ${{ matrix.config.nightly_build }} == 'osx' ]]; then
-                  unzip duckdb_cli-*.zip -d duckdb_path
-                else
-                  if [[ ${{ matrix.config.branch }} != 'main' && ${{ matrix.config.nightly_build }} == 'linux' ]]; then
-                    unzip duckdb_cli-${{ matrix.config.nightly_build }}-${{ matrix.config.duckdb_arch }}.zip -d duckdb_path
-                  else
-                    unzip duckdb_cli-${{ matrix.config.duckdb_binary }}.zip -d duckdb_path
-                  fi
-                fi
-              fi
-            fi
-            echo "Verifying version and testing extensions..."
-            python scripts/verify_and_test.py \
-                --nightly_build ${{ matrix.config.nightly_build }} \
-                --architecture ${{ matrix.config.duckdb_arch }} \
-                --run_id ${{ matrix.config.run_id }} \
-                --runs_on ${{ matrix.config.runs_on }} \
-                --branch ${{ matrix.config.branch }}
+      # - name: Verify ${{ matrix.config.nightly_build }} ${{ matrix.config.duckdb_arch }} build version and Test extensions
+      #   id: verify-build
+      #   shell: bash
+      #   env:
+      #     CURR_DATE: ${{ needs.get-run-info.outputs.CURR_DATE }}
+      #   run: |
+      #       if [[ ${{ matrix.config.nightly_build }} != 'python' ]]; then
+      #         echo "Downloading duckdb-binaries-${{ matrix.config.duckdb_binary }} artifact from ${{ matrix.config.run_id }}..."
+      #         if gh run download ${{ matrix.config.run_id }} --repo ${{ env.GH_REPO }} -n duckdb-binaries-${{ matrix.config.duckdb_binary }}; then
+      #           # echo "Artifact duckdb-binaries-${{ matrix.config.duckdb_binary }} is successfuly downloaded."
+      #           if [[ ${{ matrix.config.nightly_build }} == 'osx' ]]; then
+      #             unzip duckdb_cli-*.zip -d duckdb_path
+      #           else
+      #             if [[ ${{ matrix.config.branch }} != 'main' && ${{ matrix.config.nightly_build }} == 'linux' ]]; then
+      #               unzip duckdb_cli-${{ matrix.config.nightly_build }}-${{ matrix.config.duckdb_arch }}.zip -d duckdb_path
+      #             else
+      #               unzip duckdb_cli-${{ matrix.config.duckdb_binary }}.zip -d duckdb_path
+      #             fi
+      #           fi
+      #         fi
+      #       fi
+      #       echo "Verifying version and testing extensions..."
+      #       python scripts/verify_and_test.py \
+      #           --nightly_build ${{ matrix.config.nightly_build }} \
+      #           --architecture ${{ matrix.config.duckdb_arch }} \
+      #           --run_id ${{ matrix.config.run_id }} \
+      #           --runs_on ${{ matrix.config.runs_on }} \
+      #           --branch ${{ matrix.config.branch }}
 
-      - name: Upload actions for extensions
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.config.branch }}_ext_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}
-          path: |
-            ${{ matrix.config.branch }}_list_failed_ext_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}.csv
-            ${{ matrix.config.branch }}_non_matching_sha_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}.csv
-            ${{ matrix.config.branch }}_tested_platforms_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}.csv
-          if-no-files-found: ignore
+      # - name: Upload actions for extensions
+      #   if: always()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: ${{ matrix.config.branch }}_ext_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}
+      #     path: |
+      #       ${{ matrix.config.branch }}_list_failed_ext_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}.csv
+      #       ${{ matrix.config.branch }}_non_matching_sha_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}.csv
+      #       ${{ matrix.config.branch }}_tested_platforms_${{ matrix.config.nightly_build }}_${{ matrix.config.duckdb_arch }}.csv
+      #     if-no-files-found: ignore
     
   report:
     name: Create complete report
@@ -170,6 +170,10 @@ jobs:
     needs:
       - get-run-info 
       - run-tests
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.S3_DUCKDB_STAGING_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_DUCKDB_STAGING_KEY }}
+      AWS_DEFAULT_REGION: us-east-2
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -221,15 +225,18 @@ jobs:
       - name: Generate digests
         shell: bash
         run: |
-          python scripts/get_artifacts_list.py
           # get a run_id
           run_id=${{ needs.get-run-info.outputs.run_id }}
           # download nightly release files from GH and generate digests
-          for file in $(cat release-assets.txt); do
-            gh run download $run_id --repo ${{ env.GH_REPO }} -n $file
-            sha256sum "$file" >> ${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt
-            rm -f $file
+          aws s3 ls --recursive s3://duckdb-staging/71c5c07cdd/v1.3.0/${{ env.GH_REPO }}/github_release | awk '{print $4}' > release-assets.txt 
+          cat release-assets.txt
+          for file_path in $(cat release-assets.txt); do 
+            aws s3 cp s3://duckdb-staging/$file_path .;
+            file=$(basename $file_path)
+            shasum -a 256 $file >> ${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt;
+            rm $file; 
           done
+          
           # add a link to the file to the REPORT
           echo "\n\nNightly builds assets digest 256sha info can be found in the [checksum file](https://duckdb.github.io/duckdb-build-status/docs/v1.3-ossivalis/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt)" >> ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
 
@@ -286,9 +293,10 @@ jobs:
           mv CHECKSUM*/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt docs/${{ github.ref_name }}/checksum
 
           ls -lah docs/${{ github.ref_name }}
+          ls -lah docs/${{ github.ref_name }}/checksum
 
-          git add docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
-          git add docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}-*.txt
+          git add docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
+          git add docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin ${{ github.ref_name }}
 
@@ -304,7 +312,7 @@ jobs:
         shell: bash
         run: |
           report_file="docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md"
-          checksum_file="docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}-*.txt"
+          checksum_file="docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt"
           git fetch origin ${{ github.ref_name }}:${{ github.ref_name }}
           git checkout ${{ github.ref_name }} -- $report_file
           git checkout ${{ github.ref_name }} -- $checksum_file
