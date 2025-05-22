@@ -49,7 +49,6 @@ from shared_functions import BuildJob
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 DUCKDB_FILE = 'run_info_tables.duckdb'
 STAGING_FILE = 'staging.csv'
-on_tag=False
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--branch")
@@ -69,7 +68,7 @@ def get_value_for_key(key, build_job):
         """).fetchone()[0]
     return value
 
-def save_run_data_to_json_files(build_job, con, build_job_run_id):
+def save_run_data_to_json_files(build_job, con, build_job_run_id, on_tag):
     '''
     Fetches GH Actions data related to specified nightly-build and saves it into json files.
     As result "{build_job}.json", "{ build_job }_jobs.json" and "{ build_job }_artifacts.json"
@@ -113,8 +112,9 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id):
                 "gh", "release", "view", prev_tag, "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
             ]
     fetch_data(expected_artifacts_command, build_job.get_expected_artifacts_file_name())
+    return on_tag
 
-def create_tables_for_report(build_job, con):
+def create_tables_for_report(build_job, con, on_tag):
     '''
     In 'run_info_tables.duckdb' file creates '{ build_job }_gh_run_list', 'steps_{ build_job }'
         and 'artifacts_{ build_job }' tables from json files created on save_run_data_to_json_files()
@@ -382,13 +382,14 @@ def create_inputs(build_job, con, build_job_run_id):
 
 def main():
     build_job = BuildJob("InvokeCI")
+    on_tag=False
     if os.path.isfile(DUCKDB_FILE):
         os.remove(DUCKDB_FILE)
     con = duckdb.connect(DUCKDB_FILE)
     list_all_runs(con, build_job, branch, event)
     build_job_run_id = get_value_for_key("databaseId", build_job)
-    save_run_data_to_json_files(build_job, con, build_job_run_id)
-    create_tables_for_report(build_job, con)
+    on_tag = save_run_data_to_json_files(build_job, con, build_job_run_id, on_tag)
+    create_tables_for_report(build_job, con, on_tag)
     create_failed_jobs_table(build_job, con)
 
     matrix_data = create_inputs(build_job, con, build_job_run_id)
