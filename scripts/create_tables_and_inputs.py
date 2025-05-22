@@ -49,7 +49,6 @@ from shared_functions import BuildJob
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 DUCKDB_FILE = 'run_info_tables.duckdb'
 STAGING_FILE = 'staging.csv'
-DUCKDB_FILE = f'{branch}_{DUCKDB_FILE}'
 on_tag=False
 
 parser = argparse.ArgumentParser()
@@ -59,6 +58,7 @@ args = parser.parse_args()
 
 branch = args.branch
 event = args.event
+DUCKDB_FILE = f'{branch}_{DUCKDB_FILE}'
 
 def get_value_for_key(key, build_job):
     value = duckdb.sql(f"""
