@@ -236,9 +236,6 @@ jobs:
             shasum -a 256 $file >> ${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt;
             rm $file; 
           done
-          
-          # add a link to the file to the REPORT
-          echo "\n\nNightly builds assets digest 256sha info can be found in the [checksum file](https://duckdb.github.io/duckdb-build-status/docs/v1.3-ossivalis/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt)" >> ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
 
       - name: Upload checksum file
         uses: actions/upload-artifact@v4
