@@ -50,12 +50,12 @@ class BuildJob:
         return f"{ self.build_job_name }_jobs.json"
 
 # save command execution results into an f_output file
-def fetch_data(command, f_output): 
+def fetch_data(command, f_output, shell=False): 
     data = open(f_output, "w")
     try:
-        subprocess.run(command, stdout=data, stderr=True, check=True)
+        subprocess.run(command, stdout=data, stderr=subprocess.PIPE, check=True, shell=shell)
     except subprocess.CalledProcessError as e:
-        print(f"Command failed with error: {e.stderr}")
+        print(f"Command failed with error: {e.stderr.decode()}")
 
 # get full commit SHA of the commit that triggered a run by run_id
 def get_full_sha(run_id):

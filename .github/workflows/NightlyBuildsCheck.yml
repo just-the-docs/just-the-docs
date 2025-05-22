@@ -221,15 +221,18 @@ jobs:
       - name: Generate digests
         shell: bash
         run: |
-          python scripts/get_artifacts_list.py --file ${{ github.ref_name }}_tables/${{ github.ref_name }}_run_info_tables.duckdb
           # get a run_id
           run_id=${{ needs.get-run-info.outputs.run_id }}
           # download nightly release files from GH and generate digests
-          for file in $(cat release-assets.txt); do
-            gh run download $run_id --repo ${{ env.GH_REPO }} -n $file
-            sha256sum "$file" >> ${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt
-            rm -f $file
+          aws s3 ls --recursive s3://duckdb-staging/71c5c07cdd/v1.3.0/${{ env.GH_REPO }}/github_release | awk '{print $4}' > release-assets.txt 
+          
+          for file_path in $(cat release-assets.txt); do 
+            aws s3 cp s3://duckdb-staging/$file_path .;
+            file=$(basename $file_path)
+            shasum -a 256 $file >> CHECKSUM.txt; 
+            rm $file; 
           done
+          
           # add a link to the file to the REPORT
           echo "\n\nNightly builds assets digest 256sha info can be found in the [checksum file](https://duckdb.github.io/duckdb-build-status/docs/v1.3-ossivalis/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt)" >> ${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
 

@@ -48,6 +48,9 @@ from shared_functions import BuildJob
 
 GH_REPO = os.environ.get('GH_REPO', 'duckdb/duckdb')
 DUCKDB_FILE = 'run_info_tables.duckdb'
+STAGING_FILE = 'staging.csv'
+DUCKDB_FILE = f'{branch}_{DUCKDB_FILE}'
+on_tag=False
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--branch")
@@ -56,7 +59,6 @@ args = parser.parse_args()
 
 branch = args.branch
 event = args.event
-DUCKDB_FILE = f'{branch}_{DUCKDB_FILE}'
 
 def get_value_for_key(key, build_job):
     value = duckdb.sql(f"""
@@ -90,13 +92,26 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id):
     # get staged assets for run commit
     commit_sha = get_full_sha(build_job_run_id)[:10]
     staging_command = [
-            "aws", "s3", "ls", "--recursive", f"s3://duckdb-staging/{commit_sha}/v1.3.0/{GH_REPO}/github_release"
+            "aws", "s3", "ls", "--recursive", f"s3://duckdb-staging/{commit_sha}/{GH_REPO}/github_release"
         ]
-    fetch_data(staging_command, 'staging.csv')
-    # get assets list from latest release
-    expected_artifacts_command = [
-            "gh", "release", "view", "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
+    fetch_data(staging_command, STAGING_FILE, shell=True)
+    if os.path.getsize(STAGING_FILE) == 0:
+        on_tag=True
+        staging_command = [
+            f"aws s3 ls --recursive s3://duckdb-staging/{commit_sha}/v1.3.0/{GH_REPO}/github_release "
+            "| awk '{print $4}'"
         ]
+        fetch_data(staging_command, STAGING_FILE, shell=True)
+        # get assets list from previous release
+        expected_artifacts_command = [
+                "gh", "release", "view", "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
+            ]
+    else:
+        # get assets list from latest release
+        prev_tag = subprocess.run(["gh release list --limit 2 --json tagName --jq '.[1].tagName'"], stdout=True, stderr=True, check=True)
+        expected_artifacts_command = [
+                "gh", "release", "view", prev_tag, "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
+            ]
     fetch_data(expected_artifacts_command, build_job.get_expected_artifacts_file_name())
 
 def create_tables_for_report(build_job, con):
@@ -128,20 +143,35 @@ def create_tables_for_report(build_job, con):
             SELECT * FROM read_csv('{ build_job.get_expected_artifacts_file_name() }', columns = {{'expected': 'VARCHAR'}})
         );
     """)
-    con.execute(f"""
-        CREATE OR REPLACE TABLE 'ACTUAL' AS (
-            SELECT * FROM read_csv(
-                'staging.csv',
-                delim = '/',
-                columns = {{
-                    'date_time': 'VARCHAR',
-                    'tag': 'VARCHAR',
-                    'owner': 'VARCHAR',
-                    'repo': 'VARCHAR',
-                    'type': 'VARCHAR',
-                    'actual': 'VARCHAR' }})
-        );
-    """)
+    if on_tag:
+        con.execute(f"""
+            CREATE OR REPLACE TABLE 'ACTUAL' AS (
+                SELECT * FROM read_csv(
+                    {STAGING_FILE},
+                    delim = '/',
+                    columns = {{
+                        'date_time': 'VARCHAR',
+                        'tag': 'VARCHAR',
+                        'owner': 'VARCHAR',
+                        'repo': 'VARCHAR',
+                        'type': 'VARCHAR',
+                        'actual': 'VARCHAR' }})
+            );
+        """)
+    else:
+            con.execute(f"""
+            CREATE OR REPLACE TABLE 'ACTUAL' AS (
+                SELECT * FROM read_csv(
+                    {STAGING_FILE},
+                    delim = '/',
+                    columns = {{
+                        'date_time': 'VARCHAR',
+                        'owner': 'VARCHAR',
+                        'repo': 'VARCHAR',
+                        'type': 'VARCHAR',
+                        'actual': 'VARCHAR' }})
+            );
+        """)
     
     # check if the artifatcs table is not empty
     artifacts_count = con.execute(f"SELECT list_count(artifacts) FROM '{ build_job.get_artifact_table_name() }';").fetchone()[0]
