@@ -170,6 +170,10 @@ jobs:
     needs:
       - get-run-info 
       - run-tests
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.S3_DUCKDB_STAGING_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.S3_DUCKDB_STAGING_KEY }}
+      AWS_DEFAULT_REGION: us-east-2
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
