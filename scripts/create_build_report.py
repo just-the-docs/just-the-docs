@@ -287,7 +287,7 @@ def create_build_report(build_job, con):
         f.write(artifacts_per_job.to_markdown(index=False) + "\n")
         
         # add a link to the file to the REPORT
-        f.write(f"\n\nNightly builds assets digest 256sha info can be found in the [checksum file](https://duckdb.github.io/duckdb-build-status/docs/v1.3-ossivalis/checksum/{ CURR_DATE }_checksum_{ branch }.txt) { :download }")
+        f.write(f"\n\nNightly builds assets digest 256sha info can be found in the [checksum file](https://duckdb.github.io/duckdb-build-status/docs/v1.3-ossivalis/checksum/{ CURR_DATE }_checksum_{ branch }.txt){{ :download }}")
 
 
 def main():
