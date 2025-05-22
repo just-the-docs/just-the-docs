@@ -293,9 +293,10 @@ jobs:
           mv CHECKSUM*/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt docs/${{ github.ref_name }}/checksum
 
           ls -lah docs/${{ github.ref_name }}
+          ls -lah docs/${{ github.ref_name }}/checksum
 
-          git add docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-*.md
-          git add docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}-*.txt
+          git add docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md
+          git add docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt
           git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
           git push origin ${{ github.ref_name }}
 
@@ -311,7 +312,7 @@ jobs:
         shell: bash
         run: |
           report_file="docs/${{ github.ref_name }}/${{ needs.get-run-info.outputs.CURR_DATE }}-${{ github.ref_name }}.md"
-          checksum_file="docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}-*.txt"
+          checksum_file="docs/${{ github.ref_name }}/checksum/${{ needs.get-run-info.outputs.CURR_DATE }}_checksum_${{ github.ref_name }}.txt"
           git fetch origin ${{ github.ref_name }}:${{ github.ref_name }}
           git checkout ${{ github.ref_name }} -- $report_file
           git checkout ${{ github.ref_name }} -- $checksum_file
