@@ -97,8 +97,7 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id, on_tag):
     if os.path.getsize(STAGING_FILE) == 0:
         on_tag=True
         staging_command = [
-            f"aws s3 ls --recursive s3://duckdb-staging/{commit_sha}/v1.3.0/{GH_REPO}/github_release "
-            "| awk '{print $4}'"
+            f"aws s3 ls --recursive s3://duckdb-staging/{commit_sha}/v1.3.0/{GH_REPO}/github_release | awk '{{print $4}}'"
         ]
         fetch_data(staging_command, STAGING_FILE, shell=True)
         # get assets list from previous release
