@@ -122,14 +122,14 @@ def save_run_data_to_json_files(build_job, con, build_job_run_id, on_tag):
         
     if on_tag:
         # get assets list from previous release
+        prev_tag = subprocess.run(["gh", "release", "list", "--limit", "2", "--json", "tagName", "--jq", "'.[1].tagName'"], stdout=True, stderr=True, check=True)
         expected_artifacts_command = [
-                "gh", "release", "view", "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
+                "gh", "release", "view", prev_tag, "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
             ]
     else:
         # get assets list from latest release
-        prev_tag = subprocess.run(["gh release list --limit 2 --json tagName --jq '.[1].tagName'"], stdout=True, stderr=True, check=True)
         expected_artifacts_command = [
-                "gh", "release", "view", prev_tag, "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
+                "gh", "release", "view", "--repo", GH_REPO, "--json", "assets", "--jq", '.[].[].name'
             ]
     fetch_data(expected_artifacts_command, build_job.get_expected_artifacts_file_name())
     return on_tag
