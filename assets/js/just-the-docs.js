@@ -170,9 +170,6 @@ function initSearch() {
   request.send();
 }
 
-function buildSearchIndex(docs) {
-}
-
 function searchLoaded(index, docs) {
   var index = index;
   var docs = docs;
