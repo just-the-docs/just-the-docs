@@ -1,4 +1,4 @@
-$color-scheme: blue-dk;
+$color-scheme: two_tone-blue_dark;
 $body-background-color: #2d5986;
 $body-heading-color: $grey-lt-000;
 $body-text-color: $grey-lt-200;
@@ -17,5 +17,5 @@ $border-color: $grey-dk-200;
 $card-background-color: $grey-dk-300;
 $container-background-color: $grey-dk-300;
 
-@import "./vendor/OneDarkJekyll/syntax"; // this is the one-dark-vivid atom syntax theme
-@import "./two_tone/blue_dark"; // this is the blue_dark two_tone theme stylesheet
+@import "../vendor/OneDarkJekyll/syntax"; // this is the one-dark-vivid atom syntax theme
+@import "two_tone/blue_dark"; // this is the blue_dark two_tone theme stylesheet
