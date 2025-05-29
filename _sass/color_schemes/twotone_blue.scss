@@ -1,4 +1,4 @@
-$color-scheme: two_tone-blue_dark;
+$color-scheme: twotone_blue;
 $body-background-color: #2d5986;
 $body-heading-color: $grey-lt-000;
 $body-text-color: $grey-lt-200;
@@ -20,4 +20,4 @@ $card-shadow-color: $grey-dk-200;
 $card-shadow-hover-color: darken($card-shadow-color, 3%);
 
 @import "../vendor/OneDarkJekyll/syntax"; // this is the one-dark-vivid atom syntax theme
-@import "two_tone/blue_dark"; // this is the blue_dark two_tone theme stylesheet
+@import "styles/twotone_blue"; // this is the twotone_blue theme stylesheet
