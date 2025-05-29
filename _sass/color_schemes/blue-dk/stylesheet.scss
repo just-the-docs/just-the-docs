@@ -1,0 +1,37 @@
+.w3-card {
+  display: block;
+  background-color: $card-background-color;
+  box-shadow: 0 4px 8px 0 $grey-dk-200;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.w3-card:hover {
+  box-shadow: 0 8px 16px 0 $grey-dk-300;
+}
+
+.w3-container {
+  background-color: $container-background-color;
+  padding: 2px 16px;
+}
+
+.side-bar {
+  z-index: 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $sidebar-color;
+
+  @include mq(md) {
+    flex-flow: column nowrap;
+    position: fixed;
+    width: $nav-width-md;
+    height: 100%;
+    border-right: $border $border-color;
+    align-items: flex-end;
+  }
+
+  @include mq(lg) {
+    width: calc((100% - #{$nav-width + $content-width}) / 20 + #{$nav-width});
+    min-width: $nav-width;
+  }
+}
