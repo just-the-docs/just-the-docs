@@ -16,6 +16,8 @@ $search-result-preview-color: $grey-dk-000;
 $border-color: $grey-dk-200;
 $card-background-color: $grey-dk-300;
 $container-background-color: $grey-dk-300;
+$card-shadow-color: $grey-dk-200;
+$card-shadow-hover-color: darken($card-shadow-color, 3%);
 
 @import "../vendor/OneDarkJekyll/syntax"; // this is the one-dark-vivid atom syntax theme
 @import "two_tone/blue_dark"; // this is the blue_dark two_tone theme stylesheet
