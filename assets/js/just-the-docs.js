@@ -90,7 +90,7 @@ function initToC(retries = 3, delay = 300) {
   // If toc or toggleTocBanner is not on screen, retry after a 300ms delay
   if (!toc || !toggleTocBanner || typeof jtd === 'undefined') {
     if (retries > 0) {
-      setTimeout(() => initToC(retries - 1, delay), delay);
+      setTimeout(function() { initToC(retries - 1, delay); }, delay);
     } else {
       console.warn("initToC: Table of Contents panel, banner or jtd object not found after multiple attempts.");
     }
@@ -131,7 +131,11 @@ function initToC(retries = 3, delay = 300) {
     }
     // Double-clicking the ToC opener button to scroll back to top (md and lg)
     jtd.addEvent(document.querySelector('.btn.js-toggle-toc'), 'dblclick', () => {
-      window.scrollTo({top: 0, behavior: 'smooth'});
+      if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      } else {
+        window.scrollTo(0, 0);
+      }
     });
   } catch (e) {
     console.error("initToC: An error occurred when attempting to attach click events for Table of Contents sidebar: " + e);
@@ -163,7 +167,7 @@ function initToC(retries = 3, delay = 300) {
         // Making sure that if there's still a portion of the last section on screen, the ToC item for that remains highlighted.
         if (window.scrollY > tocAnchors[i].offsetTop - 10) { // Offset for checking the heading against top of viewport is 10px
           if (window.innerWidth <= 800) {
-            toggleTocBanner.innerHTML = `${tocAnchors[i].innerText}`;
+            toggleTocBanner.innerHTML = tocAnchors[i].innerText;
           }
           for (var k = 0; k < i; k++) {
             tocLinks[k].classList.remove('active');
