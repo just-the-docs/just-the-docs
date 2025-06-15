@@ -663,7 +663,11 @@ function navLink() {
 function scrollNav() {
   const targetLink = navLink();
   if (targetLink) {
-    targetLink.scrollIntoView({ block: "center" });
+    try {
+      targetLink.scrollIntoView({ block: "center" });
+    } catch (e) {
+      targetLink.scrollIntoView();
+    }
     targetLink.removeAttribute('href');
   }
 }
@@ -721,7 +725,7 @@ jtd.onReady(function(){
   var svgCopied =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copied"></use></svg>';
   var svgCopy =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copy"></use></svg>';
 
-  codeBlocks.forEach(codeBlock => {
+  for (var codeBlock of codeBlocks) {
     var copyButton = document.createElement('button');
     var timeout = null;
     copyButton.type = 'button';
