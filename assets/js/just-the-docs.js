@@ -122,7 +122,7 @@ function initToC(retries = 3, delay = 300) {
       }
     }
     // Buttons to open the ToC sidebar/top panel
-    for (const element of document.querySelectorAll('.js-toggle-toc')) {
+    for (var element of document.querySelectorAll('.js-toggle-toc')) {
       jtd.addEvent(element, 'click', (e) => {
         toc.classList.toggle('closed');
         e.currentTarget.setAttribute("aria-expanded",

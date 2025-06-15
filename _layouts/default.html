@@ -8,6 +8,10 @@ layout: table_wrappers
 {% include head.html %}
 <body class="{% if site.toc_enabled != false %}toc{% endif %}">
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  {% if site.toc_enabled != false and layout.toc_enabled != false and page.toc_enabled != false %}
+    <a class="skip-to-main" href="#sidebar">Skip to sidebar</a>
+  {% endif %}
+
   {% include icons/icons.html %}
   {% if page.nav_enabled == true %}
     {% include components/sidebar.html %}

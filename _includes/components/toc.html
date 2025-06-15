@@ -39,7 +39,7 @@
 {% if toc_custom != "" %}
     {{ toc_custom }}
 {% else %}
-    <aside class="toc closed{% if site.toc.md_side_panel %} panel{% endif %}" role="complementary">
+    <aside id="sidebar" class="toc closed{% if site.toc.md_side_panel %} panel{% endif %}" role="complementary">
         <button class="btn js-toggle-toc" role="button" aria-expanded="false" aria-controls="inner-toc" title="Toggle Table of Contents sidebar" aria-label="Open Table of Contents sidebar">
             <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
         </button>
