@@ -748,7 +748,7 @@ jtd.onReady(function(){
         }, timeoutSetting);
       }
     });
-  });
+  }
 
 });
 
