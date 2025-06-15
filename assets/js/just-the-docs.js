@@ -79,10 +79,23 @@ function isOutOfViewport(el) {
   );
 }
 
-function initToC() {
-  const toc = document.querySelector("aside.toc");
-  const toggleTocBanner = document.querySelector('a.toc-banner');
+function initToC(retries = 3, delay = 300) {
+  const toc = document.querySelector("aside.toc"); // Table of Contents sidebar panel
+  const toggleTocBanner = document.querySelector('a.toc-banner'); // toggle banner at the top of the page
+
+  // previousScrollY determines the last scroll position of the page => display the ToC banner when scrolling up
+  // tocItemClicked detects if a ToC item is clicked => close the ToC panel
   let previousScrollY = 0, tocItemClicked = false;
+
+  // If toc or toggleTocBanner is not on screen, retry after a 300ms delay
+  if (!toc || !toggleTocBanner || typeof jtd === 'undefined') {
+    if (retries > 0) {
+      setTimeout(() => initToC(retries - 1, delay), delay);
+    } else {
+      console.warn("initToC: Table of Contents panel, banner or jtd object not found after multiple attempts.");
+    }
+    return;
+  }
 
   try {
     // Close the ToC panel if user clicks outside the ToC sidebar (xs -> lg)
@@ -121,23 +134,24 @@ function initToC() {
       window.scrollTo({top: 0, behavior: 'smooth'});
     });
   } catch (e) {
-    console.log("An error occurred when attempting to attach click events for Table of Contents sidebar: " + e);
+    console.error("initToC: An error occurred when attempting to attach click events for Table of Contents sidebar: " + e);
   }
 
   // Highlight ToC items in view. Kudos to JohnD/Tyler2P - https://stackoverflow.com/a/75346369
   const anchors = document.querySelectorAll('#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6');
   const tocLinks = toc.querySelectorAll('a.toc-item-link');
-  if (!tocLinks.length) {
-    toggleTocBanner.remove();
-  }
 
   // Map all heading anchors which have links in the ToC
   let tocAnchors = [];
   for (var link of tocLinks) {
     for (var anchor of anchors) {
-      if (link.getAttribute('href') === anchor.querySelector('a.anchor-heading').getAttribute('href')) {
-        tocAnchors.push(anchor);
-        break;
+      try {
+        if (anchor.querySelector('a.anchor-heading') && link.getAttribute('href') === anchor.querySelector('a.anchor-heading').getAttribute('href')) {
+          tocAnchors.push(anchor);
+          break;
+        }
+      } catch (e) {
+        console.error("initToC: An error occurred when matching ToC links with heading anchors: " + e);
       }
     }
   }
@@ -677,9 +691,9 @@ jtd.onReady(function(){
     activateNav();
     scrollNav();
   }
-  if (document.querySelector('aside.toc')) {
-    initToC();
-  }
+  {%- if site.toc_enabled != false %}
+  initToC();
+  {%- endif %}
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
