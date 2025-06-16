@@ -79,58 +79,84 @@ function isOutOfViewport(el) {
   );
 }
 
-function initToC(retries = 3, delay = 300) {
-  const toc = document.querySelector("aside.toc"); // Table of Contents sidebar panel
-  const toggleTocBanner = document.querySelector('a.toc-banner'); // toggle banner at the top of the page
+function initToC() {
+  const toc = document.querySelector("aside#toc"); // Table of Contents side panel
+  const toggleToc = document.querySelector('#toggle-toc'); // ToC toggle checkbox
+  const toggleTocButtons = document.querySelectorAll('.toggle-toc'); // ToC toggle buttons
+  const toggleTocBanner = document.querySelector('.toc-banner'); // toggle banner at the top of the page
+  const skipToC = document.querySelector('.skip-to-main[href="#toc"]'); // skip ToC link at the top of the page
+  if (!toc || !toggleTocBanner || !skipToC) return; // If ToC sidebar or toggle banner is not present, exit
 
   // previousScrollY determines the last scroll position of the page => display the ToC banner when scrolling up
   // tocItemClicked detects if a ToC item is clicked => close the ToC panel
   let previousScrollY = 0, tocItemClicked = false;
 
-  // If toc or toggleTocBanner is not on screen, retry after a 300ms delay
-  if (!toc || !toggleTocBanner || typeof jtd === 'undefined') {
-    if (retries > 0) {
-      setTimeout(function() { initToC(retries - 1, delay); }, delay);
-    } else {
-      console.warn("initToC: Table of Contents panel, banner or jtd object not found after multiple attempts.");
-    }
-    return;
-  }
-
   try {
+    jtd.addEvent(skipToC, 'keydown', (e) => {
+      const isEnter = e.key === 'Enter' || e.keyCode === 13;
+      const isSpace = e.key === ' ' || e.keyCode === 32;
+
+      if (isEnter || isSpace) {
+        e.preventDefault();
+        skipToC.blur(); // Remove focus from the skip link
+        toggleToc.checked = true; // Open the ToC sidebar
+        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+          element.setAttribute('aria-expanded', 'true');
+        });
+        // Scroll to the ToC sidebar panel
+        if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
+          toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          toc.scrollIntoView();
+        }
+        // If the user pressed Tab, focus on the first ToC item
+        const firstTocItem = toc.querySelector('a.toc-item-link');
+        if (firstTocItem) firstTocItem.focus();
+      }
+    });
+
+    for (var button of toggleTocButtons) {
+      jtd.addEvent(button, 'click', function(e) {
+        toggleToc.checked = !toggleToc.checked; // Toggle the ToC sidebar
+        if (toggleToc.checked) {
+          if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
+            toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            toc.scrollIntoView();
+          }
+        }
+      });
+    }
+
     // Close the ToC panel if user clicks outside the ToC sidebar (xs -> lg)
-    jtd.addEvent(document, 'click', function(e) {
-      if (!toc.contains(e.target) && !e.target.classList.contains('js-toggle-toc')) {
-        toc.classList.add('closed');
+    jtd.addEvent(document, 'click', function (e) {
+      // If the ToC toggle is checked and the click is outside the ToC sidebar and toggle banner
+      if (!toc.contains(e.target) && !toggleToc.contains(e.target) && !e.target.closest('.toggle-toc')) {
+        toggleToc.checked = false; // Uncheck the ToC toggle checkbox
+        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+          element.setAttribute('aria-expanded', 'false');
+        });
       }
     });
-    jtd.addEvent(toc, 'focusout', function(e) {
-      if (!toc.contains(e.relatedTarget)) {
-        toc.classList.add('closed');
-      }
-    });
-    // On xs and sm screens, as the ToC panel occupies the entire screen real estate, close the panel if user clicks on a ToC item
+
+    // Close the panel once the user clicks on a ToC item
     // Do not display the heading banner for a short time after a ToC item is clicked
-    if (window.innerWidth <= 800) {
+    if (window.innerWidth <= 800 || toc.classList.contains('panel')) {
       for (var element of toc.querySelectorAll('a.toc-item-link, a.back-to-top')) {
-        jtd.addEvent(element, 'click', (e) => {
-          toc.classList.add('closed');
+        jtd.addEvent(element, 'click', function(e) {
+          toggleToc.checked = false;
+          document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+            element.setAttribute('aria-expanded', 'false');
+          });
           toggleTocBanner.classList.add('hidden');
           tocItemClicked = true;
-          setTimeout(() => { tocItemClicked = false; }, 500);
+          setTimeout(function() { tocItemClicked = false; }, 500);
         });
       }
     }
-    // Buttons to open the ToC sidebar/top panel
-    for (var element of document.querySelectorAll('.js-toggle-toc')) {
-      jtd.addEvent(element, 'click', (e) => {
-        toc.classList.toggle('closed');
-        e.currentTarget.setAttribute("aria-expanded",
-          e.currentTarget.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
-      });
-    }
+
     // Double-clicking the ToC opener button to scroll back to top (md and lg)
-    jtd.addEvent(document.querySelector('.btn.js-toggle-toc'), 'dblclick', () => {
+    jtd.addEvent(document.querySelector('aside#toc .btn'), 'dblclick', () => {
       if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
         window.scrollTo({top: 0, behavior: 'smooth'});
       } else {
@@ -165,7 +191,7 @@ function initToC(retries = 3, delay = 300) {
       for (var i = 0; i < tocAnchors.length; i++) {
         // Once a heading anchor passes the top of the viewport, remove the .active class from the ToC links of all previous anchors above.
         // Making sure that if there's still a portion of the last section on screen, the ToC item for that remains highlighted.
-        if (window.scrollY > tocAnchors[i].offsetTop - 10) { // Offset for checking the heading against top of viewport is 10px
+        if (window.scrollY > tocAnchors[i].offsetTop - 60) { // Offset for checking the heading against top of viewport is 60px
           if (window.innerWidth <= 800) {
             toggleTocBanner.innerHTML = tocAnchors[i].innerText;
           }

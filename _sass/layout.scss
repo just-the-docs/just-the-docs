@@ -189,7 +189,6 @@
 body {
   position: relative;
   padding-bottom: $sp-10;
-  overflow-y: scroll;
 
   @include mq(md) {
     position: static;
@@ -224,7 +223,7 @@ body {
 
 // ToC is added to .main-content-wrap => shift the sidebar and main div position to the left and widen the main div
 @include mq(xl) {
-  .toc .side-bar {
+  .has-toc .side-bar {
     width: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
 
     & ~ .main {

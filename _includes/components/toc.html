@@ -39,13 +39,21 @@
 {% if toc_custom != "" %}
     {{ toc_custom }}
 {% else %}
-    <aside id="sidebar" class="toc closed{% if site.toc.md_side_panel %} panel{% endif %}" role="complementary">
-        <button class="btn js-toggle-toc" role="button" aria-expanded="false" aria-controls="inner-toc" title="Toggle Table of Contents sidebar" aria-label="Open Table of Contents sidebar">
+    <input type="checkbox" id="toggle-toc" aria-controls="inner-toc" aria-hidden="true" hidden>
+    <aside id="toc" class="container{% if site.toc.md_side_panel %} panel{% endif %}" role="complementary">
+        <noscript>
+            <label for="toggle-toc" class="btn" role="button" title="Toggle Table of Contents side panel" aria-label="Toggle Table of Contents side panel" tabindex="0">
+                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+            </label>
+            <label for="toggle-toc" class="toc-banner" role="button" aria-label="Open Table of Contents top panel" tabindex="0"></label>
+        </noscript>
+        <button class="btn toggle-toc" aria-expanded="false" aria-controls="inner-toc" title="Toggle Table of Contents side panel" aria-label="Toggle Table of Contents side panel">
             <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
         </button>
-        <a class="js-toggle-toc toc-banner" aria-expanded="false" aria-controls="inner-toc"></a>
-        <nav id="inner-toc" role="navigation" aria-label="Table of Contents sidebar">
-            <a class="js-toggle-toc" role="button">Close</a>
+        <a href="#" class="toggle-toc toc-banner" role="button" aria-expanded="false" aria-controls="inner-toc" aria-label="Open Table of Contents top panel"></a>
+        <nav id="inner-toc" role="navigation" aria-label="Table of Contents panel">
+            <noscript><label for="toggle-toc" class="close-btn" role="button" tabindex="0" aria-label="Close Table of Contents panel">Close</label></noscript>
+            <a href="#" class="toggle-toc close-btn" role="button" aria-label="Close Table of Contents panel">Close</a>
             {% if site.back_to_top %}
                 <p><a href="#top" class="back-to-top">{{ site.back_to_top_text }}</a></p>
             {% endif %}

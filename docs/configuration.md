@@ -108,6 +108,40 @@ aux_links_new_tab: false
 nav_enabled: true
 ```
 
+## Table of Contents side/top panel
+
+```yaml
+# Enable or disable the Table of Contents (ToC) side/top panel
+toc_enabled: true # or false
+toc:
+  # Minimum heading level to include in the ToC. Default: 2
+  min_heading_level: 2
+  # Maximum heading level to include in the ToC. Default: 6
+  max_heading_level: 6
+  # Display the ToC as an ordered list (true) or unordered list (false)
+  ordered: false # or true
+  # Display the ToC as a single level list. Supports true or false (default)
+  flat_toc: false # or true
+  # Highlight the current sections in view in the ToC (requires JavaScript)
+  highlight_active: true # or false
+  # Display the ToC sidebar as a floating panel (default: false) or as a clipped side panel (true) on small desktops and tablets
+  # Note: enabling this disables double-clicking sidebar opener button to scroll up
+  md_side_panel: false # or true
+  # Accessibility text for the skip link to the ToC panel (optional, default: "Skip to the Table of Contents")
+  skip_label: "Skip to the Table of Contents"
+  # Feel free to add extra jekyll-toc settings, see _includes/vendor/toc.html
+```
+
+Because of the noticeable shift in layout, the Table of Contents (ToC) side/top panel is strictly opt-out. Once enabled in `_config.yml`, this feature will be on site-wide, and you'll need to set the `toc_enabled` property on a page or layout if you wish to hide the ToC panel for that page or layout. Likewise, to use the ToC panel for just one page, you have to enable the feature site-wide.
+
+If you don't like this behavior, you may want to use [In-Page Navigation]({% link docs/navigation/in-page.md %}) instead, which can be used on a per-page basis.
+
+Omitting a heading from the panel is done by adding the `{:.no_toc}` class to the heading in question.
+
+To change the label of the toggle banner for the panel on small screens, which is set to 'Table of Contents' by default, set a custom `$toc-sm-label` SCSS variable.
+
+See [Layout]({% link docs/layout/layout.md %}) and [In-Page Navigation]({% link docs/navigation/in-page.md %}) for examples on disabling the panel on a page or hiding headings from the panel, and [Customization - Custom Side/Top Panel]({% link docs/customization.md %}#custom-sidetop-panel) for information on replacing the ToC panel with a custom side panel.
+
 ## Heading anchor links
 
 ```yaml
