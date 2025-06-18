@@ -155,7 +155,7 @@ GEM
     uri (0.13.2)
     webrick (1.9.1)
     yell (2.2.2)
-    zeitwerk (2.7.2)
+    zeitwerk (2.6.18)
 
 PLATFORMS
   arm64-darwin
@@ -170,6 +170,7 @@ DEPENDENCIES
   jekyll-include-cache
   jekyll-sitemap
   just-the-docs!
+  zeitwerk (< 2.7.0)
 
 BUNDLED WITH
    2.5.9

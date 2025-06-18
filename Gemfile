@@ -3,6 +3,7 @@ gemspec
 
 gem "base64"
 gem "csv"
+gem 'zeitwerk', '< 2.7.0'
 
 gem "jekyll-github-metadata", ">= 2.15"
 
