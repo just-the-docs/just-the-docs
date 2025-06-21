@@ -7,15 +7,17 @@ nav_order: 5
 # In-Page Navigation
 {: .no_toc }
 
+Just the Docs now supports displaying the Table of Contents as a side panel on large screens and top panel on smaller screens. Omitting headings from the panel can be done by adding the `.no_toc` CSS class to the heading, see the [Omitting Heading from Table of Contents](#omitting-heading-from-table-of-contents) section below.
+
+Additionally, to support in-page navigation, you can generate a *Table of Contents* (TOC) with links to headings, like the one shown below, as well as a link to the top of the page.
+
 ## Table of Contents
 {: .no_toc .text-delta }
 
 1. TOC
 {:toc}
 
-To support in-page navigation, you can generate a *Table of Contents* (TOC) with links to headings, like the one shown above, as well as a link to the top of the page.
-
-## Generating Table of Contents
+## Generating in-page Table of Contents
 
 To generate a *Table of Contents* in a page, you use Kramdown's `{:toc}` method, immediately after the start of a list. This will automatically generate a list of anchor links to various sections of the page, based on headings and heading levels.
 
@@ -40,6 +42,23 @@ For an *unordered* table of contents, instead use the following markdown code:
 {:toc}
 ```
 
+### Collapsible Table of Contents (with `<details>` and `<summary>`)
+
+You can make the Table of Contents collapsible using the `<details>` and `<summary>` elements, as in the following example.
+
+```markdown
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+```
+
+The attribute `open` (which expands the Table of Contents by default) and the styling (here with `text-delta`) are optional.
+
 ## Omitting Heading from Table of Contents
 
 If you want to omit a particular heading from the TOC, follow it immediately by `{: .no_toc }` (possibly together with other CSS class names).
@@ -56,23 +75,6 @@ If you want to omit a particular heading from the TOC, follow it immediately by 
 ```
 
 This example omits the top-level heading (`In-Page Navigation`) from the TOC, as well as the heading for the *Table of Contents* itself.
-
-## Collapsible Table of Contents (with `<details>` and `<summary>`)
-
-You can make the Table of Contents collapsible using the `<details>` and `<summary>` elements, as in the following example.
-
-```markdown
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-1. TOC
-{:toc}
-</details>
-```
-
-The attribute `open` (which expands the Table of Contents by default) and the styling (here with `text-delta`) are optional.
 
 ## Back to Top {#back-to-top-doc}
 

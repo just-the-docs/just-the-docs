@@ -69,6 +69,166 @@ function initNav() {
   {%- endif %}
 }
 
+function isOutOfViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+      // rect.bottom < 0 || // Element is above the viewport
+      rect.top > window.innerHeight || // Element is below the viewport
+      rect.right < 0 || // Element is left of the viewport
+      rect.left > window.innerWidth // Element is right of the viewport
+  );
+}
+
+function initToC() {
+  const toc = document.querySelector("aside#toc"); // Table of Contents side panel
+  const toggleToc = document.querySelector('#toggle-toc'); // ToC toggle checkbox
+  const toggleTocButtons = document.querySelectorAll('.toggle-toc'); // ToC toggle buttons
+  const toggleTocBanner = document.querySelector('.toc-banner'); // toggle banner at the top of the page
+  const skipToC = document.querySelector('.skip-to-main[href="#toc"]'); // skip ToC link at the top of the page
+  if (!toc || !toggleTocBanner || !skipToC) return; // If ToC sidebar or toggle banner is not present, exit
+
+  // previousScrollY determines the last scroll position of the page => display the ToC banner when scrolling up
+  // tocItemClicked detects if a ToC item is clicked => close the ToC panel
+  let previousScrollY = 0, tocItemClicked = false;
+
+  try {
+    jtd.addEvent(skipToC, 'keydown', (e) => {
+      const isEnter = e.key === 'Enter' || e.keyCode === 13;
+      const isSpace = e.key === ' ' || e.keyCode === 32;
+
+      if (isEnter || isSpace) {
+        e.preventDefault();
+        skipToC.blur(); // Remove focus from the skip link
+        toggleToc.checked = true; // Open the ToC sidebar
+        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+          element.setAttribute('aria-expanded', 'true');
+        });
+        // Scroll to the ToC sidebar panel
+        if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
+          toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          toc.scrollIntoView();
+        }
+        // If the user pressed Tab, focus on the first ToC item
+        const firstTocItem = toc.querySelector('a.toc-item-link');
+        if (firstTocItem) firstTocItem.focus();
+      }
+    });
+
+    for (var button of toggleTocButtons) {
+      jtd.addEvent(button, 'click', function(e) {
+        toggleToc.checked = !toggleToc.checked; // Toggle the ToC sidebar
+        if (toggleToc.checked) {
+          if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
+            toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            toc.scrollIntoView();
+          }
+        }
+      });
+    }
+
+    // Close the ToC panel if user clicks outside the ToC sidebar (xs -> lg)
+    jtd.addEvent(document, 'click', function (e) {
+      // If the ToC toggle is checked and the click is outside the ToC sidebar and toggle banner
+      if (!toc.contains(e.target) && !toggleToc.contains(e.target) && !e.target.closest('.toggle-toc')) {
+        toggleToc.checked = false; // Uncheck the ToC toggle checkbox
+        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+          element.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    // Close the panel once the user clicks on a ToC item
+    // Do not display the heading banner for a short time after a ToC item is clicked
+    if (window.innerWidth <= 800 || toc.classList.contains('panel')) {
+      for (var element of toc.querySelectorAll('a.toc-item-link, a.back-to-top')) {
+        jtd.addEvent(element, 'click', function(e) {
+          toggleToc.checked = false;
+          document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+            element.setAttribute('aria-expanded', 'false');
+          });
+          toggleTocBanner.classList.add('hidden');
+          tocItemClicked = true;
+          setTimeout(function() { tocItemClicked = false; }, 500);
+        });
+      }
+    }
+
+    // Double-clicking the ToC opener button to scroll back to top (md and lg)
+    jtd.addEvent(document.querySelector('aside#toc .btn'), 'dblclick', () => {
+      if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      } else {
+        window.scrollTo(0, 0);
+      }
+    });
+  } catch (e) {
+    console.error("initToC: An error occurred when attempting to attach click events for Table of Contents sidebar: " + e);
+  }
+
+  // Highlight ToC items in view. Kudos to JohnD/Tyler2P - https://stackoverflow.com/a/75346369
+  const anchors = document.querySelectorAll('#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6');
+  const tocLinks = toc.querySelectorAll('a.toc-item-link');
+
+  // Map all heading anchors which have links in the ToC
+  let tocAnchors = [];
+  for (var link of tocLinks) {
+    for (var anchor of anchors) {
+      try {
+        if (anchor.querySelector('a.anchor-heading') && link.getAttribute('href') === anchor.querySelector('a.anchor-heading').getAttribute('href')) {
+          tocAnchors.push(anchor);
+          break;
+        }
+      } catch (e) {
+        console.error("initToC: An error occurred when matching ToC links with heading anchors: " + e);
+      }
+    }
+  }
+
+  jtd.addEvent(window, 'scroll', () => {
+    if (typeof (tocAnchors) != 'undefined' && tocAnchors != null && typeof (tocLinks) != 'undefined' && tocLinks != null) {
+      for (var i = 0; i < tocAnchors.length; i++) {
+        // Once a heading anchor passes the top of the viewport, remove the .active class from the ToC links of all previous anchors above.
+        // Making sure that if there's still a portion of the last section on screen, the ToC item for that remains highlighted.
+        if (window.scrollY > tocAnchors[i].offsetTop - 60) { // Offset for checking the heading against top of viewport is 60px
+          if (window.innerWidth <= 800) {
+            toggleTocBanner.innerHTML = tocAnchors[i].innerText;
+          }
+          for (var k = 0; k < i; k++) {
+            tocLinks[k].classList.remove('active');
+          }
+        }
+        // Highlight the current ToC item and subsequent items in the viewport, if any
+        for (var a = i; a < tocAnchors.length; a++) {
+          if (!isOutOfViewport(tocAnchors[a])) {
+            tocLinks[a].classList.add('active');
+          } else {
+            tocLinks[a].classList.remove('active');
+          }
+        }
+      }
+    }
+
+    if (window.innerWidth <= 800) {
+      if (tocAnchors && tocAnchors.length) {
+        if (window.scrollY < tocAnchors[0].offsetTop) {
+          toggleTocBanner.innerText = "";
+        }
+      }
+      // Hide the heading banner when scrolling down and show when scrolling up
+      if (!tocItemClicked) {
+        if (window.scrollY - previousScrollY > 15) {
+          toggleTocBanner.classList.add('hidden');
+        } else if (previousScrollY - window.scrollY > 15 || window.scrollY < 108) {
+          toggleTocBanner.classList.remove('hidden');
+        }
+      }
+      previousScrollY = window.scrollY;
+    }
+  });
+}
+
 // The <head> element is assumed to include the following stylesheets:
 // - a <link> to /assets/css/just-the-docs-head-nav.css,
 //             with id 'jtd-head-nav-stylesheet'
@@ -529,7 +689,11 @@ function navLink() {
 function scrollNav() {
   const targetLink = navLink();
   if (targetLink) {
-    targetLink.scrollIntoView({ block: "center" });
+    try {
+      targetLink.scrollIntoView({ block: "center" });
+    } catch (e) {
+      targetLink.scrollIntoView();
+    }
     targetLink.removeAttribute('href');
   }
 }
@@ -561,6 +725,9 @@ jtd.onReady(function(){
     activateNav();
     scrollNav();
   }
+  {%- if site.toc_enabled != false %}
+  initToC();
+  {%- endif %}
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
@@ -584,7 +751,7 @@ jtd.onReady(function(){
   var svgCopied =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copied"></use></svg>';
   var svgCopy =  '<svg viewBox="0 0 24 24" class="copy-icon"><use xlink:href="#svg-copy"></use></svg>';
 
-  codeBlocks.forEach(codeBlock => {
+  for (var codeBlock of codeBlocks) {
     var copyButton = document.createElement('button');
     var timeout = null;
     copyButton.type = 'button';
@@ -607,7 +774,7 @@ jtd.onReady(function(){
         }, timeoutSetting);
       }
     });
-  });
+  }
 
 });
 

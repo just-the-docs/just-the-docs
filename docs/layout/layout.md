@@ -19,9 +19,9 @@ You can use [Jekyll's front matter defaults] to specify the same layout for many
 
 This page uses the default layout. This site configures `layout: default` as a [front matter default](https://jekyllrb.com/docs/configuration/front-matter-defaults/) value for all pages in the `docs` directory.
 
-The default layout of Just the Docs is a *responsive* layout: on medium and larger width displays, it displays a sidebar, including a navigation panel; on smaller width displays, the sidebar is automatically hidden under a button.
+The default layout of Just the Docs is a *responsive* layout: on medium and larger width displays, it displays two sidebars, including a navigation panel on the left and a Table of Contents panel to the right; on smaller width displays, the sidebar is automatically hidden under a button.
 
-All pages except top-level pages automatically have a list of  so-called *breadcrumbs*: links to their parent pages and any higher-level ancestors. They show the breadcrumbs above the main content of the page.
+All pages except top-level pages automatically have a list of so-called *breadcrumbs*: links to their parent pages and any higher-level ancestors. They show the breadcrumbs above the main content of the page.
 
 Each page that has child pages generally has a list of links to those pages (you can suppress it by `has_toc: false` in the front matter). It shows the list as a *table of contents* below the main content.
 
@@ -38,6 +38,19 @@ A child and grandchild page of this page use the minimal layout. This differs fr
 layout: default
 title: Home
 nav_enabled: true
+---
+
+```
+
+You can set `toc_enabled: false` in the front matter of a page or layout to disable the Table of Contents panel on that page or layout. For instance, this can be useful for pages that have no headings.
+
+Note that the Table of Contents panel is opt-out. It must be enabled site-wide before you can disable it on a page-by-page basis. Disabling the Table of Contents panel site-wide, then setting `toc_enabled: true` on a page or layout is not supported (you can use [In-Page Navigation]({% link docs/navigation/in-page.md %}) as an alternative).
+
+```yaml
+---
+layout: default
+title: No Table of Contents
+toc_enabled: false
 ---
 
 ```
