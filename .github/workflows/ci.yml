@@ -86,7 +86,7 @@ jobs:
         with:
           config: fixtures/html5validator-config.yml
       - name: Test with html-proofer
-        run: bundle exec htmlproofer _site --ignore-urls "/github.com/,/web.archive.org/,/flickr.com/"
+        run: bundle exec htmlproofer _site --disable-external
         env:
           NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
