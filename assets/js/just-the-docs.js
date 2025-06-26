@@ -69,13 +69,13 @@ function initNav() {
   {%- endif %}
 }
 
-function isOutOfViewport(el) {
+function isOutOfViewport(el, checkTop = false) {
   const rect = el.getBoundingClientRect();
   return (
-      // rect.bottom < 0 || // Element is above the viewport
-      rect.top > window.innerHeight || // Element is below the viewport
-      rect.right < 0 || // Element is left of the viewport
-      rect.left > window.innerWidth // Element is right of the viewport
+    (rect.bottom < 0 && checkTop) || // Element is above the viewport
+    rect.top > window.innerHeight || // Element is below the viewport
+    rect.right < 0 || // Element is left of the viewport
+    rect.left > window.innerWidth // Element is right of the viewport
   );
 }
 
@@ -85,18 +85,23 @@ function initToC() {
   const toggleTocButtons = document.querySelectorAll('.toggle-toc'); // ToC toggle buttons
   const toggleTocBanner = document.querySelector('.toc-banner'); // toggle banner at the top of the page
   const skipToC = document.querySelector('.skip-to-main[href="#toc"]'); // skip ToC link at the top of the page
-  if (!toc || !toggleTocBanner || !skipToC) return; // If ToC sidebar or toggle banner is not present, exit
+  if (!toc || !toggleToc || !toggleTocBanner || !skipToC) return; // If ToC sidebar or toggle banner is not present, exit
 
   // previousScrollY determines the last scroll position of the page => display the ToC banner when scrolling up
   // tocItemClicked detects if a ToC item is clicked => close the ToC panel
   let previousScrollY = 0, tocItemClicked = false;
 
   try {
+    toggleToc.hidden = true; // Hide the ToC toggle checkbox
+    for (var element of toggleTocButtons) {
+      element.hidden = false;
+    }
+
     jtd.addEvent(skipToC, 'keydown', (e) => {
       const isEnter = e.key === 'Enter' || e.keyCode === 13;
       const isSpace = e.key === ' ' || e.keyCode === 32;
 
-      if (isEnter || isSpace) {
+      if ((isEnter || isSpace) && !toggleToc.checked) {
         e.preventDefault();
         skipToC.blur(); // Remove focus from the skip link
         toggleToc.checked = true; // Open the ToC sidebar
@@ -115,16 +120,54 @@ function initToC() {
       }
     });
 
+    jtd.addEvent(document.body, 'keydown', (e) => {
+      const isEsc = e.key === 'Escape' || e.keyCode === 27;
+
+      if (isEsc) {
+        e.preventDefault();
+        toc.blur(); // Remove focus from the ToC sidebar
+        toggleToc.checked = false; // Close the ToC sidebar
+        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+          element.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+
+    {%- if site.toc.shortcut %}
+    // Add event listener for the ToC toggle shortcut key
+    jtd.addEvent(document, 'keydown', function (e) {
+      const isShortcutKey =
+        e.key.toLowerCase() === '{{ site.toc.shortcut.key | downcase | default: 't' }}' &&
+        {{ site.toc.shortcut.ctrl_meta | default: false }} === !!(e.ctrlKey || e.metaKey) &&
+        {{ site.toc.shortcut.alt | default: false }} === !!e.altKey &&
+        {{ site.toc.shortcut.shift | default: false }} === !!e.shiftKey;
+
+      if (isShortcutKey && !toggleToc.checked) { // Check for Ctrl or Cmd key
+        e.preventDefault();
+        toggleToc.checked = true; // Open the ToC sidebar
+        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+          element.setAttribute('aria-expanded', 'true');
+        });
+        // Scroll to the ToC sidebar panel
+        if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
+          toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          toc.scrollIntoView();
+        }
+        // If the user pressed Tab, focus on the first ToC item
+        const firstTocItem = toc.querySelector('a.toc-item-link');
+        if (firstTocItem) firstTocItem.focus();
+      }
+    });
+    {%- endif %}
+
     for (var button of toggleTocButtons) {
       jtd.addEvent(button, 'click', function(e) {
+        e.preventDefault();
         toggleToc.checked = !toggleToc.checked; // Toggle the ToC sidebar
-        if (toggleToc.checked) {
-          if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
-            toc.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          } else {
-            toc.scrollIntoView();
-          }
-        }
+        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+          element.setAttribute('aria-expanded', toggleToc.checked ? 'true' : 'false');
+        });
       });
     }
 
@@ -186,27 +229,67 @@ function initToC() {
     }
   }
 
-  jtd.addEvent(window, 'scroll', () => {
+  // Use Arrow Down and Arrow Up keys to navigate through the ToC links
+  if (tocLinks.length > 0) {
+    jtd.addEvent(toc, 'keydown', function(e) {
+      const currentIndex = Array.from(tocLinks).indexOf(document.activeElement);
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const nextIndex = (currentIndex + 1) % tocLinks.length;
+        tocLinks[nextIndex].focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        const prevIndex = (currentIndex - 1 + tocLinks.length) % tocLinks.length;
+        tocLinks[prevIndex].focus();
+      }
+    });
+  }
+
+  {% if site.toc.highlight_active == true and site.toc.highlight_options %}
+  const offset = {{ site.toc.highlight_options.offset | default: 'null' }} || window.innerHeight / 2;
+  jtd.addEvent(window, 'scroll', function() {
     if (typeof (tocAnchors) != 'undefined' && tocAnchors != null && typeof (tocLinks) != 'undefined' && tocLinks != null) {
       for (var i = 0; i < tocAnchors.length; i++) {
-        // Once a heading anchor passes the top of the viewport, remove the .active class from the ToC links of all previous anchors above.
-        // Making sure that if there's still a portion of the last section on screen, the ToC item for that remains highlighted.
-        if (window.scrollY > tocAnchors[i].offsetTop - 60) { // Offset for checking the heading against top of viewport is 60px
+        {% if site.toc.highlight_options.all == true %}
+        /* Highlight all current ToC items in the viewport */
+        if (window.scrollY > tocAnchors[i].offsetTop - offset) {
           if (window.innerWidth <= 800) {
             toggleTocBanner.innerHTML = tocAnchors[i].innerText;
           }
           for (var k = 0; k < i; k++) {
             tocLinks[k].classList.remove('active');
+            tocLinks[k].removeAttribute('aria-current');
           }
         }
-        // Highlight the current ToC item and subsequent items in the viewport, if any
         for (var a = i; a < tocAnchors.length; a++) {
-          if (!isOutOfViewport(tocAnchors[a])) {
+          if (!isOutOfViewport(tocAnchors[a], false)) {
             tocLinks[a].classList.add('active');
+            tocLinks[a].setAttribute('aria-current', 'true');
+            tocLinks[a].parentElement.scrollIntoView({ block: 'nearest', inline: 'nearest' });
           } else {
             tocLinks[a].classList.remove('active');
+            tocLinks[a].removeAttribute('aria-current');
           }
         }
+        {% elsif site.toc.highlight_options.all == false %}
+        if (!isOutOfViewport(tocAnchors[i], false) && window.scrollY > tocAnchors[i].offsetTop - offset &&
+            (i === 0 || i > 0 && isOutOfViewport(tocAnchors[i-1], true))) {
+          if (window.innerWidth <= 800) {
+            toggleTocBanner.innerHTML = tocAnchors[i].innerText;
+          }
+          for (var k = 0; k !== i && k < tocAnchors.length; k++) {
+            tocLinks[k].classList.remove('active');
+            tocLinks[k].removeAttribute('aria-current');
+          }
+          tocLinks[i].classList.add('active');
+          tocLinks[i].setAttribute('aria-current', 'true');
+          tocLinks[i].parentElement.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        } else {
+          tocLinks[i].classList.remove('active');
+          tocLinks[i].removeAttribute('aria-current');
+        }
+        {% endif %}
       }
     }
 
@@ -227,6 +310,31 @@ function initToC() {
       previousScrollY = window.scrollY;
     }
   });
+
+  {%- if site.toc.highlight_options.collapse_on_scroll == true %}
+  toc.classList.add('collapse-on-scroll');
+  const tocInnerLevels = toc.querySelectorAll('ul ul, ol ol');
+  for (var tocInnerLevel of tocInnerLevels) {
+    tocInnerLevel.classList.add('active');
+    tocInnerLevel.dataset.height = tocInnerLevel.scrollHeight; // Store the initial height
+    tocInnerLevel.classList.remove('active');
+    tocInnerLevel.style.transition = 'all 0.3s ease-in-out';
+    tocInnerLevel.style.maxHeight = '0'; // Collapse all inner levels
+    tocInnerLevel.style.overflow = 'hidden';
+  }
+  jtd.addEvent(window, 'scroll', function() {
+    for (var tocInnerLevel of tocInnerLevels) {
+      if (tocInnerLevel.querySelector('li a.active')) {
+        tocInnerLevel.style.maxHeight = tocInnerLevel.dataset.height + 'px'; // Expand
+        tocInnerLevel.style.overflow = '';
+      } else {
+        tocInnerLevel.style.maxHeight = '0'; // Collapse
+        tocInnerLevel.style.overflow = 'hidden';
+      }
+    }
+  });
+  {%- endif %}
+  {%- endif %}
 }
 
 // The <head> element is assumed to include the following stylesheets:

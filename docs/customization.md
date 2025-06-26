@@ -213,7 +213,19 @@ Content added to this file appears at the top of every page's main content betwe
 
 `_includes/toc_custom.html`
 
-Content added to this file appears between the header and the breadcrumbs on every page. You can copy and customize Just the Docs' implementation, or come up with your design of the side/top panel and toggle buttons.
+```html
+<input type="checkbox" id="toggle-toc" hidden><!-- checkbox for panel state -->
+<aside id="toc" class="container">
+  <button class="btn toggle-toc toc-btn-sm"></button><!-- button to toggle the panel on mobile -->
+  <button class="btn toggle-toc toc-btn-md"></button><!-- button to toggle the panel on small desktops -->
+  <nav id="inner-toc">
+    <a href="#" class="toggle-toc close-btn"></a><!-- button to close the panel -->
+    <!-- panel content goes here -->
+  </nav>
+</aside>
+```
+
+Content added to this file appears between the header and the breadcrumbs on every page, and appears to the right of main content if you use the `aside#toc` element. You can copy and customize Just the Docs' implementation, or come up with your design of the side/top panel and toggle buttons using the structure above.
 
 `toc_enabled` must be enabled in `_config.yml` for the panel to appear. 
 

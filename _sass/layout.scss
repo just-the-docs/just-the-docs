@@ -225,11 +225,11 @@ body {
 @include mq(xl) {
   .has-toc .side-bar {
     width: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
+  }
 
-    & ~ .main {
-      margin-left: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
-      max-width: #{$content-width + $toc-width};
-    }
+  .has-toc .main {
+    margin-left: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
+    max-width: #{$content-width + $toc-width};
   }
 
   .main-content-wrap {

@@ -9,7 +9,7 @@
 
 	  Switches when the screen width is larger than `$nav-width + $content-width + $toc-width` (set as `mq(xl)`).
 
-	  Note that ToC sidebar is strictly opt-out. Once enabled in _config.yml, this feature will be enabled site-wide and
+	  Note that ToC sidebar is strictly opt-out. Once enabled in _config.yml, this feature will be enabled site-wide, and
 	  you'll need to set the flag on a page or layout if you wish to disable the ToC sidebar for that page or layout.
 	  Likewise, if you wish to use the ToC sidebar for just one page, you have to enable the feature site-wide.
 
@@ -39,21 +39,31 @@
 {% if toc_custom != "" %}
     {{ toc_custom }}
 {% else %}
-    <input type="checkbox" id="toggle-toc" aria-controls="inner-toc" aria-hidden="true" hidden>
-    <aside id="toc" class="container{% if site.toc.md_side_panel %} panel{% endif %}" role="complementary">
+    <input type="checkbox" id="toggle-toc" aria-controls="inner-toc" aria-labelledby="toggle-toc-btn" class="visually-hidden">
+    <aside id="toc" class="container{% if site.toc.md_side_panel %} panel{% endif %}" aria-label="Table of Contents sidebar">
         <noscript>
-            <label for="toggle-toc" class="btn" role="button" title="Toggle Table of Contents side panel" aria-label="Toggle Table of Contents side panel" tabindex="0">
-                <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+            <label for="toggle-toc" id="toggle-toc-btn" class="btn toc-btn-md" title="Toggle Table of Contents panel">
+                <svg viewBox="0 0 24 24" class="icon menu-icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+                <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
             </label>
-            <label for="toggle-toc" class="toc-banner" role="button" aria-label="Open Table of Contents top panel" tabindex="0"></label>
+            <label for="toggle-toc" class="toc-banner toc-btn-sm"></label>
         </noscript>
-        <button class="btn toggle-toc" aria-expanded="false" aria-controls="inner-toc" title="Toggle Table of Contents side panel" aria-label="Toggle Table of Contents side panel">
-            <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+        <button class="btn toggle-toc toc-btn-md" aria-expanded="false" aria-controls="inner-toc" title="Toggle Table of Contents side panel" aria-label="Toggle Table of Contents side panel" hidden>
+            <svg viewBox="0 0 24 24" class="icon menu-icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+            <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
         </button>
-        <a href="#" class="toggle-toc toc-banner" role="button" aria-expanded="false" aria-controls="inner-toc" aria-label="Open Table of Contents top panel"></a>
-        <nav id="inner-toc" role="navigation" aria-label="Table of Contents panel">
-            <noscript><label for="toggle-toc" class="close-btn" role="button" tabindex="0" aria-label="Close Table of Contents panel">Close</label></noscript>
-            <a href="#" class="toggle-toc close-btn" role="button" aria-label="Close Table of Contents panel">Close</a>
+        <a href="#" class="toggle-toc toc-banner toc-btn-sm" role="button" aria-expanded="false" aria-controls="inner-toc" aria-label="Open Table of Contents top panel" hidden></a>
+        <nav id="inner-toc" aria-label="Table of Contents panel">
+            <noscript>
+                <label for="toggle-toc" class="close-btn" title="Close">
+                    <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
+                    <span class="close-text">Close</span>
+                </label>
+            </noscript>
+            <a href="#" class="toggle-toc close-btn" role="button" aria-label="Close Table of Contents panel" title="Close" hidden>
+                <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
+                <span class="close-text">Close</span>
+            </a>
             {% if site.back_to_top %}
                 <p><a href="#top" class="back-to-top">{{ site.back_to_top_text }}</a></p>
             {% endif %}

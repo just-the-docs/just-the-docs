@@ -9,7 +9,7 @@ nav_order: 5
 
 Just the Docs now supports displaying the Table of Contents as a side panel on large screens and top panel on smaller screens. Omitting headings from the panel can be done by adding the `.no_toc` CSS class to the heading, see the [Omitting Heading from Table of Contents](#omitting-heading-from-table-of-contents) section below.
 
-Additionally, to support in-page navigation, you can generate a *Table of Contents* (TOC) with links to headings, like the one shown below, as well as a link to the top of the page.
+Additionally, to support in-page navigation, you can generate a *Table of Contents* (ToC) with links to headings, like the one shown below, as well as a link to the top of the page.
 
 ## Table of Contents
 {: .no_toc .text-delta }
