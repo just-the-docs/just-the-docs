@@ -94,7 +94,7 @@ function initToC() {
   try {
     toggleToc.hidden = true; // Hide the ToC toggle checkbox
     for (var element of toggleTocButtons) {
-      element.hidden = false;
+      element.classList.remove('hidden');
     }
 
     jtd.addEvent(skipToC, 'keydown', (e) => {
