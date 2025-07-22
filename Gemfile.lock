@@ -111,9 +111,9 @@ GEM
     metrics (0.12.1)
     net-http (0.4.1)
       uri
-    nokogiri (1.18.8-arm64-darwin)
+    nokogiri (1.18.9-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.8-x86_64-linux-gnu)
+    nokogiri (1.18.9-x86_64-linux-gnu)
       racc (~> 1.4)
     octokit (6.1.1)
       faraday (>= 1, < 3)
