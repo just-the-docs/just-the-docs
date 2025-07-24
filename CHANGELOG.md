@@ -17,11 +17,20 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- N/A
+- Fixed: `margin-top` and `margin-bottom` for `<hr>` elements in print styles by [@jacksonj04] in [#1677]
 
 Docs changes made since the latest release:
 
 - N/A
+
+### New Contributors
+
+- [@jacksonj04] made their first contribution in [#1677]
+
+
+[@jacksonj04]: https://github.com/jacksonj04
+
+[#1677]: https://github.com/just-the-docs/just-the-docs/pull/1677
 
 ## Release v0.10.1
 
