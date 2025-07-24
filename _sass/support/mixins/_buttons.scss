@@ -5,8 +5,8 @@
   background-color: darken($bg, 2%);
   background-image: linear-gradient(lighten($bg, 5%), darken($bg, 2%));
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.25),
-    0 4px 10px rgba(0, 0, 0, 0.12);
+    0 1px 3px rgb(0, 0, 0, 0.25),
+    0 4px 10px rgb(0, 0, 0, 0.12);
 
   &:hover,
   &.zeroclipboard-is-hover {
@@ -20,7 +20,7 @@
   &.zeroclipboard-is-active {
     background-color: darken($bg, 5%);
     background-image: none;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 2px 4px rgb(0, 0, 0, 0.15);
   }
 
   &.selected:hover {
