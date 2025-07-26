@@ -32,7 +32,7 @@ function initNav() {
     }
     if (target) {
       e.preventDefault();
-      target.ariaPressed = target.parentNode.classList.toggle('active');
+      target.ariaExpanded = target.parentNode.classList.toggle('active');
     }
   });
 
@@ -48,11 +48,11 @@ function initNav() {
     if (menuButton.classList.toggle('nav-open')) {
       siteNav.classList.add('nav-open');
       mainHeader.classList.add('nav-open');
-      menuButton.ariaPressed = true;
+      menuButton.ariaExpanded = true;
     } else {
       siteNav.classList.remove('nav-open');
       mainHeader.classList.remove('nav-open');
-      menuButton.ariaPressed = false;
+      menuButton.ariaExpanded = false;
     }
   });
 
