@@ -203,3 +203,7 @@ compress_html:
   profile: false
   # ignore:
   #   envs: all
+
+sass:
+  quiet_deps: true # https://github.com/just-the-docs/just-the-docs/issues/1541
+  silence_deprecations: ['import'] # https://github.com/just-the-docs/just-the-docs/issues/1607
