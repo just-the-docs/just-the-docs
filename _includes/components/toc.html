@@ -39,46 +39,46 @@
 {% if toc_custom != "" %}
     {{ toc_custom }}
 {% else %}
-    <input type="checkbox" id="toggle-toc" aria-controls="inner-toc" aria-labelledby="toggle-toc-btn" class="visually-hidden">
-    <aside id="toc" class="container {{ site.toc.style | default: "float" }}" aria-label="{{ site.toc.title | default: "" }} panel">
-        {% if site.toc.style == null or site.toc.style == 'float' or site.toc.style == 'side' %}
+    <input type="checkbox" id="__aside" aria-controls="inner-toc" aria-labelledby="__aside-btn" class="visually-hidden">
+    <aside id="toc" class="__container {{ site.toc.style | default: "float" }}" aria-label="{{ site.toc.title | default: "" }} panel">
+        {% if site.toc.style == null or site.toc.style contains 'float' or site.toc.style contains 'side' %}
         <noscript>
-            <label for="toggle-toc" id="toggle-toc-btn" class="btn toc-btn-md" title="Toggle {{ site.toc.title | default: "" }} side panel">
+            <label for="__aside" id="__aside-btn" class="btn toc-btn-md" title="Toggle {{ site.toc.title | default: "" }} side panel">
                 <svg viewBox="0 0 24 24" class="icon menu-icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
                 <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
             </label>
-            <label for="toggle-toc" class="toc-banner toc-btn-sm">
+            <label for="__aside" class="toc-banner toc-btn-sm">
                 <svg viewBox="0 0 24 24" class="icon arrow-down-icon" aria-hidden="true"><use xlink:href="#svg-arrow-down"></use></svg>
                 {% if site.toc.title %}
                     <span class="toc-banner-text">{{ site.toc.title }}</span>
                 {% endif %}
             </label>
         </noscript>
-        <button class="btn toggle-toc toc-btn-md" aria-expanded="false" aria-controls="inner-toc" title="Toggle {{ site.toc.title | default: "" }} side panel" aria-label="Toggle {{ site.toc.title | default: "" }} side panel" hidden>
+        <button class="btn __aside-btn toc-btn-md" aria-expanded="false" aria-controls="inner-toc" title="Toggle {{ site.toc.title | default: "" }} side panel" aria-label="Toggle {{ site.toc.title | default: "" }} side panel" hidden>
             <svg viewBox="0 0 24 24" class="icon menu-icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
             <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
         </button>
-        <a href="#" class="toggle-toc toc-banner toc-btn-sm" role="button" aria-expanded="false" aria-controls="inner-toc" aria-label="Open {{ site.toc.title | default: "" }} top panel" hidden>
+        <a href="#" class="__aside-btn toc-btn-sm" role="button" aria-expanded="false" aria-controls="inner-toc" aria-label="Open {{ site.toc.title | default: "" }} top panel" hidden>
             <svg viewBox="0 0 24 24" class="icon arrow-down-icon" aria-hidden="true"><use xlink:href="#svg-arrow-down"></use></svg>
             {% if site.toc.title %}
-                <span class="toc-banner-text">{{ site.toc.title }}</span>
+                <span class="toc-btn-sm-text">{{ site.toc.title }}</span>
             {% endif %}
             <span class="current-heading"></span>
         </a>
         {% endif %}
-        <nav id="inner-toc" aria-label="{{ site.toc.title | default: "" }} panel">
+        <nav id="inner-toc" class="__content" aria-label="{{ site.toc.title | default: "" }} panel">
             <noscript>
-                <label for="toggle-toc" class="close-btn" title="Close">
+                <label for="__aside" class="close-btn" title="Close">
                     <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
                     <span class="close-text">Close</span>
                 </label>
             </noscript>
-            <a href="#" class="toggle-toc close-btn" role="button" aria-label="Close {{ site.toc.title | default: "" }} panel" title="Close" hidden>
+            <a href="#" class="__aside-btn close-btn" role="button" aria-label="Close {{ site.toc.title | default: "" }} panel" title="Close" hidden>
                 <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
                 <span class="close-text">Close</span>
             </a>
             {% if site.toc.back_to_top or site.toc.gh_edit_link %}
-                <div class="mt-2 mb-4">
+                <div class="__page-actions">
                 {% if site.toc.back_to_top == true %}
                     <p><a href="#top" class="back-to-top">{{ site.toc.back_to_top_text | default: site.back_to_top_text | default: '' }}</a></p>
                 {% endif %}
@@ -115,5 +115,5 @@
             %}
         </nav>
     </aside>
-    <label for="toggle-toc" class="search-overlay aside-overlay"></label>
+    <label for="__aside" class="search-overlay aside-overlay"></label>
 {% endif %}

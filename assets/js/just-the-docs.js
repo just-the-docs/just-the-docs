@@ -80,10 +80,10 @@ function isOutOfViewport(el, checkTop = false) {
 }
 
 function initToC() {
-  const toc = document.querySelector("aside#toc"); // Table of Contents side panel
-  const toggleToc = document.querySelector('#toggle-toc'); // ToC toggle checkbox
-  const toggleTocButtons = document.querySelectorAll('.toggle-toc'); // ToC toggle buttons
-  const toggleTocBanner = document.querySelector('.toc-banner'); // toggle banner at the top of the page
+  const toc = document.querySelector("aside.__container"); // Table of Contents side panel
+  const toggleToc = document.querySelector('#__aside'); // ToC toggle checkbox
+  const toggleTocButtons = document.querySelectorAll('.__aside-btn'); // ToC toggle buttons
+  const toggleTocBanner = document.querySelector('.toc-btn-sm'); // toggle banner at the top of the page
   const skipToC = document.querySelector('.skip-to-main[href="#toc"]'); // skip ToC link at the top of the page
   if (!toc || !toggleToc || !toggleTocBanner || !skipToC) return; // If ToC sidebar or toggle banner is not present, exit
 
@@ -104,7 +104,7 @@ function initToC() {
         e.preventDefault();
         skipToC.blur(); // Remove focus from the skip link
         toggleToc.checked = true; // Open the ToC sidebar
-        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+        toc.querySelectorAll('[aria-expanded]').forEach(function(element) {
           element.setAttribute('aria-expanded', 'true');
         });
         // Scroll to the ToC sidebar panel
@@ -126,7 +126,7 @@ function initToC() {
         e.preventDefault();
         toc.blur(); // Remove focus from the ToC sidebar
         toggleToc.checked = false; // Close the ToC sidebar
-        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+        toc.querySelectorAll('[aria-expanded]').forEach(function(element) {
           element.setAttribute('aria-expanded', 'false');
         });
       }
@@ -144,7 +144,7 @@ function initToC() {
       if (isShortcutKey) { // Check for Ctrl or Cmd key
         e.preventDefault();
         toggleToc.checked = !toggleToc.checked; // Open the ToC sidebar
-        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+        toc.querySelectorAll('[aria-expanded]').forEach(function(element) {
           element.setAttribute('aria-expanded', toggleToc.checked ? 'true' : 'false');
         });
         // Scroll to the ToC sidebar panel
@@ -164,7 +164,7 @@ function initToC() {
       jtd.addEvent(button, 'click', function(e) {
         e.preventDefault();
         toggleToc.checked = !toggleToc.checked; // Toggle the ToC sidebar
-        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+        toc.querySelectorAll('[aria-expanded]').forEach(function(element) {
           element.setAttribute('aria-expanded', toggleToc.checked ? 'true' : 'false');
         });
       });
@@ -180,7 +180,7 @@ function initToC() {
         !e.target.closest('.aside-overlay')
       ) {
         toggleToc.checked = false; // Uncheck the ToC toggle checkbox
-        document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+        toc.querySelectorAll('[aria-expanded]').forEach(function(element) {
           element.setAttribute('aria-expanded', 'false');
         });
       }
@@ -192,7 +192,7 @@ function initToC() {
       for (var element of toc.querySelectorAll('.__item, a.back-to-top')) {
         jtd.addEvent(element, 'click', function(e) {
           toggleToc.checked = false;
-          document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
+          toc.querySelectorAll('[aria-expanded]').forEach(function(element) {
             element.setAttribute('aria-expanded', 'false');
           });
           toggleTocBanner.classList.add('hidden');
@@ -201,7 +201,7 @@ function initToC() {
     }
 
     // Double-clicking the ToC opener button to scroll back to top (md and lg)
-    jtd.addEvent(document.querySelector('aside#toc .btn'), 'dblclick', () => {
+    jtd.addEvent(document.querySelector('.toc-btn-md'), 'dblclick', () => {
       if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
         window.scrollTo({top: 0, behavior: 'smooth'});
       } else {

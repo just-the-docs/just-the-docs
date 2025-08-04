@@ -214,22 +214,20 @@ Content added to this file appears at the top of every page's main content betwe
 `_includes/toc_custom.html`
 
 ```html
-<input type="checkbox" id="toggle-toc" hidden><!-- checkbox for panel state -->
-<aside id="toc" class="container">
-  <button class="btn toggle-toc toc-btn-sm"></button><!-- button to toggle the panel on mobile -->
-  <button class="btn toggle-toc toc-btn-md"></button><!-- button to toggle the panel on small desktops -->
-  <nav id="inner-toc">
-    <a href="#" class="toggle-toc close-btn"></a><!-- button to close the panel -->
+<input type="checkbox" id="__aside" hidden><!-- checkbox for panel state -->
+<aside class="__container">
+  <button class="btn __aside-btn toc-btn-sm"></button><!-- button to toggle the panel on mobile -->
+  <button class="btn __aside-btn toc-btn-md"></button><!-- button to toggle the panel on small desktops -->
+  <nav class="__content">
+    <a href="#" class="__aside-btn close-btn"></a><!-- button to close the panel -->
     <!-- panel content goes here -->
   </nav>
 </aside>
 ```
 
-Content added to this file appears between the header and the breadcrumbs on every page, and appears to the right of main content if you use the `aside#toc` element. You can copy and customize Just the Docs' implementation, or come up with your design of the side/top panel and toggle buttons using the structure above.
+Content added to this file appears between the header and the breadcrumbs on every page, and appears to the right of main content if you use the `aside.__container` element. You can copy and customize Just the Docs' implementation, or come up with your design of the side/top panel and toggle buttons using the structure above.
 
-`toc_enabled` must be enabled in `_config.yml` for the panel to appear. 
-
-If you use JtD's implementation and wish to change the label of the panel toggle banner on small screens, which is set to 'Table of Contents' by default, set a custom `$toc-sm-label` SCSS variable.
+`toc_enabled` must be enabled in `_config.yml` for the panel to appear.
 
 ### Custom Nav Footer
 {: .d-inline-block }

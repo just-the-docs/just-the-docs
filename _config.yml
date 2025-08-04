@@ -200,10 +200,11 @@ toc:
   style: "float" # 'float' or 'side', additionally add any custom CSS classes to the panel, separated by spaces
   # Title of the side/top panel, appear above the ToC, top banner on mobile and in accessibility text
   title: "Table of Contents"
-  # Back to top button in the ToC panel
+  # Back to top button in the ToC panel. Default: true
   back_to_top: true # or false
   # back_to_top_text: "Back to top"
-  gh_edit_link: false # or true, show or hide the "Edit this page on GitHub" link in the ToC panel
+  # Display "Edit this page on GitHub" link in the ToC panel (requires configuring gh_edit_link). Default: false
+  gh_edit_link: false # or true
   # Accessibility text for the skip link to the ToC panel (requires JavaScript, optional, default: "Skip to the Table of Contents")
   # skip_label: "Skip to the Table of Contents"
   # Shortcut key to quick open the ToC panel (requires JavaScript, optional, default: t). Remove to disable keyboard shortcut.

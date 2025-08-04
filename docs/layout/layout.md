@@ -42,7 +42,7 @@ nav_enabled: true
 
 ```
 
-You can set `toc_enabled: false` in the front matter of a page or layout to disable the Table of Contents sidebar/top banner on that page or layout. For instance, this can be useful for pages that have no headings.
+You can set `toc_enabled: false` in the front matter of a page or layout to disable the Table of Contents side/top panel on that page or layout. For instance, this can be useful for pages that have no headings.
 
 Note that the Table of Contents panel is opt-out per page or layout. It must be enabled site-wide before you can disable it on a page-by-page basis. Disabling the Table of Contents panel site-wide, then setting `toc_enabled: true` on a page or layout is not allowed (you can use [In-Page Navigation]({% link docs/navigation/in-page.md %}) as an alternative).
 

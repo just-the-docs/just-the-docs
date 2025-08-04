@@ -108,7 +108,7 @@ aux_links_new_tab: false
 nav_enabled: true
 ```
 
-## Table of Contents sidebar/top banner
+## Table of Contents side/top panel
 
 ```yaml
 # Enable or disable the Table of Contents (ToC) side/top panel
@@ -124,17 +124,21 @@ toc:
   flat_toc: false # or true
   # Highlight the current section(s) in view in the ToC (requires JavaScript)
   highlight_active: true # or false
-  highlight_options:
-    # Highlight all sections in view under [offset] (true), or only the first section under [offset] when the previous section heading is out of view (false)
+  highlight:
+    # Highlight all sections in view under [offset] (true), or only the first section under [offset] when the previous heading is out of view (false)
     in_view: true # or false
     # Pixel offset from the top of the viewport to determine when a section is considered "in view". Remove to set as middle of the viewport.
     offset: 60
-  # Back to top button in the ToC panel
+  # Display the ToC sidebar as a floating panel (default: float) or as a clipped side panel (side) on small desktops and tablets
+  # tip: setting 'float' allows double-clicking the sidebar opener button to scroll up
+  style: "float" # 'float' or 'side', additionally add any custom CSS classes to the panel, separated by spaces
+  # Title of the side/top panel, appear above the ToC, top banner on mobile and in accessibility text
+  title: "Table of Contents"
+  # Back to top button in the ToC panel. Default: true
   back_to_top: true # or false
   # back_to_top_text: "Back to top"
-  # Display the ToC sidebar as a floating panel (default: false) or as a clipped side panel (true) on small desktops and tablets
-  # Note: enabling this disables double-clicking sidebar opener button to scroll up
-  md_side_panel: false # or true
+  # Display "Edit this page on GitHub" link in the ToC panel (requires configuring gh_edit_link). Default: false
+  gh_edit_link: false # or true
   # Accessibility text for the skip link to the ToC panel (requires JavaScript, optional, default: "Skip to the Table of Contents")
   # skip_label: "Skip to the Table of Contents"
   # Shortcut key to quick open the ToC panel (requires JavaScript, optional, default: t). Remove to disable keyboard shortcut.
@@ -147,13 +151,13 @@ toc:
   # Feel free to add extra jekyll-toc settings, see _includes/vendor/toc.html
 ```
 
-Because of the shift in layout, the Table of Contents (ToC) sidebar/top banner is opt-out per page or layout. Once enabled in `_config.yml`, this feature will be on site-wide, and you need to set the `toc_enabled` property on a page or layout if you wish to hide the ToC panel for that page or layout. Likewise, to use the ToC panel for just one page, you have to enable the feature site-wide.
+Because of the large shift in layout, the Table of Contents (ToC) side/top panel is opt-out per page or layout. Once enabled in `_config.yml`, this feature will be on site-wide, and you need to set the `toc_enabled` property individually if you wish to hide the ToC panel for a page or layout. Likewise, to use the ToC panel for just one page, you have to enable the feature site-wide.
 
-Disabling the Table of Contents panel site-wide, then setting `toc_enabled: true` on a page or layout is not allowed. If you don't like this behaviour, you may want to use [In-Page Navigation]({% link docs/navigation/in-page.md %}) instead, which can be used on a per-page basis.
+Disabling the ToC panel site-wide, then setting `toc_enabled: true` on a page or layout is not allowed. If you don't like this behaviour, you may want to use [In-Page Navigation]({% link docs/navigation/in-page.md %}) instead, which can be used on a per-page basis.
 
 Omitting a heading from the ToC can be done by adding the `{:.no_toc}` class to that heading.
 
-You can change the label of the toggle banner for the panel on small screens, which is set to 'Table of Contents' by default, by setting a custom `$toc-sm-label` SCSS variable. To change the width of the ToC sidebar, you can set the `$toc-width` SCSS variable.
+To change the width of the ToC sidebar, you can set the `$toc-width` SCSS variable.
 
 See [Layout]({% link docs/layout/layout.md %}) and [In-Page Navigation]({% link docs/navigation/in-page.md %}) for examples on disabling the panel on a page or hiding headings from the panel, and [Customization - Custom Side/Top Panel]({% link docs/customization.md %}#custom-sidetop-panel) for information on replacing the ToC panel with a custom side panel.
 
