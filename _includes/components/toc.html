@@ -1,22 +1,22 @@
 {%- comment -%}
-	  Include as: {% include components/toc.html %}
-	  Depends on: site, content.
-	  Includes: toc_custom.html, toc_heading_custom.html, vendor/toc.html.
-	  Overwrites: toc_custom.
+    Include as: {% include components/toc.html %}
+    Depends on: site, content.
+    Includes: toc_custom.html, toc_heading_custom.html, vendor/toc.html.
+    Overwrites: toc_custom.
 
-	  Add a Table of Contents sidebar to the right of main content. When enabled, the layout will be shifted left to
-	  accommodate the new sidebar (unless on smaller screens where ToC will display as a side/top panel).
+	Add a Table of Contents sidebar to the right of main content. When enabled, the layout will be shifted left to
+	accommodate the new sidebar (unless on smaller screens where ToC will display as a side/top panel).
 
-	  Switches when the screen width is larger than `$nav-width + $content-width + $toc-width` (set as `mq(xl)`).
+	Switches when the screen width is larger than `$nav-width + $content-width + $toc-width` (set as `mq(xl)`).
 
-	  Note that ToC sidebar is strictly opt-out. Once enabled in _config.yml, this feature will be enabled site-wide, and
-	  you'll need to set the flag on a page or layout if you wish to disable the ToC sidebar for that page or layout.
-	  Likewise, if you wish to use the ToC sidebar for just one page, you have to enable the feature site-wide.
+	Note that ToC sidebar is strictly opt-out. Once enabled in _config.yml, this feature will be enabled site-wide, and
+	you'll need to set the flag on a page or layout if you wish to disable the ToC sidebar for that page or layout.
+	Likewise, if you wish to use the ToC sidebar for just one page, you have to enable the feature site-wide.
 
-	  Again, because the _default_ layout is set to shift regardless, and navigating pages => layout shifts => surprises.
+	Again, because the _default_ layout is set to shift regardless, and navigating pages => layout shifts => surprises.
 
-	  Disabling ToC sidebar per page will leave a large blank space, to which I chose not to do anything because the other
-	  options are to break `$content-width`, or center the content inside `.main-content-wrap` which causes layout shift.
+	Disabling ToC sidebar per page will leave a large blank space, to which I chose not to do anything because the other
+	options are to break `$content-width`, or center the content inside `.main-content-wrap` which causes layout shift.
 {%- endcomment -%}
 
 {% capture toc_custom %}
@@ -24,7 +24,7 @@
 {% endcapture %}
 
 {% if site.toc.highlight_active != false %}
-    {% assign anchor_class = 'toc-item-link' %}
+    {% assign anchor_class = '__item' %}
 {% else %}
     {% assign anchor_class = site.toc.anchor_class | default: '' %}
 {% endif %}
@@ -40,34 +40,65 @@
     {{ toc_custom }}
 {% else %}
     <input type="checkbox" id="toggle-toc" aria-controls="inner-toc" aria-labelledby="toggle-toc-btn" class="visually-hidden">
-    <aside id="toc" class="container{% if site.toc.md_side_panel %} panel{% endif %}" aria-label="Table of Contents sidebar">
+    <aside id="toc" class="container {{ site.toc.style | default: "float" }}" aria-label="{{ site.toc.title | default: "" }} panel">
+        {% if site.toc.style == null or site.toc.style == 'float' or site.toc.style == 'side' %}
         <noscript>
-            <label for="toggle-toc" id="toggle-toc-btn" class="btn toc-btn-md" title="Toggle Table of Contents panel">
+            <label for="toggle-toc" id="toggle-toc-btn" class="btn toc-btn-md" title="Toggle {{ site.toc.title | default: "" }} side panel">
                 <svg viewBox="0 0 24 24" class="icon menu-icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
                 <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
             </label>
-            <label for="toggle-toc" class="toc-banner toc-btn-sm"></label>
+            <label for="toggle-toc" class="toc-banner toc-btn-sm">
+                <svg viewBox="0 0 24 24" class="icon arrow-down-icon" aria-hidden="true"><use xlink:href="#svg-arrow-down"></use></svg>
+                {% if site.toc.title %}
+                    <span class="toc-banner-text">{{ site.toc.title }}</span>
+                {% endif %}
+            </label>
         </noscript>
-        <button class="btn toggle-toc toc-btn-md hidden" aria-expanded="false" aria-controls="inner-toc" title="Toggle Table of Contents side panel" aria-label="Toggle Table of Contents side panel">
+        <button class="btn toggle-toc toc-btn-md" aria-expanded="false" aria-controls="inner-toc" title="Toggle {{ site.toc.title | default: "" }} side panel" aria-label="Toggle {{ site.toc.title | default: "" }} side panel" hidden>
             <svg viewBox="0 0 24 24" class="icon menu-icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
             <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
         </button>
-        <a href="#" class="toggle-toc toc-banner toc-btn-sm hidden" role="button" aria-expanded="false" aria-controls="inner-toc" aria-label="Open Table of Contents top panel"></a>
-        <nav id="inner-toc" aria-label="Table of Contents panel">
+        <a href="#" class="toggle-toc toc-banner toc-btn-sm" role="button" aria-expanded="false" aria-controls="inner-toc" aria-label="Open {{ site.toc.title | default: "" }} top panel" hidden>
+            <svg viewBox="0 0 24 24" class="icon arrow-down-icon" aria-hidden="true"><use xlink:href="#svg-arrow-down"></use></svg>
+            {% if site.toc.title %}
+                <span class="toc-banner-text">{{ site.toc.title }}</span>
+            {% endif %}
+            <span class="current-heading"></span>
+        </a>
+        {% endif %}
+        <nav id="inner-toc" aria-label="{{ site.toc.title | default: "" }} panel">
             <noscript>
                 <label for="toggle-toc" class="close-btn" title="Close">
                     <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
                     <span class="close-text">Close</span>
                 </label>
             </noscript>
-            <a href="#" class="toggle-toc close-btn hidden" role="button" aria-label="Close Table of Contents panel" title="Close" hidden>
+            <a href="#" class="toggle-toc close-btn" role="button" aria-label="Close {{ site.toc.title | default: "" }} panel" title="Close" hidden>
                 <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
                 <span class="close-text">Close</span>
             </a>
-            {% if site.back_to_top %}
-                <p><a href="#top" class="back-to-top">{{ site.back_to_top_text }}</a></p>
+            {% if site.toc.back_to_top or site.toc.gh_edit_link %}
+                <div class="mt-2 mb-4">
+                {% if site.toc.back_to_top == true %}
+                    <p><a href="#top" class="back-to-top">{{ site.toc.back_to_top_text | default: site.back_to_top_text | default: '' }}</a></p>
+                {% endif %}
+                {% if
+                        site.toc.gh_edit_link == true and
+                        site.gh_edit_link and
+                        site.gh_edit_link_text and
+                        site.gh_edit_repository and
+                        site.gh_edit_branch and
+                        site.gh_edit_view_mode
+                %}
+                    <p>
+                        <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}{% if page.collection and site.collections_dir %}/{{ site.collections_dir }}{% endif %}/{{ page.path }}" class="edit-this-page">{{ site.gh_edit_link_text }}</a>
+                    </p>
+                {% endif %}
+            </div>
             {% endif %}
-            {% include toc_heading_custom.html %}
+            {% if site.toc.title %}
+                <h2 class="text-delta">{{ site.toc.title }}</h2>
+            {% endif %}
             {% include vendor/toc.html
                 html=content
                 sanitize=sanitize
@@ -84,4 +115,5 @@
             %}
         </nav>
     </aside>
+    <label for="toggle-toc" class="search-overlay aside-overlay"></label>
 {% endif %}

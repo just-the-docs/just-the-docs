@@ -126,16 +126,17 @@ toc:
   highlight_active: true # or false
   highlight_options:
     # Highlight all sections in view under [offset] (true), or only the first section under [offset] when the previous section heading is out of view (false)
-    all: true # or false
+    in_view: true # or false
     # Pixel offset from the top of the viewport to determine when a section is considered "in view". Remove to set as middle of the viewport.
     offset: 60
-    # Collapse the inner levels of ToC when the subsections are not visible; may affect performance and accessibility
-    collapse_on_scroll: false # or true
+  # Back to top button in the ToC panel
+  back_to_top: true # or false
+  # back_to_top_text: "Back to top"
   # Display the ToC sidebar as a floating panel (default: false) or as a clipped side panel (true) on small desktops and tablets
   # Note: enabling this disables double-clicking sidebar opener button to scroll up
   md_side_panel: false # or true
   # Accessibility text for the skip link to the ToC panel (requires JavaScript, optional, default: "Skip to the Table of Contents")
-  skip_label: "Skip to the Table of Contents"
+  # skip_label: "Skip to the Table of Contents"
   # Shortcut key to quick open the ToC panel (requires JavaScript, optional, default: t). Remove to disable keyboard shortcut.
   # Uncomment one or multiple modifier key options below to set a key combination for opening the ToC panel
   shortcut:

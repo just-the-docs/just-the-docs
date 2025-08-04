@@ -1,3 +1,4 @@
+// CSS class for hiding the checkbox which manages the visibility of the ToC
 .visually-hidden {
 	position: fixed;
 	width: 1px;
@@ -6,11 +7,6 @@
 	clip: rect(0, 0, 0, 0);
 	clip-path: inset(50%);
 	white-space: nowrap;
-}
-
-.hidden {
-	display: none !important;
-	visibility: hidden;
 }
 
 #toggle-toc:focus + .container label:not(.close-btn) {
@@ -37,13 +33,14 @@
 
 	// Style the counter to match with current in-page ToC implementation and reset native CSS counter of nested ol
 	& #inner-toc ol {
-		padding-left: $sp-5;
+		padding-left: 1.5em;
 		list-style-type: none;
 		counter-reset: step-counter;
 
 		& > li::before {
 			position: absolute;
-			margin-left: -#{$sp-5};
+			margin-left: -1.5em;
+			color: $grey-dk-000;
 			content: counter(step-counter);
 			counter-increment: step-counter;
 		}
@@ -63,12 +60,10 @@
 		font-weight: bold;
 	}
 
-	&.collapse-on-scroll #inner-toc ul a:focus + ul,
-	&.collapse-on-scroll #inner-toc ol a:focus + ol,
-	&.collapse-on-scroll #inner-toc ul ul:has(a:focus),
-	&.collapse-on-scroll #inner-toc ol ol:has(a:focus) {
-		max-height: initial !important;
-		overflow: initial !important;
+	& a[hidden],
+	& button[hidden] {
+		display: none !important;
+		visibility: hidden;
 	}
 }
 
@@ -76,6 +71,7 @@
 	#toc.container {
 		position: sticky;
 		top: 0;
+		min-height: $sp-8;
 		z-index: 3;
 		@include fs-4;
 
@@ -94,14 +90,18 @@
 			// Button to close the ToC panel
 			& .close-btn {
 				position: sticky;
-				top: 1rem;
-				text-align: right;
 				display: block;
+				top: 0;
+				margin: 0 -#{$sp-4};
+				padding: $sp-4;
+				text-align: right;
 			}
 
 			// Padding between ToC items (applies to xs and sm screens)
+			& p:has(.back-to-top),
+			& p:has(.edit-this-page),
 			& li {
-				margin: $sp-4 0;
+				margin: 1.25em 0;
 			}
 		}
 
@@ -117,20 +117,17 @@
 			background-color: $white;
 			transition: margin-top 0.4s;
 
-			&::before {
-				content: $toc-sm-label;
+			& .toc-banner-text {
 				padding-right: $sp-2;
 				text-transform: uppercase;
 				font-weight: bold;
 				@include fs-2;
 			}
 
-			&::after {
-				content: '\2193';
-				position: absolute;
-				right: $sp-4;
+			& .arrow-down-icon {
 				padding-left: $sp-2;
-				background-color: $white;
+				padding-bottom: $sp-1;
+				float: right;
 			}
 
 			// for the transition
@@ -144,8 +141,14 @@
 	// hide .current-heading-banner when ToC is open, and hide the ToC opener button from md + lg views
 	#toggle-toc:not(:checked) + .container > #inner-toc,
 	#toggle-toc:checked + .container .close-text,
-	.container .toc-btn-md {
+	.container .toc-btn-md,
+	#toggle-toc:checked ~ div.search-overlay,
+	.search-active label.aside-overlay {
 		display: none;
+		visibility: hidden;
+	}
+
+	#toggle-toc:checked + .container .toc-btn-sm {
 		visibility: hidden;
 	}
 
@@ -154,22 +157,27 @@
 	}
 
 	// Steal the background overlay for search results to use when ToC is open
-	#toggle-toc[hidden]:checked ~ .search-overlay {
+	#toggle-toc:checked ~ .search-overlay {
 		width: 100%;
 		height: 100%;
 		opacity: 1;
-		z-index: 2;
+	}
+
+	.search-active #toc.container {
+		z-index: revert;
 	}
 }
 
 @media (min-width: map-get($media-queries, md)) and (max-width: map-get($media-queries, xl)) { // md + lg
 	// Padding between sidebar items (applies to md and bigger screens)
+	#inner-toc p:has(.back-to-top),
+	#inner-toc p:has(.edit-this-page),
 	#toc.container li {
 		margin: $sp-2 0;
 	}
 
 	// Pop-up style
-	#toc.container:not(.panel) {
+	#toc.container.float {
 		position: sticky;
 		top: $sp-4;
 		margin: $sp-8 $sp-4 -#{$sp-8} auto; // Align the ToC board to the right + move down without also moving the content
@@ -202,23 +210,12 @@
 		}
 	}
 
-	// Hide the inner div when the floating panel is closed (leaving the container and the opener button visible),
-	// hide the close button from side ToC panel view, and hide .toc-banner from xs + sm views
-	#toggle-toc:not(:checked) + .container:not(.panel) > #inner-toc,
-	#toggle-toc:not(:checked) + .container:not(.panel) .close-icon,
-	#toggle-toc:checked + .container .menu-icon,
-	.container:not(.panel) .close-btn,
-	.container:not(.panel) .toc-btn-sm {
-		display: none;
-		visibility: hidden;
-	}
-
 	// Fixed side panel style
-	#toc.container.panel {
+	#toc.container.side {
 		position: fixed;
 		top: 0;
 		right: 0;
-		padding: $sp-10 Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4) 0 $sp-4;
+		padding: 5rem Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4) 0 $sp-4;
 		width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$toc-width} + #{$sp-4});
 		min-width: #{$toc-width + $sp-6};
 		height: 100vh;
@@ -228,7 +225,7 @@
 	}
 
 	// Hide the side ToC panel visually
-	#toggle-toc:not(:checked) + .container.panel {
+	#toggle-toc:not(:checked) + .container.side {
 		visibility: hidden;
 
 		// Button to re-open the side ToC panel. Partially displays over the content so make it translucent
@@ -249,7 +246,7 @@
 	}
 
 	// Steal the background overlay for search results to use when side ToC panel is open
-	#toggle-toc:checked + .container.panel ~ .search-overlay {
+	#toggle-toc:checked + .container.side ~ .search-overlay {
 		width: 100%;
 		height: 100%;
 		opacity: 1;
@@ -257,9 +254,17 @@
 	}
 
 	// Hide the ToC opener button when the panel is open, and .toc-banner from xs + sm views
-	#toggle-toc:checked + .container.panel .toc-btn-md,
-	.container.panel .close-icon,
-	.container.panel .toc-btn-sm {
+	// Hide the inner div when the floating panel is closed (leaving the container and the opener button visible),
+	// hide the close button from side ToC panel view, and hide .toc-banner from xs + sm views
+	#toggle-toc:not(:checked) + .container.float > #inner-toc,
+	#toggle-toc:not(:checked) + .container.float .close-icon,
+	#toggle-toc:checked + .container.float .close-btn,
+	#toggle-toc:checked + .container .menu-icon,
+	#toggle-toc:checked + .container.side .toc-btn-md,
+	#toggle-toc:checked ~ div.search-overlay,
+	.search-active label.aside-overlay,
+	.container.side .close-icon,
+	.toc-btn-sm {
 		display: none;
 		visibility: hidden;
 	}
@@ -283,6 +288,8 @@
 		}
 
 		// Paddings between sidebar items (applies to md and bigger screens)
+		& p:has(.back-to-top),
+		& p:has(.edit-this-page),
 		& li {
 			margin: $sp-2 0;
 		}
@@ -295,8 +302,8 @@
 		}
 
 		// Smaller top margin for the Back to top button now that the Close button no longer shows
-		& #inner-toc > p:nth-of-type(2) {
-			margin-top: $sp-1;
+		& #inner-toc > p:nth-of-type(1) {
+			margin-top: $sp-2;
 		}
 	}
 }

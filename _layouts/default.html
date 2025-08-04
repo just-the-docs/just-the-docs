@@ -4,9 +4,9 @@ layout: table_wrappers
 
 <!DOCTYPE html>
 
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="{{ site.lang | default: 'en-US' }}" {% if site.toc_enabled != false %}class="toc"{% endif %}>
 {% include head.html %}
-<body class="{% if site.toc_enabled != false %}has-toc{% endif %}">
+<body>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   {% if site.toc_enabled != false and layout.toc_enabled != false and page.toc_enabled != false %}
     <a class="skip-to-main" href="#toc">{{ site.toc.skip_label | default: 'Skip to the Table of Contents' }}</a>

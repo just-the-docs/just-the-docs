@@ -88,13 +88,12 @@ function initToC() {
   if (!toc || !toggleToc || !toggleTocBanner || !skipToC) return; // If ToC sidebar or toggle banner is not present, exit
 
   // previousScrollY determines the last scroll position of the page => display the ToC banner when scrolling up
-  // tocItemClicked detects if a ToC item is clicked => close the ToC panel
-  let previousScrollY = 0, tocItemClicked = false;
+  let previousScrollY = 0;
 
   try {
     toggleToc.hidden = true; // Hide the ToC toggle checkbox
     for (var element of toggleTocButtons) {
-      element.classList.remove('hidden');
+      element.hidden = false; // Show the ToC toggle buttons
     }
 
     jtd.addEvent(skipToC, 'keydown', (e) => {
@@ -115,7 +114,7 @@ function initToC() {
           toc.scrollIntoView();
         }
         // If the user pressed Tab, focus on the first ToC item
-        const firstTocItem = toc.querySelector('a.toc-item-link');
+        const firstTocItem = toc.querySelector('.__item');
         if (firstTocItem) firstTocItem.focus();
       }
     });
@@ -142,11 +141,11 @@ function initToC() {
         {{ site.toc.shortcut.alt | default: false }} === !!e.altKey &&
         {{ site.toc.shortcut.shift | default: false }} === !!e.shiftKey;
 
-      if (isShortcutKey && !toggleToc.checked) { // Check for Ctrl or Cmd key
+      if (isShortcutKey) { // Check for Ctrl or Cmd key
         e.preventDefault();
-        toggleToc.checked = true; // Open the ToC sidebar
+        toggleToc.checked = !toggleToc.checked; // Open the ToC sidebar
         document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
-          element.setAttribute('aria-expanded', 'true');
+          element.setAttribute('aria-expanded', toggleToc.checked ? 'true' : 'false');
         });
         // Scroll to the ToC sidebar panel
         if (CSS && CSS.supports && CSS.supports('scroll-behavior', 'smooth')) {
@@ -155,7 +154,7 @@ function initToC() {
           toc.scrollIntoView();
         }
         // If the user pressed Tab, focus on the first ToC item
-        const firstTocItem = toc.querySelector('a.toc-item-link');
+        const firstTocItem = toc.querySelector('.__item');
         if (firstTocItem) firstTocItem.focus();
       }
     });
@@ -174,7 +173,12 @@ function initToC() {
     // Close the ToC panel if user clicks outside the ToC sidebar (xs -> lg)
     jtd.addEvent(document, 'click', function (e) {
       // If the ToC toggle is checked and the click is outside the ToC sidebar and toggle banner
-      if (!toc.contains(e.target) && !toggleToc.contains(e.target) && !e.target.closest('.toggle-toc')) {
+      if (
+        !toc.contains(e.target) &&
+        !toggleToc.contains(e.target) &&
+        !e.target.closest('.toggle-toc') &&
+        !e.target.closest('.aside-overlay')
+      ) {
         toggleToc.checked = false; // Uncheck the ToC toggle checkbox
         document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
           element.setAttribute('aria-expanded', 'false');
@@ -184,16 +188,14 @@ function initToC() {
 
     // Close the panel once the user clicks on a ToC item
     // Do not display the heading banner for a short time after a ToC item is clicked
-    if (window.innerWidth <= 800 || toc.classList.contains('panel')) {
-      for (var element of toc.querySelectorAll('a.toc-item-link, a.back-to-top')) {
+    if (window.innerWidth <= 800 || toc.classList.contains('side')) {
+      for (var element of toc.querySelectorAll('.__item, a.back-to-top')) {
         jtd.addEvent(element, 'click', function(e) {
           toggleToc.checked = false;
           document.querySelectorAll('#toc.container [aria-expanded]').forEach(element => {
             element.setAttribute('aria-expanded', 'false');
           });
           toggleTocBanner.classList.add('hidden');
-          tocItemClicked = true;
-          setTimeout(function() { tocItemClicked = false; }, 500);
         });
       }
     }
@@ -212,7 +214,7 @@ function initToC() {
 
   // Highlight ToC items in view. Kudos to JohnD/Tyler2P - https://stackoverflow.com/a/75346369
   const anchors = document.querySelectorAll('#main-content h1, #main-content h2, #main-content h3, #main-content h4, #main-content h5, #main-content h6');
-  const tocLinks = toc.querySelectorAll('a.toc-item-link');
+  const tocLinks = toc.querySelectorAll('.__item');
 
   // Map all heading anchors which have links in the ToC
   let tocAnchors = [];
@@ -246,16 +248,16 @@ function initToC() {
     });
   }
 
-  {% if site.toc.highlight_active == true and site.toc.highlight_options %}
-  const offset = {{ site.toc.highlight_options.offset | default: 'null' }} || window.innerHeight / 2;
+  {% if site.toc.highlight_active == true and site.toc.highlight %}
+  const offset = {{ site.toc.highlight.offset | default: 'null' }} || window.innerHeight / 2;
   jtd.addEvent(window, 'scroll', function() {
     if (typeof (tocAnchors) != 'undefined' && tocAnchors != null && typeof (tocLinks) != 'undefined' && tocLinks != null) {
       for (var i = 0; i < tocAnchors.length; i++) {
-        {% if site.toc.highlight_options.all == true %}
+        {% if site.toc.highlight.in_view == true %}
         /* Highlight all current ToC items in the viewport */
         if (window.scrollY > tocAnchors[i].offsetTop - offset) {
           if (window.innerWidth <= 800) {
-            toggleTocBanner.innerHTML = tocAnchors[i].innerText;
+            toggleTocBanner.querySelector('.current-heading').innerHTML = tocAnchors[i].innerText;
           }
           for (var k = 0; k < i; k++) {
             tocLinks[k].classList.remove('active');
@@ -272,11 +274,11 @@ function initToC() {
             tocLinks[a].removeAttribute('aria-current');
           }
         }
-        {% elsif site.toc.highlight_options.all == false %}
+        {% elsif site.toc.highlight.in_view == false %}
         if (!isOutOfViewport(tocAnchors[i], false) && window.scrollY > tocAnchors[i].offsetTop - offset &&
             (i === 0 || i > 0 && isOutOfViewport(tocAnchors[i-1], true))) {
           if (window.innerWidth <= 800) {
-            toggleTocBanner.innerHTML = tocAnchors[i].innerText;
+            toggleTocBanner.querySelector('.current-heading').innerHTML = tocAnchors[i].innerText;
           }
           for (var k = 0; k !== i && k < tocAnchors.length; k++) {
             tocLinks[k].classList.remove('active');
@@ -296,44 +298,18 @@ function initToC() {
     if (window.innerWidth <= 800) {
       if (tocAnchors && tocAnchors.length) {
         if (window.scrollY < tocAnchors[0].offsetTop) {
-          toggleTocBanner.innerText = "";
+          toggleTocBanner.querySelector('.current-heading').innerHTML = "";
         }
       }
       // Hide the heading banner when scrolling down and show when scrolling up
-      if (!tocItemClicked) {
-        if (window.scrollY - previousScrollY > 15) {
-          toggleTocBanner.classList.add('hidden');
-        } else if (previousScrollY - window.scrollY > 15 || window.scrollY < 108) {
-          toggleTocBanner.classList.remove('hidden');
-        }
+      if (window.scrollY - previousScrollY > 15) {
+        toggleTocBanner.classList.add('hidden');
+      } else if (previousScrollY - window.scrollY > 15 || window.scrollY < 108) {
+        toggleTocBanner.classList.remove('hidden');
       }
       previousScrollY = window.scrollY;
     }
   });
-
-  {%- if site.toc.highlight_options.collapse_on_scroll == true %}
-  toc.classList.add('collapse-on-scroll');
-  const tocInnerLevels = toc.querySelectorAll('ul ul, ol ol');
-  for (var tocInnerLevel of tocInnerLevels) {
-    tocInnerLevel.classList.add('active');
-    tocInnerLevel.dataset.height = tocInnerLevel.scrollHeight; // Store the initial height
-    tocInnerLevel.classList.remove('active');
-    tocInnerLevel.style.transition = 'all 0.3s ease-in-out';
-    tocInnerLevel.style.maxHeight = '0'; // Collapse all inner levels
-    tocInnerLevel.style.overflow = 'hidden';
-  }
-  jtd.addEvent(window, 'scroll', function() {
-    for (var tocInnerLevel of tocInnerLevels) {
-      if (tocInnerLevel.querySelector('li a.active')) {
-        tocInnerLevel.style.maxHeight = tocInnerLevel.dataset.height + 'px'; // Expand
-        tocInnerLevel.style.overflow = '';
-      } else {
-        tocInnerLevel.style.maxHeight = '0'; // Collapse
-        tocInnerLevel.style.overflow = 'hidden';
-      }
-    }
-  });
-  {%- endif %}
   {%- endif %}
 }
 
