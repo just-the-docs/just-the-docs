@@ -82,7 +82,7 @@ jobs:
       - name: Build Site
         run: bundle exec jekyll build
       - name: Test with Nu Validator
-        uses: Cyb3r-Jak3/html5validator-action@b3d451908992570865d497fddb366d01e593e55f
+        uses: Cyb3r-Jak3/html5validator-action@443b108eb8e134b63a1f8a8ba0c942d552608ed7
         with:
           config: fixtures/html5validator-config.yml
       - name: Test with html-proofer
