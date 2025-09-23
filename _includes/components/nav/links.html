@@ -13,7 +13,7 @@
   {%- if include.all == true or node.nav_exclude != true -%}
 
   {%- if include.ancestors contains node.title -%}
-  
+
     <li class="nav-list-item">
       <a href="{{ node.url | relative_url }}" class="nav-list-link"> ∞ </a>
     </li>
@@ -26,12 +26,12 @@
     {%- endcapture -%}
 
   {%- else -%}
-  
+
     {%- include components/nav/children.html node=node ancestors=include.ancestors all=include.all -%}
 
     <li class="nav-list-item">
       {%- if nav_children.size >= 1 -%}
-      <button class="nav-list-expander btn-reset" aria-label="toggle items in {{ node.title }} category" aria-pressed="false">
+      <button class="nav-list-expander btn-reset" aria-label="{{ node.title }} submenu" aria-expanded="false">
         <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
       </button>
       {%- endif -%}
@@ -44,9 +44,9 @@
         {%- include components/nav/links.html pages=nav_children ancestors=nav_ancestors all=include.all -%}
       {%- endif -%}
     </li>
-  
+
   {%- endif -%}
-  
+
   {%- endif -%}
   {%- endfor -%}
 </ul>
