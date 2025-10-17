@@ -613,6 +613,27 @@ jtd.onReady(function(){
 
 {%- endif %}
 
+document.addEventListener("DOMContentLoaded",()=>{
+  function r(){
+    if(innerWidth<=799){
+      document.getElementById("site-nav")
+              .insertBefore(
+                document.querySelector(".search"),
+                document.getElementById("site-nav").firstChild
+              );
+    }else{
+      document.getElementById("main-header")
+              .insertBefore(
+                document.querySelector(".search"),
+                document.getElementById("main-header")
+                        .querySelector(".aux-nav")
+              );
+    }
+  }
+  r();
+  window.addEventListener("resize",r);
+});
+
 })(window.jtd = window.jtd || {});
 
 {% include js/custom.js %}
