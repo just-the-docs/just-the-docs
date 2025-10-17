@@ -1,0 +1,20 @@
+// Dracula color scheme for Just the Docs
+// Based on the Dracula theme: https://draculatheme.com/
+// Original color values from: https://github.com/dracula/dracula-theme
+
+$color-scheme: dracula;
+$body-background-color: #282a36;
+$body-heading-color: #f8f8f2;
+$body-text-color: #f8f8f2;
+$link-color: #bd93f9;
+$nav-child-link-color: #f8f8f2;
+$sidebar-color: #1d1e23;
+$base-button-color: #44475a;
+$btn-primary-color: #6272a4;
+$code-background-color: #44475a;
+$code-linenumber-color: #6272a4;
+$feedback-color: darken($sidebar-color, 3%);
+$table-background-color: #44475a;
+$search-background-color: #44475a;
+$search-result-preview-color: #f8f8f2;
+$border-color: #6272a4;
