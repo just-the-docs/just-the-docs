@@ -11,7 +11,11 @@
 
 <div class="side-bar">
   <div class="site-header" role="banner">
-    <a href="{{ site.logo_link | default: '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
+    {% if site.logo_link %}
+      <a href="{{ site.logo_link }}" class="site-title lh-tight">{% include title.html %}</a>
+    {% else %}
+      <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
+    {% endif %}
     <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false">
       <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
     </button>
