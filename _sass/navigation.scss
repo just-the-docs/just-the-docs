@@ -126,6 +126,13 @@
 
       > .nav-list {
         display: block;
+
+        // Navigation guide lines
+
+        border-left: $nav-guide-line-width solid $nav-guide-line-color;
+        margin-left: $nav-guide-indent;
+        padding-left: $nav-guide-gap;
+        box-sizing: border-box;
       }
     }
   }
