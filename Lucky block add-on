@@ -1,0 +1,249 @@
+behavior_packs/
+  lucky_block_bp/
+resource_packs/
+  lucky_block_rp/{
+  "format_version": 2,
+  "header": {
+    "name": "Lucky Block BP",
+    "description": "Lucky Block Behavior Pack",
+    "uuid": "UUID1",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "UUID2",
+      "version": [1, 0, 0]
+    }
+  ]
+}{
+  "format_version": "1.20.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "lucky:block"
+    },
+    "components": {
+      "minecraft:destroy_time": 1,
+      "minecraft:explosion_resistance": 1,
+      "minecraft:loot": "loot_tables/blocks/lucky_block.json"
+    }
+  }
+}{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:spawn_egg",
+          "functions": [
+            {
+              "function": "set_actor_id",
+              "id": "lucky:trigger"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "lucky:trigger",
+      "is_spawnable": false,
+      "is_summonable": true
+    },
+    "components": {
+      "minecraft:instant_despawn": {},
+      "minecraft:timer": {
+        "time": 1,
+        "looping": false,
+        "on_time_down": {
+          "event": "random_event"
+        }
+      }
+    },
+    "events": {
+      "random_event": {
+        "randomize": [
+          { "add": { "component_groups": ["good"] } },
+          { "add": { "component_groups": ["bad"] } }
+        ]
+      }
+    },
+    "component_groups": {
+      "good": {
+        "minecraft:spawn_entity": {
+          "entities": [{ "type": "minecraft:diamond", "count": 3 }]
+        }
+      },
+      "bad": {
+        "minecraft:explode": {
+          "power": 3
+        }
+      }
+    }
+  }
+}lucky_block_rp/
+ ├─ manifest.json
+ ├─ textures/
+ │   ├─ blocks/
+ │   │   └─ lucky_block.png
+ │   └─ terrain_texture.json
+ └─ blocks.json{
+  "format_version": [1, 1, 0],
+  "lucky:block": {
+    "textures": "lucky_block",
+    "sound": "stone"
+  }
+}{
+  "resource_pack_name": "Lucky Block RP",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "lucky_block": {
+      "textures": "textures/blocks/lucky_block"
+    }
+  }
+}{
+  "format_version": 2,
+  "header": {
+    "name": "Lucky Block RP",
+    "description": "Lucky Block Resource Pack",
+    "uuid": "UUID3",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 20, 0]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "UUID4",
+      "version": [1, 0, 0]
+    }
+  ]
+}good_lucky_block.png
+bad_lucky_block.png{
+  "resource_pack_name": "Lucky Block RP",
+  "texture_name": "atlas.terrain",
+  "padding": 8,
+  "num_mip_levels": 4,
+  "texture_data": {
+    "good_lucky_block": {
+      "textures": "textures/blocks/good_lucky_block"
+    },
+    "bad_lucky_block": {
+      "textures": "textures/blocks/bad_lucky_block"
+    }
+  }
+}{
+  "format_version": [1, 1, 0],
+
+  "lucky:good_block": {
+    "textures": "good_lucky_block",
+    "sound": "stone"
+  },
+
+  "lucky:bad_block": {
+    "textures": "bad_lucky_block",
+    "sound": "stone"
+  }
+}Kötü Lucky Block kırılır
+→ lucky:bad_trigger entity çağrılır
+→ rastgele kötü olaylardan BİRİ olur{
+  "format_version": "1.20.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "lucky:bad_block"
+    },
+    "components": {
+      "minecraft:destroy_time": 1,
+      "minecraft:loot": "loot_tables/blocks/bad_lucky_block.json"
+    }
+  }
+}{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "name": "minecraft:spawn_egg",
+          "functions": [
+            {
+              "function": "set_actor_id",
+              "id": "lucky:bad_trigger"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "lucky:bad_trigger",
+      "is_spawnable": false,
+      "is_summonable": false
+    },
+
+    "components": {
+      "minecraft:instant_despawn": {},
+      "minecraft:timer": {
+        "time": 1,
+        "looping": false,
+        "on_time_down": {
+          "event": "random_bad"
+        }
+      }
+    },
+
+    "events": {
+      "random_bad": {
+        "randomize": [
+          { "add": { "component_groups": ["tnt"] } },
+          { "add": { "component_groups": ["mobs"] } },
+          { "add": { "component_groups": ["poison"] } },
+          { "add": { "component_groups": ["lava"] } }
+        ]
+      }
+    },
+
+    "component_groups": {
+
+      "tnt": {
+        "minecraft:explode": {
+          "power": 4
+        }
+      },
+
+      "mobs": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            { "type": "minecraft:zombie", "count": 3 },
+            { "type": "minecraft:creeper", "count": 1 }
+          ]
+        }
+      },
+
+      "poison": {
+        "minecraft:apply_effect": {
+          "effect": "poison",
+          "duration": 10,
+          "amplifier": 1
+        }
+      },
+
+      "lava": {
+        "minecraft:spawn_entity": {
+          "entities": [
+            { "type": "minecraft:area_effect_cloud" }
+          ]
+        }
+      }
+    }
+  }
+}
