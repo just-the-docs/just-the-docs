@@ -75,7 +75,7 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Cache HTMLProofer
         id: cache-htmlproofer
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-htmlproofer
