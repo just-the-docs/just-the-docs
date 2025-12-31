@@ -24,9 +24,9 @@ Docs changes made since the latest release:
 
 - N/A
 
-## v0.10.1
+## v0.10.1 - 2025-01-06
 
-### Bugfixes
+### Theme
 
 - Fixed: `back_to_top` not displaying when no other footer variables are set by [@mattxwang](https://github.com/mattxwang) in [#1461](https://github.com/just-the-docs/just-the-docs/pull/1461)
 - Fixed: auto-generated child navigation (TOC) by [@pdmosses](https://github.com/pdmosses) in [#1590](https://github.com/just-the-docs/just-the-docs/pull/1590)
@@ -36,9 +36,9 @@ Docs changes made since the latest release:
 - Fixed: incorrect docs for example with minimal layout parent, default layout child by [@janbrasna](https://github.com/janbrasna) in [#1540](https://github.com/just-the-docs/just-the-docs/pull/1540)
 - Fixed: unclear docs on using in-page table of contents by [@sebjameswml](https://github.com/sebjameswml) in [#1551](https://github.com/just-the-docs/just-the-docs/pull/1551)
 
-## v0.10.0
+## v0.10.0 - 2024-09-09
 
-### New Features
+### Theme
 
 - Added: Allow unlimited multi-level navigation by [@pdmosses](https://github.com/pdmosses) in [#1431](https://github.com/just-the-docs/just-the-docs/pull/1431)
 
@@ -48,15 +48,12 @@ Docs changes made since the latest release:
 - Added: sitemap (via `jekyll-sitemap` plugin) by [@mattxwang](https://github.com/mattxwang) in [#1530](https://github.com/just-the-docs/just-the-docs/pull/1530)
 - Fixed: (non-systemic) accessibility issues flagged by aXe by [@mattxwang](https://github.com/mattxwang) in [#1531](https://github.com/just-the-docs/just-the-docs/pull/1531)
 
-## v0.9.0
+## v0.9.0 - 2024-08-12
 
-### New Features
+### Theme
 
 - Added: `nav_enabled` site, layout, and page-level variable to selectively show or hide the side/mobile menu by [@kevinlin1](https://github.com/kevinlin1) in [#1441](https://github.com/just-the-docs/just-the-docs/pull/1441)
 - Added: site-wide search bar and auxiliary links to the `minimal` layout by [@kevinlin1](https://github.com/kevinlin1) in [#1441](https://github.com/just-the-docs/just-the-docs/pull/1441)
-
-### Bugfixes
-
 - Fixed: protect `search-data.json` file from front matter default for layout by [@mattxwang](https://github.com/mattxwang) in [#1468](https://github.com/just-the-docs/just-the-docs/pull/1468)
 - Fixed: Sass mixed declarations by [@bobvandevijver](https://github.com/bobvandevijver) in [#1495](https://github.com/just-the-docs/just-the-docs/pull/1495)
 - Fixed: redundant `monospace` in `pre`, `code`, `kbd`, `samp` reset by [@mattxwang](https://github.com/mattxwang) in [#1508](https://github.com/just-the-docs/just-the-docs/pull/1508)
@@ -65,15 +62,15 @@ Docs changes made since the latest release:
 
 - Docs: Explained the `nav_enabled` variables as an alternative to using the minimal layout [@kevinlin1](https://github.com/kevinlin1) in [#1441](https://github.com/just-the-docs/just-the-docs/pull/1441).
 
-## v0.8.2
+## v0.8.2 - 2024-05-15
 
-### Bugfixes
+### Theme
 
 - Fixed: Protect theme JS file from front matter default for layout by [@pdmosses](https://github.com/pdmosses) in [#1447](https://github.com/just-the-docs/just-the-docs/pull/1447)
 
-## v0.8.1
+## v0.8.1 - 2024-03-06
 
-### Bugfixes
+### Theme
 
 - Fixed: Liquid filter typo in breadcrumb component (`strip` instead of `trim`) by [@Zarthus](https://github.com/Zarthus) in [#1434](https://github.com/just-the-docs/just-the-docs/pull/1434)
 
@@ -81,14 +78,11 @@ Docs changes made since the latest release:
 
 - Build docs site using strict mode and `strict_filters` by [@Zarthus](https://github.com/Zarthus) in [#1435](https://github.com/just-the-docs/just-the-docs/pull/1435)
 
-## v0.8.0
+## v0.8.0 - 2024-02-22
 
-### New Features
+### Theme
 
 - Added: configurable keyboard shortcut to focus search input by [@kcromanpl-bajra](https://github.com/kcromanpl-bajra) in [#1411](https://github.com/just-the-docs/just-the-docs/pull/1411)
-
-### Bugfixes
-
 - Fixed: quicker build by [@pdmosses](https://github.com/pdmosses) in [#1397](https://github.com/just-the-docs/just-the-docs/pull/1397)
 - Fixed: incorrect navigation when `.html` omitted from URL by [@pdmosses](https://github.com/pdmosses) in [#1374](https://github.com/just-the-docs/just-the-docs/pull/1374)
 - Fixed: incorrect positioning of clickable area for navigation links on Safari by [@mattxwang](https://github.com/mattxwang) in [#1403](https://github.com/just-the-docs/just-the-docs/pull/1403)
@@ -97,17 +91,14 @@ Docs changes made since the latest release:
 
 - Add documentation to "Navigation Structure" on grouping pages with collections by [@mitchnemirov](https://github.com/mitchnemirov) in [#1390](https://github.com/just-the-docs/just-the-docs/pull/1390)
 
-## v0.7.0
+## v0.7.0 - 2023-10-25
 
 {: .warning }
 **Potentially Breaking Changes**: this version contains **potentially breaking changes** for a small set of users. For more information, refer to the [Migrating to v0.7.0 guide](https://just-the-docs.com/migration/#potentially-breaking-changes-in-v070).
 
-### New Features
+### Theme
 
 - Added: configuration options for opening external links in new tab by [@CarbonNeuron](https://github.com/CarbonNeuron) in [#1360](https://github.com/just-the-docs/just-the-docs/pull/1360)
-
-### Bugfixes
-
 - Fixed: remove href from the navigation link to the current page by [@pdmosses](https://github.com/pdmosses) in [#1356](https://github.com/just-the-docs/just-the-docs/pull/1356)
 - Fixed: improve build time by [@pdmosses](https://github.com/pdmosses) in [#1358](https://github.com/just-the-docs/just-the-docs/pull/1358)
 - Fixed: erroneous parentheses in `site_nav` conditional by [@mattxwang](https://github.com/mattxwang) in [#1366](https://github.com/just-the-docs/just-the-docs/pull/1366)
@@ -119,9 +110,9 @@ Docs changes made since the latest release:
 
 - Docs: fix typos in `CHANGELOG` and `MIGRATION` by [@thapasusheel](https://github.com/thapasusheel) in [#1377](https://github.com/just-the-docs/just-the-docs/pull/1377)
 
-## v0.6.2
+## v0.6.2 - 2023-09-19
 
-### Bugfixes
+### Theme
 
 - Fixed: Windows emoji font fallback by [@flanakin](https://github.com/flanakin) in [#1337](https://github.com/just-the-docs/just-the-docs/pull/1337)
 - Removed: unused `.passive` toggle in navigation by [@pdmosses](https://github.com/pdmosses) in [#1335](https://github.com/just-the-docs/just-the-docs/pull/1335)
@@ -130,18 +121,18 @@ Docs changes made since the latest release:
 
 - [@flanakin](https://github.com/flanakin) made their first contribution in [#1337](https://github.com/just-the-docs/just-the-docs/pull/1337)
 
-## v0.6.1
+## v0.6.1 - 2023-08-26
 
-### Bugfixes
+### Theme
 
 - Fixed: JS error for pages excluded from navigation by [@pdmosses](https://github.com/pdmosses) in [#1332](https://github.com/just-the-docs/just-the-docs/pull/1332)
 
-## v0.6.0
+## v0.6.0 - 2023-08-19
 
 {: .warning }
 **Potentially Breaking Changes**: this version contains **potentially breaking changes** for a small set of users. For more information, refer to the [Migrating to v0.6.0 guide](https://just-the-docs.com/migration/#potentially-breaking-changes-in-v060).
 
-### New Features and Bugfixes
+### Theme
 
 - Added: `$color-scheme` theme variable to specify `color-scheme` for `:root` by [@sigv](https://github.com/sigv) in [#1280](https://github.com/just-the-docs/just-the-docs/pull/1280)
 - Fixed: build times for large sites by [@pdmosses](https://github.com/pdmosses) in [#1244](https://github.com/just-the-docs/just-the-docs/pull/1244)
@@ -150,32 +141,32 @@ Docs changes made since the latest release:
 
 ### Documentation
 
-Docs changes:
-
 - A [footnote]({% link docs/configuration.md %}#fn:js-disabled) in the configuration docs explains how disabling JavaScript affects the display of navigation links when browsing folded collections.
 - Invalid HTML has been removed from most documentation examples.
 
-## v0.5.4
+## v0.5.4 - 2023-07-04
 
-### Bugfixes
+### Theme
 
 - Fixed: Mermaid labels inheriting theme `.label` styling by [@mattxwang](https://github.com/mattxwang) in [#1278](https://github.com/just-the-docs/just-the-docs/pull/1278)
 
-### Bugfixes
+## v0.5.3 - 2023-06-17
+
+### Theme
 
 - Fixed: font-size scaling for text-related CSS properties by using `rem` instead of fixed `px` values; deprecate `$root-font-size` by [@mattxwang](https://github.com/mattxwang) in [#1169](https://github.com/just-the-docs/just-the-docs/pull/1169)
 
-## v0.5.2
+## v0.5.2 - 2023-06-07
 
-### Bugfixes
+### Theme
 
 - Fixed: liquid variable leakage in navigation components by [@pdmosses](https://github.com/pdmosses) in [#1243](https://github.com/just-the-docs/just-the-docs/pull/1243)
 - Fixed: ARIA roles and labels for search, header, logo, mobile menu button, and main content by [@joelhawksley](https://github.com/joelhawksley) in [#1259](https://github.com/just-the-docs/just-the-docs/pull/1259)
 - Fixed: ARIA labels for all anchors with `href="#"`; adds `aria-pressed` information for toggles by [@mattxwang](https://github.com/mattxwang) in [#1262](https://github.com/just-the-docs/just-the-docs/pull/1262)
 
-## v0.5.1
+## v0.5.1 - 2023-04-25
 
-### Bugfixes
+### Theme
 
 - Fixed: disable copy code button in insecure contexts [@rmoff](https://github.com/rmoff) in [#1226](https://github.com/just-the-docs/just-the-docs/pull/1226)
 - Fixed: context-based media feature not supported by Safari `<16.4` by [@mattxwang](https://github.com/mattxwang) in [#1240](https://github.com/just-the-docs/just-the-docs/pull/1240)
@@ -187,9 +178,12 @@ Docs changes:
 - Fixed: `font-weight` typo (Utilities > Typography) by [@mattxwang](https://github.com/mattxwang) in [#1229](https://github.com/just-the-docs/just-the-docs/pull/1229)
 - Fixed: `just the docs` typo in migration guide by [@mattxwang](https://github.com/mattxwang) in [#1230](https://github.com/just-the-docs/just-the-docs/pull/1230)
 
-## v0.5.0
+## v0.5.0 - 2023-04-12
 
-### Bugfixes
+{: .warning }
+**Potentially Breaking Changes**: this version contains **potentially breaking changes** for a small set of users. For more information, refer to the [Migrating to v0.5.0 guide](https://just-the-docs.com/migration/#potentially-breaking-changes-in-v050).
+
+### Theme
 
 - **Reverted (breaking)**: "Fix import order for `setup.scss` (#1184)" by [@mattxwang](https://github.com/mattxwang) in [#1209](https://github.com/just-the-docs/just-the-docs/pull/1209)
 - Fixed: color contrast issues with `::selection` (reverting to browser defaults) [@mattxwang](https://github.com/mattxwang) in [#1208](https://github.com/just-the-docs/just-the-docs/pull/1208)
@@ -197,11 +191,9 @@ Docs changes:
 - Removed: unused images (`just-the-docs.png`, `search.svg`) by [@mattxwang](https://github.com/mattxwang) in [#1107](https://github.com/just-the-docs/just-the-docs/pull/1107)
 - Removed: `CODE_OF_CONDUCT`, `docker-compose`, and `Dockerfile` files from site by [@mattxwang](https://github.com/mattxwang) in [#1187](https://github.com/just-the-docs/just-the-docs/pull/1187)
 
-**Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.2...v0.5.0](https://github.com/just-the-docs/just-the-docs/compare/v0.4.2...v0.5.0)
+## v0.4.2 - 2023-03-14
 
-## v0.4.2
-
-### Bugfixes
+### Theme
 
 - Fixed: light scheme code highlighting contrast issues; updated to use Atom's One Light colors, consolidate theme variables by [@mattxwang](https://github.com/mattxwang) in [#1166](https://github.com/just-the-docs/just-the-docs/pull/1166)
 - Fixed: duplicate import of `color_schemes` by [@mattxwang](https://github.com/mattxwang) in [#1173](https://github.com/just-the-docs/just-the-docs/pull/1173)
@@ -212,11 +204,9 @@ Docs changes:
 
 - Added: docs for using mermaid with AsciiDoc by [@flyx](https://github.com/flyx) in [#1182](https://github.com/just-the-docs/just-the-docs/pull/1182)
 
-**Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.1...v0.4.2](https://github.com/just-the-docs/just-the-docs/compare/v0.4.1...v0.4.2)
+## v0.4.1 - 2023-02-23
 
-## v0.4.1
-
-### Bugfixes
+### Theme
 
 - Fixed: allow later versions of `bundler` by [@mattxwang](https://github.com/mattxwang) in [#1165](https://github.com/just-the-docs/just-the-docs/pull/1165)
 - Fixed: AsciiDoc code block styling by [@flyx](https://github.com/flyx) in [#1168](https://github.com/just-the-docs/just-the-docs/pull/1168)
@@ -229,7 +219,7 @@ Docs changes:
 
 **Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.0...v0.4.1](https://github.com/just-the-docs/just-the-docs/compare/v0.4.0...v0.4.1)
 
-## v0.4.0
+## v0.4.0 - 2023-02-05
 
 {: .note }
 The project underwent a large maintenance shift in 2022; `0.4.0` is the first release from the new team.
