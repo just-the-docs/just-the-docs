@@ -61,7 +61,8 @@
   }
 
   &:focus {
-    outline: 0;
+    outline: 2px solid $link-color;
+    outline-offset: -2px;
 
     + .search-label .search-icon {
       color: $link-color;

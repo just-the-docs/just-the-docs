@@ -258,7 +258,7 @@ function searchLoaded(index, docs) {
       // note: the SVG svg-doc is only loaded as a Jekyll include if site.search_enabled is true; see _includes/icons/icons.html
       var resultDoc = document.createElement('div');
       resultDoc.classList.add('search-result-doc');
-      resultDoc.innerHTML = '<svg viewBox="0 0 24 24" class="search-result-icon"><use xlink:href="#svg-doc"></use></svg>';
+      resultDoc.innerHTML = '<svg viewBox="0 0 24 24" class="search-result-icon" aria-hidden="true"><use xlink:href="#svg-doc"></use></svg>';
       resultTitle.appendChild(resultDoc);
 
       var resultDocTitle = document.createElement('div');
