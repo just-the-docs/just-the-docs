@@ -1,13 +1,16 @@
 source "https://rubygems.org"
 gemspec
 
+gem "base64"
+gem "csv"
+
 gem "jekyll-github-metadata", ">= 2.15"
 
 gem "jekyll-include-cache", group: :jekyll_plugins
 gem "jekyll-sitemap", group: :jekyll_plugins
 
 group :development, :test do
-  gem "html-proofer", "~> 5.0"
+  gem "html-proofer", "~> 5.1"
 
   # Test Infrastructure
   gem 'rack'
