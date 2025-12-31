@@ -7,8 +7,9 @@ layout: default
 
 All notable user-facing changes to this project are documented in this file.
 
-{: .highlight }
-The project underwent a major maintenance shift in March 2022.
+For information on upgrading to a new version (including resolving breaking changes), see the [Migration and Upgrading Guide](https://just-the-docs.com/MIGRATION).
+
+For more detailed explanations for each release, see [the GitHub Releases page](https://github.com/just-the-docs/just-the-docs/releases).
 
 ## HEAD
 
@@ -17,1560 +18,469 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- Fixed: `margin-top` and `margin-bottom` for `<hr>` elements in print styles by [@jacksonj04] in [#1677]
+- Fixed: `margin-top` and `margin-bottom` for `<hr>` elements in print styles by [@jacksonj04](https://github.com/jacksonj04) in [#1677](https://github.com/just-the-docs/just-the-docs/pull/1677)
 
 Docs changes made since the latest release:
 
 - N/A
 
-### New Contributors
+## v0.10.1 - 2025-01-06
 
-- [@jacksonj04] made their first contribution in [#1677]
+### Theme
 
-
-[@jacksonj04]: https://github.com/jacksonj04
-
-[#1677]: https://github.com/just-the-docs/just-the-docs/pull/1677
-
-## Release v0.10.1
-
-Hi folks! This patch fixes two bugs related to generated navigation elements and improves our docs.
-
-This release should be a straightforward upgrade for all users of Just the Docs. Thank you for your continued support!
-
-### Bugfixes
-
-- Fixed: `back_to_top` not displaying when no other footer variables are set by [@mattxwang] in [#1461]
-- Fixed: auto-generated child navigation (TOC) by [@pdmosses] in [#1590]
+- Fixed: `back_to_top` not displaying when no other footer variables are set by [@mattxwang](https://github.com/mattxwang) in [#1461](https://github.com/just-the-docs/just-the-docs/pull/1461)
+- Fixed: auto-generated child navigation (TOC) by [@pdmosses](https://github.com/pdmosses) in [#1590](https://github.com/just-the-docs/just-the-docs/pull/1590)
 
 ### Documentation
 
-- Fixed: incorrect docs for example with minimal layout parent, default layout child by [@janbrasna] in [#1540]
-- Fixed: unclear docs on using in-page table of contents by [@sebjameswml] in [#1551]
+- Fixed: incorrect docs for example with minimal layout parent, default layout child by [@janbrasna](https://github.com/janbrasna) in [#1540](https://github.com/just-the-docs/just-the-docs/pull/1540)
+- Fixed: unclear docs on using in-page table of contents by [@sebjameswml](https://github.com/sebjameswml) in [#1551](https://github.com/just-the-docs/just-the-docs/pull/1551)
 
-### New Contributors
+## v0.10.0 - 2024-09-09
 
-- [@janbrasna] made their first contribution in [#1540]
-- [@sebjameswml] made their first contribution in [#1551]
+### Theme
 
-[@janbrasna]: https://github.com/janbrasna
-[@sebjameswml]: https://github.com/sebjameswml
-
-[#1461]: https://github.com/just-the-docs/just-the-docs/pull/1461
-[#1540]: https://github.com/just-the-docs/just-the-docs/pull/1540
-[#1551]: https://github.com/just-the-docs/just-the-docs/pull/1551
-[#1590]: https://github.com/just-the-docs/just-the-docs/pull/1590
-
-## Release v0.10.0
-
-Hi folks! This minor release adds one of our most-requested features: unlimited multi-level navigation (also known as recursive navigation). Huge thanks to [@pdmosses] for his wonderful work in implementing this feature!
-
-This release should be a straightforward upgrade for all users of Just the Docs. Thank you for your continued support!
-
-### Using Release `v0.10.0`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.9.0` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.10.0
-```
-
-To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.10.0"
-```
-
-To use and pin a previous version of the theme, replace the `0.10.0` with the desired release tag.
-
-### New Features
-
-- Added: Allow unlimited multi-level navigation by [@pdmosses] in [#1431]
+- Added: Allow unlimited multi-level navigation by [@pdmosses](https://github.com/pdmosses) in [#1431](https://github.com/just-the-docs/just-the-docs/pull/1431)
 
 ### Documentation
 
-- Added: Allow unlimited multi-level navigation by [@pdmosses] in [#1440]
-- Added: sitemap (via `jekyll-sitemap` plugin) by [@mattxwang] in [#1530]
-- Fixed: (non-systemic) accessibility issues flagged by aXe by [@mattxwang] in [#1531]
+- Added: Allow unlimited multi-level navigation by [@pdmosses](https://github.com/pdmosses) in [#1440](https://github.com/just-the-docs/just-the-docs/pull/1440)
+- Added: sitemap (via `jekyll-sitemap` plugin) by [@mattxwang](https://github.com/mattxwang) in [#1530](https://github.com/just-the-docs/just-the-docs/pull/1530)
+- Fixed: (non-systemic) accessibility issues flagged by aXe by [@mattxwang](https://github.com/mattxwang) in [#1531](https://github.com/just-the-docs/just-the-docs/pull/1531)
 
-[#1431]: https://github.com/just-the-docs/just-the-docs/pull/1431
-[#1440]: https://github.com/just-the-docs/just-the-docs/pull/1440
-[#1530]: https://github.com/just-the-docs/just-the-docs/pull/1530
-[#1530]: https://github.com/just-the-docs/just-the-docs/pull/1531
+## v0.9.0 - 2024-08-12
 
-## Release v0.9.0
+### Theme
 
-Hi folks! This minor release adds a `nav_enabled` set of variables to enable/disable the navigation at a site, layout, and page level --- and uses that to add search and auxilary links to the `minimal` layout. In addition, it fixes `search-data.json` corruption with default layouts and some minor CSS/SCSS issues.
-
-This release should be a straightforward upgrade for all users of Just the Docs. Thank you for your continued support!
-
-### Using Release `v0.9.0`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.9.0` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.9.0
-```
-
-To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.9.0"
-```
-
-To use and pin a previous version of the theme, replace the `0.9.0` with the desired release tag.
-
-### New Features
-
-- Added: `nav_enabled` site, layout, and page-level variable to selectively show or hide the side/mobile menu by [@kevinlin1] in [#1441]
-- Added: site-wide search bar and auxiliary links to the `minimal` layout by [@kevinlin1] in [#1441]
-
-### Bugfixes
-
-- Fixed: protect `search-data.json` file from front matter default for layout by [@mattxwang] in [#1468]
-- Fixed: Sass mixed declarations by [@bobvandevijver] in [#1495]
-- Fixed: redundant `monospace` in `pre`, `code`, `kbd`, `samp` reset by [@mattxwang] in [#1508]
+- Added: `nav_enabled` site, layout, and page-level variable to selectively show or hide the side/mobile menu by [@kevinlin1](https://github.com/kevinlin1) in [#1441](https://github.com/just-the-docs/just-the-docs/pull/1441)
+- Added: site-wide search bar and auxiliary links to the `minimal` layout by [@kevinlin1](https://github.com/kevinlin1) in [#1441](https://github.com/just-the-docs/just-the-docs/pull/1441)
+- Fixed: protect `search-data.json` file from front matter default for layout by [@mattxwang](https://github.com/mattxwang) in [#1468](https://github.com/just-the-docs/just-the-docs/pull/1468)
+- Fixed: Sass mixed declarations by [@bobvandevijver](https://github.com/bobvandevijver) in [#1495](https://github.com/just-the-docs/just-the-docs/pull/1495)
+- Fixed: redundant `monospace` in `pre`, `code`, `kbd`, `samp` reset by [@mattxwang](https://github.com/mattxwang) in [#1508](https://github.com/just-the-docs/just-the-docs/pull/1508)
 
 ### Documentation
 
-- Docs: Explained the `nav_enabled` variables as an alternative to using the minimal layout [@kevinlin1] in [#1441].
+- Docs: Explained the `nav_enabled` variables as an alternative to using the minimal layout [@kevinlin1](https://github.com/kevinlin1) in [#1441](https://github.com/just-the-docs/just-the-docs/pull/1441).
 
-### New Contributors
+## v0.8.2 - 2024-05-15
 
-- [@bobvandevijver] made their first contribution in [#1495]
+### Theme
 
-[@bobvandevijver]: https://github.com/bobvandevijver
+- Fixed: Protect theme JS file from front matter default for layout by [@pdmosses](https://github.com/pdmosses) in [#1447](https://github.com/just-the-docs/just-the-docs/pull/1447)
 
-[#1441]: https://github.com/just-the-docs/just-the-docs/pull/1441
-[#1468]: https://github.com/just-the-docs/just-the-docs/pull/1468
-[#1495]: https://github.com/just-the-docs/just-the-docs/pull/1495
-[#1508]: https://github.com/just-the-docs/just-the-docs/pull/1508
+## v0.8.1 - 2024-03-06
 
-## Release v0.8.2
+### Theme
 
-Hi everyone! This patch release fixes a bug where a default layout with unrestricted `scope` (`path: ""`) breaks JavaScript functionality. Users who do not use a default layout with unrestricted `scope` should not be affected. This should be a straightforward upgrade for all users. Thank you to [@pdmosses] for triaging and fixing the bug!
-
-### Bugfixes
-
-- Fixed: Protect theme JS file from front matter default for layout by [@pdmosses] in [#1447]
-
-[#1447]: https://github.com/just-the-docs/just-the-docs/pull/1447
-
-## Release v0.8.1
-
-Hi folks! This patch release fixes a bug introduced in `0.8.0` that affects users who build their sites in strict mode. It is a straightforward upgrade that should require no manual migration changes. Thank you to [@Zarthus] for quickly catching and fixing this bug!
-
-### Bugfixes
-
-- Fixed: Liquid filter typo in breadcrumb component (`strip` instead of `trim`) by [@Zarthus] in [#1434]
+- Fixed: Liquid filter typo in breadcrumb component (`strip` instead of `trim`) by [@Zarthus](https://github.com/Zarthus) in [#1434](https://github.com/just-the-docs/just-the-docs/pull/1434)
 
 ### Documentation
 
-- Build docs site using strict mode and `strict_filters` by [@Zarthus] in [#1435]
+- Build docs site using strict mode and `strict_filters` by [@Zarthus](https://github.com/Zarthus) in [#1435](https://github.com/just-the-docs/just-the-docs/pull/1435)
 
-### New Contributors
+## v0.8.0 - 2024-02-22
 
-- [@Zarthus] made their first contribution in [#1434]
+### Theme
 
-[@Zarthus]: https://github.com/Zarthus
-
-[#1434]: https://github.com/just-the-docs/just-the-docs/pull/1434
-[#1435]: https://github.com/just-the-docs/just-the-docs/pull/1435
-
-## Release v0.8.0
-
-Hi folks! This first minor release of 2024 has a short number of changes: a large improvement of build times for large sites, a new keyboard shortcut to focus the search bar, and sidebar navigation bugfixes for "pretty" URLs (with `.html` omitted) and the clickable area on Safari. This release has no explicit breaking changes and should be a straightforward upgrade for most (if not all) users.
-
-### Using Release `v0.8.0`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.8.0` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.8.0
-```
-
-To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.8.0"
-```
-
-To use and pin a previous version of the theme, replace the `0.8.0` with the desired release tag.
-
-### New Features
-
-- Added: configurable keyboard shortcut to focus search input by [@kcromanpl-bajra] in [#1411]
-
-### Bugfixes
-
-- Fixed: quicker build by [@pdmosses] in [#1397]
-- Fixed: incorrect navigation when `.html` omitted from URL by [@pdmosses] in [#1374]
-- Fixed: incorrect positioning of clickable area for navigation links on Safari by [@mattxwang] in [#1403]
+- Added: configurable keyboard shortcut to focus search input by [@kcromanpl-bajra](https://github.com/kcromanpl-bajra) in [#1411](https://github.com/just-the-docs/just-the-docs/pull/1411)
+- Fixed: quicker build by [@pdmosses](https://github.com/pdmosses) in [#1397](https://github.com/just-the-docs/just-the-docs/pull/1397)
+- Fixed: incorrect navigation when `.html` omitted from URL by [@pdmosses](https://github.com/pdmosses) in [#1374](https://github.com/just-the-docs/just-the-docs/pull/1374)
+- Fixed: incorrect positioning of clickable area for navigation links on Safari by [@mattxwang](https://github.com/mattxwang) in [#1403](https://github.com/just-the-docs/just-the-docs/pull/1403)
 
 ### Documentation
 
-- Add documentation to "Navigation Structure" on grouping pages with collections by [@mitchnemirov] in [#1390]
+- Add documentation to "Navigation Structure" on grouping pages with collections by [@mitchnemirov](https://github.com/mitchnemirov) in [#1390](https://github.com/just-the-docs/just-the-docs/pull/1390)
 
-### New Contributors
-
-- [@mitchnemirov] made their first contribution in [#1390]
-- [@kcromanpl-bajra] made their first contribution in [#1411]
-
-[@mitchnemirov]: https://github.com/mitchnemirov
-[@kcromanpl-bajra]: https://github.com/kcromanpl-bajra
-
-[#1374]: https://github.com/just-the-docs/just-the-docs/pull/1374
-[#1390]: https://github.com/just-the-docs/just-the-docs/pull/1390
-[#1397]: https://github.com/just-the-docs/just-the-docs/pull/1397
-[#1403]: https://github.com/just-the-docs/just-the-docs/pull/1403
-[#1411]: https://github.com/just-the-docs/just-the-docs/pull/1411
-
-## Release v0.7.0
-
-Hi folks! This is a minor release that adds a new configuration option for opening external links in a new tab and provides many bugfixes (in both correctness and performance) for Just the Docs users with large sites. We anticipate that for most users, this is a straightforward upgrade. However, it introduces some potentially-breaking *internal* changes to undocumented features of the theme.
-
-### Migrating to `v0.7.0`
-
-**Migration**: users will need to migrate if:
-
-- they overrode `_includes/nav.html`, which has moved to `_includes/components/nav.html`
-- they have an element with the IDs `jtd-nav-activation` or `jtd-head-nav-stylesheet`
-
-For more, refer to the [migration guide](https://just-the-docs.com/MIGRATION/).
-
-### Using Release `v0.7.0`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.7.0` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.7.0
-```
-
-To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.7.0"
-```
-
-To use and pin a previous version of the theme, replace the `0.7.0` with the desired release tag.
-
-### New Features
-
-- Added: configuration options for opening external links in new tab by [@CarbonNeuron] in [#1360]
-
-### Bugfixes
-
-- Fixed: remove href from the navigation link to the current page by [@pdmosses] in [#1356]
-- Fixed: improve build time by [@pdmosses] in [#1358]
-- Fixed: erroneous parentheses in `site_nav` conditional by [@mattxwang] in [#1366]
-- Fixed: navigation scroll to active link regression by [@pdmosses] in [#1367]
-- Fixed: invalid CSS rules in head elements by [@pdmosses] in [#1368]
-- Fixed: accidental disabling of forward-declared stylesheets by [@mattxwang] in [#1373]
+## v0.7.0 - 2023-10-25
 
 {: .warning }
-[#1358] moved `_includes/nav.html` to the `_includes/components` directory,
-Users who were overriding that file will need to adjust their sites accordingly.
+**Potentially Breaking Changes**: this version contains **potentially breaking changes** for a small set of users. For more information, refer to the [Migrating to v0.7.0 guide](https://just-the-docs.com/migration/#potentially-breaking-changes-in-v070).
+
+### Theme
+
+- Added: configuration options for opening external links in new tab by [@CarbonNeuron](https://github.com/CarbonNeuron) in [#1360](https://github.com/just-the-docs/just-the-docs/pull/1360)
+- Fixed: remove href from the navigation link to the current page by [@pdmosses](https://github.com/pdmosses) in [#1356](https://github.com/just-the-docs/just-the-docs/pull/1356)
+- Fixed: improve build time by [@pdmosses](https://github.com/pdmosses) in [#1358](https://github.com/just-the-docs/just-the-docs/pull/1358)
+- Fixed: erroneous parentheses in `site_nav` conditional by [@mattxwang](https://github.com/mattxwang) in [#1366](https://github.com/just-the-docs/just-the-docs/pull/1366)
+- Fixed: navigation scroll to active link regression by [@pdmosses](https://github.com/pdmosses) in [#1367](https://github.com/just-the-docs/just-the-docs/pull/1367)
+- Fixed: invalid CSS rules in head elements by [@pdmosses](https://github.com/pdmosses) in [#1368](https://github.com/just-the-docs/just-the-docs/pull/1368)
+- Fixed: accidental disabling of forward-declared stylesheets by [@mattxwang](https://github.com/mattxwang) in [#1373](https://github.com/just-the-docs/just-the-docs/pull/1373)
 
 ### Documentation:
 
-- Docs: fix typos in `CHANGELOG` and `MIGRATION` by [@thapasusheel] in [#1377]
+- Docs: fix typos in `CHANGELOG` and `MIGRATION` by [@thapasusheel](https://github.com/thapasusheel) in [#1377](https://github.com/just-the-docs/just-the-docs/pull/1377)
+
+## v0.6.2 - 2023-09-19
+
+### Theme
+
+- Fixed: Windows emoji font fallback by [@flanakin](https://github.com/flanakin) in [#1337](https://github.com/just-the-docs/just-the-docs/pull/1337)
+- Removed: unused `.passive` toggle in navigation by [@pdmosses](https://github.com/pdmosses) in [#1335](https://github.com/just-the-docs/just-the-docs/pull/1335)
 
 ### New Contributors
 
-- [@CarbonNeuron] made their first contribution in [#1360]
-- [@thapasusheel] made their first contribution in [#1377]
+- [@flanakin](https://github.com/flanakin) made their first contribution in [#1337](https://github.com/just-the-docs/just-the-docs/pull/1337)
 
-[@CarbonNeuron]: https://github.com/CarbonNeuron
-[@thapasusheel]: https://github.com/thapasusheel
+## v0.6.1 - 2023-08-26
 
-[#1356]: https://github.com/just-the-docs/just-the-docs/pull/1356
-[#1358]: https://github.com/just-the-docs/just-the-docs/pull/1358
-[#1360]: https://github.com/just-the-docs/just-the-docs/pull/1360
-[#1366]: https://github.com/just-the-docs/just-the-docs/pull/1366
-[#1367]: https://github.com/just-the-docs/just-the-docs/pull/1367
-[#1368]: https://github.com/just-the-docs/just-the-docs/pull/1368
-[#1373]: https://github.com/just-the-docs/just-the-docs/pull/1373
-[#1377]: https://github.com/just-the-docs/just-the-docs/pull/1377
+### Theme
 
-## Release v0.6.2
+- Fixed: JS error for pages excluded from navigation by [@pdmosses](https://github.com/pdmosses) in [#1332](https://github.com/just-the-docs/just-the-docs/pull/1332)
 
-Hi all, this is a small patch release that includes two changes: adding a missing Windows emoji font fallback, and removing some (now-unused) code introduced in 0.6.
-
-### Bugfixes
-
-- Fixed: Windows emoji font fallback by [@flanakin] in [#1337]
-- Removed: unused `.passive` toggle in navigation by [@pdmosses] in [#1335]
-
-[#1335]: https://github.com/just-the-docs/just-the-docs/pull/1335
-[#1337]: https://github.com/just-the-docs/just-the-docs/pull/1337
-
-### New Contributors
-
-- [@flanakin] made their first contribution in [#1337]
-
-[@flanakin]: https://github.com/flanakin
-
-## Release v0.6.1
-
-Hi all, this is a small patch release that only includes one change: resolving a bug introduced in 0.6.0 that causes a JS error for pages excluded from navigation.
-
-### Bugfixes
-
-- Fixed: JS error for pages excluded from navigation by [@pdmosses] in [#1332]
-
-[#1332]: https://github.com/just-the-docs/just-the-docs/pull/1332
-
-## Release v0.6.0
-
-Hi all, this is a minor release that introduces performance improvements for build times on large sites, correctly sets the `color-scheme` property, and fixes invalid HTML. However, it introduces some potentially-breaking *internal* changes to undocumented features of the theme.
-
-### Migrating to `v0.6.0`
-
-**Migration**: users will need to migrate if:
-
-- they have an existing `_includes` file named `favicon.html`, `head_nav.html`, or `css/activation.scss.liquid`
-- they have code that refers to `#main-content-wrap`
-- they override the default `light` theme's code, or the theme-loading logic
-- they have different favicons for different pages
-
-For more, refer to the [migration guide](https://just-the-docs.com/MIGRATION/).
-
-### Using Release `v0.6.0`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.6.0` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.6.0
-```
-
-To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.6.0"
-```
-
-To use and pin a previous version of the theme, replace the `0.6.0` with the desired release tag.
-
-### New Features and Bugfixes
-
-- Added: `$color-scheme` theme variable to specify `color-scheme` for `:root` by [@sigv] in [#1280]
-- Fixed: build times for large sites by [@pdmosses] in [#1244]
-- Fixed: missing closing `</button>` tag in `sidebar.html` by [@mattxwang] in [#1304]
-- Fixed: removed duplicate `#main-content-wrap` minimal and default layouts by [@mattxwang] in [#1305]
-
-### Documentation
+## v0.6.0 - 2023-08-19
 
 {: .warning }
-The theme docs are unversioned, and already reflect the above changes.
+**Potentially Breaking Changes**: this version contains **potentially breaking changes** for a small set of users. For more information, refer to the [Migrating to v0.6.0 guide](https://just-the-docs.com/migration/#potentially-breaking-changes-in-v060).
 
-Docs changes:
+### Theme
+
+- Added: `$color-scheme` theme variable to specify `color-scheme` for `:root` by [@sigv](https://github.com/sigv) in [#1280](https://github.com/just-the-docs/just-the-docs/pull/1280)
+- Fixed: build times for large sites by [@pdmosses](https://github.com/pdmosses) in [#1244](https://github.com/just-the-docs/just-the-docs/pull/1244)
+- Fixed: missing closing `</button>` tag in `sidebar.html` by [@mattxwang](https://github.com/mattxwang) in [#1304](https://github.com/just-the-docs/just-the-docs/pull/1304)
+- Fixed: removed duplicate `#main-content-wrap` minimal and default layouts by [@mattxwang](https://github.com/mattxwang) in [#1305](https://github.com/just-the-docs/just-the-docs/pull/1305)
+
+### Documentation
 
 - A [footnote]({% link docs/configuration.md %}#fn:js-disabled) in the configuration docs explains how disabling JavaScript affects the display of navigation links when browsing folded collections.
 - Invalid HTML has been removed from most documentation examples.
 
-### New Contributors
+## v0.5.4 - 2023-07-04
 
-- [@sigv] made their first contribution in [#1280]
+### Theme
 
-[@sigv]: https://github.com/sigv
-[#1244]: https://github.com/just-the-docs/just-the-docs/pull/1244
-[#1280]: https://github.com/just-the-docs/just-the-docs/pull/1280
-[#1304]: https://github.com/just-the-docs/just-the-docs/pull/1304
-[#1305]: https://github.com/just-the-docs/just-the-docs/pull/1305
+- Fixed: Mermaid labels inheriting theme `.label` styling by [@mattxwang](https://github.com/mattxwang) in [#1278](https://github.com/just-the-docs/just-the-docs/pull/1278)
 
-## Release v0.5.4
+## v0.5.3 - 2023-06-17
 
-Hi all, this is a small patch release that only includes one change: fixing a style clash between Mermaid's labels and Just the Docs' labels.
+### Theme
 
-*Note: for subsequent patch releases, we will omit migration instructions (for brevity). In all cases, immediate migration should be backwards-compatible. Refer to previous major or minor update instructions for more information.*
+- Fixed: font-size scaling for text-related CSS properties by using `rem` instead of fixed `px` values; deprecate `$root-font-size` by [@mattxwang](https://github.com/mattxwang) in [#1169](https://github.com/just-the-docs/just-the-docs/pull/1169)
 
-### Bugfixes
+## v0.5.2 - 2023-06-07
 
-- Fixed: Mermaid labels inheriting theme `.label` styling by [@mattxwang] in [#1278]
+### Theme
 
-[#1278]: https://github.com/just-the-docs/just-the-docs/pull/1278
+- Fixed: liquid variable leakage in navigation components by [@pdmosses](https://github.com/pdmosses) in [#1243](https://github.com/just-the-docs/just-the-docs/pull/1243)
+- Fixed: ARIA roles and labels for search, header, logo, mobile menu button, and main content by [@joelhawksley](https://github.com/joelhawksley) in [#1259](https://github.com/just-the-docs/just-the-docs/pull/1259)
+- Fixed: ARIA labels for all anchors with `href="#"`; adds `aria-pressed` information for toggles by [@mattxwang](https://github.com/mattxwang) in [#1262](https://github.com/just-the-docs/just-the-docs/pull/1262)
 
-## Release v0.5.3
+## v0.5.1 - 2023-04-25
 
-Hi all, this is a minor patch release that only includes one change: changing all text-based CSS properties to use `rem` instead of hard-coded `px` values. This has two effects:
+### Theme
 
-1. All deprecation warnings are now fixed on build; you should now get a clean build with `jekyll build`.
-2. We have **deprecated the `$root-font-size` SCSS variable**. We will remove it in an upcoming release of the theme.
-
-If you use the stock Just the Docs theme, this release should have no impact on your final built site. If you change the `$root-font-size` SCSS variable, you might experience light layout shifts.
-
-### Using Release `v0.5.3`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.5.3` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.5.3
-```
-
-To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.5.3"
-```
-
-To use and pin a previous version of the theme, replace the `0.5.3` with the desired release tag.
-
-### Bugfixes
-
-- Fixed: font-size scaling for text-related CSS properties by using `rem` instead of fixed `px` values; deprecate `$root-font-size` by [@mattxwang] in [#1169]
-
-[#1169]: https://github.com/just-the-docs/just-the-docs/pull/1169
-
-## Release v0.5.2
-
-Hi all, this is a minor patch release that mostly focuses on accessibility. Since we follow semantic versioning, this should be a smooth upgrade with no breaking changes.
-
-In addition, the theme docs website has a new canonical URL: <https://just-the-docs.com>. We've also retroactively published the theme docs website for version `v0.3.3` at <https://v0-3-3-docs.just-the-docs.com/>. Thank you to our GitHub sponsors for funding our domain name!
-
-### Using Release `v0.5.2`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.5.2` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.5.2
-```
-
-To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.5.2"
-```
-
-To use and pin a previous version of the theme, replace the `0.5.2` with the desired release tag.
-
-### Bugfixes
-
-- Fixed: liquid variable leakage in navigation components by [@pdmosses] in [#1243]
-- Fixed: ARIA roles and labels for search, header, logo, mobile menu button, and main content by [@joelhawksley] in [#1259]
-- Fixed: ARIA labels for all anchors with `href="#"`; adds `aria-pressed` information for toggles by [@mattxwang] in [#1262]
-
-### New Contributors
-
-- [@joelhawksley] made their first contribution in [#1259]
-
-[@joelhawksley]: https://github.com/joelhawksley
-
-[#1243]: https://github.com/just-the-docs/just-the-docs/pull/1243
-[#1259]: https://github.com/just-the-docs/just-the-docs/pull/1259
-[#1262]: https://github.com/just-the-docs/just-the-docs/pull/1262
-
-## Release v0.5.1
-
-Hi all, this is a very small minor patch release that has two small behavioral bugfixes: fixing a regression introduced in `v0.5.0` on Safari versions `<16.4` (broken media query), and the copy code button providing incorrect feedback in insecure browser contexts. This should be a smooth upgrade with no breaking changes.
-
-As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
-
-### Using Release `v0.5.1`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.5.1` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.5.1
-```
-
-To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.5.1"
-```
-
-To use and pin a previous version of the theme, replace the `0.5.1` with the desired release tag.
-
-### Bugfixes
-
-
-- Fixed: disable copy code button in insecure contexts [@rmoff] in [#1226]
-- Fixed: context-based media feature not supported by Safari `<16.4` by [@mattxwang] in [#1240]
+- Fixed: disable copy code button in insecure contexts [@rmoff](https://github.com/rmoff) in [#1226](https://github.com/just-the-docs/just-the-docs/pull/1226)
+- Fixed: context-based media feature not supported by Safari `<16.4` by [@mattxwang](https://github.com/mattxwang) in [#1240](https://github.com/just-the-docs/just-the-docs/pull/1240)
 
 ### Documentation
 
-- Added: document copy code button requiring secure context by [@rmoff] in [#1225]
-- Fixed: typo ("them" → "theme") in MIGRATION.md by [@waldyrious] in [#1219]
-- Fixed: `font-weight` typo (Utilities > Typography) by [@mattxwang] in [#1229]
-- Fixed: `just the docs` typo in migration guide by [@mattxwang] in [#1230]
+- Added: document copy code button requiring secure context by [@rmoff](https://github.com/rmoff) in [#1225](https://github.com/just-the-docs/just-the-docs/pull/1225)
+- Fixed: typo ("them" → "theme") in MIGRATION.md by [@waldyrious](https://github.com/waldyrious) in [#1219](https://github.com/just-the-docs/just-the-docs/pull/1219)
+- Fixed: `font-weight` typo (Utilities > Typography) by [@mattxwang](https://github.com/mattxwang) in [#1229](https://github.com/just-the-docs/just-the-docs/pull/1229)
+- Fixed: `just the docs` typo in migration guide by [@mattxwang](https://github.com/mattxwang) in [#1230](https://github.com/just-the-docs/just-the-docs/pull/1230)
 
-### New Contributors
-- [@rmoff] made their first contribution in [#1225]
+## v0.5.0 - 2023-04-12
 
-[#1219]: https://github.com/just-the-docs/just-the-docs/pull/1219
-[#1225]: https://github.com/just-the-docs/just-the-docs/pull/1225
-[#1226]: https://github.com/just-the-docs/just-the-docs/pull/1226
-[#1229]: https://github.com/just-the-docs/just-the-docs/pull/1229
-[#1230]: https://github.com/just-the-docs/just-the-docs/pull/1230
-[#1240]: https://github.com/just-the-docs/just-the-docs/pull/1240
+{: .warning }
+**Potentially Breaking Changes**: this version contains **potentially breaking changes** for a small set of users. For more information, refer to the [Migrating to v0.5.0 guide](https://just-the-docs.com/migration/#potentially-breaking-changes-in-v050).
 
-[@rmoff]: https://github.com/rmoff
+### Theme
 
-## Release v0.5.0
+- **Reverted (breaking)**: "Fix import order for `setup.scss` (#1184)" by [@mattxwang](https://github.com/mattxwang) in [#1209](https://github.com/just-the-docs/just-the-docs/pull/1209)
+- Fixed: color contrast issues with `::selection` (reverting to browser defaults) [@mattxwang](https://github.com/mattxwang) in [#1208](https://github.com/just-the-docs/just-the-docs/pull/1208)
+- Fixed: mermaid `v10`, bundle all mermaid code in component by [@mattxwang](https://github.com/mattxwang) in [#1190](https://github.com/just-the-docs/just-the-docs/pull/1190)
+- Removed: unused images (`just-the-docs.png`, `search.svg`) by [@mattxwang](https://github.com/mattxwang) in [#1107](https://github.com/just-the-docs/just-the-docs/pull/1107)
+- Removed: `CODE_OF_CONDUCT`, `docker-compose`, and `Dockerfile` files from site by [@mattxwang](https://github.com/mattxwang) in [#1187](https://github.com/just-the-docs/just-the-docs/pull/1187)
 
-Hope your April is going well! This new release of Just the Docs is relatively minor. It has one **breaking change**: we've reverted the import order of `setup.scss` to be *before* color schemes. In addition, we include two requested fixes: color contrast issues with `::selection` and using Just the Docs with mermaid versions `>=10`.
+## v0.4.2 - 2023-03-14
 
-We've marked this as a minor version bump due to the breaking change. In the next section, we briefly outline what migration steps should be. Users who did not migrate to `v0.4.2` or who do not have a custom `setup.scss` are guaranteed no breaking changes.
+### Theme
 
-As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
-
-### Migrating to `v0.5.0`
-
-**Migration**: users with a custom `setup.scss` cannot rely on variables or functions defined in `color_scheme`. This reverts to the behaviour in `v0.4.1`. Users should instead move those variables or functions to the `color_scheme` files themselves.
-
-For more, refer to the [migration guide](https://just-the-docs.com/MIGRATION/).
-
-### Using Release `v0.5.0`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.5.0` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.5.0
-```
-
-To use this version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.5.0"
-```
-
-To use and pin a previous version of the theme, replace the `0.5.0` with the desired release tag.
-
-### Bugfixes
-
-- **Reverted (breaking)**: "Fix import order for `setup.scss` (#1184)" by [@mattxwang] in [#1209]
-- Fixed: color contrast issues with `::selection` (reverting to browser defaults) [@mattxwang] in [#1208]
-- Fixed: mermaid `v10`, bundle all mermaid code in component by [@mattxwang] in [#1190]
-- Removed: unused images (`just-the-docs.png`, `search.svg`) by [@mattxwang] in [#1107]
-- Removed: `CODE_OF_CONDUCT`, `docker-compose`, and `Dockerfile` files from site by [@mattxwang] in [#1187]
-
-**Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.2...v0.5.0](https://github.com/just-the-docs/just-the-docs/compare/v0.4.2...v0.5.0)
-
-[#1107]: https://github.com/just-the-docs/just-the-docs/pull/1107
-[#1187]: https://github.com/just-the-docs/just-the-docs/pull/1187
-[#1190]: https://github.com/just-the-docs/just-the-docs/pull/1190
-[#1208]: https://github.com/just-the-docs/just-the-docs/pull/1208
-[#1209]: https://github.com/just-the-docs/just-the-docs/pull/1209
-
-## Release v0.4.2
-
-Hello! We're back again with another small release. Like `v0.4.1`, this release is a [semver patch](https://semver.org/): it only includes bugfixes, and is fully backwards-compatible.
-
-The big highlight of this theme is fixing our light scheme code highlighting contrast issues; this was one of our most-requested features! This change is fully backwards-compatible; users can [opt-in to our old highlighting theme](https://just-the-docs.com/docs/customization/#deprecated-legacy_light) by using `legacy_light` instead of `light`.
-
-As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
-
-### Using Release `v0.4.2`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.4.2` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.4.2
-```
-
-To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.4.2"
-```
-
-To use and pin a previous version of the theme, replace the `0.4.2` with the desired release tag.
-
-### Bugfixes
-
-- Fixed: light scheme code highlighting contrast issues; updated to use Atom's One Light colors, consolidate theme variables by [@mattxwang] in [#1166]
-- Fixed: duplicate import of `color_schemes` by [@mattxwang] in [#1173]
-- Fixed: import order for `setup.scss` by [@mattxwang] in [#1184]
-- Removed: unused dark syntax themes by [@mattxwang] in [#1192]
+- Fixed: light scheme code highlighting contrast issues; updated to use Atom's One Light colors, consolidate theme variables by [@mattxwang](https://github.com/mattxwang) in [#1166](https://github.com/just-the-docs/just-the-docs/pull/1166)
+- Fixed: duplicate import of `color_schemes` by [@mattxwang](https://github.com/mattxwang) in [#1173](https://github.com/just-the-docs/just-the-docs/pull/1173)
+- Fixed: import order for `setup.scss` by [@mattxwang](https://github.com/mattxwang) in [#1184](https://github.com/just-the-docs/just-the-docs/pull/1184)
+- Removed: unused dark syntax themes by [@mattxwang](https://github.com/mattxwang) in [#1192](https://github.com/just-the-docs/just-the-docs/pull/1192)
 
 ### Documentation
 
-- Added: docs for using mermaid with AsciiDoc by [@flyx] in [#1182]
+- Added: docs for using mermaid with AsciiDoc by [@flyx](https://github.com/flyx) in [#1182](https://github.com/just-the-docs/just-the-docs/pull/1182)
 
-**Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.1...v0.4.2](https://github.com/just-the-docs/just-the-docs/compare/v0.4.1...v0.4.2)
+## v0.4.1 - 2023-02-23
 
-[#1166]: https://github.com/just-the-docs/just-the-docs/pull/1166
-[#1173]: https://github.com/just-the-docs/just-the-docs/pull/1173
-[#1182]: https://github.com/just-the-docs/just-the-docs/pull/1182
-[#1184]: https://github.com/just-the-docs/just-the-docs/pull/1184
-[#1192]: https://github.com/just-the-docs/just-the-docs/pull/1192
+### Theme
 
-## Release v0.4.1
-
-Hello! We hope you've been enjoying the new `v0.4.0`; we appreciate all the feedback we've gotten already! As promised, future releases will be small with simple steps to upgrade. This is one of them! `v0.4.1` is a [semver patch](https://semver.org/): it only includes bugfixes, and is fully backwards-compatible.
-
-As always, we'd love your feedback. [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) for bug reports, feature requests, and any other feedback. Thanks for continuing to use Just the Docs!
-
-### Using Release `v0.4.1`
-
-Users who have not pinned the theme version will be **automatically upgraded to `v0.4.1` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.4.1
-```
-
-To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.4.1"
-```
-
-To use and pin a previous version of the theme, replace the `0.4.1` with the desired release tag.
-
-### Bugfixes
-
-- Fixed: allow later versions of `bundler` by [@mattxwang] in [#1165]
-- Fixed: AsciiDoc code block styling by [@flyx] in [#1168]
-- Fixed: main content negative margin for viewports in `[$md, $nav-width + $content-width]` by [@Dima-369] in [#1177]
-- Removed: unused `OneDarkJekyll` files by [@mattxwang] in [#1167]
+- Fixed: allow later versions of `bundler` by [@mattxwang](https://github.com/mattxwang) in [#1165](https://github.com/just-the-docs/just-the-docs/pull/1165)
+- Fixed: AsciiDoc code block styling by [@flyx](https://github.com/flyx) in [#1168](https://github.com/just-the-docs/just-the-docs/pull/1168)
+- Fixed: main content negative margin for viewports in `[$md, $nav-width + $content-width]` by [@Dima-369](https://github.com/Dima-369) in [#1177](https://github.com/just-the-docs/just-the-docs/pull/1177)
+- Removed: unused `OneDarkJekyll` files by [@mattxwang](https://github.com/mattxwang) in [#1167](https://github.com/just-the-docs/just-the-docs/pull/1167)
 
 ### Documentation
 
-- Fixed: re-add `jekyll-github-metadata` to docs site by [@mattxwang] in [#1108]
-
-### New Contributors
-
-- [@flyx] made their first contribution in [#1168]
-- [@Dima-369] made their first contribution in [#1177]
-
-[#1108]: https://github.com/just-the-docs/just-the-docs/pull/1108
-[#1165]: https://github.com/just-the-docs/just-the-docs/pull/1165
-[#1167]: https://github.com/just-the-docs/just-the-docs/pull/1167
-[#1168]: https://github.com/just-the-docs/just-the-docs/pull/1168
-[#1177]: https://github.com/just-the-docs/just-the-docs/pull/1177
-
-[@flyx]: https://github.com/flyx
-[@Dima-369]: https://github.com/Dima-369
+- Fixed: re-add `jekyll-github-metadata` to docs site by [@mattxwang](https://github.com/mattxwang) in [#1108](https://github.com/just-the-docs/just-the-docs/pull/1108)
 
 **Full Changelog**: [https://github.com/just-the-docs/just-the-docs/compare/v0.4.0...v0.4.1](https://github.com/just-the-docs/just-the-docs/compare/v0.4.0...v0.4.1)
 
-## Release v0.4.0
+## v0.4.0 - 2023-02-05
 
-We're so excited to release Just the Docs `v0.4.0`. This release has been almost a year in the making - after our new maintenance team has taken over the project, we've added two years of backlogged features and bugfixes to modernize the theme. This CHANGELOG will summarize some of the key changes, discuss migrations strategies, and outline broad future plans for this theme.
+{: .note }
+The project underwent a large maintenance shift in 2022; `0.4.0` is the first release from the new team.
 
-### Brief Overview - Highlighted Changes
+{: .note }
+This PR combines the last 5 release candidates (from `0.4.0.rc1` to `0.4.0.rc5`).
 
-`v0.4.0` contains many new features and bugfixes. We enumerate all of them in further sections in this changelog; however, we'd like to call out some of the most-requested changes:
-
-- better support for dark theme: dark highlighting, search input color
-- [callouts](https://just-the-docs.com/docs/ui-components/callouts/), a new design component to highlight content
-- [configuring mermaid.js](https://just-the-docs.com/docs/ui-components/code/#mermaid-diagram-code-blocks), a markdown-native diagram visualization library
-- [copy code button](https://just-the-docs.com/docs/ui-components/code/#copy-button) for code snippets
-- external navigation links
-- major improvements to nav generation efficiency and robustness
-- minor improvements to built-in accessibility (SVG icons, nav titles, skip to main content)
-- [modularized site components](https://just-the-docs.com/docs/customization/#custom-layouts-and-includes) (advanced feature)
-- [new custom includes](https://just-the-docs.com/docs/customization/#override-includes): table of contents heading, navigation panel footer, search placeholder, lunr search indices
-- bugfixes involving WEBrick and Ruby 3, Liquid processing in CSS comments, nested task lists, relative URLs, scroll navigation, corrupted search data from rake, breadcrumbs, and more!
-- more documentation for [custom includes](https://just-the-docs.com/docs/customization/#override-includes), this changelog, and the [migration guide](https://just-the-docs.com/MIGRATION/)
-
-*After usage instructions and the roadmap, we enumerate all changes from `v0.3.3`.*
-
-### Using Release `v0.4.0`
-
-Unlike pre-releases, `v0.4.0` is a new semver minor release for the theme. That means that users who have not pinned the theme version will be **automatically upgraded to `v0.4.0` the next time they build their site**.
-
-To use this release explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.4.0
-```
-
-To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.4.0"
-```
-
-If you would prefer to not upgrade, you can enforce that explicitly:
-
-1. pin your gem version in your `Gemfile`, like so
-```ruby
-gem "just-the-docs", "0.3.3"
-```
-2. freeze the `remote_theme`, like so
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.3.3
-```
-
-### Migration Guide and Strategies
-
-We've developed a new [migration guide](https://just-the-docs.com/MIGRATION/) for users to migrate from version `v0.3.3` to `v0.4.0`. It outlines major changes in project maintenance (e.g. new repository link, team) as well as breaking changes that may break your site (and potential solutions). We suggest that all users refer to the guide before manually upgrading their site.
-
-**For the vast majority of users, we do not anticipate that this will be a breaking change.** The major touch points are surrounding new includes, navigation (ordering, pages, and collections), the favicon, and a shift to relative URLs. However, users who heavily customize the theme (primarily by overriding includes) will likely have to make minor changes.
-
-Given the length of features added in this release, users may want to incrementally upgrade through the pre-releases. To follow this approach, read this changelog from `v0.4.0.rc1` to `v0.4.0.rc5`; this breaks down the release into small chunks, each of which should be easier to upgrade. `v0.4.0.rc5` is identical to this release.
-
-For support with migrating to `v0.4.0`, [open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) and let us know!
-
-### Roadmap (What's Next?)
-
-Moving forward, we plan to release more frequently with smaller, bite-sized changes. This should make it easier for users to upgrade in the future!
-
-Broadly, many features are still on the radar. We anticipate the rest of `v0.4.x` to be bugfixes surrounding this new release.
-
-For version `v0.5`, our roadmap includes:
-
-- a theme toggle (light/dark mode), with automatic theme switching based on browser preferences
-- better GDPR compliance for analytics
-- multi-level/recursive navigation (unlimited hierarchy of child pages)
-
-In future versions, we also plan on:
-
-- adding better dark theme defaults
-- adding better internationalization support
-- exploring offline PDF generation
-- improving accessibility within the theme
-- improving search functionality
-- refactoring and improving the robustness of our codebase
-
-Have ideas for what's next, or want to get involved? [Open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) and let us know! We're looking for more contributors and maintainers to help us develop the theme.
-
-### New Features
-
-- Added: Combination by [@pdmosses] in [#578]
-  - Added: dark highlighting in [#463]
-  - Added: pages and collections in [#448]
-  - Added: callouts in [#466]
-  - Fixed: breadcrumb behaviour … by [@AdityaTiwari2102] in [#477]
-  - Fixed: prevent rake command corrupting search data in [#495] (also listed below)
-  - Fixed: nested lists in [#496]
-  - Fixed: set color for search input in [#498] (also listed below)
+- Added: Combination by [@pdmosses](https://github.com/pdmosses) in [#578](https://github.com/just-the-docs/just-the-docs/pull/578)
+  - Added: dark highlighting in [#463](https://github.com/just-the-docs/just-the-docs/pull/463)
+  - Added: pages and collections in [#448](https://github.com/just-the-docs/just-the-docs/pull/448)
+  - Added: callouts in [#466](https://github.com/just-the-docs/just-the-docs/pull/466)
+  - Fixed: breadcrumb behaviour … by [@AdityaTiwari2102](https://github.com/AdityaTiwari2102) in [#477](https://github.com/just-the-docs/just-the-docs/pull/477)
+  - Fixed: prevent rake command corrupting search data in [#495](https://github.com/just-the-docs/just-the-docs/pull/495) (also listed below)
+  - Fixed: nested lists in [#496](https://github.com/just-the-docs/just-the-docs/pull/496)
+  - Fixed: set color for search input in [#498](https://github.com/just-the-docs/just-the-docs/pull/498) (also listed below)
   - Fixed: sites with no child pages (no PR)
-  - Fixed: TOC/breadcrumbs for multiple collections in [#494]
+  - Fixed: TOC/breadcrumbs for multiple collections in [#494](https://github.com/just-the-docs/just-the-docs/pull/494)
   - Added: collection configuration option `nav_fold` (no PR)
   - Fixed: indentation and color for folded collection navigation (no PR)
-  - Fixed: scroll navigation to show the link to the current page in [#639]
-  - Fixed: Replace all uses of `absolute_url` by `relative_url`, by [@svrooij] in [#544]
-- Added: custom favicon `_includes` by [@burner1024] in [#364]
-- Added: set color for search input by [@pdmosses] in [#498]
-- Added: search placeholder configuration by [@mattxwang] in [#613]
-- Added: 'child_nav_order' front matter to be able to sort navigation pages in reverse by [@jmertic] in [#726]
-- Added: `nav_footer_custom` include by [@nathanjessen] in [#474]
-- Added: style fixes for jekyll-asciidoc by [@alyssais] in [#829]
-- Added: mermaid.js support by [@nascosto] in [#857]
-- Added: support for external navigation links by [@SPGoding] in [#876]
-- Added: refactor `mermaid` config to use `mermaid_config.js` include, only require `mermaid.version` in `_config.yml` by [@mattxwang] in [#909]
-- Added: accessible titles to nested page nav toggle by [@JPrevost] in [#950]
-- Added: better title styling for AsciiDoc examples by [@alyssais] in [#944]
-- Added: docs for custom search placeholder by [@mattxwang] in [#939]
-- Added: provide ability to skip to main content by [@JPrevost] in [#949]
-- Added: styling for `<blockquote>` by [@mattxwang] in [#965]
-- Added: custom include for TOC heading by [@pdmosses] in [#980]
-- Added: experimental nav optimization for simple cases by [@pdmosses] in [#992]
-- Added: support multiple Google Analytics tracking IDs, document UA -> GA4 switch by [@MichelleBlanchette] in [#1029]
-- Added: copy code button to code snippets by [@simonebortolin] in [#945]
-- Added: restore simple configuration of `favicon.ico` via `site.static_files` by [@pdmosses] in [#1095]
-- Added: modularize site components by [@mattxwang] in [#1058]
-- Added: includes for custom `lunr` Liquid and JS code by [@diablodale] in [#1068]
-- Added: new `_sass/custom/setup.scss` for variable definition by [@mattxwang] in [#1135]
-- Added: configuration key to load a local version of mermaid by [@fabrik42] in [#1153]
-
-### Bugfixes
-
-- Fixed: prepend `site.collections_dir` if exists by [@alexsegura] in [#519]
-- Fixed: nested task lists (#517) by [@pdmosses] in [#855]
-- Fixed: suppress Liquid processing in CSS comments by [@pdmosses] in [#686]
-- Fixed: prevent rake command from corrupting search data by [@pdmosses] in [#495]
-- Fixed: anchor heading links should be visible on focus by [@jacobhq] in [#846]
-- Fixed: add `overflow-x: auto` to `figure.highlight` by [@iridazzle] in [#727]
-- Fixed: add `overflow-wrap: word-break` to `body` by [@iridazzle] in [#889]
-- Fixed: vertical alignment for consecutive labels by [@Eisverygoodletter] in [#893]
-- Fixed: allow links to wrap by [@pdmosses] in [#905]
-- Fixed: nav scroll feature and absolute/relative URLs by [@pdmosses] in [#898]
-- Fixed: exclude `vendor/` in Jekyll config by [@manuelhenke] in [#941]
-- Fixed: improve build time of navigation panel by [@pdmosses] in [#956]
-- Fixed: spacing issue when search is disabled by [@henryiii] in [#960]
-- Fixed: active grandchild link class by [@pdmosses] in [#962]
-- Fixed: HTML validation issues (W3C validator) by [@mattxwang] in [#964]
-- Fixed: link styling now uses `text-decoration` values by [@mattxwang] in [#967]
-- Fixed: cleaning up Jekyll excludes by [@pdmosses] in [#985]
-- Fixed: docs, narrow styling for code highlighting with line numbers by [@pdmosses] in [#974]
-- Fixed: default syntax highlighting in custom color schemes [@pdmosses] in [#986]
-- Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
-- Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
-- Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
-- Fixed: top-level active link styling by [@pdmosses] in [#1015]
-- Fixed: external links for sites with no pages by [@pdmosses] in [#1021]
-- Fixed: duplicate `title` if `jekyll-seo-tag` not in users's plugins by [@Tom-Brouwer] in [#1040]
-- Fixed: removes (duplicate) `favicon.html`, shifts content to `head_custom.html` by [@mattxwang] in [#1027]
-- Fixed: add `reversed`, deprecate `desc` for nav `child_nav_order` by [@jmertic] in [#1061]
-- Fixed: `child.child_nav_order` to `node.child_nav_order` by [@mattxwang] in [#1065]
-- Fixed: remove all uses of `/` as SASS division by [@mattxwang] in [#1074]
-    - note: this was originally merged as [#1074] with a bug; it was reverted in [#1076], and then reimplemented in [#1077]
-- Fixed: skip nav collection generation when site has no pages by [@pdmosses] in [#1092]
-- Fixed: standardize SCSS with `declaration-block-no-redundant-longhand-properties` by [@simonebortolin] in [#1102]
-- Fixed: incorrect `padding` property value pair in `labels.scss` by [@SConaway] in [#1104]
-- Fixed: various bugs with copy code button by [@simonebortolin] in [#1096]
-- Fixed: replace inline styling for `<svg>` icons by [@captn3m0] in [#1110]
-- Fixed: incorrect `padding` property value pair in `search.scss` by [@kevinlin1] in [#1123]
-- Fixed: minor spacing and comment nits by [@EricFromCanada] in [#1128]
-- Fixed: exclude images from being bundled with gem by [@m-r-mccormick] in [#1142]
-- Fixed: dark theme code block background, line number colors by [@m-r-mccormick] in [#1124]
-- Fixed: copy code button interaction with kramdown line numbers by [@mattxwang] in [#1143]
-
-### Maintenance
-
-- Added: VScode devcontainer by [@max06] in [#783]
-- Added: `webrick` to `Gemfile` by [@mattxwang] in [#799]
-- Added: 'This site is powered by Netlify.' to the footer by [@mattxwang] in [#797]
-- Updated: new repo path by [@pmarsceill] in [#775]
-- Updated: rename `master` -> `main` by [@pmarsceill] in [#776]
-- Updated: README by [@pmarsceill] in [#777]
-- Updated: Code of Conduct to Contributor Covenant v2.1 by [@mattxwang] in [#790]
-- Updated: CI files, Ruby & Node Versions by [@mattxwang] in [#820]
-- Updated: Stylelint to v14, extend SCSS plugins, remove primer-* configs, resolve issues by [@mattxwang] in [#821]
-- Deleted: unused script directory by [@mattxwang] in [#937]
-- Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang] in [#1071]
-
-### Documentation
-
-- Added: docs on how to break an `ol` by [@pdmosses] in [#856]
-- Added: docs for custom includes by [@nathanjessen] in [#806]
-- Added: document caveat about variable dependencies by [@waldyrious] in [#555]
-- Added: docs on how to use `custom_head` to add a custom favicon by [@UnclassedPenguin] in [#814]
-- Added: docs load mermaid.js by default by [@mattxwang] in [#935]
-- Added: warning about mandatory `_`-prefix for collections by [@max06] in [#1091]
-- Added:  migration guide by [@pdmosses] in [#1059]
-- Added: label new features introduced in `v0.4` by [@mattxwang] in [#1138]
-- Fixed: `ol` on `index.md` by [@pmarsceill] in [#778]
-- Fixed: image link in Markdown kitchen sink by [@JeffGuKang] in [#221]
-- Fixed: images in Markdown kitchen sink by [@dougaitken] in [#782]
-- Fixed: clearer label of link to Jekyll quickstart by [@waldyrious] in [#549]
-- Fixed: remove extra spaces in component docs by [@MichelleBlanchette] in [#554]
-- Fixed: double "your" typo in `index.md` by [@sehilyi] in [#499]
-- Fixed: "you" -> "your" typo in `index.md` by [@nathanjessen] in [#473]
-- Fixed: spacing in toc example by [@henryiii] in [#835]
-- Fixed: typo in `README` on `_config.yml` by [@ivanskodje] in [#891]
-- Fixed: missing code fence in navigation structure docs by [@mattxwang] in [#906]
-- Fixed: table of contents on search docs by [@robinpokorny] in [#940]
-- Fixed: broken docs link (custom footer) by [@olgarithms] in [#951]
-- Fixed: clarify version docs by [@pdmosses] in [#955]
-- Fixed: typo in changelog links [@koppor] in [#1000]
-- Fixed: two bugs in "Customization" (custom favicon, new annotation) by [@mattxwang] in [#1090]
-- Fixed: "View Typography Utilities" link by [@agabrys] in [#1130]
-- Fixed: broken relative page links by [@mattxwang] in [#1106]
-- Fixed: clarify steps to add custom `lunr` index code by [@diablodale] in [#1139]
-- Updated: homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
-- Updated: README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
-- Updated: `README` demo video by [@codewithfan] in [#1097]
-
-### New Contributors
-
-- [@AdityaTiwari2102] made their first contribution in [#477]
-- [@svrooij] made their first contribution in [#544]
-- [@alexsegura] made their first contribution in [#519]
-- [@burner1024] made their first contribution in [#364]
-- [@JeffGuKang] made their first contribution in [#221]
-- [@dougaitken] made their first contribution in [#782]
-- [@max06] made their first contribution in [#783]
-- [@sehilyi] made their first contribution in [#499]
-- [@nathanjessen] made their first contribution in [#473]
-- [@waldyrious] made their first contribution in [#549]
-- [@MichelleBlanchette] made their first contribution in [#554]
-- [@henryiii] made their first contribution in [#835]
-- [@jmertic] made their first contribution in [#726]
-- [@jacobhq] made their first contribution in [#846]
-- [@UnclassedPenguin] made their first contribution in [#814]
-- [@alyssais] made their first contribution in [#829]
-- [@nascosto] made their first contribution in [#857]
-- [@SPGoding] made their first contribution in [#876]
-- [@iridazzle] made their first contribution in [#727]
-- [@ivanskodje] made their first contribution in [#891]
-- [@Eisverygoodletter] made their first contribution in [#893]
-- [@robinpokorny] made their first contribution in [#940]
-- [@olgarithms] made their first contribution in [#951]
-- [@manuelhenke] made their first contribution in [#941]
-- [@JPrevost] made their first contribution in [#950]
-- [@koppor] made their first contribution in [#1000]
-- [@deseo] made their first contribution in [#1010]
-- [@Tom-Brouwer] made their first contribution in [#1040]
-- [@simonebortolin] made their first contribution in [#945]
-- [@SConaway] made their first contribution in [#1104]
-- [@captn3m0] made their first contribution in [#1110]
-- [@kevinlin1] made their first contribution in [#1123]
-- [@codewithfan] made their first contribution in [#1097]
-- [@agabrys] made their first contribution in [#1130]
-- [@diablodale] made their first contribution in [#1068]
-- [@m-r-mccormick] made their first contribution in [#1142]
-- [@fabrik42] made their first contribution in [#1153]
-
-## Pre-release v0.4.0.rc5
-
-Hi everyone, we're so excited to finally release `v0.4.0`! For posterity's sake, we're going to release `v0.4.0.rc5` and then immediately re-release it as `v0.4.0`; this should make it more clear what changes were introduced in the lead up to the minor release.
-
-This RC does not introduce any major user-facing features. It adds more customizability for custom SCSS variables (fixing a bug with callout introduction order), `lunr` indexing, and loading `mermaid` locally. In addition, it fixes bugs introduced in `.rc4`: incorrect CSS, inconsistencies with code block backgrounds in dark theme, and the copy code button. It also adds a migration guide for users coming from `v0.3.3`.
-
-### Trying out pre-release `v0.4.0.rc5`
-
-Similar to the prior release, `v0.4.0.rc5` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` following immediately after. While we don't anticipate many users using this RC, it is still possible to opt-in.
-
-To use this RC explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.4.0.rc5
-```
-
-To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.4.0.rc5"
-```
-
-By default, **users will not be upgraded to `0.4.0.rc5`**. To enforce that explicitly, either:
-
-1. pin your gem version in your `Gemfile`, like so
-```ruby
-gem "just-the-docs", "0.3.3"
-```
-2. freeze the `remote_theme`, like so
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.3.3
-```
-
-### New Features
-
-- Added: includes for custom `lunr` Liquid and JS code by [@diablodale] in [#1068]
-- Added: new `_sass/custom/setup.scss` for variable definition by [@mattxwang] in [#1135]
-- Added: configuration key to load a local version of mermaid by [@fabrik42] in [#1153]
-
-### Bugfixes and Maintenance
-
-- Fixed: incorrect `padding` property value pair in `search.scss` by [@kevinlin1] in [#1123]
-- Fixed: minor spacing and comment nits by [@EricFromCanada] in [#1128]
-- Fixed: exclude images from being bundled with gem by [@m-r-mccormick] in [#1142]
-- Fixed: dark theme code block background, line number colors by [@m-r-mccormick] in [#1124]
-- Fixed: copy code button interaction with kramdown line numbers by [@mattxwang] in [#1143]
-
-### Docs
-
-- Docs: add a migration guide by [@pdmosses] in [#1059]
-- Docs: update `README` demo video by [@codewithfan] in [#1097]
-- Docs: update "View Typography Utilities" link by [@agabrys] in [#1130]
-- Docs: fix broken relative page links by [@mattxwang] in [#1106]
-- Docs: clarify steps to add custom `lunr` index code by [@diablodale] in [#1139]
-- Docs: label new features introduced in `v0.4` by [@mattxwang] in [#1138]
-
-### New Contributors
-
-- [@kevinlin1] made their first contribution in [#1123]
-- [@codewithfan] made their first contribution in [#1097]
-- [@agabrys] made their first contribution in [#1130]
-- [@diablodale] made their first contribution in [#1068]
-- [@m-r-mccormick] made their first contribution in [#1142]
-- [@fabrik42] made their first contribution in [#1153]
-
-[#1059]: https://github.com/just-the-docs/just-the-docs/pull/1059
-[#1068]: https://github.com/just-the-docs/just-the-docs/pull/1068
-[#1097]: https://github.com/just-the-docs/just-the-docs/pull/1097
-[#1106]: https://github.com/just-the-docs/just-the-docs/pull/1106
-[#1123]: https://github.com/just-the-docs/just-the-docs/pull/1123
-[#1124]: https://github.com/just-the-docs/just-the-docs/pull/1124
-[#1128]: https://github.com/just-the-docs/just-the-docs/pull/1128
-[#1130]: https://github.com/just-the-docs/just-the-docs/pull/1130
-[#1135]: https://github.com/just-the-docs/just-the-docs/pull/1135
-[#1138]: https://github.com/just-the-docs/just-the-docs/pull/1138
-[#1139]: https://github.com/just-the-docs/just-the-docs/pull/1139
-[#1142]: https://github.com/just-the-docs/just-the-docs/pull/1142
-[#1143]: https://github.com/just-the-docs/just-the-docs/pull/1143
-[#1153]: https://github.com/just-the-docs/just-the-docs/pull/1153
-
-[@agabrys]: https://github.com/agabrys
-[@codewithfan]: https://github.com/codewithfan
-[@diablodale]: https://github.com/diablodale
-[@fabrik42]: https://github.com/fabrik42
-[@kevinlin1]: https://github.com/kevinlin1
-[@EricFromCanada]: https://github.com/EricFromCanada
-[@m-r-mccormick]: https://github.com/m-r-mccormick
-
-## Pre-release v0.4.0.rc4
-
-Happy new year! We're celebrating with another pre-release, with features that should help theme users better adapt to changes moving forward. **We aim to re-release this as `v0.4.0`, with only few changes**.
-
-Notable new additions include:
-
-- modular site components, which split up the site into smaller reusable components; advanced theme users can then remix layouts quickly without duplication
-- a "copy code" button to code blocks
-- fixing bugs in generated TOCs and navigation from previous prereleases
-- various cleanups of CSS and HTML markup
-
-The roadmap to `v0.4.0` is small. We are only looking to:
-
-- finish a migration guide, so users can easily upgrade from `v0.3.3` to `v0.4.0`
-- fix one last bug relating to callouts and custom colors
-- fix any new bugs introduced by this pre-release
-
-Have any questions, thoughts, or concerns? We'd love to hear from you! Please [open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) and let us know!
-
-### Trying out pre-release `v0.4.0.rc4`
-
-Similar to the prior release, `v0.4.0.rc4` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc4`.
-
-To use this RC explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.4.0.rc4
-```
-
-To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.4.0.rc4"
-```
-
-By default, **users will not be upgraded to `0.4.0.rc4`**. To enforce that explicitly, either:
-
-1. pin your gem version in your `Gemfile`, like so
-```ruby
-gem "just-the-docs", "0.3.3"
-```
-2. freeze the `remote_theme`, like so
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.3.3
-```
-
-### New Features
-
-- Added: support multiple Google Analytics tracking IDs, document UA -> GA4 switch by [@MichelleBlanchette] in [#1029]
-- Added: copy code button to code snippets by [@simonebortolin] in [#945]
-- Added: restore simple configuration of `favicon.ico` via `site.static_files` by [@pdmosses] in [#1095]
-- Added: modularize site components by [@mattxwang] in [#1058]
-
-### Bugfixes and Maintenance
-
-- Fixed: incorrect disambiguation in generated TOCs by [@pdmosses] in [#999]
-- Fixed: duplicated external links in collections by [@pdmosses] in [#1001]
-- Fixed: import order of `custom.scss`; puts at end by [@deseo] in [#1010]
-- Fixed: top-level active link styling by [@pdmosses] in [#1015]
-- Fixed: external links for sites with no pages by [@pdmosses] in [#1021]
-- Fixed: duplicate `title` if `jekyll-seo-tag` not in users's plugins by [@Tom-Brouwer] in [#1040]
-- Fixed: removes (duplicate) `favicon.html`, shifts content to `head_custom.html` by [@mattxwang] in [#1027]
-- Fixed: add `reversed`, deprecate `desc` for nav `child_nav_order` by [@jmertic] in [#1061]
-- Fixed: `child.child_nav_order` to `node.child_nav_order` by [@mattxwang] in [#1065]
-- Fixed: remove all uses of `/` as SASS division by [@mattxwang] in [#1074]
-    - note: this was originally merged as [#1074] with a bug; it was reverted in [#1076], and then reimplemented in [#1077]
-- Fixed: skip nav collection generation when site has no pages by [@pdmosses] in [#1092]
-- Fixed: standardize SCSS with `declaration-block-no-redundant-longhand-properties` by [@simonebortolin] in [#1102]
-- Fixed: incorrect `padding` property value pair in `labels.scss` by [@SConaway] in [#1104]
-- Fixed: various bugs with copy code button by [@simonebortolin] in [#1096]
-- Fixed: replace inline styling for `<svg>` icons by [@captn3m0] in [#1110]
-- Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang] in [#1071]
-
-### Docs
-
-- Docs: fix typo in changelog links [@koppor] in [#1000]
-- Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1018]
-- Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses] in [#1019]
-- Docs: fix two bugs in "Customization" (custom favicon, new annotation) by [@mattxwang] in [#1090]
-- Docs: Add warning about mandatory `_`-prefix for collections by [@max06] in [#1091]
-- Docs: remove Google Analytics on main site by [@mattxwang] in [#1113]
-
-### New Contributors
-
-- [@koppor] made their first contribution in [#1000]
-- [@deseo] made their first contribution in [#1010]
-- [@Tom-Brouwer] made their first contribution in [#1040]
-- [@simonebortolin] made their first contribution in [#945]
-- [@SConaway] made their first contribution in [#1104]
-- [@captn3m0] made their first contribution in [#1110]
-
-**Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.4.0.rc3...v0.4.0.rc4
-
-[#945]: https://github.com/just-the-docs/just-the-docs/pull/945
-[#999]: https://github.com/just-the-docs/just-the-docs/pull/999
-[#1000]: https://github.com/just-the-docs/just-the-docs/pull/1000
-[#1001]: https://github.com/just-the-docs/just-the-docs/pull/1001
-[#1010]: https://github.com/just-the-docs/just-the-docs/pull/1010
-[#1015]: https://github.com/just-the-docs/just-the-docs/pull/1015
-[#1018]: https://github.com/just-the-docs/just-the-docs/pull/1018
-[#1019]: https://github.com/just-the-docs/just-the-docs/pull/1019
-[#1021]: https://github.com/just-the-docs/just-the-docs/pull/1021
-[#1027]: https://github.com/just-the-docs/just-the-docs/pull/1027
-[#1029]: https://github.com/just-the-docs/just-the-docs/pull/1029
-[#1040]: https://github.com/just-the-docs/just-the-docs/pull/1040
-[#1058]: https://github.com/just-the-docs/just-the-docs/pull/1058
-[#1061]: https://github.com/just-the-docs/just-the-docs/pull/1061
-[#1065]: https://github.com/just-the-docs/just-the-docs/pull/1065
-[#1071]: https://github.com/just-the-docs/just-the-docs/pull/1071
-[#1074]: https://github.com/just-the-docs/just-the-docs/pull/1074
-[#1076]: https://github.com/just-the-docs/just-the-docs/pull/1076
-[#1077]: https://github.com/just-the-docs/just-the-docs/pull/1077
-[#1090]: https://github.com/just-the-docs/just-the-docs/pull/1090
-[#1091]: https://github.com/just-the-docs/just-the-docs/pull/1091
-[#1092]: https://github.com/just-the-docs/just-the-docs/pull/1092
-[#1095]: https://github.com/just-the-docs/just-the-docs/pull/1095
-[#1096]: https://github.com/just-the-docs/just-the-docs/pull/1096
-[#1102]: https://github.com/just-the-docs/just-the-docs/pull/1102
-[#1104]: https://github.com/just-the-docs/just-the-docs/pull/1104
-[#1110]: https://github.com/just-the-docs/just-the-docs/pull/1110
-[#1113]: https://github.com/just-the-docs/just-the-docs/pull/1113
-
-[@captn3m0]: https://github.com/captn3m0
-[@deseo]: https://github.com/deseo
-[@koppor]: https://github.com/koppor
-[@MichelleBlanchette]: https://github.com/MichelleBlanchette
-[@simonebortolin]: https://github.com/simonebortolin
-[@SConaway]: https://github.com/SConaway
-[@Tom-Brouwer]: https://github.com/Tom-Brouwer
-
-## Pre-release v0.4.0.rc3
-
-Hi there! This is (actually) hopefully the last prerelease before `v0.4.0`; in particular, if we find that this prerelease is stable, we'll re-release it as `v0.4.0`.
-
-In general, this is a more mature pre-release; there are few new features. However, we'll highlight [@pdmosses]'s work in [#992] to better optimize nav generation for large sites (ex 100+ pages). We don't expect this to affect most users; however, **it is technically a breaking change**, and we suggest testing your site before upgrading to this prerelease.
-
-We want your feedback! Please [open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) and let us know!
-
-As soon as we get stable test results from major downstream users, we'll push out a `v0.4.0` ASAP - closing out almost 2 years of backlogged work!
-
-### Trying out pre-release `v0.4.0.rc3`
-
-Similar to the prior release, `v0.4.0.rc3` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc3`.
-
-To use this RC explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.4.0.rc3
-```
-
-To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.4.0.rc3"
-```
-
-By default, **users will not be upgraded to `0.4.0.rc3`**. To enforce that explicitly, either:
-
-1. pin your gem version in your `Gemfile`, like so
-```ruby
-gem "just-the-docs", "0.3.3"
-```
-2. freeze the `remote_theme`, like so
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.3.3
-```
-
-### Features
-
-Broadly, this prerelease is feature-light!
-
-- Added: styling for `<blockquote>` by [@mattxwang] in [#965]
-- Added: custom include for TOC heading by [@pdmosses] in [#980]
-
-### Bugfixes and Experimental Features
-
-*Note*: experimental nav optimization may be unstable. Please give us feedback!
-
-- Added: experimental nav optimization for simple cases by [@pdmosses] in [#992]
-- Fixed: spacing issue when search is disabled by [@henryiii] in [#960]
-- Fixed: active grandchild link class by [@pdmosses] in [#962]
-- Fixed: HTML validation issues (W3C validator) by [@mattxwang] in [#964]
-- Fixed: link styling now uses `text-decoration` values by [@mattxwang] in [#967]
-- Fixed: cleaning up Jekyll excludes by [@pdmosses] in [#985]
-- Fixed: docs, narrow styling for code highlighting with line numbers by [@pdmosses] in [#974]
-- Fixed: default syntax highlighting in custom color schemes [@pdmosses] in [#986]
-
-[#965]: https://github.com/just-the-docs/just-the-docs/pull/965
-[#960]: https://github.com/just-the-docs/just-the-docs/pull/960
-[#962]: https://github.com/just-the-docs/just-the-docs/pull/962
-[#964]: https://github.com/just-the-docs/just-the-docs/pull/964
-[#967]: https://github.com/just-the-docs/just-the-docs/pull/967
-[#974]: https://github.com/just-the-docs/just-the-docs/pull/974
-[#980]: https://github.com/just-the-docs/just-the-docs/pull/980
-[#985]: https://github.com/just-the-docs/just-the-docs/pull/985
-[#986]: https://github.com/just-the-docs/just-the-docs/pull/986
-[#992]: https://github.com/just-the-docs/just-the-docs/pull/992
-
-[@henryiii]: https://github.com/henryiii
-
-**Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.4.0.rc2...v0.4.0.rc3
-
-## Pre-release v0.4.0.rc2
-
-{: .warning }
-This website includes docs for some new features that are not available in `v0.4.0.rc1` and `v0.3.3`!
-
-Hey there! This is likely the last pre-release before releasing `v0.4.0`, which we plan on doing soon (i.e. before the end of the month) - very exciting! Some new additions to highlight:
-
-- significant improvement on build time of navigation panel by [@pdmosses]
-  - this is big: for a community member with over 300 pages, we shortened the build time from 3 minutes to 30 seconds!
-- improved accessibility features led by [@JPrevost]
-- more docs!
-
-The intention of this release candidate is to gather even more feedback on a potential `v0.4.0`. As it stands, we have not encountered any breaking changes with early adopters of `v0.4.0.rc1`. If you encounter any - for either of our pre-releases - please let us know!
-
-### Trying out pre-release `v0.4.0.rc2`
-
-Similar to the prior release, `v0.4.0.rc2` is a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc2`.
-
-To use this RC explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.4.0.rc2
-```
-
-To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.4.0.rc2"
-```
-
-By default, **users will not be upgraded to `0.4.0.rc2`**. To enforce that explicitly, either:
-
-1. pin your gem version in your `Gemfile`, like so
-```ruby
-gem "just-the-docs", "0.3.3"
-```
-2. freeze the `remote_theme`, like so
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.3.3
-```
-
-### Features
-
-- Added: accessible titles to nested page nav toggle by [@JPrevost] in [#950]
-- Added: better title styling for AsciiDoc examples by [@alyssais] in [#944]
-- Added: docs for custom search placeholder by [@mattxwang] in [#939]
-- Added: provide ability to skip to main content by [@JPrevost] in [#949]
-- Fixed: exclude `vendor/` in Jekyll config by [@manuelhenke] in [#941]
-- Fixed: improve build time of navigation panel by [@pdmosses] in [#956]
-
-[#950]: https://github.com/just-the-docs/just-the-docs/pull/950
-[#944]: https://github.com/just-the-docs/just-the-docs/pull/944
-[#939]: https://github.com/just-the-docs/just-the-docs/pull/939
-[#949]: https://github.com/just-the-docs/just-the-docs/pull/949
-[#941]: https://github.com/just-the-docs/just-the-docs/pull/941
-[#956]: https://github.com/just-the-docs/just-the-docs/pull/956
-
-[@alyssais]: https://github.com/alyssais
-
-### Documentation and Maintenance
-
-- Added: docs load mermaid.js by default by [@mattxwang] in [#935]
-- Fixed: table of contents on search docs by [@robinpokorny] in [#940]
-- Fixed: broken docs link (custom footer) by [@olgarithms] in [#951]
-- Fixed: clarify version docs by [@pdmosses] in [#955]
-- Deleted: unused script directory by [@mattxwang] in [#937]
-
-[#935]: https://github.com/just-the-docs/just-the-docs/pull/935
-[#940]: https://github.com/just-the-docs/just-the-docs/pull/940
-[#951]: https://github.com/just-the-docs/just-the-docs/pull/951
-[#955]: https://github.com/just-the-docs/just-the-docs/pull/955
-[#937]: https://github.com/just-the-docs/just-the-docs/pull/937
-
-### New Contributors
-
-* [@robinpokorny] made their first contribution in [#940]
-* [@olgarithms] made their first contribution in [#951]
-* [@manuelhenke] made their first contribution in [#941]
-* [@JPrevost] made their first contribution in [#950]
-
-[@robinpokorny]: https://github.com/robinpokorny
-[@olgarithms]: https://github.com/olgarithms
-[@manuelhenke]: https://github.com/manuelhenke
-[@JPrevost]: https://github.com/JPrevost
-
-## Pre-release v0.4.0.rc1
-
-### We're back!
-
-Hi all! The Just the Docs team is excited to have our first pre-release in over two years! It is jam-packed with features and bugfixes that have been requested by the community since 2020. They include:
-
-- The new callouts component
-- Allowing pages and collections to coexist on the navigation pane
-- New styling: dark syntax highlighting, support for jekyll-asciidoc, word-wrapping instead of overflow for various elements
-- More customization: external nav links, custom nav footers, favicon includes, search color and placeholder configuration, mermaid.js support, and nav sorting
-- Over 20 bugfixes! Big ones include fixing the `rake` command, using `relative_url`, and search input color
-- More documentation, especially on using custom includes
-- Updating core dependencies to stable Ruby versions
-- A WIP [template repository](https://github.com/just-the-docs/just-the-docs-template) that allows you to setup your own repository using Just the Docs and GitHub Pages with one click - give it a shot! More documentation, etc. is on the way!
-
-We want your feedback! Are these changes helpful? Are our docs easy to understand? Should new features like `mermaid` be opt-in or opt-out? Please [open an issue](https://github.com/just-the-docs/just-the-docs/issues) or [start a discussion](https://github.com/just-the-docs/just-the-docs/discussions) and let us know!
-
-### Trying out pre-release `v0.4.0.rc1`
-
-Due to the massive scope of these changes, we're making `v0.4.0.rc1` available as a **release candidate** for the theme (i.e., a pre-release) with release `v0.4.0` coming soon. We want your help in testing the changes! As of now, the gem on RubyGems and the repository are updated to `v0.4.0.rc1`.
-
-To use this RC explicitly as a remote theme:
-
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.4.0.rc1
-```
-
-To use this RC explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
-
-```ruby
-gem "just-the-docs", "0.4.0.rc1"
-```
-
-### Staying on `v0.3.3`
-
-If you're not ready to make the switch, that's alright! If your version of just-the-docs is pinned to `v0.3.3` (i.e. by a `Gemfile.lock` or in `remote_theme`, then there's nothing you need to do.
-
-If you have not pinned your theme version, you should either:
-
-1. pin your gem version in your `Gemfile`, like so
-```ruby
-gem "just-the-docs", "0.3.3"
-```
-2. freeze the `remote_theme`, like so
-```yml
-remote_theme: just-the-docs/just-the-docs@v0.3.3
-```
-
-{: .warning }
-Use of branches for closed PRs (e.g., [#466], [#578]) is now deprecated, as those branches have been (directly or indirectly) merged, and they may be deleted after the pre-release of `v0.4.0.rc1`.
-
-### Maintenance
-
-Internally, our maintainer team has expanded: [Patrick Marsceill][@pmarsceill], the original maintainer, has stepped down from an active role after almost 4 years! We're very thankful for the work that he's done to create and maintain one of the most popular Jekyll themes. Please join us in giving him thanks!
-
-The new core team currently consists of [@mattxwang], [@pdmosses], [@skullface], [@dougaitken], and [@max06]. Over the past six months, we've been triaging and merging in PRs, as well as contributing our own fixes. We'll continue to address open issues, merge in PRs from the community, and plan out the future of Just the Docs. If you'd like to contribute, now is a great time!
-
-[@mattxwang]: https://github.com/mattxwang
-[@pdmosses]: https://github.com/pdmosses
-[@skullface]: https://github.com/skullface
-[@dougaitken]: https://github.com/dougaitken
-[@max06]: https://github.com/max06
-
-### Roadmap
-
-In the short-term, we're committed to tidying up everything for a `v0.4.0` release. This involves fixing bugs reported from the community in this pre-release, as well as continually merging in minor PRs.
-
-We're also scoping out medium and long-term projects, and want to keep you in the loop. These include:
-
-- upgrading to Jekyll 4, and stopping support for Jekyll 3
-- versioned docs - issue [#728]
-- improved accessibility - issues [#566], [#870]
-- internationalization (i18n) - issue [#59]
-- recursive/multi-level navigation - PR [#462]
-- toggleable dark mode - issue [#234]
-
-as well as DX improvements like better regression tests, CI, and tooling. If you're interested in any of these, please join us [on GitHub](https://github.com/just-the-docs/just-the-docs) - any contribution (raising an issue, writing docs, or submitting a PR) is welcome!
-
-[#728]: https://github.com/just-the-docs/just-the-docs/issues/728
-[#566]: https://github.com/just-the-docs/just-the-docs/issues/566
-[#870]: https://github.com/just-the-docs/just-the-docs/issues/870
-[#59]: https://github.com/just-the-docs/just-the-docs/issues/59
-[#462]: https://github.com/just-the-docs/just-the-docs/pull/462
-[#234]: https://github.com/just-the-docs/just-the-docs/issues/234
-
-### Features
-
-* Added: Combination by [@pdmosses] in [#578]
-  - Added: dark highlighting in [#463]
-  - Added: pages and collections in [#448]
-  - Added: callouts in [#466]
-  - Fixed: breadcrumb behaviour … by [@AdityaTiwari2102] in [#477]
-  - Fixed: prevent rake command corrupting search data in [#495] (also listed below)
-  - Fixed: nested lists in [#496]
-  - Fixed: set color for search input in [#498] (also listed below)
+  - Fixed: scroll navigation to show the link to the current page in [#639](https://github.com/just-the-docs/just-the-docs/pull/639)
+  - Fixed: Replace all uses of `absolute_url` by `relative_url`, by [@svrooij](https://github.com/svrooij) in [#544](https://github.com/just-the-docs/just-the-docs/pull/544)
+- Added: custom favicon `_includes` by [@burner1024](https://github.com/burner1024) in [#364](https://github.com/just-the-docs/just-the-docs/pull/364)
+- Added: set color for search input by [@pdmosses](https://github.com/pdmosses) in [#498](https://github.com/just-the-docs/just-the-docs/pull/498)
+- Added: search placeholder configuration by [@mattxwang](https://github.com/mattxwang) in [#613](https://github.com/just-the-docs/just-the-docs/pull/613)
+- Added: 'child_nav_order' front matter to be able to sort navigation pages in reverse by [@jmertic](https://github.com/jmertic) in [#726](https://github.com/just-the-docs/just-the-docs/pull/726)
+- Added: `nav_footer_custom` include by [@nathanjessen](https://github.com/nathanjessen) in [#474](https://github.com/just-the-docs/just-the-docs/pull/474)
+- Added: style fixes for jekyll-asciidoc by [@alyssais](https://github.com/alyssais) in [#829](https://github.com/just-the-docs/just-the-docs/pull/829)
+- Added: mermaid.js support by [@nascosto](https://github.com/nascosto) in [#857](https://github.com/just-the-docs/just-the-docs/pull/857)
+- Added: support for external navigation links by [@SPGoding](https://github.com/SPGoding) in [#876](https://github.com/just-the-docs/just-the-docs/pull/876)
+- Added: refactor `mermaid` config to use `mermaid_config.js` include, only require `mermaid.version` in `_config.yml` by [@mattxwang](https://github.com/mattxwang) in [#909](https://github.com/just-the-docs/just-the-docs/pull/909)
+- Added: accessible titles to nested page nav toggle by [@JPrevost](https://github.com/JPrevost) in [#950](https://github.com/just-the-docs/just-the-docs/pull/950)
+- Added: better title styling for AsciiDoc examples by [@alyssais](https://github.com/alyssais) in [#944](https://github.com/just-the-docs/just-the-docs/pull/944)
+- Added: docs for custom search placeholder by [@mattxwang](https://github.com/mattxwang) in [#939](https://github.com/just-the-docs/just-the-docs/pull/939)
+- Added: provide ability to skip to main content by [@JPrevost](https://github.com/JPrevost) in [#949](https://github.com/just-the-docs/just-the-docs/pull/949)
+- Added: styling for `<blockquote>` by [@mattxwang](https://github.com/mattxwang) in [#965](https://github.com/just-the-docs/just-the-docs/pull/965)
+- Added: custom include for TOC heading by [@pdmosses](https://github.com/pdmosses) in [#980](https://github.com/just-the-docs/just-the-docs/pull/980)
+- Added: experimental nav optimization for simple cases by [@pdmosses](https://github.com/pdmosses) in [#992](https://github.com/just-the-docs/just-the-docs/pull/992)
+- Added: support multiple Google Analytics tracking IDs, document UA to GA4 switch by [@MichelleBlanchette](https://github.com/MichelleBlanchette) in [#1029](https://github.com/just-the-docs/just-the-docs/pull/1029)
+- Added: copy code button to code snippets by [@simonebortolin](https://github.com/simonebortolin) in [#945](https://github.com/just-the-docs/just-the-docs/pull/945)
+- Added: restore simple configuration of `favicon.ico` via `site.static_files` by [@pdmosses](https://github.com/pdmosses) in [#1095](https://github.com/just-the-docs/just-the-docs/pull/1095)
+- Added: modularize site components by [@mattxwang](https://github.com/mattxwang) in [#1058](https://github.com/just-the-docs/just-the-docs/pull/1058)
+- Added: includes for custom `lunr` Liquid and JS code by [@diablodale](https://github.com/diablodale) in [#1068](https://github.com/just-the-docs/just-the-docs/pull/1068)
+- Added: new `_sass/custom/setup.scss` for variable definition by [@mattxwang](https://github.com/mattxwang) in [#1135](https://github.com/just-the-docs/just-the-docs/pull/1135)
+- Added: configuration key to load a local version of mermaid by [@fabrik42](https://github.com/fabrik42) in [#1153](https://github.com/just-the-docs/just-the-docs/pull/1153)
+- Fixed: prepend `site.collections_dir` if exists by [@alexsegura](https://github.com/alexsegura) in [#519](https://github.com/just-the-docs/just-the-docs/pull/519)
+- Fixed: nested task lists (#517) by [@pdmosses](https://github.com/pdmosses) in [#855](https://github.com/just-the-docs/just-the-docs/pull/855)
+- Fixed: suppress Liquid processing in CSS comments by [@pdmosses](https://github.com/pdmosses) in [#686](https://github.com/just-the-docs/just-the-docs/pull/686)
+- Fixed: prevent rake command from corrupting search data by [@pdmosses](https://github.com/pdmosses) in [#495](https://github.com/just-the-docs/just-the-docs/pull/495)
+- Fixed: anchor heading links should be visible on focus by [@jacobhq](https://github.com/jacobhq) in [#846](https://github.com/just-the-docs/just-the-docs/pull/846)
+- Fixed: add `overflow-x: auto` to `figure.highlight` by [@iridazzle](https://github.com/iridazzle) in [#727](https://github.com/just-the-docs/just-the-docs/pull/727)
+- Fixed: add `overflow-wrap: word-break` to `body` by [@iridazzle](https://github.com/iridazzle) in [#889](https://github.com/just-the-docs/just-the-docs/pull/889)
+- Fixed: vertical alignment for consecutive labels by [@Eisverygoodletter](https://github.com/Eisverygoodletter) in [#893](https://github.com/just-the-docs/just-the-docs/pull/893)
+- Fixed: allow links to wrap by [@pdmosses](https://github.com/pdmosses) in [#905](https://github.com/just-the-docs/just-the-docs/pull/905)
+- Fixed: nav scroll feature and absolute/relative URLs by [@pdmosses](https://github.com/pdmosses) in [#898](https://github.com/just-the-docs/just-the-docs/pull/898)
+- Fixed: exclude `vendor/` in Jekyll config by [@manuelhenke](https://github.com/manuelhenke) in [#941](https://github.com/just-the-docs/just-the-docs/pull/941)
+- Fixed: improve build time of navigation panel by [@pdmosses](https://github.com/pdmosses) in [#956](https://github.com/just-the-docs/just-the-docs/pull/956)
+- Fixed: spacing issue when search is disabled by [@henryiii](https://github.com/henryiii) in [#960](https://github.com/just-the-docs/just-the-docs/pull/960)
+- Fixed: active grandchild link class by [@pdmosses](https://github.com/pdmosses) in [#962](https://github.com/just-the-docs/just-the-docs/pull/962)
+- Fixed: HTML validation issues (W3C validator) by [@mattxwang](https://github.com/mattxwang) in [#964](https://github.com/just-the-docs/just-the-docs/pull/964)
+- Fixed: link styling now uses `text-decoration` values by [@mattxwang](https://github.com/mattxwang) in [#967](https://github.com/just-the-docs/just-the-docs/pull/967)
+- Fixed: cleaning up Jekyll excludes by [@pdmosses](https://github.com/pdmosses) in [#985](https://github.com/just-the-docs/just-the-docs/pull/985)
+- Fixed: docs, narrow styling for code highlighting with line numbers by [@pdmosses](https://github.com/pdmosses) in [#974](https://github.com/just-the-docs/just-the-docs/pull/974)
+- Fixed: default syntax highlighting in custom color schemes [@pdmosses](https://github.com/pdmosses) in [#986](https://github.com/just-the-docs/just-the-docs/pull/986)
+- Fixed: incorrect disambiguation in generated TOCs by [@pdmosses](https://github.com/pdmosses) in [#999](https://github.com/just-the-docs/just-the-docs/pull/999)
+- Fixed: duplicated external links in collections by [@pdmosses](https://github.com/pdmosses) in [#1001](https://github.com/just-the-docs/just-the-docs/pull/1001)
+- Fixed: import order of `custom.scss`; puts at end by [@deseo](https://github.com/deseo) in [#1010](https://github.com/just-the-docs/just-the-docs/pull/1010)
+- Fixed: top-level active link styling by [@pdmosses](https://github.com/pdmosses) in [#1015](https://github.com/just-the-docs/just-the-docs/pull/1015)
+- Fixed: external links for sites with no pages by [@pdmosses](https://github.com/pdmosses) in [#1021](https://github.com/just-the-docs/just-the-docs/pull/1021)
+- Fixed: duplicate `title` if `jekyll-seo-tag` not in users's plugins by [@Tom-Brouwer](https://github.com/Tom-Brouwer) in [#1040](https://github.com/just-the-docs/just-the-docs/pull/1040)
+- Fixed: removes (duplicate) `favicon.html`, shifts content to `head_custom.html` by [@mattxwang](https://github.com/mattxwang) in [#1027](https://github.com/just-the-docs/just-the-docs/pull/1027)
+- Fixed: add `reversed`, deprecate `desc` for nav `child_nav_order` by [@jmertic](https://github.com/jmertic) in [#1061](https://github.com/just-the-docs/just-the-docs/pull/1061)
+- Fixed: `child.child_nav_order` to `node.child_nav_order` by [@mattxwang](https://github.com/mattxwang) in [#1065](https://github.com/just-the-docs/just-the-docs/pull/1065)
+- Fixed: remove all uses of `/` as SASS division by [@mattxwang](https://github.com/mattxwang) in [#1074](https://github.com/just-the-docs/just-the-docs/pull/1074)
+    - note: this was originally merged as [#1074](https://github.com/just-the-docs/just-the-docs/pull/1074) with a bug; it was reverted in [#1076](https://github.com/just-the-docs/just-the-docs/pull/1076), and then reimplemented in [#1077](https://github.com/just-the-docs/just-the-docs/pull/1077)
+- Fixed: skip nav collection generation when site has no pages by [@pdmosses](https://github.com/pdmosses) in [#1092](https://github.com/just-the-docs/just-the-docs/pull/1092)
+- Fixed: standardize SCSS with `declaration-block-no-redundant-longhand-properties` by [@simonebortolin](https://github.com/simonebortolin) in [#1102](https://github.com/just-the-docs/just-the-docs/pull/1102)
+- Fixed: incorrect `padding` property value pair in `labels.scss` by [@SConaway](https://github.com/SConaway) in [#1104](https://github.com/just-the-docs/just-the-docs/pull/1104)
+- Fixed: various bugs with copy code button by [@simonebortolin](https://github.com/simonebortolin) in [#1096](https://github.com/just-the-docs/just-the-docs/pull/1096)
+- Fixed: replace inline styling for `<svg>` icons by [@captn3m0](https://github.com/captn3m0) in [#1110](https://github.com/just-the-docs/just-the-docs/pull/1110)
+- Fixed: incorrect `padding` property value pair in `search.scss` by [@kevinlin1](https://github.com/kevinlin1) in [#1123](https://github.com/just-the-docs/just-the-docs/pull/1123)
+- Fixed: minor spacing and comment nits by [@EricFromCanada](https://github.com/EricFromCanada) in [#1128](https://github.com/just-the-docs/just-the-docs/pull/1128)
+- Fixed: exclude images from being bundled with gem by [@m-r-mccormick](https://github.com/m-r-mccormick) in [#1142](https://github.com/just-the-docs/just-the-docs/pull/1142)
+- Fixed: dark theme code block background, line number colors by [@m-r-mccormick](https://github.com/m-r-mccormick) in [#1124](https://github.com/just-the-docs/just-the-docs/pull/1124)
+- Fixed: copy code button interaction with kramdown line numbers by [@mattxwang](https://github.com/mattxwang) in [#1143](https://github.com/just-the-docs/just-the-docs/pull/1143)
+- Maintenance changes (developer-only)
+    - Added: VScode devcontainer by [@max06](https://github.com/max06) in [#783](https://github.com/just-the-docs/just-the-docs/pull/783)
+    - Added: `webrick` to `Gemfile` by [@mattxwang](https://github.com/mattxwang) in [#799](https://github.com/just-the-docs/just-the-docs/pull/799)
+    - Added: 'This site is powered by Netlify.' to the footer by [@mattxwang](https://github.com/mattxwang) in [#797](https://github.com/just-the-docs/just-the-docs/pull/797)
+    - Updated: new repo path by [@pmarsceill](https://github.com/pmarsceill) in [#775](https://github.com/just-the-docs/just-the-docs/pull/775)
+    - Updated: rename `master` to `main` by [@pmarsceill](https://github.com/pmarsceill) in [#776](https://github.com/just-the-docs/just-the-docs/pull/776)
+    - Updated: README by [@pmarsceill](https://github.com/pmarsceill) in [#777](https://github.com/just-the-docs/just-the-docs/pull/777)
+    - Updated: Code of Conduct to Contributor Covenant v2.1 by [@mattxwang](https://github.com/mattxwang) in [#790](https://github.com/just-the-docs/just-the-docs/pull/790)
+    - Updated: CI files, Ruby & Node Versions by [@mattxwang](https://github.com/mattxwang) in [#820](https://github.com/just-the-docs/just-the-docs/pull/820)
+    - Updated: Stylelint to v14, extend SCSS plugins, remove primer-* configs, resolve issues by [@mattxwang](https://github.com/mattxwang) in [#821](https://github.com/just-the-docs/just-the-docs/pull/821)
+    - Deleted: unused script directory by [@mattxwang](https://github.com/mattxwang) in [#937](https://github.com/just-the-docs/just-the-docs/pull/937)
+    - Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang](https://github.com/mattxwang) in [#1071](https://github.com/just-the-docs/just-the-docs/pull/1071)
+- Documentation changes
+    - Added: docs on how to break an `ol` by [@pdmosses](https://github.com/pdmosses) in [#856](https://github.com/just-the-docs/just-the-docs/pull/856)
+    - Added: docs for custom includes by [@nathanjessen](https://github.com/nathanjessen) in [#806](https://github.com/just-the-docs/just-the-docs/pull/806)
+    - Added: document caveat about variable dependencies by [@waldyrious](https://github.com/waldyrious) in [#555](https://github.com/just-the-docs/just-the-docs/pull/555)
+    - Added: docs on how to use `custom_head` to add a custom favicon by [@UnclassedPenguin](https://github.com/UnclassedPenguin) in [#814](https://github.com/just-the-docs/just-the-docs/pull/814)
+    - Added: docs load mermaid.js by default by [@mattxwang](https://github.com/mattxwang) in [#935](https://github.com/just-the-docs/just-the-docs/pull/935)
+    - Added: warning about mandatory `_`-prefix for collections by [@max06](https://github.com/max06) in [#1091](https://github.com/just-the-docs/just-the-docs/pull/1091)
+    - Added:  migration guide by [@pdmosses](https://github.com/pdmosses) in [#1059](https://github.com/just-the-docs/just-the-docs/pull/1059)
+    - Added: label new features introduced in `v0.4` by [@mattxwang](https://github.com/mattxwang) in [#1138](https://github.com/just-the-docs/just-the-docs/pull/1138)
+    - Fixed: `ol` on `index.md` by [@pmarsceill](https://github.com/pmarsceill) in [#778](https://github.com/just-the-docs/just-the-docs/pull/778)
+    - Fixed: image link in Markdown kitchen sink by [@JeffGuKang](https://github.com/JeffGuKang) in [#221](https://github.com/just-the-docs/just-the-docs/pull/221)
+    - Fixed: images in Markdown kitchen sink by [@dougaitken](https://github.com/dougaitken) in [#782](https://github.com/just-the-docs/just-the-docs/pull/782)
+    - Fixed: clearer label of link to Jekyll quickstart by [@waldyrious](https://github.com/waldyrious) in [#549](https://github.com/just-the-docs/just-the-docs/pull/549)
+    - Fixed: remove extra spaces in component docs by [@MichelleBlanchette](https://github.com/MichelleBlanchette) in [#554](https://github.com/just-the-docs/just-the-docs/pull/554)
+    - Fixed: double "your" typo in `index.md` by [@sehilyi](https://github.com/sehilyi) in [#499](https://github.com/just-the-docs/just-the-docs/pull/499)
+    - Fixed: "you" to "your" typo in `index.md` by [@nathanjessen](https://github.com/nathanjessen) in [#473](https://github.com/just-the-docs/just-the-docs/pull/473)
+    - Fixed: spacing in toc example by [@henryiii](https://github.com/henryiii) in [#835](https://github.com/just-the-docs/just-the-docs/pull/835)
+    - Fixed: typo in `README` on `_config.yml` by [@ivanskodje](https://github.com/ivanskodje) in [#891](https://github.com/just-the-docs/just-the-docs/pull/891)
+    - Fixed: missing code fence in navigation structure docs by [@mattxwang](https://github.com/mattxwang) in [#906](https://github.com/just-the-docs/just-the-docs/pull/906)
+    - Fixed: table of contents on search docs by [@robinpokorny](https://github.com/robinpokorny) in [#940](https://github.com/just-the-docs/just-the-docs/pull/940)
+    - Fixed: broken docs link (custom footer) by [@olgarithms](https://github.com/olgarithms) in [#951](https://github.com/just-the-docs/just-the-docs/pull/951)
+    - Fixed: clarify version docs by [@pdmosses](https://github.com/pdmosses) in [#955](https://github.com/just-the-docs/just-the-docs/pull/955)
+    - Fixed: typo in changelog links [@koppor](https://github.com/koppor) in [#1000](https://github.com/just-the-docs/just-the-docs/pull/1000)
+    - Fixed: two bugs in "Customization" (custom favicon, new annotation) by [@mattxwang](https://github.com/mattxwang) in [#1090](https://github.com/just-the-docs/just-the-docs/pull/1090)
+    - Fixed: "View Typography Utilities" link by [@agabrys](https://github.com/agabrys) in [#1130](https://github.com/just-the-docs/just-the-docs/pull/1130)
+    - Fixed: broken relative page links by [@mattxwang](https://github.com/mattxwang) in [#1106](https://github.com/just-the-docs/just-the-docs/pull/1106)
+    - Fixed: clarify steps to add custom `lunr` index code by [@diablodale](https://github.com/diablodale) in [#1139](https://github.com/just-the-docs/just-the-docs/pull/1139)
+    - Updated: homepage (focus: new features, conciseness, deduplication) by [@pdmosses](https://github.com/pdmosses) in [#1018](https://github.com/just-the-docs/just-the-docs/pull/1018)
+    - Updated: README (focus: new features, conciseness, deduplication) by [@pdmosses](https://github.com/pdmosses) in [#1019](https://github.com/just-the-docs/just-the-docs/pull/1019)
+    - Updated: `README` demo video by [@codewithfan](https://github.com/codewithfan) in [#1097](https://github.com/just-the-docs/just-the-docs/pull/1097)
+
+## v0.4.0.rc5
+
+- Added: includes for custom `lunr` Liquid and JS code by [@diablodale](https://github.com/diablodale) in [#1068](https://github.com/just-the-docs/just-the-docs/pull/1068)
+- Added: new `_sass/custom/setup.scss` for variable definition by [@mattxwang](https://github.com/mattxwang) in [#1135](https://github.com/just-the-docs/just-the-docs/pull/1135)
+- Added: configuration key to load a local version of mermaid by [@fabrik42](https://github.com/fabrik42) in [#1153](https://github.com/just-the-docs/just-the-docs/pull/1153)
+- Fixed: incorrect `padding` property value pair in `search.scss` by [@kevinlin1](https://github.com/kevinlin1) in [#1123](https://github.com/just-the-docs/just-the-docs/pull/1123)
+- Fixed: minor spacing and comment nits by [@EricFromCanada](https://github.com/EricFromCanada) in [#1128](https://github.com/just-the-docs/just-the-docs/pull/1128)
+- Fixed: exclude images from being bundled with gem by [@m-r-mccormick](https://github.com/m-r-mccormick) in [#1142](https://github.com/just-the-docs/just-the-docs/pull/1142)
+- Fixed: dark theme code block background, line number colors by [@m-r-mccormick](https://github.com/m-r-mccormick) in [#1124](https://github.com/just-the-docs/just-the-docs/pull/1124)
+- Fixed: copy code button interaction with kramdown line numbers by [@mattxwang](https://github.com/mattxwang) in [#1143](https://github.com/just-the-docs/just-the-docs/pull/1143)
+- Docs: add a migration guide by [@pdmosses](https://github.com/pdmosses) in [#1059](https://github.com/just-the-docs/just-the-docs/pull/1059)
+- Docs: update `README` demo video by [@codewithfan](https://github.com/codewithfan) in [#1097](https://github.com/just-the-docs/just-the-docs/pull/1097)
+- Docs: update "View Typography Utilities" link by [@agabrys](https://github.com/agabrys) in [#1130](https://github.com/just-the-docs/just-the-docs/pull/1130)
+- Docs: fix broken relative page links by [@mattxwang](https://github.com/mattxwang) in [#1106](https://github.com/just-the-docs/just-the-docs/pull/1106)
+- Docs: clarify steps to add custom `lunr` index code by [@diablodale](https://github.com/diablodale) in [#1139](https://github.com/just-the-docs/just-the-docs/pull/1139)
+- Docs: label new features introduced in `v0.4` by [@mattxwang](https://github.com/mattxwang) in [#1138](https://github.com/just-the-docs/just-the-docs/pull/1138)
+
+## v0.4.0.rc4
+
+- Added: support multiple Google Analytics tracking IDs, document UA to GA4 switch by [@MichelleBlanchette](https://github.com/MichelleBlanchette) in [#1029](https://github.com/just-the-docs/just-the-docs/pull/1029)
+- Added: copy code button to code snippets by [@simonebortolin](https://github.com/simonebortolin) in [#945](https://github.com/just-the-docs/just-the-docs/pull/945)
+- Added: restore simple configuration of `favicon.ico` via `site.static_files` by [@pdmosses](https://github.com/pdmosses) in [#1095](https://github.com/just-the-docs/just-the-docs/pull/1095)
+- Added: modularize site components by [@mattxwang](https://github.com/mattxwang) in [#1058](https://github.com/just-the-docs/just-the-docs/pull/1058)
+- Fixed: incorrect disambiguation in generated TOCs by [@pdmosses](https://github.com/pdmosses) in [#999](https://github.com/just-the-docs/just-the-docs/pull/999)
+- Fixed: duplicated external links in collections by [@pdmosses](https://github.com/pdmosses) in [#1001](https://github.com/just-the-docs/just-the-docs/pull/1001)
+- Fixed: import order of `custom.scss`; puts at end by [@deseo](https://github.com/deseo) in [#1010](https://github.com/just-the-docs/just-the-docs/pull/1010)
+- Fixed: top-level active link styling by [@pdmosses](https://github.com/pdmosses) in [#1015](https://github.com/just-the-docs/just-the-docs/pull/1015)
+- Fixed: external links for sites with no pages by [@pdmosses](https://github.com/pdmosses) in [#1021](https://github.com/just-the-docs/just-the-docs/pull/1021)
+- Fixed: duplicate `title` if `jekyll-seo-tag` not in users's plugins by [@Tom-Brouwer](https://github.com/Tom-Brouwer) in [#1040](https://github.com/just-the-docs/just-the-docs/pull/1040)
+- Fixed: removes (duplicate) `favicon.html`, shifts content to `head_custom.html` by [@mattxwang](https://github.com/mattxwang) in [#1027](https://github.com/just-the-docs/just-the-docs/pull/1027)
+- Fixed: add `reversed`, deprecate `desc` for nav `child_nav_order` by [@jmertic](https://github.com/jmertic) in [#1061](https://github.com/just-the-docs/just-the-docs/pull/1061)
+- Fixed: `child.child_nav_order` to `node.child_nav_order` by [@mattxwang](https://github.com/mattxwang) in [#1065](https://github.com/just-the-docs/just-the-docs/pull/1065)
+- Fixed: remove all uses of `/` as SASS division by [@mattxwang](https://github.com/mattxwang) in [#1074](https://github.com/just-the-docs/just-the-docs/pull/1074)
+    - note: this was originally merged as [#1074](https://github.com/just-the-docs/just-the-docs/pull/1074) with a bug; it was reverted in [#1076](https://github.com/just-the-docs/just-the-docs/pull/1076), and then reimplemented in [#1077](https://github.com/just-the-docs/just-the-docs/pull/1077)
+- Fixed: skip nav collection generation when site has no pages by [@pdmosses](https://github.com/pdmosses) in [#1092](https://github.com/just-the-docs/just-the-docs/pull/1092)
+- Fixed: standardize SCSS with `declaration-block-no-redundant-longhand-properties` by [@simonebortolin](https://github.com/simonebortolin) in [#1102](https://github.com/just-the-docs/just-the-docs/pull/1102)
+- Fixed: incorrect `padding` property value pair in `labels.scss` by [@SConaway](https://github.com/SConaway) in [#1104](https://github.com/just-the-docs/just-the-docs/pull/1104)
+- Fixed: various bugs with copy code button by [@simonebortolin](https://github.com/simonebortolin) in [#1096](https://github.com/just-the-docs/just-the-docs/pull/1096)
+- Fixed: replace inline styling for `<svg>` icons by [@captn3m0](https://github.com/captn3m0) in [#1110](https://github.com/just-the-docs/just-the-docs/pull/1110)
+- Vendor: update `jekyll-anchor-headings`, `lunr.js` by [@mattxwang](https://github.com/mattxwang) in [#1071](https://github.com/just-the-docs/just-the-docs/pull/1071)
+- Docs: fix typo in changelog links [@koppor](https://github.com/koppor) in [#1000](https://github.com/just-the-docs/just-the-docs/pull/1000)
+- Docs: update homepage (focus: new features, conciseness, deduplication) by [@pdmosses](https://github.com/pdmosses) in [#1018](https://github.com/just-the-docs/just-the-docs/pull/1018)
+- Docs: update README (focus: new features, conciseness, deduplication) by [@pdmosses](https://github.com/pdmosses) in [#1019](https://github.com/just-the-docs/just-the-docs/pull/1019)
+- Docs: fix two bugs in "Customization" (custom favicon, new annotation) by [@mattxwang](https://github.com/mattxwang) in [#1090](https://github.com/just-the-docs/just-the-docs/pull/1090)
+- Docs: Add warning about mandatory `_`-prefix for collections by [@max06](https://github.com/max06) in [#1091](https://github.com/just-the-docs/just-the-docs/pull/1091)
+- Docs: remove Google Analytics on main site by [@mattxwang](https://github.com/mattxwang) in [#1113](https://github.com/just-the-docs/just-the-docs/pull/1113)
+
+## v0.4.0.rc3
+
+- Added: styling for `<blockquote>` by [@mattxwang](https://github.com/mattxwang) in [#965](https://github.com/just-the-docs/just-the-docs/pull/965)
+- Added: custom include for TOC heading by [@pdmosses](https://github.com/pdmosses) in [#980](https://github.com/just-the-docs/just-the-docs/pull/980)
+- Added: experimental nav optimization for simple cases by [@pdmosses](https://github.com/pdmosses) in [#992](https://github.com/just-the-docs/just-the-docs/pull/992)
+- Fixed: spacing issue when search is disabled by [@henryiii](https://github.com/henryiii) in [#960](https://github.com/just-the-docs/just-the-docs/pull/960)
+- Fixed: active grandchild link class by [@pdmosses](https://github.com/pdmosses) in [#962](https://github.com/just-the-docs/just-the-docs/pull/962)
+- Fixed: HTML validation issues (W3C validator) by [@mattxwang](https://github.com/mattxwang) in [#964](https://github.com/just-the-docs/just-the-docs/pull/964)
+- Fixed: link styling now uses `text-decoration` values by [@mattxwang](https://github.com/mattxwang) in [#967](https://github.com/just-the-docs/just-the-docs/pull/967)
+- Fixed: cleaning up Jekyll excludes by [@pdmosses](https://github.com/pdmosses) in [#985](https://github.com/just-the-docs/just-the-docs/pull/985)
+- Fixed: docs, narrow styling for code highlighting with line numbers by [@pdmosses](https://github.com/pdmosses) in [#974](https://github.com/just-the-docs/just-the-docs/pull/974)
+- Fixed: default syntax highlighting in custom color schemes [@pdmosses](https://github.com/pdmosses) in [#986](https://github.com/just-the-docs/just-the-docs/pull/986)
+
+## v0.4.0.rc2
+
+- Added: accessible titles to nested page nav toggle by [@JPrevost](https://github.com/JPrevost) in [#950](https://github.com/just-the-docs/just-the-docs/pull/950)
+- Added: better title styling for AsciiDoc examples by [@alyssais](https://github.com/alyssais) in [#944](https://github.com/just-the-docs/just-the-docs/pull/944)
+- Added: docs for custom search placeholder by [@mattxwang](https://github.com/mattxwang) in [#939](https://github.com/just-the-docs/just-the-docs/pull/939)
+- Added: provide ability to skip to main content by [@JPrevost](https://github.com/JPrevost) in [#949](https://github.com/just-the-docs/just-the-docs/pull/949)
+- Fixed: exclude `vendor/` in Jekyll config by [@manuelhenke](https://github.com/manuelhenke) in [#941](https://github.com/just-the-docs/just-the-docs/pull/941)
+- Fixed: improve build time of navigation panel by [@pdmosses](https://github.com/pdmosses) in [#956](https://github.com/just-the-docs/just-the-docs/pull/956)
+- Added: docs load mermaid.js by default by [@mattxwang](https://github.com/mattxwang) in [#935](https://github.com/just-the-docs/just-the-docs/pull/935)
+- Fixed: table of contents on search docs by [@robinpokorny](https://github.com/robinpokorny) in [#940](https://github.com/just-the-docs/just-the-docs/pull/940)
+- Fixed: broken docs link (custom footer) by [@olgarithms](https://github.com/olgarithms) in [#951](https://github.com/just-the-docs/just-the-docs/pull/951)
+- Fixed: clarify version docs by [@pdmosses](https://github.com/pdmosses) in [#955](https://github.com/just-the-docs/just-the-docs/pull/955)
+- Deleted: unused script directory by [@mattxwang](https://github.com/mattxwang) in [#937](https://github.com/just-the-docs/just-the-docs/pull/937)
+
+## v0.4.0.rc1
+
+- Added: Combination by [@pdmosses](https://github.com/pdmosses) in [#578](https://github.com/just-the-docs/just-the-docs/pull/578)
+  - Added: dark highlighting in [#463](https://github.com/just-the-docs/just-the-docs/pull/463)
+  - Added: pages and collections in [#448](https://github.com/just-the-docs/just-the-docs/pull/448)
+  - Added: callouts in [#466](https://github.com/just-the-docs/just-the-docs/pull/466)
+  - Fixed: breadcrumb behaviour … by [@AdityaTiwari2102](https://github.com/AdityaTiwari2102) in [#477](https://github.com/just-the-docs/just-the-docs/pull/477)
+  - Fixed: prevent rake command corrupting search data in [#495](https://github.com/just-the-docs/just-the-docs/pull/495) (also listed below)
+  - Fixed: nested lists in [#496](https://github.com/just-the-docs/just-the-docs/pull/496)
+  - Fixed: set color for search input in [#498](https://github.com/just-the-docs/just-the-docs/pull/498) (also listed below)
   - Fixed: sites with no child pages (no PR)
-  - Fixed: TOC/breadcrumbs for multiple collections in [#494]
+  - Fixed: TOC/breadcrumbs for multiple collections in [#494](https://github.com/just-the-docs/just-the-docs/pull/494)
   - Added: collection configuration option `nav_fold` (no PR)
   - Fixed: indentation and color for folded collection navigation (no PR)
-  - Fixed: scroll navigation to show the link to the current page in [#639]
-  - Fixed: Replace all uses of `absolute_url` by `relative_url`, by [@svrooij] in [#544]
-* Added: custom favicon `_includes` by [@burner1024] in [#364]
-* Added: set color for search input by [@pdmosses] in [#498]
-* Added: search placeholder configuration by [@mattxwang] in [#613]
-* Added: 'child_nav_order' front matter to be able to sort navigation pages in reverse by [@jmertic] in [#726]
-* Added: `nav_footer_custom` include by [@nathanjessen] in [#474]
-* Added: style fixes for jekyll-asciidoc by [@alyssais] in [#829]
-* Added: mermaid.js support by [@nascosto] in [#857]
-* Added: support for external navigation links by [@SPGoding] in [#876]
-* Added: refactor `mermaid` config to use `mermaid_config.js` include, only require `mermaid.version` in `_config.yml` by [@mattxwang] in [#909]
-* Fixed: prepend `site.collections_dir` if exists by [@alexsegura] in [#519]
-* Fixed: nested task lists (#517) by [@pdmosses] in [#855]
-* Fixed: suppress Liquid processing in CSS comments by [@pdmosses] in [#686]
-* Fixed: prevent rake command from corrupting search data by [@pdmosses] in [#495]
-* Fixed: anchor heading links should be visible on focus by [@jacobhq] in [#846]
-* Fixed: add `overflow-x: auto` to `figure.highlight` by [@iridazzle] in [#727]
-* Fixed: add `overflow-wrap: word-break` to `body` by [@iridazzle] in [#889]
-* Fixed: vertical alignment for consecutive labels by [@Eisverygoodletter] in [#893]
-* Fixed: allow links to wrap by [@pdmosses] in [#905]
-* Fixed: nav scroll feature and absolute/relative URLs by [@pdmosses] in [#898]
-
-[#578]: https://github.com/just-the-docs/just-the-docs/pull/578
-[#463]: https://github.com/just-the-docs/just-the-docs/pull/463
-[#448]: https://github.com/just-the-docs/just-the-docs/pull/448
-[#466]: https://github.com/just-the-docs/just-the-docs/pull/466
-[#477]: https://github.com/just-the-docs/just-the-docs/pull/477
-[#495]: https://github.com/just-the-docs/just-the-docs/pull/495
-[#496]: https://github.com/just-the-docs/just-the-docs/pull/496
-[#498]: https://github.com/just-the-docs/just-the-docs/pull/498
-[#494]: https://github.com/just-the-docs/just-the-docs/pull/494
-[#639]: https://github.com/just-the-docs/just-the-docs/pull/639
-[#544]: https://github.com/just-the-docs/just-the-docs/pull/544
-[#364]: https://github.com/just-the-docs/just-the-docs/pull/364
-[#498]: https://github.com/just-the-docs/just-the-docs/pull/498
-[#613]: https://github.com/just-the-docs/just-the-docs/pull/613
-[#726]: https://github.com/just-the-docs/just-the-docs/pull/726
-[#474]: https://github.com/just-the-docs/just-the-docs/pull/474
-[#829]: https://github.com/just-the-docs/just-the-docs/pull/829
-[#857]: https://github.com/just-the-docs/just-the-docs/pull/857
-[#876]: https://github.com/just-the-docs/just-the-docs/pull/876
-[#909]: https://github.com/just-the-docs/just-the-docs/pull/909
-[#519]: https://github.com/just-the-docs/just-the-docs/pull/519
-[#855]: https://github.com/just-the-docs/just-the-docs/pull/855
-[#686]: https://github.com/just-the-docs/just-the-docs/pull/686
-[#495]: https://github.com/just-the-docs/just-the-docs/pull/495
-[#846]: https://github.com/just-the-docs/just-the-docs/pull/846
-[#727]: https://github.com/just-the-docs/just-the-docs/pull/727
-[#889]: https://github.com/just-the-docs/just-the-docs/pull/889
-[#893]: https://github.com/just-the-docs/just-the-docs/pull/893
-[#905]: https://github.com/just-the-docs/just-the-docs/pull/905
-[#898]: https://github.com/just-the-docs/just-the-docs/pull/898
-
-### Documentation
-
-* Added: docs on how to break an `ol` by [@pdmosses] in [#856]
-* Added: docs for custom includes by [@nathanjessen] in [#806]
-* Added: document caveat about variable dependencies by [@waldyrious] in [#555]
-* Added: docs on how to use `custom_head` to add a custom favicon by [@UnclassedPenguin] in [#814]
-* Fixed: `ol` on `index.md` by [@pmarsceill] in [#778]
-* Fixed: image link in Markdown kitchen sink by [@JeffGuKang] in [#221]
-* Fixed: images in Markdown kitchen sink by [@dougaitken] in [#782]
-* Fixed: clearer label of link to Jekyll quickstart by [@waldyrious] in [#549]
-* Fixed: remove extra spaces in component docs by [@MichelleBlanchette] in [#554]
-* Fixed: double "your" typo in `index.md` by [@sehilyi] in [#499]
-* Fixed: "you" -> "your" typo in `index.md` by [@nathanjessen] in [#473]
-* Fixed: spacing in toc example by [@henryiii] in [#835]
-* Fixed: typo in `README` on `_config.yml` by [@ivanskodje] in [#891]
-* Fixed: missing code fence in navigation structure docs by [@mattxwang] in [#906]
-
-[#856]: https://github.com/just-the-docs/just-the-docs/pull/856
-[#806]: https://github.com/just-the-docs/just-the-docs/pull/806
-[#555]: https://github.com/just-the-docs/just-the-docs/pull/555
-[#814]: https://github.com/just-the-docs/just-the-docs/pull/814
-[#778]: https://github.com/just-the-docs/just-the-docs/pull/778
-[#221]: https://github.com/just-the-docs/just-the-docs/pull/221
-[#782]: https://github.com/just-the-docs/just-the-docs/pull/782
-[#549]: https://github.com/just-the-docs/just-the-docs/pull/549
-[#554]: https://github.com/just-the-docs/just-the-docs/pull/554
-[#499]: https://github.com/just-the-docs/just-the-docs/pull/499
-[#473]: https://github.com/just-the-docs/just-the-docs/pull/473
-[#835]: https://github.com/just-the-docs/just-the-docs/pull/835
-[#891]: https://github.com/just-the-docs/just-the-docs/pull/891
-[#906]: https://github.com/just-the-docs/just-the-docs/pull/906
-
-### Maintenance
-
-* Added: VScode devcontainer by [@max06] in [#783]
-* Added: `webrick` to `Gemfile` by [@mattxwang] in [#799]
-* Added: 'This site is powered by Netlify.' to the footer by [@mattxwang] in [#797]
-* Updated: new repo path by [@pmarsceill] in [#775]
-* Updated: rename `master` -> `main` by [@pmarsceill] in [#776]
-* Updated: README by [@pmarsceill] in [#777]
-* Updated: Code of Conduct to Contributor Covenant v2.1 by [@mattxwang] in [#790]
-* Updated: CI files, Ruby & Node Versions by [@mattxwang] in [#820]
-* Updated: Stylelint to v14, extend SCSS plugins, remove primer-* configs, resolve issues by [@mattxwang] in [#821]
-
-[#783]: https://github.com/just-the-docs/just-the-docs/pull/783
-[#799]: https://github.com/just-the-docs/just-the-docs/pull/799
-[#797]: https://github.com/just-the-docs/just-the-docs/pull/797
-[#775]: https://github.com/just-the-docs/just-the-docs/pull/775
-[#776]: https://github.com/just-the-docs/just-the-docs/pull/776
-[#777]: https://github.com/just-the-docs/just-the-docs/pull/777
-[#790]: https://github.com/just-the-docs/just-the-docs/pull/790
-[#820]: https://github.com/just-the-docs/just-the-docs/pull/820
-[#821]: https://github.com/just-the-docs/just-the-docs/pull/821
-
-### Dependencies
-
-* Upgrade to GitHub-native Dependabot by @dependabot-preview in [#627]
-* [Security] Bump y18n from 3.2.1 to 3.2.2 by @dependabot-preview in [#606]
-* [Security] Bump hosted-git-info from 2.7.1 to 2.8.9 by @dependabot-preview in [#641]
-* [Security] Bump lodash from 4.17.19 to 4.17.21 by @dependabot-preview in [#640]
-* [Security] Bump ini from 1.3.5 to 1.3.8 by @dependabot-preview in [#511]
-* Bump path-parse from 1.0.6 to 1.0.7 by @dependabot in [#699]
-* Bump ajv from 6.10.0 to 6.12.6 by @dependabot in [#766]
-* Bump prettier from 2.1.2 to 2.5.1 by @dependabot in [#787]
-* Bump prettier from 2.5.1 to 2.6.2 by @dependabot in [#809]
-* Bump prettier from 2.6.2 to 2.7.1 by @dependabot in [#864]
-
-[#627]: https://github.com/just-the-docs/just-the-docs/pull/627
-[#606]: https://github.com/just-the-docs/just-the-docs/pull/606
-[#641]: https://github.com/just-the-docs/just-the-docs/pull/641
-[#640]: https://github.com/just-the-docs/just-the-docs/pull/640
-[#511]: https://github.com/just-the-docs/just-the-docs/pull/511
-[#699]: https://github.com/just-the-docs/just-the-docs/pull/699
-[#766]: https://github.com/just-the-docs/just-the-docs/pull/766
-[#787]: https://github.com/just-the-docs/just-the-docs/pull/787
-[#809]: https://github.com/just-the-docs/just-the-docs/pull/809
-[#864]: https://github.com/just-the-docs/just-the-docs/pull/864
-
-### New Contributors
-
-* [@AdityaTiwari2102] made their first contribution in [#477]
-* [@svrooij] made their first contribution in [#544]
-* [@alexsegura] made their first contribution in [#519]
-* [@burner1024] made their first contribution in [#364]
-* [@JeffGuKang] made their first contribution in [#221]
-* [@dougaitken] made their first contribution in [#782]
-* [@max06] made their first contribution in [#783]
-* [@sehilyi] made their first contribution in [#499]
-* [@nathanjessen] made their first contribution in [#473]
-* [@waldyrious] made their first contribution in [#549]
-* [@MichelleBlanchette] made their first contribution in [#554]
-* [@henryiii] made their first contribution in [#835]
-* [@jmertic] made their first contribution in [#726]
-* [@jacobhq] made their first contribution in [#846]
-* [@UnclassedPenguin] made their first contribution in [#814]
-* [@alyssais] made their first contribution in [#829]
-* [@nascosto] made their first contribution in [#857]
-* [@SPGoding] made their first contribution in [#876]
-* [@iridazzle] made their first contribution in [#727]
-* [@ivanskodje] made their first contribution in [#891]
-* [@Eisverygoodletter] made their first contribution in [#893]
-
-[@AdityaTiwari2102]: https://github.com/AdityaTiwari2102
-[@svrooij]: https://github.com/svrooij
-[@alexsegura]: https://github.com/alexsegura
-[@burner1024]: https://github.com/burner1024
-[@JeffGuKang]: https://github.com/JeffGuKang
-[@dougaitken]: https://github.com/dougaitken
-[@max06]: https://github.com/max06
-[@sehilyi]: https://github.com/sehilyi
-[@nathanjessen]: https://github.com/nathanjessen
-[@waldyrious]: https://github.com/waldyrious
-[@MichelleBlanchette]: https://github.com/MichelleBlanchette
-[@henryiii]: https://github.com/henryiii
-[@jmertic]: https://github.com/jmertic
-[@jacobhq]: https://github.com/jacobhq
-[@UnclassedPenguin]: https://github.com/UnclassedPenguin
-[@alyssais]: https://github.com/alyssais
-[@nascosto]: https://github.com/nascosto
-[@SPGoding]: https://github.com/SPGoding
-[@iridazzle]: https://github.com/iridazzle
-[@ivanskodje]: https://github.com/ivanskodje
-[@Eisverygoodletter]: https://github.com/Eisverygoodletter
-
-**Full Changelog**: https://github.com/just-the-docs/just-the-docs/compare/v0.3.3...v0.4.0.rc1
-
-[@pmarsceill]: https://github.com/pmarsceill
+  - Fixed: scroll navigation to show the link to the current page in [#639](https://github.com/just-the-docs/just-the-docs/pull/639)
+  - Fixed: Replace all uses of `absolute_url` by `relative_url`, by [@svrooij](https://github.com/svrooij) in [#544](https://github.com/just-the-docs/just-the-docs/pull/544)
+- Added: custom favicon `_includes` by [@burner1024](https://github.com/burner1024) in [#364](https://github.com/just-the-docs/just-the-docs/pull/364)
+- Added: set color for search input by [@pdmosses](https://github.com/pdmosses) in [#498](https://github.com/just-the-docs/just-the-docs/pull/498)
+- Added: search placeholder configuration by [@mattxwang](https://github.com/mattxwang) in [#613](https://github.com/just-the-docs/just-the-docs/pull/613)
+- Added: 'child_nav_order' front matter to be able to sort navigation pages in reverse by [@jmertic](https://github.com/jmertic) in [#726](https://github.com/just-the-docs/just-the-docs/pull/726)
+- Added: `nav_footer_custom` include by [@nathanjessen](https://github.com/nathanjessen) in [#474](https://github.com/just-the-docs/just-the-docs/pull/474)
+- Added: style fixes for jekyll-asciidoc by [@alyssais](https://github.com/alyssais) in [#829](https://github.com/just-the-docs/just-the-docs/pull/829)
+- Added: mermaid.js support by [@nascosto](https://github.com/nascosto) in [#857](https://github.com/just-the-docs/just-the-docs/pull/857)
+- Added: support for external navigation links by [@SPGoding](https://github.com/SPGoding) in [#876](https://github.com/just-the-docs/just-the-docs/pull/876)
+- Added: refactor `mermaid` config to use `mermaid_config.js` include, only require `mermaid.version` in `_config.yml` by [@mattxwang](https://github.com/mattxwang) in [#909](https://github.com/just-the-docs/just-the-docs/pull/909)
+- Fixed: prepend `site.collections_dir` if exists by [@alexsegura](https://github.com/alexsegura) in [#519](https://github.com/just-the-docs/just-the-docs/pull/519)
+- Fixed: nested task lists (#517) by [@pdmosses](https://github.com/pdmosses) in [#855](https://github.com/just-the-docs/just-the-docs/pull/855)
+- Fixed: suppress Liquid processing in CSS comments by [@pdmosses](https://github.com/pdmosses) in [#686](https://github.com/just-the-docs/just-the-docs/pull/686)
+- Fixed: prevent rake command from corrupting search data by [@pdmosses](https://github.com/pdmosses) in [#495](https://github.com/just-the-docs/just-the-docs/pull/495)
+- Fixed: anchor heading links should be visible on focus by [@jacobhq](https://github.com/jacobhq) in [#846](https://github.com/just-the-docs/just-the-docs/pull/846)
+- Fixed: add `overflow-x: auto` to `figure.highlight` by [@iridazzle](https://github.com/iridazzle) in [#727](https://github.com/just-the-docs/just-the-docs/pull/727)
+- Fixed: add `overflow-wrap: word-break` to `body` by [@iridazzle](https://github.com/iridazzle) in [#889](https://github.com/just-the-docs/just-the-docs/pull/889)
+- Fixed: vertical alignment for consecutive labels by [@Eisverygoodletter](https://github.com/Eisverygoodletter) in [#893](https://github.com/just-the-docs/just-the-docs/pull/893)
+- Fixed: allow links to wrap by [@pdmosses](https://github.com/pdmosses) in [#905](https://github.com/just-the-docs/just-the-docs/pull/905)
+- Fixed: nav scroll feature and absolute/relative URLs by [@pdmosses](https://github.com/pdmosses) in [#898](https://github.com/just-the-docs/just-the-docs/pull/898)
+- Documentation changes
+    - Added: docs on how to break an `ol` by [@pdmosses](https://github.com/pdmosses) in [#856](https://github.com/just-the-docs/just-the-docs/pull/856)
+    - Added: docs for custom includes by [@nathanjessen](https://github.com/nathanjessen) in [#806](https://github.com/just-the-docs/just-the-docs/pull/806)
+    - Added: document caveat about variable dependencies by [@waldyrious](https://github.com/waldyrious) in [#555](https://github.com/just-the-docs/just-the-docs/pull/555)
+    - Added: docs on how to use `custom_head` to add a custom favicon by [@UnclassedPenguin](https://github.com/UnclassedPenguin) in [#814](https://github.com/just-the-docs/just-the-docs/pull/814)
+    - Fixed: `ol` on `index.md` by [@pmarsceill](https://github.com/pmarsceill) in [#778](https://github.com/just-the-docs/just-the-docs/pull/778)
+    - Fixed: image link in Markdown kitchen sink by [@JeffGuKang](https://github.com/JeffGuKang) in [#221](https://github.com/just-the-docs/just-the-docs/pull/221)
+    - Fixed: images in Markdown kitchen sink by [@dougaitken](https://github.com/dougaitken) in [#782](https://github.com/just-the-docs/just-the-docs/pull/782)
+    - Fixed: clearer label of link to Jekyll quickstart by [@waldyrious](https://github.com/waldyrious) in [#549](https://github.com/just-the-docs/just-the-docs/pull/549)
+    - Fixed: remove extra spaces in component docs by [@MichelleBlanchette](https://github.com/MichelleBlanchette) in [#554](https://github.com/just-the-docs/just-the-docs/pull/554)
+    - Fixed: double "your" typo in `index.md` by [@sehilyi](https://github.com/sehilyi) in [#499](https://github.com/just-the-docs/just-the-docs/pull/499)
+    - Fixed: "you" to "your" typo in `index.md` by [@nathanjessen](https://github.com/nathanjessen) in [#473](https://github.com/just-the-docs/just-the-docs/pull/473)
+    - Fixed: spacing in toc example by [@henryiii](https://github.com/henryiii) in [#835](https://github.com/just-the-docs/just-the-docs/pull/835)
+    - Fixed: typo in `README` on `_config.yml` by [@ivanskodje](https://github.com/ivanskodje) in [#891](https://github.com/just-the-docs/just-the-docs/pull/891)
+    - Fixed: missing code fence in navigation structure docs by [@mattxwang](https://github.com/mattxwang) in [#906](https://github.com/just-the-docs/just-the-docs/pull/906)
+- Maintenance changes (developer-only)
+    - Added: VScode devcontainer by [@max06](https://github.com/max06) in [#783](https://github.com/just-the-docs/just-the-docs/pull/783)
+    - Added: `webrick` to `Gemfile` by [@mattxwang](https://github.com/mattxwang) in [#799](https://github.com/just-the-docs/just-the-docs/pull/799)
+    - Added: 'This site is powered by Netlify.' to the footer by [@mattxwang](https://github.com/mattxwang) in [#797](https://github.com/just-the-docs/just-the-docs/pull/797)
+    - Updated: new repo path by [@pmarsceill](https://github.com/pmarsceill) in [#775](https://github.com/just-the-docs/just-the-docs/pull/775)
+    - Updated: rename `master` to `main` by [@pmarsceill](https://github.com/pmarsceill) in [#776](https://github.com/just-the-docs/just-the-docs/pull/776)
+    - Updated: README by [@pmarsceill](https://github.com/pmarsceill) in [#777](https://github.com/just-the-docs/just-the-docs/pull/777)
+    - Updated: Code of Conduct to Contributor Covenant v2.1 by [@mattxwang](https://github.com/mattxwang) in [#790](https://github.com/just-the-docs/just-the-docs/pull/790)
+    - Updated: CI files, Ruby & Node Versions by [@mattxwang](https://github.com/mattxwang) in [#820](https://github.com/just-the-docs/just-the-docs/pull/820)
+    - Updated: Stylelint to v14, extend SCSS plugins, remove primer-* configs, resolve issues by [@mattxwang](https://github.com/mattxwang) in [#821](https://github.com/just-the-docs/just-the-docs/pull/821)
 
 ## v0.3.3
 
@@ -1624,7 +534,6 @@ as well as DX improvements like better regression tests, CI, and tooling. If you
 - Bump lodash from 4.17.15 to 4.17.19 @dependabot (#384)
 - Bump @primer/css from 14.4.0 to 15.0.0 @dependabot-preview (#371)
 
-
 ## v0.3.1
 
 ### Changes
@@ -1637,7 +546,6 @@ as well as DX improvements like better regression tests, CI, and tooling. If you
 
 - Remove collapsible TOC on nav doc @pmarsceill (#368)
 - Pdmosses collapsible toc @pmarsceill (#367)
-
 
 ## v0.3.0
 
@@ -1659,7 +567,6 @@ as well as DX improvements like better regression tests, CI, and tooling. If you
 - Bump version numbers @pmarsceill (#360)
 - Bump stylelint from 13.3.3 to 13.6.1 @dependabot-preview (#343)
 - Bump stylelint-config-prettier from 8.0.1 to 8.0.2 @dependabot-preview (#349)
-
 
 ## v0.2.9
 
@@ -1763,7 +670,6 @@ fixes #291 #256 #293 #177
 #152 by @yavorg - Improves syntax highlighting for js readablity
 #159 by @julienduchesne - Optimizes nav generation
 #162 by @nergmada - Modifies the google analytics code to match the new tags used by GA
-
 
 ## v0.2.5
 
