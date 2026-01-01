@@ -19,14 +19,20 @@
 
   {% include_cached components/site_nav.html %}
 
+  {%- comment -%}
+    note: nav_footer_custom and/or this "site footer" appear in components/footer.html for the mobile view.
+  {%- endcomment -%}
+
+  <div class="d-md-block d-sm-none">
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}
   {% endcapture %}
   {% if nav_footer_custom != "" %}
     {{ nav_footer_custom }}
   {% else %}
-    <footer class="site-footer">
+    <div class="site-footer">
       This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-    </footer>
+    </div>
   {% endif %}
+  </div>
 </div>
