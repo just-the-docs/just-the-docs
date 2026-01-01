@@ -9,8 +9,8 @@
   Should not be cached, because nav_footer_custom.html might depend on page.
 {%- endcomment -%}
 
-<div class="side-bar">
-  <div class="site-header" role="banner">
+<header class="side-bar">
+  <div class="site-header">
     <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
     <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
@@ -35,4 +35,4 @@
     </div>
   {% endif %}
   </div>
-</div>
+</header>
