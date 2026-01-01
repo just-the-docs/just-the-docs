@@ -2,7 +2,7 @@ $color-scheme: dark;
 $body-background-color: $grey-dk-300;
 $body-heading-color: $grey-lt-000;
 $body-text-color: $grey-lt-300;
-$link-color: $blue-000;
+$link-color: lighten($blue-000, 10%);
 $nav-child-link-color: $grey-dk-000;
 $sidebar-color: $grey-dk-300;
 $base-button-color: $grey-dk-250;
