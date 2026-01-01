@@ -24,6 +24,24 @@ Docs changes made since the latest release:
 
 - N/A
 
+## v0.11.0 - 2026-01-01
+
+### Theme
+
+- Fixed: low-contrast syntax highlighting via `accessible-pygments` and harsher backgrounds by [@mattxwang](https://github.com/mattxwang) in [#1749](https://github.com/just-the-docs/just-the-docs/pull/1749)
+- Fixed: callout body text color contrast by [@mattxwang](https://github.com/mattxwang) in [#1748](https://github.com/just-the-docs/just-the-docs/pull/1748)
+- Fixed: button and label color contrast by [@mattxwang](https://github.com/mattxwang) in [#1750](https://github.com/just-the-docs/just-the-docs/pull/1750)
+- Fixed: inability to focus on scrollable code blocks via keyboard navigation by [@mattxwang](https://github.com/mattxwang) in [#1533](https://github.com/just-the-docs/just-the-docs/pull/1533)
+- Fixed: `.site-footer` focus order on `sm` (mobile) viewport by [@mattxwang](https://github.com/mattxwang) in [#1751](https://github.com/just-the-docs/just-the-docs/pull/1751)
+- Fixed: color contrast between dark mode background and `$link-color` by [@mattxwang](https://github.com/mattxwang) in [#1752](https://github.com/just-the-docs/just-the-docs/pull/1752)
+- Fixed: color contrast for selected `.nav-list-link` in light mode by [@mattxwang](https://github.com/mattxwang) in [#1753](https://github.com/just-the-docs/just-the-docs/pull/1753)
+- Fixed: sidebar ARIA role (by including navigation) by [@mattxwang](https://github.com/mattxwang) in [#1754](https://github.com/just-the-docs/just-the-docs/pull/1754)
+- Fixed: `footer_content`/`footer_custom` color contrast by [@mattxwang](https://github.com/mattxwang) in [#1755](https://github.com/just-the-docs/just-the-docs/pull/1755)
+
+### Documentation
+
+- Added: aXe accessibility tests by [@cycomachead](https://github.com/cycomachead) in [#1756](https://github.com/just-the-docs/just-the-docs/pull/1756)
+
 ## v0.10.2 - 2025-12-31
 
 ### Theme
