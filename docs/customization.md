@@ -20,8 +20,8 @@ Just the Docs supports two color schemes: light (default), and dark.
 
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
 
-#### Example
-{: .no_toc }
+### Example: preview dark color scheme
+{: .no_toc .text-delta }
 
 ```yaml
 # Color scheme supports "light" (default) and "dark"
@@ -47,11 +47,11 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 ### deprecated: `legacy_light`
 {: .d-inline-block .no_toc }
 
-New (v0.4.2)
-{: .label .label-green }
+Removed (v0.11.0)
+{: .label .label-red }
 
 
-In Just the Docs version `0.4.2`, we changed the default syntax highlighting theme for the `light` color scheme to have higher contrast. Users who want to use the old highlighting need to explicitly opt-in with the deprecated `legacy_light` color scheme. In a future major release of Just the Docs, we will remove this color scheme.
+In Just the Docs version `0.4.2`, we changed the default syntax highlighting theme for the `light` color scheme to have higher contrast. Users who want to use the old highlighting need to explicitly opt-in with the deprecated `legacy_light` color scheme. We removed this in `v0.11.0` as part of a broader accessibility pass on the theme.
 
 ## Custom schemes
 
@@ -76,8 +76,8 @@ Available variables are listed in the [\_variables.scss](https://github.com/just
 
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
-#### Example
-{: .no_toc }
+#### Example: custom link color
+{: .no_toc .text-delta }
 
 ```scss
 $link-color: $blue-000;
@@ -142,10 +142,10 @@ Additionally, you may want to add completely custom CSS specific to your content
 To do this, put your styles in the file `_sass/custom/custom.scss`.
 This will allow for all overrides to be kept in a single file, and for any upstream changes to still be applied.
 
-For example, if you'd like to add your own styles for printing a page, you could add the following styles.
+### Example: custom print styles
+{: .no_toc .text-delta }
 
-#### Example
-{: .no_toc }
+For example, if you'd like to add your own styles for printing a page, you could add the following styles.
 
 ```scss
 // Print-only styles.
@@ -179,7 +179,7 @@ New (v0.4.0)
 
 If the page has any child pages, and `has_toc` is not set to `false`, this content appears as a heading above the [auto-generating list of child pages]({% link docs/navigation/children.md %}) after the page's content.
 
-#### Example
+#### Example: changing TOC heading
 {: .no_toc }
 
 To change the default TOC heading to "Contents", create `_includes/toc_heading_custom.html` and add:

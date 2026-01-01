@@ -32,7 +32,7 @@ More specifically, the created site:
 
 Other than that, you're free to customize sites that you create with the template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
 
-### Use RubyGems
+### Use as a Ruby Gem
 
 Alternatively, you can install the theme as a Ruby Gem, without creating a new site.
 
@@ -48,17 +48,11 @@ And add this line to your Jekyll site's `_config.yml`:
 theme: just-the-docs
 ```
 
-And then execute:
+And then install all relevant dependencies:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install just-the-docs
-
-Alternatively, you can run it inside Docker while developing your site
-
-    $ docker-compose up
+```shell
+$ bundle
+```
 
 ## Usage
 
@@ -87,8 +81,6 @@ Bug reports, proposals of new features, and pull requests are welcome on GitHub 
 ## Development
 
 To set up your environment to develop this theme: fork this repo, the run `bundle install` from the root directory.
-
-A modern [devcontainer configuration](https://code.visualstudio.com/docs/remote/containers) for VSCode is included.
 
 Your theme is set up just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 

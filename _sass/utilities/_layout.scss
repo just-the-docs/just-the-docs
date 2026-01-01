@@ -22,6 +22,20 @@
   display: none !important;
 }
 
+// Screenreader-only
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 @each $media-query in map-keys($media-queries) {
   @for $i from 1 through length($spacers) {
     @include mq($media-query) {
