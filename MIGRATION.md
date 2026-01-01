@@ -17,16 +17,22 @@ Summary
 
 This document contains instructions on how to migrate and upgrade Just the Docs sites from every minor or major version bump, starting from `v0.3.3` to `v0.4.0`.
 
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-- TOC
-{:toc}
-</details>
+## Pinning the Theme Version
+{: .no_toc }
 
-{::options toc_levels="2..4" /}
+Users who have not pinned the theme version will be **automatically upgraded to the latest version the next time they build their site**.
+
+To use a specific release explicitly as a remote theme:
+
+```yml
+remote_theme: just-the-docs/just-the-docs@v0.10.0 # replace 0.10.0 with your desired version
+```
+
+To use a specific version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
+
+```ruby
+gem "just-the-docs", "0.10.0" # replace 0.10.0 with your desired version
+```
 
 {: .warning }
 > If your configuration states `remote_theme: just-the-docs/just-the-docs`, your
@@ -40,6 +46,21 @@ This document contains instructions on how to migrate and upgrade Just the Docs 
 > If you have cloned/forked and customised the theme repo,
 > and pull the changes of a new release to your clone,
 > you may need to resolve merge conflicts.
+
+
+## Table of Contents
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    All migration versions (click to expand/collapse)
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
+
+{::options toc_levels="2..4" /}
 
 [CHANGELOG]: {% link CHANGELOG.md %}
 

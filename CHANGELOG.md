@@ -18,11 +18,24 @@ This website is built from the `HEAD` of the `main` branch of the theme reposito
 
 Code changes to `main` that are *not* in the latest release:
 
-- Fixed: `margin-top` and `margin-bottom` for `<hr>` elements in print styles by [@jacksonj04](https://github.com/jacksonj04) in [#1677](https://github.com/just-the-docs/just-the-docs/pull/1677)
+- N/A
 
 Docs changes made since the latest release:
 
 - N/A
+
+## v0.10.2 - 2025-12-31
+
+### Theme
+
+- Fixed: `margin-top` and `margin-bottom` for `<hr>` elements in print styles by [@jacksonj04](https://github.com/jacksonj04) in [#1677](https://github.com/just-the-docs/just-the-docs/pull/1677)
+- Fixed: sidenav footer (`.site-footer`) color contrast by [@mattxwang](https://github.com/mattxwang) in [#1746](https://github.com/just-the-docs/just-the-docs/pull/1746)
+- Fixed: use `aria-expanded` instead of `aria-pressed` for buttons connected to expandable content by [@rianrietveld](https://github.com/rianrietveld) in [#1679](https://github.com/just-the-docs/just-the-docs/pull/1679)
+- Fixed: accessibility issues with search bar (color contrast, focus indicator, decorative icons) by [@mattxwang](https://github.com/mattxwang) in [#1747](https://github.com/just-the-docs/just-the-docs/pull/1747)
+
+### Documentation
+
+- Remove non-essential CHANGELOG information by [@mattxwang](https://github.com/mattxwang) in [#1745](https://github.com/just-the-docs/just-the-docs/pull/1745)
 
 ## v0.10.1 - 2025-01-06
 
