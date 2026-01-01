@@ -186,8 +186,8 @@ See [Customization]({% link docs/customization.md %}) for more information.
 ## Callouts
 {: .d-inline-block }
 
-New (v0.4.0)
-{: .label .label-green }
+Updated (v0.11.0)
+{: .label .label-yellow }
 
 To use this feature, you need to configure a `color` and (optionally) `title` for each kind of callout you want to use, e.g.:
 
@@ -198,47 +198,29 @@ callouts:
     color: red
 ```
 
-This uses the color `$red-000` for the background of the callout, and `$red-300` for the title and box decoration.[^dark] You can then style a paragraph as a `warning` callout like this:
+This uses the color `$red-300` for the title and left border, and `$red-000` for the other borders. You can then style a paragraph as a `warning` callout like this:
 
 ```markdown
 {: .warning }
 A paragraph...
 ```
 
-[^dark]:
-    If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title.
+{: .warning }
+A paragraph...
 
 The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/setup.scss` file:
 
 ```scss
 $pink-000: #f77ef1;
-$pink-100: #f967f1;
-$pink-200: #e94ee1;
 $pink-300: #dd2cd4;
 ```
 
-You can override the default `opacity` of the background for a particular callout, e.g.:
+You can also adjust the overall level of callouts. Both color schemes use `300` color level for the title and left border. The difference is for the rest of the border:
 
-```yaml
-callouts:
-  custom:
-    color: pink
-    opacity: 0.3
-```
+- `quiet` (the default when using the `light` or custom color schemes) uses `-000` as the outline
+- `loud` (the default when using the `dark` color scheme) uses `-300` as the outline
 
-You can change the default opacity (`0.2`) for all callouts, e.g.:
-
-```yaml
-callouts_opacity: 0.3
-```
-
-You can also adjust the overall level of callouts.
-The value of `callouts_level` is either `quiet` or `loud`;
-`loud` increases the saturation and lightness of the backgrounds.
-The default level is `quiet` when using the `light` or custom color schemes,
-and `loud` when using the `dark color scheme.`
-
-See [Callouts]({% link docs/ui-components/callouts.md %}) for more information.
+See [Callouts]({% link docs/ui-components/callouts.md %}) for more information. The colors used in the theme are further described in [Color Utilities]({% link docs/utilities/color.md %}).
 
 ## Google Analytics
 
