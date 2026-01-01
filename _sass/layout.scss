@@ -72,7 +72,6 @@
 
   @include mq(md) {
     padding-top: $gutter-spacing;
-    padding-bottom: $gutter-spacing;
   }
 }
 
@@ -190,7 +189,6 @@
 body {
   position: relative;
   padding-bottom: $sp-10;
-  overflow-y: scroll;
 
   @include mq(md) {
     position: static;
@@ -221,4 +219,20 @@ body {
   width: $sp-5;
   height: $sp-5;
   color: $link-color;
+}
+
+// ToC is added to .main-content-wrap => shift the sidebar and main div position to the left and widen the main div
+@include mq(xl) {
+  .toc .side-bar {
+    width: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
+  }
+
+  .toc .main {
+    margin-left: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2 + #{$nav-width});
+    max-width: #{$content-width + $toc-width};
+  }
+
+  .main-content-wrap {
+    width: $content-width;
+  }
 }

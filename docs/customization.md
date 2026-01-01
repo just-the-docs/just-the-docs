@@ -209,6 +209,26 @@ The `<head>` tag automatically includes a link to an existing favicon if you set
 
 Content added to this file appears at the top of every page's main content between the site search and auxiliary links if they are enabled. If `search_enabled` were set to false and `aux_links` were removed, the content of `header_custom.html` would occupy the space at the top of every page.
 
+### Custom Side/Top Panel
+
+`_includes/toc_custom.html`
+
+```html
+<input type="checkbox" id="__aside" hidden><!-- checkbox for panel state -->
+<aside class="__container">
+  <button class="btn __aside-btn toc-btn-sm"></button><!-- button to toggle the panel on mobile -->
+  <button class="btn __aside-btn toc-btn-md"></button><!-- button to toggle the panel on small desktops -->
+  <nav class="__content">
+    <a href="#" class="__aside-btn close-btn"></a><!-- button to close the panel -->
+    <!-- panel content goes here -->
+  </nav>
+</aside>
+```
+
+Content added to this file appears between the header and the breadcrumbs on every page, and appears to the right of main content if you use the `aside.__container` element. You can copy and customize Just the Docs' implementation, or come up with your design of the side/top panel and toggle buttons using the structure above.
+
+`toc_enabled` must be enabled in `_config.yml` for the panel to appear.
+
 ### Custom Nav Footer
 {: .d-inline-block }
 
@@ -277,6 +297,7 @@ Here is a simplified code example of what it looks like:
   {% include components/sidebar.html %}
   {% include components/header.html %}
   {% include components/breadcrumbs.html %}
+  {% include components/toc.html %}
 
   {% if site.heading_anchors != false %}
     {% include vendor/anchor_headings.html html=content ... %}
@@ -315,7 +336,8 @@ To briefly summarize each component:
 - `_includes/icons/icons.html` imports all SVG icons that are used throughout the site. Some, such as those relating to search or code snippet copying, are only loaded when those features are enabled.
 - `_includes/components/sidebar.html` renders the sidebar, containing the site header, navigation links, external links, collections, and nav footer.
 - `_includes/components/header.html` renders the navigation header, containing the search bar, custom header, and aux links
-- `_includes/components/breadcrumbs.html` renders the breadcrumbs feature
+- `_includes/components/breadcrumbs.html` renders the breadcrumbs 
+- `_includes/components/toc.html` renders the Table of Contents side/top panel, containing a list of links to the headings in the page content.
 - `vendor/anchor_headings.html` is a local copy of Vladimir Jimenez's [jekyll-anchor-headings](https://github.com/allejo/jekyll-anchor-headings) snippet
 - `_includes/components/children_nav.html` renders a list of nav links to child pages on parent pages
 - `_includes/components/footer.html` renders the bottom-of-page footer

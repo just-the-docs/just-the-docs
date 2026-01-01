@@ -1,0 +1,119 @@
+{%- comment -%}
+    Include as: {% include components/toc.html %}
+    Depends on: site, content.
+    Includes: toc_custom.html, toc_heading_custom.html, vendor/toc.html.
+    Overwrites: toc_custom.
+
+	Add a Table of Contents sidebar to the right of main content. When enabled, the layout will be shifted left to
+	accommodate the new sidebar (unless on smaller screens where ToC will display as a side/top panel).
+
+	Switches when the screen width is larger than `$nav-width + $content-width + $toc-width` (set as `mq(xl)`).
+
+	Note that ToC sidebar is strictly opt-out. Once enabled in _config.yml, this feature will be enabled site-wide, and
+	you'll need to set the flag on a page or layout if you wish to disable the ToC sidebar for that page or layout.
+	Likewise, if you wish to use the ToC sidebar for just one page, you have to enable the feature site-wide.
+
+	Again, because the _default_ layout is set to shift regardless, and navigating pages => layout shifts => surprises.
+
+	Disabling ToC sidebar per page will leave a large blank space, to which I chose not to do anything because the other
+	options are to break `$content-width`, or center the content inside `.main-content-wrap` which causes layout shift.
+{%- endcomment -%}
+
+{% capture toc_custom %}
+    {%- include toc_custom.html -%}
+{% endcapture %}
+
+{% if site.toc.highlight_active != false %}
+    {% assign anchor_class = '__item' %}
+{% else %}
+    {% assign anchor_class = site.toc.anchor_class | default: '' %}
+{% endif %}
+
+{% assign sanitize = site.toc.sanitize | default: false %}
+{% assign class = site.toc.class | default: '' %}
+{% assign item_class = site.toc.item_class | default: '' %}
+{% assign submenu_class = site.toc.submenu_class | default: '' %}
+{% assign base_url = site.toc.base_url | default: '' %}
+{% assign skip_no_ids = site.toc.skip_no_ids | default: false %}
+
+{% if toc_custom != "" %}
+    {{ toc_custom }}
+{% else %}
+    <input type="checkbox" id="__aside" aria-controls="inner-toc" aria-labelledby="__aside-btn" class="visually-hidden">
+    <aside id="toc" class="__container {{ site.toc.style | default: "float" }}" aria-label="{{ site.toc.title | default: "" }} panel">
+        {% if site.toc.style == null or site.toc.style contains 'float' or site.toc.style contains 'side' %}
+        <noscript>
+            <label for="__aside" id="__aside-btn" class="btn toc-btn-md" title="Toggle {{ site.toc.title | default: "" }} side panel">
+                <svg viewBox="0 0 24 24" class="icon menu-icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+                <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
+            </label>
+            <label for="__aside" class="toc-btn-sm">
+                <svg viewBox="0 0 24 24" class="icon arrow-down-icon" aria-hidden="true"><use xlink:href="#svg-arrow-down"></use></svg>
+                {% if site.toc.title %}
+                    <span class="toc-btn-sm-text">{{ site.toc.title }}</span>
+                {% endif %}
+            </label>
+        </noscript>
+        <button class="btn __aside-btn toc-btn-md" aria-expanded="false" aria-controls="inner-toc" title="Toggle {{ site.toc.title | default: "" }} side panel" aria-label="Toggle {{ site.toc.title | default: "" }} side panel" hidden>
+            <svg viewBox="0 0 24 24" class="icon menu-icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
+            <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
+        </button>
+        <a href="#" class="__aside-btn toc-btn-sm" role="button" aria-expanded="false" aria-controls="inner-toc" aria-label="Open {{ site.toc.title | default: "" }} top panel" hidden>
+            <svg viewBox="0 0 24 24" class="icon arrow-down-icon" aria-hidden="true"><use xlink:href="#svg-arrow-down"></use></svg>
+            {% if site.toc.title %}
+                <span class="toc-btn-sm-text">{{ site.toc.title }}</span>
+            {% endif %}
+            <span class="current-heading"></span>
+        </a>
+        {% endif %}
+        <nav id="inner-toc" class="__content" aria-label="{{ site.toc.title | default: "" }} panel">
+            <noscript>
+                <label for="__aside" class="close-btn" title="Close">
+                    <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
+                    <span class="close-text">Close</span>
+                </label>
+            </noscript>
+            <a href="#" class="__aside-btn close-btn" role="button" aria-label="Close {{ site.toc.title | default: "" }} panel" title="Close" hidden>
+                <svg viewBox="0 0 24 24" class="icon close-icon" aria-hidden="true"><use xlink:href="#svg-close"></use></svg>
+                <span class="close-text">Close</span>
+            </a>
+            {% if site.toc.back_to_top or site.toc.gh_edit_link %}
+                <div class="__page-actions">
+                {% if site.toc.back_to_top == true %}
+                    <p><a href="#top" class="back-to-top">{{ site.toc.back_to_top_text | default: site.back_to_top_text | default: '' }}</a></p>
+                {% endif %}
+                {% if
+                        site.toc.gh_edit_link == true and
+                        site.gh_edit_link and
+                        site.gh_edit_link_text and
+                        site.gh_edit_repository and
+                        site.gh_edit_branch and
+                        site.gh_edit_view_mode
+                %}
+                    <p>
+                        <a href="{{ site.gh_edit_repository }}/{{ site.gh_edit_view_mode }}/{{ site.gh_edit_branch }}{% if site.gh_edit_source %}/{{ site.gh_edit_source }}{% endif %}{% if page.collection and site.collections_dir %}/{{ site.collections_dir }}{% endif %}/{{ page.path }}" class="edit-this-page">{{ site.gh_edit_link_text }}</a>
+                    </p>
+                {% endif %}
+            </div>
+            {% endif %}
+            {% if site.toc.title %}
+                <h2 class="text-delta">{{ site.toc.title }}</h2>
+            {% endif %}
+            {% include vendor/toc.html
+                html=content
+                sanitize=sanitize
+                class=class
+                h_min=site.toc.min_heading_level
+                h_max=site.toc.max_heading_level
+                ordered=site.toc.ordered
+                item_class=item_class
+                submenu_class=submenu_class
+                base_url=base_url
+                anchor_class=anchor_class
+                skip_no_ids=skip_no_ids
+                flat_toc=site.toc.flat_toc
+            %}
+        </nav>
+    </aside>
+    <label for="__aside" class="search-overlay aside-overlay"></label>
+{% endif %}
