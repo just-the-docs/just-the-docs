@@ -56,6 +56,7 @@
 
       &:hover,
       &.active {
+        color: darken($link-color, 5%);
         background-image: linear-gradient(
           -90deg,
           rgba($feedback-color, 1) 0%,
