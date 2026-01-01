@@ -7,10 +7,10 @@ $nav-child-link-color: $grey-dk-100 !default;
 $sidebar-color: $grey-lt-000 !default;
 $base-button-color: #f7f7f7 !default;
 $btn-primary-color: $purple-100 !default;
-$code-background-color: $grey-lt-000 !default;
+$code-background-color: $white !default;
 $feedback-color: darken($sidebar-color, 3%) !default;
 $table-background-color: $white !default;
 $search-background-color: $white !default;
 $search-result-preview-color: $grey-dk-100 !default;
 
-@import "./vendor/OneLightJekyll/syntax";
+@import "./vendor/accessible-pygments/github-light";
