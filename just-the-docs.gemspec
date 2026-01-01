@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "just-the-docs"
-  spec.version       = "0.10.1"
+  spec.version       = "0.10.2"
   spec.authors       = ["Patrick Marsceill", "Matthew Wang"]
   spec.email         = ["patrick.marsceill@gmail.com", "matt@matthewwang.me"]
 
