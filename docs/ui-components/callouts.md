@@ -22,6 +22,26 @@ When you have [configured]({% link docs/configuration.md %}#callouts) the  `colo
 [^postfix]:
     You can put the callout markup either before or after its content.
 
+The following examples were generated with this configuration:
+
+```yml
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
+```
+
 ## An untitled callout
 {: .no_toc .text-delta }
 

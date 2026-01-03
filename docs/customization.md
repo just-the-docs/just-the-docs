@@ -47,11 +47,11 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 ### deprecated: `legacy_light`
 {: .d-inline-block .no_toc }
 
-New (v0.4.2)
-{: .label .label-green }
+Removed (v0.11.0)
+{: .label .label-red }
 
 
-In Just the Docs version `0.4.2`, we changed the default syntax highlighting theme for the `light` color scheme to have higher contrast. Users who want to use the old highlighting need to explicitly opt-in with the deprecated `legacy_light` color scheme. In a future major release of Just the Docs, we will remove this color scheme.
+In Just the Docs version `0.4.2`, we changed the default syntax highlighting theme for the `light` color scheme to have higher contrast. Users who want to use the old highlighting need to explicitly opt-in with the deprecated `legacy_light` color scheme. We removed this in `v0.11.0` as part of a broader accessibility pass on the theme.
 
 ## Custom schemes
 

@@ -49,7 +49,9 @@ See the theme [README][Just the Docs README] for how to use the theme as a gem w
 
 ## About the project
 
-Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](https://patrickmarsceill.com).
+Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](https://patrickmarsceill.com) and the [Just the Docs contributors](https://github.com/just-the-docs/just-the-docs/graphs/contributors).
+
+Just the Docs is currently primarily maintained by [Matt Wang](https://mattx.wang).
 
 ### License
 
