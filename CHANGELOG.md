@@ -24,6 +24,12 @@ Docs changes made since the latest release:
 
 - N/A
 
+## v0.11.1 - 2026-01-02
+
+### Theme
+
+- Fixed: incorrect behaviour of `nav_footer` on `xs` viewport
+
 ## v0.11.0 - 2026-01-01
 
 ### Theme
