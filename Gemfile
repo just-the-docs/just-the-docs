@@ -10,7 +10,7 @@ gem "jekyll-include-cache", group: :jekyll_plugins
 gem "jekyll-sitemap", group: :jekyll_plugins
 
 group :development, :test do
-  gem "html-proofer", "~> 5.1"
+  gem "html-proofer", "~> 5.2"
 
   # Test Infrastructure
   gem 'rack'
