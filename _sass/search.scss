@@ -152,7 +152,7 @@
 .search-result-doc {
   display: flex;
   align-items: center;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 
   &.search-result-doc-parent {
     opacity: 0.5;
@@ -178,7 +178,7 @@
 
 .search-result-section {
   margin-left: #{$sp-4 + $sp-2};
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .search-result-rel-url {
@@ -198,7 +198,7 @@
   padding-left: $sp-4;
   margin-left: $sp-2;
   color: $search-result-preview-color;
-  word-wrap: break-word;
+  overflow-wrap: break-word;
   border-left: $border;
   border-left-color: $border-color;
   @include fs-2;

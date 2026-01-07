@@ -64,6 +64,84 @@ gem "just-the-docs", "0.10.0" # replace 0.10.0 with your desired version
 
 [CHANGELOG]: {% link CHANGELOG.md %}
 
+## v0.10.x - v0.11.0
+
+### POTENTIALLY-BREAKING CHANGES in v0.11.0
+
+There are some minor potentially-breaking changes for users in version `v0.11.0`. **They do not affect the vast majority of users**. They concern:
+
+1. the removal of the `OneLightJekyll` and `OneDarkJekyll` syntax highlighting themes
+  - **explicit migration only necessary if users have custom code that imports these themes**
+2. the removal of the deprecated `legacy_light` color scheme
+  - **explicit migration only necessary if users have `theme: legacy_light` in their `_config.yml`**
+3. minor changes to the behaviour of `.site-footer` (the "nav footer", "This site uses Just the Docs...") within the sidebar
+  - **explicit migration necessary if**:
+    1. **users have a custom `_includes/components/sidebar.html` and/or `_includes/components/footer.html`**
+    2. **users have custom code or logic that relies on `.site-footer` outside of `_includes/nav_footer_custom.html`**
+
+Additionally, the theme makes style changes that are "non-breaking" (in that they do not stop code from compiling, or core functional behavior) but do significantly affect some components. These are briefly documented in case users would like to revert them, though we discourage this.
+
+#### Removal of OneLightJekyll and OneDarkJekyll syntax highlighters
+
+The `OneLightJekyll` and `OneDarkJekyll` syntax highlighting themes (designed for rouge, using pygments-compatible stylesheets) have been removed in favour of the new `github-light` and `github-dark` syntax highlighting themes, which meet WCAG 2.1 AA color contrast guidelines.
+
+Migration is only needed if users have custom code that uses `_sass/vendor/OneDarkJekyll` and `_sass/vendor/OneLightJekyll` (e.g. if a custom theme imports from these folders).
+
+We encourage users to migrate to the new, higher-contrast syntax themes.
+
+To migrate:
+
+- to switch to the new themes,
+  - replace `_sass/vendor/OneDarkJekyll/syntax.scss` with `_sass/vendor/accessible-pygments/github-dark.scss`
+  - replace `_sass/vendor/OneLightJekyll/syntax.scss` with `_sass/vendor/accessible-pygments/github-light.scss`
+- to keep the old themes, pull the relevant folders from [release v0.10.2](https://github.com/just-the-docs/just-the-docs/releases/tag/v0.10.2)  (not recommended)
+
+#### Removal of deprecated `legacy_light` color scheme
+
+The `legacy_light` color scheme, first deprecated in `v0.4.0`, has now been removed.
+
+Migration is only needed if users have `theme: legacy_light` in their `_config.yml`.
+
+We encourage users to migrate to the new scheme.
+
+To migrate:
+
+- to switch to the new scheme, change `theme: legacy_light` to `theme: light`
+- to use the old scheme, pull the `_sass/color_schemes/legacy_light.scss` file from [release v0.10.2](https://github.com/just-the-docs/just-the-docs/releases/tag/v0.10.2) (not recommended)
+
+#### Updated site footer behavior
+
+The nav footer (`.site-footer`, "This site uses Just the Docs...") has been updated to fix several different accessibility issues (incorrect tab order on the `sm`/mobile viewport, duplicate `contentinfo` ARIA roles). In most cases, this causes no visual changes to the site. A side effect is that half of this footer's markup now lives in `_includes/components/footer.html`.
+
+Migration is only needed if:
+
+- users have a custom `_includes/components/sidebar.html` or `_includes/components/footer.html`
+- users have custom code for the site footer *outside* of using `nav_footer_custom.html` (relatively uncommon)
+
+To migrate, users should:
+
+1. first, check if they have a custom `_includes/components/sidebar.html` or `_includes/components/footer.html`. If so, they should port over:
+  - for `footer.html`: [#1754](https://github.com/just-the-docs/just-the-docs/pull/1754) and [#1755](https://github.com/just-the-docs/just-the-docs/pull/1755)
+  - for `sidebar.html`: [#1751](https://github.com/just-the-docs/just-the-docs/pull/1751) and [#1754](https://github.com/just-the-docs/just-the-docs/pull/1754)
+2. whether or not the previous step required a change, they should now inspect the nav footer in both the `sm` and `md` viewport. If adjustments are necessary, we recommend editing `nav_footer_custom.html`
+
+### STYLE CHANGES in v0.11.0
+
+This version changes the *styling* of many different components in Just the Docs to better meet accessibility standards (more specifically, [WCAG 2.1 AA](https://www.w3.org/TR/WCAG21/)). We strongly encourage all users to follow these accessibility standards. However, these style changes may inadvertently clash with other customizations that users have made.
+
+This list includes a brief description of each style change. To revert, we recommend users to override the change with [custom styles]({{site.baseurl}}/docs/customization/#override-and-completely-custom-styles) or [custom variables]({{site.baseurl}}/docs/customization/#override-and-define-new-variables) (rather than replacing theme `_scss` files), which will future-proof their site from future changes.
+
+- changed `btn-blue`, `btn-green`, `label-green`, and `label-red` to have stronger color contrast in [#1750](https://github.com/just-the-docs/just-the-docs/pull/1750)
+- changed callout styling to have stronger color contrast in [#1748](https://github.com/just-the-docs/just-the-docs/pull/1748)
+  - this change removes the tinted background color and makes the outline stronger; additionally, it now ignores `opacity`
+  - to revert this change, users will need to edit `_includes/css/callouts.scss.liquid` (instead of custom variables/styles)
+  - note: callouts still have fundamental accessibility issues. We are currently working on a different solution and will likely deprecate their styling in a future release.
+- changed `$link-color` to have stronger dark-theme color contrast in [#1752](https://github.com/just-the-docs/just-the-docs/pull/1752)
+- changed `.nav-list-link`'s `:hover` and `:active` to have stronger color contrast in [#1753](https://github.com/just-the-docs/just-the-docs/pull/1753)
+- changed `site.footer_content` and the `footer_custom` include to have stronger color contrast in [#1755](https://github.com/just-the-docs/just-the-docs/pull/1755)
+
+Additionally, see the breaking changes section for details on new syntax highlighting themes.
+
 ## v0.9.x - v0.10.0
 
 There are no potentially-breaking changes in v0.10.0.

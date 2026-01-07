@@ -185,21 +185,6 @@
   );
 }
 
-// stylelint-disable selector-max-type
-
-body {
-  position: relative;
-  padding-bottom: $sp-10;
-  overflow-y: scroll;
-
-  @include mq(md) {
-    position: static;
-    padding-bottom: 0;
-  }
-}
-
-// stylelint-enable selector-max-type
-
 .site-footer {
   position: absolute;
   bottom: 0;

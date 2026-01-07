@@ -106,3 +106,27 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm test
+
+  rspec:
+    name: Accessibility (RSpec + aXe)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+      - name: Run a11y tests
+        run: |
+          bundle exec rspec
+      - name: summary
+        if: failure()
+        run: ruby spec/support/spec_summary.rb
+      - name: Keep screenshots from failed tests
+        uses: actions/upload-artifact@v6
+        if: failure()
+        with:
+          name: screenshots
+          path: ${{ github.workspace }}/tmp/capybara
+          if-no-files-found: ignore
+          retention-days: 7
