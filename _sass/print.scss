@@ -19,7 +19,7 @@
     width: 100%;
     height: auto;
     border-right: 0 !important;
-
+    /* Disable display: flex and position: fixed from non-print styles */
     position: static;
     display: block;
   }
@@ -43,6 +43,6 @@
 
   .main {
     max-width: none;
-    margin-left: 0 !important;
+    margin-left: 0 !important; /* Necessary to override .side-bar + .main specificity */
   }
 }
