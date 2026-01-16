@@ -19,6 +19,9 @@
     width: 100%;
     height: auto;
     border-right: 0 !important;
+
+    position: static;
+    display: block;
   }
 
   .site-header {
@@ -40,6 +43,6 @@
 
   .main {
     max-width: none;
-    margin-left: 0;
+    margin-left: 0 !important;
   }
 }
