@@ -24,11 +24,22 @@ Docs changes made since the latest release:
 
 - N/A
 
+## v0.11.2 - 2026-01-23
+
+### Theme
+
+- Fixed: incorrect behaviour of `nav_footer` *below* `xs` viewport by [@mattxwang](https://github.com/mattxwang) in [#1760](https://github.com/just-the-docs/just-the-docs/pull/1760)
+- Fixed: usage of deprecated css properties (`word-wrap`, `clip`) and values (`appearance: button`) by [@mattxwang](https://github.com/mattxwang) in [#1761](https://github.com/just-the-docs/just-the-docs/pull/1761)
+- Fixed: incorrect main content spacing in print styles by [@mattxwang](https://github.com/mattxwang) in [#1765](https://github.com/just-the-docs/just-the-docs/pull/1765)
+- Fixed: focus indicator clipping and consistency for sidebar and top nav elements by [@mattxwang](https://github.com/mattxwang) in [#1769](https://github.com/just-the-docs/just-the-docs/pull/1769)
+- Fixed: search bar focus trap and search result focus outline clipping by [@mattxwang](https://github.com/mattxwang) in [#1770](https://github.com/just-the-docs/just-the-docs/pull/1770)
+
+
 ## v0.11.1 - 2026-01-02
 
 ### Theme
 
-- Fixed: incorrect behaviour of `nav_footer` on `xs` viewport
+- Fixed: incorrect behaviour of `nav_footer` on `xs` viewport by [@mattxwang](https://github.com/mattxwang) in [#1759](https://github.com/just-the-docs/just-the-docs/pull/1759)
 
 ## v0.11.0 - 2026-01-01
 
