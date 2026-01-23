@@ -133,6 +133,7 @@
   padding-top: $sp-3;
   padding-bottom: $sp-3;
   color: $body-heading-color;
+  outline-offset: -1px; // Fixes outline clipping on both desktop/mobile "views"
 
   @include container;
 
@@ -160,6 +161,7 @@
   height: 100%;
   padding: $gutter-spacing-sm;
   align-items: center;
+  outline-offset: -1px; // Fixes outline clipping on both desktop/mobile "views"
 }
 
 @include mq(md) {
