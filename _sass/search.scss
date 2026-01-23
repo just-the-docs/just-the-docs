@@ -128,6 +128,7 @@
 .search-result {
   display: block;
   padding: $sp-1 $sp-3;
+  outline-offset: -1px;
 
   &:hover,
   &.active {
