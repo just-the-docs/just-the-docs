@@ -34,16 +34,14 @@
     note: nav_footer_custom and/or this "site footer" appear in components/sidebar.html for the desktop view.
   {%- endcomment -%}
 
-  <div class="d-md-none">
+  <div class="d-md-none mt-4 fs-2">
     {% capture nav_footer_custom %}
       {%- include nav_footer_custom.html -%}
     {% endcapture %}
     {% if nav_footer_custom != "" %}
       {{ nav_footer_custom }}
     {% else %}
-      <div class="mt-4 fs-2">
-        This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-      </div>
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
     {% endif %}
   </div>
 </footer>

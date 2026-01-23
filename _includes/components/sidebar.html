@@ -23,16 +23,14 @@
     note: nav_footer_custom and/or this "site footer" appear in components/footer.html for the mobile view.
   {%- endcomment -%}
 
-  <div class="d-md-block d-none">
+  <div class="d-md-block d-none site-footer">
   {% capture nav_footer_custom %}
     {%- include nav_footer_custom.html -%}
   {% endcapture %}
   {% if nav_footer_custom != "" %}
     {{ nav_footer_custom }}
   {% else %}
-    <div class="site-footer">
-      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
-    </div>
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
   {% endif %}
   </div>
 </header>

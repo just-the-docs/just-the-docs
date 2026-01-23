@@ -64,6 +64,111 @@ gem "just-the-docs", "0.10.0" # replace 0.10.0 with your desired version
 
 [CHANGELOG]: {% link CHANGELOG.md %}
 
+## v0.11.x - v0.12.0
+
+### POTENTIALLY-BREAKING CHANGES in v0.12.0
+
+`v0.12.0` changes the approach to the "custom nav footer" (`_includes/nav_footer_custom.html`) to properly fix a regression introduced in `v0.11.0`. This change is described as:
+
+1. a minor change to the behaviour of `.site-footer` (the "nav footer", "This site uses Just the Docs...") within the sidebar
+  - **explicit migration necessary if**:
+    1. **users have a custom `_includes/nav_footer_custom.html`**
+    2. **users have a custom `_includes/components/sidebar.html` and/or `_includes/components/footer.html`**
+    3. **users have custom code or logic that relies on `.site-footer` outside of `_includes/nav_footer_custom.html`**
+
+Migration steps are included below - they are slightly complex due to the (incorrect) way that this bug was handled before.
+
+#### Context: Updated site footer behavior (again)
+
+For some context: in `v0.11.0`, the nav footer (`.site-footer`, "This site uses Just the Docs...") was updated to fix several different accessibility issues (incorrect tab order on the `sm`/mobile viewport, duplicate `contentinfo` ARIA roles). However, this did not properly account for the different ways that users used `_includes/nav_footer_custom.html`. Subsequent patch releases attempted to fix this issue - however, after further discussion, it was not deemed possible to provide a backwards-compatible fix that works for all users. In retrospect, this should have been released in v0.11.0 originally (with some more thorough testing), and with some additional migration documentation.
+
+`v0.12.0` fixes this by making a new "rule": `nav_footer_custom.html` should *not* contain `.site-footer`. Making this markup change now makes it possible to cleanly migrate all users to the new system. The following sections explain, in more detail, how to migrate from `0.11.x` (or `0.10.x`) to `0.12.0`.
+
+#### Migrating `_includes/nav_footer_custom.html`
+
+Users who do *not* have an `_includes/nav_footer_custom.html` can skip this step.
+
+Users who do have an `_includes/nav_footer_custom.html` should inspect its contents. **If it includes a `.site-footer`, it should be removed.** For example, consider the following `_includes`:
+
+```html
+<!-- OLD: _includes/nav_footer_custom.html -->
+<div class="site-footer">
+	This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+</div>
+```
+
+It should be changed to either:
+
+```html
+<!-- New: _includes/nav_footer_custom.html -->
+<div>
+	This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+</div>
+```
+
+or
+
+```html
+<!-- New: _includes/nav_footer_custom.html -->
+This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+```
+
+Note that `nav_footer_custom` should *not* contain a `<footer>` element - doing so will produce semantically incorrect markup.
+
+#### Migrating `_includes/components/sidebar.html`
+
+Users who do *not* have an `_includes/components/sidebar.html` can skip this step.
+
+Users who have overriden the theme's `_includes/components/sidebar.html` should change the `nav_footer_custom` rendering code to the current version in `0.12.0`. This is the code that immediately follows `{% include_cached components/site_nav.html %}`.
+
+Prior to `0.11.0`, it looked like this:
+
+```html
+<!-- Old: _includes/components/sidebar.html -->
+<header>
+  <!-- other code... -->
+  {% include_cached components/site_nav.html %}
+
+  {% capture nav_footer_custom %}
+    {%- include nav_footer_custom.html -%}
+  {% endcapture %}
+  {% if nav_footer_custom != "" %}
+    {{ nav_footer_custom }}
+  {% else %}
+    <footer class="site-footer">
+      This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+    </footer>
+  {% endif %}
+</header>
+```
+
+Now, that same portion of the code should be:
+
+```html
+<!-- New: _includes/components/sidebar.html -->
+<header>
+  <!-- other code... -->
+  {% include_cached components/site_nav.html %}
+
+  <div class="d-md-block d-none site-footer">
+  {% capture nav_footer_custom %}
+    {%- include nav_footer_custom.html -%}
+  {% endcapture %}
+  {% if nav_footer_custom != "" %}
+    {{ nav_footer_custom }}
+  {% else %}
+    This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.
+  {% endif %}
+  </div>
+</header>
+```
+
+#### Migrating `_includes/components/footer.html`
+
+Users who do *not* have an `_includes/components/footer.html` can skip this step.
+
+Users who have overriden the theme's `_includes/components/footer.html` should replace the entire file with the current contents from `0.12.0`, and then make modifications from there. Importantly, mobile view for the `nav_footer_custom.html` is *now* rendered within this component.
+
 ## v0.10.x - v0.11.0
 
 ### POTENTIALLY-BREAKING CHANGES in v0.11.0
