@@ -24,6 +24,12 @@ Docs changes made since the latest release:
 
 - N/A
 
+## v0.12.0 - 2026-01-23
+
+### Theme:
+
+- Fixed: site footer placement on `md`/`xs`/below, *for real* [@mattxwang](https://github.com/mattxwang) in [#1771](https://github.com/just-the-docs/just-the-docs/pull/1771)
+
 ## v0.11.2 - 2026-01-23
 
 ### Theme
