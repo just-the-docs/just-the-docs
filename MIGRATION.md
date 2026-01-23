@@ -25,13 +25,13 @@ Users who have not pinned the theme version will be **automatically upgraded to 
 To use a specific release explicitly as a remote theme:
 
 ```yml
-remote_theme: just-the-docs/just-the-docs@v0.10.0 # replace 0.10.0 with your desired version
+remote_theme: just-the-docs/just-the-docs@v0.12.0 # replace 0.12.0 with your desired version
 ```
 
 To use a specific version explicitly as a gem-based theme, pin the version in your `Gemfile` and re-run `bundle install` or `bundle update just-the-docs`:
 
 ```ruby
-gem "just-the-docs", "0.10.0" # replace 0.10.0 with your desired version
+gem "just-the-docs", "0.12.0" # replace 0.12.0 with your desired version
 ```
 
 {: .warning }
@@ -119,10 +119,11 @@ Note that `nav_footer_custom` should *not* contain a `<footer>` element - doing 
 
 Users who do *not* have an `_includes/components/sidebar.html` can skip this step.
 
-Users who have overriden the theme's `_includes/components/sidebar.html` should change the `nav_footer_custom` rendering code to the current version in `0.12.0`. This is the code that immediately follows `{% include_cached components/site_nav.html %}`.
+Users who have overriden the theme's `_includes/components/sidebar.html` should change the `nav_footer_custom` rendering code to the current version in `0.12.0`. This is the code that immediately follows {% raw %}`{% include_cached components/site_nav.html %}`{% endraw %}.
 
 Prior to `0.11.0`, it looked like this:
 
+{% raw %}
 ```html
 <!-- Old: _includes/components/sidebar.html -->
 <header>
@@ -141,9 +142,11 @@ Prior to `0.11.0`, it looked like this:
   {% endif %}
 </header>
 ```
+{% endraw %}
 
 Now, that same portion of the code should be:
 
+{% raw %}
 ```html
 <!-- New: _includes/components/sidebar.html -->
 <header>
@@ -162,6 +165,7 @@ Now, that same portion of the code should be:
   </div>
 </header>
 ```
+{% endraw %}
 
 #### Migrating `_includes/components/footer.html`
 
