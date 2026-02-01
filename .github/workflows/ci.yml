@@ -16,7 +16,7 @@ jobs:
       matrix:
         jekyll-version: [3.9, 4.3]
         os: [ubuntu-latest, macos-latest, windows-latest]
-        ruby-version: ["3.1", "3.2", "3.3", "3.4"]
+        ruby-version: ["3.2", "3.3", "3.4"]
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v6
@@ -75,14 +75,14 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Cache HTMLProofer
         id: cache-htmlproofer
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-htmlproofer
       - name: Build Site
         run: bundle exec jekyll build
       - name: Test with Nu Validator
-        uses: Cyb3r-Jak3/html5validator-action@b3d451908992570865d497fddb366d01e593e55f
+        uses: Cyb3r-Jak3/html5validator-action@443b108eb8e134b63a1f8a8ba0c942d552608ed7
         with:
           config: fixtures/html5validator-config.yml
       - name: Test with html-proofer
@@ -101,8 +101,32 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm test
+
+  rspec:
+    name: Accessibility (RSpec + aXe)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+          bundler-cache: true
+      - name: Run a11y tests
+        run: |
+          bundle exec rspec
+      - name: summary
+        if: failure()
+        run: ruby spec/support/spec_summary.rb
+      - name: Keep screenshots from failed tests
+        uses: actions/upload-artifact@v6
+        if: failure()
+        with:
+          name: screenshots
+          path: ${{ github.workspace }}/tmp/capybara
+          if-no-files-found: ignore
+          retention-days: 7
