@@ -20,15 +20,15 @@ GEM
       io-event (~> 1.11)
       metrics (~> 0.12)
       traces (~> 0.18)
-    axe-core-api (4.11.0)
+    axe-core-api (4.11.1)
       dumb_delegator
       ostruct
       virtus
-    axe-core-capybara (4.11.0)
-      axe-core-api (= 4.11.0)
+    axe-core-capybara (4.11.1)
+      axe-core-api (= 4.11.1)
       dumb_delegator
-    axe-core-rspec (4.11.0)
-      axe-core-api (= 4.11.0)
+    axe-core-rspec (4.11.1)
+      axe-core-api (= 4.11.1)
       dumb_delegator
       ostruct
       virtus
