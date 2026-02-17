@@ -73,10 +73,12 @@ GEM
       ffi (>= 1.15.0)
       logger
     eventmachine (1.2.7)
-    faraday (2.9.0)
-      faraday-net_http (>= 2.0, < 3.2)
-    faraday-net_http (3.1.0)
-      net-http
+    faraday (2.14.1)
+      faraday-net_http (>= 2.0, < 3.5)
+      json
+      logger
+    faraday-net_http (3.4.2)
+      net-http (~> 0.5)
     ffi (1.17.3-arm64-darwin)
     ffi (1.17.3-x86_64-linux-gnu)
     fiber-annotation (0.2.0)
@@ -156,8 +158,8 @@ GEM
     mercenary (0.4.0)
     metrics (0.15.0)
     mini_mime (1.1.5)
-    net-http (0.4.1)
-      uri
+    net-http (0.9.1)
+      uri (>= 0.11.1)
     nokogiri (1.19.0-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.19.0-x86_64-linux-gnu)
@@ -227,7 +229,7 @@ GEM
     typhoeus (1.4.1)
       ethon (>= 0.9.0)
     unicode-display_width (2.6.0)
-    uri (0.13.3)
+    uri (1.1.1)
     virtus (2.0.0)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
