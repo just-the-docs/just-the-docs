@@ -4,15 +4,57 @@
   Includes: components/nav/sorted.html.
   Assigns to: nav_children.
   Overwrites:
-    nav_candidates, nav_child, nav_child_ok.
+    nav_candidates, nav_path_candidates, nav_child, nav_child_ok.
+
+  The `parent` front matter field supports two matching modes:
+    1. Title-based (default): `parent: "Section Title"` matches parent's `title`
+    2. Path-based: `parent: "/section/"` (starts with `/`) matches parent's URL
+  Path-based matching enables i18n (translated titles), safe renames, and
+  unambiguous matching for pages with duplicate titles.
 {%- endcomment -%}
 
 {%- assign nav_children = "" | split: "" -%}
 
 {%- if include.all == true or include.node.has_children != false -%}
 
+  {%- comment -%}
+    Title-based matching (backwards compatible): find children whose
+    `parent` value matches this node's title.
+  {%- endcomment -%}
   {%- assign nav_candidates = nav_parenthood
         | where: "name", include.node.title | map: "items" | first -%}
+
+  {%- comment -%}
+    Path-based matching: find children whose `parent` starts with `/`
+    and matches this node's URL. These pages are grouped by their `parent`
+    value (e.g., "/quickstart/") in nav_parenthood, so we look up by the
+    node's URL directly, then also scan all groups for path-based parents
+    that match.
+  {%- endcomment -%}
+  {%- assign nav_node_url = include.node.url | default: include.node.permalink -%}
+  {%- assign nav_path_group = nav_parenthood
+        | where: "name", nav_node_url | map: "items" | first -%}
+  {%- assign nav_path_candidates = "" | split: "" -%}
+  {%- if nav_path_group -%}
+    {%- for nav_item in nav_path_group -%}
+      {%- assign nav_path_candidates = nav_path_candidates | push: nav_item -%}
+    {%- endfor -%}
+  {%- endif -%}
+
+  {%- comment -%}
+    Merge path-based candidates into the title-based candidates,
+    avoiding duplicates.
+  {%- endcomment -%}
+  {%- if nav_candidates == nil -%}
+    {%- assign nav_candidates = nav_path_candidates -%}
+  {%- else -%}
+    {%- assign nav_existing_urls = nav_candidates | map: "url" -%}
+    {%- for nav_path_child in nav_path_candidates -%}
+      {%- unless nav_existing_urls contains nav_path_child.url -%}
+        {%- assign nav_candidates = nav_candidates | push: nav_path_child -%}
+      {%- endunless -%}
+    {%- endfor -%}
+  {%- endif -%}
 
   {%- for nav_child in nav_candidates -%}
     {%- assign nav_child_ok = true -%}
@@ -30,12 +72,16 @@
     {%- comment -%}
       The following check rejects nav_child as 3rd-level when include.node is 2nd-level
       and nav_child can also be 2nd-level. This is for backwards compatibility with
-      existing 3-level sites.
+      existing 3-level sites. Skip this check for path-based children since they
+      use explicit path matching rather than ambiguous title matching.
     {%- endcomment -%}
-    {%- if nav_child.grand_parent == nil and nav_child.ancestor == nil and 
-          nav_top_node_titles contains nav_child.parent and include.ancestors.size >= 1 -%}
-      {%- assign nav_child_ok = false -%}
-    {%- endif -%}
+    {%- assign nav_parent_first_char = nav_child.parent | slice: 0 -%}
+    {%- unless nav_parent_first_char == "/" -%}
+      {%- if nav_child.grand_parent == nil and nav_child.ancestor == nil and
+            nav_top_node_titles contains nav_child.parent and include.ancestors.size >= 1 -%}
+        {%- assign nav_child_ok = false -%}
+      {%- endif -%}
+    {%- endunless -%}
 
     {%- if nav_child_ok -%}
       {%- assign nav_children = nav_children | push: nav_child -%}
