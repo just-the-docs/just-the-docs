@@ -198,7 +198,7 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  appearance: button;
+  appearance: auto;
 }
 
 /**
@@ -308,7 +308,7 @@ textarea {
  */
 
 ::-webkit-file-upload-button {
-  appearance: button; /* 1 */
+  appearance: auto; /* 1 */
   font: inherit; /* 2 */
 }
 

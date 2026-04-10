@@ -1,3 +1,8 @@
+// TODO: would be good to consider refactoring these mixins in a way that
+// the & { } selector is not necessary. Note that removing the & { }
+// will trip a SCSS deprecation warning -
+// see https://sass-lang.com/documentation/breaking-changes/mixed-decls/
+// stylelint-disable block-no-redundant-nested-style-rules
 @mixin fs-1 {
   & {
     font-size: $font-size-1 !important;

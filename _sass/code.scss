@@ -87,8 +87,9 @@ figure.highlight {
     position: absolute;
     top: 0;
     right: 0;
-    border: $sp-3 solid $code-background-color;
-    background-color: $code-background-color;
+    padding: $sp-3;
+    border: none;
+    background: none;
     color: $body-text-color;
     box-sizing: content-box;
 
@@ -104,6 +105,7 @@ figure.highlight {
 
     &:focus {
       opacity: 1;
+      outline: 2px solid $link-color;
     }
   }
 
@@ -124,7 +126,8 @@ figure.highlight {
     overflow-x: auto;
     padding: $sp-3;
     margin: 0;
-    border: 0;
+    border: 1px solid $body-text-color;
+    border-radius: $border-radius;
   }
 
   #{$pre-select},
@@ -160,7 +163,8 @@ figure.highlight {
     overflow-x: auto;
     padding: $sp-3;
     margin: 0;
-    border: 0;
+    border: 1px solid $body-text-color;
+    border-radius: $border-radius;
   }
 }
 

@@ -133,6 +133,7 @@
   padding-top: $sp-3;
   padding-bottom: $sp-3;
   color: $body-heading-color;
+  outline-offset: -1px; // Fixes outline clipping on both desktop/mobile "views"
 
   @include container;
 
@@ -160,6 +161,7 @@
   height: 100%;
   padding: $gutter-spacing-sm;
   align-items: center;
+  outline-offset: -1px; // Fixes outline clipping on both desktop/mobile "views"
 }
 
 @include mq(md) {
@@ -185,28 +187,12 @@
   );
 }
 
-// stylelint-disable selector-max-type
-
-body {
-  position: relative;
-  padding-bottom: $sp-10;
-  overflow-y: scroll;
-
-  @include mq(md) {
-    position: static;
-    padding-bottom: 0;
-  }
-}
-
-// stylelint-enable selector-max-type
-
 .site-footer {
   position: absolute;
   bottom: 0;
   left: 0;
   padding-top: $sp-4;
   padding-bottom: $sp-4;
-  color: $grey-dk-000;
 
   @include container;
 

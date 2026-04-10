@@ -47,7 +47,7 @@
             <ul class="nav-list nav-category-list">
               <li class="nav-list-item">
                 {%- if collection.size > 0 -%}
-                <button class="nav-list-expander btn-reset" aria-label="Toggle collection {{ collection_value.name }}" aria-pressed="false">
+                <button class="nav-list-expander btn-reset" aria-label="{{ collection_value.name }} collection" aria-expanded="false">
                   <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
                 </button>
                 {%- endif -%}
