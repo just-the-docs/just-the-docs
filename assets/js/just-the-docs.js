@@ -69,6 +69,107 @@ function initNav() {
   {%- endif %}
 }
 
+// Sidebar TOC (rendered in content via Kramdown {:toc}, then cloned into sidebar)
+
+function initSidebarToc() {
+  const configEl = document.querySelector('[data-jtd-sidebar-toc-config]');
+  if (!configEl) return;
+
+  // Kramdown's {:toc} renders to <ul id="markdown-toc"> by default.
+  // Allow an explicit wrapper (.js-page-toc) to disambiguate if needed.
+  const sourceToc =
+    document.querySelector('.js-page-toc #markdown-toc') ||
+    document.getElementById('markdown-toc');
+
+  if (!sourceToc) return;
+
+  const siteNav = document.getElementById('site-nav');
+  if (!siteNav) return;
+
+  // `scrollNav()` removes the href from the current page's link, so we prefer
+  // selecting via the `.active` class (set by activateNav()).
+  const currentNavLink =
+    siteNav.querySelector('a.nav-list-link.active') ||
+    navLink();
+  if (!currentNavLink) return;
+
+  const currentNavItem = currentNavLink.closest('li.nav-list-item');
+  if (!currentNavItem) return;
+
+  // Convert the rendered TOC list into a nav subtree that matches the
+  // Just the Docs nav markup/classes (nav-list, nav-list-item, nav-list-link).
+  function buildNavListFromTocList(listEl) {
+    const ul = document.createElement('ul');
+    ul.classList.add('nav-list');
+
+    Array.from(listEl.children).forEach((child) => {
+      if (!child || child.tagName !== 'LI') return;
+
+      const link = child.querySelector(':scope > a');
+      if (!link) return;
+
+      const li = document.createElement('li');
+      li.classList.add('nav-list-item');
+
+      const a = document.createElement('a');
+      a.classList.add('nav-list-link');
+      a.setAttribute('href', link.getAttribute('href') || '#');
+      a.textContent = link.textContent || '';
+
+      li.appendChild(a);
+
+      const nestedList = child.querySelector(':scope > ol, :scope > ul');
+      if (nestedList) {
+        const subtree = buildNavListFromTocList(nestedList);
+
+        const expander = document.createElement('button');
+        expander.classList.add('nav-list-expander', 'btn-reset');
+        expander.setAttribute('aria-label', 'Toggle section');
+        expander.setAttribute('aria-expanded', 'false');
+        expander.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>';
+
+        li.insertBefore(expander, li.firstChild);
+        li.appendChild(subtree);
+
+        // Default: expanded, to behave like a page outline.
+        li.classList.toggle('active', true);
+        expander.ariaExpanded = true;
+      }
+
+      ul.appendChild(li);
+    });
+
+    return ul;
+  }
+
+  // Remove any previous injected TOC (hot reload / navigation).
+  const existing = currentNavItem.querySelector(':scope > ul.nav-list[data-jtd-sidebar-toc-nav]');
+  if (existing) existing.remove();
+
+  const tocNavList = buildNavListFromTocList(sourceToc);
+  tocNavList.setAttribute('data-jtd-sidebar-toc-nav', 'true');
+
+  // Ensure this nav item can expand/collapse like other nav items.
+  let expander = currentNavItem.querySelector(':scope > button.nav-list-expander');
+  if (!expander) {
+    expander = document.createElement('button');
+    expander.classList.add('nav-list-expander', 'btn-reset');
+    expander.setAttribute('aria-label', 'Toggle page sections');
+    expander.setAttribute('aria-expanded', 'false');
+    expander.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>';
+    currentNavItem.insertBefore(expander, currentNavItem.firstChild);
+  }
+
+  currentNavItem.appendChild(tocNavList);
+  currentNavItem.classList.toggle('active', true);
+  expander.ariaExpanded = true;
+
+  const hideSource = (configEl.getAttribute('data-jtd-sidebar-toc-hide-source') || '').toLowerCase();
+  if (hideSource === 'true' || hideSource === '1') {
+    sourceToc.hidden = true;
+  }
+}
+
 // The <head> element is assumed to include the following stylesheets:
 // - a <link> to /assets/css/just-the-docs-head-nav.css,
 //             with id 'jtd-head-nav-stylesheet'
@@ -580,6 +681,7 @@ jtd.onReady(function(){
     activateNav();
     scrollNav();
   }
+  initSidebarToc();
   {%- if site.search_enabled != false %}
   initSearch();
   {%- endif %}
