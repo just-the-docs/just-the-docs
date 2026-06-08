@@ -115,3 +115,10 @@ $media-queries: (
   lg: $content-width + $nav-width,
   xl: 87.5rem,
 ) !default;
+
+// Navigation guide lines
+
+$nav-guide-line-color: $border-color !default;
+$nav-guide-line-width: 2px !default;
+$nav-guide-indent: 2.35rem !default; 
+$nav-guide-gap: 0 !default;
