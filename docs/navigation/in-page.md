@@ -2,6 +2,7 @@
 title: In-Page Navigation
 parent: Navigation
 nav_order: 5
+sidebar_toc: true
 ---
 
 # In-Page Navigation
@@ -14,6 +15,38 @@ nav_order: 5
 {:toc}
 
 To support in-page navigation, you can generate a *Table of Contents* (TOC) with links to headings, like the one shown above, as well as a link to the top of the page.
+
+## Sidebar Table of Contents
+
+If you want the page's Table of Contents to appear in the **left navigation sidebar** (instead of only in the page content),
+enable the `sidebar_toc` option. This will clone the generated `#markdown-toc` list into the sidebar.
+
+To enable site-wide, add to `_config.yml`:
+
+```yml
+sidebar_toc: true
+```
+
+To enable on a single page, add to the page front matter:
+
+```yml
+sidebar_toc: true
+```
+
+To hide the in-page TOC after cloning it into the sidebar:
+
+```yml
+sidebar_toc_hide: true
+```
+
+If you have multiple TOCs and want to ensure we use a specific one, wrap it:
+
+```markdown
+<div class="js-page-toc" markdown="block">
+1. TOC
+{:toc}
+</div>
+```
 
 ## Generating Table of Contents
 

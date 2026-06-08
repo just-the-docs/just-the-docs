@@ -19,6 +19,16 @@
 
   {% include_cached components/site_nav.html %}
 
+  {%- if site.sidebar_toc == true or page.sidebar_toc == true -%}
+    {%- assign sidebar_toc_hide_source =
+        page.sidebar_toc_hide | default: site.sidebar_toc_hide | default: false -%}
+    <div
+      data-jtd-sidebar-toc-config
+      data-jtd-sidebar-toc-hide-source="{{ sidebar_toc_hide_source }}"
+      hidden
+    ></div>
+  {%- endif -%}
+
   {%- comment -%}
     note: nav_footer_custom and/or this "site footer" appear in components/footer.html for the mobile view.
   {%- endcomment -%}
