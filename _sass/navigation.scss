@@ -24,6 +24,7 @@
       padding-bottom: $sp-1;
       line-height: #{$nav-list-item-height-sm - 2 * $sp-1};
       outline-offset: -1px; // Fixes outline clipping on both desktop/mobile "views"
+      text-wrap: balance;
 
       @if $nav-list-expander-right {
         padding-right: $nav-list-item-height-sm;
