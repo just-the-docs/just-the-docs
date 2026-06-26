@@ -44,7 +44,7 @@ GEM
     childprocess (5.1.0)
       logger (~> 1.5)
     colorator (1.1.0)
-    concurrent-ruby (1.3.6)
+    concurrent-ruby (1.3.7)
     console (1.34.3)
       fiber-annotation
       fiber-local (~> 1.1)
