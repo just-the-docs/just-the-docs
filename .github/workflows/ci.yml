@@ -19,7 +19,7 @@ jobs:
         ruby-version: ["3.2", "3.3", "3.4"]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Setup Ruby ${{ matrix.ruby-version }}
         uses: ruby/setup-ruby@v1
         with:
@@ -42,7 +42,7 @@ jobs:
     name: Build (github-pages gem)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -66,7 +66,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Setup Ruby ${{ matrix.ruby-version }}
         uses: ruby/setup-ruby@v1
         with:
@@ -75,7 +75,7 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Cache HTMLProofer
         id: cache-htmlproofer
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-htmlproofer
@@ -99,7 +99,7 @@ jobs:
         node-version: [22.x]
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v6
         with:
@@ -111,7 +111,7 @@ jobs:
     name: Accessibility (RSpec + aXe)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.4'
