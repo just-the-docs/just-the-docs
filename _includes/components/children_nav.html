@@ -67,6 +67,10 @@
 
   {% assign nav_top_node_titles = nav_top_nodes | map: "title" -%}
 
+  {%- comment -%}
+    Pass the page to children.html, which supports both title-based and
+    path-based (parent_path) matching for i18n compatibility.
+  {%- endcomment -%}
   {%- include components/nav/children.html node=page ancestors=nav_ancestors all=true -%}
 
 {%- endunless -%}
