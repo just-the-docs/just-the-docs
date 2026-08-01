@@ -47,7 +47,7 @@ GEM
       fiber-annotation
       fiber-local (~> 1.1)
       json
-    csv (3.3.5)
+    csv (3.3.6)
     diff-lcs (1.6.2)
     dumb_delegator (1.1.0)
     em-websocket (0.5.3)
