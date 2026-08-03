@@ -105,6 +105,8 @@ $content-width: 50rem !default;
 $header-height: 3.75rem !default;
 $search-results-width: $content-width - $nav-width !default;
 $transition-duration: 400ms;
+$toc-width: 16.5rem !default;
+$toc-sm-label: "Table of Contents" !default;
 
 // Media queries in pixels
 
@@ -113,5 +115,5 @@ $media-queries: (
   sm: 31.25rem,
   md: $content-width,
   lg: $content-width + $nav-width,
-  xl: 87.5rem,
+  xl: $content-width + $nav-width + $toc-width,
 ) !default;
