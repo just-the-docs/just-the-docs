@@ -18,12 +18,12 @@ GEM
       console (~> 1.29)
       fiber-annotation
       io-event (~> 1.11)
-    axe-core-api (4.12.0)
+    axe-core-api (4.13.0)
       dumb_delegator
-    axe-core-capybara (4.12.0)
-      axe-core-api (= 4.12.0)
-    axe-core-rspec (4.12.0)
-      axe-core-api (= 4.12.0)
+    axe-core-capybara (4.13.0)
+      axe-core-api (= 4.13.0)
+    axe-core-rspec (4.13.0)
+      axe-core-api (= 4.13.0)
     base64 (0.3.0)
     benchmark (0.5.0)
     bigdecimal (3.3.1)
