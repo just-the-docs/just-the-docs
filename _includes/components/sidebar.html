@@ -11,11 +11,39 @@
 
 <header class="side-bar">
   <div class="site-header">
-    <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
+    
+    {%- comment -%}
+      <a href="{{ '/' | relative_url }}" class="site-title lh-tight">{% include title.html %}</a>
+    {%- endcomment -%}
+    
     <button id="menu-button" class="site-button btn-reset" aria-label="Menu" aria-expanded="false">
       <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
     </button>
-  </div>
+
+    <div class="sb-photo-wrap">
+      <img class="sb-photo"
+           src="{{ '/assets/images/headshot_cropped.png' | relative_url }}"
+           alt="Gabriel-John Cunanan" width="250" height="250">
+      <svg class="sb-name-arc"
+           viewBox="0 0 220 220"
+           xmlns="http://www.w3.org/2000/svg"
+           overflow="visible"
+           aria-hidden="true">
+        <defs>
+          <path id="sbArc" d="M 25,145 A 85,85 0 0,1 195,145" fill="none"/>
+        </defs>
+        <text font-size="22" font-weight="600" fill="#7253ed" font-family="inherit">
+          <textPath href="#sbArc" startOffset="50%" text-anchor="middle">Gabriel-John Cunanan</textPath>
+        </text>
+      </svg>
+    </div>
+
+    <div class="social-icons">
+      <a href="mailto:gabriel.john.cunaan@gmail.com"                    title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/gabriel-john-cunanan/"       title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    </div>
 
   {% include_cached components/site_nav.html %}
 

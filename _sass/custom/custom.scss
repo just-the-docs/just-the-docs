@@ -1,1 +1,150 @@
 // custom SCSS (or CSS) goes here
+// --- Sidebar header layout ---
+
+// Reserve the window scrollbar gutter on every page so the layout never
+// shifts horizontally when navigating between short and tall pages.
+html {
+  scrollbar-gutter: stable;
+}
+
+// Allow the SVG name arc to extend above .site-header without being clipped.
+// !important beats JTD's higher-specificity rule "header.side-bar { overflow-y: auto }".
+// Scrollbar hiding is also applied here as a belt-and-suspenders measure.
+.side-bar {
+  overflow: visible !important;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Halve JTD's default padding-top ($sp-8 = 3rem) between the divider and
+// the first nav link.
+// Hide the scrollbar on the nav scroll area — prevents the ~15px horizontal
+// shift when the nav overflows on some pages but not others.
+.site-nav {
+  padding-top: 1.5rem !important;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// Replace JTD's fixed-height flex-row header with a tall centred column.
+// !important is needed because JTD's own stylesheet sets display/flex-direction
+// and possibly a fixed height with equal or higher specificity.
+.site-header {
+  position: relative !important;   // anchor for the abs-positioned hamburger
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  height: auto !important;         // JTD sets a fixed px height; unset it
+  max-height: none !important;     // JTD also sets max-height: $header-height (60px) at md+;
+                                   // without this the flex layout still treats the header as
+                                   // 60px tall and .site-nav overlaps our taller content
+  min-height: unset !important;
+  padding: 1.5rem 0 0.75rem !important;
+  overflow: visible !important;
+  border-bottom: 1px solid $border-color; // divider before nav links
+}
+
+// Hamburger menu button: pin to top-right so it doesn't push the column down.
+// JTD's own CSS hides it on wide screens; on narrow screens it sits in the
+// corner of the visible sidebar header and acts as a close button.
+.site-header .site-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+// --- Profile photo + curved name ---
+
+// Container that positions the photo and the SVG name overlay together.
+// 50 px of headroom above the 170 px photo circle = 220 px total height.
+.sb-photo-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;   // 170px photo + 50px headroom above for the name arc
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+// Standard <img> circle — reliable cross-browser image loading.
+img.sb-photo {
+  position: absolute;
+  bottom: 0;
+  left: 35px;     // (220 - 150) / 2 = 35 px each side
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+// SVG overlay: draws only the curved "James Bowden" text.
+// overflow: visible lets the arc endpoints extend past the container edges.
+svg.sb-name-arc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+// On mobile (below JTD's $md = 50rem), shrink the whole photo+name group to 50%.
+// transform: scale() scales both the <img> and the SVG text uniformly.
+// The untransformed element still occupies 220px; the negative margin-bottom
+// compensates for the 110px of unused space (220 - 220×0.5 = 110px).
+@media screen and (max-width: 49.9375rem) {
+  .sb-photo-wrap {
+    transform: scale(0.6);
+    transform-origin: top center;
+    margin-bottom: -88px;
+  }
+}
+
+
+// --- Media nav section ---
+
+.sb-media-nav {
+  .sb-media-divider {
+    border: none;
+    border-top: 1px solid $border-color;
+    margin: 0.5rem 0 0;
+  }
+
+  .sb-media-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: $nav-child-link-color;
+    padding: 0.5rem $nav-list-item-height-sm * 0.5 0.25rem;
+  }
+}
+
+// --- Social icons ---
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 0.6rem 0 0.4rem;
+
+  a {
+    color: inherit;
+    opacity: 0.65;
+    font-size: 1.15rem;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+}

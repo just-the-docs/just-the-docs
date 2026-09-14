@@ -1,9 +1,10 @@
 ---
-title: Home
+title: About
 layout: home
 nav_order: 1
 description: "Welcome page for my website"
 permalink: /
+image: /assets/images/headshot.jpg
 ---
 
 # Hello There!
