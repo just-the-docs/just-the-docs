@@ -1,0 +1,305 @@
+// CSS class for hiding the checkbox which manages the visibility of the ToC
+.visually-hidden {
+	position: fixed;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+#__aside:focus + .__container label:not(.close-btn) {
+	outline: 5px auto Highlight;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+aside.__container {
+	overflow-y: auto;
+	line-height: 1.5;
+	@include fs-3;
+
+	// Padding between sidebar items (applies to md and bigger screens)
+	& .__page-actions > p,
+	& li {
+		margin: $sp-2 0;
+	}
+
+	// Because toc-width is usually small => hide the list bullet points and minimize left padding
+	& .__content > ul {
+		padding-left: 0;
+		list-style-type: none;
+
+		& ul {
+			padding-left: $sp-4;
+			list-style-type: none;
+			border-left: 1px solid $grey-lt-300;
+		}
+	}
+
+	// Style the counter to match with current in-page ToC implementation and reset native CSS counter of nested ol
+	& .__content ol {
+		padding-left: 1.5em;
+		list-style-type: none;
+		counter-reset: step-counter;
+
+		& > li::before {
+			position: absolute;
+			margin-left: -1.5em;
+			color: $grey-dk-000;
+			content: counter(step-counter);
+			counter-increment: step-counter;
+		}
+
+		& > li ol {
+			counter-reset: sub-counter;
+		}
+
+		& > li ol > li::before {
+			content: counter(sub-counter, lower-alpha);
+			counter-increment: sub-counter;
+		}
+	}
+
+	// Mark ToC items that are currently showing in view
+	& .__item.active {
+		font-weight: bold;
+	}
+
+	& a[hidden],
+	& button[hidden] {
+		display: none !important;
+		visibility: hidden;
+	}
+}
+
+@media (max-width: map-get($media-queries, md)) { // xs + sm
+	aside.__container {
+		position: sticky;
+		top: 0;
+		min-height: $sp-8;
+		z-index: 3;
+		@include fs-4;
+
+		& > .__content {
+			position: fixed;
+			top: 0;
+			padding: 0 $sp-4;
+			width: 100%;
+			max-height: 100vh;
+			overflow-y: auto;
+			overscroll-behavior: contain;
+			-ms-scroll-chaining: none;
+			background-color: $sidebar-color;
+			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+
+			// Button to close the ToC panel
+			& .close-btn {
+				position: sticky;
+				display: block;
+				top: 0;
+				margin: 0 -#{$sp-4};
+				padding: $sp-4;
+				text-align: right;
+			}
+
+			// Padding between ToC items (applies to xs and sm screens)
+			& .__page-actions > p,
+			& li {
+				margin: 1.25em 0;
+			}
+		}
+
+		// Banner to open ToC panel at the top of the page/when scrolling down
+		& .toc-btn-sm {
+			display: block;
+			margin-top: 0;
+			padding: $sp-3 $sp-4;
+			white-space: nowrap;
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			background-color: $white;
+			transition: margin-top 0.4s;
+
+			& .toc-btn-sm-text {
+				padding-right: $sp-2;
+				text-transform: uppercase;
+				font-weight: bold;
+				@include fs-2;
+			}
+
+			& .arrow-down-icon {
+				padding-left: $sp-2;
+				padding-bottom: $sp-1;
+				float: right;
+			}
+
+			// for the transition
+			&.hidden {
+				margin-top: -48px;
+			}
+		}
+	}
+
+	// Hide the inner div when the top panel is closed (leaving the container and .current-heading-banner visible),
+	// hide .current-heading-banner when ToC is open, and hide the ToC opener button from md + lg views
+	#__aside:not(:checked) + .__container .__content,
+	#__aside:checked + .__container .close-text,
+	.__container .toc-btn-md,
+	#__aside:checked ~ div.search-overlay,
+	.search-active label.aside-overlay {
+		display: none;
+		visibility: hidden;
+	}
+
+	#__aside:checked + .__container .toc-btn-sm {
+		visibility: hidden;
+	}
+
+	// Steal the background overlay for search results to use when ToC is open
+	#__aside:checked ~ .search-overlay {
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+	}
+
+	.search-active aside.__container {
+		z-index: revert;
+	}
+}
+
+@media (min-width: map-get($media-queries, md)) and (max-width: map-get($media-queries, xl)) { // md + lg
+	// Pop-up style
+	aside.__container.float {
+		position: sticky;
+		top: $sp-4;
+		margin: $sp-8 $sp-4 -#{$sp-8} auto; // Align the ToC board to the right + move down without also moving the content
+		width: #{$toc-width + 2rem}; // 2rem padding
+		height: 0;
+		overflow: visible;
+		z-index: 1;
+
+		& > .__content {
+			padding: 0 $sp-4;
+			max-height: calc(100vh - 40px - 2rem);
+			overflow-y: auto;
+			background-color: $sidebar-color;
+			border-radius: $sp-1;
+			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+
+			& .__page-actions {
+				margin-top: $sp-4;
+				margin-bottom: $sp-4;
+			}
+		}
+
+		// Button to open/close the floating ToC panel
+		& .toc-btn-md {
+			display: block;
+			margin-left: auto;
+			padding: .6em;
+			opacity: 0.3;
+			width: 40px;
+			height: 40px;
+
+			&:hover, &:active, &:target {
+				opacity: 1;
+			}
+		}
+	}
+
+	// Fixed side panel style
+	aside.__container.side {
+		position: fixed;
+		top: 0;
+		right: 0;
+		padding: 5rem Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4) 0 $sp-4;
+		width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$toc-width} + #{$sp-4});
+		min-width: #{$toc-width + $sp-6};
+		height: 100vh;
+		background-color: $sidebar-color;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+		z-index: 3;
+
+		& .__page-actions {
+			margin-top: $sp-4;
+			margin-bottom: $sp-4;
+		}
+	}
+
+	// Hide the side ToC panel visually
+	#__aside:not(:checked) + aside.__container.side {
+		visibility: hidden;
+
+		// Button to re-open the side ToC panel. Partially displays over the content so make it translucent
+		& .btn {
+			visibility: visible;
+			position: fixed;
+			top: $header-height + $sp-8;
+			right: Max(calc((100% - #{$nav-width + $content-width}) / 2), $sp-4);
+			padding: .6em; // Align the SVG icon to the center of the button
+			width: 40px;
+			height: 40px;
+			opacity: 0.3;
+
+			&:hover, &:active, &:target {
+				opacity: 1;
+			}
+		}
+	}
+
+	// Steal the background overlay for search results to use when side ToC panel is open
+	#__aside:checked + .__container.side ~ .search-overlay {
+		width: 100%;
+		height: 100%;
+		opacity: 1;
+		z-index: 2;
+	}
+
+	// Hide the ToC opener button when the panel is open, and .toc-banner from xs + sm views
+	// Hide the inner div when the floating panel is closed (leaving the container and the opener button visible),
+	// hide the close button from side ToC panel view, and hide .toc-banner from xs + sm views
+	#__aside:not(:checked) + .__container.float .__content,
+	#__aside:not(:checked) + .__container.float .close-icon,
+	#__aside:checked + .__container.float .close-btn,
+	#__aside:checked + .__container .menu-icon,
+	#__aside:checked + .__container.side .toc-btn-md,
+	#__aside:checked ~ div.search-overlay,
+	.search-active label.aside-overlay,
+	.__container.side .close-icon,
+	.toc-btn-sm {
+		display: none;
+		visibility: hidden;
+	}
+}
+
+@include mq(xl) { // xl
+	aside.__container {
+		position: sticky;
+		top: $sp-4;
+		margin-top: $sp-8;
+		float: right;
+		width: $toc-width;
+		max-height: calc(100vh - #{$sp-6});
+
+		// IE fixes as position: sticky isn't exist
+		@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+			position: fixed;
+			right: calc((100% - #{$nav-width + $toc-width + $content-width}) / 2);
+			top: $header-height;
+			max-height: calc(100vh - #{$header-height + $sp-10});
+		}
+
+		& .__page-actions {
+			margin-bottom: $sp-4;
+		}
+
+		// Hide all buttons which toggle the ToC sidebar (include a.current-heading-banner, a.btn.js-toggle-toc and Close button)
+		// ToC sidebar isn't supposed to be closed on large screens
+		& label, .toc-btn-sm, .toc-btn-md, .close-btn {
+			display: none;
+			visibility: hidden;
+		}
+	}
+}
