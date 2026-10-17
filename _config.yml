@@ -27,6 +27,14 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  - scope:
+      path: "" # all files in the project
+      type: "pages"
+    values:
+      image:
+        path: "/assets/images/og-image.png"
+        width: 1200
+        height: 630
 
 exclude:
   # from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
