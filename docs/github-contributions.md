@@ -14,7 +14,6 @@ Documentation-related contributions to open source GitHub projects.
 > - **Audience:** Maintainers and users of the open source projects I contributed to.
 > - **My role:** External contributor who proposed and authored each change via pull request, following each project's existing style guide and review process.
 > - **Tools:** Markdown, AsciiDoc, GitHub.
-> - **Outcome:** One merged PR, one PR approved by two maintainers but closed as stale before landing, and one adopted style guide—spanning infrastructure config documentation, metadata clarity, and style consistency.
 {: .note }
 
 ## Table of contents
@@ -22,6 +21,25 @@ Documentation-related contributions to open source GitHub projects.
 
 1. TOC
 {:toc}
+
+## Perses: advertising all supported datasources on the homepage
+*[Perses](https://www.cncf.io/projects/perses/) is a [Cloud Native Computing Foundation (CNCF)](https://contribute.cncf.io/) sandbox project: an open specification and tool for building, embedding, and sharing observability dashboards.*
+
+**Problem:** [Issue #4410](https://github.com/perses/perses/issues/4410) on the Perses repo flagged that both the [perses.dev](https://perses.dev/) homepage and the `perses/perses` README still named only the first four datasources Perses supported (Prometheus, Tempo, Loki, Pyroscope), reading as if those were the only options, with no link to the full, dynamically-updated list.
+
+**My contribution:** I opened two companion PRs to close the gap. On the homepage, I kept those four as examples of the observability pillars, explicitly stated that Perses supports other datasources too, and linked to the [Datasources documentation](https://perses.dev/perses/docs/concepts/datasource/) from both the "Observability display" card and the "Visualize your data" section. 
+
+I also scoped a CSS rule (`.grid.cards a` → `.grid.cards.image-grid a`) that was unintentionally centering every link in the feature-card grid, including the new text link, down to just the logo-image grid it was originally written for. On the `perses/perses` README, I made the matching update to the Overview section, noting that Perses supports several technologies per signal and linking to the same Datasources documentation page.
+
+**Impact:** Both merged by maintainer `Nexucis`.
+
+[View the merged website pull request](https://github.com/perses/website/pull/163)
+
+![Perses homepage datasources update](../images/perses_website_PR_screenshot.png)
+
+[View the merged perses/perses README pull request](https://github.com/perses/perses/pull/4591)
+
+![Perses README update](../images/perses_README_PR_screenshot.png)  
 
 ## NGINX: documenting config file size limits
 *NGINX is one of the most widely used web servers and reverse proxies in production infrastructure, and its documentation is maintained by F5's docs team.*
