@@ -93,6 +93,16 @@ The search button displays in the bottom right corner of the screen and triggers
 search.button: true
 ```
 
+### Always show the search bar on small screens
+
+On small screens, the search bar is part of the navigation menu, so readers have to open the menu before they can search. Set `search.always_show_on_mobile` to keep the search bar visible above the page content while the menu stays collapsed. Wider screens are not affected.
+
+```yaml
+search:
+  # Supports true or false (default)
+  always_show_on_mobile: true
+```
+
 ### Focus search bar with a keyboard shortcut
 
 Just the Docs supports focusing the search bar input with a keyboard shortcut. After setting the `search.focus_shortcut_key` config item key, users who press <kbd>Ctrl</kbd> + `search.focus_shortcut_key` (or on macOS, <kbd>Command</kbd> + `search.focus_shortcut_key`) will focus the search bar.
