@@ -51,6 +51,18 @@
           display: flex;
         }
       }
+
+      // search.always_show_on_mobile: keep the search row (only) visible
+      // on small screens while the navigation is collapsed
+      &.main-header-search-mobile:not(.nav-open) {
+        @media not all and (min-width: map-get($media-queries, md)) {
+          display: block;
+
+          > :not(.search) {
+            display: none;
+          }
+        }
+      }
     }
   }
 }
