@@ -4,10 +4,14 @@ layout: table_wrappers
 
 <!DOCTYPE html>
 
-<html lang="{{ site.lang | default: 'en-US' }}">
+<html lang="{{ site.lang | default: 'en-US' }}" {% if site.toc_enabled != false %}class="toc"{% endif %}>
 {% include head.html %}
 <body>
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
+  {% if site.toc_enabled != false and layout.toc_enabled != false and page.toc_enabled != false %}
+    <a class="skip-to-main" href="#toc">{{ site.toc.skip_label | default: 'Skip to the Table of Contents' }}</a>
+  {% endif %}
+
   {% include icons/icons.html %}
   {% if page.nav_enabled == true %}
     {% include components/sidebar.html %}
@@ -16,8 +20,14 @@ layout: table_wrappers
   {% elsif site.nav_enabled != false and layout.nav_enabled == nil and page.nav_enabled == nil %}
     {% include components/sidebar.html %}
   {% endif %}
+
   <div class="main" id="top">
     {% include components/header.html %}
+
+    {% if site.toc_enabled != false and layout.toc_enabled != false and page.toc_enabled != false %}
+      {% include components/toc.html %}
+    {% endif %}
+
     <div class="main-content-wrap">
       {% include components/breadcrumbs.html %}
       <div id="main-content" class="main-content">
