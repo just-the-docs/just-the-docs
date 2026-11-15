@@ -65,6 +65,9 @@ search:
   # Enable or disable the search button that appears in the bottom right corner of every page
   # Supports true or false (default)
   button: false
+  # Keep the search bar visible on small screens without opening the navigation menu
+  # Supports true or false (default)
+  always_show_on_mobile: false
   # Focus the search input by pressing `ctrl + focus_shortcut_key` (or `cmd + focus_shortcut_key` on macOS)
   focus_shortcut_key: 'k'
 ```

@@ -1,4 +1,4 @@
-<div id="main-header" class="main-header">
+<div id="main-header" class="main-header{% if site.search_enabled != false and site.search.always_show_on_mobile %} main-header-search-mobile{% endif %}">
   {% if site.search_enabled != false %}
     {% include components/search_header.html %}
   {% else %}
