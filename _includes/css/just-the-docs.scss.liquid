@@ -7,6 +7,11 @@ $logo: "{{ site.logo | relative_url }}";
 {% unless include.color_scheme == "light" %}
 @import "./color_schemes/{{ include.color_scheme }}";
 {% endunless %}
+{% if site.custom_schemes %}
+{% for scheme in site.custom_schemes %}
+@import "./custom_schemes/{{scheme}}";
+{% endfor %}
+{% endif %}
 @import "./modules";
 {% include css/callouts.scss.liquid color_scheme = include.color_scheme %}
 {% include css/custom.scss.liquid %}
